@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+import { categoryName, formatDate } from '../lib/site';
+import { newsUrl, type Haber } from '../lib/news';
+
+interface Props {
+  haber: Haber;
+  showCategory?: boolean;
+}
+
+const { haber, showCategory = true } = Astro.props;
+const { title, description, date, category, cover, coverAlt } = haber.data;
+---
+
+<article class="card">
+  <a href={newsUrl(haber)}>
+    <div class="thumb">
+      {
+        cover ? (
+          <Image src={cover} alt={coverAlt ?? title} widths={[400, 800]} sizes="(max-width: 800px) 100vw, 380px" />
+        ) : (
+          <div class="thumb-empty">tidsrøst</div>
+        )
+      }
+    </div>
+    {showCategory && <span class="kicker">{categoryName(category)}</span>}
+    <h3>{title}</h3>
+  </a>
+  <p>{description}</p>
+  <time class="meta" datetime={date.toISOString()}>{formatDate(date)}</time>
+</article>

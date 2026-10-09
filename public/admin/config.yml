@@ -1,0 +1,92 @@
+# Sveltia CMS ayarları: https://sveltiacms.app/en/docs
+backend:
+  name: github
+  repo: senoldak/tidsrost
+  branch: main
+
+site_url: https://tidsrost.com
+display_url: https://tidsrost.com
+locale: tr
+
+# Yüklenen resimler varsayılan olarak buraya gider (haber kapakları haberin kendi klasörüne kaydedilir).
+media_folder: /public/uploads
+public_folder: /uploads
+
+# Resimler yüklenirken otomatik olarak WebP'ye çevrilir ve küçültülür.
+media_libraries:
+  default:
+    config:
+      slugify_filename: true
+      transformations:
+        raster_image:
+          format: webp
+          quality: 85
+          width: 2000
+          height: 2000
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+output:
+  omit_empty_optional_fields: true
+
+collections:
+  - name: haberler
+    label: Haberler
+    label_singular: Haber
+    folder: src/content/haberler
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    create: true
+    slug: '{{title}}'
+    summary: '{{title}} · {{date | date("DD.MM.YYYY HH:mm")}}'
+    sortable_fields:
+      fields: [date, title, category]
+      default:
+        field: date
+        direction: descending
+    view_filters:
+      - { label: Manşet, field: featured, pattern: true }
+      - { label: Son dakika, field: breaking, pattern: true }
+      - { label: Taslaklar, field: draft, pattern: true }
+    view_groups:
+      - { label: Kategori, field: category }
+    fields:
+      - { name: title, label: Başlık, widget: string }
+      - name: description
+        label: Spot (özet)
+        widget: text
+        hint: Anasayfada ve paylaşımlarda görünen 1-2 cümlelik özet.
+      - name: category
+        label: Kategori
+        widget: select
+        default: innenriks
+        options:
+          - { label: Innenriks, value: innenriks }
+          - { label: Utenriks, value: utenriks }
+          - { label: Økonomi, value: okonomi }
+          - { label: Sport, value: sport }
+          - { label: Kultur, value: kultur }
+          - { label: Teknologi, value: teknologi }
+      - { name: date, label: Yayın tarihi, widget: datetime, default: '{{now}}', input_timezone: Europe/Oslo }
+      - { name: cover, label: Kapak resmi, widget: image, required: false }
+      - { name: coverAlt, label: Resim açıklaması, widget: string, required: false }
+      - { name: author, label: Yazar, widget: string, default: tidsrøst }
+      - name: featured
+        label: Manşet
+        widget: boolean
+        default: false
+        hint: Açıksa anasayfanın en üstünde büyük olarak gösterilir.
+      - name: breaking
+        label: Son dakika
+        widget: boolean
+        default: false
+        hint: Açıksa anasayfadaki kırmızı "Son dakika" şeridinde gösterilir.
+      - name: draft
+        label: Taslak
+        widget: boolean
+        default: false
+        hint: Açıksa haber sitede yayınlanmaz.
+      - { name: body, label: Haber metni, widget: markdown }

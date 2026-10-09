@@ -1,0 +1,31 @@
+---
+import Base from '../../layouts/Base.astro';
+import NewsCard from '../../components/NewsCard.astro';
+import { CATEGORIES } from '../../lib/site';
+import { getNews } from '../../lib/news';
+
+export async function getStaticPaths() {
+  const news = await getNews();
+  return CATEGORIES.map((c) => ({
+    params: { slug: c.slug },
+    props: { name: c.name, items: news.filter((h) => h.data.category === c.slug) },
+  }));
+}
+
+const { name, items } = Astro.props;
+---
+
+<Base title={name} description={`Nyheter om ${name.toLowerCase()}`}>
+  <h1 class="page-title">{name}</h1>
+  {
+    items.length > 0 ? (
+      <div class="grid">
+        {items.map((h) => (
+          <NewsCard haber={h} showCategory={false} />
+        ))}
+      </div>
+    ) : (
+      <p class="empty">Ingen saker i denne kategorien ennå.</p>
+    )
+  }
+</Base>

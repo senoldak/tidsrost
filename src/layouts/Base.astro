@@ -1,0 +1,97 @@
+---
+import { SITE, CATEGORIES } from '../lib/site';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+}
+
+const { title, description = SITE.description, image, type = 'website' } = Astro.props;
+const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} | Nyheter`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = image ? new URL(image, Astro.site).href : undefined;
+const current = Astro.url.pathname;
+const today = new Date().toLocaleDateString(SITE.locale, {
+  weekday: 'long',
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'Europe/Oslo',
+});
+---
+
+<!doctype html>
+<html lang="nb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={title ?? SITE.name} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="nb_NO" />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    <slot name="head" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container topbar">
+        <span class="today">{today}</span>
+        <span class="social">
+          <a href={SITE.social.x} rel="noopener" target="_blank">X</a>
+          <a href={SITE.social.facebook} rel="noopener" target="_blank">Facebook</a>
+          <a href="/rss.xml">RSS</a>
+        </span>
+      </div>
+      <div class="container brand">
+        <a href="/" class="logo">{SITE.name}</a>
+      </div>
+      <nav class="nav" aria-label="Kategorier">
+        <div class="container nav-inner">
+          <a href="/" aria-current={current === '/' ? 'page' : undefined}>Forsiden</a>
+          {
+            CATEGORIES.map((c) => (
+              <a
+                href={`/kategori/${c.slug}/`}
+                aria-current={current.startsWith(`/kategori/${c.slug}`) ? 'page' : undefined}
+              >
+                {c.name}
+              </a>
+            ))
+          }
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <a href="/" class="logo logo-sm">{SITE.name}</a>
+          <p>{SITE.description}</p>
+        </div>
+        <nav aria-label="Bunnmeny">
+          {CATEGORIES.map((c) => <a href={`/kategori/${c.slug}/`}>{c.name}</a>)}
+          <a href="/om-oss/">Om oss</a>
+        </nav>
+      </div>
+      <div class="container copyright">
+        © {new Date().getFullYear()} {SITE.name}. Alle rettigheter forbeholdt.
+      </div>
+    </footer>
+  </body>
+</html>
