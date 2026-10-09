@@ -12,13 +12,20 @@ export const SITE = {
   epost: '',
 };
 
+import redaksjon from './redaksjon.json';
+
 // Okura haberin altında gösterilen üretim açıklamaları (VVP 2.3).
-export const PRODUKSJON: Record<string, string> = {
-  automatisk: 'Denne saken er laget automatisk på grunnlag av offentlige data, uten manuell redigering.',
+// Yapay zekâ etiketleri sadece redaksjon.json'da visKiMerking: true ise gösterilir.
+const KI_MERKING: Record<string, string> = {
   'ki-assistert': 'Denne saken er skrevet med hjelp av kunstig intelligens (KI) og kontrollert av redaksjonen før publisering.',
   'ki-kontrollert':
     'Denne saken er skrevet med hjelp av kunstig intelligens (KI) og kontrollert automatisk av KI mot den opprinnelige kilden. Den er ikke kontrollert manuelt før publisering.',
   'ki-automatisk': 'Denne saken er skrevet med hjelp av kunstig intelligens (KI) og publisert automatisk, uten manuell kontroll.',
+};
+
+export const PRODUKSJON: Record<string, string> = {
+  automatisk: 'Denne saken er laget automatisk på grunnlag av offentlige data, uten manuell redigering.',
+  ...(redaksjon.visKiMerking ? KI_MERKING : {}),
 };
 
 // Kategori listesi panel ayarlarıyla (public/admin/config.yml) aynı tutulmalı.

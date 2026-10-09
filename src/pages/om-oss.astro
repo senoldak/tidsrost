@@ -37,12 +37,18 @@ const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/reda
           {
             {
               manuell: ' De kontrolleres av redaksjonen mot den opprinnelige pressemeldingen før de publiseres.',
-              ki: ' Hver sak kontrolleres automatisk av en egen KI-kontroll mot den opprinnelige pressemeldingen: at alle opplysninger har dekning i kilden, at sitater er gjengitt ordrett, og at avsenderens synspunkter er tydelig tilskrevet. Saker som består kontrollen, publiseres uten manuell gjennomgang. Saker som ikke består, publiseres ikke før redaksjonen har gått gjennom dem.',
+              ki: ' Hver sak kontrolleres automatisk mot den opprinnelige pressemeldingen før publisering: at alle opplysninger har dekning i kilden, at sitater er gjengitt ordrett, og at avsenderens synspunkter er tydelig tilskrevet. Finner kontrollen feil, rettes saken før den publiseres.',
               ingen: ' De publiseres automatisk, uten kontroll på forhånd.',
             }[redaksjon.kontroll]
           }
         </li>
-        <li>Hver sak er merket nederst med hvordan den er laget, og lenker til den opprinnelige kilden.</li>
+        <li>
+          {
+            redaksjon.visKiMerking
+              ? 'Hver sak er merket nederst med hvordan den er laget, og lenker til den opprinnelige kilden.'
+              : 'Hver sak lenker til den opprinnelige kilden.'
+          }
+        </li>
         <li>Vi bruker ikke KI til å lage eller endre bilder.</li>
       </ul>
       <p>

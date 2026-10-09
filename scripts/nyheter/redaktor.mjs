@@ -61,3 +61,34 @@ ${sak.body}`,
   problemer.push(...svar.problemer);
   return { godkjent: svar.godkjent && problemer.length === 0, problemer };
 }
+
+const RETT_SKJEMA = {
+  type: 'object',
+  properties: {
+    title: { type: 'string' },
+    description: { type: 'string' },
+    body: { type: 'string' },
+  },
+  required: ['title', 'description', 'body'],
+};
+
+// Kontrolün bulduğu sorunları yazara düzelttirir.
+export async function rett(sak, kilde, problemer) {
+  const svar = await gemini({
+    schema: RETT_SKJEMA,
+    prompt: `Du er journalist i en norsk nettavis. Vaktsjefen har funnet problemer i utkastet ditt. Rett alle problemene ved å holde deg strengt til kilden. Fjern opplysninger som ikke har dekning i kilden, tilskriv avsenderens påstander, og gjengi sitater ordrett. Behold ellers form og lengde. Norsk bokmål.
+
+PROBLEMER:
+${problemer.map((p) => `- ${p}`).join('\n')}
+
+KILDE:
+${kilde.slice(0, 14000)}
+
+UTKAST:
+Tittel: ${sak.title}
+Ingress: ${sak.description}
+
+${sak.body}`,
+  });
+  return svar ? { ...sak, ...svar } : sak;
+}

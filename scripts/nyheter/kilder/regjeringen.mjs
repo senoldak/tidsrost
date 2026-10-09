@@ -2,11 +2,11 @@
 // GEMINI_API_KEY yoksa bu kaynak hiç çalışmaz (bkz. lag()).
 import { readFile } from 'node:fs/promises';
 import { hentTekst, lesRss, htmlTilTekst, decodeEntities, gemini, osloIso, KATEGORIER } from '../lib.mjs';
-import { vurder } from '../redaktor.mjs';
+import { vurder, rett } from '../redaktor.mjs';
 
 // Site ile ortak ayar (src/lib/redaksjon.json):
 //   "manuell": tüm yapay zekâ haberleri taslak, editör kontrol edip yayınlar
-//   "ki":      yapay zekâ kontrol masası onaylarsa yayınlanır, onaylamazsa taslak kalır
+//   "ki":      yapay zekâ kontrol masası sorun bulursa bir kez düzelttirir, sonra yayınlanır
 //   "ingen":   kontrolsüz otomatik yayın
 const { kontroll } = JSON.parse(await readFile(new URL('../../../src/lib/redaksjon.json', import.meta.url), 'utf8'));
 
@@ -110,10 +110,16 @@ export default {
           if (kontroll === 'manuell') return { ...felles, draft: true, produksjon: 'ki-assistert' };
 
           const kildeTekst = `Avsender: ${side.departement}\nTittel: ${item.title}\nIngress: ${side.ingress || item.description}\n\n${side.body}`;
-          const vurdering = await vurder(sak, kildeTekst);
-          return vurdering.godkjent
-            ? { ...felles, produksjon: 'ki-kontrollert' }
-            : { ...felles, draft: true, produksjon: 'ki-assistert', merknader: vurdering.problemer };
+          // Kontrol → düzeltme döngüsü (en fazla 2 düzeltme); sonuç her durumda yayınlanır.
+          let utkast = sak;
+          const merknader = [];
+          for (let runde = 0; runde < 2; runde++) {
+            const vurdering = await vurder(utkast, kildeTekst);
+            if (vurdering.godkjent) break;
+            merknader.push(...vurdering.problemer);
+            utkast = await rett(utkast, kildeTekst, vurdering.problemer);
+          }
+          return { ...felles, ...utkast, produksjon: 'ki-kontrollert', ...(merknader.length && { merknader }) };
         },
       }));
   },
