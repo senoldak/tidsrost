@@ -363,6 +363,28 @@ a:hover .thumb img {
   margin: 1.5em 0;
 }
 
+.rettelse {
+  margin: 1.5em 0;
+  padding: 0.8em 1em;
+  border-left: 4px solid var(--accent);
+  background: var(--surface);
+  font-size: 0.95rem;
+}
+
+.produksjon {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.produksjon a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .prose table {
   display: block;
   max-width: 100%;

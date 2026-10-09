@@ -19,6 +19,10 @@ const haberler = defineCollection({
       featured: z.boolean().default(false),
       breaking: z.boolean().default(false),
       draft: z.boolean().default(false),
+      // Haberin nasıl üretildiği; okura haberin altında açıkça gösterilir (VVP 2.3).
+      produksjon: z.enum(['manuell', 'automatisk', 'ki-assistert', 'ki-automatisk']).default('manuell'),
+      // Düzeltme notu; haberin en üstünde gösterilir (VVP 4.13).
+      rettelse: z.string().optional(),
     }),
 });
 

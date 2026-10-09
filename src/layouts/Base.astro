@@ -83,6 +83,8 @@ const today = new Date().toLocaleDateString(SITE.locale, {
         <div>
           <a href="/" class="logo logo-sm">{SITE.name}</a>
           <p>{SITE.description}</p>
+          {SITE.redaktor && <p>Ansvarlig redaktør: {SITE.redaktor}</p>}
+          <p>Vi arbeider etter Vær Varsom-plakaten og Redaktørplakaten.</p>
         </div>
         <nav aria-label="Bunnmeny">
           {CATEGORIES.map((c) => <a href={`/kategori/${c.slug}/`}>{c.name}</a>)}

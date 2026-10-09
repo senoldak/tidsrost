@@ -88,5 +88,20 @@ collections:
         label: Taslak
         widget: boolean
         default: false
-        hint: Açıksa haber sitede yayınlanmaz.
+        hint: Açıksa haber sitede yayınlanmaz. Bot, yapay zekâyla yazdığı haberleri taslak olarak kaydeder; okuyup kontrol ettikten sonra bu kutuyu kapatıp kaydet.
+      - name: produksjon
+        label: Üretim şekli
+        widget: select
+        default: manuell
+        hint: Okura haberin altında gösterilir. Yapay zekâ taslağını kontrol edip yayınlıyorsan "KI-assistert" seçili kalmalı.
+        options:
+          - { label: Elle yazıldı, value: manuell }
+          - { label: Otomatik veri haberi, value: automatisk }
+          - { label: KI-assistert (yapay zekâ yazdı, editör kontrol etti), value: ki-assistert }
+          - { label: KI-automatisk (kontrol edilmedi), value: ki-automatisk }
+      - name: rettelse
+        label: Düzeltme notu
+        widget: text
+        required: false
+        hint: Yayından sonra bir hata düzeltildiyse ne düzeltildiğini Norveççe yaz (ör. "I en tidligere versjon stod det feilaktig ..."). Haberin en üstünde gösterilir.
       - { name: body, label: Haber metni, widget: markdown }

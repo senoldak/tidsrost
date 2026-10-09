@@ -1,7 +1,10 @@
 // Regjeringen.no: departementlerin haber ve basın bültenleri.
+// GEMINI_API_KEY yoksa bu kaynak hiç çalışmaz (bkz. lag()).
+import { readFile } from 'node:fs/promises';
 import { hentTekst, lesRss, htmlTilTekst, decodeEntities, gemini, osloIso, KATEGORIER } from '../lib.mjs';
 
-// GEMINI_API_KEY yoksa bu kaynak hiç çalışmaz (bkz. lag()).
+// Site ile ortak ayar: true ise yapay zekâ haberleri taslak olarak kaydedilir, editör kontrol edip yayınlar (VVP 2.1).
+const { kiKontroll } = JSON.parse(await readFile(new URL('../../../src/lib/redaksjon.json', import.meta.url), 'utf8'));
 
 const FEED = 'https://www.regjeringen.no/no/rss/Rss/2581966/?documentType=aktuelt/nyheter';
 
@@ -15,8 +18,9 @@ const SKJEMA = {
     description: { type: 'string', description: 'Ingress, 1–2 setninger' },
     body: { type: 'string', description: 'Brødtekst i Markdown, 3–6 avsnitt, uten overskrift' },
     category: { type: 'string', enum: KATEGORIER },
+    egnet: { type: 'boolean', description: 'false hvis saken ikke egner seg for automatisk behandling (se reglene)' },
   },
-  required: ['title', 'description', 'body', 'category'],
+  required: ['egnet', 'title', 'description', 'body', 'category'],
 };
 
 function lesSide(html) {
@@ -31,15 +35,31 @@ function lesSide(html) {
 
 function prompt(item, side) {
   const kort = !side.body;
-  return `Du er nyhetsjournalist i nettavisen tidsrøst. Skriv en kort, nøytral nyhetssak på norsk bokmål basert på pressemeldingen under.
+  return `Du er nyhetsjournalist i nettavisen tidsrøst, som arbeider etter Vær Varsom-plakaten. Skriv en kort, nøytral nyhetssak på norsk bokmål basert på pressemeldingen under.
 
-Regler:${kort ? `
-- Du har bare tittel og ingress. Skriv en kort sak på 1–2 avsnitt. Ikke fyll ut med bakgrunn, tall eller sitater som ikke står i materialet.
-- Avslutt med en setning om at hele pressemeldingen kan leses hos regjeringen.no.` : ''}
-- Bruk bare fakta fra pressemeldingen. Ikke legg til noe du ikke vet, og ikke bruk forsterkende ord (som «kraftig» eller «skarpt») som ikke har dekning i teksten.
-- Ikke kopier setninger ordrett; skriv med egne ord. Direkte sitater er lov, men bare med anførselstegn og tydelig hvem som sier det.
-- Første avsnitt skal fortelle det viktigste: hvem, hva, hvorfor.
-- Nevn at opplysningene kommer fra ${side.departement}.
+En pressemelding er avsenderens egen fremstilling, ikke uavhengig dokumentert fakta. Følg disse reglene nøye:
+
+Kilde og tilskriving (VVP 2.7, 3.1, 4.2):
+- Si tydelig i første eller andre avsnitt at opplysningene kommer fra en pressemelding fra ${side.departement}.
+- Alt som er avsenderens påstander, vurderinger, mål eller forventninger, skal tilskrives avsenderen («ifølge departementet», «mener regjeringen», «skriver departementet»). Presenter dem aldri som fakta.
+- Gjengi bare avsenderens synspunkter. Ikke legg til egne vurderinger, kommentarer, konklusjoner eller vinklinger.
+
+Nøyaktighet (VVP 3.2, 3.7, 4.4):
+- Bruk bare opplysninger som står i materialet. Ikke legg til bakgrunn, tall, navn eller sammenhenger fra egen kunnskap.
+- Ikke bruk forsterkende eller ladede ord (som «kraftig», «skarpt», «historisk», «massiv») med mindre de står i materialet.
+- Tittel og ingress skal ikke gå lenger enn det er dekning for i teksten. Tittelen skal vise at det er avsenderens forslag, vedtak eller syn (f.eks. «Regjeringen foreslår …», «Departementet: …»).
+- Direkte sitater skal gjengis ordrett, på originalspråket (også nynorsk), i anførselstegn og med navn og tittel på den som uttaler seg. Ikke lag sitater, og ikke endre eller oversett dem.
+- Ellers skal du skrive med egne ord, ikke kopiere setninger.
+
+Varsomhet (VVP 4.3, 4.5, 4.7, 4.8):
+- Sett egnet=false hvis pressemeldingen handler om navngitte privatpersoner, enkeltsaker om kriminalitet, barn, selvmord, ulykker med omkomne, eller annet som krever særlig varsomhet. Fyll da ut de andre feltene med tomme strenger.
+- Ellers egnet=true.
+
+Form:
+- Første avsnitt skal fortelle det viktigste: hvem, hva, hvorfor.${kort ? `
+- Du har bare tittel og ingress. Skriv en kort sak på 1–2 avsnitt. Ikke fyll ut.
+- Avslutt med en setning om at hele pressemeldingen kan leses hos regjeringen.no.` : `
+- 3–6 korte avsnitt.`}
 - Ingen overskrift i body, ingen kildehenvisning nederst (den legges til automatisk).
 - Velg kategori: innenriks (norske forhold), utenriks (internasjonalt), okonomi, kultur, teknologi eller sport.
 
@@ -77,7 +97,17 @@ export default {
           // Anahtar yoksa null döner; haber atlanır ve sonraki çalışmada tekrar denenir.
           // Bülten metnini olduğu gibi yayınlamıyoruz.
           const ai = await gemini({ prompt: prompt(item, side), schema: SKJEMA });
-          return ai && { ...ai, date: osloIso(), kilde };
+          if (!ai) return null;
+          // Özel dikkat gerektiren konular (kişiler, suç, çocuklar vb.) otomatik işlenmez.
+          if (!ai.egnet) return { hopp: 'krever særlig varsomhet, bør vurderes manuelt' };
+          const { egnet, ...sak } = ai;
+          return {
+            ...sak,
+            date: osloIso(),
+            kilde,
+            draft: kiKontroll,
+            produksjon: kiKontroll ? 'ki-assistert' : 'ki-automatisk',
+          };
         },
       }));
   },

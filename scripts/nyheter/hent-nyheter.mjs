@@ -51,6 +51,7 @@ while (valgt.length < MAKS && Object.values(kandidater).some((l) => l.length)) {
 
 let antall = 0;
 const feilListe = [];
+const utkastListe = [];
 for (const [i, k] of valgt.entries()) {
   if (TORR) {
     console.log(`  [tørr] ${k.id} — ${k.tittel}`);
@@ -63,11 +64,18 @@ for (const [i, k] of valgt.entries()) {
       feilListe.push(`${k.id}: hoppet over, GEMINI_API_KEY mangler`);
       continue;
     }
+    if (sak.hopp) {
+      tilstand.sett[k.id] = new Date().toISOString();
+      console.log(`  - ${k.id}: hoppet over (${sak.hopp})`);
+      feilListe.push(`${k.id} «${k.tittel}»: hoppet over, ${sak.hopp}`);
+      continue;
+    }
     const slug = await skrivSak(ROT, sak);
     tilstand.sett[k.id] = new Date().toISOString();
     delete tilstand.feil[k.id];
     antall++;
-    console.log(`  + ${slug}`);
+    console.log(`  + ${slug}${sak.draft ? ' (utkast)' : ''}`);
+    if (sak.draft) utkastListe.push(sak.title);
   } catch (e) {
     // Hata mesajı durum dosyasına da yazılır; loglara bakmadan görülebilsin.
     const melding = `${e.message}${e.cause ? ` (${e.cause.message ?? e.cause})` : ''}`.slice(0, 500);
@@ -95,6 +103,10 @@ console.log(`Ferdig: ${antall} nye saker.`);
 if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `antall=${antall}\n`);
 // Actions çalışma sayfasında görünen özet.
 if (process.env.GITHUB_STEP_SUMMARY) {
-  const ozet = [`### Nyhetsbot: ${antall} nye saker`, ...feilListe.map((f) => `- ❌ ${f}`)].join('\n');
+  const ozet = [
+    `### Nyhetsbot: ${antall} nye saker`,
+    ...utkastListe.map((t) => `- 📝 Taslak, kontrol edilip yayınlanmayı bekliyor (/admin): ${t}`),
+    ...feilListe.map((f) => `- ❌ ${f}`),
+  ].join('\n');
   await appendFile(process.env.GITHUB_STEP_SUMMARY, ozet + '\n');
 }

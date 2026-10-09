@@ -168,9 +168,12 @@ export async function skrivSak(rot, sak) {
     `date: ${sak.date}`,
     `category: ${sak.category}`,
     sak.breaking ? 'breaking: true' : null,
+    sak.draft ? 'draft: true' : null,
+    `produksjon: ${sak.produksjon}`,
     '---',
   ].filter(Boolean);
-  const kilde = `*Kilde: [${sak.kilde.navn}](${sak.kilde.url})${sak.kilde.lisens ? ` (${sak.kilde.lisens})` : ''}. Saken er skrevet automatisk på grunnlag av offentlige data.*`;
+  // Üretim şekli notu sayfada ayrıca gösterilir; burada sadece kaynak (VVP 3.1).
+  const kilde = `*Kilde: [${sak.kilde.navn}](${sak.kilde.url})${sak.kilde.lisens ? ` (${sak.kilde.lisens})` : ''}*`;
   const innhold = `${fm.join('\n')}\n\n${sak.body.trim()}\n\n${kilde}\n`;
   await mkdir(path.join(base, slug), { recursive: true });
   await writeFile(path.join(base, slug, 'index.md'), innhold, 'utf8');

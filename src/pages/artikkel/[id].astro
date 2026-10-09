@@ -3,7 +3,7 @@ import { Image, getImage } from 'astro:assets';
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import NewsCard from '../../components/NewsCard.astro';
-import { SITE, categoryName, formatDate } from '../../lib/site';
+import { SITE, PRODUKSJON, categoryName, formatDate } from '../../lib/site';
 import { getNews, type Haber } from '../../lib/news';
 
 export async function getStaticPaths() {
@@ -20,7 +20,7 @@ interface Props {
 }
 
 const { haber, related } = Astro.props;
-const { title, description, date, category, cover, coverAlt, author } = haber.data;
+const { title, description, date, category, cover, coverAlt, author, produksjon, rettelse } = haber.data;
 const { Content } = await render(haber);
 
 const ogImage = cover ? (await getImage({ src: cover, width: 1200, format: 'jpeg' })).src : undefined;
@@ -34,7 +34,7 @@ const jsonLd = {
   headline: title,
   description,
   datePublished: date.toISOString(),
-  author: { '@type': 'Person', name: author },
+  author: author === SITE.name ? { '@type': 'Organization', name: author } : { '@type': 'Person', name: author },
   publisher: { '@type': 'Organization', name: SITE.name },
   mainEntityOfPage: pageUrl,
   ...(ogImage ? { image: [new URL(ogImage, Astro.site).href] } : {}),
@@ -65,9 +65,19 @@ const jsonLd = {
       )
     }
 
+    {
+      rettelse && (
+        <aside class="rettelse">
+          <strong>Rettelse:</strong> {rettelse}
+        </aside>
+      )
+    }
+
     <div class="prose">
       <Content />
     </div>
+
+    {PRODUKSJON[produksjon] && <p class="produksjon">{PRODUKSJON[produksjon]} <a href="/om-oss/#ki">Les mer om hvordan vi bruker KI og automatikk.</a></p>}
 
     <div class="share">
       <a href={`https://x.com/intent/post?url=${share}&text=${shareText}`} target="_blank" rel="noopener">Del på X</a>

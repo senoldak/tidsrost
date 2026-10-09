@@ -44,6 +44,7 @@ export default {
               category: 'innenriks',
               breaking: farge !== 'yellow',
               date: osloIso(),
+              produksjon: 'automatisk',
               kilde: { navn: 'Meteorologisk institutt', url: 'https://www.met.no/', lisens: 'CC BY 4.0' },
             };
           },

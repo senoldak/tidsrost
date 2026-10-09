@@ -3,6 +3,7 @@ title: "Valutakurser fredag 9. oktober: Én euro koster 10,72 kroner"
 description: "Kronen holdt seg stabil mot euro fredag 9. oktober. Euroen er nesten uendret fra dagen før, ifølge Norges Banks referansekurser."
 date: 2026-10-10T00:53:05+02:00
 category: okonomi
+produksjon: automatisk
 ---
 
 Norges Banks referansekurs for euro var 10,7155 kroner fredag 9. oktober. Det er nesten uendret sammenlignet med forrige virkedag.
@@ -17,4 +18,4 @@ Norges Banks referansekurs for euro var 10,7155 kroner fredag 9. oktober. Det er
 
 Referansekursene fastsettes rundt klokken 14.15 hver virkedag og er ment som informasjon, ikke som handelskurser.
 
-*Kilde: [Norges Bank](https://www.norges-bank.no/tema/Statistikk/Valutakurser/) (NLOD). Saken er skrevet automatisk på grunnlag av offentlige data.*
+*Kilde: [Norges Bank](https://www.norges-bank.no/tema/Statistikk/Valutakurser/) (NLOD)*

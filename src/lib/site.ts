@@ -6,6 +6,17 @@ export const SITE = {
     x: 'https://x.com/',
     facebook: 'https://facebook.com/',
   },
+  // Sorumlu editör ve iletişim; sitenin altbilgisinde ve "Om oss" sayfasında gösterilir.
+  // Boş bırakılan alanlar sitede görünmez.
+  redaktor: '',
+  epost: '',
+};
+
+// Okura haberin altında gösterilen üretim açıklamaları (VVP 2.3).
+export const PRODUKSJON: Record<string, string> = {
+  automatisk: 'Denne saken er laget automatisk på grunnlag av offentlige data, uten manuell redigering.',
+  'ki-assistert': 'Denne saken er skrevet med hjelp av kunstig intelligens (KI) og kontrollert av redaksjonen før publisering.',
+  'ki-automatisk': 'Denne saken er skrevet med hjelp av kunstig intelligens (KI) og publisert automatisk, uten manuell kontroll.',
 };
 
 // Kategori listesi panel ayarlarıyla (public/admin/config.yml) aynı tutulmalı.

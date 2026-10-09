@@ -53,6 +53,7 @@ async function valuta() {
         body: `Norges Banks referansekurs for euro var ${tall(eur.verdi, 4)} kroner ${dag}. Det er ${retning(eur.endring)} sammenlignet med forrige virkedag.\n\n${tabell}\n\nReferansekursene fastsettes rundt klokken 14.15 hver virkedag og er ment som informasjon, ikke som handelskurser.`,
         category: 'okonomi',
         date: osloIso(),
+        produksjon: 'automatisk',
         kilde: KILDE,
       };
     },
@@ -80,6 +81,7 @@ async function styringsrente() {
           category: 'okonomi',
           breaking: true,
           date: osloIso(),
+          produksjon: 'automatisk',
           kilde: { ...KILDE, url: 'https://www.norges-bank.no/tema/pengepolitikk/Styringsrenten/' },
         };
       },

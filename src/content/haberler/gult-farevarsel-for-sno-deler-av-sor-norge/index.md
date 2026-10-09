@@ -3,6 +3,7 @@ title: "Gult farevarsel for snø: Deler av Sør-Norge"
 description: "Fra fredag ettermiddag er det ventet 5-15 cm snø på 24 timer i høyereliggende områder i Sør-Norge, først i vest."
 date: 2026-10-10T00:53:12+02:00
 category: innenriks
+produksjon: automatisk
 ---
 
 Meteorologisk institutt har sendt ut gult farevarsel for snø for deler av Sør-Norge.
@@ -17,4 +18,4 @@ Fra fredag ettermiddag er det ventet 5-15 cm snø på 24 timer i høyereliggende
 
 Følg med på oppdaterte varsler på [yr.no](https://www.yr.no/nb/farevarsler).
 
-*Kilde: [Meteorologisk institutt](https://www.met.no/) (CC BY 4.0). Saken er skrevet automatisk på grunnlag av offentlige data.*
+*Kilde: [Meteorologisk institutt](https://www.met.no/) (CC BY 4.0)*
