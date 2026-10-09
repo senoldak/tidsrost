@@ -30,10 +30,13 @@ function lesSide(html) {
 }
 
 function prompt(item, side) {
+  const kort = !side.body;
   return `Du er nyhetsjournalist i nettavisen tidsrøst. Skriv en kort, nøytral nyhetssak på norsk bokmål basert på pressemeldingen under.
 
-Regler:
-- Bruk bare fakta fra pressemeldingen. Ikke legg til noe du ikke vet.
+Regler:${kort ? `
+- Du har bare tittel og ingress. Skriv en kort sak på 1–2 avsnitt. Ikke fyll ut med bakgrunn, tall eller sitater som ikke står i materialet.
+- Avslutt med en setning om at hele pressemeldingen kan leses hos regjeringen.no.` : ''}
+- Bruk bare fakta fra pressemeldingen. Ikke legg til noe du ikke vet, og ikke bruk forsterkende ord (som «kraftig» eller «skarpt») som ikke har dekning i teksten.
 - Ikke kopier setninger ordrett; skriv med egne ord. Direkte sitater er lov, men bare med anførselstegn og tydelig hvem som sier det.
 - Første avsnitt skal fortelle det viktigste: hvem, hva, hvorfor.
 - Nevn at opplysningene kommer fra ${side.departement}.
@@ -44,8 +47,7 @@ Avsender: ${side.departement}
 Tittel: ${item.title}
 Ingress: ${side.ingress || item.description}
 
-Tekst:
-${side.body.slice(0, 12000)}`;
+${side.body ? `Tekst:\n${side.body.slice(0, 12000)}` : ''}`;
 }
 
 export default {
@@ -62,8 +64,16 @@ export default {
         tittel: item.title,
         async lag() {
           const url = item.link.replace(/\?.*$/, '');
-          const side = lesSide(await hentTekst(url));
-          const kilde = { navn: `${side.departement} / regjeringen.no`, url };
+          // regjeringen.no, GitHub sunucularından sayfa isteğini 403 ile engelliyor.
+          // O durumda sadece RSS'teki başlık ve özetle kısa haber yazılır.
+          let side;
+          try {
+            side = lesSide(await hentTekst(url));
+          } catch (e) {
+            if (!/^40[13] /.test(e.message)) throw e;
+            side = { ingress: item.description, body: '', departement: 'regjeringen' };
+          }
+          const kilde = { navn: side.departement === 'regjeringen' ? 'regjeringen.no' : `${side.departement} / regjeringen.no`, url };
           // Anahtar yoksa null döner; haber atlanır ve sonraki çalışmada tekrar denenir.
           // Bülten metnini olduğu gibi yayınlamıyoruz.
           const ai = await gemini({ prompt: prompt(item, side), schema: SKJEMA });
