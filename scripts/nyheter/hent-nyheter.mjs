@@ -75,7 +75,7 @@ for (const [i, k] of valgt.entries()) {
     delete tilstand.feil[k.id];
     antall++;
     console.log(`  + ${slug}${sak.draft ? ' (utkast)' : ''}`);
-    if (sak.draft) utkastListe.push(sak.title);
+    if (sak.draft) utkastListe.push(`${sak.title}${sak.merknader?.length ? ` — ${sak.merknader.join(' / ')}` : ''}`);
   } catch (e) {
     // Hata mesajı durum dosyasına da yazılır; loglara bakmadan görülebilsin.
     const melding = `${e.message}${e.cause ? ` (${e.cause.message ?? e.cause})` : ''}`.slice(0, 500);

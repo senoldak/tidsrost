@@ -2,9 +2,13 @@
 // GEMINI_API_KEY yoksa bu kaynak hiç çalışmaz (bkz. lag()).
 import { readFile } from 'node:fs/promises';
 import { hentTekst, lesRss, htmlTilTekst, decodeEntities, gemini, osloIso, KATEGORIER } from '../lib.mjs';
+import { vurder } from '../redaktor.mjs';
 
-// Site ile ortak ayar: true ise yapay zekâ haberleri taslak olarak kaydedilir, editör kontrol edip yayınlar (VVP 2.1).
-const { kiKontroll } = JSON.parse(await readFile(new URL('../../../src/lib/redaksjon.json', import.meta.url), 'utf8'));
+// Site ile ortak ayar (src/lib/redaksjon.json):
+//   "manuell": tüm yapay zekâ haberleri taslak, editör kontrol edip yayınlar
+//   "ki":      yapay zekâ kontrol masası onaylarsa yayınlanır, onaylamazsa taslak kalır
+//   "ingen":   kontrolsüz otomatik yayın
+const { kontroll } = JSON.parse(await readFile(new URL('../../../src/lib/redaksjon.json', import.meta.url), 'utf8'));
 
 const FEED = 'https://www.regjeringen.no/no/rss/Rss/2581966/?documentType=aktuelt/nyheter';
 
@@ -101,13 +105,15 @@ export default {
           // Özel dikkat gerektiren konular (kişiler, suç, çocuklar vb.) otomatik işlenmez.
           if (!ai.egnet) return { hopp: 'krever særlig varsomhet, bør vurderes manuelt' };
           const { egnet, ...sak } = ai;
-          return {
-            ...sak,
-            date: osloIso(),
-            kilde,
-            draft: kiKontroll,
-            produksjon: kiKontroll ? 'ki-assistert' : 'ki-automatisk',
-          };
+          const felles = { ...sak, date: osloIso(), kilde };
+          if (kontroll === 'ingen') return { ...felles, produksjon: 'ki-automatisk' };
+          if (kontroll === 'manuell') return { ...felles, draft: true, produksjon: 'ki-assistert' };
+
+          const kildeTekst = `Avsender: ${side.departement}\nTittel: ${item.title}\nIngress: ${side.ingress || item.description}\n\n${side.body}`;
+          const vurdering = await vurder(sak, kildeTekst);
+          return vurdering.godkjent
+            ? { ...felles, produksjon: 'ki-kontrollert' }
+            : { ...felles, draft: true, produksjon: 'ki-assistert', merknader: vurdering.problemer };
         },
       }));
   },

@@ -98,6 +98,7 @@ collections:
           - { label: Elle yazıldı, value: manuell }
           - { label: Otomatik veri haberi, value: automatisk }
           - { label: KI-assistert (yapay zekâ yazdı, editör kontrol etti), value: ki-assistert }
+          - { label: KI-kontrollert (yapay zekâ yazdı ve kontrol etti), value: ki-kontrollert }
           - { label: KI-automatisk (kontrol edilmedi), value: ki-automatisk }
       - name: rettelse
         label: Düzeltme notu

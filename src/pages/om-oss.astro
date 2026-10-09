@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { SITE } from '../lib/site';
-// kiKontroll: true ise bot yapay zekâ haberlerini taslak olarak kaydeder, editör kontrol edip yayınlar.
+// kontroll: "manuell" | "ki" | "ingen" (bkz. scripts/nyheter/kilder/regjeringen.mjs)
 import redaksjon from '../lib/redaksjon.json';
 
 const VVP = 'https://www.presse.no/vaer-varsom-plakaten';
@@ -35,9 +35,11 @@ const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/reda
         <li>
           <strong>Saker basert på pressemeldinger</strong> fra regjeringen og departementene skrives med hjelp av KI.
           {
-            redaksjon.kiKontroll
-              ? ' De kontrolleres av redaksjonen mot den opprinnelige pressemeldingen før de publiseres.'
-              : ' De publiseres automatisk, uten manuell kontroll på forhånd.'
+            {
+              manuell: ' De kontrolleres av redaksjonen mot den opprinnelige pressemeldingen før de publiseres.',
+              ki: ' Hver sak kontrolleres automatisk av en egen KI-kontroll mot den opprinnelige pressemeldingen: at alle opplysninger har dekning i kilden, at sitater er gjengitt ordrett, og at avsenderens synspunkter er tydelig tilskrevet. Saker som består kontrollen, publiseres uten manuell gjennomgang. Saker som ikke består, publiseres ikke før redaksjonen har gått gjennom dem.',
+              ingen: ' De publiseres automatisk, uten kontroll på forhånd.',
+            }[redaksjon.kontroll]
           }
         </li>
         <li>Hver sak er merket nederst med hvordan den er laget, og lenker til den opprinnelige kilden.</li>
