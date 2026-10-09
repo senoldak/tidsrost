@@ -1,10 +1,10 @@
-# Saatte bir açık kamu verilerinden haber üretir ve repoya ekler.
+# 2 saatte bir açık kamu verilerinden haber üretir ve repoya ekler.
 # Cloudflare yeni commit'i görünce siteyi otomatik yeniden derler.
 name: Nyhetsbot
 
 on:
   schedule:
-    - cron: '17 * * * *'
+    - cron: '17 */2 * * *'
   workflow_dispatch:
 
 permissions:

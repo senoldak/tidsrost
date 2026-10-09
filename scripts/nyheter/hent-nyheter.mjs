@@ -1,6 +1,6 @@
 // Açık kamu verilerinden haber üretir ve src/content/haberler altına yazar.
 // Kullanım: node scripts/nyheter/hent-nyheter.mjs [--torr]   (--torr: dosya yazmadan sadece listeler)
-// Ortam değişkenleri: GEMINI_API_KEY, GEMINI_MODEL, MAKS_PER_KJORING (varsayılan 5)
+// Ortam değişkenleri: GEMINI_API_KEY, GEMINI_MODEL, MAKS_PER_KJORING (varsayılan 8)
 import path from 'node:path';
 import { writeFile, appendFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
@@ -15,7 +15,7 @@ const HER = path.dirname(fileURLToPath(import.meta.url));
 const ROT = path.resolve(HER, '../..');
 const TILSTAND_FIL = path.join(HER, 'sett.json');
 const TORR = process.argv.includes('--torr');
-const MAKS = Number(process.env.MAKS_PER_KJORING || 5);
+const MAKS = Number(process.env.MAKS_PER_KJORING || 8);
 // Bir kaynak ilk kez çalıştığında eski haberleri yığmamak için sadece en yeni birkaçını al.
 const FORSTE_GANG = 2;
 const MAKS_FEIL = 3;
