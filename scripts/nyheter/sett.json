@@ -97,25 +97,12 @@
     "regjeringen:3175611": "2026-10-09T22:53:05.352Z",
     "regjeringen:3174107": "2026-10-09T22:53:05.352Z",
     "norgesbank:valuta:2026-10-09": "2026-10-09T22:53:05.357Z",
-    "met:snow:deler-av-sor-norge:2026-10-09": "2026-10-09T22:53:12.360Z"
+    "met:snow:deler-av-sor-norge:2026-10-09": "2026-10-09T22:53:12.360Z",
+    "regjeringen:3176911": "2026-10-09T23:03:43.054Z",
+    "regjeringen:3176866": "2026-10-09T23:03:51.192Z",
+    "regjeringen:3173692": "2026-10-09T23:03:59.421Z"
   },
-  "feil": {
-    "regjeringen:3176911": {
-      "antall": 2,
-      "melding": "403 Forbidden: https://www.regjeringen.no/no/aktuelt/uttalelse-fra-utenriksminister-espen-barth-eide-om-de-varslede-sanksjonene-mot-den-internasjonale-straffedomstolen/id3176911/",
-      "tid": "2026-10-09T23:01:19.865Z"
-    },
-    "regjeringen:3176866": {
-      "antall": 2,
-      "melding": "403 Forbidden: https://www.regjeringen.no/no/aktuelt/regjeringen-foreslar-a-utvide-varigheten-for-ordningen-med-midlertidig-kollektiv-beskyttelse/id3176866/",
-      "tid": "2026-10-09T23:01:26.909Z"
-    },
-    "regjeringen:3173692": {
-      "antall": 1,
-      "melding": "403 Forbidden: https://www.regjeringen.no/no/aktuelt/3-580-millionar-meir-i-frie-inntekter-til-oslo-neste-ar/id3173692/",
-      "tid": "2026-10-09T23:01:33.959Z"
-    }
-  },
+  "feil": {},
   "kilder": {
     "norgesbank": "2026-10-09T22:53:04.344Z",
     "met": "2026-10-09T22:53:04.910Z",
