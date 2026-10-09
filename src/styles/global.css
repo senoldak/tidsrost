@@ -363,6 +363,26 @@ a:hover .thumb img {
   margin: 1.5em 0;
 }
 
+.prose table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1.5em 0;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.prose th,
+.prose td {
+  padding: 0.5em 0.9em;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.prose th {
+  background: var(--surface);
+}
+
 .share {
   display: flex;
   gap: 10px;
