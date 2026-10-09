@@ -50,6 +50,7 @@ while (valgt.length < MAKS && Object.values(kandidater).some((l) => l.length)) {
 }
 
 let antall = 0;
+const feilListe = [];
 for (const [i, k] of valgt.entries()) {
   if (TORR) {
     console.log(`  [tørr] ${k.id} — ${k.tittel}`);
@@ -59,6 +60,7 @@ for (const [i, k] of valgt.entries()) {
     const sak = await k.lag();
     if (!sak) {
       console.log(`  - ${k.id}: hoppet over (mangler GEMINI_API_KEY)`);
+      feilListe.push(`${k.id}: hoppet over, GEMINI_API_KEY mangler`);
       continue;
     }
     const slug = await skrivSak(ROT, sak);
@@ -67,9 +69,15 @@ for (const [i, k] of valgt.entries()) {
     antall++;
     console.log(`  + ${slug}`);
   } catch (e) {
-    tilstand.feil[k.id] = (tilstand.feil[k.id] ?? 0) + 1;
-    console.error(`  ! ${k.id}: ${e.message}`);
-    if (tilstand.feil[k.id] >= MAKS_FEIL) {
+    // Hata mesajı durum dosyasına da yazılır; loglara bakmadan görülebilsin.
+    const melding = `${e.message}${e.cause ? ` (${e.cause.message ?? e.cause})` : ''}`.slice(0, 500);
+    const forrige = tilstand.feil[k.id];
+    const tidligere = typeof forrige === 'number' ? forrige : forrige?.antall ?? 0;
+    const ant = e.konfig ? tidligere : tidligere + 1;
+    tilstand.feil[k.id] = { antall: ant, melding, tid: new Date().toISOString() };
+    feilListe.push(`${k.id}: ${melding}`);
+    console.error(`  ! ${k.id}: ${melding}`);
+    if (ant >= MAKS_FEIL) {
       tilstand.sett[k.id] = new Date().toISOString();
       delete tilstand.feil[k.id];
     }
@@ -85,3 +93,8 @@ for (const [id, t] of Object.entries(tilstand.sett)) if (Date.parse(t) < grense)
 if (!TORR) await writeFile(TILSTAND_FIL, JSON.stringify(tilstand, null, 2) + '\n', 'utf8');
 console.log(`Ferdig: ${antall} nye saker.`);
 if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `antall=${antall}\n`);
+// Actions çalışma sayfasında görünen özet.
+if (process.env.GITHUB_STEP_SUMMARY) {
+  const ozet = [`### Nyhetsbot: ${antall} nye saker`, ...feilListe.map((f) => `- ❌ ${f}`)].join('\n');
+  await appendFile(process.env.GITHUB_STEP_SUMMARY, ozet + '\n');
+}

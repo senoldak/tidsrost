@@ -128,7 +128,17 @@ export async function gemini({ prompt, schema }) {
       await sleep(20_000 * forsok);
       continue;
     }
-    if (!res.ok) throw new Error(`Gemini ${res.status}: ${(await res.text()).slice(0, 300)}`);
+    if (!res.ok) {
+      const raw = await res.text();
+      let msg = raw.slice(0, 300);
+      try {
+        msg = JSON.parse(raw).error?.message ?? msg;
+      } catch {}
+      const feil = new Error(`Gemini ${res.status}: ${msg}`);
+      // Anahtar/model hatası: haberin suçu değil, haber atlanmamalı.
+      feil.konfig = [400, 401, 403, 404].includes(res.status);
+      throw feil;
+    }
     const data = await res.json();
     const tekst = data.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') ?? '';
     return JSON.parse(tekst);
