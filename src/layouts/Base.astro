@@ -49,8 +49,8 @@ const today = new Date().toLocaleDateString(SITE.locale, {
       <div class="container topbar">
         <span class="today">{today}</span>
         <span class="social">
-          <a href={SITE.social.x} rel="noopener" target="_blank">X</a>
-          <a href={SITE.social.facebook} rel="noopener" target="_blank">Facebook</a>
+          {SITE.social.x && <a href={SITE.social.x} rel="noopener" target="_blank">X</a>}
+          {SITE.social.facebook && <a href={SITE.social.facebook} rel="noopener" target="_blank">Facebook</a>}
           <a href="/rss.xml">RSS</a>
         </span>
       </div>

@@ -2,9 +2,11 @@ export const SITE = {
   name: 'tidsrøst',
   description: 'Siste nytt fra Norge og verden.',
   locale: 'nb-NO',
+  // Sosyal medya hesapları; boş bırakılan link sitede görünmez.
+  // Hesap açılınca tam adresi yaz (ör. 'https://x.com/tidsrost').
   social: {
-    x: 'https://x.com/',
-    facebook: 'https://facebook.com/',
+    x: '',
+    facebook: '',
   },
   // Sorumlu editör ve iletişim; sitenin altbilgisinde ve "Om oss" sayfasında gösterilir.
   // Boş bırakılan alanlar sitede görünmez.
