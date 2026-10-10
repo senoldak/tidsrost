@@ -112,3 +112,78 @@ export const kulturdirektoratet = lagKilde({
     body: mellom(html, 'data-chunks', 'Andre artikler'),
   }),
 });
+
+// ── Ekonomi ────────────────────────────────────────────────────────────
+
+// Norges Bank basın bültenleri (faiz kararları, finansal istikrar, Petrol Fonu sonuçları).
+// Akış text/html ve BOM'la geliyor ama RSS 2.0; aylık rutin döviz işlemi duyurusu atlanır.
+export const norgesbankPresse = lagKilde({
+  navn: 'norgesbank-presse',
+  avsender: 'Norges Bank',
+  kortnavn: 'Norges Bank',
+  feed: 'https://www.norges-bank.no/RSS/Pressemeldinger---Norges-Bank/',
+  sjanger: 'pressemeldingen',
+  kategorihint: 'okonomi.',
+  underlinje: 'Pressemelding fra norges-bank.no',
+  filter: (i) => !/valutatransaksjon/i.test(i.title),
+  les: (html) => ({
+    ingress: mellom(html, 'class="intro"', '</div>'),
+    body: mellom(html, 'class="article__main-body"', 'class="meta-container"'),
+  }),
+});
+
+// Finanstilsynet: Atom akışı (sadece haberler). Özetlerde varlıklar iki kez kaçışlı (&amp;oslash;).
+export const finanstilsynet = lagKilde({
+  navn: 'finanstilsynet',
+  avsender: 'Finanstilsynet',
+  kortnavn: 'Finanstilsynet',
+  sjanger: 'nyhetssaken',
+  kategorihint: 'okonomi.',
+  underlinje: 'Nyhet fra finanstilsynet.no',
+  async liste() {
+    const xml = await hentTekst('https://www.finanstilsynet.no/rss/nyheter/');
+    return [...xml.matchAll(/<entry[\s>][\s\S]*?<\/entry>/gi)].map(([e]) => {
+      const felt = (t) => decodeEntities(decodeEntities(e.match(new RegExp('<' + t + '[^>]*>([^]*?)</' + t + '>'))?.[1] ?? '')).trim();
+      const link = e.match(/<link[^>]*rel="alternate"[^>]*href="([^"]+)"/)?.[1] ?? e.match(/<link[^>]*href="([^"]+)"/)?.[1] ?? felt('id');
+      return { guid: felt('id') || link, title: felt('title'), link, description: htmlTilTekst(felt('summary')), pubDate: felt('published') || felt('updated') };
+    });
+  },
+  les: (html) => ({
+    ingress: '',
+    body: mellom(html, 'class="article--bodytext', '</section>'),
+  }),
+});
+
+// Konkurransetilsynet (WordPress): sadece "Nyheter" kategorisi; tam metin akışta (content:encoded).
+export const konkurransetilsynet = lagKilde({
+  navn: 'konkurransetilsynet',
+  avsender: 'Konkurransetilsynet',
+  kortnavn: 'Konkurransetilsynet',
+  sjanger: 'nyhetssaken',
+  kategorihint: 'okonomi.',
+  underlinje: 'Nyhet fra konkurransetilsynet.no',
+  async liste() {
+    const xml = await hentTekst('https://konkurransetilsynet.no/feed/');
+    const nyheter = [...xml.matchAll(/<item[\s>][\s\S]*?<\/item>/gi)].map(([i]) => /<category><!\[CDATA\[Nyheter\]\]><\/category>|<category>Nyheter<\/category>/.test(i));
+    return lesRss(xml).filter((_, n) => nyheter[n]);
+  },
+  les: (html) => ({
+    ingress: '',
+    body: mellom(html, 'class="left-content', '<footer'),
+  }),
+});
+
+// Skatteetaten: basın bültenleri (ayda birkaç tane).
+export const skatteetaten = lagKilde({
+  navn: 'skatteetaten',
+  avsender: 'Skatteetaten',
+  kortnavn: 'Skatteetaten',
+  feed: 'https://www.skatteetaten.no/rss/presse/pressemeldinger/',
+  sjanger: 'pressemeldingen',
+  kategorihint: 'okonomi for skatt og avgifter; innenriks for arbeidslivskriminalitet og folkeregister.',
+  underlinje: 'Pressemelding fra skatteetaten.no',
+  les: (html) => ({
+    ingress: mellom(html, 'class="lead design-system-wrapper"', '</div>'),
+    body: mellom(html, 'class="article-wrapper narrow-container"', '<footer'),
+  }),
+});
