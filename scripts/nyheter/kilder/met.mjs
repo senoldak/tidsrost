@@ -15,8 +15,10 @@ export default {
       .map((f) => ({ p: f.properties, when: f.when?.interval ?? [] }))
       .filter(({ p }) => {
         const farge = p.awareness_level?.split(';')[1]?.trim();
-        // Sarı uyarılardan sadece karadakiler; denizdeki sarı fırtına uyarıları çok sık.
-        return farge === 'orange' || farge === 'red' || (farge === 'yellow' && p.geographicDomain === 'land');
+        // Sarı uyarılardan karadakiler ve kıyıyı etkileyen fırtına kabarması (stormflo);
+        // denizdeki sarı fırtına (kuling) uyarıları çok sık olduğu için alınmaz.
+        if (farge === 'orange' || farge === 'red') return true;
+        return farge === 'yellow' && (p.geographicDomain === 'land' || p.event === 'stormSurge');
       })
       .map(({ p, when }) => {
         const farge = p.awareness_level.split(';')[1].trim();

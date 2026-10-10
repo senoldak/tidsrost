@@ -94,10 +94,17 @@ export function osloIso(date = new Date()) {
 export const norskDato = (date, opts = {}) =>
   date.toLocaleDateString('nb-NO', { timeZone: 'Europe/Oslo', day: 'numeric', month: 'long', ...opts });
 
+// Ücretsiz katmanın dakikalık sınırını aşmamak için istekler arasında en az bu kadar beklenir.
+const GEMINI_ARALIK_MS = Number(process.env.GEMINI_ARALIK_MS || 4500);
+let sonGeminiKall = 0;
+
 // Gemini'ye istek atar, JSON şemasına uygun yanıt döner.
 export async function gemini({ prompt, schema }) {
   const key = process.env.GEMINI_API_KEY;
   if (!key) return null;
+  const bekle = sonGeminiKall + GEMINI_ARALIK_MS - Date.now();
+  if (bekle > 0) await sleep(bekle);
+  sonGeminiKall = Date.now();
   const model = process.env.GEMINI_MODEL || 'gemini-flash-lite-latest';
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
 

@@ -2,11 +2,11 @@
 // GEMINI_API_KEY yoksa bu kaynak hiç çalışmaz (bkz. lag()).
 import { readFile } from 'node:fs/promises';
 import { hentTekst, lesRss, htmlTilTekst, decodeEntities, gemini, osloIso, KATEGORIER } from '../lib.mjs';
-import { vurder, rett } from '../redaktor.mjs';
+import { redigerSak } from '../redaktor.mjs';
 
 // Site ile ortak ayar (src/lib/redaksjon.json):
 //   "manuell": tüm yapay zekâ haberleri taslak, editör kontrol edip yayınlar
-//   "ki":      yapay zekâ kontrol masası sorun bulursa bir kez düzelttirir, sonra yayınlanır
+//   "ki":      yazı işleri süreci (redaktor.mjs) kontrol eder, düzelttirir ve yayınlar
 //   "ingen":   kontrolsüz otomatik yayın
 const { kontroll } = JSON.parse(await readFile(new URL('../../../src/lib/redaksjon.json', import.meta.url), 'utf8'));
 
@@ -110,16 +110,16 @@ export default {
           if (kontroll === 'manuell') return { ...felles, draft: true, produksjon: 'ki-assistert' };
 
           const kildeTekst = `Avsender: ${side.departement}\nTittel: ${item.title}\nIngress: ${side.ingress || item.description}\n\n${side.body}`;
-          // Kontrol → düzeltme döngüsü (en fazla 2 düzeltme); sonuç her durumda yayınlanır.
-          let utkast = sak;
-          const merknader = [];
-          for (let runde = 0; runde < 2; runde++) {
-            const vurdering = await vurder(utkast, kildeTekst);
-            if (vurdering.godkjent) break;
-            merknader.push(...vurdering.problemer);
-            utkast = await rett(utkast, kildeTekst, vurdering.problemer);
-          }
-          return { ...felles, ...utkast, produksjon: 'ki-kontrollert', ...(merknader.length && { merknader }) };
+          // Yazı işleri: kontrol → düzeltme → Norveççe redaksiyon → son kesin kontrol (bkz. redaktor.mjs).
+          const { sak: ferdig, merknader, stopp } = await redigerSak(sak, kildeTekst);
+          return {
+            ...felles,
+            ...ferdig,
+            produksjon: 'ki-kontrollert',
+            ...(merknader.length && { merknader }),
+            // Uydurma alıntı ya da kaynakta olmayan rakam kaldıysa yayınlanmaz, taslak olarak bekler.
+            ...(stopp.length && { draft: true, stopp }),
+          };
         },
       }));
   },

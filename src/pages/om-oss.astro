@@ -38,15 +38,17 @@ const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/reda
       <p>Deler av innholdet vårt lages med hjelp av automatikk og kunstig intelligens (KI). Vi er åpne om hvordan:</p>
       <ul>
         <li>
-          <strong>Datasaker</strong>, som valutakurser fra Norges Bank og farevarsler fra Meteorologisk institutt, lages
-          automatisk fra offentlige data og publiseres uten manuell redigering.
+          <strong>Datasaker</strong>, som valutakurser fra Norges Bank, farevarsler fra Meteorologisk institutt og
+          flom-, jordskred- og snøskredvarsler fra NVE, lages automatisk fra offentlige data og publiseres uten manuell
+          redigering.
         </li>
         <li>
-          <strong>Saker basert på pressemeldinger</strong> fra regjeringen og departementene skrives med hjelp av KI.
+          <strong>Saker basert på pressemeldinger</strong> fra regjeringen og departementene, og på Stortingets egne
+          oppsummeringer av vedtak, skrives med hjelp av KI.
           {
             {
               manuell: ' De kontrolleres av redaksjonen mot den opprinnelige pressemeldingen før de publiseres.',
-              ki: ' Hver sak kontrolleres automatisk mot den opprinnelige pressemeldingen før publisering: at alle opplysninger har dekning i kilden, at sitater er gjengitt ordrett, og at avsenderens synspunkter er tydelig tilskrevet. Finner kontrollen feil, rettes saken før den publiseres.',
+              ki: ' Hver sak kontrolleres automatisk mot kilden før publisering: at alle opplysninger, tall og navn har dekning i kilden, at sitater er gjengitt ordrett, og at avsenderens synspunkter er tydelig tilskrevet. Deretter språkvaskes saken. Finner kontrollen feil, rettes saken før den publiseres. Kan tall eller sitater fortsatt ikke bekreftes mot kilden, publiseres saken ikke.',
               ingen: ' De publiseres automatisk, uten kontroll på forhånd.',
             }[redaksjon.kontroll]
           }
@@ -67,8 +69,8 @@ const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/reda
 
       <h2>Kilder</h2>
       <p>
-        Vi oppgir alltid kilden og lenker til originalen. Data fra Norges Bank er lisensiert under Norsk lisens for
-        offentlige data (NLOD), og data fra Meteorologisk institutt under CC BY 4.0.
+        Vi oppgir alltid kilden og lenker til originalen. Data fra Norges Bank, NVE og Stortinget er lisensiert under
+        Norsk lisens for offentlige data (NLOD), og data fra Meteorologisk institutt under CC BY 4.0.
       </p>
 
       <h2>Rettelser og klager</h2>

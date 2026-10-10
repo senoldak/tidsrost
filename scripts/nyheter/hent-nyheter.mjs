@@ -4,12 +4,14 @@
 import path from 'node:path';
 import { writeFile, appendFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import { skrivSak, lesJsonFil, sleep } from './lib.mjs';
+import { skrivSak, lesJsonFil } from './lib.mjs';
 import regjeringen from './kilder/regjeringen.mjs';
 import norgesbank from './kilder/norgesbank.mjs';
 import met from './kilder/met.mjs';
+import nve from './kilder/nve.mjs';
+import stortinget from './kilder/stortinget.mjs';
 
-const KILDER = [norgesbank, met, regjeringen];
+const KILDER = [norgesbank, met, nve, stortinget, regjeringen];
 
 const HER = path.dirname(fileURLToPath(import.meta.url));
 const ROT = path.resolve(HER, '../..');
@@ -53,7 +55,8 @@ let antall = 0;
 const feilListe = [];
 const utkastListe = [];
 const rettetListe = [];
-for (const [i, k] of valgt.entries()) {
+const stoppListe = [];
+for (const k of valgt) {
   if (TORR) {
     console.log(`  [tørr] ${k.id} — ${k.tittel}`);
     continue;
@@ -76,7 +79,8 @@ for (const [i, k] of valgt.entries()) {
     delete tilstand.feil[k.id];
     antall++;
     console.log(`  + ${slug}${sak.draft ? ' (utkast)' : ''}`);
-    if (sak.draft) utkastListe.push(`${sak.title}${sak.merknader?.length ? ` — ${sak.merknader.join(' / ')}` : ''}`);
+    if (sak.stopp?.length) stoppListe.push(`${sak.title} — ${sak.stopp.join(' / ')}`);
+    else if (sak.draft) utkastListe.push(`${sak.title}${sak.merknader?.length ? ` — ${sak.merknader.join(' / ')}` : ''}`);
     else if (sak.merknader?.length) rettetListe.push(`${sak.title} — ${sak.merknader.join(' / ')}`);
   } catch (e) {
     // Hata mesajı durum dosyasına da yazılır; loglara bakmadan görülebilsin.
@@ -92,8 +96,6 @@ for (const [i, k] of valgt.entries()) {
       delete tilstand.feil[k.id];
     }
   }
-  // Gemini ücretsiz katmanında dakikalık sınırı aşmamak için.
-  if (process.env.GEMINI_API_KEY && i < valgt.length - 1) await sleep(7_000);
 }
 
 // 90 günden eski kayıtları temizle.
@@ -107,6 +109,7 @@ if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `anta
 if (process.env.GITHUB_STEP_SUMMARY) {
   const ozet = [
     `### Nyhetsbot: ${antall} nye saker`,
+    ...stoppListe.map((t) => `- ⛔ Yayınlanmadı (kaynakta olmayan rakam/alıntı), taslakta bekliyor (/admin): ${t}`),
     ...utkastListe.map((t) => `- 📝 Taslak, kontrol edilip yayınlanmayı bekliyor (/admin): ${t}`),
     ...rettetListe.map((t) => `- ✏️ Kontrol düzeltti ve yayınlandı: ${t}`),
     ...feilListe.map((f) => `- ❌ ${f}`),
