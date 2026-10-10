@@ -102,7 +102,22 @@
     "regjeringen:3176866": "2026-10-09T23:03:51.192Z",
     "regjeringen:3173692": "2026-10-09T23:03:59.421Z",
     "norgesbank:valutauke:2026-10-09": "2026-10-10T12:57:06.607Z",
-    "regjeringen:3176921": "2026-10-10T17:38:47.363Z"
+    "regjeringen:3176921": "2026-10-10T17:38:47.363Z",
+    "nkom:0948d496-d51e-4467-9176-27be370061cf": "2026-10-10T18:37:51.372Z",
+    "nkom:2bdea7fe-5b70-49cc-a0d9-75e5dec1f493": "2026-10-10T18:37:51.372Z",
+    "mattilsynet:https://www.mattilsynet.no/fisk-og-akvakultur/fiskesykdommer/infeksios-lakseanemi-ila/mattilsynet-opphever-vernesonen-i-restriksjonssoneforskrift-for-ila-i-naeroysund-og-namsos-kommuner-trondelag": "2026-10-10T18:37:52.647Z",
+    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/statsbudsjettet-2027-nok-en-gang-paa-stedet-hvil": "2026-10-10T18:37:54.878Z",
+    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/statsbudsjettet-2027-gode-nyheter-for-norske-kunstnere": "2026-10-10T18:37:54.878Z",
+    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/ny-lydzine-byggjer-vidare-paa-kulturraadets-forsking-om-korleis-musikk-tek-form": "2026-10-10T18:37:54.878Z",
+    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/kunstfaglig-skjoenn-er-ikke-moralske-vurderinger": "2026-10-10T18:37:54.878Z",
+    "ssb:7d146942-f505-47b1-af58-aff45664955b": "2026-10-10T18:38:05.927Z",
+    "nkom:1e083d2c-a498-41ff-83a7-6bfdff3f874e": "2026-10-10T18:38:28.479Z",
+    "mattilsynet:https://www.mattilsynet.no/tilbakekallinger/asian-food-import-as-trekker-tilbake-sweet-basil-fra-thailand-etter-pavist-e.coli-i-produktet": "2026-10-10T18:38:55.380Z",
+    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/god-forvaltning-maa-ogsaa-vaere-god-for-kunstnerne": "2026-10-10T18:38:59.298Z",
+    "ssb:eb0f82ee-5fc8-4cbe-8ad4-5ab28a31cefa": "2026-10-10T18:39:13.396Z",
+    "nkom:6926d462-cafd-4a19-b54b-8110c4c01546": "2026-10-10T18:39:35.836Z",
+    "mattilsynet:https://www.mattilsynet.no/dyr/dyresykdommer/fugleinfluensa/mattilsynet-innforer-restriksjoner-for-fjorfehold-i-trondelag": "2026-10-10T18:39:49.337Z",
+    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/statsbudsjettet-2027-lite-nytt-for-kunstnere-og-kulturaktoerer": "2026-10-10T18:40:02.966Z"
   },
   "feil": {},
   "kilder": {
@@ -110,6 +125,11 @@
     "met": "2026-10-09T22:53:04.910Z",
     "regjeringen": "2026-10-09T22:53:05.352Z",
     "nve": "2026-10-10T12:29:33.685Z",
-    "stortinget": "2026-10-10T12:29:35.106Z"
+    "stortinget": "2026-10-10T12:29:35.106Z",
+    "ssb": "2026-10-10T18:37:50.658Z",
+    "nkom": "2026-10-10T18:37:51.372Z",
+    "mattilsynet": "2026-10-10T18:37:52.647Z",
+    "datatilsynet": "2026-10-10T18:37:53.419Z",
+    "kulturdirektoratet": "2026-10-10T18:37:54.878Z"
   }
 }
