@@ -29,7 +29,7 @@ A non-commercial news site with no ads and no revenue, built on primary public s
 
 ## Capabilities and Constraints
 
-- Astro static site, deployed on Cloudflare Pages. Security headers live in `public/_headers`, so any external font or asset host must be allowed there.
+- Astro static site, deployed as a Cloudflare Worker with static assets (Workers Builds, config in `wrangler.jsonc`). Security headers live in `public/_headers`, so any external font or asset host must be allowed there.
 - Corrections (`rettelse`) and production/AI disclosures (`produksjon`, `KI_MERKING` in `src/lib/site.ts`) are editorial obligations and must stay visible.
 - Editor-facing comments in the code are Turkish; all reader-facing copy is Norwegian.
 - Sister sites `finfolis` and `kifobu` (Turkish) share the same code skeleton but must each have a **fully separate identity**, with no shared family look.

@@ -17,11 +17,11 @@ Astro ile yapılmış, Cloudflare'de ücretsiz yayınlanan haber sitesi. Haberle
 
 1. **GitHub:** github.com'da `tidsrost` adında bir repo aç ve bu klasörü yükle.
 2. **Panel ayarı:** `public/admin/config.yml` içinde repo `senoldak/tidsrost` olarak ayarlı.
-3. **Cloudflare:** Workers & Pages → Create → Pages → GitHub reposunu bağla.
-   - Framework preset: **Astro**
+3. **Cloudflare:** Workers & Pages → Create → Workers → "Import a repository" → `tidsrost` reposunu bağla (Workers Builds).
    - Build command: `npm run build`
-   - Output directory: `dist`
-4. **Alan adı:** Pages projesinde Custom domains → `tidsrost.com` ekle.
+   - Deploy command: `npx wrangler deploy`
+   - Ayarlar `wrangler.jsonc` dosyasından okunur: site `dist` klasöründen statik dosya olarak yayınlanır.
+4. **Alan adı:** `tidsrost.com` alan adı `wrangler.jsonc` içindeki `routes` ile her yayında otomatik bağlanır; panelden ayrıca eklemeye gerek yok.
 5. **Panele giriş:** `tidsrost.com/admin` → "Erişim Token'ı Kullanarak Giriş Yap". Açılan GitHub sayfasında token oluştur (sadece `tidsrost` reposuna, Contents: Read and write) ve yapıştır. Tarayıcı bunu hatırlar.
 
 ## Günlük kullanım

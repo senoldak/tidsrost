@@ -25,3 +25,8 @@ pnpm-debug.log*
 
 # editor / claude
 .claude/
+
+# impeccable çalışma dosyaları (taslaklar, ekran görüntüleri)
+.impeccable/mocks/
+.impeccable/questions/
+.impeccable/review/
