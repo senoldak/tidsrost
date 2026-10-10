@@ -10,8 +10,9 @@ import norgesbank from './kilder/norgesbank.mjs';
 import met from './kilder/met.mjs';
 import nve from './kilder/nve.mjs';
 import stortinget from './kilder/stortinget.mjs';
+import { ssb, nkom, mattilsynet, datatilsynet, kulturdirektoratet } from './kilder/etater.mjs';
 
-const KILDER = [norgesbank, met, nve, stortinget, regjeringen];
+const KILDER = [norgesbank, met, nve, stortinget, regjeringen, ssb, nkom, mattilsynet, datatilsynet, kulturdirektoratet];
 
 const HER = path.dirname(fileURLToPath(import.meta.url));
 const ROT = path.resolve(HER, '../..');

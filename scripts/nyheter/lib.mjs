@@ -26,12 +26,18 @@ export async function hentJson(url, headers = {}) {
 
 // HTML varlıklarını (&#xE5; &amp; vb.) çözer.
 export function decodeEntities(s = '') {
-  const named = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', laquo: '«', raquo: '»', ndash: '–', mdash: '—', hellip: '…' };
+  // Büyük/küçük harf ayrımı önemli (&aring; → å, &Aring; → Å).
+  const named = {
+    amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', shy: '', laquo: '«', raquo: '»', ndash: '–', mdash: '—', hellip: '…',
+    lsquo: '‘', rsquo: '’', ldquo: '“', rdquo: '”', euro: '€',
+    aring: 'å', Aring: 'Å', oslash: 'ø', Oslash: 'Ø', aelig: 'æ', AElig: 'Æ',
+    eacute: 'é', Eacute: 'É', auml: 'ä', Auml: 'Ä', ouml: 'ö', Ouml: 'Ö', uuml: 'ü', Uuml: 'Ü',
+  };
   return s
     .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
     .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
     .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)))
-    .replace(/&([a-z]+);/gi, (m, n) => named[n.toLowerCase()] ?? m);
+    .replace(/&([a-z]+);/gi, (m, n) => named[n] ?? named[n.toLowerCase()] ?? m);
 }
 
 // HTML'i paragraflı düz metne çevirir.
