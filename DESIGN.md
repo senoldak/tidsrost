@@ -161,7 +161,7 @@ Survey-sheet restraint: paper and ink do almost all the work, water blue marks i
 - **Water Blue** (water): the single accent. Used for links in prose and production notes, the active legend-nav item and its 3px underline, link hover, focus rings, text selection, the "ø" in the wordmark, and "Alle saker" index links. In nattark it lifts to Nattark Water.
 
 ### Secondary
-- **Contour Brown** (contour-index, contour-intermediate): index and intermediate contour lines in the masthead terrain and the favicon. Frame only.
+- **Contour Brown** (contour-index, contour-intermediate): index and intermediate contour lines in the masthead terrain. Frame only.
 - **Shoreline Blue** (contour-shore): the lowest contour in the masthead, read as the waterline.
 
 ### Tertiary
@@ -180,7 +180,7 @@ Survey-sheet restraint: paper and ink do almost all the work, water blue marks i
 ### Named Rules
 **The One Water Rule.** Water blue is the only interactive accent. Nothing else is clickable-coloured, and no second accent is introduced.
 
-**The Frame-Only Contour Rule.** Contour brown belongs to the masthead terrain and the favicon. It never colours text, rules, or content.
+**The Frame-Only Contour Rule.** Contour brown belongs to the masthead terrain. It never colours text, rules, or content.
 
 **The Mark-Not-Hue Rule.** State is carried by a legend symbol. Breaking red and farevarsel colours always accompany their symbol and label; a colour never carries a state alone.
 
@@ -280,6 +280,10 @@ Square corners everywhere (radius 0). Borders are always 1px, ink for structure 
 - **Don't** put kicker or eyebrow labels above headlines; category and source belong in the meta line.
 - **Don't** use a serif masthead, a red category kicker, or an image-led hero grid (the broadsheet template the world rejects).
 - **Don't** add radius, drop shadows, or raised cards.
-- **Don't** introduce a second interactive accent beside water blue, or use contour brown outside the masthead and favicon.
+- **Don't** introduce a second interactive accent beside water blue, or use contour brown outside the masthead.
 - **Don't** show a state by colour alone; breaking red and farevarsel colours always ride with their symbol and label.
 - **Don't** put covers on list rows or the Siste list.
+
+## Favicon
+
+The favicon is the owner's own mark: a pure red (#ff0000) lowercase "t" set in Coloman, on a transparent ground (`public/favicon.svg` vector, `favicon.ico`, `favicon-32.png`, `favicon-192.png`, `favicon-512.png`, and `apple-touch-icon.png` on white). It is a brand commitment, not part of the map palette, so its red is not a second page accent and never appears inside the page.

@@ -546,7 +546,7 @@
       },
       {
         "name": "The Frame-Only Contour Rule",
-        "body": "Contour brown belongs to the masthead terrain and the favicon. It never colours text, rules, or content.",
+        "body": "Contour brown belongs to the masthead terrain. It never colours text, rules, or content.",
         "section": "colors"
       },
       {
@@ -587,7 +587,7 @@
       "**Don't** put kicker or eyebrow labels above headlines; category and source belong in the meta line.",
       "**Don't** use a serif masthead, a red category kicker, or an image-led hero grid (the broadsheet template the world rejects).",
       "**Don't** add radius, drop shadows, or raised cards.",
-      "**Don't** introduce a second interactive accent beside water blue, or use contour brown outside the masthead and favicon.",
+      "**Don't** introduce a second interactive accent beside water blue, or use contour brown outside the masthead.",
       "**Don't** show a state by colour alone; breaking red and farevarsel colours always ride with their symbol and label.",
       "**Don't** put covers on list rows or the Siste list."
     ]

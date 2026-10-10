@@ -37,13 +37,14 @@ A non-commercial news site with no ads and no revenue, built on primary public s
 ## Brand Commitments
 
 - Name: **tidsrøst**, always lowercase, with the ø.
+- Favicon: a red (#ff0000) lowercase "t" set in Coloman, made by the owner. Files: `public/favicon.svg` (vector traced from the owner's PNG; there is no other source), `favicon.ico`, `favicon-32/192/512.png`, `apple-touch-icon.png`. It is the site's own brand mark, so its red stays even though the page accent is water blue.
 - Voice: plain, sober Norwegian with no clickbait.
 - Footer statements on non-commercial status and press ethics are binding.
 
 ## Evidence on Hand
 
 - Real articles in `src/content/haberler/`.
-- Not on hand: a named editor, publisher or org.nr. (fields in `site.ts` are empty), social accounts, a logo file beyond `favicon.svg`, testimonials or readership numbers. Do not fabricate any of these.
+- Not on hand: a named editor, publisher or org.nr. (fields in `site.ts` are empty), social accounts, a full logo file beyond the favicon, testimonials or readership numbers. Do not fabricate any of these.
 
 ## Product Principles
 
