@@ -10,10 +10,11 @@ import norgesbank from './kilder/norgesbank.mjs';
 import met from './kilder/met.mjs';
 import nve from './kilder/nve.mjs';
 import stortinget from './kilder/stortinget.mjs';
+import udi from './kilder/udi.mjs';
 import { ssb, nkom, mattilsynet, datatilsynet, kulturdirektoratet, norgesbankPresse, finanstilsynet, konkurransetilsynet, skatteetaten,
   vegvesen, fhi, dsb, havforskning, sivilombudet, forbrukerradet, idrettsforbundet, norfund } from './kilder/etater.mjs';
 
-const KILDER = [norgesbank, met, nve, stortinget, regjeringen, ssb, nkom, mattilsynet, datatilsynet, kulturdirektoratet, norgesbankPresse, finanstilsynet, konkurransetilsynet, skatteetaten,
+const KILDER = [norgesbank, met, nve, stortinget, udi, regjeringen, ssb, nkom, mattilsynet, datatilsynet, kulturdirektoratet, norgesbankPresse, finanstilsynet, konkurransetilsynet, skatteetaten,
   vegvesen, fhi, dsb, havforskning, sivilombudet, forbrukerradet, idrettsforbundet, norfund];
 
 const HER = path.dirname(fileURLToPath(import.meta.url));
@@ -34,8 +35,9 @@ for (const kilde of KILDER) {
     let liste = (await kilde.hent()).filter((k) => !tilstand.sett[k.id]);
     liste.sort((a, b) => b.tid - a.tid);
     if (!tilstand.kilder[kilde.navn]) {
-      for (const k of liste.slice(FORSTE_GANG)) tilstand.sett[k.id] = new Date().toISOString();
-      liste = liste.slice(0, FORSTE_GANG);
+      const forste = kilde.forsteGang ?? FORSTE_GANG;
+      for (const k of liste.slice(forste)) tilstand.sett[k.id] = new Date().toISOString();
+      liste = liste.slice(0, forste);
       tilstand.kilder[kilde.navn] = new Date().toISOString();
     }
     kandidater[kilde.navn] = liste;
