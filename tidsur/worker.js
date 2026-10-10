@@ -8,6 +8,10 @@ const DISPATCH = 'https://api.github.com/repos/senoldak/tidsrost/actions/workflo
 
 export default {
   async scheduled(event, env) {
+    // Cron her saat başı (UTC) çalışır; bot sadece Oslo saatiyle çift saatlerde (00, 02, 04 …) başlar.
+    // Böylece yaz/kış saati değişince de saatler kaymaz.
+    const osloSaat = Number(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Oslo', hour: '2-digit', hourCycle: 'h23' }).format(new Date(event.scheduledTime)));
+    if (osloSaat % 2 !== 0) return;
     // Panele/terminale yapıştırırken token'a satır sonu, boşluk ya da "Bearer " eklenebiliyor;
     // bu durumda GitHub başlığı bozuk sayıp gövdesiz 400 döner.
     const token = String(env.GITHUB_TOKEN ?? '').replace(/^\s*(Bearer|token)\s+/i, '').replace(/\s+/g, '');

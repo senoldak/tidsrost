@@ -13,7 +13,7 @@ GitHub'ın kendi zamanlayıcısı (`schedule`) çalışmaları saatlerce gecikti
 
 ## 2. Cloudflare Worker
 
-Kod ve zamanlama (`wrangler.jsonc`, cron `17 */2 * * *`, UTC) bu klasörden yüklenir:
+Kod ve zamanlama (`wrangler.jsonc`, cron `0 * * * *` (UTC); bot sadece Oslo saatiyle çift saatlerde (00, 02, 04 …) başlar) bu klasörden yüklenir:
 
 ```
 cd tidsur
