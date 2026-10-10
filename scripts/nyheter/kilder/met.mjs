@@ -4,8 +4,11 @@ import { hentJson, osloIso, slugify } from '../lib.mjs';
 const URL = 'https://api.met.no/weatherapi/metalerts/2.0/current.json';
 const NIVA = { yellow: 'Gult', orange: 'Oransje', red: 'Rødt' };
 
+// Norveççe saat yazımı nokta ile: "fredag 9. oktober kl. 19.00".
 const tid = (iso) =>
-  new Date(iso).toLocaleString('nb-NO', { timeZone: 'Europe/Oslo', weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' });
+  new Date(iso)
+    .toLocaleString('nb-NO', { timeZone: 'Europe/Oslo', weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' })
+    .replace(/(\d{2}):(\d{2})/, '$1.$2');
 
 export default {
   navn: 'met',
@@ -32,7 +35,7 @@ export default {
           tittel: p.title,
           async lag() {
             const avsnitt = [
-              `Meteorologisk institutt har sendt ut ${NIVA[farge].toLowerCase()} farevarsel for ${p.eventAwarenessName.toLowerCase()} for ${omrade}.`,
+              `Meteorologisk institutt har sendt ut ${NIVA[farge].toLowerCase()} farevarsel for ${p.eventAwarenessName.toLowerCase()} i ${omrade}.`,
               start && slutt ? `Varselet gjelder fra ${tid(start)} til ${tid(slutt)}.` : null,
               p.description,
               p.consequences ? `**Mulige konsekvenser:** ${p.consequences.trim()}` : null,
@@ -40,7 +43,7 @@ export default {
               'Følg med på oppdaterte varsler på [yr.no](https://www.yr.no/nb/farevarsler).',
             ].filter(Boolean);
             return {
-              title: `${NIVA[farge]} farevarsel for ${p.eventAwarenessName.toLowerCase()}: ${p.area}`,
+              title: `${NIVA[farge]} farevarsel for ${p.eventAwarenessName.toLowerCase()} i ${omrade}`,
               description: p.description.split(/(?<=\.)\s/)[0],
               body: avsnitt.join('\n\n'),
               category: 'innenriks',
