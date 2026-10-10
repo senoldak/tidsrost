@@ -3,6 +3,15 @@
 import { hentTekst, lesRss, decodeEntities, htmlTilTekst } from '../lib.mjs';
 import { lagKilde, mellom } from './pressemelding.mjs';
 
+// Atom akışı → lesRss ile aynı alanlar. Bazı akışlarda varlıklar iki kez kaçışlı (&amp;oslash;).
+function lesAtom(xml) {
+  return [...xml.matchAll(/<entry[\s>][\s\S]*?<\/entry>/gi)].map(([e]) => {
+    const felt = (t) => decodeEntities(decodeEntities(e.match(new RegExp('<' + t + '[^>]*>([^]*?)</' + t + '>'))?.[1] ?? '')).trim();
+    const link = e.match(/<link[^>]*rel="alternate"[^>]*href="([^"]+)"/)?.[1] ?? e.match(/<link[^>]*href="([^"]+)"/)?.[1] ?? felt('id');
+    return { guid: felt('id') || link, title: felt('title'), link, description: htmlTilTekst(felt('summary') || felt('content')), pubDate: felt('published') || felt('updated') };
+  });
+}
+
 // Statistisk sentralbyrå: resmi istatistik yayınları. Akışta hem haber başlıklı makaleler
 // (…/artikler/…) hem de "Konsumprisindeksen" gibi çıplak istatistik sayfaları var; sadece makaleler alınır.
 export const ssb = lagKilde({
@@ -140,14 +149,7 @@ export const finanstilsynet = lagKilde({
   sjanger: 'nyhetssaken',
   kategorihint: 'okonomi.',
   underlinje: 'Nyhet fra finanstilsynet.no',
-  async liste() {
-    const xml = await hentTekst('https://www.finanstilsynet.no/rss/nyheter/');
-    return [...xml.matchAll(/<entry[\s>][\s\S]*?<\/entry>/gi)].map(([e]) => {
-      const felt = (t) => decodeEntities(decodeEntities(e.match(new RegExp('<' + t + '[^>]*>([^]*?)</' + t + '>'))?.[1] ?? '')).trim();
-      const link = e.match(/<link[^>]*rel="alternate"[^>]*href="([^"]+)"/)?.[1] ?? e.match(/<link[^>]*href="([^"]+)"/)?.[1] ?? felt('id');
-      return { guid: felt('id') || link, title: felt('title'), link, description: htmlTilTekst(felt('summary')), pubDate: felt('published') || felt('updated') };
-    });
-  },
+  liste: async () => lesAtom(await hentTekst('https://www.finanstilsynet.no/rss/nyheter/')),
   les: (html) => ({
     ingress: '',
     body: mellom(html, 'class="article--bodytext', '</section>'),
@@ -186,4 +188,103 @@ export const skatteetaten = lagKilde({
     ingress: mellom(html, 'class="lead design-system-wrapper"', '</div>'),
     body: mellom(html, 'class="article-wrapper narrow-container"', '<footer'),
   }),
+});
+
+// ── Innenriks, sport, utenriks ─────────────────────────────────────────
+
+// Statens vegvesen: Atom; sadece ulusal basın bültenleri (/om-oss/presse/), yerel yol projeleri atlanır.
+export const vegvesen = lagKilde({
+  navn: 'vegvesen',
+  avsender: 'Statens vegvesen',
+  kortnavn: 'Vegvesenet',
+  sjanger: 'pressemeldingen',
+  kategorihint: 'innenriks.',
+  underlinje: 'Nyhet fra vegvesen.no',
+  liste: async () => lesAtom(await hentTekst('https://www.vegvesen.no/rss/')).filter((i) => i.link.includes('/om-oss/presse/')),
+  les: (html) => ({ ingress: '', body: mellom(html, 'class="article', '<footer') }),
+});
+
+// Folkehelseinstituttet. İntihar gibi hassas konular istemde egnet=false ile elenir.
+export const fhi = lagKilde({
+  navn: 'fhi',
+  avsender: 'Folkehelseinstituttet (FHI)',
+  kortnavn: 'FHI',
+  feed: 'https://www.fhi.no/rss/nyheter/',
+  sjanger: 'nyhetssaken',
+  kategorihint: 'innenriks.',
+  underlinje: 'Nyhet fra fhi.no',
+  les: (html) => ({ ingress: mellom(html, 'md:text-ingress', '</div>'), body: mellom(html, 'article--body textual-block', '<footer') }),
+});
+
+// DSB: sivil savunma, yangın ve elektrik güvenliği.
+export const dsb = lagKilde({
+  navn: 'dsb',
+  avsender: 'Direktoratet for samfunnssikkerhet og beredskap (DSB)',
+  kortnavn: 'DSB',
+  feed: 'https://www.dsb.no/rss/rss-dsb---aktuelt/',
+  sjanger: 'nyhetssaken',
+  kategorihint: 'innenriks.',
+  underlinje: 'Nyhet fra dsb.no',
+  les: (html) => ({ ingress: mellom(html, 'article-header__main-intro', '</div>'), body: mellom(html, 'article__main-body', '<footer') }),
+});
+
+// Havforskningsinstituttet: balık stokları, kota tavsiyeleri.
+export const havforskning = lagKilde({
+  navn: 'havforskning',
+  avsender: 'Havforskningsinstituttet',
+  kortnavn: 'Havforskningsinstituttet',
+  feed: 'https://www.hi.no/hi/rss/nyheter.rss',
+  sjanger: 'nyhetssaken',
+  kategorihint: 'okonomi for fiskekvoter og havbruk som næring; ellers innenriks.',
+  underlinje: 'Nyhet fra hi.no',
+  les: (html) => ({ ingress: '', body: mellom(html, 'class="bodytext padd2"', '<footer') }),
+});
+
+// Sivilombudet: kamu yönetimi denetim raporları.
+export const sivilombudet = lagKilde({
+  navn: 'sivilombudet',
+  avsender: 'Sivilombudet',
+  kortnavn: 'Sivilombudet',
+  feed: 'https://www.sivilombudet.no/feed/',
+  sjanger: 'nyhetssaken',
+  kategorihint: 'innenriks.',
+  underlinje: 'Nyhet fra sivilombudet.no',
+  les: (html) => ({ ingress: mellom(html, 'post-excerpt preamble', '</div>'), body: mellom(html, 'article-body', '<footer') }),
+});
+
+// Forbrukerrådet: tüketici hakları.
+export const forbrukerradet = lagKilde({
+  navn: 'forbrukerradet',
+  avsender: 'Forbrukerrådet',
+  kortnavn: 'Forbrukerrådet',
+  feed: 'https://www.forbrukerradet.no/feed/',
+  sjanger: 'pressemeldingen',
+  kategorihint: 'okonomi for priser, bank, forsikring og handel; ellers innenriks.',
+  underlinje: 'Nyhet fra forbrukerradet.no',
+  les: (html) => ({ ingress: '', body: mellom(html, 'article-main', '<footer') }),
+});
+
+// Norges idrettsforbund. Fotoğraflarını kullanmıyoruz (kendileri yasaklıyor); kapak her zaman kaynak kartı.
+export const idrettsforbundet = lagKilde({
+  navn: 'idrettsforbundet',
+  avsender: 'Norges idrettsforbund',
+  kortnavn: 'Idrettsforbundet',
+  feed: 'https://www.idrettsforbundet.no/rss/nyheter',
+  sjanger: 'nyhetssaken',
+  kategorihint: 'sport.',
+  underlinje: 'Nyhet fra idrettsforbundet.no',
+  les: (html) => ({ ingress: mellom(html, 'class="ingress', '</div>'), body: mellom(html, 'class="body-text', '<footer') }),
+});
+
+// Norfund: kalkınma yatırımları; akış çoğunlukla İngilizce. İlk girdi sitenin kendisi.
+export const norfund = lagKilde({
+  navn: 'norfund',
+  avsender: 'Norfund',
+  kortnavn: 'Norfund',
+  feed: 'https://www.norfund.no/feed/',
+  sjanger: 'pressemeldingen (kan være på engelsk; skriv saken på norsk bokmål)',
+  kategorihint: 'utenriks for investeringer i utlandet; okonomi for selskapsnytt.',
+  underlinje: 'Nyhet fra norfund.no',
+  filter: (i) => i.title !== 'Norfund',
+  les: (html) => ({ ingress: '', body: mellom(html, 'class="entry-content', '<footer') }),
 });
