@@ -103,13 +103,26 @@ function kursSetning(l, sammenlignTekst) {
 
 // ── Haftalık özet ──────────────────────────────────────────────────────
 
-function ukesoppsummering(per, sisteDato) {
+function ukesoppsummering(per, sisteDato, storFredag = false) {
   // Sadece cuma kuru geldiğinde; karşılaştırma bir önceki haftanın son iş günüyle.
   if (dato(sisteDato).getUTCDay() !== 5) return [];
   const mandag = new Date(dato(sisteDato).getTime() - 4 * 864e5).toISOString().slice(0, 10);
   const datoer = [...new Set((per.EUR ?? []).map((o) => o.dato))];
   const forrigeUke = datoer.filter((d) => d < mandag).at(-1);
   if (!forrigeUke) return [];
+
+  // Cuma günü büyük hareket olduysa özete bir cümle olarak eklenir (ayrı günlük haber yazılmaz).
+  let fredagSetning = null;
+  const torsdag = datoer.filter((d) => d < sisteDato).at(-1);
+  if (storFredag && torsdag) {
+    const dag = endringer(per, sisteDato, torsdag).filter((l) => ['EUR', 'USD'].includes(l.kode));
+    const s = dag.sort((a, b) => Math.abs(b.endring) - Math.abs(a.endring))[0];
+    // Devrik cümle: "Bare fredag svekket kronen seg …" (fiil – özne – "seg").
+    if (s && kronenMot(s)) {
+      const verb = kronenMot(s).replace(' seg', '');
+      fredagSetning = `Bare fredag ${verb} kronen seg ${pst(s.endring)} mot ${s.kode === 'EUR' ? 'euro' : 'dollar'}.`;
+    }
+  }
 
   const linjer = endringer(per, sisteDato, forrigeUke);
   const eur = linjer.find((l) => l.kode === 'EUR');
@@ -130,11 +143,11 @@ function ukesoppsummering(per, sisteDato) {
       const avsnitt = [
         `${overskrift(eur, usd, 'uke')}. Ifølge Norges Banks referansekurs fra ${dagTekst(sisteDato)} kostet en euro ${tall(eur.verdi)} kroner – ${
           Math.abs(eur.endring) < ROLIG ? `omtrent det samme som ${fraTekst}` : `${differanse(eur.diff)} ${eur.diff > 0 ? 'mer' : 'mindre'} enn ${fraTekst}`
-        }.`,
+        }.${fredagSetning ? ` ${fredagSetning}` : ''}`,
         [
           usd ? kursSetning(usd, ukeFør) : null,
           andre && Math.abs(andre.endring) >= ROLIG
-            ? `${stor(andre.best)} ${andre.endring > 0 ? 'steg' : 'falt'} ${pst(andre.endring)} mot norske kroner gjennom uken.`
+            ? `${stor(andre.best)} ${andre.endring > 0 ? 'steg' : 'falt'} ${pst(andre.endring)} mot norsk krone gjennom uken.`
             : null,
         ]
           .filter(Boolean)
@@ -197,7 +210,9 @@ async function valuta() {
   const sisteDato = (per.EUR ?? []).at(-1)?.dato;
   // Sadece son 3 gün içindeki kurlar haber olur.
   if (!sisteDato || Date.now() - dato(sisteDato).getTime() > 3 * 864e5) return [];
-  return [...storDagsbevegelse(per, sisteDato), ...ukesoppsummering(per, sisteDato)];
+  // Cuma günü haftalık özet çıkar; aynı gün ayrıca günlük haber yazılmaz, günün hareketi özette anlatılır.
+  const uke = ukesoppsummering(per, sisteDato, storDagsbevegelse(per, sisteDato).length > 0);
+  return uke.length ? uke : storDagsbevegelse(per, sisteDato);
 }
 
 async function styringsrente() {

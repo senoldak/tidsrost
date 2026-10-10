@@ -8,7 +8,7 @@ produksjon: automatisk
 
 Kronen styrket seg denne uken. Ifølge Norges Banks referansekurs fra fredag 9. oktober kostet en euro 10,72 kroner – 12 øre mindre enn fredag 2. oktober.
 
-En dollar kostet 9,56 kroner, 9 øre mindre enn en uke tidligere. Pundet falt 0,8 prosent mot norske kroner gjennom uken.
+En dollar kostet 9,56 kroner, 9 øre mindre enn en uke tidligere. Pundet falt 0,8 prosent mot norsk krone gjennom uken.
 
 | Valuta | Kurs | Endring siden 2. oktober |
 |---|---:|---:|
