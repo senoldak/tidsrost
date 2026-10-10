@@ -84,6 +84,9 @@ const today = new Date().toLocaleDateString(SITE.locale, {
           <a href="/" class="logo logo-sm">{SITE.name}</a>
           <p>{SITE.description}</p>
           {SITE.redaktor && <p>Ansvarlig redaktør: {SITE.redaktor}</p>}
+          {SITE.utgiver && <p>Utgiver: {SITE.utgiver}{SITE.orgnr && `, org.nr. ${SITE.orgnr}`}</p>}
+          {SITE.epost && <p>Kontakt: <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a></p>}
+          {SITE.ikkeKommersiell && <p>Ikke-kommersielt nettsted uten annonser og inntekter.</p>}
           <p>Vi arbeider etter Vær Varsom-plakaten og Redaktørplakaten.</p>
         </div>
         <nav aria-label="Bunnmeny">

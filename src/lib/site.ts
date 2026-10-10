@@ -9,7 +9,12 @@ export const SITE = {
   // Sorumlu editör ve iletişim; sitenin altbilgisinde ve "Om oss" sayfasında gösterilir.
   // Boş bırakılan alanlar sitede görünmez.
   redaktor: '',
-  epost: '',
+  epost: 'redaksjon@tidsrost.com',
+  // Yayıncı; şirket kurulursa adı ve organizasyon numarası buraya yazılır.
+  utgiver: '',
+  orgnr: '',
+  // Sitenin gelir getirmediği açıkça belirtilir (altbilgi ve "Om oss").
+  ikkeKommersiell: true,
 };
 
 import redaksjon from './redaksjon.json';

@@ -25,6 +25,15 @@ const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/reda
         intelligens.
       </p>
 
+      <h2>Utgiver og finansiering</h2>
+      <p>
+        {SITE.utgiver && <>Utgiver er {SITE.utgiver}{SITE.orgnr && `, org.nr. ${SITE.orgnr}`}. </>}
+        {
+          SITE.ikkeKommersiell &&
+            `${SITE.name} er et ikke-kommersielt nettsted. Siden har ingen annonser, ingen betalte abonnementer, ingen sponsorer og ingen inntekter.`
+        }
+      </p>
+
       <h2 id="ki">Automatikk og kunstig intelligens</h2>
       <p>Deler av innholdet vårt lages med hjelp av automatikk og kunstig intelligens (KI). Vi er åpne om hvordan:</p>
       <ul>
