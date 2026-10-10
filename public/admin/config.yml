@@ -73,6 +73,7 @@ collections:
       - { name: date, label: Yayın tarihi, widget: datetime, default: '{{now}}', input_timezone: Europe/Oslo }
       - { name: cover, label: Kapak resmi, widget: image, required: false }
       - { name: coverAlt, label: Resim açıklaması, widget: string, required: false }
+      - { name: coverKreditt, label: Resim kaynağı, widget: string, required: false, hint: 'Ör. Foto: Ola Nordmann / NTB. Resim altında gösterilir.' }
       - { name: author, label: Yazar, widget: string, default: tidsrøst }
       - name: featured
         label: Manşet

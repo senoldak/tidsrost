@@ -4,6 +4,9 @@ description: "Regjeringen har besluttet at ordningen med midlertidig kollektiv b
 date: 2026-10-10T01:03:51+02:00
 category: innenriks
 produksjon: ki-kontrollert
+cover: ./cover.png
+coverAlt: "Illustrasjon med teksten «Justis- og beredskapsdepartementet»"
+coverKreditt: "Illustrasjon: tidsrøst"
 ---
 
 Ifølge opplysninger fra regjeringen vil ordningen med midlertidig kollektiv beskyttelse for personer som er fordrevne fra Ukraina, bli videreført til mars 2028. Dette betyr at ordningen også vil gjelde for ukrainere som ankommer Norge i tiden fremover, ettersom de fleste ukrainere som oppholder seg i landet har denne type beskyttelse.

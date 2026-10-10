@@ -1,10 +1,13 @@
 // Haber botu için ortak yardımcılar: indirme, RSS okuma, HTML temizleme, Gemini, dosya yazma.
 import { mkdir, readFile, writeFile, access } from 'node:fs/promises';
 import path from 'node:path';
+import { kildekort, tilPng } from './bilde.mjs';
 
 export const USER_AGENT = 'tidsrost-nyhetsbot/1.0 (+https://github.com/senoldak/tidsrost)';
 
 export const KATEGORIER = ['innenriks', 'utenriks', 'okonomi', 'sport', 'kultur', 'teknologi'];
+const KATEGORI_NAVN = { innenriks: 'Innenriks', utenriks: 'Utenriks', okonomi: 'Økonomi', sport: 'Sport', kultur: 'Kultur', teknologi: 'Teknologi' };
+export const kategoriNavn = (slug) => KATEGORI_NAVN[slug] ?? slug;
 
 export const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -166,11 +169,51 @@ export function trygg(tekst = '') {
     .replace(/\[([^\]]*)\]\(\s*((?:[^()\s]|\([^()\s]*\))*)[^)]*\)/g, (m, txt, url) => (/^https:\/\/[^\s"'<>]+$/i.test(url) ? `[${txt}](${url})` : txt));
 }
 
+// Norveç yazım kuralları (Språkrådet); yapay zekâya bırakmadan her habere en son uygulanır.
+// Tablolar (| ile başlayan satırlar) ve linklerin adresleri değiştirilmez.
+export function typografi(tekst = '', { tittel = false } = {}) {
+  const satirlar = String(tekst)
+    .split('\n')
+    .map((linje) => {
+      if (/^\s*\|/.test(linje)) return linje;
+      // Linkleri geçici olarak ayır ki adreslerine dokunulmasın.
+      const lenker = [];
+      let l = linje.replace(/\]\(([^)]*)\)/g, (m) => `\u0000${lenker.push(m) - 1}\u0000`);
+      l = l
+        // Satır başı alıntı: "- Tekst, sier X." Markdown'da liste maddesine dönüşmesin.
+        .replace(/^[-–]\s+(?=.+,\s*(?:sier|seier|skriver|uttaler|understreker|påpeker|legger til)\b)/, '– ')
+        // Düz ve kıvrık tırnaklar → « »
+        .replace(/"([^"\n]+)"/g, '«$1»')
+        .replace(/[“”„]([^“”„\n]+)[“”]/g, '«$1»')
+        // Boşluklu kısa çizgi → uzun tire
+        .replace(/ - /g, ' – ')
+        // Saat: kl. 14:15 → kl. 14.15
+        .replace(/\b(kl\.\s?\d{1,2}):(\d{2})\b/g, '$1.$2')
+        // Kısaltma Språkrådet normuyla: "f. eks." → "f.eks."
+        .replace(/\bf\.\s+eks\./g, 'f.eks.')
+        // Yüzde işaretinden önce boşluk: 5,3% → 5,3 %
+        .replace(/(\d)%/g, '$1 %')
+        // Noktalama öncesi boşluk ve çift boşluk
+        .replace(/ +([,.;:!?])(?=\s|$)/g, '$1')
+        .replace(/ {2,}/g, ' ')
+        .trimEnd();
+      return l.replace(/\u0000(\d+)\u0000/g, (_, i) => lenker[i]);
+    });
+  let ut = satirlar.join('\n').replace(/\n{3,}/g, '\n\n').trim();
+  if (tittel) ut = ut.replace(/\s*\.$/, '').replace(/\s+/g, ' ');
+  return ut;
+}
+
 // Haberi src/content/haberler/<slug>/index.md olarak yazar, slug'ı döner.
 export async function skrivSak(rot, sak) {
   if (!KATEGORIER.includes(sak.category)) sak.category = 'innenriks';
   if (!/^https:\/\//.test(sak.kilde.url)) throw new Error(`Ugyldig kilde-URL: ${sak.kilde.url}`);
-  sak = { ...sak, title: trygg(sak.title), description: trygg(sak.description), body: trygg(sak.body) };
+  sak = {
+    ...sak,
+    title: typografi(trygg(sak.title), { tittel: true }),
+    description: typografi(trygg(sak.description), { tittel: false }).replace(/\s+/g, ' '),
+    body: typografi(trygg(sak.body)),
+  };
   const base = path.join(rot, 'src/content/haberler');
   let slug = slugify(sak.title) || 'sak';
   for (let i = 2; ; i++) {
@@ -190,14 +233,37 @@ export async function skrivSak(rot, sak) {
     sak.breaking ? 'breaking: true' : null,
     sak.draft ? 'draft: true' : null,
     `produksjon: ${sak.produksjon}`,
-    '---',
   ].filter(Boolean);
   // Üretim şekli notu sayfada ayrıca gösterilir; burada sadece kaynak (VVP 3.1).
   const kilde = `*Kilde: [${sak.kilde.navn}](${sak.kilde.url})${sak.kilde.lisens ? ` (${sak.kilde.lisens})` : ''}*`;
-  const innhold = `${fm.join('\n')}\n\n${sak.body.trim()}\n\n${kilde}\n`;
   await mkdir(path.join(base, slug), { recursive: true });
+  const bilde = await lagBilde(sak);
+  if (bilde) {
+    await writeFile(path.join(base, slug, 'cover.png'), bilde.png);
+    fm.push('cover: ./cover.png', `coverAlt: ${yamlStr(bilde.alt)}`, `coverKreditt: ${yamlStr(bilde.kreditt)}`);
+  }
+  fm.push('---');
+  const innhold = `${fm.join('\n')}\n\n${sak.body.trim()}\n\n${kilde}\n`;
   await writeFile(path.join(base, slug, 'index.md'), innhold, 'utf8');
   return slug;
+}
+
+// Kapak resmi: kaynak kendi görselini verdiyse (harita, grafik) o, yoksa kaynağın adıyla tipografik kart.
+// sak.bilde = { svg: (sak) => string | Promise<string>, alt, kreditt }
+// Görsel üretilemezse haber yine yazılır, sadece kapaksız kalır.
+async function lagBilde(sak) {
+  const b = sak.bilde ?? {
+    svg: () => kildekort({ kategori: kategoriNavn(sak.category), avsender: sak.kilde.navn }),
+    alt: `Illustrasjon med teksten «${sak.kilde.navn}»`,
+    kreditt: 'Illustrasjon: tidsrøst',
+  };
+  try {
+    const png = await tilPng(await b.svg(sak));
+    return png && { png, alt: b.alt, kreditt: b.kreditt };
+  } catch (e) {
+    console.warn(`  kapak resmi üretilemedi: ${e.message}`);
+    return null;
+  }
 }
 
 export async function lesJsonFil(fil, fallback) {

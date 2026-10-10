@@ -1,7 +1,8 @@
 // Stortinget: Meclis'in karara bağladığı dosyalar.
 // Kaynak, Meclis'in kendi yazdığı tarafsız karar özeti (kortvedtak); haber bundan yazılır ve
 // yazı işleri sürecinden (redaktor.mjs) geçer. GEMINI_API_KEY yoksa bu kaynak çalışmaz.
-import { hentJson, gemini, osloIso, KATEGORIER } from '../lib.mjs';
+import { hentJson, gemini, osloIso, KATEGORIER, kategoriNavn } from '../lib.mjs';
+import { kildekort } from '../bilde.mjs';
 import { redigerSak } from '../redaktor.mjs';
 
 const API = 'https://data.stortinget.no/eksport';
@@ -77,7 +78,6 @@ export default {
             `Sak: ${d.tittel}`,
             d.korttittel && d.korttittel !== d.tittel ? `Korttittel: ${d.korttittel}` : null,
             d.komite?.navn ? `Komité: ${d.komite.navn}` : null,
-            d.henvisning ? `Henvisning: ${d.henvisning}` : null,
             `Stortingets oppsummering av vedtaket:\n${vedtak}`,
           ]
             .filter(Boolean)
@@ -89,6 +89,11 @@ export default {
             ...ferdig,
             date: osloIso(),
             kilde: { navn: 'Stortinget', url: KILDE_URL(s.id), lisens: 'NLOD' },
+            bilde: {
+              svg: (sak) => kildekort({ kategori: kategoriNavn(sak.category), avsender: 'Stortinget', underlinje: d.komite?.navn }),
+              alt: 'Illustrasjon med teksten «Stortinget»',
+              kreditt: 'Illustrasjon: tidsrøst',
+            },
             produksjon: 'ki-kontrollert',
             ...(merknader.length && { merknader }),
             ...(stopp.length && { draft: true, stopp }),

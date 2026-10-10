@@ -1,7 +1,8 @@
 // Regjeringen.no: departementlerin haber ve basın bültenleri.
 // GEMINI_API_KEY yoksa bu kaynak hiç çalışmaz (bkz. lag()).
 import { readFile } from 'node:fs/promises';
-import { hentTekst, lesRss, htmlTilTekst, decodeEntities, gemini, osloIso, KATEGORIER } from '../lib.mjs';
+import { hentTekst, lesRss, htmlTilTekst, decodeEntities, gemini, osloIso, sleep, KATEGORIER, kategoriNavn } from '../lib.mjs';
+import { kildekort } from '../bilde.mjs';
 import { redigerSak } from '../redaktor.mjs';
 
 // Site ile ortak ayar (src/lib/redaksjon.json):
@@ -11,6 +12,43 @@ import { redigerSak } from '../redaktor.mjs';
 const { kontroll } = JSON.parse(await readFile(new URL('../../../src/lib/redaksjon.json', import.meta.url), 'utf8'));
 
 const FEED = 'https://www.regjeringen.no/no/rss/Rss/2581966/?documentType=aktuelt/nyheter';
+
+// Ana akışta gönderen bakanlık yazmıyor; haber sayfası da GitHub'dan 403 veriyor.
+// Bu yüzden bakanlık, her bakanlığın kendi RSS akışından (owner=<id>) bulunur.
+// Kimlikler regjeringen.no/no/aktuelt/rss/id2581966/ sayfasındaki bakanlık filtresinden.
+const DEPARTEMENTER = {
+  875: 'Statsministerens kontor',
+  165: 'Arbeids- og inkluderingsdepartementet',
+  298: 'Barne- og familiedepartementet',
+  810: 'Digitaliserings- og forvaltningsdepartementet',
+  750: 'Energidepartementet',
+  216: 'Finansdepartementet',
+  380: 'Forsvarsdepartementet',
+  421: 'Helse- og omsorgsdepartementet',
+  463: 'Justis- og beredskapsdepartementet',
+  668: 'Klima- og miljødepartementet',
+  504: 'Kommunal- og distriktsdepartementet',
+  545: 'Kultur- og likestillingsdepartementet',
+  586: 'Kunnskapsdepartementet',
+  627: 'Landbruks- og matdepartementet',
+  709: 'Nærings- og fiskeridepartementet',
+  791: 'Samferdselsdepartementet',
+  833: 'Utenriksdepartementet',
+};
+
+// guid → bakanlık adı. Bir akış alınamazsa o bakanlığın haberleri "Regjeringen" olarak kalır.
+async function avsendere() {
+  const kart = new Map();
+  for (const [id, navn] of Object.entries(DEPARTEMENTER)) {
+    try {
+      for (const i of lesRss(await hentTekst(`${FEED}&owner=${id}`))) if (!kart.has(i.guid)) kart.set(i.guid, navn);
+    } catch (e) {
+      console.warn(`  regjeringen: ${navn} akışı alınamadı (${e.message})`);
+    }
+    await sleep(200);
+  }
+  return kart;
+}
 
 // Haber değeri düşük rutin başlıklar.
 const HOPP_OVER = [/program (for )?(uke|veke)/i, /^statsr[åa]dens program/i, /ledig stilling/i];
@@ -62,7 +100,7 @@ Varsomhet (VVP 4.3, 4.5, 4.7, 4.8):
 Form:
 - Første avsnitt skal fortelle det viktigste: hvem, hva, hvorfor.${kort ? `
 - Du har bare tittel og ingress. Skriv en kort sak på 1–2 avsnitt. Ikke fyll ut.
-- Avslutt med en setning om at hele pressemeldingen kan leses hos regjeringen.no.` : `
+- Ikke avslutt med henvisninger som «les mer på regjeringen.no»; lenken til kilden legges til automatisk.` : `
 - 3–6 korte avsnitt.`}
 - Ingen overskrift i body, ingen kildehenvisning nederst (den legges til automatisk).
 - Velg kategori: innenriks (norske forhold), utenriks (internasjonalt), okonomi, kultur, teknologi eller sport.
@@ -79,9 +117,12 @@ export default {
   async hent() {
     const items = lesRss(await hentTekst(FEED));
     const naa = Date.now();
-    return items
+    const nye = items
       .filter((i) => i.guid && !HOPP_OVER.some((r) => r.test(i.title)))
-      .filter((i) => new Date(i.pubDate).getTime() <= naa)
+      .filter((i) => new Date(i.pubDate).getTime() <= naa);
+    // Bakanlık akışları (17 küçük RSS isteği) sadece akışta aday varsa indirilir.
+    const avsenderFor = nye.length ? await avsendere() : new Map();
+    return nye
       .map((item) => ({
         id: `regjeringen:${item.guid}`,
         tid: new Date(item.pubDate),
@@ -95,7 +136,7 @@ export default {
             side = lesSide(await hentTekst(url));
           } catch (e) {
             if (!/^40[13] /.test(e.message)) throw e;
-            side = { ingress: item.description, body: '', departement: 'regjeringen' };
+            side = { ingress: item.description, body: '', departement: avsenderFor.get(item.guid) ?? 'regjeringen' };
           }
           const kilde = { navn: side.departement === 'regjeringen' ? 'regjeringen.no' : `${side.departement} / regjeringen.no`, url };
           // Anahtar yoksa null döner; haber atlanır ve sonraki çalışmada tekrar denenir.
@@ -105,7 +146,14 @@ export default {
           // Özel dikkat gerektiren konular (kişiler, suç, çocuklar vb.) otomatik işlenmez.
           if (!ai.egnet) return { hopp: 'krever særlig varsomhet, bør vurderes manuelt' };
           const { egnet, ...sak } = ai;
-          const felles = { ...sak, date: osloIso(), kilde };
+          // Kapak: bülteni gönderen bakanlığın adıyla tipografik kart.
+          const avsender = side.departement === 'regjeringen' ? 'Regjeringen' : side.departement;
+          const bilde = {
+            svg: (s) => kildekort({ kategori: kategoriNavn(s.category), avsender, underlinje: 'Pressemelding på regjeringen.no' }),
+            alt: `Illustrasjon med teksten «${avsender}»`,
+            kreditt: 'Illustrasjon: tidsrøst',
+          };
+          const felles = { ...sak, date: osloIso(), kilde, bilde };
           if (kontroll === 'ingen') return { ...felles, produksjon: 'ki-automatisk' };
           if (kontroll === 'manuell') return { ...felles, draft: true, produksjon: 'ki-assistert' };
 

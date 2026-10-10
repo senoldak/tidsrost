@@ -1,8 +1,10 @@
 // NVE / Varsom: sel (flom), heyelan (jordskred) ve çığ (snøskred) uyarıları.
 // Metinler NVE'nin kendi resmî uyarı metinlerinden şablonla kurulur; yapay zekâ kullanılmaz.
 import { hentJson, osloIso } from '../lib.mjs';
+import { varselkart, kommuneOmrader } from '../bilde.mjs';
 
 const NIVA = { 2: 'Gult', 3: 'Oransje', 4: 'Rødt' };
+const KARTFARGE = { 2: 'gul', 3: 'oransje', 4: 'rod' };
 const TYPE = { flood: 'flom', landslide: 'jordskred' };
 const SNOSKRED_NIVA = { 4: 'Stor', 5: 'Meget stor' };
 const KILDE = { navn: 'NVE / Varsom', url: 'https://www.varsom.no/', lisens: 'NLOD' };
@@ -14,11 +16,13 @@ const idag = () => (process.env.NVE_DATO ? new Date(`${process.env.NVE_DATO}T12:
 // NVE tarihleri saat dilimi olmadan, Norveç saatiyle gelir ("2026-10-10T07:00:00").
 const MND = ['januar', 'februar', 'mars', 'april', 'mai', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'desember'];
 const DAG = ['søndag', 'mandag', 'tirsdag', 'onsdag', 'torsdag', 'fredag', 'lørdag'];
+// Bitiş saatleri "06:59:59" gibi gelir; okura "kl. 07.00" olarak gösterilir.
 function tid(lokal) {
-  const [d, t = '00:00'] = lokal.split('T');
-  const [y, m, dd] = d.split('-').map(Number);
-  const ukedag = DAG[new Date(Date.UTC(y, m - 1, dd)).getUTCDay()];
-  return `${ukedag} ${dd}. ${MND[m - 1]} kl. ${t.slice(0, 5).replace(':', '.')}`;
+  const t = new Date(`${lokal.slice(0, 19)}Z`);
+  if (t.getUTCSeconds() === 59) t.setUTCSeconds(60);
+  const ukedag = DAG[t.getUTCDay()];
+  const kl = `${String(t.getUTCHours()).padStart(2, '0')}.${String(t.getUTCMinutes()).padStart(2, '0')}`;
+  return `${ukedag} ${t.getUTCDate()}. ${MND[t.getUTCMonth()]} kl. ${kl}`;
 }
 
 const liste = (navn) => (navn.length <= 1 ? navn.join('') : `${navn.slice(0, -1).join(', ')} og ${navn.at(-1)}`);
@@ -38,11 +42,12 @@ async function farevarsler(type) {
     if (niva < 2 || !nokkel) continue;
     let g = grupper.get(nokkel);
     if (!g) {
-      g = { ...w, nokkel, niva, fylker: new Set(), fra: w.ValidFrom, til: w.ValidTo };
+      g = { ...w, nokkel, niva, fylker: new Set(), kommuner: new Set(), fra: w.ValidFrom, til: w.ValidTo };
       grupper.set(nokkel, g);
     }
     g.niva = Math.max(g.niva, niva);
     for (const c of w.CountyList ?? []) g.fylker.add(c.Name);
+    for (const k of w.MunicipalityList ?? []) g.kommuner.add(k.Id);
     if (w.ValidFrom < g.fra) Object.assign(g, { fra: w.ValidFrom, WarningText: w.WarningText, ConsequenceText: w.ConsequenceText, AdviceText: w.AdviceText });
     if (w.ValidTo > g.til) g.til = w.ValidTo;
   }
@@ -78,6 +83,19 @@ async function farevarsler(type) {
           date: osloIso(),
           produksjon: 'automatisk',
           kilde: KILDE,
+          bilde: {
+            svg: async () =>
+              varselkart({
+                omrade: await kommuneOmrader([...g.kommuner]),
+                niva: KARTFARGE[g.niva],
+                tittel: `${NIVA[g.niva]} farevarsel`,
+                undertittel: `${navn[0].toUpperCase()}${navn.slice(1)} · ${fylker}`,
+                kilde: 'Varselområde: NVE. Kommunegrenser: © Kartverket',
+                klippTilLand: true,
+              }),
+            alt: `Kart som viser kommunene med ${NIVA[g.niva].toLowerCase()} farevarsel for ${navn} i ${fylker}.`,
+            kreditt: 'Kart: tidsrøst. Varselområde: NVE (NLOD). Kommunegrenser: © Kartverket (CC BY 4.0). Kartgrunnlag: Natural Earth.',
+          },
         };
       },
     };

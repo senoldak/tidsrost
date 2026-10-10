@@ -10,6 +10,7 @@ Astro ile yapılmış, Cloudflare'de ücretsiz yayınlanan haber sitesi. Haberle
 | `src/lib/site.ts` | Site adı, açıklama, sosyal medya linkleri, kategoriler |
 | `public/admin/config.yml` | Panel ayarları (kategoriler `site.ts` ile aynı olmalı) |
 | `src/styles/global.css` | Tasarım (renkler en üstte) |
+| `scripts/nyheter/bilde.mjs` | Botun kapak resimleri: uyarı haritası, kur grafiği, kaynak kartı. Dışarıdan fotoğraf alınmaz, telif derdi yok |
 
 ## Kurulum (bir kerelik)
 

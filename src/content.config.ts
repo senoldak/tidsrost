@@ -15,6 +15,8 @@ const haberler = defineCollection({
       category: z.enum(slugs),
       cover: image().optional(),
       coverAlt: z.string().optional(),
+      // Görselin kaynağı/hakları (ör. "Kart: tidsrøst. Kartgrunnlag: Natural Earth."); resim altında gösterilir.
+      coverKreditt: z.string().optional(),
       author: z.string().default('tidsrøst'),
       featured: z.boolean().default(false),
       breaking: z.boolean().default(false),

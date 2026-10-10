@@ -4,6 +4,9 @@ description: "Fra fredag ettermiddag er det ventet 5-15 cm snø på 24 timer i h
 date: 2026-10-10T00:53:12+02:00
 category: innenriks
 produksjon: automatisk
+cover: ./cover.png
+coverAlt: "Kart som viser området med gult farevarsel for snø i deler av Sør-Norge."
+coverKreditt: "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
 ---
 
 Meteorologisk institutt har sendt ut gult farevarsel for snø i deler av Sør-Norge.

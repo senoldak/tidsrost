@@ -4,6 +4,9 @@ description: "Ifølge Kommunal- og distriktsdepartementet får Oslo kommune og O
 date: 2026-10-10T01:03:59+02:00
 category: innenriks
 produksjon: ki-kontrollert
+cover: ./cover.png
+coverAlt: "Illustrasjon med teksten «Kommunal- og distriktsdepartementet»"
+coverKreditt: "Illustrasjon: tidsrøst"
 ---
 
 Regjeringen foreslår i statsbudsjettet for 2027 en realvekst i kommunesektorens frie inntekter på 3,2 milliarder kroner, opplyser Kommunal- og distriktsdepartementet i en pressemelding.

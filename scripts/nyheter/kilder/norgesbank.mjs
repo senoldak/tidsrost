@@ -2,6 +2,7 @@
 //  - Haftalık döviz özeti: haftanın son kuru cuma geldiğinde (her hafta bir haber).
 //  - Günlük haber: sadece euro ya da dolar bir günde belirgin oynarsa.
 import { hentTekst, osloIso, norskDato } from '../lib.mjs';
+import { kursgraf, tallkort } from '../bilde.mjs';
 
 // tabell: tablodaki ad; navn: metinde; best: belirli hâli ("euroen steg").
 const VALUTA = {
@@ -101,6 +102,21 @@ function kursSetning(l, sammenlignTekst) {
   return `${enhetTekst(l)} kostet ${tall(l.verdi)} kroner, ${differanse(l.diff)} ${mer} enn ${sammenlignTekst}.`;
 }
 
+// Kapak: euro ve doların son üç haftası, yan yana iki grafik.
+function kursBilde(per) {
+  const serier = [
+    { navn: '1 euro', punkter: per.EUR ?? [] },
+    { navn: '1 amerikansk dollar', punkter: per.USD ?? [] },
+  ].filter((s) => s.punkter.length > 1);
+  const fra = serier[0]?.punkter[0]?.dato;
+  const til = serier[0]?.punkter.at(-1)?.dato;
+  return {
+    svg: () => kursgraf({ tittel: 'Euro og dollar i norske kroner', serier }),
+    alt: `Graf over Norges Banks referansekurs for euro og amerikanske dollar fra ${fra && norskDato(dato(fra))} til ${til && norskDato(dato(til))}.`,
+    kreditt: 'Grafikk: tidsrøst. Data: Norges Bank (NLOD).',
+  };
+}
+
 // ── Haftalık özet ──────────────────────────────────────────────────────
 
 function ukesoppsummering(per, sisteDato, storFredag = false) {
@@ -147,7 +163,7 @@ function ukesoppsummering(per, sisteDato, storFredag = false) {
         [
           usd ? kursSetning(usd, ukeFør) : null,
           andre && Math.abs(andre.endring) >= ROLIG
-            ? `${stor(andre.best)} ${andre.endring > 0 ? 'steg' : 'falt'} ${pst(andre.endring)} mot norsk krone gjennom uken.`
+            ? `${stor(andre.best)} ${andre.endring > 0 ? 'steg' : 'falt'} ${pst(andre.endring)} mot den norske${andre.kode === 'SEK' ? '' : ' kronen'} gjennom uken.`
             : null,
         ]
           .filter(Boolean)
@@ -163,6 +179,7 @@ function ukesoppsummering(per, sisteDato, storFredag = false) {
         date: osloIso(),
         produksjon: 'automatisk',
         kilde: KILDE,
+        bilde: kursBilde(per),
       };
     },
   }];
@@ -200,6 +217,7 @@ function storDagsbevegelse(per, sisteDato) {
         date: osloIso(),
         produksjon: 'automatisk',
         kilde: KILDE,
+        bilde: kursBilde(per),
       };
     },
   }];
@@ -232,12 +250,17 @@ async function styringsrente() {
         return {
           title: `Norges Bank ${opp ? 'øker' : 'kutter'} styringsrenten til ${tall(ny)} prosent`,
           description: `Styringsrenten er ${opp ? 'satt opp' : 'satt ned'} fra ${tall(gammel)} til ${tall(ny)} prosent med virkning fra ${norskDato(dato(fra), { year: 'numeric' })}.`,
-          body: `Norges Bank har ${opp ? 'økt' : 'redusert'} styringsrenten med ${tall(Math.abs(ny - gammel))} prosentpoeng, fra ${tall(gammel)} til ${tall(ny)} prosent. Den nye renten gjelder fra ${norskDato(dato(fra), { year: 'numeric' })}.\n\nStyringsrenten er renten bankene får på sine innskudd i Norges Bank, og påvirker rentene på boliglån og sparing. Endringer i styringsrenten slår vanligvis inn i bankenes utlånsrenter etter noen uker.\n\nLes Norges Banks begrunnelse på [norges-bank.no](https://www.norges-bank.no/aktuelt/nyheter-og-hendelser/).`,
+          body: `Norges Bank har ${opp ? 'økt' : 'redusert'} styringsrenten med ${tall(Math.abs(ny - gammel))} prosentpoeng, fra ${tall(gammel)} til ${tall(ny)} prosent. Den nye renten gjelder fra ${norskDato(dato(fra), { year: 'numeric' })}.\n\nStyringsrenten er renten bankene får på sine innskudd i Norges Bank, og påvirker rentene på boliglån og sparing.\n\nLes Norges Banks begrunnelse på [norges-bank.no](https://www.norges-bank.no/aktuelt/nyheter-og-hendelser/).`,
           category: 'okonomi',
           breaking: true,
           date: osloIso(),
           produksjon: 'automatisk',
           kilde: { ...KILDE, url: 'https://www.norges-bank.no/tema/pengepolitikk/Styringsrenten/' },
+          bilde: {
+            svg: () => tallkort({ overlinje: 'Styringsrenten', tall: `${tall(ny)} %`, underlinje: `${opp ? '▲ opp' : '▼ ned'} fra ${tall(gammel)} prosent` }),
+            alt: `Styringsrenten er ${tall(ny)} prosent, ${opp ? 'opp' : 'ned'} fra ${tall(gammel)} prosent.`,
+            kreditt: 'Grafikk: tidsrøst. Data: Norges Bank (NLOD).',
+          },
         };
       },
     }];

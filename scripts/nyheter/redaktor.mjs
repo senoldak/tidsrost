@@ -184,7 +184,10 @@ Rett:
 - Oversettelsespreg og anglisismer: unaturlige konstruksjoner, direkte oversatte uttrykk, feil preposisjoner.
 - Blanding av bokmål og nynorsk utenfor sitater.
 - Norske skrivekonvensjoner: anførselstegn « », sitatstrek (–) for replikker, desimalkomma (3,5), mellomrom som tusenskille (3 580), datoer som «10. oktober», klokkeslett som «kl. 14.15».
-- Titler med stor forbokstav bare i første ord og i egennavn (f.eks. «Regjeringen foreslår økt støtte», ikke «Regjeringen Foreslår Økt Støtte»). Departementsnavn og titler som «statsminister», «utenriksminister» skrives med liten forbokstav.
+- Titler med stor forbokstav bare i første ord og i egennavn (f.eks. «Regjeringen foreslår økt støtte», ikke «Regjeringen Foreslår Økt Støtte»). Titler som «statsminister» og «utenriksminister» og ord som «finanskomiteen» skrives med liten forbokstav; departementsnavn («Finansdepartementet») med stor.
+- Klarspråk og avisstil: korte setninger (helst under 25 ord), aktiv form, ett poeng per setning. Unngå kansellistil og substantivsyke: «basert på», «samt», «i forbindelse med», «vedrørende», «herunder», «foreta en vurdering av» (skriv heller «vurdere»), «gjennomføre en økning» (skriv heller «øke»).
+- Gjentakelser: Samme tilskriving eller formulering («ifølge pressemeldingen», «opplyser departementet») skal ikke gjentas tett; varier eller fjern den andre. Ikke gjenta tittelen ordrett i første setning.
+- Ingen avsluttende henvisninger som «les mer på …» eller «hele pressemeldingen kan leses …»; kildelenken legges til automatisk.
 
 Ikke endre:
 - Fakta, tall, navn, datoer eller rekkefølgen av opplysninger.

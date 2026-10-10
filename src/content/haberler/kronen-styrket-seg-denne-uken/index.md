@@ -4,6 +4,9 @@ description: "En euro kostet 10,72 kroner, 12 øre mindre enn en uke tidligere. 
 date: 2026-10-10T14:57:06+02:00
 category: okonomi
 produksjon: automatisk
+cover: ./cover.png
+coverAlt: "Graf over Norges Banks referansekurs for euro og amerikanske dollar fra 21. september til 9. oktober."
+coverKreditt: "Grafikk: tidsrøst. Data: Norges Bank (NLOD)."
 ---
 
 Kronen styrket seg denne uken. Ifølge Norges Banks referansekurs fra fredag 9. oktober kostet en euro 10,72 kroner – 12 øre mindre enn fredag 2. oktober.
