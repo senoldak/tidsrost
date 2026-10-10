@@ -149,8 +149,21 @@ export async function gemini({ prompt, schema }) {
 // YAML'da güvenli çift tırnaklı metin.
 const yamlStr = (s) => JSON.stringify(String(s));
 
+// Dışarıdan gelen ya da yapay zekânın ürettiği metni güvenli Markdown'a çevirir:
+// ham HTML, resimler ve https dışındaki linkler (javascript: vb.) kaldırılır (XSS'e karşı).
+export function trygg(tekst = '') {
+  return String(tekst)
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(/<\/?[a-z][^>]*>/gi, '')
+    .replace(/!\[([^\]]*)\]\((?:[^()]|\([^()]*\))*\)/g, '$1')
+    .replace(/\[([^\]]*)\]\(\s*((?:[^()\s]|\([^()\s]*\))*)[^)]*\)/g, (m, txt, url) => (/^https:\/\/[^\s"'<>]+$/i.test(url) ? `[${txt}](${url})` : txt));
+}
+
 // Haberi src/content/haberler/<slug>/index.md olarak yazar, slug'ı döner.
 export async function skrivSak(rot, sak) {
+  if (!KATEGORIER.includes(sak.category)) sak.category = 'innenriks';
+  if (!/^https:\/\//.test(sak.kilde.url)) throw new Error(`Ugyldig kilde-URL: ${sak.kilde.url}`);
+  sak = { ...sak, title: trygg(sak.title), description: trygg(sak.description), body: trygg(sak.body) };
   const base = path.join(rot, 'src/content/haberler');
   let slug = slugify(sak.title) || 'sak';
   for (let i = 2; ; i++) {
