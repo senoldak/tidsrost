@@ -1,27 +1,30 @@
 ---
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
-import NewsCard from '../components/NewsCard.astro';
-import { CATEGORIES, categoryName, formatDate } from '../lib/site';
-import { getNews, newsUrl } from '../lib/news';
+import StoryRow from '../components/StoryRow.astro';
+import Symbol from '../components/Symbol.astro';
+import StoryMeta from '../components/StoryMeta.astro';
+import { getActiveCategories, getNews, groupByDay, newsUrl } from '../lib/news';
 
 const news = await getNews();
 const breaking = news.filter((h) => h.data.breaking).slice(0, 5);
 const hero = news.find((h) => h.data.featured) ?? news[0];
 const rest = news.filter((h) => h !== hero);
 const side = rest.slice(0, 4);
-const latest = rest.slice(4, 12);
-const sections = CATEGORIES.map((c) => ({
-  ...c,
-  items: news.filter((h) => h.data.category === c.slug && h !== hero).slice(0, 4),
-})).filter((s) => s.items.length > 0);
+const days = groupByDay(rest.slice(4, 24));
+const sections = (await getActiveCategories())
+  .map((c) => ({ ...c, items: news.filter((h) => h.data.category === c.slug).slice(0, 5) }))
+  .filter((s) => s.items.length > 0);
 ---
 
 <Base>
   {
     breaking.length > 0 && (
       <div class="breaking" role="region" aria-label="Siste nytt">
-        <span class="breaking-label">Siste nytt</span>
+        <span class="breaking-label">
+          <Symbol kind="breaking" />
+          Siste nytt
+        </span>
         <div class="breaking-items">
           {breaking.map((h) => (
             <a href={newsUrl(h)}>{h.data.title}</a>
@@ -33,44 +36,41 @@ const sections = CATEGORIES.map((c) => ({
 
   {
     hero ? (
-      <section class="top">
-        <article class="hero">
-          <a href={newsUrl(hero)}>
-            <div class="thumb">
-              {hero.data.cover ? (
+      <section class="top" aria-label="Hovedsaker">
+        <article class="lead-story">
+          <h2>
+            <a href={newsUrl(hero)}>{hero.data.title}</a>
+          </h2>
+          <p class="standfirst">{hero.data.description}</p>
+          <StoryMeta haber={hero} time="full" />
+          {hero.data.cover && (
+            <figure>
+              <a href={newsUrl(hero)} tabindex="-1" aria-hidden="true">
                 <Image
                   src={hero.data.cover}
-                  alt={hero.data.coverAlt ?? hero.data.title}
+                  alt={hero.data.coverAlt ?? ''}
                   widths={[800, 1200]}
-                  sizes="(max-width: 800px) 100vw, 760px"
+                  sizes="(max-width: 860px) 100vw, 800px"
                   loading="eager"
                 />
-              ) : (
-                <div class="thumb-empty">tidsrøst</div>
-              )}
-            </div>
-            <span class="kicker">{categoryName(hero.data.category)}</span>
-            <h2>{hero.data.title}</h2>
-          </a>
-          <p>{hero.data.description}</p>
-          <time class="meta" datetime={hero.data.date.toISOString()}>
-            {formatDate(hero.data.date, true)}
-          </time>
+              </a>
+            </figure>
+          )}
         </article>
 
-        <div class="side-list">
-          {side.map((h) => (
-            <article class="side-item">
-              <a href={newsUrl(h)}>
-                <span class="kicker">{categoryName(h.data.category)}</span>
-                <h3>{h.data.title}</h3>
-              </a>
-              <time class="meta" datetime={h.data.date.toISOString()}>
-                {formatDate(h.data.date, true)}
-              </time>
-            </article>
-          ))}
-        </div>
+        {side.length > 0 && (
+          <div class="side-list">
+            <h2 class="band">Siste</h2>
+            {side.map((h) => (
+              <article class="item">
+                <h3>
+                  <a href={newsUrl(h)}>{h.data.title}</a>
+                </h3>
+                <StoryMeta haber={h} time="short" />
+              </article>
+            ))}
+          </div>
+        )}
       </section>
     ) : (
       <p class="empty">Ingen saker ennå.</p>
@@ -78,33 +78,41 @@ const sections = CATEGORIES.map((c) => ({
   }
 
   {
-    latest.length > 0 && (
-      <section class="section">
-        <div class="section-title">
-          <h2>Siste saker</h2>
-        </div>
-        <div class="grid">
-          {latest.map((h) => (
-            <NewsCard haber={h} />
+    days.map((d) => (
+      <section class="day">
+        <h2 class="band">{d.label}</h2>
+        {d.items.map((h) => (
+          <StoryRow haber={h} />
+        ))}
+      </section>
+    ))
+  }
+
+  {
+    sections.length > 1 && (
+      <section class="day" aria-labelledby="etter-tema">
+        <h2 class="band" id="etter-tema">Etter tema</h2>
+        <div class="index">
+          {sections.map((s) => (
+            <div>
+              <h2>
+                <Symbol kind={s.slug} />
+                {s.name}
+              </h2>
+              <ul>
+                {s.items.map((h) => (
+                  <li>
+                    <a href={newsUrl(h)}>{h.data.title}</a>
+                  </li>
+                ))}
+              </ul>
+              <a class="all" href={`/kategori/${s.slug}/`}>
+                Alle saker i {s.name.toLowerCase()}
+              </a>
+            </div>
           ))}
         </div>
       </section>
     )
-  }
-
-  {
-    sections.map((s) => (
-      <section class="section">
-        <div class="section-title">
-          <h2>{s.name}</h2>
-          <a href={`/kategori/${s.slug}/`}>Se alle →</a>
-        </div>
-        <div class="grid">
-          {s.items.map((h) => (
-            <NewsCard haber={h} showCategory={false} />
-          ))}
-        </div>
-      </section>
-    ))
   }
 </Base>

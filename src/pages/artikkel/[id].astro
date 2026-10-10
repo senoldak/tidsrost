@@ -2,9 +2,10 @@
 import { Image, getImage } from 'astro:assets';
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import NewsCard from '../../components/NewsCard.astro';
-import { SITE, PRODUKSJON, categoryName, formatDate } from '../../lib/site';
-import { getNews, type Haber } from '../../lib/news';
+import StoryRow from '../../components/StoryRow.astro';
+import Symbol from '../../components/Symbol.astro';
+import { SITE, PRODUKSJON, categoryName, formatDay, formatTime, produksjonMerke, varsel } from '../../lib/site';
+import { getNews, kilde, type Haber } from '../../lib/news';
 
 export async function getStaticPaths() {
   const news = await getNews();
@@ -20,8 +21,11 @@ interface Props {
 }
 
 const { haber, related } = Astro.props;
-const { title, description, date, category, cover, coverAlt, author, produksjon, rettelse } = haber.data;
+const { title, description, date, category, cover, coverAlt, coverKreditt, author, produksjon, rettelse } = haber.data;
 const { Content } = await render(haber);
+const source = kilde(haber);
+const made = produksjonMerke(produksjon);
+const warn = varsel(title);
 
 const ogImage = cover ? (await getImage({ src: cover, width: 1200, format: 'jpeg' })).src : undefined;
 const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
@@ -49,18 +53,58 @@ const jsonLd = {
   </Fragment>
 
   <article class="article">
-    <a class="kicker" href={`/kategori/${category}/`}>{categoryName(category)}</a>
     <h1>{title}</h1>
     <p class="lead">{description}</p>
-    <div class="byline meta">
-      <strong>{author}</strong> · <time datetime={date.toISOString()}>{formatDate(date, true)}</time>
-    </div>
+
+    <dl class="margin-info">
+      {
+        warn && (
+          <div>
+            <dt>Varsel</dt>
+            <dd><span class="mark mark-varsel"><Symbol kind="varsel" class={`sym-varsel-${warn.level}`} />{warn.label}</span></dd>
+          </div>
+        )
+      }
+      <div>
+        <dt>Tema</dt>
+        <dd><a class="mark" href={`/kategori/${category}/`}><Symbol kind={category} />{categoryName(category)}</a></dd>
+      </div>
+      <div>
+        <dt>Publisert</dt>
+        <dd><time datetime={date.toISOString()}>{formatDay(date)} kl. {formatTime(date)}</time></dd>
+      </div>
+      {
+        source && (
+          <div>
+            <dt>Kilde</dt>
+            <dd><span class="mark"><Symbol kind="kilde" />{source}</span></dd>
+          </div>
+        )
+      }
+      {
+        made && (
+          <div>
+            <dt>Laget</dt>
+            <dd><span class="mark"><Symbol kind={made.kind} />{made.label}</span></dd>
+          </div>
+        )
+      }
+      <div>
+        <dt>Av</dt>
+        <dd>{author}</dd>
+      </div>
+    </dl>
 
     {
       cover && (
         <figure>
-          <Image src={cover} alt={coverAlt ?? title} widths={[760, 1200]} sizes="(max-width: 800px) 100vw, 760px" loading="eager" />
-          {coverAlt && <figcaption>{coverAlt}</figcaption>}
+          <Image src={cover} alt={coverAlt ?? title} widths={[760, 1200]} sizes="(max-width: 1080px) 100vw, 920px" loading="eager" />
+          {(coverAlt || coverKreditt) && (
+            <figcaption>
+              {coverAlt}
+              {coverKreditt && <span class="kreditt">{coverKreditt}</span>}
+            </figcaption>
+          )}
         </figure>
       )
     }
@@ -68,7 +112,8 @@ const jsonLd = {
     {
       rettelse && (
         <aside class="rettelse">
-          <strong>Rettelse:</strong> {rettelse}
+          <Symbol kind="rettelse" />
+          <p><strong>Rettelse:</strong> {rettelse}</p>
         </aside>
       )
     }
@@ -77,10 +122,24 @@ const jsonLd = {
       <Content />
     </div>
 
+<<<<<<< Updated upstream
     {PRODUKSJON[produksjon] && <p class="produksjon">{PRODUKSJON[produksjon]} <a href="/om-oss/#ki">Les mer om hvordan sakene våre lages.</a></p>}
+=======
+    {
+      PRODUKSJON[produksjon] && (
+        <p class="produksjon">
+          {made && <Symbol kind={made.kind} />}
+          <span>
+            {PRODUKSJON[produksjon]} <a href="/om-oss/#ki">Les mer om hvordan sakene våre lages.</a>
+          </span>
+        </p>
+      )
+    }
+>>>>>>> Stashed changes
 
     <div class="share">
-      <a href={`https://x.com/intent/post?url=${share}&text=${shareText}`} target="_blank" rel="noopener">Del på X</a>
+      <span>Del saken:</span>
+      <a href={`https://x.com/intent/post?url=${share}&text=${shareText}`} target="_blank" rel="noopener">X</a>
       <a href={`https://www.facebook.com/sharer/sharer.php?u=${share}`} target="_blank" rel="noopener">Facebook</a>
       <a href={`https://wa.me/?text=${shareText}%20${share}`} target="_blank" rel="noopener">WhatsApp</a>
     </div>
@@ -88,15 +147,11 @@ const jsonLd = {
 
   {
     related.length > 0 && (
-      <section class="section">
-        <div class="section-title">
-          <h2>Relaterte saker</h2>
-        </div>
-        <div class="grid">
-          {related.map((h) => (
-            <NewsCard haber={h} />
-          ))}
-        </div>
+      <section class="related">
+        <h2 class="band">Mer om {categoryName(category).toLowerCase()}</h2>
+        {related.map((h) => (
+          <StoryRow haber={h} showCategory={false} />
+        ))}
       </section>
     )
   }

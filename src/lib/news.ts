@@ -1,5 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
-import { CATEGORIES } from './site';
+import { CATEGORIES, dayBand } from './site';
 
 export type Haber = CollectionEntry<'haberler'>;
 
@@ -18,4 +18,19 @@ export async function getActiveCategories() {
 
 export function newsUrl(haber: Haber) {
   return `/artikkel/${haber.id}/`;
+}
+
+// Haberin sonundaki "*Kilde: [Ad](link)*" satırından kaynağın adını okur; listelerde gösterilir.
+export function kilde(haber: Haber) {
+  return haber.body?.match(/\*Kilde:\s*\[([^\]]+)\]/)?.[1];
+}
+
+// Haberleri gün bantlarına ayırır: I dag, I går, Tidligere (anasayfa ve kategori sayfaları).
+export function groupByDay(news: Haber[]) {
+  const bands = new Map<string, Haber[]>();
+  for (const h of news) {
+    const key = dayBand(h.data.date);
+    bands.set(key, [...(bands.get(key) ?? []), h]);
+  }
+  return [...bands].map(([label, items]) => ({ label, items }));
 }

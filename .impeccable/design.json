@@ -1,0 +1,595 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-10T13:30:52.777Z",
+  "title": "Design System: tidsrøst",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Map Paper",
+        "canonical": "#fdfdfb",
+        "oklch": "oklch(99.3% 0.003 106.4)",
+        "tonalRamp": [
+          "oklch(15% 0.003 106.4)",
+          "oklch(25% 0.003 106.4)",
+          "oklch(35% 0.003 106.4)",
+          "oklch(45% 0.003 106.4)",
+          "oklch(55% 0.003 106.4)",
+          "oklch(70% 0.003 106.4)",
+          "oklch(85% 0.003 106.4)",
+          "oklch(95% 0.003 106.4)"
+        ]
+      },
+      "surface-forest": {
+        "role": "neutral",
+        "displayName": "Forest Tint",
+        "canonical": "#f1f5ec",
+        "oklch": "oklch(96.5% 0.013 126.4)",
+        "tonalRamp": [
+          "oklch(15% 0.013 126.4)",
+          "oklch(25% 0.013 126.4)",
+          "oklch(35% 0.013 126.4)",
+          "oklch(45% 0.013 126.4)",
+          "oklch(55% 0.013 126.4)",
+          "oklch(70% 0.013 126.4)",
+          "oklch(85% 0.013 126.4)",
+          "oklch(95% 0.013 126.4)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Survey Ink",
+        "canonical": "#16191c",
+        "oklch": "oklch(21.2% 0.008 248.2)",
+        "tonalRamp": [
+          "oklch(15% 0.008 248.2)",
+          "oklch(25% 0.008 248.2)",
+          "oklch(35% 0.008 248.2)",
+          "oklch(45% 0.008 248.2)",
+          "oklch(55% 0.008 248.2)",
+          "oklch(70% 0.008 248.2)",
+          "oklch(85% 0.008 248.2)",
+          "oklch(95% 0.008 248.2)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink 2",
+        "canonical": "#2f353a",
+        "oklch": "oklch(32.5% 0.012 243.2)",
+        "tonalRamp": [
+          "oklch(15% 0.012 243.2)",
+          "oklch(25% 0.012 243.2)",
+          "oklch(35% 0.012 243.2)",
+          "oklch(45% 0.012 243.2)",
+          "oklch(55% 0.012 243.2)",
+          "oklch(70% 0.012 243.2)",
+          "oklch(85% 0.012 243.2)",
+          "oklch(95% 0.012 243.2)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Grey",
+        "canonical": "#5a6168",
+        "oklch": "oklch(48.9% 0.014 248.1)",
+        "tonalRamp": [
+          "oklch(15% 0.014 248.1)",
+          "oklch(25% 0.014 248.1)",
+          "oklch(35% 0.014 248.1)",
+          "oklch(45% 0.014 248.1)",
+          "oklch(55% 0.014 248.1)",
+          "oklch(70% 0.014 248.1)",
+          "oklch(85% 0.014 248.1)",
+          "oklch(95% 0.014 248.1)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule Grey",
+        "canonical": "#dcded8",
+        "oklch": "oklch(89.7% 0.008 121.6)",
+        "tonalRamp": [
+          "oklch(15% 0.008 121.6)",
+          "oklch(25% 0.008 121.6)",
+          "oklch(35% 0.008 121.6)",
+          "oklch(45% 0.008 121.6)",
+          "oklch(55% 0.008 121.6)",
+          "oklch(70% 0.008 121.6)",
+          "oklch(85% 0.008 121.6)",
+          "oklch(95% 0.008 121.6)"
+        ]
+      },
+      "water": {
+        "role": "primary",
+        "displayName": "Water Blue",
+        "canonical": "#1f5f99",
+        "oklch": "oklch(47.5% 0.113 249.8)",
+        "tonalRamp": [
+          "oklch(15% 0.113 249.8)",
+          "oklch(25% 0.113 249.8)",
+          "oklch(35% 0.113 249.8)",
+          "oklch(45% 0.113 249.8)",
+          "oklch(55% 0.113 249.8)",
+          "oklch(70% 0.113 249.8)",
+          "oklch(85% 0.040 249.8)",
+          "oklch(95% 0.040 249.8)"
+        ]
+      },
+      "breaking-red": {
+        "role": "tertiary",
+        "displayName": "Breaking Red",
+        "canonical": "#c8281e",
+        "oklch": "oklch(54.1% 0.197 29.1)",
+        "tonalRamp": [
+          "oklch(15% 0.197 29.1)",
+          "oklch(25% 0.197 29.1)",
+          "oklch(35% 0.197 29.1)",
+          "oklch(45% 0.197 29.1)",
+          "oklch(55% 0.197 29.1)",
+          "oklch(70% 0.197 29.1)",
+          "oklch(85% 0.040 29.1)",
+          "oklch(95% 0.040 29.1)"
+        ]
+      },
+      "contour-index": {
+        "role": "secondary",
+        "displayName": "Index Contour Brown",
+        "canonical": "#a0643c",
+        "oklch": "oklch(56.1% 0.095 53.3)",
+        "tonalRamp": [
+          "oklch(15% 0.095 53.3)",
+          "oklch(25% 0.095 53.3)",
+          "oklch(35% 0.095 53.3)",
+          "oklch(45% 0.095 53.3)",
+          "oklch(55% 0.095 53.3)",
+          "oklch(70% 0.095 53.3)",
+          "oklch(85% 0.040 53.3)",
+          "oklch(95% 0.040 53.3)"
+        ]
+      },
+      "contour-intermediate": {
+        "role": "secondary",
+        "displayName": "Intermediate Contour Brown",
+        "canonical": "#b07a55",
+        "oklch": "oklch(62.6% 0.085 54.9)",
+        "tonalRamp": [
+          "oklch(15% 0.085 54.9)",
+          "oklch(25% 0.085 54.9)",
+          "oklch(35% 0.085 54.9)",
+          "oklch(45% 0.085 54.9)",
+          "oklch(55% 0.085 54.9)",
+          "oklch(70% 0.085 54.9)",
+          "oklch(85% 0.040 54.9)",
+          "oklch(95% 0.040 54.9)"
+        ]
+      },
+      "contour-shore": {
+        "role": "secondary",
+        "displayName": "Shoreline Blue",
+        "canonical": "#3a78b5",
+        "oklch": "oklch(56.0% 0.115 250.3)",
+        "tonalRamp": [
+          "oklch(15% 0.115 250.3)",
+          "oklch(25% 0.115 250.3)",
+          "oklch(35% 0.115 250.3)",
+          "oklch(45% 0.115 250.3)",
+          "oklch(55% 0.115 250.3)",
+          "oklch(70% 0.115 250.3)",
+          "oklch(85% 0.040 250.3)",
+          "oklch(95% 0.040 250.3)"
+        ]
+      },
+      "varsel-gult": {
+        "role": "tertiary",
+        "displayName": "Farevarsel Yellow",
+        "canonical": "#f2c400",
+        "oklch": "oklch(83.7% 0.171 91.6)",
+        "tonalRamp": [
+          "oklch(15% 0.171 91.6)",
+          "oklch(25% 0.171 91.6)",
+          "oklch(35% 0.171 91.6)",
+          "oklch(45% 0.171 91.6)",
+          "oklch(55% 0.171 91.6)",
+          "oklch(70% 0.171 91.6)",
+          "oklch(85% 0.040 91.6)",
+          "oklch(95% 0.040 91.6)"
+        ]
+      },
+      "varsel-oransje": {
+        "role": "tertiary",
+        "displayName": "Farevarsel Orange",
+        "canonical": "#f08a00",
+        "oklch": "oklch(72.8% 0.168 61.6)",
+        "tonalRamp": [
+          "oklch(15% 0.168 61.6)",
+          "oklch(25% 0.168 61.6)",
+          "oklch(35% 0.168 61.6)",
+          "oklch(45% 0.168 61.6)",
+          "oklch(55% 0.168 61.6)",
+          "oklch(70% 0.168 61.6)",
+          "oklch(85% 0.040 61.6)",
+          "oklch(95% 0.040 61.6)"
+        ]
+      },
+      "varsel-rodt": {
+        "role": "tertiary",
+        "displayName": "Farevarsel Red",
+        "canonical": "#d9261c",
+        "oklch": "oklch(57.1% 0.213 29.1)",
+        "tonalRamp": [
+          "oklch(15% 0.213 29.1)",
+          "oklch(25% 0.213 29.1)",
+          "oklch(35% 0.213 29.1)",
+          "oklch(45% 0.213 29.1)",
+          "oklch(55% 0.213 29.1)",
+          "oklch(70% 0.213 29.1)",
+          "oklch(85% 0.040 29.1)",
+          "oklch(95% 0.040 29.1)"
+        ]
+      },
+      "nattark-paper": {
+        "role": "neutral",
+        "displayName": "Nattark Paper",
+        "canonical": "#171612",
+        "oklch": "oklch(20.0% 0.008 95.5)",
+        "tonalRamp": [
+          "oklch(15% 0.008 95.5)",
+          "oklch(25% 0.008 95.5)",
+          "oklch(35% 0.008 95.5)",
+          "oklch(45% 0.008 95.5)",
+          "oklch(55% 0.008 95.5)",
+          "oklch(70% 0.008 95.5)",
+          "oklch(85% 0.008 95.5)",
+          "oklch(95% 0.008 95.5)"
+        ]
+      },
+      "nattark-surface": {
+        "role": "neutral",
+        "displayName": "Nattark Surface",
+        "canonical": "#1f1e19",
+        "oklch": "oklch(23.4% 0.009 97.8)",
+        "tonalRamp": [
+          "oklch(15% 0.009 97.8)",
+          "oklch(25% 0.009 97.8)",
+          "oklch(35% 0.009 97.8)",
+          "oklch(45% 0.009 97.8)",
+          "oklch(55% 0.009 97.8)",
+          "oklch(70% 0.009 97.8)",
+          "oklch(85% 0.009 97.8)",
+          "oklch(95% 0.009 97.8)"
+        ]
+      },
+      "nattark-ink": {
+        "role": "neutral",
+        "displayName": "Nattark Ink",
+        "canonical": "#ebe9e2",
+        "oklch": "oklch(93.4% 0.010 93.6)",
+        "tonalRamp": [
+          "oklch(15% 0.010 93.6)",
+          "oklch(25% 0.010 93.6)",
+          "oklch(35% 0.010 93.6)",
+          "oklch(45% 0.010 93.6)",
+          "oklch(55% 0.010 93.6)",
+          "oklch(70% 0.010 93.6)",
+          "oklch(85% 0.010 93.6)",
+          "oklch(95% 0.010 93.6)"
+        ]
+      },
+      "nattark-ink-2": {
+        "role": "neutral",
+        "displayName": "Nattark Ink 2",
+        "canonical": "#cdcac0",
+        "oklch": "oklch(83.9% 0.014 93.0)",
+        "tonalRamp": [
+          "oklch(15% 0.014 93.0)",
+          "oklch(25% 0.014 93.0)",
+          "oklch(35% 0.014 93.0)",
+          "oklch(45% 0.014 93.0)",
+          "oklch(55% 0.014 93.0)",
+          "oklch(70% 0.014 93.0)",
+          "oklch(85% 0.014 93.0)",
+          "oklch(95% 0.014 93.0)"
+        ]
+      },
+      "nattark-muted": {
+        "role": "neutral",
+        "displayName": "Nattark Muted",
+        "canonical": "#a19d92",
+        "oklch": "oklch(69.6% 0.016 90.3)",
+        "tonalRamp": [
+          "oklch(15% 0.016 90.3)",
+          "oklch(25% 0.016 90.3)",
+          "oklch(35% 0.016 90.3)",
+          "oklch(45% 0.016 90.3)",
+          "oklch(55% 0.016 90.3)",
+          "oklch(70% 0.016 90.3)",
+          "oklch(85% 0.016 90.3)",
+          "oklch(95% 0.016 90.3)"
+        ]
+      },
+      "nattark-rule": {
+        "role": "neutral",
+        "displayName": "Nattark Rule",
+        "canonical": "#33312b",
+        "oklch": "oklch(31.3% 0.011 91.7)",
+        "tonalRamp": [
+          "oklch(15% 0.011 91.7)",
+          "oklch(25% 0.011 91.7)",
+          "oklch(35% 0.011 91.7)",
+          "oklch(45% 0.011 91.7)",
+          "oklch(55% 0.011 91.7)",
+          "oklch(70% 0.011 91.7)",
+          "oklch(85% 0.011 91.7)",
+          "oklch(95% 0.011 91.7)"
+        ]
+      },
+      "nattark-water": {
+        "role": "primary",
+        "displayName": "Nattark Water",
+        "canonical": "#7fb2e5",
+        "oklch": "oklch(74.7% 0.092 249.1)",
+        "tonalRamp": [
+          "oklch(15% 0.092 249.1)",
+          "oklch(25% 0.092 249.1)",
+          "oklch(35% 0.092 249.1)",
+          "oklch(45% 0.092 249.1)",
+          "oklch(55% 0.092 249.1)",
+          "oklch(70% 0.092 249.1)",
+          "oklch(85% 0.040 249.1)",
+          "oklch(95% 0.040 249.1)"
+        ]
+      },
+      "nattark-red": {
+        "role": "tertiary",
+        "displayName": "Nattark Breaking Red",
+        "canonical": "#ff7a6b",
+        "oklch": "oklch(73.2% 0.165 28.3)",
+        "tonalRamp": [
+          "oklch(15% 0.165 28.3)",
+          "oklch(25% 0.165 28.3)",
+          "oklch(35% 0.165 28.3)",
+          "oklch(45% 0.165 28.3)",
+          "oklch(55% 0.165 28.3)",
+          "oklch(70% 0.165 28.3)",
+          "oklch(85% 0.040 28.3)",
+          "oklch(95% 0.040 28.3)"
+        ]
+      },
+      "nattark-contour-index": {
+        "role": "secondary",
+        "displayName": "Nattark Index Contour",
+        "canonical": "#c49470",
+        "oklch": "oklch(70.4% 0.076 58.0)",
+        "tonalRamp": [
+          "oklch(15% 0.076 58.0)",
+          "oklch(25% 0.076 58.0)",
+          "oklch(35% 0.076 58.0)",
+          "oklch(45% 0.076 58.0)",
+          "oklch(55% 0.076 58.0)",
+          "oklch(70% 0.076 58.0)",
+          "oklch(85% 0.040 58.0)",
+          "oklch(95% 0.040 58.0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Wordmark",
+        "purpose": "The tidsrøst wordmark only (footer repeats it at 2rem)."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Lead story; article h1 and page titles share weight and tracking at their own clamps."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Story-row and side-list headlines."
+      },
+      "standfirst": {
+        "displayName": "Standfirst",
+        "purpose": "Lead paragraphs under the lead story and article h1, ink-2, max 62ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Base reading text, lining numerals."
+      },
+      "prose": {
+        "displayName": "Prose",
+        "purpose": "Article reading column, 70ch."
+      },
+      "nav": {
+        "displayName": "Legend Nav",
+        "purpose": "Category navigation items."
+      },
+      "label": {
+        "displayName": "Meta Label",
+        "purpose": "Meta lines, margin column, captions."
+      },
+      "band": {
+        "displayName": "Band",
+        "purpose": "Uppercase section bands, footer heads, breaking label, margin-column terms."
+      },
+      "sheet-margin": {
+        "displayName": "Sheet Margin",
+        "purpose": "Top marginalia strip and edition line."
+      }
+    },
+    "shadows": [],
+    "borders": [
+      {
+        "name": "frame-hairline",
+        "value": "1px solid var(--ink)",
+        "purpose": "Masthead base, band rules, page head, margin column top, breaking strip, rettelse."
+      },
+      {
+        "name": "divider-hairline",
+        "value": "1px solid var(--rule)",
+        "purpose": "Row and list dividers, image borders, nav bottom rule."
+      },
+      {
+        "name": "nav-marker",
+        "value": "box-shadow: inset 0 -3px var(--water)",
+        "purpose": "Active legend-nav position marker (rule grey on hover). Not elevation."
+      },
+      {
+        "name": "masthead-ticks",
+        "value": "repeating-linear-gradient(to right, var(--ink) 0 1px, transparent 1px 80px); height 7px; opacity .6",
+        "purpose": "Grid ticks along the masthead lower edge."
+      }
+    ],
+    "motion": [
+      {
+        "name": "page-out",
+        "value": "160ms cubic-bezier(0.4, 0, 1, 1) fade-out",
+        "purpose": "View transition: old page fades."
+      },
+      {
+        "name": "page-in",
+        "value": "320ms cubic-bezier(0.16, 1, 0.3, 1) rise-in (from opacity 0, translateY 10px)",
+        "purpose": "View transition: new page rises in; masthead and legend nav keep their own transition names and stay put. Disabled under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "article-collapse",
+        "value": "1080px"
+      },
+      {
+        "name": "stack",
+        "value": "860px"
+      },
+      {
+        "name": "phone",
+        "value": "640px"
+      }
+    ],
+    "focus": {
+      "value": "outline: 2px solid var(--water); outline-offset: 3px",
+      "purpose": "All focusable elements."
+    }
+  },
+  "components": [
+    {
+      "name": "Legend Nav",
+      "kind": "nav",
+      "refersTo": "legend-nav-link",
+      "description": "Sticky category navigation; each item led by its legend symbol, active item marked by a water underline.",
+      "html": "<nav class=\"ds-legend-nav\"><a href=\"#\" aria-current=\"page\">Forsiden</a><a href=\"#\"><svg class=\"ds-sym\" viewBox=\"0 0 12 12\" width=\"12\" height=\"12\" aria-hidden=\"true\"><path d=\"M6 1.2 11.2 10.4H.8Z\" fill=\"currentColor\"/></svg>Innenriks</a><a href=\"#\"><svg class=\"ds-sym\" viewBox=\"0 0 12 12\" width=\"12\" height=\"12\" aria-hidden=\"true\"><circle cx=\"6\" cy=\"6\" r=\"4.1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"/></svg>Utenriks</a><a href=\"#\"><svg class=\"ds-sym\" viewBox=\"0 0 12 12\" width=\"12\" height=\"12\" aria-hidden=\"true\"><rect x=\"1.6\" y=\"1.6\" width=\"8.8\" height=\"8.8\" fill=\"currentColor\"/></svg>Økonomi</a></nav>",
+      "css": ".ds-legend-nav{display:flex;gap:24px;background:var(--paper,#fdfdfb);border-bottom:1px solid var(--rule,#dcded8);padding:0 24px}.ds-legend-nav a{display:inline-flex;align-items:center;gap:.5em;min-height:48px;font:600 .9375rem 'Archivo Variable', 'Archivo', system-ui, sans-serif;font-stretch:96%;color:var(--ink,#16191c);text-decoration:none;box-shadow:inset 0 -3px transparent}.ds-legend-nav a:hover{color:var(--water,#1f5f99);box-shadow:inset 0 -3px var(--rule,#dcded8)}.ds-legend-nav a:focus-visible{outline:2px solid var(--water,#1f5f99);outline-offset:3px}.ds-legend-nav a[aria-current=page]{color:var(--water,#1f5f99);box-shadow:inset 0 -3px var(--water,#1f5f99)}.ds-sym{flex:none;width:12px;height:12px}"
+    },
+    {
+      "name": "Story Row",
+      "kind": "card",
+      "refersTo": "story-row",
+      "description": "Text-only gazetteer entry: tabular time column, serif headline, description, legend meta line.",
+      "html": "<article class=\"ds-row\"><time class=\"ds-row-time\">14:57</time><div><h3><a href=\"#\">Kronen styrket seg denne uken</a></h3><p class=\"ds-row-desc\">En euro kostet 10,72 kroner, 12 øre mindre enn en uke tidligere.</p><p class=\"ds-meta\"><span class=\"ds-mark\"><svg class=\"ds-sym\" viewBox=\"0 0 12 12\" width=\"12\" height=\"12\" aria-hidden=\"true\"><rect x=\"1.6\" y=\"1.6\" width=\"8.8\" height=\"8.8\" fill=\"currentColor\"/></svg>Økonomi</span><span class=\"ds-mark\"><svg class=\"ds-sym\" viewBox=\"0 0 12 12\" width=\"12\" height=\"12\" aria-hidden=\"true\"><circle cx=\"6\" cy=\"6\" r=\"4.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\"/><circle cx=\"6\" cy=\"6\" r=\"1.6\" fill=\"currentColor\"/></svg>Norges Bank</span><span class=\"ds-mark\"><svg class=\"ds-sym\" viewBox=\"0 0 12 12\" width=\"12\" height=\"12\" aria-hidden=\"true\"><path d=\"M1.5 10.5h9\" stroke=\"currentColor\" stroke-width=\"1.2\"/><path d=\"M3 9V6M6 9V2.5M9 9V4.5\" stroke=\"currentColor\" stroke-width=\"1.8\"/></svg>Automatisk</span></p></div></article>",
+      "css": ".ds-row{display:grid;grid-template-columns:4.5rem minmax(0,1fr);gap:24px;padding:20px 0;border-bottom:1px solid var(--rule,#dcded8);background:var(--paper,#fdfdfb);color:var(--ink,#16191c)}.ds-row-time{padding-top:.3em;font:600 .875rem 'Archivo Variable', 'Archivo', system-ui, sans-serif;font-variant-numeric:tabular-nums;color:var(--muted,#5a6168)}.ds-row h3{font:600 1.3rem/1.25 'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif;margin:0 0 6px}.ds-row h3 a{color:inherit;text-decoration:none}.ds-row h3 a:hover{color:var(--water,#1f5f99);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em}.ds-row h3 a:focus-visible{outline:2px solid var(--water,#1f5f99);outline-offset:3px}.ds-row-desc{margin:0 0 8px;color:var(--ink-2,#2f353a);font:1.0625rem/1.6 'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif;max-width:68ch}.ds-meta{display:flex;flex-wrap:wrap;gap:4px 18px;margin:0;font:500 .8125rem/1.4 'Archivo Variable', 'Archivo', system-ui, sans-serif;font-stretch:92%;letter-spacing:.01em;color:var(--muted,#5a6168)}.ds-mark{display:inline-flex;align-items:center;gap:.45em}.ds-sym{flex:none;width:12px;height:12px}"
+    },
+    {
+      "name": "Band Heading",
+      "kind": "custom",
+      "refersTo": "band-heading",
+      "description": "Section band (Siste, I dag, I går, Tidligere): tracked uppercase Archivo followed by a full-width ink hairline.",
+      "html": "<h2 class=\"ds-band\">I dag</h2>",
+      "css": ".ds-band{display:flex;align-items:center;gap:12px;margin:0 0 8px;font:700 .75rem/1 'Archivo Variable', 'Archivo', system-ui, sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--ink,#16191c)}.ds-band::after{content:'';flex:1;height:1px;background:var(--ink,#16191c)}"
+    },
+    {
+      "name": "Breaking Strip",
+      "kind": "custom",
+      "refersTo": "breaking-strip-label",
+      "description": "Siste nytt strip: ink-bordered box, red flag mark and label cell, scrolling serif headlines.",
+      "html": "<div class=\"ds-breaking\"><span class=\"ds-breaking-label\"><svg class=\"ds-sym\" viewBox=\"0 0 12 12\" width=\"12\" height=\"12\" aria-hidden=\"true\"><path d=\"M2.2 11.4V.8\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M2.9 1.2h8.3L9 4.1l2.2 2.9H2.9Z\" fill=\"currentColor\"/></svg>Siste nytt</span><div class=\"ds-breaking-items\"><a href=\"#\">Gult farevarsel for snø i deler av Sør-Norge</a><a href=\"#\">Regjeringen foreslår ny ordning</a></div></div>",
+      "css": ".ds-breaking{display:flex;align-items:stretch;border:1px solid var(--ink,#16191c);background:var(--paper,#fdfdfb)}.ds-breaking-label{display:flex;align-items:center;gap:.5em;padding:8px 16px;border-right:1px solid var(--ink,#16191c);color:var(--red,#c8281e);font:700 .75rem 'Archivo Variable', 'Archivo', system-ui, sans-serif;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}.ds-breaking-items{display:flex;gap:32px;padding:8px 16px;overflow-x:auto;font:600 1rem/1.4 'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif}.ds-breaking-items a{white-space:nowrap;color:var(--ink,#16191c);text-decoration:none}.ds-breaking-items a:hover{color:var(--water,#1f5f99);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em}.ds-breaking-items a:focus-visible{outline:2px solid var(--water,#1f5f99);outline-offset:3px}.ds-sym{flex:none;width:12px;height:12px}"
+    },
+    {
+      "name": "Rettelse Note",
+      "kind": "card",
+      "refersTo": "rettelse-note",
+      "description": "Correction notice above the prose: ink border on forest tint, led by the rettelse symbol.",
+      "html": "<aside class=\"ds-rettelse\"><svg class=\"ds-sym\" viewBox=\"0 0 12 12\" width=\"12\" height=\"12\" aria-hidden=\"true\"><rect x=\"1.4\" y=\"1.4\" width=\"9.2\" height=\"9.2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\"/><path d=\"M3.4 8.6 8.6 3.4\" stroke=\"currentColor\" stroke-width=\"1.4\"/></svg><p><strong>Rettelse:</strong> En tidligere versjon oppga feil dato.</p></aside>",
+      "css": ".ds-rettelse{display:flex;gap:12px;padding:12px 16px;border:1px solid var(--ink,#16191c);background:var(--surface,#f1f5ec);color:var(--ink,#16191c);font:500 .9375rem/1.5 'Archivo Variable', 'Archivo', system-ui, sans-serif}.ds-rettelse p{margin:0}.ds-rettelse .ds-sym{flex:none;margin-top:.3em;width:.9em;height:.9em}"
+    },
+    {
+      "name": "Prose Link",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Links inside reading text and editorial notes: always water blue and underlined.",
+      "html": "<p class=\"ds-prose\">Les mer om <a href=\"#\">hvordan sakene våre lages</a>.</p>",
+      "css": ".ds-prose{font:1.1875rem/1.7 'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif;color:var(--ink,#16191c)}.ds-prose a{color:var(--water,#1f5f99);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em}.ds-prose a:hover{text-decoration-thickness:2px}.ds-prose a:focus-visible{outline:2px solid var(--water,#1f5f99);outline-offset:3px}"
+    },
+    {
+      "name": "Wordmark",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Archivo 800 wide wordmark on a paper label halo; the ø in water blue.",
+      "html": "<a href=\"#\" class=\"ds-logo\">tidsr<span>ø</span>st</a>",
+      "css": ".ds-logo{display:inline-block;background:var(--paper,#fdfdfb);padding:.06em .16em .1em;font:800 4rem/.9 'Archivo Variable', 'Archivo', system-ui, sans-serif;font-stretch:112%;letter-spacing:-.04em;color:var(--ink,#16191c);text-decoration:none}.ds-logo span{color:var(--water,#1f5f99)}.ds-logo:focus-visible{outline:2px solid var(--water,#1f5f99);outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Survey Sheet",
+    "overview": "tidsrøst is set like a Kartverket N50 topographic sheet: map-paper white, near-black survey ink, one water-blue accent, and a frame of marginalia around a calm reading field. Everything is locatable. Every story carries the same row of legend marks (category, source, how it was made), and the reader scans by symbol and time, not by colour or image. The whole system is drawn with hairlines on an 8px grid (rutenett), with no radius and no shadow.\n\nThe frame and the reading field are typeset differently. Archivo, at condensed and wide widths, does the cartographic work: the sheet-margin strip, the wordmark, the legend nav, meta lines, band headings and the margin column. Source Serif 4 carries every headline and the reading column. Rank is shown by one step in type size and weight, never by a colour block or a card. Images are optional. Text-only stories are the default, and every layout is complete without a cover.\n\nThe masthead is a generated contour field that changes daily (a new \"Ark\" each day), with the wordmark and the edition date set on paper-coloured label halos, the way names sit on a map. A dark \"nattark\" (night sheet) honours `prefers-color-scheme`. It is a warm ink-dark ground, not blue slate, and light map paper stays the primary sheet.",
+    "keyCharacteristics": [
+      "Map paper, survey ink, one water-blue accent; contour brown only in the frame.",
+      "Categories and states are SVG legend symbols, drawn at 12px everywhere.",
+      "Hairline rules (1px) for all structure; zero radius; no shadows.",
+      "Archivo for the frame, Source Serif 4 for headlines and reading.",
+      "8px rutenett for all spacing; 80px tick marks along the masthead's lower edge.",
+      "Text-first: covers appear only on the lead story (capped at 34rem) and the article page."
+    ],
+    "rules": [
+      {
+        "name": "The One Water Rule",
+        "body": "Water blue is the only interactive accent. Nothing else is clickable-coloured, and no second accent is introduced.",
+        "section": "colors"
+      },
+      {
+        "name": "The Frame-Only Contour Rule",
+        "body": "Contour brown belongs to the masthead terrain and the favicon. It never colours text, rules, or content.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mark-Not-Hue Rule",
+        "body": "State is carried by a legend symbol. Breaking red and farevarsel colours always accompany their symbol and label; a colour never carries a state alone.",
+        "section": "colors"
+      },
+      {
+        "name": "The One-Step Rank Rule",
+        "body": "Importance is shown by one step of the type scale (headline, then title), not by colour, boxes, or imagery.",
+        "section": "typography"
+      },
+      {
+        "name": "The Two-Hands Rule",
+        "body": "Archivo labels the sheet; Source Serif 4 says the news. No story headline is set in Archivo, and no frame label is set in serif (the edition date is the one deliberate serif in the margin).",
+        "section": "typography"
+      },
+      {
+        "name": "The No-Kicker Rule",
+        "body": "Nothing sits above a headline. Category, source and time go in the meta line beneath it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Printed Sheet Rule",
+        "body": "No drop shadows, no blur, no raised cards. The 3px inset underline on legend-nav items is a position marker, not elevation.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** mark every category and state with its legend symbol at 12px, and add any new category's symbol to the set and the footer legend.",
+      "**Do** keep all structure in 1px hairlines: ink for frame and section edges, rule grey for item dividers.",
+      "**Do** space everything on the 8px unit.",
+      "**Do** make every layout complete without a cover image; covers are capped (34rem on the lead) and bordered in rule grey.",
+      "**Do** keep the rettelse and produksjon notes visible in the article flow.",
+      "**Do** set headlines and reading text in Source Serif 4 and frame labels in Archivo, using its width axis."
+    ],
+    "donts": [
+      "**Don't** put kicker or eyebrow labels above headlines; category and source belong in the meta line.",
+      "**Don't** use a serif masthead, a red category kicker, or an image-led hero grid (the broadsheet template the world rejects).",
+      "**Don't** add radius, drop shadows, or raised cards.",
+      "**Don't** introduce a second interactive accent beside water blue, or use contour brown outside the masthead and favicon.",
+      "**Don't** show a state by colour alone; breaking red and farevarsel colours always ride with their symbol and label.",
+      "**Don't** put covers on list rows or the Siste list."
+    ]
+  }
+}

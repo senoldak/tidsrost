@@ -6,4 +6,6 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://tidsrost.com',
   integrations: [sitemap()],
+  // CSP (public/_headers) satır içi stile izin vermez; tüm CSS ayrı dosya olarak yüklenir.
+  build: { inlineStylesheets: 'never' },
 });

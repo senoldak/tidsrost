@@ -1,0 +1,39 @@
+---
+// Kartın tegnforklaring'i gibi: her kategori ve durum tek bir işaretle gösterilir.
+// Yeni kategori eklenirse buraya da bir işaret eklenmeli (yoksa nokta gösterilir).
+interface Props {
+  kind: string;
+  label?: string;
+  class?: string;
+}
+
+const { kind, label, class: extra } = Astro.props;
+
+const SHAPES: Record<string, string> = {
+  innenriks: '<path d="M6 1.2 11.2 10.4H.8Z" fill="currentColor"/>',
+  utenriks: '<circle cx="6" cy="6" r="4.1" fill="none" stroke="currentColor" stroke-width="1.7"/>',
+  okonomi: '<rect x="1.6" y="1.6" width="8.8" height="8.8" fill="currentColor"/>',
+  sport: '<path d="M6 1 11 6 6 11 1 6Z" fill="none" stroke="currentColor" stroke-width="1.6"/>',
+  kultur: '<circle cx="6" cy="6" r="4.4" fill="currentColor"/>',
+  teknologi: '<rect x="2" y="2" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1.7"/>',
+  breaking: '<path d="M2.2 11.4V.8" stroke="currentColor" stroke-width="1.5"/><path d="M2.9 1.2h8.3L9 4.1l2.2 2.9H2.9Z" fill="currentColor"/>',
+  rettelse: '<rect x="1.4" y="1.4" width="9.2" height="9.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3.4 8.6 8.6 3.4" stroke="currentColor" stroke-width="1.4"/>',
+  varsel: '<path d="M6 .4 10.9 3.2v5.6L6 11.6 1.1 8.8V3.2Z" fill="currentColor"/><path d="M6 3.2v3.8M6 8.1v1.1" stroke-width="1.5"/>',
+  automatisk: '<path d="M1.5 10.5h9" stroke="currentColor" stroke-width="1.2"/><path d="M3 9V6M6 9V2.5M9 9V4.5" stroke="currentColor" stroke-width="1.8"/>',
+  ki: '<path d="M6 1v10M1.7 3.5l8.6 5M1.7 8.5l8.6-5" stroke="currentColor" stroke-width="1.5"/>',
+  kilde: '<circle cx="6" cy="6" r="4.4" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="6" cy="6" r="1.6" fill="currentColor"/>',
+};
+
+const shape = SHAPES[kind] ?? '<circle cx="6" cy="6" r="2.4" fill="currentColor"/>';
+---
+
+<svg
+  class:list={['sym', `sym-${kind}`, extra]}
+  viewBox="0 0 12 12"
+  width="12"
+  height="12"
+  role={label ? 'img' : undefined}
+  aria-label={label}
+  aria-hidden={label ? undefined : 'true'}
+  set:html={shape}
+/>

@@ -1,0 +1,23 @@
+---
+import StoryMeta from './StoryMeta.astro';
+import { formatTime } from '../lib/site';
+import { newsUrl, type Haber } from '../lib/news';
+
+// Listelerde haberler metin olarak gösterilir (kapak görseli sadece manşette ve haber sayfasında).
+interface Props {
+  haber: Haber;
+  showCategory?: boolean;
+}
+
+const { haber, showCategory = true } = Astro.props;
+const { title, description, date } = haber.data;
+---
+
+<article class="row">
+  <time class="row-time" datetime={date.toISOString()}>{formatTime(date)}</time>
+  <div class="row-body">
+    <h3><a href={newsUrl(haber)}>{title}</a></h3>
+    <p class="row-desc">{description}</p>
+    <StoryMeta haber={haber} showCategory={showCategory} />
+  </div>
+</article>

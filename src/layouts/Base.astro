@@ -1,6 +1,7 @@
 ---
-import { SITE } from '../lib/site';
+import { SITE, PRODUKSJON } from '../lib/site';
 import { getActiveCategories } from '../lib/news';
+import Symbol from '../components/Symbol.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -16,13 +17,17 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = image ? new URL(image, Astro.site).href : undefined;
 const current = Astro.url.pathname;
 const categories = await getActiveCategories();
-const today = new Date().toLocaleDateString(SITE.locale, {
-  weekday: 'long',
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric',
-  timeZone: 'Europe/Oslo',
-});
+
+// Paftanın kenar bilgisi: derleme günü ve yılın kaçıncı günü olduğu ("Ark 283").
+const now = new Date();
+const oslo = (opts: Intl.DateTimeFormatOptions) => now.toLocaleDateString(SITE.locale, { ...opts, timeZone: 'Europe/Oslo' });
+const weekday = oslo({ weekday: 'long' });
+const today = oslo({ day: 'numeric', month: 'long', year: 'numeric' });
+const [y, m, d] = now.toLocaleDateString('sv-SE', { timeZone: 'Europe/Oslo' }).split('-').map(Number);
+const sheet = Math.round((Date.UTC(y, m - 1, d) - Date.UTC(y, 0, 0)) / 86400000);
+
+// "tidsrøst" içindeki ø harfi su mavisiyle gösterilir.
+const [nameHead, nameTail] = SITE.name.split('ø');
 ---
 
 <!doctype html>
@@ -32,6 +37,8 @@ const today = new Date().toLocaleDateString(SITE.locale, {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#fdfdfb" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#171612" media="(prefers-color-scheme: dark)" />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
@@ -47,27 +54,35 @@ const today = new Date().toLocaleDateString(SITE.locale, {
     <slot name="head" />
   </head>
   <body>
+    <a class="skip" href="#innhold">Hopp til innholdet</a>
     <header class="site-header">
-      <div class="container topbar">
-        <span class="today">{today}</span>
-        <span class="social">
-          {SITE.social.x && <a href={SITE.social.x} rel="noopener" target="_blank">X</a>}
-          {SITE.social.facebook && <a href={SITE.social.facebook} rel="noopener" target="_blank">Facebook</a>}
-          <a href="/rss.xml">RSS</a>
-        </span>
+      <div class="sheet-margin">
+        <div class="container">
+          <span class="sources"><Symbol kind="kilde" />Kilder: Regjeringen · Stortinget · Norges Bank · NVE · MET</span>
+          <span>{SITE.description}</span>
+          <nav aria-label="Følg oss">
+            {SITE.social.x && <a href={SITE.social.x} rel="noopener" target="_blank">X</a>}
+            {SITE.social.facebook && <a href={SITE.social.facebook} rel="noopener" target="_blank">Facebook</a>}
+            <a href="/rss.xml">RSS</a>
+          </nav>
+        </div>
       </div>
-      <div class="container brand">
-        <a href="/" class="logo">{SITE.name}</a>
+      <div class="mast">
+        <img class="mast-terrain" src="/kart.svg" alt="" width="1440" height="200" />
+        <div class="container mast-inner">
+          <a href="/" class="logo label" aria-label={`${SITE.name}, til forsiden`}>
+            {nameTail === undefined ? SITE.name : <>{nameHead}<span class="o">ø</span>{nameTail}</>}
+          </a>
+          <p class="edition label">Ark {sheet} · {weekday}<b>{today}</b></p>
+        </div>
       </div>
-      <nav class="nav" aria-label="Kategorier">
-        <div class="container nav-inner">
+      <nav class="legend-nav" aria-label="Kategorier">
+        <div class="container">
           <a href="/" aria-current={current === '/' ? 'page' : undefined}>Forsiden</a>
           {
             categories.map((c) => (
-              <a
-                href={`/kategori/${c.slug}/`}
-                aria-current={current.startsWith(`/kategori/${c.slug}`) ? 'page' : undefined}
-              >
+              <a href={`/kategori/${c.slug}/`} aria-current={current.startsWith(`/kategori/${c.slug}`) ? 'page' : undefined}>
+                <Symbol kind={c.slug} />
                 {c.name}
               </a>
             ))
@@ -76,29 +91,54 @@ const today = new Date().toLocaleDateString(SITE.locale, {
       </nav>
     </header>
 
-    <main class="container">
+    <main class="container" id="innhold">
       <slot />
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
+      <div class="container footer-grid">
         <div>
-          <a href="/" class="logo logo-sm">{SITE.name}</a>
+          <a href="/" class="logo-sm">{SITE.name}</a>
           <p>{SITE.description}</p>
-          {SITE.redaktor && <p>Ansvarlig redaktør: {SITE.redaktor}</p>}
-          {SITE.utgiver && <p>Utgiver: {SITE.utgiver}{SITE.orgnr && `, org.nr. ${SITE.orgnr}`}</p>}
-          {SITE.epost && <p>Kontakt: <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a></p>}
           {SITE.ikkeKommersiell && <p>Ikke-kommersielt nettsted uten annonser og inntekter.</p>}
           <p>Vi arbeider etter Vær Varsom-plakaten og Redaktørplakaten.</p>
         </div>
-        <nav aria-label="Bunnmeny">
-          {categories.map((c) => <a href={`/kategori/${c.slug}/`}>{c.name}</a>)}
-          <a href="/om-oss/">Om oss</a>
-          <a href="/personvern/">Personvern</a>
-        </nav>
+        <section aria-labelledby="tegnforklaring">
+          <h2 id="tegnforklaring">Tegnforklaring</h2>
+          <ul>
+            {
+              categories.map((c) => (
+                <li>
+                  <a href={`/kategori/${c.slug}/`}>
+                    <Symbol kind={c.slug} />
+                    {c.name}
+                  </a>
+                </li>
+              ))
+            }
+            <li><span class="mark-breaking"><Symbol kind="breaking" />Siste nytt</span></li>
+            <li><span><Symbol kind="varsel" class="sym-varsel-gult" />Farevarsel (gult, oransje, rødt)</span></li>
+            <li><span><Symbol kind="kilde" />Kilde for saken</span></li>
+            <li><span><Symbol kind="automatisk" />Laget automatisk av offentlige data</span></li>
+            {PRODUKSJON['ki-kontrollert'] && <li><span><Symbol kind="ki" />Skrevet med hjelp av KI</span></li>}
+            <li><span><Symbol kind="rettelse" />Rettelse</span></li>
+          </ul>
+        </section>
+        <section aria-labelledby="redaksjonen">
+          <h2 id="redaksjonen">Redaksjonen</h2>
+          {SITE.redaktor && <p>Ansvarlig redaktør: {SITE.redaktor}</p>}
+          {SITE.utgiver && <p>Utgiver: {SITE.utgiver}{SITE.orgnr && `, org.nr. ${SITE.orgnr}`}</p>}
+          {SITE.epost && <p>Kontakt: <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a></p>}
+          <ul>
+            <li><a href="/om-oss/">Om oss</a></li>
+            <li><a href="/personvern/">Personvern</a></li>
+            <li><a href="/rss.xml">RSS</a></li>
+          </ul>
+        </section>
       </div>
       <div class="container copyright">
-        © {new Date().getFullYear()} {SITE.name}. Alle rettigheter forbeholdt.
+        <span>© {new Date().getFullYear()} {SITE.name}. Alle rettigheter forbeholdt.</span>
+        <span>Ark {sheet} · {today}</span>
       </div>
     </footer>
   </body>

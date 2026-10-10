@@ -60,3 +60,36 @@ export function formatDate(date: Date, withTime = false) {
     timeZone: 'Europe/Oslo',
   });
 }
+
+export function formatTime(date: Date) {
+  return date.toLocaleTimeString(SITE.locale, { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Oslo' });
+}
+
+export function formatDay(date: Date) {
+  const s = date.toLocaleDateString(SITE.locale, { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Oslo' });
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+// Haberin üretim şekli için kısa işaret; sadece okura açıklama gösterilen türler için (PRODUKSJON).
+export function produksjonMerke(produksjon: string) {
+  if (!PRODUKSJON[produksjon]) return undefined;
+  return produksjon === 'automatisk' ? { kind: 'automatisk', label: 'Automatisk' } : { kind: 'ki', label: 'KI' };
+}
+
+// MET/NVE farevarsel'leri başlıktan tanınır; seviye rengi işarette gösterilir.
+export function varsel(title: string) {
+  const m = title.match(/^(gult|oransje|rødt)\b.*(farevarsel|varsel)/i);
+  if (!m) return undefined;
+  const level = m[1].toLowerCase().replace('ø', 'o');
+  return { level, label: `${m[1].charAt(0).toUpperCase()}${m[1].slice(1).toLowerCase()} farevarsel` };
+}
+
+// Gün bantları: derleme gününe göre "I dag", "I går", sonra "Tidligere".
+export function dayBand(date: Date) {
+  const day = (d: Date) => d.toLocaleDateString('sv-SE', { timeZone: 'Europe/Oslo' });
+  const today = new Date();
+  const yesterday = new Date(today.getTime() - 86400000);
+  if (day(date) === day(today)) return 'I dag';
+  if (day(date) === day(yesterday)) return 'I går';
+  return 'Tidligere';
+}

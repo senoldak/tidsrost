@@ -1,0 +1,31 @@
+---
+// Haberin işaret satırı: farevarsel, Siste nytt, kategori, saat, kaynak ve üretim işareti.
+import Symbol from './Symbol.astro';
+import { categoryName, formatDay, formatTime, produksjonMerke, varsel } from '../lib/site';
+import { kilde, type Haber } from '../lib/news';
+
+interface Props {
+  haber: Haber;
+  showCategory?: boolean;
+  time?: 'full' | 'short' | false;
+}
+
+const { haber, showCategory = true, time = false } = Astro.props;
+const { title, date, category, breaking, produksjon } = haber.data;
+const warn = varsel(title);
+const source = kilde(haber);
+const made = produksjonMerke(produksjon);
+---
+
+<p class="meta">
+  {warn && <span class="mark mark-varsel"><Symbol kind="varsel" class={`sym-varsel-${warn.level}`} />{warn.label}</span>}
+  {breaking && <span class="mark mark-breaking"><Symbol kind="breaking" />Siste nytt</span>}
+  {showCategory && <span class="mark"><Symbol kind={category} />{categoryName(category)}</span>}
+  {
+    time && (
+      <time datetime={date.toISOString()}>{time === 'full' ? `${formatDay(date)} kl. ${formatTime(date)}` : formatTime(date)}</time>
+    )
+  }
+  {source && <span class="mark"><Symbol kind="kilde" />{source}</span>}
+  {made && <span class="mark"><Symbol kind={made.kind} />{made.label}</span>}
+</p>
