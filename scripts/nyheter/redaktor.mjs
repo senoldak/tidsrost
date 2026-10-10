@@ -113,11 +113,36 @@ export function sjekkNavn(tekst, kilde) {
   return [...funn].map((w) => `Navnet/ordet «${w}» finnes ikke i kilden`);
 }
 
+// Alıntılar (« » içi ve tireyle başlayan satırlar) dışındaki metin; dil kontrolleri sadece buna bakar.
+const utenSitater = (tekst) =>
+  tekst
+    .replace(/«[^»]*»/g, ' ')
+    .split('\n')
+    .filter((l) => !/^\s*–/.test(l))
+    .join('\n');
+
+// Kaynak Nynorsk olunca yapay zekâ onu taklit edebiliyor; site Bokmål yazıyor.
+// Bokmål'da olmayan, Nynorsk'a özgü kelimeler (alıntılar hariç).
+// (?<!\p{L}) / (?!\p{L}): \b å, ø, æ harflerini tanımadığı için Unicode'a duyarlı kelime sınırı.
+const NYNORSK = /(?<!\p{L})(ikkje|frå|berre|korleis|kva|kven|meir|mykje|noko|nokon|sjølv|desse|dei|eit|òg|vore|vere|heile|fleire|nokre|kvifor|difor|saman|styrkje|førebyggje|handtere|regjeringa|kommunane|fylka|\p{L}+leg|\p{L}+lege)(?!\p{L})/giu;
+export function sjekkBokmål(tekst) {
+  const funn = [...new Set((utenSitater(tekst).match(NYNORSK) ?? []).map((w) => w.toLowerCase()))];
+  return funn.length >= 2 ? [`Teksten er skrevet på nynorsk (f.eks. ${funn.slice(0, 4).map((w) => `«${w}»`).join(', ')}); hele saken skal være på bokmål, bortsett fra direkte sitater`] : [];
+}
+
+// "i går / i dag / i morgen" haber geç yayınlanırsa yanlış olur; tarih ya da gün adı kullanılmalı.
+export function sjekkRelativTid(tekst) {
+  const funn = [...new Set((utenSitater(tekst).match(/(?<!\p{L})(i går|i dag|i morgen|i forgårs|i kveld|i natt)(?!\p{L})/giu) ?? []).map((w) => w.toLowerCase()))];
+  return funn.length ? [`Relative tidsuttrykk (${funn.map((w) => `«${w}»`).join(', ')}) kan bli feil når saken leses senere; bruk ukedag eller dato fra kilden, eller fjern dem`] : [];
+}
+
+const sprakSjekk = (tekst) => [...sjekkBokmål(tekst), ...sjekkRelativTid(tekst)];
+
 // ── 2. Kontrol masası ──────────────────────────────────────────────────
 
 export async function vurder(sak, kilde, { pressemelding = true } = {}) {
   const tekst = helTekst(sak);
-  const problemer = [...sjekkSitater(tekst, kilde), ...sjekkTall(tekst, kilde), ...sjekkNavn(tekst, kilde)];
+  const problemer = [...sjekkSitater(tekst, kilde), ...sjekkTall(tekst, kilde), ...sjekkNavn(tekst, kilde), ...sprakSjekk(tekst)];
 
   const svar = await gemini({
     schema: VURDERING_SKJEMA,
@@ -126,7 +151,7 @@ export async function vurder(sak, kilde, { pressemelding = true } = {}) {
 Avvis (godkjent=false) og forklar kort på norsk hvis noe av dette gjelder:
 1. En faktaopplysning (tall, navn, tittel på person, dato, sted, hendelse, partinavn) i utkastet står ikke i kilden, eller er gjengitt feil (VVP 3.2).
 2. Avsenderens påstander, vurderinger eller mål presenteres som fakta i stedet for å tilskrives avsenderen (VVP 4.2).
-3. ${pressemelding ? 'Det kommer ikke tydelig frem at saken bygger på en pressemelding og fra hvem' : 'Det kommer ikke tydelig frem hvem som er kilden'} (VVP 2.7, 3.1).
+3. ${pressemelding ? 'Det kommer ikke tydelig frem at saken bygger på en pressemelding og fra hvem' : 'Det kommer ikke frem hvilket organ som har fattet vedtaket (egne setninger som «Opplysningene kommer fra …» er ikke nødvendig)'} (VVP 2.7, 3.1).
 4. Tittel eller ingress går lenger enn det er dekning for i teksten, eller er misvisende (VVP 4.4).
 5. Utkastet inneholder egne vurderinger, ladede eller forsterkende ord, eller spekulasjon.
 6. Saken omtaler navngitte privatpersoner, kriminalsaker, barn, selvmord eller annet som krever særlig varsomhet (VVP 4.3–4.9).
@@ -182,12 +207,15 @@ export async function språkvask(sak) {
 Rett:
 - Grammatikk, rettskriving, tegnsetting og ordstilling på norsk bokmål (Språkrådets normer).
 - Oversettelsespreg og anglisismer: unaturlige konstruksjoner, direkte oversatte uttrykk, feil preposisjoner.
-- Blanding av bokmål og nynorsk utenfor sitater.
+- Nynorsk utenfor sitater: All tekst skal være på bokmål, også når kilden er på nynorsk (f.eks. «ikkje» → «ikke», «frå» → «fra», «ulovleg» → «ulovlig», «regjeringa» → «regjeringen»). Direkte sitater beholdes på originalspråket.
+- Relative tidsuttrykk som «i går», «i dag» og «i morgen» skal erstattes med ukedag eller dato hvis den står i saken, ellers fjernes de.
 - Norske skrivekonvensjoner: anførselstegn « », sitatstrek (–) for replikker, desimalkomma (3,5), mellomrom som tusenskille (3 580), datoer som «10. oktober», klokkeslett som «kl. 14.15».
 - Titler med stor forbokstav bare i første ord og i egennavn (f.eks. «Regjeringen foreslår økt støtte», ikke «Regjeringen Foreslår Økt Støtte»). Titler som «statsminister» og «utenriksminister» og ord som «finanskomiteen» skrives med liten forbokstav; departementsnavn («Finansdepartementet») med stor.
 - Klarspråk og avisstil: korte setninger (helst under 25 ord), aktiv form, ett poeng per setning. Unngå kansellistil og substantivsyke: «basert på», «samt», «i forbindelse med», «vedrørende», «herunder», «foreta en vurdering av» (skriv heller «vurdere»), «gjennomføre en økning» (skriv heller «øke»).
-- Gjentakelser: Samme tilskriving eller formulering («ifølge pressemeldingen», «opplyser departementet») skal ikke gjentas tett; varier eller fjern den andre. Ikke gjenta tittelen ordrett i første setning.
-- Ingen avsluttende henvisninger som «les mer på …» eller «hele pressemeldingen kan leses …»; kildelenken legges til automatisk.
+- Ikke overta byråkratiske formuleringer fra kilden; skriv dem om til vanlig avisspråk uten å endre meningen (f.eks. «utvide varigheten for ordningen» → «forlenge ordningen», «iverksette tiltak» → «sette i gang tiltak»). Egennavn, navn på ordninger og direkte sitater endres ikke.
+- Unngå passiv når det er kjent hvem som handlet: «Regjeringen besluttet tidligere at …», ikke «Det har tidligere blitt besluttet at …».
+- Gjentakelser: Samme tilskriving eller formulering («ifølge pressemeldingen», «opplyser departementet») skal ikke gjentas tett; varier eller fjern den andre. Første setning i brødteksten skal ikke gjenta ingressen ordrett.
+- Fjern avsluttende henvisninger som «les mer på …», «hele pressemeldingen kan leses …» og setninger som «Opplysningene kommer fra …»; kildelenken legges til automatisk.
 
 Ikke endre:
 - Fakta, tall, navn, datoer eller rekkefølgen av opplysninger.
@@ -229,17 +257,19 @@ export async function redigerSak(sak, kilde, opts = {}) {
     utkast = vasket;
   }
 
-  // Son kesin kontrol: uydurma alıntı ya da kaynakta olmayan rakam kalmışsa bir kez daha düzelttir;
-  // yine kalırsa yayınlama.
-  const sluttsjekk = (s) => [...sjekkSitater(helTekst(s), kilde), ...sjekkTall(helTekst(s), kilde)];
+  // Son kesin kontrol: uydurma alıntı, kaynakta olmayan rakam, Nynorsk metin ya da "i går" gibi
+  // göreli zaman kalmışsa bir kez daha düzelttir; yine kalırsa yayınlama.
+  const sluttsjekk = (s) => [...sjekkSitater(helTekst(s), kilde), ...sjekkTall(helTekst(s), kilde), ...sprakSjekk(helTekst(s))];
   let stopp = sluttsjekk(utkast);
   if (stopp.length) {
     merknader.push(...stopp);
     const sisteForsok = await rett(utkast, kilde, [
       ...stopp,
       'Sitater må kopieres tegn for tegn fra kilden, med samme ordstilling. Klarer du ikke det, skriv om til indirekte tale uten anførselstegn.',
+      'All tekst utenom direkte sitater skal være på bokmål, også om kilden er på nynorsk.',
     ]);
-    if (sluttsjekk(sisteForsok).length < stopp.length) utkast = sisteForsok;
+    if (sluttsjekk(sisteForsok).length < stopp.length) utkast = await språkvask(sisteForsok);
+    if (sluttsjekk(utkast).length > sluttsjekk(sisteForsok).length) utkast = sisteForsok;
     stopp = sluttsjekk(utkast);
   }
   return { sak: utkast, merknader, stopp };

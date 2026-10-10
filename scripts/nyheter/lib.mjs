@@ -211,7 +211,7 @@ export async function skrivSak(rot, sak) {
   sak = {
     ...sak,
     title: typografi(trygg(sak.title), { tittel: true }),
-    description: typografi(trygg(sak.description), { tittel: false }).replace(/\s+/g, ' '),
+    description: typografi(trygg(sak.description)).replace(/\s+/g, ' '),
     body: typografi(trygg(sak.body)),
   };
   const base = path.join(rot, 'src/content/haberler');

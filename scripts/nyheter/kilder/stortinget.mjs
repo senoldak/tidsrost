@@ -36,6 +36,32 @@ const SKJEMA = {
   required: ['title', 'description', 'body', 'category'],
 };
 
+// Meclis'in kısa karar özetleri sabit bir kalıpta yazılır:
+//   "Stortinget har behandlet et representantforslag fra Senterpartiet om lavere bensin- og dieselpriser.
+//    Forslaget ble ikke vedtatt."
+// Bu kalıba uyanlar yapay zekâsız, sabit Norveççe metinle haberleştirilir.
+const MAL = /^Stortinget har behandlet (?:et |)(?:representantforslag|forslag) fra (.+?) om (.+?)\.\s+Forslaget ble (ikke )?vedtatt\.?\s*$/s;
+const KOMITE_KATEGORI = { Finanskomiteen: 'okonomi', Næringskomiteen: 'okonomi', 'Utenriks- og forsvarskomiteen': 'utenriks' };
+
+export function fraMal(vedtak, komite) {
+  const m = vedtak.replace(/\s+/g, ' ').trim().match(MAL);
+  if (!m) return null;
+  const [, fra, omRå, ikke] = m;
+  // Haber metninde "mv." gibi kısaltmalar gereksiz; teklifin adının geri kalanı olduğu gibi kalır.
+  const omTittel = omRå.replace(/,?\s+(mv|m\.m|osv|o\.l)\.?$/, '');
+  const stor = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+  const avsnitt = [
+    `${stor(fra)} hadde fremmet et forslag om ${omTittel}.`,
+    komite ? `Saken var til behandling i ${komite.charAt(0).toLowerCase() + komite.slice(1)}.` : null,
+  ].filter(Boolean);
+  return {
+    title: ikke ? `Stortinget sa nei til forslag om ${omTittel}` : `Stortinget vedtok forslag om ${omTittel}`,
+    description: ikke ? `Forslaget fra ${fra} fikk ikke flertall i Stortinget.` : `Stortinget vedtok forslaget fra ${fra}.`,
+    body: avsnitt.join(' '),
+    category: KOMITE_KATEGORI[komite] ?? 'innenriks',
+  };
+}
+
 function prompt(kilde) {
   return `Du er nyhetsjournalist i nettavisen tidsrøst, som arbeider etter Vær Varsom-plakaten. Skriv en kort, nøytral nyhetssak på norsk bokmål om et vedtak i Stortinget, basert BARE på opplysningene under fra Stortingets egne sider.
 
@@ -45,7 +71,10 @@ Regler:
 - Nevn hvilke partier som sto bak et representantforslag bare hvis det står i materialet.
 - Ingen egne vurderinger, ladede ord eller spekulasjon om konsekvenser.
 - Tittelen skal si hva Stortinget gjorde (f.eks. «Stortinget sa nei til forslag om …», «Stortinget vedtok …»).
-- Nevn at opplysningene kommer fra Stortinget.
+- Ingressen skal inneholde utfallet (vedtatt eller ikke vedtatt) og hvem som fremmet forslaget, hvis det står i materialet.
+- Første setning i brødteksten skal ikke gjenta ingressen ordrett, og skal ikke begynne med «Stortinget har behandlet». Skriv heller hva forslaget gikk ut på, og nevn komiteen i en egen, enkel setning (f.eks. «Saken ble behandlet i finanskomiteen.»).
+- Ikke skriv setninger som «Opplysningene kommer fra Stortinget»; kilden fremgår av saken og lenkes automatisk.
+- Ingen saksnummer eller dokumenthenvisninger (som «Dokument 8:158 S» eller «Innst. 455 S»).
 - Ingen overskrift i body, ingen kildehenvisning nederst (den legges til automatisk).
 - Kategori: okonomi for skatt, avgifter, budsjett og næringsliv; ellers innenriks (utenriks bare for internasjonale saker).
 
@@ -74,6 +103,17 @@ export default {
         tid: new Date(msFra(s.sist_oppdatert_dato)),
         tittel: d.korttittel ?? d.tittel,
         async lag() {
+          const kilde = { navn: 'Stortinget', url: KILDE_URL(s.id), lisens: 'NLOD' };
+          const bilde = {
+            svg: (sak) => kildekort({ kategori: kategoriNavn(sak.category), avsender: 'Stortinget', underlinje: d.komite?.navn }),
+            alt: 'Illustrasjon med teksten «Stortinget»',
+            kreditt: 'Illustrasjon: tidsrøst',
+          };
+          // Kalıba uyan kısa kararlar şablonla yazılır: kaynak iki cümleden ibaret olduğunda
+          // yapay zekâ anlatacak bir şey bulamayıp dolgu cümle uyduruyor.
+          const mal = fraMal(vedtak, d.komite?.navn);
+          if (mal) return { ...mal, date: osloIso(), kilde, bilde, produksjon: 'automatisk' };
+
           const kildeTekst = [
             `Sak: ${d.tittel}`,
             d.korttittel && d.korttittel !== d.tittel ? `Korttittel: ${d.korttittel}` : null,
@@ -88,12 +128,8 @@ export default {
           return {
             ...ferdig,
             date: osloIso(),
-            kilde: { navn: 'Stortinget', url: KILDE_URL(s.id), lisens: 'NLOD' },
-            bilde: {
-              svg: (sak) => kildekort({ kategori: kategoriNavn(sak.category), avsender: 'Stortinget', underlinje: d.komite?.navn }),
-              alt: 'Illustrasjon med teksten «Stortinget»',
-              kreditt: 'Illustrasjon: tidsrøst',
-            },
+            kilde,
+            bilde,
             produksjon: 'ki-kontrollert',
             ...(merknader.length && { merknader }),
             ...(stopp.length && { draft: true, stopp }),
