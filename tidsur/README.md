@@ -13,12 +13,17 @@ GitHub'ın kendi zamanlayıcısı (`schedule`) çalışmaları saatlerce gecikti
 
 ## 2. Cloudflare Worker
 
-1. dash.cloudflare.com → **Workers & Pages** → **Create** → **Create Worker** → ad: `tidsrost-tidsur` → **Deploy**
-2. **Edit code** → içeriği sil, `worker.js` dosyasının içeriğini yapıştır → **Deploy**
-3. Worker sayfası → **Settings** → **Variables and Secrets** → **Add** → tür: **Secret**, ad: `GITHUB_TOKEN`, değer: token → **Deploy**
-4. **Settings** → **Trigger Events** (Triggers) → **Add** → **Cron Triggers** → `17 */2 * * *` → **Add**
+Kod ve zamanlama (`wrangler.jsonc`, cron `17 */2 * * *`, UTC) bu klasörden yüklenir:
 
-Cron saatleri UTC'dir: 00:17, 02:17 … (Norveç saatiyle 1–2 saat ileri).
+```
+cd tidsur
+npx wrangler login          # bir kerelik, tarayıcıda onay
+npx wrangler deploy
+npx wrangler secret put GITHUB_TOKEN   # token'ı sorduğunda yapıştır
+```
+
+Token'ı panelde düz değişken (Variable) olarak eklemeyin; `wrangler deploy` onu siler. Sadece `secret put` ya da panelde tür **Secret**.
+Panelden "Import a repository" ile Worker oluşturmayın: sitenin ayarlarını alıp tidsrost.com alan adını üzerine çeker.
 
 ## Kontrol
 
