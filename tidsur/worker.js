@@ -11,7 +11,7 @@ export default {
     // Panele/terminale yapıştırırken token'a satır sonu, boşluk ya da "Bearer " eklenebiliyor;
     // bu durumda GitHub başlığı bozuk sayıp gövdesiz 400 döner.
     const token = String(env.GITHUB_TOKEN ?? '').replace(/^\s*(Bearer|token)\s+/i, '').replace(/\s+/g, '');
-    // Terminalde Ctrl+V bazen yapıştırmaz,  karakterini kaydeder; gerçek token 40+ karakterdir.
+    // Terminalde Ctrl+V bazen yapıştırmaz, Ctrl+V karakterini (kod 22) kaydeder; gerçek token 40+ karakterdir.
     if (token.length < 20) throw new Error(`GITHUB_TOKEN geçersiz (${token.length} karakter); wrangler secret put ile yeniden girin`);
     const res = await fetch(DISPATCH, {
       method: 'POST',
