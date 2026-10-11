@@ -13,11 +13,13 @@ import stortinget from './kilder/stortinget.mjs';
 import udi from './kilder/udi.mjs';
 import medier from './kilder/medier.mjs';
 import { ssb, nkom, mattilsynet, datatilsynet, kulturdirektoratet, norgesbankPresse, finanstilsynet, konkurransetilsynet, skatteetaten,
-  vegvesen, fhi, dsb, havforskning, sivilombudet, forbrukerradet, idrettsforbundet, norfund } from './kilder/etater.mjs';
+  vegvesen, fhi, dsb, havforskning, sivilombudet, forbrukerradet, idrettsforbundet, norfund,
+  unnews, eukommisjonen, statnett, arbeidstilsynet, kystverket, helsedirektoratet, miljodirektoratet } from './kilder/etater.mjs';
 
 // medier: haber siteleri, en az iki sitede çıkan olaylar (bkz. kilder/medier.mjs).
 const KILDER = [medier, norgesbank, met, nve, stortinget, udi, regjeringen, ssb, nkom, mattilsynet, datatilsynet, kulturdirektoratet, norgesbankPresse, finanstilsynet, konkurransetilsynet, skatteetaten,
-  vegvesen, fhi, dsb, havforskning, sivilombudet, forbrukerradet, idrettsforbundet, norfund];
+  vegvesen, fhi, dsb, havforskning, sivilombudet, forbrukerradet, idrettsforbundet, norfund,
+  unnews, eukommisjonen, statnett, arbeidstilsynet, kystverket, helsedirektoratet, miljodirektoratet];
 
 const HER = path.dirname(fileURLToPath(import.meta.url));
 const ROT = path.resolve(HER, '../..');

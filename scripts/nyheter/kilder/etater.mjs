@@ -288,3 +288,178 @@ export const norfund = lagKilde({
   filter: (i) => i.title !== 'Norfund',
   les: (html) => ({ ingress: '', body: mellom(html, 'class="entry-content', '<footer') }),
 });
+
+// ── 2026-10-11 eklenenler (canlı sitelerde doğrulandı) ─────────────────
+
+// RSS 2.0 der datoen står i <a10:updated> i stedet for <pubDate> (Statnett, Council of the EU).
+function lesRssA10(xml) {
+  const datoer = [...xml.matchAll(/<item[\s>][\s\S]*?<\/item>/gi)].map(([i]) => i.match(/<a10:updated>([^<]+)<\/a10:updated>/)?.[1] ?? '');
+  return lesRss(xml).map((item, n) => ({ ...item, pubDate: item.pubDate || datoer[n] }));
+}
+
+// UN News: RSS-en (news.un.org/feed/...) henger; nyhetslisten er serverrendret. Publiserer også i helgene.
+export const unnews = lagKilde({
+  navn: 'unnews',
+  avsender: 'FNs nyhetstjeneste (UN News)',
+  kortnavn: 'UN News',
+  sjanger: 'nyhetssaken (på engelsk; skriv saken på norsk bokmål)',
+  kategorihint: 'utenriks.',
+  underlinje: 'Nyhet fra news.un.org',
+  async liste() {
+    const html = await hentTekst('https://news.un.org/en/news');
+    return [...html.matchAll(/<article class="node node--type-news-story[\s\S]*?<\/article>/g)].flatMap(([kort]) => {
+      const a = kort.match(/<h2 class="node__title">\s*<a href="(\/en\/story\/[^"]+)"[^>]*>([\s\S]*?)<\/a>/);
+      const d = kort.match(/<time datetime="([^"]+)"/);
+      if (!a || !d) return [];
+      const link = 'https://news.un.org' + a[1];
+      // Datoen er alltid kl. 12:00Z; ligger den i fremtiden, ville hent() forkastet saken.
+      const tid = Math.min(new Date(d[1]).getTime(), Date.now());
+      return [{ guid: link, title: htmlTilTekst(a[2]), link, description: htmlTilTekst(kort.match(/field--name-field-news-story-lead[^>]*>([\s\S]*?)<\/div>/)?.[1] ?? ''), pubDate: new Date(tid).toISOString() }];
+    });
+  },
+  les: (html) => ({
+    ingress: mellom(html, 'views-field-field-news-story-lead', '</div>'),
+    body: mellom(html, 'block-views-block-content-fields-block-body', '<div id="block-views-block-content-footer-block'),
+  }),
+});
+
+// EU-kommisjonen (Press corner). Artikkelsidene er JS-rendret; fullteksten hentes fra presscorner-API-et
+// i liste() og slås opp i les() via og:url. Bare pressemeldinger, uttalelser og referater (ikke taler/agenda).
+const EC_TEKST = new Map();
+export const eukommisjonen = lagKilde({
+  navn: 'eukommisjonen',
+  avsender: 'Europakommisjonen',
+  kortnavn: 'EU-kommisjonen',
+  sjanger: 'pressemeldingen (på engelsk; skriv saken på norsk bokmål)',
+  kategorihint: 'utenriks; okonomi for handel, konkurranse, finans og energi.',
+  underlinje: 'Pressemelding fra ec.europa.eu',
+  async liste() {
+    const items = lesRss(await hentTekst('https://ec.europa.eu/commission/presscorner/api/rss?language=en'))
+      .filter((i) => /\/detail\/en\/(ip|statement|read)_\d+_\d+$/.test(i.link))
+      .filter((i) => Date.now() - new Date(i.pubDate) < 3 * 864e5);
+    for (const i of items) {
+      const ref = i.link.split('/').pop().toUpperCase().replaceAll('_', '/');
+      try {
+        const doc = JSON.parse(await hentTekst(`https://ec.europa.eu/commission/presscorner/api/documents?reference=${ref}&language=en`));
+        EC_TEKST.set(i.link, htmlTilTekst(doc.docuLanguageResource?.htmlContent ?? ''));
+      } catch {}
+    }
+    return items;
+  },
+  les: (html) => {
+    const url = (html.match(/property="og:url" content="([^"]+)"/)?.[1] ?? '').replaceAll('\\/', '/');
+    return { ingress: '', body: EC_TEKST.get(url) ?? '' };
+  },
+});
+
+// Statnett: kraftnett og forsyningssikkerhet. Datoen står i <a10:updated>.
+export const statnett = lagKilde({
+  navn: 'statnett',
+  avsender: 'Statnett',
+  kortnavn: 'Statnett',
+  sjanger: 'nyhetssaken',
+  kategorihint: 'okonomi for kraftpriser, nettleie og investeringer; ellers innenriks.',
+  underlinje: 'Nyhet fra statnett.no',
+  liste: async () => lesRssA10(await hentTekst('https://www.statnett.no/rss/')),
+  les: (html) => ({
+    ingress: mellom(html, 'class="article-intro"', '</div>'),
+    body: mellom(html, 'class="article-text', '<div class="article-footer'),
+  }),
+});
+
+// Arbeidstilsynet: ingen RSS; /nyheter/-listen (dato DD.MM.ÅÅÅÅ). Listen har også innlegg/kronikker.
+export const arbeidstilsynet = lagKilde({
+  navn: 'arbeidstilsynet',
+  avsender: 'Arbeidstilsynet',
+  kortnavn: 'Arbeidstilsynet',
+  sjanger: 'nyhetssaken',
+  kategorihint: 'innenriks; okonomi for lønn og arbeidsmarked.',
+  underlinje: 'Nyhet fra arbeidstilsynet.no',
+  filter: (i) => !/^(Innlegg|Kronikk)\s*:/i.test(i.title),
+  async liste() {
+    const html = await hentTekst('https://www.arbeidstilsynet.no/nyheter/');
+    return [...html.matchAll(/<a class="card card-link" href="([^"]+)">([\s\S]*?)<\/a>/g)].flatMap(([, href, kort]) => {
+      const t = kort.match(/<h3>([\s\S]*?)<\/h3>/);
+      const d = kort.match(/Publisert (\d{2})\.(\d{2})\.(\d{4})/);
+      if (!t || !d) return [];
+      const link = new URL(href, 'https://www.arbeidstilsynet.no').href;
+      return [{ guid: link, title: htmlTilTekst(t[1]), link, description: htmlTilTekst(kort.match(/<p class="ingress">([\s\S]*?)<\/p>/)?.[1] ?? ''), pubDate: `${d[3]}-${d[2]}-${d[1]}T00:00:00+02:00` }];
+    });
+  },
+  les: (html) => ({
+    ingress: mellom(html, 'class="news__ingress', '</div>'),
+    body: mellom(html, 'class="body-text', '<section class="footer-links'),
+  }),
+});
+
+// Kystverket: ingen RSS; /nyheter/-listen har <time datetime>.
+export const kystverket = lagKilde({
+  navn: 'kystverket',
+  avsender: 'Kystverket',
+  kortnavn: 'Kystverket',
+  sjanger: 'nyhetssaken',
+  kategorihint: 'innenriks; okonomi for havner og sjøtransport som næring.',
+  underlinje: 'Nyhet fra kystverket.no',
+  async liste() {
+    const html = await hentTekst('https://www.kystverket.no/nyheter/');
+    return [...html.matchAll(/<a class="card__headline-link" href="([^"]+)">([\s\S]*?)<\/a>([\s\S]*?)<\/article>/g)].flatMap(([, href, tittel, rest]) => {
+      const d = rest.match(/<time datetime="([^"]+)"/);
+      if (!d) return [];
+      const link = new URL(href, 'https://www.kystverket.no').href;
+      return [{ guid: link, title: htmlTilTekst(tittel), link, description: htmlTilTekst(rest.match(/<div class="card__content">([\s\S]*?)<\/div>/)?.[1] ?? ''), pubDate: d[1].replace(' ', 'T') }];
+    });
+  },
+  les: (html) => ({
+    ingress: mellom(html, 'class="article__lead', '</div>'),
+    body: mellom(html, 'class="article__body', '<footer'),
+  }),
+});
+
+// Helsedirektoratet: ingen RSS; /nyheter-listen (dato «08. oktober 2026», uten klokkeslett).
+const MAANED = { januar: 1, februar: 2, mars: 3, april: 4, mai: 5, juni: 6, juli: 7, august: 8, september: 9, oktober: 10, november: 11, desember: 12 };
+export const helsedirektoratet = lagKilde({
+  navn: 'helsedirektoratet',
+  avsender: 'Helsedirektoratet',
+  kortnavn: 'Helsedirektoratet',
+  sjanger: 'nyhetssaken',
+  kategorihint: 'innenriks.',
+  underlinje: 'Nyhet fra helsedirektoratet.no',
+  async liste() {
+    const html = await hentTekst('https://www.helsedirektoratet.no/nyheter');
+    return [...html.matchAll(/<a href="(https:\/\/www\.helsedirektoratet\.no\/nyheter\/[^"]+)"\s+class=" b-nav-list__link">([\s\S]*?)<\/a>/g)].flatMap(([, link, kort]) => {
+      const t = kort.match(/<h2[^>]*>([\s\S]*?)<\/h2>/);
+      const d = kort.match(/b-list-item-type__date">\s*(\d{1,2})\. (\p{L}+) (\d{4})/u);
+      if (!t || !d || !MAANED[d[2]]) return [];
+      const dato = `${d[3]}-${String(MAANED[d[2]]).padStart(2, '0')}-${d[1].padStart(2, '0')}T00:00:00+02:00`;
+      return [{ guid: link, title: htmlTilTekst(t[1]), link, description: htmlTilTekst(kort.match(/<p>([\s\S]*?)<\/p>/)?.[1] ?? ''), pubDate: dato }];
+    });
+  },
+  les: (html) => ({
+    ingress: mellom(html, 'class="b-article-intro__intro', '</p>'),
+    body: mellom(html, 't-body-text', '<button id="exportPdf"'),
+  }),
+});
+
+// Miljødirektoratet: ingen RSS; listen ligger som JSON i en React-komponent på /aktuelt/nyheter/.
+export const miljodirektoratet = lagKilde({
+  navn: 'miljodirektoratet',
+  avsender: 'Miljødirektoratet',
+  kortnavn: 'Miljødirektoratet',
+  sjanger: 'nyhetssaken',
+  kategorihint: 'innenriks (miljø, klima, natur, forurensning).',
+  underlinje: 'Nyhet fra miljodirektoratet.no',
+  async liste() {
+    const html = await hentTekst('https://www.miljodirektoratet.no/aktuelt/nyheter/');
+    const sett = new Set();
+    return [...html.matchAll(/\{"title":"((?:[^"\\]|\\.)*)","text":"((?:[^"\\]|\\.)*)"[^{}]*?"href":"(\/aktuelt\/nyheter\/[^"]+)","publishedDate":"([^"]+)"/g)].flatMap(([, tittel, tekst, href, dato]) => {
+      if (sett.has(href)) return [];
+      sett.add(href);
+      const link = 'https://www.miljodirektoratet.no' + href;
+      return [{ guid: link, title: JSON.parse(`"${tittel}"`), link, description: JSON.parse(`"${tekst}"`), pubDate: dato }];
+    });
+  },
+  les: (html) => ({
+    ingress: mellom(html, 'c_news-page-header__preamble', '</p>'),
+    body: mellom(html, 'c_news-page-main-container', '<footer'),
+  }),
+});
