@@ -243,7 +243,8 @@ export async function skrivSak(rot, sak) {
   ].filter(Boolean);
   // Üretim şekli notu sayfada ayrıca gösterilir; burada sadece kaynak (VVP 3.1).
   const lenke = (k) => `[${k.navn}](${k.url})${k.lisens ? ` (${k.lisens})` : ''}`;
-  const kilde = `*${kilder.length > 1 ? 'Kilder' : 'Kilde'}: ${kilder.map(lenke).join(', ')}*`;
+  // Haber sitelerine dayanan haberde kaynak satırı yazılmaz (kilder: []; sahibin kuralı).
+  const kilde = kilder.length ? `*${kilder.length > 1 ? 'Kilder' : 'Kilde'}: ${kilder.map(lenke).join(', ')}*` : '';
   await mkdir(path.join(base, slug), { recursive: true });
   const bilde = await lagBilde(sak);
   if (bilde) {
@@ -251,7 +252,7 @@ export async function skrivSak(rot, sak) {
     fm.push('cover: ./cover.png', `coverAlt: ${yamlStr(bilde.alt)}`, `coverKreditt: ${yamlStr(bilde.kreditt)}`);
   }
   fm.push('---');
-  const innhold = `${fm.join('\n')}\n\n${sak.body.trim()}\n\n${kilde}\n`;
+  const innhold = `${fm.join('\n')}\n\n${sak.body.trim()}\n${kilde ? `\n${kilde}\n` : ''}`;
   await writeFile(path.join(base, slug, 'index.md'), innhold, 'utf8');
   return slug;
 }

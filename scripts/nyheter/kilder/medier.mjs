@@ -1,7 +1,9 @@
 // Haber sitelerinin akışları (NRK, VG, Aftenposten …). Resmi kaynakların aksine burada tek sitenin haberi
 // yazılmaz: bir olay ancak en az MIN_MEDIER farklı sitede yer aldıysa haber olur (başka sitenin özel haberini
-// sahiplenmemek ve tek kaynağa dayanmamak için, sahibin kararı 2026-10-11). Bir site olayı "erfarer/kjenner til"
-// diye ilk kez duyurduysa haberde o siteye atıf yapılır (VVP 3.1 / 2.7).
+// sahiplenmemek ve tek kaynağa dayanmamak için, sahibin kararı 2026-10-11).
+// Sahibin kesin kuralı (2026-10-11): haber siteleri ve ajanslar ne metinde, ne kaynak satırında, ne görselde
+// anılır. Bu yüzden bir sitenin kendi ortaya çıkardığı bilgiye ("erfarer", "kjenner til") dayanan olay yazılmaz;
+// medyaya atfedilen bilgi ("ifølge Financial Times") metne alınmaz. Kaynak satırı yok, kapakta kategori yazar.
 //
 // Akış: akışlar → son 24 saatin başlıkları → tek Gemini çağrısıyla aynı olayı anlatanlar gruplanır ve son 48 saatte
 // yazılmış haberlerle eşlenir → MIN_MEDIER siteye ulaşan grup aday olur → lag(): sayfa metinleri, taslak, yazı işleri.
@@ -112,8 +114,9 @@ function prompt(kilder) {
 
 Kilde og tilskriving (VVP 2.7, 3.1):
 - Bruk bare opplysninger som står i sakene, helst det flere av dem forteller. Er sakene uenige om et tall eller en opplysning, ta det ikke med.
-- Si tydelig hvilke medier som melder saken («melder NRK og VG»).
-- Har ett medie avdekket saken selv («NRK erfarer», «kjenner til», «avslører», «har fått innsyn i», «har fått vite»), skal opplysningene tilskrives det mediet («ifølge NRK»).
+- Nevn ALDRI et medie, en nettavis, en tv-kanal, et nyhetsbyrå eller en podkast ved navn (NRK, VG, TV 2, Reuters, NTB, AFP, Financial Times …), og skriv ikke «melder flere medier» eller lignende. Skriv saken som en selvstendig nyhetssak.
+- Opplysninger som bare tilskrives et medie («ifølge Financial Times», «sier han til TV 2», «NRK erfarer») skal utelates helt. Uttalelser kan gjengis med hvem som sa dem, men uten å nevne hvilket medie de ble sagt til.
+- Bygger hele saken på opplysninger som ett medie har avdekket selv («erfarer», «kjenner til», «avslører», «har fått innsyn i», «har fått vite»), sett egnet=false.
 - Påstander og vurderinger fra personer, partier, selskaper eller myndigheter tilskrives dem. Ikke legg til egne vurderinger, kommentarer eller bakgrunn fra egen kunnskap.
 
 Nøyaktighet (VVP 3.2, 4.4):
@@ -127,7 +130,7 @@ Varsomhet (VVP 4.3, 4.5, 4.7, 4.8):
 - Ellers egnet=true.
 
 Form:
-- Første avsnitt forteller det viktigste. 2–5 korte avsnitt. Ingen overskrift i body, ingen kildeliste nederst (lenkene legges til automatisk).
+- Første avsnitt forteller det viktigste. 2–5 korte avsnitt. Ingen overskrift i body, ingen kildeliste og ingen lenker.
 - Kategori: sport for idrett; kultur for kultur og underholdning; okonomi for næringsliv, økonomi og arbeidsliv; teknologi for teknologi; utenriks for saker utenfor Norge; ellers innenriks.
 
 ${kilder.map((k, i) => `### Sak ${i + 1}: ${k.medie}\nTittel: ${k.tittel}\nIngress: ${k.ingress}\n${k.tekst ? `Tekst:\n${k.tekst.slice(0, 6000)}` : ''}`).join('\n\n')}`;
@@ -203,25 +206,20 @@ function lagKandidat(valgt, alle) {
       if (!ai) return null;
       if (!ai.egnet) return { hopp: 'ikke egnet (varsomhet eller ikke nyhet)' };
       const { egnet, ...sak } = ai;
-      const navn = [...new Set(valgt.map((k) => k.medie))];
-      const kilder = valgt.map((k) => ({ navn: k.medie, url: k.url }));
+      // Kaynak satırı yok (kilder: []); kapakta sadece kategori adı.
       const bilde = {
-        svg: (s) => kildekort({ kategori: kategoriNavn(s.category), avsender: navn.join(', '), underlinje: 'Saken bygger på dekning i flere medier' }),
-        alt: `Illustrasjon med teksten «${navn.join(', ')}»`,
+        svg: (s) => kildekort({ kategori: 'tidsrøst', avsender: kategoriNavn(s.category), underlinje: '' }),
+        alt: 'Illustrasjon med kategorinavnet',
         kreditt: 'Illustrasjon: tidsrøst',
       };
-      const felles = { ...sak, date: osloIso(), kilde: kilder[0], kilder, bilde };
+      const felles = { ...sak, date: osloIso(), kilder: [], bilde };
       if (kontroll === 'ingen') return { ...felles, produksjon: 'ki-medier' };
       if (kontroll === 'manuell') return { ...felles, draft: true, produksjon: 'ki-assistert' };
       const kildeTekst = valgt.map((k) => `Medie: ${k.medie}\nTittel: ${k.tittel}\nIngress: ${k.ingress}\n\n${k.tekst}`).join('\n\n---\n\n');
       const { sak: ferdig, merknader, stopp } = await redigerSak(sak, kildeTekst, { medier: true });
-      return {
-        ...felles,
-        ...ferdig,
-        produksjon: 'ki-medier',
-        ...(merknader.length && { merknader }),
-        ...(stopp.length && { draft: true, stopp }),
-      };
+      // Son kontrolde sorun kalırsa (medya adı, kaynakta olmayan rakam/alıntı) yayınlanmaz, taslak da açılmaz.
+      if (stopp.length) return { hopp: `kontroll: ${stopp.join(' / ')}` };
+      return { ...felles, ...ferdig, produksjon: 'ki-medier', ...(merknader.length && { merknader }) };
     },
   };
 }

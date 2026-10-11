@@ -16,7 +16,7 @@ tidsrøst ("time's voice") publishes short, factual news in Norwegian Bokmål (`
 
 ## Positioning
 
-A non-commercial news site with no ads and no revenue. Its base is primary public sources (Regjeringen, Stortinget, Norges Bank, NVE, MET, about 30 Norwegian agencies, UN News and the European Commission). Since 2026-10-11 it also covers news from Norwegian media (NRK, VG, Aftenposten, E24, TV 2 and others), but only events reported by at least two different outlets; an outlet's own scoop is credited to it, and every such story links to the outlets (owner's decision, to avoid taking a single outlet's exclusive). It is open about how each story was produced, through a production note under each article, and it follows Vær Varsom-plakaten and Redaktørplakaten.
+A non-commercial news site with no ads and no revenue. Its base is primary public sources (Regjeringen, Stortinget, Norges Bank, NVE, MET, about 30 Norwegian agencies, UN News and the European Commission). Since 2026-10-11 it also covers current events found in Norwegian media feeds (NRK, VG, Aftenposten, E24, TV 2 and others), but only events reported by at least two different outlets, and never a single outlet's own scoop. Owner's strict rule: news outlets and agencies are never named or linked, in text, source line or cover image; only official sources are cited. It is open about how each story was produced, through a production note under each article, and it follows Vær Varsom-plakaten and Redaktørplakaten.
 
 ## Operating Context
 

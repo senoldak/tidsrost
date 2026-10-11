@@ -138,11 +138,18 @@ export function sjekkRelativTid(tekst) {
 
 const sprakSjekk = (tekst) => [...sjekkBokmål(tekst), ...sjekkRelativTid(tekst)];
 
+// Haber sitelerine dayanan haberde hiçbir medya kuruluşu anılmaz (sahibin kuralı); anılırsa haber yayınlanmaz.
+const MEDIER = /(?<![\p{L}\d])(NRK|VG|Aftenposten|Dagbladet|E24|TV ?2|Nettavisen|Bergens Tidende|Dagsavisen|Dagens Næringsliv|DN\.no|Klassekampen|Romsdals Budstikke|Adresseavisen|Stavanger Aftenblad|Fædrelandsvennen|iTromsø|Nordlys|NTB|Reuters|AFP|Bloomberg|Financial Times|BBC|CNN|Sky News|The Guardian|New York Times|Washington Post|Wall Street Journal|Al Jazeera|ANB|Avisenes Nyhetsbyrå)(?![\p{L}\d])/gu;
+export function sjekkMedier(tekst) {
+  const funn = [...new Set(tekst.match(MEDIER) ?? [])];
+  return funn.length ? [`Medier nevnt ved navn (${funn.join(', ')}); fjern dem og alt som bare tilskrives dem`] : [];
+}
+
 // ── 2. Kontrol masası ──────────────────────────────────────────────────
 
 export async function vurder(sak, kilde, { pressemelding = true, medier = false } = {}) {
   const tekst = helTekst(sak);
-  const problemer = [...sjekkSitater(tekst, kilde), ...sjekkTall(tekst, kilde), ...sjekkNavn(tekst, kilde), ...sprakSjekk(tekst)];
+  const problemer = [...sjekkSitater(tekst, kilde), ...sjekkTall(tekst, kilde), ...sjekkNavn(tekst, kilde), ...sprakSjekk(tekst), ...(medier ? sjekkMedier(tekst) : [])];
 
   const svar = await gemini({
     schema: VURDERING_SKJEMA,
@@ -151,7 +158,7 @@ export async function vurder(sak, kilde, { pressemelding = true, medier = false 
 Avvis (godkjent=false) og forklar kort på norsk hvis noe av dette gjelder:
 1. En faktaopplysning (tall, navn, tittel på person, dato, sted, hendelse, partinavn) i utkastet står ikke i kilden, eller er gjengitt feil (VVP 3.2).
 2. Avsenderens påstander, vurderinger eller mål presenteres som fakta i stedet for å tilskrives avsenderen (VVP 4.2).
-3. ${medier ? 'Det kommer ikke tydelig frem hvilke medier som melder saken, eller opplysninger som ett medie har avdekket selv («erfarer», «kjenner til», «avslører») er ikke tilskrevet det mediet' : pressemelding ? 'Det kommer ikke tydelig frem at saken bygger på en pressemelding og fra hvem' : 'Det kommer ikke frem hvilket organ som har fattet vedtaket (egne setninger som «Opplysningene kommer fra …» er ikke nødvendig)'} (VVP 2.7, 3.1).
+3. ${medier ? 'Utkastet nevner et medie, en nettavis, en tv-kanal, et nyhetsbyrå eller en podkast ved navn, skriver «melder flere medier» e.l., eller bygger på opplysninger som ett medie har avdekket selv' : pressemelding ? 'Det kommer ikke tydelig frem at saken bygger på en pressemelding og fra hvem' : 'Det kommer ikke frem hvilket organ som har fattet vedtaket (egne setninger som «Opplysningene kommer fra …» er ikke nødvendig)'} (VVP 2.7, 3.1).
 4. Tittel eller ingress går lenger enn det er dekning for i teksten, eller er misvisende (VVP 4.4).
 5. Utkastet inneholder egne vurderinger, ladede eller forsterkende ord, eller spekulasjon.
 6. Saken omtaler navngitte privatpersoner, kriminalsaker, barn, selvmord eller annet som krever særlig varsomhet (VVP 4.3–4.9).
@@ -259,7 +266,7 @@ export async function redigerSak(sak, kilde, opts = {}) {
 
   // Son kesin kontrol: uydurma alıntı, kaynakta olmayan rakam, Nynorsk metin ya da "i går" gibi
   // göreli zaman kalmışsa bir kez daha düzelttir; yine kalırsa yayınlama.
-  const sluttsjekk = (s) => [...sjekkSitater(helTekst(s), kilde), ...sjekkTall(helTekst(s), kilde), ...sprakSjekk(helTekst(s))];
+  const sluttsjekk = (s) => [...sjekkSitater(helTekst(s), kilde), ...sjekkTall(helTekst(s), kilde), ...sprakSjekk(helTekst(s)), ...(opts.medier ? sjekkMedier(helTekst(s)) : [])];
   let stopp = sluttsjekk(utkast);
   if (stopp.length) {
     merknader.push(...stopp);
