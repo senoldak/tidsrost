@@ -61,8 +61,8 @@ jobs:
 
       # Nye saker til Telegram-kanalen med omslagsbilde. Venter til saken er publisert (lenken svarer 200),
       # og lagrer listen over sendte saker med [skip ci].
+      # Her kjøring: også saker som ikke kom frem forrige gang (f.eks. manglende kanaltilgang) prøves igjen.
       - name: Telegram
-        if: steps.hent.outputs.antall != '0'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_KANAL: ${{ vars.TELEGRAM_KANAL }}
