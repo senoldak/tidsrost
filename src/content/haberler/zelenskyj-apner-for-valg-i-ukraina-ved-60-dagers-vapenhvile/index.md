@@ -9,4 +9,6 @@ coverAlt: "Illustrasjon med kategorinavnet"
 coverKreditt: "Illustrasjon: tidsrøst"
 ---
 
-Ukrainas president Volodymyr Zelenskyj opplyser at det vil bli arrangert valg i landet dersom Russlands president Vladimir Putin godtar en total våpenhvile på 60 dager. Utspillet kommer som svar på meldinger fra USAs president Donald Trump. Trump kom tidligere med utspill om at Ukraina trenger en ny leder og at landet burde inngått en avtale. Zelenskyj svarer at det er opp til folket å velge leder, og at det er opp til Putin om det blir valg. Samtidig har det vært uklare meldinger om en eventuell våpenhvile i energisektoren. USAs president har hevdet at partene er enige om å stanse angrep på energiområdet, noe den ukrainske presidenten har kommentert i intervjuer.
+Ukrainas president Volodymyr Zelenskyj opplyser at det vil bli arrangert valg i landet dersom Russlands president Vladimir Putin godtar en total våpenhvile på 60 dager. Utspillet kommer som svar på meldinger fra USAs president Donald Trump. Trump kom tidligere med utspill om at Ukraina trenger en ny leder og at landet burde inngått en avtale.
+
+Zelenskyj svarer at det er opp til folket å velge leder, og at det er opp til Putin om det blir valg. Samtidig har det vært uklare meldinger om en eventuell våpenhvile i energisektoren. USAs president har hevdet at partene er enige om å stanse angrep på energiområdet, noe den ukrainske presidenten har kommentert i intervjuer.

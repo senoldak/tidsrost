@@ -126,12 +126,13 @@ export function lagKilde(etat) {
 
             const kildeTekst = `Avsender: ${etat.avsender}\nTittel: ${item.title}\nIngress: ${side.ingress}\n\n${side.body}`;
             const { sak: ferdig, merknader, stopp } = await redigerSak(sak, kildeTekst, { pressemelding: etat.pressemelding ?? true });
+            // Düzeltme turlarından sonra hâlâ sorunluysa yayınlanmaz, taslak da açılmaz.
+            if (stopp.length) return { hopp: `kontroll: ${stopp.join(' / ')}` };
             return {
               ...felles,
               ...ferdig,
               produksjon: 'ki-kontrollert',
               ...(merknader.length && { merknader }),
-              ...(stopp.length && { draft: true, stopp }),
             };
           },
         }));

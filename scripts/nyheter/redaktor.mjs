@@ -242,7 +242,8 @@ ${sak.body}`,
 
 // ── Tüm süreç ──────────────────────────────────────────────────────────
 
-// Döner: { sak, merknader, stopp } — stopp doluysa haber yayınlanmamalı (taslak kalır).
+// Döner: { sak, merknader, stopp } — stopp doluysa haber yayınlanmamalı (taslak da açılmaz; kaynak hopp döner).
+const SISTE_RUNDER = 3;
 export async function redigerSak(sak, kilde, opts = {}) {
   let utkast = sak;
   const merknader = [];
@@ -267,13 +268,16 @@ export async function redigerSak(sak, kilde, opts = {}) {
   // Son kesin kontrol: uydurma alıntı, kaynakta olmayan rakam, Nynorsk metin ya da "i går" gibi
   // göreli zaman kalmışsa bir kez daha düzelttir; yine kalırsa yayınlama.
   const sluttsjekk = (s) => [...sjekkSitater(helTekst(s), kilde), ...sjekkTall(helTekst(s), kilde), ...sprakSjekk(helTekst(s)), ...(opts.medier ? sjekkMedier(helTekst(s)) : [])];
+  // Sahibin kararı (2026-10-11): taslak bekletilmez. En fazla SISTE_RUNDER düzeltme turu; yine kalırsa
+  // çağıran kaynak haberi yayınlamaz (hopp).
   let stopp = sluttsjekk(utkast);
-  if (stopp.length) {
-    merknader.push(...stopp);
+  if (stopp.length) merknader.push(...stopp);
+  for (let runde = 0; runde < SISTE_RUNDER && stopp.length; runde++) {
     const sisteForsok = await rett(utkast, kilde, [
       ...stopp,
       'Sitater må kopieres tegn for tegn fra kilden, med samme ordstilling. Klarer du ikke det, skriv om til indirekte tale uten anførselstegn.',
       'All tekst utenom direkte sitater skal være på bokmål, også om kilden er på nynorsk.',
+      'Tall som ikke står i kilden skal fjernes.',
     ]);
     if (sluttsjekk(sisteForsok).length < stopp.length) utkast = await språkvask(sisteForsok);
     if (sluttsjekk(utkast).length > sluttsjekk(sisteForsok).length) utkast = sisteForsok;

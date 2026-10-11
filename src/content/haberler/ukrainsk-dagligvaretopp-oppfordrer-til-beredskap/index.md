@@ -9,4 +9,6 @@ coverAlt: "Illustrasjon med kategorinavnet"
 coverKreditt: "Illustrasjon: tidsrøst"
 ---
 
-Roman Korsak, sjef for Spar i Ukraina, har drevet dagligvarebutikker gjennom fire år med krig. Han var på norgesbesøk og delte sine erfaringer på en konferanse i regi av Strongpoint. Kjeden har 107 butikker i drift i Ukraina og har åpnet 90 nye butikker i løpet av krigen. Korsak råder norske butikker til å ha reservestrøm, sikre kommunikasjon og ha kontanter tilgjengelig ved kriser. Videre mener han at initiativet til beredskap bør komme fra bransjen, ikke staten, og at man må våge å investere selv i usikre tider. Samtidig tester norske dagligvarekjeder nå egne beredskapsbutikker med nødstrøm og alternative betalingsløsninger.
+Roman Korsak, sjef for Spar i Ukraina, har drevet dagligvarebutikker gjennom fire år med krig. Han var på norgesbesøk og delte sine erfaringer på en konferanse i regi av Strongpoint. Kjeden har 107 butikker i drift i Ukraina og har åpnet 90 nye butikker i løpet av krigen.
+
+Korsak råder norske butikker til å ha reservestrøm, sikre kommunikasjon og ha kontanter tilgjengelig ved kriser. Videre mener han at initiativet til beredskap bør komme fra bransjen, ikke staten, og at man må våge å investere selv i usikre tider. Samtidig tester norske dagligvarekjeder nå egne beredskapsbutikker med nødstrøm og alternative betalingsløsninger.

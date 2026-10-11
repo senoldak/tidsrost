@@ -210,6 +210,22 @@ export function typografi(tekst = '', { tittel = false } = {}) {
   return ut;
 }
 
+// Yapay zekâ bazen gövdeyi tek blok döndürüyor; boş satırı olmayan, liste/tablo içermeyen uzun metin
+// 2-3 cümlelik paragraflara bölünür (kısaltmalarda bölünmesin diye cümle sonu + büyük harf aranır).
+export function avsnitt(tekst = '') {
+  const t = tekst.trim();
+  if (/\n\s*\n/.test(t) || /^\s*([-*|#]|\d+\.)\s/m.test(t) || t.length < 350) return t;
+  const setninger = t.replace(/\n+/g, ' ').split(/(?<=[.!?»])\s+(?=[«–"A-ZÆØÅ0-9])/u);
+  if (setninger.length < 4) return t;
+  const ut = [];
+  for (let i = 0; i < setninger.length; ) {
+    const n = setninger.length - i === 4 ? 2 : Math.min(3, setninger.length - i);
+    ut.push(setninger.slice(i, i + n).join(' '));
+    i += n;
+  }
+  return ut.join('\n\n');
+}
+
 // Haberi src/content/haberler/<slug>/index.md olarak yazar, slug'ı döner.
 export async function skrivSak(rot, sak) {
   if (!KATEGORIER.includes(sak.category)) sak.category = 'innenriks';
@@ -219,7 +235,7 @@ export async function skrivSak(rot, sak) {
     ...sak,
     title: typografi(trygg(sak.title), { tittel: true }),
     description: typografi(trygg(sak.description)).replace(/\s+/g, ' '),
-    body: typografi(trygg(sak.body)),
+    body: typografi(trygg(avsnitt(sak.body))),
   };
   const base = path.join(rot, 'src/content/haberler');
   let slug = slugify(sak.title) || 'sak';

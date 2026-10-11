@@ -160,13 +160,13 @@ export default {
           const kildeTekst = `Avsender: ${side.departement}\nTittel: ${item.title}\nIngress: ${side.ingress || item.description}\n\n${side.body}`;
           // Yazı işleri: kontrol → düzeltme → Norveççe redaksiyon → son kesin kontrol (bkz. redaktor.mjs).
           const { sak: ferdig, merknader, stopp } = await redigerSak(sak, kildeTekst);
+          // Uydurma alıntı ya da kaynakta olmayan rakam kaldıysa yayınlanmaz, taslak da açılmaz.
+          if (stopp.length) return { hopp: `kontroll: ${stopp.join(' / ')}` };
           return {
             ...felles,
             ...ferdig,
             produksjon: 'ki-kontrollert',
             ...(merknader.length && { merknader }),
-            // Uydurma alıntı ya da kaynakta olmayan rakam kaldıysa yayınlanmaz, taslak olarak bekler.
-            ...(stopp.length && { draft: true, stopp }),
           };
         },
       }));

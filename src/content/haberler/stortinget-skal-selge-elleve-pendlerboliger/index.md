@@ -9,4 +9,6 @@ coverAlt: "Illustrasjon med kategorinavnet"
 coverKreditt: "Illustrasjon: tidsrøst"
 ---
 
-Stortinget eier 143 pendlerboliger, og elleve av disse er det ikke lenger bruk for. Eiendomsoppdraget er lagt ut på Doffin, som er databasen for offentlige anskaffelser. – Stortinget har gjort en vurdering av sitt boligbehov. Denne vurderingen har medført at vi vil tilpasse porteføljen, sier avdelingssjef Terje Olsen i eiendoms- og serviceavdelingen på Stortinget. En megler velges i løpet av november, og deretter følger en ordinær salgsprosess med klargjøring, annonsering, visninger og budrunde. Stortinget opplyser at etterspørselen etter pendlerboliger ikke har endret seg vesentlig etter saken i 2021.
+Stortinget eier 143 pendlerboliger, og elleve av disse er det ikke lenger bruk for. Eiendomsoppdraget er lagt ut på Doffin, som er databasen for offentlige anskaffelser. – Stortinget har gjort en vurdering av sitt boligbehov.
+
+Denne vurderingen har medført at vi vil tilpasse porteføljen, sier avdelingssjef Terje Olsen i eiendoms- og serviceavdelingen på Stortinget. En megler velges i løpet av november, og deretter følger en ordinær salgsprosess med klargjøring, annonsering, visninger og budrunde. Stortinget opplyser at etterspørselen etter pendlerboliger ikke har endret seg vesentlig etter saken i 2021.

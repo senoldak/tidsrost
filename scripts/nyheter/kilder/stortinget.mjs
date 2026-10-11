@@ -125,6 +125,7 @@ export default {
           const ai = await gemini({ prompt: prompt(kildeTekst), schema: SKJEMA });
           if (!ai) return null;
           const { sak: ferdig, merknader, stopp } = await redigerSak(ai, kildeTekst, { pressemelding: false });
+          if (stopp.length) return { hopp: `kontroll: ${stopp.join(' / ')}` };
           return {
             ...ferdig,
             date: osloIso(),
@@ -132,7 +133,6 @@ export default {
             bilde,
             produksjon: 'ki-kontrollert',
             ...(merknader.length && { merknader }),
-            ...(stopp.length && { draft: true, stopp }),
           };
         },
       });
