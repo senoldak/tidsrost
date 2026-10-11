@@ -1,6 +1,6 @@
 // Açık kamu verilerinden haber üretir ve src/content/haberler altına yazar.
 // Kullanım: node scripts/nyheter/hent-nyheter.mjs [--torr]   (--torr: dosya yazmadan sadece listeler)
-// Ortam değişkenleri: GEMINI_API_KEY, GEMINI_MODEL, MAKS_PER_KJORING (varsayılan 8)
+// Ortam değişkenleri: GEMINI_API_KEY, GEMINI_MODEL, MAKS_PER_KJORING (varsayılan 12)
 import path from 'node:path';
 import { writeFile, appendFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
@@ -11,33 +11,42 @@ import met from './kilder/met.mjs';
 import nve from './kilder/nve.mjs';
 import stortinget from './kilder/stortinget.mjs';
 import udi from './kilder/udi.mjs';
+import medier from './kilder/medier.mjs';
 import { ssb, nkom, mattilsynet, datatilsynet, kulturdirektoratet, norgesbankPresse, finanstilsynet, konkurransetilsynet, skatteetaten,
   vegvesen, fhi, dsb, havforskning, sivilombudet, forbrukerradet, idrettsforbundet, norfund } from './kilder/etater.mjs';
 
-const KILDER = [norgesbank, met, nve, stortinget, udi, regjeringen, ssb, nkom, mattilsynet, datatilsynet, kulturdirektoratet, norgesbankPresse, finanstilsynet, konkurransetilsynet, skatteetaten,
+// medier: haber siteleri, en az iki sitede çıkan olaylar (bkz. kilder/medier.mjs).
+const KILDER = [medier, norgesbank, met, nve, stortinget, udi, regjeringen, ssb, nkom, mattilsynet, datatilsynet, kulturdirektoratet, norgesbankPresse, finanstilsynet, konkurransetilsynet, skatteetaten,
   vegvesen, fhi, dsb, havforskning, sivilombudet, forbrukerradet, idrettsforbundet, norfund];
 
 const HER = path.dirname(fileURLToPath(import.meta.url));
 const ROT = path.resolve(HER, '../..');
 const TILSTAND_FIL = path.join(HER, 'sett.json');
 const TORR = process.argv.includes('--torr');
-const MAKS = Number(process.env.MAKS_PER_KJORING || 8);
-// Bir kaynak ilk kez çalıştığında eski haberleri yığmamak için sadece en yeni birkaçını al.
-const FORSTE_GANG = 2;
+const MAKS = Number(process.env.MAKS_PER_KJORING || 12);
+// Bir kaynak ilk kez çalıştığında eski birikim yayınlanmaz: sadece son 24 saatin haberleri alınır
+// (önceden sadece en yeni 2 haber alınıyordu; yeni eklenen kaynakların o günkü haberleri kayboluyordu).
+const FORSTE_GANG_TIMER = 24;
 const MAKS_FEIL = 3;
 
 const tilstand = await lesJsonFil(TILSTAND_FIL, { sett: {}, feil: {}, kilder: {} });
+// Bir aday birden fazla kaynak öğesini kapsayabilir (medier: aynı olayın bütün siteleri); hepsi görüldü sayılır.
+const merkSett = (k) => {
+  for (const id of k.ider ?? [k.id]) tilstand.sett[id] = new Date().toISOString();
+};
 
 // Her kaynaktan yeni (görülmemiş) adaylar.
 const kandidater = {};
 for (const kilde of KILDER) {
   try {
-    let liste = (await kilde.hent()).filter((k) => !tilstand.sett[k.id]);
+    let liste = (await kilde.hent({ sett: tilstand.sett })).filter((k) => !tilstand.sett[k.id]);
+    for (const id of kilde.alleredeSett ?? []) tilstand.sett[id] = new Date().toISOString();
     liste.sort((a, b) => b.tid - a.tid);
     if (!tilstand.kilder[kilde.navn]) {
-      const forste = kilde.forsteGang ?? FORSTE_GANG;
-      for (const k of liste.slice(forste)) tilstand.sett[k.id] = new Date().toISOString();
-      liste = liste.slice(0, forste);
+      const grense = Date.now() - FORSTE_GANG_TIMER * 36e5;
+      const forste = kilde.forsteGang ? liste.slice(0, kilde.forsteGang) : liste.filter((k) => k.tid.getTime() >= grense);
+      for (const k of liste) if (!forste.includes(k)) merkSett(k);
+      liste = forste;
       tilstand.kilder[kilde.navn] = new Date().toISOString();
     }
     kandidater[kilde.navn] = liste;
@@ -74,13 +83,13 @@ for (const k of valgt) {
       continue;
     }
     if (sak.hopp) {
-      tilstand.sett[k.id] = new Date().toISOString();
+      merkSett(k);
       console.log(`  - ${k.id}: hoppet over (${sak.hopp})`);
       feilListe.push(`${k.id} «${k.tittel}»: hoppet over, ${sak.hopp}`);
       continue;
     }
     const slug = await skrivSak(ROT, sak);
-    tilstand.sett[k.id] = new Date().toISOString();
+    merkSett(k);
     delete tilstand.feil[k.id];
     antall++;
     console.log(`  + ${slug}${sak.draft ? ' (utkast)' : ''}`);
@@ -97,7 +106,7 @@ for (const k of valgt) {
     feilListe.push(`${k.id}: ${melding}`);
     console.error(`  ! ${k.id}: ${melding}`);
     if (ant >= MAKS_FEIL) {
-      tilstand.sett[k.id] = new Date().toISOString();
+      merkSett(k);
       delete tilstand.feil[k.id];
     }
   }

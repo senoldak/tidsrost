@@ -213,7 +213,8 @@ export function typografi(tekst = '', { tittel = false } = {}) {
 // Haberi src/content/haberler/<slug>/index.md olarak yazar, slug'ı döner.
 export async function skrivSak(rot, sak) {
   if (!KATEGORIER.includes(sak.category)) sak.category = 'innenriks';
-  if (!/^https:\/\//.test(sak.kilde.url)) throw new Error(`Ugyldig kilde-URL: ${sak.kilde.url}`);
+  const kilder = sak.kilder ?? [sak.kilde];
+  for (const k of kilder) if (!/^https:\/\//.test(k.url)) throw new Error(`Ugyldig kilde-URL: ${k.url}`);
   sak = {
     ...sak,
     title: typografi(trygg(sak.title), { tittel: true }),
@@ -241,7 +242,8 @@ export async function skrivSak(rot, sak) {
     `produksjon: ${sak.produksjon}`,
   ].filter(Boolean);
   // Üretim şekli notu sayfada ayrıca gösterilir; burada sadece kaynak (VVP 3.1).
-  const kilde = `*Kilde: [${sak.kilde.navn}](${sak.kilde.url})${sak.kilde.lisens ? ` (${sak.kilde.lisens})` : ''}*`;
+  const lenke = (k) => `[${k.navn}](${k.url})${k.lisens ? ` (${k.lisens})` : ''}`;
+  const kilde = `*${kilder.length > 1 ? 'Kilder' : 'Kilde'}: ${kilder.map(lenke).join(', ')}*`;
   await mkdir(path.join(base, slug), { recursive: true });
   const bilde = await lagBilde(sak);
   if (bilde) {

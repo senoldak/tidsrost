@@ -28,6 +28,8 @@ const KI_MERKING: Record<string, string> = {
   'ki-kontrollert':
     'Denne saken er skrevet med hjelp av kunstig intelligens (KI) og kontrollert automatisk av KI mot den opprinnelige kilden. Den er ikke kontrollert manuelt før publisering.',
   'ki-automatisk': 'Denne saken er skrevet med hjelp av kunstig intelligens (KI) og publisert automatisk, uten manuell kontroll.',
+  'ki-medier':
+    'Denne saken er skrevet med hjelp av kunstig intelligens (KI) på grunnlag av saker fra minst to andre medier, som det lenkes til nedenfor. Den er kontrollert automatisk av KI mot disse sakene, men ikke kontrollert manuelt før publisering.',
 };
 
 export const PRODUKSJON: Record<string, string> = {

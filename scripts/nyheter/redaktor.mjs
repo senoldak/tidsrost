@@ -140,7 +140,7 @@ const sprakSjekk = (tekst) => [...sjekkBokmål(tekst), ...sjekkRelativTid(tekst)
 
 // ── 2. Kontrol masası ──────────────────────────────────────────────────
 
-export async function vurder(sak, kilde, { pressemelding = true } = {}) {
+export async function vurder(sak, kilde, { pressemelding = true, medier = false } = {}) {
   const tekst = helTekst(sak);
   const problemer = [...sjekkSitater(tekst, kilde), ...sjekkTall(tekst, kilde), ...sjekkNavn(tekst, kilde), ...sprakSjekk(tekst)];
 
@@ -151,7 +151,7 @@ export async function vurder(sak, kilde, { pressemelding = true } = {}) {
 Avvis (godkjent=false) og forklar kort på norsk hvis noe av dette gjelder:
 1. En faktaopplysning (tall, navn, tittel på person, dato, sted, hendelse, partinavn) i utkastet står ikke i kilden, eller er gjengitt feil (VVP 3.2).
 2. Avsenderens påstander, vurderinger eller mål presenteres som fakta i stedet for å tilskrives avsenderen (VVP 4.2).
-3. ${pressemelding ? 'Det kommer ikke tydelig frem at saken bygger på en pressemelding og fra hvem' : 'Det kommer ikke frem hvilket organ som har fattet vedtaket (egne setninger som «Opplysningene kommer fra …» er ikke nødvendig)'} (VVP 2.7, 3.1).
+3. ${medier ? 'Det kommer ikke tydelig frem hvilke medier som melder saken, eller opplysninger som ett medie har avdekket selv («erfarer», «kjenner til», «avslører») er ikke tilskrevet det mediet' : pressemelding ? 'Det kommer ikke tydelig frem at saken bygger på en pressemelding og fra hvem' : 'Det kommer ikke frem hvilket organ som har fattet vedtaket (egne setninger som «Opplysningene kommer fra …» er ikke nødvendig)'} (VVP 2.7, 3.1).
 4. Tittel eller ingress går lenger enn det er dekning for i teksten, eller er misvisende (VVP 4.4).
 5. Utkastet inneholder egne vurderinger, ladede eller forsterkende ord, eller spekulasjon.
 6. Saken omtaler navngitte privatpersoner, kriminalsaker, barn, selvmord eller annet som krever særlig varsomhet (VVP 4.3–4.9).
