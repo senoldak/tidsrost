@@ -1,6 +1,6 @@
 # tidsur
 
-Haber botunu her 2 saatte bir çalıştıran küçük Cloudflare Worker (ücretsiz paket yeterli).
+Haber botunu Oslo saatiyle çift saatlerde (08–02, gece 03–08 arası yayın yok) çalıştıran küçük Cloudflare Worker (ücretsiz paket yeterli).
 GitHub'ın kendi zamanlayıcısı (`schedule`) çalışmaları saatlerce geciktirip atlayabildiği için tetikleme Cloudflare'den yapılır.
 
 ## 1. GitHub token
@@ -13,7 +13,7 @@ GitHub'ın kendi zamanlayıcısı (`schedule`) çalışmaları saatlerce gecikti
 
 ## 2. Cloudflare Worker
 
-Kod ve zamanlama (`wrangler.jsonc`, cron `0 * * * *` (UTC); bot sadece Oslo saatiyle çift saatlerde (00, 02, 04 …) başlar) bu klasörden yüklenir:
+Kod ve zamanlama (`wrangler.jsonc`, cron `0 * * * *` (UTC); bot sadece Oslo saatiyle 08, 10 … 22, 00, 02'de başlar) bu klasörden yüklenir:
 
 ```
 cd tidsur

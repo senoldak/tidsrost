@@ -4,14 +4,18 @@
 //
 // Gizli değişken: GITHUB_TOKEN — sadece senoldak/tidsrost, izin: Actions (Read and write).
 
+// Üç sitenin ortak yayın planı (Oslo saati): çift saatler 08–02, 03:00–07:59 gece modu.
+// tidsrost :00'da, kifobu :20'de, finfolis :40'ta başlar; botlar aynı anda çalışmaz.
+const YAYIN_SAATLERI = [8, 10, 12, 14, 16, 18, 20, 22, 0, 2];
+
 const DISPATCH = 'https://api.github.com/repos/senoldak/tidsrost/actions/workflows/nyheter.yml/dispatches';
 
 export default {
   async scheduled(event, env) {
-    // Cron her saat başı (UTC) çalışır; bot sadece Oslo saatiyle çift saatlerde (00, 02, 04 …) başlar.
+    // Cron her saat başı (UTC) çalışır; bot sadece YAYIN_SAATLERI'nde (Oslo saati) başlar.
     // Böylece yaz/kış saati değişince de saatler kaymaz.
     const osloSaat = Number(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Oslo', hour: '2-digit', hourCycle: 'h23' }).format(new Date(event.scheduledTime)));
-    if (osloSaat % 2 !== 0) return;
+    if (!YAYIN_SAATLERI.includes(osloSaat)) return;
     // Panele/terminale yapıştırırken token'a satır sonu, boşluk ya da "Bearer " eklenebiliyor;
     // bu durumda GitHub başlığı bozuk sayıp gövdesiz 400 döner.
     const token = String(env.GITHUB_TOKEN ?? '').replace(/^\s*(Bearer|token)\s+/i, '').replace(/\s+/g, '');
