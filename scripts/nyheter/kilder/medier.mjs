@@ -122,7 +122,8 @@ Nøyaktighet (VVP 3.2, 4.4):
 - Ikke skriv relative tidsuttrykk som «i går» eller «i dag»; bruk ukedag eller dato hvis den står i sakene.
 
 Varsomhet (VVP 4.3, 4.5, 4.7, 4.8):
-- Sett egnet=false hvis saken handler om navngitte privatpersoner, enkeltsaker om kriminalitet, barn, selvmord, ulykker med omkomne eller skadde, eller annet som krever særlig varsomhet. Sett også egnet=false for kommentarer, anmeldelser, debatt, quiz, reklame, tv-program, «se høydepunktene»-saker og saker uten nyhetsinnhold. Fyll da ut de andre feltene med tomme strenger.
+- Sett egnet=false hvis saken dreier seg om en identifiserbar privatperson (navn, bilde eller detaljer som gjør vedkommende gjenkjennelig), enkeltsaker om kriminalitet der mistenkte eller ofre kan identifiseres, barn, selvmord, eller ulykker der omkomne eller skadde kan identifiseres. Sett også egnet=false for kommentarer, anmeldelser, debatt, quiz, reklame, tv-program, «se høydepunktene»-saker og saker uten nyhetsinnhold. Fyll da ut de andre feltene med tomme strenger.
+- Store hendelser som krig, angrep, naturkatastrofer, større ulykker og politiets arbeid i saker av offentlig interesse er vanlige nyheter (egnet=true), så lenge du ikke navngir eller identifiserer ofre, mistenkte eller pårørende som ikke er offentlige personer. Skriv nøkternt, uten detaljer om lidelse.
 - Ellers egnet=true.
 
 Form:
