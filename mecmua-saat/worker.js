@@ -1,6 +1,6 @@
 // mecmua-saat: üç sitenin (tidsrost, kifobu, finfolis) zamanlayıcısı tek Worker'da.
 // Cloudflare ücretsiz paketinde hesap başına 5 cron hakkı var; üç ayrı Worker yerine bu tek Worker 1 hak kullanır.
-// Eski Worker'lar: tidsrost/tidsur, kifobu/saat (HTTP tetikleme için duruyor, cron'u yok), finfolis/saat.
+// Eski üç Worker (tidsrost-tidsur, kifobu-saat, finfolis-saat) 2026-10-12'de silindi.
 //
 // Gizli değişkenler (npx wrangler secret put AD):
 //   GITHUB_TOKEN_TIDSROST, GITHUB_TOKEN_KIFOBU, GITHUB_TOKEN_FINFOLIS — ilgili repo, izin: Actions (Read and write).
