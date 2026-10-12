@@ -17,6 +17,7 @@ const SITELER = [
   { ad: 'tidsrost', repo: 'senoldak/tidsrost', bot: 'nyheter.yml', dakika: 0, site: 'https://tidsrost.com', hedefler: '@tidsrost', onek: '', kv: 'KV_TIDSROST' },
   { ad: 'kifobu', repo: 'senoldak/kifobu', bot: 'bot.yml', dakika: 20, site: 'https://kifobu.com', hedefler: '@kifobu,@fundov:24358', onek: '📰 ', kv: 'KV_KIFOBU' },
   { ad: 'finfolis', repo: 'senoldak/finfolis', bot: 'haberler.yml', dakika: 40, site: 'https://finfolis.com', hedefler: '@finfolis', onek: '🧮 ', kv: 'KV_FINFOLIS' },
+  { ad: 'jendume', repo: 'senoldak/jendume', bot: 'bot.yml', dakika: 50, site: 'https://jendume.com', hedefler: '@jendume', onek: '⚡ ', kv: 'KV_JENDUME' },
 ];
 
 const gizli = (env, ad, site) => env[`${ad}_${site.toUpperCase()}`] ?? env[ad];
@@ -68,6 +69,17 @@ export default {
       hourCycle: 'h23',
     }).format(new Date());
 
+    // ?tetikle= ve ?telegram= yalnızca doğru anahtarla çalışır (?anahtar=... ya da "Authorization: Bearer ...").
+    // Anahtar Secret olarak durur: npx wrangler secret put TEST_ANAHTARI. Tanımlı değilse ikisi de kapalı.
+    if (url.searchParams.has('tetikle') || url.searchParams.has('telegram')) {
+      const beklenen = new TextEncoder().encode(String(env.TEST_ANAHTARI ?? ''));
+      const gelen = new TextEncoder().encode(
+        url.searchParams.get('anahtar') ?? (request.headers.get('Authorization') ?? '').replace(/^Bearer\s+/i, ''),
+      );
+      const dogru = beklenen.byteLength >= 16 && beklenen.byteLength === gelen.byteLength && crypto.subtle.timingSafeEqual(beklenen, gelen);
+      if (!dogru) return new Response('Yetkisiz.', { status: 401, headers: { 'content-type': 'text/plain; charset=utf-8' } });
+    }
+
     const testSite = url.searchParams.get('tetikle');
     if (testSite) {
       const s = SITELER.find((x) => x.ad === testSite.toLowerCase());
@@ -101,16 +113,16 @@ export default {
         });
       }
       try {
-        await telegramSirasi(
+        const log = await telegramSirasi(
           { SITE: s.site, TELEGRAM_HEDEFLER: s.hedefler, TELEGRAM_ONEK: s.onek, TELEGRAM_BOT_TOKEN: gizli(env, 'TELEGRAM_BOT_TOKEN', s.ad), TELEGRAM_KV: env[s.kv] },
           new Date(),
         );
-        return new Response(`${s.ad}: Telegram kuyruğu başarıyla kontrol edildi! (Oslo: ${oslo})`, {
+        return new Response(`${s.ad}: Telegram kontrol edildi:\n${log || 'İşlem tamamlandı'} (Oslo: ${oslo})`, {
           status: 200,
           headers: { 'content-type': 'text/plain; charset=utf-8' },
         });
       } catch (err) {
-        return new Response(`${s.ad} Telegram hatası: ${err.message}`, {
+        return new Response(`${s.ad} Telegram hatası: ${err.message}\n${err.stack || ''}`, {
           status: 500,
           headers: { 'content-type': 'text/plain; charset=utf-8' },
         });
@@ -130,7 +142,7 @@ export default {
         dakika: s.dakika,
         siteUrl: s.site,
       })),
-      bilgi: 'Bu Worker zamanlayıcı (cron: */10 * * * *) ile çalışır. Test için: ?tetikle=site_adi veya ?telegram=site_adi',
+      bilgi: 'Bu Worker zamanlayıcı (cron: */10 * * * *) ile çalışır.',
     };
 
     return new Response(JSON.stringify(durum, null, 2), {
