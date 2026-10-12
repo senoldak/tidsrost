@@ -29,3 +29,13 @@ Panelden "Import a repository" ile Worker oluşturmayın: sitenin ayarlarını a
 
 - GitHub → tidsrost → **Actions** → Nyhetsbot: çalışmalar "workflow_dispatch" olarak görünür.
 - Hata olursa: Cloudflare → Worker → **Logs** (ör. `GitHub 401` = token yanlış ya da süresi dolmuş).
+
+## Telegram
+
+Bu Worker yeni haberleri Telegram'a da gönderir (`telegram.js`): 10 dakikada bir sitenin RSS akışındaki gönderilmemiş en eski haberi kapak görseliyle yollar. Böylece bir vardiyanın haberleri 2 saate yayılır. Gece modunda (Oslo 03:00–07:59) gönderim yok; 24 saatten eski haber gönderilmez. Gönderilenler KV'de (`TELEGRAM_KV`, anahtar `gonderilen`) tutulur. Hedefler ve önek `wrangler.jsonc` içindeki `vars`'ta; bot token'ı secret olarak:
+
+```
+npx wrangler secret put TELEGRAM_BOT_TOKEN
+```
+
+Bot, hedef kanalda yönetici olmalıdır. GitHub iş akışında artık Telegram adımı yok (iki taraf birden göndermesin).

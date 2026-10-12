@@ -8,8 +8,11 @@
   "workers_dev": false,
   "preview_urls": false,
   "triggers": {
-    // UTC; her saat başı. Worker botu sadece Oslo saatiyle 08, 10 … 22, 00, 02'de başlatır (worker.js).
-    "crons": ["0 * * * *"]
+    // UTC; 10 dakikada bir. Haber botu kendi dakikasında başlar (worker.js), Telegram kuyruğu her çağrıda 1 haber gönderir.
+    "crons": ["*/10 * * * *"]
   },
-  "observability": { "enabled": true }
+  "observability": { "enabled": true },
+  // Telegram kuyruğu (telegram.js). TELEGRAM_BOT_TOKEN secret olarak durur: npx wrangler secret put TELEGRAM_BOT_TOKEN
+  "vars": { "SITE": "https://tidsrost.com", "TELEGRAM_HEDEFLER": "@tidsrost", "TELEGRAM_ONEK": "" },
+  "kv_namespaces": [{ "binding": "TELEGRAM_KV", "id": "46047695f7ee4165b4d8af20719381ef" }]
 }
