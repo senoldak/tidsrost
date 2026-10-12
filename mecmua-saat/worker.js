@@ -57,6 +57,61 @@ async function site(s, env, zaman) {
 }
 
 export default {
+  // HTTP istekleri: Tarayıcıdan veya panelden tıklandığında Error 1101 vermez, durum raporu döner.
+  // İsteğe bağlı olarak ?tetikle=site_adi ile manuel tetikleme yapılabilir.
+  async fetch(request, env, ctx) {
+    const url = new URL(request.url);
+    const oslo = new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Europe/Oslo',
+      dateStyle: 'short',
+      timeStyle: 'medium',
+      hourCycle: 'h23',
+    }).format(new Date());
+
+    const testSite = url.searchParams.get('tetikle');
+    if (testSite) {
+      const s = SITELER.find((x) => x.ad === testSite.toLowerCase());
+      if (!s) {
+        return new Response(`Bilinmeyen site: ${testSite}. Seçenekler: ${SITELER.map((x) => x.ad).join(', ')}`, {
+          status: 400,
+          headers: { 'content-type': 'text/plain; charset=utf-8' },
+        });
+      }
+      try {
+        await tetikle(s, env);
+        return new Response(`${s.ad}: ${s.bot} başarıyla tetiklendi! (Oslo: ${oslo})`, {
+          status: 200,
+          headers: { 'content-type': 'text/plain; charset=utf-8' },
+        });
+      } catch (err) {
+        return new Response(`${s.ad} tetikleme hatası: ${err.message}`, {
+          status: 500,
+          headers: { 'content-type': 'text/plain; charset=utf-8' },
+        });
+      }
+    }
+
+    const durum = {
+      worker: 'mecmua-saat',
+      durum: 'aktif',
+      osloZamani: oslo,
+      utcZamani: new Date().toISOString(),
+      yayinSaatleriOslo: YAYIN_SAATLERI,
+      siteler: SITELER.map((s) => ({
+        ad: s.ad,
+        repo: s.repo,
+        isAkisi: s.bot,
+        dakika: s.dakika,
+        siteUrl: s.site,
+      })),
+      bilgi: 'Bu Worker zamanlayıcı (cron: */10 * * * *) ile çalışır. Manuel test için: ?tetikle=tidsrost | kifobu | finfolis',
+    };
+
+    return new Response(JSON.stringify(durum, null, 2), {
+      headers: { 'content-type': 'application/json; charset=utf-8' },
+    });
+  },
+
   // Cron 10 dakikada bir (UTC). Siteler birbirinden bağımsız işlenir; biri hata verirse öbürleri etkilenmez.
   async scheduled(event, env, ctx) {
     const zaman = new Date(event.scheduledTime);
