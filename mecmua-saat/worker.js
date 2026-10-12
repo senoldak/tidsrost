@@ -91,6 +91,32 @@ export default {
       }
     }
 
+    const testTelegram = url.searchParams.get('telegram');
+    if (testTelegram) {
+      const s = SITELER.find((x) => x.ad === testTelegram.toLowerCase());
+      if (!s) {
+        return new Response(`Bilinmeyen site: ${testTelegram}. Seçenekler: ${SITELER.map((x) => x.ad).join(', ')}`, {
+          status: 400,
+          headers: { 'content-type': 'text/plain; charset=utf-8' },
+        });
+      }
+      try {
+        await telegramSirasi(
+          { SITE: s.site, TELEGRAM_HEDEFLER: s.hedefler, TELEGRAM_ONEK: s.onek, TELEGRAM_BOT_TOKEN: gizli(env, 'TELEGRAM_BOT_TOKEN', s.ad), TELEGRAM_KV: env[s.kv] },
+          new Date(),
+        );
+        return new Response(`${s.ad}: Telegram kuyruğu başarıyla kontrol edildi! (Oslo: ${oslo})`, {
+          status: 200,
+          headers: { 'content-type': 'text/plain; charset=utf-8' },
+        });
+      } catch (err) {
+        return new Response(`${s.ad} Telegram hatası: ${err.message}`, {
+          status: 500,
+          headers: { 'content-type': 'text/plain; charset=utf-8' },
+        });
+      }
+    }
+
     const durum = {
       worker: 'mecmua-saat',
       durum: 'aktif',
@@ -104,7 +130,7 @@ export default {
         dakika: s.dakika,
         siteUrl: s.site,
       })),
-      bilgi: 'Bu Worker zamanlayıcı (cron: */10 * * * *) ile çalışır. Manuel test için: ?tetikle=tidsrost | kifobu | finfolis',
+      bilgi: 'Bu Worker zamanlayıcı (cron: */10 * * * *) ile çalışır. Test için: ?tetikle=site_adi veya ?telegram=site_adi',
     };
 
     return new Response(JSON.stringify(durum, null, 2), {
