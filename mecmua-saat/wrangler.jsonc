@@ -16,6 +16,7 @@
   "kv_namespaces": [
     { "binding": "KV_TIDSROST", "id": "46047695f7ee4165b4d8af20719381ef" },
     { "binding": "KV_KIFOBU", "id": "0c4eabac8d074de98d31d0f8e28650ab" },
-    { "binding": "KV_FINFOLIS", "id": "09746676c64046cc8e90e3081673f304" }
+    { "binding": "KV_FINFOLIS", "id": "09746676c64046cc8e90e3081673f304" },
+    { "binding": "KV_JENDUME", "id": "c0da9530fea648019122475ddd8f0c3f" }
   ]
 }
