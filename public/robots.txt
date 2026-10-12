@@ -1,4 +1,47 @@
+# Arama motorları siteyi tarayabilir; içerik yapay zekâ eğitimi ya da yapay zekâ yanıtları için kullanılamaz.
+# Content-Signal: Cloudflare'in içerik sinyalleri politikası (https://contentsignals.org).
 User-agent: *
+Content-Signal: search=yes, ai-train=no, ai-input=no
 Disallow: /admin/
+
+# Yapay zekâ eğitimi ve yapay zekâ arama/yanıt botları
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: Claude-Web
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: Google-CloudVertexBot
+User-agent: Applebot-Extended
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: Amazonbot
+User-agent: meta-externalagent
+User-agent: meta-externalfetcher
+User-agent: FacebookBot
+User-agent: cohere-ai
+User-agent: cohere-training-data-crawler
+User-agent: MistralAI-User
+User-agent: DuckAssistBot
+User-agent: YouBot
+User-agent: Diffbot
+User-agent: AI2Bot
+User-agent: Ai2Bot-Dolma
+User-agent: Timpibot
+User-agent: ImagesiftBot
+User-agent: Omgilibot
+User-agent: Omgili
+User-agent: PanguBot
+User-agent: Kangaroo Bot
+User-agent: Webzio-Extended
+User-agent: img2dataset
+User-agent: DeepSeekBot
+User-agent: TikTokSpider
+Disallow: /
 
 Sitemap: https://tidsrost.com/sitemap-index.xml

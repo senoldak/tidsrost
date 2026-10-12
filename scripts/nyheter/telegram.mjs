@@ -11,7 +11,7 @@ const HER = path.dirname(fileURLToPath(import.meta.url));
 const ROT = path.resolve(HER, '../..');
 const TILSTAND = path.join(HER, 'telegram-sendt.json');
 const SITE = 'https://tidsrost.com';
-const MAKS = 10; // bir çalıştırmada kanala en fazla bu kadar sak
+const MAKS = 12; // bir çalıştırmada kanala en fazla bu kadar sak (botun vardiya başına sınırı kadar)
 const VENT_MS = 20_000;
 const MAKS_VENT = 8 * 60_000;
 
