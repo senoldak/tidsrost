@@ -17,7 +17,7 @@ const SITELER = [
   { ad: 'tidsrost', repo: 'senoldak/tidsrost', bot: 'nyheter.yml', dakika: 0, site: 'https://tidsrost.com', hedefler: '@tidsrost', onek: '', kv: 'KV_TIDSROST' },
   { ad: 'kifobu', repo: 'senoldak/kifobu', bot: 'bot.yml', dakika: 20, site: 'https://kifobu.com', hedefler: '@kifobu,@fundov:24358', onek: '📰 ', kv: 'KV_KIFOBU' },
   { ad: 'finfolis', repo: 'senoldak/finfolis', bot: 'haberler.yml', dakika: 40, site: 'https://finfolis.com', hedefler: '@finfolis', onek: '🧮 ', kv: 'KV_FINFOLIS' },
-  { ad: 'jendume', repo: 'senoldak/jendume', bot: 'bot.yml', dakika: 50, site: 'https://jendume.com', hedefler: '@jenndume', onek: '⚡ ', kv: 'KV_JENDUME' },
+  { ad: 'jendume', repo: 'senoldak/jendume', bot: 'bot.yml', dakika: 50, site: 'https://jendume.com/tr', hedefler: '@jenndume', onek: '⚡ ', kv: 'KV_JENDUME' },
 ];
 
 const gizli = (env, ad, site) => env[`${ad}_${site.toUpperCase()}`] ?? env[ad];
