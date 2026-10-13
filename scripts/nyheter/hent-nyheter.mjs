@@ -1,6 +1,6 @@
 // Açık kamu verilerinden haber üretir ve src/content/haberler altına yazar.
 // Kullanım: node scripts/nyheter/hent-nyheter.mjs [--torr]   (--torr: dosya yazmadan sadece listeler)
-// Ortam değişkenleri: GEMINI_API_KEY, GEMINI_MODEL, MAKS_PER_KJORING (varsayılan 12), SURE_DK (varsayılan 18)
+// Ortam değişkenleri: GEMINI_API_KEY, GEMINI_MODEL, MAKS_PER_KJORING (varsayılan 12), SURE_DK (varsayılan 15)
 import path from 'node:path';
 import { writeFile, appendFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
@@ -27,7 +27,7 @@ const ROT = path.resolve(HER, '../..');
 const TILSTAND_FIL = path.join(HER, 'sett.json');
 const TORR = process.argv.includes('--torr');
 const MAKS = Number(process.env.MAKS_PER_KJORING || 12);
-const SURE_MS = Number(process.env.SURE_DK || 18) * 60_000;
+const SURE_MS = Number(process.env.SURE_DK || 15) * 60_000;
 const BASLANGIC = Date.now();
 // Bir kaynak ilk kez çalıştığında eski birikim yayınlanmaz: sadece son 24 saatin haberleri alınır
 // (önceden sadece en yeni 2 haber alınıyordu; yeni eklenen kaynakların o günkü haberleri kayboluyordu).
@@ -85,7 +85,7 @@ for (const k of valgt) {
     continue;
   }
   if (Date.now() - BASLANGIC > SURE_MS) {
-    console.log('\nTidsbudsjett utløpt (18 min); resterende saker spares til neste kjøring.');
+    console.log(`\nTidsbudsjett utløpt (${SURE_MS / 60_000} min); resterende saker spares til neste kjøring.`);
     break;
   }
   try {
