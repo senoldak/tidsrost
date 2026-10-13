@@ -9,6 +9,8 @@ on:
 
 permissions:
   contents: write
+  # Yeni haber yazıldığında "Yayınla" iş akışını başlatmak için.
+  actions: write
 
 concurrency:
   group: nyhetsbot
@@ -42,6 +44,7 @@ jobs:
         run: node scripts/nyheter/hent-nyheter.mjs
 
       - name: Commit
+        id: commit
         run: |
           git config user.name "tidsrost-nyhetsbot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -55,8 +58,21 @@ jobs:
             git commit -m "Nyhetsbot: oppdater tilstand [skip ci]"
           else
             git commit -m "Nyhetsbot: ${{ steps.hent.outputs.antall }} nye saker"
+            echo "yayin=1" >> "$GITHUB_OUTPUT"
           fi
-          git pull --rebase
-          git push
+          # Başka işler de depoya yazar; çakışmada yazılan haberler kaybolmasın diye 5 kez denenir.
+          for i in 1 2 3 4 5; do
+            git pull --rebase -X theirs && git push && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 5))
+          done
+          exit 1
+
+      # Botun push'u yayın iş akışını kendiliğinden tetiklemez (GITHUB_TOKEN); elle başlatılır.
+      - name: Siteyi yayınla
+        if: steps.commit.outputs.yayin == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run yayinla.yml --ref "${{ github.ref_name }}"
 
       # Telegram-utsending håndteres av Cloudflare-worker (mecmua-saat): saker spres utover vakten hvert 10. minutt.
