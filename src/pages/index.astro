@@ -5,6 +5,7 @@ import StoryRow from '../components/StoryRow.astro';
 import Symbol from '../components/Symbol.astro';
 import StoryMeta from '../components/StoryMeta.astro';
 import { getActiveCategories, getNews, groupByDay, newsUrl } from '../lib/news';
+import { gorselVar } from '../lib/site';
 
 const news = await getNews();
 const breaking = news.filter((h) => h.data.breaking).slice(0, 5);
@@ -43,14 +44,13 @@ const sections = (await getActiveCategories())
           </h2>
           <p class="standfirst">{hero.data.description}</p>
           <StoryMeta haber={hero} time="full" />
-          {hero.data.cover && (
+          {hero.data.cover && gorselVar(hero.data.date) && (
             <figure>
               <a href={newsUrl(hero)} tabindex="-1" aria-hidden="true">
                 <Image
                   src={hero.data.cover}
                   alt={hero.data.coverAlt ?? ''}
-                  widths={[800, 1200]}
-                  sizes="(max-width: 860px) 100vw, 800px"
+                  width={1200}
                   loading="eager"
                 />
               </a>

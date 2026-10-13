@@ -95,3 +95,9 @@ export function dayBand(date: Date) {
   if (day(date) === day(yesterday)) return 'I går';
   return 'Tidligere';
 }
+
+// Görseller yalnızca yeni haberlerde gerekir (anasayfa ve Telegram, yayından birkaç saat sonra).
+// GORSEL_GUN günden eski haberlerde derlemede kapak/OG görseli üretilmez: dosya sayısı sınırı (20.000) için.
+export const GORSEL_GUN = 14;
+export const gorselVar = (tarih: Date | string, simdi = new Date()) =>
+  simdi.getTime() - new Date(tarih).getTime() <= GORSEL_GUN * 86_400_000;

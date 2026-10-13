@@ -4,7 +4,7 @@ import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import StoryRow from '../../components/StoryRow.astro';
 import Symbol from '../../components/Symbol.astro';
-import { SITE, PRODUKSJON, categoryName, formatDay, formatTime, produksjonMerke, varsel } from '../../lib/site';
+import { SITE, PRODUKSJON, categoryName, formatDay, formatTime, produksjonMerke, varsel, gorselVar } from '../../lib/site';
 import { getNews, kilde, type Haber } from '../../lib/news';
 
 export async function getStaticPaths() {
@@ -21,8 +21,10 @@ interface Props {
 }
 
 const { haber, related } = Astro.props;
-const { title, description, date, category, cover, coverAlt, coverKreditt, author, produksjon, rettelse } = haber.data;
+const { title, description, date, category, cover: kapak, coverAlt, coverKreditt, author, produksjon, rettelse } = haber.data;
 const { Content } = await render(haber);
+// Eski haberlerde kapak üretilmez (bkz. gorselVar).
+const cover = kapak && gorselVar(date) ? kapak : undefined;
 const source = kilde(haber);
 const made = produksjonMerke(produksjon);
 const warn = varsel(title);
@@ -98,7 +100,7 @@ const jsonLd = {
     {
       cover && (
         <figure>
-          <Image src={cover} alt={coverAlt ?? title} widths={[760, 1200]} sizes="(max-width: 1080px) 100vw, 920px" loading="eager" />
+          <Image src={cover} alt={coverAlt ?? title} width={1200} loading="eager" />
           {(coverAlt || coverKreditt) && (
             <figcaption>
               {coverAlt}
