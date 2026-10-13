@@ -5,6 +5,7 @@ import path from 'node:path';
 import { writeFile, appendFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { skrivSak, lesJsonFil } from './lib.mjs';
+import { vurder, velg } from './viktighet.mjs';
 import regjeringen from './kilder/regjeringen.mjs';
 import norgesbank from './kilder/norgesbank.mjs';
 import met from './kilder/met.mjs';
@@ -59,12 +60,16 @@ for (const kilde of KILDER) {
   }
 }
 
-// Kaynaklar arasında sırayla seç (biri diğerlerini bastırmasın).
-const valgt = [];
-while (valgt.length < MAKS && Object.values(kandidater).some((l) => l.length)) {
-  for (const liste of Object.values(kandidater)) {
-    if (liste.length && valgt.length < MAKS) valgt.push(liste.shift());
-  }
+// Haber değerine göre seç (bkz. viktighet.mjs). Gemini cevap vermezse puansız, kaynaklar arasında sırayla.
+const poeng = await vurder(kandidater).catch((e) => {
+  console.error(`viktighet: FEIL ${e.message}`);
+  return null;
+});
+if (!poeng) console.warn('viktighet: ingen vurdering; velger uten poeng');
+const { valgt, forkastet } = velg(kandidater, poeng, MAKS);
+for (const k of forkastet) {
+  console.log(`  - ${k.id}: lav nyhetsverdi (${poeng.get(k)})`);
+  if (!TORR) merkSett(k);
 }
 
 let antall = 0;

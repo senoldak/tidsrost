@@ -45,7 +45,9 @@ async function site(s, env, zaman) {
     telegramSirasi(
       { SITE: s.site, TELEGRAM_HEDEFLER: s.hedefler, TELEGRAM_ONEK: s.onek, TELEGRAM_BOT_TOKEN: gizli(env, 'TELEGRAM_BOT_TOKEN', s.ad), TELEGRAM_KV: env[s.kv] },
       zaman,
-    ).catch((e) => console.error(`${s.ad} Telegram: ${e.message}`)),
+    )
+      .then((log) => console.log(`${s.ad} Telegram: ${log}`))
+      .catch((e) => console.error(`${s.ad} Telegram: ${e.message}`)),
   ];
   // Haber botu: kendi dakikasında, YAYIN_SAATLERI'nde (Oslo saati; yaz/kış saatinde kaymaz).
   if (dakika === s.dakika && YAYIN_SAATLERI.includes(osloSaat)) isler.push(tetikle(s, env));

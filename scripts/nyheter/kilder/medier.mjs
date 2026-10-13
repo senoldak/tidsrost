@@ -13,6 +13,7 @@ import { fileURLToPath } from 'node:url';
 import { hentTekst, lesRss, htmlTilTekst, gemini, osloIso, KATEGORIER, kategoriNavn } from '../lib.mjs';
 import { kildekort } from '../bilde.mjs';
 import { redigerSak } from '../redaktor.mjs';
+import { uavhengigeKilder } from '../uavhengighet.mjs';
 
 const { kontroll } = JSON.parse(await readFile(new URL('../../../src/lib/redaksjon.json', import.meta.url), 'utf8'));
 const ROT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
@@ -93,8 +94,8 @@ ${publisert.length ? publisert.map((t) => `- ${t}`).join('\n') : '(ingen)'}`,
   return { grupper: ut, kjente: new Set((svar.kjente ?? []).filter(gyldig)) };
 }
 
-// Bir grubun farklı site sayısı.
-export const antallMedier = (medlemmer) => new Set(medlemmer.map((s) => s.medie)).size;
+// Bir grubun bağımsız kaynak sayısı: farklı siteler, ama aynı ajans metnini (NTB) basanlar tek kaynak.
+export const antallMedier = (medlemmer) => uavhengigeKilder(medlemmer);
 
 const SKJEMA = {
   type: 'object',
@@ -173,10 +174,10 @@ export default {
       if (idx.some((i) => g.kjente.has(i))) continue;
       const medlemmer = idx.map((i) => saker[i]);
       if (antallMedier(medlemmer) < MIN_MEDIER) continue;
-      // Her siteden bir sak, en fazla 4.
+      // Her siteden bir sak, en fazla 6 (ajans kopyaları elendikten sonra yine en az iki bağımsız kalsın).
       const valgt = [];
       for (const s of medlemmer) if (!valgt.some((v) => v.medie === s.medie)) valgt.push(s);
-      kandidater.push(lagKandidat(valgt.slice(0, 4), medlemmer));
+      kandidater.push(lagKandidat(valgt.slice(0, 6), medlemmer));
     }
     // Zaten yazılmış olaya ait başlıklar görüldü sayılır (sonraki çalışmada tekrar gruplanmasın);
     // hent-nyheter.mjs bunları alleredeSett'ten işaretler.
@@ -202,6 +203,8 @@ function lagKandidat(valgt, alle) {
           k.tekst = '';
         }
       }
+      // Gövde metinleriyle yeniden say: başlıkları farklı olsa da metin aynı ajanstan olabilir.
+      if (uavhengigeKilder(valgt) < MIN_MEDIER) return { hopp: `bare én uavhengig kilde (byråsak eller kopi)` };
       const ai = await gemini({ prompt: prompt(valgt), schema: SKJEMA });
       if (!ai) return null;
       if (!ai.egnet) return { hopp: 'ikke egnet (varsomhet eller ikke nyhet)' };

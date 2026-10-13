@@ -75,21 +75,26 @@ async function gonder(token, hedef, { foto, metin }) {
 
 export async function telegramSirasi(env, simdi = new Date()) {
   const token = String(env.TELEGRAM_BOT_TOKEN ?? '').trim();
-  if (!token || !env.TELEGRAM_KV) return console.log('Telegram: token ya da KV yok, atlandı');
+  if (!token) return 'HATA: TELEGRAM_BOT_TOKEN yok';
+  if (!env.TELEGRAM_KV) return 'HATA: TELEGRAM_KV bağlı değil';
   const osloSaat = Number(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Oslo', hour: '2-digit', hourCycle: 'h23' }).format(simdi));
-  if (osloSaat >= 3 && osloSaat < 8) return; // gece modu
+  if (osloSaat >= 3 && osloSaat < 8) return `Gece modu (${osloSaat}:00 Oslo), gönderim yapılmadı`;
 
   const gonderilen = (await env.TELEGRAM_KV.get(ANAHTAR, 'json')) ?? {};
-  const rss = await fetch(`${env.SITE}/rss.xml`, { headers: { 'cache-control': 'no-cache' } });
-  if (!rss.ok) throw new Error(`RSS ${rss.status}`);
-  const sira = rssOgeleri(await rss.text())
+  const rssRes = await fetch(`${env.SITE}/rss.xml`, { headers: { 'cache-control': 'no-cache' } });
+  if (!rssRes.ok) throw new Error(`RSS ${rssRes.status}: ${env.SITE}/rss.xml`);
+  const tumu = rssOgeleri(await rssRes.text());
+  const sira = tumu
     .filter((o) => o.slug && !gonderilen[o.slug] && simdi - o.tarih <= AZAMI_YAS_MS)
-    .sort((a, b) => a.tarih - b.tarih); // eskiden yeniye: kanalda sıra doğru görünsün
+    .sort((a, b) => a.tarih - b.tarih);
+  
+  if (sira.length === 0) {
+    return `Kuyrukta yeni haber yok (Toplam RSS: ${tumu.length}, Gönderilenler KV: ${Object.keys(gonderilen).length})`;
+  }
   const o = sira[0];
-  if (!o) return;
 
   const sayfa = await fetch(o.link);
-  if (!sayfa.ok) return console.log(`Telegram: ${o.slug} henüz yayında değil (${sayfa.status})`);
+  if (!sayfa.ok) return `${o.slug} sayfasına erişilemedi (${sayfa.status})`;
   const html = await sayfa.text();
   const foto = html.match(/property="og:image" content="([^"]+)"/)?.[1];
   const maddeler = bultenMaddeleri(html);
@@ -97,19 +102,20 @@ export async function telegramSirasi(env, simdi = new Date()) {
   const ileti = { foto, metin: aciklama({ onek: env.TELEGRAM_ONEK ?? '', baslik: o.baslik, metin, link: o.link }) };
 
   let basarili = false;
+  const hatalar = [];
   for (const h of hedefler(env.TELEGRAM_HEDEFLER)) {
     try {
       await gonder(token, h, ileti);
       basarili = true;
     } catch (e) {
-      console.error(e.message);
+      hatalar.push(`${h.chat}: ${e.message}`);
     }
   }
-  // En az bir hedefe gittiyse gönderildi sayılır (biri sürekli hata verirse kuyruk tıkanmasın).
   if (basarili) {
     gonderilen[o.slug] = simdi.toISOString();
     for (const [s, t] of Object.entries(gonderilen)) if (simdi - new Date(t) > SAKLA_MS) delete gonderilen[s];
     await env.TELEGRAM_KV.put(ANAHTAR, JSON.stringify(gonderilen));
-    console.log(`Telegram: + ${o.slug} (kuyrukta ${sira.length - 1} kaldı)`);
+    return `Başarıyla gönderildi: ${o.slug} -> ${env.TELEGRAM_HEDEFLER}`;
   }
+  throw new Error(`Gönderilemedi: ${hatalar.join('; ')}`);
 }
