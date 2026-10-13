@@ -41,6 +41,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           MAKS_PER_KJORING: ${{ vars.MAKS_PER_KJORING }}
+          SURE_DK: ${{ vars.SURE_DK }}
         run: node scripts/nyheter/hent-nyheter.mjs
 
       - name: Commit
