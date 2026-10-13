@@ -21,9 +21,8 @@ const SITELER = [
 ];
 
 const gizli = (env, ad, site) => env[`${ad}_${site.toUpperCase()}`] ?? env[ad];
-// kifobu günde 4 gönderi (Türkiye saati): 09:00 sabah, 13:00 öğle, 18:00 kapanış (hafta içi, tablolu;
-// hafta sonu yerine akşam bülteni), 23:00 gece. Bültenler ozet.yml ile yazılır; Telegram'a yalnız bunlar gider.
-// Canlı bülten güncellemeleri hafta içi 10:00–17:00.
+// kifobu her gün 4 gönderi (Türkiye saati): 09:00 sabah, 13:00 öğle, 18:00 tablolu kapanış, 23:00 gece.
+// Bültenler ozet.yml ile yazılır; Telegram'a yalnız bunlar ve kapanış gider. Canlı tablo güncellemeleri 10:00–17:00.
 const KIFOBU_BULTEN_SAATLERI = [9, 13, 23];
 
 async function tetikle(s, env, inputs, dosya = inputs ? 'bulten-otomasyon.yml' : s.bot) {
@@ -54,12 +53,10 @@ async function site(s, env, zaman) {
   // Haber botu: kendi dakikasında, YAYIN_SAATLERI'nde (Oslo saati; yaz/kış saatinde kaymaz).
   if (dakika === s.dakika && YAYIN_SAATLERI.includes(osloSaat)) isler.push(tetikle(s, env));
   if (s.ad === 'kifobu' && dakika === 0) {
-    const tr = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Istanbul', hour: '2-digit', hourCycle: 'h23', weekday: 'short' }).formatToParts(zaman);
-    const trSaat = Number(tr.find((p) => p.type === 'hour').value);
-    const trHaftaIci = !['Sat', 'Sun'].includes(tr.find((p) => p.type === 'weekday').value);
-    if (trHaftaIci && trSaat >= 10 && trSaat <= 17) isler.push(tetikle(s, env, { mod: 'canli' }));
-    if (trHaftaIci && trSaat === 18) isler.push(tetikle(s, env, { mod: 'kapanis' }));
-    if (KIFOBU_BULTEN_SAATLERI.includes(trSaat) || (!trHaftaIci && trSaat === 18)) isler.push(tetikle(s, env, undefined, 'ozet.yml'));
+    const trSaat = Number(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Istanbul', hour: '2-digit', hourCycle: 'h23' }).format(zaman));
+    if (trSaat >= 10 && trSaat <= 17) isler.push(tetikle(s, env, { mod: 'canli' }));
+    if (trSaat === 18) isler.push(tetikle(s, env, { mod: 'kapanis' }));
+    if (KIFOBU_BULTEN_SAATLERI.includes(trSaat)) isler.push(tetikle(s, env, undefined, 'ozet.yml'));
   }
   for (const r of await Promise.allSettled(isler)) if (r.status === 'rejected') console.error(`${s.ad}: ${r.reason?.message}`);
 }

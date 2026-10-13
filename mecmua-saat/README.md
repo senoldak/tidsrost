@@ -4,7 +4,7 @@ tidsrost, kifobu ve finfolis'in haber botlarını (ve kifobu bültenini) zamanı
 Cloudflare ücretsiz paketinde hesap başına 5 cron hakkı var; bu Worker 1 tanesini kullanır.
 
 - Cron: `*/10 * * * *` (UTC). Botlar Oslo saatiyle çift saatlerde: tidsrost :00, kifobu :20, finfolis :40. Gece 03–08 yayın yok.
-- Telegram: her çağrıda site başına en fazla 1 haber (telegram.js). kifobu'da günde 4 gönderi (Türkiye saati): 09:00 sabah, 13:00 öğle, 18:00 kapanış (hafta sonu akşam bülteni), 23:00 gece.
+- Telegram: her çağrıda site başına en fazla 1 haber (telegram.js). kifobu'da her gün 4 gönderi (Türkiye saati): 09:00 sabah, 13:00 öğle, 18:00 tablolu kapanış, 23:00 gece.
 
 ## Gizli değişkenler
 
