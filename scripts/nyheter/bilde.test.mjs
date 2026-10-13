@@ -118,3 +118,34 @@ test('sakKapagi: Norveççe özel karakterleri (æ, ø, å, « », –) hatasız
   assert.equal(meta.width, 1200);
   assert.equal(meta.height, 675);
 });
+
+test('KATEGORI_SEMBOL: økonomi ve okonomi anahtarlarının her ikisini de destekler', () => {
+  assert.ok(KATEGORI_SEMBOL['okonomi'], 'okonomi sembolü tanımlı olmalı');
+  assert.ok(KATEGORI_SEMBOL['økonomi'], 'økonomi sembolü tanımlı olmalı');
+  assert.equal(KATEGORI_SEMBOL['økonomi'], KATEGORI_SEMBOL['okonomi']);
+});
+
+test('sakKapagi: rakam (gösterge) parametresi ile iki kolonlu kartuşlu Düzen B PNG üretir', async () => {
+  const veri = await sakKapagi({
+    tittel: 'Styringsrenten holdes uendret på 4,5 prosent',
+    ingress: 'Norges Bank besluttet torsdag å holde styringsrenten uendret. Komiteen mener det er behov for å holde renten oppe.',
+    kategori: 'økonomi',
+    dato: '2026-10-13T12:00:00+02:00',
+    rakam: { etiket: 'STYRINGSRENTE', deger: '4,50 %' },
+    kilde: 'Norges Bank',
+  });
+
+  // SVG içinde Düzen B kartuş kutusu ve bileşenleri bulunmalı
+  assert.match(veri.svg, /<rect[^>]+width="330"[^>]+height="250"/);
+  assert.match(veri.svg, /fill="#ffffff"/);
+
+  const png = await kapakCiz(veri);
+  assert.ok(Buffer.isBuffer(png));
+  assert.ok(png.length > 5000);
+
+  const meta = await sharp(png).metadata();
+  assert.equal(meta.width, 1200);
+  assert.equal(meta.height, 675);
+  assert.equal(meta.format, 'png');
+});
+
