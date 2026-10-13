@@ -8,6 +8,7 @@
 //   5. Son kesin kontrol: redaksiyon olguları bozmadı mı?
 // Son kontrolde uydurma alıntı ya da kaynakta olmayan rakam kalırsa haber yayınlanmaz (stopp).
 import { gemini } from './lib.mjs';
+import { RELATIV_TID, MEDIER, lokalRett, ilgiliKisim } from './tekstverktoy.mjs';
 
 const VURDERING_SKJEMA = {
   type: 'object',
@@ -132,14 +133,13 @@ export function sjekkBokmål(tekst) {
 
 // "i går / i dag / i morgen" haber geç yayınlanırsa yanlış olur; tarih ya da gün adı kullanılmalı.
 export function sjekkRelativTid(tekst) {
-  const funn = [...new Set((utenSitater(tekst).match(/(?<!\p{L})(i går|i dag|i morgen|i forgårs|i kveld|i natt)(?!\p{L})/giu) ?? []).map((w) => w.toLowerCase()))];
+  const funn = [...new Set((utenSitater(tekst).match(RELATIV_TID) ?? []).map((w) => w.toLowerCase()))];
   return funn.length ? [`Relative tidsuttrykk (${funn.map((w) => `«${w}»`).join(', ')}) kan bli feil når saken leses senere; bruk ukedag eller dato fra kilden, eller fjern dem`] : [];
 }
 
 const sprakSjekk = (tekst) => [...sjekkBokmål(tekst), ...sjekkRelativTid(tekst)];
 
 // Haber sitelerine dayanan haberde hiçbir medya kuruluşu anılmaz (sahibin kuralı); anılırsa haber yayınlanmaz.
-const MEDIER = /(?<![\p{L}\d])(NRK|VG|Aftenposten|Dagbladet|E24|TV ?2|Nettavisen|Bergens Tidende|Dagsavisen|Dagens Næringsliv|DN\.no|Klassekampen|Romsdals Budstikke|Adresseavisen|Stavanger Aftenblad|Fædrelandsvennen|iTromsø|Nordlys|NTB|Reuters|AFP|Bloomberg|Financial Times|BBC|CNN|Sky News|The Guardian|New York Times|Washington Post|Wall Street Journal|Al Jazeera|ANB|Avisenes Nyhetsbyrå)(?![\p{L}\d])/gu;
 export function sjekkMedier(tekst) {
   const funn = [...new Set(tekst.match(MEDIER) ?? [])];
   return funn.length ? [`Medier nevnt ved navn (${funn.join(', ')}); fjern dem og alt som bare tilskrives dem`] : [];
@@ -168,7 +168,7 @@ Avvis (godkjent=false) og forklar kort på norsk hvis noe av dette gjelder:
 Godkjenn bare hvis ingen av punktene gjelder. Små språklige forbedringer er ikke grunn til avvisning.
 
 KILDE:
-${kilde.slice(0, 14000)}
+${ilgiliKisim(kilde, helTekst(sak), 14000)}
 
 UTKAST:
 Tittel: ${sak.title}
@@ -193,7 +193,7 @@ PROBLEMER:
 ${problemer.map((p) => `- ${p}`).join('\n')}
 
 KILDE:
-${kilde.slice(0, 14000)}
+${ilgiliKisim(kilde, helTekst(sak), 14000)}
 
 UTKAST:
 Tittel: ${sak.title}
@@ -245,7 +245,8 @@ ${sak.body}`,
 // Döner: { sak, merknader, stopp } — stopp doluysa haber yayınlanmamalı (taslak da açılmaz; kaynak hopp döner).
 const SISTE_RUNDER = 3;
 export async function redigerSak(sak, kilde, opts = {}) {
-  let utkast = sak;
+  // Yazar taslağındaki basit sorunlar (cümle ortası göreli zaman, medya atfı) önce yerelde silinir.
+  let utkast = lokalRett(sak);
   const merknader = [];
   for (let runde = 0; runde < 2; runde++) {
     const vurdering = await vurder(utkast, kilde, opts);
@@ -273,6 +274,13 @@ export async function redigerSak(sak, kilde, opts = {}) {
   let stopp = sluttsjekk(utkast);
   if (stopp.length) merknader.push(...stopp);
   for (let runde = 0; runde < SISTE_RUNDER && stopp.length; runde++) {
+    // Önce yerel düzeltme; sorun kalmazsa Gemini çağrılmaz, kalırsa sadece kalanlar gönderilir.
+    const lokal = lokalRett(utkast);
+    if (sluttsjekk(lokal).length < stopp.length) {
+      utkast = lokal;
+      stopp = sluttsjekk(utkast);
+      if (!stopp.length) break;
+    }
     const sisteForsok = await rett(utkast, kilde, [
       ...stopp,
       'Sitater må kopieres tegn for tegn fra kilden, med samme ordstilling. Klarer du ikke det, skriv om til indirekte tale uten anførselstegn.',
