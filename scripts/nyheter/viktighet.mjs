@@ -37,6 +37,7 @@ export async function vurder(kandidater, { kall = gemini } = {}) {
   if (!liste.length) return poeng;
   const svar = await kall({
     schema: SKJEMA,
+    tenkning: 'minimal',
     prompt: `Du er vaktsjef i en norsk nettavis for et bredt publikum. Gi hver sak under en nyhetsverdi fra 1 til 5:
 5 = stor nyhet de fleste i Norge bør få med seg (vedtak med bred virkning, store hendelser, viktige tall).
 4 = klar nyhet med betydning for mange.

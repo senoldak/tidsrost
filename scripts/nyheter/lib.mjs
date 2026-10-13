@@ -109,7 +109,7 @@ const GEMINI_ARALIK_MS = Number(process.env.GEMINI_ARALIK_MS || 4500);
 let sonGeminiKall = 0;
 
 // Gemini'ye istek atar, JSON şemasına uygun yanıt döner.
-export async function gemini({ prompt, schema }) {
+export async function gemini({ prompt, schema, tenkning: niva = 'low' }) {
   const key = process.env.GEMINI_API_KEY;
   if (!key) return null;
   const bekle = sonGeminiKall + GEMINI_ARALIK_MS - Date.now();
@@ -119,7 +119,7 @@ export async function gemini({ prompt, schema }) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
 
   // Düşünme seviyesini düşük tutmak cevabı çok hızlandırıyor; desteklemeyen modelde kapatılır.
-  let tenkning = { thinkingLevel: 'low' };
+  let tenkning = { thinkingLevel: niva };
   for (let forsok = 1; forsok <= 3; forsok++) {
     const res = await fetch(url, {
       method: 'POST',
@@ -136,7 +136,7 @@ export async function gemini({ prompt, schema }) {
       signal: AbortSignal.timeout(180_000),
     });
     if (res.status === 400 && tenkning && /thinking/i.test(await res.clone().text())) {
-      tenkning = null;
+      tenkning = tenkning.thinkingLevel === 'low' ? null : { thinkingLevel: 'low' };
       forsok--;
       continue;
     }

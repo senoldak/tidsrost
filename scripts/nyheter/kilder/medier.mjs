@@ -73,6 +73,8 @@ export async function grupper(saker, publisert, { kall = gemini } = {}) {
   if (!saker.length) return { grupper: [], kjente: new Set() };
   const svar = await kall({
     schema: GRUPPE_SKJEMA,
+    // Gruppering er klassifisering: minimal tenkning holder og koster mindre.
+    tenkning: 'minimal',
     prompt: `Du er vaktsjef i en norsk nettavis. Under er ferske overskrifter fra flere medier. Grupper overskriftene som handler om SAMME konkrete hendelse (samme kamp, samme vedtak, samme ulykke, samme utspill). Ulike hendelser om samme tema skal IKKE i samme gruppe. Hver overskrift i høyst én gruppe; overskrifter uten match kan utelates.
 Marker også i «kjente» overskrifter som handler om en hendelse som allerede står i listen over publiserte saker.
 
