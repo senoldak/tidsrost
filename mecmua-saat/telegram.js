@@ -98,10 +98,10 @@ export async function telegramSirasi(env, simdi = new Date()) {
   if (!sayfa.ok) return `${o.slug} sayfasına erişilemedi (${sayfa.status})`;
   const html = await sayfa.text();
   const foto = html.match(/property="og:image" content="([^"]+)"/)?.[1];
-  // finfolis piyasa bülteni: ilk 3 madde; kifobu sabah/akşam/gece bülteni: haber başlıkları (1024 karaktere sığdığı kadar).
+  // finfolis piyasa bülteni: ilk 3 madde; kifobu sabah/öğle/akşam/gece bülteni: haber başlıkları (1024 karaktere sığdığı kadar).
   const maddeler = o.slug.startsWith('piyasa-bulteni')
     ? bultenMaddeleri(html)
-    : /^(sabah|aksam|gece)-bulteni-/.test(o.slug)
+    : /^(sabah|ogle|aksam|gece)-bulteni-/.test(o.slug)
       ? bultenMaddeleri(html, { azami: 15, ikiNokta: false })
       : [];
   const metin = maddeler.length ? maddeler.map((m) => `• ${m}`).join('\n') : o.ozet;

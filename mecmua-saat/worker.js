@@ -15,14 +15,16 @@ import { telegramSirasi } from './telegram.js';
 
 const SITELER = [
   { ad: 'tidsrost', repo: 'senoldak/tidsrost', bot: 'nyheter.yml', dakika: 0, site: 'https://tidsrost.com', hedefler: '@tidsrost', onek: '', kv: 'KV_TIDSROST' },
-  { ad: 'kifobu', repo: 'senoldak/kifobu', bot: 'bot.yml', dakika: 20, site: 'https://kifobu.com', hedefler: '@kifobu,@fundov:24358', onek: '📰 ', kv: 'KV_KIFOBU', yalniz: /^(sabah|aksam|gece)-bulteni-/ },
+  { ad: 'kifobu', repo: 'senoldak/kifobu', bot: 'bot.yml', dakika: 20, site: 'https://kifobu.com', hedefler: '@kifobu,@fundov:24358', onek: '📰 ', kv: 'KV_KIFOBU', yalniz: /^(sabah|ogle|aksam|gece)-bulteni-/ },
   { ad: 'finfolis', repo: 'senoldak/finfolis', bot: 'haberler.yml', dakika: 40, site: 'https://finfolis.com', hedefler: '@finfolis,@fundov:5472', onek: '🧮 ', kv: 'KV_FINFOLIS' },
   { ad: 'jendume', repo: 'senoldak/jendume', bot: 'bot.yml', dakika: 50, site: 'https://jendume.com/tr', hedefler: '@jenndume,@fundov:11227', onek: '⚡ ', kv: 'KV_JENDUME' },
 ];
 
 const gizli = (env, ad, site) => env[`${ad}_${site.toUpperCase()}`] ?? env[ad];
-// kifobu: Telegram'a yalnız bültenler gider; bültenler Türkiye saatiyle bu saatlerde yazılır (ozet.yml).
-const KIFOBU_BULTEN_SAATLERI = [9, 19, 23];
+// kifobu günde 4 gönderi (Türkiye saati): 09:00 sabah, 13:00 öğle, 18:00 kapanış (hafta içi, tablolu;
+// hafta sonu yerine akşam bülteni), 23:00 gece. Bültenler ozet.yml ile yazılır; Telegram'a yalnız bunlar gider.
+// Canlı bülten güncellemeleri hafta içi 10:00–17:00.
+const KIFOBU_BULTEN_SAATLERI = [9, 13, 23];
 
 async function tetikle(s, env, inputs, dosya = inputs ? 'bulten-otomasyon.yml' : s.bot) {
   // Panele/terminale yapıştırırken token'a satır sonu, boşluk ya da "Bearer " eklenebiliyor.
@@ -40,7 +42,6 @@ async function tetikle(s, env, inputs, dosya = inputs ? 'bulten-otomasyon.yml' :
 async function site(s, env, zaman) {
   const oslo = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Oslo', hour: '2-digit', hourCycle: 'h23', weekday: 'short' }).formatToParts(zaman);
   const osloSaat = Number(oslo.find((p) => p.type === 'hour').value);
-  const haftaIci = !['Sat', 'Sun'].includes(oslo.find((p) => p.type === 'weekday').value);
   const dakika = zaman.getUTCMinutes();
   const isler = [
     telegramSirasi(
@@ -52,13 +53,14 @@ async function site(s, env, zaman) {
   ];
   // Haber botu: kendi dakikasında, YAYIN_SAATLERI'nde (Oslo saati; yaz/kış saatinde kaymaz).
   if (dakika === s.dakika && YAYIN_SAATLERI.includes(osloSaat)) isler.push(tetikle(s, env));
-  // kifobu bülteni: :00'da, hafta içi. Canlı 09:00–16:00, kapanış 17:00 (Oslo).
-  if (s.ad === 'kifobu' && dakika === 0 && haftaIci) {
-    if (osloSaat >= 9 && osloSaat <= 16) isler.push(tetikle(s, env, { mod: 'canli' }));
-    else if (osloSaat === 17) isler.push(tetikle(s, env, { mod: 'kapanis' }));
+  if (s.ad === 'kifobu' && dakika === 0) {
+    const tr = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Istanbul', hour: '2-digit', hourCycle: 'h23', weekday: 'short' }).formatToParts(zaman);
+    const trSaat = Number(tr.find((p) => p.type === 'hour').value);
+    const trHaftaIci = !['Sat', 'Sun'].includes(tr.find((p) => p.type === 'weekday').value);
+    if (trHaftaIci && trSaat >= 10 && trSaat <= 17) isler.push(tetikle(s, env, { mod: 'canli' }));
+    if (trHaftaIci && trSaat === 18) isler.push(tetikle(s, env, { mod: 'kapanis' }));
+    if (KIFOBU_BULTEN_SAATLERI.includes(trSaat) || (!trHaftaIci && trSaat === 18)) isler.push(tetikle(s, env, undefined, 'ozet.yml'));
   }
-  const istanbulSaat = Number(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Istanbul', hour: '2-digit', hourCycle: 'h23' }).format(zaman));
-  if (s.ad === 'kifobu' && dakika === 0 && KIFOBU_BULTEN_SAATLERI.includes(istanbulSaat)) isler.push(tetikle(s, env, undefined, 'ozet.yml'));
   for (const r of await Promise.allSettled(isler)) if (r.status === 'rejected') console.error(`${s.ad}: ${r.reason?.message}`);
 }
 
