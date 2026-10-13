@@ -22,7 +22,7 @@ jobs:
     # Süre bütçesi yeni yazıyı ~15–18. dakikada keser; Gemini 503 beklemeleri için pay bırakılır (repo açık, dakika ücretsiz).
     timeout-minutes: 40
     steps:
-      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           # Sıradaki çalışma tetiklendiği anki commit'i değil, dalın en son hâlini alır; yoksa eski görülen listesiyle aynı haberleri yeniden yazar.
           ref: ${{ github.ref_name }}
