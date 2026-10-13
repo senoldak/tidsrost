@@ -2,7 +2,12 @@
 // Böylece telif ya da atıf derdi olmaz; sadece harita altlığı ve sınırlar için kaynak yazılır.
 // Her fonksiyon 1200×675 (16:9) SVG döner; skrivSak bunu sharp ile PNG'ye çevirir.
 import { readFile } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { hentJson, sleep } from './lib.mjs';
+
+const HER = path.dirname(fileURLToPath(import.meta.url));
+const FONT_DIR = path.join(HER, 'fonts');
 
 const B = 1200;
 const H = 675;
@@ -497,3 +502,56 @@ export async function tilPng(svgTekst) {
   }
   return sharp(Buffer.from(svgTekst)).png({ compressionLevel: 9, palette: true, quality: 90 }).toBuffer();
 }
+
+// ── Pango Metin Katmanı ve Taşma Koruması ──────────────────────────────
+
+export async function yazi(metin, {
+  aile = 'SourceSerif4',
+  boyut = 32,
+  kalinlik = 400,
+  renk = '#16191c',
+  genislik,
+  aralik = 0,
+  satirAraligi,
+  buyukHarf = false,
+} = {}) {
+  let sharp;
+  ({ default: sharp } = await import('sharp'));
+  const icerik = esc(buyukHarf ? String(metin).toLocaleUpperCase('nb-NO') : metin);
+  const harf = aralik ? ` letter_spacing="${Math.round(aralik * boyut * 1024)}"` : '';
+  const markup = `<span foreground="${renk}" font_weight="${kalinlik}"${harf}>${icerik}</span>`;
+  const fontFile = path.join(FONT_DIR, `${aile}.ttf`);
+  const fontName = aile === 'SourceSerif4' ? 'Source Serif 4' : 'Archivo';
+
+  const { data, info } = await sharp({
+    text: {
+      text: markup,
+      font: `${fontName} ${boyut}`,
+      fontfile: fontFile,
+      rgba: true,
+      dpi: 72,
+      ...(genislik ? { width: Math.round(genislik), wrap: 'word' } : {}),
+      ...(satirAraligi ? { spacing: Math.round(satirAraligi) } : {}),
+    },
+  })
+    .png()
+    .toBuffer({ resolveWithObject: true });
+
+  return { input: data, genislik: info.width, yukseklik: info.height };
+}
+
+export async function sigdir({ input, left, top, genislik, yukseklik }) {
+  let sharp;
+  ({ default: sharp } = await import('sharp'));
+  const x = Math.max(0, Math.round(left));
+  const y = Math.max(0, Math.round(top));
+  const enFazlaG = B - 40 - x;
+  const enFazlaY = H - y;
+  if (genislik <= enFazlaG && yukseklik <= enFazlaY) return { input, left: x, top: y };
+  const kucuk = await sharp(input)
+    .resize({ width: enFazlaG, height: enFazlaY, fit: 'inside' })
+    .png()
+    .toBuffer();
+  return { input: kucuk, left: x, top: y };
+}
+
