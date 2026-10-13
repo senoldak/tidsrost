@@ -49,3 +49,10 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: npx --yes wrangler@4.34.0 deploy
+
+      # Cloudflare ücretsiz planında bir sürüm en fazla 20.000 dosya olabilir; sınıra yaklaşınca uyarır.
+      - name: Dosya sayısı
+        run: |
+          n=$(find dist -type f | wc -l)
+          echo "dist: $n dosya (sınır 20.000)" >> "$GITHUB_STEP_SUMMARY"
+          if [ "$n" -gt 15000 ]; then echo "::warning::dist $n dosya; Cloudflare ücretsiz sınırı 20.000"; fi
