@@ -1,8 +1,7 @@
 // Regjeringen.no: departementlerin haber ve basın bültenleri.
 // GEMINI_API_KEY yoksa bu kaynak hiç çalışmaz (bkz. lag()).
 import { readFile } from 'node:fs/promises';
-import { hentTekst, lesRss, htmlTilTekst, decodeEntities, gemini, osloIso, sleep, KATEGORIER, kategoriNavn } from '../lib.mjs';
-import { kildekort } from '../bilde.mjs';
+import { hentTekst, lesRss, htmlTilTekst, decodeEntities, gemini, osloIso, sleep, KATEGORIER } from '../lib.mjs';
 import { redigerSak } from '../redaktor.mjs';
 
 // Site ile ortak ayar (src/lib/redaksjon.json):
@@ -146,14 +145,7 @@ export default {
           // Özel dikkat gerektiren konular (kişiler, suç, çocuklar vb.) otomatik işlenmez.
           if (!ai.egnet) return { hopp: 'krever særlig varsomhet, bør vurderes manuelt' };
           const { egnet, ...sak } = ai;
-          // Kapak: bülteni gönderen bakanlığın adıyla tipografik kart.
-          const avsender = side.departement === 'regjeringen' ? 'Regjeringen' : side.departement;
-          const bilde = {
-            svg: (s) => kildekort({ kategori: kategoriNavn(s.category), avsender, underlinje: 'Pressemelding på regjeringen.no' }),
-            alt: `Illustrasjon med teksten «${avsender}»`,
-            kreditt: 'Illustrasjon: tidsrøst',
-          };
-          const felles = { ...sak, date: osloIso(), kilde, bilde };
+          const felles = { ...sak, date: osloIso(), kilde };
           if (kontroll === 'ingen') return { ...felles, produksjon: 'ki-automatisk' };
           if (kontroll === 'manuell') return { ...felles, draft: true, produksjon: 'ki-assistert' };
 

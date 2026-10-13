@@ -2,7 +2,7 @@
 import { mkdir, readFile, writeFile, access } from 'node:fs/promises';
 import path from 'node:path';
 import { kullanimEkle } from './kullanim.mjs';
-import { kildekort, tilPng } from './bilde.mjs';
+import { sakKapagi, kapakCiz, tilPng } from './bilde.mjs';
 
 export const USER_AGENT = 'tidsrost-nyhetsbot/1.0 (+https://github.com/senoldak/tidsrost)';
 
@@ -275,18 +275,31 @@ export async function skrivSak(rot, sak) {
   return slug;
 }
 
-// Kapak resmi: kaynak kendi görselini verdiyse (harita, grafik) o, yoksa kaynağın adıyla tipografik kart.
-// sak.bilde = { svg: (sak) => string | Promise<string>, alt, kreditt }
+// Kapak resmi: kaynak kendi görselini verdiyse (harita, grafik) o, yoksa editoryal sakKapagi.
+// sak.bilde = { svg: (sak) => string | object | Promise<...>, alt, kreditt }
 // Görsel üretilemezse haber yine yazılır, sadece kapaksız kalır.
-async function lagBilde(sak) {
-  const b = sak.bilde ?? {
-    svg: () => kildekort({ kategori: kategoriNavn(sak.category), avsender: sak.kilde.navn }),
-    alt: `Illustrasjon med teksten «${sak.kilde.navn}»`,
-    kreditt: 'Illustrasjon: tidsrøst',
-  };
+export async function lagBilde(sak) {
   try {
-    const png = await tilPng(await b.svg(sak));
-    return png && { png, alt: b.alt, kreditt: b.kreditt };
+    if (sak.bilde) {
+      const b = sak.bilde;
+      const res = await b.svg(sak);
+      const png = (res && typeof res === 'object' && ('katmanlar' in res || 'svg' in res))
+        ? await kapakCiz(res)
+        : await tilPng(res);
+      return png && { png, alt: b.alt, kreditt: b.kreditt };
+    }
+
+    const alt = `Illustrasjon: «${sak.title}»`;
+    const kreditt = 'Illustrasjon: tidsrøst';
+    const png = await kapakCiz(sakKapagi({
+      tittel: sak.title,
+      ingress: sak.description,
+      kategori: sak.category,
+      dato: sak.date,
+      rakam: sak.rakam,
+      kilde: sak.kilde?.navn,
+    }));
+    return png && { png, alt, kreditt };
   } catch (e) {
     console.warn(`  kapak resmi üretilemedi: ${e.message}`);
     return null;

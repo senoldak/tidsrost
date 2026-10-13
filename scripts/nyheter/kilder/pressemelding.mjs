@@ -3,8 +3,7 @@
 // RSS → sayfa metni → Gemini taslağı → yazı işleri (redaktor.mjs) → yayın ya da taslak.
 // GEMINI_API_KEY yoksa bu kaynaklar çalışmaz (bkz. lag()).
 import { readFile } from 'node:fs/promises';
-import { hentTekst, lesRss, htmlTilTekst, gemini, osloIso, KATEGORIER, kategoriNavn } from '../lib.mjs';
-import { kildekort } from '../bilde.mjs';
+import { hentTekst, lesRss, htmlTilTekst, gemini, osloIso, KATEGORIER } from '../lib.mjs';
 import { redigerSak } from '../redaktor.mjs';
 
 const { kontroll } = JSON.parse(await readFile(new URL('../../../src/lib/redaksjon.json', import.meta.url), 'utf8'));
@@ -115,12 +114,7 @@ export function lagKilde(etat) {
             if (!ai) return null;
             if (!ai.egnet) return { hopp: 'ikke egnet for automatisk behandling, bør vurderes manuelt' };
             const { egnet, ...sak } = ai;
-            const bilde = {
-              svg: (s) => kildekort({ kategori: kategoriNavn(s.category), avsender: etat.avsender, underlinje: etat.underlinje }),
-              alt: `Illustrasjon med teksten «${etat.avsender}»`,
-              kreditt: 'Illustrasjon: tidsrøst',
-            };
-            const felles = { ...sak, date: osloIso(), kilde, bilde };
+            const felles = { ...sak, date: osloIso(), kilde };
             if (kontroll === 'ingen') return { ...felles, produksjon: 'ki-automatisk' };
             if (kontroll === 'manuell') return { ...felles, draft: true, produksjon: 'ki-assistert' };
 

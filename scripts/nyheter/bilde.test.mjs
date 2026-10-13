@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import sharp from 'sharp';
 import { yazi, sigdir, sakKapagi, kapakCiz, KATEGORI_SEMBOL } from './bilde.mjs';
+import { lagBilde } from './lib.mjs';
 
 test('yazi: Source Serif 4 ile metin buffer üretir', async () => {
   const katman = await yazi('Regjeringen legger fram ny krisepakke', {
@@ -144,6 +145,49 @@ test('sakKapagi: rakam (gösterge) parametresi ile iki kolonlu kartuşlu Düzen 
   assert.ok(png.length > 5000);
 
   const meta = await sharp(png).metadata();
+  assert.equal(meta.width, 1200);
+  assert.equal(meta.height, 675);
+  assert.equal(meta.format, 'png');
+});
+
+test('lagBilde: sak.bilde tanımlı olmadığında sakKapagi ile editoryal kapak üretir', async () => {
+  const sak = {
+    title: 'Ny rapport viser økt verdiskaping i distriktene',
+    description: 'En ny undersøkelse fra SSB viser at verdiskapingen i distriktskommunene har økt kraftig det siste året.',
+    category: 'innenriks',
+    date: '2026-10-13T12:00:00+02:00',
+    kilde: { navn: 'Statistisk sentralbyrå' },
+  };
+
+  const bilde = await lagBilde(sak);
+  assert.ok(bilde);
+  assert.equal(bilde.alt, 'Illustrasjon: «Ny rapport viser økt verdiskaping i distriktene»');
+  assert.equal(bilde.kreditt, 'Illustrasjon: tidsrøst');
+  assert.ok(Buffer.isBuffer(bilde.png));
+
+  const meta = await sharp(bilde.png).metadata();
+  assert.equal(meta.width, 1200);
+  assert.equal(meta.height, 675);
+  assert.equal(meta.format, 'png');
+});
+
+test('lagBilde: sak.bilde özel tanımlandığında özel grafiği üretir', async () => {
+  const sak = {
+    title: 'Varsel om fare for flom',
+    bilde: {
+      svg: () => '<svg width="1200" height="675" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="675" fill="#123456"/></svg>',
+      alt: 'Flomvarsel for Vestland',
+      kreditt: 'Illustrasjon: Varsom / NVE',
+    },
+  };
+
+  const bilde = await lagBilde(sak);
+  assert.ok(bilde);
+  assert.equal(bilde.alt, 'Flomvarsel for Vestland');
+  assert.equal(bilde.kreditt, 'Illustrasjon: Varsom / NVE');
+  assert.ok(Buffer.isBuffer(bilde.png));
+
+  const meta = await sharp(bilde.png).metadata();
   assert.equal(meta.width, 1200);
   assert.equal(meta.height, 675);
   assert.equal(meta.format, 'png');

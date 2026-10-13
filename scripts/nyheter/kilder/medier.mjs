@@ -10,8 +10,7 @@
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { hentTekst, lesRss, htmlTilTekst, gemini, osloIso, KATEGORIER, kategoriNavn } from '../lib.mjs';
-import { kildekort } from '../bilde.mjs';
+import { hentTekst, lesRss, htmlTilTekst, gemini, osloIso, KATEGORIER } from '../lib.mjs';
 import { redigerSak } from '../redaktor.mjs';
 import { uavhengigeKilder } from '../uavhengighet.mjs';
 
@@ -211,13 +210,7 @@ function lagKandidat(valgt, alle) {
       if (!ai) return null;
       if (!ai.egnet) return { hopp: 'ikke egnet (varsomhet eller ikke nyhet)' };
       const { egnet, ...sak } = ai;
-      // Kaynak satırı yok (kilder: []); kapakta sadece kategori adı.
-      const bilde = {
-        svg: (s) => kildekort({ kategori: 'tidsrøst', avsender: kategoriNavn(s.category), underlinje: '' }),
-        alt: 'Illustrasjon med kategorinavnet',
-        kreditt: 'Illustrasjon: tidsrøst',
-      };
-      const felles = { ...sak, date: osloIso(), kilder: [], bilde };
+      const felles = { ...sak, date: osloIso(), kilder: [] };
       if (kontroll === 'ingen') return { ...felles, produksjon: 'ki-medier' };
       if (kontroll === 'manuell') return { ...felles, draft: true, produksjon: 'ki-assistert' };
       const kildeTekst = valgt.map((k) => `Medie: ${k.medie}\nTittel: ${k.tittel}\nIngress: ${k.ingress}\n\n${k.tekst}`).join('\n\n---\n\n');

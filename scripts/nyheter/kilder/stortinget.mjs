@@ -1,8 +1,7 @@
 // Stortinget: Meclis'in karara bağladığı dosyalar.
 // Kaynak, Meclis'in kendi yazdığı tarafsız karar özeti (kortvedtak); haber bundan yazılır ve
 // yazı işleri sürecinden (redaktor.mjs) geçer. GEMINI_API_KEY yoksa bu kaynak çalışmaz.
-import { hentJson, gemini, osloIso, KATEGORIER, kategoriNavn } from '../lib.mjs';
-import { kildekort } from '../bilde.mjs';
+import { hentJson, gemini, osloIso, KATEGORIER } from '../lib.mjs';
 import { redigerSak } from '../redaktor.mjs';
 
 const API = 'https://data.stortinget.no/eksport';
@@ -104,15 +103,10 @@ export default {
         tittel: d.korttittel ?? d.tittel,
         async lag() {
           const kilde = { navn: 'Stortinget', url: KILDE_URL(s.id), lisens: 'NLOD' };
-          const bilde = {
-            svg: (sak) => kildekort({ kategori: kategoriNavn(sak.category), avsender: 'Stortinget', underlinje: d.komite?.navn }),
-            alt: 'Illustrasjon med teksten «Stortinget»',
-            kreditt: 'Illustrasjon: tidsrøst',
-          };
           // Kalıba uyan kısa kararlar şablonla yazılır: kaynak iki cümleden ibaret olduğunda
           // yapay zekâ anlatacak bir şey bulamayıp dolgu cümle uyduruyor.
           const mal = fraMal(vedtak, d.komite?.navn);
-          if (mal) return { ...mal, date: osloIso(), kilde, bilde, produksjon: 'automatisk' };
+          if (mal) return { ...mal, date: osloIso(), kilde, produksjon: 'automatisk' };
 
           const kildeTekst = [
             `Sak: ${d.tittel}`,
@@ -130,7 +124,6 @@ export default {
             ...ferdig,
             date: osloIso(),
             kilde,
-            bilde,
             produksjon: 'ki-kontrollert',
             ...(merknader.length && { merknader }),
           };
