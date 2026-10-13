@@ -1,14 +1,18 @@
-// Haber kapaklarındaki haritaların altlığını (nordkart.json) üretir. Bir kerelik çalıştırılır.
-// Kaynak: Natural Earth 1:10m ülke sınırları (kamu malı, atıf gerekmez).
-//   https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_0_countries.geojson
-// Kullanım: node scripts/nyheter/kart/lag-nordkart.mjs <indirilen.geojson>
+// Haber kapaklarındaki haritaların altlığını (nordkart.json) üretir.
+// Kaynak: Natural Earth 1:10m ülke sınırları ve göller (kamu malı, atıf gerekmez).
+// Kullanım: node scripts/nyheter/kart/lag-nordkart.mjs [indirilen.geojson]
 import { readFile, writeFile } from 'node:fs/promises';
+import { hentJson } from '../lib.mjs';
 
-const LAND = ['NOR', 'SWE', 'FIN', 'DNK', 'RUS', 'EST', 'LVA', 'DEU', 'POL', 'NLD', 'GBR', 'IRL', 'FRO'];
-// Norveç ve çevresi (boylam, enlem); Svalbard dahil değil.
-const [X0, Y0, X1, Y1] = [-9, 51, 42, 72.5];
+const LAND = ['NOR', 'SWE', 'FIN', 'DNK', 'RUS', 'EST', 'LVA', 'DEU', 'POL', 'NLD', 'GBR', 'IRL', 'FRO', 'ISL', 'GRL'];
+// Kuzey Atlantik, Grönland Denizi, Svalbard, Barents Denizi ve İskandinavya (boylam, enlem).
+const [X0, Y0, X1, Y1] = [-28, 51, 42, 82];
 
-// Halkayı dikdörtgene kırpar (Sutherland–Hodgman).
+function kryss(a, b, akse, v) {
+  const t = (v - a[akse]) / (b[akse] - a[akse]);
+  return [a[0] + t * (b[0] - a[0]), a[1] + t * (b[1] - a[1])];
+}
+
 function klipp(ring) {
   const kanter = [
     [(p) => p[0] >= X0, (a, b) => kryss(a, b, 0, X0)],
@@ -33,35 +37,41 @@ function klipp(ring) {
   return ut;
 }
 
-function kryss(a, b, akse, v) {
-  const t = (v - a[akse]) / (b[akse] - a[akse]);
-  return [a[0] + t * (b[0] - a[0]), a[1] + t * (b[1] - a[1])];
-}
-
-// Yaklaşık 1 km'den yakın ardışık noktaları atar (dosya küçük kalsın).
-function seyrelt(ring) {
+function seyrelt(ring, tol = 0.012) {
   const ut = [];
   for (const p of ring) {
     const q = ut.at(-1);
-    if (!q || Math.abs(p[0] - q[0]) * Math.cos((p[1] * Math.PI) / 180) > 0.012 || Math.abs(p[1] - q[1]) > 0.006) ut.push(p);
+    if (!q || Math.abs(p[0] - q[0]) * Math.cos((p[1] * Math.PI) / 180) > tol || Math.abs(p[1] - q[1]) > tol * 0.5) ut.push(p);
   }
   return ut;
 }
 
-const utenfor = (ring) => ring.some(([x, y]) => x < X0 || x > X1 || y < Y0 || y > Y1);
+const cData = process.argv[2]
+  ? JSON.parse(await readFile(process.argv[2], 'utf8'))
+  : await hentJson('https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_0_countries.geojson');
 
-const data = JSON.parse(await readFile(process.argv[2], 'utf8'));
+const lData = await hentJson('https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_lakes.geojson');
+
 const land = [];
-for (const f of data.features) {
+for (const f of cData.features) {
   const kode = f.properties.ADM0_A3;
   if (!LAND.includes(kode)) continue;
   const polygoner = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates;
   const ringer = polygoner
-    // Norveç'in ana kara dışındaki parçaları (Svalbard, Jan Mayen) kırpılmaz, tamamen atlanır.
-    .filter((p) => kode !== 'NOR' || !utenfor(p[0]))
     .map((p) => seyrelt(klipp(p[0])).map(([x, y]) => [Math.round(x * 1000) / 1000, Math.round(y * 1000) / 1000]))
     .filter((r) => r.length >= 3);
   if (ringer.length) land.push({ kode, ringer });
 }
-await writeFile(new URL('./nordkart.json', import.meta.url), JSON.stringify({ kilde: 'Natural Earth (public domain)', land }) + '\n');
-console.log(land.map((l) => `${l.kode}: ${l.ringer.length}`).join(', '));
+
+const innsjoer = [];
+for (const f of lData.features) {
+  const polygoner = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates;
+  for (const p of polygoner) {
+    const ring = seyrelt(klipp(p[0]), 0.018).map(([x, y]) => [Math.round(x * 1000) / 1000, Math.round(y * 1000) / 1000]);
+    if (ring.length >= 4) innsjoer.push(ring);
+  }
+}
+
+const utData = { kilde: 'Natural Earth (public domain)', land, innsjoer };
+await writeFile(new URL('./nordkart.json', import.meta.url), JSON.stringify(utData) + '\n');
+console.log(`nordkart.json lagret: ${land.length} land, ${innsjoer.length} innsjøer.`);
