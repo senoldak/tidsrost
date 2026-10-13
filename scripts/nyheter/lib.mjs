@@ -1,6 +1,7 @@
 // Haber botu için ortak yardımcılar: indirme, RSS okuma, HTML temizleme, Gemini, dosya yazma.
 import { mkdir, readFile, writeFile, access } from 'node:fs/promises';
 import path from 'node:path';
+import { kullanimEkle } from './kullanim.mjs';
 import { kildekort, tilPng } from './bilde.mjs';
 
 export const USER_AGENT = 'tidsrost-nyhetsbot/1.0 (+https://github.com/senoldak/tidsrost)';
@@ -156,6 +157,7 @@ export async function gemini({ prompt, schema }) {
       throw feil;
     }
     const data = await res.json();
+    kullanimEkle(data.usageMetadata);
     const tekst = data.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') ?? '';
     return JSON.parse(tekst);
   }
