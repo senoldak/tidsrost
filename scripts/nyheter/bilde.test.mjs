@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import sharp from 'sharp';
-import { yazi, sigdir } from './bilde.mjs';
+import { yazi, sigdir, sakKapagi, kapakCiz, KATEGORI_SEMBOL } from './bilde.mjs';
 
 test('yazi: Source Serif 4 ile metin buffer üretir', async () => {
   const katman = await yazi('Regjeringen legger fram ny krisepakke', {
@@ -76,4 +76,45 @@ test('sigdir: tuvalden taşan katmanı tuvale sığacak şekilde küçültür', 
   // H = 675, enFazlaY = 675 - 500 = 175
   assert.ok(meta.width <= 160);
   assert.ok(meta.height <= 175);
+});
+
+test('KATEGORI_SEMBOL: 6 standart kategori sembolü içerir', () => {
+  const kategorier = ['innenriks', 'utenriks', 'okonomi', 'sport', 'kultur', 'teknologi'];
+  for (const kat of kategorier) {
+    assert.ok(KATEGORI_SEMBOL[kat], `${kat} sembolü tanımlı olmalı`);
+  }
+});
+
+test('sakKapagi: standart başlık ve ingress ile geçerli 1200x675 PNG üretir', async () => {
+  const png = await kapakCiz(sakKapagi({
+    tittel: 'Stortinget vedtar nye tiltak for å sikre kraftforsyningen',
+    ingress: 'Et bredt flertall på Stortinget har tirsdag samlet seg om en ny pakke for å styrke nettkapasiteten og støtte industrien i Sør-Norge.',
+    kategori: 'innenriks',
+    dato: '2026-10-13T12:00:00+02:00',
+    kilde: 'Stortinget',
+  }));
+
+  assert.ok(Buffer.isBuffer(png));
+  assert.ok(png.length > 5000);
+
+  const meta = await sharp(png).metadata();
+  assert.equal(meta.width, 1200);
+  assert.equal(meta.height, 675);
+  assert.equal(meta.format, 'png');
+});
+
+test('sakKapagi: Norveççe özel karakterleri (æ, ø, å, « », –) hatasız işler', async () => {
+  const png = await kapakCiz(sakKapagi({
+    tittel: '«Et historisk løft for bøndene», sier næringsministeren om avtalen',
+    ingress: 'Avtalen sikrer bøndene 1,8 milliarder kroner i økt inntekt over to år.',
+    kategori: 'okonomi',
+    dato: '2026-10-13T12:00:00+02:00',
+  }));
+
+  assert.ok(Buffer.isBuffer(png));
+  assert.ok(png.length > 5000);
+
+  const meta = await sharp(png).metadata();
+  assert.equal(meta.width, 1200);
+  assert.equal(meta.height, 675);
 });

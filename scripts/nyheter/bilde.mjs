@@ -555,3 +555,199 @@ export async function sigdir({ input, left, top, genislik, yukseklik }) {
   return { input: kucuk, left: x, top: y };
 }
 
+// ── Kategori Sembolleri (Symbol.astro ile uyumlu geometrik vektör şekilleri) ──
+
+export const KATEGORI_SEMBOL = {
+  innenriks: '<path d="M6 1.2 11.2 10.4H.8Z" fill="currentColor"/>',
+  utenriks: '<circle cx="6" cy="6" r="4.1" fill="none" stroke="currentColor" stroke-width="1.7"/>',
+  okonomi: '<rect x="1.6" y="1.6" width="8.8" height="8.8" fill="currentColor"/>',
+  sport: '<path d="M6 1 11 6 6 11 1 6Z" fill="none" stroke="currentColor" stroke-width="1.6"/>',
+  kultur: '<circle cx="6" cy="6" r="4.4" fill="currentColor"/>',
+  teknologi: '<rect x="2" y="2" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1.7"/>',
+};
+
+export const KATEGORI_NAVN = {
+  innenriks: 'Innenriks',
+  utenriks: 'Utenriks',
+  okonomi: 'Økonomi',
+  økonomi: 'Økonomi',
+  sport: 'Sport',
+  kultur: 'Kultur',
+  teknologi: 'Teknologi',
+};
+
+export function formatDato(dato) {
+  if (!dato) return '';
+  const d = typeof dato === 'string' || typeof dato === 'number' ? new Date(dato) : dato;
+  if (isNaN(d.getTime())) return String(dato);
+  return d.toLocaleDateString('nb-NO', { timeZone: 'Europe/Oslo', day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+// ── Kapak Çizici (SVG taban üzerine katmanları birleştirerek PNG üretir) ──────
+
+export async function kapakCiz(uretici) {
+  let sharp;
+  ({ default: sharp } = await import('sharp'));
+  const veri = typeof uretici === 'function' ? await uretici() : await uretici;
+  const svgMetin = typeof veri === 'string' ? veri : veri.svg;
+  const katmanlar = (typeof veri === 'object' && Array.isArray(veri?.katmanlar)) ? veri.katmanlar : [];
+
+  const hazirKatmanlar = katmanlar.map((k) => ({
+    input: k.input,
+    left: Math.round(k.left),
+    top: Math.round(k.top),
+  }));
+
+  let resim = sharp(Buffer.from(svgMetin));
+  if (hazirKatmanlar.length > 0) {
+    resim = resim.composite(hazirKatmanlar);
+  }
+  return resim.png({ compressionLevel: 9, palette: true, quality: 90 }).toBuffer();
+}
+
+// ── Standart Haber Kapağı Şablonu (Düzen A: Tam Genişlik Başlık Odaklı) ───────
+
+export async function sakKapagi({ tittel, ingress, kategori, dato, rakam, kilde }) {
+  const katKey = String(kategori ?? 'innenriks').toLowerCase();
+  const katSembolSvg = (KATEGORI_SEMBOL[katKey] ?? '<circle cx="6" cy="6" r="2.4" fill="currentColor"/>').replaceAll('currentColor', FARGE.tekst);
+  const katNavn = (KATEGORI_NAVN[katKey] ?? kategori ?? 'Nyheter').toLocaleUpperCase('nb-NO');
+
+  // 1. Üst Bant (Kategori sembolü 24×24, Kategori adı, Tarih damgası)
+  const katKatman = await yazi(katNavn, {
+    aile: 'Archivo',
+    boyut: 24,
+    kalinlik: 600,
+    renk: FARGE.tekst,
+    buyukHarf: true,
+    aralik: 0.08,
+  });
+
+  const katLeft = 110;
+  const katTop = 48 + Math.max(0, Math.round((24 - katKatman.yukseklik) / 2));
+
+  let datoKatman = null;
+  let datoLeft = 0;
+  let datoTop = 0;
+  if (dato) {
+    const datoStr = formatDato(dato).toLocaleUpperCase('nb-NO');
+    datoKatman = await yazi(`·   ${datoStr}`, {
+      aile: 'Archivo',
+      boyut: 20,
+      kalinlik: 500,
+      renk: FARGE.dempet,
+      aralik: 0.04,
+    });
+    datoLeft = katLeft + katKatman.genislik + 14;
+    datoTop = 48 + Math.max(0, Math.round((24 - datoKatman.yukseklik) / 2));
+  }
+
+  // 2. Orta Alan (Dinamik Başlık + Havblå Vurgu Çizgisi + Spot / İngress)
+  const tLen = (tittel ?? '').length;
+  let baslikBoyut = 60;
+  if (tLen > 110) baslikBoyut = 48;
+  else if (tLen > 80) baslikBoyut = 52;
+  else if (tLen > 50) baslikBoyut = 56;
+  else baslikBoyut = 62;
+
+  const baslikKatman = await yazi(tittel, {
+    aile: 'SourceSerif4',
+    boyut: baslikBoyut,
+    kalinlik: 600,
+    renk: FARGE.tekst,
+    genislik: 1056,
+    satirAraligi: -4,
+  });
+
+  let ingressKatman = null;
+  if (ingress) {
+    const ingressBoyut = ingress.length > 140 ? 26 : 28;
+    ingressKatman = await yazi(ingress, {
+      aile: 'SourceSerif4',
+      boyut: ingressBoyut,
+      kalinlik: 400,
+      renk: FARGE.tekst2,
+      genislik: 996,
+      satirAraligi: 4,
+    });
+  }
+
+  const cizgiGenislik = 60;
+  const cizgiKalinlik = 3;
+  const boslukUst = 26;
+  const boslukAlt = ingressKatman ? 26 : 0;
+  const ingressYuks = ingressKatman ? ingressKatman.yukseklik : 0;
+  const toplamIcerikY = baslikKatman.yukseklik + boslukUst + cizgiKalinlik + boslukAlt + ingressYuks;
+
+  let baslikY = Math.round(96 + (488 - toplamIcerikY) / 2);
+  if (baslikY < 114) baslikY = 114;
+
+  const cizgiY = baslikY + baslikKatman.yukseklik + boslukUst;
+  const ingressY = cizgiY + cizgiKalinlik + boslukAlt;
+
+  const baslikSigdirildi = await sigdir({
+    input: baslikKatman.input,
+    left: 72,
+    top: baslikY,
+    genislik: baslikKatman.genislik,
+    yukseklik: baslikKatman.yukseklik,
+  });
+
+  let ingressSigdirildi = null;
+  if (ingressKatman) {
+    ingressSigdirildi = await sigdir({
+      input: ingressKatman.input,
+      left: 72,
+      top: ingressY,
+      genislik: ingressKatman.genislik,
+      yukseklik: ingressKatman.yukseklik,
+    });
+  }
+
+  // 3. Alt Bant (tidsrøst Editoryal İmzası + NOREG Pafta Damgası)
+  const logoKatman = await yazi('tidsrøst', {
+    aile: 'SourceSerif4',
+    boyut: 28,
+    kalinlik: 700,
+    renk: FARGE.tekst,
+  });
+  const logoTop = 584 + Math.round((661 - 584 - logoKatman.yukseklik) / 2);
+
+  const paftaMetin = kilde ? `NOREG · ${String(kilde).toLocaleUpperCase('nb-NO')}` : 'NOREG';
+  const paftaKatman = await yazi(paftaMetin, {
+    aile: 'Archivo',
+    boyut: 18,
+    kalinlik: 500,
+    renk: FARGE.dempet,
+    buyukHarf: true,
+    aralik: 0.12,
+  });
+  const paftaLeft = Math.max(200, 1128 - paftaKatman.genislik);
+  const paftaTop = 584 + Math.round((661 - 584 - paftaKatman.yukseklik) / 2);
+
+  // SVG Tabanı (N50 Neatline Çift Çerçeve, Ayırıcı Çizgiler ve Aksan Çizgisi)
+  const svgInnhold = `
+<rect width="${B}" height="${H}" fill="${FARGE.bg}"/>
+<rect x="10" y="10" width="${B - 20}" height="${H - 20}" fill="none" stroke="${FARGE.ramme}" stroke-width="1.5"/>
+<rect x="14" y="14" width="${B - 28}" height="${H - 28}" fill="none" stroke="${FARGE.delestrek}" stroke-width="0.8"/>
+<svg x="72" y="48" width="24" height="24" viewBox="0 0 12 12">${katSembolSvg}</svg>
+<line x1="72" y1="96" x2="1128" y2="96" stroke="${FARGE.delestrek}" stroke-width="1"/>
+<rect x="72" y="${cizgiY}" width="${cizgiGenislik}" height="${cizgiKalinlik}" fill="${FARGE.aksent}" rx="1.5"/>
+<line x1="72" y1="584" x2="1128" y2="584" stroke="${FARGE.delestrek}" stroke-width="1"/>
+`;
+
+  const katmanlar = [
+    { input: katKatman.input, left: katLeft, top: katTop },
+    ...(datoKatman ? [{ input: datoKatman.input, left: datoLeft, top: datoTop }] : []),
+    baslikSigdirildi,
+    ...(ingressSigdirildi ? [ingressSigdirildi] : []),
+    { input: logoKatman.input, left: 72, top: logoTop },
+    { input: paftaKatman.input, left: paftaLeft, top: paftaTop },
+  ];
+
+  return {
+    svg: svg(svgInnhold),
+    katmanlar,
+  };
+}
+
+
