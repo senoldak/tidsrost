@@ -5,7 +5,7 @@ import StoryRow from '../components/StoryRow.astro';
 import Symbol from '../components/Symbol.astro';
 import StoryMeta from '../components/StoryMeta.astro';
 import { getActiveCategories, getNews, groupByDay, newsUrl } from '../lib/news';
-import { gorselVar } from '../lib/site';
+import { SITE, gorselVar } from '../lib/site';
 
 const news = await getNews();
 const breaking = news.filter((h) => h.data.breaking).slice(0, 5);
@@ -19,6 +19,7 @@ const sections = (await getActiveCategories())
 ---
 
 <Base>
+  <h1 class="sr-only">{SITE.name}: {SITE.description}</h1>
   {
     breaking.length > 0 && (
       <div class="breaking" role="region" aria-label="Siste nytt">
@@ -52,6 +53,8 @@ const sections = (await getActiveCategories())
                   alt={hero.data.coverAlt ?? ''}
                   width={1200}
                   loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
                 />
               </a>
             </figure>

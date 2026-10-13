@@ -16,6 +16,7 @@ export async function GET(context: APIContext) {
       link: newsUrl(h),
       categories: [categoryName(h.data.category)],
     })),
-    customData: '<language>nb</language>',
+    xmlns: { atom: 'http://www.w3.org/2005/Atom' },
+    customData: `<language>nb</language><atom:link href="${new URL('/rss.xml', context.site).href}" rel="self" type="application/rss+xml"/>`,
   });
 }

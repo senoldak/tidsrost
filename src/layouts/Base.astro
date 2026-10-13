@@ -1,5 +1,6 @@
 ---
 import { SITE, PRODUKSJON } from '../lib/site';
+import { metaDescription, organization, website } from '../lib/seo';
 import { getActiveCategories } from '../lib/news';
 import Symbol from '../components/Symbol.astro';
 import '../styles/global.css';
@@ -8,10 +9,19 @@ interface Props {
   title?: string;
   description?: string;
   image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageAlt?: string;
   type?: 'website' | 'article';
+  // 404 ve içeriksiz sayfalar arama sonuçlarına girmez.
+  noindex?: boolean;
 }
 
-const { title, description = SITE.description, image, type = 'website' } = Astro.props;
+const { title, description: desc, image, imageWidth, imageHeight, imageAlt, type = 'website', noindex = false } = Astro.props;
+const description = desc?.trim() ? desc.trim() : SITE.description;
+const metaDesc = metaDescription(description);
+const robots = noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+const siteLd = { '@context': 'https://schema.org', '@graph': [organization, website] };
 const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} | Nyheter`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = image ? new URL(image, Astro.site).href : undefined;
@@ -36,7 +46,8 @@ const [nameHead, nameTail] = SITE.name.split('ø');
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
-    <meta name="description" content={description} />
+    <meta name="description" content={metaDesc} />
+    <meta name="robots" content={robots} />
     <meta name="theme-color" content="#fdfdfb" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#171612" media="(prefers-color-scheme: dark)" />
     <link rel="canonical" href={canonical} />
@@ -45,6 +56,7 @@ const [nameHead, nameTail] = SITE.name.split('ø');
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta property="og:site_name" content={SITE.name} />
@@ -54,7 +66,16 @@ const [nameHead, nameTail] = SITE.name.split('ø');
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content="nb_NO" />
     {ogImage && <meta property="og:image" content={ogImage} />}
+    {ogImage && imageWidth && <meta property="og:image:width" content={String(imageWidth)} />}
+    {ogImage && imageHeight && <meta property="og:image:height" content={String(imageHeight)} />}
+    {ogImage && <meta property="og:image:alt" content={imageAlt ?? title ?? SITE.name} />}
     <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={title ?? SITE.name} />
+    <meta name="twitter:description" content={metaDesc} />
+    {ogImage && <meta name="twitter:image" content={ogImage} />}
+    {ogImage && <meta name="twitter:image:alt" content={imageAlt ?? title ?? SITE.name} />}
+    {SITE.social.x && <meta name="twitter:site" content={`@${SITE.social.x.replace(/\/+$/, '').split('/').pop()}`} />}
+    <script type="application/ld+json" set:html={JSON.stringify(siteLd)} />
     <slot name="head" />
   </head>
   <body>

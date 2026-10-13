@@ -45,3 +45,4 @@ User-agent: TikTokSpider
 Disallow: /
 
 Sitemap: https://tidsrost.com/sitemap-index.xml
+Sitemap: https://tidsrost.com/news-sitemap.xml

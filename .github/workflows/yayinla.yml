@@ -56,3 +56,9 @@ jobs:
           n=$(find dist -type f | wc -l)
           echo "dist: $n dosya (sınır 20.000)" >> "$GITHUB_STEP_SUMMARY"
           if [ "$n" -gt 15000 ]; then echo "::warning::dist $n dosya; Cloudflare ücretsiz sınırı 20.000"; fi
+
+      # Yeni haberleri arama motorlarına bildirir (IndexNow: Bing, Yandex, Seznam, Naver). Hata yayını etkilemez.
+      - name: IndexNow
+        continue-on-error: true
+        timeout-minutes: 2
+        run: node scripts/indexnow.mjs
