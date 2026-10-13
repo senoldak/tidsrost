@@ -31,3 +31,6 @@ pnpm-debug.log*
 .impeccable/questions/
 .impeccable/review/
 .wrangler/
+
+# örnek kapak çıktıları
+.kapak-ornekleri/
