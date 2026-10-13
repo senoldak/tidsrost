@@ -3,7 +3,8 @@
 // haberleri vardiyaya yayılır. Gece modunda (Oslo 03:00–07:59) gönderim yok.
 // Durum: KV'de "gonderilen" anahtarı ({ slug: zaman }), 7 günden eskiler silinir.
 // Kapak: haber sayfasının og:image'ı (Telegram görseli adresinden kendisi indirir).
-// Ayarlar (wrangler.jsonc vars): SITE, TELEGRAM_HEDEFLER ("@kanal" ya da "@grup:konu", virgülle), TELEGRAM_ONEK.
+// Ayarlar (wrangler.jsonc vars): SITE, TELEGRAM_HEDEFLER ("@kanal" ya da "@grup:konu", virgülle), TELEGRAM_ONEK,
+// TELEGRAM_YALNIZ (isteğe bağlı RegExp: yalnız slug'ı buna uyan yazılar gider; kifobu'da günün bültenleri).
 // Gizli: TELEGRAM_BOT_TOKEN. Yoksa sessizce atlanır.
 
 const ANAHTAR = 'gonderilen';
@@ -32,7 +33,7 @@ export function rssOgeleri(xml) {
 const etiketsiz = (s) => varlik(s.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
 
 // Bülten sayfasından ilk 3 madde (Göstergeler bölümünden önce); yoksa boş.
-export function bultenMaddeleri(html) {
+export function bultenMaddeleri(html, { azami = 3, ikiNokta = true } = {}) {
   const bas = html.indexOf('<article');
   if (bas < 0) return [];
   let govde = html.slice(bas);
@@ -40,8 +41,8 @@ export function bultenMaddeleri(html) {
   if (g > 0) govde = govde.slice(0, g);
   return [...govde.matchAll(/<li[^>]*>([\s\S]*?)<\/li>/g)]
     .map(([, l]) => etiketsiz(l).replace(/\s*\(Ayrıntı\)\s*$/, ''))
-    .filter((l) => l.includes(':'))
-    .slice(0, 3);
+    .filter((l) => !ikiNokta || l.includes(':'))
+    .slice(0, azami);
 }
 
 export function aciklama({ onek, baslik, metin, link }) {
@@ -85,7 +86,7 @@ export async function telegramSirasi(env, simdi = new Date()) {
   if (!rssRes.ok) throw new Error(`RSS ${rssRes.status}: ${env.SITE}/rss.xml`);
   const tumu = rssOgeleri(await rssRes.text());
   const sira = tumu
-    .filter((o) => o.slug && !gonderilen[o.slug] && simdi - o.tarih <= AZAMI_YAS_MS)
+    .filter((o) => o.slug && !gonderilen[o.slug] && simdi - o.tarih <= AZAMI_YAS_MS && (!env.TELEGRAM_YALNIZ || env.TELEGRAM_YALNIZ.test(o.slug)))
     .sort((a, b) => a.tarih - b.tarih);
   
   if (sira.length === 0) {
@@ -97,8 +98,13 @@ export async function telegramSirasi(env, simdi = new Date()) {
   if (!sayfa.ok) return `${o.slug} sayfasına erişilemedi (${sayfa.status})`;
   const html = await sayfa.text();
   const foto = html.match(/property="og:image" content="([^"]+)"/)?.[1];
-  const maddeler = bultenMaddeleri(html);
-  const metin = o.slug.startsWith('piyasa-bulteni') && maddeler.length ? maddeler.map((m) => `• ${m}`).join('\n') : o.ozet;
+  // finfolis piyasa bülteni: ilk 3 madde; kifobu sabah/akşam/gece bülteni: haber başlıkları (1024 karaktere sığdığı kadar).
+  const maddeler = o.slug.startsWith('piyasa-bulteni')
+    ? bultenMaddeleri(html)
+    : /^(sabah|aksam|gece)-bulteni-/.test(o.slug)
+      ? bultenMaddeleri(html, { azami: 15, ikiNokta: false })
+      : [];
+  const metin = maddeler.length ? maddeler.map((m) => `• ${m}`).join('\n') : o.ozet;
   const ileti = { foto, metin: aciklama({ onek: env.TELEGRAM_ONEK ?? '', baslik: o.baslik, metin, link: o.link }) };
 
   let basarili = false;

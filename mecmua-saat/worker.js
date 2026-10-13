@@ -15,18 +15,19 @@ import { telegramSirasi } from './telegram.js';
 
 const SITELER = [
   { ad: 'tidsrost', repo: 'senoldak/tidsrost', bot: 'nyheter.yml', dakika: 0, site: 'https://tidsrost.com', hedefler: '@tidsrost', onek: '', kv: 'KV_TIDSROST' },
-  { ad: 'kifobu', repo: 'senoldak/kifobu', bot: 'bot.yml', dakika: 20, site: 'https://kifobu.com', hedefler: '@kifobu,@fundov:24358', onek: '📰 ', kv: 'KV_KIFOBU' },
+  { ad: 'kifobu', repo: 'senoldak/kifobu', bot: 'bot.yml', dakika: 20, site: 'https://kifobu.com', hedefler: '@kifobu,@fundov:24358', onek: '📰 ', kv: 'KV_KIFOBU', yalniz: /^(sabah|aksam|gece)-bulteni-/ },
   { ad: 'finfolis', repo: 'senoldak/finfolis', bot: 'haberler.yml', dakika: 40, site: 'https://finfolis.com', hedefler: '@finfolis,@fundov:5472', onek: '🧮 ', kv: 'KV_FINFOLIS' },
   { ad: 'jendume', repo: 'senoldak/jendume', bot: 'bot.yml', dakika: 50, site: 'https://jendume.com/tr', hedefler: '@jenndume,@fundov:11227', onek: '⚡ ', kv: 'KV_JENDUME' },
 ];
 
 const gizli = (env, ad, site) => env[`${ad}_${site.toUpperCase()}`] ?? env[ad];
+// kifobu: Telegram'a yalnız bültenler gider; bültenler Türkiye saatiyle bu saatlerde yazılır (ozet.yml).
+const KIFOBU_BULTEN_SAATLERI = [9, 19, 23];
 
-async function tetikle(s, env, inputs) {
+async function tetikle(s, env, inputs, dosya = inputs ? 'bulten-otomasyon.yml' : s.bot) {
   // Panele/terminale yapıştırırken token'a satır sonu, boşluk ya da "Bearer " eklenebiliyor.
   const token = String(gizli(env, 'GITHUB_TOKEN', s.ad) ?? '').replace(/^\s*(Bearer|token)\s+/i, '').replace(/\s+/g, '');
   if (token.length < 20) throw new Error(`GITHUB_TOKEN_${s.ad.toUpperCase()} geçersiz (${token.length} karakter)`);
-  const dosya = inputs ? 'bulten-otomasyon.yml' : s.bot;
   const res = await fetch(`https://api.github.com/repos/${s.repo}/actions/workflows/${dosya}/dispatches`, {
     method: 'POST',
     headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'User-Agent': 'mecmua-saat' },
@@ -43,7 +44,7 @@ async function site(s, env, zaman) {
   const dakika = zaman.getUTCMinutes();
   const isler = [
     telegramSirasi(
-      { SITE: s.site, TELEGRAM_HEDEFLER: s.hedefler, TELEGRAM_ONEK: s.onek, TELEGRAM_BOT_TOKEN: gizli(env, 'TELEGRAM_BOT_TOKEN', s.ad), TELEGRAM_KV: env[s.kv] },
+      { SITE: s.site, TELEGRAM_HEDEFLER: s.hedefler, TELEGRAM_ONEK: s.onek, TELEGRAM_BOT_TOKEN: gizli(env, 'TELEGRAM_BOT_TOKEN', s.ad), TELEGRAM_KV: env[s.kv], TELEGRAM_YALNIZ: s.yalniz },
       zaman,
     )
       .then((log) => console.log(`${s.ad} Telegram: ${log}`))
@@ -56,6 +57,8 @@ async function site(s, env, zaman) {
     if (osloSaat >= 9 && osloSaat <= 16) isler.push(tetikle(s, env, { mod: 'canli' }));
     else if (osloSaat === 17) isler.push(tetikle(s, env, { mod: 'kapanis' }));
   }
+  const istanbulSaat = Number(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Istanbul', hour: '2-digit', hourCycle: 'h23' }).format(zaman));
+  if (s.ad === 'kifobu' && dakika === 0 && KIFOBU_BULTEN_SAATLERI.includes(istanbulSaat)) isler.push(tetikle(s, env, undefined, 'ozet.yml'));
   for (const r of await Promise.allSettled(isler)) if (r.status === 'rejected') console.error(`${s.ad}: ${r.reason?.message}`);
 }
 
@@ -116,7 +119,7 @@ export default {
       }
       try {
         const log = await telegramSirasi(
-          { SITE: s.site, TELEGRAM_HEDEFLER: s.hedefler, TELEGRAM_ONEK: s.onek, TELEGRAM_BOT_TOKEN: gizli(env, 'TELEGRAM_BOT_TOKEN', s.ad), TELEGRAM_KV: env[s.kv] },
+          { SITE: s.site, TELEGRAM_HEDEFLER: s.hedefler, TELEGRAM_ONEK: s.onek, TELEGRAM_BOT_TOKEN: gizli(env, 'TELEGRAM_BOT_TOKEN', s.ad), TELEGRAM_KV: env[s.kv], TELEGRAM_YALNIZ: s.yalniz },
           new Date(),
         );
         return new Response(`${s.ad}: Telegram kontrol edildi:\n${log || 'İşlem tamamlandı'} (Oslo: ${oslo})`, {
