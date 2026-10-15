@@ -227,7 +227,7 @@ The system is completely flat. Depth comes from paper and hairlines, as on a pri
 
 ## Shapes
 
-Square corners everywhere (radius 0). Borders are always 1px, ink for structure and rule grey for division. Form comes from the legend symbols: a 12x12 viewBox set of triangle, ring, square, diamond, disc, hollow square, flag, hexagon-with-bar, bar chart, asterisk, and ringed dot, all filled or stroked in `currentColor`. The masthead's lower edge carries a tick every 80px (1px ink, 7px tall, 60% opacity). The favicon's 12px corner radius is an app-icon convention and does not extend to the interface.
+Square corners everywhere (radius 0). Borders are always 1px, ink for structure and rule grey for division. Form comes from the legend symbols: a 12x12 viewBox set of triangle, ring, square, diamond, disc, hollow square, flag, hexagon-with-bar, bar chart, asterisk, ringed dot, index lines (tema) and table (data), all filled or stroked in `currentColor`. The masthead's lower edge carries a tick every 80px (1px ink, 7px tall, 60% opacity). The favicon's 12px corner radius is an app-icon convention and does not extend to the interface.
 
 ## Components
 

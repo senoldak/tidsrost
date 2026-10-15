@@ -6,6 +6,8 @@ import Symbol from '../components/Symbol.astro';
 import StoryMeta from '../components/StoryMeta.astro';
 import { getActiveCategories, getNews, groupByDay, newsUrl } from '../lib/news';
 import { SITE, gorselVar } from '../lib/site';
+import { RENTE, aktiveVarsler, datoTekst, prosent } from '../lib/data';
+import { aktiveTemaer } from '../lib/temaer';
 
 const news = await getNews();
 const breaking = news.filter((h) => h.data.breaking).slice(0, 5);
@@ -16,6 +18,9 @@ const days = groupByDay(rest.slice(4, 24));
 const sections = (await getActiveCategories())
   .map((c) => ({ ...c, items: news.filter((h) => h.data.category === c.slug).slice(0, 5) }))
   .filter((s) => s.items.length > 0);
+const harTemaer = aktiveTemaer(news).length > 0;
+const varsler = aktiveVarsler();
+const sterke = varsler.filter((v) => v.niva !== 'gult').length;
 ---
 
 <Base>
@@ -90,6 +95,26 @@ const sections = (await getActiveCategories())
       </section>
     ))
   }
+
+  <section class="day forside-data" aria-labelledby="alltid-oppdatert">
+    <h2 class="band" id="alltid-oppdatert">
+      Alltid oppdatert
+      {harTemaer && <a href="/tema/">Alle temaer</a>}
+    </h2>
+    <ul class="data-lenker">
+      <li>
+        <a href="/styringsrenten/"><Symbol kind="data" />Styringsrenten nå</a>
+        <span><strong>{prosent(RENTE.rente)}</strong>{RENTE.gjeldendeFra && ` · gjeldende fra ${datoTekst(RENTE.gjeldendeFra)}`} · Norges Bank</span>
+      </li>
+      <li>
+        <a href="/farevarsler/"><Symbol kind="varsel" class="sym-varsel-gult" />Farevarsler i dag</a>
+        <span>
+          <strong>{varsler.length ? `${varsler.length} gjeldende varsler` : 'Ingen gjeldende varsler'}</strong>
+          {sterke > 0 && ` · ${sterke} på oransje eller rødt nivå`} · Meteorologisk institutt
+        </span>
+      </li>
+    </ul>
+  </section>
 
   {
     sections.length > 1 && (

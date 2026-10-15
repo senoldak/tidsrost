@@ -49,22 +49,34 @@ jobs:
           if [ -z "$KILDE_NOKKEL" ]; then echo "::error::KILDE_NOKKEL secret'ı yok; haber sitelerinin akışları okunamaz."; exit 1; fi
           node scripts/nyheter/hent-nyheter.mjs
 
+      # Sürekli güncel veri sayfaları (/styringsrenten/, /farevarsler/): Norges Bank ve MET'in resmi, anahtarsız açık
+      # API'leri (bkz. scripts/data/hent-data.mjs). Hata haber botunu durdurmaz; son bilinen veri dosyada kalır.
+      - name: Oppdater datasider
+        id: data
+        continue-on-error: true
+        timeout-minutes: 3
+        run: node scripts/data/hent-data.mjs
+
       - name: Commit
         id: commit
         run: |
           git config user.name "tidsrost-nyhetsbot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/content/haberler scripts/nyheter/sett.json
+          git add src/content/haberler scripts/nyheter/sett.json src/data
           if git diff --cached --quiet; then
             echo "Ingen endringer."
             exit 0
           fi
-          # Sadece durum dosyası değiştiyse siteyi boşuna yeniden derletme.
-          if [ "${{ steps.hent.outputs.antall }}" = "0" ]; then
-            git commit -m "Nyhetsbot: oppdater tilstand [skip ci]"
-          else
+          # Sadece durum dosyası (ya da veri dosyalarının alma zamanı) değiştiyse siteyi boşuna yeniden derletme.
+          # Veri içeriği değiştiyse (yeni faiz, yeni/biten farevarsel) site yeni haber olmasa da yeniden derlenir.
+          if [ "${{ steps.hent.outputs.antall }}" != "0" ]; then
             git commit -m "Nyhetsbot: ${{ steps.hent.outputs.antall }} nye saker"
             echo "yayin=1" >> "$GITHUB_OUTPUT"
+          elif [ "${{ steps.data.outputs.endret }}" = "1" ]; then
+            git commit -m "Nyhetsbot: oppdater datasider"
+            echo "yayin=1" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Nyhetsbot: oppdater tilstand [skip ci]"
           fi
           # Başka işler de depoya yazar; çakışmada yazılan haberler kaybolmasın diye 5 kez denenir.
           for i in 1 2 3 4 5; do

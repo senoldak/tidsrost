@@ -1,0 +1,135 @@
+---
+// "Farevarsler i dag": MET Norway'in açık MetAlerts verisinden (CC BY 4.0) geçerli ve yaklaşan farevarsler.
+// Veri scripts/data/hent-data.mjs ile Nyhetsbot çalışmalarında alınır (src/data/farevarsler.json).
+// Bitişi derleme anında geçmiş uyarılar gösterilmez; veri eskiyse sayfa bunu açıkça söyler.
+import Base from '../layouts/Base.astro';
+import Symbol from '../components/Symbol.astro';
+import Brodsmuler from '../components/Brodsmuler.astro';
+import { GAMMEL_VARSEL_MS, NIVA_NAVN, VARSLER, aktiveVarsler, erGammel, tidTekst, type Farevarsel } from '../lib/data';
+import { getNews } from '../lib/news';
+import { aktiveTemaer, temaUrl } from '../lib/temaer';
+import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs } from '../lib/seo';
+
+const pageUrl = `${SITE_URL}/farevarsler/`;
+const kilde = VARSLER.kilde;
+const hentet = VARSLER.hentet;
+const gammel = erGammel(hentet, GAMMEL_VARSEL_MS);
+const varsler = aktiveVarsler();
+const land = varsler.filter((v) => v.domene === 'land');
+const hav = varsler.filter((v) => v.domene === 'hav');
+const antall = (niva: Farevarsel['niva']) => varsler.filter((v) => v.niva === niva).length;
+const oppsummering = (['rodt', 'oransje', 'gult'] as const)
+  .map((n) => ({ n, tall: antall(n) }))
+  .filter((x) => x.tall > 0)
+  .map((x) => `${x.tall} ${NIVA_NAVN[x.n].toLowerCase()}`)
+  .join(', ');
+
+const tittel = 'Farevarsler i dag';
+const description = varsler.length
+  ? `Gjeldende farevarsler fra Meteorologisk institutt: ${oppsummering}. Se område, tidsrom og råd for hvert varsel.`
+  : 'Gjeldende farevarsler fra Meteorologisk institutt, med område, tidsrom og råd for hvert varsel.';
+const harMetTema = aktiveTemaer(await getNews()).some((t) => t.tema.slug === 'meteorologisk-institutt');
+const sti = [
+  { name: 'Forsiden', url: `${SITE_URL}/` },
+  { name: 'Temaer', url: `${SITE_URL}/tema/` },
+  { name: tittel, url: pageUrl },
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `${pageUrl}#page`,
+      url: pageUrl,
+      name: tittel,
+      description,
+      inLanguage: 'nb',
+      dateModified: hentet,
+      isPartOf: { '@id': WEBSITE_ID },
+      publisher: { '@id': ORG_ID },
+      about: { '@type': 'Organization', name: 'Meteorologisk institutt', sameAs: 'https://www.wikidata.org/wiki/Q1779817' },
+      isBasedOn: kilde.data,
+      license: kilde.lisensUrl,
+    },
+    breadcrumbs(sti),
+  ],
+};
+
+const grupper = [
+  { id: 'land', navn: 'På land', liste: land },
+  { id: 'hav', navn: 'Til havs og langs kysten', liste: hav },
+].filter((g) => g.liste.length > 0);
+---
+
+<Base title={tittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="varsel" class="sym-varsel-gult" />{tittel}</h1>
+    <p class="page-intro">
+      Meteorologisk institutt (MET) sender ut farevarsler når det ventes vær som kan gi skader eller fare. Her er alle
+      gjeldende og kommende varsler fra MET, med det mest alvorlige nivået først.
+    </p>
+    <p class="data-merknad">
+      {varsler.length ? `${varsler.length} varsler: ${oppsummering}` : 'Ingen gjeldende farevarsler'} · Sist oppdatert
+      <time datetime={hentet}>{tidTekst(hentet)}</time>
+    </p>
+  </header>
+
+  {
+    gammel && (
+      <p class="data-varsel" role="status">
+        Vi har ikke klart å hente nye varsler siden {tidTekst(hentet)}. Varslene kan ha endret seg. Følg de siste
+        varslene fra <a href={kilde.url}>Meteorologisk institutt</a>.
+      </p>
+    )
+  }
+
+  {
+    grupper.length === 0 && (
+      <p class="empty">Det var ingen gjeldende farevarsler fra MET da siden sist ble oppdatert.</p>
+    )
+  }
+
+  {
+    grupper.map((g) => (
+      <section class="day" aria-labelledby={`varsler-${g.id}`}>
+        <h2 class="band" id={`varsler-${g.id}`}>{g.navn}</h2>
+        {g.liste.map((v) => (
+          <article class="varsel-rad">
+            <h3>
+              <span class="mark mark-varsel">
+                <Symbol kind="varsel" class={`sym-varsel-${v.niva}`} />
+                {NIVA_NAVN[v.niva]} farevarsel
+              </span>
+              <span class="varsel-hendelse">{v.hendelse}, {v.omrade}</span>
+            </h3>
+            {v.start && v.slutt && (
+              <p class="varsel-tid">
+                Gjelder fra <time datetime={v.start}>{tidTekst(v.start)}</time> til <time datetime={v.slutt}>{tidTekst(v.slutt)}</time>
+              </p>
+            )}
+            {v.beskrivelse && <p class="varsel-tekst">{v.beskrivelse}</p>}
+            {v.rad && (
+              <p class="varsel-tekst">
+                <strong>Råd fra MET:</strong> {v.rad}
+              </p>
+            )}
+          </article>
+        ))}
+      </section>
+    ))
+  }
+
+  <p class="data-kilde">
+    <Symbol kind="kilde" />
+    <span>
+      Kilde: varsler fra <a href={kilde.url}>Meteorologisk institutt (MET Norway)</a>, lisensiert under
+      <a href={kilde.lisensUrl}>CC BY 4.0</a>. Hentet automatisk fra MET sitt åpne API flere ganger om dagen, sist
+      {tidTekst(hentet)}. Teksten i varslene er gjengitt slik MET har publisert den. Varsler kan endres raskt; følg alltid
+      de siste varslene fra MET.
+    </span>
+  </p>
+  {harMetTema && <p class="tema-alle"><a href={temaUrl('meteorologisk-institutt')}>Saker om farevarsler fra MET</a></p>}
+</Base>

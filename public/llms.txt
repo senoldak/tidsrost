@@ -26,6 +26,14 @@ tidsrøst er en uavhengig, ikke-kommersiell norsk nyhetsformidler som samler og 
 - **Teknologi**: Digitalisering, kunstig intelligens, IT-sikkerhet, telekom og teknologiske fremskritt.
   - URL: https://tidsrost.com/kategori/teknologi/
 
+## Temaer og datasider
+- **Temaer**: Saker samlet etter institusjon og tema (Norges Bank, Stortinget, regjeringen, SSB, Meteorologisk institutt m.fl.).
+  - URL: https://tidsrost.com/tema/
+- **Styringsrenten nå**: Gjeldende styringsrente og siste endringer, hentet automatisk fra Norges Banks åpne data.
+  - URL: https://tidsrost.com/styringsrenten/
+- **Farevarsler i dag**: Gjeldende farevarsler fra Meteorologisk institutt (MET Norway, CC BY 4.0), hentet automatisk.
+  - URL: https://tidsrost.com/farevarsler/
+
 ## Innholdsstrømmer og dokumentasjon
 - **Fulltekststrøm for LLM-er**: https://tidsrost.com/llms-full.txt
 - **RSS-strøm**: https://tidsrost.com/rss.xml

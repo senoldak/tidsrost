@@ -25,7 +25,7 @@ A non-commercial news site with no ads and no revenue. Its base is primary publi
 - Many bot stories have **no cover image**, so every layout must look complete without imagery.
 - Flags: `featured` (manşet, the lead story on the front page), `breaking` (Siste nytt strip), draft.
 - Categories, shown only when they have stories: Innenriks, Utenriks, Økonomi, Sport, Kultur, Teknologi.
-- Pages: front page, category pages, article, Om oss, Personvern, 404, RSS.
+- Pages: front page, category pages, article, Om oss, Personvern, 404, RSS, Temaer (`/tema/`, institution/topic pages built from `src/lib/tema.mjs`, only with at least 3 stories), and always-current data pages `/styringsrenten/` (Norges Bank open data) and `/farevarsler/` (MET Norway MetAlerts, CC BY 4.0). Data is fetched by `scripts/data/hent-data.mjs` in the bot workflow into `src/data/*.json`; on failure the last known value stays, with its timestamp.
 
 ## Capabilities and Constraints
 

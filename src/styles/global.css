@@ -502,7 +502,8 @@ main.container {
   gap: calc(var(--u) * 5) calc(var(--u) * 4);
 }
 
-.index h2 {
+.index h2,
+.index h3 {
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -1223,4 +1224,189 @@ main.container {
 .sider .side-nr {
   color: var(--muted);
   font-weight: 500;
+}
+
+
+/* ——— Temaer og datasider (styringsrenten, farevarsler) ——— */
+.tema-data,
+.data-kilde {
+  display: flex;
+  gap: calc(var(--u) * 1.5);
+  max-width: 70ch;
+  margin: 0 0 calc(var(--u) * 4);
+  font: 500 0.875rem/1.55 var(--frame);
+  color: var(--muted);
+}
+
+.tema-data .sym,
+.data-kilde .sym {
+  flex: none;
+  margin-top: 0.35em;
+}
+
+.tema-data a,
+.data-kilde a,
+.data-varsel a,
+.tema-alle a {
+  color: var(--water);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.data-kilde {
+  margin-top: calc(var(--u) * 5);
+  padding-top: calc(var(--u) * 2);
+  border-top: 1px solid var(--ink);
+}
+
+.tema-alle {
+  margin: calc(var(--u) * 4) 0 0;
+  font: 600 0.875rem var(--frame);
+}
+
+.data-varsel {
+  max-width: 70ch;
+  margin: 0 0 calc(var(--u) * 4);
+  padding: calc(var(--u) * 1.5) calc(var(--u) * 2);
+  border: 1px solid var(--ink);
+  background: var(--surface);
+  font: 500 0.9375rem/1.5 var(--frame);
+}
+
+.data-tall {
+  margin-bottom: calc(var(--u) * 6);
+}
+
+.data-verdi {
+  margin: calc(var(--u) * 2) 0 calc(var(--u) * 2);
+  font: 650 clamp(3rem, 8vw, 5rem) / 1 var(--read);
+  letter-spacing: -0.02em;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.data-fakta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--u) calc(var(--u) * 5);
+  margin: 0;
+  font: 500 0.875rem/1.4 var(--frame);
+}
+
+.data-fakta dt {
+  font: 700 0.6875rem var(--frame);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.data-fakta dd {
+  margin: 4px 0 0;
+}
+
+.data-tabell table {
+  margin-top: var(--u);
+}
+
+.data-merknad {
+  max-width: 70ch;
+  margin: 0;
+  font: 500 0.8125rem/1.5 var(--frame);
+  color: var(--muted);
+}
+
+.data-lenker {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.data-lenker li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px calc(var(--u) * 2);
+  padding: calc(var(--u) * 2) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.data-lenker a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font: 600 clamp(1.1875rem, 1.7vw, 1.4375rem) / 1.25 var(--read);
+}
+
+.data-lenker span {
+  font: 500 0.875rem var(--frame);
+  color: var(--muted);
+}
+
+.varsel-rad {
+  padding: calc(var(--u) * 2.5) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.varsel-rad h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px calc(var(--u) * 1.5);
+  margin: 0 0 6px;
+}
+
+.varsel-rad .mark-varsel {
+  font: 650 0.8125rem var(--frame);
+}
+
+.varsel-hendelse {
+  font: 600 1.1875rem/1.28 var(--read);
+}
+
+.varsel-tid {
+  margin: 0;
+  font: 500 0.8125rem/1.4 var(--frame);
+  color: var(--muted);
+}
+
+.page-head .data-merknad {
+  flex-basis: 100%;
+}
+
+.varsel-tekst {
+  max-width: 68ch;
+  margin: var(--u) 0 0;
+  color: var(--ink-2);
+}
+
+/* Forside: "Alltid oppdatert" — datasidene med gjeldende verdi */
+.forside-data .data-lenker strong {
+  font: 600 0.875rem var(--frame);
+  color: var(--ink);
+}
+
+/* Menüde Temaer, kategorilerden ince bir çizgiyle ayrılır (Forklart'ın aynası) */
+.legend-nav .nav-tema {
+  position: relative;
+  margin-left: calc(var(--u) * 1.5);
+}
+
+.legend-nav .nav-tema::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: calc(var(--u) * -2.25);
+  border-left: 1px solid var(--rule);
+}
+
+.footer-grid p + h2 {
+  margin-top: calc(var(--u) * 3);
+}
+
+/* Artikkel: "Emner" (temaer) i margen, ett emne per linje */
+.margin-info .emner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px calc(var(--u) * 1.5);
 }

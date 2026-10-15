@@ -3,6 +3,7 @@ import { SITE, PRODUKSJON } from '../lib/site';
 import { metaDescription, organization, website } from '../lib/seo';
 import { FORKLART, erForklart, getActiveCategories, getNews } from '../lib/news';
 import Symbol from '../components/Symbol.astro';
+import { aktiveTemaer } from '../lib/temaer';
 import '../styles/global.css';
 
 interface Props {
@@ -31,7 +32,10 @@ const ogAlt = imageAlt ?? title ?? SITE.name;
 const current = Astro.url.pathname;
 const categories = await getActiveCategories();
 // "Forklart" menüde sadece yayımlanmış en az bir açıklayıcı yazı varsa görünür.
-const harForklart = (await getNews()).some(erForklart);
+const alleSaker = await getNews();
+const harForklart = alleSaker.some(erForklart);
+// "Temaer" menüde sadece sayfası olan en az bir tema varsa görünür (src/lib/tema.mjs).
+const harTemaer = aktiveTemaer(alleSaker).length > 0;
 
 // Paftanın kenar bilgisi: derleme günü ve yılın kaçıncı günü olduğu ("Ark 283").
 const now = new Date();
@@ -134,6 +138,14 @@ const [nameHead, nameTail] = SITE.name.split('ø');
               </a>
             ))
           }
+          {
+            harTemaer && (
+              <a href="/tema/" class="nav-tema" aria-current={current.startsWith('/tema/') ? 'page' : undefined}>
+                <Symbol kind="tema" />
+                Temaer
+              </a>
+            )
+          }
         </div>
       </nav>
     </header>
@@ -149,6 +161,12 @@ const [nameHead, nameTail] = SITE.name.split('ø');
           <p>{SITE.description}</p>
           {SITE.ikkeKommersiell && <p>Ikke-kommersielt nettsted uten annonser og inntekter.</p>}
           <p>Vi arbeider etter Vær Varsom-plakaten og Redaktørplakaten.</p>
+          <h2 id="alltid-oppdatert-bunn">Alltid oppdatert</h2>
+          <ul aria-labelledby="alltid-oppdatert-bunn">
+            <li><a href="/styringsrenten/"><Symbol kind="data" />Styringsrenten nå</a></li>
+            <li><a href="/farevarsler/"><Symbol kind="varsel" class="sym-varsel-gult" />Farevarsler i dag</a></li>
+            {harTemaer && <li><a href="/tema/"><Symbol kind="tema" />Temaer</a></li>}
+          </ul>
         </div>
         <section aria-labelledby="tegnforklaring">
           <h2 id="tegnforklaring">Tegnforklaring</h2>
@@ -166,6 +184,8 @@ const [nameHead, nameTail] = SITE.name.split('ø');
             <li><span class="mark-breaking"><Symbol kind="breaking" />Siste nytt</span></li>
             <li><span><Symbol kind="varsel" class="sym-varsel-gult" />Farevarsel (gult, oransje, rødt)</span></li>
             <li><span><Symbol kind="kilde" />Kilde for saken</span></li>
+            {harTemaer && <li><span><Symbol kind="tema" />Tema (institusjon eller emne)</span></li>}
+            <li><span><Symbol kind="data" />Data fra offentlige kilder</span></li>
             <li><span><Symbol kind="automatisk" />Laget automatisk av offentlige data</span></li>
             {PRODUKSJON['ki-kontrollert'] && <li><span><Symbol kind="ki" />Skrevet med hjelp av KI</span></li>}
             <li><span><Symbol kind="rettelse" />Rettelse</span></li>

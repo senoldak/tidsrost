@@ -1,0 +1,65 @@
+{
+  "hentet": "2026-10-15T20:10:18.526Z",
+  "kilde": {
+    "navn": "Norges Bank",
+    "url": "https://www.norges-bank.no/tema/pengepolitikk/Styringsrenten/",
+    "data": "https://data.norges-bank.no/",
+    "lisens": "NLOD"
+  },
+  "rente": 4.5,
+  "sisteObservasjon": "2026-10-14",
+  "gjeldendeFra": "2026-09-25",
+  "serieFra": "2016-01-04",
+  "endringer": [
+    {
+      "fra": "2026-09-25",
+      "rente": 4.5,
+      "forrige": 4.25
+    },
+    {
+      "fra": "2026-05-08",
+      "rente": 4.25,
+      "forrige": 4
+    },
+    {
+      "fra": "2025-09-19",
+      "rente": 4,
+      "forrige": 4.25
+    },
+    {
+      "fra": "2025-06-20",
+      "rente": 4.25,
+      "forrige": 4.5
+    },
+    {
+      "fra": "2023-12-15",
+      "rente": 4.5,
+      "forrige": 4.25
+    },
+    {
+      "fra": "2023-09-22",
+      "rente": 4.25,
+      "forrige": 4
+    },
+    {
+      "fra": "2023-08-18",
+      "rente": 4,
+      "forrige": 3.75
+    },
+    {
+      "fra": "2023-06-23",
+      "rente": 3.75,
+      "forrige": 3.25
+    },
+    {
+      "fra": "2023-05-05",
+      "rente": 3.25,
+      "forrige": 3
+    },
+    {
+      "fra": "2023-03-24",
+      "rente": 3,
+      "forrige": 2.75
+    }
+  ]
+}

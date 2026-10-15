@@ -13,23 +13,27 @@ import { indekserbar } from '../../lib/ordtelling.mjs';
 import { relaterteSaker } from '../../lib/relaterte';
 import Brodsmuler from '../../components/Brodsmuler.astro';
 import DelSaken from '../../components/DelSaken.astro';
+import { aktiveTemaer, temaerPerSak, temaUrl, type Tema } from '../../lib/temaer';
 
 export async function getStaticPaths() {
   const news = await getNews();
   // İlgili haberler ortak kurum/özel isimlere göre bir kez hesaplanır (src/lib/relaterte.ts).
   const relatert = relaterteSaker(news);
+  // Haberin girdiği, sayfası olan temalar (src/lib/tema.mjs): kenar sütununda "Emner" olarak bağlanır.
+  const temaer = temaerPerSak(aktiveTemaer(news));
   return news.map((haber) => ({
     params: { id: haber.id },
-    props: { haber, related: relatert.get(haber.id) ?? [] },
+    props: { haber, related: relatert.get(haber.id) ?? [], temaer: temaer.get(haber.id) ?? [] },
   }));
 }
 
 interface Props {
   haber: Haber;
   related: Haber[];
+  temaer: Tema[];
 }
 
-const { haber, related } = Astro.props;
+const { haber, related, temaer } = Astro.props;
 const { title, description, date, category, cover: kapak, coverAlt, coverKreditt, author, produksjon, rettelse, oppdatert } = haber.data;
 const { Content } = await render(haber);
 // OG/JSON-LD görseli her haberde üretilir; büyük WebP kapak yalnızca yeni haberlerde (bkz. gorselVar).
@@ -111,7 +115,7 @@ const jsonLd = {
         warn && (
           <div>
             <dt>Varsel</dt>
-            <dd><span class="mark mark-varsel"><Symbol kind="varsel" class={`sym-varsel-${warn.level}`} />{warn.label}</span></dd>
+            <dd><a class="mark mark-varsel" href="/farevarsler/"><Symbol kind="varsel" class={`sym-varsel-${warn.level}`} />{warn.label}</a></dd>
           </div>
         )
       }
@@ -127,6 +131,18 @@ const jsonLd = {
         <dt>Tema</dt>
         <dd><a class="mark" href={`/kategori/${category}/`}><Symbol kind={category} />{categoryName(category)}</a></dd>
       </div>
+      {
+        temaer.length > 0 && (
+          <div>
+            <dt>Emner</dt>
+            <dd class="emner">
+              {temaer.map((t) => (
+                <a class="mark" href={temaUrl(t.slug)}><Symbol kind="tema" />{t.navn}</a>
+              ))}
+            </dd>
+          </div>
+        )
+      }
       <div>
         <dt>Publisert</dt>
         <dd><time datetime={date.toISOString()}>{formatDay(date)} kl. {formatTime(date)}</time></dd>
