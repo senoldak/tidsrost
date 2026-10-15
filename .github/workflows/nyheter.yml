@@ -1,0 +1,90 @@
+# Açık kamu verilerinden haber üretir ve repoya ekler.
+# Cloudflare yeni commit'i görünce siteyi otomatik yeniden derler.
+# Zamanlama Cloudflare'deki tidsur Worker'ındadır (Oslo saatiyle 08, 10 … 22, 00, 02; bkz. tidsur/README.md).
+# GitHub'ın cron'u UTC'dir ve yaz/kış saatini izlemez, bu yüzden burada schedule yok.
+name: Nyhetsbot
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  # Yeni haber yazıldığında "Yayınla" iş akışını başlatmak için.
+  actions: write
+
+concurrency:
+  group: nyhetsbot
+  cancel-in-progress: false
+
+jobs:
+  hent:
+    runs-on: ubuntu-latest
+    # Süre bütçesi yeni yazıyı ~15–18. dakikada keser; Gemini 503 beklemeleri için pay bırakılır (repo açık, dakika ücretsiz).
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          # Sıradaki çalışma tetiklendiği anki commit'i değil, dalın en son hâlini alır; yoksa eski görülen listesiyle aynı haberleri yeniden yazar.
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      # Kapak resimlerini PNG'ye çevirmek için sharp gerekiyor (bkz. scripts/nyheter/bilde.mjs).
+      - name: Installer avhengigheter
+        run: npm ci --no-audit --no-fund
+
+      - name: Hent nyheter
+        id: hent
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Haber sitelerinin şifreli listesi ve izi için (bkz. scripts/nyheter/hemmelig.mjs).
+          KILDE_NOKKEL: ${{ secrets.KILDE_NOKKEL }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          MAKS_PER_KJORING: ${{ vars.MAKS_PER_KJORING }}
+          SURE_DK: ${{ vars.SURE_DK }}
+        run: |
+          if [ -z "$KILDE_NOKKEL" ]; then echo "::error::KILDE_NOKKEL secret'ı yok; haber sitelerinin akışları okunamaz."; exit 1; fi
+          node scripts/nyheter/hent-nyheter.mjs
+
+      - name: Commit
+        id: commit
+        run: |
+          git config user.name "tidsrost-nyhetsbot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content/haberler scripts/nyheter/sett.json
+          if git diff --cached --quiet; then
+            echo "Ingen endringer."
+            exit 0
+          fi
+          # Sadece durum dosyası değiştiyse siteyi boşuna yeniden derletme.
+          if [ "${{ steps.hent.outputs.antall }}" = "0" ]; then
+            git commit -m "Nyhetsbot: oppdater tilstand [skip ci]"
+          else
+            git commit -m "Nyhetsbot: ${{ steps.hent.outputs.antall }} nye saker"
+            echo "yayin=1" >> "$GITHUB_OUTPUT"
+          fi
+          # Başka işler de depoya yazar; çakışmada yazılan haberler kaybolmasın diye 5 kez denenir.
+          for i in 1 2 3 4 5; do
+            git pull --rebase -X theirs && git push && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 5))
+          done
+          exit 1
+
+      # Planlanmış haberler (gelecek tarihli, ör. Forklart yazıları) tarihleri gelince bu çalışmayla yayına girer.
+      - name: Planlanmış saker
+        id: planlagt
+        if: steps.commit.outputs.yayin != '1'
+        run: node scripts/planlagt.mjs
+
+      # Botun push'u yayın iş akışını kendiliğinden tetiklemez (GITHUB_TOKEN); elle başlatılır.
+      - name: Siteyi yayınla
+        if: steps.commit.outputs.yayin == '1' || steps.planlagt.outputs.yayin == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run yayinla.yml --ref "${{ github.ref_name }}"
+
+      # Telegram-utsending håndteres av Cloudflare-worker (mecmua-saat): saker spres utover vakten hvert 10. minutt.

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 496" width="760" height="496" role="img" aria-label="Kraftprisen i de fem prisområdene i 2026">
+<title>Kraftprisen i de fem prisområdene i 2026</title>
+<rect width="760" height="496" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Kraftprisen i de fem prisområdene i 2026</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Gjennomsnittlig engrospris, uten nettleie, avgifter og støtte</text>
+<rect x="24" y="86" width="12" height="12" fill="#1f5f99"/>
+<text x="42" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">1. kvartal 2026</text>
+<rect x="162" y="86" width="12" height="12" fill="#a0643c"/>
+<text x="180" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">2. kvartal 2026</text>
+<rect x="300" y="86" width="12" height="12" fill="#3a78b5"/>
+<text x="318" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Uke 40 2026</text>
+<text x="24" y="120" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Øre/kWh</text>
+<line x1="70" x2="736" y1="402" y2="402" stroke="#16191c" stroke-width="1"/>
+<text x="62" y="406" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">0</text>
+<line x1="70" x2="736" y1="334" y2="334" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="338" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">50</text>
+<line x1="70" x2="736" y1="266" y2="266" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="270" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">100</text>
+<line x1="70" x2="736" y1="198" y2="198" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="202" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">150</text>
+<line x1="70" x2="736" y1="130" y2="130" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="134" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">200</text>
+<rect x="88.6" y="234.7" width="31.0" height="167.3" fill="#1f5f99"/>
+<rect x="221.8" y="241.5" width="31.0" height="160.5" fill="#1f5f99"/>
+<rect x="355.0" y="259.2" width="31.0" height="142.8" fill="#1f5f99"/>
+<rect x="488.2" y="313.6" width="31.0" height="88.4" fill="#1f5f99"/>
+<rect x="621.4" y="234.7" width="31.0" height="167.3" fill="#1f5f99"/>
+<rect x="120.6" y="266.0" width="31.0" height="136.0" fill="#a0643c"/>
+<rect x="253.8" y="257.8" width="31.0" height="144.2" fill="#a0643c"/>
+<rect x="387.0" y="291.8" width="31.0" height="110.2" fill="#a0643c"/>
+<rect x="520.2" y="365.3" width="31.0" height="36.7" fill="#a0643c"/>
+<rect x="653.4" y="266.0" width="31.0" height="136.0" fill="#a0643c"/>
+<rect x="152.6" y="202.1" width="31.0" height="199.9" fill="#3a78b5"/>
+<rect x="285.8" y="189.8" width="31.0" height="212.2" fill="#3a78b5"/>
+<rect x="419.0" y="263.3" width="31.0" height="138.7" fill="#3a78b5"/>
+<rect x="552.2" y="361.2" width="31.0" height="40.8" fill="#3a78b5"/>
+<rect x="685.4" y="208.9" width="31.0" height="193.1" fill="#3a78b5"/>
+<text x="136.6" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">NO1 Sørøst</text>
+<text x="269.8" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">NO2 Sørvest</text>
+<text x="403.0" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">NO3 Midt</text>
+<text x="536.2" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">NO4 Nord</text>
+<text x="669.4" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">NO5 Vest</text>
+<text x="24" y="442" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Uke 40 er 28. september–4. oktober 2026.</text>
+<line x1="24" x2="736" y1="460" y2="460" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="476" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: NVE, kvartalsrapporter for kraftmarkedet og kraftsituasjonen uke 40</text>
+<text x="736" y="476" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

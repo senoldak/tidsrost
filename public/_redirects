@@ -1,0 +1,41 @@
+# Kalıcı yönlendirmeler (Cloudflare Workers statik varlıkları, public/_redirects → dist/_redirects).
+# Aynı olayı anlatan mükerrer haberler birleştirildi: silinen haberin adresi tutulan habere gider.
+# Gruplar scripts/nyheter/finn-dubletter.mjs ile bulundu ve elle doğrulandı (2026-10-15).
+/artikkel/datatilsynet-gir-microsoft-selskap-92-millioner-i-bot/ /artikkel/microsoft-selskap-botlagt-med-8-5-millioner-euro-etter-klage-fra-forbrukerradet/ 301
+/artikkel/datatilsynet-gir-microsoft-selskap-92-millioner-i-bot /artikkel/microsoft-selskap-botlagt-med-8-5-millioner-euro-etter-klage-fra-forbrukerradet/ 301
+/artikkel/microsoft-selskap-ilagt-bot-pa-92-millioner-etter-klage/ /artikkel/microsoft-selskap-botlagt-med-8-5-millioner-euro-etter-klage-fra-forbrukerradet/ 301
+/artikkel/microsoft-selskap-ilagt-bot-pa-92-millioner-etter-klage /artikkel/microsoft-selskap-botlagt-med-8-5-millioner-euro-etter-klage-fra-forbrukerradet/ 301
+/artikkel/datatilsynet-gir-microsoft-selskap-rekordbot-pa-92-millioner/ /artikkel/microsoft-selskap-botlagt-med-8-5-millioner-euro-etter-klage-fra-forbrukerradet/ 301
+/artikkel/datatilsynet-gir-microsoft-selskap-rekordbot-pa-92-millioner /artikkel/microsoft-selskap-botlagt-med-8-5-millioner-euro-etter-klage-fra-forbrukerradet/ 301
+/artikkel/norge-og-polen-signerte-erklaering-om-strategisk-partnerskap/ /artikkel/norge-og-polen-signerer-strategisk-partnerskap/ 301
+/artikkel/norge-og-polen-signerte-erklaering-om-strategisk-partnerskap /artikkel/norge-og-polen-signerer-strategisk-partnerskap/ 301
+/artikkel/naeringsministeren-reiser-til-london-for-a-styrke-naeringssamarbeidet/ /artikkel/naeringsministeren-besokte-london-for-a-styrke-samarbeidet/ 301
+/artikkel/naeringsministeren-reiser-til-london-for-a-styrke-naeringssamarbeidet /artikkel/naeringsministeren-besokte-london-for-a-styrke-samarbeidet/ 301
+/artikkel/prisjegersaken-i-gang-i-retten/ /artikkel/prisjegersaken-i-gang-i-lagmannsretten/ 301
+/artikkel/prisjegersaken-i-gang-i-retten /artikkel/prisjegersaken-i-gang-i-lagmannsretten/ 301
+/artikkel/amerikanske-senatorer-slakter-trumps-dieselavtale-med-russland/ /artikkel/senatorer-advarer-mot-trumps-dieselavtale-med-russland/ 301
+/artikkel/amerikanske-senatorer-slakter-trumps-dieselavtale-med-russland /artikkel/senatorer-advarer-mot-trumps-dieselavtale-med-russland/ 301
+/artikkel/foreslar-store-endringer-i-oljefondets-etiske-rammeverk/ /artikkel/gjedrem-utvalget-legger-fram-rapport-om-oljefondets-etiske-rammeverk/ 301
+/artikkel/foreslar-store-endringer-i-oljefondets-etiske-rammeverk /artikkel/gjedrem-utvalget-legger-fram-rapport-om-oljefondets-etiske-rammeverk/ 301
+/artikkel/finansdepartementet-finansministeren-mottok-etikkutvalgets-utredning/ /artikkel/gjedrem-utvalget-legger-fram-rapport-om-oljefondets-etiske-rammeverk/ 301
+/artikkel/finansdepartementet-finansministeren-mottok-etikkutvalgets-utredning /artikkel/gjedrem-utvalget-legger-fram-rapport-om-oljefondets-etiske-rammeverk/ 301
+/artikkel/fem-personer-siktet-for-bedrageri-mot-nato/ /artikkel/fire-siktede-i-nato-bedrageri-fremstilles-for-fengsling/ 301
+/artikkel/fem-personer-siktet-for-bedrageri-mot-nato /artikkel/fire-siktede-i-nato-bedrageri-fremstilles-for-fengsling/ 301
+/artikkel/bayern-munchen-pa-plass-i-stavanger/ /artikkel/bayern-munchen-trener-pa-kunstgress-i-stavanger-for-mesterligaen/ 301
+/artikkel/bayern-munchen-pa-plass-i-stavanger /artikkel/bayern-munchen-trener-pa-kunstgress-i-stavanger-for-mesterligaen/ 301
+/artikkel/nkom-hever-beredskapen-og-varsler-tilsyn-mot-telenor/ /artikkel/slik-folger-nkom-opp-mobilfeilen-hos-telenor/ 301
+/artikkel/nkom-hever-beredskapen-og-varsler-tilsyn-mot-telenor /artikkel/slik-folger-nkom-opp-mobilfeilen-hos-telenor/ 301
+/artikkel/alvorlige-samfunnskonsekvenser-etter-telenor-problemer/ /artikkel/slik-folger-nkom-opp-mobilfeilen-hos-telenor/ 301
+/artikkel/alvorlige-samfunnskonsekvenser-etter-telenor-problemer /artikkel/slik-folger-nkom-opp-mobilfeilen-hos-telenor/ 301
+/artikkel/oransje-farevarsel-for-sterk-ising-pa-skip-i-a3-2/ /artikkel/oransje-farevarsel-for-sterk-ising-pa-skip-i-a3/ 301
+/artikkel/oransje-farevarsel-for-sterk-ising-pa-skip-i-a3-2 /artikkel/oransje-farevarsel-for-sterk-ising-pa-skip-i-a3/ 301
+/artikkel/oransje-farevarsel-for-sterk-ising-pa-skip-i-b2-2/ /artikkel/oransje-farevarsel-for-sterk-ising-pa-skip-i-b2/ 301
+/artikkel/oransje-farevarsel-for-sterk-ising-pa-skip-i-b2-2 /artikkel/oransje-farevarsel-for-sterk-ising-pa-skip-i-b2/ 301
+/artikkel/kulturdepartementet-dronning-sonja-til-apningen-av-munch-picasso-i-malaga/ /artikkel/dronning-sonja-reiser-til-spania/ 301
+/artikkel/kulturdepartementet-dronning-sonja-til-apningen-av-munch-picasso-i-malaga /artikkel/dronning-sonja-reiser-til-spania/ 301
+/artikkel/kunnskapsdepartementet-kraftig-nedgang-i-fravaer-etter-nye-regler/ /artikkel/fravaeret-i-den-videregaende-skolen-har-gatt-ned/ 301
+/artikkel/kunnskapsdepartementet-kraftig-nedgang-i-fravaer-etter-nye-regler /artikkel/fravaeret-i-den-videregaende-skolen-har-gatt-ned/ 301
+/artikkel/flere-inkassosaker-ved-utgangen-av-forste-halvar-2026/ /artikkel/nesten-6-9-millioner-inkassosaker-under-behandling/ 301
+/artikkel/flere-inkassosaker-ved-utgangen-av-forste-halvar-2026 /artikkel/nesten-6-9-millioner-inkassosaker-under-behandling/ 301
+/artikkel/forskere-har-rangert-alle-verdens-helsetrusler-dette-frykter-norge-mest/ /artikkel/fedme-og-psykisk-uhelse-pekes-ut-som-storste-helsetrusler/ 301
+/artikkel/forskere-har-rangert-alle-verdens-helsetrusler-dette-frykter-norge-mest /artikkel/fedme-og-psykisk-uhelse-pekes-ut-som-storste-helsetrusler/ 301

@@ -1,0 +1,103 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
+// kontroll: "manuell" | "ki" | "ingen" (bkz. scripts/nyheter/kilder/regjeringen.mjs)
+import redaksjon from '../lib/redaksjon.json';
+
+const VVP = 'https://www.presse.no/vaer-varsom-plakaten';
+const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/redaktorplakaten';
+---
+
+<Base title="Om oss">
+  <article class="article">
+    <h1>Om oss</h1>
+    <div class="prose">
+      <p>
+        {SITE.name} er en uavhengig nyhetsside som formidler de viktigste nyhetene fra Norge og verden på en klar og
+        lettfattelig måte.
+      </p>
+
+      <h2>Redaksjonelt ansvar</h2>
+      {SITE.redaktor && <p>Ansvarlig redaktør er <strong>{SITE.redaktor}</strong>.</p>}
+      <p>
+        Vi arbeider etter <a href={VVP}>Vær Varsom-plakaten</a> og <a href={RP}>Redaktørplakaten</a>. Ansvarlig redaktør har
+        det fulle ansvaret for alt redaksjonelt innhold, også det som lages med hjelp av automatikk eller kunstig
+        intelligens.
+      </p>
+      <p>
+        Våre fullstendige etiske retningslinjer, standarder for redaksjonell uavhengighet, The Trust Project-indikatorer,
+        KI-deklarasjon og kildekredittering er samlet på siden for <a href="/redaksjonelle-prinsipper/"><strong>redaksjonelle prinsipper</strong></a>.
+      </p>
+
+      <h2>Utgiver og finansiering</h2>
+      <p>
+        {SITE.utgiver && <>Utgiver er {SITE.utgiver}{SITE.orgnr && `, org.nr. ${SITE.orgnr}`}. </>}
+        {
+          SITE.ikkeKommersiell &&
+            `${SITE.name} er et ikke-kommersielt nettsted. Siden har ingen annonser, ingen betalte abonnementer, ingen sponsorer og ingen inntekter.`
+        }
+      </p>
+
+      <h2 id="ki">Slik lages sakene</h2>
+      <p>
+        De fleste sakene på {SITE.name} skrives automatisk med kunstig intelligens (KI) og publiseres uten at et menneske
+        har lest dem først. Vi er åpne om hvordan det skjer:
+      </p>
+      <ul>
+        <li>
+          <strong>Datasaker</strong>, som valutakurser fra Norges Bank, farevarsler fra Meteorologisk institutt og
+          flom-, jordskred- og snøskredvarsler fra NVE, lages automatisk fra offentlige data og publiseres uten manuell
+          redigering.
+        </li>
+        <li>
+          <strong>Saker fra offentlige kilder</strong>, som pressemeldinger fra regjeringen, departementene og statlige
+          etater, Stortingets egne oppsummeringer av vedtak, FN og Europakommisjonen, skrives av KI.
+          {
+            {
+              manuell: ' De kontrolleres av redaksjonen mot den opprinnelige pressemeldingen før de publiseres.',
+              ki: ' Hver sak kontrolleres automatisk mot kilden før publisering: at alle opplysninger, tall og navn har dekning i kilden, at sitater er gjengitt ordrett, og at avsenderens synspunkter er tydelig tilskrevet. Deretter språkvaskes saken. Finner kontrollen feil, rettes saken før den publiseres. Kan tall eller sitater fortsatt ikke bekreftes mot kilden, publiseres saken ikke.',
+              ingen: ' De publiseres automatisk, uten kontroll på forhånd.',
+            }[redaksjon.kontroll]
+          }
+        </li>
+        <li>
+          <strong>Saker om aktuelle hendelser</strong> skrives av KI bare når hendelsen er omtalt av flere uavhengige
+          norske medier. Vi navngir ikke mediene, og vi skriver ikke saker som bygger på ett medies egne avsløringer.
+          Sakene kontrolleres automatisk mot mediesakene på samme måte som andre KI-saker.
+        </li>
+        <li>
+          {
+            redaksjon.visKiMerking
+              ? 'Under hver sak står en produksjonsmerknad som forteller hvordan saken er laget og om den er kontrollert manuelt. Saker fra offentlige kilder lenker til den opprinnelige kilden.'
+              : 'Saker fra offentlige kilder lenker til den opprinnelige kilden.'
+          }
+        </li>
+        <li>
+          En menneskelig redaktør skriver <a href="/forklart/">Forklart</a>-sakene, som er merket med forfatter, og
+          behandler rettelser og klager. Feil rettes og merkes åpent i saken.
+        </li>
+        <li>Vi bruker ikke KI til å lage eller endre bilder.</li>
+      </ul>
+      <p>
+        Pressemeldinger er avsenderens egen fremstilling. Vi gjengir dem som det: Påstander og vurderinger tilskrives
+        avsenderen, og vi skiller tydelig mellom fakta og avsenderens synspunkter.
+      </p>
+
+      <h2>Kilder</h2>
+      <p>
+        Vi oppgir alltid kilden og lenker til originalen når saken bygger på en offentlig kilde. Data fra Norges Bank, NVE og Stortinget er lisensiert under
+        Norsk lisens for offentlige data (NLOD), og data fra Meteorologisk institutt under CC BY 4.0. Saker om hendelser
+        som er bekreftet av flere medier, har ingen kildelenke; produksjonsmerknaden under saken forteller at den bygger
+        på flere uavhengige kilder.
+      </p>
+
+      <h2 id="rettelser">Rettelser og klager</h2>
+      <p>
+        Feil skal rettes så raskt som mulig. Rettelser markeres tydelig øverst i saken. Har du funnet en feil, eller mener
+        du at vi har brutt god presseskikk?
+        {SITE.epost ? <>Skriv til oss på <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a>.</> : 'Ta kontakt med redaksjonen.'}
+        {' '}Les mer om vår fremgangsmåte og klagebehandling under <a href="/redaksjonelle-prinsipper/#rettelser">redaksjonelle prinsipper for rettelser</a>.
+      </p>
+    </div>
+  </article>
+</Base>

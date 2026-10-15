@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 454" width="760" height="454" role="img" aria-label="Elbilenes andel av alle personbiler">
+<title>Elbilenes andel av alle personbiler</title>
+<rect width="760" height="454" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Elbilenes andel av alle personbiler</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Registrerte personbiler med elektrisk drivstoff, per 31. desember</text>
+<text x="24" y="94" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Prosent</text>
+<line x1="70" x2="736" y1="376" y2="376" stroke="#16191c" stroke-width="1"/>
+<text x="62" y="380" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">0</text>
+<line x1="70" x2="736" y1="308" y2="308" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="312" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">10</text>
+<line x1="70" x2="736" y1="240" y2="240" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="244" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">20</text>
+<line x1="70" x2="736" y1="172" y2="172" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="176" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">30</text>
+<line x1="70" x2="736" y1="104" y2="104" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="108" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">40</text>
+<polyline points="75.0,358.3 140.6,350.8 206.2,341.3 271.8,327.7 337.4,312.8 403.0,293.7 468.6,267.2 534.2,235.9 599.8,212.8 665.4,189.7 731.0,157.0" fill="none" stroke="#1f5f99" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="731.0" cy="157.0" r="4" fill="#1f5f99"/>
+<text x="723.0" y="147.0" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">32,2</text>
+<text x="75.0" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2015</text>
+<text x="140.6" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2016</text>
+<text x="206.2" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2017</text>
+<text x="271.8" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2018</text>
+<text x="337.4" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2019</text>
+<text x="403.0" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2020</text>
+<text x="468.6" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2021</text>
+<text x="534.2" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2022</text>
+<text x="599.8" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2023</text>
+<text x="665.4" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2024</text>
+<text x="731.0" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2025</text>
+<line x1="24" x2="736" y1="414" y2="414" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="430" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 07849</text>
+<text x="736" y="430" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

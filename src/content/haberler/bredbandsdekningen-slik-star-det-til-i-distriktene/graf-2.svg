@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480" role="img" aria-label="Bredbåndsdekning for husstander 2022–2025">
+<title>Bredbåndsdekning for husstander 2022–2025</title>
+<rect width="760" height="480" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Bredbåndsdekning for husstander 2022–2025</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Andel husstander med tilbud om fast bredbånd, ved utgangen av året</text>
+<rect x="24" y="86" width="12" height="12" fill="#1f5f99"/>
+<text x="42" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Minst 100 Mbit/s</text>
+<rect x="169.2" y="86" width="12" height="12" fill="#a0643c"/>
+<text x="187.2" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Minst 1 Gbit/s</text>
+<text x="24" y="120" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Prosent</text>
+<line x1="70" x2="736" y1="402" y2="402" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="406" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">90</text>
+<line x1="70" x2="736" y1="347.6" y2="347.6" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="351.6" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">92</text>
+<line x1="70" x2="736" y1="293.2" y2="293.2" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="297.2" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">94</text>
+<line x1="70" x2="736" y1="238.8" y2="238.8" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="242.8" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">96</text>
+<line x1="70" x2="736" y1="184.39999999999998" y2="184.39999999999998" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="188.39999999999998" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">98</text>
+<line x1="70" x2="736" y1="130" y2="130" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="134" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">100</text>
+<polyline points="75.0,282.3 293.7,179.0 512.3,154.5 731.0,149.0" fill="none" stroke="#1f5f99" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="731.0" cy="149.0" r="4" fill="#1f5f99"/>
+<polyline points="75.0,309.5 293.7,263.3 512.3,233.4 731.0,230.6" fill="none" stroke="#a0643c" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="731.0" cy="230.6" r="4" fill="#a0643c"/>
+<text x="75.0" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2022</text>
+<text x="293.7" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2023</text>
+<text x="512.3" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2024</text>
+<text x="731.0" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2025</text>
+<line x1="24" x2="736" y1="440" y2="440" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="456" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: Nkom, Utviklingen av gigabitsamfunnet flater ut (2026)</text>
+<text x="736" y="456" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

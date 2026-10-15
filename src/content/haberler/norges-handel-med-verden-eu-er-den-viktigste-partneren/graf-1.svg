@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480" role="img" aria-label="Vareeksport og vareimport, 2016–2025">
+<title>Vareeksport og vareimport, 2016–2025</title>
+<rect width="760" height="480" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Vareeksport og vareimport, 2016–2025</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Verdi i milliarder kroner, løpende priser</text>
+<rect x="24" y="86" width="12" height="12" fill="#1f5f99"/>
+<text x="42" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Eksport i alt</text>
+<rect x="147.60000000000002" y="86" width="12" height="12" fill="#a0643c"/>
+<text x="165.60000000000002" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Herav råolje, naturgass og kondensater</text>
+<rect x="451.20000000000005" y="86" width="12" height="12" fill="#3a78b5"/>
+<text x="469.20000000000005" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Import i alt</text>
+<text x="24" y="120" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Mrd. kr</text>
+<line x1="70" x2="736" y1="402" y2="402" stroke="#16191c" stroke-width="1"/>
+<text x="62" y="406" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">0</text>
+<line x1="70" x2="736" y1="311.33333333333337" y2="311.33333333333337" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="315.33333333333337" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">1 000</text>
+<line x1="70" x2="736" y1="220.66666666666669" y2="220.66666666666669" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="224.66666666666669" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">2 000</text>
+<line x1="70" x2="736" y1="130" y2="130" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="134" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">3 000</text>
+<polyline points="75.0,333.9 147.9,323.7 220.8,311.3 293.7,319.0 366.6,331.3 439.4,266.6 512.3,160.6 585.2,231.2 658.1,237.9 731.0,240.7" fill="none" stroke="#1f5f99" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="731.0" cy="240.7" r="4" fill="#1f5f99"/>
+<polyline points="75.0,370.0 147.9,362.9 220.8,353.6 293.7,362.7 366.6,372.0 439.4,317.5 512.3,223.5 585.2,295.8 658.1,303.6 731.0,310.4" fill="none" stroke="#a0643c" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="731.0" cy="310.4" r="4" fill="#a0643c"/>
+<polyline points="75.0,345.0 147.9,340.0 220.8,337.6 293.7,333.3 366.6,332.3 439.4,324.7 512.3,308.5 585.2,306.6 658.1,303.3 731.0,300.6" fill="none" stroke="#3a78b5" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="731.0" cy="300.6" r="4" fill="#3a78b5"/>
+<text x="75.0" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2016</text>
+<text x="147.9" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2017</text>
+<text x="220.8" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2018</text>
+<text x="293.7" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2019</text>
+<text x="366.6" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2020</text>
+<text x="439.4" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2021</text>
+<text x="512.3" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2022</text>
+<text x="585.2" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2023</text>
+<text x="658.1" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2024</text>
+<text x="731.0" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2025</text>
+<line x1="24" x2="736" y1="440" y2="440" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="456" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 08792</text>
+<text x="736" y="456" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

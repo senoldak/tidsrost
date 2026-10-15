@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 496" width="760" height="496" role="img" aria-label="Styringsrenten og renten på nye boliglån">
+<title>Styringsrenten og renten på nye boliglån</title>
+<rect width="760" height="496" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Styringsrenten og renten på nye boliglån</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Månedlig, januar 2021–september 2026. Prosent</text>
+<rect x="24" y="86" width="12" height="12" fill="#1f5f99"/>
+<text x="42" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Styringsrenten (månedsgjennomsnitt)</text>
+<rect x="306" y="86" width="12" height="12" fill="#a0643c"/>
+<text x="324" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Nye nedbetalingslån med pant i bolig, husholdninger</text>
+<text x="24" y="120" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Prosent</text>
+<line x1="70" x2="736" y1="402" y2="402" stroke="#16191c" stroke-width="1"/>
+<text x="62" y="406" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">0</text>
+<line x1="70" x2="736" y1="311.33333333333337" y2="311.33333333333337" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="315.33333333333337" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">2</text>
+<line x1="70" x2="736" y1="220.66666666666669" y2="220.66666666666669" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="224.66666666666669" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">4</text>
+<line x1="70" x2="736" y1="130" y2="130" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="134" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">6</text>
+<polyline points="75.0,402.0 84.6,402.0 94.3,402.0 103.9,402.0 113.6,402.0 123.2,402.0 132.9,402.0 142.5,402.0 152.2,399.3 161.8,390.7 171.5,390.7 181.1,385.7 190.8,379.3 200.4,379.3 210.1,377.1 219.7,368.0 229.4,368.0 239.0,362.6 248.6,345.3 258.3,336.3 267.9,316.3 277.6,300.0 287.2,290.0 296.9,283.2 306.5,277.3 316.2,277.3 325.8,274.2 335.5,266.0 345.1,256.5 354.8,248.3 364.4,232.0 374.1,227.0 383.7,217.5 393.4,209.3 403.0,209.3 412.6,203.9 422.3,198.0 431.9,198.0 441.6,198.0 451.2,198.0 460.9,198.0 470.5,198.0 480.2,198.0 489.8,198.0 499.5,198.0 509.1,198.0 518.8,198.0 528.4,198.0 538.1,198.0 547.7,198.0 557.4,198.0 567.0,198.0 576.6,198.0 586.3,202.1 595.9,209.3 605.6,209.3 615.2,213.4 624.9,220.7 634.5,220.7 644.2,220.7 653.8,220.7 663.5,220.7 673.1,220.7 682.8,220.7 692.4,212.1 702.1,209.3 711.7,209.3 721.4,209.3 731.0,207.1" fill="none" stroke="#1f5f99" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="731.0" cy="207.1" r="4" fill="#1f5f99"/>
+<polyline points="75.0,321.8 84.6,322.2 94.3,321.8 103.9,321.8 113.6,322.7 123.2,323.1 132.9,322.7 142.5,323.1 152.2,322.7 161.8,318.1 171.5,315.4 181.1,315.0 190.8,308.2 200.4,305.9 210.1,303.6 219.7,297.3 229.4,295.0 239.0,293.2 248.6,280.1 258.3,270.5 267.9,252.9 277.6,236.1 287.2,225.7 296.9,221.1 306.5,213.0 316.2,211.6 325.8,211.1 335.5,203.0 345.1,197.1 354.8,188.5 364.4,176.2 374.1,166.7 383.7,159.9 393.4,154.5 403.0,150.4 412.6,149.5 422.3,146.8 431.9,145.4 441.6,142.7 451.2,142.2 460.9,142.2 470.5,142.2 480.2,142.2 489.8,144.1 499.5,149.5 509.1,151.8 518.8,145.4 528.4,146.3 538.1,145.0 547.7,145.9 557.4,146.8 567.0,146.8 576.6,146.8 586.3,149.5 595.9,158.1 605.6,158.1 615.2,163.1 624.9,171.3 634.5,170.3 644.2,172.2 653.8,172.2 663.5,172.6 673.1,173.1 682.8,172.6 692.4,169.9 702.1,165.4 711.7,162.6 721.4,161.3" fill="none" stroke="#a0643c" stroke-width="2.5" stroke-linejoin="round"/>
+<text x="75.0" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">jan 21</text>
+<text x="132.9" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">jul 21</text>
+<text x="190.8" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">jan 22</text>
+<text x="248.6" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">jul 22</text>
+<text x="306.5" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">jan 23</text>
+<text x="364.4" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">jul 23</text>
+<text x="422.3" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">jan 24</text>
+<text x="480.2" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">jul 24</text>
+<text x="538.1" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">jan 25</text>
+<text x="595.9" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">jul 25</text>
+<text x="653.8" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">jan 26</text>
+<text x="731.0" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">sep 26</text>
+<text x="24" y="442" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Boliglånsrenten er publisert til og med august 2026.</text>
+<line x1="24" x2="736" y1="460" y2="460" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="476" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: Norges Bank, SSB tabell 10748</text>
+<text x="736" y="476" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

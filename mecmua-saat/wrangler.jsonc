@@ -1,0 +1,22 @@
+{
+  // mecmua-saat: üç sitenin haber botlarını ve Telegram kuyruklarını çalıştıran tek Worker (README.md).
+  // Yükleme: cd mecmua-saat && npx wrangler deploy
+  "name": "mecmua-saat",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-01",
+  // Alan adı yok; bu Worker dışarıdan çağrılmaz, sadece zamanlayıcıyla çalışır.
+  "workers_dev": true,
+  "preview_urls": false,
+  "triggers": {
+    // UTC; 10 dakikada bir. Haber botları kendi dakikasında başlar, Telegram kuyrukları her çağrıda site başına 1 haber gönderir.
+    "crons": ["*/10 * * * *"]
+  },
+  "observability": { "enabled": true },
+  // Eski Worker'ların KV'leri; daha önce gönderilenler tekrar gitmez.
+  "kv_namespaces": [
+    { "binding": "KV_TIDSROST", "id": "46047695f7ee4165b4d8af20719381ef" },
+    { "binding": "KV_KIFOBU", "id": "0c4eabac8d074de98d31d0f8e28650ab" },
+    { "binding": "KV_FINFOLIS", "id": "09746676c64046cc8e90e3081673f304" },
+    { "binding": "KV_JENDUME", "id": "c0da9530fea648019122475ddd8f0c3f" }
+  ]
+}

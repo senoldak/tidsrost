@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 496" width="760" height="496" role="img" aria-label="Kino, konsert, bibliotek og teater 1991–2025">
+<title>Kino, konsert, bibliotek og teater 1991–2025</title>
+<rect width="760" height="496" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Kino, konsert, bibliotek og teater 1991–2025</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Andel som har brukt tilbudet siste 12 måneder</text>
+<rect x="24" y="86" width="12" height="12" fill="#1f5f99"/>
+<text x="42" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Kino</text>
+<rect x="82.8" y="86" width="12" height="12" fill="#a0643c"/>
+<text x="100.8" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Konsert</text>
+<rect x="163.2" y="86" width="12" height="12" fill="#3a78b5"/>
+<text x="181.2" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Folkebibliotek</text>
+<rect x="294" y="86" width="12" height="12" fill="#5a6168"/>
+<text x="312" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Teater, musikal, revy</text>
+<text x="24" y="120" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Prosent</text>
+<line x1="70" x2="736" y1="402" y2="402" stroke="#16191c" stroke-width="1"/>
+<text x="62" y="406" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">0</text>
+<line x1="70" x2="736" y1="334" y2="334" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="338" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">20</text>
+<line x1="70" x2="736" y1="266" y2="266" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="270" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">40</text>
+<line x1="70" x2="736" y1="198" y2="198" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="202" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">60</text>
+<line x1="70" x2="736" y1="130" y2="130" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="134" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">80</text>
+<polyline points="75.0,204.8 140.6,194.6 206.2,198.0 271.8,181.0 337.4,170.8 403.0,164.0 468.6,174.2 534.2,157.2 599.8,266.0 665.4,181.0 731.0,191.2" fill="none" stroke="#1f5f99" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="731.0" cy="191.2" r="4" fill="#1f5f99"/>
+<polyline points="75.0,238.8 140.6,215.0 206.2,208.2 271.8,204.8 337.4,194.6 403.0,191.2 468.6,194.6 534.2,191.2 599.8,323.8 665.4,204.8 731.0,198.0" fill="none" stroke="#a0643c" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="731.0" cy="198.0" r="4" fill="#a0643c"/>
+<polyline points="75.0,235.4 140.6,228.6 206.2,225.2 271.8,225.2 337.4,218.4 403.0,228.6 468.6,235.4 534.2,245.6 599.8,276.2 665.4,252.4 731.0,235.4" fill="none" stroke="#3a78b5" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="731.0" cy="235.4" r="4" fill="#3a78b5"/>
+<polyline points="75.0,252.4 140.6,249.0 206.2,252.4 271.8,232.0 337.4,235.4 403.0,221.8 468.6,249.0 534.2,232.0 599.8,347.6 665.4,272.8 731.0,276.2" fill="none" stroke="#5a6168" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="731.0" cy="276.2" r="4" fill="#5a6168"/>
+<text x="75.0" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">1991</text>
+<text x="140.6" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">1994</text>
+<text x="206.2" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">1997</text>
+<text x="271.8" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2000</text>
+<text x="337.4" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2004</text>
+<text x="403.0" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2008</text>
+<text x="468.6" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2012</text>
+<text x="534.2" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2016</text>
+<text x="599.8" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2021</text>
+<text x="665.4" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2023</text>
+<text x="731.0" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2025</text>
+<text x="24" y="442" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Til og med 2016: 9–79 år. Fra 2021: 9 år og eldre.</text>
+<line x1="24" x2="736" y1="460" y2="460" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="476" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 13503</text>
+<text x="736" y="476" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

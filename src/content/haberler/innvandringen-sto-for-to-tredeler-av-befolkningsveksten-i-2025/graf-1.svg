@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 496" width="760" height="496" role="img" aria-label="Nettoinnvandring og fødselsoverskudd, 2015–2025">
+<title>Nettoinnvandring og fødselsoverskudd, 2015–2025</title>
+<rect width="760" height="496" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Nettoinnvandring og fødselsoverskudd, 2015–2025</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Antall personer per år, hele landet</text>
+<rect x="24" y="86" width="12" height="12" fill="#1f5f99"/>
+<text x="42" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Nettoinnvandring</text>
+<rect x="169.2" y="86" width="12" height="12" fill="#a0643c"/>
+<text x="187.2" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Fødselsoverskudd</text>
+<text x="24" y="120" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Personer</text>
+<line x1="70" x2="736" y1="402" y2="402" stroke="#16191c" stroke-width="1"/>
+<text x="62" y="406" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">0</text>
+<line x1="70" x2="736" y1="311.33333333333337" y2="311.33333333333337" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="315.33333333333337" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">20 000</text>
+<line x1="70" x2="736" y1="220.66666666666669" y2="220.66666666666669" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="224.66666666666669" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">40 000</text>
+<line x1="70" x2="736" y1="130" y2="130" stroke="#dcded8" stroke-width="1"/>
+<text x="62" y="134" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">60 000</text>
+<rect x="78.5" y="266.9" width="20.8" height="135.1" fill="#1f5f99"/>
+<rect x="139.0" y="283.8" width="20.8" height="118.2" fill="#1f5f99"/>
+<rect x="199.6" y="305.2" width="20.8" height="96.8" fill="#1f5f99"/>
+<rect x="260.1" y="319.9" width="20.8" height="82.1" fill="#1f5f99"/>
+<rect x="320.7" y="287.2" width="20.8" height="114.8" fill="#1f5f99"/>
+<rect x="381.2" y="350.7" width="20.8" height="51.3" fill="#1f5f99"/>
+<rect x="441.7" y="312.9" width="20.8" height="89.1" fill="#1f5f99"/>
+<rect x="502.3" y="139.3" width="20.8" height="262.7" fill="#1f5f99"/>
+<rect x="562.8" y="163.6" width="20.8" height="238.4" fill="#1f5f99"/>
+<rect x="623.4" y="247.4" width="20.8" height="154.6" fill="#1f5f99"/>
+<rect x="683.9" y="300.8" width="20.8" height="101.2" fill="#1f5f99"/>
+<rect x="100.3" y="318.9" width="20.8" height="83.1" fill="#a0643c"/>
+<rect x="160.8" y="319.7" width="20.8" height="82.3" fill="#a0643c"/>
+<rect x="221.4" y="330.1" width="20.8" height="71.9" fill="#a0643c"/>
+<rect x="281.9" y="337.3" width="20.8" height="64.7" fill="#a0643c"/>
+<rect x="342.5" y="339.4" width="20.8" height="62.6" fill="#a0643c"/>
+<rect x="403.0" y="345.9" width="20.8" height="56.1" fill="#a0643c"/>
+<rect x="463.5" y="338.3" width="20.8" height="63.7" fill="#a0643c"/>
+<rect x="524.1" y="376.1" width="20.8" height="25.9" fill="#a0643c"/>
+<rect x="584.6" y="364.9" width="20.8" height="37.1" fill="#a0643c"/>
+<rect x="645.2" y="357.7" width="20.8" height="44.3" fill="#a0643c"/>
+<rect x="705.7" y="355.0" width="20.8" height="47.0" fill="#a0643c"/>
+<text x="100.3" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2015</text>
+<text x="160.8" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2016</text>
+<text x="221.4" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2017</text>
+<text x="281.9" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2018</text>
+<text x="342.5" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2019</text>
+<text x="403.0" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2020</text>
+<text x="463.5" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2021</text>
+<text x="524.1" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2022</text>
+<text x="584.6" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2023</text>
+<text x="645.2" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2024</text>
+<text x="705.7" y="422" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2025</text>
+<text x="24" y="442" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Beregnet fra SSB: innflyttinger minus utflyttinger, og levendefødte minus døde.</text>
+<line x1="24" x2="736" y1="460" y2="460" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="476" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 05803</text>
+<text x="736" y="476" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

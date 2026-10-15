@@ -1,0 +1,215 @@
+---
+import { Image, getImage } from 'astro:assets';
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import StoryRow from '../../components/StoryRow.astro';
+import Symbol from '../../components/Symbol.astro';
+import { SITE, PRODUKSJON, categoryName, formatDay, formatTime, produksjonMerke, varsel, gorselVar } from '../../lib/site';
+import { FORKLART, erForklart, forfatterSlug, getNews, kilde, type Haber } from '../../lib/news';
+import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs, headline } from '../../lib/seo';
+import SentezBlok from '../../components/SentezBlok.astro';
+import { matchEntities } from '../../lib/entities';
+import { indekserbar } from '../../lib/ordtelling.mjs';
+
+export async function getStaticPaths() {
+  const news = await getNews();
+  return news.map((haber) => ({
+    params: { id: haber.id },
+    props: { haber, related: news.filter((h) => h !== haber && h.data.category === haber.data.category).slice(0, 3) },
+  }));
+}
+
+interface Props {
+  haber: Haber;
+  related: Haber[];
+}
+
+const { haber, related } = Astro.props;
+const { title, description, date, category, cover: kapak, coverAlt, coverKreditt, author, produksjon, rettelse, oppdatert } = haber.data;
+const { Content } = await render(haber);
+// Eski haberlerde kapak üretilmez (bkz. gorselVar).
+const cover = kapak && gorselVar(date) ? kapak : undefined;
+const source = kilde(haber);
+const made = produksjonMerke(produksjon);
+const warn = varsel(title);
+const forklart = erForklart(haber);
+// Kişi adıyla yayımlanan yazıların yazar sayfası vardır (/forfatter/<slug>/).
+const forfatterUrl = author !== SITE.name ? `/forfatter/${forfatterSlug(author)}/` : undefined;
+
+// OG görseli en az 1200 px genişlikte (Google Discover); kaynak daha darsa kendi genişliği kullanılır.
+const ogWidth = cover ? Math.min(1200, cover.width) : 1200;
+const ogHeight = cover && ogWidth ? Math.round((ogWidth * cover.height) / cover.width) : 630;
+const ogImage = cover ? (await getImage({ src: cover, width: ogWidth, format: 'jpeg' })).src : '/og-default.png';
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
+const share = encodeURIComponent(pageUrl);
+const shareText = encodeURIComponent(title);
+
+const iso = date.toISOString();
+// Düzeltme ya da güncelleme tarihi (oppdatert) varsa dateModified odur; yayın tarihinden önce olamaz.
+const endret = oppdatert && oppdatert > date ? oppdatert : undefined;
+const modifiedIso = (endret ?? date).toISOString();
+// Çok kısa haberler arama motorlarına kapalı (noindex, follow) ve site haritalarında yok (src/lib/ordtelling.mjs).
+const noindex = !indekserbar(haber.body);
+const section = categoryName(category);
+const categoryUrl = `${SITE_URL}/kategori/${category}/`;
+const entities = matchEntities(`${title} ${description} ${source ?? ''} ${haber.body ?? ''}`);
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': forklart ? 'AnalysisNewsArticle' : 'NewsArticle',
+      '@id': `${pageUrl}#article`,
+      headline: headline(title),
+      description,
+      image: [{ '@type': 'ImageObject', url: new URL(ogImage, Astro.site).href, width: ogWidth, height: ogHeight }],
+      datePublished: iso,
+      dateModified: modifiedIso,
+      author: forfatterUrl ? { '@type': 'Person', name: author, url: `${SITE_URL}${forfatterUrl}` } : { '@id': ORG_ID },
+      // Yayıncının tam tanımı (publishingPrinciples dahil) Base.astro'daki Organization düğümünde (src/lib/seo.ts);
+      // burada aynı @id ile çelişen ikinci bir tanım yazılmaz, sadece ona bağlanılır.
+      publisher: { '@id': ORG_ID },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+      url: pageUrl,
+      articleSection: forklart ? [section, FORKLART.name] : section,
+      inLanguage: 'nb',
+      isAccessibleForFree: true,
+      isPartOf: { '@id': WEBSITE_ID },
+      ...(entities.length > 0 ? { about: entities } : {}),
+    },
+    breadcrumbs([
+      { name: 'Forsiden', url: `${SITE_URL}/` },
+      { name: section, url: categoryUrl },
+      { name: headline(title), url: pageUrl },
+    ]),
+  ],
+};
+---
+
+<Base title={title} description={description} image={ogImage} imageWidth={ogWidth} imageHeight={ogHeight} imageAlt={coverAlt ?? title} type="article" noindex={noindex}>
+  <Fragment slot="head">
+    <meta property="article:published_time" content={iso} />
+    <meta property="article:modified_time" content={modifiedIso} />
+    <meta property="article:section" content={section} />
+    {forklart && <meta property="article:tag" content={FORKLART.name} />}
+    {forfatterUrl && <meta name="author" content={author} />}
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </Fragment>
+
+  <article class="article">
+    <h1>{title}</h1>
+    <p class="lead">{description}</p>
+
+    <dl class="margin-info">
+      {
+        warn && (
+          <div>
+            <dt>Varsel</dt>
+            <dd><span class="mark mark-varsel"><Symbol kind="varsel" class={`sym-varsel-${warn.level}`} />{warn.label}</span></dd>
+          </div>
+        )
+      }
+      {
+        forklart && (
+          <div>
+            <dt>Sjanger</dt>
+            <dd><a class="mark" href={`/${FORKLART.slug}/`}><Symbol kind="forklart" />{FORKLART.name}</a></dd>
+          </div>
+        )
+      }
+      <div>
+        <dt>Tema</dt>
+        <dd><a class="mark" href={`/kategori/${category}/`}><Symbol kind={category} />{categoryName(category)}</a></dd>
+      </div>
+      <div>
+        <dt>Publisert</dt>
+        <dd><time datetime={date.toISOString()}>{formatDay(date)} kl. {formatTime(date)}</time></dd>
+      </div>
+      {
+        endret && (
+          <div>
+            <dt>Oppdatert</dt>
+            <dd><time datetime={modifiedIso}>{formatDay(endret)} kl. {formatTime(endret)}</time></dd>
+          </div>
+        )
+      }
+      {
+        source && (
+          <div>
+            <dt>Kilde</dt>
+            <dd><span class="mark"><Symbol kind="kilde" />{source}</span></dd>
+          </div>
+        )
+      }
+      {
+        made && (
+          <div>
+            <dt>Laget</dt>
+            <dd><span class="mark"><Symbol kind={made.kind} />{made.label}</span></dd>
+          </div>
+        )
+      }
+      <div>
+        <dt>Av</dt>
+        <dd>{forfatterUrl ? <a href={forfatterUrl} rel="author">{author}</a> : author}</dd>
+      </div>
+    </dl>
+
+    <SentezBlok whyMatters={haber.data.why_matters} keyPoints={haber.data.key_points} />
+
+    {
+      cover && (
+        <figure>
+          <Image src={cover} alt={coverAlt ?? title} width={1200} loading="eager" fetchpriority="high" decoding="async" />
+          {(coverAlt || coverKreditt) && (
+            <figcaption>
+              {coverAlt}
+              {coverKreditt && <span class="kreditt">{coverKreditt}</span>}
+            </figcaption>
+          )}
+        </figure>
+      )
+    }
+
+    {
+      rettelse && (
+        <aside class="rettelse">
+          <Symbol kind="rettelse" />
+          <p><strong>Rettelse:</strong> {rettelse}</p>
+        </aside>
+      )
+    }
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {
+      PRODUKSJON[produksjon] && (
+        <p class="produksjon">
+          {made && <Symbol kind={made.kind} />}
+          <span>
+            {PRODUKSJON[produksjon]} <a href="/om-oss/#ki">Les mer om hvordan sakene våre lages.</a>
+          </span>
+        </p>
+      )
+    }
+
+    <div class="share">
+      <span>Del saken:</span>
+      <a href={`https://x.com/intent/post?url=${share}&text=${shareText}`} target="_blank" rel="noopener">X</a>
+      <a href={`https://www.facebook.com/sharer/sharer.php?u=${share}`} target="_blank" rel="noopener">Facebook</a>
+      <a href={`https://wa.me/?text=${shareText}%20${share}`} target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </article>
+
+  {
+    related.length > 0 && (
+      <section class="related">
+        <h2 class="band">Mer om {categoryName(category).toLowerCase()}</h2>
+        {related.map((h) => (
+          <StoryRow haber={h} showCategory={false} />
+        ))}
+      </section>
+    )
+  }
+</Base>

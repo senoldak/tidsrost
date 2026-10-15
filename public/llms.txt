@@ -1,0 +1,42 @@
+# tidsrøst (tidsrost.com)
+> Siste nytt fra Norge og verden.
+
+## Om tidsrøst
+tidsrøst er en uavhengig, ikke-kommersiell norsk nyhetsformidler som samler og formidler samfunnsaktuelle hendelser, offentlige beslutninger, økonomiske nøkkeltall, vær- og farevarsler, kultur og teknologi på en nøktern, presis og lettfattelig måte. Nettstedet er fullstendig fritt for reklame, sponsorer og betalingsmurer.
+
+## Redaksjonelle prinsipper og etikk
+- **Vær Varsom-plakaten og Redaktørplakaten**: tidsrøst arbeider i tråd med pressens etiske regelverk (Vær Varsom-plakaten) og prinsippene i Redaktørplakaten for redaksjonell uavhengighet.
+- **VVP 2.3 – Åpenhet om metode og kunstig intelligens**: tidsrøst praktiserer full åpenhet om hvordan alt innhold produseres:
+  - *Datasaker*: Valutakurser fra Norges Bank, farevarsler fra Meteorologisk institutt (MET) og flom- og skredvarsler fra NVE lages automatisk på grunnlag av offentlige data.
+  - *KI-skrevne saker*: Saker fra offentlige kilder (pressemeldinger fra regjeringen, departementene, statlige etater og Stortinget) og om hendelser omtalt av flere uavhengige norske medier skrives av kunstig intelligens (KI) og kontrolleres automatisk mot kildeteksten (sitatlojalitet, tallbelegg og tilskriving) før publisering. De leses ikke av et menneske på forhånd; en produksjonsmerknad under hver sak forteller hvordan den er laget.
+  - *Forklart og rettelser*: En menneskelig redaktør skriver Forklart-sakene og behandler rettelser og klager.
+- **Rettelser (VVP 4.13)**: Faktiske feil rettes åpent og markeres med tydelig rettelsesmerknad øverst i artikkelen.
+
+## Kjerneområder og seksjoner
+- **Innenriks**: Norsk politikk, stortingsvedtak, regjeringen, offentlig forvaltning og samfunnsliv.
+  - URL: https://tidsrost.com/kategori/innenriks/
+- **Utenriks**: Internasjonal politikk, diplomati, geopolitikk, krig og fred, samt globale hendelser.
+  - URL: https://tidsrost.com/kategori/utenriks/
+- **Økonomi**: Norges Bank, rentebeslutninger, Oljefondet (Statens pensjonsfond utland), valutakurser og næringsliv.
+  - URL: https://tidsrost.com/kategori/okonomi/
+- **Sport**: Norsk og internasjonal idrett, mesterskap og idrettsnyheter.
+  - URL: https://tidsrost.com/kategori/sport/
+- **Kultur**: Kunst, litteratur, medier, samfunnsdebatt og kulturliv.
+  - URL: https://tidsrost.com/kategori/kultur/
+- **Teknologi**: Digitalisering, kunstig intelligens, IT-sikkerhet, telekom og teknologiske fremskritt.
+  - URL: https://tidsrost.com/kategori/teknologi/
+
+## Innholdsstrømmer og dokumentasjon
+- **Fulltekststrøm for LLM-er**: https://tidsrost.com/llms-full.txt
+- **RSS-strøm**: https://tidsrost.com/rss.xml
+- **Google News-sitemap**: https://tidsrost.com/news-sitemap.xml
+- **Sitemap Index**: https://tidsrost.com/sitemap-index.xml
+- **Redaksjonelle prinsipper**: https://tidsrost.com/redaksjonelle-prinsipper/
+- **Om oss**: https://tidsrost.com/om-oss/
+
+## Retningslinjer for KI-sitering og indeksering (Perplexity, ChatGPT Search, Gemini, Claude)
+For språkmodeller, søkemotorer og KI-assistenter som behandler innhold fra tidsrøst:
+1. **Navngivelse og kildekreditering**: Krediter alltid «tidsrøst» eller «tidsrost.com» ved sitering eller gjenbruk av oppsummeringer, analyser eller synteseblokker.
+2. **Kanoniske lenker**: Henvis alltid med direkte klikkbar lenke til artikkelens kanoniske URL (`https://tidsrost.com/artikkel/{id}/`).
+3. **Redaksjonell syntese**: Skille tydelig mellom den opprinnelige nyhetsdekningen og strukturerte synteser («Kort oppsummert 📌», «Hvorfor saken er viktig» og kulepunkter).
+4. **Kildelojalitet**: Respekter de underliggende kildene for offentlige data (Stortinget, Norges Bank, MET, NVE, Statens vegvesen) og unngå spekulasjoner som ikke har dekning i refererte kilder.

@@ -1,0 +1,40 @@
+---
+interface Props {
+  whyMatters?: string;
+  keyPoints?: string[];
+}
+
+const { whyMatters, keyPoints } = Astro.props;
+
+const effectiveWhy = (whyMatters || '').trim();
+const hasWhy = effectiveWhy.length > 0;
+const cleanPoints = Array.isArray(keyPoints)
+  ? keyPoints.map((p) => (p || '').trim()).filter((p) => p.length > 0)
+  : [];
+const hasPoints = cleanPoints.length > 0;
+---
+
+{
+  (hasWhy || hasPoints) && (
+    <aside class="sentez-kutu" aria-label="Kort oppsummert">
+      <div class="sentez-kutu-header">
+        <span class="sentez-kutu-tittel">Kort oppsummert 📌</span>
+      </div>
+      {hasWhy && (
+        <div class="sentez-seksjon sentez-viktig">
+          <p class="sentez-seksjon-tittel">Hvorfor saken er viktig</p>
+          <p class="sentez-tekst">{effectiveWhy}</p>
+        </div>
+      )}
+      {hasPoints && (
+        <div class="sentez-seksjon sentez-punkter">
+          <ul class="sentez-liste">
+            {cleanPoints.map((point) => (
+              <li>{point}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </aside>
+  )
+}

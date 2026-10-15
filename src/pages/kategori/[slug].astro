@@ -1,0 +1,85 @@
+---
+import Base from '../../layouts/Base.astro';
+import StoryRow from '../../components/StoryRow.astro';
+import Symbol from '../../components/Symbol.astro';
+import { CATEGORIES, SITE } from '../../lib/site';
+import { getNews, groupByDay, newsUrl } from '../../lib/news';
+import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs } from '../../lib/seo';
+
+export async function getStaticPaths() {
+  const news = await getNews();
+  return CATEGORIES.map((c) => ({
+    params: { slug: c.slug },
+    props: { slug: c.slug, name: c.name, items: news.filter((h) => h.data.category === c.slug) },
+  }));
+}
+
+// Her kategori için arama sonuçlarında görünen özgün açıklama.
+const BESKRIVELSE: Record<string, string> = {
+  innenriks: 'Siste nytt fra Norge: politikk, Stortinget, regjeringen, vær, farevarsler og samfunn.',
+  utenriks: 'Siste nytt fra verden: internasjonal politikk, konflikter, diplomati og humanitære kriser.',
+  okonomi: 'Siste nytt om økonomi: renten, Norges Bank, kronekursen, næringsliv og arbeidsmarked.',
+  sport: 'Siste nytt fra sporten: fotball, vintersport og norske utøvere hjemme og ute.',
+  kultur: 'Siste nytt om kultur: film, musikk, litteratur, scenekunst og kulturpolitikk.',
+  teknologi: 'Siste nytt om teknologi: digitalisering, telekom, kunstig intelligens og forskning.',
+};
+
+const { slug, name, items } = Astro.props;
+const days = groupByDay(items);
+const pageUrl = `${SITE_URL}/kategori/${slug}/`;
+const description = `${BESKRIVELSE[slug] ?? `Nyheter om ${name.toLowerCase()}.`} Saker fra ${SITE.name}.`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${pageUrl}#page`,
+      url: pageUrl,
+      name: `${name} – siste nytt`,
+      description,
+      inLanguage: 'nb',
+      isPartOf: { '@id': WEBSITE_ID },
+      publisher: { '@id': ORG_ID },
+      ...(items.length
+        ? {
+            mainEntity: {
+              '@type': 'ItemList',
+              itemListElement: items.slice(0, 20).map((h, i) => ({
+                '@type': 'ListItem',
+                position: i + 1,
+                url: new URL(newsUrl(h), SITE_URL).href,
+              })),
+            },
+          }
+        : {}),
+    },
+    breadcrumbs([
+      { name: 'Forsiden', url: `${SITE_URL}/` },
+      { name, url: pageUrl },
+    ]),
+  ],
+};
+---
+
+<Base title={`${name} – siste nytt`} description={description} noindex={items.length === 0}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind={slug} />{name}</h1>
+    <p class="meta">{items.length} {items.length === 1 ? 'sak' : 'saker'}</p>
+  </header>
+  {
+    days.length > 0 ? (
+      days.map((d) => (
+        <section class="day">
+          <h2 class="band">{d.label}</h2>
+          {d.items.map((h) => (
+            <StoryRow haber={h} showCategory={false} />
+          ))}
+        </section>
+      ))
+    ) : (
+      <p class="empty">Ingen saker i denne kategorien ennå.</p>
+    )
+  }
+</Base>
