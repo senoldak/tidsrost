@@ -6,8 +6,14 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { indekserbar } from './src/lib/ordtelling.mjs';
 
-// Eski haberlerin kapakları sayfada kullanılmasa da Astro orijinal dosyayı yine dist/_astro'ya yazar.
-// Derleme sonunda hiçbir çıktı dosyasında adı geçmeyen görselleri sileriz (dosya sayısı sınırı: 20.000).
+// Astro kapakların orijinal PNG'sini de dist/_astro'ya yazar, oysa sayfalar yalnızca türetilmiş dosyaları kullanır.
+// Derleme sonunda hiçbir çıktı dosyasında adı geçmeyen görselleri sileriz. Kaynaktaki kapaklar (src/content) silinmez.
+//
+// Dosya bütçesi (Cloudflare Workers static assets: sürüm başına en fazla 20.000 dosya; yayinla.yml 15.000'de uyarır):
+//   her haber: index.html + OG/JSON-LD görseli (1200 px JPEG) = 2 dosya, grafikli yazılarda + graf-N.svg;
+//   son GORSEL_GUN (14) gündeki haberler: + sayfa kapağı (1200 px WebP); kategori sayfası: 30 haberde 1 sayfa.
+//   Sabit kısım (site sayfaları, yazı tipleri, CSS/JS, public/) ~100 dosya. ~250 haberde dist ≈ 750 dosya;
+//   15.000'lik uyarıya ~7.000 haberde varılır. O zaman eski OG görselleri ortak bir görsele çevrilebilir.
 const kullanilmayanGorseller = () => ({
   name: 'kullanilmayan-gorseller',
   hooks: {
@@ -55,6 +61,7 @@ const siteHaritasi = sitemap({
   filter: (sayfa) => {
     const yol = new URL(sayfa).pathname;
     if (yol.startsWith('/admin') || yol.startsWith('/404') || kisaHaberler.has(yol)) return false;
+    // Kategorinin 2. ve sonraki sayfaları (/kategori/<slug>/2/) yalnız haber varsa üretilir; haritaya girer.
     const kategori = yol.match(/^\/kategori\/([^/]+)\/$/)?.[1];
     return !kategori || doluKategoriler.has(kategori);
   },
@@ -70,4 +77,7 @@ export default defineConfig({
   integrations: [siteHaritasi, kullanilmayanGorseller()],
   // CSP (public/_headers) satır içi stile izin vermez; tüm CSS ayrı dosya olarak yüklenir.
   build: { inlineStylesheets: 'never' },
+  // CSP satır içi script'e de izin vermez: Astro küçük script'leri (ör. DelSaken'deki "Kopier lenke") satır içine
+  // gömmesin, her zaman ayrı dosya (/_astro/*.js) olsun.
+  vite: { build: { assetsInlineLimit: 0 } },
 });

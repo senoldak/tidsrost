@@ -1,0 +1,24 @@
+---
+// Görünür içerik yolu (breadcrumb). Aynı liste sayfanın JSON-LD'sinde BreadcrumbList olarak da yazılır
+// (src/lib/seo.ts breadcrumbs); son öğe bulunulan sayfadır ve bağlantı değildir.
+interface Props {
+  items: { name: string; url: string }[];
+}
+const { items } = Astro.props;
+---
+
+<nav class="brodsmuler" aria-label="Brødsmulesti">
+  <ol>
+    {
+      items.map((it, i) =>
+        i === items.length - 1 ? (
+          <li aria-current="page">{it.name}</li>
+        ) : (
+          <li>
+            <a href={new URL(it.url).pathname}>{it.name}</a>
+          </li>
+        ),
+      )
+    }
+  </ol>
+</nav>

@@ -1,7 +1,7 @@
 import rss from '@astrojs/rss';
 import type { APIContext } from 'astro';
 import { getImage } from 'astro:assets';
-import { SITE, categoryName, gorselVar } from '../lib/site';
+import { SITE, categoryName } from '../lib/site';
 import { getNews, newsUrl } from '../lib/news';
 
 const xml = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
@@ -10,7 +10,8 @@ export async function GET(context: APIContext) {
   const news = await getNews();
   const items = await Promise.all(
     news.slice(0, 50).map(async (h) => {
-      const cover = gorselVar(h.data.date) ? h.data.cover : undefined;
+      // Haber sayfasındaki OG görseliyle aynı dosya (aynı ayarlar, yeni dosya üretmez).
+      const cover = h.data.cover;
       const ogWidth = cover ? Math.min(1200, cover.width) : undefined;
       const img = cover && ogWidth ? await getImage({ src: cover, width: ogWidth, format: 'jpeg' }) : undefined;
       const media = img

@@ -7,6 +7,8 @@ export const SITE = {
   social: {
     x: '',
     facebook: '',
+    // Haberlerin gönderildiği Telegram kanalı (mecmua-saat/worker.js, hedefler: '@tidsrost').
+    telegram: 'https://t.me/tidsrost',
   },
   // Sorumlu editör ve iletişim; sitenin altbilgisinde ve "Om oss" sayfasında gösterilir.
   // Boş bırakılan alanlar sitede görünmez.
@@ -100,8 +102,9 @@ export function dayBand(date: Date) {
   return 'Tidligere';
 }
 
-// Görseller yalnızca yeni haberlerde gerekir (anasayfa ve Telegram, yayından birkaç saat sonra).
-// GORSEL_GUN günden eski haberlerde derlemede kapak/OG görseli üretilmez: dosya sayısı sınırı (20.000) için.
+// Sayfa içi büyük kapak (WebP) yalnızca yeni haberlerde üretilir (anasayfa manşeti ve haber sayfası).
+// OG/JSON-LD görseli (1200 px JPEG) ise her haberde üretilir; eski haber sayfası kapağı o JPEG'le gösterir,
+// böylece eski haber başına tek görsel dosyası kalır. Dosya bütçesi için bkz. astro.config.mjs.
 export const GORSEL_GUN = 14;
 export const gorselVar = (tarih: Date | string, simdi = new Date()) =>
   simdi.getTime() - new Date(tarih).getTime() <= GORSEL_GUN * 86_400_000;

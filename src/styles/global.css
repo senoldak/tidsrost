@@ -1137,3 +1137,90 @@ main.container {
   }
 }
 
+
+/* ——— Brødsmulesti (haber ve kategori sayfaları) ——— */
+.brodsmuler {
+  margin: 0 0 calc(var(--u) * 3);
+  font: 500 0.8125rem var(--frame);
+  font-stretch: 94%;
+  color: var(--muted);
+}
+
+.brodsmuler ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--u);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.brodsmuler li + li::before {
+  content: '›';
+  margin-right: var(--u);
+  color: var(--muted);
+}
+
+.brodsmuler a {
+  color: var(--water);
+}
+
+.brodsmuler [aria-current='page'] {
+  overflow: hidden;
+  max-width: 48ch;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* ——— Del saken: kopier-knapp og Telegram ——— */
+.share .kopier {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--water);
+  cursor: pointer;
+}
+
+.share .kopiert {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.share .kopiert:empty {
+  display: none;
+}
+
+.folg {
+  margin: calc(var(--u) * 1.5) 0 0;
+  font: 500 0.875rem var(--frame);
+  color: var(--muted);
+}
+
+.folg a {
+  color: var(--water);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+/* ——— Kategori: sidenummerering ——— */
+.sider {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: calc(var(--u) * 2);
+  margin-top: calc(var(--u) * 5);
+  padding-top: calc(var(--u) * 2);
+  border-top: 1px solid var(--ink);
+  font: 600 0.875rem var(--frame);
+}
+
+.sider a {
+  color: var(--water);
+}
+
+.sider .side-nr {
+  color: var(--muted);
+  font-weight: 500;
+}

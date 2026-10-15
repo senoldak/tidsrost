@@ -1,0 +1,58 @@
+---
+// Paylaşım bağlantıları: düz bağlantılardır, dışarıdan script yüklenmez (CSP: public/_headers).
+// "Kopier lenke" düğmesi JavaScript ve pano izni olan tarayıcıda görünür (aşamalı geliştirme);
+// script Astro'nun derlediği ayrı dosyadır, satır içi değildir.
+import { SITE } from '../lib/site';
+
+interface Props {
+  url: string;
+  title: string;
+}
+const { url, title } = Astro.props;
+const u = encodeURIComponent(url);
+const t = encodeURIComponent(title);
+const lenker = [
+  { navn: 'Telegram', href: `https://t.me/share/url?url=${u}&text=${t}` },
+  { navn: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${u}` },
+  { navn: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${u}` },
+  { navn: 'Bluesky', href: `https://bsky.app/intent/compose?text=${encodeURIComponent(`${title} ${url}`)}` },
+  { navn: 'X', href: `https://x.com/intent/post?url=${u}&text=${t}` },
+  { navn: 'WhatsApp', href: `https://wa.me/?text=${t}%20${u}` },
+];
+---
+
+<div class="share">
+  <span>Del saken:</span>
+  {
+    lenker.map((l) => (
+      <a href={l.href} target="_blank" rel="noopener noreferrer" aria-label={`Del på ${l.navn} (åpnes i ny fane)`}>
+        {l.navn}
+      </a>
+    ))
+  }
+  <button type="button" class="kopier" data-url={url} hidden>Kopier lenke</button>
+  <span class="kopiert" role="status" aria-live="polite"></span>
+</div>
+{
+  SITE.social.telegram && (
+    <p class="folg">
+      Følg {SITE.name} på <a href={SITE.social.telegram} rel="noopener noreferrer" target="_blank">Telegram</a> og få sakene rett i kanalen.
+    </p>
+  )
+}
+
+<script>
+  for (const knapp of document.querySelectorAll<HTMLButtonElement>('.share .kopier')) {
+    if (!navigator.clipboard?.writeText) continue;
+    knapp.hidden = false;
+    const melding = knapp.parentElement?.querySelector('.kopiert');
+    knapp.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(knapp.dataset.url ?? location.href);
+        if (melding) melding.textContent = 'Lenken er kopiert.';
+      } catch {
+        if (melding) melding.textContent = 'Kunne ikke kopiere lenken.';
+      }
+    });
+  }
+</script>

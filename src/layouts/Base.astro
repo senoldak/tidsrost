@@ -101,6 +101,7 @@ const [nameHead, nameTail] = SITE.name.split('ø');
           <nav aria-label="Følg oss">
             {SITE.social.x && <a href={SITE.social.x} rel="noopener noreferrer" target="_blank" aria-label="X (åpnes i ny fane)">X</a>}
             {SITE.social.facebook && <a href={SITE.social.facebook} rel="noopener noreferrer" target="_blank" aria-label="Facebook (åpnes i ny fane)">Facebook</a>}
+            {SITE.social.telegram && <a href={SITE.social.telegram} rel="noopener noreferrer" target="_blank" aria-label="Telegram (åpnes i ny fane)">Telegram</a>}
             <a href="/rss.xml">RSS</a>
           </nav>
         </div>
@@ -179,6 +180,7 @@ const [nameHead, nameTail] = SITE.name.split('ø');
             <li><a href="/om-oss/">Om oss</a></li>
             <li><a href="/redaksjonelle-prinsipper/">Redaksjonelle prinsipper</a></li>
             <li><a href="/personvern/">Personvern</a></li>
+            {SITE.social.telegram && <li><a href={SITE.social.telegram} rel="noopener noreferrer">Telegram-kanalen</a></li>}
             <li><a href="/rss.xml">RSS</a></li>
             <li><a href="/llms.txt">llms.txt</a></li>
           </ul>

@@ -10,12 +10,17 @@ import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs, headline } from '../../lib/s
 import SentezBlok from '../../components/SentezBlok.astro';
 import { matchEntities } from '../../lib/entities';
 import { indekserbar } from '../../lib/ordtelling.mjs';
+import { relaterteSaker } from '../../lib/relaterte';
+import Brodsmuler from '../../components/Brodsmuler.astro';
+import DelSaken from '../../components/DelSaken.astro';
 
 export async function getStaticPaths() {
   const news = await getNews();
+  // İlgili haberler ortak kurum/özel isimlere göre bir kez hesaplanır (src/lib/relaterte.ts).
+  const relatert = relaterteSaker(news);
   return news.map((haber) => ({
     params: { id: haber.id },
-    props: { haber, related: news.filter((h) => h !== haber && h.data.category === haber.data.category).slice(0, 3) },
+    props: { haber, related: relatert.get(haber.id) ?? [] },
   }));
 }
 
@@ -27,8 +32,9 @@ interface Props {
 const { haber, related } = Astro.props;
 const { title, description, date, category, cover: kapak, coverAlt, coverKreditt, author, produksjon, rettelse, oppdatert } = haber.data;
 const { Content } = await render(haber);
-// Eski haberlerde kapak üretilmez (bkz. gorselVar).
-const cover = kapak && gorselVar(date) ? kapak : undefined;
+// OG/JSON-LD görseli her haberde üretilir; büyük WebP kapak yalnızca yeni haberlerde (bkz. gorselVar).
+const cover = kapak;
+const yeniKapak = cover && gorselVar(date);
 const source = kilde(haber);
 const made = produksjonMerke(produksjon);
 const warn = varsel(title);
@@ -39,10 +45,9 @@ const forfatterUrl = author !== SITE.name ? `/forfatter/${forfatterSlug(author)}
 // OG görseli en az 1200 px genişlikte (Google Discover); kaynak daha darsa kendi genişliği kullanılır.
 const ogWidth = cover ? Math.min(1200, cover.width) : 1200;
 const ogHeight = cover && ogWidth ? Math.round((ogWidth * cover.height) / cover.width) : 630;
+// Kapaksız haberde ortak varsayılan görsel (public/og-default.png, 1200×630).
 const ogImage = cover ? (await getImage({ src: cover, width: ogWidth, format: 'jpeg' })).src : '/og-default.png';
 const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
-const share = encodeURIComponent(pageUrl);
-const shareText = encodeURIComponent(title);
 
 const iso = date.toISOString();
 // Düzeltme ya da güncelleme tarihi (oppdatert) varsa dateModified odur; yayın tarihinden önce olamaz.
@@ -52,6 +57,11 @@ const modifiedIso = (endret ?? date).toISOString();
 const noindex = !indekserbar(haber.body);
 const section = categoryName(category);
 const categoryUrl = `${SITE_URL}/kategori/${category}/`;
+const sti = [
+  { name: 'Forsiden', url: `${SITE_URL}/` },
+  { name: section, url: categoryUrl },
+  { name: headline(title), url: pageUrl },
+];
 const entities = matchEntities(`${title} ${description} ${source ?? ''} ${haber.body ?? ''}`);
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -76,11 +86,7 @@ const jsonLd = {
       isPartOf: { '@id': WEBSITE_ID },
       ...(entities.length > 0 ? { about: entities } : {}),
     },
-    breadcrumbs([
-      { name: 'Forsiden', url: `${SITE_URL}/` },
-      { name: section, url: categoryUrl },
-      { name: headline(title), url: pageUrl },
-    ]),
+    breadcrumbs(sti),
   ],
 };
 ---
@@ -95,6 +101,7 @@ const jsonLd = {
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </Fragment>
 
+  <Brodsmuler items={sti} />
   <article class="article">
     <h1>{title}</h1>
     <p class="lead">{description}</p>
@@ -159,7 +166,11 @@ const jsonLd = {
     {
       cover && (
         <figure>
-          <Image src={cover} alt={coverAlt ?? title} width={1200} loading="eager" fetchpriority="high" decoding="async" />
+          {yeniKapak ? (
+            <Image src={cover} alt={coverAlt ?? title} width={1200} loading="eager" fetchpriority="high" decoding="async" />
+          ) : (
+            <img src={ogImage} alt={coverAlt ?? title} width={ogWidth} height={ogHeight} loading="eager" decoding="async" />
+          )}
           {(coverAlt || coverKreditt) && (
             <figcaption>
               {coverAlt}
@@ -194,20 +205,15 @@ const jsonLd = {
       )
     }
 
-    <div class="share">
-      <span>Del saken:</span>
-      <a href={`https://x.com/intent/post?url=${share}&text=${shareText}`} target="_blank" rel="noopener">X</a>
-      <a href={`https://www.facebook.com/sharer/sharer.php?u=${share}`} target="_blank" rel="noopener">Facebook</a>
-      <a href={`https://wa.me/?text=${shareText}%20${share}`} target="_blank" rel="noopener">WhatsApp</a>
-    </div>
+    <DelSaken url={pageUrl} title={title} />
   </article>
 
   {
     related.length > 0 && (
       <section class="related">
-        <h2 class="band">Mer om {categoryName(category).toLowerCase()}</h2>
+        <h2 class="band">Relaterte saker</h2>
         {related.map((h) => (
-          <StoryRow haber={h} showCategory={false} />
+          <StoryRow haber={h} showCategory={h.data.category !== category} dato />
         ))}
       </section>
     )
