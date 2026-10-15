@@ -23,7 +23,33 @@ export const forLiteKilde = (kildeTekst) => ordtelling(kildeTekst) < MIN_KILDE_O
 export const LENGDE_REGEL = `- Lengde: 250–400 ord i brødteksten, fordelt på 4–6 korte avsnitt. Bygg saken slik: først hva som har skjedd (hvem, hva, når, hvor), deretter bakgrunn og sammenheng, til slutt hva det betyr og hva som skjer videre.
 - Bakgrunn og betydning skal også komme fra materialet: forklar med opplysninger som står der (tidligere vedtak, tall, begrunnelser, frister, hvem som berøres). Aldri legg til fakta, tall, navn eller vurderinger fra egen kunnskap, og aldri spekuler. Har materialet for lite stoff, skriv heller en kortere sak enn å fylle ut.`;
 
-export const TITTEL_REGEL = `- Tittelen skal begynne med det leserne søker etter: selve saken (hvem eller hva det gjelder). Start aldri tittelen med avsenderen og kolon, som «Departementet: …», «Utenriksdepartementet: …» eller «Statsministerens kontor: …». Skriv f.eks. «Norge gir 150 millioner til glemte kriser», ikke «Utenriksdepartementet: Norge gir 150 millioner til glemte kriser». Hvem som sier det, kommer fram i ingressen og brødteksten.`;
+export const TITTEL_REGEL = `- Tittelen skal begynne med det leserne søker etter: selve saken (hvem eller hva det gjelder), f.eks. navnet på institusjonen, personen, stedet eller ordningen. Start aldri tittelen med avsenderen og kolon, som «Departementet: …», «Utenriksdepartementet: …» eller «Statsministerens kontor: …», og bruk heller ikke kolon tidlig i tittelen («Oslo: …», «Støre: …»). Skriv f.eks. «Norge gir 150 millioner til glemte kriser», ikke «Utenriksdepartementet: Norge gir 150 millioner til glemte kriser». Hvem som sier det, kommer fram i ingressen og brødteksten.
+- Tittelen skal være konkret og fortelle hva som har skjedd. Ikke vage titler som «Dette må du vite», «Nå skjer det», «Viktig melding», «Nye tall» eller «Departementet foreslår endringer», og ikke spørsmål som tittel.`;
+
+// Başlık denetimi (kesin, yapay zekâsız): aranan kelimeyle başlamayan ya da belirsiz başlıklar düzelttirilir.
+// Mevcut haberlerin başlıklarına ve adreslerine dokunulmaz; yalnızca botun yeni yazdığı taslaklar denetlenir.
+// Başta en fazla üç kelimelik etiket + iki nokta ("Departementet: …", "Støre: …", "Norges Bank: …").
+const KOLON_START = /^\s*([^:]{1,60}?)\s*:\s+\S/u;
+// Somut bir konu söylemeyen açılışlar.
+const VAG_START = /^(?:dette|her er|her kommer|se|sjekk|les|nå|nyhet|nyheter|oppdatering|informasjon|viktig|pressemelding)(?![\p{L}\p{N}])/iu;
+// Adı söylenmeyen kurum: okur "departementet"i aramaz.
+const ANONYM_START = /^(?:departementet|direktoratet|etaten|tilsynet|ministeren|statsråden|byrået)(?![\p{L}\p{N}])/iu;
+const ordIListe = (t) => t.split(/\s+/).filter((w) => /[\p{L}\p{N}]/u.test(w));
+
+export function sjekkTittel(tittel = '') {
+  const t = String(tittel).trim();
+  const problemer = [];
+  const kolon = t.match(KOLON_START);
+  if (kolon && ordIListe(kolon[1]).length <= 3 && /[\p{L})]$/u.test(kolon[1])) {
+    problemer.push(`Tittelen begynner med «${kolon[1]}:». Begynn med selve saken (det leserne søker etter) uten kolon tidlig i tittelen`);
+  }
+  if (VAG_START.test(t) || ANONYM_START.test(t)) {
+    problemer.push('Tittelen er vag: begynn med hvem eller hva saken gjelder (navn på institusjon, person, sted eller ordning) og si hva som har skjedd');
+  }
+  if (/\?\s*$/.test(t)) problemer.push('Tittelen er et spørsmål; skriv en konkret påstand om hva som har skjedd');
+  if (ordIListe(t).length < 4) problemer.push('Tittelen er for kort til å si hva saken gjelder (minst fire ord)');
+  return problemer;
+}
 
 // Yapay zekâ kurala rağmen "Utenriksdepartementet: …" yazarsa önek yerelde atılır (aranan konu başa gelsin).
 const AVSENDER_PREFIKS = /^(?:[\p{L}-]+(?:\s+og\s+[\p{L}-]+)?departementet|Departementet|Regjeringen|Statsministerens kontor|Statsministeren)\s*:\s+/u;
@@ -186,7 +212,7 @@ export function sjekkMedier(tekst) {
 
 export async function vurder(sak, kilde, { pressemelding = true, medier = false } = {}) {
   const tekst = helTekst(sak);
-  const problemer = [...sjekkSitater(tekst, kilde), ...sjekkTall(tekst, kilde), ...sjekkNavn(tekst, kilde), ...sprakSjekk(tekst), ...(medier ? sjekkMedier(tekst) : []), ...sjekkLengde(sak)];
+  const problemer = [...sjekkSitater(tekst, kilde), ...sjekkTall(tekst, kilde), ...sjekkNavn(tekst, kilde), ...sprakSjekk(tekst), ...(medier ? sjekkMedier(tekst) : []), ...sjekkLengde(sak), ...sjekkTittel(utenAvsenderprefiks(sak.title))];
 
   const svar = await gemini({
     schema: VURDERING_SKJEMA,
@@ -224,7 +250,7 @@ ${sak.body}`,
 export async function rett(sak, kilde, problemer) {
   const svar = await gemini({
     schema: TEKST_SKJEMA,
-    prompt: `Du er journalist i en norsk nettavis. Vaktsjefen har funnet problemer i utkastet ditt. Rett alle problemene ved å holde deg strengt til kilden. Fjern opplysninger som ikke har dekning i kilden, tilskriv avsenderens påstander, og gjengi sitater ordrett. Er et tall eller navn markert som «finnes ikke i kilden», skal det fjernes eller skrives nøyaktig slik det står i kilden. Behold ellers formen, og ikke gjør saken kortere: brødteksten skal ha 250–400 ord. Er saken markert som for kort, utvid den med flere opplysninger fra kilden (bakgrunn, detaljer, hva saken betyr ifølge kilden), aldri med noe som ikke står der. Tittelen skal ikke begynne med avsenderen og kolon («Departementet: …»). Norsk bokmål.
+    prompt: `Du er journalist i en norsk nettavis. Vaktsjefen har funnet problemer i utkastet ditt. Rett alle problemene ved å holde deg strengt til kilden. Fjern opplysninger som ikke har dekning i kilden, tilskriv avsenderens påstander, og gjengi sitater ordrett. Er et tall eller navn markert som «finnes ikke i kilden», skal det fjernes eller skrives nøyaktig slik det står i kilden. Behold ellers formen, og ikke gjør saken kortere: brødteksten skal ha 250–400 ord. Er saken markert som for kort, utvid den med flere opplysninger fra kilden (bakgrunn, detaljer, hva saken betyr ifølge kilden), aldri med noe som ikke står der. Tittelen skal begynne med det leserne søker etter (hvem eller hva saken gjelder), være konkret og ikke ha kolon tidlig i tittelen («Departementet: …», «Støre: …»). Norsk bokmål.
 
 PROBLEMER:
 ${problemer.map((p) => `- ${p}`).join('\n')}
@@ -328,5 +354,17 @@ export async function redigerSak(sak, kilde, opts = {}) {
     if (sluttsjekk(utkast).length > sluttsjekk(sisteForsok).length) utkast = sisteForsok;
     stopp = sluttsjekk(utkast);
   }
-  return { sak: { ...utkast, title: utenAvsenderprefiks(utkast.title) }, merknader, stopp };
+  utkast = { ...utkast, title: utenAvsenderprefiks(utkast.title) };
+
+  // Başlık hâlâ kurala uymuyorsa (kolonlu başlangıç, belirsiz başlık) yalnızca bir düzeltme turu daha.
+  // Yeni hâl kesin kontrollerde daha kötü değilse ve başlık sorunu azaldıysa kullanılır; yoksa eski hâl kalır
+  // ve not düşülür (başlık yüzünden haber durdurulmaz, olgu kontrolleri gevşemez).
+  const tittelFeil = sjekkTittel(utkast.title);
+  if (!stopp.length && tittelFeil.length) {
+    const ny = await rett(utkast, kilde, [...tittelFeil, 'Endre bare tittelen; ingress og brødtekst skal stå uendret.']);
+    const nyTittel = { ...utkast, title: utenAvsenderprefiks(ny.title ?? utkast.title) };
+    if (sluttsjekk(nyTittel).length === 0 && sjekkTittel(nyTittel.title).length < tittelFeil.length) utkast = nyTittel;
+    else merknader.push(...tittelFeil);
+  }
+  return { sak: utkast, merknader, stopp };
 }
