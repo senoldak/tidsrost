@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 import StoryRow from '../components/StoryRow.astro';
 import Symbol from '../components/Symbol.astro';
 import StoryMeta from '../components/StoryMeta.astro';
-import { getActiveCategories, getNews, groupByDay, newsUrl } from '../lib/news';
+import { FORKLART, erForklart, getActiveCategories, getNews, groupByDay, newsUrl } from '../lib/news';
 import { SITE, gorselVar } from '../lib/site';
 import { RENTE, aktiveVarsler, datoTekst, prosent } from '../lib/data';
 import { aktiveTemaer } from '../lib/temaer';
@@ -14,7 +14,9 @@ const breaking = news.filter((h) => h.data.breaking).slice(0, 5);
 const hero = news.find((h) => h.data.featured) ?? news[0];
 const rest = news.filter((h) => h !== hero);
 const side = rest.slice(0, 4);
-const days = groupByDay(rest.slice(4, 24));
+const forklartSaker = news.filter(erForklart).slice(0, 4);
+const forklartSet = new Set(forklartSaker);
+const days = groupByDay(rest.slice(4, 28).filter((h) => !forklartSet.has(h)).slice(0, 20));
 const sections = (await getActiveCategories())
   .map((c) => ({ ...c, items: news.filter((h) => h.data.category === c.slug).slice(0, 5) }))
   .filter((s) => s.items.length > 0);
@@ -82,6 +84,21 @@ const sterke = varsler.filter((v) => v.niva !== 'gult').length;
       </section>
     ) : (
       <p class="empty">Ingen saker ennå.</p>
+    )
+  }
+
+  {
+    forklartSaker.length > 0 && (
+      <section class="day" aria-labelledby="forklart-forside">
+        <h2 class="band" id="forklart-forside">
+          <Symbol kind="forklart" />
+          Forklart – dybde og datajournalistikk
+          <a href={`/${FORKLART.slug}/`}>Alle forklarende saker</a>
+        </h2>
+        {forklartSaker.map((h) => (
+          <StoryRow haber={h} dato />
+        ))}
+      </section>
     )
   }
 

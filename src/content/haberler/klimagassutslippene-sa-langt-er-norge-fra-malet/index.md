@@ -1,7 +1,7 @@
 ---
 title: "Klimagassutslippene har falt hvert år siden 2019 – historisk lavt utslipp fra veitrafikken"
 description: "Norges klimagassutslipp gikk ned til 44,1 millioner tonn i 2025, 13,9 prosent under 1990-nivået. Elbilene har gitt det laveste utslippet fra veitrafikken som noen gang er målt."
-date: 2026-10-17T08:00:00+02:00
+date: 2026-10-05T08:00:00+02:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Klimagassutslippene har falt hvert år siden 2019 – historisk lavt utslipp fra veitrafikken»"

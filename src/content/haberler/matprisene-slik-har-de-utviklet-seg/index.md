@@ -1,7 +1,7 @@
 ---
 title: "Matprisveksten har roet seg til 2,4 prosent – nye tiltak skal styrke konkurransen i dagligvaremarkedet"
 description: "Mat og alkoholfrie drikkevarer steg 2,4 prosent det siste året, lavere enn den generelle prisveksten på 3,4 prosent. Samtidig styrker regjeringen Konkurransetilsynet og foreslår nye regler for grossisttilgang."
-date: 2026-10-21T08:00:00+02:00
+date: 2026-10-09T08:00:00+02:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Matprisveksten har roet seg til 2,4 prosent – nye tiltak skal styrke konkurransen i dagligvaremarkedet»"

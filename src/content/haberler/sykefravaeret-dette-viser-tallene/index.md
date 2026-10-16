@@ -1,7 +1,7 @@
 ---
 title: "Rekordhøy bruk av gradert sykmelding holder flere i kontakt med arbeidslivet"
 description: "31 prosent av alle sykmeldinger i 2. kvartal 2026 ble gitt som gradert sykmelding – det høyeste nivået Nav har målt. Samtidig styrker regjeringen innsatsen for tettere oppfølging mellom fastleger, Nav og arbeidsplassene."
-date: 2026-10-20T08:00:00+02:00
+date: 2026-10-08T08:00:00+02:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Rekordhøy bruk av gradert sykmelding holder flere i kontakt med arbeidslivet»"

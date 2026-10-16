@@ -1,7 +1,7 @@
 ---
 title: "Over 30 000 kilometer preparerte skiløyper og 1,96 millioner medlemskap i norsk idrett"
 description: "Norske kommuner, turlag og idrettslag kjører opp mer enn 30 000 kilometer skiløyper hver vinter, og 3 850 lysløyper gir gratis treningsmuligheter etter mørkets frembrudd. Samtidig har Norges idrettsforbund nådd 1,96 millioner medlemskap."
-date: 2026-11-18T08:00:00+01:00
+date: 2026-11-06T08:00:00+01:00
 category: sport
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Over 30 000 kilometer preparerte skiløyper og 1,96 millioner medlemskap i norsk idrett»"

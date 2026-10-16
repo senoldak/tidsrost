@@ -1,7 +1,7 @@
 ---
 title: "Norsk romvirksomhet passerer 20 milliarder kroner – satellitter våker over hav, kyst og klima"
 description: "Fra bakkestasjonen på Svalbard og oppskytingsbasen på Andøya til avansert skips- og miljøovervåking i nordområdene: Norsk romsektor har vokst til en høyteknologisk næring med over 20 milliarder kroner i årlig omsetning."
-date: 2026-11-14T08:00:00+01:00
+date: 2026-11-02T08:00:00+01:00
 category: teknologi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Norsk romvirksomhet passerer 20 milliarder kroner – satellitter våker over hav, kyst og klima»"

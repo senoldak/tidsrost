@@ -1,7 +1,7 @@
 ---
 title: "Over 95 prosent norsk kjøtt, melk og egg – slik styrkes matsikkerheten og beredskapen"
 description: "Rundt 37 500 jordbruksbedrifter holder kulturlandskapet i hevd i alle norske kommuner. Bedre matkornavlinger, nytt beredskapslagring av korn og historisk lav antibiotikabruk kjennetegner norsk matproduksjon."
-date: 2026-11-11T08:00:00+01:00
+date: 2026-10-30T08:00:00+01:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Over 95 prosent norsk kjøtt, melk og egg – slik styrkes matsikkerheten og beredskapen»"

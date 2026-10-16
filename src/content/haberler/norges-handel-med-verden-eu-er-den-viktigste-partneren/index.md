@@ -1,7 +1,7 @@
 ---
 title: "To av tre norske eksportkroner går til EU – sterk eksportvekst gjennom EØS-samarbeidet"
 description: "Norge eksporterte varer for 1 778,8 milliarder kroner i 2025 og oppnådde et handelsoverskudd på 660,9 milliarder kroner. EØS-avtalen sikrer markedsadgangen for to tredjedeler av eksporten."
-date: 2026-10-27T08:00:00+01:00
+date: 2026-10-15T08:00:00+02:00
 category: utenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «To av tre norske eksportkroner går til EU – sterk eksportvekst gjennom EØS-samarbeidet»"

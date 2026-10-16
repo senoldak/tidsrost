@@ -1,7 +1,7 @@
 ---
 title: "Over 307 000 studenter tar høyere utdanning ved norske universiteter og høgskoler"
 description: "Høsten 2025 og våren 2026 var 307 200 studenter registrert i høyere utdanning i Norge. Gratisprinsippet ved offentlige læresteder og desentraliserte studietilbud gir høy utdanningsdeltakelse i hele landet."
-date: 2026-10-31T08:00:00+01:00
+date: 2026-10-19T08:00:00+02:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Over 307 000 studenter tar høyere utdanning ved norske universiteter og høgskoler»"

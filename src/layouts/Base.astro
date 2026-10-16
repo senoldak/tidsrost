@@ -194,7 +194,7 @@ const [nameHead, nameTail] = SITE.name.split('ø');
         </section>
         <section aria-labelledby="redaksjonen">
           <h2 id="redaksjonen">Redaksjonen</h2>
-          {SITE.redaktor && <p>Ansvarlig redaktør: {SITE.redaktor}</p>}
+          {SITE.redaktor && <p>Ansvarlig redaktør og journalist: <a href="/forfatter/senol-dak/">{SITE.redaktor}</a></p>}
           {SITE.utgiver && <p>Utgiver: {SITE.utgiver}{SITE.orgnr && `, org.nr. ${SITE.orgnr}`}</p>}
           {SITE.epost && <p>Kontakt: <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a></p>}
           <ul>

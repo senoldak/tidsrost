@@ -1,7 +1,7 @@
 ---
 title: "97 prosent av innbyggerne bruker digitale offentlige tjenester – Norge i europatoppen"
 description: "Over 310 millioner innlogginger ble gjennomført via ID-porten i 2025, og 97 prosent av befolkningen mellom 16 og 79 år benytter offentlige nettjenester som Helsenorge, Skatteetaten, Nav og Altinn."
-date: 2026-11-05T08:00:00+01:00
+date: 2026-10-24T08:00:00+02:00
 category: teknologi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «97 prosent av innbyggerne bruker digitale offentlige tjenester – Norge i europatoppen»"

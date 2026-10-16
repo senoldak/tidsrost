@@ -1,7 +1,7 @@
 ---
 title: "Norsk film tar 27,8 prosent av kinomarkedet – litteratur og scenekunst når ut til over 50 språk"
 description: "Mer enn hver fjerde kinobillett som selges i Norge, går til en norskprodusert film. Samtidig opplever norsk barne- og voksenlitteratur rekordstor internasjonal etterspørsel gjennom oversettelsesstøtte fra NORLA."
-date: 2026-11-17T08:00:00+01:00
+date: 2026-11-05T08:00:00+01:00
 category: kultur
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Norsk film tar 27,8 prosent av kinomarkedet – litteratur og scenekunst når ut til over 50 språk»"

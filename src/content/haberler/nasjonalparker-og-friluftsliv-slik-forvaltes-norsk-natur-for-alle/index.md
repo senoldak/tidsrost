@@ -1,7 +1,7 @@
 ---
 title: "48 nasjonalparker og allemannsrett for alle – ni av ti deltar i norsk friluftsliv"
 description: "17,8 prosent av Fastlands-Norge og over 65 prosent av Svalbard er vernet gjennom nasjonalparker, naturreservater og landskapsvernområder. Allemannsretten og mer enn 22 000 kilometer merkede stier gjør naturen tilgjengelig for hele befolkningen."
-date: 2026-11-12T08:00:00+01:00
+date: 2026-10-31T08:00:00+01:00
 category: kultur
 cover: ./cover.png
 coverAlt: "Illustrasjon: «48 nasjonalparker og allemannsrett for alle – ni av ti deltar i norsk friluftsliv»"

@@ -1,7 +1,7 @@
 ---
 title: "Styringsrenten på 4,50 prosent skal bringe prisveksten ned – kjøpekraften ventes å øke videre"
 description: "Norges Bank hevet styringsrenten til 4,50 prosent i september 2026 for å sikre at inflasjonen kommer tilbake til målet på 2 prosent. Samtidig anslås husholdningenes reelle kjøpekraft å vokse med 2,5 prosent i år."
-date: 2026-10-10T07:00:00+02:00
+date: 2026-09-28T08:00:00+02:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Styringsrenten på 4,50 prosent skal bringe prisveksten ned – kjøpekraften ventes å øke videre»"

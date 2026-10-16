@@ -1,7 +1,7 @@
 ---
 title: "Forsvarsbudsjettet øker til 191,7 milliarder kroner i 2027 – 68,7 milliarder går til Ukraina"
 description: "Regjeringen foreslår en forsvarsramme på 191,7 milliarder kroner for 2027. Trekker man fra den militære Ukraina-støtten, øker det ordinære forsvarsbudsjettet fra 112 til 123 milliarder."
-date: 2026-10-22T08:00:00+02:00
+date: 2026-10-10T08:00:00+02:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Forsvarsbudsjettet øker til 191,7 milliarder kroner i 2027 – 68,7 milliarder går til Ukraina»"

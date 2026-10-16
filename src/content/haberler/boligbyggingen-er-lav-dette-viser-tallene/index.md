@@ -1,7 +1,7 @@
 ---
 title: "20 184 boliger fikk byggetillatelse i 2025 – nå forenkler regjeringen byggereglene"
 description: "Etter en roligere periode i byggebransjen økte antall igangsettingstillatelser til 20 184 boliger i 2025. Nå moderniseres byggereglene for å nå målet om 130 000 nye boliger innen 2030."
-date: 2026-10-12T07:00:00+02:00
+date: 2026-09-30T08:00:00+02:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «20 184 boliger fikk byggetillatelse i 2025 – nå forenkler regjeringen byggereglene»"

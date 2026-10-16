@@ -1,7 +1,7 @@
 ---
 title: "4,1 milliarder kroner i spillemidler til idretten – kraftig kutt i ventetiden for nye anlegg"
 description: "Norsk idrett får 4 115,7 millioner kroner fra Norsk Tippings overskudd i 2026. Over halvparten går til nye anlegg i kommunene, samtidig som faste tilskuddsordninger senker terskelen for deltakelse i barne- og ungdomsidretten."
-date: 2026-10-29T08:00:00+01:00
+date: 2026-10-17T00:30:00+02:00
 category: sport
 cover: ./cover.png
 coverAlt: "Illustrasjon: «4,1 milliarder kroner i spillemidler til idretten – kraftig kutt i ventetiden for nye anlegg»"

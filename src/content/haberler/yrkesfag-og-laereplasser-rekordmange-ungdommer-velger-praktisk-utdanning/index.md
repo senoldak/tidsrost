@@ -1,7 +1,7 @@
 ---
 title: "54,1 prosent av tiendeklassingene søker yrkesfag – over 48 000 lærlinger ute i bedriftene"
 description: "Stadig flere ungdommer i Norge velger yrkesfag på videregående skole, og 54,1 prosent av søkerne til Vg1 i 2026 hadde et yrkesfaglig utdanningsprogram som førstevalg. Samtidig styrker den nye opplæringsloven retten til fullføring og fagbrev."
-date: 2026-11-15T08:00:00+01:00
+date: 2026-11-03T08:00:00+01:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «54,1 prosent av tiendeklassingene søker yrkesfag – over 48 000 lærlinger ute i bedriftene»"

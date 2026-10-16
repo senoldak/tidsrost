@@ -1,7 +1,7 @@
 ---
 title: "Tre av fire husholdninger eier egen bolig – Husbankens utlånsramme styrket til 30 milliarder kroner"
 description: "Over 76 prosent av norske husholdninger eier sin egen bolig. Gjennom en kraftig opptrappet utlånsramme i Husbanken får flere barnefamilier, førstegangskjøpere og studenter finansiering til trygge hjem."
-date: 2026-11-09T08:00:00+01:00
+date: 2026-10-28T08:00:00+01:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Tre av fire husholdninger eier egen bolig – Husbankens utlånsramme styrket til 30 milliarder kroner»"

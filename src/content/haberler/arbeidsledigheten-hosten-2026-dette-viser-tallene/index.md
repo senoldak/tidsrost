@@ -1,7 +1,7 @@
 ---
 title: "Stabilt lav arbeidsledighet høsten 2026 med 2,0 prosent hos Nav og 4,5 prosent hos SSB"
 description: "59 400 personer var registrert helt ledige hos Nav i september, mens SSBs arbeidskraftundersøkelse måler ledigheten til 4,5 prosent. Samtidig har 24 000 flere kommet i jobb det siste året."
-date: 2026-10-19T08:00:00+02:00
+date: 2026-10-07T08:00:00+02:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Stabilt lav arbeidsledighet høsten 2026 med 2,0 prosent hos Nav og 4,5 prosent hos SSB»"

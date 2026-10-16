@@ -1,7 +1,7 @@
 ---
 title: "99,3 prosent av norske husstander har nå raskt bredbånd – videre utbygging i distriktene"
 description: "Ved utgangen av 2025 hadde 99,3 prosent av norske husstander tilbud om minst 100 Mbit/s, og over 96 prosent kan få gigabitbredbånd. Nå rettes de statlige tilskuddene mot de siste spredtbygde områdene."
-date: 2026-10-26T08:00:00+01:00
+date: 2026-10-14T08:00:00+02:00
 category: teknologi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «99,3 prosent av norske husstander har nå raskt bredbånd – videre utbygging i distriktene»"

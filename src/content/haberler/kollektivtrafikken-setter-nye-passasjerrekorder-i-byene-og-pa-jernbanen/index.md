@@ -1,7 +1,7 @@
 ---
 title: "712 millioner reiser med buss, bane og tog – ny passasjerrekord i kollektivtrafikken"
 description: "Aldri før har det blitt foretatt flere kollektivreiser i Norge enn i 2025, da passasjertallet passerte 712 millioner påstigninger. Byvekstavtalene og elektriske bybusser driver veksten videre i 2026."
-date: 2026-11-02T08:00:00+01:00
+date: 2026-10-21T08:00:00+02:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «712 millioner reiser med buss, bane og tog – ny passasjerrekord i kollektivtrafikken»"

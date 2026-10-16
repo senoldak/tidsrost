@@ -1,7 +1,7 @@
 ---
 title: "Oljefondet har syvdoblet seg på 15 år – passerte 22 683 milliarder kroner"
 description: "På 15 år har Statens pensjonsfond utland vokst fra drøyt 3 000 til 22 683 milliarder kroner. Over to tredjedeler av formuen stammer nå fra avkastning i finansmarkedene."
-date: 2026-10-16T08:00:00+02:00
+date: 2026-10-04T08:00:00+02:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Oljefondet har syvdoblet seg på 15 år – passerte 22 683 milliarder kroner»"

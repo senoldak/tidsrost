@@ -1,7 +1,7 @@
 ---
 title: "94,1 prosent av alle barn går i barnehage – maksprisen er mer enn halvert siden 2022"
 description: "Over 266 000 barn har plass i norske barnehager, tilsvarende 94,1 prosent av alle 1–5-åringer. Med en nasjonal makspris på 1 200 kroner i måneden sparer barnefamilier over 25 000 kroner i året per barn sammenlignet med 2022."
-date: 2026-11-01T08:00:00+01:00
+date: 2026-10-20T08:00:00+02:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «94,1 prosent av alle barn går i barnehage – maksprisen er mer enn halvert siden 2022»"

@@ -1,7 +1,7 @@
 ---
 title: "Laksen drar lasset i norsk fastlandseksport – verdt tre ganger så mye som aluminium"
 description: "Norge eksporterte sjømat for rekordhøye 181,5 milliarder kroner i 2025, og alene sto laks for 124,7 milliarder. I 2026 vokser salget til Polen og Kina, mens USA-eksporten faller."
-date: 2026-10-23T08:00:00+02:00
+date: 2026-10-11T08:00:00+02:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Laksen drar lasset i norsk fastlandseksport – verdt tre ganger så mye som aluminium»"

@@ -1,7 +1,7 @@
 ---
 title: "Rekordbesøk på norske folkebibliotek og sterk vekst for konserter i kulturbarometeret"
 description: "SSBs kulturbarometer for 2025 viser at folkebibliotekene nådde rekordhøye 27,8 millioner besøk, mens konserter, museer og festivaler er tilbake på nivået fra før pandemien."
-date: 2026-10-28T08:00:00+01:00
+date: 2026-10-16T08:00:00+02:00
 category: kultur
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Rekordbesøk på norske folkebibliotek og sterk vekst for konserter i kulturbarometeret»"

@@ -1,7 +1,7 @@
 ---
 title: "Innvandring og høyere fødselstall ga en folkevekst på 33 060 personer i 2025"
 description: "Nettoinnvandringen til Norge var 22 324 personer i 2025, mens fødselsoverskuddet økte til 10 361. I første halvår 2026 har flere nyfødte stått for den største delen av folkeveksten."
-date: 2026-10-24T08:00:00+02:00
+date: 2026-10-12T08:00:00+02:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Innvandring og høyere fødselstall ga en folkevekst på 33 060 personer i 2025»"

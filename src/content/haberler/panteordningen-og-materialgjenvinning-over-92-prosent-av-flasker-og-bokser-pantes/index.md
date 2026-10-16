@@ -1,7 +1,7 @@
 ---
 title: "1,68 milliarder flasker og bokser pantes årlig – slik fungerer verdens mest effektive retursystem"
 description: "Over 92,6 prosent av alle drikkevarebokser og plastflasker i Norge pantes og gjenvinnes til nye produkter. Samtidig styrker nye utsorteringskrav for mat- og plastavfall den sirkulære økonomien i kommunene."
-date: 2026-11-10T08:00:00+01:00
+date: 2026-10-29T08:00:00+01:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «1,68 milliarder flasker og bokser pantes årlig – slik fungerer verdens mest effektive retursystem»"

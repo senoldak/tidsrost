@@ -1,7 +1,7 @@
 ---
 title: "Over 65 000 nye bedrifter etablert på ett år – rask digital selskapsstiftelse og målrettet gründerstøtte"
 description: "I 2025 ble det registrert 65 400 nye foretak i Norge, og etableringstakten har holdt seg høy inn i 2026. Digital stiftelse av aksjeselskap via Altinn og finansiering fra Innovasjon Norge senker terskelen for gründere."
-date: 2026-11-16T08:00:00+01:00
+date: 2026-11-04T08:00:00+01:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Over 65 000 nye bedrifter etablert på ett år – rask digital selskapsstiftelse og målrettet gründerstøtte»"

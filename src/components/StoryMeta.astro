@@ -1,8 +1,8 @@
 ---
 // Haberin işaret satırı: farevarsel, Siste nytt, kategori, saat, kaynak ve üretim işareti.
 import Symbol from './Symbol.astro';
-import { categoryName, formatDay, formatTime, produksjonMerke, varsel } from '../lib/site';
-import { erForklart, FORKLART, kilde, type Haber } from '../lib/news';
+import { SITE, categoryName, formatDay, formatTime, produksjonMerke, varsel } from '../lib/site';
+import { erForklart, FORKLART, forfatterSlug, kilde, type Haber } from '../lib/news';
 
 interface Props {
   haber: Haber;
@@ -11,10 +11,11 @@ interface Props {
 }
 
 const { haber, showCategory = true, time = false } = Astro.props;
-const { title, date, category, breaking, produksjon } = haber.data;
+const { title, date, category, breaking, produksjon, author } = haber.data;
 const warn = varsel(title);
 const source = kilde(haber);
 const made = produksjonMerke(produksjon);
+const harForfatter = Boolean(author && author !== SITE.name);
 ---
 
 <p class="meta">
@@ -22,6 +23,7 @@ const made = produksjonMerke(produksjon);
   {breaking && <span class="mark mark-breaking"><Symbol kind="breaking" />Siste nytt</span>}
   {erForklart(haber) && <span class="mark mark-forklart"><Symbol kind="forklart" />{FORKLART.name}</span>}
   {showCategory && <span class="mark"><Symbol kind={category} />{categoryName(category)}</span>}
+  {harForfatter && <span class="mark">Av <a href={`/forfatter/${forfatterSlug(author)}/`}>{author}</a></span>}
   {
     time && (
       <time datetime={date.toISOString()}>{time === 'full' ? `${formatDay(date)} kl. ${formatTime(date)}` : formatTime(date)}</time>

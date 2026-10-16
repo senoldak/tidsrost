@@ -1,7 +1,7 @@
 ---
 title: "Over 40 millioner gjestedøgn ved norske hoteller og campingplasser – ny reiselivsrekord"
 description: "Norske overnattingsbedrifter passerte for første gang 40 millioner gjestedøgn i 2025, og veksten har fortsatt gjennom sommeren 2026. Nord-Norge og Fjord-Norge trekker rekordmange internasjonale besøkende."
-date: 2026-11-04T08:00:00+01:00
+date: 2026-10-23T08:00:00+02:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Over 40 millioner gjestedøgn ved norske hoteller og campingplasser – ny reiselivsrekord»"

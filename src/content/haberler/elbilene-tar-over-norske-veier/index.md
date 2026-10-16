@@ -1,7 +1,7 @@
 ---
 title: "97,9 prosent av nye personbiler er elbiler – elbilene har passert dieselbilene på norske veier"
 description: "Nesten alle nye personbiler i 2026 er elektriske, og elbilene utgjør nå nær en tredjedel av hele bilparken. Etter at 2025-målet i praksis er nådd, fases momsfritaket gradvis inn i det ordinære avgiftssystemet."
-date: 2026-10-15T08:00:00+02:00
+date: 2026-10-03T08:00:00+02:00
 category: teknologi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «97,9 prosent av nye personbiler er elbiler – elbilene har passert dieselbilene på norske veier»"

@@ -1,8 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
 import { SITE } from '../lib/site';
-// kontroll: "manuell" | "ki" | "ingen" (bkz. scripts/nyheter/kilder/regjeringen.mjs)
-import redaksjon from '../lib/redaksjon.json';
 
 const VVP = 'https://www.presse.no/vaer-varsom-plakaten';
 const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/redaktorplakaten';
@@ -18,7 +16,14 @@ const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/reda
       </p>
 
       <h2>Redaksjonelt ansvar</h2>
-      {SITE.redaktor && <p>Ansvarlig redaktør er <strong>{SITE.redaktor}</strong>.</p>}
+      {
+        SITE.redaktor && (
+          <p>
+            Journalist og ansvarlig redaktør (uten arbeidsgiveransvar) er{' '}
+            <a href="/forfatter/senol-dak/"><strong>{SITE.redaktor}</strong></a>.
+          </p>
+        )
+      }
       <p>
         Vi arbeider etter <a href={VVP}>Vær Varsom-plakaten</a> og <a href={RP}>Redaktørplakaten</a>. Ansvarlig redaktør har
         det fulle ansvaret for alt redaksjonelt innhold, også det som lages med hjelp av automatikk eller kunstig
@@ -38,52 +43,70 @@ const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/reda
         }
       </p>
 
-      <h2 id="ki">Slik lages sakene</h2>
+      <h2 id="arbeidsmetode">Slik arbeider redaksjonen</h2>
       <p>
-        Vi bruker kunstig intelligens (KI) og automatiserte verktøy som støtte i nyhetsarbeidet, i tråd med norsk
-        presseetikk. Alt innhold kvalitetssikres av redaksjonen før publisering. Vi er åpne om hvordan sakene blir til:
+        Redaksjonen i {SITE.name} kombinerer forklarende dybde- og datajournalistikk med løpende nyhetsdekning basert på
+        verifiserbare primærkilder:
       </p>
       <ul>
         <li>
-          <strong>Datasaker</strong>, som valutakurser fra Norges Bank, farevarsler fra Meteorologisk institutt og
-          flom-, jordskred- og snøskredvarsler fra NVE, lages på grunnlag av offentlige data og kvalitetssikres av
-          redaksjonen.
+          <strong>Forklart og datajournalistikk:</strong> Dybdesakene under <a href="/forklart/">Forklart</a> er skrevet av
+          navngitt journalist i redaksjonen (<a href="/forfatter/senol-dak/">{SITE.redaktor}</a>) og bygger på egne sammenstillinger av offisiell
+          statistikk, offentlige utredninger, statsbudsjetter og forskningsrapporter fra blant annet Statistisk sentralbyrå (SSB),
+          Norges Bank, Folkehelseinstituttet (FHI), NVE og departementene, med egenproduserte tabeller og datagrafer.
         </li>
         <li>
-          <strong>Saker fra offentlige kilder</strong>, som pressemeldinger fra regjeringen, departementene og statlige
-          etater, Stortingets egne oppsummeringer av vedtak, FN og Europakommisjonen, skrives ved hjelp av KI og
-          kvalitetssikres av redaksjonen mot den opprinnelige kilden før publisering: at alle opplysninger, tall og navn
-          har dekning i kilden, at sitater er gjengitt ordrett, og at avsenderens synspunkter er tydelig tilskrevet.
+          <strong>Løpende nyhetssaker fra primærkilder:</strong> Nyhetssaker om politiske vedtak, økonomiske nøkkeltall og
+          myndighetsbeslutninger tar alltid utgangspunkt i primærkilden – som Stortinget, regjeringen, departementene,
+          statlige tilsyn og internasjonale organer (FN og Europakommisjonen). Påstander og vurderinger tilskrives tydelig
+          avsenderen, og vi skiller klart mellom fakta og synspunkter.
         </li>
         <li>
-          <strong>Saker om aktuelle hendelser</strong> skrives ved hjelp av KI bare når hendelsen er omtalt av flere
-          uavhengige norske medier, og kvalitetssikres av redaksjonen mot kildene før publisering. Vi navngir ikke
-          mediene, og vi skriver ikke saker som bygger på ett medies egne avsløringer.
+          <strong>Løpende hendelsesnyheter:</strong> Saker om aktuelle hendelser omtales når faktiske opplysninger er
+          bekreftet av flere uavhengige redaktørstyrte medier eller offentlige etater. Vi skriver ikke saker som bygger på
+          ett enkelt medies egne eksklusive avsløringer uten selvstendig kildegrunnlag.
         </li>
         <li>
-          {
-            redaksjon.visKiMerking
-              ? 'Under hver sak står en produksjonsmerknad som forteller hvordan saken er laget og kvalitetssikret. Saker fra offentlige kilder lenker til den opprinnelige kilden.'
-              : 'Saker fra offentlige kilder lenker til den opprinnelige kilden.'
-          }
+          <strong>Datatjenester:</strong> Løpende oversikter over <a href="/styringsrenten/">styringsrenten</a> fra Norges Bank
+          og <a href="/farevarsler/">farevarsler</a> fra Meteorologisk institutt og NVE hentes fra etatenes åpne datagrensesnitt
+          og kvalitetssikres redaksjonelt.
         </li>
-        <li>
-          Redaksjonen skriver <a href="/forklart/">Forklart</a>-sakene, som er merket med forfatter, og
-          behandler rettelser og klager. Feil rettes og merkes åpent i saken.
-        </li>
-        <li>Vi bruker ikke KI til å lage eller endre fotografier.</li>
       </ul>
-      <p>
-        Pressemeldinger er avsenderens egen fremstilling. Vi gjengir dem som det: Påstander og vurderinger tilskrives
-        avsenderen, og vi skiller tydelig mellom fakta og avsenderens synspunkter.
-      </p>
 
-      <h2>Kilder</h2>
+      <h2 id="ki">Retningslinjer for bruk av kunstig intelligens (KI)</h2>
       <p>
-        Vi oppgir alltid kilden og lenker til originalen når saken bygger på en offentlig kilde. Data fra Norges Bank, NVE og Stortinget er lisensiert under
-        Norsk lisens for offentlige data (NLOD), og data fra Meteorologisk institutt under CC BY 4.0. Saker om hendelser
-        som er bekreftet av flere medier, har ingen kildelenke; produksjonsmerknaden under saken forteller at den bygger
-        på flere uavhengige kilder.
+        I likhet med øvrige norske redaktørstyrte medier benytter {SITE.name} digitale verktøy og språkmodeller som
+        hjelpemidler i det redaksjonelle arbeidet. Våre retningslinjer bygger på <a href={VVP}>Vær Varsom-plakaten</a> (særlig
+        punkt 2.2 om integritet, punkt 3.2 om kildekritikk og kontroll av opplysninger, og punkt 4.11 om bildebruk) og
+        prinsippene fra Norsk Redaktørforening:
+      </p>
+      <ul>
+        <li>
+          <strong>Et verktøy, aldri en kilde:</strong> Kunstig intelligens brukes som støtte til research, strukturering av
+          store datamengder, språkvask og tekstutkast på grunnlag av verifiserte kildedokumenter. En språkmodell er aldri en
+          kilde i seg selv.
+        </li>
+        <li>
+          <strong>Alltid menneskelig kontroll og ansvar:</strong> Alt innhold gjennomgås, kontrolleres mot primærkilden og
+          godkjennes av redaksjonen før publisering. Ansvarlig redaktør bærer det fulle juridiske og presseetiske ansvaret
+          for alt som publiseres.
+        </li>
+        <li>
+          <strong>Kildevern og datasikkerhet:</strong> Upublisert kildemateriale eller opplysninger som er underlagt
+          kildevern (VVP 3.4 og 3.5), deles aldri med åpne KI-tjenester.
+        </li>
+        <li>
+          <strong>Forbud mot fotorealistisk KI (VVP 4.11):</strong> Vi publiserer aldri KI-genererte bilder eller videoer
+          som gir seg ut for å være dokumentariske fotografier av virkeligheten. Redaksjonelle grafikkelementer og
+          illustrasjoner merkes alltid tydelig som illustrasjon.
+        </li>
+      </ul>
+
+      <h2>Kilder og åpne data</h2>
+      <p>
+        Vi oppgir alltid primærkilden og lenker til originaldokumentet når en sak bygger på offentlige rapporter, statistikk
+        eller vedtak. Data fra Norges Bank, SSB, NVE og Stortinget benyttes under Norsk lisens for offentlige data (NLOD),
+        og meteorologiske data fra Meteorologisk institutt under CC BY 4.0.
       </p>
 
       <h2 id="rettelser">Rettelser og klager</h2>

@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 
 const { name, items } = Astro.props;
 const pageUrl = `${SITE_URL}/forfatter/${forfatterSlug(name)}/`;
-const description = `Saker skrevet av ${name} i ${SITE.name}.`;
+const description = `${name} er journalist i ${SITE.name} og arbeider med nyhets-, data- og økonomi- og samfunnsjournalistikk basert på offentlige primærkilder.`;
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -34,8 +34,11 @@ const jsonLd = {
         '@type': 'Person',
         '@id': `${pageUrl}#person`,
         name,
+        jobTitle: 'Journalist',
         url: pageUrl,
+        ...(SITE.epost ? { email: SITE.epost } : {}),
         worksFor: { '@id': ORG_ID },
+        knowsAbout: ['Norsk økonomi', 'Offentlig forvaltning', 'Datajournalistikk', 'Samfunn og arbeidsliv', 'Energi og klima'],
       },
       hasPart: items.slice(0, 50).map((h) => ({ '@type': 'NewsArticle', url: new URL(newsUrl(h), SITE_URL).href, headline: h.data.title })),
     },
@@ -47,11 +50,18 @@ const jsonLd = {
 };
 ---
 
-<Base title={name} description={description}>
+<Base title={`${name} – Journalist`} description={description}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <header class="page-head">
     <h1 class="page-title">{name}</h1>
-    <p class="meta">Skribent i {SITE.name} · {items.length} {items.length === 1 ? 'sak' : 'saker'}</p>
+    <p class="page-intro">
+      Journalist i {SITE.name}. Arbeider med forklarende nyhets- og datajournalistikk om norsk økonomi, arbeidsliv,
+      velferd, energi og samfunn i tråd med <a href="https://www.presse.no/vaer-varsom-plakaten">Vær Varsom-plakaten</a>.
+    </p>
+    <p class="meta">
+      Journalist i {SITE.name} · {items.length} publiserte {items.length === 1 ? 'sak' : 'saker'}
+      {SITE.epost && <> · Kontakt: <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a></>}
+    </p>
   </header>
   <section class="day">
     {items.map((h) => <StoryRow haber={h} dato />)}

@@ -1,7 +1,7 @@
 ---
 title: "Sykehuskøene krymper i hele landet – ti dager kortere ventetid etter Ventetidsløftet"
 description: "Ventetiden i norske sykehus falt med ti dager fra våren 2025 til våren 2026, og køene er redusert i samtlige fire hovedområder i spesialisthelsetjenesten. Rusbehandlingen innfrir allerede det langsiktige målet."
-date: 2026-10-25T08:00:00+01:00
+date: 2026-10-13T08:00:00+02:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Sykehuskøene krymper i hele landet – ti dager kortere ventetid etter Ventetidsløftet»"

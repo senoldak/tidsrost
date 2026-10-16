@@ -1,7 +1,7 @@
 ---
 title: "Norgespris og strømstønad kuttet strømregningen med en tredjedel i andre kvartal"
 description: "De statlige støtteordningene reduserte husholdningenes gjennomsnittlige strømpris fra 173,2 til 117,9 øre/kWh i 2. kvartal 2026. Nesten 1,9 millioner strømkunder har valgt fastprisordningen Norgespris."
-date: 2026-10-13T07:00:00+02:00
+date: 2026-10-01T08:00:00+02:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Norgespris og strømstønad kuttet strømregningen med en tredjedel i andre kvartal»"

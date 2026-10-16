@@ -141,47 +141,42 @@ const OPPDATERT = '16. oktober 2026';
         </li>
       </ol>
 
-      <h2 id="kunstig-intelligens">4. Paris-charteret om kunstig intelligens og journalistikk (RSF 2023)</h2>
+      <h2 id="kunstig-intelligens">4. Retningslinjer for kunstig intelligens og journalistikk (VVP 2.2, 3.2, 4.11 og Paris-charteret)</h2>
       <p>
-        Bruk av teknologi skal styrke, ikke svekke, journalistisk kvalitet og troverdighet. {SITE.name} etterlever
-        prinsippene i <strong>Paris-charteret om KI og journalistikk</strong>, utarbeidet av Reporters Without Borders
-        (<a href={RSF_CHARTER_URL} target="_blank" rel="noopener noreferrer">Reporters sans frontières / RSF</a>) og
-        16 internasjonale mediepartnere i november 2023:
+        Bruk av teknologi skal styrke, ikke svekke, journalistisk kvalitet og troverdighet. {SITE.name}s retningslinjer for
+        bruk av kunstig intelligens (KI) bygger på <strong>Vær Varsom-plakaten</strong> (punkt 2.2 om redaksjonell integritet,
+        punkt 3.2 om kildekritikk og opplysningskontroll, og punkt 4.11 om vern av fotografiets troverdighet), anbefalingene
+        fra <strong>Norsk Redaktørforening</strong> og <strong>Paris-charteret om KI og journalistikk</strong> fra Reporters
+        Without Borders (<a href={RSF_CHARTER_URL} target="_blank" rel="noopener noreferrer">RSF, november 2023</a>):
       </p>
       <ul>
         <li>
-          <strong>Menneskelig redaksjonelt ansvar er urokkelig:</strong> Kunstig intelligens brukes som et verktøy i
-          nyhetsarbeidet, men fritar aldri mennesker for redaksjonelt ansvar. Ansvarlig redaktør bærer det juridiske og
-          etiske ansvaret for ethvert ord som formidles, og alt innhold kvalitetssikres av redaksjonen før publisering.
+          <strong>Menneskelig redaksjonelt ansvar er urokkelig (VVP 2.2):</strong> Kunstig intelligens er et redaksjonelt
+          hjelpemiddel i research, strukturering av data og språkarbeid, men erstatter aldri journalistisk vurderingsevne.
+          Ansvarlig redaktør bærer det juridiske og presseetiske ansvaret for ethvert ord som publiseres.
         </li>
         <li>
-          <strong>Slik foregår produksjonen og kvalitetssikringen:</strong>
+          <strong>KI er et verktøy, aldri en kilde (VVP 3.2):</strong> Språkmodeller kan ikke brukes som kilde for faktiske
+          opplysninger. Alle tall, navn, datoer og sitater i sakene våre skal ha direkte dekning i verifiserte primærkilder
+          (offentlige dokumenter, statistikk fra SSB/Norges Bank/FHI/NVE, vedtak i Stortinget eller bekreftede opplysninger
+          fra flere uavhengige redaktørstyrte medier).
+        </li>
+        <li>
+          <strong>Slik kvalitetssikres de ulike sjangrene i redaksjonen:</strong>
           <ul>
-            <li><em>Kilder:</em> Vi utarbeider saker ved hjelp av KI fra offentlige kilder (pressemeldinger fra regjeringen, departementene og statlige etater, Stortingets vedtak, FN og Europakommisjonen) og om hendelser som er omtalt av flere uavhengige norske medier. Saker som bygger på ett medies egne avsløringer, skriver vi ikke.</li>
-            <li><em>Kvalitetssikring:</em> Før publisering kontrolleres og kvalitetssikres hver sak av redaksjonen mot kilden: at tall, navn og opplysninger har dekning, at sitater er ordrett gjengitt, at påstander er tilskrevet avsenderen, og at språket er korrekt bokmål.</li>
-            <li><em>Produksjonsmerknad:</em> Under hver sak står det åpent hvordan den er utarbeidet ved hjelp av KI eller offentlige data og kvalitetssikret av redaksjonen.</li>
-            <li><em>Redaksjonell oppfølging:</em> Redaksjonen skriver dybdesakene under Forklart og behandler rettelser, klager og henvendelser fra lesere.</li>
+            <li><em>Forklart og datajournalistikk:</em> Skrives av navngitt journalist i redaksjonen (<a href="/forfatter/senol-dak/">{SITE.redaktor}</a>) med selvstendig kildeinnhenting, tabeller, datagrafer og direkte lenker til alle primærkilder under «Kilder».</li>
+            <li><em>Løpende nyhetssaker fra offentlige kilder:</em> Utarbeides på grunnlag av primærdokumenter fra offentlige myndigheter og gjennomgås av redaksjonen mot kildeteksten før publisering, slik at sitater er ordrett gjengitt og synspunkter er tydelig tilskrevet avsenderen.</li>
+            <li><em>Datatjenester:</em> Bygger på strukturerte åpne data fra Norges Bank, Meteorologisk institutt og NVE.</li>
           </ul>
         </li>
         <li>
-          <strong>Åpen og transparent merking:</strong> I tråd med VVP 2.3 merkes all bruk av kunstig intelligens tydelig
-          overfor leseren. Vi merker sakene våre etter nøyaktige produksjonsformer:
-          <ul>
-            <li><em>Laget fra offentlige data:</em> Datasaker utarbeidet på grunnlag av strukturerte offentlige kilder (f.eks. valutakurser fra Norges Bank eller farevarsler fra MET/NVE) og kvalitetssikret av redaksjonen.</li>
-            <li><em>Skrevet ved hjelp av KI:</em> Saker basert på pressemeldinger eller offentlige vedtak, der teksten er skrevet ved hjelp av KI og kvalitetssikret av redaksjonen mot kildeteksten før publisering.</li>
-            <li><em>Skrevet ved hjelp av KI fra flere kilder:</em> Saker om aktuelle hendelser som er omtalt av flere uavhengige norske medier, skrevet ved hjelp av KI og kvalitetssikret av redaksjonen før publisering.</li>
-            <li><em>Forklart:</em> Forklarende saker skrevet av en navngitt forfatter i redaksjonen.</li>
-          </ul>
+          <strong>Kildevern og datasikkerhet (VVP 3.4 og 3.5):</strong> Konfidensielt kildemateriale, personopplysninger eller
+          upublisert materiale som kan identifisere anonyme kilder, legges aldri inn i åpne språkmodeller.
         </li>
         <li>
-          <strong>Faktasjekk og kildedekning:</strong> KI-systemer tillates ikke å spekulere eller «hallusinere». Hvert
-          enkelt faktum, navn, tall og sitat må ha direkte og etterprøvbar dekning i kildedokumentet. Sitater gjengis ordrett,
-          og avsenderens vurderinger tilskrives avsenderen som synspunkter, ikke som nøytrale fakta.
-        </li>
-        <li>
-          <strong>Forbud mot syntetiske forfalskninger:</strong> Vi bruker aldri KI til å generere villedende bilder,
-          deepfakes, syntetiske lydspor eller uekte hendelser. Illustrasjoner og bilder skal være autentiske eller
-          tydelig merket grafikkelementer.
+          <strong>Absolutt forbud mot fotorealistiske KI-bilder (VVP 4.11):</strong> Vi publiserer aldri KI-genererte bilder,
+          videoer eller lydspor som utgir seg for å dokumentere virkelige hendelser eller personer. Redaksjonell grafikk og
+          illustrasjoner merkes alltid eksplisitt med <em>«Illustrasjon: tidsrøst»</em>.
         </li>
       </ul>
 

@@ -1,7 +1,7 @@
 ---
 title: "Over 1,2 millioner kunder i Lånekassen – økt studiestøtte og opptil 60 000 kroner i årlig gjeldssletting i nord"
 description: "Statens lånekasse for utdanning utbetaler over 42 milliarder kroner årlig i stipend og studielån. Økt basisstøtte og nye ordninger for sletting av studielån i distriktskommuner gjør det mer attraktivt å studere og bosette seg i hele landet."
-date: 2026-11-13T08:00:00+01:00
+date: 2026-11-01T08:00:00+01:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Over 1,2 millioner kunder i Lånekassen – økt studiestøtte og opptil 60 000 kroner i årlig gjeldssletting i nord»"

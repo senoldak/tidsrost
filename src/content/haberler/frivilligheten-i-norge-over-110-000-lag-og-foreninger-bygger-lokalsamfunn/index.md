@@ -1,7 +1,7 @@
 ---
 title: "Over 114 000 lag og foreninger i Frivillighetsregisteret – dugnadsinnsatsen tilsvarer 142 000 årsverk"
 description: "Mer enn seks av ti voksne i Norge utfører frivillig arbeid i løpet av året, og antall lag i Frivillighetsregisteret har passert 114 800. Statens fulle momskompensasjon tilfører organisasjonene rundt 2,6 milliarder kroner årlig."
-date: 2026-11-07T08:00:00+01:00
+date: 2026-10-26T08:00:00+01:00
 category: kultur
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Over 114 000 lag og foreninger i Frivillighetsregisteret – dugnadsinnsatsen tilsvarer 142 000 årsverk»"

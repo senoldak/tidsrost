@@ -1,7 +1,7 @@
 ---
 title: "Fødselstallene stiger for andre år på rad – slik ruster Norge seg for en eldre befolkning"
 description: "Fruktbarheten i Norge steg til 1,48 barn per kvinne i 2025 etter bunnoteringen på 1,40 i 2023. Samtidig viser SSBs framskrivinger at andelen over 80 år nesten dobles innen 2050."
-date: 2026-10-14T07:00:00+02:00
+date: 2026-10-02T08:00:00+02:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Fødselstallene stiger for andre år på rad – slik ruster Norge seg for en eldre befolkning»"

@@ -1,7 +1,7 @@
 ---
 title: "Over 90 elektriske bilferger i drift – slik leder norsk skipsfart an i den grønne omstillingen"
 description: "Fra verdens første batteridrevne bilferge på Sognefjorden i 2015 har den elektriske fergeflåten langs norskekysten vokst til 91 fartøy i 2026. Offentlige anbudskrav og maritim teknologi kutter utslipp i fjordene."
-date: 2026-11-06T08:00:00+01:00
+date: 2026-10-25T08:00:00+01:00
 category: teknologi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Over 90 elektriske bilferger i drift – slik leder norsk skipsfart an i den grønne omstillingen»"

@@ -1,7 +1,7 @@
 ---
 title: "Forventet levealder i Norge har nådd 84,8 år for kvinner og 81,7 år for menn"
 description: "Levealderen i Norge er blant de aller høyeste i verden, og forskjellen mellom kvinner og menn er halvert på tre tiår. Kraftig nedgang i hjerte- og karsykdommer og røyking løfter folkehelsen."
-date: 2026-11-08T08:00:00+01:00
+date: 2026-10-27T08:00:00+01:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Forventet levealder i Norge har nådd 84,8 år for kvinner og 81,7 år for menn»"

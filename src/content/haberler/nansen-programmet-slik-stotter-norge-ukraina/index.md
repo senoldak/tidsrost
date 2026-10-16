@@ -1,7 +1,7 @@
 ---
 title: "Nansen-programmet utvides til 344,5 milliarder kroner med ny Ukraina-støtte i 2027"
 description: "Regjeringen foreslår å videreføre Ukraina-støtten på 85 milliarder kroner i 2027, med 70 milliarder til militære formål og 15 milliarder til sivil bistand."
-date: 2026-10-18T08:00:00+02:00
+date: 2026-10-06T08:00:00+02:00
 category: utenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Nansen-programmet utvides til 344,5 milliarder kroner med ny Ukraina-støtte i 2027»"

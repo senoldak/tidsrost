@@ -1,7 +1,7 @@
 ---
 title: "Hver fjerde budsjettkrone hentes fra oljefondet – 608,4 milliarder i 2027-forslaget"
 description: "Regjeringen foreslår å bruke 608,4 milliarder oljekroner i 2027 – tilsvarende 2,7 prosent av fondet og trygt innenfor handlingsregelen. Midlene styrker forsvar, sykehus, kommuner og skattelettelser på arbeidsinntekt."
-date: 2026-10-11T07:00:00+02:00
+date: 2026-09-29T08:00:00+02:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Hver fjerde budsjettkrone hentes fra oljefondet – 608,4 milliarder i 2027-forslaget»"

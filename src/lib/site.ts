@@ -12,7 +12,7 @@ export const SITE = {
   },
   // Sorumlu editör ve iletişim; sitenin altbilgisinde ve "Om oss" sayfasında gösterilir.
   // Boş bırakılan alanlar sitede görünmez.
-  redaktor: '',
+  redaktor: 'Şenol Dak',
   epost: 'redaksjon@tidsrost.com',
   // Yayıncı; şirket kurulursa adı ve organizasyon numarası buraya yazılır.
   utgiver: '',

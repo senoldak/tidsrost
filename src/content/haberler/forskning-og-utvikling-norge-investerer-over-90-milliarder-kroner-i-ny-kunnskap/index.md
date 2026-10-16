@@ -1,7 +1,7 @@
 ---
 title: "Norge investerer 98,2 milliarder kroner i forskning og utvikling – kunstig intelligens og grønn teknologi i front"
 description: "Samlede utgifter til forskning og utviklingsarbeid (FoU) i Norge har vokst til 98,2 milliarder kroner. Næringslivet står for halvparten av innsatsen, mens regjeringens milliardsatsing på kunstig intelligens løfter teknologimiljøene."
-date: 2026-11-03T08:00:00+01:00
+date: 2026-10-22T08:00:00+02:00
 category: teknologi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Norge investerer 98,2 milliarder kroner i forskning og utvikling – kunstig intelligens og grønn teknologi i front»"

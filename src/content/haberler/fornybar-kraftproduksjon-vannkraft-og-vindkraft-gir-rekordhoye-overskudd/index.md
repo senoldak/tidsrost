@@ -1,7 +1,7 @@
 ---
 title: "Over 98 prosent av norsk strøm kommer fra vann, vind og sol"
 description: "Norske kraftverk produserte 159,1 terawattimer strøm i 2025, og nesten hele produksjonen stammer fra fornybare energikilder. Samtidig bygges vannkraftverkene ut med mer effekt gjennom nye oppgraderinger."
-date: 2026-10-30T08:00:00+01:00
+date: 2026-10-18T08:00:00+02:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Over 98 prosent av norsk strøm kommer fra vann, vind og sol»"
