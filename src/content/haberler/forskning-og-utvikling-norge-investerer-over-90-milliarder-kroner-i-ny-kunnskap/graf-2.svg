@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 278" width="760" height="278" role="img" aria-label="FoU-innsats etter utførende sektor i 2025">
+<title>FoU-innsats etter utførende sektor i 2025</title>
+<rect width="760" height="278" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">FoU-innsats etter utførende sektor i 2025</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Milliarder kroner og andel av samlede norske FoU-utgifter</text>
+<text x="230" y="119" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Næringslivet</text>
+<rect x="240" y="104" width="367.5" height="20" fill="#16191c"/>
+<text x="615.5" y="119" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">49,3 mrd. kr (50,2 %)</text>
+<text x="230" y="155" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Universiteter og høgskoler</text>
+<rect x="240" y="140" width="222.1" height="20" fill="#1f5f99"/>
+<text x="470.1" y="155" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">29,8 mrd. kr (30,3 %)</text>
+<text x="230" y="191" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Instituttsektoren</text>
+<rect x="240" y="176" width="142.4" height="20" fill="#1f5f99"/>
+<text x="390.4" y="191" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">19,1 mrd. kr (19,5 %)</text>
+<line x1="240" x2="240" y1="98" y2="204" stroke="#16191c" stroke-width="1"/>
+<line x1="24" x2="736" y1="240" y2="240" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="258" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB og NIFU</text>
+<text x="736" y="258" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

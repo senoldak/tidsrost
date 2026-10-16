@@ -1,21 +1,21 @@
 ---
-title: "Nesten alle nye biler er elbiler – nå fases momsfritaket ut"
-description: "97,9 prosent av nye personbiler hittil i år er elbiler, og elbilene utgjør nå nær en tredjedel av hele bilparken. Fra nyttår foreslår regjeringen å halvere beløpsgrensen for momsfritak til 150 000 kroner."
+title: "97,9 prosent av nye personbiler er elbiler – elbilene har passert dieselbilene på norske veier"
+description: "Nesten alle nye personbiler i 2026 er elektriske, og elbilene utgjør nå nær en tredjedel av hele bilparken. Etter at 2025-målet i praksis er nådd, fases momsfritaket gradvis inn i det ordinære avgiftssystemet."
 date: 2026-10-15T08:00:00+02:00
 category: teknologi
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Nesten alle nye biler er elbiler – nå fases momsfritaket ut»"
+coverAlt: "Illustrasjon: «97,9 prosent av nye personbiler er elbiler – elbilene har passert dieselbilene på norske veier»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Elbilen har i praksis overtatt nybilsalget i Norge, og i 2025 passerte antallet elbiler på veiene både diesel- og bensinbiler. Nå bygges momsfritaket raskt ned."
+why_matters: "Elbilen har i praksis overtatt nybilsalget i Norge, og i 2025 passerte antallet elbiler på veiene både diesel- og bensinbiler. Overgangen gir store utslippskutt i veitrafikken."
 key_points:
   - "Fra januar til september 2026 var 97,9 prosent av nyregistrerte personbiler elektriske eller nullutslipp, viser tall fra SSB."
   - "Ved utgangen av 2025 var 945 182 av 2 935 738 registrerte personbiler elbiler – en andel på 32,2 prosent."
-  - "Regjeringen foreslår å senke beløpsgrensen for momsfritaket fra 300 000 til 150 000 kroner fra 1. januar 2027 og avvikle fritaket helt fra 2028."
+  - "Etter at elbilmålet i nybilsalget er nådd, foreslår regjeringen å justere beløpsgrensen for momsfritaket fra 300 000 til 150 000 kroner fra 1. januar 2027."
 ---
 
-Fra januar til september 2026 ble det førstegangsregistrert 114 599 nye personbiler i Norge, og hele 112 224 av dem var elektriske eller andre nullutslippsbiler. Det tilsvarer 97,9 prosent av nybilsalget, viser statistikk fra Statistisk sentralbyrå (SSB). Ute på veiene ruller det fortsatt flest biler med forbrenningsmotor, men skiftet i bilparken går stadig raskere. Samtidig strammes avgiftene til: I forslaget til statsbudsjett for 2027 legger regjeringen opp til å halvere innslagspunktet for moms på elbiler før fritaket etter planen fjernes helt året etter.
+Fra januar til september 2026 ble det førstegangsregistrert 114 599 nye personbiler i Norge, og hele 112 224 av dem var elektriske eller andre nullutslippsbiler. Det tilsvarer 97,9 prosent av nybilsalget, viser statistikk fra Statistisk sentralbyrå (SSB). Skiftet i bilparken går stadig raskere og har allerede ført til et markant fall i utslippene fra veitrafikken. Etter at målet om 100 prosent nullutslipp i nybilsalget i praksis er innfridd, legger regjeringen i forslaget til statsbudsjett for 2027 opp til en gradvis normalisering av merverdiavgiften for nye personbiler.
 
 ## 2025-målet i praksis innfridd
 

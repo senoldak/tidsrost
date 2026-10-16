@@ -1,40 +1,40 @@
 ---
-title: "Norges Bank hevet renten til 4,50 prosent – slik slår rentesnuoperasjonen ut på boliglånet"
-description: "Etter to rentekutt i fjor har Norges Bank snudd og hevet styringsrenten to ganger i 2026, tilbake til 4,50 prosent. En prisvekst på 3,4 prosent holder rentetoppen oppe lenger enn tidligere antatt."
+title: "Styringsrenten på 4,50 prosent skal bringe prisveksten ned – kjøpekraften ventes å øke videre"
+description: "Norges Bank hevet styringsrenten til 4,50 prosent i september 2026 for å sikre at inflasjonen kommer tilbake til målet på 2 prosent. Samtidig anslås husholdningenes reelle kjøpekraft å vokse med 2,5 prosent i år."
 date: 2026-10-10T07:00:00+02:00
 category: okonomi
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Norges Bank hevet renten til 4,50 prosent – slik slår rentesnuoperasjonen ut på boliglånet»"
+coverAlt: "Illustrasjon: «Styringsrenten på 4,50 prosent skal bringe prisveksten ned – kjøpekraften ventes å øke videre»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Styringsrenten påvirker renten på boliglån og sparing for nesten alle husholdninger. Norges Banks egen prognose viser at renten trolig holdes høy en tid fremover."
+why_matters: "Styringsrenten påvirker renten på boliglån og bankinnskudd for norske husholdninger, og er Norges Banks viktigste virkemiddel for å sikre lav og stabil prisvekst."
 key_points:
-  - "Norges Bank satte styringsrenten opp fra 4,25 til 4,50 prosent 24. september 2026, den andre økningen i år."
-  - "Prisveksten (KPI) var 3,4 prosent i september 2026, mens den underliggende inflasjonen (KPI-JAE) var 3,0 prosent – klart over målet på 2 prosent."
-  - "Renten på nye nedbetalingslån med pant i bolig var 5,31 prosent i august 2026, opp fra 5,05 prosent i mars."
+  - "Norges Bank satte styringsrenten opp fra 4,25 til 4,50 prosent 24. september 2026 for å dempe prisveksten."
+  - "Prisveksten (KPI) var 3,4 prosent i september 2026, mens den underliggende inflasjonen (KPI-JAE) er kommet ned til 3,0 prosent."
+  - "Norges Bank anslår at husholdningenes disponible realinntekt vokser med 2,5 prosent i 2026 og 1,1 prosent i 2027."
 ---
 
-Den 24. september 2026 hevet Norges Bank styringsrenten fra 4,25 til 4,50 prosent. Beslutningen var sentralbankens andre renteheving i 2026, etter at renten først ble satt opp fra 4,00 til 4,25 prosent i mai.
+Den 24. september 2026 satte Norges Bank styringsrenten opp fra 4,25 til 4,50 prosent. Beslutningen følger opp renteøkningen fra 4,00 til 4,25 prosent i mai, og har som formål å bringe prisveksten trygt tilbake til inflasjonsmålet på 2 prosent.
 
-Bak snuoperasjonen ligger en prisvekst som fortsatt biter seg fast et godt stykke over inflasjonsmålet på 2 prosent: Fra september 2025 til september 2026 steg konsumprisindeksen (KPI) med 3,4 prosent, viser tall fra Statistisk sentralbyrå (SSB). Parallelt har rentene på nye boliglån krøpet oppover siden mars. Neste rentemøte i Norges Bank avsluttes 5. november 2026.
+Fra september 2025 til september 2026 var tolvmånedersveksten i konsumprisindeksen (KPI) 3,4 prosent, mens den underliggende prisveksten (KPI-JAE) er kommet ned på 3,0 prosent, viser tall fra Statistisk sentralbyrå (SSB). Samtidig venter Norges Bank at god lønnsvekst gir norske husholdninger økt kjøpekraft både i 2026 og 2027. Neste rentemøte i Norges Bank avsluttes 5. november 2026.
 
-## Tilbake på rentetoppen fra 2023
+## Stabilt rentenivå for å trygge kronekurs og kjøpekraft
 
-Styringsrenten angir hva bankene får i rente på sine innskudd i Norges Bank, og setter gulvet for rentene bankene tilbyr husholdninger og bedrifter. Ved starten av 2021 sto styringsrenten i 0 prosent. Fra september 2021 ble den hevet gradvis gjennom 2022 og 2023, før den nådde 4,50 prosent i desember 2023 – et nivå som ble stående helt til sommeren 2025.
+Styringsrenten angir hva bankene får i rente på sine innskudd i Norges Bank, og danner utgangspunktet for rentene bankene tilbyr husholdninger og bedrifter. Ved starten av 2021 sto styringsrenten i 0 prosent. Fra september 2021 ble den hevet gradvis gjennom 2022 og 2023 til 4,50 prosent i desember 2023.
 
-I juni og september 2025 kuttet Norges Bank renten i to omganger ned til 4,00 prosent. Lettelsen ble imidlertid kortvarig: Med hevingene i mai og september 2026 (med virkning fra 25. september) er styringsrenten tilbake på 4,50 prosent, nøyaktig samme nivå som under rentetoppen mellom desember 2023 og juni 2025.
+Etter to rentekutt i juni og september 2025 ned til 4,00 prosent, har Norges Bank gjennom justeringene i mai og september 2026 lagt styringsrenten tilbake på 4,50 prosent for å sikre at inflasjonen fortsetter nedover mot 2-prosentmålet.
 
 ![Linjediagram som viser styringsrenten og renten på nye nedbetalingslån med pant i bolig for husholdninger fra januar 2021 til september 2026. Styringsrenten steg fra 0 prosent i 2021 til 4,50 prosent fra desember 2023, falt til 4,00 prosent høsten 2025 og var 4,30 prosent i gjennomsnitt i september 2026. Boliglånsrenten steg fra 1,77 prosent i januar 2021 til 5,73 prosent i 2024, falt til 5,05 prosent i mars 2026 og var 5,31 prosent i august 2026.](./graf-1.svg)
 *Styringsrenten (månedsgjennomsnitt) og renten på nye boliglån til husholdninger. Kilde: Norges Bank og SSB.*
 
-## Dyrere råvarer og seig prisvekst
+## Lavere underliggende inflasjon og sterkere krone
 
 Da Norges Banks komité for pengepolitikk og finansiell stabilitet la fram septemberbeslutningen, viste den til at det er «behov for en noe strammere pengepolitikk for å få prisveksten ned til målet innen rimelig tid».
 
 – Prisveksten har ligget over målet i flere år. Ved å sette opp renten bidrar vi til å dempe prisveksten, uttalte sentralbanksjef Ida Wolden Bache.
 
-Komiteen trakk fram et delt inflasjonsbilde: Mens den samlede konsumprisveksten (KPI) har vært høyere enn sentralbanken anslo, har den underliggende prisveksten – målt ved KPI justert for avgiftsendringer og uten energivarer (KPI-JAE) – avtatt og ligget lavere enn ventet. Samtidig har konflikten i Midtøsten skapt ny usikkerhet om prisutsiktene og drevet opp prisene på olje, gass og flere andre råvarer siden juni. På motsatt side bidrar en sterkere kronekurs til å dempe prisveksten på varer Norge importerer fra utlandet.
+Komiteen pekte på at den underliggende prisveksten – målt ved KPI justert for avgiftsendringer og uten energivarer (KPI-JAE) – har avtatt og vært lavere enn ventet, mens internasjonale råvare- og energipriser har trukket den samlede konsumprisindeksen noe opp. Samtidig bidrar en sterkere kronekurs til å dempe prisveksten på varer Norge importerer fra utlandet.
 
 SSBs konsumpristall fra 9. oktober viser en tolvmånedersvekst i KPI på 3,4 prosent og i KPI-JAE på 3,0 prosent i september 2026. Det er klart lavere enn under pristoppen høsten 2022 og sommeren 2023 – da KPI nådde 7,5 prosent i oktober 2022 og KPI-JAE 6,9 prosent i juni 2023 – men begge indeksene har nå ligget sammenhengende over 2-prosentmålet siden februar 2022.
 

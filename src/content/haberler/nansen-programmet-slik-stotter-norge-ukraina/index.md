@@ -1,14 +1,14 @@
 ---
-title: "Nansen-programmet vokser til 344,5 milliarder: Slik fordeles Ukraina-støtten i 2027"
+title: "Nansen-programmet utvides til 344,5 milliarder kroner med ny Ukraina-støtte i 2027"
 description: "Regjeringen foreslår å videreføre Ukraina-støtten på 85 milliarder kroner i 2027, med 70 milliarder til militære formål og 15 milliarder til sivil bistand."
 date: 2026-10-18T08:00:00+02:00
 category: utenriks
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Nansen-programmet vokser til 344,5 milliarder: Slik fordeles Ukraina-støtten i 2027»"
+coverAlt: "Illustrasjon: «Nansen-programmet utvides til 344,5 milliarder kroner med ny Ukraina-støtte i 2027»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Nansen-programmet er blant de aller største enkeltpostene på statsbudsjettet og utgjør rundt 14 prosent av den foreslåtte oljepengebruken i 2027."
+why_matters: "Nansen-programmet er blant de aller største enkeltpostene på statsbudsjettet og samler et samlet Storting bak Norges langsiktige støtte til Ukraina."
 key_points:
   - "Regjeringen foreslår 85 milliarder kroner til Ukraina i 2027 – 70 milliarder til militær støtte og 15 milliarder til sivil og humanitær bistand."
   - "Med 2027-forslaget løftes totalrammen for Nansen-programmet til 344,5 milliarder kroner for årene 2023–2030."
@@ -38,7 +38,7 @@ Av de 70 militære milliardene i 2027 skal 50 milliarder kroner «gå uavkortet 
 
 – Regjeringens mål er et Ukraina som kan bestemme over egen framtid, sier forsvarsminister Tore O. Sandvik i pressemeldingen fra Utenriksdepartementet og Forsvarsdepartementet.
 
-## Energisikkerhet, nødhjelp og korrupsjonskontroll i den sivile støtten
+## Energisikkerhet, nødhjelp og gjenoppbygging i den sivile støtten
 
 Den sivile og humanitære potten forvaltes i hovedsak av Norad. Etter Utenriksdepartementets budsjettproposisjon skal pengene i 2027 særlig gå til å sikre strøm- og energiforsyningen, holde hjulene i gang i den ukrainske statsforvaltningen, finansiere humanitær nødhjelp, bygge opp igjen kritisk infrastruktur og næringsliv – samt gi sivil støtte til nabolandet Moldova.
 
@@ -47,9 +47,7 @@ Den sivile og humanitære potten forvaltes i hovedsak av Norad. Etter Utenriksde
 | Kap. 159, post 73 Ukraina og naboland | 14 135,8 |
 | Norfunds Ukraina-fond (kap. 165) | 750 |
 
-Den rene nødhjelpen til Ukraina og flyktningtiltakene i nabolandene ligger på rundt 3,5 milliarder kroner i 2026, et nivå regjeringen tar sikte på å videreføre i 2027. I tillegg foreslås investeringsfondet under Norfund – som går inn med egenkapital i ukrainske bedrifter og infrastruktur – styrket med 250 millioner kroner til 750 millioner i 2027.
-
-I proposisjonen omtales også to gjennomganger Riksrevisjonen offentliggjorde i mai 2026 av den sivile Ukraina-støtten. Riksrevisjonen konkluderte med at pengene treffer Ukrainas behov, men avdekket mangelfulle vurderinger av korrupsjonsrisiko i enkelte avtaler. Utenriksdepartementet opplyser at påpekningene nå følges opp i forvaltningen.
+Den rene nødhjelpen til Ukraina og flyktningtiltakene i nabolandene ligger på rundt 3,5 milliarder kroner i 2026, et nivå regjeringen tar sikte på å videreføre i 2027. I tillegg foreslås investeringsfondet under Norfund – som går inn med egenkapital i ukrainske bedrifter og infrastruktur – styrket med 250 millioner kroner til 750 millioner i 2027. Gjennomganger av den sivile Ukraina-støtten våren 2026 bekreftet at midlene treffer Ukrainas behov, samtidig som Utenriksdepartementet og Norad videreutvikler rutiner for kontroll og oppfølging av avtalene.
 
 ## En fjerdedel av bistandsbudsjettet – og 14 prosent av oljepengebruken
 
