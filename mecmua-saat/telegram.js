@@ -34,6 +34,17 @@ export function rssOgeleri(xml) {
 
 const kacis = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
+// Telegram bağlantısına UTM (utm_source=telegram&utm_medium=social&utm_campaign=<haber|bulten>). Zaten utm_source'u olan adrese dokunmaz.
+export function utmLink(url, kampanya) {
+  const u = new URL(url);
+  if (!u.searchParams.has('utm_source')) {
+    u.searchParams.set('utm_source', 'telegram');
+    u.searchParams.set('utm_medium', 'social');
+    u.searchParams.set('utm_campaign', kampanya);
+  }
+  return u.href;
+}
+
 // kifobu sabah/öğle/akşam/gece bülteni: başlıklar haberlere bağlantılı (HTML). Telegram sınırı görünen metne uygulanır.
 export function bultenBaglantilari(html, site) {
   const bas = html.indexOf('<article');
@@ -149,23 +160,34 @@ export async function telegramSirasi(env, simdi = new Date()) {
     return `${o.slug} sayfasına erişilemedi (${sayfa.status}, deneme ${d})`;
   }
   const html = await sayfa.text();
-  const foto = html.match(/property="og:image" content="([^"]+)"/)?.[1];
-  // finfolis piyasa bülteni: ilk 3 madde. kifobu sabah/öğle/akşam/gece bülteni: başlıklar haberlere bağlantılı.
-  const baglantilar = /^(sabah|ogle|aksam|gece)-bulteni-/.test(o.slug) ? bultenBaglantilari(html, env.SITE) : [];
-  let ileti;
-  if (baglantilar.length) {
-    ileti = { foto, html: true, metin: bultenAciklamasi({ onek: env.TELEGRAM_ONEK ?? '', baslik: o.baslik, ogeler: baglantilar, link: o.link }) };
-  } else {
-    const maddeler = o.slug.startsWith('piyasa-bulteni') ? bultenMaddeleri(html) : [];
-    const metin = maddeler.length ? maddeler.map((m) => `• ${m}`).join('\n') : o.ozet;
-    ileti = { foto, metin: aciklama({ onek: env.TELEGRAM_ONEK ?? '', baslik: o.baslik, metin, link: o.link }) };
-  }
-
   const bultenMi = Boolean(
     (env.TELEGRAM_BULTEN && env.TELEGRAM_BULTEN.test(o.slug)) ||
     /^(sabah|ogle|aksam|gece)-bulteni-/.test(o.slug) ||
     o.slug.startsWith('piyasa-bulteni')
   );
+  // Yalnız indekslenebilir haberler paylaşılır: noindex (kısa haber) sayfası kanala gitmez, bir daha denenmez.
+  // Bülten yazılarının indeks durumu bu kuralın dışındadır (bülten sayfaları başka sitelerde de kullanılır).
+  if (!bultenMi && /<meta name="robots" content="[^"]*noindex/.test(html)) {
+    gonderilen[o.slug] = simdi.toISOString();
+    await env.TELEGRAM_KV.put(ANAHTAR, JSON.stringify(gonderilen));
+    return `${o.slug}: noindex (kısa haber), kanala gönderilmedi`;
+  }
+  // Telegram'daki her bağlantıya UTM: bülten ya da haber kampanyası.
+  const kampanya = bultenMi ? 'bulten' : 'haber';
+  const foto = html.match(/property="og:image" content="([^"]+)"/)?.[1];
+  // finfolis piyasa bülteni: ilk 3 madde. kifobu sabah/öğle/akşam/gece bülteni: başlıklar haberlere bağlantılı.
+  const baglantilar = /^(sabah|ogle|aksam|gece)-bulteni-/.test(o.slug) ? bultenBaglantilari(html, env.SITE) : [];
+  const link = utmLink(o.link, kampanya);
+  let ileti;
+  if (baglantilar.length) {
+    const ogeler = baglantilar.map((b) => ({ ...b, link: utmLink(b.link, kampanya) }));
+    ileti = { foto, html: true, metin: bultenAciklamasi({ onek: env.TELEGRAM_ONEK ?? '', baslik: o.baslik, ogeler, link }) };
+  } else {
+    const maddeler = o.slug.startsWith('piyasa-bulteni') ? bultenMaddeleri(html) : [];
+    const metin = maddeler.length ? maddeler.map((m) => `• ${m}`).join('\n') : o.ozet;
+    ileti = { foto, metin: aciklama({ onek: env.TELEGRAM_ONEK ?? '', baslik: o.baslik, metin, link }) };
+  }
+
   const hedefDizesi = (bultenMi && env.TELEGRAM_BULTEN_HEDEFLER) ? env.TELEGRAM_BULTEN_HEDEFLER : env.TELEGRAM_HEDEFLER;
 
   // Her hedef ayrı takip edilir: biri gitmişse diğerine yeniden gönderilmez, eksik hedef sonraki turda denenir.

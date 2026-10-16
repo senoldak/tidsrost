@@ -236,3 +236,61 @@ test('telegramSirasi: yalnız bülten gönderen sitede birikmiş bültenlerden y
     globalThis.fetch = orjinalFetch;
   }
 });
+
+test('utmLink: telegram UTM ekler, mevcut UTM\'e dokunmaz', async () => {
+  const { utmLink } = await import('./telegram.js');
+  const u = new URL(utmLink('https://tidsrost.com/artikkel/a/', 'haber'));
+  assert.equal(u.searchParams.get('utm_source'), 'telegram');
+  assert.equal(u.searchParams.get('utm_medium'), 'social');
+  assert.equal(u.searchParams.get('utm_campaign'), 'haber');
+  assert.equal(utmLink(u.href, 'bulten'), u.href);
+});
+
+function noindexSenaryosu(sayfaHtml) {
+  const gonderilenler = [];
+  const kvDepo = {};
+  const sahteKv = { get: async (k) => kvDepo[k] ?? null, put: async (k, v) => { kvDepo[k] = JSON.parse(v); } };
+  const sahteRss = `<rss version="2.0"><channel><item><title>Kısa Haber</title><description>Özet</description><link>https://tidsrost.com/artikkel/kisa-haber/</link><pubDate>${new Date(Date.now() - 3600e3).toUTCString()}</pubDate></item></channel></rss>`;
+  return { gonderilenler, kvDepo, sahteKv, sahteRss, sayfaHtml };
+}
+
+test('telegramSirasi: noindex haber kanala gönderilmez ve bir daha denenmez', async () => {
+  const s = noindexSenaryosu('<html><head><meta name="robots" content="noindex, follow"></head><body><article>kısa</article></body></html>');
+  const orjinalFetch = globalThis.fetch;
+  globalThis.fetch = async (url, opts) => {
+    if (String(url).endsWith('/rss.xml')) return { ok: true, text: async () => s.sahteRss };
+    if (String(url).includes('/artikkel/')) return { ok: true, text: async () => s.sayfaHtml };
+    if (String(url).includes('api.telegram.org')) { s.gonderilenler.push(JSON.parse(opts.body)); return { ok: true, json: async () => ({ ok: true }) }; }
+    return { ok: false, status: 404 };
+  };
+  try {
+    const env = { SITE: 'https://tidsrost.com', TELEGRAM_BOT_TOKEN: 'fake_token', TELEGRAM_KV: s.sahteKv, TELEGRAM_HEDEFLER: '@tidsrost' };
+    const sonuc = await telegramSirasi(env, new Date());
+    assert.match(sonuc, /noindex/);
+    assert.equal(s.gonderilenler.length, 0);
+    assert.equal(typeof s.kvDepo.gonderilen['kisa-haber'], 'string');
+    assert.match(await telegramSirasi(env, new Date()), /Kuyrukta yeni haber yok/);
+  } finally {
+    globalThis.fetch = orjinalFetch;
+  }
+});
+
+test('telegramSirasi: indekslenebilir haber UTM\'li bağlantıyla gider', async () => {
+  const s = noindexSenaryosu('<html><head><meta name="robots" content="index, follow"><meta property="og:image" content="https://tidsrost.com/img.jpg"></head><body><article>Uzun haber</article></body></html>');
+  const orjinalFetch = globalThis.fetch;
+  globalThis.fetch = async (url, opts) => {
+    if (String(url).endsWith('/rss.xml')) return { ok: true, text: async () => s.sahteRss };
+    if (String(url).includes('/artikkel/')) return { ok: true, text: async () => s.sayfaHtml };
+    if (String(url).includes('api.telegram.org')) { s.gonderilenler.push(JSON.parse(opts.body)); return { ok: true, json: async () => ({ ok: true }) }; }
+    return { ok: false, status: 404 };
+  };
+  try {
+    const env = { SITE: 'https://tidsrost.com', TELEGRAM_BOT_TOKEN: 'fake_token', TELEGRAM_KV: s.sahteKv, TELEGRAM_HEDEFLER: '@tidsrost' };
+    const sonuc = await telegramSirasi(env, new Date());
+    assert.match(sonuc, /Başarıyla gönderildi/);
+    const metin = s.gonderilenler[0].caption ?? s.gonderilenler[0].text;
+    assert.match(metin, /utm_source=telegram&utm_medium=social&utm_campaign=haber/);
+  } finally {
+    globalThis.fetch = orjinalFetch;
+  }
+});
