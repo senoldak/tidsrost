@@ -6,6 +6,7 @@ import path from 'node:path';
 import { writeFile, appendFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { skrivSak, lesJsonFil } from './lib.mjs';
+import { butceYukle, geminiPayiBitti } from './butce.mjs';
 import { vurder, velg, UTEN_VURDERING } from './viktighet.mjs';
 import { lesHukommelse, finnDublett, nokkel } from './dublett.mjs';
 import { fjernAdresser } from './hemmelig.mjs';
@@ -34,6 +35,9 @@ const TORR = process.argv.includes('--torr');
 const MAKS = Number(process.env.MAKS_PER_KJORING || 12);
 const SURE_MS = Number(process.env.SURE_DK || 15) * 60_000;
 const BASLANGIC = Date.now();
+
+// Katman 3 (Gemini kota planı): bu turun Gemini payı; yeni habere başlamadan önce geminiPayiBitti() sorulur.
+if (!TORR) console.log(await butceYukle({ url: process.env.MOTOR_URL, anahtar: process.env.MOTOR_ANAHTARI, site: 'tidsrost' }));
 // Bir kaynak ilk kez çalıştığında eski birikim yayınlanmaz: sadece son 24 saatin haberleri alınır
 // (önceden sadece en yeni 2 haber alınıyordu; yeni eklenen kaynakların o günkü haberleri kayboluyordu).
 const FORSTE_GANG_TIMER = 24;
@@ -107,8 +111,12 @@ for (const k of valgt) {
     console.log(`  [tørr] ${k.skjult ? `${k.id} (${k.ider?.length ?? 1} saker)` : `${k.id} — ${k.tittel}`}`);
     continue;
   }
-  if (Date.now() - BASLANGIC > SURE_MS) {
-    console.log(`\nTidsbudsjett utløpt (${SURE_MS / 60_000} min); resterende saker spares til neste kjøring.`);
+  if (Date.now() - BASLANGIC > SURE_MS || geminiPayiBitti()) {
+    console.log(
+      Date.now() - BASLANGIC > SURE_MS
+        ? `\nTidsbudsjett utløpt (${SURE_MS / 60_000} min); resterende saker spares til neste kjøring.`
+        : '\nGemini-budsjettet for denne kjøringen er brukt opp; resterende saker spares til neste kjøring.',
+    );
     break;
   }
   try {
