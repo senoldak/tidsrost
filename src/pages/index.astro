@@ -25,7 +25,7 @@ const varsler = aktiveVarsler();
 const sterke = varsler.filter((v) => v.niva !== 'gult').length;
 ---
 
-<Base>
+<Base description={SITE.forsideBeskrivelse}>
   <h1 class="sr-only">{SITE.name}: {SITE.description}</h1>
   {
     breaking.length > 0 && (

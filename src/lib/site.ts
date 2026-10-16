@@ -1,6 +1,9 @@
 export const SITE = {
   name: 'tidsrøst',
   description: 'Siste nytt fra Norge og verden.',
+  // Ana sayfanın meta açıklaması (SEO, 140–155 karakter); kısa description slogan olarak başlıkta kalır.
+  forsideBeskrivelse:
+    'Siste nytt fra Norge og verden – økonomi, politikk, samfunn og teknologi forklart enkelt, basert på flere uavhengige kilder og offisielle data.',
   locale: 'nb-NO',
   // Sosyal medya hesapları; boş bırakılan link sitede görünmez.
   // Hesap açılınca tam adresi yaz (ör. 'https://x.com/tidsrost').

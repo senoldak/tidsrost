@@ -1,5 +1,5 @@
 ---
-import { SITE, PRODUKSJON } from '../lib/site';
+import { SITE } from '../lib/site';
 import { metaDescription, organization, website } from '../lib/seo';
 import { FORKLART, erForklart, getActiveCategories, getNews } from '../lib/news';
 import Symbol from '../components/Symbol.astro';
@@ -157,21 +157,60 @@ const [nameHead, nameTail] = SITE.name.split('ø');
 
     <footer class="site-footer">
       <div class="container footer-grid">
-        <div>
-          <a href="/" class="logo-sm">{SITE.name}</a>
-          <p>{SITE.description}</p>
-          {SITE.ikkeKommersiell && <p>Ikke-kommersielt nettsted uten annonser og inntekter.</p>}
-          <p>Vi arbeider etter Vær Varsom-plakaten og Redaktørplakaten.</p>
-          <h2 id="alltid-oppdatert-bunn">Alltid oppdatert</h2>
-          <ul aria-labelledby="alltid-oppdatert-bunn">
-            <li><a href="/styringsrenten/"><Symbol kind="data" />Styringsrenten nå</a></li>
-            <li><a href="/farevarsler/"><Symbol kind="varsel" class="sym-varsel-gult" />Farevarsler i dag</a></li>
-            {harTemaer && <li><a href="/tema/"><Symbol kind="tema" />Temaer</a></li>}
-          </ul>
+        <div class="footer-brand">
+          <a href="/" class="logo-sm">
+            {nameTail === undefined ? SITE.name : <>{nameHead}<span class="o">ø</span>{nameTail}</>}
+          </a>
+          <p>
+            Uavhengig norsk nyhetsside som formidler dybdejournalistikk, dataanalyse og løpende nyheter fra Norge og
+            verden.
+          </p>
+          <dl class="footer-ansvar">
+            {
+              SITE.redaktor && (
+                <div>
+                  <dt>Ansvarlig redaktør og journalist</dt>
+                  <dd><a href="/forfatter/senol-dak/">{SITE.redaktor}</a></dd>
+                </div>
+              )
+            }
+            {
+              SITE.epost && (
+                <div>
+                  <dt>Redaksjon og tips</dt>
+                  <dd><a href={`mailto:${SITE.epost}`}>{SITE.epost}</a></dd>
+                </div>
+              )
+            }
+            {
+              SITE.utgiver && (
+                <div>
+                  <dt>Utgiver</dt>
+                  <dd>{SITE.utgiver}{SITE.orgnr && `, org.nr. ${SITE.orgnr}`}</dd>
+                </div>
+              )
+            }
+          </dl>
+          <p class="footer-etikk">
+            Redaksjonen arbeider etter <a href="https://www.presse.no/vaer-varsom-plakaten">Vær Varsom-plakaten</a> og{' '}
+            <a href="https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/redaktorplakaten">Redaktørplakaten</a>{' '}
+            for god presseskikk.
+          </p>
         </div>
-        <section aria-labelledby="tegnforklaring">
-          <h2 id="tegnforklaring">Tegnforklaring</h2>
+
+        <section aria-labelledby="footer-seksjoner">
+          <h2 id="footer-seksjoner">Seksjoner og innhold</h2>
           <ul>
+            {
+              harForklart && (
+                <li>
+                  <a href={`/${FORKLART.slug}/`}>
+                    <Symbol kind="forklart" />
+                    <strong>{FORKLART.name} – dybde og data</strong>
+                  </a>
+                </li>
+              )
+            }
             {
               categories.map((c) => (
                 <li>
@@ -182,28 +221,24 @@ const [nameHead, nameTail] = SITE.name.split('ø');
                 </li>
               ))
             }
-            <li><span class="mark-breaking"><Symbol kind="breaking" />Siste nytt</span></li>
-            <li><span><Symbol kind="varsel" class="sym-varsel-gult" />Farevarsel (gult, oransje, rødt)</span></li>
-            <li><span><Symbol kind="kilde" />Kilde for saken</span></li>
-            {harTemaer && <li><span><Symbol kind="tema" />Tema (institusjon eller emne)</span></li>}
-            <li><span><Symbol kind="data" />Data fra offentlige kilder</span></li>
-            <li><span><Symbol kind="automatisk" />Laget av offentlige data</span></li>
-            {PRODUKSJON['ki-kontrollert'] && <li><span><Symbol kind="ki" />Skrevet ved hjelp av KI</span></li>}
-            <li><span><Symbol kind="rettelse" />Rettelse</span></li>
+            <li><a href="/styringsrenten/"><Symbol kind="data" />Styringsrenten nå</a></li>
+            <li><a href="/farevarsler/"><Symbol kind="varsel" class="sym-varsel-gult" />Farevarsler i dag</a></li>
+            {harTemaer && <li><a href="/tema/"><Symbol kind="tema" />Alle temaer</a></li>}
           </ul>
         </section>
-        <section aria-labelledby="redaksjonen">
-          <h2 id="redaksjonen">Redaksjonen</h2>
-          {SITE.redaktor && <p>Ansvarlig redaktør og journalist: <a href="/forfatter/senol-dak/">{SITE.redaktor}</a></p>}
-          {SITE.utgiver && <p>Utgiver: {SITE.utgiver}{SITE.orgnr && `, org.nr. ${SITE.orgnr}`}</p>}
-          {SITE.epost && <p>Kontakt: <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a></p>}
+
+        <section aria-labelledby="footer-apenhet">
+          <h2 id="footer-apenhet">Åpenhet og informasjon</h2>
           <ul>
-            <li><a href="/om-oss/">Om oss</a></li>
+            <li><a href="/om-oss/">Om {SITE.name}</a></li>
             <li><a href="/redaksjonelle-prinsipper/">Redaksjonelle prinsipper</a></li>
-            <li><a href="/personvern/">Personvern</a></li>
+            <li><a href="/om-oss/#arbeidsmetode">Slik arbeider redaksjonen</a></li>
+            <li><a href="/om-oss/#ki">Bruk av KI i {SITE.name}-artikler</a></li>
+            <li><a href="/redaksjonelle-prinsipper/#rettelser">Rettelser og klager (PFU)</a></li>
+            {SITE.redaktor && <li><a href="/forfatter/senol-dak/">Redaksjonen: {SITE.redaktor}</a></li>}
+            <li><a href="/personvern/">Personvern og informasjonskapsler</a></li>
             {SITE.social.telegram && <li><a href={SITE.social.telegram} rel="noopener noreferrer">Telegram-kanalen</a></li>}
-            <li><a href="/rss.xml">RSS</a></li>
-            <li><a href="/llms.txt">llms.txt</a></li>
+            <li><a href="/rss.xml">RSS-strøm</a></li>
           </ul>
         </section>
       </div>
@@ -211,7 +246,11 @@ const [nameHead, nameTail] = SITE.name.split('ø');
         <BultenSkjema id="bulten-bunn" />
       </div>
       <div class="container copyright">
-        <span>© {new Date().getFullYear()} {SITE.name}. Alle rettigheter forbeholdt.</span>
+        <span>
+          © {new Date().getFullYear()} {SITE.name}
+          {SITE.redaktor && ` · Ansvarlig redaktør: ${SITE.redaktor}`}
+          {SITE.ikkeKommersiell && ' · Ikke-kommersielt nettsted uten annonser'}
+        </span>
         <span>Ark {sheet} · {today}</span>
       </div>
     </footer>
