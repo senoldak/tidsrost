@@ -1,0 +1,55 @@
+---
+// Ukesbrev sayfası. ?durum= mesajları JS'siz de okunabilsin diye tüm metinler sayfada; public/nyhetsbrev.js doğru kutuyu gösterir.
+import Base from '../../layouts/Base.astro';
+import BultenSkjema from '../../components/BultenSkjema.astro';
+import { SITE } from '../../lib/site';
+
+const description = `Ukesbrev fra ${SITE.name}: ukens viktigste saker på e-post, hver mandag. Gratis, uten annonser og uten sporing.`;
+---
+
+<Base title="Ukesbrev på e-post" description={description}>
+  <article class="article">
+    <h1>Ukesbrev på e-post</h1>
+    <p class="lead">
+      Én e-post i uken, hver mandag, med ukens viktigste saker fra {SITE.name}. Når vi har laget en forklaring med tall og
+      grafer, står den også med.
+    </p>
+    <div class="prose">
+      <p class="bulten-generell">
+        Vi sender deg en e-post med en bekreftelseslenke før du får noe. Lenken gjelder i 7 dager.
+      </p>
+
+      <div class="bulten-status" data-durum="kontrol" hidden tabindex="-1">
+        <p>
+          Sjekk e-posten din. Hvis adressen er ny, har vi sendt en bekreftelseslenke. Klikk på den for å bli med. Finner
+          du ingen e-post, sjekk søppelpostmappen.
+        </p>
+      </div>
+      <div class="bulten-status" data-durum="onaylandi" hidden tabindex="-1">
+        <p>Takk! Abonnementet ditt er bekreftet. Du får ukesbrevet hver mandag.</p>
+      </div>
+      <div class="bulten-status" data-durum="gecersiz" hidden tabindex="-1">
+        <p>Lenken er ugyldig eller utløpt. Meld deg på igjen nedenfor, så sender vi en ny bekreftelseslenke.</p>
+      </div>
+      <div class="bulten-status" data-durum="ayrildi" hidden tabindex="-1">
+        <p>Du er meldt av ukesbrevet. Adressen din er slettet fra listen.</p>
+      </div>
+      <div class="bulten-status" data-durum="kapali" hidden tabindex="-1">
+        <p>Ukesbrevet er ikke i drift akkurat nå. Prøv igjen senere.</p>
+      </div>
+      <div class="bulten-status" data-durum="ugyldig" hidden tabindex="-1">
+        <p>Skriv inn en gyldig e-postadresse, for eksempel navn@eksempel.no.</p>
+      </div>
+
+      <h2>Slik fungerer det</h2>
+      <ol>
+        <li>Du skriver inn e-postadressen din nedenfor.</li>
+        <li>Du får en e-post med en bekreftelseslenke. Klikk på den.</li>
+        <li>Hver mandag etter det får du ukens saker. Hver e-post har en lenke for å melde deg av.</li>
+      </ol>
+
+      <BultenSkjema id="bulten-side" />
+    </div>
+  </article>
+  <script src="/nyhetsbrev.js" defer></script>
+</Base>

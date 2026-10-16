@@ -1410,3 +1410,82 @@ main.container {
   flex-wrap: wrap;
   gap: 4px calc(var(--u) * 1.5);
 }
+
+/* Ukesbrev (nyhetsbrev): påmelding i altbilgi, haber sayfası ve /nyhetsbrev/ */
+.bulten-skjema {
+  margin: calc(var(--u) * 4) 0;
+  padding-top: calc(var(--u) * 3);
+  border-top: 1px solid var(--rule);
+}
+.bulten-skjema h2 {
+  margin-bottom: var(--u);
+}
+.bulten-skjema p {
+  margin: 0 0 calc(var(--u) * 2);
+}
+.bulten-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--u);
+  align-items: flex-end;
+}
+.bulten-felt {
+  flex: 1 1 260px;
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+.bulten-felt label {
+  font-family: var(--frame);
+  font-size: 0.875rem;
+}
+.bulten-felt input {
+  font: inherit;
+  width: 100%;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--muted);
+  border-radius: 0;
+  background: var(--paper);
+  color: var(--ink);
+}
+.bulten-form button {
+  font-family: var(--frame);
+  font-weight: 600;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 0;
+  background: var(--ink);
+  color: var(--paper);
+  cursor: pointer;
+}
+.bulten-form button:focus-visible,
+.bulten-felt input:focus-visible {
+  outline: 2px solid var(--water);
+  outline-offset: 2px;
+}
+/* Tuzak alanı: görsel olarak ve klavye/yardımcı teknoloji için gizli. */
+.bulten-web {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.bulten-note {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.bulten-status {
+  margin: calc(var(--u) * 2) 0;
+  padding: calc(var(--u) * 1.5) calc(var(--u) * 2);
+  border-left: 4px solid var(--water);
+  background: var(--water-soft);
+}
+.bulten-status:focus {
+  outline: 2px solid var(--water);
+}
+.bulten-status[hidden],
+.bulten-generell[hidden] {
+  display: none;
+}

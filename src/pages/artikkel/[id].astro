@@ -13,6 +13,7 @@ import { indekserbar } from '../../lib/ordtelling.mjs';
 import { relaterteSaker } from '../../lib/relaterte';
 import Brodsmuler from '../../components/Brodsmuler.astro';
 import DelSaken from '../../components/DelSaken.astro';
+import BultenSkjema from '../../components/BultenSkjema.astro';
 import { aktiveTemaer, temaerPerSak, temaUrl, type Tema } from '../../lib/temaer';
 
 export async function getStaticPaths() {
@@ -222,6 +223,7 @@ const jsonLd = {
     }
 
     <DelSaken url={pageUrl} title={title} />
+    <BultenSkjema id="bulten-sak" />
   </article>
 
   {
