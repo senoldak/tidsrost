@@ -40,6 +40,7 @@ jobs:
         id: hent
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_KULLANIM_DOSYASI: ${{ runner.temp }}/gemini-kullanim.json
           # Haber sitelerinin şifreli listesi ve izi için (bkz. scripts/nyheter/hemmelig.mjs).
           KILDE_NOKKEL: ${{ secrets.KILDE_NOKKEL }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
@@ -100,3 +101,13 @@ jobs:
         run: gh workflow run yayinla.yml --ref "${{ github.ref_name }}"
 
       # Telegram-utsending håndteres av Cloudflare-worker mecmua-saat (repo senoldak/mecmua, mappe saat/): saker spres utover vakten hvert 10. minutt.
+
+      # Katman 0 (Gemini kota planı): bu işin Gemini kullanımını model ve amaç başına mecmua-saat'e bildirir. İşi düşürmez.
+      - name: Gemini kullanımını saate bildir
+        if: always()
+        continue-on-error: true
+        env:
+          GEMINI_KULLANIM_DOSYASI: ${{ runner.temp }}/gemini-kullanim.json
+          MOTOR_URL: ${{ vars.MOTOR_URL }}
+          MOTOR_ANAHTARI: ${{ secrets.MOTOR_ANAHTARI }}
+        run: node scripts/nyheter/gemini-rapor.mjs tidsrost
