@@ -1347,15 +1347,29 @@
     "medier:823bf9d008058baa": "2026-10-16T17:21:19.925Z",
     "medier:c1fa1b7aa714eacf": "2026-10-16T17:21:19.925Z",
     "medier:5cb6bf8eae7e5752": "2026-10-16T17:21:19.925Z",
-    "medier:3597e5a36720c3ad": "2026-10-16T17:21:19.925Z"
+    "medier:3597e5a36720c3ad": "2026-10-16T17:21:19.925Z",
+    "medier:edc232bf25c21f6a": "2026-10-16T18:05:22.016Z",
+    "medier:7605bb8aeaad5c49": "2026-10-16T18:05:22.016Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2190": "2026-10-16T18:05:22.016Z",
+    "medier:25eab66e70fc6973": "2026-10-16T18:05:22.016Z",
+    "medier:9006e24a2df4edc4": "2026-10-16T18:05:22.016Z",
+    "medier:4649ea208e87801c": "2026-10-16T18:05:22.016Z",
+    "medier:825650c608b5f502": "2026-10-16T18:07:58.235Z",
+    "medier:fc85eb386b2c3f2b": "2026-10-16T18:07:58.235Z",
+    "medier:fd48e39a68c67f63": "2026-10-16T18:09:28.047Z",
+    "medier:4a31fcf17f3e158f": "2026-10-16T18:09:28.047Z",
+    "medier:ea1acccc197a37dd": "2026-10-16T18:09:28.047Z",
+    "medier:173cecfa4041d401": "2026-10-16T18:09:28.047Z",
+    "medier:cf8303282dba28ca": "2026-10-16T18:09:28.047Z",
+    "medier:53f7e867dec49d32": "2026-10-16T18:10:41.032Z",
+    "medier:a49e6d41d9931b45": "2026-10-16T18:10:41.032Z",
+    "medier:e55134702446f0bb": "2026-10-16T18:10:43.270Z",
+    "medier:15fa0643a9664fb2": "2026-10-16T18:10:43.270Z",
+    "medier:3ab09f04a5d09720": "2026-10-16T18:10:43.270Z",
+    "regjeringen:3178435": "2026-10-16T18:10:43.361Z",
+    "unnews:https://news.un.org/en/story/2026/10/1168617": "2026-10-16T18:16:34.218Z"
   },
-  "feil": {
-    "medier:fd48e39a68c67f63": {
-      "antall": 1,
-      "melding": "Gemini: çok fazla deneme",
-      "tid": "2026-10-16T17:13:27.176Z"
-    }
-  },
+  "feil": {},
   "kilder": {
     "norgesbank": "2026-10-09T22:53:04.344Z",
     "met": "2026-10-09T22:53:04.910Z",

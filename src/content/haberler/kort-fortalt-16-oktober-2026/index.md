@@ -2,7 +2,7 @@
 title: "Kort fortalt 16. oktober 2026"
 description: "Korte meldinger fra departementer, etater og Stortinget 16. oktober 2026, med lenke til hele saken hos avsenderen."
 date: 2026-10-16T10:07:20+02:00
-oppdatert: 2026-10-16T16:04:12+02:00
+oppdatert: 2026-10-16T20:16:34+02:00
 category: innenriks
 produksjon: automatisk
 ---
@@ -15,3 +15,4 @@ Korte meldinger fra offentlige kilder i dag. Hver linje er avsenderens egen titt
 - **Verdensbankens årsmøte: Jobber, kriser og Ukraina på dagsordenen.** Krig, geopolitisk uro, klimakrise, høye gjeldsnivåer og knappere utviklingsfinansiering, var det alvorlige bakteppet for utviklingsminister Åsmund Aukrust deltagelse på Verdensbankens årsmøtet i Bangkok denne uken. *([Utenriksdepartementet / regjeringen.no](https://www.regjeringen.no/no/aktuelt/verdensbankens-arsmote-jobber-kriser-og-ukraina-pa-dagsordenen/id3178401/))*
 - **Nye kontraktar sikrar at alle kan få lokalavisa i postkassa.** Samferdselsdepartementet har sendt ut ein konkurranse om statleg kjøp av avisdistribusjon til postkasser på tysdagar, torsdagar og fredagar til område utan kommersielle avisbodnett. *([Samferdselsdepartementet / regjeringen.no](https://www.regjeringen.no/no/aktuelt/nye-kontraktar-sikrar-at-alle-kan-fa-lokalavisa-i-postkassa/id3178397/))*
 - **Næringsministeren til Kina.** Næringsminister Cecilie Myrseth besøker Beijing og Shanghai sammen med en norsk næringslivsdelegasjon, og er i Kina fra 2. til 6. november. *([Nærings- og fiskeridepartementet / regjeringen.no](https://www.regjeringen.no/no/aktuelt/naringsministeren-til-kina/id3178425/))*
+- **Rekordlav avskoging i Brasil.** Nye tall fra brasilianske myndigheter viser at avskogingen i Amazonas i fjor var på det laveste nivået siden målingene startet for nesten 40 år siden. Resultatene er et formidabelt bidrag i arbeidet for å bevare verdens største tropiske regnskog og redusere de globale klimagassutslippene. *([Klima- og miljødepartementet / regjeringen.no](https://www.regjeringen.no/no/aktuelt/rekordlav-avskoging-i-brasil/id3178435/))*
