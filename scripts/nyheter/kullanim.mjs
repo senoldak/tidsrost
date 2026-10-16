@@ -17,6 +17,9 @@ const AZAMI_SATIR = 40; // saatin kabul ettiği en fazla satır (D1 sorgu sını
 const ATLANAN = new Set(['kullanim.mjs', 'lib.mjs']);
 
 export const kullanim = { cagri: 0, giris: 0, cikis: 0, dusunme: 0 };
+// Günlük kotası dolan (429, PerDay) modeller: bu süreçte bir daha denenmez (lib.mjs), ana model doluysa bütçe
+// yöneticisi yeni habere başlatmaz (butce.mjs).
+export const gunlukDolu = new Set();
 const ayrinti = new Map();
 
 // Çağrının amacı: yığında lib ve sayaç dışındaki ilk dosya ve fonksiyon ("yazar/yaziYaz").

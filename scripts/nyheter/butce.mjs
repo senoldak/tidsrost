@@ -4,7 +4,7 @@
 // %20'lik pay elle çalıştırmalar ve sürprizler için kalır. Harcanmayan pay kendiliğinden sonraki turlara devreder.
 // Bot, yeni bir habere başlamadan önce geminiPayiBitti() sorar; doluysa kalan haberler görülmedi kalır ve sonraki
 // turda yazılır. Saate ulaşılamazsa güvenli varsayılan: sınır × 0,8 / 12. Bu dosya dört botta aynıdır.
-import { kullanim } from './kullanim.mjs';
+import { kullanim, gunlukDolu } from './kullanim.mjs';
 
 // Ücretsiz katman, proje başına günlük istek sınırı (AI Studio, 2026-10-16). Ana model Flash Lite.
 export const GUNLUK_SINIR = { 'gemini-flash-lite-latest': 500 };
@@ -59,5 +59,7 @@ export async function butceYukle({ url, anahtar, site, simdi = new Date(), fetch
   }
 }
 
-export const geminiPayiBitti = () => kullanim.cagri >= pay;
+// Ana modelin günlük kotası dolduysa (429) yedek tek başına günü taşıyamaz: yeni habere başlanmaz.
+export const geminiPayiBitti = () =>
+  kullanim.cagri >= pay || gunlukDolu.has(process.env.GEMINI_MODEL || 'gemini-flash-lite-latest');
 export const butceDurumu = () => ({ pay, harcanan: kullanim.cagri });

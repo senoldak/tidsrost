@@ -1,7 +1,7 @@
 // Haber botu için ortak yardımcılar: indirme, RSS okuma, HTML temizleme, Gemini, dosya yazma.
 import { mkdir, readFile, writeFile, access } from 'node:fs/promises';
 import path from 'node:path';
-import { kullanimEkle, hataEkle, amacBul } from './kullanim.mjs';
+import { kullanimEkle, hataEkle, amacBul, gunlukDolu } from './kullanim.mjs';
 import { sakKapagi, kapakCiz, tilPng } from './bilde.mjs';
 
 export const USER_AGENT = 'tidsrost-nyhetsbot/1.0 (+https://github.com/senoldak/tidsrost)';
@@ -137,7 +137,14 @@ export async function gemini({ prompt, schema, tenkning: niva = 'low', denetim =
   // Düşünme seviyesini düşük tutmak cevabı çok hızlandırıyor; desteklemeyen modelde kapatılır.
   let tenkning = { thinkingLevel: niva };
   for (let forsok = 1; forsok <= enFazla; forsok++) {
-    const model = modeller[(forsok - 1) % modeller.length];
+    // 429 disiplini (Gemini kota planı): günlük kotası dolan model bu süreçte bir daha denenmez.
+    const acik = modeller.filter((m) => !gunlukDolu.has(m));
+    if (!acik.length) {
+      const hata = new Error('Gemini: bütün modellerin günlük kotası dolu');
+      hata.kota = true;
+      throw hata;
+    }
+    const model = acik[(forsok - 1) % acik.length];
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
     const res = await fetch(url, {
       method: 'POST',
@@ -160,6 +167,11 @@ export async function gemini({ prompt, schema, tenkning: niva = 'low', denetim =
     }
     if (res.status === 429 || res.status >= 500) {
       hataEkle(model, amac, res.status);
+      if (res.status === 429 && /PerDay/i.test(await res.clone().text())) {
+        gunlukDolu.add(model);
+        console.warn(`  Gemini 429 (${model}): günlük kota doldu; bu turda bir daha denenmez`);
+        continue;
+      }
       console.warn(`  Gemini ${res.status} (${model}), ${forsok}. deneme; bekleniyor...`);
       if (forsok < enFazla) await sleep(GEMINI_BEKLEMELER_SN[forsok - 1] * 1000 * carpan);
       continue;
