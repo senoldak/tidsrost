@@ -7,9 +7,9 @@ tidsrøst er en uavhengig, ikke-kommersiell norsk nyhetsformidler som samler og 
 ## Redaksjonelle prinsipper og etikk
 - **Vær Varsom-plakaten og Redaktørplakaten**: tidsrøst arbeider i tråd med pressens etiske regelverk (Vær Varsom-plakaten) og prinsippene i Redaktørplakaten for redaksjonell uavhengighet.
 - **VVP 2.3 – Åpenhet om metode og kunstig intelligens**: tidsrøst praktiserer full åpenhet om hvordan alt innhold produseres:
-  - *Datasaker*: Valutakurser fra Norges Bank, farevarsler fra Meteorologisk institutt (MET) og flom- og skredvarsler fra NVE lages automatisk på grunnlag av offentlige data.
-  - *KI-skrevne saker*: Saker fra offentlige kilder (pressemeldinger fra regjeringen, departementene, statlige etater og Stortinget) og om hendelser omtalt av flere uavhengige norske medier skrives av kunstig intelligens (KI) og kontrolleres automatisk mot kildeteksten (sitatlojalitet, tallbelegg og tilskriving) før publisering. De leses ikke av et menneske på forhånd; en produksjonsmerknad under hver sak forteller hvordan den er laget.
-  - *Forklart og rettelser*: En menneskelig redaktør skriver Forklart-sakene og behandler rettelser og klager.
+  - *Datasaker*: Valutakurser fra Norges Bank, farevarsler fra Meteorologisk institutt (MET) og flom- og skredvarsler fra NVE lages på grunnlag av offentlige data og kvalitetssikres av redaksjonen.
+  - *KI-assisterte saker*: Saker fra offentlige kilder (pressemeldinger fra regjeringen, departementene, statlige etater og Stortinget) og om hendelser omtalt av flere uavhengige norske medier skrives ved hjelp av kunstig intelligens (KI) og kvalitetssikres av redaksjonen mot kildeteksten (sitatlojalitet, tallbelegg og tilskriving) før publisering. En produksjonsmerknad under hver sak forteller hvordan den er laget og kvalitetssikret.
+  - *Forklart og rettelser*: Redaksjonen skriver Forklart-sakene og behandler rettelser og klager.
 - **Rettelser (VVP 4.13)**: Faktiske feil rettes åpent og markeres med tydelig rettelsesmerknad øverst i artikkelen.
 
 ## Kjerneområder og seksjoner

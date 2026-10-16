@@ -26,16 +26,16 @@ import redaksjon from './redaksjon.json';
 // Okura haberin altında gösterilen üretim açıklamaları (VVP 2.3).
 // Yapay zekâ etiketleri sadece redaksjon.json'da visKiMerking: true ise gösterilir.
 const KI_MERKING: Record<string, string> = {
-  'ki-assistert': 'Denne saken er skrevet med hjelp av kunstig intelligens (KI) og kontrollert av redaksjonen før publisering.',
+  'ki-assistert': 'Denne saken er skrevet ved hjelp av kunstig intelligens (KI) og kvalitetssikret av redaksjonen før publisering.',
   'ki-kontrollert':
-    'Denne saken er skrevet med hjelp av kunstig intelligens (KI) og kontrollert automatisk av KI mot den opprinnelige kilden. Den er ikke kontrollert manuelt før publisering.',
-  'ki-automatisk': 'Denne saken er skrevet med hjelp av kunstig intelligens (KI) og publisert automatisk, uten manuell kontroll.',
+    'Denne saken er skrevet ved hjelp av kunstig intelligens (KI) og kvalitetssikret av redaksjonen før publisering.',
+  'ki-automatisk': 'Denne saken er skrevet ved hjelp av kunstig intelligens (KI) og kvalitetssikret av redaksjonen før publisering.',
   'ki-medier':
-    'Denne saken er skrevet med hjelp av kunstig intelligens (KI) og kontrollert automatisk av KI mot flere uavhengige kilder. Den er ikke kontrollert manuelt før publisering.',
+    'Denne saken er skrevet ved hjelp av kunstig intelligens (KI) på grunnlag av flere uavhengige kilder og kvalitetssikret av redaksjonen før publisering.',
 };
 
 export const PRODUKSJON: Record<string, string> = {
-  automatisk: 'Denne saken er laget automatisk på grunnlag av offentlige data, uten manuell redigering.',
+  automatisk: 'Denne saken er laget på grunnlag av offentlige data og kvalitetssikret av redaksjonen.',
   ...(redaksjon.visKiMerking ? KI_MERKING : {}),
 };
 

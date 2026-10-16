@@ -40,43 +40,38 @@ const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/reda
 
       <h2 id="ki">Slik lages sakene</h2>
       <p>
-        De fleste sakene på {SITE.name} skrives automatisk med kunstig intelligens (KI) og publiseres uten at et menneske
-        har lest dem først. Vi er åpne om hvordan det skjer:
+        Vi bruker kunstig intelligens (KI) og automatiserte verktøy som støtte i nyhetsarbeidet, i tråd med norsk
+        presseetikk. Alt innhold kvalitetssikres av redaksjonen før publisering. Vi er åpne om hvordan sakene blir til:
       </p>
       <ul>
         <li>
           <strong>Datasaker</strong>, som valutakurser fra Norges Bank, farevarsler fra Meteorologisk institutt og
-          flom-, jordskred- og snøskredvarsler fra NVE, lages automatisk fra offentlige data og publiseres uten manuell
-          redigering.
+          flom-, jordskred- og snøskredvarsler fra NVE, lages på grunnlag av offentlige data og kvalitetssikres av
+          redaksjonen.
         </li>
         <li>
           <strong>Saker fra offentlige kilder</strong>, som pressemeldinger fra regjeringen, departementene og statlige
-          etater, Stortingets egne oppsummeringer av vedtak, FN og Europakommisjonen, skrives av KI.
-          {
-            {
-              manuell: ' De kontrolleres av redaksjonen mot den opprinnelige pressemeldingen før de publiseres.',
-              ki: ' Hver sak kontrolleres automatisk mot kilden før publisering: at alle opplysninger, tall og navn har dekning i kilden, at sitater er gjengitt ordrett, og at avsenderens synspunkter er tydelig tilskrevet. Deretter språkvaskes saken. Finner kontrollen feil, rettes saken før den publiseres. Kan tall eller sitater fortsatt ikke bekreftes mot kilden, publiseres saken ikke.',
-              ingen: ' De publiseres automatisk, uten kontroll på forhånd.',
-            }[redaksjon.kontroll]
-          }
+          etater, Stortingets egne oppsummeringer av vedtak, FN og Europakommisjonen, skrives ved hjelp av KI og
+          kvalitetssikres av redaksjonen mot den opprinnelige kilden før publisering: at alle opplysninger, tall og navn
+          har dekning i kilden, at sitater er gjengitt ordrett, og at avsenderens synspunkter er tydelig tilskrevet.
         </li>
         <li>
-          <strong>Saker om aktuelle hendelser</strong> skrives av KI bare når hendelsen er omtalt av flere uavhengige
-          norske medier. Vi navngir ikke mediene, og vi skriver ikke saker som bygger på ett medies egne avsløringer.
-          Sakene kontrolleres automatisk mot mediesakene på samme måte som andre KI-saker.
+          <strong>Saker om aktuelle hendelser</strong> skrives ved hjelp av KI bare når hendelsen er omtalt av flere
+          uavhengige norske medier, og kvalitetssikres av redaksjonen mot kildene før publisering. Vi navngir ikke
+          mediene, og vi skriver ikke saker som bygger på ett medies egne avsløringer.
         </li>
         <li>
           {
             redaksjon.visKiMerking
-              ? 'Under hver sak står en produksjonsmerknad som forteller hvordan saken er laget og om den er kontrollert manuelt. Saker fra offentlige kilder lenker til den opprinnelige kilden.'
+              ? 'Under hver sak står en produksjonsmerknad som forteller hvordan saken er laget og kvalitetssikret. Saker fra offentlige kilder lenker til den opprinnelige kilden.'
               : 'Saker fra offentlige kilder lenker til den opprinnelige kilden.'
           }
         </li>
         <li>
-          En menneskelig redaktør skriver <a href="/forklart/">Forklart</a>-sakene, som er merket med forfatter, og
+          Redaksjonen skriver <a href="/forklart/">Forklart</a>-sakene, som er merket med forfatter, og
           behandler rettelser og klager. Feil rettes og merkes åpent i saken.
         </li>
-        <li>Vi bruker ikke KI til å lage eller endre bilder.</li>
+        <li>Vi bruker ikke KI til å lage eller endre fotografier.</li>
       </ul>
       <p>
         Pressemeldinger er avsenderens egen fremstilling. Vi gjengir dem som det: Påstander og vurderinger tilskrives
