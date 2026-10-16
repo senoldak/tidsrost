@@ -22,9 +22,10 @@
       "migrations_dir": "migrations"
     }
   ],
-  // "0 6 * * 1": pazartesi 06:00 UTC haftalık bülten. "30 5 * * *": ayrıca her gün süresi dolan onaysız kayıtları siler.
+  // Her gün 06:00 UTC: süresi dolan onaysız kayıtları siler; haftalık bülteni haftanın ilk çalışmasında (pazartesi) bir kez gönderir.
+  // Tek cron: ücretsiz planda hesap başına 5 cron sınırı var.
   "triggers": {
-    "crons": ["0 6 * * 1", "30 5 * * *"]
+    "crons": ["0 6 * * *"]
   },
   // Gönderen adı görünür; adres ASCII kalır. RESEND_API_KEY bir Worker secret'ıdır (wrangler secret put), buraya yazılmaz.
   "vars": {

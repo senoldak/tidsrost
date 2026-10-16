@@ -21,7 +21,6 @@ import {
   yeniBelirtec,
 } from './lib.mjs';
 
-const UKE_CRON = '0 6 * * 1'; // pazartesi 06:00 UTC: haftalık gönderim
 
 const yonlendir = (durum) =>
   new Response(null, { status: 303, headers: { Location: `/nyhetsbrev/?durum=${durum}`, 'Cache-Control': 'no-store' } });
@@ -141,13 +140,13 @@ async function haftalikIcerik(env) {
 }
 
 /**
- * Zamanlanmış görev. Her gün: süresi dolan bekleyen kayıtları sil.
- * Pazartesi: haftalık bülten (aynı hafta bir kez; gönderim satırı yazılınca tekrar edilmez).
+ * Zamanlanmış görev (her gün 06:00 UTC; ücretsiz planda hesap başına 5 cron sınırı olduğu için tek cron).
+ * Önce süresi dolan bekleyen kayıtlar silinir. Sonra haftalık bülten: haftanın ilk çalışmasında (pazartesi) bir kez
+ * gönderilir; gönderim satırı yazılınca o hafta tekrar edilmez.
  */
 export async function planla(event, env, now = new Date()) {
   const sinir = new Date(now.getTime() - ONAY_SURESI_MS).toISOString();
   await env.DB.prepare("DELETE FROM abone WHERE durum = 'bekliyor' AND olusturma < ?").bind(sinir).run();
-  if (event.cron !== UKE_CRON) return 'bekleyen kayıtlar temizlendi';
 
   const hafta = isoHafta(now);
   const gonderildi = await env.DB.prepare('SELECT 1 AS var FROM gonderim WHERE hafta = ? AND dil = ?').bind(hafta, DIL).first();

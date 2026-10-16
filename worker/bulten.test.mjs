@@ -260,7 +260,7 @@ test('planla: pazartesi haftalık bülteni onaylı abonelere parti halinde gönd
   for (let i = 0; i < 3; i++) ekle.run(`a${i}@ornek.no`, crypto.randomUUID(), '2026-10-01T00:00:00Z');
   db.prepare("INSERT INTO abone (eposta, durum, belirtec, olusturma) VALUES ('bekle@ornek.no', 'bekliyor', ?, ?)").run(crypto.randomUUID(), '2026-10-15T00:00:00Z');
   const pazartesi = new Date('2026-10-19T06:00:00Z');
-  const sonuc = await planla({ cron: '0 6 * * 1' }, env, pazartesi);
+  const sonuc = await planla({ cron: '0 6 * * *' }, env, pazartesi);
   assert.equal(sonuc, '2026-W43: 3 alıcı');
   const gonderimler = calls.filter((c) => c.url.endsWith('/emails/batch'));
   assert.equal(gonderimler.length, 1);
@@ -272,7 +272,7 @@ test('planla: pazartesi haftalık bülteni onaylı abonelere parti halinde gönd
   assert.ok(gonderimler[0].init.headers['Idempotency-Key']);
   assert.deepEqual(satirlar('SELECT hafta, dil, adet FROM gonderim'), [{ hafta: '2026-W43', dil: 'nb', adet: 3 }]);
 
-  const ikinci = await planla({ cron: '0 6 * * 1' }, env, pazartesi);
+  const ikinci = await planla({ cron: '0 6 * * *' }, env, pazartesi);
   assert.equal(ikinci, '2026-W43 zaten gönderildi');
   assert.equal(calls.filter((c) => c.url.endsWith('/emails/batch')).length, 1);
 });
@@ -280,7 +280,7 @@ test('planla: pazartesi haftalık bülteni onaylı abonelere parti halinde gönd
 test('planla: 100den fazla alıcı birden fazla batch çağrısına bölünür', async () => {
   const ekle = db.prepare("INSERT INTO abone (eposta, durum, belirtec, olusturma) VALUES (?, 'onayli', ?, ?)");
   for (let i = 0; i < 150; i++) ekle.run(`k${i}@ornek.no`, crypto.randomUUID(), '2026-10-01T00:00:00Z');
-  await planla({ cron: '0 6 * * 1' }, env, new Date('2026-10-19T06:00:00Z'));
+  await planla({ cron: '0 6 * * *' }, env, new Date('2026-10-19T06:00:00Z'));
   const parti = calls.filter((c) => c.url.endsWith('/emails/batch')).map((c) => JSON.parse(c.init.body).length);
   assert.deepEqual(parti, [100, 50]);
 });
@@ -289,17 +289,16 @@ test('planla: gönderilecek haber yoksa e-posta gitmez ve gonderim yazılmaz', a
   db.prepare("INSERT INTO abone (eposta, durum, belirtec, olusturma) VALUES ('ola@ornek.no', 'onayli', ?, ?)").run(crypto.randomUUID(), '2026-10-01T00:00:00Z');
   sahteFetch({ icerik: { haberler: [], forklart: [] } });
   env.ASSETS = { fetch: (u) => globalThis.fetch(u) };
-  const sonuc = await planla({ cron: '0 6 * * 1' }, env, new Date('2026-10-19T06:00:00Z'));
+  const sonuc = await planla({ cron: '0 6 * * *' }, env, new Date('2026-10-19T06:00:00Z'));
   assert.match(sonuc, /gönderilecek sak yok/);
   assert.equal(calls.filter((c) => c.url.endsWith('/emails/batch')).length, 0);
   assert.equal(satirlar('SELECT * FROM gonderim').length, 0);
 });
 
-test('planla: süresi dolan bekleyen kayıtlar her gün silinir, salı günü gönderim yapılmaz', async () => {
+test('planla: süresi dolan bekleyen kayıtlar her çalışmada silinir', async () => {
   db.prepare("INSERT INTO abone (eposta, durum, belirtec, olusturma) VALUES ('eski@ornek.no', 'bekliyor', ?, ?)").run(crypto.randomUUID(), '2026-10-01T00:00:00Z');
   db.prepare("INSERT INTO abone (eposta, durum, belirtec, olusturma) VALUES ('yeni@ornek.no', 'bekliyor', ?, ?)").run(crypto.randomUUID(), '2026-10-15T00:00:00Z');
-  const sonuc = await planla({ cron: '30 5 * * *' }, env, new Date('2026-10-16T05:30:00Z'));
-  assert.equal(sonuc, 'bekleyen kayıtlar temizlendi');
-  assert.deepEqual(satirlar('SELECT eposta FROM abone'), [{ eposta: 'yeni@ornek.no' }]);
-  assert.equal(calls.length, 0);
+  const sonuc = await planla({ cron: '0 6 * * *' }, env, new Date('2026-10-16T06:00:00Z'));
+  assert.match(sonuc, /onaylı abone yok|gönderilecek sak yok/);
+  assert.deepEqual(satirlar("SELECT eposta FROM abone WHERE durum = 'bekliyor'"), [{ eposta: 'yeni@ornek.no' }]);
 });
