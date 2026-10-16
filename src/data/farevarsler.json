@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-16T18:16:34.847Z",
+  "hentet": "2026-10-16T20:13:07.073Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-16T18:16:26+00:00",
+  "sistEndretHosMet": "2026-10-16T20:11:18+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.261016100000.0839_7_0",
@@ -34,19 +34,6 @@
       "konsekvenser": "Stor fare for at småbåter kan synke: Det ventes sterk isvekst på fronten/styrhuset til båten. Det er stor fare for at båten mister stabilitet, velter og synker. Sterk isvekst kan gjøre det vanskelig å få fjernet isen raskt nok før uhellet er ute. Kraftig isvekst på overflater: Det er stor risiko for en betydelig mengde is på overflater på båter som ferdes i området. Isen vil føre til glatte dekk, gelender og stiger, og operasjoner utendørs blir utfordrende. Redningsutstyr kan bli påvirket: Nedising av redningsteknisk utstyr kan forekomme, og isingen kan ødelegge samband- og kommunikasjonsutstyr.",
       "rad": "Kraftig isvekst på overflater: Fjern is raskt fra båten.",
       "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.20261016064428.072",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Bodø - Melbu",
-      "domene": "hav",
-      "start": "2026-10-13T06:00:00+00:00",
-      "slutt": "2026-10-16T19:00:00+00:00",
-      "beskrivelse": "I dag, fredag, sørvest til vest stiv kuling 15 m/s, periodevis sterk kuling 20. I kveld minkende.",
-      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
       "id": "2.49.0.1.578.0.20261016155839.043",
@@ -173,19 +160,6 @@
       "domene": "hav",
       "start": "2026-10-16T10:00:00+00:00",
       "slutt": "2026-10-17T00:00:00+00:00",
-      "beskrivelse": "Nordvest sterk kuling 20 m/s.",
-      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.261016100000.0853_1_0",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "D3",
-      "domene": "hav",
-      "start": "2026-10-16T10:00:00+00:00",
-      "slutt": "2026-10-16T19:00:00+00:00",
       "beskrivelse": "Nordvest sterk kuling 20 m/s.",
       "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
