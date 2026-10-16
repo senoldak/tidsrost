@@ -60,3 +60,22 @@ test('hep 503: 6 deneme iki model arasında döner; sonraki çağrı kısa dener
     ag.geri();
   }
 });
+
+// Katman 4 (Gemini kota planı): Flash'ın günlük sınırı 20 çağrı. Evet/hayır denetimlerinde yedek Gemma 26B'dir
+// (günde 14.400); yazma, gruplama ve puanlama çağrılarında yedek değişmez.
+test('denetim çağrısında yedek model Gemma; diğer çağrılarda Flash', async () => {
+  let ag = sahteAg([503, 200]);
+  try {
+    assert.deepEqual(await gemini({ prompt: 'x', schema: { type: 'object' }, denetim: true }), { ok: true });
+    assert.deepEqual(ag.modeller, ['gemini-flash-lite-latest', 'gemma-4-26b-a4b-it']);
+  } finally {
+    ag.geri();
+  }
+  ag = sahteAg([503, 200]);
+  try {
+    await cagir();
+    assert.deepEqual(ag.modeller, ['gemini-flash-lite-latest', 'gemini-flash-latest']);
+  } finally {
+    ag.geri();
+  }
+});

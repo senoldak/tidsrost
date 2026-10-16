@@ -114,13 +114,22 @@ let geminiKesik = false;
 let sonGeminiKall = 0;
 
 // Gemini'ye istek atar, JSON şemasına uygun yanıt döner.
-export async function gemini({ prompt, schema, tenkning: niva = 'low' }) {
+// Katman 4 (Gemini kota planı): ücretsiz katmanda Flash günde 20 çağrı, Gemma 26B 14.400 (dakikada 16 bin token).
+// Denemede (2026-10-17) Gemma denetim kararlarında Flash Lite kadar isabetliydi, puanlamada çok daha sıkıydı;
+// bu yüzden yalnız evet/hayır denetimlerinde yedektir.
+export const DENETIM_YEDEK_MODEL = 'gemma-4-26b-a4b-it';
+
+// denetim: evet/hayır denetim çağrısı; yedek model Gemma olur (Katman 4, bkz. DENETIM_YEDEK_MODEL).
+export async function gemini({ prompt, schema, tenkning: niva = 'low', denetim = false }) {
   const key = process.env.GEMINI_API_KEY;
   if (!key) return null;
   const bekle = sonGeminiKall + GEMINI_ARALIK_MS - Date.now();
   if (bekle > 0) await sleep(bekle);
   sonGeminiKall = Date.now();
-  const modeller = [process.env.GEMINI_MODEL || 'gemini-flash-lite-latest', process.env.GEMINI_YEDEK_MODEL || 'gemini-flash-latest'];
+  const yedek = denetim
+    ? process.env.GEMINI_DENETIM_YEDEK_MODEL || DENETIM_YEDEK_MODEL
+    : process.env.GEMINI_YEDEK_MODEL || 'gemini-flash-latest';
+  const modeller = [process.env.GEMINI_MODEL || 'gemini-flash-lite-latest', yedek];
   const carpan = Number(process.env.GEMINI_BEKLE_CARPAN ?? 1);
   const enFazla = geminiKesik ? 2 : GEMINI_BEKLEMELER_SN.length + 1;
   const amac = amacBul(); // Katman 0: çağıran dosya/fonksiyon

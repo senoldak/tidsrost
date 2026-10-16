@@ -215,6 +215,7 @@ export async function vurder(sak, kilde, { pressemelding = true, medier = false 
   const problemer = [...sjekkSitater(tekst, kilde), ...sjekkTall(tekst, kilde), ...sjekkNavn(tekst, kilde), ...sprakSjekk(tekst), ...(medier ? sjekkMedier(tekst) : []), ...sjekkLengde(sak), ...sjekkTittel(utenAvsenderprefiks(sak.title))];
 
   const svar = await gemini({
+    denetim: true,
     schema: VURDERING_SKJEMA,
     prompt: `Du er vaktsjef i en norsk nettavis og kontrollerer et KI-skrevet utkast mot kilden før publisering, etter Vær Varsom-plakaten. Vær streng: ved tvil, ikke godkjenn.
 
