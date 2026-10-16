@@ -99,4 +99,4 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run yayinla.yml --ref "${{ github.ref_name }}"
 
-      # Telegram-utsending håndteres av Cloudflare-worker (mecmua-saat): saker spres utover vakten hvert 10. minutt.
+      # Telegram-utsending håndteres av Cloudflare-worker mecmua-saat (repo senoldak/mecmua, mappe saat/): saker spres utover vakten hvert 10. minutt.
