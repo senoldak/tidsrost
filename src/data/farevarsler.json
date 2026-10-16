@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-16T12:09:05.337Z",
+  "hentet": "2026-10-16T14:04:12.751Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-16T12:08:53+00:00",
+  "sistEndretHosMet": "2026-10-16T14:01:40+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.261016100000.0839_7_0",
@@ -72,19 +72,6 @@
       "beskrivelse": "I dag, fredag, fortsatt sørvestlig stiv kuling 15 m/s, periodevis sterk kuling 20, i ettermiddag dreiende vestlig. Lørdag morgen minkende.",
       "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261016063817.043",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Sandnessjøen - Bodø",
-      "domene": "hav",
-      "start": "2026-10-14T06:00:00+00:00",
-      "slutt": "2026-10-16T14:00:00+00:00",
-      "beskrivelse": "I dag, fredag, fortsatt sørvest stiv kuling 15 m/s. I ettermiddag minkende.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker. Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
