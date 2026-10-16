@@ -27,3 +27,10 @@ export function ordtelling(body = '') {
  * @param {string | undefined} body
  */
 export const indekserbar = (body) => ordtelling(body) >= MIN_ORD_INDEKS;
+
+/**
+ * Lesetid i minutter (200 ord i minuttet, minst 1). Vises bare når den er 2 minutter eller mer:
+ * korte nyhetssaker er alle «1 min» og forteller leseren ingenting.
+ * @param {string | undefined} body
+ */
+export const lesetid = (body) => Math.max(1, Math.round(ordtelling(body) / 200));

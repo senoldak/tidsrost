@@ -1,0 +1,220 @@
+---
+// Åpenhet: hvor mye nyhetsroboten har gått gjennom og publisert, og fra hvilke kildetyper. Medienes navn vises ikke.
+import Base from '../layouts/Base.astro';
+import Brodsmuler from '../components/Brodsmuler.astro';
+import { getNews } from '../lib/news';
+import { SITE } from '../lib/site';
+import { SITE_URL } from '../lib/seo';
+import { apenhetsdata } from '../lib/apenhet.mjs';
+import { dagTittel } from '../lib/arkiv.mjs';
+import data from '../../scripts/nyheter/sett.json';
+
+const v = apenhetsdata(
+  (await getNews()).map((h) => ({ date: h.data.date })),
+  data.sett,
+  { naa: new Date() },
+);
+const tall = (n: number) => n.toLocaleString('nb-NO');
+// Kort dato for diagram og tabell: "10. okt".
+const kort = (d: string) => dagTittel(d).replace(/^(\d+\. \p{L}{3})\p{L}* \d{4}$/u, '$1');
+const andel = (v.andelPublisert * 100).toLocaleString('nb-NO', { maximumFractionDigits: 1 });
+
+// Søylediagram som SVG: høyder settes som attributter (CSP tillater ikke inline-stil).
+const STEG = 44;
+const SOYLE = 26;
+const maks = Math.max(1, ...v.daglig.map((d) => d.publisert));
+const G = {
+  bredde: v.daglig.length * STEG,
+  hoyde: 200,
+  soyler: v.daglig.map((d, i) => {
+    const x = i * STEG + (STEG - SOYLE) / 2;
+    const h = Math.max(2, (d.publisert / maks) * 150);
+    const topp = 176 - h;
+    const r = Math.min(4, h / 2);
+    return {
+      midt: x + SOYLE / 2,
+      topp,
+      verdi: d.publisert,
+      dag: kort(d.dag),
+      merket: v.daglig.length <= 10 || i % 2 === 0,
+      tips: `${kort(d.dag)}: ${d.publisert} artikler, ${tall(d.gjennomgatt)} saker gjennomgått`,
+      sti: `M${x},176 V${topp + r} Q${x},${topp} ${x + r},${topp} H${x + SOYLE - r} Q${x + SOYLE},${topp} ${x + SOYLE},${topp + r} V176 Z`,
+      x,
+    };
+  }),
+};
+---
+
+<Base
+  title="Åpenhet: slik velger vi nyheter"
+  description={`Hvor mange saker ${SITE.name} sin nyhetsrobot har gått gjennom, hvor mange artikler som ble publisert, og fra hvilke kildetyper.`}
+>
+  <Brodsmuler items={[{ name: 'Forsiden', url: `${SITE_URL}/` }, { name: 'Åpenhet', url: `${SITE_URL}/apenhet/` }]} />
+  <header class="page-head">
+    <h1 class="page-title">Åpenhet</h1>
+    <p class="page-intro">
+      Mange av sakene våre lages med hjelp av en nyhetsrobot og kontrolleres før publisering. Her ser du hvor mye
+      roboten har gått gjennom, og hvor lite av det som blir til artikler. Tallene oppdateres ved hver publisering.
+    </p>
+  </header>
+
+  <div class="apenhet">
+    <dl class="nokkeltall" aria-label={`Siste ${v.antallDager} dager`}>
+      <div><dt>Saker gjennomgått</dt><dd>{tall(v.gjennomgatt)}</dd></div>
+      <div><dt>Artikler publisert</dt><dd>{tall(v.publisert)}</dd></div>
+      <div><dt>Publisert per gjennomgått</dt><dd>{andel} %</dd></div>
+      <div><dt>Offentlige kilder</dt><dd>{v.offentlige.kilder}</dd></div>
+    </dl>
+    <p class="periode">Siste {v.antallDager} dager: {kort(v.fra)} – {kort(v.til)}.</p>
+
+    <section aria-labelledby="daglig-tittel">
+      <h2 id="daglig-tittel">Publiserte artikler per dag</h2>
+      <svg class="soyler" viewBox={`0 0 ${G.bredde} ${G.hoyde}`} width={G.bredde} height={G.hoyde} role="img" aria-labelledby="daglig-tittel">
+        <line class="grunnlinje" x1="0" x2={G.bredde} y1="176" y2="176" />
+        {
+          G.soyler.map((s) => (
+            <g class="soyle">
+              <title>{s.tips}</title>
+              <rect class="treff" x={s.x - 6} y="0" width={SOYLE + 12} height={G.hoyde} />
+              <path class="fyll" d={s.sti} />
+              <text class="verdi" x={s.midt} y={s.topp - 6}>{s.verdi}</text>
+              {s.merket && <text class="dag" x={s.midt} y="192">{s.dag}</text>}
+            </g>
+          ))
+        }
+      </svg>
+      <details class="tabellvisning">
+        <summary>Vis som tabell</summary>
+        <table>
+          <thead><tr><th scope="col">Dag</th><th scope="col">Gjennomgått</th><th scope="col">Publisert</th></tr></thead>
+          <tbody>
+            {v.daglig.map((d) => <tr><th scope="row">{kort(d.dag)}</th><td>{tall(d.gjennomgatt)}</td><td>{d.publisert}</td></tr>)}
+          </tbody>
+        </table>
+      </details>
+    </section>
+
+    <section aria-labelledby="kilde-tittel">
+      <h2 id="kilde-tittel">Hvor sakene kommer fra</h2>
+      <table>
+        <thead><tr><th scope="col">Kildetype</th><th scope="col">Saker gjennomgått</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Offentlige etater og organisasjoner ({v.offentlige.kilder} kilder)</th><td>{tall(v.offentlige.saker)}</td></tr>
+          <tr><th scope="row">Norske og internasjonale medier</th><td>{tall(v.medier.saker)}</td></tr>
+        </tbody>
+      </table>
+      <p class="merknad">
+        Vi oppgir ikke navnene på mediene roboten leser. Vi gjengir ikke andres saker: vi sjekker opplysningene mot flere
+        kilder og skriver nyheten selv. Offentlige kilder lenkes alltid i artikkelen. Mer om arbeidsmetoden står under
+        <a href="/redaksjonelle-prinsipper/">redaksjonelle prinsipper</a>.
+      </p>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .apenhet {
+    max-width: 760px;
+    font-family: var(--frame);
+  }
+  .apenhet section {
+    margin-top: calc(var(--u) * 5);
+  }
+  .apenhet h2 {
+    font-size: 1.15rem;
+    margin: 0 0 calc(var(--u) * 2);
+  }
+  .nokkeltall {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+    margin: 0;
+    border-top: 3px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nokkeltall div {
+    padding: 14px 14px 14px 0;
+  }
+  .nokkeltall dt {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .nokkeltall dd {
+    margin: 4px 0 0;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+  .periode,
+  .merknad {
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .soyler {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .grunnlinje {
+    stroke: var(--rule);
+  }
+  .treff {
+    fill: transparent;
+  }
+  .fyll {
+    fill: var(--water);
+  }
+  .soyle:hover .fyll {
+    fill: var(--ink);
+  }
+  .verdi,
+  .dag {
+    text-anchor: middle;
+    font-variant-numeric: tabular-nums;
+  }
+  .verdi {
+    font-size: 12px;
+    fill: var(--ink);
+  }
+  .dag {
+    font-size: 11px;
+    fill: var(--muted);
+  }
+  .tabellvisning {
+    margin-top: calc(var(--u) * 2);
+    font-size: 0.9rem;
+  }
+  .tabellvisning summary {
+    cursor: pointer;
+    color: var(--water);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    font-variant-numeric: tabular-nums;
+    margin-top: 10px;
+  }
+  th,
+  td {
+    text-align: left;
+    padding: 8px 10px 8px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  thead th {
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  td,
+  thead th:not(:first-child) {
+    text-align: right;
+  }
+  th[scope='row'] {
+    font-weight: 500;
+  }
+</style>

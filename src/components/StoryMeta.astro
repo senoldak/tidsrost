@@ -3,6 +3,7 @@
 import Symbol from './Symbol.astro';
 import { SITE, categoryName, formatDay, formatTime, produksjonMerke, varsel } from '../lib/site';
 import { erForklart, FORKLART, forfatterSlug, kilde, type Haber } from '../lib/news';
+import { lesetid } from '../lib/ordtelling.mjs';
 
 interface Props {
   haber: Haber;
@@ -16,6 +17,8 @@ const warn = varsel(title);
 const source = kilde(haber);
 const made = produksjonMerke(produksjon);
 const harForfatter = Boolean(author && author !== SITE.name);
+// Lesetid bare for lengre saker (2 min eller mer), som Forklart-artikler.
+const minutter = lesetid(haber.body);
 ---
 
 <p class="meta">
@@ -31,4 +34,5 @@ const harForfatter = Boolean(author && author !== SITE.name);
   }
   {source && <span class="mark"><Symbol kind="kilde" />{source}</span>}
   {made && <span class="mark"><Symbol kind={made.kind} />{made.label}</span>}
+  {minutter >= 2 && <span class="mark">{minutter} min lesetid</span>}
 </p>

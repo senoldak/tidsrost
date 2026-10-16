@@ -5,6 +5,8 @@ import { readdir, readFile, rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { indekserbar } from './src/lib/ordtelling.mjs';
+import { osloDag } from './src/lib/apenhet.mjs';
+import { ARKIV_TERSKEL } from './src/lib/arkiv.mjs';
 
 // Astro kapakların orijinal PNG'sini de dist/_astro'ya yazar, oysa sayfalar yalnızca türetilmiş dosyaları kullanır.
 // Derleme sonunda hiçbir çıktı dosyasında adı geçmeyen görselleri sileriz. Kaynaktaki kapaklar (src/content) silinmez.
@@ -38,6 +40,8 @@ const haberDizini = fileURLToPath(new URL('./src/content/haberler/', import.meta
 const haberTarihleri = new Map();
 const doluKategoriler = new Set();
 const kisaHaberler = new Set();
+// Arkivdag (Oslo) → antall artikler; dagssider under ARKIV_TERSKEL er noindex og står ikke i kartet.
+const arkivDager = new Map();
 for (const f of await readdir(haberDizini, { recursive: true })) {
   if (!f.endsWith('.md')) continue;
   const metin = await readFile(path.join(haberDizini, f), 'utf8');
@@ -55,18 +59,27 @@ for (const f of await readdir(haberDizini, { recursive: true })) {
   if (!indekserbar(metin)) kisaHaberler.add(`/artikkel/${id}/`);
   const kategori = alan('category');
   if (kategori) doluKategoriler.add(kategori);
+  if (!Number.isNaN(tarih.getTime())) {
+    const dag = osloDag(tarih);
+    const a = arkivDager.get(dag) ?? { antall: 0, sist: tarih };
+    arkivDager.set(dag, { antall: a.antall + 1, sist: a.sist > tarih ? a.sist : tarih });
+  }
 }
 
 const siteHaritasi = sitemap({
   filter: (sayfa) => {
     const yol = new URL(sayfa).pathname;
     if (yol.startsWith('/admin') || yol.startsWith('/404') || kisaHaberler.has(yol)) return false;
+    const arkiv = yol.match(/^\/arkiv\/(\d{4}-\d{2}-\d{2})\/$/)?.[1];
+    if (arkiv && (arkivDager.get(arkiv)?.antall ?? 0) < ARKIV_TERSKEL) return false;
     // Kategorinin 2. ve sonraki sayfaları (/kategori/<slug>/2/) yalnız haber varsa üretilir; haritaya girer.
     const kategori = yol.match(/^\/kategori\/([^/]+)\/$/)?.[1];
     return !kategori || doluKategoriler.has(kategori);
   },
   serialize: (oge) => {
-    const tarih = haberTarihleri.get(new URL(oge.url).pathname);
+    const yol = new URL(oge.url).pathname;
+    const arkiv = yol.match(/^\/arkiv\/(\d{4}-\d{2}-\d{2})\/$/)?.[1];
+    const tarih = arkiv ? arkivDager.get(arkiv)?.sist : haberTarihleri.get(yol);
     return tarih ? { ...oge, lastmod: tarih.toISOString() } : oge;
   },
 });

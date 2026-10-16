@@ -1,0 +1,121 @@
+---
+// Arkiv: én månedskalender per måned; dager med artikler lenker til dagssiden.
+import Base from '../../layouts/Base.astro';
+import Brodsmuler from '../../components/Brodsmuler.astro';
+import { getNews } from '../../lib/news';
+import { SITE } from '../../lib/site';
+import { SITE_URL } from '../../lib/seo';
+import { delPaDager, manedTittel, manedskalender } from '../../lib/arkiv.mjs';
+
+const dager = delPaDager(await getNews());
+const antall = new Map(dager.map((d) => [d.dag, d.artikler.length]));
+const maneder = [...new Set(dager.map((d) => d.dag.slice(0, 7)))];
+const totalt = dager.reduce((t, d) => t + d.artikler.length, 0);
+const UKEDAGER = ['Man', 'Tir', 'Ons', 'Tor', 'Fre', 'Lør', 'Søn'];
+---
+
+<Base title="Arkiv" description={`Alle ${totalt} artikler fra ${SITE.name}, dag for dag i kalenderen.`}>
+  <Brodsmuler items={[{ name: 'Forsiden', url: `${SITE_URL}/` }, { name: 'Arkiv', url: `${SITE_URL}/arkiv/` }]} />
+  <header class="page-head">
+    <h1 class="page-title">Arkiv</h1>
+    <p class="page-intro">Velg en dag for å se alle artiklene vi publiserte den dagen.</p>
+  </header>
+  {
+    maneder.map((mnd) => (
+      <section class="maned" id={`mnd-${mnd}`} aria-labelledby={`mnd-${mnd}-tittel`}>
+        <h2 id={`mnd-${mnd}-tittel`}>{manedTittel(mnd)}</h2>
+        <table class="kalender">
+          <thead>
+            <tr>
+              {UKEDAGER.map((d) => (
+                <th scope="col">{d}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {manedskalender(mnd, antall).map((uke) => (
+              <tr>
+                {uke.map((c) =>
+                  !c ? (
+                    <td />
+                  ) : c.antall > 0 ? (
+                    <td class="har">
+                      <a href={`/arkiv/${c.dag}/`} aria-label={`${c.nr}. ${manedTittel(mnd)}: ${c.antall} artikler`}>
+                        <span class="nr">{c.nr}</span>
+                        <span class="antall">{c.antall}</span>
+                      </a>
+                    </td>
+                  ) : (
+                    <td class="tom">
+                      <span class="nr">{c.nr}</span>
+                    </td>
+                  ),
+                )}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+    ))
+  }
+</Base>
+
+<style>
+  .maned {
+    margin-top: calc(var(--u) * 4);
+    font-family: var(--frame);
+  }
+  .maned h2 {
+    font-size: 1.15rem;
+    margin: 0 0 10px;
+  }
+  .kalender {
+    width: 100%;
+    max-width: 560px;
+    border-collapse: separate;
+    border-spacing: 4px;
+    table-layout: fixed;
+    font-variant-numeric: tabular-nums;
+  }
+  .kalender th {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-bottom: 4px;
+  }
+  .kalender td {
+    height: 52px;
+    padding: 0;
+    vertical-align: top;
+  }
+  .kalender .nr {
+    display: block;
+    font-size: 0.85rem;
+  }
+  .kalender .tom {
+    padding: 6px 8px;
+    color: var(--muted);
+    opacity: 0.5;
+  }
+  .kalender .har a {
+    display: block;
+    height: 100%;
+    padding: 6px 8px;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    color: var(--ink);
+    text-decoration: none;
+    background: var(--surface);
+  }
+  .kalender .har a:hover,
+  .kalender .har a:focus-visible {
+    border-color: var(--water);
+  }
+  .kalender .antall {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.75rem;
+    color: var(--water);
+  }
+</style>
