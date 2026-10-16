@@ -1327,9 +1327,35 @@
     "unnews:https://news.un.org/en/story/2026/10/1168611": "2026-10-16T14:04:12.088Z",
     "norgesbank:valutauke:2026-10-16": "2026-10-16T14:04:12.364Z",
     "regjeringen:3178425": "2026-10-16T14:04:12.414Z",
-    "unnews:https://news.un.org/en/story/2026/10/1168612": "2026-10-16T14:04:12.451Z"
+    "unnews:https://news.un.org/en/story/2026/10/1168612": "2026-10-16T14:04:12.451Z",
+    "medier:ac44fc2a7dc3b784": "2026-10-16T17:10:42.144Z",
+    "unnews:https://news.un.org/en/story/2026/10/1168613": "2026-10-16T17:11:23.861Z",
+    "medier:00669c3cb37ab37c": "2026-10-16T17:11:23.861Z",
+    "medier:a18806b5897ae8d9": "2026-10-16T17:11:23.861Z",
+    "medier:7b5f17ff85c17182": "2026-10-16T17:11:23.861Z",
+    "medier:e001145d9b8f0d70": "2026-10-16T17:13:36.209Z",
+    "medier:502d224a5b99093d": "2026-10-16T17:13:36.209Z",
+    "unnews:https://news.un.org/en/story/2026/10/1168614": "2026-10-16T17:15:36.027Z",
+    "medier:bd225288e7dad18b": "2026-10-16T17:15:44.588Z",
+    "medier:e3d1fb1b95d59be9": "2026-10-16T17:15:44.588Z",
+    "medier:1ca2b834cb769a23": "2026-10-16T17:16:13.532Z",
+    "medier:d56394bc7fcad676": "2026-10-16T17:16:13.532Z",
+    "medier:c82bb6d3ef395edc": "2026-10-16T17:19:29.457Z",
+    "medier:70258e20dad86d03": "2026-10-16T17:19:29.457Z",
+    "medier:aee2ab562d2dafa5": "2026-10-16T17:21:19.925Z",
+    "medier:9b6afc25ba27f319": "2026-10-16T17:21:19.925Z",
+    "medier:823bf9d008058baa": "2026-10-16T17:21:19.925Z",
+    "medier:c1fa1b7aa714eacf": "2026-10-16T17:21:19.925Z",
+    "medier:5cb6bf8eae7e5752": "2026-10-16T17:21:19.925Z",
+    "medier:3597e5a36720c3ad": "2026-10-16T17:21:19.925Z"
   },
-  "feil": {},
+  "feil": {
+    "medier:fd48e39a68c67f63": {
+      "antall": 1,
+      "melding": "Gemini: çok fazla deneme",
+      "tid": "2026-10-16T17:13:27.176Z"
+    }
+  },
   "kilder": {
     "norgesbank": "2026-10-09T22:53:04.344Z",
     "met": "2026-10-09T22:53:04.910Z",
