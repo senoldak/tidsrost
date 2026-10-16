@@ -1,12 +1,33 @@
 {
-  // Cloudflare ayarı: site statik dosyalar olarak yayınlanır (ücretsiz).
+  // Cloudflare ayarı: statik site (dist/) ve ukesbrev Worker'ı (worker/index.ts) aynı Worker'da.
+  // Sayfalar statik sunulur; yalnız /api/* Worker'a gider (run_worker_first).
   "name": "tidsrost",
+  "main": "worker/index.ts",
   "compatibility_date": "2026-10-01",
   "routes": [
     { "pattern": "tidsrost.com", "custom_domain": true }
   ],
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  // Ukesbrev abonneliste (D1). Şema: migrations/0001_bulten.sql. Uzak uygulama ana oturumda yapılır.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "tidsrost-bulten",
+      "database_id": "8b359ffe-8787-4cc8-b641-431a2e2a2597",
+      "migrations_dir": "migrations"
+    }
+  ],
+  // "0 6 * * 1": pazartesi 06:00 UTC haftalık bülten. "30 5 * * *": ayrıca her gün süresi dolan onaysız kayıtları siler.
+  "triggers": {
+    "crons": ["0 6 * * 1", "30 5 * * *"]
+  },
+  // Gönderen adı görünür; adres ASCII kalır. RESEND_API_KEY bir Worker secret'ıdır (wrangler secret put), buraya yazılmaz.
+  "vars": {
+    "BULTEN_GONDEREN": "tidsrøst <nyhetsbrev@tidsrost.com>"
   }
 }
