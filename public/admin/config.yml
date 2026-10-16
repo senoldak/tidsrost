@@ -1,4 +1,4 @@
-# Sveltia CMS ayarları: https://sveltiacms.app/en/docs
+# Sveltia CMS-innstillinger: https://sveltiacms.app/en/docs
 backend:
   name: github
   repo: senoldak/tidsrost
@@ -6,13 +6,13 @@ backend:
 
 site_url: https://tidsrost.com
 display_url: https://tidsrost.com
-locale: tr
+locale: nb
 
-# Yüklenen resimler varsayılan olarak buraya gider (haber kapakları haberin kendi klasörüne kaydedilir).
+# Opplastede mediefiler
 media_folder: /public/uploads
 public_folder: /uploads
 
-# Resimler yüklenirken otomatik olarak WebP'ye çevrilir ve küçültülür.
+# Bildebehandling ved opplasting (konverteres automatisk til WebP)
 media_libraries:
   default:
     config:
@@ -33,8 +33,8 @@ output:
 
 collections:
   - name: haberler
-    label: Haberler
-    label_singular: Haber
+    label: Nyheter
+    label_singular: Nyhetssak
     folder: src/content/haberler
     path: '{{slug}}/index'
     media_folder: ''
@@ -48,17 +48,17 @@ collections:
         field: date
         direction: descending
     view_filters:
-      - { label: Manşet, field: featured, pattern: true }
-      - { label: Son dakika, field: breaking, pattern: true }
-      - { label: Taslaklar, field: draft, pattern: true }
+      - { label: Toppsak, field: featured, pattern: true }
+      - { label: Siste nytt, field: breaking, pattern: true }
+      - { label: Utkast, field: draft, pattern: true }
     view_groups:
       - { label: Kategori, field: category }
     fields:
-      - { name: title, label: Başlık, widget: string }
+      - { name: title, label: Tittel, widget: string }
       - name: description
-        label: Spot (özet)
+        label: Ingress
         widget: text
-        hint: Anasayfada ve paylaşımlarda görünen 1-2 cümlelik özet.
+        hint: Kort sammendrag på 1–2 setninger som vises på forsiden og ved deling.
       - name: category
         label: Kategori
         widget: select
@@ -70,41 +70,41 @@ collections:
           - { label: Sport, value: sport }
           - { label: Kultur, value: kultur }
           - { label: Teknologi, value: teknologi }
-      - { name: date, label: Yayın tarihi, widget: datetime, default: '{{now}}', input_timezone: Europe/Oslo }
-      - { name: cover, label: Kapak resmi, widget: image, required: false }
-      - { name: coverAlt, label: Resim açıklaması, widget: string, required: false }
-      - { name: coverKreditt, label: Resim kaynağı, widget: string, required: false, hint: 'Ör. Foto: Ola Nordmann / NTB. Resim altında gösterilir.' }
-      - { name: author, label: Yazar, widget: string, default: tidsrøst }
+      - { name: date, label: Publiseringstidspunkt, widget: datetime, default: '{{now}}', input_timezone: Europe/Oslo }
+      - { name: cover, label: Forsidebilde, widget: image, required: false }
+      - { name: coverAlt, label: Bildetekst / alt-tekst, widget: string, required: false }
+      - { name: coverKreditt, label: Bildekreditt, widget: string, required: false, hint: 'F.eks. Foto: Ola Nordmann / NTB. Vises under bildet.' }
+      - { name: author, label: Forfatter, widget: string, default: tidsrøst }
       - name: featured
-        label: Manşet
+        label: Toppsak
         widget: boolean
         default: false
-        hint: Açıksa anasayfanın en üstünde büyük olarak gösterilir.
+        hint: Vises som hovedoppslag øverst på forsiden.
       - name: breaking
-        label: Son dakika
+        label: Siste nytt (breaking)
         widget: boolean
         default: false
-        hint: Açıksa anasayfadaki kırmızı "Son dakika" şeridinde gösterilir.
+        hint: Vises i det røde Siste nytt-båndet øverst på forsiden.
       - name: draft
-        label: Taslak
+        label: Utkast
         widget: boolean
         default: false
-        hint: Açıksa haber sitede yayınlanmaz. Bot, yapay zekâyla yazdığı haberleri taslak olarak kaydeder; okuyup kontrol ettikten sonra bu kutuyu kapatıp kaydet.
+        hint: Hvis avkrysset, publiseres ikke saken på nettsiden.
       - name: produksjon
-        label: Üretim şekli
+        label: Produksjonsform
         widget: select
         default: manuell
-        hint: Okura haberin altında gösterilir. Yapay zekâ taslağını kontrol edip yayınlıyorsan "KI-assistert" seçili kalmalı.
+        hint: Opplyser om hvordan saken er utarbeidet (VVP 2.3).
         options:
-          - { label: Elle yazıldı, value: manuell }
-          - { label: Otomatik veri haberi, value: automatisk }
-          - { label: 'KI-assistert (yapay zekâ yazdı, editör kontrol etti)', value: ki-assistert }
-          - { label: 'KI-kontrollert (yapay zekâ yazdı ve kontrol etti)', value: ki-kontrollert }
-          - { label: 'KI-automatisk (kontrol edilmedi)', value: ki-automatisk }
+          - { label: Egenskrevet / manuell, value: manuell }
+          - { label: Automatisk datatjeneste, value: automatisk }
+          - { label: 'KI-assistert (utarbeidet med KI-støtte, redaksjonelt kvalitetssikret)', value: ki-assistert }
+          - { label: 'KI-kontrollert (gjennomgått redaksjonelt)', value: ki-kontrollert }
+          - { label: 'KI-automatisk', value: ki-automatisk }
       - name: rettelse
-        label: Düzeltme notu
+        label: Rettelsesmerknad
         widget: text
         required: false
-        hint: Yayından sonra bir hata düzeltildiyse ne düzeltildiğini Norveççe yaz (ör. "I en tidligere versjon stod det feilaktig ..."). Haberin en üstünde gösterilir.
-      - { name: oppdatert, label: Düzeltme/güncelleme tarihi, widget: datetime, required: false, input_timezone: Europe/Oslo, hint: 'Düzeltme notu eklediğinde ya da haberi güncellediğinde doldur. Haberde "Oppdatert" olarak ve arama motorlarına değiştirilme tarihi olarak gösterilir.' }
-      - { name: body, label: Haber metni, widget: markdown }
+        hint: Dersom en feil er rettet etter publisering, beskrives rettelsen her (VVP 4.13). Vises øverst i saken.
+      - { name: oppdatert, label: Oppdatert tidspunkt, widget: datetime, required: false, input_timezone: Europe/Oslo, hint: 'Oppgis ved oppdateringer eller rettelser. Vises som Oppdatert i saken og i søkemotor-metadata.' }
+      - { name: body, label: Brødtekst, widget: markdown }
