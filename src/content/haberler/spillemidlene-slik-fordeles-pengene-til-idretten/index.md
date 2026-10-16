@@ -1,27 +1,29 @@
 ---
-title: "Spillemidlene: Slik fordeles 4,1 milliarder kroner til idretten i 2026"
-description: "Idretten får 4 115,7 millioner kroner fra Norsk Tippings overskudd i 2026. Halvparten går til anlegg. Her er fordelingen, ventetiden og tallene for fylkene."
+title: "4,1 milliarder i spillemidler til idretten – men foreldrenes lommebok avgjør fortsatt hvem som deltar"
+description: "Idretten får 4 115,7 millioner kroner fra Norsk Tippings overskudd i 2026, og halvparten går til nye anlegg. Samtidig viser tallene et tydelig inntektsgap i barne- og ungdomsidretten."
 date: 2026-10-29T08:00:00+01:00
 category: sport
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Spillemidlene: Slik fordeles 4,1 milliarder kroner til idretten i 2026»"
+coverAlt: "Illustrasjon: «4,1 milliarder i spillemidler til idretten – men foreldrenes lommebok avgjør fortsatt hvem som deltar»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Tilskudd til idrettsanlegg er ifølge departementet statens viktigste virkemiddel for idrett og fysisk aktivitet, og spillemidlene går også direkte til lokale idrettslag. Fordelingen påvirker hvor raskt nye anlegg kan bygges."
+why_matters: "Tilskudd til idrettsanlegg er statens viktigste virkemiddel for idrett og fysisk aktivitet, og spillemidlene går også direkte til lokale idrettslag. Fordelingen påvirker hvor raskt nye anlegg kan bygges."
 key_points:
   - "Hovedfordelingen for 2026 er på 4 115 669 000 kroner, 138 millioner kroner mindre enn i 2025."
-  - "2 066 482 000 kroner fordeles til idrettsanlegg i kommunene, og ifølge departementet er ventetiden på vei ned mot et halvt år."
-  - "SSB-tall for 2024 viser at 59 prosent av barna i familiene med lavest inntekt driver med organisert idrett, mot 83 prosent i familiene med høyest inntekt."
+  - "2 066 482 000 kroner fordeles til idrettsanlegg i kommunene, og ventetiden for tilskudd er på vei ned mot et halvt år."
+  - "59 prosent av barna i familiene med lavest inntekt driver med organisert idrett, mot 83 prosent i familiene med høyest inntekt."
 ---
 
-Idretten får 4 115 669 000 kroner fra overskuddet til Norsk Tipping i 2026. Fordelingen ble fastsatt i statsråd 7. mai 2026, ifølge Kultur- og likestillingsdepartementet. Litt over halvparten av pengene går til bygging og rehabilitering av idrettsanlegg. Resten går blant annet til Norges idrettsforbund og olympiske og paralympiske komité (NIF), lokale idrettslag og tiltak som skal gjøre det lettere for barn fra familier med dårlig råd å delta. Samlet er beløpet 138 millioner kroner lavere enn i 2025, men 27 prosent høyere enn i 2021, regnet i løpende kroner.
+I 2026 får norsk idrett 4 115 669 000 kroner fra overskuddet i Norsk Tipping, etter at fordelingen ble fastsatt i statsråd 7. mai 2026. Litt over halvparten av midlene er øremerket bygging og rehabilitering av idrettsanlegg rundt i landet. Resten fordeles blant annet til Norges idrettsforbund og olympiske og paralympiske komité (NIF), lokale idrettslag og målrettede tiltak som skal senke terskelen for barn fra familier med stram økonomi.
 
-## Slik deles overskuddet fra Norsk Tipping
+Samlet sett er potten 138 millioner kroner mindre enn i toppåret 2025, men 27 prosent høyere enn i 2021 målt i løpende kroner.
 
-Fordelingen av overskuddet til Norsk Tipping er fastsatt i pengespilloven. Departementet beskriver ordningen slik: Først går 6,4 prosent til helse- og rehabiliteringsformål. Av det som er igjen, går 64 prosent til idrettsformål, 18 prosent til kulturformål og 18 prosent til samfunnsnyttige og humanitære organisasjoner. Pengene til idretten fordeles hvert år i den såkalte hovedfordelingen, etter at generalforsamlingen i Norsk Tipping er avholdt.
+## Fordelingsnøkkelen i pengespilloven
 
-Tabellen viser hovedpostene i fordelingen for 2026. Andelene er beregnet ut fra departementets tall.
+Hvordan overskuddet fra Norsk Tipping skal deles, er lovfestet i pengespilloven. Først går 6,4 prosent av overskuddet til helse- og rehabiliteringsformål. Av det resterende beløpet tilfaller 64 prosent idrettsformål, 18 prosent kulturformål og 18 prosent samfunnsnyttige og humanitære organisasjoner. Idrettens andel fordeles hver vår gjennom den såkalte hovedfordelingen etter at Norsk Tipping har avholdt sin generalforsamling.
+
+Slik fordeler Kultur- og likestillingsdepartementet idrettsmidlene i 2026:
 
 | Post | Kroner 2026 | Andel |
 |---|---|---|
@@ -34,52 +36,54 @@ Tabellen viser hovedpostene i fordelingen for 2026. Andelene er beregnet ut fra 
 | Forsknings- og utviklingsarbeid | 42 184 000 | 1,0 % |
 | **Totalt** | **4 115 669 000** | **100 %** |
 
-Tilskuddet til NIF økte fra 930 millioner kroner i 2025 til 965 millioner kroner i 2026. Tilskuddet til lokale lag og foreninger gikk ned fra 553 millioner til 535 millioner kroner. Disse pengene fordeles etter hvor mange 6–19-åringer det er i hver kommune.
+Mens overføringen til NIF økte fra 930 millioner kroner i 2025 til 965 millioner kroner i 2026, ble potten til lokale lag og foreninger redusert fra 553 til 535 millioner kroner. Disse lokale midlene fordeles etter hvor mange innbyggere mellom 6 og 19 år hver enkelt kommune har.
 
 ![Stolpediagram over spillemidler til idrettsformål i hovedfordelingen fra 2021 til 2026, i millioner kroner: 3 231 i 2021, 3 293 i 2022, 3 435 i 2023, 3 723 i 2024, 4 254 i 2025 og 4 116 i 2026.](./graf-1.svg)
 *Spillemidler til idrettsformål etter hovedfordelingen, løpende kroner. Kilde: Kultur- og likestillingsdepartementet.*
 
-## Over to milliarder til anlegg i kommunene
+## Over to milliarder til lokale anlegg
 
-Den største enkeltposten er idrettsanlegg i kommunene. I hovedfordelingen er det satt av 2 016 482 000 kroner. I tillegg bruker departementet 50 millioner kroner av disponible midler, slik at det fordeles 2 066 482 000 kroner. I 2025 var den samme posten på 2 176 152 000 kroner. Det er 110 millioner kroner mer enn i 2026.
+Idrettsanlegg i kommunene utgjør den klart største enkeltposten. I ordinær hovedfordeling er det satt av 2 016 482 000 kroner, og når departementet legger til 50 millioner kroner fra disponible midler, kommer den samlede utbetalingen opp i 2 066 482 000 kroner. I 2025 var den tilsvarende potten på 2 176 152 000 kroner – 110 millioner kroner mer enn i 2026.
 
-Pengene går til bygging og rehabilitering av alt fra store idrettshaller til mindre nærmiljøanlegg. Som hovedregel kan det gis tilskudd til inntil en tredjedel av godkjente kostnader. Departementet fordeler en ramme til hver fylkeskommune, og fylkeskommunene bestemmer hvilke anlegg som får penger.
+Tilskuddene finansierer alt fra store flerbrukshaller til mindre nærmiljøanlegg, og dekker som hovedregel inntil en tredjedel av godkjente anleggskostnader. Staten tildeler en økonomisk ramme til hver fylkeskommune, som deretter avgjør hvilke lokale prosjekter som får penger.
 
-Departementets side for hovedfordelingen inneholder ingen samlet fylkesoversikt for 2026. Fylkeskommunenes egne saker og meldinger viser blant annet disse beløpene:
+Departementet har ikke publisert en samlet nasjonal tabell over fylkesrammene for 2026, men saksdokumenter og meldinger fra flere fylkeskommuner viser store regionale variasjoner i forholdet mellom ramme og søknadsmengde:
 
-- Rogaland fylkeskommune fordelte 220 271 000 kroner.
-- Akershus fylkeskommune fikk tildelt 201 595 000 kroner fra staten.
-- Vestfold fylkeskommune fikk tildelt 96 908 000 kroner. Godkjente søknader i fylket var på til sammen 97 831 000 kroner.
-- Telemark fylkeskommune fikk tildelt 91 448 000 kroner. Med renter og inndratte midler hadde fylket 100 844 000 kroner å fordele, mens godkjente søknader var på 122 698 000 kroner.
-- Finnmark fylkeskommune fikk en ramme på 38 405 000 kroner. Med rentemidler kunne fylket gi 100 prosent av godkjent søknadssum.
-- Trøndelag fylkeskommune opplyste 29. mai 2026 at 230 millioner kroner ble fordelt på 243 søknader.
+- **Rogaland fylkeskommune** fordelte 220 271 000 kroner.
+- **Akershus fylkeskommune** fikk tildelt 201 595 000 kroner fra staten.
+- **Vestfold fylkeskommune** fikk tildelt 96 908 000 kroner, mens godkjente søknader i fylket beløp seg til 97 831 000 kroner.
+- **Telemark fylkeskommune** fikk tildelt 91 448 000 kroner. Inkludert renter og inndratte midler hadde fylket 100 844 000 kroner til disposisjon, mot en godkjent søknadsmasse på 122 698 000 kroner.
+- **Finnmark fylkeskommune** fikk en ramme på 38 405 000 kroner, og kunne ved hjelp av rentemidler innvilge 100 prosent av godkjent søknadssum.
+- **Trøndelag fylkeskommune** opplyste 29. mai 2026 at 230 millioner kroner ble fordelt på 243 søknader.
 
-Ifølge saksdokumentene fra Vestfold og Telemark ble rammene for 2026 beregnet ut fra søknadssum (50 prosent), befolkning (25 prosent) og anleggsdekning (25 prosent). En ny anleggsforskrift trådte i kraft 15. juni 2026. Der skal søknadsbeløp, anleggsdekning og befolkning telle en tredjedel hver.
+For 2026 ble fylkesrammene regnet ut etter en nøkkel der søknadssum veide 50 prosent, befolkning 25 prosent og anleggsdekning 25 prosent, viser saksframleggene fra Vestfold og Telemark. Fra 15. juni 2026 trådte imidlertid en ny anleggsforskrift i kraft, der søknadsbeløp, anleggsdekning og folketall heretter skal telle en tredjedel hver.
 
-## Ventetiden har gått ned
+## Kortere kø, men dyrere nye hallprosjekter
 
-Fordi det lenge kom inn flere søknader enn det var penger til, måtte mange idrettslag og kommuner vente i flere år på tilskudd. Det kalles etterslepet. Ifølge departementets pressemelding fra 7. mai 2026 er ventetiden «på veg ned mot eit halvt år». Departementet skriver at ventetiden var på nesten tre år i 2021.
+I mange år har søknadsbunken vokst raskere enn spillemiddelpotten, slik at kommuner og idrettslag har måttet vente i årevis på utbetaling etter at anleggene sto ferdige. Dette etterslepet er nå kraftig krympet: Mens ventetiden i 2021 var oppe i nesten tre år, opplyste Kultur- og likestillingsdepartementet 7. mai 2026 at ventetiden er «på veg ned mot eit halvt år».
 
-Samtidig melder det seg flere nye prosjekter. Søknadsbeløpet for nye søknader økte med rundt 420 millioner kroner fra 2025 til 2026, ifølge departementet. I Telemark var godkjent søknadsbeløp mer enn dobbelt så stort som året før. Fylkeskommunen begrunner det med flere søknader om store anlegg, særlig idrettshaller.
+Samtidig strømmer det inn nye og kostbare prosjekter. Fra 2025 til 2026 økte det samlede beløpet for nye søknader med rundt 420 millioner kroner på landsbasis. I Telemark alene ble det godkjente søknadsbeløpet mer enn doblet fra året før, drevet av flere søknader om store idrettshaller.
 
-– Idrettsanlegga er motoren i den lokale idretten, sier kultur- og likestillingsminister Lubna Jaffery (Ap) i pressemeldingen.
+– Idrettsanlegga er motoren i den lokale idretten, uttalte kultur- og likestillingsminister Lubna Jaffery (Ap) da årets tildeling ble lagt fram.
 
-## Store forskjeller i hvem som deltar
+## Tydelig inntektsgap blant barna
 
-SSBs undersøkelse Barn si fritid viser at 72,2 prosent av barn mellom 6 og 15 år drev med organisert idrett i 2024. Andelen var 78,2 prosent blant 6–11-åringer og 63,8 prosent blant 12–15-åringer. Deltakelsen varierer mye med hvor mye foreldrene tjener.
+Selv om anleggsdekningen bedres, er det fortsatt store sosiale forskjeller i hvem som bruker idrettstilbudet. I SSBs undersøkelse *Barn si fritid* fra 2024 oppga 72,2 prosent av alle barn mellom 6 og 15 år at de deltok i organisert idrett – 78,2 prosent blant 6–11-åringene og 63,8 prosent blant 12–15-åringene.
+
+Brytes tallene ned etter foreldrenes inntekt, kommer et markant skille til syne:
 
 ![Liggende stolpediagram over andelen barn 6–15 år som driver med organisert idrett i 2024 etter foreldrenes inntekt: 58,8 prosent i laveste inntektskvartil, 69,3 i andre kvartil, 77,8 i tredje kvartil, 82,6 i høyeste kvartil og 72,2 prosent i alt.](./graf-2.svg)
 *Andel barn 6–15 år som driver med organisert idrett, 2024. Kilde: SSB, tabell 14416.*
 
-I en analyse publisert 2. desember 2025 skriver SSB at 45 prosent av foreldrene oppgir at kostnader til utstyr og reiser hindrer barnas idrettsdeltakelse. I familiene med lavest inntekt gjelder det 62 prosent, mot 32 prosent i familiene med høyest inntekt.
+I en analyse publisert 2. desember 2025 pekte SSB på at 45 prosent av foreldrene opplever utgifter til utstyr og reiser som et hinder for barnas deltakelse. Blant familiene med lavest inntekt gjelder dette 62 prosent, mot 32 prosent i familiene med høyest inntekt.
 
-Blant voksne er flere fysisk aktive enn før. SSBs statistikk over levevaner viser at 78 prosent av befolkningen fra 16 år og oppover trener ukentlig eller oftere, mot 58 prosent i 1998. SSB opplyser at tallene fra 2015 og senere ikke er helt sammenlignbare med tidligere år, fordi spørsmålsformuleringen ble endret.
+Blant voksne har treningsaktiviteten økt over tid. I SSBs levekårsstatistikk oppgir 78 prosent av befolkningen fra 16 år og oppover at de trener ukentlig eller oftere, opp fra 58 prosent i 1998. (SSB gjør oppmerksom på at en endret spørsmålsformulering fra 2015 gjør at nyere tall ikke er fullt ut sammenlignbare med eldre årganger.)
 
-## Hva betyr dette for folk flest?
+## Slik treffer midlene hverdagen i idrettslagene
 
-For de fleste merkes spillemidlene gjennom anlegg i nærmiljøet, som haller, baner, løyper og svømmeanlegg. Regjeringen har ifølge budsjettproposisjonen for 2026 prioritert å redusere etterslepet, slik at idrettslag og andre som bygger anlegg, kan få tilskuddet raskere.
+For idrettslag og kommuner som bygger nye kunstgressbaner, svømmeanlegg, haller eller lysløyper, betyr nedbyggingen av etterslepet færre år med renteutgifter på mellomfinansiering før statstilskuddet utbetales.
 
-For familier med barn i idretten er tilskuddet til lokale lag og foreninger viktig. Det er på 535 millioner kroner i 2026, og skal ifølge departementet bidra til flere aktivitetstilbud og til å holde kostnadene i lagene nede. I tillegg går 150 millioner kroner til en ordning for idrettslag i områder med mange barn i familier med lavinntekt. Ifølge departementet skal pengene holde foreldrebetalingen nede. Ordningen ble gjort permanent i 2025.
+For barnefamilier ligger den mest direkte effekten i potten på 535 millioner kroner til lokale lag og foreninger, som skal holde treningsavgiftene nede og breddetilbudet oppe. I tillegg er 150 millioner kroner satt av til en egen støtteordning – som ble gjort permanent i 2025 – rettet mot idrettslag i levekårsutsatte områder for å bremse foreldrebetalingen.
 
 ## Kilder
 

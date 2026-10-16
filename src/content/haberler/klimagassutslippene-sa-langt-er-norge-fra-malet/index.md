@@ -1,40 +1,40 @@
 ---
-title: "Klimagassutslippene: Så langt er Norge fra 2030-målet"
-description: "Norges klimagassutslipp var 44,1 millioner tonn i 2025, 13,9 prosent lavere enn i 1990. Klimaloven krever minst 55 prosent kutt innen 2030."
+title: "Klimagassutslippene er kuttet 13,9 prosent siden 1990 – slik skal Norge nå 55 prosent innen 2030"
+description: "Norges klimagassutslipp falt til 44,1 millioner tonn i 2025, 13,9 prosent under 1990-nivået. Med vedtatt politikk ligger de innenlandske kuttene an til å nå 27 prosent i 2030."
 date: 2026-10-17T08:00:00+02:00
 category: innenriks
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Klimagassutslippene: Så langt er Norge fra 2030-målet»"
+coverAlt: "Illustrasjon: «Klimagassutslippene er kuttet 13,9 prosent siden 1990 – slik skal Norge nå 55 prosent innen 2030»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Klimaloven slår fast at utslippene skal kuttes med minst 55 prosent fra 1990 til 2030. Hvor langt Norge er fra målet, påvirker avgifter, krav og tiltak som berører bilister, bedrifter og husholdninger."
+why_matters: "Klimaloven forplikter Norge til å kutte utslippene med minst 55 prosent fra 1990 til 2030. Avstanden til målet styrer CO₂-avgifter, utslippskrav og hvor mye kvoter Norge må hente gjennom EU-samarbeidet."
 key_points:
-  - "Ifølge foreløpige tall fra SSB var klimagassutslippene i Norge 44,1 millioner tonn CO₂-ekvivalenter i 2025, 1,2 prosent lavere enn i 2024 og 13,9 prosent lavere enn i 1990."
-  - "Olje- og gassutvinning og industri sto hver for om lag en fjerdedel av utslippene, mens veitrafikken hadde den største nedgangen fra 2024, 8,2 prosent."
-  - "Regjeringens anslag viser nasjonale utslipp på om lag 37 millioner tonn i 2030 med vedtatt politikk, 27 prosent under 1990-nivå. Målet er minst 55 prosent kutt."
+  - "Foreløpige tall fra SSB viser at klimagassutslippene i Norge var 44,1 millioner tonn CO₂-ekvivalenter i 2025 – 1,2 prosent lavere enn i 2024 og 13,9 prosent under 1990-nivå."
+  - "Olje- og gassutvinning og industri sto hver for om lag en fjerdedel av utslippene, mens veitrafikken sto for det største kuttet det siste året med en nedgang på 8,2 prosent."
+  - "Regjeringen anslår at innenlandske utslipp med vedtatt politikk vil ligge på rundt 37 millioner tonn i 2030 (27 prosent under 1990-nivå), mot målet om minst 55 prosent kutt."
 ---
 
-Klimagassutslippene i Norge var 44,1 millioner tonn CO₂-ekvivalenter i 2025, ifølge foreløpige tall fra Statistisk sentralbyrå (SSB) publisert 4. juni 2026. Det er 0,5 millioner tonn, eller 1,2 prosent, mindre enn i 2024, og 13,9 prosent mindre enn i 1990. Klimaloven fastsetter at utslippene i 2030 skal være minst 55 prosent lavere enn i 1990. Regjeringens klimastatus og -plan for 2027, lagt fram 7. oktober, viser at nasjonale kutt alene ikke ventes å nå dette målet, og at Norge regner med samarbeidet med EU for å komme nærmere.
+Norges samlede klimagassutslipp endte på 44,1 millioner tonn CO₂-ekvivalenter i 2025, viser foreløpige tall fra Statistisk sentralbyrå (SSB) som ble lagt fram 4. juni 2026. Det er 0,5 millioner tonn (1,2 prosent) mindre enn året før, og 13,9 prosent lavere enn i referanseåret 1990. Etter klimaloven skal utslippene i 2030 være minst 55 prosent lavere enn i 1990. I regjeringens klimastatus og -plan for 2027 (Grønn bok), lagt fram 7. oktober, går det fram at innenlandske kutt alene ikke vil bringe Norge i mål – og at regjeringen baserer seg på klimasamarbeidet med EU for å tette gapet.
 
-## Slik har utslippene utviklet seg siden 1990
+## Mesteparten av kuttene har kommet etter 2019
 
-I referanseåret 1990 var de samlede utslippene 51,2 millioner tonn, ifølge SSBs tabell 13931. Utslippene steg på 1990-tallet og lå mellom 52 og 57 millioner tonn hvert år fra 1996 til 2018. Det høyeste nivået i tidsserien var 56,4 millioner tonn i 2007.
+I referanseåret 1990 slapp Norge ut 51,2 millioner tonn CO₂-ekvivalenter (SSB-tabell 13931). Utover 1990-tallet vokste utslippene, og i hele perioden fra 1996 til 2018 lå de mellom 52 og 57 millioner tonn i året, med en topp på 56,4 millioner tonn i 2007.
 
-Fra 2019 har utslippene falt hvert år. I Klima- og miljødepartementets klimastatus og -plan for 2027, også kalt Grønn bok, står det at mesteparten av nedgangen siden 1990 har skjedd de siste fem årene. Der går det også fram at utslippene falt med over 4 prosent i både 2023 og 2024, mens nedgangen i 2025 var mindre.
+Siden 2019 har pilen pekt nedover hvert eneste år. Som Klima- og miljødepartementet peker på i Grønn bok for 2027, har hovedtyngden av hele utslippsnedgangen siden 1990 kommet i løpet av de siste fem årene. Etter priskutt og omstilling som ga fall på over 4 prosent både i 2023 og 2024, bremset imidlertid nedgangen opp til 1,2 prosent i 2025.
 
 ![Linjediagram over klimagassutslippene i Norge fra 1990 til 2025. Utslippene var 51,2 millioner tonn CO₂-ekvivalenter i 1990, nådde toppen med 56,4 millioner tonn i 2007, var 51,1 millioner tonn i 2019 og falt til 44,1 millioner tonn i 2025. 2030-målet om minst 55 prosent kutt tilsvarer om lag 23,0 millioner tonn.](./graf-1.svg)
 *Utslippene har falt hvert år siden 2019. Tallet for 2025 er foreløpig. Kilde: SSB, tabell 13931.*
 
-– Utslippene fortsetter å synke, men nedgangen er noe svakere enn det vi har sett de siste par årene, sier seniorrådgiver Trude Melby Bothner i SSB i SSBs publisering av tallene.
+– Utslippene fortsetter å synke, men nedgangen er noe svakere enn det vi har sett de siste par årene, sier seniorrådgiver Trude Melby Bothner i SSB i byråets omtale av tallene.
 
-Tallene for 2025 er foreløpige. SSB publiserer endelige tall 4. november 2026. Ifølge SSB blir beregningene for veitrafikk samtidig oppdatert med en ny versjon av beregningsmodellen. Det vil påvirke hele tidsserien fra 1990.
+SSB legger fram det endelige klimaregnskapet for 2025 den 4. november 2026. Da tas det samtidig i bruk en ny versjon av beregningsmodellen for veitrafikk, som vil endre tallene bakover i hele tidsserien helt til 1990.
 
-## Olje og gass og industri står for halvparten
+## Olje, gass og industri står for halvparten av utslippene
 
-Olje- og gassutvinning var den største utslippskilden i 2025 med 10,9 millioner tonn, nesten en fjerdedel av totalen. Utslippene fra sektoren er 32,5 prosent høyere enn i 1990, men gikk ned 0,9 prosent fra 2024. Ifølge SSB økte utslippene på sokkelen noe, mens utslippene fra landanleggene gikk ned.
+Olje- og gassutvinning var også i 2025 den største enkeltkilden med 10,9 millioner tonn – nesten en fjerdedel av alle norske utslipp. Sektoren slipper ut 32,5 prosent mer enn i 1990, men reduserte utslippene med 0,9 prosent fra 2024 til 2025. Nedgangen kom ved landanleggene, mens utslippene ute på sokkelen økte litt.
 
-Industri og bergverk slapp ut 10,7 millioner tonn. Det er 44,0 prosent mindre enn i 1990, men 1,6 prosent mer enn i 2024. Miljødirektoratet skriver at økningen i stor grad kan forklares med mer normal drift etter flere tilfeller av driftsstans ved industrianlegg i 2024.
+Industri og bergverk sto for 10,7 millioner tonn. Siden 1990 har industrien kuttet utslippene med hele 44,0 prosent, men fra 2024 til 2025 gikk utslippene opp med 1,6 prosent. Miljødirektoratet forklarer oppgangen det siste året med at flere industrianlegg hadde lengre driftsstans i 2024 og var tilbake i normal produksjon i 2025.
 
 ![Liggende stolpediagram over klimagassutslipp etter kilde i 2025. Olje- og gassutvinning 10,9 millioner tonn CO₂-ekvivalenter, industri og bergverk 10,7, luftfart, sjøfart, fiske m.m. 7,4, veitrafikk 6,9, jordbruk 4,4, andre kilder 2,1, energiforsyning 1,1 og oppvarming 0,5.](./graf-2.svg)
 *Olje- og gassutvinning og industri var de største utslippskildene i 2025. Foreløpige tall. Kilde: SSB, tabell 13931.*
@@ -48,33 +48,33 @@ Industri og bergverk slapp ut 10,7 millioner tonn. Det er 44,0 prosent mindre en
 | Jordbruk | 4,4 | −9,5 % | +0,9 % |
 | Alle kilder | 44,1 | −13,9 % | −1,2 % |
 
-## Veitrafikken trekker ned
+## Elbilene kutter utslippene på veiene
 
-Veitrafikken bidro mest til nedgangen i 2025. Utslippene fra vei falt med 8,2 prosent fra året før, til 6,9 millioner tonn. Ifølge Miljødirektoratet er dette det laveste nivået i hele tidsserien. SSBs tall viser at utslippene fra veitrafikk var på sitt høyeste i 2015, med 10,3 millioner tonn.
+Det var veitrafikken som trakk de samlede norske utslippene ned i 2025, med et fall på 8,2 prosent på ett år til 6,9 millioner tonn. Ifølge Miljødirektoratet har utslippene fra veitrafikken aldri vært lavere i måleperioden, etter at de toppet seg på 10,3 millioner tonn i 2015.
 
-SSB skriver at det i 2025 var 20 prosent flere elbiler på norske veier enn året før, og at elbiler utgjorde 95 prosent av nyregistrerte personbiler. Miljødirektoratet peker på økt andel elbiler og hybridbiler og mer biodrivstoff som hovedårsakene til nedgangen etter 2015.
+Bak nedgangen ligger utskiftingen av bilparken og økt bruk av biodrivstoff: I løpet av 2025 økte antallet elbiler på norske veier med 20 prosent, og 95 prosent av alle nyregistrerte personbiler var elektriske.
 
-Utslippene fra jordbruket økte 0,9 prosent til 4,4 millioner tonn, i hovedsak på grunn av økt forbruk av mineralgjødsel, ifølge SSB. Luftfart, sjøfart, fiske og motorredskaper slapp ut 7,4 millioner tonn, 38,9 prosent mer enn i 1990.
+I jordbruket gikk derimot utslippene opp med 0,9 prosent til 4,4 millioner tonn, drevet av økt bruk av mineralgjødsel. Kategorien som samler innenriks luftfart, sjøfart, fiske og anleggsmaskiner, endte på 7,4 millioner tonn – 38,9 prosent høyere enn i 1990.
 
-## Avstanden til klimamålet
+## Gapet fram til 2030-målet – og regningen i EU-samarbeidet
 
-Klimaloven § 3 slår fast: «Målet skal være at klimagassutslippene i 2030 reduseres med minst 55 prosent fra utslippsnivået i referanseåret 1990.» For 2035 er målet et kutt på minst 70–75 prosent.
+Etter klimaloven § 3 er det lovfestede målet at «klimagassutslippene i 2030 reduseres med minst 55 prosent fra utslippsnivået i referanseåret 1990», mens målet for 2035 er et kutt på minst 70–75 prosent.
 
-Regnet ut fra SSBs tall for 1990 tilsvarer et kutt på 55 prosent utslipp på om lag 23,0 millioner tonn. Utslippene i 2025 var dermed rundt 21 millioner tonn over dette nivået.
+Regnet ut fra 1990-utslippene på 51,2 millioner tonn tilsvarer et kutt på 55 prosent at utslippene må ned til rundt 23,0 millioner tonn. I 2025 lå norske utslipp dermed fortsatt rundt 21 millioner tonn over en rent nasjonal 55-prosentgrense.
 
-Regjeringens framskrivinger i Grønn bok viser at utslippene med vedtatt politikk anslås til om lag 37 millioner tonn i 2030, en reduksjon på 27 prosent fra 1990. Med regjeringens planlagte politikk anslås utslippene til 34 millioner tonn, en reduksjon på 33 prosent. Departementet understreker at anslagene er usikre.
+Regjeringens egne framskrivinger i Grønn bok viser at allerede vedtatt politikk vil bringe de innenlandske utslippene ned til rundt 37 millioner tonn i 2030 – et kutt på 27 prosent fra 1990. Legger man inn regjeringens planlagte nye tiltak, kryper anslaget ned til 34 millioner tonn, eller 33 prosent kutt.
 
-Norge samarbeider med EU om å nå 2030-målet. Når Norge oppfyller forpliktelsene i EU-samarbeidet og det regnes med bidrag fra EUs klimakvotesystem, anslår regjeringen at Norge kan komme til om lag 51 prosent utslippskutt i 2030. For den delen av utslippene som omfattes av innsatsfordelingen med EU, blant annet transport, jordbruk, bygg og avfall, ligger Norge an til et utslippsgap på 5,3 millioner tonn i perioden 2021–2030, også etter bruk av tilgjengelig fleksibilitet. Regjeringen skriver at det kan bli behov for å kjøpe utslippskutt fra andre EU- og EØS-land, og at risikoen for at 2030-målet ikke nås, består.
+Resten av veien mot 55-prosentmålet er knyttet til klimaavtalen med EU. Når kutt i EUs kvotesystem og oppfyllelse av EU-forpliktelsene regnes med, anslår regjeringen at Norge kommer til rundt 51 prosent reduksjon i 2030. For de ikke-kvotepliktige sektorene som inngår i EUs innsatsfordeling – som transport, jordbruk, oppvarming og avfall – ligger Norge likevel an til et samlet utslippsgap på 5,3 millioner tonn over perioden 2021–2030, selv etter at eksisterende fleksibilitetsmekanismer er brukt opp. Regjeringen varsler at det kan bli nødvendig å kjøpe utslippsenheter fra andre EU- og EØS-land, og erkjenner at det fortsatt er fare for at 2030-målet ikke nås.
 
 – Det er fortsatt risiko for at vi ikke når klimamålene, sier klima- og miljøminister Sigrun Aasland i departementets pressemelding.
 
-## Hva betyr dette for folk flest?
+## Høyere CO₂-avgift, men uendret pumpeavgift i 2027
 
-Regjeringen skriver at planene om å trappe opp CO₂-avgiftene ligger fast. Ifølge Klima- og miljødepartementet skal økte inntekter fra klimaavgiftene i 2027 gå tilbake til innbyggerne gjennom lettelser i inntektsskatten og redusert veibruksavgift fra 1. januar. De samlede avgiftene på bensin og diesel til veitrafikk holdes uendret.
+I budsjettet for 2027 holder regjeringen fast ved opptrappingen av CO₂-avgiften. For å dempe utslaget for husholdningene foreslår Klima- og miljødepartementet å føre merinntektene tilbake gjennom lavere inntektsskatt og ved å senke veibruksavgiften fra 1. januar 2027, slik at de samlede drivstoffavgiftene på bensin og diesel holdes uendret ved pumpen.
 
-Departementet opplyser også at elektriske varebiler blir fritatt for trafikkforsikringsavgift fra mars neste år, og at regjeringen vil utrede hvordan Stortingets mål om at alle nye lastebiler og busser skal være nullutslipp kan nås.
+Fra mars 2027 foreslås dessuten elektriske varebiler fritatt for trafikkforsikringsavgift, samtidig som regjeringen vil utrede nye virkemidler for å nå Stortingets mål om at alle nye lastebiler og busser skal være nullutslippskjøretøy.
 
-Utslippstallene omfatter bare utslipp fra norsk territorium. Utenriks sjø- og luftfart er ikke med, og heller ikke utslipp fra produksjon av varer som importeres til Norge, ifølge SSB og Miljødirektoratet.
+De offisielle utslippstallene fra SSB og Miljødirektoratet omfatter kun utslipp som skjer på norsk territorium; utenriks skipsfart og luftfart samt utslipp fra vareproduksjon i utlandet som importeres til Norge, føres utenfor det nasjonale klimaregnskapet.
 
 ## Kilder
 

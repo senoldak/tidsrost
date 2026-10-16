@@ -1,71 +1,71 @@
 ---
-title: "Forsvarsbudsjettet 2027: 191,7 milliarder, hvorav 68,7 til Ukraina"
-description: "Regjeringen foreslår 191,7 milliarder kroner til forsvarssektoren i 2027. Uten den militære støtten til Ukraina er budsjettet om lag 123 milliarder."
+title: "Forsvarsbudsjettet 2027: 191,7 milliarder kroner – 68,7 milliarder går til Ukraina"
+description: "Regjeringen foreslår en forsvarsramme på 191,7 milliarder kroner for 2027. Trekker man fra den militære Ukraina-støtten, øker det ordinære forsvarsbudsjettet fra 112 til 123 milliarder."
 date: 2026-10-22T08:00:00+02:00
 category: innenriks
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Forsvarsbudsjettet 2027: 191,7 milliarder, hvorav 68,7 til Ukraina»"
+coverAlt: "Illustrasjon: «Forsvarsbudsjettet 2027: 191,7 milliarder kroner – 68,7 milliarder går til Ukraina»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Forsvaret er blant de raskest voksende postene på statsbudsjettet. Tallene viser hvor mye som går til Norges eget forsvar, og hvor mye som er støtte til Ukraina."
+why_matters: "Forsvaret er blant de raskest voksende postene på statsbudsjettet. Budsjettallene skiller mellom den løpende opptrappingen av Norges eget forsvar og den militære bistanden til Ukraina."
 key_points:
-  - "Regjeringen foreslår en utgiftsramme på 191,7 milliarder kroner for forsvarssektoren i 2027, 11,9 milliarder mer enn saldert budsjett for 2026."
+  - "Regjeringen foreslår en utgiftsramme på 191,7 milliarder kroner for forsvarssektoren i 2027 – 11,9 milliarder mer enn i saldert budsjett for 2026."
   - "Forsvarsutgiftene anslås til 3,4 prosent av BNP i 2027. Holdes den militære støtten til Ukraina utenom, er andelen 2,2 prosent."
-  - "NATO-landene forpliktet seg i Haag i juni 2025 til å bruke 5 prosent av BNP innen 2035, hvorav minst 3,5 prosent på kjerneutgifter til forsvar."
+  - "På NATO-toppmøtet i Haag i juni 2025 forpliktet medlemslandene seg til et mål om 5 prosent av BNP innen 2035, hvorav minst 3,5 prosent til militære kjerneutgifter."
 ---
 
-Regjeringen foreslår å bruke 191,7 milliarder kroner på forsvarssektoren i 2027, ifølge Forsvarsdepartementets budsjettproposisjon, Prop. 1 S (2026–2027), som ble godkjent i statsråd 25. september 2026 og presentert av forsvarsminister Tore O. Sandvik (Ap) 7. oktober 2026. Det er 11,9 milliarder kroner mer enn i saldert budsjett for 2026. Nær 69 milliarder kroner av forslaget er militær støtte til Ukraina. Uten denne støtten øker budsjettet fra om lag 112 milliarder kroner i 2026 til om lag 123 milliarder kroner i 2027. Budsjettet skal vedtas av Stortinget.
+Regjeringen foreslår å bevilge 191,7 milliarder kroner til forsvarssektoren i 2027, går det fram av Forsvarsdepartementets budsjettproposisjon (Prop. 1 S (2026–2027)), som ble lagt fram av forsvarsminister Tore O. Sandvik (Ap) 7. oktober 2026 etter statsråd 25. september. Det er 11,9 milliarder kroner mer enn i saldert budsjett for 2026. Drøyt en tredjedel av totalrammen – nærmere 69 milliarder kroner – er militær støtte til Ukraina. Holder man Ukraina-midlene utenfor, vokser det ordinære forsvarsbudsjettet fra rundt 112 milliarder kroner i 2026 til rundt 123 milliarder i 2027. Budsjettet skal behandles og vedtas av Stortinget i høst.
 
-## Hva budsjettet består av
+## Slik fordeles milliardene i 2027
 
-Budsjettforslaget har en utgiftsramme på 191 680,9 millioner kroner. Departementet oppgir at den nominelle økningen er om lag 6,6 prosent. Korrigert for pris- og lønnsvekst og tekniske endringer er økningen i bevilgningsrammen nærmere 6,4 milliarder kroner, eller om lag 3,5 prosent.
+Totalrammen i budsjettforslaget lyder på 191 680,9 millioner kroner, en nominell økning på rundt 6,6 prosent fra 2026. Renset for pris- og lønnskompensasjon og tekniske flyttinger mellom budsjettposter utgjør den reelle økningen i bevilgningsrammen nær 6,4 milliarder kroner, eller rundt 3,5 prosent.
 
-Tabellen viser hvordan rammen er fordelt, og hva som gjenstår når den militære støtten til Ukraina trekkes fra:
+Når den militære støtten til Ukraina skilles ut fra totalrammen, ser utviklingen fra 2026 til 2027 slik ut:
 
 | Millioner kroner | Saldert 2026 | Forslag 2027 |
 |---|---|---|
 | Total forsvarsramme | 179 809 | 191 681 |
 | Militær støtte til Ukraina | 67 689 | 68 651 |
-| Rammen uten Ukraina-støtte (beregnet) | 112 120 | 123 030 |
+| Rammen uten Ukraina-støtte | 112 120 | 123 030 |
 
-*Kilde: Forsvarsdepartementet, Prop. 1 S (2026–2027), tabell 1.1. Siste rad er beregnet ved å trekke Ukraina-støtten fra totalrammen.*
+*Kilde: Forsvarsdepartementet, Prop. 1 S (2026–2027), tabell 1.1. Nederste rad viser differansen mellom totalrammen og Ukraina-støtten.*
 
-Beregnet på denne måten øker rammen uten Ukraina-støtte med om lag 10,9 milliarder kroner, eller om lag 9,7 prosent. Driften av Forsvaret og investeringer i eiendom, bygg og anlegg står for den største veksten.
+Uten Ukraina-støtten løftes dermed rammen for Norges eget forsvar med rundt 10,9 milliarder kroner, eller 9,7 prosent i løpende kroner. Det er særlig den daglige driften av Forsvaret og utbygging av eiendom, bygg og anlegg som trekker opp.
 
 ![Søylediagram som sammenligner saldert budsjett 2026 med forslaget for 2027. Drift øker fra 70,2 til 78,3 milliarder kroner, infrastruktur fra 7,5 til 10,8 milliarder, materiellinvesteringer går fra 34,5 til 33,9 milliarder, og militær støtte til Ukraina fra 67,7 til 68,7 milliarder.](./graf-2.svg)
 *Drift og infrastruktur øker mest, mens Ukraina-støtten er om lag uendret. Kilde: Forsvarsdepartementet, Prop. 1 S (2026–2027).*
 
-Departementet opplyser i proposisjonen at nedgangen i materiellinvesteringer skyldes tekniske endringer og en justert satsing på forskning og utvikling, og at andelen som går til materiellinvesteringer øker med 103,6 millioner kroner.
+At posten for materiellinvesteringer ser litt lavere ut i kronebeløp fra 2026 til 2027, skyldes ifølge proposisjonen tekniske budsjettendringer og en justert innretning på forskning og utvikling; selve innsatsen til materiellinvesteringer øker med 103,6 millioner kroner.
 
-## Ukraina-støtten skilles ut
+## 70 milliarder i militær støtte gjennom Nansen-programmet
 
-Den militære støtten til Ukraina gis gjennom Nansen-programmet. For 2027 foreslår regjeringen å videreføre rammen for sivil og militær støtte på 85 milliarder kroner, hvorav 70 milliarder kroner er militær støtte. Bevilgningen på kapittel 1750 er 68,7 milliarder kroner. Ifølge proposisjonen skal blant annet verdien av donert materiell fra forsvarssektoren regnes inn i rammen. Som i 2026 skal 50 milliarder kroner gå uavkortet til internasjonale initiativ og kjøp fra ukrainsk industri, for å begrense påvirkningen på norsk økonomi.
+Den militære bistanden til Ukraina kanaliseres gjennom Nansen-programmet. For 2027 foreslår regjeringen å videreføre en samlet sivil og militær støtte til Ukraina på 85 milliarder kroner, der 70 milliarder kroner er satt av til militære formål. Selve bevilgningen under kapittel 1750 på forsvarsbudsjettet er på 68,7 milliarder kroner, mens blant annet verdien av donert materiell fra Forsvarets egne lagre regnes inn i totalrammen på 70 milliarder. På samme måte som i 2026 skal 50 milliarder kroner brukes uavkortet på internasjonale innkjøpssamarbeid og direkte kjøp fra ukrainsk forsvarsindustri, slik at pengene ikke presser opp etterspørselen i norsk økonomi.
 
-Regjeringen planlegger at om lag 35 prosent av den militære støtten går til droner og autonomi, 25 prosent til luftvern og F-16-understøttelse, 24 prosent til landkrigen og trening av ukrainsk personell, 14 prosent til maritim sikkerhet og 3 prosent til øvrige områder. Med forslaget blir den samlede rammen for Nansen-programmet 359,5 milliarder kroner for perioden 2023–2030.
+Planen for den militære støtten legger opp til at rundt 35 prosent går til droner og autonome systemer, 25 prosent til luftvern og støtte til F-16-kampfly, 24 prosent til landstyrker og opplæring av ukrainske soldater, 14 prosent til maritim sikkerhet og 3 prosent til øvrige tiltak. Med 2027-forslaget kommer den samlede rammen for Nansen-programmet i perioden 2023–2030 opp i 359,5 milliarder kroner i Forsvarsdepartementets oppstilling.
 
-## Andelen av BNP og NATO-målene
+## Fra 2 til 5 prosent: Nye NATO-krav løfter BNP-andelen
 
-I 2014 ble NATO-landene enige om å bruke 2 prosent av BNP på forsvar. På toppmøtet i Haag 25. juni 2025 ble det avtalt et nytt mål: 5 prosent av BNP årlig innen 2035, fordelt på minst 3,5 prosent til kjerneutgifter etter NATOs definisjon og inntil 1,5 prosent til forsvars- og sikkerhetsrelaterte utgifter. Ifølge toppmøteerklæringen skal direkte bidrag til Ukrainas forsvar og forsvarsindustri regnes med i landenes forsvarsutgifter.
+I tiåret etter NATO-toppmøtet i Wales i 2014 var alliansens mål at medlemslandene skulle bruke minst 2 prosent av bruttonasjonalproduktet (BNP) på forsvar. På toppmøtet i Haag 25. juni 2025 vedtok NATO-landene en langt høyere forpliktelse: 5 prosent av BNP årlig innen 2035, delt i minst 3,5 prosent til militære kjerneutgifter etter NATOs definisjon og inntil 1,5 prosent til bredere forsvars- og sikkerhetsrelaterte tiltak. Etter toppmøteerklæringen teller direkte militære bidrag til Ukrainas forsvar og forsvarsindustri med i landenes kjerneandel.
 
-NATOs statistikk viser at Norges kjerneutgifter til forsvar lå mellom 1,4 og 1,9 prosent av BNP fra 2014 til 2023. I 2024 var andelen 2,16 prosent. For 2025 og 2026 anslår NATO henholdsvis 3,16 og 3,17 prosent.
+NATOs egne tall viser at Norges militære kjerneutgifter lå mellom 1,4 og 1,9 prosent av BNP i årene 2014–2023, før andelen passerte 2-prosentgrensen i 2024 med 2,16 prosent. For 2025 og 2026 anslår NATO den norske andelen til henholdsvis 3,16 og 3,17 prosent.
 
 ![Søylediagram over Norges kjerneutgifter til forsvar som andel av BNP 2014–2026. Andelen var 1,50 prosent i 2014, 1,89 prosent i 2020, 1,41 prosent i 2022, 2,16 prosent i 2024 og anslått til 3,16 prosent i 2025 og 3,17 prosent i 2026.](./graf-1.svg)
 *Andelen passerte 2 prosent i 2024 og økte kraftig i 2025, samme år som Stortinget økte rammen for militær støtte til Ukraina med 50 milliarder kroner. Tallene for 2025 og 2026 er anslag. Kilde: NATO.*
 
-For 2027 anslår Forsvarsdepartementet at forsvarsutgiftene utgjør om lag 3,4 prosent av BNP. Holdes den militære støtten til Ukraina utenom, er andelen 2,2 prosent, ifølge proposisjonen. Etter Finansdepartementets beregninger ligger Norge i 2026 an til å bruke anslagsvis 3,1 prosent på forsvarsutgifter og 1,5 prosent på sikkerhets- og forsvarsrelaterte utgifter.
+For 2027 anslår Forsvarsdepartementet at forsvarsutgiftene vil tilsvare rundt 3,4 prosent av BNP inklusive Ukraina-støtten, og 2,2 prosent dersom den militære Ukraina-støtten holdes utenfor. I tillegg kommer sikkerhets- og forsvarsrelaterte utgifter i sivil sektor, som Finansdepartementet for 2026 anslår til 1,5 prosent av BNP ved siden av 3,1 prosent til selve forsvaret.
 
-## Langtidsplanen for 2025–2036
+## Langtidsplanen utvidet til 1 854 milliarder kroner
 
-Budsjettet bygger på langtidsplanen for forsvarssektoren, Prop. 87 S (2023–2024). Regjeringen foreslo i april 2024 en økonomisk opptrapping på 600 milliarder kroner over tolv år. Etter forliket i Stortinget i juni 2024 ble økningen 611 milliarder kroner.
+Årets budsjettforslag følger opp langtidsplanen for forsvarssektoren (Prop. 87 S (2023–2024)). Da regjeringen la fram planen i april 2024, var rammen foreslått styrket med 600 milliarder kroner over tolv år, et beløp som ble økt til 611 milliarder da et samlet Storting inngikk forsvarsforliket i juni 2024.
 
-Regjeringen la fram Prop. 68 S (2025–2026) 27. mars 2026. Gjennom behandlingen av proposisjonen vedtok et enstemmig Storting å øke rammen med om lag 121 milliarder kroner for perioden 2026–2036 og å utvide planrammen til 2040. Den samlede rammen for langtidsplanen er dermed om lag 1 854 milliarder 2026-kroner for 2025–2036. Ifølge proposisjonen skal Norge med den nye planen styre mot minimum 3,5 prosent av BNP på forsvarsutgifter innen 2035. Av økningen i 2027 er 6,5 milliarder kroner knyttet til langtidsplanen.
+Våren 2026 ble planen skalert ytterligere opp gjennom Prop. 68 S (2025–2026), lagt fram 27. mars 2026. Et enstemmig Storting sluttet seg til å øke rammen med rundt 121 milliarder kroner for årene 2026–2036 og forlenge planperioden fram til 2040. Dermed lyder den samlede langtidsplanen for tolvårsperioden 2025–2036 på rundt 1 854 milliarder 2026-kroner, med sikte på å nå minst 3,5 prosent av BNP i ordinære forsvarsutgifter innen 2035. Av budsjettøkningen i 2027 utgjør opptrappingen etter langtidsplanen 6,5 milliarder kroner.
 
-## Dette betyr det for folk flest
+## Flere ansatte, vernepliktige og kaserner i 2027
 
-Økningen i driftsbudsjettet skal ifølge proposisjonen gjøre det mulig for Forsvaret å øke bemanningen med om lag 750 fast ansatte, 900 reservister og 450 vernepliktige i løpet av 2027. Regjeringen foreslår også 1,59 milliarder kroner mer til infrastrukturinvesteringer, som eiendom, bygg og anlegg, og 516 millioner kroner mer for å øke produksjonskapasiteten i norsk og europeisk forsvarsindustri.
+I praksis skal de ekstra driftskronene i 2027 gi plass til rundt 750 nye fast ansatte, 900 flere reservister og 450 flere vernepliktige inne til førstegangstjeneste i løpet av neste år. Samtidig foreslås det 1,59 milliarder kroner mer til bygg og anlegg på militære baser rundt i landet, og 516 millioner kroner ekstra til å bygge ut produksjonskapasiteten i norsk og europeisk forsvarsindustri.
 
-Opptrappingen betyr at forsvar tar en større del av statens utgifter. Den militære støtten til Ukraina er innrettet slik at 50 milliarder kroner brukes på internasjonale initiativ og kjøp fra ukrainsk industri. Ifølge proposisjonen forventer regjeringen dermed at påvirkningen på norsk økonomi blir tilsvarende som i 2026. Forsvarsdepartementet skal også effektivisere: i 2027 omfordeles om lag 190 millioner kroner fra forsvarsbudsjettet til andre formål på statsbudsjettet.
+Samtidig pålegges forsvarssektoren et effektiviseringskrav: I 2027-budsjettet frigjøres rundt 190 millioner kroner gjennom intern effektivisering som flyttes til andre poster på statsbudsjettet.
 
 ## Kilder
 

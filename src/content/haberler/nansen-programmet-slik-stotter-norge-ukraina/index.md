@@ -1,71 +1,65 @@
 ---
-title: "Nansen-programmet: Slik er Norges støtte til Ukraina fordelt"
-description: "Regjeringen foreslår 85 milliarder kroner til Ukraina i 2027, hvorav 70 milliarder til militær støtte. Her er tallene for Nansen-programmet fra 2023 til 2027."
+title: "Nansen-programmet vokser til 344,5 milliarder: Slik fordeles Ukraina-støtten i 2027"
+description: "Regjeringen foreslår å videreføre Ukraina-støtten på 85 milliarder kroner i 2027, med 70 milliarder til militære formål og 15 milliarder til sivil bistand."
 date: 2026-10-18T08:00:00+02:00
 category: utenriks
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Nansen-programmet: Slik er Norges støtte til Ukraina fordelt»"
+coverAlt: "Illustrasjon: «Nansen-programmet vokser til 344,5 milliarder: Slik fordeles Ukraina-støtten i 2027»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Nansen-programmet er blant de største enkeltpostene i statsbudsjettet. Tallene viser hvor mye av fellesskapets penger som går til Ukraina, og hvordan støtten er fordelt mellom militære og sivile formål."
+why_matters: "Nansen-programmet er blant de aller største enkeltpostene på statsbudsjettet og utgjør rundt 14 prosent av den foreslåtte oljepengebruken i 2027."
 key_points:
-  - "Regjeringen foreslår 85 milliarder kroner til Ukraina i 2027: 70 milliarder til militær støtte og 15 milliarder til sivil og humanitær støtte."
-  - "Med forslaget øker den samlede rammen for Nansen-programmet til 344,5 milliarder kroner for perioden 2023–2030."
-  - "Programmet startet i 2023 med en ramme på 75 milliarder kroner over fem år, om lag 15 milliarder kroner i året."
+  - "Regjeringen foreslår 85 milliarder kroner til Ukraina i 2027 – 70 milliarder til militær støtte og 15 milliarder til sivil og humanitær bistand."
+  - "Med 2027-forslaget løftes totalrammen for Nansen-programmet til 344,5 milliarder kroner for årene 2023–2030."
+  - "Da programmet ble opprettet våren 2023, var rammen 75 milliarder kroner over fem år – rundt 15 milliarder i året."
 ---
 
-Regjeringen foreslår å bruke 85 milliarder kroner på støtte til Ukraina i 2027, like mye som Stortinget vedtok for 2026. Av dette skal 70 milliarder kroner gå til militære formål og 15 milliarder kroner til sivil og humanitær støtte, går det fram av statsbudsjettet som ble lagt fram 7. oktober 2026. Pengene går gjennom Nansen-programmet, Norges flerårige støtteprogram for Ukraina. Med forslaget blir den samlede rammen for programmet 344,5 milliarder kroner for perioden 2023–2030, ifølge Utenriksdepartementet. Budsjettet er et forslag som Stortinget skal behandle denne høsten.
+Regjeringen foreslår å sette av 85 milliarder kroner til Ukraina i 2027, det samme totalbeløpet som Stortinget vedtok for 2026. I statsbudsjettet som ble lagt fram 7. oktober 2026, er beløpet delt i 70 milliarder kroner til militær støtte og 15 milliarder kroner til sivil og humanitær bistand. Midlene kanaliseres gjennom Nansen-programmet, Norges flerårige støtteprogram for Ukraina. Med 2027-forslaget kommer den samlede rammen for programmet i perioden 2023–2030 opp i 344,5 milliarder kroner, opplyser Utenriksdepartementet. Budsjettet ligger nå til behandling i Stortinget.
 
-## Fra 75 til 344,5 milliarder kroner
+## Fra 75 til 344,5 milliarder på tre og et halvt år
 
-Nansen-programmet ble lansert 16. februar 2023. Et bredt flertall på Stortinget sluttet seg da til et program på 75 milliarder kroner over fem år, 2023–2027, som tilsvarte årlige utbetalinger på om lag 15 milliarder kroner.
+Da et bredt stortingsflertall lanserte Nansen-programmet 16. februar 2023, var utgangspunktet en femårig ramme på 75 milliarder kroner for perioden 2023–2027 – i snitt rundt 15 milliarder kroner årlig.
 
-Siden er programmet utvidet flere ganger. I november 2024 ble alle partiene på Stortinget enige om å forlenge det med tre år, til og med 2030. Samtidig ble det innført et «gulv» på 15 milliarder kroner i året. Ifølge regjeringen innebærer gulvet at bevilgninger utover dette i et enkelt år ikke skal trekkes fra den totale rammen.
+Siden har Stortinget utvidet både tidshorisonten og beløpene i flere omganger. I november 2024 ble samtlige partier på Stortinget enige om å forlenge programmet med tre år fram til utgangen av 2030. Samtidig ble de årlige 15 milliardene gjort om til et fast «gulv»: Ekstrabevilgninger utover 15 milliarder i et enkelt budsjettår spiser dermed ikke av potten for de påfølgende årene, men legges på toppen av totalrammen.
 
-I mars 2025 økte partiene på Stortinget støtten med 50 milliarder kroner for 2025, og rammen ble 205 milliarder kroner. I desember 2025 vedtok Stortinget 85 milliarder kroner for 2026, og rammen ble 274,5 milliarder kroner. Regjeringens forslag for 2027 innebærer at rammen øker med ytterligere 70 milliarder kroner, til 344,5 milliarder.
+I mars 2025 skjøt partiene på Stortinget inn 50 milliarder kroner ekstra for 2025, noe som løftet totalrammen til 205 milliarder kroner. I desember 2025 ble støtten for 2026 satt til 85 milliarder kroner, slik at rammen økte til 274,5 milliarder. Med regjeringens forslag om 85 milliarder kroner også i 2027 – altså 70 milliarder over det faste gulvet – vokser den samlede rammen videre til 344,5 milliarder kroner.
 
-## Militær støtte utgjør den største delen
+## Tyngdepunktet flyttet over på våpen og forsvar
 
-Fordelingen mellom militær og sivil støtte har endret seg. I 2023 gikk 10,2 milliarder kroner til militær støtte og 8,9 milliarder til sivil og humanitær støtte, ifølge regjeringens oversikt. Tallene for 2023 og 2024 gjelder samlet støtte til Ukraina og enkelte nærliggende land som rammes av krigen. I 2024 var fordelingen 17 milliarder til militær og 10 milliarder til sivil og humanitær støtte.
+De første to årene var støtten langt jevnere fordelt mellom sivile og militære tiltak. I 2023 gikk 10,2 milliarder kroner til militær støtte og 8,9 milliarder til sivil og humanitær innsats, og i 2024 var fordelingen 17 milliarder militært og 10 milliarder sivilt (tallene for 2023 og 2024 inkluderer også støtte til naboland som ble direkte berørt av krigen).
 
-Fra 2025 økte den militære delen kraftig. For 2025 ble det lagt opp til 72,5 milliarder kroner i militær støtte og 12,5 milliarder i sivil støtte. For 2026 er fordelingen 70 milliarder militært og 15 milliarder sivilt, og regjeringen foreslår samme fordeling for 2027.
+Fra og med 2025 har den militære opptrappingen dominert. I 2025 ble det satt av 72,5 milliarder kroner til militære formål og 12,5 milliarder til sivile tiltak. Både i vedtatt budsjett for 2026 og i regjeringens forslag for 2027 ligger fordelingen på 70 milliarder kroner militært og 15 milliarder kroner sivilt.
 
 ![Stolpediagram over norsk støtte til Ukraina fordelt på militær og sivil støtte. Militær støtte: 10,2 milliarder kroner i 2023, 17 i 2024, 72,5 i 2025, 70 i 2026 og 70 i forslaget for 2027. Sivil og humanitær støtte: 8,9 milliarder i 2023, 10 i 2024, 12,5 i 2025, 15 i 2026 og 15 i forslaget for 2027.](./graf-1.svg)
 *Militær og sivil støtte til Ukraina per år, milliarder kroner. 2027 er regjeringens forslag. Kilde: Regjeringen, Prop. 1 S (2026–2027).*
 
-Av de 70 milliardene til militær støtte i 2027 skal 50 milliarder kroner «gå uavkortet til internasjonale initiativ og kjøp fra ukrainsk industri», skriver Forsvarsdepartementet. Regjeringen opplyser at den vil videreføre trening og utdanning av ukrainsk personell, innsatsen i den maritime koalisjonen og kjøp fra ukrainsk forsvarsindustri.
+Av de 70 militære milliardene i 2027 skal 50 milliarder kroner «gå uavkortet til internasjonale initiativ og kjøp fra ukrainsk industri», skriver Forsvarsdepartementet. Ved siden av direkte materiellkjøp fra ukrainske fabrikker og flernasjonale fond viderefører Norge opplæringen av ukrainske soldater og innsatsen i den maritime koalisjonen.
 
-– Regjeringens mål er et Ukraina som kan bestemme over egen framtid, sier forsvarsminister Tore O. Sandvik i en pressemelding fra Utenriksdepartementet og Forsvarsdepartementet.
+– Regjeringens mål er et Ukraina som kan bestemme over egen framtid, sier forsvarsminister Tore O. Sandvik i pressemeldingen fra Utenriksdepartementet og Forsvarsdepartementet.
 
-## Hva den sivile støtten går til
+## Energisikkerhet, nødhjelp og korrupsjonskontroll i den sivile støtten
 
-Den sivile delen av programmet forvaltes av Norad, ifølge regjeringens oversikt. Ifølge budsjettproposisjonen fra Utenriksdepartementet skal pengene i hovedsak gå til energisikkerhet, gjenoppbygging og driftsstøtte til ukrainske myndigheter, humanitær bistand, støtte til privat sektor og sivil støtte til Moldova.
+Den sivile og humanitære potten forvaltes i hovedsak av Norad. Etter Utenriksdepartementets budsjettproposisjon skal pengene i 2027 særlig gå til å sikre strøm- og energiforsyningen, holde hjulene i gang i den ukrainske statsforvaltningen, finansiere humanitær nødhjelp, bygge opp igjen kritisk infrastruktur og næringsliv – samt gi sivil støtte til nabolandet Moldova.
 
 | Sivil Nansen-støtte i forslaget for 2027 | Mill. kroner |
 |---|---|
 | Kap. 159, post 73 Ukraina og naboland | 14 135,8 |
 | Norfunds Ukraina-fond (kap. 165) | 750 |
 
-Den humanitære bistanden til Ukraina og flyktningresponsen i nabolandene er på om lag 3,5 milliarder kroner i 2026, og regjeringen planlegger foreløpig å videreføre dette nivået i 2027. Norfunds Ukraina-fond, som skal investere i ukrainsk næringsliv og infrastruktur, foreslås økt med 250 millioner kroner.
+Den rene nødhjelpen til Ukraina og flyktningtiltakene i nabolandene ligger på rundt 3,5 milliarder kroner i 2026, et nivå regjeringen tar sikte på å videreføre i 2027. I tillegg foreslås investeringsfondet under Norfund – som går inn med egenkapital i ukrainske bedrifter og infrastruktur – styrket med 250 millioner kroner til 750 millioner i 2027.
 
-Proposisjonen viser også til at Riksrevisjonen la fram to undersøkelser av den sivile delen av programmet i mai 2026. Ifølge departementet viser de at midlene forvaltes i tråd med Ukrainas behov, men de påpeker blant annet mangelfulle vurderinger av korrupsjonsrisiko i noen av avtalene som ble undersøkt. Departementet skriver at anbefalingene blir fulgt opp.
+I proposisjonen omtales også to gjennomganger Riksrevisjonen offentliggjorde i mai 2026 av den sivile Ukraina-støtten. Riksrevisjonen konkluderte med at pengene treffer Ukrainas behov, men avdekket mangelfulle vurderinger av korrupsjonsrisiko i enkelte avtaler. Utenriksdepartementet opplyser at påpekningene nå følges opp i forvaltningen.
 
-## Slik er Ukraina-støtten sammenlignet med bistanden
+## En fjerdedel av bistandsbudsjettet – og 14 prosent av oljepengebruken
 
-Regjeringen foreslår en samlet bistandsramme på 57,6 milliarder kroner i 2027, som tilsvarer 0,93 prosent av anslått bruttonasjonalinntekt. Den sivile Ukraina-posten på 14,1 milliarder kroner ligger under programområdet for internasjonal bistand i Utenriksdepartementets budsjett. Det tilsvarer om lag en firedel av bistandsrammen, ifølge tidsrøsts utregning.
+Sett opp mot resten av utenriksbudsjettet legger Ukraina-innsatsen beslag på en stor del av de norske bistandskronene. Regjeringen foreslår et samlet bistandsbudsjett på 57,6 milliarder kroner i 2027, tilsvarende 0,93 prosent av anslått bruttonasjonalinntekt (BNI). Den sivile Ukraina-posten på 14,1 milliarder kroner føres under bistandsrammen og utgjør dermed rundt en fjerdedel av all norsk utviklingshjelp. Som følge av Nansen-programmet er Europa nå den verdensdelen som mottar mest øremerket norsk bistand, etter at det i 2025 gikk 12,5 milliarder kroner i sivil støtte til Ukraina og nabolandene.
 
-Ifølge proposisjonen er Europa den regionen som mottar mest øremerket bistand fra Norge, fordi det går sivil og humanitær støtte til Ukraina og nabolandene gjennom Nansen-programmet. I 2025 ga Norge 12,5 milliarder kroner i sivil bistand til Ukraina og nabolandene gjennom programmet.
+Den militære delen på 70 milliarder kroner føres på sin side over Forsvarsdepartementets budsjett på totalt 191,7 milliarder kroner. Holder man den militære Ukraina-støtten utenfor, øker det ordinære norske forsvarsbudsjettet fra rundt 112 milliarder kroner i 2026 til 123 milliarder i 2027.
 
-Den militære støtten ligger på forsvarsbudsjettet. Regjeringen foreslår 191,7 milliarder kroner til forsvarssektoren i 2027. Uten den militære støtten til Ukraina øker forsvarsbudsjettet fra om lag 112 milliarder kroner i 2026 til 123 milliarder kroner i 2027, ifølge Forsvarsdepartementet.
-
-## Hva det betyr for statsbudsjettet
-
-Ukraina-støtten finansieres over statsbudsjettet, og en stor del av budsjettet dekkes av penger fra oljefondet. Finansdepartementet anslår at regjeringen vil bruke 608,4 milliarder kroner fra Statens pensjonsfond i 2027, og at dette beløpet inkluderer de 85 milliardene til Ukraina. Ukraina-støtten tilsvarer dermed om lag 14 prosent av den foreslåtte fondsbruken, ifølge tidsrøsts utregning.
+På inntektssiden dekkes hele Ukraina-pakken innenfor uttaket fra Statens pensjonsfond utland (oljefondet). Finansdepartementet legger opp til å bruke 608,4 milliarder oljekroner over statsbudsjettet i 2027 – og de 85 milliardene til Ukraina utgjør alene rundt 14 prosent av hele fondsuttaket.
 
 – Ukrainas kamp for frihet angår oss alle. Den er avgjørende for Ukrainas framtid og har direkte betydning for sikkerheten i Europa og Norge, sier utenriksminister Espen Barth Eide i pressemeldingen.
-
-Da regjeringen varslet forslaget i august, skrev den at fordelingen mellom militær og sivil støtte ikke var bestemt. Fordelingen er nå lagt fram i budsjettforslaget, som Stortinget skal behandle.
 
 ## Kilder
 

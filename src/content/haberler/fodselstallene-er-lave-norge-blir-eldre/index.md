@@ -1,36 +1,36 @@
 ---
-title: "Lave fødselstall og flere eldre: Dette viser tallene fra SSB"
-description: "Fruktbarheten i Norge var 1,48 barn per kvinne i 2025, etter rekordlave 1,40 i 2023. SSB venter at andelen over 80 år nesten dobles fram mot 2050."
+title: "Fødselstallene har løftet seg litt – men i 2032 blir de eldre flere enn de unge"
+description: "Fruktbarheten i Norge steg til 1,48 barn per kvinne i 2025 etter rekordbunnen på 1,40 i 2023. Samtidig anslår SSB at andelen over 80 år nesten dobles innen 2050."
 date: 2026-10-14T07:00:00+02:00
 category: innenriks
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Lave fødselstall og flere eldre: Dette viser tallene fra SSB»"
+coverAlt: "Illustrasjon: «Fødselstallene har løftet seg litt – men i 2032 blir de eldre flere enn de unge»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Hvor mange barn som blir født, og hvor mange som blir eldre, påvirker behovet for barnehager, skoler, helsetjenester og arbeidskraft i hele landet. Regjeringens fødselstallsutvalg har lagt fram forslag som nå er til behandling."
+why_matters: "Samspillet mellom fødselstall og levealder avgjør behovet for barnehager, skoler, sykehjemsplasser og arbeidskraft i kommunene. Regjeringens fødselstallsutvalg har lagt fram en rekke tiltak som nå er til behandling."
 key_points:
-  - "Samlet fruktbarhetstall var 1,48 barn per kvinne i 2025, opp fra 1,40 i 2023, som er det laveste nivået SSB har registrert. I 2009 var tallet 1,98."
-  - "Ifølge SSBs hovedalternativ øker andelen av befolkningen som er 80 år eller eldre, fra 5,1 prosent i 2026 til 9,5 prosent i 2050."
-  - "SSB framskriver at det fra 2046 vil dø flere enn det blir født i Norge."
+  - "Samlet fruktbarhetstall var 1,48 barn per kvinne i 2025, opp fra 1,40 i 2023 – det laveste nivået SSB har målt. I 2009 lå tallet på 1,98."
+  - "I SSBs hovedalternativ øker andelen av befolkningen som er 80 år eller eldre, fra 5,1 prosent i 2026 til 9,5 prosent i 2050."
+  - "Fra og med 2046 venter SSB at det vil dø flere enn det blir født i Norge."
 ---
 
-Kvinner i Norge fikk i gjennomsnitt 1,48 barn i 2025, ifølge Statistisk sentralbyrå (SSB). Det er en økning fra 1,44 året før og fra 1,40 i 2023, som er det laveste samlede fruktbarhetstallet som er registrert i SSBs tabell med tall tilbake til 1968. Samtidig blir befolkningen eldre. SSBs befolkningsframskrivinger fra juni 2026 viser at andelen som er 80 år eller eldre, nesten dobles fram mot 2050. Denne artikkelen går gjennom hva tallene viser, og hva regjeringens fødselstallsutvalg mener lave fødselstall betyr for samfunnet.
+Kvinner i Norge fikk i gjennomsnitt 1,48 barn i 2025, viser statistikk fra Statistisk sentralbyrå (SSB). Det er andre år på rad med oppgang etter at fruktbarheten i 2023 falt til 1,40 barn per kvinne – det laveste nivået i SSBs tidsserie tilbake til 1968 – og deretter krøp opp til 1,44 i 2024. Samtidig eldes befolkningen raskt. I befolkningsframskrivingene fra juni 2026 anslår SSB at andelen innbyggere på 80 år eller mer nesten dobles fram mot 2050.
 
 ## Fra 1,98 til 1,40 barn per kvinne
 
-Samlet fruktbarhetstall viser hvor mange barn hver kvinne i gjennomsnitt vil få dersom fruktbarheten i et gitt år holder seg uendret gjennom hele livet.
+Samlet fruktbarhetstall (SFT) måler hvor mange barn hver kvinne i gjennomsnitt ville fått gjennom livet dersom fødselsmønsteret i et bestemt kalenderår holdt seg uendret.
 
-I Norge nådde tallet en topp på 1,98 i 2009. Deretter falt det hvert år, til 1,48 i 2020. Etter en midlertidig oppgang til 1,55 i 2021 falt tallet til 1,41 i 2022 og 1,40 i 2023. De to siste årene har det gått noe opp igjen.
+Så sent som i 2009 lå tallet på 1,98 barn per kvinne i Norge. Derfra fulgte et elleve år langt fall ned til 1,48 i 2020. Under pandemien kom et kortvarig hopp til 1,55 i 2021, før kurven igjen snudde ned til 1,41 i 2022 og bunnoteringen på 1,40 i 2023.
 
 ![Linjediagram over samlet fruktbarhetstall i Norge fra 2005 til 2025. Tallet steg fra 1,84 i 2005 til en topp på 1,98 i 2009, falt til 1,40 i 2023 og steg deretter til 1,44 i 2024 og 1,48 i 2025.](./graf-1.svg)
 *Samlet fruktbarhetstall, hele landet, 2005–2025. Kilde: SSB, tabell 04232.*
 
-SSB skriver i sin artikkel om fødselstallene for 2025 at fruktbarheten fortsatt er lav i et historisk perspektiv. Ifølge SSB var det særlig kvinner i alderen 30–34 år som bidro til økningen i fjor. Gjennomsnittsalderen for kvinner som fikk sitt første barn, var 30,4 år i 2025, den samme som året før. For menn var den 32,3 år.
+Til tross for oppgangen i 2024 og 2025 understreker SSB at fruktbarheten fortsatt er lav i et historisk perspektiv. Det var særlig kvinner i aldersgruppen 30–34 år som trakk fødselstallene opp i fjor. Gjennomsnittsalderen for førstegangsfødende lå uendret på 30,4 år for kvinner og 32,3 år for førstegangsfedre i 2025.
 
-## Færre fødte enn for 15 år siden
+## 58 prosent av 30-årige kvinner har ikke fått barn
 
-Antallet levendefødte følger den samme utviklingen. Ifølge SSB ble det født 61 807 barn i Norge i 2009. I 2022 var tallet 51 480, og i 2023 51 980. I 2025 ble det født 55 401 barn, som er 1 388 flere enn i 2024.
+Utviklingen i antallet nyfødte speiler fruktbarhetstallet. I toppåret 2009 kom 61 807 barn til verden i Norge. I 2022 var fødselstallet nede i 51 480 og i 2023 på 51 980, før det i 2025 økte til 55 401 levendefødte – 1 388 flere enn året før.
 
 | År | Levendefødte | Samlet fruktbarhetstall |
 |---|---|---|
@@ -42,40 +42,40 @@ Antallet levendefødte følger den samme utviklingen. Ifølge SSB ble det født 
 
 *Kilde: SSB, tabell 04231 og 04232.*
 
-SSB skriver at det er lite sannsynlig at dagens kvinner kommer til å få like mange barn som tidligere generasjoner. Ifølge SSB hadde 58 prosent av kvinnene som fylte 30 år i 2025, ikke fått barn ennå. Ti år tidligere var andelen 43 prosent.
+Fordi stadig flere venter lenger med å få sitt første barn, regner SSB det som lite sannsynlig at dagens unge kvinner vil ende opp med like store barnekull som tidligere generasjoner. Blant kvinnene som fylte 30 år i 2025, var 58 prosent fortsatt barnløse – mot 43 prosent ti år tidligere.
 
-## Andelen eldre øker kraftig
+## Veiskille i 2032: Flere eldre enn barn og unge
 
-Per 1. januar 2026 bodde det 5 627 400 personer i Norge. Av dem var 959 633 personer 67 år eller eldre, og 284 939 var 80 år eller eldre. Det tilsvarer henholdsvis 17,1 og 5,1 prosent av befolkningen.
+Ved inngangen til 2026 hadde Norge 5 627 400 innbyggere. Av disse var 959 633 personer 67 år eller eldre (17,1 prosent), mens 284 939 hadde fylt 80 år (5,1 prosent).
 
-I SSBs hovedalternativ øker folketallet til 6 214 071 i 2050. Antallet som er 67 år eller eldre, øker til 1 425 792, mens antallet over 80 år øker til 588 212, altså mer enn en dobling. Andelen over 80 år blir da 9,5 prosent, og 10,8 prosent i 2060.
+I SSBs hovedalternativ for befolkningsutviklingen vokser folketallet til 6 214 071 i 2050. Da ventes gruppen på 67 år og over å telle 1 425 792 personer, mens antallet over 80 år mer enn dobles til 588 212. De eldste over 80 år vil dermed utgjøre 9,5 prosent av befolkningen i 2050 og 10,8 prosent i 2060.
 
 ![Stolpediagram over andelen eldre i befolkningen ifølge SSBs hovedalternativ. Andelen 67 år og eldre øker fra 17,1 prosent i 2026 til 18,2 i 2030, 21,3 i 2040, 22,9 i 2050 og 25,1 prosent i 2060. Andelen 80 år og eldre øker fra 5,1 prosent i 2026 til 6,1 i 2030, 7,7 i 2040, 9,5 i 2050 og 10,8 prosent i 2060.](./graf-2.svg)
 *Andel av befolkningen 67 år og eldre og 80 år og eldre, SSBs hovedalternativ. Kilde: SSB, tabell 14740.*
 
-SSB peker på et vendepunkt i 2032. Da passerer antallet eldre over 65 år antallet unge under 20 år, ifølge framskrivingene. I fylkene Innlandet, Telemark, Vestfold, Nordland og Troms har dette allerede skjedd. Oslo blir ifølge SSB det siste fylket der dette skjer, innen 2046.
+Allerede i 2032 passerer Norge en demografisk milepæl på landsbasis: Da vil det være flere innbyggere over 65 år enn barn og unge under 20 år. I Innlandet, Telemark, Vestfold, Nordland og Troms har dette skiftet allerede skjedd, mens Oslo ventes å bli det siste fylket som bikker over, innen 2046.
 
-Framskrivingene viser også at antallet døde etter hvert blir høyere enn antallet fødte. I hovedalternativet er det 58 593 fødte og 58 368 døde i 2045, mens det i 2046 er 58 146 fødte og 58 801 døde. SSB skriver at befolkningsveksten etter dette bare vil opprettholdes av positiv nettoinnvandring.
+Samme år – i 2046 – snur også fødselsoverskuddet til underskudd i hovedalternativet. Mens 2045 er anslått å gi 58 593 fødte mot 58 368 døde, ventes 2046 å gi 58 146 fødte og 58 801 døde. Derfra vil videre folkevekst i Norge være helt avhengig av positiv nettoinnvandring.
 
-## Usikre forutsetninger
+## Hva som driver eldrebølgen
 
-Framskrivingene bygger på antakelser om fruktbarhet, levealder og innvandring. I hovedalternativet antar SSB at samlet fruktbarhetstall øker til 1,50 i 2026, 1,56 i 2030 og 1,63 i 2050. I alternativet med lav fruktbarhet er tallet 1,19 i 2050, og i alternativet med høy fruktbarhet 1,87.
+Befolkningsframskrivinger hviler på usikre antakelser om fremtidig fruktbarhet, levealder og innvandring. I hovedalternativet legger SSB til grunn at fruktbarhetstallet gradvis løfter seg til 1,50 i 2026, 1,56 i 2030 og 1,63 i 2050. I lavalternativet synker det til 1,19 i 2050, mens høyalternativet legger opp til 1,87.
 
-Fødselstallsutvalget skriver i sin utredning at anslag på framtidige fødselstall er svært usikre. Utvalget påpeker også at fødselstallene i liten grad påvirker hvor mange eldre det blir de neste tiårene: «Ulike nivåer på fødselstallene i framskrivingene vil ikke påvirke antallet eldre før etter 2090.» Veksten i antallet eldre skyldes ifølge utvalget i hovedsak at dødeligheten har gått ned og levealderen økt, og at de store etterkrigskullene blir eldre.
+Fødselstallsutvalget peker i sin utredning på at dagens fødselstall uansett ikke kan bremse eldrebølgen de neste tiårene: «Ulike nivåer på fødselstallene i framskrivingene vil ikke påvirke antallet eldre før etter 2090.» At antallet eldre øker så raskt nå, skyldes at levealderen har steget og at de store etterkrigskullene rykker opp i de eldste aldersgruppene.
 
-## Hva betyr det for samfunnet?
+## Fødselstallsutvalgets diagnose og forslag
 
-Regjeringen oppnevnte Fødselstallsutvalget ved kongelig resolusjon 9. august 2024. Utvalget, ledet av Rannveig Kaldager Hart, la fram NOU 2026: 2 «Politikk for nye generasjoner» 9. februar 2026.
+Fødselstallsutvalget, som ble oppnevnt i august 2024 under ledelse av Rannveig Kaldager Hart, overleverte utredningen NOU 2026: 2 «Politikk for nye generasjoner» 9. februar 2026.
 
-Utvalget beskriver at virkningene er ulike på kort og lang sikt. På kort sikt kan færre barn gi lavere utgifter til barnehage og skole. Utvalget skriver samtidig at få barn «gir likevel mindre grunnlag for tilbud til barn og unge», og at det kan gi færre valgmuligheter innen fritidsaktiviteter og utdanning i lokalsamfunn. Videre heter det: «Samtidig gir aldringen en sterk og varig vekst i behovet for helse- og omsorgstjenester.» Ifølge utvalget står kommuner og andre offentlige institusjoner dermed overfor krevende omstillinger.
+Utvalget skiller mellom virkningene på kort og lang sikt. På kort sikt gjør mindre barnekull at kommunene sparer penger på barnehager og skoler, men medaljen har en bakside: Få barn «gir likevel mindre grunnlag for tilbud til barn og unge», noe som kan svekke utdanningstilbud og fritidsaktiviteter i mindre lokalsamfunn. Samtidig peker utvalget på at «aldringen gir en sterk og varig vekst i behovet for helse- og omsorgstjenester», noe som tvinger kommunene til å flytte ressurser fra oppvekst til pleie og omsorg.
 
-Når det gjelder offentlige finanser, viser utvalget til en analyse fra forskere i SSB. Den konkluderer med at fødselstallene først og fremst har betydning på kort sikt, og at virkningen på nasjonalinntekten per innbygger på lang sikt, etter om lag 65 år, beregnes til å være svært liten.
+For statsfinansene viser utvalget til beregninger fra SSB-forskere som tyder på at lavere fødselstall først og fremst merkes de første tiårene, mens utslaget på nasjonalinntekten per innbygger på svært lang sikt – etter rundt 65 år – er lite.
 
-Utvalget mener familiepolitikken bør ha som mål at folk kan realisere sine ønsker om å få barn. Blant forslagene er økt økonomisk støtte til foreldre under 30 år, tilbud om barnehageplass fra ettårsalderen kombinert med en mer fleksibel foreldrepengeordning, bedre helsetjenester for nye foreldre og forsøk med redusert arbeidstid for småbarnsforeldre.
+Utvalgets hovedgrep er å gjøre det enklere å kombinere barn og arbeidsliv slik at folk kan få de barna de ønsker seg. Blant forslagene er økt økonomisk støtte til foreldre under 30 år, rett til barnehageplass fra barnet fyller ett år kombinert med mer fleksible foreldrepenger, bedre barsel- og helsetjenester for nybakte foreldre og forsøk med kortere arbeidstid for småbarnsforeldre.
 
-– Fleksibilitet og tid til familieliv er vel så viktig som økonomiske tilskudd og insentiver, sa barne- og familieminister Lene Vågslid da hun tok imot utredningen.
+– Fleksibilitet og tid til familieliv er vel så viktig som økonomiske tilskudd og insentiver, sa barne- og familieminister Lene Vågslid da hun mottok rapporten.
 
-Barne- og familiedepartementet sendte utredningen på høring 22. april 2026, med frist 1. august 2026. Saken er ifølge departementet under behandling.
+Utredningen ble sendt på høring 22. april 2026 med høringsfrist 1. august 2026, og ligger nå til oppfølging i Barne- og familiedepartementet.
 
 ## Kilder
 

@@ -1,38 +1,38 @@
 ---
-title: "Bredbåndsmålet for 2025 ble nesten nådd, men distriktene ligger fortsatt etter"
-description: "Ved utgangen av 2025 kunne 99,3 prosent av husstandene få minst 100 Mbit/s. Nær 19 400 husstander manglet tilbudet, de fleste i spredtbygde strøk."
+title: "Bredbåndsmålet for 2025 glapp på målstreken – nesten hele etterslepet ligger på bygda"
+description: "Ved utgangen av 2025 kunne 99,3 prosent av norske husstander få minst 100 Mbit/s. De 19 393 husstandene som fortsatt manglet raskt bredbånd, bodde nesten utelukkende i spredtbygde strøk."
 date: 2026-10-26T08:00:00+01:00
 category: teknologi
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Bredbåndsmålet for 2025 ble nesten nådd, men distriktene ligger fortsatt etter»"
+coverAlt: "Illustrasjon: «Bredbåndsmålet for 2025 glapp på målstreken – nesten hele etterslepet ligger på bygda»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Raskt bredbånd er en forutsetning for hjemmekontor, digitale offentlige tjenester og næringsliv i hele landet. Tallene viser hvor de siste hullene i nettet er, og hvor statens støttemidler går."
+why_matters: "Raskt bredbånd er en forutsetning for hjemmekontor, digitale offentlige tjenester og lokalt næringsliv. Tallene fra Nkom viser hvor de siste hullene i nettet ligger – og hvorfor den kommersielle utbyggingen nå bremser opp."
 key_points:
-  - "99,3 prosent av husstandene hadde tilbud om minst 100 Mbit/s ved utgangen av 2025. Målet var 100 prosent."
+  - "99,3 prosent av husstandene hadde tilbud om minst 100 Mbit/s ved utgangen av 2025, like under målet om 100 prosent."
   - "19 393 husstander manglet tilbudet, og 18 520 av dem lå i spredtbygde områder."
-  - "Dekningen for 1 Gbit/s økte bare 0,1 prosentpoeng fra 2024 til 2025, til 96,3 prosent."
+  - "Dekningen for 1 Gbit/s økte med bare 0,1 prosentpoeng fra 2024 til 2025, til 96,3 prosent."
 ---
 
-Regjeringen hadde som mål at alle husstander og virksomheter skulle ha tilbud om bredbånd med minst 100 megabit per sekund (Mbit/s) innen utgangen av 2025. Ved utgangen av 2025 var 99,3 prosent av husstandene dekket, viser Nasjonal kommunikasjonsmyndighets (Nkom) rapport om husstandsdekningen for 2025, publisert 27. mai 2026. Målet ble dermed ikke helt nådd: 19 393 husstander manglet fortsatt et slikt tilbud. Nesten alle bodde i spredtbygde områder.
+Regjeringen satte som mål at alle norske husstander og virksomheter skulle ha tilbud om bredbånd med minst 100 megabit per sekund (Mbit/s) innen utgangen av 2025. Da fristen gikk ut, var 99,3 prosent av husstandene dekket, viser dekningsrapporten fra Nasjonal kommunikasjonsmyndighet (Nkom) som ble lagt fram 27. mai 2026. Målet glapp dermed på målstreken: 19 393 husstander sto fortsatt uten et slikt tilbud, og 18 520 av dem lå i spredtbygde strøk.
 
-## Målene og hvor langt Norge har kommet
+## Gigabitveksten har nesten stoppet opp
 
-Målene står i regjeringens nasjonale digitaliseringsstrategi fra september 2024: minst 100 Mbit/s innen utgangen av 2025 og minst 1 gigabit per sekund (Gbit/s) innen utgangen av 2030. I statsbudsjettet for 2026 (Prop. 1 S (2025–2026)) skrev Digitaliserings- og forvaltningsdepartementet at regjeringen var «nære ved å nå målet om full dekning» for 100 Mbit/s innen utgangen av 2025.
+De nasjonale bredbåndsmålene er fastsatt i regjeringens digitaliseringsstrategi fra september 2024: minst 100 Mbit/s til alle innen utgangen av 2025, og minst 1 gigabit per sekund (Gbit/s) innen utgangen av 2030. Allerede i statsbudsjettet for 2026 (Prop. 1 S (2025–2026)) konstaterte Digitaliserings- og forvaltningsdepartementet at regjeringen var «nære ved å nå målet om full dekning» for 100 Mbit/s.
 
-Dekningen for 100 Mbit/s har økt fra 94,4 prosent i 2022 til 99,3 prosent i 2025. Gigabitdekningen har økt fra 93,4 til 96,3 prosent i samme periode, men veksten fra 2024 til 2025 var bare 0,1 prosentpoeng. 96 985 husstander manglet tilbud om 1 Gbit/s ved utgangen av 2025.
+Fra 2022 til 2025 har dekningen for 100 Mbit/s blitt løftet fra 94,4 til 99,3 prosent. For gigabitbredbånd har utviklingen gått fra 93,4 til 96,3 prosent i samme periode, men det siste året bremset utbyggingen kraftig opp: Fra 2024 til 2025 vokste gigabitdekningen med bare 0,1 prosentpoeng. Ved inngangen til 2026 sto 96 985 husstander uten tilbud om 1 Gbit/s.
 
 ![Linjediagram over andelen husstander med tilbud om fast bredbånd 2022–2025. Minst 100 Mbit/s: 94,4 prosent i 2022, 98,2 i 2023, 99,1 i 2024 og 99,3 i 2025. Minst 1 Gbit/s: 93,4 prosent i 2022, 95,1 i 2023, 96,2 i 2024 og 96,3 i 2025.](./graf-2.svg)
 *Gigabitdekningen sto nesten stille fra 2024 til 2025. Kilde: Nkom.*
 
-I en egen analyse fra mai 2026 skriver Nkom at markedet ser ut til å nærme seg et kommersielt metningspunkt for ny gigabitdekning. Ifølge Nkom gjør høyere rente, inflasjon og dyrere anleggsarbeid nye graveprosjekter mindre lønnsomme, samtidig som de gjenværende husstandene ofte er dyrere å nå.
+I en analyse fra mai 2026 peker Nkom på at markedet ser ut til å nærme seg et kommersielt metningspunkt for ny gigabitdekning. Høyere rente, generell prisvekst og dyrere entreprenørtjenester gjør nye graveprosjekter mindre lønnsomme, samtidig som de husstandene som gjenstår, gjerne ligger spredt og koster langt mer å koble på.
 
-«De små endringene i dekningsgraden, kan tyde på at de områdene som er kommersielt lønnsomme er utbygd flere steder i landet», sier Nkom-direktør John-Eivind Velure i Nkoms pressemelding om tallene.
+«De små endringene i dekningsgraden, kan tyde på at de områdene som er kommersielt lønnsomme er utbygd flere steder i landet», uttaler Nkom-direktør John-Eivind Velure i pressemeldingen om rapporten.
 
-## Store forskjeller mellom by og land
+## Tettbygd mot spredtbygd
 
-I tettbygde områder hadde alle husstander tilbud om minst 100 Mbit/s ved utgangen av 2025. I spredtbygde områder var andelen 95,5 prosent. Av de 19 393 husstandene som manglet tilbudet, lå 18 520 i spredtbygde områder. Det tilsvarer 95,5 prosent (beregnet fra Nkoms tall).
+I byer og tettsteder hadde 100 prosent av husstandene tilgang til minst 100 Mbit/s ved utgangen av 2025, mens dekningsgraden i spredtbygde strøk lå på 95,5 prosent. Dermed befant hele 95,5 prosent av de 19 393 husstandene uten 100 Mbit/s-tilbud seg utenfor tettstedene (18 520 husstander).
 
 | Ved utgangen av 2025 | Tettbygd | Spredtbygd |
 |---|---|---|
@@ -43,36 +43,36 @@ I tettbygde områder hadde alle husstander tilbud om minst 100 Mbit/s ved utgang
 
 *Prosent av husstandene. Kilde: Nkom, Husstandsdekning for fast bredbånd 2025.*
 
-Gapet krymper likevel. Andelen husstander i spredtbygde områder med tilbud om gigabithastighet økte fra 70,4 prosent i 2022 til 82,9 prosent i 2025, ifølge Nkom.
+Over tid har likevel distriktene tatt innpå. Andelen husstander i spredtbygde områder som kan bestille gigabithastighet, har økt fra 70,4 prosent i 2022 til 82,9 prosent i 2025.
 
-## Nordland ligger lavest
+## Nordland henger lengst etter
 
-Blant fylkene har Oslo høyest gigabitdekning med 99,2 prosent, mens Nordland ligger lavest med 90,9 prosent. Nordland er også fylket med lavest dekning for 100 Mbit/s, 97,1 prosent, og med flest husstander uten et slikt tilbud: 3 403. Deretter følger Trøndelag med 2 602 og Innlandet med 2 085 husstander.
+Mellom fylkene spenner gigabitdekningen fra 99,2 prosent i Oslo til 90,9 prosent i Nordland. Nordland ligger også lavest på 100 Mbit/s med 97,1 prosent, og er fylket med flest husstander helt uten et slikt tilbud: 3 403 husstander, fulgt av Trøndelag med 2 602 og Innlandet med 2 085.
 
 ![Liggende søylediagram over andelen husstander med tilbud om minst 1 Gbit/s per fylke ved utgangen av 2025. Oslo 99,2 prosent, Rogaland og Vestland 97,9, Møre og Romsdal 97,7, Agder 97,3, Akershus 96,7, Telemark 96,0, Troms 95,6, Trøndelag 95,3, Vestfold 95,1, Finnmark 94,7, Østfold 93,9, Innlandet 93,8, Buskerud 92,5 og Nordland 90,9. Hele landet 96,3 prosent.](./graf-1.svg)
 *Nordland og Buskerud har lavest gigabitdekning. Kilde: Nkom.*
 
-Flest husstander uten gigabittilbud finnes i Innlandet (11 298), Trøndelag (10 822) og Akershus (10 589).
+Målt i antall hjem uten tilgang til gigabitbredbånd er etterslepet størst i de folkerike østlands- og midtnorske fylkene: Innlandet (11 298 husstander), Trøndelag (10 822) og Akershus (10 589).
 
-## Mobilnettet: 5G nesten overalt der folk bor
+## 5G-nettet: God dekning hjemme, store hull i terrenget
 
-Nkoms kartlegging av mobildekningen, publisert 17. juni 2026, viser at 99,8 prosent av husstandene hadde grunnleggende 5G-dekning ved utgangen av 2025. Med krav om 30 Mbit/s var husstandsdekningen 95,2 prosent. Nordland og Finnmark lå mer enn 5 prosentpoeng under landsgjennomsnittet. For 100 Mbit/s i 5G-nettet var dekningen 71,4 prosent, fra 99,1 prosent i Oslo til 37,9 prosent i Finnmark.
+Nkoms kartlegging av mobilnettet fra 17. juni 2026 viser at 99,8 prosent av norske husstander hadde grunnleggende 5G-dekning ved årsskiftet. Skrur man kravet opp til 30 Mbit/s over mobilnettet, var husstandsdekningen 95,2 prosent på landsbasis, mens Nordland og Finnmark lå mer enn 5 prosentpoeng under snittet. For 100 Mbit/s over 5G falt landsdekningen til 71,4 prosent – med et spenn fra 99,1 prosent i Oslo ned til 37,9 prosent i Finnmark.
 
-Arealdekningen er lavere. Grunnleggende 5G-dekning gjaldt 78,5 prosent av arealet, fra 63,2 prosent i Finnmark til 99,9 prosent i Oslo. Nkom opplyser at det er et statistisk brudd i datagrunnlaget for 2025, og fraråder direkte sammenligning med 2024 og tidligere år.
+Regnet etter landareal er 5G-dekningen betydelig lavere: Grunnleggende 5G dekket 78,5 prosent av Norges areal, fra 63,2 prosent i Finnmark til 99,9 prosent i Oslo. Nkom gjør oppmerksom på at beregningsgrunnlaget ble lagt om i 2025, slik at tallene ikke bør sammenlignes direkte med 2024 og eldre årganger.
 
-## Statlig støtte der markedet ikke bygger
+## Statlig støtte krympet fra 415 til 159 millioner
 
-Staten gir støtte til bredbåndsutbygging i områder uten kommersielt grunnlag. Midlene fordeles til fylkeskommunene, som tildeler dem til prosjekter. For 2025 ble det tildelt 415 millioner kroner, ifølge Nkom. For 2026 er fylkeskommunene tildelt til sammen 159,11 millioner kroner. Nordland har fått mest med 25,9 millioner kroner, om lag 16 prosent av totalen (beregnet). Oslo har fått minst med 0,48 millioner kroner.
+I områder der teleselskapene ikke finner det regningssvarende å bygge ut selv, bidrar staten med tilskudd som fordeles via fylkeskommunene. I 2025 var den statlige potten på 415 millioner kroner. For 2026 er det tildelt 159,11 millioner kroner til fylkeskommunene – hvorav Nordland får den største potten med 25,9 millioner kroner, rundt 16 prosent av totalen, mens Oslo får minst med 0,48 millioner kroner.
 
-Ordningen for 2026 ble godkjent av EFTAs overvåkningsorgan ESA i februar 2026. Ifølge Nkom kan den nå også gi støtte til bedre arealdekning for mobil. I statsbudsjettet for 2026 opplyser departementet at om lag 30 000 nye husstander har fått eller vil få høyhastighetsbredbånd gjennom støtteordningen fra 2022 til 2025.
+Støtteordningen for 2026 ble godkjent av EFTAs overvåkningsorgan ESA i februar 2026, og åpner nå også for å bruke midler på å bedre arealdekningen i mobilnettet. Ifølge statsbudsjettet for 2026 har til sammen rundt 30 000 husstander fått eller vil få høyhastighetsbredbånd gjennom de statlige støtteordningene i perioden 2022–2025.
 
-## Hva betyr dette for folk flest?
+## Fiber i bakken betyr ikke alltid fiber i veggen
 
-For de aller fleste husstandene finnes det et tilbud om raskt bredbånd. Det er likevel ikke alle som tar det i bruk. Ved utgangen av 2025 hadde 92,1 prosent av husstandene mulighet for fiber, mens 78,5 prosent var fysisk tilkoblet fibernettet. Medianhastigheten på private abonnementer var 250 Mbit/s både i 2024 og 2025, ifølge Nkom.
+Selv om raskt bredbånd nå ligger tilgjengelig utenfor nesten alle norske hjem, velger mange å la være å koble seg på. Ved utgangen av 2025 hadde 92,1 prosent av husstandene mulighet til å få fiber, men bare 78,5 prosent hadde faktisk et aktivt fiberabonnement. Medianhastigheten for private bredbåndsabonnementer lå uendret på 250 Mbit/s fra 2024 til 2025.
 
-For husstander i distriktene er bildet et annet. I spredtbygde områder hadde 69,9 prosent tilbud fra to eller flere tilbydere, mot 98,2 prosent i tettbygde områder. Færre tilbydere kan bety mindre valgfrihet. Nkom skriver i analysen fra mai 2026 at markedet neppe alene vil sikre full geografisk gigabitdekning. Det er fylkeskommunene som administrerer de statlige støttemidlene til utbygging.
+For forbrukere i distriktene handler forskjellen også om konkurranse: Mens 98,2 prosent av husstandene i tettbygde strøk kunne velge mellom to eller flere bredbåndstilbydere, gjaldt det samme bare 69,9 prosent i spredtbygde områder. Nkom konkluderer i mai-analysen med at markedet neppe vil klare å levere full geografisk gigabitdekning på egen hånd innen 2030.
 
-Digitaliserings- og forvaltningsminister Karianne Tung (Ap) uttalte i Nkoms pressemelding 27. mai 2026: «Vi må sørge for at nettene er sikre og robuste, og vi må sørge for god konkurranse og rimelige priser.»
+Digitaliserings- og forvaltningsminister Karianne Tung (Ap) oppsummerte utfordringen slik da tallene ble lagt fram 27. mai 2026: «Vi må sørge for at nettene er sikre og robuste, og vi må sørge for god konkurranse og rimelige priser.»
 
 ## Kilder
 

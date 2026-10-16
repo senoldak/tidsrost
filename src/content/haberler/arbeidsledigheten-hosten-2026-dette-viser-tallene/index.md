@@ -1,59 +1,59 @@
 ---
-title: "Arbeidsledigheten høsten 2026: Dette viser tallene fra Nav og SSB"
-description: "2,0 prosent var registrert helt ledige hos Nav i september, mens SSBs arbeidskraftundersøkelse viser 4,5 prosent ledighet. Her er tallene, forskjellene og fylkene."
+title: "Arbeidsledigheten høsten 2026: 2,0 prosent hos Nav, 4,5 prosent hos SSB"
+description: "59 400 personer var registrert helt ledige hos Nav i september, mens SSBs arbeidskraftundersøkelse måler ledigheten til 4,5 prosent. De to statistikkene teller ulikt – og gapet mellom dem har økt."
 date: 2026-10-19T08:00:00+02:00
 category: innenriks
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Arbeidsledigheten høsten 2026: Dette viser tallene fra Nav og SSB»"
+coverAlt: "Illustrasjon: «Arbeidsledigheten høsten 2026: 2,0 prosent hos Nav, 4,5 prosent hos SSB»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Ledighetstallene brukes når politikere, Nav og Norges Bank vurderer økonomien, og de sier noe om hvor lett det er å finne jobb. De to hovedmålene gir ulike tall, og det er nyttig å vite hvorfor."
+why_matters: "Ledighetstallene brukes når politikere, Nav og Norges Bank vurderer norsk økonomi. Fordi de to hovedmålene bygger på ulike definisjoner, gir de svært forskjellige svar på hvor mange som faktisk står uten jobb."
 key_points:
-  - "59 400 personer var registrert som helt ledige hos Nav i september 2026, 2,0 prosent av arbeidsstyrken."
+  - "59 400 personer var registrert som helt ledige hos Nav i september 2026 – 2,0 prosent av arbeidsstyrken."
   - "SSBs arbeidskraftundersøkelse viser 4,5 prosent ledighet i august 2026 (trendtall), uendret fra de tre foregående månedene."
-  - "Oslo og Østfold har den høyeste registrerte ledigheten, Troms den laveste."
+  - "Oslo og Østfold har den høyeste registrerte ledigheten, mens Troms ligger lavest."
 ---
 
-Det var 59 400 personer registrert som helt ledige hos Nav i september 2026. Det tilsvarer 2,0 prosent av arbeidsstyrken, ifølge Navs månedlige hovedtall publisert 2. oktober. Justert for normale sesongvariasjoner var andelen uendret fra august. Statistisk sentralbyrås (SSB) arbeidskraftundersøkelse (AKU) viser samtidig en arbeidsledighet på 4,5 prosent i august. De to tallene måler ikke det samme, og forskjellen mellom dem har økt de siste årene.
+Ved utgangen av september 2026 var 59 400 personer registrert som helt ledige hos Nav, viser etatens månedlige hovedtall fra 2. oktober. Det utgjør 2,0 prosent av arbeidsstyrken, og justert for normale sesongsvingninger er nivået uendret fra august. Ser man derimot på Statistisk sentralbyrås (SSB) arbeidskraftundersøkelse (AKU), lå arbeidsledigheten på 4,5 prosent i august. Forskjellen skyldes at de to undersøkelsene måler ulike ting, og avstanden mellom dem har blitt merkbart større de siste årene.
 
-## Registrert ledighet: Stabilt rundt 2 prosent
+## Stabilt rundt 2 prosent hos Nav
 
-Navs ujusterte tall for september viser at 59 413 personer var helt ledige. Det er 2 542 færre enn i september 2025, en nedgang på 4 prosent. Andelen var da 2,1 prosent av arbeidsstyrken. I tillegg var 22 900 personer registrert som delvis ledige og 12 800 som arbeidssøkere på tiltak. Totalt var 95 200 personer registrert som arbeidssøkere, 3,2 prosent av arbeidsstyrken.
+I de ujusterte tallene fra Nav var 59 413 personer registrert som helt ledige i september. Det er 2 542 færre enn på samme tid i fjor, en nedgang på 4 prosent fra september 2025, da andelen lå på 2,1 prosent. I tillegg kommer 22 900 delvis ledige og 12 800 arbeidssøkere på tiltak. Legger man sammen alle tre gruppene, var 95 200 personer registrert som arbeidssøkere hos Nav – 3,2 prosent av arbeidsstyrken.
 
-Justert for sesongvariasjoner falt antallet helt ledige med rundt 600 personer fra august til september, til 61 265. Bruttoledigheten, som omfatter både helt ledige og arbeidssøkere på tiltak, var stabil på 2,6 prosent.
+Justert for sesongvariasjoner gikk antallet helt ledige ned med rundt 600 personer fra august til september, til 61 265. Bruttoledigheten, som slår sammen helt ledige og deltakere på tiltak, holdt seg i ro på 2,6 prosent.
 
-– Arbeidsledigheten og antall ledige stillinger var stabile i september. Samlet sett tyder det på et fortsatt godt arbeidsmarked, med lav ledighet og god etterspørsel etter arbeidskraft, sier arbeids- og velferdsdirektør Hege Nilssen i Navs pressemelding.
+– Arbeidsledigheten og antall ledige stillinger var stabile i september. Samlet sett tyder det på et fortsatt godt arbeidsmarked, med lav ledighet og god etterspørsel etter arbeidskraft, sier arbeids- og velferdsdirektør Hege Nilssen i pressemeldingen fra Nav.
 
 ![Linjediagram over andelen helt ledige registrert hos Nav i september hvert år fra 2011 til 2026, sesongjustert. Andelen var 2,6 prosent i 2011, 3,0 prosent i 2015, 2,3 prosent i 2019, 3,9 prosent i 2020, 1,6 prosent i 2022, 2,1 prosent i 2025 og 2,0 prosent i 2026.](./graf-1.svg)
 *Andel helt ledige i september hvert år, sesongjustert. Det er brudd i statistikken i november 2018 og april 2025. Kilde: Nav.*
 
-I et lengre perspektiv er dagens nivå lavt. Sesongjustert var andelen helt ledige i september 3,0 prosent i 2015 og 3,9 prosent i 2020, året da pandemien slo inn i arbeidsmarkedet. Laveste septembernivå i perioden var 1,6 prosent i 2022. Siden har andelen økt noe, til 2,1 prosent i september 2025, før den var 2,0 prosent i september i år. Nav opplyser at det er brudd i statistikken i november 2018 og i april 2025, og at arbeidsstyrken fra 2022 beregnes på et annet grunnlag enn før. Tallene er derfor ikke helt sammenlignbare over hele perioden.
+Historisk sett er en registrert ledighet på 2,0 prosent lav. Sesongjustert lå septembertallene på 3,0 prosent i 2015 og spratt opp i 3,9 prosent høsten 2020 under pandemien. Bunnivået i perioden ble nådd i september 2022 med 1,6 prosent, før kurven krøp opp til 2,1 prosent i fjor høst og tilbake til 2,0 prosent i år. Nav gjør oppmerksom på at tidsserien har statistiske brudd i november 2018 og april 2025, og at selve arbeidsstyrken fra og med 2022 beregnes etter en ny metode. Tallene kan derfor ikke sammenlignes direkte bakover i tid uten forbehold.
 
-## Store forskjeller mellom fylkene
+## Høyest i Oslo og Østfold, lavest i nord og vest
 
-Oslo hadde den høyeste andelen helt ledige i september, med 2,7 prosent av arbeidsstyrken, fulgt av Østfold med 2,6 prosent. Troms hadde den laveste andelen, 1,2 prosent. Også Nordland, Vestland, Innlandet og Møre og Romsdal lå på 1,6 prosent eller lavere.
+Fylkene skiller lag. Oslo hadde den høyeste andelen helt ledige i september med 2,7 prosent av arbeidsstyrken, tett fulgt av Østfold på 2,6 prosent. I den andre enden lå Troms på 1,2 prosent, og både Nordland, Vestland, Innlandet og Møre og Romsdal hadde en ledighet på 1,6 prosent eller lavere.
 
 ![Liggende stolpediagram over andelen helt ledige etter fylke i september 2026, ikke sesongjustert. Oslo 2,7 prosent, Østfold 2,6, Akershus 2,3, Buskerud, Vestfold og Telemark 2,2, Finnmark 2,1, hele landet 2,0, Agder 2,0, Rogaland og Trøndelag 1,9, Møre og Romsdal, Innlandet og Vestland 1,6, Nordland 1,5 og Troms 1,2 prosent.](./graf-2.svg)
 *Helt ledige i prosent av arbeidsstyrken, september 2026, ujusterte tall. Kilde: Nav.*
 
-Målt ved bruttoledighet, som også tar med arbeidssøkere på tiltak, var Østfold høyest med 3,2 prosent og Oslo nest høyest med 3,1 prosent, ifølge Nav. Troms var lavest med 1,5 prosent.
+Ser man på bruttoledigheten, der også arbeidssøkere på tiltak er regnet med, bytter de to øverste fylkene plass: Østfold topper med 3,2 prosent foran Oslo med 3,1 prosent. Troms ligger fortsatt lavest med 1,5 prosent.
 
-## Økning blant ingeniører og IKT-ansatte
+## Flere ledige ingeniører og IT-folk, færre i bygg og anlegg
 
-Fordelt på yrke var andelen helt ledige høyest innen reiseliv og transport med 2,9 prosent, og lavest innen akademiske yrker med 0,8 prosent og helse, pleie og omsorg med 0,9 prosent.
+Mellom yrkesgruppene spenner ledigheten fra 2,9 prosent i reiseliv og transport til 0,8 prosent i akademiske yrker og 0,9 prosent i helse, pleie og omsorg.
 
-Ingeniør- og IKT-fag skiller seg ut. Her var 4 539 personer helt ledige i september, 538 flere enn ett år tidligere. Andelen økte fra 1,3 til 1,5 prosent. Nav peker på at noe av økningen kommer fra petroleumsnæringen. I bygg og anlegg gikk antallet helt ledige ned med 737 personer, og andelen falt fra 2,6 til 2,3 prosent.
+En merkbar endring det siste året gjelder ingeniør- og IKT-fag. Her var 4 539 personer registrert som helt ledige i september – 538 flere enn året før, noe som løftet andelen fra 1,3 til 1,5 prosent. Nav knytter deler av oppgangen til lavere etterspørsel fra petroleumsnæringen. Innen bygg og anlegg gikk utviklingen motsatt vei: Antallet helt ledige falt med 737 personer, og ledighetsandelen gikk ned fra 2,6 til 2,3 prosent.
 
-Samtidig ble det lyst ut 44 500 ledige stillinger på arbeidsplassen.no i september, 3 prosent flere enn i september i fjor. Flest stillinger var innen helse, pleie og omsorg, med 10 000.
+Etterspørselen etter arbeidskraft holder seg likevel oppe. I løpet av september ble det lyst ut 44 500 ledige stillinger på arbeidsplassen.no, 3 prosent flere enn i september i fjor. Helse, pleie og omsorg sto alene for 10 000 av utlysningene.
 
-## SSB: 4,5 prosent ledige og flere sysselsatte
+## 136 000 arbeidsledige i SSBs undersøkelse
 
-SSBs arbeidskraftundersøkelse viser at 136 000 personer i alderen 15–74 år var arbeidsledige i august 2026. Det tilsvarer 4,5 prosent av arbeidsstyrken. SSB oppgir trendtall, og ledigheten var uendret fra de tre foregående månedene. I august 2025 var trendtallet 4,6 prosent.
+I SSBs arbeidskraftundersøkelse (AKU) var 136 000 personer i alderen 15 til 74 år arbeidsledige i august 2026. Det tilsvarer et trendtall på 4,5 prosent av arbeidsstyrken – det samme som i de tre foregående månedene, og litt ned fra 4,6 prosent i august 2025.
 
-Antallet sysselsatte var 2 928 000 i august, 24 000 flere enn i august 2025, ifølge trendtallene. Sysselsettingsandelen var 69,9 prosent av befolkningen i alderen 15–74 år, mot 69,6 prosent ett år tidligere. Blant unge mellom 15 og 24 år var ledigheten 13,4 prosent, ned fra 14,4 prosent i august 2025. Trendtallene kan bli revidert når nye data kommer inn.
+Samtidig var 2 928 000 personer i arbeid i august, en oppgang på 24 000 sysselsatte på ett år. Sysselsettingsandelen i aldersgruppen 15–74 år økte fra 69,6 til 69,9 prosent. Blant unge mellom 15 og 24 år gikk ledigheten ned fra 14,4 prosent i august i fjor til 13,4 prosent i år. Fordi SSB publiserer glattede trendtall, kan augusttallene bli justert når nye måneder legges til.
 
-## Hvorfor tallene er så forskjellige
+## Derfor spriker tallene fra Nav og SSB
 
 | | Nav: registrert helt ledige | SSB: AKU-ledige |
 |---|---|---|
@@ -62,11 +62,11 @@ Antallet sysselsatte var 2 928 000 i august, 24 000 flere enn i august 2025, if�
 | Permitterte | Regnes som ledige fra første dag | Regnes som sysselsatte de første tre månedene |
 | Siste tall | 2,0 prosent (september 2026) | 4,5 prosent (august 2026) |
 
-Ifølge SSB er den viktigste forskjellen at Nav teller alle som er registrert, mens AKU bygger på intervjuer med et utvalg av befolkningen. SSB skriver at unge og andre grupper uten krav på dagpenger har mindre motivasjon til å registrere seg hos Nav. I 2025 var 18 000 studenter arbeidsledige i AKU uten å melde seg hos Nav. Personer på arbeidsmarkedstiltak er ikke med i Navs tall over helt ledige, men kan bli regnet som ledige i AKU.
+Hovedforskjellen ligger i hvem som fanges opp. Nav teller kun dem som selv melder seg som arbeidssøkere hos etaten, mens AKU er en utvalgsundersøkelse basert på intervjuer i befolkningen. Som SSB påpeker, har unge og andre som ikke har opptjent rett til dagpenger, ofte liten grunn til å registrere seg hos Nav når de leter etter jobb. I 2025 fanget AKU opp 18 000 arbeidsledige studenter som ikke sto i Navs registre. I tillegg kommer personer på arbeidsmarkedstiltak: Hos Nav føres de på en egen linje utenfor de helt ledige, mens de i AKU kan bli telt som ordinært arbeidsledige dersom de søker jobb.
 
-Til sammen var 171 000 personer arbeidsledige ifølge Nav og/eller AKU i 2025, men bare 28 000 av dem var ledige i begge statistikkene, ifølge SSB. I årene 2011–2014 lå Navs ledighetsprosent i snitt 1,1 prosentpoeng lavere enn AKU-ledigheten. Avviket var rundt 2,0 prosentpoeng i 2024 og 2,4 prosentpoeng i 2025.
+Ser man på 2025 under ett, var til sammen 171 000 personer arbeidsledige i én eller begge statistikkene, men bare 28 000 av dem inngikk i begge to samtidig. Gapet mellom de to målene har dessuten vokst: I årene 2011–2014 lå Nav-ledigheten i snitt 1,1 prosentpoeng under AKU-ledigheten, mens avstanden økte til rundt 2,0 prosentpoeng i 2024 og 2,4 prosentpoeng i 2025.
 
-For den som søker jobb, er Navs register nyttig fordi det gir detaljerte tall helt ned på kommunenivå, og fordelt på yrke. AKU-tallene følger internasjonale definisjoner og er ifølge SSB internasjonalt sammenlignbare. SSB beskriver AKU som den kilden som gir det mest dekkende bildet av den totale arbeidsledigheten.
+De to statistikkene utfyller hverandre til hvert sitt bruk. Fordi Nav-tallene bygger på et fullstendig register, gir de et nøyaktig øyeblikksbilde helt ned på kommunenivå og enkeltbransjer. AKU følger på sin side internasjonale standarder (ILO) og fanger også opp jobbsøkere utenfor stønadsapparatet – og regnes av SSB som det mest dekkende målet på den samlede arbeidsledigheten i Norge.
 
 ## Kilder
 

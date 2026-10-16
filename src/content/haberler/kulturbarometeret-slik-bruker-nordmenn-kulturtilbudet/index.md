@@ -1,27 +1,27 @@
 ---
-title: "Kulturbarometeret: Konsert og bibliotek er tilbake, kino og teater henger etter"
-description: "SSBs kulturbarometer for 2025 viser at de fleste kulturtilbud er tilbake på nivået fra før pandemien. Kino og teater har færre brukere enn i 2016."
+title: "Norsk kulturbarometer: Konserter og bibliotek er tilbake – kino og teater sliter"
+description: "SSBs kulturbarometer for 2025 viser at konserter, museer og folkebibliotek er tilbake på nivået fra før pandemien. Kino og teater har derimot mistet mange besøkende siden 2016."
 date: 2026-10-28T08:00:00+01:00
 category: kultur
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Kulturbarometeret: Konsert og bibliotek er tilbake, kino og teater henger etter»"
+coverAlt: "Illustrasjon: «Norsk kulturbarometer: Konserter og bibliotek er tilbake – kino og teater sliter»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Tallene viser hvilke kulturtilbud folk faktisk bruker, og hvor de opplever at økonomi og tid står i veien. De danner også bakteppet for statsbudsjettet for kultur i 2027."
+why_matters: "Undersøkelsen viser hvilke kulturtilbud folk faktisk oppsøker – og hvor billettpriser og tidsklemme holder publikum hjemme. Tallene danner også bakteppet for kulturbudsjettet for 2027."
 key_points:
-  - "62 prosent gikk på kino i 2025, mot 72 prosent i 2016. Andelen som gikk på teater falt fra 50 til 37 prosent."
-  - "Andelen som brukte folkebibliotek steg til 49 prosent i 2025, og bibliotekene hadde 27,8 millioner fysiske besøk."
-  - "Regjeringen foreslår 28,1 milliarder kroner over Kultur- og likestillingsdepartementets budsjett for 2027."
+  - "62 prosent gikk på kino i 2025, ned fra 72 prosent i 2016. Andelen som gikk på teater, musikal eller revy, falt fra 50 til 37 prosent."
+  - "49 prosent oppsøkte et folkebibliotek i 2025, og bibliotekene talte rekordhøye 27,8 millioner fysiske besøk."
+  - "Regjeringen foreslår en ramme på 28,1 milliarder kroner over Kultur- og likestillingsdepartementets budsjett for 2027."
 ---
 
-Seks av ti i befolkningen var på kino i løpet av et år, viser Norsk kulturbarometer 2025 fra Statistisk sentralbyrå (SSB), publisert 5. mars 2026. Kino er fortsatt det kulturtilbudet flest bruker, men andelen er lavere enn før pandemien: 62 prosent i 2025 mot 72 prosent i 2016. Teater har hatt den største nedgangen. Konserter, museer, festivaler og folkebibliotek er derimot tilbake på omtrent samme nivå som før pandemien.
+Seks av ti nordmenn var på kino i løpet av de siste tolv månedene, viser Norsk kulturbarometer 2025 fra Statistisk sentralbyrå (SSB), som ble lagt fram 5. mars 2026. Kinoen holder dermed stand som det mest brukte kulturtilbudet i landet, men har likevel mistet en betydelig del av publikummet sitt siden før pandemien: 62 prosent gikk på kino i 2025, mot 72 prosent i 2016. Enda brattere har nedturen vært for scenekunsten. Konserter, museer, festivaler og folkebibliotek har derimot hentet seg helt inn igjen til nivået fra midten av 2010-tallet.
 
-## Hva kulturbarometeret måler
+## Slik har kulturvanene endret seg siden 2016
 
-Kulturbarometeret er en spørreundersøkelse som SSB har gjennomført jevnlig siden 1991. Deltakerne oppgir om de har brukt ulike kulturtilbud de siste 12 månedene, og hvor mange ganger. Til og med 2016 gjaldt undersøkelsen personer i alderen 9–79 år. Fra 2021 omfatter den alle som er 9 år og eldre. Undersøkelsen fra 2021 ble gjennomført mens smitteverntiltak begrenset kulturlivet, og må leses i lys av det.
+Kulturbarometeret er en landsomfattende spørreundersøkelse SSB har gjennomført med jevne mellomrom siden 1991. Deltakerne svarer på hvilke kulturarenaer de har besøkt de siste tolv månedene og hvor ofte. Fram til og med 2016 omfattet utvalget aldersgruppen 9–79 år, mens undersøkelsene fra og med 2021 tar med hele befolkningen fra 9 år og oppover. 2021-målingen ble dessuten gjort mens smittevernrestriksjoner holdt store deler av kulturlivet stengt.
 
-Tabellen viser andelen av befolkningen som har brukt utvalgte tilbud minst én gang de siste 12 månedene:
+Andelen av befolkningen som har oppsøkt de ulike kulturtilbudene minst én gang i løpet av det siste året, har utviklet seg slik:
 
 | Kulturtilbud | 2016 | 2021 | 2023 | 2025 |
 |---|---|---|---|---|
@@ -35,39 +35,39 @@ Tabellen viser andelen av befolkningen som har brukt utvalgte tilbud minst én g
 
 *Prosent. Kilde: SSB, tabell 13503.*
 
-## Pandemien ga et kraftig fall
+## Konsertene tar innpå kinoen
 
-I 2021 lå bruken av alle tilbudene i tabellen langt under nivået fra 2016. Andelen som hadde vært på konsert, falt fra 62 til 23 prosent, og andelen som hadde vært på teater, fra 50 til 16 prosent. Allerede i 2023 var mye av fallet hentet inn.
+Under pandemien i 2021 stupte besøket over hele linjen: Andelen som hadde vært på konsert, falt fra 62 til 23 prosent, og for teater, musikal og revy krympet publikumsandelen fra 50 til 16 prosent. To år senere, i 2023, var det meste av korona-fallet hentet inn igjen, men siden den gang har utviklingen skilt lag.
 
 ![Linjediagram over andelen som har brukt kino, konsert, folkebibliotek og teater siste 12 måneder, 1991–2025. Kino gikk fra 58 prosent i 1991 til 72 prosent i 2016, falt til 40 prosent i 2021 og var 62 prosent i 2025. Konsert falt fra 62 til 23 prosent og var 60 prosent i 2025. Folkebibliotek var 46 prosent i 2016, 37 i 2021 og 49 i 2025. Teater falt fra 50 til 16 prosent og var 37 prosent i 2025.](./graf-1.svg)
 *Fallet i 2021 var bratt for alle tilbudene, men kino og teater har ikke kommet helt tilbake. Kilde: SSB, tabell 13503.*
 
-Fra 2023 til 2025 gikk kinoandelen ned med 3 prosentpoeng, mens bibliotek, konsert og festival økte. «Vi ser at konsert vokser frem som et av de aller mest populære kulturtilbudene», sier Fam Vivian Bekkengen, statistikkansvarlig for Norsk kulturbarometer i SSB, i SSBs artikkel om tallene.
+Fra 2023 til 2025 mistet kinoene ytterligere 3 prosentpoeng, samtidig som bibliotek, konserter og festivaler klatret videre. «Vi ser at konsert vokser frem som et av de aller mest populære kulturtilbudene», sier Fam Vivian Bekkengen, statistikkansvarlig for Norsk kulturbarometer i SSB, i byråets gjennomgang av tallene.
 
-Nedgangen på kino er tydeligst blant unge og voksne. I 2016 hadde 90 prosent av 16–24-åringene vært på kino, mot 82 prosent i 2025. Blant 25–44-åringene var andelen 81 prosent i 2016. I 2025 var den 15 prosentpoeng lavere. I aldersgruppen 9–15 år hadde 92 prosent vært på kino i 2025, mens andelen var 25 prosent blant dem som er 80 år eller eldre.
+Kinonedgangen er særlig tydelig blant unge voksne. Blant 16–24-åringene gikk kinoandelen ned fra 90 prosent i 2016 til 82 prosent i 2025, og i aldersgruppen 25–44 år har andelen falt med hele 15 prosentpoeng fra 81 prosent i 2016. De ivrigste kinogjengerne finnes fortsatt blant barn og tenåringer mellom 9 og 15 år (92 prosent i 2025), mens bare 25 prosent av dem på 80 år og over var på kino.
 
-## Bibliotekene har flere besøk enn før pandemien
+## Rekordbesøk på bibliotekene – tross færre filialer
 
-Folkebibliotekene har økt både i undersøkelsen og i den kommunale rapporteringen til SSB (KOSTRA). Ifølge kulturbarometeret brukte 49 prosent av befolkningen et folkebibliotek i 2025. Blant barn i alderen 9–15 år var andelen 78 prosent. Andelen var høyere blant kvinner enn blant menn, 54 mot 44 prosent.
+Folkebibliotekene skiller seg ut med klar vekst både i spørreundersøkelsen og i kommunenes egen KOSTRA-rapportering til SSB. I kulturbarometeret svarte 49 prosent at de hadde brukt et folkebibliotek i løpet av det siste året – 54 prosent av kvinnene mot 44 prosent av mennene, og hele 78 prosent blant barna mellom 9 og 15 år.
 
-Bibliotekene registrerte 27,8 millioner fysiske besøk i 2025. I 2020 var tallet 15,9 millioner. Sammenlignet med 2019, da det var 25,8 millioner besøk, er økningen om lag 7,6 prosent (beregnet fra SSBs tall).
+Totalt talte folkebibliotekene 27,8 millioner fysiske besøk i 2025. Etter bunnen på 15,9 millioner besøk under nedstengningene i 2020 har besøkstallet passert 2019-nivået på 25,8 millioner med rundt 7,6 prosent.
 
 ![Søylediagram over fysiske besøk i folkebibliotekene 2015–2025. Besøkene økte fra 22,4 millioner i 2015 til 25,8 millioner i 2019, falt til 15,9 millioner i 2020 og 17,5 millioner i 2021, og steg til 27,8 millioner i 2025.](./graf-2.svg)
 *Bibliotekbesøkene i 2025 var de høyeste i perioden. Kilde: SSB, tabell 11758.*
 
-Utlånet av bøker fra folkebibliotekene var 14,1 millioner i 2025, mot 12,2 millioner i 2019. Det er en økning på om lag 15 prosent (beregnet). Utlånet av barnebøker steg fra 6,7 til 8,3 millioner i samme periode. Utlånet av film har gått kraftig ned, fra nær 2,0 millioner i 2016 til 0,3 millioner i 2025. Samtidig er det færre bibliotek: 618 i 2025, mot 675 i 2015.
+Også bokutlånet har skutt fart: 14,1 millioner utlånte bøker i 2025 er rundt 15 prosent mer enn de 12,2 millionene i 2019, drevet blant annet av at utlånet av barnebøker økte fra 6,7 til 8,3 millioner. Utlånet av fysisk film på bibliotekene er på sin side nesten borte – ned fra nær 2,0 millioner i 2016 til 0,3 millioner i 2025. Besøksrekorden har kommet til tross for at antall folkebibliotek i landet er redusert fra 675 i 2015 til 618 i 2025.
 
-## Dette betyr det for folk flest
+## Prislappen bremser unge konsert- og teatergjengere
 
-Mange vil gjerne bruke kulturtilbudene oftere enn de gjør. Ifølge SSB vil nær halvparten av befolkningen gå oftere på teater, og om lag seks av ti oftere på kino. Økonomi og mangel på tid er vanlige hindringer. Blant 16–24-åringene svarer 72 prosent at de skulle ønske de var på konsert oftere, og over halvparten av disse oppgir økonomiske grunner.
+Spørreundersøkelsen viser at interessen er større enn den faktiske bruken: Nær halvparten av de spurte oppgir at de gjerne skulle gått oftere i teateret, og rundt seks av ti ønsker seg oftere på kino. Det er særlig økonomi og mangel på tid som oppgis som bremseklosser. Blant unge mellom 16 og 24 år svarer hele 72 prosent at de skulle ønske de kunne gå oftere på konsert, og over halvparten av disse peker på billettprisene og egen økonomi som årsak.
 
-Folkebibliotekene er gratis å bruke, og de har flere besøkende enn før pandemien. I tillegg til utlån arrangerte bibliotekene 75 294 arrangementer i 2025, med til sammen 1,9 millioner deltakere.
+Her stiller folkebibliotekene med en åpenbar fordel ved å være gratis. Ved siden av bokutlånet fungerer bibliotekene i økende grad som lokale møteplasser: I løpet av 2025 ble det holdt 75 294 arrangementer på norske folkebibliotek, med til sammen 1,9 millioner deltakere.
 
-## Kulturbudsjettet for 2027
+## 28,1 milliarder på kulturbudsjettet for 2027
 
-Regjeringen la fram forslaget til statsbudsjett for 2027 den 7. oktober 2026. Over Kultur- og likestillingsdepartementets budsjett foreslås 28,1 milliarder kroner. Det er en økning på om lag 946 millioner kroner fra 2026. Forslaget skal behandles i Stortinget.
+I regjeringens forslag til statsbudsjett for 2027, lagt fram 7. oktober 2026, foreslås det en samlet ramme på 28,1 milliarder kroner under Kultur- og likestillingsdepartementet – en økning på rundt 946 millioner kroner fra 2026. Budsjettforslaget ligger nå til behandling i Stortinget.
 
-Blant tiltakene som berører tilbudene i kulturbarometeret, foreslås 6 millioner kroner ekstra til innkjøpsordningene for norskspråklig litteratur under Norsk kulturfond, slik at flere bøker går til bibliotekene. Departementet opplyser at regjeringen arbeider med en leselyststrategi for voksne. Filmfeltet foreslås styrket med 75 millioner kroner, blant annet 5 millioner til en ny tilskuddsordning for oppgradering av digitalt kinoutstyr. Dansefeltet foreslås styrket med 10 millioner kroner.
+Flere av budsjettgrepene er rettet direkte mot områdene i kulturbarometeret: Innkjøpsordningene for ny norsk litteratur under Norsk kulturfond foreslås styrket med 6 millioner kroner for å sende flere nye bøker ut til folkebibliotekene, samtidig som regjeringen arbeider med en egen leselyststrategi for voksne. Filmfeltet foreslås løftet med 75 millioner kroner – deriblant 5 millioner til en ny støtteordning for oppgradering av digitalt kinoutstyr rundt i landet – mens dansefeltet er tilgodesett med 10 millioner kroner ekstra.
 
 «Derfor fortset vi styrkinga av innkjøpsordningane, no med ytterlegare seks millionar, slik at biblioteka over heile landet får fleire bøker», sier kultur- og likestillingsminister Lubna Jaffery (Ap) i departementets pressemelding.
 

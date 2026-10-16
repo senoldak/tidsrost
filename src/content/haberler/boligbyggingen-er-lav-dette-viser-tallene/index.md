@@ -1,55 +1,53 @@
 ---
-title: "Boligbyggingen er lav: Dette viser tallene"
-description: "Det ble gitt igangsettingstillatelse til 20 184 boliger i 2025, langt under snittet siden 2000. Så langt i 2026 er nivået omtrent som i fjor, viser tall fra SSB."
+title: "Boligbyggingen ligger langt under snittet – mens prisene fortsetter opp"
+description: "I 2025 ble det gitt igangsettingstillatelse til 20 184 boliger, mer enn en fjerdedel under snittet siden år 2000. Så langt i 2026 er byggeaktiviteten på stedet hvil."
 date: 2026-10-12T07:00:00+02:00
 category: okonomi
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Boligbyggingen er lav: Dette viser tallene»"
+coverAlt: "Illustrasjon: «Boligbyggingen ligger langt under snittet – mens prisene fortsetter opp»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Hvor mange boliger som bygges, påvirker tilbudet av boliger og dermed prisene. Norges Bank peker på at lav tilførsel av nye boliger trekker i retning av høyere boligpriser."
+why_matters: "Hvor mange boliger som bygges, styrer tilbudet i boligmarkedet på sikt. Norges Bank peker på at lav tilførsel av nye boliger er med på å presse boligprisene videre opp."
 key_points:
-  - "I 2025 fikk 20 184 boliger igangsettingstillatelse, om lag 27 prosent under snittet for 2000–2025."
-  - "Fra januar til september 2026 ble det registrert 15 209 igangsatte boliger, nesten likt med samme periode i fjor."
-  - "Prisene på brukte boliger var 3,3 prosent høyere i tredje kvartal 2026 enn ett år før."
+  - "I 2025 fikk 20 184 boliger igangsettingstillatelse – om lag 27 prosent under snittet for årene 2000–2025."
+  - "Fra januar til september 2026 ble det registrert 15 209 igangsatte boliger, nesten identisk med samme periode i fjor."
+  - "Prisene på brukte boliger lå 3,3 prosent høyere i tredje kvartal 2026 enn ett år tidligere."
 ---
 
-Det bygges færre nye boliger i Norge enn på mange år. I 2025 ble det gitt igangsettingstillatelse til 20 184 boliger, viser tall fra Statistisk sentralbyrå (SSB). Snittet for årene 2000–2025 er om lag 27 800 boliger per år. De ni første månedene av 2026 ble det registrert 15 209 igangsatte boliger, omtrent som i samme periode i fjor. Samtidig fortsetter boligprisene å stige, og Norges Bank skriver at lav tilførsel av nye boliger trekker prisene opp.
+Det bygges færre nye boliger i Norge enn på mange år. I løpet av 2025 ble det gitt igangsettingstillatelse til 20 184 boliger, viser tall fra Statistisk sentralbyrå (SSB) – godt under årsgjennomsnittet på rundt 27 800 boliger for perioden 2000–2025. Heller ikke i år har utbyggingen skutt fart: De ni første månedene av 2026 ble det registrert 15 209 igangsatte boliger, omtrent på linje med fjoråret. Samtidig fortsetter bruktboligprisene oppover, og Norges Bank peker på at det lave nyboligtilbudet bidrar til prisveksten.
 
-## Kraftig fall etter 2022
+## Bratt fall etter 2022
 
-Fra 2012 til 2022 lå antallet igangsatte boliger over 27 000 hvert år. Toppen kom i 2016, med 36 203 boliger. I 2023 falt tallet til 22 778, og i 2024 til 18 679, som er det laveste i perioden fra 2000. I 2025 steg det litt, til 20 184 boliger.
-
-Det betyr at nivået i 2025 var om lag 27 prosent lavere enn snittet for perioden 2000–2025. Snittet er tidsrøsts beregning ut fra SSBs årstall.
+Mellom 2012 og 2022 lå antallet igangsatte boliger stabilt over 27 000 i året, med en topp på 36 203 boliger i 2016. Så snudde markedet brått. I 2023 falt igangsettingen til 22 778 boliger, før den i 2024 sank videre til 18 679 – det laveste årsresultatet siden årtusenskiftet. Fjorårets 20 184 boliger ga et lite løft fra bunnen, men utgjør likevel rundt 27 prosent færre boliger enn snittet for perioden 2000–2025.
 
 ![Stolpediagram over igangsatte boliger i Norge per år fra 2010 til 2025. Tallet var 36 203 i 2016, 29 727 i 2022, 22 778 i 2023, 18 679 i 2024 og 20 184 i 2025. Snittet for 2000–2025 er om lag 27 800 boliger per år.](./graf-1.svg)
 *Antall boliger med igangsettingstillatelse per år. De tre siste årene er uthevet. Kilde: SSB, tabell 05940.*
 
-Igangsettingstillatelse betyr at kommunen har gitt tillatelse til å starte byggingen. SSB understreker at tallene er foreløpige, og at registreringsforsinkelser gjør at registrert aktivitet ikke alltid stemmer med den faktiske byggeaktiviteten i en periode.
+En igangsettingstillatelse innebærer at kommunen har godkjent oppstart av selve byggearbeidet. SSB gjør oppmerksom på at tallene er foreløpige, og at etterslep i den kommunale registreringen gjør at statistikken for en enkeltperiode ikke alltid sammenfaller helt med når gravemaskinene faktisk settes i jorda.
 
-## Så langt i 2026: Ingen klar oppgang
+## Ingen tydelig vending i 2026
 
-SSBs månedstall viser at det ble registrert 15 209 igangsatte boliger fra januar til og med september 2026. I samme periode i 2025 var tallet 15 233. Sammenlignet med de ni første månedene av 2022, da tallet var 21 979, er nivået om lag 31 prosent lavere.
+Månedstallene fra SSB viser at det fra januar til og med september 2026 ble registrert 15 209 igangsatte boliger, mot 15 233 i de samme ni månedene i 2025. Målt mot de ni første månedene av 2022, da det ble satt i gang 21 979 boliger, ligger aktiviteten om lag 31 prosent lavere.
 
-I september alene ble det registrert 2 421 igangsatte boliger. For den siste tolvmånedersperioden, fra oktober 2025 til september 2026, var tallet 20 319. Det er 5,6 prosent mer enn i tolvmånedersperioden før, ifølge SSB.
+I september isolert ble det registrert 2 421 igangsatte boliger. Ser man på de siste tolv månedene samlet – fra oktober 2025 til september 2026 – kom tallet opp i 20 319 boliger, en oppgang på 5,6 prosent sammenlignet med tolvmånedersperioden før.
 
 ![Stolpediagram over igangsatte boliger i perioden januar til september hvert år fra 2016 til 2026. Tallet var 27 156 i 2017, 21 979 i 2022, 16 237 i 2023, 14 804 i 2024, 15 233 i 2025 og 15 209 i 2026.](./graf-2.svg)
 *Sum igangsatte boliger januar–september, basert på månedstall. Tallene for 2026 er foreløpige. Kilde: SSB, tabell 03723.*
 
-Summen av månedstallene kan avvike noe fra SSBs årstall, fordi rettelser i registeret Matrikkelen kommer inn i ettertid.
+Summen av de løpende månedstallene kan avvike litt fra de endelige årstallene fordi etterregistreringer og rettelser i Matrikkelen legges inn fortløpende.
 
-## Prisene stiger fortsatt
+## Bruktboligene blir dyrere
 
-SSBs prisindeks for brukte boliger var 158,3 i tredje kvartal 2026, mot 153,2 i samme kvartal i 2025. Det er en økning på 3,3 prosent. Indeksen har 2015 som basisår, og årsindeksen for 2025 var 152,5. Det betyr at prisene på brukte boliger i snitt lå drøyt 50 prosent høyere i 2025 enn i 2015, målt i løpende kroner.
+Mens nyboligbyggingen går på lavgir, stiger prisene i bruktmarkedet. SSBs prisindeks for brukte boliger lå på 158,3 i tredje kvartal 2026, opp fra 153,2 i tredje kvartal 2025 – en oppgang på 3,3 prosent på ett år. Indeksen har 2015 som referanseår (100), og årsgjennomsnittet på 152,5 for 2025 innebærer at bruktboligprisene i løpende kroner har økt med drøyt 50 prosent på ti år.
 
-Norges Bank omtaler sammenhengen mellom bygging og priser i Pengepolitisk rapport 3/2026, som ble publisert 24. september 2026. Der heter det: «Lav tilførsel av nye boliger trekker i retning av høyere boligpriser.» Banken skriver også at «Det bygges fortsatt få nye boliger, men fallet i investeringene har stoppet opp.»
+I Pengepolitisk rapport 3/2026 fra 24. september knytter Norges Bank prisveksten direkte til byggeaktiviteten: «Lav tilførsel av nye boliger trekker i retning av høyere boligpriser.» Sentralbanken konstaterer samtidig at nedturen ser ut til å ha nådd gulvet: «Det bygges fortsatt få nye boliger, men fallet i investeringene har stoppet opp.»
 
-Ifølge rapporten har kraftig oppgang i materialkostnader, økte lønnsutgifter og høyere renter bidratt til den svake utviklingen. Norges Bank venter at boliginvesteringene begynner å ta seg opp neste år, men at oppgangen blir moderat.
+Bak bremsen i boligbyggingen ligger en kombinasjon av høye materialkostnader, økte lønnsutgifter og et høyere rentenivå. Norges Bank venter at boliginvesteringene så smått begynner å hente seg inn igjen til neste år, men anslår at oppgangen blir moderat.
 
-## Befolkningen vokser mindre enn før
+## Færre fullførte boliger tross befolkningsvekst
 
-Behovet for nye boliger henger blant annet sammen med hvor raskt befolkningen vokser. Ifølge SSB var folketallet 5 627 400 per 1. januar 2026. Folketilveksten var særlig høy i 2022 og 2023, men har avtatt siden.
+Etterspørselen etter boliger henger tett sammen med befolkningsutviklingen. Ved inngangen til 2026 hadde Norge 5 627 400 innbyggere. Etter svært høy befolkningsvekst i 2022 og 2023 har tilveksten roet seg de siste par årene, men antallet ferdigstilte boliger har falt enda raskere:
 
 | År | Folketilvekst | Igangsatte boliger | Fullførte boliger |
 |---|---|---|---|
@@ -60,15 +58,15 @@ Behovet for nye boliger henger blant annet sammen med hvor raskt befolkningen vo
 
 *Kilde: SSB, tabell 06913 og 05940.*
 
-Tallene kan ikke sammenlignes direkte, siden flere personer ofte deler én bolig. De viser likevel at antallet fullførte boliger har falt fra 28 056 i 2022 til 19 498 i 2025, samtidig som befolkningen har fortsatt å øke.
+Folketilvekst og boligtall kan ikke sammenlignes én til én, ettersom det i snitt bor mer enn én person i hver husholdning. Tabellen viser likevel hvordan ferdigstillelsen – som følger igangsettingen med et par års forsinkelse – har sunket fra 28 056 fullførte boliger i 2022 til 19 498 i 2025.
 
-## Hva betyr dette for folk flest?
+## Smalere utvalg for boligkjøpere og mål om 130 000 nye boliger
 
-For dem som skal kjøpe bolig, særlig førstegangskjøpere, betyr færre nye boliger et mindre tilbud å velge mellom. Norges Bank vurderer at lav tilførsel av nye boliger trekker i retning av høyere priser. I rapporten skriver banken også at en fortsatt høy pris på nye boliger sammenlignet med brukte boliger kan bidra til at det tar tid før salget av nye boliger tar seg opp igjen.
+For boligkjøpere – og særlig førstegangskjøpere – betyr den lave byggeaktiviteten færre boliger å velge mellom og sterkere press i bruktmarkedet. Norges Bank peker i sin rapport også på at prisforskjellen mellom nye og brukte boliger fortsatt er høy, noe som kan gjøre at det tar tid før nyboligsalget løsner for alvor.
 
-Regjeringen har et mål om å sette i gang bygging av flere boliger. I en pressemelding fra Kommunal- og distriktsdepartementet 26. januar 2026 heter det at forenklingen av byggteknisk forskrift (TEK 17) er «en del av regjeringens arbeid for å nå målet om å sette i gang bygging av 130 000 boliger innen 2030». I samme pressemelding skriver departementet at «Materialprisene har økt kraftig, og høye renter har bidratt til å stramme inn».
+Politisk har regjeringen satt som mål at det skal settes i gang bygging av 130 000 boliger innen 2030. Da Kommunal- og distriktsdepartementet 26. januar 2026 varslet forenklinger i byggteknisk forskrift (TEK 17), ble grepet presentert som «en del av regjeringens arbeid for å nå målet om å sette i gang bygging av 130 000 boliger innen 2030». Departementet viste i samme melding til at «Materialprisene har økt kraftig, og høye renter har bidratt til å stramme inn».
 
-SSB publiserer nye tall for igangsatte boliger hver måned. Neste oppdatering av byggearealstatistikken er planlagt 19. oktober 2026.
+SSB legger fram neste månedlige oppdatering av byggearealstatistikken 19. oktober 2026.
 
 ## Kilder
 

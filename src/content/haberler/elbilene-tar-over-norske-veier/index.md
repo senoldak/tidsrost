@@ -1,51 +1,51 @@
 ---
-title: "Nesten alle nye biler er elbiler – nå fases momsfordelen ut"
-description: "97,9 prosent av nye personbiler i år er elbiler, og elbilene utgjør nær en tredjedel av bilparken. Regjeringen foreslår å senke momsfritaket til 150 000 kroner i 2027."
+title: "Nesten alle nye biler er elbiler – nå fases momsfritaket ut"
+description: "97,9 prosent av nye personbiler hittil i år er elbiler, og elbilene utgjør nå nær en tredjedel av hele bilparken. Fra nyttår foreslår regjeringen å halvere beløpsgrensen for momsfritak til 150 000 kroner."
 date: 2026-10-15T08:00:00+02:00
 category: teknologi
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Nesten alle nye biler er elbiler – nå fases momsfordelen ut»"
+coverAlt: "Illustrasjon: «Nesten alle nye biler er elbiler – nå fases momsfritaket ut»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Elbilen er blitt det vanlige valget for dem som kjøper ny bil, og avgiftsendringene i 2026 og 2027 påvirker prisen på nye elbiler. Samtidig går utslippene fra veitrafikken ned."
+why_matters: "Elbilen har i praksis overtatt nybilsalget i Norge, og i 2025 passerte antallet elbiler på veiene både diesel- og bensinbiler. Nå bygges momsfritaket raskt ned."
 key_points:
-  - "Fra januar til september 2026 var 97,9 prosent av nye personbiler elektriske eller nullutslipp, viser SSB."
-  - "Ved utgangen av 2025 var 945 182 av 2 935 738 registrerte personbiler elbiler, det vil si 32,2 prosent."
-  - "Regjeringen foreslår å senke grensen for momsfritaket fra 300 000 til 150 000 kroner fra 1. januar 2027 og å fjerne fritaket fra 2028."
+  - "Fra januar til september 2026 var 97,9 prosent av nyregistrerte personbiler elektriske eller nullutslipp, viser tall fra SSB."
+  - "Ved utgangen av 2025 var 945 182 av 2 935 738 registrerte personbiler elbiler – en andel på 32,2 prosent."
+  - "Regjeringen foreslår å senke beløpsgrensen for momsfritaket fra 300 000 til 150 000 kroner fra 1. januar 2027 og avvikle fritaket helt fra 2028."
 ---
 
-Fra januar til september 2026 ble det førstegangsregistrert 114 599 nye personbiler i Norge. 112 224 av dem var elektriske eller nullutslipp. Det tilsvarer 97,9 prosent, viser tall fra Statistisk sentralbyrå (SSB). Elbilene utgjør fortsatt en mindre del av alle bilene på veiene, men den delen øker raskt. Samtidig er avgiftsfordelene i ferd med å bygges ned. Regjeringen foreslår i budsjettet for 2027 at momsfritaket for elbiler skal fases ut.
+Fra januar til september 2026 ble det førstegangsregistrert 114 599 nye personbiler i Norge, og hele 112 224 av dem var elektriske eller andre nullutslippsbiler. Det tilsvarer 97,9 prosent av nybilsalget, viser statistikk fra Statistisk sentralbyrå (SSB). Ute på veiene ruller det fortsatt flest biler med forbrenningsmotor, men skiftet i bilparken går stadig raskere. Samtidig strammes avgiftene til: I forslaget til statsbudsjett for 2027 legger regjeringen opp til å halvere innslagspunktet for moms på elbiler før fritaket etter planen fjernes helt året etter.
 
-## Målet for 2025 er i praksis nådd
+## 2025-målet i praksis innfridd
 
-I Nasjonal transportplan 2022–2033 videreførte regjeringen et måltall fra den forrige transportplanen: «nye personbiler og lette varebiler skal være nullutslippskjøretøy i 2025». Måltallet ble først satt i Nasjonal transportplan 2018–2029.
+Allerede i Nasjonal transportplan 2018–2029 satte myndighetene som måltall at «nye personbiler og lette varebiler skal være nullutslippskjøretøy i 2025», en ambisjon som ble videreført i Nasjonal transportplan 2022–2033.
 
-SSBs tabell over førstegangsregistrerte kjøretøy viser hvor raskt det har gått. I 2015 var 17,1 prosent av nye personbiler elektriske eller nullutslipp. I 2020 var andelen 54,3 prosent, og i 2025 var den 95,9 prosent. Det betyr at 169 569 av 176 847 nye personbiler var elbiler i 2025. Hittil i 2026 er andelen enda høyere, med 98,8 prosent i september alene.
+Tallene over førstegangsregistrerte personbiler hos SSB viser hvor bratt overgangen har vært på ti år: I 2015 var 17,1 prosent av nye personbiler elektriske eller nullutslipp. I 2020 var andelen kommet opp i 54,3 prosent, og i målåret 2025 endte den på 95,9 prosent – 169 569 elbiler av totalt 176 847 nyregistrerte personbiler. I 2026 har elbilandelen krøpet enda litt nærmere hundre prosent, med 98,8 prosent i september måned alene.
 
 ![Søylediagram over elbilandelen av nye personbiler i Norge. Andelen var 17,1 prosent i 2015, 54,3 prosent i 2020, 88,9 prosent i 2024, 95,9 prosent i 2025 og 97,9 prosent i januar–september 2026.](./graf-1.svg)
 *Andel elektrisk/nullutslipp av førstegangsregistrerte nye personbiler. 2026 gjelder januar–september. Kilde: SSB, tabell 14020.*
 
-Da Finansdepartementet la fram statsbudsjettet for 2026 i oktober 2025, sa finansminister Jens Stoltenberg (Ap): «Vi har hatt som mål at alle nye personbiler skal være elektriske i 2025, og med en elbilandel på 95 prosent i år kan vi si at målet i praksis er nådd.»
+Da statsbudsjettet for 2026 ble lagt fram i oktober 2025, konstaterte finansminister Jens Stoltenberg (Ap) at skiftet i nybilsalget var gjennomført: «Vi har hatt som mål at alle nye personbiler skal være elektriske i 2025, og med en elbilandel på 95 prosent i år kan vi si at målet i praksis er nådd.»
 
-## Bilparken skifter saktere
+## Flere elbiler enn dieselbiler på norske veier
 
-Tallene for nysalget er bare én del av bildet. Biler er i bruk i mange år, og derfor endrer bilparken seg saktere. Ifølge SSB var det 945 182 elektriske personbiler i Norge ved utgangen av 2025. Det var 19,8 prosent flere enn året før. Elbilene utgjorde da 32,2 prosent av de 2 935 738 registrerte personbilene i tabell 07849. I 2015 var andelen 2,6 prosent.
+Siden en personbil ifølge Finansdepartementet har en typisk levetid på 15 til 20 år, tar det langt lengre tid å bytte ut hele den rullende bilparken enn å snu nybilsalget. Ved utgangen av 2025 var det registrert 945 182 elektriske personbiler i Norge – 19,8 prosent flere enn ett år tidligere. Dermed utgjorde elbilene 32,2 prosent av landets 2 935 738 registrerte personbiler (SSB-tabell 07849), opp fra bare 2,6 prosent i 2015.
 
-SSB skriver at 2025 var det første året det var registrert flere elbiler enn både bensinbiler og dieselbiler i Norge. Ved utgangen av året var det 942 780 dieselbiler og 676 614 bensinbiler. Kategorien «annet drivstoff» er ikke tatt med i denne sammenligningen.
+2025 ble dessuten et veiskille i bilstatistikken: For første gang var det registrert flere elbiler enn både dieselbiler (942 780) og bensinbiler (676 614) på norske skilt (kategorien «annet drivstoff» holdes utenom sammenligningen).
 
 ![Linjediagram over elbilenes andel av alle registrerte personbiler i Norge per 31. desember. Andelen økte fra 2,6 prosent i 2015 til 12,1 prosent i 2020, 27,4 prosent i 2024 og 32,2 prosent i 2025.](./graf-2.svg)
 *Andel personbiler med elektrisk drivstoff av alle registrerte personbiler, per 31. desember. Kilde: SSB, tabell 07849.*
 
-I budsjettproposisjonen for 2027 skriver Finansdepartementet at biler «typisk» har en levetid på 15–20 år. Ifølge departementet ble antallet personbiler med forbrenningsmotor redusert med nær 600 000 fra 2017 til 2025, eller om lag 23 prosent.
+Siden 2017 har antallet personbiler med ren forbrenningsmotor krympet med nær 600 000 biler fram til utgangen av 2025, en nedgang på rundt 23 prosent, opplyser Finansdepartementet i budsjettproposisjonen for 2027.
 
-## Momsfritaket bygges ned
+## Slik trappes momsfritaket ned mot 2028
 
-Fram til 2023 var elbiler helt fritatt for merverdiavgift. I 2023 ble fritaket begrenset til en pris på 500 000 kroner. I budsjettet for 2026 ble grensen senket til 300 000 kroner. I dag betales det dermed 25 prosent moms på den delen av prisen som er over 300 000 kroner.
+Fram til nyttår 2023 var elbiler helt fritatt for merverdiavgift. Fra 2023 ble det innført 25 prosent moms på den delen av kjøpesummen som oversteg 500 000 kroner, og i 2026-budsjettet ble denne fribeløpsgrensen senket til 300 000 kroner.
 
-I statsbudsjettet for 2027, som ble lagt fram 7. oktober, foreslår regjeringen å senke grensen videre til 150 000 kroner fra 1. januar 2027. Regjeringen viser til at Stortinget har bedt om dette. Fritaket skal etter planen avvikles fra 2028. Ifølge proposisjonen gir endringen staten 3,8 milliarder kroner i økte inntekter i 2027. Forslaget må vedtas av Stortinget, og en videreføring av fritaket etter 2026 må også godkjennes av ESA.
+I statsbudsjettet for 2027, lagt fram 7. oktober, foreslår regjeringen – i tråd med et tidligere anmodningsvedtak fra Stortinget – å kutte grensen videre til 150 000 kroner fra 1. januar 2027, før hele fritaket avvikles fra 2028. Endringen er beregnet å gi statskassen 3,8 milliarder kroner i merinntekter i 2027. Forslaget krever vedtak i Stortinget, og en videreføring av et delvis fritak etter 2026 må også godkjennes av EFTAs overvåkningsorgan ESA.
 
-Finansdepartementet har regnet på hvor mye mer moms en kjøper må betale med den nye grensen, dersom hele avgiften gir seg utslag i prisen:
+Finansdepartementet har regnet ut hvor mye ekstra moms som påløper ved ulike bilpriser dersom hele avgiftsøkningen veltes over i utsalgsprisen:
 
 | Pris ekskl. avgift | Økt moms | Økning i prosent av prisen |
 |---|---|---|
@@ -54,25 +54,25 @@ Finansdepartementet har regnet på hvor mye mer moms en kjøper må betale med d
 | 300 000 kr | 37 500 kr | 11,7 % |
 | 500 000 kr | 37 500 kr | 6,6 % |
 
-Departementet begrunner forslaget slik: «Nå som tilnærmet alle nye biler er elbiler, er fritaket i praksis en generell støtte til kjøp av personbil.» Proposisjonen viser også at husholdningene med de 20 prosent høyeste inntektene kjøpte om lag 40 prosent av alle nye elbiler i 2025.
+Begrunnelsen fra departementet er at avgiftsfritaket har utspilt sin opprinnelige rolle: «Nå som tilnærmet alle nye biler er elbiler, er fritaket i praksis en generell støtte til kjøp av personbil.» I proposisjonen pekes det også på fordelingsvirkningen: Husholdningene blant de 20 prosentene med høyest inntekt sto for rundt 40 prosent av alle nye elbilkjøp i 2025.
 
-## Engangsavgiften videreføres
+## Vektavgift på elbiler og høy engangsavgift på fossilbiler
 
-Engangsavgiften betales når en bil registreres i Norge for første gang. Elbiler betaler bare vektkomponenten, som ble innført i 2023. For 2027 foreslår regjeringen å prisjustere satsene. Særavgiftene er i utgangspunktet foreslått justert opp med 2,7 prosent for å ta hensyn til forventet prisvekst. Vektkomponenten for alle personbiler foreslås økt fra 12,71 til 13,05 kroner per kilo over de første 500 kiloene.
+Ved førstegangsregistrering betaler elbiler kun vektkomponenten i engangsavgiften, som ble innført i 2023. For 2027 foreslår regjeringen å prisjustere særavgiftene med 2,7 prosent i takt med forventet prisvekst, slik at vektavgiften for alle personbiler øker fra 12,71 til 13,05 kroner per kilo utover de første 500 kiloene.
 
-Budsjettet for 2026 la opp til høyere engangsavgift for fossilbiler. Finansdepartementet skrev da at «de fleste personbiler med forbrenningsmotor får en avgiftsøkning på 20 000 til 30 000 kroner». Ifølge departementet er engangsavgiften det viktigste virkemiddelet for å få bilkjøpere til å velge elbil.
+For bensin- og dieselbiler ble engangsavgiften strammet kraftig til i 2026-budsjettet, da Finansdepartementet anslo at «de fleste personbiler med forbrenningsmotor får en avgiftsøkning på 20 000 til 30 000 kroner». Departementet fremhever engangsavgiften som det viktigste virkemiddelet for å sørge for at nybilkjøpere fortsatt velger elektrisk også når momsfritaket fases ut.
 
-## Lavere utslipp fra veitrafikken
+## Utslippene fra veitrafikken faller raskt
 
-Ifølge SSBs foreløpige tall var klimagassutslippene fra veitrafikken 6,9 millioner tonn CO₂-ekvivalenter i 2025. Det er 8,2 prosent mindre enn i 2024. I 2015 var tallet 10,3 millioner tonn. SSB skriver at nedgangen i veitrafikken var det største bidraget til at de samlede utslippene i Norge falt med 1,2 prosent, til 44,1 millioner tonn.
+Utskiftingen av bilparken slår tydelig ut i klimaregnskapet. Foreløpige tall fra SSB viser at veitrafikken slapp ut 6,9 millioner tonn CO₂-ekvivalenter i 2025 – en nedgang på 8,2 prosent på bare ett år, og ned fra 10,3 millioner tonn i 2015. Ifølge SSB var utslippskuttet på veiene den viktigste enkeltårsaken til at Norges samlede klimagassutslipp gikk ned med 1,2 prosent til 44,1 millioner tonn i 2025.
 
-«Overgangen til flere elbiler fortsetter å redusere forbruket av bensin og diesel», sier Trude Melby Bothner i SSB i en artikkel om tallene.
+«Overgangen til flere elbiler fortsetter å redusere forbruket av bensin og diesel», sier Trude Melby Bothner i SSB i byråets gjennomgang av utslippstallene.
 
-SSB opplyser også at utslippene fra veitrafikken vil bli beregnet på nytt når de endelige tallene publiseres i november 2026. Det skyldes en ny versjon av beregningsmodellen, og endringen vil gjelde hele tidsserien tilbake til 1990.
+Når de endelige utslippstallene for 2025 legges fram i november 2026, varsler SSB at tallene for veitrafikken vil bli regnet om med en ny modellversjon for hele tidsserien tilbake til 1990.
 
-## Hva betyr dette for deg?
+## Opptil 37 500 kroner dyrere etter nyttår
 
-For den som skal kjøpe ny bil, er elbilen allerede det vanligste valget. Hvis Stortinget vedtar forslaget, blir en ny elbil som koster mer enn 150 000 kroner før avgift, dyrere fra 1. januar 2027. Ifølge Finansdepartementets beregning blir økningen på høyst 37 500 kroner, dersom hele avgiften gir seg utslag i prisen. For leasingavtaler som er inngått før 1. januar 2027, foreslås det en overgangsordning der grensen på 300 000 kroner fortsatt gjelder, så lenge bilen er levert til kunden før denne datoen. Fossilbiler har fortsatt høyere engangsavgift enn elbiler.
+Dersom Stortinget vedtar regjeringens budsjettforslag, vil enhver ny elbil med en pris før avgift på 300 000 kroner eller mer få 37 500 kroner i økt merverdiavgift fra 1. januar 2027. For biler mellom 150 000 og 300 000 kroner før avgift øker momsen gradvis. For leasingavtaler som er signert før 1. januar 2027, foreslås det en overgangsregel der dagens fribeløp på 300 000 kroner beholdes såfremt bilen også er levert til kunden før årsskiftet.
 
 ## Kilder
 
