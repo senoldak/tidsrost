@@ -2,6 +2,7 @@
 // Yazar sayfası: kişi adıyla yayımlanan yazılar (author ≠ site adı). Biyografi uydurulmaz; sadece yazılar listelenir.
 import Base from '../../layouts/Base.astro';
 import StoryRow from '../../components/StoryRow.astro';
+import ForfatterKort, { FORFATTER_BESKRIVELSE } from '../../components/ForfatterKort.astro';
 import { SITE } from '../../lib/site';
 import { forfatterSlug, getNews, newsUrl, type Haber } from '../../lib/news';
 import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs } from '../../lib/seo';
@@ -17,7 +18,7 @@ export async function getStaticPaths() {
 
 const { name, items } = Astro.props;
 const pageUrl = `${SITE_URL}/forfatter/${forfatterSlug(name)}/`;
-const description = `${name} er journalist i ${SITE.name} og arbeider med nyhets-, data- og økonomi- og samfunnsjournalistikk basert på offentlige primærkilder.`;
+const description = FORFATTER_BESKRIVELSE;
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -35,6 +36,7 @@ const jsonLd = {
         '@id': `${pageUrl}#person`,
         name,
         jobTitle: 'Journalist',
+        description,
         url: pageUrl,
         ...(SITE.epost ? { email: SITE.epost } : {}),
         worksFor: { '@id': ORG_ID },
@@ -52,18 +54,9 @@ const jsonLd = {
 
 <Base title={`${name} – Journalist`} description={description}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-  <header class="page-head">
-    <h1 class="page-title">{name}</h1>
-    <p class="page-intro">
-      Journalist i {SITE.name}. Arbeider med forklarende nyhets- og datajournalistikk om norsk økonomi, arbeidsliv,
-      velferd, energi og samfunn i tråd med <a href="https://www.presse.no/vaer-varsom-plakaten">Vær Varsom-plakaten</a>.
-    </p>
-    <p class="meta">
-      Journalist i {SITE.name} · {items.length} publiserte {items.length === 1 ? 'sak' : 'saker'}
-      {SITE.epost && <> · Kontakt: <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a></>}
-    </p>
-  </header>
+  <ForfatterKort name={name} antallSaker={items.length} heading="h1" />
   <section class="day">
+    <h2 class="band">Siste saker av {name}</h2>
     {items.map((h) => <StoryRow haber={h} dato />)}
   </section>
 </Base>

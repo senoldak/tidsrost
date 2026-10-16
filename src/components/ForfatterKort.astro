@@ -1,0 +1,73 @@
+---
+import { SITE } from '../lib/site';
+import { forfatterSlug } from '../lib/news';
+
+interface Props {
+  name: string;
+  antallSaker?: number;
+  heading?: 'h1' | 'h3';
+}
+
+const { name, antallSaker, heading = 'h3' } = Astro.props;
+const slug = forfatterSlug(name);
+const profilUrl = `/forfatter/${slug}/`;
+const initialer = name
+  .split(/\s+/)
+  .map((del) => del[0])
+  .join('')
+  .slice(0, 2)
+  .toUpperCase();
+
+export const FORFATTER_BESKRIVELSE = `Jeg skriver om de viktigste sakene innen norsk økonomi, arbeidsliv, velferd, energi og samfunn i ${SITE.name}, og arbeider særlig med datajournalistikk og forklarende dybdesaker («Forklart») basert på offentlig statistikk og primærkilder. Har du tips eller innspill til en sak, send gjerne en e-post til ${SITE.epost}.`;
+---
+
+<section class="forfatter-kort" itemprop="mainEntity" itemscope itemtype="https://schema.org/Person" aria-label={`Om journalisten ${name}`}>
+  <p class="forfatter-kort-etikett">Tips meg</p>
+  <div class="forfatter-kort-topp">
+    <div>
+      {
+        heading === 'h1' ? (
+          <h1 class="forfatter-kort-navn" itemprop="name">{name}</h1>
+        ) : (
+          <h3 class="forfatter-kort-navn" itemprop="name">
+            <a href={profilUrl} itemprop="url">{name}</a>
+          </h3>
+        )
+      }
+      <p class="forfatter-kort-tittel" itemprop="jobTitle">
+        Journalist
+        {typeof antallSaker === 'number' && <span> · {antallSaker} publiserte {antallSaker === 1 ? 'sak' : 'saker'}</span>}
+      </p>
+    </div>
+    <div class="forfatter-kort-monogram" aria-hidden="true">{initialer}</div>
+  </div>
+  <p class="forfatter-kort-beskrivelse" itemprop="description">
+    {FORFATTER_BESKRIVELSE}
+  </p>
+  <div class="forfatter-kort-handling">
+    {
+      SITE.epost && (
+        <a class="forfatter-epost-knapp" href={`mailto:${SITE.epost}`} itemprop="email" aria-label={`Send e-post til ${name}`}>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M20.6143 9.16797C20.7805 9.06062 20.9998 9.18002 21 9.37793V18.75C21 18.8881 20.8881 19 20.75 19H3.25C3.11193 19 3 18.8881 3 18.75V9.37793C3.0002 9.18002 3.21953 9.06062 3.38574 9.16797L11.8643 14.6631C11.947 14.7167 12.053 14.7167 12.1357 14.6631L20.6143 9.16797Z"
+              fill="currentColor"
+            />
+            <path
+              d="M20.75 5C20.8881 5 21 5.11193 21 5.25V6.03125C20.9998 6.11581 20.9567 6.19423 20.8857 6.24023L12.1357 11.9121C12.0532 11.9655 11.9468 11.9655 11.8643 11.9121L3.11426 6.24023C3.04328 6.19423 3.00016 6.11581 3 6.03125V5.25C3 5.11193 3.11193 5 3.25 5H20.75Z"
+              fill="currentColor"
+            />
+          </svg>
+          Send e-post
+        </a>
+      )
+    }
+    {
+      heading !== 'h1' && (
+        <a class="forfatter-alle-lenke" href={profilUrl}>
+          Se alle saker av {name} →
+        </a>
+      )
+    }
+  </div>
+</section>

@@ -1553,3 +1553,95 @@ main.container {
 .bulten-generell[hidden] {
   display: none;
 }
+
+/* ——— VG-stil forfatterkort («Tips meg» på forfatterside og under sak) ——— */
+.forfatter-kort {
+  margin: 0 0 calc(var(--u) * 5);
+  padding: calc(var(--u) * 3);
+  background: var(--surface);
+  border: 1px solid var(--ink);
+  max-width: 70ch;
+}
+
+.article .forfatter-kort {
+  margin: calc(var(--u) * 5) 0 0;
+}
+
+.forfatter-kort-etikett {
+  margin: 0 0 var(--u);
+  font: 700 0.75rem/1.2 var(--frame);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--contour);
+}
+
+.forfatter-kort-topp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(var(--u) * 2);
+  margin-bottom: calc(var(--u) * 2);
+}
+
+.forfatter-kort-navn {
+  margin: 0;
+  font: 650 clamp(1.625rem, 3vw, 2.25rem) / 1.15 var(--read);
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.forfatter-kort-tittel {
+  margin: 4px 0 0;
+  font: 500 0.875rem/1.4 var(--frame);
+  color: var(--muted);
+}
+
+.forfatter-kort-monogram {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  font: 700 1.25rem/1 var(--frame);
+  letter-spacing: 0.04em;
+  color: var(--water);
+}
+
+.forfatter-kort-beskrivelse {
+  margin: 0 0 calc(var(--u) * 2.5);
+  font: 400 1.0625rem/1.55 var(--read);
+  color: var(--ink-2);
+}
+
+.forfatter-kort-handling {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: calc(var(--u) * 2) calc(var(--u) * 3);
+}
+
+.forfatter-epost-knapp {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--u);
+  padding: 10px 18px;
+  background: var(--ink);
+  color: var(--paper);
+  font: 600 0.875rem/1.2 var(--frame);
+  text-decoration: none;
+}
+
+.forfatter-epost-knapp:hover {
+  background: var(--water);
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.forfatter-alle-lenke {
+  font: 600 0.875rem/1.3 var(--frame);
+  color: var(--water);
+}
+

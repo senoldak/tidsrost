@@ -14,6 +14,7 @@ import { relaterteSaker } from '../../lib/relaterte';
 import Brodsmuler from '../../components/Brodsmuler.astro';
 import DelSaken from '../../components/DelSaken.astro';
 import BultenSkjema from '../../components/BultenSkjema.astro';
+import ForfatterKort, { FORFATTER_BESKRIVELSE } from '../../components/ForfatterKort.astro';
 import { aktiveTemaer, temaerPerSak, temaUrl, type Tema } from '../../lib/temaer';
 
 export async function getStaticPaths() {
@@ -79,7 +80,9 @@ const jsonLd = {
       image: [{ '@type': 'ImageObject', url: new URL(ogImage, Astro.site).href, width: ogWidth, height: ogHeight }],
       datePublished: iso,
       dateModified: modifiedIso,
-      author: forfatterUrl ? { '@type': 'Person', name: author, url: `${SITE_URL}${forfatterUrl}` } : { '@id': ORG_ID },
+      author: forfatterUrl
+        ? [{ '@type': 'Person', name: author, jobTitle: 'Journalist', description: FORFATTER_BESKRIVELSE, url: `${SITE_URL}${forfatterUrl}` }]
+        : { '@id': ORG_ID },
       // Yayıncının tam tanımı (publishingPrinciples dahil) Base.astro'daki Organization düğümünde (src/lib/seo.ts);
       // burada aynı @id ile çelişen ikinci bir tanım yazılmaz, sadece ona bağlanılır.
       publisher: { '@id': ORG_ID },
@@ -210,6 +213,8 @@ const jsonLd = {
     <div class="prose">
       <Content />
     </div>
+
+    {forfatterUrl && <ForfatterKort name={author} heading="h3" />}
 
     {
       PRODUKSJON[produksjon] ? (
