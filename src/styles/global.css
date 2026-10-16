@@ -823,6 +823,24 @@ main.container {
   color: var(--contour);
 }
 
+.sentez-ki-lenke {
+  margin: calc(var(--u) * 1.5) 0 0;
+  padding-top: var(--u);
+  border-top: 1px solid var(--rule);
+  font: 500 0.75rem/1.4 var(--frame);
+  color: var(--muted);
+}
+
+.sentez-ki-lenke a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.sentez-ki-lenke a:hover {
+  color: var(--water);
+}
+
 .produksjon {
   display: flex;
   gap: calc(var(--u) * 1.5);

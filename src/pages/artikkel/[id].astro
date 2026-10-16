@@ -212,13 +212,21 @@ const jsonLd = {
     </div>
 
     {
-      PRODUKSJON[produksjon] && (
+      PRODUKSJON[produksjon] ? (
         <p class="produksjon">
           {made && <Symbol kind={made.kind} />}
           <span>
-            {PRODUKSJON[produksjon]} <a href="/om-oss/#ki">Les mer om hvordan sakene våre lages.</a>
+            {PRODUKSJON[produksjon]} <a href="/om-oss/#ki">Informasjon om KI i {SITE.name}-artikler.</a>
           </span>
         </p>
+      ) : (
+        produksjon?.startsWith('ki-') && (
+          <p class="produksjon">
+            <span>
+              <a href="/om-oss/#ki">Informasjon om KI i {SITE.name}-artikler</a>
+            </span>
+          </p>
+        )
       )
     }
 

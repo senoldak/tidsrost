@@ -1,4 +1,6 @@
 ---
+import { SITE } from '../lib/site';
+
 interface Props {
   whyMatters?: string;
   keyPoints?: string[];
@@ -35,6 +37,9 @@ const hasPoints = cleanPoints.length > 0;
           </ul>
         </div>
       )}
+      <p class="sentez-ki-lenke">
+        <a href="/om-oss/#ki">Informasjon om KI i {SITE.name}-artikler</a>
+      </p>
     </aside>
   )
 }
