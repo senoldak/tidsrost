@@ -16,6 +16,11 @@ npx wrangler secret put GITHUB_TOKEN_FINFOLIS
 npx wrangler secret put TELEGRAM_BOT_TOKEN_TIDSROST
 npx wrangler secret put TELEGRAM_BOT_TOKEN_KIFOBU
 npx wrangler secret put TELEGRAM_BOT_TOKEN_FINFOLIS
+npx wrangler secret put GOREV_ANAHTARI
 ```
 
 Üç repoya yetkili tek GitHub token'ı varsa `GITHUB_TOKEN` yeterli (Telegram için de `TELEGRAM_BOT_TOKEN`).
+
+## E-posta bülteni
+
+Her gün 06:00 UTC'de dört sitenin Worker'ı service binding ile çağrılır (POST /api/bulten/gorev). Site onaysız kayıtları siler ve haftanın ilk çalışmasında (pazartesi) haftalık bülteni bir kez gönderir. Sitelerin kendi cron'u yok (hesap başına 5 cron sınırı). GOREV_ANAHTARI beş Worker'da (mecmua-saat, tidsrost, kifobu, finfolis, jendume) aynı secret olmalıdır.

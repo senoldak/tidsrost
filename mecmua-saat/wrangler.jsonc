@@ -12,6 +12,14 @@
     "crons": ["*/10 * * * *"]
   },
   "observability": { "enabled": true },
+  // Dört sitenin bülten Worker'ları: günlük bülten görevi her gün 06:00 UTC'de bunlar üzerinden tetiklenir (worker.js, bultenGorevi).
+  // Sitelerin kendi cron'u yok; ücretsiz planda hesap başına 5 cron sınırı var. Doğrulama: GOREV_ANAHTARI secret'ı (beş Worker'da aynı).
+  "services": [
+    { "binding": "BULTEN_TIDSROST", "service": "tidsrost" },
+    { "binding": "BULTEN_KIFOBU", "service": "kifobu" },
+    { "binding": "BULTEN_FINFOLIS", "service": "finfolis" },
+    { "binding": "BULTEN_JENDUME", "service": "jendume" }
+  ],
   // Eski Worker'ların KV'leri; daha önce gönderilenler tekrar gitmez.
   "kv_namespaces": [
     { "binding": "KV_TIDSROST", "id": "46047695f7ee4165b4d8af20719381ef" },

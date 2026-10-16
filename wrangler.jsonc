@@ -3,6 +3,9 @@
   // Sayfalar statik sunulur; yalnız /api/* Worker'a gider (run_worker_first).
   "name": "tidsrost",
   "main": "worker/index.ts",
+  // Günlük bülten görevini mecmua-saat Worker'ı tetikler (POST /api/bulten/gorev, GOREV_ANAHTARI); bu Worker'ın cron'u yok
+  // çünkü Cloudflare ücretsiz planında hesap başına 5 cron sınırı var. Boş liste, eski cron'u Cloudflare'den siler.
+  "triggers": { "crons": [] },
   "compatibility_date": "2026-10-01",
   "routes": [
     { "pattern": "tidsrost.com", "custom_domain": true }
@@ -22,11 +25,6 @@
       "migrations_dir": "migrations"
     }
   ],
-  // Her gün 06:00 UTC: süresi dolan onaysız kayıtları siler; haftalık bülteni haftanın ilk çalışmasında (pazartesi) bir kez gönderir.
-  // Tek cron: ücretsiz planda hesap başına 5 cron sınırı var.
-  "triggers": {
-    "crons": ["0 6 * * *"]
-  },
   // Gönderen adı görünür; adres ASCII kalır. RESEND_API_KEY bir Worker secret'ıdır (wrangler secret put), buraya yazılmaz.
   "vars": {
     "BULTEN_GONDEREN": "tidsrøst <nyhetsbrev@tidsrost.com>"

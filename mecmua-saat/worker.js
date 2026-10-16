@@ -92,6 +92,20 @@ async function site(s, env, zaman) {
   for (const r of await Promise.allSettled(isler)) if (r.status === 'rejected') console.error(`${s.ad}: ${r.reason?.message}`);
 }
 
+// Dört sitenin e-posta bülteni: her gün 06:00 UTC'de site Worker'ının POST /api/bulten/gorev ucu service binding ile çağrılır.
+// Site, onaysız kayıtları siler ve haftanın ilk çalışmasında (pazartesi) haftalık bülteni bir kez gönderir.
+const BULTEN_SITELERI = ['tidsrost', 'kifobu', 'finfolis', 'jendume'];
+
+export async function bultenGorevi(ad, env) {
+  const baglanti = env[`BULTEN_${ad.toUpperCase()}`];
+  if (!baglanti || !env.GOREV_ANAHTARI) return console.log(`${ad}: bülten görevi atlandı (bağlantı ya da GOREV_ANAHTARI yok)`);
+  const res = await baglanti.fetch(`https://${ad}.com/api/bulten/gorev`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${env.GOREV_ANAHTARI}` },
+  });
+  console.log(`${ad}: bülten görevi ${res.status} ${(await res.text()).slice(0, 200)}`);
+}
+
 export default {
   // HTTP istekleri: Tarayıcıdan veya panelden tıklandığında Error 1101 vermez, durum raporu döner.
   // İsteğe bağlı olarak ?tetikle=site_adi ile manuel tetikleme yapılabilir.
@@ -197,6 +211,8 @@ export default {
   // Cron 10 dakikada bir (UTC). Siteler birbirinden bağımsız işlenir; biri hata verirse öbürleri etkilenmez.
   async scheduled(event, env, ctx) {
     const zaman = new Date(event.scheduledTime);
-    ctx.waitUntil(Promise.allSettled(SITELER.map((s) => site(s, env, zaman))));
+    const isler = SITELER.map((s) => site(s, env, zaman));
+    if (zaman.getUTCHours() === 6 && zaman.getUTCMinutes() < 10) isler.push(...BULTEN_SITELERI.map((ad) => bultenGorevi(ad, env)));
+    ctx.waitUntil(Promise.allSettled(isler));
   },
 };
