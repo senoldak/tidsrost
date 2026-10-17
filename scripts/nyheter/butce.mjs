@@ -1,6 +1,9 @@
 // Katman 3 (Gemini kota planı): bütçe yöneticisi. Tur başında saatten sitenin bugünkü (Google günü, Pasifik saati)
 // ana model kullanımını okur ve bu turun Gemini payını hesaplar:
-//   pay = (günlük sınır × 0,8 − bugün kullanılan) / günün kalan tur sayısı
+//   kalan = günlük sınır × 0,8 − bugün kullanılan
+//   pay   = kalan / ⌈kalan tur / 2⌉, ama sonraki her tura en az TABAN kalacak kadar (en az da eşit pay)
+// Ön yükleme: Google günü 07:00 UTC'de başlar; o saatte gece biriken iş en çok, eşit pay (400/12 = 33) her turda
+// doluyor, gün sonunda ise kullanılmayan pay birikiyordu (2026-10-17: gün başı 4/5 tur dolu, gün toplamı 175–256).
 // %20'lik pay elle çalıştırmalar ve sürprizler için kalır. Harcanmayan pay kendiliğinden sonraki turlara devreder.
 // Bot, yeni bir habere başlamadan önce geminiPayiBitti() sorar; doluysa kalan haberler görülmedi kalır ve sonraki
 // turda yazılır. Saate ulaşılamazsa güvenli varsayılan: sınır × 0,8 / 12. Bu dosya dört botta aynıdır.
@@ -11,6 +14,7 @@ export const GUNLUK_SINIR = { 'gemini-flash-lite-latest': 500 };
 export const PAY_ORANI = 0.8;
 const TUR_ARALIGI_SAAT = 2; // saat botları iki saatte bir tetikler
 const VARSAYILAN_TUR = 12;
+const TABAN = 10; // ön yüklemede sonraki her tura bırakılan en az çağrı
 
 let pay = Infinity; // butceYukle çağrılmadıysa sınır yok (testler, yerel araçlar)
 
@@ -27,7 +31,10 @@ export function pasifikKalanSaat(simdi = new Date()) {
 export function turPayi({ kullanilan, simdi = new Date(), sinir }) {
   const kalan = Math.floor(sinir * PAY_ORANI) - kullanilan;
   const turlar = Math.max(1, Math.ceil(pasifikKalanSaat(simdi) / TUR_ARALIGI_SAAT));
-  return Math.max(0, Math.floor(kalan / turlar));
+  const esit = Math.floor(kalan / turlar);
+  const onden = Math.floor(kalan / Math.ceil(turlar / 2));
+  const tavan = kalan - (turlar - 1) * TABAN;
+  return Math.max(0, Math.min(onden, Math.max(esit, tavan)));
 }
 
 // Döner: log satırı. Hiçbir durumda hata fırlatmaz.

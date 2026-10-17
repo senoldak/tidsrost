@@ -13,9 +13,13 @@ test('pasifikKalanSaat: Google gününün (Pasifik) bitmesine kalan saat', () =>
   assert.equal(pasifikKalanSaat(new Date('2026-10-18T06:30:00Z')), 0.5); // Pasifik 23:30
 });
 
-test('turPayi: kalan bütçe kalan turlara bölünür; harcanmayan pay sonraki turlara kalır', () => {
-  assert.equal(turPayi({ kullanilan: 0, simdi: gunBasi, sinir: 500 }), 33); // 400 / 12
-  assert.equal(turPayi({ kullanilan: 100, simdi: new Date('2026-10-17T19:00:00Z'), sinir: 500 }), 50); // 300 / 6
+test('turPayi: kalan bütçe kalan turların yarısına bölünür (ön yükleme); harcanmayan pay sonraki turlara kalır', () => {
+  assert.equal(turPayi({ kullanilan: 0, simdi: gunBasi, sinir: 500 }), 66); // 400 / ⌈12/2⌉
+  assert.equal(turPayi({ kullanilan: 100, simdi: new Date('2026-10-17T19:00:00Z'), sinir: 500 }), 100); // 300 / 3
+  // kalan azsa sonraki turlara TABAN (10) bırakılır, ama eşit payın altına inilmez: 50 kalan, 8 tur → 50/8
+  assert.equal(turPayi({ kullanilan: 350, simdi: new Date('2026-10-17T15:00:00Z'), sinir: 500 }), 6);
+  // 120 kalan, 8 tur → 120/4 = 30, ama 7 tura 10'ar bırakmak için en çok 50; 30 ≤ 50 → 30
+  assert.equal(turPayi({ kullanilan: 280, simdi: new Date('2026-10-17T15:00:00Z'), sinir: 500 }), 30);
   assert.equal(turPayi({ kullanilan: 0, simdi: new Date('2026-10-18T06:30:00Z'), sinir: 500 }), 400); // son tur hepsini alır
   assert.equal(turPayi({ kullanilan: 450, simdi: gunBasi, sinir: 500 }), 0); // pay aşıldı: yapay zekâ adımları atlanır
 });
@@ -30,9 +34,9 @@ test('butceYukle: saatten bugünkü ana model kullanımını okur', async () => 
   };
   const m = await butceYukle({ url: 'https://saat.example/', anahtar: 'a', site: 'deneme', simdi: new Date('2026-10-17T19:00:00Z'), fetchFn });
   assert.equal(adres, 'https://saat.example/motor/deneme/gemini Bearer a');
-  assert.equal(butceDurumu().pay, 50);
+  assert.equal(butceDurumu().pay, 100);
   assert.match(m, /100\/500/);
-  assert.match(m, /payı 50/);
+  assert.match(m, /payı 100/);
 });
 
 test('butceYukle: saat yoksa ya da hata verirse güvenli varsayılan (sınır × 0,8 / 12)', async () => {
