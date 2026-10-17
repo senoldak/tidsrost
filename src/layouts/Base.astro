@@ -4,7 +4,6 @@ import { SITE } from '../lib/site';
 import { metaDescription, organization, website } from '../lib/seo';
 import { FORKLART, erForklart, getActiveCategories, getNews } from '../lib/news';
 import Symbol from '../components/Symbol.astro';
-import BultenSkjema from '../components/BultenSkjema.astro';
 import { aktiveTemaer } from '../lib/temaer';
 import '../styles/global.css';
 
@@ -250,9 +249,6 @@ const [nameHead, nameTail] = SITE.name.split('ø');
             <li><a href="/rss.xml">RSS-strøm</a></li>
           </ul>
         </section>
-      </div>
-      <div class="container">
-        <BultenSkjema id="bulten-bunn" />
       </div>
       <div class="container copyright">
         <span>

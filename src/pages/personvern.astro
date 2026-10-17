@@ -3,8 +3,8 @@ import Base from '../layouts/Base.astro';
 import { SITE } from '../lib/site';
 
 // Bu sayfadaki bilgiler sitenin gerçek durumuna dayanır: çerez yok, analiz/izleme yok, harici script yok.
-// Siteye analiz, reklam, yorum vb. eklenirse bu sayfa da güncellenmeli. Ukesbrev bölümü worker/bulten.mjs'in gerçek davranışını anlatır.
-const OPPDATERT = '16. oktober 2026';
+// Siteye analiz, reklam, yorum vb. eklenirse bu sayfa da güncellenmeli.
+const OPPDATERT = '17. oktober 2026';
 ---
 
 <Base title="Personvern" description={`Hvordan ${SITE.name} behandler personopplysninger.`}>
@@ -45,30 +45,6 @@ const OPPDATERT = '16. oktober 2026';
       <p>
         Knappene for å dele saker på X, Facebook og WhatsApp er vanlige lenker. Ingen opplysninger sendes til disse
         tjenestene før du selv klikker på en av dem. Da gjelder tjenestens egne personvernvilkår.
-      </p>
-
-      <h2 id="ukesbrev">Ukesbrev på e-post</h2>
-      <p>
-        Melder du deg på ukesbrevet, behandler vi e-postadressen din for ett formål: å sende deg ukesbrevet én gang i
-        uken. Vi lagrer ingen andre opplysninger om deg i forbindelse med påmeldingen, heller ikke IP-adresse eller
-        nettleseropplysninger.
-      </p>
-      <p>
-        Det rettslige grunnlaget er ditt samtykke (personvernforordningen artikkel 6 nr. 1 bokstav a). Vi legger ikke til
-        adressen før du har bekreftet den med lenken i bekreftelses-e-posten vi sender deg.
-      </p>
-      <p>
-        Adressen lagres i en database hos Cloudflare (D1) i EU. Ukesbrevet sendes via tjenesten Resend, som behandler
-        adressen på våre vegne. Resend er et amerikansk selskap, så opplysningene kan behandles utenfor EØS.
-      </p>
-      <p>
-        Hver e-post har en lenke for å melde deg av. Når du melder deg av, slettes adressen din med en gang. Påmeldinger
-        som ikke er bekreftet, slettes senest 7 dager etter at de ble sendt inn. Vi bruker ikke adressen til annet enn
-        ukesbrevet.
-      </p>
-      <p>
-        Du kan når som helst be om innsyn, retting eller sletting, se «Dine rettigheter» under. Du kan også melde deg av
-        ved å bruke lenken i en av e-postene våre.
       </p>
 
       <h2>Når du kontakter oss</h2>

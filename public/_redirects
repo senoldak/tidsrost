@@ -35,3 +35,7 @@
 /artikkel/flere-inkassosaker-ved-utgangen-av-forste-halvar-2026 /artikkel/nesten-6-9-millioner-inkassosaker-under-behandling/ 301
 /artikkel/forskere-har-rangert-alle-verdens-helsetrusler-dette-frykter-norge-mest/ /artikkel/fedme-og-psykisk-uhelse-pekes-ut-som-storste-helsetrusler/ 301
 /artikkel/forskere-har-rangert-alle-verdens-helsetrusler-dette-frykter-norge-mest /artikkel/fedme-og-psykisk-uhelse-pekes-ut-som-storste-helsetrusler/ 301
+# E-posta bülteni (ukesbrev) kaldırıldı (2026-10-17): eski /nyhetsbrev/ adresleri ana sayfaya gider.
+/nyhetsbrev / 301
+/nyhetsbrev/ / 301
+/nyhetsbrev/* / 301

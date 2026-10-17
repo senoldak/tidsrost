@@ -10,8 +10,6 @@ on:
     paths:
       - 'src/**'
       - 'public/**'
-      - 'worker/**'
-      - 'migrations/**'
       - 'astro.config.mjs'
       - 'package.json'
       - 'package-lock.json'
