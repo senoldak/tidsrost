@@ -37,11 +37,13 @@ test('fjordKart: harita kapağı post ve story\'de üstte durur, site kapağınd
   assert.equal(kapak.katmanlar.length, 2);
 });
 
-test('fjordKart: imzalı yazı üstte kırmızı tür + yazar bandı alır, haberde bant yok', async () => {
+test('fjordKart: imzalı yazı ters Fjord alır (açık zemin, etiket, yazar adı); haber koyu zeminde kalır', async () => {
   const imzali = await fjordKart({ tittel: 'Hver fjerde budsjettkrone hentes fra oljefondet', forfatter: 'Şenol Dak', sjanger: 'forklart' }, 'kapak');
-  assert.match(imzali.svg, /<rect x="0" y="0" width="1200" height="\d+" fill="#c8281e"\/>/);
+  assert.match(imzali.svg, /^<svg[^>]*><rect width="1200" height="675" fill="#e6eef6"\/>/);
+  assert.equal(imzali.katmanlar.length, 4); // etiket, logo, başlık, yazar adı
   const haber = await fjordKart({ tittel: 'Hver fjerde budsjettkrone hentes fra oljefondet' }, 'kapak');
-  assert.doesNotMatch(haber.svg, /<rect x="0" y="0" width="1200"[^>]*#c8281e/);
+  assert.match(haber.svg, /^<svg[^>]*><rect width="1200" height="675" fill="#0d3557"\/>/);
+  assert.equal(haber.katmanlar.length, 2);
   const png = await kapakCiz(fjordKart({ tittel: 'Styringsrenten – kjøpekraften øker', forfatter: 'Şenol Dak', sjanger: 'forklart' }, 'story'));
   assert.equal((await sharp(png).metadata()).height, 1920);
 });

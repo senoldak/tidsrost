@@ -112,10 +112,11 @@ const PALET = {
 };
 
 /**
- * @param {{ tittel: string, ingress?: string, tohum?: string, omslag?: Buffer, forfatter?: string, sjanger?: string, varyant?: 'ters'|'bant' }} m
+ * @param {{ tittel: string, ingress?: string, tohum?: string, omslag?: Buffer, forfatter?: string, sjanger?: string }} m
  *   omslag: haberin harita/grafik kapağı (1200×675); post ve story'de üstte durur.
- *   forfatter: imzalı yazı (ör. Şenol Dak, Forklart). Sahibin isteği 2026-10-18: aynı aile, ama akışta haberle
- *   karışmasın. varyant 'ters' (açık zemin) ya da 'bant' (üstte kırmızı tür + yazar bandı).
+ *   forfatter: imzalı yazı (ör. Şenol Dak, Forklart). Sahibin seçimi 2026-10-18: "ters Fjord" — açık buz mavisi
+ *   zemin, fjord mavisi başlık, sol üstte kırmızı tür etiketi, başlığın altında kırmızı yazar adı. Aynı aile, ama
+ *   akışta haberle karışmaz.
  * @param {'kapak'|'post'|'story'} bicim
  */
 export async function fjordKart(m, bicim = 'kapak') {
@@ -126,23 +127,13 @@ export async function fjordKart(m, bicim = 'kapak') {
   const ic = W - 2 * pad;
   const { kicker, ana, alt: altBaslik } = bol(m.tittel);
   const imzali = Boolean(m.forfatter);
-  // Sahibin seçimi (2026-10-18): imzalı yazılar 'bant' (üstte kırmızı "FORKLART · yazar" bandı). 'ters' denemede kaldı.
-  const varyant = imzali ? (m.varyant ?? 'bant') : null;
-  const P = varyant === 'ters' ? PALET.ters : PALET.fjord;
+  const P = imzali ? PALET.ters : PALET.fjord;
   const tur = (m.sjanger === 'forklart' ? 'Forklart' : 'Kommentar').toLocaleUpperCase('nb-NO');
   const katmanlar = [];
   let svg = `<rect width="${W}" height="${H}" fill="${P.bg}"/>`;
 
   let sinirUst = ust + (bicim === 'kapak' ? 0 : 40);
-  if (varyant === 'bant') {
-    // Tam genişlik kırmızı bant: "FORKLART · Şenol Dak". Story'de üst güvenli alanın hemen altında.
-    const bantY = bicim === 'story' ? ust - 40 : 0;
-    const t = await tekst(`${tur}  ·  ${m.forfatter}`, { font: 'TidsrostTung', boy: b.kick, renk: R.hvit });
-    const bh = Math.round(t.h * 2.1);
-    svg += `<rect x="0" y="${bantY}" width="${W}" height="${bh}" fill="${R.rod}"/>`;
-    katmanlar.push({ input: t.input, left: pad, top: bantY + Math.round((bh - t.h) / 2) });
-    sinirUst = Math.max(sinirUst, bantY + bh + 48);
-  } else if (varyant === 'ters') {
+  if (imzali) {
     const etiket = await tekst(tur, { font: 'TidsrostTung', boy: b.kick, renk: R.hvit });
     const px = Math.round(etiket.h * 0.32);
     const py = Math.round(etiket.h * 0.18);
@@ -174,8 +165,8 @@ export async function fjordKart(m, bicim = 'kapak') {
   const kickAra = 40;
   const altT = altBaslik ? await tekst(altBaslik, { font: 'TidsrostSemi', boy: b.altB, renk: P.ikincil, gen: ic, aralik: 6 }) : null;
   const ingT = !altBaslik && b.ing && m.ingress ? await tekst(m.ingress, { font: 'TidsrostBrod', boy: b.ing, renk: P.ikincil, gen: ic, aralik: 10 }) : null;
-  // Ters varyantta yazar adı başlığın altında, kırmızı (bant varyantında ad zaten bantta).
-  const imzaT = varyant === 'ters' ? await tekst(m.forfatter, { font: 'TidsrostTung', boy: b.altB, renk: P.imza }) : null;
+  // İmzalı yazıda yazar adı başlığın altında, kırmızı.
+  const imzaT = imzali ? await tekst(m.forfatter, { font: 'TidsrostTung', boy: b.altB, renk: P.imza }) : null;
 
   // Metin sığmazsa ana başlık puntosu küçülür (en büyük üçüncü basamağın %80'ine kadar).
   let punto = puntoSec(ana, b.ana);
