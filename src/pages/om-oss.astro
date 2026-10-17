@@ -11,7 +11,7 @@ const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/reda
     <h1>Om oss</h1>
     <div class="prose">
       <p>
-        {SITE.name} er en uavhengig nyhetsside med redaksjonell base i Moss som formidler de viktigste nyhetene fra
+        {SITE.name} er en uavhengig nyhetsside som formidler de viktigste nyhetene fra
         Norge og verden på en klar og lettfattelig måte.
       </p>
 
@@ -20,7 +20,7 @@ const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/reda
         SITE.redaktor && (
           <p>
             Journalist og ansvarlig redaktør (uten arbeidsgiveransvar) er{' '}
-            <a href="/forfatter/senol-dak/"><strong>{SITE.redaktor}</strong></a>, basert i Moss.
+            <a href="/forfatter/senol-dak/"><strong>{SITE.redaktor}</strong></a>.
           </p>
         )
       }
@@ -36,7 +36,7 @@ const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/reda
 
       <h2>Utgiver og finansiering</h2>
       <p>
-        Redaksjonen holder til i Moss, Norge.{' '}
+        Redaksjonen holder til i Norge.{' '}
         {SITE.utgiver && <>Utgiver er {SITE.utgiver}{SITE.orgnr && `, org.nr. ${SITE.orgnr}`}. </>}
         {
           SITE.ikkeKommersiell &&
