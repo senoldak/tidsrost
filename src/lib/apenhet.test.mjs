@@ -55,3 +55,16 @@ test('lesetid: 200 ord i minuttet, minst 1', () => {
   assert.equal(lesetid(''), 1);
   assert.equal(lesetid('ord '.repeat(900)), 5);
 });
+
+test('isoUke og delPaUker: årsskifte, mandag som første dag, nyeste uke først', async () => {
+  const { isoUke, delPaUker } = await import('./arkiv.mjs');
+  assert.equal(isoUke('2026-10-12').nokkel, '2026-42');
+  assert.equal(isoUke('2026-10-11').nokkel, '2026-41');
+  assert.equal(isoUke('2027-01-01').nokkel, '2026-53');
+  assert.equal(isoUke('2024-12-30').nokkel, '2025-01');
+  const d = (dag, n) => ({ dag, artikler: Array(n).fill({}) });
+  assert.deepEqual(
+    delPaUker([d('2026-10-16', 3), d('2026-10-12', 2), d('2026-10-09', 1)]).map((u) => [u.nokkel, u.forste, u.siste, u.antall]),
+    [['2026-42', '2026-10-12', '2026-10-16', 5], ['2026-41', '2026-10-09', '2026-10-09', 1]],
+  );
+});

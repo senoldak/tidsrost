@@ -47,3 +47,33 @@ export function manedskalender(mnd, antall) {
   for (let i = 0; i < celler.length; i += 7) uker.push(celler.slice(i, i + 7));
   return uker;
 }
+
+/** ISO 8601-uke: "2026-10-16" → { ar: 2026, nr: 42, nokkel: "2026-42" } (uka starter mandag). */
+export function isoUke(dag) {
+  const [a, m, d] = dag.split('-').map(Number);
+  const t = new Date(Date.UTC(a, m - 1, d));
+  t.setUTCDate(t.getUTCDate() - ((t.getUTCDay() + 6) % 7) + 3); // ukas torsdag
+  const ar = t.getUTCFullYear();
+  // Uka tilhører året torsdagen ligger i; nummeret er hele uker siden 1. januar det året + 1.
+  const nr = 1 + Math.floor((t - Date.UTC(ar, 0, 1)) / 86400000 / 7);
+  return { ar, nr, nokkel: `${ar}-${String(nr).padStart(2, '0')}` };
+}
+
+/** Dager (fra delPaDager) samlet per ISO-uke, nyeste uke først. */
+export function delPaUker(dager) {
+  const kart = new Map();
+  for (const d of dager) {
+    const u = isoUke(d.dag);
+    if (!kart.has(u.nokkel)) kart.set(u.nokkel, { ...u, dager: [] });
+    kart.get(u.nokkel).dager.push(d);
+  }
+  return [...kart.values()]
+    .map((u) => ({
+      ...u,
+      dager: u.dager.sort((a, b) => (a.dag < b.dag ? 1 : -1)),
+      forste: u.dager.map((d) => d.dag).sort()[0],
+      siste: u.dager.map((d) => d.dag).sort().at(-1),
+      antall: u.dager.reduce((t, d) => t + d.artikler.length, 0),
+    }))
+    .sort((a, b) => (a.nokkel < b.nokkel ? 1 : -1));
+}
