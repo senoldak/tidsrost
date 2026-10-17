@@ -1,6 +1,7 @@
 # Yeni tam haberleri Facebook Sayfasına ve Instagram'a post + story olarak gönderir (scripts/sosial/del.mjs).
 # Her başarılı yayından sonra çalışır: post/story görselleri o yayınla tidsrost.com/sosial/ altına çıkar.
-# Elle: mod=kontrol (hiçbir şey yayımlamadan erişim), mod=baslat (penceredeki haberleri gönderilmiş say), mod=paylas.
+# Elle: mod=kontrol (hiçbir şey yayımlamadan erişim), mod=baslat (penceredeki haberleri gönderilmiş say), mod=paylas,
+# mod=test (tek haberi gece kuralı ve tavana bakmadan seçilen kanallara gönderir).
 # Sayfa ve Instagram kimlikleri repo değişkeni (META_PAGE_ID, INSTAGRAM_USER_ID), token gizli (META_TOKEN).
 name: Sosyal medya
 
@@ -14,7 +15,13 @@ on:
         description: 'Çalışma modu'
         type: choice
         default: paylas
-        options: [paylas, kontrol, baslat]
+        options: [paylas, kontrol, baslat, test]
+      test_id:
+        description: 'mod=test: haber kimliği (boş = görseli yayında olan en yeni tam haber)'
+        default: ''
+      kanallar:
+        description: 'mod=test: kanallar'
+        default: 'ig_post,ig_story'
 
 permissions:
   contents: write
@@ -48,10 +55,13 @@ jobs:
           INSTAGRAM_USER_ID: ${{ vars.INSTAGRAM_USER_ID }}
           SOSIAL_GUNLUK_TAVAN: ${{ vars.SOSIAL_GUNLUK_TAVAN }}
           MOD: ${{ github.event.inputs.mod || 'paylas' }}
+          TEST_ID: ${{ github.event.inputs.test_id }}
+          KANALLAR: ${{ github.event.inputs.kanallar || 'ig_post,ig_story' }}
         run: |
           case "$MOD" in
             kontrol) node scripts/sosial/del.mjs --kontrol ;;
             baslat) node scripts/sosial/del.mjs --baslat ;;
+            test) node scripts/sosial/del.mjs --test ${TEST_ID:+"$TEST_ID"} --kanallar "$KANALLAR" ;;
             *) node scripts/sosial/del.mjs ;;
           esac
 

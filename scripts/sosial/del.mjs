@@ -4,8 +4,10 @@
 //
 // Ortam: META_TOKEN (tidsrost portföyündeki sistem kullanıcısının süresiz token'ı), META_PAGE_ID, INSTAGRAM_USER_ID,
 // SOSIAL_GUNLUK_TAVAN (24 saatte en çok kaç haber; boş = sınırsız).
-// Kullanım: node scripts/sosial/del.mjs [--kontrol | --baslat]
+// Kullanım: node scripts/sosial/del.mjs [--kontrol | --baslat | --test [haber-id] [--kanallar ig_post,ig_story]]
 //   --kontrol: hiçbir şey yayımlamadan erişimi sınar.  --baslat: penceredeki haberleri gönderilmiş sayar (ilk kurulum).
+//   --test: tek haberi (verilmezse görseli yayında olan en yeni tam haberi) gece kuralı ve tavana bakmadan seçilen
+//   kanallara gönderir; giden kanallar delt.json'a işlenir, haber sonraki turlarda tekrar gitmez.
 import { readFile, writeFile } from 'node:fs/promises';
 import { sakerOku, paylasilir, bildetekst, bildeUrl } from './saker.mjs';
 
@@ -93,6 +95,32 @@ if (kontrol) {
   process.exit(0);
 }
 
+const argDeger = (ad) => { const i = process.argv.indexOf(`--${ad}`); const v = process.argv[i + 1]; return i > 0 && v && !v.startsWith('--') ? v : null; };
+const gorselHazir = async (id) =>
+  (await Promise.all(['post', 'story'].map((b) => fetch(bildeUrl(id, b), { method: 'HEAD' }).then((r) => r.ok, () => false)))).every(Boolean);
+
+if (process.argv.includes('--test')) {
+  const kanallar = (argDeger('kanallar') ?? 'ig_post,ig_story').split(',').filter((c) => KANALLAR.includes(c));
+  const adaylar = (await sakerOku()).filter((s) => paylasilir(s, Date.now(), 30 * 3600e3)).reverse();
+  const istenen = argDeger('test');
+  let s = null;
+  for (const a of istenen ? adaylar.filter((x) => x.id === istenen) : adaylar) if (await gorselHazir(a.id)) { s = a; break; }
+  if (!s) { console.error(`[sosial] Test: ${istenen ?? 'görseli yayında olan tam haber'} bulunamadı.`); process.exit(1); }
+  let durum;
+  try { durum = JSON.parse(await readFile(DURUM, 'utf8')); } catch { durum = {}; }
+  const k = (durum[s.id] ??= { tarih: new Date().toISOString(), atlandi: 'test' });
+  let hata = 0;
+  console.log(`[sosial] Test: ${s.id} → ${kanallar.join(', ')}`);
+  for (const c of kanallar) {
+    if (k[c]) { console.log(`[sosial] ${c} zaten gönderilmiş (${k[c]})`); continue; }
+    try { k[c] = await GONDER[c](s); console.log(`[sosial] ✓ ${c} (${k[c]})`); }
+    catch (e) { hata++; console.error(`[sosial] ! ${c}: ${gizle(e.message).slice(0, 300)}`); }
+  }
+  await writeFile(DURUM, `${JSON.stringify(durum, null, 2)}
+`);
+  process.exit(hata ? 1 : 0);
+}
+
 // Oslo gecesi 01–07 paylaşım yok; birikenler sabah ilk turda gider.
 const osloSaat = Number(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Oslo', hour: '2-digit', hourCycle: 'h23' }).format(new Date()));
 if (!baslat && osloSaat >= 1 && osloSaat < 7) {
@@ -133,8 +161,7 @@ for (const s of sira) {
   if (islenen >= TUR_BASINA) break;
 
   // Görsel henüz yayında değilse (derleme sürüyor) haber sonraki tura kalır; deneme sayılmaz.
-  const hazir = await Promise.all(['post', 'story'].map((b) => fetch(bildeUrl(s.id, b), { method: 'HEAD' }).then((r) => r.ok, () => false)));
-  if (!hazir.every(Boolean)) { console.log(`[sosial] ${s.id}: görsel yayında değil, sonraki tur.`); continue; }
+  if (!(await gorselHazir(s.id))) { console.log(`[sosial] ${s.id}: görsel yayında değil, sonraki tur.`); continue; }
 
   if (islenen) await bekle(ARA_MS);
   islenen++;
