@@ -136,9 +136,9 @@ test('sakKapagi: yalnız başlık ve özet; rakam, kategori ve kaynak çizilmez'
     kilde: 'Norges Bank',
   });
 
-  // Sahibin isteği: veri kutusu yok; katmanlar yalnız başlık, özet ve tidsrøst imzası
+  // Sahibin isteği: veri kutusu, kategori ve kaynak yok; Fjord kapağında katmanlar yalnız imza ve başlık
   assert.doesNotMatch(veri.svg, /width="330"/);
-  assert.equal(veri.katmanlar.length, 3);
+  assert.equal(veri.katmanlar.length, 2);
 
   const png = await kapakCiz(veri);
   assert.ok(Buffer.isBuffer(png));

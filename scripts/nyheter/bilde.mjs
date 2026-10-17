@@ -5,6 +5,7 @@ import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { hentJson, sleep } from './lib.mjs';
+import { fjordKart } from './fjord.mjs';
 
 const HER = path.dirname(fileURLToPath(import.meta.url));
 const FONT_DIR = path.join(HER, 'fonts');
@@ -606,94 +607,12 @@ export async function kapakCiz(uretici) {
   return resim.png({ compressionLevel: 9, palette: true, quality: 90 }).toBuffer();
 }
 
-// ── Standart Haber Kapağı Şablonu: yalnız başlık + kısa özet ──────────────────
-// Sahibin isteği (2026-10-14): kapakta kaynak, kategori/tarih etiketi ve veri kutusu yok; göz yormasın.
+// ── Standart Haber Kapağı: Fjord dili (bkz. fjord.mjs) ─────────────────────
+// Sahibin kararları: kapakta kaynak, kategori/tarih etiketi ve veri kutusu yok (2026-10-14); görsel dil Fjord (2026-10-18).
 // kategori, dato, rakam, kilde parametreleri geriye dönük uyum için kabul edilir ama çizilmez.
 
 export async function sakKapagi({ tittel, ingress }) {
-  const tLen = (tittel ?? '').length;
-  const baslikBoyut = tLen > 110 ? 52 : tLen > 80 ? 56 : tLen > 50 ? 62 : 68;
-
-  const baslikKatman = await yazi(tittel, {
-    aile: 'SourceSerif4',
-    boyut: baslikBoyut,
-    kalinlik: 600,
-    renk: FARGE.tekst,
-    genislik: 1056,
-    satirAraligi: -4,
-  });
-
-  let ingressKatman = null;
-  if (ingress) {
-    ingressKatman = await yazi(ingress, {
-      aile: 'SourceSerif4',
-      boyut: ingress.length > 160 ? 27 : 30,
-      kalinlik: 400,
-      renk: FARGE.tekst2,
-      genislik: 1000,
-      satirAraligi: 6,
-    });
-  }
-
-  const cizgiGenislik = 60;
-  const cizgiKalinlik = 3;
-  const boslukUst = 30;
-  const boslukAlt = ingressKatman ? 30 : 0;
-  const ingressYuks = ingressKatman ? ingressKatman.yukseklik : 0;
-  const toplamIcerikY = baslikKatman.yukseklik + boslukUst + cizgiKalinlik + boslukAlt + ingressYuks;
-
-  // İçerik, çerçevenin üstü (48) ile alt çizgi (584) arasında dikey ortalanır.
-  const baslikY = Math.max(56, Math.round(48 + (536 - toplamIcerikY) / 2));
-  const cizgiY = baslikY + baslikKatman.yukseklik + boslukUst;
-  const ingressY = cizgiY + cizgiKalinlik + boslukAlt;
-
-  const baslikSigdirildi = await sigdir({
-    input: baslikKatman.input,
-    left: 72,
-    top: baslikY,
-    genislik: baslikKatman.genislik,
-    yukseklik: baslikKatman.yukseklik,
-  });
-
-  let ingressSigdirildi = null;
-  if (ingressKatman) {
-    ingressSigdirildi = await sigdir({
-      input: ingressKatman.input,
-      left: 72,
-      top: ingressY,
-      genislik: ingressKatman.genislik,
-      yukseklik: ingressKatman.yukseklik,
-    });
-  }
-
-  // Alt bant: yalnız tidsrøst imzası
-  const logoKatman = await yazi('tidsrøst', {
-    aile: 'SourceSerif4',
-    boyut: 28,
-    kalinlik: 700,
-    renk: FARGE.tekst,
-  });
-  const logoTop = 584 + Math.round((661 - 584 - logoKatman.yukseklik) / 2);
-
-  // SVG tabanı: N50 çift çerçeve, aksan çizgisi, alt ayırıcı
-  const svgInnhold = `
-<rect width="${B}" height="${H}" fill="${FARGE.bg}"/>
-<rect x="10" y="10" width="${B - 20}" height="${H - 20}" fill="none" stroke="${FARGE.ramme}" stroke-width="1.5"/>
-<rect x="14" y="14" width="${B - 28}" height="${H - 28}" fill="none" stroke="${FARGE.delestrek}" stroke-width="0.8"/>
-<rect x="72" y="${cizgiY}" width="${cizgiGenislik}" height="${cizgiKalinlik}" fill="${FARGE.aksent}" rx="1.5"/>
-<line x1="72" y1="584" x2="1128" y2="584" stroke="${FARGE.delestrek}" stroke-width="1"/>
-`;
-
-  const katmanlar = [
-    baslikSigdirildi,
-    ...(ingressSigdirildi ? [ingressSigdirildi] : []),
-    { input: logoKatman.input, left: 72, top: logoTop },
-  ];
-
-  return {
-    svg: svg(svgInnhold),
-    katmanlar,
-  };
+  return fjordKart({ tittel, ingress }, 'kapak');
 }
 
 
