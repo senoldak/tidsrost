@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-17T12:02:46.444Z",
+  "hentet": "2026-10-17T14:04:45.997Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-17T12:02:09+00:00",
+  "sistEndretHosMet": "2026-10-17T14:04:15+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.20261016104030.032",
