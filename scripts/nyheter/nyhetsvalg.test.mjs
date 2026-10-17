@@ -45,7 +45,7 @@ test('velg: lav verdi forkastes, høy verdi først, dataskilder slipper vurderin
   const poeng = await vurder(kandidater, {
     kall: async ({ prompt }) => {
       assert.ok(!prompt.includes('m1'));
-      return { poeng: [{ nr: 0, poeng: 2 }, { nr: 1, poeng: 3 }, { nr: 2, poeng: 5 }] };
+      return { poeng: [{ nr: 0, poeng: 65 }, { nr: 1, poeng: 70 }, { nr: 2, poeng: 95 }] };
     },
   });
   const { valgt, forkastet } = velg(kandidater, poeng, 12);

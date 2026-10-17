@@ -1,13 +1,15 @@
-// Haber değeri: seçimden önce bütün adaylar tek Gemini çağrısıyla 1–5 puanlanır.
+// Haber değeri: seçimden önce bütün adaylar tek Gemini çağrısıyla 1–100 puanlanır.
 // MIN_VIKTIGHET altındakiler yazılmaz; kalanlar puan sırasıyla seçilir (eşit puanda kaynaklar arasında sırayla).
 // Şablonla yazılan veri kaynakları (uyarılar, kur, istatistik) puanlanmaz: kendi eşikleri var.
 import { gemini } from './lib.mjs';
 
-export const MIN_VIKTIGHET = 3;
+// 2026-10-17 site sahibinin kararıyla ölçek 1–5'ten 1–100'e geçti, eşik 3/5'ten 3,5/5'e, yani 70/100'e çıktı
+// (tam sayılı 1–5'te 3,5 pratikte 4 olurdu).
+export const MIN_VIKTIGHET = 70;
 export const UTEN_VURDERING = new Set(['met', 'nve', 'norgesbank', 'udi']);
-const STANDARD = 3;
+const STANDARD = 70;
 // Puanlanmayan veri kaynakları (resmî uyarılar vb.) sıralamada sıradan bir haberin önünde durur.
-const DATA_POENG = 4;
+const DATA_POENG = 80;
 const MAKS_I_KALL = 150;
 
 const SKJEMA = {
@@ -38,19 +40,20 @@ export async function vurder(kandidater, { kall = gemini } = {}) {
   const svar = await kall({
     schema: SKJEMA,
     tenkning: 'minimal',
-    prompt: `Du er vaktsjef i en norsk nettavis for et bredt publikum. Gi hver sak under en nyhetsverdi fra 1 til 5:
-5 = stor nyhet de fleste i Norge bør få med seg (vedtak med bred virkning, store hendelser, viktige tall).
-4 = klar nyhet med betydning for mange.
-3 = nyttig nyhet for en tydelig gruppe lesere.
-2 = smal eller rutinepreget (tilsettinger, arrangementer, høringer uten nytt innhold, mindre tilskudd).
-1 = ingen nyhetsverdi for allmennheten (interne saker, påminnelser, generell informasjon).
+    prompt: `Du er vaktsjef i en norsk nettavis for et bredt publikum. Gi hver sak under en nyhetsverdi fra 1 til 100:
+90–100 = stor nyhet de fleste i Norge bør få med seg (vedtak med bred virkning, store hendelser, viktige tall).
+70–89 = klar nyhet med betydning for mange.
+50–69 = nyttig nyhet for en tydelig gruppe lesere.
+30–49 = smal eller rutinepreget (tilsettinger, arrangementer, høringer uten nytt innhold, mindre tilskudd).
+1–29 = ingen nyhetsverdi for allmennheten (interne saker, påminnelser, generell informasjon).
+Finjuster innenfor intervallet. 70 eller mer publiseres: gi det bare til saker leserne virkelig bør få med seg, og gi ikke 70 hvis du er usikker.
 Vurder bare nyhetsverdien, ikke kilden. Svar med ett poeng per nummer.
 
 ${liste.map(({ navn, k }, i) => `${i}. [${navn}] ${rentTittel(k)}`).join('\n')}`,
   });
   if (!svar?.poeng) return null;
   for (const { nr, poeng: p } of svar.poeng) {
-    if (Number.isInteger(nr) && liste[nr] && Number.isInteger(p)) poeng.set(liste[nr].k, Math.min(5, Math.max(1, p)));
+    if (Number.isInteger(nr) && liste[nr] && Number.isInteger(p)) poeng.set(liste[nr].k, Math.min(100, Math.max(1, p)));
   }
   return poeng;
 }
