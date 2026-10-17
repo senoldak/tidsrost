@@ -273,14 +273,17 @@ export async function skrivSak(rot, sak) {
     body: typografi(trygg(avsnitt(sak.body))),
   };
   const base = path.join(rot, 'src/content/haberler');
+  // public/_redirects'te kaynak olan (birleştirilmiş/silinmiş) adresler yeniden kullanılmaz; yoksa yeni haber eskisine yönlenir.
+  const yonlenen = new Set(
+    (await readFile(path.join(rot, 'public/_redirects'), 'utf8').catch(() => ''))
+      .split('\n')
+      .map((l) => l.match(/^\/artikkel\/([^/\s]+)/)?.[1])
+      .filter(Boolean),
+  );
+  const finnes = (s) => access(path.join(base, s)).then(() => true, () => false);
   let slug = slugify(sak.title) || 'sak';
-  for (let i = 2; ; i++) {
-    try {
-      await access(path.join(base, slug));
-      slug = `${slugify(sak.title)}-${i}`;
-    } catch {
-      break;
-    }
+  for (let i = 2; yonlenen.has(slug) || (await finnes(slug)); i++) {
+    slug = `${slugify(sak.title) || 'sak'}-${i}`;
   }
   const fm = [
     '---',

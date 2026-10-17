@@ -24,7 +24,9 @@ const description = desc?.trim() ? desc.trim() : SITE.description;
 const metaDesc = metaDescription(description);
 const robots = noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 const siteLd = { '@context': 'https://schema.org', '@graph': [organization, website] };
-const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} | Nyheter`;
+// Uzun başlıklarda site adı eklenmez (Google ~60 karakterden sonrasını keser); ana sayfa açıklayıcı başlık alır.
+const fullTitle = title ? (title.length > 55 ? title : `${title} | ${SITE.name}`) : `${SITE.name} – siste nytt fra Norge og verden`;
+const ogTitle = title ?? fullTitle;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(image || '/og-default.png', Astro.site).href;
 const ogWidth = imageWidth ?? 1200;
@@ -72,7 +74,7 @@ const [nameHead, nameTail] = SITE.name.split('ø');
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta property="og:site_name" content={SITE.name} />
     <meta property="og:type" content={type} />
-    <meta property="og:title" content={title ?? SITE.name} />
+    <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content="nb_NO" />
@@ -81,7 +83,7 @@ const [nameHead, nameTail] = SITE.name.split('ø');
     <meta property="og:image:height" content={String(ogHeight)} />
     <meta property="og:image:alt" content={ogAlt} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title ?? SITE.name} />
+    <meta name="twitter:title" content={ogTitle} />
     <meta name="twitter:description" content={metaDesc} />
     <meta name="twitter:image" content={ogImage} />
     <meta name="twitter:image:alt" content={ogAlt} />
