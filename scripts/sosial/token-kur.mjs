@@ -1,14 +1,16 @@
 // Bir kerelik kurulum: Graph API Gezgini'nden alınıp 60 güne uzatılan kullanıcı token'ından Sayfanın süresiz
 // token'ını ve bağlı Instagram hesabının kimliğini bulur, GitHub'a yazar (gizli META_TOKEN, değişkenler META_PAGE_ID,
 // INSTAGRAM_USER_ID). Token ekrana yazılmaz; yapıştırırken de görünmez.
-// Kullanım (terminalde): node scripts/sosial/token-kur.mjs <sayfa-adı> <owner/repo>
-//   ör. node scripts/sosial/token-kur.mjs Tidsrøst senoldak/tidsrost
+// Kullanım (terminalde): node scripts/sosial/token-kur.mjs <sayfa-kimliği> <owner/repo>
+//   ör. node scripts/sosial/token-kur.mjs 1343803192154866 senoldak/tidsrost
+// Token'da pages_show_list, pages_read_engagement, pages_manage_posts, instagram_basic, instagram_content_publish ve
+// (Sayfa bir işletme portföyüne aitse) business_management izinleri olmalı.
 import { execFileSync } from 'node:child_process';
 import readline from 'node:readline';
 
-const [sayfaAdi, repo] = process.argv.slice(2);
-if (!sayfaAdi || !repo) {
-  console.error('Kullanım: node scripts/sosial/token-kur.mjs <sayfa-adı> <owner/repo>');
+const [sayfaId, repo] = process.argv.slice(2);
+if (!sayfaId || !repo) {
+  console.error('Kullanım: node scripts/sosial/token-kur.mjs <sayfa-kimliği> <owner/repo>');
   process.exit(1);
 }
 const API = 'https://graph.facebook.com/v25.0';
@@ -28,9 +30,8 @@ async function graph(yol, alanlar) {
 }
 
 const kullaniciToken = await gizliOku('Uzatılmış kullanıcı token\'ını yapıştırıp Enter\'a bas (görünmez): ');
-const { data: sayfalar } = await graph('me/accounts', { fields: 'id,name,access_token,instagram_business_account{id,username}', access_token: kullaniciToken, limit: '200' });
-const sayfa = sayfalar.find((s) => s.name.toLocaleLowerCase('nb') === sayfaAdi.toLocaleLowerCase('nb'));
-if (!sayfa) throw new Error(`"${sayfaAdi}" bulunamadı. Token'ın erişebildiği Sayfalar: ${sayfalar.map((s) => s.name).join(', ')}`);
+const sayfa = await graph(sayfaId, { fields: 'id,name,access_token,instagram_business_account{id,username}', access_token: kullaniciToken });
+if (!sayfa.access_token) throw new Error(`${sayfa.name ?? sayfaId}: Sayfa token'ı alınamadı (token'ın bu Sayfada yetkisi var mı?)`);
 if (!sayfa.instagram_business_account) throw new Error(`${sayfa.name} Sayfasına bağlı Instagram profesyonel hesabı yok.`);
 
 // Süresiz mi? Uzatılmış kullanıcı token'ından gelen Sayfa token'ı süresizdir (expires_at 0).
