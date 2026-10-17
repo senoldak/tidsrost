@@ -50,10 +50,11 @@ async function graph(yontem, yol, alanlar, tok = token) {
   }
 }
 
+// META_TOKEN bir sistem kullanıcısı token'ıysa Sayfa token'ı ondan alınır; zaten Sayfa token'ıysa (token-kur.mjs)
+// alan dönmez ve token olduğu gibi kullanılır.
 let sayfaToken;
 async function sayfaTokeni() {
-  sayfaToken ??= (await graph('GET', sayfaId, { fields: 'access_token' })).access_token;
-  if (!sayfaToken) throw new Error('Sayfa token alınamadı (sistem kullanıcısına Sayfa atanmış mı?)');
+  sayfaToken ??= (await graph('GET', sayfaId, { fields: 'access_token' }).catch(() => ({}))).access_token ?? token;
   return sayfaToken;
 }
 
