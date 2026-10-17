@@ -1,5 +1,6 @@
 ---
 // Yazar sayfası: kişi adıyla yayımlanan yazılar (author ≠ site adı). Biyografi uydurulmaz; sadece yazılar listelenir.
+import { jsonLdMetni } from '../../lib/json-ld.mjs';
 import Base from '../../layouts/Base.astro';
 import StoryRow from '../../components/StoryRow.astro';
 import ForfatterKort, { FORFATTER_BESKRIVELSE } from '../../components/ForfatterKort.astro';
@@ -53,7 +54,7 @@ const jsonLd = {
 ---
 
 <Base title={`${name} – Journalist`} description={description}>
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
   <ForfatterKort name={name} antallSaker={items.length} heading="h1" />
   <section class="day">
     <h2 class="band">Siste saker av {name}</h2>

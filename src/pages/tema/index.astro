@@ -1,5 +1,6 @@
 ---
 // Tema dizini: sayfası olan bütün kurum ve konu temaları (src/lib/tema.mjs) ve sürekli güncel veri sayfaları.
+import { jsonLdMetni } from '../../lib/json-ld.mjs';
 import Base from '../../layouts/Base.astro';
 import Symbol from '../../components/Symbol.astro';
 import Brodsmuler from '../../components/Brodsmuler.astro';
@@ -40,7 +41,7 @@ const jsonLd = {
 ---
 
 <Base title={tittel} description={description} noindex={temaer.length === 0}>
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
   <Brodsmuler items={sti} />
   <header class="page-head">
     <h1 class="page-title"><Symbol kind="tema" />Temaer</h1>

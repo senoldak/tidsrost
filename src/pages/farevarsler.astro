@@ -2,6 +2,7 @@
 // "Farevarsler i dag": MET Norway'in açık MetAlerts verisinden (CC BY 4.0) geçerli ve yaklaşan farevarsler.
 // Veri scripts/data/hent-data.mjs ile Nyhetsbot çalışmalarında alınır (src/data/farevarsler.json).
 // Bitişi derleme anında geçmiş uyarılar gösterilmez; veri eskiyse sayfa bunu açıkça söyler.
+import { jsonLdMetni } from '../lib/json-ld.mjs';
 import Base from '../layouts/Base.astro';
 import Symbol from '../components/Symbol.astro';
 import Brodsmuler from '../components/Brodsmuler.astro';
@@ -63,7 +64,7 @@ const grupper = [
 ---
 
 <Base title={tittel} description={description}>
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
   <Brodsmuler items={sti} />
   <header class="page-head">
     <h1 class="page-title"><Symbol kind="varsel" class="sym-varsel-gult" />{tittel}</h1>

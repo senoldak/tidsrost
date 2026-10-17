@@ -1,4 +1,5 @@
 ---
+import { jsonLdMetni } from '../lib/json-ld.mjs';
 import Base from '../layouts/Base.astro';
 import { SITE } from '../lib/site';
 import { SITE_URL, breadcrumbs } from '../lib/seo';
@@ -22,7 +23,7 @@ const OPPDATERT = '16. oktober 2026';
   <Fragment slot="head">
     <script
       type="application/ld+json"
-      set:html={JSON.stringify(
+      set:html={jsonLdMetni(
         breadcrumbs([
           { name: 'Forsiden', url: `${SITE_URL}/` },
           { name: 'Redaksjonelle prinsipper', url: `${SITE_URL}/redaksjonelle-prinsipper/` },

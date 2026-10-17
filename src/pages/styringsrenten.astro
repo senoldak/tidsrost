@@ -1,6 +1,7 @@
 ---
 // "Styringsrenten nå": Norges Bank'ın açık verisinden (SDMX API) güncel politika faizi ve son değişiklikler.
 // Veri scripts/data/hent-data.mjs ile Nyhetsbot çalışmalarında alınır (src/data/styringsrente.json).
+import { jsonLdMetni } from '../lib/json-ld.mjs';
 import Base from '../layouts/Base.astro';
 import Symbol from '../components/Symbol.astro';
 import Brodsmuler from '../components/Brodsmuler.astro';
@@ -67,7 +68,7 @@ const jsonLd = {
 ---
 
 <Base title={tittel} description={description}>
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
   <Brodsmuler items={sti} />
   <header class="page-head">
     <h1 class="page-title"><Symbol kind="data" />{tittel}</h1>

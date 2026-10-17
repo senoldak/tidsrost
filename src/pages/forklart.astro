@@ -1,5 +1,6 @@
 ---
 // "Forklart" bölümü: tablo ve grafiklerle açıklayıcı yazılar (frontmatter: sjanger: forklart).
+import { jsonLdMetni } from '../lib/json-ld.mjs';
 import Base from '../layouts/Base.astro';
 import StoryRow from '../components/StoryRow.astro';
 import Symbol from '../components/Symbol.astro';
@@ -45,7 +46,7 @@ const jsonLd = {
 ---
 
 <Base title={`${FORKLART.name} – tallene bak nyhetene`} description={description} noindex={items.length === 0}>
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
   <header class="page-head">
     <h1 class="page-title"><Symbol kind="forklart" />{FORKLART.name}</h1>
     <p class="page-intro">

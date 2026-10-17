@@ -1,4 +1,5 @@
 ---
+import { jsonLdMetni } from '../lib/json-ld.mjs';
 import { SITE } from '../lib/site';
 import { metaDescription, organization, website } from '../lib/seo';
 import { FORKLART, erForklart, getActiveCategories, getNews } from '../lib/news';
@@ -88,7 +89,7 @@ const [nameHead, nameTail] = SITE.name.split('ø');
     <meta name="twitter:image" content={ogImage} />
     <meta name="twitter:image:alt" content={ogAlt} />
     {SITE.social.x && <meta name="twitter:site" content={`@${SITE.social.x.replace(/\/+$/, '').split('/').pop()}`} />}
-    <script type="application/ld+json" set:html={JSON.stringify(siteLd)} />
+    <script type="application/ld+json" set:html={jsonLdMetni(siteLd)} />
     <!-- Cloudflare Web Analytics -->
     <script
       type="module"

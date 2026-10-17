@@ -1,4 +1,5 @@
 ---
+import { jsonLdMetni } from '../../../lib/json-ld.mjs';
 import type { GetStaticPathsOptions, Page } from 'astro';
 import Base from '../../../layouts/Base.astro';
 import StoryRow from '../../../components/StoryRow.astro';
@@ -83,7 +84,7 @@ const jsonLd = {
   <Fragment slot="head">
     {forrige && <link rel="prev" href={forrige} />}
     {neste && <link rel="next" href={neste} />}
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
   </Fragment>
   <Brodsmuler items={sti} />
   <header class="page-head">
