@@ -193,8 +193,8 @@ if (process.env.GITHUB_STEP_SUMMARY) {
   const ozet = [
     `### Nyhetsbot: ${antall} nye saker`,
     ...(kortLagt ? [`- 🗒️ Kort fortalt: ${kortLagt} kısa resmi duyuru eklendi`] : []),
-    ...stoppListe.map((t) => `- ⛔ Yayınlanmadı (kaynakta olmayan rakam/alıntı), taslakta bekliyor (/admin): ${t}`),
-    ...utkastListe.map((t) => `- 📝 Taslak, kontrol edilip yayınlanmayı bekliyor (/admin): ${t}`),
+    ...stoppListe.map((t) => `- ⛔ Yayınlanmadı (kaynakta olmayan rakam/alıntı), taslakta bekliyor: ${t}`),
+    ...utkastListe.map((t) => `- 📝 Taslak, kontrol edilip yayınlanmayı bekliyor: ${t}`),
     ...rettetListe.map((t) => `- ✏️ Kontrol düzeltti ve yayınlandı: ${t}`),
     ...feilListe.map((f) => `- ❌ ${f}`),
   ].join('\n');

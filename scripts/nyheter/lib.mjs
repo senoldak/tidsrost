@@ -73,7 +73,7 @@ export function lesRss(xml) {
   }));
 }
 
-// Sveltia CMS ile aynı mantıkta ASCII slug.
+// ASCII slug.
 export function slugify(s) {
   return s
     .toLowerCase()

@@ -42,7 +42,6 @@ export const PRODUKSJON: Record<string, string> = {
   ...(redaksjon.visKiMerking ? KI_MERKING : {}),
 };
 
-// Kategori listesi panel ayarlarıyla (public/admin/config.yml) aynı tutulmalı.
 export const CATEGORIES = [
   { slug: 'innenriks', name: 'Innenriks' },
   { slug: 'utenriks', name: 'Utenriks' },
