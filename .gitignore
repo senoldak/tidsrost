@@ -37,3 +37,6 @@ pnpm-debug.log*
 
 # şifreli kaynak listesinin açık hali (bkz. scripts/nyheter/hemmelig.mjs)
 scripts/nyheter/kilder/hemmelige-kilder.json
+
+# Facebook/Instagram görselleri yayında üretilir (scripts/sosial/bilder.mjs)
+public/sosial/

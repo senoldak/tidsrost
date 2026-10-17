@@ -42,6 +42,12 @@ jobs:
       - name: Bağımlılıkları kur
         run: npm ci --no-audit --no-fund
 
+      # Facebook/Instagram post ve story görselleri (Fjord): son haberler için public/sosial/ altına (scripts/sosial).
+      # Hata yayını durdurmaz; görseli olmayan haber paylaşılmaz.
+      - name: Sosyal medya görselleri
+        continue-on-error: true
+        run: node scripts/sosial/bilder.mjs
+
       - name: Derle
         run: npm run build
 
