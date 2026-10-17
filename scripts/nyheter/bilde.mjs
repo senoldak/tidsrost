@@ -611,8 +611,8 @@ export async function kapakCiz(uretici) {
 // Sahibin kararları: kapakta kaynak, kategori/tarih etiketi ve veri kutusu yok (2026-10-14); görsel dil Fjord (2026-10-18).
 // kategori, dato, rakam, kilde parametreleri geriye dönük uyum için kabul edilir ama çizilmez.
 
-export async function sakKapagi({ tittel, ingress }) {
-  return fjordKart({ tittel, ingress }, 'kapak');
+export async function sakKapagi({ tittel, ingress, forfatter, sjanger }) {
+  return fjordKart({ tittel, ingress, forfatter, sjanger }, 'kapak');
 }
 
 

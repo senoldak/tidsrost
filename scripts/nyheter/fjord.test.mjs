@@ -36,3 +36,12 @@ test('fjordKart: harita kapağı post ve story\'de üstte durur, site kapağınd
   const kapak = await fjordKart({ tittel: 'Gult farevarsel for kraftige vindkast i Finnmark', omslag }, 'kapak');
   assert.equal(kapak.katmanlar.length, 2);
 });
+
+test('fjordKart: imzalı yazı üstte kırmızı tür + yazar bandı alır, haberde bant yok', async () => {
+  const imzali = await fjordKart({ tittel: 'Hver fjerde budsjettkrone hentes fra oljefondet', forfatter: 'Şenol Dak', sjanger: 'forklart' }, 'kapak');
+  assert.match(imzali.svg, /<rect x="0" y="0" width="1200" height="\d+" fill="#c8281e"\/>/);
+  const haber = await fjordKart({ tittel: 'Hver fjerde budsjettkrone hentes fra oljefondet' }, 'kapak');
+  assert.doesNotMatch(haber.svg, /<rect x="0" y="0" width="1200"[^>]*#c8281e/);
+  const png = await kapakCiz(fjordKart({ tittel: 'Styringsrenten – kjøpekraften øker', forfatter: 'Şenol Dak', sjanger: 'forklart' }, 'story'));
+  assert.equal((await sharp(png).metadata()).height, 1920);
+});

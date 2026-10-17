@@ -18,7 +18,7 @@ for (const s of saker) {
   try {
     const omslag = s.gorselKapak ? await readFile(path.join(DIZIN, s.id, 'cover.png')) : undefined;
     for (const bicim of ['post', 'story']) {
-      await writeFile(path.join(CIKIS, bildeFil(s.id, bicim)), await kapakCiz(fjordKart({ tittel: s.tittel, ingress: s.ingress, tohum: s.id, omslag }, bicim)));
+      await writeFile(path.join(CIKIS, bildeFil(s.id, bicim)), await kapakCiz(fjordKart({ tittel: s.tittel, ingress: s.ingress, tohum: s.id, omslag, forfatter: s.forfatter, sjanger: s.sjanger }, bicim)));
     }
     n++;
   } catch (e) {

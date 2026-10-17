@@ -66,7 +66,7 @@ function tohumla(s) {
   for (const c of String(s)) h = Math.imul(h ^ c.charCodeAt(0), 16777619);
   return () => ((h = Math.imul(h ^ (h >>> 15), 2246822507) ^ Math.imul(h ^ (h >>> 13), 3266489909)) >>> 0) / 4294967296;
 }
-function konturlar({ cx, cy, rx, ry, adet, tohum, kalin = 1 }) {
+function konturlar({ cx, cy, rx, ry, adet, tohum, kalin = 1, renk = R.doku }) {
   const r = tohumla(tohum);
   const faz = Array.from({ length: 4 }, () => r() * 6.283);
   const g = [0.16, 0.1, 0.06, 0.04].map((x) => x * (0.7 + r() * 0.6));
@@ -79,7 +79,7 @@ function konturlar({ cx, cy, rx, ry, adet, tohum, kalin = 1 }) {
       const d = 1 + g[0] * Math.sin(2 * t + faz[0] + i * 0.15) + g[1] * Math.sin(3 * t + faz[1]) + g[2] * Math.sin(5 * t + faz[2] - i * 0.2) + g[3] * Math.sin(7 * t + faz[3]);
       p.push(`${(cx + Math.cos(t) * rx * k * d).toFixed(1)},${(cy + Math.sin(t) * ry * k * d).toFixed(1)}`);
     }
-    o += `<polygon points="${p.join(' ')}" fill="none" stroke="${R.doku}" stroke-width="${(i % 5 === 0 ? 3 : 1.4) * kalin}"/>`;
+    o += `<polygon points="${p.join(' ')}" fill="none" stroke="${renk}" stroke-width="${(i % 5 === 0 ? 3 : 1.4) * kalin}"/>`;
   }
   return o;
 }
@@ -105,51 +105,85 @@ export const BICIM = {
 
 const puntoSec = (s, [buyuk, orta, kucuk]) => (s.length > 70 ? kucuk : s.length > 45 ? orta : buyuk);
 
+// Palet: haber = koyu fjord zemin; imzalı yazının "ters" varyantı = açık buz mavisi zemin, fjord mavisi başlık.
+const PALET = {
+  fjord: { bg: R.fjord, doku: R.doku, baslik: R.hvit, ikincil: R.lys, logo: R.hvit, imza: R.hvit },
+  ters: { bg: '#e6eef6', doku: '#c4d6e6', baslik: R.fjord, ikincil: '#2c4f71', logo: R.fjord, imza: R.rod },
+};
+
 /**
- * @param {{ tittel: string, ingress?: string, tohum?: string, omslag?: Buffer }} m
+ * @param {{ tittel: string, ingress?: string, tohum?: string, omslag?: Buffer, forfatter?: string, sjanger?: string, varyant?: 'ters'|'bant' }} m
  *   omslag: haberin harita/grafik kapağı (1200×675); post ve story'de üstte durur.
+ *   forfatter: imzalı yazı (ör. Şenol Dak, Forklart). Sahibin isteği 2026-10-18: aynı aile, ama akışta haberle
+ *   karışmasın. varyant 'ters' (açık zemin) ya da 'bant' (üstte kırmızı tür + yazar bandı).
  * @param {'kapak'|'post'|'story'} bicim
  */
 export async function fjordKart(m, bicim = 'kapak') {
   await fontlariDenetle();
   const b = BICIM[bicim];
-  const { W, H, pad, ust, alt } = b;
+  const { W, H, pad, alt } = b;
+  let { ust } = b;
   const ic = W - 2 * pad;
   const { kicker, ana, alt: altBaslik } = bol(m.tittel);
+  const imzali = Boolean(m.forfatter);
+  // Sahibin seçimi (2026-10-18): imzalı yazılar 'bant' (üstte kırmızı "FORKLART · yazar" bandı). 'ters' denemede kaldı.
+  const varyant = imzali ? (m.varyant ?? 'bant') : null;
+  const P = varyant === 'ters' ? PALET.ters : PALET.fjord;
+  const tur = (m.sjanger === 'forklart' ? 'Forklart' : 'Kommentar').toLocaleUpperCase('nb-NO');
   const katmanlar = [];
-  let svg = `<rect width="${W}" height="${H}" fill="${R.fjord}"/>`;
+  let svg = `<rect width="${W}" height="${H}" fill="${P.bg}"/>`;
 
   let sinirUst = ust + (bicim === 'kapak' ? 0 : 40);
+  if (varyant === 'bant') {
+    // Tam genişlik kırmızı bant: "FORKLART · Şenol Dak". Story'de üst güvenli alanın hemen altında.
+    const bantY = bicim === 'story' ? ust - 40 : 0;
+    const t = await tekst(`${tur}  ·  ${m.forfatter}`, { font: 'TidsrostTung', boy: b.kick, renk: R.hvit });
+    const bh = Math.round(t.h * 2.1);
+    svg += `<rect x="0" y="${bantY}" width="${W}" height="${bh}" fill="${R.rod}"/>`;
+    katmanlar.push({ input: t.input, left: pad, top: bantY + Math.round((bh - t.h) / 2) });
+    sinirUst = Math.max(sinirUst, bantY + bh + 48);
+  } else if (varyant === 'ters') {
+    const etiket = await tekst(tur, { font: 'TidsrostTung', boy: b.kick, renk: R.hvit });
+    const px = Math.round(etiket.h * 0.32);
+    const py = Math.round(etiket.h * 0.18);
+    const ey = ust + py;
+    svg += `<rect x="${pad}" y="${ey - py}" width="${etiket.w + 2 * px}" height="${etiket.h + 2 * py}" fill="${R.rod}"/>`;
+    katmanlar.push({ input: etiket.input, left: pad + px, top: ey });
+    sinirUst = Math.max(sinirUst, ey + etiket.h + py + 40);
+  }
   if (m.omslag && bicim !== 'kapak') {
     const { default: sharp } = await import('sharp');
     const oh = Math.round((ic * 675) / 1200);
-    katmanlar.push({ input: await sharp(m.omslag).resize(ic, oh).png().toBuffer(), left: pad, top: ust });
-    sinirUst = ust + oh + 56;
+    const top = Math.max(ust, sinirUst - 40);
+    katmanlar.push({ input: await sharp(m.omslag).resize(ic, oh).png().toBuffer(), left: pad, top });
+    sinirUst = top + oh + 56;
   }
 
-  // Alt bant: kırmızı çizgi + imza; story'de sağda yönlendirme.
-  const logo = await tekst('tidsrøst', { font: 'TidsrostTung', boy: b.logo, renk: R.hvit });
+  // Alt bant: kırmızı çizgi + logo; story'de sağda yönlendirme.
+  const logo = await tekst('tidsrøst', { font: 'TidsrostTung', boy: b.logo, renk: P.logo });
   const logoY = alt - logo.h;
   katmanlar.push({ input: logo.input, left: pad, top: logoY });
   svg += `<rect x="${pad}" y="${logoY - 26}" width="72" height="7" fill="${R.rod}"/>`;
   if (b.cta) {
-    const c = await tekst(b.cta, { font: 'TidsrostSemi', boy: 40, renk: R.lys });
+    const c = await tekst(b.cta, { font: 'TidsrostSemi', boy: 40, renk: P.ikincil });
     katmanlar.push({ input: c.input, left: W - pad - c.w, top: alt - c.h });
   }
   const metinAlt = logoY - 26 - b.metinBosluk;
 
   const kick = kicker ? await tekst(kicker.toLocaleUpperCase('nb-NO'), { font: 'TidsrostTung', boy: b.kick, renk: R.hvit }) : null;
   const kickAra = 40;
-  const altT = altBaslik ? await tekst(altBaslik, { font: 'TidsrostSemi', boy: b.altB, renk: R.lys, gen: ic, aralik: 6 }) : null;
-  const ingT = !altBaslik && b.ing && m.ingress ? await tekst(m.ingress, { font: 'TidsrostBrod', boy: b.ing, renk: R.lys, gen: ic, aralik: 10 }) : null;
+  const altT = altBaslik ? await tekst(altBaslik, { font: 'TidsrostSemi', boy: b.altB, renk: P.ikincil, gen: ic, aralik: 6 }) : null;
+  const ingT = !altBaslik && b.ing && m.ingress ? await tekst(m.ingress, { font: 'TidsrostBrod', boy: b.ing, renk: P.ikincil, gen: ic, aralik: 10 }) : null;
+  // Ters varyantta yazar adı başlığın altında, kırmızı (bant varyantında ad zaten bantta).
+  const imzaT = varyant === 'ters' ? await tekst(m.forfatter, { font: 'TidsrostTung', boy: b.altB, renk: P.imza }) : null;
 
   // Metin sığmazsa ana başlık puntosu küçülür (en büyük üçüncü basamağın %80'ine kadar).
   let punto = puntoSec(ana, b.ana);
   let anaT;
   let yuk;
   for (;;) {
-    anaT = await tekst(ana, { font: 'TidsrostTittel', boy: punto, renk: R.hvit, gen: ic, aralik: -Math.round(punto * 0.08) });
-    yuk = (kick ? kick.h + kickAra : 0) + anaT.h + (altT ? 28 + altT.h : 0) + (ingT ? 36 + ingT.h : 0);
+    anaT = await tekst(ana, { font: 'TidsrostTittel', boy: punto, renk: P.baslik, gen: ic, aralik: -Math.round(punto * 0.08) });
+    yuk = (kick ? kick.h + kickAra : 0) + anaT.h + (altT ? 28 + altT.h : 0) + (ingT ? 36 + ingT.h : 0) + (imzaT ? 36 + imzaT.h : 0);
     if (metinAlt - yuk >= sinirUst || punto <= b.ana[2] * 0.8) break;
     punto -= 6;
   }
@@ -157,7 +191,7 @@ export async function fjordKart(m, bicim = 'kapak') {
   let y = metinAlt - yuk;
   if (!m.omslag || bicim === 'kapak') {
     const k = b.kontur;
-    svg += konturlar({ cx: W * k.cx, cy: Math.min(H * k.cy, y - 40), rx: k.rx, ry: k.ry, adet: k.adet, tohum: m.tohum ?? m.tittel, kalin: k.kalin });
+    svg += konturlar({ cx: W * k.cx, cy: Math.min(H * k.cy, y - 40), rx: k.rx, ry: k.ry, adet: k.adet, tohum: m.tohum ?? m.tittel, kalin: k.kalin, renk: P.doku });
   }
   if (kick) {
     const px = Math.round(kick.h * 0.32);
@@ -169,7 +203,8 @@ export async function fjordKart(m, bicim = 'kapak') {
   katmanlar.push({ input: anaT.input, left: pad, top: y });
   y += anaT.h;
   if (altT) { y += 28; katmanlar.push({ input: altT.input, left: pad, top: y }); y += altT.h; }
-  if (ingT) { y += 36; katmanlar.push({ input: ingT.input, left: pad, top: y }); }
+  if (ingT) { y += 36; katmanlar.push({ input: ingT.input, left: pad, top: y }); y += ingT.h; }
+  if (imzaT) { y += 36; katmanlar.push({ input: imzaT.input, left: pad, top: y }); }
 
   return {
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">${svg}</svg>`,

@@ -23,6 +23,8 @@ export function sakOku(id, md) {
     ingress: fm.description ?? '',
     punkter: Array.isArray(fm.key_points) ? fm.key_points : [],
     kategori: fm.category,
+    forfatter: fm.author,
+    sjanger: fm.sjanger,
     dato: new Date(fm.date),
     taslak: fm.draft === true,
     // Editoryal kapak değilse (harita, grafik) sosyal görselde üstte kullanılır.

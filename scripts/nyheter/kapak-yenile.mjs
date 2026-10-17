@@ -24,7 +24,7 @@ for (const f of await readdir(DIZIN, { recursive: true })) {
   const fm = parse(md.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? '') ?? {};
   if (fm.coverKreditt !== 'Illustrasjon: tidsrøst' || fm.cover !== './cover.png') continue;
   if (!(new Date(fm.date).getTime() >= sinir)) continue;
-  hedefler.push({ dir: path.join(DIZIN, path.dirname(f)), tittel: fm.title, ingress: fm.description });
+  hedefler.push({ dir: path.join(DIZIN, path.dirname(f)), tittel: fm.title, ingress: fm.description, forfatter: fm.author, sjanger: fm.sjanger });
 }
 hedefler.sort((a, b) => a.dir.localeCompare(b.dir));
 console.log(`${hedefler.length} kapak (son ${gun} gün)`);
@@ -32,7 +32,7 @@ console.log(`${hedefler.length} kapak (son ${gun} gün)`);
 if (ornek) await mkdir(ornek, { recursive: true });
 let n = 0;
 for (const h of ornek ? hedefler.slice(0, 6) : hedefler) {
-  const png = await kapakCiz(sakKapagi({ tittel: h.tittel, ingress: h.ingress }));
+  const png = await kapakCiz(sakKapagi({ tittel: h.tittel, ingress: h.ingress, forfatter: h.forfatter, sjanger: h.sjanger }));
   await writeFile(ornek ? path.join(ornek, `${path.basename(h.dir)}.png`) : path.join(h.dir, 'cover.png'), png);
   n++;
 }
