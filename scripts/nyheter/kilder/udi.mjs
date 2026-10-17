@@ -1,3 +1,4 @@
+// DEVRE DIŞI (2026-10-17): Actions ve Cloudflare çıkışı Azure WAF 403 alıyor; bkz. hent-nyheter.mjs, KILDER.
 // UDI: aylık istatistik tabloları (iltica başvuruları, çalışma ve aile izinleri).
 // Tabloya yeni ay eklenince o ay için bir veri haberi yazılır. Yapay zekâ kullanılmaz:
 // metin sabit Norveççe kalıplarla tablodaki rakamlardan kurulur (produksjon: automatisk).
