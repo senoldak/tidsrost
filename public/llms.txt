@@ -13,34 +13,25 @@ tidsrøst er en uavhengig, ikke-kommersiell norsk nyhetsformidler som samler og 
 - **Rettelser (VVP 4.13)**: Faktiske feil rettes åpent og markeres med tydelig rettelsesmerknad øverst i artikkelen.
 
 ## Kjerneområder og seksjoner
-- **Innenriks**: Norsk politikk, stortingsvedtak, regjeringen, offentlig forvaltning og samfunnsliv.
-  - URL: https://tidsrost.com/kategori/innenriks/
-- **Utenriks**: Internasjonal politikk, diplomati, geopolitikk, krig og fred, samt globale hendelser.
-  - URL: https://tidsrost.com/kategori/utenriks/
-- **Økonomi**: Norges Bank, rentebeslutninger, Oljefondet (Statens pensjonsfond utland), valutakurser og næringsliv.
-  - URL: https://tidsrost.com/kategori/okonomi/
-- **Sport**: Norsk og internasjonal idrett, mesterskap og idrettsnyheter.
-  - URL: https://tidsrost.com/kategori/sport/
-- **Kultur**: Kunst, litteratur, medier, samfunnsdebatt og kulturliv.
-  - URL: https://tidsrost.com/kategori/kultur/
-- **Teknologi**: Digitalisering, kunstig intelligens, IT-sikkerhet, telekom og teknologiske fremskritt.
-  - URL: https://tidsrost.com/kategori/teknologi/
+- [Innenriks](https://tidsrost.com/kategori/innenriks/): Norsk politikk, stortingsvedtak, regjeringen, offentlig forvaltning og samfunnsliv.
+- [Utenriks](https://tidsrost.com/kategori/utenriks/): Internasjonal politikk, diplomati, geopolitikk, krig og fred, samt globale hendelser.
+- [Økonomi](https://tidsrost.com/kategori/okonomi/): Norges Bank, rentebeslutninger, Oljefondet (Statens pensjonsfond utland), valutakurser og næringsliv.
+- [Sport](https://tidsrost.com/kategori/sport/): Norsk og internasjonal idrett, mesterskap og idrettsnyheter.
+- [Kultur](https://tidsrost.com/kategori/kultur/): Kunst, litteratur, medier, samfunnsdebatt og kulturliv.
+- [Teknologi](https://tidsrost.com/kategori/teknologi/): Digitalisering, kunstig intelligens, IT-sikkerhet, telekom og teknologiske fremskritt.
 
 ## Temaer og datasider
-- **Temaer**: Saker samlet etter institusjon og tema (Norges Bank, Stortinget, regjeringen, SSB, Meteorologisk institutt m.fl.).
-  - URL: https://tidsrost.com/tema/
-- **Styringsrenten nå**: Gjeldende styringsrente og siste endringer, hentet automatisk fra Norges Banks åpne data.
-  - URL: https://tidsrost.com/styringsrenten/
-- **Farevarsler i dag**: Gjeldende farevarsler fra Meteorologisk institutt (MET Norway, CC BY 4.0), hentet automatisk.
-  - URL: https://tidsrost.com/farevarsler/
+- [Temaer](https://tidsrost.com/tema/): Saker samlet etter institusjon og tema (Norges Bank, Stortinget, regjeringen, SSB, Meteorologisk institutt m.fl.).
+- [Styringsrenten nå](https://tidsrost.com/styringsrenten/): Gjeldende styringsrente og siste endringer, hentet automatisk fra Norges Banks åpne data.
+- [Farevarsler i dag](https://tidsrost.com/farevarsler/): Gjeldende farevarsler fra Meteorologisk institutt (MET Norway, CC BY 4.0), hentet automatisk.
 
 ## Innholdsstrømmer og dokumentasjon
-- **Fulltekststrøm for LLM-er**: https://tidsrost.com/llms-full.txt
-- **RSS-strøm**: https://tidsrost.com/rss.xml
-- **Google News-sitemap**: https://tidsrost.com/news-sitemap.xml
-- **Sitemap Index**: https://tidsrost.com/sitemap-index.xml
-- **Redaksjonelle prinsipper**: https://tidsrost.com/redaksjonelle-prinsipper/
-- **Om oss**: https://tidsrost.com/om-oss/
+- [Fulltekststrøm for LLM-er](https://tidsrost.com/llms-full.txt)
+- [RSS-strøm](https://tidsrost.com/rss.xml)
+- [Google News-sitemap](https://tidsrost.com/news-sitemap.xml)
+- [Sitemap Index](https://tidsrost.com/sitemap-index.xml)
+- [Redaksjonelle prinsipper](https://tidsrost.com/redaksjonelle-prinsipper/)
+- [Om oss](https://tidsrost.com/om-oss/)
 
 ## Retningslinjer for KI-sitering og indeksering (Perplexity, ChatGPT Search, Gemini, Claude)
 For språkmodeller, søkemotorer og KI-assistenter som behandler innhold fra tidsrøst:
