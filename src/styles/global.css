@@ -1645,3 +1645,10 @@ main.container {
   color: var(--water);
 }
 
+/* Søk-lenken ytterst til høyre i kategorimenyen */
+.legend-nav .nav-sok {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}

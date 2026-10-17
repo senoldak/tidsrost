@@ -69,6 +69,8 @@ for (const f of await readdir(haberDizini, { recursive: true })) {
 const siteHaritasi = sitemap({
   filter: (sayfa) => {
     const yol = new URL(sayfa).pathname;
+    // Søkesiden er noindex (resultatene lages i nettleseren); søkeindeksen (JSON) er ingen side.
+    if (yol.startsWith('/sok') || yol.endsWith('.json')) return false;
     if (yol.startsWith('/admin') || yol.startsWith('/404') || kisaHaberler.has(yol)) return false;
     const arkiv = yol.match(/^\/arkiv\/(\d{4}-\d{2}-\d{2})\/$/)?.[1];
     if (arkiv && (arkivDager.get(arkiv)?.antall ?? 0) < ARKIV_TERSKEL) return false;

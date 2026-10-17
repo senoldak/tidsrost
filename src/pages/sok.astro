@@ -1,0 +1,163 @@
+---
+// Søk i artiklene. Resultatene filtreres i nettleseren fra /sok.json (se src/lib/arama-cekirdek.mjs);
+// skriptet lastes som egen fil (CSP tillater ikke inline-skript). Siden er stengt for søkemotorer.
+import Base from '../layouts/Base.astro';
+import Brodsmuler from '../components/Brodsmuler.astro';
+import { SITE } from '../lib/site';
+import { SITE_URL } from '../lib/seo';
+---
+
+<Base title="Søk" description={`Søk i artiklene fra ${SITE.name} etter tittel, ingress og kategori.`} noindex>
+  <Brodsmuler items={[{ name: 'Forsiden', url: `${SITE_URL}/` }, { name: 'Søk', url: `${SITE_URL}/sok/` }]} />
+  <header class="page-head">
+    <h1 class="page-title">Søk</h1>
+  </header>
+  <div class="sok">
+    <form class="sok-skjema" action="/sok/" method="get" role="search">
+      <label for="sok-q">Søkeord</label>
+      <div class="sok-rad">
+        <input id="sok-q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="f.eks. styringsrenten, strømpris, Ukraina" />
+        <button type="submit">Søk</button>
+      </div>
+    </form>
+    <p class="sok-status" id="sok-status" aria-live="polite"></p>
+    <ol class="sok-treff" id="sok-treff"></ol>
+    <noscript><p class="sok-status">Søket krever JavaScript. Du finner også alle artikler i <a href="/arkiv/">arkivet</a>.</p></noscript>
+  </div>
+</Base>
+
+<script>
+  import { ara } from '../lib/arama-cekirdek.mjs';
+
+  type Post = { t: string; d: string; k: string; u: string; z: string };
+
+  const felt = document.getElementById('sok-q') as HTMLInputElement;
+  const status = document.getElementById('sok-status')!;
+  const liste = document.getElementById('sok-treff')!;
+  const dato = (iso: string) =>
+    new Date(iso).toLocaleDateString('nb-NO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Oslo' });
+
+  let indeks: Post[] | undefined;
+  async function lastIndeks() {
+    if (!indeks) indeks = await fetch('/sok.json').then((r) => r.json());
+    return indeks!;
+  }
+
+  function vis(treff: Post[], q: string) {
+    liste.replaceChildren(
+      ...treff.map((p) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = p.u;
+        a.textContent = p.t;
+        const h = document.createElement('h2');
+        h.append(a);
+        const ingress = document.createElement('p');
+        ingress.textContent = p.d;
+        const meta = document.createElement('p');
+        meta.className = 'sok-meta';
+        meta.textContent = `${p.k} · ${dato(p.z)}`;
+        li.append(h, ingress, meta);
+        return li;
+      }),
+    );
+    status.textContent = !q.trim()
+      ? ''
+      : treff.length
+        ? `${treff.length === 50 ? 'De 50 mest relevante' : treff.length} treff for «${q.trim()}»`
+        : `Ingen treff for «${q.trim()}». Prøv et kortere eller annet ord.`;
+  }
+
+  async function sok(q: string) {
+    const poster = await lastIndeks();
+    vis(q.trim() ? ara(poster, q) : [], q);
+  }
+
+  const forste = new URLSearchParams(location.search).get('q') ?? '';
+  felt.value = forste;
+  if (forste) sok(forste);
+
+  let vent: ReturnType<typeof setTimeout>;
+  felt.addEventListener('input', () => {
+    clearTimeout(vent);
+    vent = setTimeout(() => {
+      const url = new URL(location.href);
+      if (felt.value.trim()) url.searchParams.set('q', felt.value);
+      else url.searchParams.delete('q');
+      history.replaceState(null, '', url);
+      sok(felt.value);
+    }, 150);
+  });
+  felt.closest('form')!.addEventListener('submit', (e) => {
+    e.preventDefault();
+    sok(felt.value);
+  });
+</script>
+
+<style>
+  .sok {
+    max-width: 760px;
+    font-family: var(--frame);
+  }
+  .sok-skjema label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .sok-rad {
+    display: flex;
+    gap: 8px;
+  }
+  .sok-rad input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid var(--ink);
+    border-radius: 3px;
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+    font-size: 1.05rem;
+  }
+  .sok-rad button {
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 3px;
+    background: var(--ink);
+    color: var(--paper);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .sok-status {
+    margin: 16px 0 8px;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .sok-treff {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .sok-treff :global(li) {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .sok-treff :global(h2) {
+    margin: 0 0 4px;
+    font-family: var(--read);
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+  .sok-treff :global(p) {
+    margin: 0;
+    font-family: var(--read);
+  }
+  .sok-treff :global(.sok-meta) {
+    margin-top: 4px;
+    font-family: var(--frame);
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+</style>
