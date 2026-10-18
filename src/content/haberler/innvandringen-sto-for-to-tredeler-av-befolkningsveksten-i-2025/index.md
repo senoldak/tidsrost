@@ -6,6 +6,7 @@ category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Innvandring og høyere fødselstall ga en folkevekst på 33 060 personer i 2025»"
 coverKreditt: "Illustrasjon: tidsrøst"
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen oppga at endringen i ordningen for kollektiv beskyttelse hadde virkning fra 5. mai 2026; regjeringen oppgir bare at endringen ble kunngjort 27. mars 2026 og trer i kraft kort tid etter, og datoen er fjernet. Artikkelen forklarte også utvandringstallene i 2. kvartal 2026 som en følge av en teknisk kvalitetsgjennomgang; SSB opplyser bare at Skattedirektoratet har en pågående opprydding i folkeregisteret, og koblingen til kvartalstallene er fjernet. Alle befolknings-, flytte- og innvandringsgrunntall er kontrollert mot SSB og er riktige."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Samspillet mellom innvandring og fødselsoverskudd viser hvordan befolkningen i Norge utvikler seg – og gir grunnlaget for kommunenes planlegging av skoler, boliger, helsetjenester og arbeidskraft."
@@ -30,7 +31,7 @@ Relativt sett vokste befolkningen med 0,59 prosent i 2025, mot 1,17 prosent i 20
 
 I første halvår 2026 vokste befolkningen med 9 504 personer, slik at Norge hadde 5 636 904 innbyggere ved utgangen av juni 2026. Det ble født 29 200 barn i løpet av halvåret – 1 600 flere enn i første halvår 2025. Dermed ga fødselsoverskuddet et bidrag på 6 243 personer, mens nettoinnvandringen utgjorde 3 261 personer i halvåret under ett.
 
-Kvartalstallene i 2026 påvirkes samtidig av en teknisk kvalitetsgjennomgang hos Skattedirektoratet i Det sentrale folkeregisteret. Mens første kvartal viste 13 076 innvandringer mot 8 225 utvandringer, ble det i andre kvartal bokført 10 095 innvandringer og 11 685 utvandringer (en registrert nettoutvandring på 1 590 personer, mot et overskudd på 1 992 i andre kvartal året før). Grunnen er at personer som reelt sett flyttet ut av landet i tidligere år uten å levere flyttemelding, ble registrert som utvandret under gjennomgangen i andre kvartal.
+Samtidig opplyser SSB at Skattedirektoratet har en pågående opprydding i Det sentrale folkeregisteret, der personer som for lenge siden flyttet ut av landet uten å melde fra, fjernes fra registeret. Mens første kvartal viste 13 076 innvandringer mot 8 225 utvandringer, ble det i andre kvartal bokført 10 095 innvandringer og 11 685 utvandringer (en registrert nettoutvandring på 1 590 personer, mot et overskudd på 1 992 i andre kvartal året før).
 
 ## Fordeling etter statsborgerskap
 
@@ -62,7 +63,7 @@ Til sammenligning var det 76 563 førstegangsinnvandringer i 2022, hvorav 35 801
 
 Hos Utlendingsdirektoratet (UDI) ble det registrert 13 445 søknader om midlertidig kollektiv beskyttelse i 2025. I de ni første månedene av 2026 ble det registrert 6 233 slike søknader (1 008 i september), mot 7 845 i januar–september 2025.
 
-Høsten 2025 (15. oktober) opplyste regjeringen at over 80 000 ukrainere hadde gyldig midlertidig kollektiv beskyttelse i Norge. Som ledd i arbeidet med en kontrollert og bærekraftig innvandring og god integrering i kommunene, tilpasset Justis- og beredskapsdepartementet ordningen våren 2026 (med virkning fra 5. mai 2026 for nye søkere), slik at søknader fra menn mellom 18 og 60 år med enkelte unntak vurderes etter ordinære individuelle beskyttelsesregler. I sitt anslag fra juni 2026 regner UDI med totalt 7 800 søknader om kollektiv beskyttelse for hele året 2026.
+Høsten 2025 (15. oktober) opplyste regjeringen at over 80 000 ukrainere hadde gyldig midlertidig kollektiv beskyttelse i Norge. Som ledd i arbeidet med en kontrollert og bærekraftig innvandring og god integrering i kommunene, kunngjorde Justis- og beredskapsdepartementet 27. mars 2026 en endring i utlendingsforskriften som gjelder nye søkere, slik at søknader fra menn mellom 18 og 60 år med enkelte unntak vurderes etter ordinære individuelle beskyttelsesregler. I sitt anslag fra juni 2026 regner UDI med totalt 7 800 søknader om kollektiv beskyttelse for hele året 2026.
 
 ## Forutsigbarhet for kommunenes planlegging
 

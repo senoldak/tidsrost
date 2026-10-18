@@ -6,6 +6,7 @@ category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Matprisveksten har roet seg til 2,4 prosent – nye tiltak skal styrke konkurransen i dagligvaremarkedet»"
 coverKreditt: "Illustrasjon: tidsrøst"
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Overskriften «Kaffe og sjømat trakk opp i september» er endret til «Kaffe trakk opp i september»; fisk og sjømat ble 0,5 prosent billigere fra august til september (SSB, tabell 14700). Artikkelen sa at matprisveksten lå under den samlede inflasjonen «siden våren 2026»; riktig er fra juni 2026, og matprisveksten lå over KPI i april og mai. Beskrivelsen av Konkurransetilsynets budsjett (5 millioner kroner var foreslått) og kartleggingen av innkjøpspriser (nær uendret fra 2024 til 2025) er presisert etter regjeringen.no og Konkurransetilsynet."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Mat og alkoholfrie drikkevarer utgjør drøyt ti prosent av husholdningenes forbruk. Etter flere år med internasjonal råvareprisvekst har matprisveksten i 2026 avtatt til under den generelle inflasjonen."
@@ -17,7 +18,7 @@ key_points:
 
 Prisene på matvarer og alkoholfrie drikkevarer lå 2,4 prosent høyere i september 2026 enn på samme tid året før, viser konsumprisindeksen (KPI) fra Statistisk sentralbyrå (SSB) som ble lagt fram 9. oktober 2026. Det siste året har matprisene dermed steget merkbart langsommere enn den samlede prisveksten på 3,4 prosent. Ser man på hele femårsperioden fra september 2021 til september 2026 under ett, har matprisene steget 36,3 prosent, mot 21,8 prosent for KPI samlet.
 
-## Kaffe og sjømat trakk opp i september
+## Kaffe trakk opp i september
 
 Mellom august og september 2026 gikk prisene på matvarer og alkoholfrie drikkevarer samlet ned med 0,1 prosent (SSB-tabell 14700). Selve matvarene ble 0,7 prosent rimeligere i løpet av måneden – blant annet etter et prisfall på 5,9 prosent for grønnsaker og belgfrukter – mens alkoholfrie drikkevarer økte med 4,0 prosent, drevet av en oppgang på 14,1 prosent for kaffe.
 
@@ -27,12 +28,12 @@ I SSBs konsumprisindeks har mat og alkoholfrie drikkevarer en vekt på 104,7 pro
 
 ## Lavere matprisvekst i 2026 etter internasjonalt prishopp
 
-Etter den internasjonale råvare- og energikrisen i 2022 lå tolvmånedersveksten på mat og alkoholfrie drikkevarer over den generelle prisveksten fra juli 2022 til februar 2026, med en topp på 13,4 prosent i juni 2023 (mot 6,4 prosent for KPI totalt samme måned). Siden våren 2026 har matprisveksten avtatt tydelig og ligget under den samlede inflasjonen.
+Etter den internasjonale råvare- og energikrisen i 2022 lå tolvmånedersveksten på mat og alkoholfrie drikkevarer over den generelle prisveksten i nesten hele perioden fra juli 2022 til mai 2026 (unntatt mars 2026), med en topp på 13,4 prosent i juni 2023 (mot 6,4 prosent for KPI totalt samme måned). Fra juni 2026 har matprisveksten ligget under den samlede inflasjonen.
 
 ![Linjediagram over tolvmånedersendringen i prisene på matvarer og alkoholfrie drikkevarer og i KPI totalt fra januar 2021 til september 2026. Matprisveksten toppet seg på 13,4 prosent i juni 2023 og var 2,4 prosent i september 2026, mot 3,4 prosent for KPI totalt.](./graf-1.svg)
 *Tolvmånedersendring i prisene på mat og alkoholfrie drikkevarer og i KPI totalt. Kilde: SSB, tabell 14700.*
 
-Utviklingen fra september til september de siste seks årene viser hvordan tolvmånedersveksten på mat har kommet ned på det laveste nivået siden 2021:
+Utviklingen fra september til september de siste seks årene viser hvordan tolvmånedersveksten på mat har kommet ned til det laveste septembernivået siden 2021:
 
 | September | KPI totalt | Mat og alkoholfrie drikkevarer |
 |---|---|---|
@@ -58,13 +59,13 @@ Meieriprodukter og egg (+31,6 prosent), brød og kornvarer (+33,2 prosent), fruk
 
 ## Styrket konkurransetilsyn og nye tiltak i dagligvaremarkedet
 
-Regjeringen har satt i verk en rekke tiltak for å styrke konkurransen i dagligvarekjeden til beste for forbrukerne. Da statsbudsjettet for 2026 ble lagt fram 15. oktober 2025, understreket Nærings- og fiskeridepartementet at «Regjeringen er bekymret for den høye veksten i matvareprisene». Fra 1. juli 2025 fikk Konkurransetilsynet et nytt markedsetterforskningsverktøy som gir hjemmel til å sette inn tiltak mot strukturelle konkurranseutfordringer, og tilsynet fikk 5 millioner kroner ekstra til dette arbeidet i 2026-budsjettet.
+Regjeringen har satt i verk en rekke tiltak for å styrke konkurransen i dagligvarekjeden til beste for forbrukerne. Da statsbudsjettet for 2026 ble lagt fram 15. oktober 2025, understreket Nærings- og fiskeridepartementet at «Regjeringen er bekymret for den høye veksten i matvareprisene». Fra 1. juli 2025 fikk Konkurransetilsynet et nytt markedsetterforskningsverktøy som gir hjemmel til å sette inn tiltak mot strukturelle konkurranseutfordringer, og i forslaget til statsbudsjett for 2026 ble tilsynet foreslått tildelt 5 millioner kroner ekstra til dette arbeidet.
 
 For å samle fagmiljøene og sikre mer slagkraftig håndheving ble oppgavene etter loven om god handelsskikk overført fra Dagligvaretilsynet til Konkurransetilsynet 30. april 2026.
 
 Den 18. september 2026 la næringsminister Cecilie Myrseth fram ytterligere to konkrete grep: Et forskriftsforslag – på høring fram til 18. desember 2026 – skal gi mindre dagligvareaktører med under 5 prosent markedsandel rett til å kjøpe varer på ikke-diskriminerende vilkår hos grossister eid av kjeder med minst 20 prosent markedsandel. Samtidig styrkes loven om god handelsskikk gjennom Prop. 112 L (2025–2026) med klarere krav til skriftlige avtaler og hjemmel for overtredelsesgebyr på opptil 1 prosent av omsetningen. «Vi vet at konkurranseutfordringene i dagligvarebransjen er komplekse, og dette er ingen quick-fix», uttalte Myrseth da tiltakene ble presentert.
 
-Konkurransetilsynets årlige kartlegging av kjedenes innkjøpspriser for 2025, publisert 17. juni 2026, bekreftet samtidig at forskjellene i innkjøpspriser mellom Norgesgruppen, Coop og Rema er blitt betydelig redusert siden den første kartleggingen i 2017.
+Konkurransetilsynets årlige kartlegging av kjedenes innkjøpspriser for 2025, publisert 17. juni 2026, viser at forskjellene i innkjøpspriser mellom Norgesgruppen, Coop og Rema er betydelig reduserte siden 2017, men at de var nær uendret fra 2024 til 2025.
 
 ## Bedret kjøpekraft når matprisveksten avtar
 

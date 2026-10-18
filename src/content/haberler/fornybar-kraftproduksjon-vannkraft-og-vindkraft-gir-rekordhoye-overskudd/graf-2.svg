@@ -5,19 +5,19 @@
 <text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Kraftproduksjon etter energikilde i 2025</text>
 <text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Andel av samlet norsk elektrisitetsproduksjon</text>
 <text x="230" y="119" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Vannkraft</text>
-<rect x="240" y="104" width="361.6" height="20" fill="#16191c"/>
-<text x="609.6" y="119" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">88,2 %</text>
+<rect x="240" y="104" width="368.6" height="20" fill="#16191c"/>
+<text x="616.6" y="119" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">89,9 %</text>
 <text x="230" y="155" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Vindkraft</text>
-<rect x="240" y="140" width="40.2" height="20" fill="#1f5f99"/>
-<text x="288.2" y="155" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">9,8 %</text>
+<rect x="240" y="140" width="35.3" height="20" fill="#1f5f99"/>
+<text x="283.3" y="155" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">8,6 %</text>
 <text x="230" y="191" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Varmekraft</text>
-<rect x="240" y="176" width="6.1" height="20" fill="#1f5f99"/>
-<text x="254.2" y="191" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">1,5 %</text>
+<rect x="240" y="176" width="5.3" height="20" fill="#1f5f99"/>
+<text x="253.3" y="191" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">1,3 %</text>
 <text x="230" y="227" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Solkraft</text>
 <rect x="240" y="212" width="3.0" height="20" fill="#1f5f99"/>
-<text x="251.0" y="227" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">0,5 %</text>
+<text x="251.0" y="227" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">0,2 %</text>
 <line x1="240" x2="240" y1="98" y2="240" stroke="#16191c" stroke-width="1"/>
 <line x1="24" x2="736" y1="276" y2="276" stroke="#dcded8" stroke-width="1"/>
-<text x="24" y="294" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB og NVE</text>
+<text x="24" y="294" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 08307</text>
 <text x="736" y="294" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
 </svg>

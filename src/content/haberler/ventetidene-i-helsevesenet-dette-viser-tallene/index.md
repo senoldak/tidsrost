@@ -6,13 +6,14 @@ category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Sykehuskøene krymper i hele landet – ti dager kortere ventetid etter Ventetidsløftet»"
 coverKreditt: "Illustrasjon: tidsrøst"
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen siterte helse- og omsorgsminister Jan Christian Vestre på «Ventetidsløftet har virket»; sitatet i regjeringens pressemelding 19. juni 2026 er «Ventetidsløftet har gitt svært gode resultater». Det nye 60-dagersmålet ble presentert som et mål «på sikt», ikke innført med en frist, og beskrivelsen av det som et mål for tiden mellom utredning og behandling er fjernet. Påstanden om at registreringen av «start helsehjelp» ble presisert 1. juni 2024, om økt kapasitet i helseregionene og om økte ventetider i mange land etter pandemien er fjernet fordi den ikke lot seg bekrefte. Fristbruddtallene er presisert (7,7 prosent i 2024 gjelder somatikk hos Helsedirektoratet og alle sektorer hos regjeringen). Ventetidstallene er kontrollert mot FHI og er riktige."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Om lag 2,9 millioner pasienter fikk helsehjelp i spesialisthelsetjenesten i 2025. Kortere ventetider gir raskere behandling, bedre livskvalitet og raskere tilbakevending til arbeid og hverdag."
 key_points:
   - "Gjennomsnittlig ventetid for alle tjenesteområder falt fra 74 dager i 2024 til 66 dager i 2025, og videre til 62 dager i 1. tertial 2026."
   - "I somatikken ble ventetiden kuttet med elleve dager på ett år, fra 75 dager i 1. tertial 2025 til 64 dager i 1. tertial 2026."
-  - "Regjeringen innførte 19. juni 2026 et nytt mål om at pasienter normalt skal ha fått behandling eller være i gang innen 60 dager fra henvisning er mottatt."
+  - "Regjeringen presenterte 19. juni 2026 et nytt mål om at pasienter på sikt normalt skal ha fått behandling eller være i gang innen 60 dager fra henvisning er mottatt."
 ---
 
 I årets fire første måneder (1. tertial 2026) ventet pasienter som ble henvist til spesialisthelsetjenesten, i gjennomsnitt 62 dager før helsehjelpen startet, viser statistikk fra Norsk pasientregister som Folkehelseinstituttet (FHI) la fram 23. juni 2026. Det er hele ti dager kortere enn i samme periode i 2025, da ventetiden var 72 dager.
@@ -23,11 +24,11 @@ Ser man på kalenderåret 2025 under ett, gikk den gjennomsnittlige ventetiden n
 
 Den offisielle hovedindikatoren måler antall kalenderdager fra spesialisthelsetjenesten mottar en henvisning til utredning eller behandling faktisk starter. Akuttinnleggelser og øyeblikkelig hjelp holdes utenfor, ettersom slike pasienter tas imot umiddelbart. FHI publiserer reviderte tall hvert tertial og for hele året, i tillegg til foreløpige månedstall innen den 15. i måneden etter.
 
-Tallene varierer naturlig gjennom året i takt med ferieavvikling og sesongmønstre. Samtidig ble registreringen av sluttpunktet for ventetiden presisert til «start helsehjelp» fra 1. juni 2024 for å gi mer nøyaktig statistikk over pasientforløpene.
+Tallene varierer naturlig gjennom året i takt med ferieavvikling og sesongmønstre.
 
 ## Markant nedgang etter lanseringen av Ventetidsløftet
 
-Etter pandemiårene økte ventetidene i mange land, og i norsk fysisk helse (somatikken) var årsgjennomsnittet i FHIs statistikk oppe i 77 dager i 2024, før utviklingen snudde markant ned til 68 dager i 2025.
+I norsk fysisk helse (somatikken) var årsgjennomsnittet i FHIs statistikk oppe i 77 dager i 2024, før utviklingen snudde markant ned til 68 dager i 2025.
 
 Den 13. mai 2024 lanserte regjeringen *Ventetidsløftet* i samarbeid med de regionale helseforetakene og partene i arbeidslivet. Ved utgangen av desember 2025 var den gjennomsnittlige ventetiden for påbegynt helsehjelp nede i 57 dager – 12 dager kortere enn i desember 2024, og tilbake på samme nivå som før pandemien i desember 2019.
 
@@ -54,13 +55,13 @@ I 1. tertial 2026 rykket samtlige områder nærmere måltallene, med 64 dager i 
 ![Liggende stolpediagram som sammenligner ventetid i 1. tertial 2025 og 2026 med langsiktige mål. Somatikk: 75 og 64 dager, mål under 50. Psykisk helsevern voksne: 51 og 43, mål under 40. Psykisk helsevern barn og unge: 46 og 41, mål under 35. Rusbehandling: 28 og 27, mål under 30.](./graf-2.svg)
 *Gjennomsnittlig ventetid i 1. tertial og langsiktige mål. Kilde: FHI og Helsedirektoratet.*
 
-Blant helseregionene er det jevn innsats for å øke kapasiteten på poliklinikker og operasjonsstuer, og andelen fristbrudd for ventende somatiske pasienter på landsbasis gikk ned fra 10,1 prosent ved utgangen av 2023 til 7,7 prosent ved utgangen av 2024 og videre ned til 4,6 prosent for alle sektorer samlet i desember 2025.
+Andelen fristbrudd blant ventende somatiske pasienter gikk ned fra 10,1 prosent ved utgangen av 2023 til 7,7 prosent ved utgangen av 2024, ifølge Helsedirektoratet. For alle sektorer samlet var andelen fristbrudd blant ventende 4,6 prosent i desember 2025, mot 7,7 prosent i desember 2024.
 
 ## Nytt 60-dagersmål for hele pasientforløpet
 
-I oppdragsdokumentene for 2026 har Helse- og omsorgsdepartementet gitt helseforetakene i oppdrag å redusere ventetiden til påbegynt helsehjelp ytterligere hvert år fram mot 2029. Den 19. juni 2026 presenterte regjeringen i tillegg et nytt styringsmål som også omfatter tiden mellom første utredningstime og videre behandling: «På sikt skal pasienter normalt ha fått behandling eller være i gang med behandling innen 60 dager fra henvisning er mottatt», med unntak for tilfeller der medisinske grunner eller pasientens eget ønske tilsier noe annet.
+I oppdragsdokumentene for 2026 har Helse- og omsorgsdepartementet gitt helseforetakene i oppdrag å redusere ventetiden til påbegynt helsehjelp ytterligere hvert år fram mot 2029. Den 19. juni 2026 presenterte regjeringen i tillegg et nytt mål: «På sikt skal pasienter normalt ha fått behandling eller være i gang med behandling innen 60 dager fra henvisning er mottatt», med unntak for tilfeller der medisinske grunner eller pasientens eget ønske tilsier noe annet.
 
-Helse- og omsorgsminister Jan Christian Vestre oppsummerte resultatene slik under framleggelsen: «Ventetidsløftet har virket.»
+Helse- og omsorgsminister Jan Christian Vestre sa i forbindelse med framleggelsen at «Ventetidsløftet har gitt svært gode resultater».
 
 ## Hva kortere ventetid betyr for pasientene
 

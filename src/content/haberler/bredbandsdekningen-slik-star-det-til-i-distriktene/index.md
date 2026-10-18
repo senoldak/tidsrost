@@ -6,6 +6,7 @@ category: teknologi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «99,3 prosent av norske husstander har nå raskt bredbånd – videre utbygging i distriktene»"
 coverKreditt: "Illustrasjon: tidsrøst"
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen oppga at 78,5 prosent av husstandene hadde et aktivt fiberabonnement; riktig er at 78,5 prosent var fysisk tilkoblet fibernett, med eller uten aktivt abonnement (Nkom). Opplysningen om at det ble bevilget 415 millioner kroner i 2025 er fjernet fordi den ikke lot seg bekrefte. Øvrige dekningstall er kontrollert mot Nkoms rapporter og er riktige."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Raskt bredbånd er en forutsetning for hjemmekontor, digitale offentlige tjenester og lokalt næringsliv. Etter en rask utbygging de siste årene har nesten alle norske hjem fått høyhastighetsdekning."
@@ -62,13 +63,13 @@ Regnet etter landareal dekket grunnleggende 5G hele 78,5 prosent av Norges areal
 
 ## Målrettet statlig støtte til distriktene i 2026
 
-I områder der teleselskapene ikke bygger ut på rent kommersielt grunnlag, bidrar staten med øremerkede tilskudd som fordeles via fylkeskommunene. Etter at det ble bevilget 415 millioner kroner i 2025, er det for 2026 tildelt 159,11 millioner kroner til de gjenstående områdene i fylkene. Nordland mottar den største rammen med 25,9 millioner kroner – rundt 16 prosent av potten – mens Oslo får 0,48 millioner kroner.
+I områder der teleselskapene ikke bygger ut på rent kommersielt grunnlag, bidrar staten med øremerkede tilskudd som fordeles via fylkeskommunene. For 2026 er det tildelt 159,11 millioner kroner til de gjenstående områdene i fylkene. Nordland mottar den største rammen med 25,9 millioner kroner – rundt 16 prosent av potten – mens Oslo får 0,48 millioner kroner.
 
 Støtteordningen for 2026 ble godkjent av EFTAs overvåkningsorgan ESA i februar 2026, og åpner nå også for å bruke midler på å styrke arealdekningen i mobilnettet. Ifølge statsbudsjettet for 2026 har til sammen rundt 30 000 husstander fått eller vil få høyhastighetsbredbånd gjennom de statlige støtteordningene for perioden 2022–2025.
 
 ## Flere tilbydere og fokus på robuste nett
 
-Ved utgangen av 2025 hadde 92,1 prosent av norske husstander mulighet til å koble seg på fiber, og 78,5 prosent hadde et aktivt fiberabonnement. Medianhastigheten for private bredbåndsabonnementer lå på 250 Mbit/s både i 2024 og 2025.
+Ved utgangen av 2025 hadde 92,1 prosent av norske husstander mulighet til å koble seg på fiber, og 78,5 prosent var fysisk tilkoblet fibernettet (med aktivt abonnement eller kabel ført inn i boligen). Medianhastigheten for private bredbåndsabonnementer lå på 250 Mbit/s både i 2024 og 2025.
 
 Samtidig har valgmulighetene økt: 98,2 prosent av husstandene i tettbygde strøk og 69,9 prosent i spredtbygde områder kan nå velge mellom to eller flere bredbåndstilbydere. Nkom peker i mai-analysen på at offentlige virkemidler fortsatt vil være viktige sammen med kommersiell utbygging fram mot 2030-målet.
 

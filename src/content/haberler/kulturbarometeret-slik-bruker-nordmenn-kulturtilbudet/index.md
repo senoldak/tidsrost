@@ -1,17 +1,18 @@
 ---
-title: "Rekordbesøk på norske folkebibliotek og sterk vekst for konserter i kulturbarometeret"
-description: "SSBs kulturbarometer for 2025 viser at folkebibliotekene nådde rekordhøye 27,8 millioner besøk, mens konserter, museer og festivaler er tilbake på nivået fra før pandemien."
+title: "Folkebibliotekene har flere besøk enn før pandemien, mens kinoen mister publikum i kulturbarometeret"
+description: "SSBs kulturbarometer for 2025 viser at folkebibliotekene hadde 27,8 millioner besøk, flere enn før pandemien, mens konserter, museer og festivaler er tilbake på nivået fra før pandemien."
 date: 2026-10-16T08:00:00+02:00
 category: kultur
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Rekordbesøk på norske folkebibliotek og sterk vekst for konserter i kulturbarometeret»"
+coverAlt: "Illustrasjon: «Folkebibliotekene har flere besøk enn før pandemien, mens kinoen mister publikum i kulturbarometeret»"
 coverKreditt: "Illustrasjon: tidsrøst"
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Tittelen, beskrivelsen og et nøkkelpunkt omtalte 27,8 millioner besøk på folkebibliotekene som «rekord». SSB omtaler ikke tallet som rekord, og tallene i SSBs statistikkbank (tabell 11758) starter først i 2015; riktig er at 27,8 millioner er det høyeste i SSBs tall fra 2015 og 7,6 prosent over 2019. Tittelen er endret, og «sterk vekst for konserter» er tatt ut siden andelen som gikk på konsert bare økte fra 58 til 60 prosent fra 2023 til 2025 (SSB, tabell 13503). Øvrige tall og sitater er kontrollert mot SSB og regjeringen.no og er riktige."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Undersøkelsen viser hvilke kulturtilbud folk faktisk oppsøker – og hvor billettpriser og tidsklemme holder publikum hjemme. Tallene danner også bakteppet for kulturbudsjettet for 2027."
 key_points:
   - "62 prosent gikk på kino i 2025, ned fra 72 prosent i 2016. Andelen som gikk på teater, musikal eller revy, falt fra 50 til 37 prosent."
-  - "49 prosent oppsøkte et folkebibliotek i 2025, og bibliotekene talte rekordhøye 27,8 millioner fysiske besøk."
+  - "49 prosent oppsøkte et folkebibliotek i 2025, og bibliotekene talte 27,8 millioner fysiske besøk, det høyeste i SSBs tall fra 2015."
   - "Regjeringen foreslår en ramme på 28,1 milliarder kroner over Kultur- og likestillingsdepartementets budsjett for 2027."
 ---
 
@@ -46,7 +47,7 @@ Fra 2023 til 2025 mistet kinoene ytterligere 3 prosentpoeng, samtidig som biblio
 
 Kinonedgangen er særlig tydelig blant unge voksne. Blant 16–24-åringene gikk kinoandelen ned fra 90 prosent i 2016 til 82 prosent i 2025, og i aldersgruppen 25–44 år har andelen falt med hele 15 prosentpoeng fra 81 prosent i 2016. De ivrigste kinogjengerne finnes fortsatt blant barn og tenåringer mellom 9 og 15 år (92 prosent i 2025), mens bare 25 prosent av dem på 80 år og over var på kino.
 
-## Rekordbesøk på bibliotekene – tross færre filialer
+## Flere besøk på bibliotekene – tross færre filialer
 
 Folkebibliotekene skiller seg ut med klar vekst både i spørreundersøkelsen og i kommunenes egen KOSTRA-rapportering til SSB. I kulturbarometeret svarte 49 prosent at de hadde brukt et folkebibliotek i løpet av det siste året – 54 prosent av kvinnene mot 44 prosent av mennene, og hele 78 prosent blant barna mellom 9 og 15 år.
 
@@ -55,7 +56,7 @@ Totalt talte folkebibliotekene 27,8 millioner fysiske besøk i 2025. Etter bunne
 ![Søylediagram over fysiske besøk i folkebibliotekene 2015–2025. Besøkene økte fra 22,4 millioner i 2015 til 25,8 millioner i 2019, falt til 15,9 millioner i 2020 og 17,5 millioner i 2021, og steg til 27,8 millioner i 2025.](./graf-2.svg)
 *Bibliotekbesøkene i 2025 var de høyeste i perioden. Kilde: SSB, tabell 11758.*
 
-Også bokutlånet har skutt fart: 14,1 millioner utlånte bøker i 2025 er rundt 15 prosent mer enn de 12,2 millionene i 2019, drevet blant annet av at utlånet av barnebøker økte fra 6,7 til 8,3 millioner. Utlånet av fysisk film på bibliotekene er på sin side nesten borte – ned fra nær 2,0 millioner i 2016 til 0,3 millioner i 2025. Besøksrekorden har kommet til tross for at antall folkebibliotek i landet er redusert fra 675 i 2015 til 618 i 2025.
+Også bokutlånet har skutt fart: 14,1 millioner utlånte bøker i 2025 er rundt 15 prosent mer enn de 12,2 millionene i 2019, drevet blant annet av at utlånet av barnebøker økte fra 6,7 til 8,3 millioner. Utlånet av fysisk film på bibliotekene er på sin side nesten borte – ned fra nær 2,0 millioner i 2016 til 0,3 millioner i 2025. Det høye besøkstallet har kommet til tross for at antall folkebibliotek i landet er redusert fra 675 i 2015 til 618 i 2025.
 
 ## Prislappen bremser unge konsert- og teatergjengere
 

@@ -6,9 +6,10 @@ category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Forsvarsbudsjettet øker til 191,7 milliarder kroner i 2027 – 68,7 milliarder går til Ukraina»"
 coverKreditt: "Illustrasjon: tidsrøst"
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen forklarte forskjellen mellom bevilgningen på kapittel 1750 (68,7 milliarder kroner) og rammen på 70 milliarder kroner for militær Ukraina-støtte med donert materiell fra Forsvarets lagre; det lar seg ikke bekrefte i Prop. 1 S (2026–2027), og forklaringen er byttet ut med det proposisjonen oppgir (481,4 millioner kroner på kapittel 1760). Oppgaven om Nansen-programmets samlede ramme for 2023–2030 (359,5 milliarder kroner) er fjernet fordi offisielle dokumenter oppgir ulike beløp, og påstanden om Finansdepartementets anslag for sikkerhetsrelaterte utgifter (1,5 og 3,1 prosent av BNP) er fjernet fordi den ikke lot seg bekrefte. Budsjettets hovedtall (191,7 milliarder kroner) er kontrollert mot Prop. 1 S og er riktige."
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Forsvaret er blant de raskest voksende postene på statsbudsjettet. Budsjettallene skiller mellom den løpende opptrappingen av Norges eget forsvar og den militære bistanden til Ukraina."
+why_matters: "Forsvarets andel av økonomien har vokst kraftig de siste årene. Budsjettallene skiller mellom den løpende opptrappingen av Norges eget forsvar og den militære bistanden til Ukraina."
 key_points:
   - "Regjeringen foreslår en utgiftsramme på 191,7 milliarder kroner for forsvarssektoren i 2027 – 11,9 milliarder mer enn i saldert budsjett for 2026."
   - "Forsvarsutgiftene anslås til 3,4 prosent av BNP i 2027. Holdes den militære støtten til Ukraina utenom, er andelen 2,2 prosent."
@@ -40,9 +41,9 @@ At posten for materiellinvesteringer ser litt lavere ut i kronebeløp fra 2026 t
 
 ## 70 milliarder i militær støtte gjennom Nansen-programmet
 
-Den militære bistanden til Ukraina kanaliseres gjennom Nansen-programmet. For 2027 foreslår regjeringen å videreføre en samlet sivil og militær støtte til Ukraina på 85 milliarder kroner, der 70 milliarder kroner er satt av til militære formål. Selve bevilgningen under kapittel 1750 på forsvarsbudsjettet er på 68,7 milliarder kroner, mens blant annet verdien av donert materiell fra Forsvarets egne lagre regnes inn i totalrammen på 70 milliarder. På samme måte som i 2026 skal 50 milliarder kroner brukes uavkortet på internasjonale innkjøpssamarbeid og direkte kjøp fra ukrainsk forsvarsindustri, slik at pengene ikke presser opp etterspørselen i norsk økonomi.
+Den militære bistanden til Ukraina kanaliseres gjennom Nansen-programmet. For 2027 foreslår regjeringen å videreføre en samlet sivil og militær støtte til Ukraina på 85 milliarder kroner, der 70 milliarder kroner er satt av til militære formål. Selve bevilgningen under kapittel 1750 på forsvarsbudsjettet er på 68,7 milliarder kroner; resten av rammen på 70 milliarder ligger på andre poster, blant annet 481,4 millioner kroner på kapittel 1760 til ordinær prisutvikling i flerårige anskaffelsesløp for gjenanskaffelse av donert materiell. Regjeringen foreslår å videreføre at 50 milliarder kroner skal brukes uavkortet på internasjonale innkjøpssamarbeid og direkte kjøp fra ukrainsk forsvarsindustri, slik at pengene ikke presser opp etterspørselen i norsk økonomi.
 
-Planen for den militære støtten legger opp til at rundt 35 prosent går til droner og autonome systemer, 25 prosent til luftvern og støtte til F-16-kampfly, 24 prosent til landstyrker og opplæring av ukrainske soldater, 14 prosent til maritim sikkerhet og 3 prosent til øvrige tiltak. Med 2027-forslaget kommer den samlede rammen for Nansen-programmet i perioden 2023–2030 opp i 359,5 milliarder kroner i Forsvarsdepartementets oppstilling.
+Planen for den militære støtten legger opp til at rundt 35 prosent går til droner og autonome systemer, 25 prosent til luftvern og støtte til F-16-kampfly, 24 prosent til landstyrker og opplæring av ukrainske soldater, 14 prosent til maritim sikkerhet og 3 prosent til øvrige tiltak.
 
 ## Fra 2 til 5 prosent: Nye NATO-krav løfter BNP-andelen
 
@@ -53,7 +54,7 @@ NATOs egne tall viser at Norges militære kjerneutgifter lå mellom 1,4 og 1,9 p
 ![Søylediagram over Norges kjerneutgifter til forsvar som andel av BNP 2014–2026. Andelen var 1,50 prosent i 2014, 1,89 prosent i 2020, 1,41 prosent i 2022, 2,16 prosent i 2024 og anslått til 3,16 prosent i 2025 og 3,17 prosent i 2026.](./graf-1.svg)
 *Andelen passerte 2 prosent i 2024 og økte kraftig i 2025, samme år som Stortinget økte rammen for militær støtte til Ukraina med 50 milliarder kroner. Tallene for 2025 og 2026 er anslag. Kilde: NATO.*
 
-For 2027 anslår Forsvarsdepartementet at forsvarsutgiftene vil tilsvare rundt 3,4 prosent av BNP inklusive Ukraina-støtten, og 2,2 prosent dersom den militære Ukraina-støtten holdes utenfor. I tillegg kommer sikkerhets- og forsvarsrelaterte utgifter i sivil sektor, som Finansdepartementet for 2026 anslår til 1,5 prosent av BNP ved siden av 3,1 prosent til selve forsvaret.
+For 2027 anslår Forsvarsdepartementet at forsvarsutgiftene vil tilsvare rundt 3,4 prosent av BNP inklusive Ukraina-støtten, og 2,2 prosent dersom den militære Ukraina-støtten holdes utenfor.
 
 ## Langtidsplanen utvidet til 1 854 milliarder kroner
 
