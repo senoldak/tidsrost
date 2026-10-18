@@ -122,5 +122,25 @@
     "ig_story": "18114819857596103",
     "fb_post": "1343803192154866_122104996995509504",
     "fb_story": "1474345154568697"
+  },
+  "volodymyr-zelenskyj-advarer-trump-mot-historisk-feil": {
+    "tarih": "2026-10-18T14:05:01.949Z",
+    "deneme": {
+      "ig_post": 1,
+      "ig_story": 1,
+      "fb_post": 1,
+      "fb_story": 1
+    },
+    "son_hata": "Graph 400: Error validating access token: The user has not authorized application 1127775303074017."
+  },
+  "kunstig-intelligens-og-datasentre": {
+    "tarih": "2026-10-18T14:06:02.600Z",
+    "deneme": {
+      "ig_post": 1,
+      "ig_story": 1,
+      "fb_post": 1,
+      "fb_story": 1
+    },
+    "son_hata": "Graph 400: Error validating access token: The user has not authorized application 1127775303074017."
   }
 }
