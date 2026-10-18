@@ -1,5 +1,7 @@
 # tidsrøst Haber Kapakları Implementation Plan
 
+> **Durum (2026-10-18):** Uygulandı, sonra Fjord kapak diliyle değiştirildi (tarihî plan).
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** `tidsrøst` haber botunun ürettiği haber kapaklarını N50 kartografik pafta ve İskandinav gazetesi estetiğinde (Source Serif 4, Archivo, neatline çift çerçeve, veri/lejant kutusu) zenginleştirmek ve `finfolis` standardına ulaştırmak.
@@ -34,13 +36,13 @@
 - Produces: `sigdir({ input, left, top, genislik, yukseklik })`:
   - Returns: `Promise<{ input: Buffer, left: number, top: number }>`
 
-- [ ] **Step 1: Font dizinini oluştur ve TTF dosyalarını indir**
+- [x] **Step 1: Font dizinini oluştur ve TTF dosyalarını indir**
 
 İndirilecek dosyalar:
 - Source Serif 4 Variable TTF: `https://raw.githubusercontent.com/google/fonts/main/ofl/sourceserif4/SourceSerif4%5Bopsz%2Cwght%5D.ttf` -> `scripts/nyheter/fonts/SourceSerif4.ttf`
 - Archivo Variable TTF: `https://raw.githubusercontent.com/google/fonts/main/ofl/archivo/Archivo%5Bwdth%2Cwght%5D.ttf` -> `scripts/nyheter/fonts/Archivo.ttf`
 
-- [ ] **Step 2: Failing test yaz (`bilde.test.mjs`)**
+- [x] **Step 2: Failing test yaz (`bilde.test.mjs`)**
 
 ```javascript
 import test from 'node:test';
@@ -72,12 +74,12 @@ test('yazi: Archivo ile büyük harf ve harf aralıklı etiket üretir', async (
 });
 ```
 
-- [ ] **Step 3: Testi çalıştır ve fail ettiğini doğrula**
+- [x] **Step 3: Testi çalıştır ve fail ettiğini doğrula**
 
 Run: `node --test tidsrost/scripts/nyheter/bilde.test.mjs`
 Expected: FAIL (yazi is not exported / defined)
 
-- [ ] **Step 4: `bilde.mjs` içinde `yazi` ve `sigdir` fonksiyonlarını uygula**
+- [x] **Step 4: `bilde.mjs` içinde `yazi` ve `sigdir` fonksiyonlarını uygula**
 
 ```javascript
 import path from 'node:path';
@@ -137,12 +139,12 @@ export async function sigdir({ input, left, top, genislik, yukseklik }) {
 }
 ```
 
-- [ ] **Step 5: Testi çalıştır ve başarılı olduğunu doğrula**
+- [x] **Step 5: Testi çalıştır ve başarılı olduğunu doğrula**
 
 Run: `node --test tidsrost/scripts/nyheter/bilde.test.mjs`
 Expected: PASS
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git -C tidsrost add scripts/nyheter/fonts/ scripts/nyheter/bilde.mjs scripts/nyheter/bilde.test.mjs
@@ -164,7 +166,7 @@ git -C tidsrost commit -m "feat(bilde): Sharp Pango metin motoru ve yerel font v
   - Takes an async function returning `{ svg, katmanlar }`
   - Returns: `Promise<Buffer>` (PNG 1200×675)
 
-- [ ] **Step 1: `bilde.test.mjs`'e Standart Kapak testini ekle**
+- [x] **Step 1: `bilde.test.mjs`'e Standart Kapak testini ekle**
 
 ```javascript
 import { sakKapagi, kapakCiz } from './bilde.mjs';
@@ -195,12 +197,12 @@ test('sakKapagi: Norveççe özel karakterleri (æ, ø, å, « », –) hatasız
 });
 ```
 
-- [ ] **Step 2: Testi çalıştır ve fail ettiğini doğrula**
+- [x] **Step 2: Testi çalıştır ve fail ettiğini doğrula**
 
 Run: `node --test tidsrost/scripts/nyheter/bilde.test.mjs`
 Expected: FAIL (sakKapagi / kapakCiz is not defined)
 
-- [ ] **Step 3: `bilde.mjs` içine `KATEGORI_SEMBOL`, `kapakCiz` ve `sakKapagi` Düzen A'yı uygula**
+- [x] **Step 3: `bilde.mjs` içine `KATEGORI_SEMBOL`, `kapakCiz` ve `sakKapagi` Düzen A'yı uygula**
 
 `Symbol.astro` sembollerini ve N50 pafta neatline/çerçeve SVG'sini hazırla:
 - Neatline: dış çerçeve 1.5px `#16191c`, iç çerçeve 0.8px `#dcded8`.
@@ -209,12 +211,12 @@ Expected: FAIL (sakKapagi / kapakCiz is not defined)
 - Alt imza: Sol altta `tidsrøst` (Source Serif 4 700), sağ altta `NOREG` kartografik pafta damgası.
 - `kapakCiz` fonksiyonu SVG taban üzerine `katmanlar`'ı `composite` eder ve Sharp PNG buffer döner.
 
-- [ ] **Step 4: Testi çalıştır ve başarılı olduğunu doğrula**
+- [x] **Step 4: Testi çalıştır ve başarılı olduğunu doğrula**
 
 Run: `node --test tidsrost/scripts/nyheter/bilde.test.mjs`
 Expected: PASS
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git -C tidsrost add scripts/nyheter/bilde.mjs scripts/nyheter/bilde.test.mjs
@@ -236,7 +238,7 @@ git -C tidsrost commit -m "feat(bilde): standart baslik odakli sakKapagi ve kapa
     - Left column (width 660px): Title + Spot.
     - Right column (width 330px): N50 technical cartouche data box with top accent bar, category tag in Archivo 700 uppercase, and large figure in Archivo 700.
 
-- [ ] **Step 1: `bilde.test.mjs`'e Rakamlı Kapak testini ekle**
+- [x] **Step 1: `bilde.test.mjs`'e Rakamlı Kapak testini ekle**
 
 ```javascript
 test('sakKapagi: rakamlı veri kutusu içeren iki kolonlu kapak geçerli PNG üretir', async () => {
@@ -254,11 +256,11 @@ test('sakKapagi: rakamlı veri kutusu içeren iki kolonlu kapak geçerli PNG ür
 });
 ```
 
-- [ ] **Step 2: Testi çalıştır ve başarısız olduğunu veya Düzen B'nin uygulanmadığını doğrula**
+- [x] **Step 2: Testi çalıştır ve başarısız olduğunu veya Düzen B'nin uygulanmadığını doğrula**
 
 Run: `node --test tidsrost/scripts/nyheter/bilde.test.mjs`
 
-- [ ] **Step 3: `bilde.mjs` içindeki `sakKapagi` fonksiyonuna Düzen B mantığını ekle**
+- [x] **Step 3: `bilde.mjs` içindeki `sakKapagi` fonksiyonuna Düzen B mantığını ekle**
 
 ```javascript
 if (rakam && rakam.deger) {
@@ -271,12 +273,12 @@ if (rakam && rakam.deger) {
 }
 ```
 
-- [ ] **Step 4: Testleri çalıştır ve tüm testlerin geçtiğini doğrula**
+- [x] **Step 4: Testleri çalıştır ve tüm testlerin geçtiğini doğrula**
 
 Run: `node --test tidsrost/scripts/nyheter/bilde.test.mjs`
 Expected: ALL PASS
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git -C tidsrost add scripts/nyheter/bilde.mjs scripts/nyheter/bilde.test.mjs
@@ -296,11 +298,11 @@ git -C tidsrost commit -m "feat(bilde): iki kolonlu veri kutulu (kartusj) haber 
   - Generates demo covers for visual inspection in `.kapak-ornekleri/`
   - Covers: `haber-standart.png`, `haber-rakamli.png`, `haber-uzun-baslik.png`, `varselkart-demo.png`, `kursgraf-demo.png`
 
-- [ ] **Step 1: `.gitignore` dosyasına `.kapak-ornekleri` ekle**
+- [x] **Step 1: `.gitignore` dosyasına `.kapak-ornekleri` ekle**
 
 `.kapak-ornekleri/` satırını `tidsrost/.gitignore` içine ekle.
 
-- [ ] **Step 2: `scripts/nyheter/ornekler.mjs` scriptini yaz**
+- [x] **Step 2: `scripts/nyheter/ornekler.mjs` scriptini yaz**
 
 ```javascript
 import { mkdir, writeFile } from 'node:fs/promises';
@@ -342,12 +344,12 @@ for (const [ad, tur] of Object.entries(ornekler)) {
 }
 ```
 
-- [ ] **Step 3: Scripti çalıştır ve örnek PNG'lerin üretildiğini doğrula**
+- [x] **Step 3: Scripti çalıştır ve örnek PNG'lerin üretildiğini doğrula**
 
 Run: `node tidsrost/scripts/nyheter/ornekler.mjs`
 Expected: 3 PNG dosyası `.kapak-ornekleri/` altında üretilir ve boyutları konsola basılır.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git -C tidsrost add .gitignore scripts/nyheter/ornekler.mjs
@@ -370,7 +372,7 @@ git -C tidsrost commit -m "feat(bilde): ornek kapak uretme scripti ve gitignore 
   - If not defined, generates `sakKapagi` with `sak.title`, `sak.description`, `sak.category`, `sak.date`, `sak.rakam`, `sak.kilde?.navn`.
   - Converts SVG + layers via `kapakCiz` to PNG buffer.
 
-- [ ] **Step 1: `lib.mjs` içindeki `lagBilde` fonksiyonunu güncelle**
+- [x] **Step 1: `lib.mjs` içindeki `lagBilde` fonksiyonunu güncelle**
 
 Eski kod:
 ```javascript
@@ -393,21 +395,21 @@ async function lagBilde(sak) {
 Yeni kod:
 `sak.bilde` özel bir SVG/grafik fonksiyonsa (varselkart/kursgraf) o çizilir; aksi halde doğrudan `sakKapagi` çağrılır ve `kapakCiz` ile PNG üretilir.
 
-- [ ] **Step 2: `kilder/pressemelding.mjs` içindeki sabit `kildekort`'u kaldır**
+- [x] **Step 2: `kilder/pressemelding.mjs` içindeki sabit `kildekort`'u kaldır**
 
 `pressemelding.mjs` içinde `bilde: { svg: ... kildekort ... }` atamasını kaldır veya standart `sakKapagi`'na bırak; böylece tüm kamu kurumları haberleri başlık ve ingress'li muhteşem editoryal kapakla üretilsin.
 
-- [ ] **Step 3: `kilder/` altındaki diğer kaynakları kontrol et ve temizle**
+- [x] **Step 3: `kilder/` altındaki diğer kaynakları kontrol et ve temizle**
 
 `kilder/regjeringen.mjs`, `kilder/stortinget.mjs`, `kilder/medier.mjs` vb. dosyaları incele; `kildekort` kalıntılarını temizle.
 
-- [ ] **Step 4: Bot pipeline kuru çalıştırma (`--torr`) veya simülasyon testi yap**
+- [x] **Step 4: Bot pipeline kuru çalıştırma (`--torr`) veya simülasyon testi yap**
 
 Run: `node --test tidsrost/scripts/nyheter/bilde.test.mjs`
 Run: `node tidsrost/scripts/nyheter/hent-nyheter.mjs --torr`
 Expected: Bot hatasız çalışır ve haberleri listeler.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git -C tidsrost add scripts/nyheter/lib.mjs scripts/nyheter/kilder/
@@ -421,17 +423,17 @@ git -C tidsrost commit -m "feat(bilde): bot haber akisi yeni editoryal kapak sis
 **Files:**
 - Test: Tüm testler ve Astro derleme kontrolü
 
-- [ ] **Step 1: Birim testleri çalıştır**
+- [x] **Step 1: Birim testleri çalıştır**
 
 Run: `node --test tidsrost/scripts/nyheter/bilde.test.mjs`
 Expected: 100% PASS
 
-- [ ] **Step 2: Astro derlemesini doğrula**
+- [x] **Step 2: Astro derlemesini doğrula**
 
 Run: `npm --prefix tidsrost run build`
 Expected: Build successfully completes without any image/route errors.
 
-- [ ] **Step 3: Git durumunu kontrol et ve temizlik yap**
+- [x] **Step 3: Git durumunu kontrol et ve temizlik yap**
 
 Run: `git -C tidsrost status`
 Beklenmeyen veya geçici dosyaların (`.kapak-ornekleri/` vb.) commit edilmediğinden emin ol.
