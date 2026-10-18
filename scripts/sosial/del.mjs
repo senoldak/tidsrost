@@ -72,10 +72,10 @@ async function igYayimla(alanlar) {
 }
 
 const GONDER = {
-  ig_post: (s) => igYayimla({ image_url: bildeUrl(s.id, 'post'), caption: bildetekst(s) }),
+  ig_post: (s) => igYayimla({ image_url: bildeUrl(s.id, 'post'), caption: bildetekst(s, 'instagram') }),
   ig_story: (s) => igYayimla({ image_url: bildeUrl(s.id, 'story'), media_type: 'STORIES' }),
   fb_post: async (s) => {
-    const r = await graph('POST', `${sayfaId}/photos`, { url: bildeUrl(s.id, 'post'), message: bildetekst(s), published: 'true' }, await sayfaTokeni());
+    const r = await graph('POST', `${sayfaId}/photos`, { url: bildeUrl(s.id, 'post'), message: bildetekst(s, 'facebook'), published: 'true' }, await sayfaTokeni());
     return r.post_id ?? r.id;
   },
   fb_story: async (s) => {

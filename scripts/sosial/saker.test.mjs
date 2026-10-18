@@ -24,7 +24,12 @@ test('paylasilir: kısa (noindex), taslak, gelecek ve eski haber gitmez', () => 
   assert.equal(paylasilir(sakOku('a', md(fm)), Date.parse('2026-10-18T13:00:00+02:00')), false);
 });
 
-test('bildetekst: başlık, özet, noktalar, yönlendirme ve etiketler; bağlantı yok', () => {
+test('bildetekst Facebook: bağlantı var, etiket yok', () => {
+  const t = bildetekst(sakOku('togstreiken', md(fm)), 'facebook');
+  assert.equal(t, 'Togstreiken er over\n\nPartene er enige.\n\n• Ett\n• To\n\nLes hele saken: https://tidsrost.com/artikkel/togstreiken/?utm_source=facebook&utm_medium=social');
+});
+
+test('bildetekst Instagram: başlık, özet, noktalar, yönlendirme ve etiketler; bağlantı yok', () => {
   const t = bildetekst(sakOku('a', md(fm)));
   assert.equal(t, 'Togstreiken er over\n\nPartene er enige.\n\n• Ett\n• To\n\nLes hele saken på tidsrost.com\n\n#nyheter #norge #økonomi');
   assert.doesNotMatch(t, /https?:\/\//);

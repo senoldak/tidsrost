@@ -1,6 +1,6 @@
 // Facebook/Instagram'a gidecek haberler ve paylaşım metni (sahibin kararı 2026-10-18: her tam haber post + story).
 // Seçim kuralı Telegram'la aynı: taslak değil, yayın saati gelmiş, son PENCERE içinde ve arama motorlarına açık
-// (çok kısa haberler noindex'tir ve paylaşılmaz). Metinde bağlantı yok; kaynak/haber sitesi adı eklenmez.
+// (çok kısa haberler noindex'tir ve paylaşılmaz). Bağlantı yalnız Facebook metninde; kaynak/haber sitesi adı eklenmez.
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { parse } from 'yaml';
@@ -48,11 +48,23 @@ export async function sakerOku(dizin = DIZIN) {
   return out.sort((a, b) => a.dato - b.dato || a.id.localeCompare(b.id));
 }
 
-/** Instagram/Facebook açıklaması: başlık, özet, ana noktalar, yönlendirme, etiketler. Bağlantı yok. */
-export function bildetekst(s) {
+/** Haberin adresi; Facebook'ta ölçüm için kanal parametreleriyle. */
+export const sakUrl = (id, kanal) => `${SITE}/artikkel/${id}/${kanal ? `?utm_source=${kanal}&utm_medium=social` : ''}`;
+
+/**
+ * Paylaşım metni: başlık, özet, ana noktalar ve yönlendirme.
+ * Instagram'da bağlantı tıklanmadığı için adres yok, sonda etiketler var; Facebook'ta haberin bağlantısı var,
+ * etiket yok (sahibin isteği 2026-10-18: Facebook'a bağlantı gitsin, Instagram'a gitmesin).
+ * @param {'instagram'|'facebook'} kanal
+ */
+export function bildetekst(s, kanal = 'instagram') {
   const satirlar = [s.tittel, '', s.ingress];
   if (s.punkter.length) satirlar.push('', ...s.punkter.slice(0, 3).map((p) => `• ${p}`));
-  satirlar.push('', 'Les hele saken på tidsrost.com', '', ['#nyheter', '#norge', KATEGORI_ETIKET[s.kategori] && `#${KATEGORI_ETIKET[s.kategori]}`].filter(Boolean).join(' '));
+  if (kanal === 'facebook') {
+    satirlar.push('', `Les hele saken: ${sakUrl(s.id, 'facebook')}`);
+  } else {
+    satirlar.push('', 'Les hele saken på tidsrost.com', '', ['#nyheter', '#norge', KATEGORI_ETIKET[s.kategori] && `#${KATEGORI_ETIKET[s.kategori]}`].filter(Boolean).join(' '));
+  }
   return satirlar.join('\n').replace(/\n{3,}/g, '\n\n').trim();
 }
 
