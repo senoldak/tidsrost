@@ -7,7 +7,7 @@ import { writeFile, appendFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { skrivSak, lesJsonFil, mdKacir } from './lib.mjs';
 import { butceYukle, geminiPayiBitti } from './butce.mjs';
-import { vurder, velg, UTEN_VURDERING } from './viktighet.mjs';
+import { vurder, velg, puanTemizle, UTEN_VURDERING } from './viktighet.mjs';
 import { lesHukommelse, finnDublett, nokkel } from './dublett.mjs';
 import { fjernAdresser } from './hemmelig.mjs';
 import { maskerMedier } from './tekstverktoy.mjs';
@@ -82,7 +82,8 @@ for (const kilde of KILDER) {
 }
 
 // Haber değerine göre seç (bkz. viktighet.mjs). Gemini cevap vermezse puansız, kaynaklar arasında sırayla.
-const poeng = await vurder(kandidater).catch((e) => {
+tilstand.puan ??= {};
+const poeng = await vurder(kandidater, { hukommelse: tilstand.puan }).catch((e) => {
   console.error(`viktighet: FEIL ${e.message}`);
   return null;
 });
@@ -181,6 +182,7 @@ if (!TORR && kortListe.length) {
   if (kortLagt) antall++;
 }
 
+puanTemizle(tilstand.puan);
 // 90 günden eski kayıtları temizle.
 const grense = Date.now() - 90 * 864e5;
 for (const [id, t] of Object.entries(tilstand.sett)) if (Date.parse(t) < grense) delete tilstand.sett[id];
