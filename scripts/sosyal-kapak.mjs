@@ -1,6 +1,6 @@
 // Sosyal kapak görselleri ve varsayılan paylaşım görseli (BRAND.md §9, §11), Fjord dilinde: koyu fiyort zemin, açık mavi
 // eş yükselti dokusu (fjord.mjs ile aynı), kısa kırmızı çizgi, beyaz logo (brand/logo/tidsrost-ordmerke-hvit.svg, logo
-// tek kaynaktan gelir; önce node scripts/merke.mjs) ve altında slogan.
+// tek kaynaktan gelir; önce node scripts/merke.mjs) ve altında slogan ("Hør tidens røst.").
 //   brand/sosyal/  x-kapak-1500x500.png, facebook-kapak-1640x624.png, linkedin-kapak-1128x191.png (logo ortada: profil
 //                  fotoğrafından ve mobil kırpmadan uzak)
 //   public/        og-default.png (1200×630, kapaksız haberlerin paylaşım görseli; logo solda)
@@ -14,7 +14,7 @@ import { konturlar } from './nyheter/fjord.mjs';
 
 const KOK = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const R = { fjord: '#0d3557', doku: '#24557f', rod: '#c8281e', lys: '#d6e4f0' };
-const SLOGAN = 'Siste nytt fra Norge og verden';
+const SLOGAN = 'Hør tidens røst.'; // src/lib/site.ts SITE.slogan ile aynı
 
 // Logo: SVG'nin içi; viewBox'ta yazının çevresinde boşluk var, gerçek yazı kutusu ölçülerek kırpılır.
 const logoSvg = fs.readFileSync(path.join(KOK, 'brand/logo/tidsrost-ordmerke-hvit.svg'), 'utf8');

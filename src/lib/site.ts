@@ -1,7 +1,9 @@
 export const SITE = {
   name: 'tidsrøst',
   description: 'Siste nytt fra Norge og verden.',
-  // Ana sayfanın meta açıklaması (SEO, 140–155 karakter); kısa description slogan olarak başlıkta kalır.
+  // Slogan (sahibin seçimi, 2026-10-18): başlıkta logonun altında ve marka görsellerinde. description meta/RSS içindir.
+  slogan: 'Hør tidens røst.',
+  // Ana sayfanın meta açıklaması (SEO, 140–155 karakter); kısa description diğer sayfaların meta ve RSS açıklamasıdır.
   forsideBeskrivelse:
     'Siste nytt fra Norge og verden – økonomi, politikk, samfunn og teknologi forklart enkelt, basert på flere uavhengige kilder og offisielle data.',
   locale: 'nb-NO',

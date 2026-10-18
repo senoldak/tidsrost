@@ -1,6 +1,6 @@
 # tidsrøst — Kimlik Kılavuzu
 
-> Sürüm 1.1 · 18 Ekim 2026 (logo yazının kendisi, ø simgesi; sosyal kapak görselleri). Sahibiyle 10–18 Ekim arasında verilen kararların toplu hâli; site (N50 harita yaprağı,
+> Sürüm 1.2 · 18 Ekim 2026 (slogan "Hør tidens røst."; logo yazının kendisi, ø simgesi; sosyal kapak görselleri). Sahibiyle 10–18 Ekim arasında verilen kararların toplu hâli; site (N50 harita yaprağı,
 > 10 Ekim) ve kapaklar (Fjord, 18 Ekim) bu kararlarla canlıda. Bu belge kimliğin tek kaynağıdır; ayrıntılı site kuralları
 > `DESIGN.md`'de, ürün kararları `PRODUCT.md`'de. Okur dili Norveççe (Bokmål); bu belge editör içindir.
 > "Öneri" diye işaretli maddeler sahibin onayına açıktır.
@@ -11,8 +11,13 @@ Norveç'te ve dünyada olanı, gürültüsüz ve kaynağından anlatan reklamsı
 sakin, dürüst ve kolay okunur bir alternatif.
 
 - **Ad:** *tid* (zaman) + *røst* (ses, eski ve ağırbaşlı söyleyiş) → **"zamanın sesi"**.
-- **Sitedeki alt başlık (canlı):** **Siste nytt fra Norge og verden.**
-- **Motto (öneri, sitede kullanılmıyor):** *Tidens stemme – rett fra kilden.* · kısa hâli *Rett fra kilden.*
+- **Slogan (sahibin seçimi, 18 Ekim 2026):** **Hør tidens røst.** (*Zamanın sesini dinle.*) Adın anlamını söyler ve
+  Viking çağının haber taşıyan sesine, skalda selam verir. Sitede başlıkta logonun altında (`SITE.slogan`), sosyal kapak
+  görsellerinde ve varsayılan paylaşım görselinde durur.
+- **Tanım cümlesi:** *Siste nytt fra Norge og verden.* Meta açıklaması, RSS ve ekran okuyucu başlığı içindir
+  (`SITE.description`); ne yaptığımızı söyler, slogan değildir.
+- Elenen öneriler: "Tidens stemme – rett fra kilden", "Bud fra kilden", "Ravnene melder", "Ord som står" ve diğerleri.
+  "Budstikka" bir gazetenin adı olduğu için kullanılmaz.
 - **Kime konuşuyoruz:** Norveç'teki genel haber okuru; kitle yaşça büyük (kapaklarda punto bu yüzden büyük).
   Telefonda ve masaüstünde kısa oturumlar; çoğu doğrudan tek bir habere gelir.
 
@@ -64,7 +69,7 @@ sakin, dürüst ve kolay okunur bir alternatif.
     ø yuvarlak kırpmada da tam görünür.
   - `brand/sosyal/` kapak görselleri ve `public/og-default.png` (`node scripts/sosyal-kapak.mjs` üretir, logoyu
     `tidsrost-ordmerke-hvit.svg`'den alır): Fjord zemin, eş yükselti dokusu, kısa kırmızı çizgi, beyaz logo, altında slogan
-    "Siste nytt fra Norge og verden". `x-kapak-1500x500.png`, `facebook-kapak-1640x624.png`,
+    "Hør tidens røst.". `x-kapak-1500x500.png`, `facebook-kapak-1640x624.png`,
     `linkedin-kapak-1128x191.png` (logo ortada: profil fotoğrafından ve mobil kırpmadan uzak); `og-default.png`
     1200×630 (kapaksız haberlerin paylaşım görseli, logo solda).
 - Yapılmaz: ø'yü yeniden çizmek ya da başka yazı tipinden almak, döndürmek, gölge, degrade, kontur; logonun yanına ayrıca
@@ -135,10 +140,10 @@ su `#7fb2e5`.
 ## 10. Hazır metinler (Norveççe) · öneri
 
 **Sosyal biyografi:**
-> tidsrøst – tidens stemme, rett fra kilden. Rolige nyheter fra Norge og verden, bygget på offentlige kilder. Uten reklame.
+> tidsrøst – hør tidens røst. Rolige nyheter fra Norge og verden, bygget på offentlige kilder. Uten reklame.
 
 **Tek cümle tanıtım:**
-> tidsrøst er en reklamefri nyhetstjeneste som forteller hva som skjer i Norge og verden, rett fra de offentlige kildene.
+> tidsrøst er en reklamefri nyhetstjeneste som forteller hva som skjer i Norge og verden, rett fra de offentlige kildene. Hør tidens røst.
 
 ## 11. Uygulamalar
 
