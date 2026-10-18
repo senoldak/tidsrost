@@ -101,6 +101,8 @@ export const BICIM = {
   post: { W: 1080, H: 1350, pad: 80, ust: 80, alt: 1270, ana: [128, 112, 96], altB: 48, kick: 40, ing: 0, logo: 46, cta: null, kontur: { cx: 0.78, cy: 0.2, rx: 640, ry: 400, adet: 18, kalin: 1 }, metinBosluk: 64 },
   // Story'de üstte ~270, altta ~340 px Instagram arayüzünün altında kalır; içerik aradaki güvenli alanda.
   story: { W: 1080, H: 1920, pad: 80, ust: 270, alt: 1580, ana: [136, 120, 104], altB: 52, kick: 44, ing: 46, logo: 48, cta: 'Les mer på tidsrost.com', kontur: { cx: 0.78, cy: 0.3, rx: 660, ry: 560, adet: 18, kalin: 1 }, metinBosluk: 64 },
+  // Reels: altta açıklama (~420 px), sağda beğen/yorum sütunu (~140 px) arayüzün altında kalır.
+  reels: { W: 1080, H: 1920, pad: 80, sag: 150, ust: 250, alt: 1480, ana: [128, 112, 96], altB: 50, kick: 44, ing: 44, logo: 48, cta: null, kontur: { cx: 0.78, cy: 0.3, rx: 660, ry: 560, adet: 18, kalin: 1 }, metinBosluk: 64 },
 };
 
 const puntoSec = (s, [buyuk, orta, kucuk]) => (s.length > 70 ? kucuk : s.length > 45 ? orta : buyuk);
@@ -117,20 +119,28 @@ const PALET = {
  *   forfatter: imzalı yazı (ör. Şenol Dak, Forklart). Sahibin seçimi 2026-10-18: "ters Fjord" — açık buz mavisi
  *   zemin, fjord mavisi başlık, sol üstte kırmızı tür etiketi, başlığın altında kırmızı yazar adı. Aynı aile, ama
  *   akışta haberle karışmaz.
- * @param {'kapak'|'post'|'story'} bicim
+ * @param {'kapak'|'post'|'story'|'reels'} bicim
+ * Dönüşteki canli (reels.mjs için): zemin SVG'si ve rolü belli parçalar (metin katmanları ve kırmızı kutular) ayrı ayrı.
  */
 export async function fjordKart(m, bicim = 'kapak') {
   await fontlariDenetle();
   const b = BICIM[bicim];
   const { W, H, pad, alt } = b;
   let { ust } = b;
-  const ic = W - 2 * pad;
+  const ic = W - pad - (b.sag ?? pad);
   const { kicker, ana, alt: altBaslik } = bol(m.tittel);
   const imzali = Boolean(m.forfatter);
   const P = imzali ? PALET.ters : PALET.fjord;
   const tur = (m.sjanger === 'forklart' ? 'Forklart' : 'Kommentar').toLocaleUpperCase('nb-NO');
   const katmanlar = [];
+  const parcalar = [];
   let svg = `<rect width="${W}" height="${H}" fill="${P.bg}"/>`;
+  let zemin = svg;
+  const katman = (rol, k) => { katmanlar.push(k); parcalar.push({ rol, ...k }); };
+  const kutu = (rol, x, y, w, h, fill) => {
+    svg += `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
+    parcalar.push({ rol, rect: { x, y, w, h, fill } });
+  };
 
   let sinirUst = ust + (bicim === 'kapak' ? 0 : 40);
   if (imzali) {
@@ -138,26 +148,26 @@ export async function fjordKart(m, bicim = 'kapak') {
     const px = Math.round(etiket.h * 0.32);
     const py = Math.round(etiket.h * 0.18);
     const ey = ust + py;
-    svg += `<rect x="${pad}" y="${ey - py}" width="${etiket.w + 2 * px}" height="${etiket.h + 2 * py}" fill="${R.rod}"/>`;
-    katmanlar.push({ input: etiket.input, left: pad + px, top: ey });
+    kutu('etiket', pad, ey - py, etiket.w + 2 * px, etiket.h + 2 * py, R.rod);
+    katman('etiket', { input: etiket.input, left: pad + px, top: ey });
     sinirUst = Math.max(sinirUst, ey + etiket.h + py + 40);
   }
   if (m.omslag && bicim !== 'kapak') {
     const { default: sharp } = await import('sharp');
     const oh = Math.round((ic * 675) / 1200);
     const top = Math.max(ust, sinirUst - 40);
-    katmanlar.push({ input: await sharp(m.omslag).resize(ic, oh).png().toBuffer(), left: pad, top });
+    katman('omslag', { input: await sharp(m.omslag).resize(ic, oh).png().toBuffer(), left: pad, top });
     sinirUst = top + oh + 56;
   }
 
   // Alt bant: kırmızı çizgi + logo; story'de sağda yönlendirme.
   const logo = await tekst('tidsrøst', { font: 'TidsrostTung', boy: b.logo, renk: P.logo });
   const logoY = alt - logo.h;
-  katmanlar.push({ input: logo.input, left: pad, top: logoY });
-  svg += `<rect x="${pad}" y="${logoY - 26}" width="72" height="7" fill="${R.rod}"/>`;
+  katman('logo', { input: logo.input, left: pad, top: logoY });
+  kutu('logo', pad, logoY - 26, 72, 7, R.rod);
   if (b.cta) {
     const c = await tekst(b.cta, { font: 'TidsrostSemi', boy: 40, renk: P.ikincil });
-    katmanlar.push({ input: c.input, left: W - pad - c.w, top: alt - c.h });
+    katman('cta', { input: c.input, left: W - pad - c.w, top: alt - c.h });
   }
   const metinAlt = logoY - 26 - b.metinBosluk;
 
@@ -182,24 +192,27 @@ export async function fjordKart(m, bicim = 'kapak') {
   let y = metinAlt - yuk;
   if (!m.omslag || bicim === 'kapak') {
     const k = b.kontur;
-    svg += konturlar({ cx: W * k.cx, cy: Math.min(H * k.cy, y - 40), rx: k.rx, ry: k.ry, adet: k.adet, tohum: m.tohum ?? m.tittel, kalin: k.kalin, renk: P.doku });
+    const doku = konturlar({ cx: W * k.cx, cy: Math.min(H * k.cy, y - 40), rx: k.rx, ry: k.ry, adet: k.adet, tohum: m.tohum ?? m.tittel, kalin: k.kalin, renk: P.doku });
+    svg += doku;
+    zemin += doku;
   }
   if (kick) {
     const px = Math.round(kick.h * 0.32);
     const py = Math.round(kick.h * 0.18);
-    svg += `<rect x="${pad}" y="${y - py}" width="${kick.w + 2 * px}" height="${kick.h + 2 * py}" fill="${R.rod}"/>`;
-    katmanlar.push({ input: kick.input, left: pad + px, top: y });
+    kutu('kick', pad, y - py, kick.w + 2 * px, kick.h + 2 * py, R.rod);
+    katman('kick', { input: kick.input, left: pad + px, top: y });
     y += kick.h + kickAra;
   }
-  katmanlar.push({ input: anaT.input, left: pad, top: y });
+  katman('ana', { input: anaT.input, left: pad, top: y });
   y += anaT.h;
-  if (altT) { y += 28; katmanlar.push({ input: altT.input, left: pad, top: y }); y += altT.h; }
-  if (ingT) { y += 36; katmanlar.push({ input: ingT.input, left: pad, top: y }); y += ingT.h; }
-  if (imzaT) { y += 36; katmanlar.push({ input: imzaT.input, left: pad, top: y }); }
+  if (altT) { y += 28; katman('alt', { input: altT.input, left: pad, top: y }); y += altT.h; }
+  if (ingT) { y += 36; katman('ing', { input: ingT.input, left: pad, top: y }); y += ingT.h; }
+  if (imzaT) { y += 36; katman('imza', { input: imzaT.input, left: pad, top: y }); }
 
   return {
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">${svg}</svg>`,
     katmanlar,
+    canli: { W, H, zemin, parcalar },
   };
 }
 

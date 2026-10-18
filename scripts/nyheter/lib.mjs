@@ -323,6 +323,7 @@ export async function skrivSak(rot, sak) {
     `produksjon: ${sak.produksjon}`,
     // Resmi olmayan kaynakların şifreli kaydı (bkz. hemmelig.mjs); sitede gösterilmez.
     sak.kildeSpor ? `kildeSpor: ${yamlStr(sak.kildeSpor)}` : null,
+    Number.isInteger(sak.nyhetsverdi) ? `nyhetsverdi: ${sak.nyhetsverdi}` : null,
   ].filter(Boolean);
   // Üretim şekli notu sayfada ayrıca gösterilir; burada sadece kaynak (VVP 3.1).
   const lenke = (k) => `[${mdMetin(k.navn)}](${k.url})${k.lisens ? ` (${mdMetin(k.lisens)})` : ''}`;

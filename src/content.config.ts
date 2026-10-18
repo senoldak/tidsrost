@@ -34,6 +34,8 @@ const haberler = defineCollection({
       sjanger: z.enum(['nyhet', 'forklart']).default('nyhet'),
       // Resmi olmayan kaynakların şifreli kaydı; sitede gösterilmez (bkz. scripts/nyheter/hemmelig.mjs).
       kildeSpor: z.string().optional(),
+      // Botun seçimde verdiği haber değeri (1–100, bkz. scripts/nyheter/viktighet.mjs); sitede gösterilmez, Reels seçiminde kullanılır.
+      nyhetsverdi: z.number().int().min(1).max(100).optional(),
     }),
 });
 

@@ -4,16 +4,22 @@
 //
 // Ortam: META_TOKEN (tidsrost portföyündeki sistem kullanıcısının süresiz token'ı), META_PAGE_ID, INSTAGRAM_USER_ID,
 // SOSIAL_GUNLUK_TAVAN (24 saatte en çok kaç haber; boş = sınırsız).
-// Kullanım: node scripts/sosial/del.mjs [--kontrol | --baslat | --test [haber-id] [--kanallar ig_post,ig_story]]
+// Kullanım: node scripts/sosial/del.mjs [--kontrol | --baslat | --reels | --test [haber-id] [--kanallar ig_post,ig_story]]
 //   --kontrol: hiçbir şey yayımlamadan erişimi sınar.  --baslat: penceredeki haberleri gönderilmiş sayar (ilk kurulum).
 //   --test: tek haberi (verilmezse görseli yayında olan en yeni tam haberi) gece kuralı ve tavana bakmadan seçilen
 //   kanallara gönderir; giden kanallar delt.json'a işlenir, haber sonraki turlarda tekrar gitmez.
+//   --reels: Oslo öğle/akşam diliminde günün en güçlü haberini Instagram ve Facebook Reels olarak gönderir
+//   (sosial.yml zamanlayıcısı; seçim kuralı saker.mjs reelsSec). Video burada üretilir ve doğrudan yüklenir.
 import { readFile, writeFile } from 'node:fs/promises';
-import { sakerOku, paylasilir, bildetekst, bildeUrl, varselSeviye, varselSuz } from './saker.mjs';
+import os from 'node:os';
+import path from 'node:path';
+import { sakerOku, paylasilir, bildetekst, bildeUrl, varselSeviye, varselSuz, reelsDilimi, reelsSec } from './saker.mjs';
+import { reelsCiz } from './reels.mjs';
 
 const API = 'https://graph.facebook.com/v25.0';
 const DURUM = 'scripts/sosial/delt.json';
 const KANALLAR = ['ig_post', 'ig_story', 'fb_post', 'fb_story'];
+const REELS_KANALLAR = ['ig_reels', 'fb_reels'];
 const AZAMI_DENEME = 3;
 const TUR_BASINA = 10; // bir turda en çok bu kadar haber; kalanı sonraki tura
 const ARA_MS = Number(process.env.SOSIAL_ARA_MS ?? 60_000); // haberler arası bekleme (akışı boğmamak için)
@@ -71,6 +77,24 @@ async function igYayimla(alanlar) {
   return (await graph('POST', `${igId}/media_publish`, { creation_id: kap.id })).id;
 }
 
+// Video bir kez üretilir, iki kanala da aynı dosya gider.
+const videolar = new Map();
+async function video(s) {
+  if (!videolar.has(s.id)) videolar.set(s.id, reelsCiz(s, path.join(os.tmpdir(), `${s.id.replace(/\//g, '-')}-reels.mp4`)).then((f) => readFile(f)));
+  return videolar.get(s.id);
+}
+// Meta'nın yükleme sunucusuna ham dosya (resumable upload, tek parça).
+async function rupload(url, tok, veri) {
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { Authorization: `OAuth ${tok}`, offset: '0', file_size: String(veri.length) },
+    body: veri,
+    signal: AbortSignal.timeout(180_000),
+  });
+  const v = await res.json().catch(() => ({}));
+  if (!res.ok || v.error || v.success === false) throw new Error(`Graph ${res.status}: yükleme reddedildi (${v.error?.message ?? v.debug_info?.message ?? 'bilinmeyen hata'})`);
+}
+
 const GONDER = {
   ig_post: (s) => igYayimla({ image_url: bildeUrl(s.id, 'post'), caption: bildetekst(s, 'instagram') }),
   ig_story: (s) => igYayimla({ image_url: bildeUrl(s.id, 'story'), media_type: 'STORIES' }),
@@ -83,6 +107,28 @@ const GONDER = {
     const foto = await graph('POST', `${sayfaId}/photos`, { url: bildeUrl(s.id, 'story'), published: 'false' }, tok);
     const r = await graph('POST', `${sayfaId}/photo_stories`, { photo_id: foto.id }, tok);
     return r.post_id ?? foto.id;
+  },
+  ig_reels: async (s) => {
+    const veri = await video(s);
+    const kap = await graph('POST', `${igId}/media`, { media_type: 'REELS', upload_type: 'resumable', share_to_feed: 'true', caption: bildetekst(s, 'instagram') });
+    await rupload(`https://rupload.facebook.com/ig-api-upload/v25.0/${kap.id}`, token, veri);
+    // Video işlenmesi bir dakikayı bulabilir.
+    for (let i = 0; ; i++) {
+      const { status_code } = await graph('GET', kap.id, { fields: 'status_code' });
+      if (status_code === 'FINISHED') break;
+      if (status_code === 'ERROR' || status_code === 'EXPIRED') throw new Error(`Instagram Reels kabı: ${status_code}`);
+      if (i >= 40) throw new Error('Instagram Reels kabı 3 dakikada hazır olmadı');
+      await bekle(5000);
+    }
+    return (await graph('POST', `${igId}/media_publish`, { creation_id: kap.id })).id;
+  },
+  fb_reels: async (s) => {
+    const veri = await video(s);
+    const tok = await sayfaTokeni();
+    const bas = await graph('POST', `${sayfaId}/video_reels`, { upload_phase: 'start' }, tok);
+    await rupload(bas.upload_url ?? `https://rupload.facebook.com/video-upload/v25.0/${bas.video_id}`, tok, veri);
+    await graph('POST', `${sayfaId}/video_reels`, { upload_phase: 'finish', video_id: bas.video_id, video_state: 'PUBLISHED', description: bildetekst(s, 'facebook') }, tok);
+    return bas.video_id;
   },
 };
 
@@ -100,7 +146,7 @@ const gorselHazir = async (id) =>
   (await Promise.all(['post', 'story'].map((b) => fetch(bildeUrl(id, b), { method: 'HEAD' }).then((r) => r.ok, () => false)))).every(Boolean);
 
 if (process.argv.includes('--test')) {
-  const kanallar = (argDeger('kanallar') ?? 'ig_post,ig_story').split(',').filter((c) => KANALLAR.includes(c));
+  const kanallar = (argDeger('kanallar') ?? 'ig_post,ig_story').split(',').filter((c) => KANALLAR.includes(c) || REELS_KANALLAR.includes(c));
   const adaylar = (await sakerOku()).filter((s) => paylasilir(s, Date.now(), 30 * 3600e3)).reverse();
   const istenen = argDeger('test');
   let s = null;
@@ -118,6 +164,36 @@ if (process.argv.includes('--test')) {
   }
   await writeFile(DURUM, `${JSON.stringify(durum, null, 2)}
 `);
+  process.exit(hata ? 1 : 0);
+}
+
+if (process.argv.includes('--reels')) {
+  const dilim = reelsDilimi();
+  if (!dilim) { console.log('[sosial] Reels: Oslo saati dilim dışında.'); process.exit(0); }
+  let durum;
+  try { durum = JSON.parse(await readFile(DURUM, 'utf8')); } catch { console.log('[sosial] Reels: delt.json yok, atlandı.'); process.exit(0); }
+  const simdi = Date.now();
+  const tukenmis = (k) => REELS_KANALLAR.every((c) => k?.[c] || (k?.deneme?.[c] ?? 0) >= AZAMI_DENEME);
+  const s = reelsSec((await sakerOku()).filter((x) => paylasilir(x, simdi) && !tukenmis(durum[x.id])), durum, dilim);
+  if (!s) { console.log(`[sosial] Reels (${dilim.gun} ${dilim.ad}): gönderilecek haber yok ya da dilim dolu.`); process.exit(0); }
+  const k = (durum[s.id] ??= { tarih: new Date(simdi).toISOString() });
+  console.log(`[sosial] Reels (${dilim.gun} ${dilim.ad}): ${s.id}`);
+  let hata = 0;
+  for (const c of REELS_KANALLAR) {
+    if (k[c] || (k.deneme?.[c] ?? 0) >= AZAMI_DENEME) continue;
+    try {
+      k[c] = await GONDER[c](s);
+      console.log(`[sosial] ✓ ${s.id} ${c} (${k[c]})`);
+    } catch (e) {
+      hata++;
+      k.deneme = { ...k.deneme, [c]: (k.deneme?.[c] ?? 0) + 1 };
+      k.son_hata = gizle(e.message).slice(0, 300);
+      console.error(`[sosial] ! ${s.id} ${c}: ${k.son_hata}`);
+    }
+  }
+  // Bir kanal bile gittiyse dilim dolmuş sayılır; ikisi de düştüyse dilimin sonraki turu yeniden dener.
+  if (REELS_KANALLAR.some((c) => k[c])) k.reels = { gun: dilim.gun, dilim: dilim.ad };
+  await writeFile(DURUM, `${JSON.stringify(durum, null, 2)}\n`);
   process.exit(hata ? 1 : 0);
 }
 

@@ -30,6 +30,7 @@ export function sakOku(id, md) {
     // Editoryal kapak değilse (harita, grafik) sosyal görselde üstte kullanılır.
     gorselKapak: fm.cover === './cover.png' && fm.coverKreditt !== 'Illustrasjon: tidsrøst',
     indeks: indekserbar(m[2]),
+    nyhetsverdi: Number.isInteger(fm.nyhetsverdi) ? fm.nyhetsverdi : null,
   };
 }
 
@@ -94,3 +95,38 @@ export function bildetekst(s, kanal = 'instagram') {
 /** Yayında servis edilen görsellerin adı (bilder.mjs üretir, public/sosial/). */
 export const bildeFil = (id, bicim) => `${id.replace(/\//g, '-')}-${bicim}.png`;
 export const bildeUrl = (id, bicim) => `${SITE}/sosial/${bildeFil(id, bicim)}`;
+
+// Reels (sahibin kararı 2026-10-19): günde 1–2, en güçlü haberler. İki dilim, Oslo saatiyle: öğle her gün bir Reels
+// (en iyi aday), akşam yalnız güçlü bir aday varsa. İmzalı yazılar (Forklart) sitenin vitrini olduğu için öne alınır;
+// puanı olmayan eski haberler eşik değeri (70) sayılır. Farevarsel Reels olmaz (rødt bile: video üretimi sürerken eskir).
+export const REELS_DILIMLERI = [
+  { ad: 'midt', bas: 11, son: 14, esik: 70 },
+  { ad: 'kveld', bas: 18, son: 21, esik: 80 },
+];
+export const reelsPuan = (s) => (s.forfatter ? 90 : s.nyhetsverdi ?? 70);
+
+const osloParca = (t) => Object.fromEntries(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Oslo', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', hourCycle: 'h23' })
+  .formatToParts(new Date(t)).map((p) => [p.type, p.value]));
+
+/** Şu anki Reels dilimi ve günü; dilim dışındaysa null. */
+export function reelsDilimi(simdi = Date.now()) {
+  const p = osloParca(simdi);
+  const saat = Number(p.hour);
+  const d = REELS_DILIMLERI.find((x) => saat >= x.bas && saat < x.son);
+  return d ? { ...d, gun: `${p.year}-${p.month}-${p.day}` } : null;
+}
+
+/**
+ * Bu dilimin Reels haberi: penceredeki, daha önce Reels olmamış, eşiği geçen en yüksek puanlı haber (eşitlikte en yeni).
+ * Dilimde zaten bir Reels gittiyse null.
+ * @param {object[]} saker paylaşılabilir haberler
+ * @param {Record<string, {reels?: {gun: string, dilim: string}}>} delt paylaşım durumu
+ */
+export function reelsSec(saker, delt, dilim) {
+  if (!dilim) return null;
+  if (Object.values(delt).some((k) => k?.reels?.gun === dilim.gun && k.reels.dilim === dilim.ad)) return null;
+  const aday = saker
+    .filter((s) => !delt[s.id]?.reels && !varselSeviye(s) && reelsPuan(s) >= dilim.esik)
+    .sort((a, b) => reelsPuan(b) - reelsPuan(a) || b.dato - a.dato);
+  return aday[0] ?? null;
+}

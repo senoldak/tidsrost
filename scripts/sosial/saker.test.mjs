@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { sakOku, paylasilir, bildetekst, bildeFil, bildeUrl, varselSeviye, varselSuz } from './saker.mjs';
+import { sakOku, paylasilir, bildetekst, bildeFil, bildeUrl, varselSeviye, varselSuz, reelsDilimi, reelsSec, REELS_DILIMLERI } from './saker.mjs';
 
 const govde = (n) => Array.from({ length: n }, (_, i) => `ord${i}`).join(' ');
 const md = (fm, n = 200) => `---\n${fm}\n---\n\n${govde(n)}\n`;
@@ -54,4 +54,24 @@ test('farevarsel: gult gitmez, oransje 24 saatte bir (en yenisi), rødt hep gide
   assert.equal(varselSeviye(h('x', 'Farevarsel-systemet forklart')), null);
   assert.deepEqual(varselSuz(liste).map((s) => s.id), ['a', 'd', 'e']);
   assert.deepEqual(varselSuz(liste, 1).map((s) => s.id), ['a', 'e']);
+});
+
+test('reelsDilimi: Oslo saatiyle öğle ve akşam dilimi, yaz ve kış saati', () => {
+  assert.deepEqual(reelsDilimi(Date.parse('2026-10-19T10:20:00Z')), { ...REELS_DILIMLERI[0], gun: '2026-10-19' }); // 12:20 CEST
+  assert.equal(reelsDilimi(Date.parse('2026-10-19T17:20:00Z')).ad, 'kveld'); // 19:20 CEST
+  assert.equal(reelsDilimi(Date.parse('2026-10-19T14:20:00Z')), null); // 16:20
+  assert.equal(reelsDilimi(Date.parse('2026-11-02T10:20:00Z')).ad, 'midt'); // 11:20 CET
+});
+
+test('reelsSec: en yüksek puan, imzalı öne, farevarsel ve eşik altı yok, dilimde bir kez', () => {
+  const s = (id, ek = '') => sakOku(id, md(`${fm}${ek}`));
+  const dilim = { ad: 'kveld', esik: 80, gun: '2026-10-17' };
+  const saker = [s('zayif', '\nnyhetsverdi: 75'), s('guclu', '\nnyhetsverdi: 88'), sakOku('varsel', md(`${fm.replace('Togstreiken er over', 'Oransje farevarsel for regn')}\nnyhetsverdi: 95`))];
+  assert.equal(reelsSec(saker, {}, dilim).id, 'guclu');
+  assert.equal(reelsSec([...saker, s('forklart', '\nauthor: "Şenol Dak"')], {}, dilim).id, 'forklart');
+  assert.equal(reelsSec([saker[0]], {}, dilim), null);
+  assert.equal(reelsSec([saker[0]], {}, { ...dilim, ad: 'midt', esik: 70 }).id, 'zayif');
+  assert.equal(reelsSec(saker, { guclu: { reels: { gun: '2026-10-17', dilim: 'kveld' } } }, dilim), null);
+  assert.equal(reelsSec(saker, { guclu: { reels: { gun: '2026-10-16', dilim: 'kveld' } } }, dilim), null);
+  assert.equal(reelsSec(saker, { guclu: { reels: { gun: '2026-10-16', dilim: 'kveld' } } }, { ...dilim, esik: 70 }).id, 'zayif');
 });

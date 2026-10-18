@@ -2,18 +2,23 @@
 # Her başarılı yayının son adımı (yayinla.yml) başlatır: post/story görselleri o yayınla tidsrost.com/sosial/ altına
 # çıkar. workflow_run kullanılmaz: GitHub botun başlattığı yayınlardan sonra o olayı üretmiyor.
 # Elle: mod=kontrol (hiçbir şey yayımlamadan erişim), mod=baslat (penceredeki haberleri gönderilmiş say), mod=paylas,
-# mod=test (tek haberi gece kuralı ve tavana bakmadan seçilen kanallara gönderir).
+# mod=test (tek haberi gece kuralı ve tavana bakmadan seçilen kanallara gönderir; ig_reels,fb_reels de seçilebilir).
+# Zamanlayıcı mod=reels: Oslo öğle ve akşam diliminde günün en güçlü haberi IG + FB Reels (del.mjs --reels). Yaz/kış saati
+# için her dilime iki UTC saati; dilim dolunca ikinci tur bir şey yapmaz.
 # Sayfa ve Instagram kimlikleri repo değişkeni (META_PAGE_ID, INSTAGRAM_USER_ID), token gizli (META_TOKEN).
 name: Sosyal medya
 
 on:
+  schedule:
+    - cron: '17 10,11 * * *'
+    - cron: '17 17,18 * * *'
   workflow_dispatch:
     inputs:
       mod:
         description: 'Çalışma modu'
         type: choice
         default: paylas
-        options: [paylas, kontrol, baslat, test]
+        options: [paylas, kontrol, baslat, test, reels]
       test_id:
         description: 'mod=test: haber kimliği (boş = görseli yayında olan en yeni tam haber)'
         default: ''
@@ -44,6 +49,10 @@ jobs:
 
       - run: npm ci --no-audit --no-fund
 
+      # Reels videosu ffmpeg ile üretilir (ubuntu-latest'te kurulu; değilse kurulur).
+      - name: ffmpeg
+        run: command -v ffmpeg || (sudo apt-get update -q && sudo apt-get install -y -q ffmpeg)
+
       - name: Paylaş
         id: paylas
         env:
@@ -51,7 +60,7 @@ jobs:
           META_PAGE_ID: ${{ vars.META_PAGE_ID }}
           INSTAGRAM_USER_ID: ${{ vars.INSTAGRAM_USER_ID }}
           SOSIAL_GUNLUK_TAVAN: ${{ vars.SOSIAL_GUNLUK_TAVAN }}
-          MOD: ${{ github.event.inputs.mod || 'paylas' }}
+          MOD: ${{ github.event_name == 'schedule' && 'reels' || github.event.inputs.mod || 'paylas' }}
           TEST_ID: ${{ github.event.inputs.test_id }}
           KANALLAR: ${{ github.event.inputs.kanallar || 'ig_post,ig_story' }}
         run: |
@@ -59,6 +68,7 @@ jobs:
             kontrol) node scripts/sosial/del.mjs --kontrol ;;
             baslat) node scripts/sosial/del.mjs --baslat ;;
             test) node scripts/sosial/del.mjs --test ${TEST_ID:+"$TEST_ID"} --kanallar "$KANALLAR" ;;
+            reels) node scripts/sosial/del.mjs --reels ;;
             *) node scripts/sosial/del.mjs ;;
           esac
 

@@ -148,6 +148,8 @@ for (const k of valgt) {
       console.log(`  - ${k.id}: hoppet over (samme hendelse som ${dublett.slug})`);
       continue;
     }
+    // Haber değeri künyeye yazılır; sosyal medyada günün Reels haberleri buna göre seçilir (scripts/sosial/saker.mjs).
+    if (Number.isInteger(poeng?.get(k))) sak.nyhetsverdi = poeng.get(k);
     const slug = await skrivSak(ROT, sak);
     if (!sak.draft) hukommelse.push(nokkel({ slug, tittel: sak.title, ingress: sak.description, tekst: sak.body, tid: Date.now(), produksjon: sak.produksjon }));
     merkSett(k);
