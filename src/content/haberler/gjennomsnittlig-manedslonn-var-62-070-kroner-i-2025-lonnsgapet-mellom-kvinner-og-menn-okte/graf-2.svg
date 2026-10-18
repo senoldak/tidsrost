@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" role="img" aria-label="Gjennomsnittlig månedslønn 2025 etter kjønn">
+<title>Gjennomsnittlig månedslønn 2025 etter kjønn</title>
+<rect width="760" height="430" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Gjennomsnittlig månedslønn 2025 etter kjønn</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Alle sektorer, per heltidsekvivalent, kroner</text>
+<text x="24" y="92" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kroner per måned</text>
+<line x1="74" x2="736" y1="352" y2="352" stroke="#16191c" stroke-width="1"/>
+<text x="66" y="356" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">0</text>
+<line x1="74" x2="736" y1="291" y2="291" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="295" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">20 000</text>
+<line x1="74" x2="736" y1="230" y2="230" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="234" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">40 000</text>
+<line x1="74" x2="736" y1="169" y2="169" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="173" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">60 000</text>
+<line x1="74" x2="736" y1="108" y2="108" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="112" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">80 000</text>
+<rect x="160.3" y="176" width="48" height="176" fill="#1f5f99"/>
+<text x="184.3" y="170" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">57 690</text>
+<text x="184.3" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">Kvinner</text>
+<rect x="381" y="162.7" width="48" height="189.3" fill="#16191c"/>
+<text x="405" y="156.7" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">62 070</text>
+<text x="405" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">Begge kjønn</text>
+<rect x="601.7" y="151.9" width="48" height="200.1" fill="#1f5f99"/>
+<text x="625.7" y="145.9" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">65 610</text>
+<text x="625.7" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">Menn</text>
+<line x1="24" x2="736" y1="390" y2="390" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="408" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 11418 (Yrkesfordelt månedslønn). Kvinners lønn: 87,9 % av menns</text>
+<text x="736" y="408" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>
