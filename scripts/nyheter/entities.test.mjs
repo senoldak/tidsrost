@@ -5,13 +5,13 @@ import { NORWEGIAN_ENTITIES, matchEntities, findEntities } from '../../src/lib/e
 test('NORWEGIAN_ENTITIES contains all 8 required Wikidata mappings', () => {
   const expected = [
     { name: 'Stortinget', sameAs: 'https://www.wikidata.org/wiki/Q109016', type: 'Organization' },
-    { name: 'Norges Bank', sameAs: 'https://www.wikidata.org/wiki/Q1145151', type: 'Organization' },
-    { name: 'Meteorologisk institutt', sameAs: 'https://www.wikidata.org/wiki/Q1779817', type: 'Organization' },
-    { name: 'Equinor', sameAs: 'https://www.wikidata.org/wiki/Q145547', type: 'Organization' },
-    { name: 'Jonas Gahr Støre', sameAs: 'https://www.wikidata.org/wiki/Q316021', type: 'Person' },
-    { name: 'NVE', sameAs: 'https://www.wikidata.org/wiki/Q1779822', type: 'Organization' },
-    { name: 'Oljefondet', sameAs: 'https://www.wikidata.org/wiki/Q1197779', type: 'Organization' },
-    { name: 'Statens vegvesen', sameAs: 'https://www.wikidata.org/wiki/Q1779841', type: 'Organization' },
+    { name: 'Norges Bank', sameAs: 'https://www.wikidata.org/wiki/Q970769', type: 'Organization' },
+    { name: 'Meteorologisk institutt', sameAs: 'https://www.wikidata.org/wiki/Q665666', type: 'Organization' },
+    { name: 'Equinor', sameAs: 'https://www.wikidata.org/wiki/Q1776022', type: 'Organization' },
+    { name: 'Jonas Gahr Støre', sameAs: 'https://www.wikidata.org/wiki/Q467948', type: 'Person' },
+    { name: 'NVE', sameAs: 'https://www.wikidata.org/wiki/Q3357659', type: 'Organization' },
+    { name: 'Oljefondet', sameAs: 'https://www.wikidata.org/wiki/Q1196231', type: 'Organization' },
+    { name: 'Statens vegvesen', sameAs: 'https://www.wikidata.org/wiki/Q1468793', type: 'Organization' },
   ];
 
   assert.equal(NORWEGIAN_ENTITIES.length, 8);
