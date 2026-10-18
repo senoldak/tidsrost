@@ -24,7 +24,7 @@ export const NORWEGIAN_ENTITIES: EntityMapping[] = [
   {
     name: 'Norges Bank',
     type: 'Organization',
-    sameAs: 'https://www.wikidata.org/wiki/Q1145151',
+    sameAs: 'https://www.wikidata.org/wiki/Q970769',
     keywords: [
       'Norges Bank',
       'Norges Banks',
@@ -35,7 +35,7 @@ export const NORWEGIAN_ENTITIES: EntityMapping[] = [
   {
     name: 'Meteorologisk institutt',
     type: 'Organization',
-    sameAs: 'https://www.wikidata.org/wiki/Q1779817',
+    sameAs: 'https://www.wikidata.org/wiki/Q665666',
     keywords: [
       'Meteorologisk institutt',
       'Meteorologisk Institutt',
@@ -47,7 +47,7 @@ export const NORWEGIAN_ENTITIES: EntityMapping[] = [
   {
     name: 'Equinor',
     type: 'Organization',
-    sameAs: 'https://www.wikidata.org/wiki/Q145547',
+    sameAs: 'https://www.wikidata.org/wiki/Q1776022',
     keywords: [
       'Equinor',
       'Equinors',
@@ -57,7 +57,7 @@ export const NORWEGIAN_ENTITIES: EntityMapping[] = [
   {
     name: 'Jonas Gahr Støre',
     type: 'Person',
-    sameAs: 'https://www.wikidata.org/wiki/Q316021',
+    sameAs: 'https://www.wikidata.org/wiki/Q467948',
     keywords: [
       'Jonas Gahr Støre',
       'Jonas Gahr Støres',
@@ -70,7 +70,7 @@ export const NORWEGIAN_ENTITIES: EntityMapping[] = [
   {
     name: 'NVE',
     type: 'Organization',
-    sameAs: 'https://www.wikidata.org/wiki/Q1779822',
+    sameAs: 'https://www.wikidata.org/wiki/Q3357659',
     keywords: [
       'NVE',
       'NVEs',
@@ -81,7 +81,7 @@ export const NORWEGIAN_ENTITIES: EntityMapping[] = [
   {
     name: 'Oljefondet',
     type: 'Organization',
-    sameAs: 'https://www.wikidata.org/wiki/Q1197779',
+    sameAs: 'https://www.wikidata.org/wiki/Q1196231',
     keywords: [
       'Oljefondet',
       'Oljefondets',
@@ -92,7 +92,7 @@ export const NORWEGIAN_ENTITIES: EntityMapping[] = [
   {
     name: 'Statens vegvesen',
     type: 'Organization',
-    sameAs: 'https://www.wikidata.org/wiki/Q1779841',
+    sameAs: 'https://www.wikidata.org/wiki/Q1468793',
     keywords: [
       'Statens vegvesen',
       'Statens Vegvesen',
