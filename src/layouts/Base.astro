@@ -104,11 +104,12 @@ const [nameHead, nameTail] = SITE.name.split('ø');
         <div class="container">
           {/* Haberlerin bir kısmı resmi kaynaklardan, bir kısmı birden fazla medyada doğrulanmış olaylardan (ki-medier); medya adı yazılmaz. */}
           <span class="sources"><Symbol kind="kilde" />Kilder: offentlige etater · hendelser bekreftet av flere medier</span>
-          <span>{SITE.description}</span>
+          <span class="tagline">{SITE.description}</span>
           <nav aria-label="Følg oss">
             {SITE.social.x && <a href={SITE.social.x} rel="noopener noreferrer" target="_blank" aria-label="X (åpnes i ny fane)">X</a>}
             {SITE.social.facebook && <a href={SITE.social.facebook} rel="noopener noreferrer" target="_blank" aria-label="Facebook (åpnes i ny fane)">Facebook</a>}
             {SITE.social.instagram && <a href={SITE.social.instagram} rel="noopener noreferrer" target="_blank" aria-label="Instagram (åpnes i ny fane)">Instagram</a>}
+            {SITE.social.linkedin && <a href={SITE.social.linkedin} rel="noopener noreferrer" target="_blank" aria-label="LinkedIn (åpnes i ny fane)">LinkedIn</a>}
             {SITE.social.telegram && <a href={SITE.social.telegram} rel="noopener noreferrer" target="_blank" aria-label="Telegram (åpnes i ny fane)">Telegram</a>}
             <a href="/rss.xml">RSS</a>
           </nav>
@@ -248,6 +249,7 @@ const [nameHead, nameTail] = SITE.name.split('ø');
             <li><a href="/personvern/">Personvern og informasjonskapsler</a></li>
             {SITE.social.facebook && <li><a href={SITE.social.facebook} rel="noopener noreferrer">Facebook</a></li>}
             {SITE.social.instagram && <li><a href={SITE.social.instagram} rel="noopener noreferrer">Instagram</a></li>}
+            {SITE.social.linkedin && <li><a href={SITE.social.linkedin} rel="noopener noreferrer">LinkedIn</a></li>}
             {SITE.social.telegram && <li><a href={SITE.social.telegram} rel="noopener noreferrer">Telegram-kanalen</a></li>}
             <li><a href="/rss.xml">RSS-strøm</a></li>
           </ul>

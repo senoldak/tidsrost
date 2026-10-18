@@ -1135,6 +1135,15 @@ main.container {
     font-size: 1rem;
   }
 
+  /* Dar ekranda üst şeritte yer sosyal linklere kalır. */
+  .sheet-margin .tagline {
+    display: none;
+  }
+
+  .sheet-margin .container {
+    justify-content: flex-end;
+  }
+
   .mast-inner {
     flex-direction: column;
     align-items: flex-start;
