@@ -1,26 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 350" width="760" height="350" role="img" aria-label="Kollektivreiser etter transportmiddel i 2025">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 314" width="760" height="314" role="img" aria-label="Kollektivreiser etter transportmiddel i 2025">
 <title>Kollektivreiser etter transportmiddel i 2025</title>
-<rect width="760" height="350" fill="#fdfdfb"/>
+<rect width="760" height="314" fill="#fdfdfb"/>
 <rect x="0" y="0" width="760" height="2" fill="#16191c"/>
 <text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Kollektivreiser etter transportmiddel i 2025</text>
-<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Fordeling av 712 millioner påstigninger i Norge</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Passasjerer i millioner</text>
 <text x="230" y="119" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Buss</text>
-<rect x="240" y="104" width="379.0" height="20" fill="#16191c"/>
-<text x="627.0" y="119" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">416 mill. (58,4 %)</text>
-<text x="230" y="155" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Forstadsbane og T-bane</text>
-<rect x="240" y="140" width="113.0" height="20" fill="#1f5f99"/>
-<text x="361.0" y="155" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">124 mill. (17,4 %)</text>
-<text x="230" y="191" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Jernbane (tog)</text>
-<rect x="240" y="176" width="76.5" height="20" fill="#1f5f99"/>
-<text x="324.5" y="191" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">84 mill. (11,8 %)</text>
-<text x="230" y="227" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Trikk</text>
-<rect x="240" y="212" width="51.0" height="20" fill="#1f5f99"/>
-<text x="299.0" y="227" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">56 mill. (7,9 %)</text>
-<text x="230" y="263" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Passasjerbåt og ferge</text>
-<rect x="240" y="248" width="29.2" height="20" fill="#1f5f99"/>
-<text x="277.2" y="263" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">32 mill. (4,5 %)</text>
-<line x1="240" x2="240" y1="98" y2="276" stroke="#16191c" stroke-width="1"/>
-<line x1="24" x2="736" y1="312" y2="312" stroke="#dcded8" stroke-width="1"/>
-<text x="24" y="330" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, kollektivtransportstatistikken</text>
-<text x="736" y="330" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+<rect x="240" y="104" width="390.0" height="20" fill="#16191c"/>
+<text x="638.0" y="119" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">459</text>
+<text x="230" y="155" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Trikk, T-bane og forstadsbane</text>
+<rect x="240" y="140" width="160.6" height="20" fill="#1f5f99"/>
+<text x="408.6" y="155" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">189</text>
+<text x="230" y="191" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Tog</text>
+<rect x="240" y="176" width="71.4" height="20" fill="#1f5f99"/>
+<text x="319.4" y="191" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">84</text>
+<text x="230" y="227" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Båt</text>
+<rect x="240" y="212" width="9.3" height="20" fill="#1f5f99"/>
+<text x="257.3" y="227" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">11</text>
+<line x1="240" x2="240" y1="98" y2="240" stroke="#16191c" stroke-width="1"/>
+<line x1="24" x2="736" y1="276" y2="276" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="294" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 11570</text>
+<text x="736" y="294" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
 </svg>

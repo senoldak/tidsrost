@@ -1,60 +1,55 @@
 ---
-title: "Tre av fire husholdninger eier egen bolig – Husbankens utlånsramme styrket til 30 milliarder kroner"
-description: "Over 76 prosent av norske husholdninger eier sin egen bolig. Gjennom en kraftig opptrappet utlånsramme i Husbanken får flere barnefamilier, førstegangskjøpere og studenter finansiering til trygge hjem."
+title: "Nær tre av fire husholdninger eier egen bolig – Husbanken betalte ut startlån til 7 373 husstander i 2025"
+description: "72,7 prosent av norske husholdninger eier boligen de bor i. Gjennom Husbankens startlån, som kommunene formidler, fikk 7 373 husstander til sammen 16,1 milliarder kroner til å kjøpe bolig i 2025."
 date: 2026-10-28T08:00:00+01:00
 category: okonomi
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Tre av fire husholdninger eier egen bolig – Husbankens utlånsramme styrket til 30 milliarder kroner»"
+coverAlt: "Illustrasjon: «Nær tre av fire husholdninger eier egen bolig – Husbanken betalte ut startlån til 7 373 husstander i 2025»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Den norske eierlinjen i boligpolitikken gjør at et stort flertall av befolkningen tar del i verdiskapingen i boligmarkedet, mens Husbanken og kommunene sikrer at også familier uten egenkapital kan kjøpe egen bolig."
+why_matters: "De fleste husholdninger eier boligen sin, og Husbanken og kommunene gir også husstander som ikke får vanlig bankfinansiering mulighet til å kjøpe egen bolig."
 key_points:
-  - "76,6 prosent av alle husholdninger i Norge eier boligen de bor i – fordelt på 62,8 prosent selveiere og 13,8 prosent andelseiere i borettslag."
-  - "Husbankens årlige utlånsramme er økt fra 19 milliarder kroner i 2020 til rundt 30 milliarder kroner i 2026."
-  - "Over 7 500 husstander får hvert år hjelp til å kjøpe egen bolig gjennom kommunale startlån finansiert av Husbanken."
+  - "72,7 prosent av alle husholdninger i Norge eide boligen sin i 2025 – fordelt på 59,2 prosent selveiere og 13,5 prosent andels- eller aksjeeiere."
+  - "I 2025 ble det utbetalt 7 373 startlån fra Husbanken, til sammen 16,1 milliarder kroner, og om lag 61 prosent gikk til barnefamilier."
+  - "Regjeringen oppgir at Husbankens låneramme for 2026 er 34 milliarder kroner, 15 milliarder mer enn da regjeringen tiltrådte."
 ---
 
-Eierlinjen har vært et bærende prinsipp i norsk boligpolitikk siden etterkrigstiden. Ifølge boforholdsstatistikken fra Statistisk sentralbyrå (SSB) eier 76,6 prosent av norske husholdninger sin egen bolig, og regnes antall personer i stedet for husholdninger, bor over 81 prosent av befolkningen i en bolig familien selv eier.
+Eierlinjen har vært et bærende prinsipp i norsk boligpolitikk i flere tiår. Ifølge SSBs boforholdsstatistikk eide 72,7 prosent av norske husholdninger boligen sin i 2025: 59,2 prosent som selveiere og 13,5 prosent som andels- eller aksjeeiere, for eksempel i borettslag. De øvrige 27,3 prosent leide. Regnet i personer i stedet for husholdninger bodde 78,7 prosent i en bolig de selv eide eller var andelseiere i.
 
-For å sikre at flest mulig kan komme inn på boligmarkedet og bo trygt i alle deler av landet, har regjeringen og Stortinget løftet Husbankens utlånsramme fra 19 milliarder kroner i 2020 til rundt 30 milliarder kroner i 2026.
+Husbanken er statens virkemiddel for å hjelpe vanskeligstilte på boligmarkedet. Regjeringen oppgir at Husbankens låneramme for 2026 er 34 milliarder kroner, en økning på 15 milliarder kroner siden regjeringen tiltrådte. I forslaget til statsbudsjett for 2027 er rammen 34 milliarder kroner, om lag 2 milliarder kroner lavere enn 2026-nivået etter revidert nasjonalbudsjett.
 
-## Startlån hjelper barnefamilier inn i egen bolig
+## Startlån hjelper husstander inn i egen bolig
 
-Husbankens største enkeltvirkemiddel er startlånet, som formidles i samarbeid med landets 357 kommuner. Ordningen er rettet mot barnefamilier, eldre, personer med nedsatt funksjonsevne og andre som har fast inntekt til å betjene et boliglån over tid, men som ikke får ordinært lån i privatbank fordi de mangler oppspart egenkapital.
+Husbankens største enkeltvirkemiddel er startlånet, som kommunene formidler. Ordningen er rettet mot husstander som har fast inntekt til å betjene et boliglån, men som ikke får lån i ordinær bank. I 2025 utbetalte 328 av landets 357 kommuner startlån. Totalt ble det utbetalt 7 373 startlån på til sammen 16,1 milliarder kroner, mot 8 016 lån og 17 milliarder kroner i 2024. Et gjennomsnittlig startlån var litt under 2,2 millioner kroner. Om lag 61 prosent av lånene gikk til barnefamilier.
 
-![Stolpediagram over Husbankens utlånsramme fra 2020 til 2026 i milliarder kroner: 19,0 i 2020, 20,0 i 2021, 21,5 i 2022, 24,0 i 2023, 29,0 i 2024 og 30,0 i 2026.](./graf-1.svg)
-*Husbankens årlige utlånsramme i milliarder kroner, 2020–2026. Kilde: Husbanken og Kommunal- og distriktsdepartementet.*
-
-Hvert år får over 7 500 husstander innvilget startlån til boligkjøp eller nødvendig utbedring av boligen, og mer enn halvparten av lånene går til barnefamilier, slik at barna sikres en stabil oppvekst i nærmiljøet sitt.
+For 2027 foreslår regjeringen at inntil 19 milliarder kroner av lånerammen prioriteres til startlån.
 
 ## Eierformer og Husbankens viktigste ordninger
 
-Tabellen viser hvordan Husbankens utlån og tilskudd støtter opp under boligforsyningen i hele landet:
+Tabellen viser noen av Husbankens ordninger:
 
 | Virkemiddel i Husbanken | Målgruppe | Hovedformål |
 |---|---|---|
-| Startlån (via kommunene) | Barnefamilier og langsiktig vanskeligstilte | Kjøp av egen bolig uten krav om ordinær egenkapital |
-| Lån og tilskudd til studentboliger | Studentsamskipnader og stiftelser | Bygging av tusenvis av rimelige studentboliger |
-| Lån til boligkvalitet og utleieboliger | Kommuner og utbyggere i distriktene | Eldreboliger, trygdeboliger og miljøvennlige bygg |
-| Bostøtte | Husstander med lave inntekter og høye boutgifter | Månedlig økonomisk støtte til strøm, husleie eller boliglån |
+| Startlån (via kommunene) | Vanskeligstilte på boligmarkedet med fast inntekt | Kjøp av egen bolig når ordinær bankfinansiering ikke er tilgjengelig |
+| Lån og tilskudd til studentboliger | Studentsamskipnader og stiftelser | Bygging av studentboliger |
+| Lån til boligkvalitet | Kommuner og utbyggere | Bygging og utbedring av boliger med god kvalitet |
+| Bostøtte | Husstander med lave inntekter og høye boutgifter | Månedlig økonomisk støtte til boutgifter |
 
-*Kilde: Husbanken og Kommunal- og distriktsdepartementet.*
+*Kilde: Husbanken.*
 
-I tillegg mottar over 120 000 husstander i Norge statlig bostøtte i løpet av året, en rettighetsbasert ordning som utbetales månedlig av Husbanken og kommunene for å holde bo- og strømutgiftene håndterbare.
+Bostøtten er en rettighetsbasert ordning. For 2027 anslår regjeringen at om lag 92 900 husstander i gjennomsnitt vil få bostøtte hver måned, og at utbetalingene blir om lag 4,2 milliarder kroner.
 
-![Liggende stolpediagram over husholdninger i Norge etter eierstatus: Selveiere 62,8 prosent, andelseiere i borettslag 13,8 prosent og leietakere 23,4 prosent.](./graf-2.svg)
-*Fordeling av husholdninger i Norge etter eierstatus. Kilde: SSB, tabell 11084.*
+![Liggende stolpediagram over husholdninger i Norge etter eierstatus i 2025: selveiere 59,2 prosent, andels- eller aksjeeiere 13,5 prosent og leietakere 27,3 prosent.](./graf-2.svg)
+*Fordeling av husholdninger i Norge etter eierstatus, 2025. Kilde: SSB, tabell 14891.*
 
-## Satsing på studentboliger og boligbygging i distriktene
+## Lån til boligkvalitet i 2026
 
-Gjennom tilskudd og gunstige lån fra Husbanken finansierer staten hvert år bygging av mellom 1 500 og 2 000 nye studentboliger hos studentsamskipnadene, slik at dekningsgraden for studentboliger på landsbasis har økt jevnt.
-
-Samtidig har regjeringen utvidet bruken av Husbankens lån til boligkvalitet i distriktskommuner, noe som gjør det enklere å finansiere nye helårsboliger og eldrevennlige leiligheter i mindre lokalsamfunn der tomte- og byggekostnadene ellers kan overstige markedsverdien ved ferdigstillelse.
+I 2026 omfordelte regjeringen 2 milliarder kroner innenfor Husbankens låneramme til lån til boligkvalitet, og understreket at kommunene ikke skal få avslag på søknader om startlån.
 
 ## Kilder
 
-- [SSB: Boforhold, registerbasert statistikk over eierstatus og boligtyper](https://www.ssb.no/bygg-bolig-og-eiendom/bolig-og-boforhold/statistikk/boforhold-registerbasert)
-- [SSB Statistikkbanken: Tabell 11084 – Husholdninger etter eierstatus](https://www.ssb.no/statbank/table/11084)
-- [Husbanken: Årsrapporter, statistikk og nøkkeltall for lån og tilskudd](https://www.husbanken.no/om-husbanken/statistikk/)
-- [Kommunal- og distriktsdepartementet: Meld. St. 13 (2023–2024) Bustadmeldinga – Ein heilskapleg og aktiv bustadpolitikk for heile landet](https://www.regjeringen.no/no/dokumenter/meld.-st.-13-20232024/id3030675/)
+- [SSB Statistikkbanken: Tabell 14891 – Husholdninger etter eierstatus](https://www.ssb.no/statbank/table/14891)
+- [Husbanken: Startlån – ny analyse (februar 2026)](https://kommunikasjon.ntb.no/pressemelding/18794022/vanskeligere-a-kjope-bolig-med-startlan)
+- [Regjeringen: Omfordeler mer penger til lån til boligkvalitet](https://www.regjeringen.no/no/aktuelt/omfordeler-mer-penger-til-lan-til-boligkvalitet/id3156203/)
+- [Husbanken: Forslaget til statsbudsjett for 2027](https://kommunikasjon.ntb.no/pressemelding/19096870/forslaget-til-statsbudsjett-for-2027-pa-ansvarsomradet-til-husbanken-bolig-og-bygningsdirektoratet)

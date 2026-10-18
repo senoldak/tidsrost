@@ -1,36 +1,34 @@
 ---
-title: "Forventet levealder i Norge har nådd 84,8 år for kvinner og 81,7 år for menn"
-description: "Levealderen i Norge er blant de aller høyeste i verden, og forskjellen mellom kvinner og menn er halvert på tre tiår. Kraftig nedgang i hjerte- og karsykdommer og røyking løfter folkehelsen."
+title: "Forventet levealder i Norge er 84,9 år for kvinner og 81,6 år for menn"
+description: "Forventet levealder ved fødselen i Norge var 83,2 år i 2025. Forskjellen mellom kvinner og menn er omtrent halvert siden 1990, ifølge Folkehelseinstituttet."
 date: 2026-10-27T08:00:00+01:00
 category: innenriks
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Forventet levealder i Norge har nådd 84,8 år for kvinner og 81,7 år for menn»"
+coverAlt: "Illustrasjon: «Forventet levealder i Norge er 84,9 år for kvinner og 81,6 år for menn»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Forventet levealder oppsummerer utviklingen i levekår, forebyggende folkehelsearbeid og kvaliteten i helsetjenesten, og viser at stadig flere nordmenn får mange friske år som pensjonister."
+why_matters: "Forventet levealder oppsummerer utviklingen i levekår, folkehelsearbeid og kvaliteten i helsetjenesten."
 key_points:
-  - "I 2025 var forventet levealder ved fødselen i Norge 84,8 år for kvinner og 81,7 år for menn – opp 0,2 og 0,3 år fra året før."
-  - "Siden 1995 har forventet levealder økt med 6,9 år for menn og 4,0 år for kvinner, slik at kjønnsforskjellen er redusert til 3,1 år."
-  - "Dødeligheten av hjerte- og karsykdommer er redusert med over 70 prosent siden 1990, og andelen som røyker daglig er nede i rundt 6 prosent."
+  - "I 2025 var forventet levealder ved fødselen 84,9 år for kvinner og 81,6 år for menn, og 83,2 år for begge kjønn samlet, viser SSBs dødelighetstabeller."
+  - "Siden 1995 har forventet levealder økt med om lag 6,8 år for menn og 4,1 år for kvinner, og kjønnsforskjellen er nede i 3,3 år."
+  - "Andelen som røyker daglig er om lag 8 prosent blant menn og 7 prosent blant kvinner (18–74 år, 2021–2025), mot 36 og 33 prosent i 1991–1995."
 ---
 
-En jente født i Norge i 2025 kan forvente å bli 84,8 år gammel, mens en nyfødt gutt har en forventet levealder på 81,7 år, viser befolkningsstatistikken fra Statistisk sentralbyrå (SSB). Det plasserer Norge blant de fem landene i Europa med høyest levealder.
+En jente født i Norge i 2025 kan forvente å bli 84,9 år gammel, mens en nyfødt gutt har en forventet levealder på 81,6 år, viser dødelighetstabellene fra Statistisk sentralbyrå (SSB). For begge kjønn samlet er tallet 83,2 år. Folkehelseinstituttet (FHI) skriver at økningen fra 2024 til 2025 var liten sammenlignet med økningen før pandemien, og at levealderen i 2023 var tilbake på omtrent samme nivå som i 2019.
 
-Etter en kortvarig utflating i etterkant av pandemiårene har levealderen igjen steget markant i både 2024 og 2025. Også blant eldre har levetiden økt jevnt: En 65-årig kvinne i Norge kan i snitt regne med 22,2 gjenstående leveår (til 87,2 år), mens en 65-årig mann i snitt har 19,9 gjenstående leveår (til 84,9 år).
+Også blant eldre har levetiden økt over tid: En 65-årig kvinne i Norge kan i snitt regne med om lag 21,9 gjenstående leveår (til 86,9 år), mens en 65-årig mann i snitt har om lag 19,7 gjenstående leveår (til 84,7 år).
 
-## Menn har tatt igjen mer enn halvparten av forspranget
+## Kjønnsforskjellen er omtrent halvert siden 1990
 
-På midten av 1980-tallet levde norske kvinner i snitt nesten sju år lenger enn menn. Siden den gang har levealderen steget langt raskere blant menn enn blant kvinner: Fra 1995 til 2025 økte menns forventede levealder med hele 6,9 år (fra 74,8 til 81,7 år), mens kvinners levealder økte med 4,0 år (fra 80,8 til 84,8 år).
+Siden 1995 har menns forventede levealder økt med 6,8 år (fra 74,8 til 81,6 år), mens kvinners har økt med 4,1 år (fra 80,8 til 84,9 år). Dermed er forskjellen mellom kjønnene nede i 3,3 år. FHI oppgir at forskjellen var 6,4 år i 1990, og at den dermed er omtrent halvert.
 
-Dermed er forskjellen i forventet levealder mellom kjønnene nede i 3,1 år – blant de minste kjønnsforskjellene som er registrert i moderne tid.
-
-![Stolpediagram over forventet levealder ved fødselen i Norge (begge kjønn samlet) fra 1995 til 2025: 77,8 år i 1995, 78,9 år i 2001, 80,5 år i 2007, 81,8 år i 2013, 83,0 år i 2019 og 83,3 år i 2025.](./graf-1.svg)
-*Forventet levealder ved fødselen i Norge (år, gjennomsnitt for begge kjønn), 1995–2025. Kilde: SSB, tabell 07902.*
+![Stolpediagram over forventet levealder ved fødselen i Norge (begge kjønn samlet): 77,8 år i 1995, 78,9 år i 2001, 80,5 år i 2007, 81,7 år i 2013, 83,0 år i 2019 og 83,2 år i 2025.](./graf-1.svg)
+*Forventet levealder ved fødselen i Norge (år, gjennomsnitt for begge kjønn), utvalgte år 1995–2025. Kilde: SSB, tabell 07902.*
 
 ## Utviklingen i forventet levealder gjennom 30 år
 
-Tabellen under viser utviklingen i forventet levealder ved fødselen for kvinner og menn i Norge siden 1995:
+Tabellen viser forventet levealder ved fødselen for kvinner og menn i Norge siden 1995:
 
 | År | Kvinner (år) | Menn (år) | Forskjell (år) |
 |---|---:|---:|---:|
@@ -38,25 +36,25 @@ Tabellen under viser utviklingen i forventet levealder ved fødselen for kvinner
 | 2005 | 82,5 | 77,7 | 4,8 |
 | 2015 | 84,2 | 80,4 | 3,8 |
 | 2020 | 84,9 | 81,5 | 3,4 |
-| 2024 | 84,6 | 81,4 | 3,2 |
-| 2025 | 84,8 | 81,7 | 3,1 |
+| 2024 | 84,8 | 81,6 | 3,2 |
+| 2025 | 84,9 | 81,6 | 3,3 |
 
-*Kilde: SSB, tabell 07902.*
+*Kilde: SSB, tabell 07902. Tallene er avrundet til én desimal, og forskjellen er regnet ut fra de avrundede tallene.*
 
-Også regionalt er forskjellene i levealder relativt små sammenlignet med andre land. Sogn og Fjordane (Vestland), Møre og Romsdal, Rogaland og Akershus har gjennomgående de høyeste tallene, men levealderen har økt betydelig i samtlige norske fylker.
+I 2025 hadde Sverige den høyeste forventede levealderen i Norden for begge kjønn, med Norge på andreplass, ifølge FHI.
 
-![Liggende stolpediagram over forventet levealder etter kjønn i 2025: Kvinner ved fødsel 84,8 år, menn ved fødsel 81,7 år, kvinner ved fylte 65 år 87,2 år og menn ved fylte 65 år 84,9 år.](./graf-2.svg)
-*Forventet levealder ved fødsel og ved fylte 65 år i 2025. Kilde: SSB.*
+![Liggende stolpediagram over forventet levealder etter kjønn i 2025: kvinner ved fødselen 84,9 år, menn ved fødselen 81,6 år, kvinner ved fylte 65 år 86,9 år og menn ved fylte 65 år 84,7 år.](./graf-2.svg)
+*Forventet levealder ved fødselen og ved fylte 65 år i 2025. Kilde: SSB, tabell 07902.*
 
-## Kraftig nedgang i hjerte- og karsykdommer og bedre kreftoverlevelse
+## Færre røyker, og kreftoverlevelsen er høy
 
-Ifølge Folkehelseinstituttets (FHI) *Folkehelserapport* er den viktigste medisinske forklaringen på de ekstra leveårene at dødeligheten av hjerte- og karsykdommer har falt med mer enn 70 prosent siden 1990. Dette skyldes både bedre akuttbehandling ved norske sykehus, forebyggende legemidler mot høyt blodtrykk og kolesterol, og store endringer i levevaner.
+Ifølge FHI skyldes økningen i levealder først og fremst lavere dødelighet av blant annet hjerte- og karsykdommer og kreft. Røykeslutt har gitt store helsegevinster: I perioden 1991–1995 røykte 36 prosent av menn og 33 prosent av kvinner daglig, mens andelen i 2021–2025 var 8 prosent blant menn og 7 prosent blant kvinner (18–74 år, aldersstandardisert).
 
-Spesielt har røykeslutt gitt store helsegevinster: Andelen av den voksne befolkningen som røyker daglig, er redusert fra over 30 prosent rundt årtusenskiftet til om lag 6 prosent i dag, og blant unge voksne under 35 år er dagligrøyking nede i rundt 2 prosent. Samtidig viser tall fra Kreftregisteret ved FHI at tre av fire som får en kreftdiagnose i Norge i dag, lever minst fem år etter at sykdommen ble oppdaget – støttet av nasjonale screeningprogrammer og pakkeforløp i helsetjenesten.
+Kreftregisteret ved FHI oppgir i rapporten *Cancer in Norway 2025* at 5-års relativ overlevelse for alle krefttyper samlet er 78 prosent.
 
 ## Kilder
 
-- [SSB: Døde og forventet levealder i Norge](https://www.ssb.no/befolkning/fodte-og-dode/statistikk/dode)
-- [SSB Statistikkbanken: Tabell 07902 – Forventet gjenstående levetid etter kjønn og alder](https://www.ssb.no/statbank/table/07902)
-- [Folkehelseinstituttet (FHI): Folkehelserapporten – Helsetilstanden i Norge](https://www.fhi.no/he/folkehelserapporten/)
-- [Helse- og omsorgsdepartementet: Nasjonal helse- og samhandlingsplan og folkehelsearbeid](https://www.regjeringen.no/no/tema/helse-og-omsorg/folkehelse/id10877/)
+- [SSB Statistikkbanken: Tabell 07902 – Dødelighetstabeller](https://www.ssb.no/statbank/table/07902)
+- [Folkehelseinstituttet: Forventet levealder i Norge](https://www.fhi.no/he/folkehelserapporten/samfunn/levealder/)
+- [Folkehelseinstituttet: Tobakksbruk blant voksne](https://fhi.no/is/ncd/tobakk/voksne)
+- [Folkehelseinstituttet: Cancer in Norway 2025](https://www.fhi.no/publ/2026/cancer-in-norway-2025/)

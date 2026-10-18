@@ -3,27 +3,27 @@
 <rect width="760" height="386" fill="#fdfdfb"/>
 <rect x="0" y="0" width="760" height="2" fill="#16191c"/>
 <text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Studenter etter fagfelt i 2025</text>
-<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Andel av studentmassen ved universiteter og høgskoler</text>
-<text x="230" y="119" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Økonomi og administrasjon</text>
-<rect x="240" y="104" width="297.9" height="20" fill="#16191c"/>
-<text x="545.9" y="119" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">21,8 %</text>
-<text x="230" y="155" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Helse-, sosial- og idrettsfag</text>
-<rect x="240" y="140" width="267.9" height="20" fill="#1f5f99"/>
-<text x="515.9" y="155" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">19,6 %</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Andel av alle registrerte studenter ved universiteter og høgskoler</text>
+<text x="230" y="119" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Helse-, sosial- og idrettsfag</text>
+<rect x="240" y="104" width="390.0" height="20" fill="#16191c"/>
+<text x="638.0" y="119" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">20,3 %</text>
+<text x="230" y="155" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Økonomi og administrasjon</text>
+<rect x="240" y="140" width="384.2" height="20" fill="#1f5f99"/>
+<text x="632.2" y="155" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">20,0 %</text>
 <text x="230" y="191" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Naturvitenskap og teknologi</text>
-<rect x="240" y="176" width="237.8" height="20" fill="#1f5f99"/>
-<text x="485.8" y="191" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">17,4 %</text>
-<text x="230" y="227" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Samfunnsfag og juridiske fag</text>
-<rect x="240" y="212" width="207.7" height="20" fill="#1f5f99"/>
-<text x="455.7" y="227" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">15,2 %</text>
-<text x="230" y="263" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Lærerutdanning og pedagogikk</text>
-<rect x="240" y="248" width="192.7" height="20" fill="#1f5f99"/>
-<text x="440.7" y="263" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">14,1 %</text>
+<rect x="240" y="176" width="334.3" height="20" fill="#1f5f99"/>
+<text x="582.3" y="191" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">17,4 %</text>
+<text x="230" y="227" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Lærerutdanning og pedagogikk</text>
+<rect x="240" y="212" width="274.7" height="20" fill="#1f5f99"/>
+<text x="522.7" y="227" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">14,3 %</text>
+<text x="230" y="263" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Samfunnsfag og juridiske fag</text>
+<rect x="240" y="248" width="257.4" height="20" fill="#1f5f99"/>
+<text x="505.4" y="263" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">13,4 %</text>
 <text x="230" y="299" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Humanistiske og estetiske fag</text>
-<rect x="240" y="284" width="162.6" height="20" fill="#1f5f99"/>
-<text x="410.6" y="299" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">11,9 %</text>
+<rect x="240" y="284" width="169.1" height="20" fill="#1f5f99"/>
+<text x="417.1" y="299" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">8,8 %</text>
 <line x1="240" x2="240" y1="98" y2="312" stroke="#16191c" stroke-width="1"/>
 <line x1="24" x2="736" y1="348" y2="348" stroke="#dcded8" stroke-width="1"/>
-<text x="24" y="366" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB og HK-dir (DBH)</text>
+<text x="24" y="366" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 05576</text>
 <text x="736" y="366" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
 </svg>

@@ -1,60 +1,58 @@
 ---
-title: "Norge investerer 98,2 milliarder kroner i forskning og utvikling – kunstig intelligens og grønn teknologi i front"
-description: "Samlede utgifter til forskning og utviklingsarbeid (FoU) i Norge har vokst til 98,2 milliarder kroner. Næringslivet står for halvparten av innsatsen, mens regjeringens milliardsatsing på kunstig intelligens løfter teknologimiljøene."
+title: "Norge brukte 94,4 milliarder kroner på forskning og utvikling i 2024 – næringslivet står for nær halvparten"
+description: "Samlede utgifter til forskning og utviklingsarbeid (FoU) i Norge var 94,4 milliarder kroner i 2024. Næringslivet utførte nær halvparten, og regjeringen har satt av minst én milliard kroner over fem år til forskning på kunstig intelligens."
 date: 2026-10-22T08:00:00+02:00
 category: teknologi
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Norge investerer 98,2 milliarder kroner i forskning og utvikling – kunstig intelligens og grønn teknologi i front»"
+coverAlt: "Illustrasjon: «Norge brukte 94,4 milliarder kroner på forskning og utvikling i 2024 – næringslivet står for nær halvparten»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Forskning og utvikling legger grunnlaget for nye arbeidsplasser, medisinske gjennombrudd, mer effektive offentlige tjenester og lavutslippsløsninger i norsk industri."
+why_matters: "Forskning og utvikling legger grunnlaget for nye arbeidsplasser, medisinske framskritt, mer effektive offentlige tjenester og lavutslippsløsninger i norsk industri."
 key_points:
-  - "De samlede utgiftene til forskning og utvikling (FoU) i Norge utgjorde 98,2 milliarder kroner i 2025, opp fra 76,2 milliarder kroner i 2019."
-  - "Næringslivet utførte FoU for 49,3 milliarder kroner (50,2 prosent), universiteter og høgskoler for 29,8 milliarder (30,3 prosent) og forskningsinstituttene for 19,1 milliarder (19,5 prosent)."
-  - "Gjennom Forskningsrådet og nasjonal KI-satsing er det opprettet seks nasjonale forskningssentre for kunstig intelligens med over en milliard kroner i statlig støtte."
+  - "De samlede FoU-utgiftene i Norge var 94,4 milliarder kroner i 2024, opp fra 76,8 milliarder kroner i 2019, målt i løpende priser."
+  - "Næringslivet utførte FoU for 46,6 milliarder kroner (49,4 prosent), universiteter og høgskoler for 30,1 milliarder (31,9 prosent) og instituttsektoren for 17,7 milliarder (18,7 prosent)."
+  - "Regjeringen har satt av minst én milliard kroner over fem år til forskning på kunstig intelligens, og seks nasjonale forskningssentre for KI ble besluttet opprettet i juni 2025."
 ---
 
-I 2025 ble det utført forskning og utviklingsarbeid (FoU) i Norge for 98,2 milliarder kroner, viser FoU-statistikken fra Statistisk sentralbyrå (SSB) og Nordisk institutt for studier av innovasjon, forskning og utdanning (NIFU). Målt i løpende priser har de årlige investeringene i ny kunnskap og teknologi økt med nær 29 prosent siden 2019.
+I 2024 ble det utført forskning og utviklingsarbeid (FoU) i Norge for 94,4 milliarder kroner, viser FoU-statistikken fra Statistisk sentralbyrå (SSB). Målt i løpende priser er det en økning på 23 prosent fra 2019, men nivået var omtrent uendret fra 2023, da utgiftene var 94,5 milliarder kroner. 2024 er det siste året SSB har publisert samlede tall for.
 
-Totalt ble det lagt ned mer enn 52 000 årsverk i norsk forskning og utvikling i løpet av året, fordelt mellom bedrifter, universiteter, universitetssykehus og uavhengige forskningsinstitutter som SINTEF, Havforskningsinstituttet og Folkehelseinstituttet.
+Det ble utført 52 367 FoU-årsverk i 2024, fordelt mellom bedrifter, universiteter og høgskoler (inkludert helseforetakene) og forskningsinstitutter. Antall årsverk var lavere enn i 2023, da det var 54 597.
 
-## Næringslivet står for halvparten av forskningsinnsatsen
+## Næringslivet står for nær halvparten av forskningsinnsatsen
 
-Det norske forskningssystemet er delt inn i tre utførende sektorer som utfyller hverandre. Næringslivet er den største aktøren og sto i 2025 for 49,3 milliarder kroner – 50,2 prosent av de samlede FoU-utgiftene. Universitets- og høgskolesektoren (inkludert helseforetakene) sto for 29,8 milliarder kroner (30,3 prosent), mens instituttsektoren utførte oppdrags- og anvendt forskning for 19,1 milliarder kroner (19,5 prosent).
+Det norske forskningssystemet er delt inn i tre utførende sektorer. Næringslivet er den største og sto i 2024 for 46,6 milliarder kroner, 49,4 prosent av de samlede FoU-utgiftene. Universitets- og høgskolesektoren (inkludert helseforetakene) sto for 30,1 milliarder kroner (31,9 prosent), mens instituttsektoren utførte forskning for 17,7 milliarder kroner (18,7 prosent).
 
-![Stolpediagram over samlede FoU-utgifter i Norge 2019–2025 i milliarder kroner: 76,2 i 2019, 78,6 i 2020, 82,1 i 2021, 86,9 i 2022, 91,4 i 2023, 94,8 i 2024 og 98,2 i 2025.](./graf-1.svg)
-*Samlede utgifter til forskning og utviklingsarbeid (FoU) i Norge, løpende milliarder kroner. Kilde: SSB, tabell 07967 og NIFU.*
+![Stolpediagram over samlede FoU-utgifter i Norge 2019–2024 i milliarder kroner: 76,8 i 2019, 77,7 i 2020, 81,6 i 2021, 88,9 i 2022, 94,5 i 2023 og 94,4 i 2024.](./graf-1.svg)
+*Samlede utgifter til forskning og utviklingsarbeid (FoU) i Norge, løpende milliarder kroner. Kilde: SSB, tabell 11010.*
 
-For bedriftene er den statlige Skattefunn-ordningen, administrert av Norges forskningsråd i samarbeid med Skatteetaten, et av de viktigste virkemidlene. Gjennom Skattefunn kan alle norske bedrifter som utvikler nye eller forbedrede varer, tjenester eller produksjonsprosesser, få skattefradrag for opptil 19 prosent av prosjektkostnadene.
+For bedriftene er den statlige Skattefunn-ordningen, administrert av Norges forskningsråd i samarbeid med Skatteetaten, et av de viktigste virkemidlene. Gjennom Skattefunn kan bedrifter som driver forsknings- og utviklingsprosjekter få skattefradrag på 19 prosent av prosjektkostnadene.
 
 ## Slik fordeler FoU-midlene seg mellom sektorene
 
-Tabellen viser utviklingen i FoU-utgifter og forskningsårsverk i de tre sektorene:
+Tabellen viser utviklingen i FoU-utgifter og FoU-årsverk i de tre sektorene:
 
-| Utførende sektor | FoU-utgifter 2021 (mrd. kr) | FoU-utgifter 2025 (mrd. kr) | FoU-årsverk 2025 |
+| Utførende sektor | FoU-utgifter 2021 (mrd. kr) | FoU-utgifter 2024 (mrd. kr) | FoU-årsverk 2024 |
 |---|---:|---:|---:|
-| Næringslivet | 40,8 | 49,3 | 24 900 |
-| Universiteter og høgskoler | 25,6 | 29,8 | 17 600 |
-| Instituttsektoren | 15,7 | 19,1 | 9 800 |
-| **Norge i alt** | **82,1** | **98,2** | **52 300** |
+| Næringslivet | 38,3 | 46,6 | 25 583 |
+| Universiteter og høgskoler | 26,9 | 30,1 | 16 798 |
+| Instituttsektoren | 16,4 | 17,7 | 9 986 |
+| **Norge i alt** | **81,6** | **94,4** | **52 367** |
 
-*Kilde: SSB, tabell 07967 og Indikatorrapporten (NIFU/Forskningsrådet).*
+*Kilde: SSB, tabell 11010.*
 
-I næringslivet er det informasjonsteknologi og programvareutvikling som utgjør det største teknologifeltet, tett fulgt av maritim teknologi, havbruk, fornybar energi og legemiddelutvikling.
-
-![Liggende stolpediagram over FoU-innsats etter utførende sektor i 2025: Næringslivet 49,3 mrd. kr (50,2 %), universiteter og høgskoler 29,8 mrd. kr (30,3 %) og instituttsektoren 19,1 mrd. kr (19,5 %).](./graf-2.svg)
-*FoU-utgifter etter utførende sektor i 2025. Kilde: SSB og NIFU.*
+![Liggende stolpediagram over FoU-utgifter etter utførende sektor i 2024: næringslivet 46,6 mrd. kr, universiteter og høgskoler 30,1 mrd. kr og instituttsektoren 17,7 mrd. kr.](./graf-2.svg)
+*FoU-utgifter etter utførende sektor i 2024, milliarder kroner. Kilde: SSB, tabell 11010.*
 
 ## Milliardsatsing på kunstig intelligens og Horisont Europa
 
-Som del av *Langtidsplanen for forskning og høyere utdanning* har regjeringen satt av en ekstra milliard kroner over fem år til forskning på kunstig intelligens og digital sikkerhet. Midlene har blant annet finansiert opprettelsen av seks nye nasjonale forskningssentre for kunstig intelligens (KI-sentre) gjennom Norges forskningsråd, der forskere samarbeider med sykehus, kommuner og bedrifter om trygg og samfunnsnyttig bruk av KI.
+Sommeren 2023 satte regjeringen av minst én milliard kroner over fem år til forskning på kunstig intelligens. I juni 2025 besluttet regjeringen og Kunnskapsdepartementet å opprette seks nasjonale forskningssentre for kunstig intelligens gjennom Norges forskningsråd.
 
-Samtidig hevder norske forskningsmiljøer seg sterkt internasjonalt: Gjennom EUs rammeprogram *Horisont Europa* har norske universiteter, institutter og bedrifter hentet hjem over 15 milliarder kroner til felles europeiske prosjekter innen klima, helse, hav og kvanteteknologi.
+Norske forskere deltar også i EUs rammeprogram Horisont Europa. Ifølge Kunnskapsdepartementet hadde norske aktører per november 2024 fått tildelt nesten 15 milliarder kroner fra programmet, tilsvarende 3,31 prosent av midlene som var lyst ut.
 
 ## Kilder
 
-- [SSB: Forskning og utvikling i næringslivet og samlet FoU-statistikk](https://www.ssb.no/teknologi-og-innovasjon/forskning-og-innovasjon-i-naeringslivet/statistikk/forskning-og-utvikling-i-naeringslivet)
-- [SSB Statistikkbanken: Tabell 07967 – Utgifter til FoU etter sektor](https://www.ssb.no/statbank/table/07967)
-- [Norges forskningsråd: Indikatorrapporten for det norske forsknings- og innovasjonssystemet](https://www.forskningsradet.no/indikatorrapporten/)
-- [Kunnskapsdepartementet: Langtidsplan for forskning og høyere utdanning](https://www.regjeringen.no/no/tema/forskning/innsiktsartikler/langtidsplan-for-forskning-og-hoyere-utdanning/id2353340/)
+- [SSB Statistikkbanken: Tabell 11010 – FoU-personale, FoU-årsverk og FoU-utgifter etter sektor](https://www.ssb.no/statbank/table/11010)
+- [Regjeringen: Regjeringens milliardsatsing – Norges seks nye forskningssentre for kunstig intelligens](https://www.regjeringen.no/no/aktuelt/regjeringens-milliardsatsing-dette-er-norges-seks-nye-forskningssentre-for-kunstig-intelligens/id3108609/)
+- [Regjeringen: Rekordmykje EU-pengar til norsk forsking](https://www.regjeringen.no/no/aktuelt/rekordmykje-eu-pengar-til-norsk-forsking/id3076431/)
+- [Skatteetaten: SkatteFUNN](https://www.skatteetaten.no/nn/bedrift-og-organisasjon/skatt-for-bedrift-og-organisasjon/skattemelding-for-naringsdrivande/fradrag/forskning-og-gave/skattefunn-ordninga/)
