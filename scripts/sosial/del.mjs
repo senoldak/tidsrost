@@ -96,24 +96,34 @@ async function rupload(url, tok, veri) {
 }
 
 // Haberde geçen şehrin yer sayfası varsa konum etiketi (saker.mjs YERLER).
-const yer = (s, alan) => (sakYeri(s) ? { [alan]: sakYeri(s) } : {});
+// Meta konumu reddederse (yer sayfası kaldırılmış vb.) paylaşım düşmesin: bir kez konumsuz denenir.
+const yer = (s, alan, konum) => (konum && sakYeri(s) ? { [alan]: sakYeri(s) } : {});
+const konumlu = (gonder) => async (s) => {
+  try {
+    return await gonder(s, true);
+  } catch (e) {
+    if (!sakYeri(s)) throw e;
+    console.warn(`[sosial] ${s.id}: konumla olmadı (${gizle(e.message).slice(0, 150)}), konumsuz deneniyor`);
+    return gonder(s, false);
+  }
+};
 
 const GONDER = {
-  ig_post: (s) => igYayimla({ image_url: bildeUrl(s.id, 'post'), caption: bildetekst(s, 'instagram'), ...yer(s, 'location_id') }),
+  ig_post: konumlu((s, k) => igYayimla({ image_url: bildeUrl(s.id, 'post'), caption: bildetekst(s, 'instagram'), ...yer(s, 'location_id', k) })),
   ig_story: (s) => igYayimla({ image_url: bildeUrl(s.id, 'story'), media_type: 'STORIES' }),
-  fb_post: async (s) => {
-    const r = await graph('POST', `${sayfaId}/photos`, { url: bildeUrl(s.id, 'post'), message: bildetekst(s, 'facebook'), published: 'true', ...yer(s, 'place') }, await sayfaTokeni());
+  fb_post: konumlu(async (s, k) => {
+    const r = await graph('POST', `${sayfaId}/photos`, { url: bildeUrl(s.id, 'post'), message: bildetekst(s, 'facebook'), published: 'true', ...yer(s, 'place', k) }, await sayfaTokeni());
     return r.post_id ?? r.id;
-  },
+  }),
   fb_story: async (s) => {
     const tok = await sayfaTokeni();
     const foto = await graph('POST', `${sayfaId}/photos`, { url: bildeUrl(s.id, 'story'), published: 'false' }, tok);
     const r = await graph('POST', `${sayfaId}/photo_stories`, { photo_id: foto.id }, tok);
     return r.post_id ?? foto.id;
   },
-  ig_reels: async (s) => {
+  ig_reels: konumlu(async (s, k) => {
     const veri = await video(s);
-    const kap = await graph('POST', `${igId}/media`, { media_type: 'REELS', upload_type: 'resumable', share_to_feed: 'true', caption: bildetekst(s, 'instagram'), ...yer(s, 'location_id') });
+    const kap = await graph('POST', `${igId}/media`, { media_type: 'REELS', upload_type: 'resumable', share_to_feed: 'true', caption: bildetekst(s, 'instagram'), ...yer(s, 'location_id', k) });
     await rupload(`https://rupload.facebook.com/ig-api-upload/v25.0/${kap.id}`, token, veri);
     // Video işlenmesi bir dakikayı bulabilir.
     for (let i = 0; ; i++) {
@@ -124,7 +134,7 @@ const GONDER = {
       await bekle(5000);
     }
     return (await graph('POST', `${igId}/media_publish`, { creation_id: kap.id })).id;
-  },
+  }),
   fb_reels: async (s) => {
     const veri = await video(s);
     const tok = await sayfaTokeni();
@@ -141,11 +151,13 @@ if (kontrol) {
   const { data } = await graph('GET', `${igId}/content_publishing_limit`, { fields: 'quota_usage,config' });
   console.log(`[sosial] ✓ Facebook Sayfası: ${name}`);
   console.log(`[sosial] ✓ Instagram: @${username}, 24 saatlik kota ${data?.[0]?.quota_usage ?? '?'}/${data?.[0]?.config?.quota_total ?? '?'}`);
-  // Konum etiketi kimlikleri (saker.mjs YERLER) yer sayfası olarak okunabiliyor mu.
+  // Konum etiketi: Graph API başka sayfaları okumaya izin vermiyor; Meta'nın kimliği kabul edip etmediği, yayımlanmayan
+  // bir Instagram kabıyla sınanır (kap 24 saatte kendiliğinden düşer, akışta görünmez).
+  const ornek = (await sakerOku()).filter((x) => paylasilir(x, Date.now(), 7 * 86400e3)).at(-1);
   for (const [by, id] of Object.entries(YERLER)) {
     try {
-      const r = await graph('GET', id, { fields: 'name,location{city,country}' }, await sayfaTokeni());
-      console.log(`[sosial] ✓ yer ${by}: ${r.name} (${r.location?.city ?? '?'}, ${r.location?.country ?? '?'})`);
+      const kap = await graph('POST', `${igId}/media`, { image_url: bildeUrl(ornek.id, 'post'), location_id: id });
+      console.log(`[sosial] ✓ yer ${by} (${id}): Instagram kabı kabul etti (${kap.id}, yayımlanmadı)`);
     } catch (e) {
       console.log(`[sosial] ! yer ${by} (${id}): ${gizle(e.message).slice(0, 200)}`);
     }
