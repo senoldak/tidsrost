@@ -5,6 +5,7 @@
 //   2. Kontrol masası (vaktsjef): olgu, atfetme, başlık, hassas konular.
 //   3. Sorun varsa yazara düzelttirme (en fazla 2 tur).
 //   4. Norveççe redaksiyon (språkvask): dilbilgisi, bokmål, yazım kuralları, çeviri kokan ifadeler.
+//      Onay turu (2) ile redaksiyon (4) tek çağrıda yapılır (vurderOgVask); onay gelmezse ayrı språkvask çağrısı kalır.
 //   5. Son kesin kontrol: redaksiyon olguları bozmadı mı?
 // Son kontrolde uydurma alıntı ya da kaynakta olmayan rakam kalırsa haber yayınlanmaz (stopp).
 // Uzunluk da kesin kontroldür: MIN_ORD_UTKAST altındaki taslak düzeltme turlarında uzatılır, olmazsa yayınlanmaz.
@@ -214,14 +215,22 @@ export function sjekkMedier(tekst) {
 
 // ── 2. Kontrol masası ──────────────────────────────────────────────────
 
-export async function vurder(sak, kilde, { pressemelding = true, medier = false } = {}) {
+const kesinProblemer = (sak, kilde, medier) => {
   const tekst = helTekst(sak);
-  const problemer = [...sjekkSitater(tekst, kilde), ...sjekkTall(tekst, kilde), ...sjekkNavn(tekst, kilde), ...sprakSjekk(tekst), ...(medier ? sjekkMedier(tekst) : []), ...sjekkLengde(sak), ...sjekkTittel(utenAvsenderprefiks(sak.title))];
+  return [...sjekkSitater(tekst, kilde), ...sjekkTall(tekst, kilde), ...sjekkNavn(tekst, kilde), ...sprakSjekk(tekst), ...(medier ? sjekkMedier(tekst) : []), ...sjekkLengde(sak), ...sjekkTittel(utenAvsenderprefiks(sak.title))];
+};
 
-  const svar = await gemini({
-    denetim: true,
-    schema: VURDERING_SKJEMA,
-    prompt: `Du er vaktsjef i en norsk nettavis og kontrollerer et KI-skrevet utkast mot kilden før publisering, etter Vær Varsom-plakaten. Vær streng: ved tvil, ikke godkjenn.
+// Kontrol masasının istemi (vurder ve vurderOgVask ortak kullanır).
+const sakBlokk = (sak) => `Tittel: ${sak.title}
+Ingress: ${sak.description}
+
+${sak.body}
+${sak.why_matters ? `
+Hvorfor viktig: ${sak.why_matters}` : ""}${Array.isArray(sak.key_points) && sak.key_points.length ? `
+Nøkkelpunkter: ${sak.key_points.join(" | ")}` : ""}`;
+
+function vurderPrompt(sak, kilde, { pressemelding, medier }) {
+  return `Du er vaktsjef i en norsk nettavis og kontrollerer et KI-skrevet utkast mot kilden før publisering, etter Vær Varsom-plakaten. Vær streng: ved tvil, ikke godkjenn.
 
 Avvis (godkjent=false) og forklar kort på norsk hvis noe av dette gjelder:
 1. En faktaopplysning (tall, navn, tittel på person, dato, sted, hendelse, partinavn) i utkastet står ikke i kilden, eller er gjengitt feil (VVP 3.2).
@@ -245,7 +254,15 @@ Ingress: ${sak.description}
 ${sak.body}
 ${sak.why_matters ? `
 Hvorfor viktig: ${sak.why_matters}` : ""}${Array.isArray(sak.key_points) && sak.key_points.length ? `
-Nøkkelpunkter: ${sak.key_points.join(" | ")}` : ""}`,
+Nøkkelpunkter: ${sak.key_points.join(" | ")}` : ""}`;
+}
+
+export async function vurder(sak, kilde, { pressemelding = true, medier = false } = {}) {
+  const problemer = kesinProblemer(sak, kilde, medier);
+  const svar = await gemini({
+    denetim: true,
+    schema: VURDERING_SKJEMA,
+    prompt: vurderPrompt(sak, kilde, { pressemelding, medier }),
   });
 
   if (!svar) return { godkjent: false, problemer: [...problemer, 'KI-kontroll kunne ikke kjøres'] };
@@ -278,14 +295,8 @@ Nøkkelpunkter: ${sak.key_points.join(" | ")}` : ""}`,
   return svar ? { ...sak, ...svar } : sak;
 }
 
-// ── 4. Norveççe redaksiyon ─────────────────────────────────────────────
-
-export async function språkvask(sak) {
-  const svar = await gemini({
-    schema: TEKST_SKJEMA,
-    prompt: `Du er språkvasker (korrekturleser) i en norsk nettavis. Gjør en språkvask av saken under. Du skal BARE rette språket, aldri innholdet.
-
-Rett:
+// Redaksiyon kuralları (språkvask ve vurderOgVask ortak kullanır).
+const SPRAKVASK_REGLER = `Rett:
 - Grammatikk, rettskriving, tegnsetting og ordstilling på norsk bokmål (Språkrådets normer).
 - Oversettelsespreg og anglisismer: unaturlige konstruksjoner, direkte oversatte uttrykk, feil preposisjoner.
 - Nynorsk utenfor sitater: All tekst skal være på bokmål, også når kilden er på nynorsk (f.eks. «ikkje» → «ikke», «frå» → «fra», «ulovleg» → «ulovlig», «regjeringa» → «regjeringen»). Direkte sitater beholdes på originalspråket.
@@ -302,7 +313,16 @@ Ikke endre:
 - Fakta, tall, navn, datoer eller rekkefølgen av opplysninger.
 - Ordlyden i direkte sitater (sitater på nynorsk skal stå på nynorsk).
 - Tilskrivinger («ifølge departementet», «mener regjeringen»).
-- Lengden vesentlig.
+- Lengden vesentlig.`;
+
+// ── 4. Norveççe redaksiyon ─────────────────────────────────────────────
+
+export async function språkvask(sak) {
+  const svar = await gemini({
+    schema: TEKST_SKJEMA,
+    prompt: `Du er språkvasker (korrekturleser) i en norsk nettavis. Gjør en språkvask av saken under. Du skal BARE rette språket, aldri innholdet.
+
+${SPRAKVASK_REGLER}
 
 Er teksten allerede korrekt, returner den uendret.
 
@@ -317,6 +337,48 @@ Nøkkelpunkter: ${sak.key_points.join(" | ")}` : ""}`,
   return svar ? { ...sak, ...svar } : sak;
 }
 
+// ── 4b. Birleşik: son onay + redaksiyon tek çağrıda (Katman 2.4) ───────
+
+const VURDER_VASK_SKJEMA = {
+  type: 'object',
+  properties: {
+    ...VURDERING_SKJEMA.properties,
+    redigert: { ...TEKST_SKJEMA, description: 'Språkvasket versjon av utkastet (bare hvis godkjent=true; ellers utelat)' },
+  },
+  required: VURDERING_SKJEMA.required,
+};
+
+/**
+ * Vaktsjefens kontroll og språkvasken i ett KI-kall. Kesin kontroller her de eskisi gibi çalışır.
+ * Döner: { godkjent, problemer, vasket }. vasket yalnızca godkjent=true ve sonuç kesin kontrollerden
+ * geçiyorsa (olgular bozulmamış, uzunluk kuralı tutuyor) dolu olur; yoksa undefined (çağıran onaylı
+ * ham metni korur).
+ */
+export async function vurderOgVask(sak, kilde, { pressemelding = true, medier = false } = {}) {
+  const problemer = kesinProblemer(sak, kilde, medier);
+  const svar = await gemini({
+    schema: VURDER_VASK_SKJEMA,
+    prompt: `${vurderPrompt(sak, kilde, { pressemelding, medier })}
+
+OPPGAVE 2 (bare hvis du godkjenner utkastet): Gjør en språkvask av utkastet og returner den i feltet «redigert». Du skal BARE rette språket, aldri innholdet. Hvis du ikke godkjenner, utelat «redigert» og beskriv problemene i «problemer».
+
+${SPRAKVASK_REGLER}
+
+Er teksten allerede korrekt, returner den uendret i «redigert».`,
+  });
+  if (!svar) return { godkjent: false, problemer: [...problemer, 'KI-kontroll kunne ikke kjøres'] };
+  problemer.push(...svar.problemer);
+  const godkjent = svar.godkjent && problemer.length === 0;
+  let vasket;
+  if (godkjent && svar.redigert?.title && svar.redigert?.description && svar.redigert?.body) {
+    const kandidat = { ...sak, ...svar.redigert };
+    const nyeFeil = [...sjekkSitater(helTekst(kandidat), kilde), ...sjekkTall(helTekst(kandidat), kilde), ...sjekkLengde(kandidat)];
+    const foerFeil = [...sjekkSitater(helTekst(sak), kilde), ...sjekkTall(helTekst(sak), kilde), ...sjekkLengde(sak)];
+    if (nyeFeil.length <= foerFeil.length) vasket = kandidat;
+  }
+  return { godkjent, problemer, vasket };
+}
+
 // ── Tüm süreç ──────────────────────────────────────────────────────────
 
 // Döner: { sak, merknader, stopp } — stopp doluysa haber yayınlanmamalı (taslak da açılmaz; kaynak hopp döner).
@@ -325,15 +387,22 @@ export async function redigerSak(sak, kilde, opts = {}) {
   // Yazar taslağındaki basit sorunlar (cümle ortası göreli zaman, medya atfı) önce yerelde silinir.
   let utkast = lokalRett(sak);
   const merknader = [];
+  // Katman 2.4: onay turu aynı çağrıda redaksiyonu da yapar; onaylanırsa ayrı språkvask çağrısı gerekmez.
+  let ferdigVasket;
   for (let runde = 0; runde < 2; runde++) {
-    const vurdering = await vurder(utkast, kilde, opts);
-    if (vurdering.godkjent) break;
+    const vurdering = await vurderOgVask(utkast, kilde, opts);
+    if (vurdering.godkjent) {
+      // Redaksiyon kesin kontrolden geçmediyse onaylı ham metin korunur (ayrı çağrı yapılmaz).
+      ferdigVasket = vurdering.vasket ?? utkast;
+      break;
+    }
     merknader.push(...vurdering.problemer);
     utkast = await rett(utkast, kilde, vurdering.problemer);
   }
 
   const foer = utkast;
-  const vasket = await språkvask(utkast);
+  // Onay gelmediyse (düzeltme turları bitti) eski usul ayrı redaksiyon çağrısı.
+  const vasket = ferdigVasket ?? (await språkvask(utkast));
   // Redaksiyon olguları değiştirdiyse redaksiyondan önceki hâli kullan.
   const nyeFeil = [...sjekkSitater(helTekst(vasket), kilde), ...sjekkTall(helTekst(vasket), kilde)];
   const foerFeil = [...sjekkSitater(helTekst(foer), kilde), ...sjekkTall(helTekst(foer), kilde)];
