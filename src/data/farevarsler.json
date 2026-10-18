@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-18T00:02:10.182Z",
+  "hentet": "2026-10-18T06:03:13.261Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,21 +7,8 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-18T00:00:17+00:00",
+  "sistEndretHosMet": "2026-10-18T06:01:23+00:00",
   "varsler": [
-    {
-      "id": "2.49.0.1.578.0.20261017112100.045",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Slettnes fyr - Vardø",
-      "domene": "hav",
-      "start": "2026-10-15T06:00:00+00:00",
-      "slutt": "2026-10-18T05:00:00+00:00",
-      "beskrivelse": "I dag, lørdag, fortsatt vest stiv kuling 15 m/s. Søndag morgen minkende.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker. Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
     {
       "id": "2.49.0.1.578.0.20261017071849.028",
       "niva": "gult",
