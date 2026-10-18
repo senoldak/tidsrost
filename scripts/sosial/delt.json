@@ -126,30 +126,30 @@
   "volodymyr-zelenskyj-advarer-trump-mot-historisk-feil": {
     "tarih": "2026-10-18T14:05:01.949Z",
     "deneme": {
-      "ig_post": 2,
-      "ig_story": 2,
-      "fb_post": 2,
-      "fb_story": 2
+      "ig_post": 3,
+      "ig_story": 3,
+      "fb_post": 3,
+      "fb_story": 3
     },
     "son_hata": "Graph 400: Error validating access token: The user has not authorized application 1127775303074017."
   },
   "kunstig-intelligens-og-datasentre": {
     "tarih": "2026-10-18T14:06:02.600Z",
     "deneme": {
-      "ig_post": 2,
-      "ig_story": 2,
-      "fb_post": 2,
-      "fb_story": 2
+      "ig_post": 3,
+      "ig_story": 3,
+      "fb_post": 3,
+      "fb_story": 3
     },
     "son_hata": "Graph 400: Error validating access token: The user has not authorized application 1127775303074017."
   },
   "donald-trump-gir-sin-fulle-stotte-til-benjamin-netanyahu-for-valget-i-israel": {
     "tarih": "2026-10-18T16:06:11.253Z",
     "deneme": {
-      "ig_post": 1,
-      "ig_story": 1,
-      "fb_post": 1,
-      "fb_story": 1
+      "ig_post": 2,
+      "ig_story": 2,
+      "fb_post": 2,
+      "fb_story": 2
     },
     "son_hata": "Graph 400: Error validating access token: The user has not authorized application 1127775303074017."
   }
