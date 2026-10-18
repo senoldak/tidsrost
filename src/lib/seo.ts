@@ -29,7 +29,7 @@ export const organization = {
   '@id': ORG_ID,
   name: SITE.name,
   url: `${SITE_URL}/`,
-  // Haber yayıncısı logosu dikdörtgen, en az 600×60 (sitenin yazı logosundan üretilir: scripts/logo.mjs).
+  // Haber yayıncısı logosu dikdörtgen, en az 600×60 (sitenin yazı logosundan üretilir: scripts/merke.mjs).
   logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo-600x60.png`, width: 600, height: 60 },
   image: { '@type': 'ImageObject', url: `${SITE_URL}/favicon-512.png`, width: 512, height: 512 },
   ...(sameAs.length ? { sameAs } : {}),

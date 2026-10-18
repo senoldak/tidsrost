@@ -45,19 +45,31 @@ sakin, dürüst ve kolay okunur bir alternatif.
 | Kısa paragraf, büyük punto | Jargon, kısaltma yığını |
 | Forklart yazılarında her rakam resmî kaynaktan; yanlış çıkan rakam `rettelse` ile düzeltilir | Kaynaksız rakam ya da uydurma alıntı |
 
-## 5. İşaret
+## 5. Logo ve simge
 
-- **İşaret:** sahibinin kendi çizimi; Coloman ile çizilmiş küçük harf **kırmızı "t"** (`#ff0000`), saydam zemin.
-  Tek vektör kaynak `public/favicon.svg` (sahibin PNG'sinden izlendi). Dosyalar: `favicon.ico`, `favicon-32/192/512.png`,
-  `apple-touch-icon.png` (beyaz zemin).
-- İşaretin kırmızısı yalnız işarette kullanılır; sayfada ve kapakta vurgu kırmızısı `#c8281e`'dir.
-- Yapılmaz: döndürme, gölge, degrade, kontur, başka renge boyamak.
-- Ayrı bir logo dosyası yok; "t" işareti ile kelime işareti birlikte bir logo paketi olarak henüz üretilmedi.
+- **Logo yazının kendisidir:** "tidsrøst", ø su mavisi (§6). Ayrı bir sembol ya da "simge + ad" düzeni yoktur
+  (sahibin kararı, 18 Ekim 2026).
+- **Simge:** logodaki **ø'nün birebir aynısı** (Archivo 800, wdth 112). Yalnız favicon, uygulama simgesi ve sosyal medya
+  profil fotoğrafında tek başına durur. Açık zeminde su mavisi `#1f5f99`, koyu zeminde `#7fb2e5`; fiyort mavisi ya da
+  fotoğraf üstünde beyaz, tek renk baskıda mürekkep.
+- Eski işaret (sahibin Coloman ile çizdiği kırmızı "t") 18 Ekim 2026'da emekliye ayrıldı. Yenileme denemeleri (temiz
+  kopya t, mavi t, ø'den türetilmiş semboller) gösterildi, sahibi yazının kendisini seçti.
+- **Dosyalar** (`node scripts/merke.mjs` üretir; yazı glif yoludur, yazı tipi gerekmez):
+  - `public/favicon.svg` (gece temasında açık mavi), `favicon.ico`, `favicon-32/192/512.png` (saydam),
+    `favicon-maskable-512.png` ve `apple-touch-icon.png` (kâğıt zemin), `logo-600x60.png` (Google yayıncı logosu).
+    Favicon bağlantıları `?v=2` taşır; simge bir daha değişirse sayıyı artır.
+  - `brand/logo/`: `tidsrost-ordmerke-*` (logo) ve `tidsrost-merke-*` (ø simgesi); `lys`, `mork`, `hvit`, `blekk`
+    renklerinde, SVG + saydam PNG.
+  - `brand/sosyal/`: `profil-lys.png` (kâğıt zemin, mavi ø) ve `profil-mork.png` (gece zemini, açık mavi ø), 1080 kare;
+    ø yuvarlak kırpmada da tam görünür.
+- Yapılmaz: ø'yü yeniden çizmek ya da başka yazı tipinden almak, döndürmek, gölge, degrade, kontur; logonun yanına ayrıca
+  simge koymak.
 
 ## 6. Kelime işareti
 
 - **"tidsrøst"** her zaman küçük harf ve ø ile. "Tidsrost", "TidsRøst" yazılmaz; "tidsrost" yalnız alan adı ve kodda.
-- **Sitede:** Archivo 800, geniş (wdth 112), sıkı aralık; günün eş yükselti haritasının üstünde kâğıt rengi halede.
+- **Sitede:** Archivo 800, geniş (wdth 112), sıkı aralık (-0.04em), **ø su mavisi**; günün eş yükselti haritasının
+  üstünde kâğıt rengi halede. Gece yaprağında yazı `#ebe9e2`, ø `#7fb2e5`.
 - **Kapakta:** Archivo'dan türetilmiş kalın kesim, üstünde kısa kırmızı çizgi; fjord zeminde beyaz, ters Fjord'da
   fjord mavisi.
 
@@ -130,12 +142,13 @@ su `#7fb2e5`.
 | Site, gece yaprağı, Temaer, `/styringsrenten/`, `/farevarsler/` | Canlı (harita yaprağı) |
 | Haber kapağı, Forklart kapağı, FB/IG gönderi ve hikâye | Canlı (Fjord, ters Fjord) |
 | Telegram | Canlı (`@tidsrost`) |
-| Profil fotoğrafı, kapak görseli, logo paketi | Henüz yok |
+| Logo paketi, favicon, yayıncı logosu, profil fotoğrafı | Hazır (ø simgesi, 18 Ekim); profil fotoğrafını sahibi yükler |
+| Sosyal kapak görseli (banner) | Henüz yok |
 
 ## 12. Yapılmayacaklar
 
 - Medya kuruluşu adı ya da bağlantısı (metin, kaynak satırı, kapak: hiçbir yerde).
-- Sarı (uyarı haritası dışında); işaret kırmızısını sayfada kullanmak; su mavisinin yanına ikinci etkileşim rengi.
+- Sarı (uyarı haritası dışında); su mavisinin yanına ikinci etkileşim rengi.
 - Kapakta kaynak, kategori, tarih ya da veri kutusu.
 - Başlığın üstünde üst etiket (kicker); serif künye; görsel ağırlıklı manşet ızgarası.
 - Köşe yuvarlatması, gölge, kart; durumu yalnız renkle göstermek.

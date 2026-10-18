@@ -1,0 +1,14 @@
+tidsrøst logo paketi (BRAND.md §5-6). Elle düzenlemeyin; yeniden üretmek için: node scripts/merke.mjs
+
+tidsrost-ordmerke-*   LOGO: "tidsrøst" yazısı, ø mavi. Logo budur; yanına ayrıca simge konmaz.
+tidsrost-merke-*      SİMGE: logodaki ø'nün birebir aynısı (512 kare). Yalnız favicon, uygulama simgesi, sosyal profil.
+
+Renkler:
+  lys    açık zemin: mürekkep yazı #16191c, mavi ø #1f5f99 (ana kullanım)
+  mork   koyu zemin: açık yazı #ebe9e2, açık mavi ø #7fb2e5
+  hvit   fiyort mavisi ya da fotoğraf üstü, hepsi beyaz
+  blekk  tek renk baskı, hepsi mürekkep
+
+Sosyal profil fotoğrafı: ../sosyal/profil-lys.png ya da profil-mork.png (1080 kare, yuvarlak kırpmaya uygun).
+SVG'lerde yazı glif yoludur, yazı tipi gerekmez. PNG'ler saydam zeminlidir.
+Logonun çevresinde en az ø yüksekliğinin yarısı kadar boşluk bırakın; döndürmeyin, gölge/degrade/kontur eklemeyin.
