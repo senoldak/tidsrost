@@ -1,58 +1,42 @@
 ---
-title: "Norsk romvirksomhet passerer 20 milliarder kroner – satellitter våker over hav, kyst og klima"
-description: "Fra bakkestasjonen på Svalbard og oppskytingsbasen på Andøya til avansert skips- og miljøovervåking i nordområdene: Norsk romsektor har vokst til en høyteknologisk næring med over 20 milliarder kroner i årlig omsetning."
+title: "Ny romlov og første testoppskyting fra Andøya – slik styrker Norge romvirksomheten"
+description: "Romloven trådte i kraft 1. juli 2026, og i 2025 ble den første testoppskytingen gjennomført fra Andøya. Direktoratet for romvirksomhet melder om økte ESA-kontrakter til norsk industri og en sterk posisjon for KSAT innen nedlesing av satellittdata."
 date: 2026-11-02T08:00:00+01:00
 category: teknologi
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Norsk romvirksomhet passerer 20 milliarder kroner – satellitter våker over hav, kyst og klima»"
+coverAlt: "Illustrasjon: «Ny romlov og første testoppskyting fra Andøya – slik styrker Norge romvirksomheten»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "På grunn av Norges geografiske plassering mot nord og våre enorme havområder er satellittdata uunnværlige for søk og redning, skipsfart, værvarsling, fiskerikontroll og overvåking av havis og klima."
+why_matters: "På grunn av Norges beliggenhet mot nord og de store havområdene er satellitter viktige for overvåking av skipstrafikk, fiskeri og miljø i nordområdene, og for samfunnssikkerhet og beredskap."
 key_points:
-  - "Norsk romrelatert virksomhet hadde en samlet omsetning på rundt 20,1 milliarder kroner i 2025, og over 70 prosent av inntektene kommer fra eksport."
-  - "Svalbard satellittstasjon (SvalSat), drevet av Kongsberg Satellite Services (KSAT), er verdens største kommersielle bakkestasjon for satellitter i polare baner."
-  - "Norges nasjonale mikrosatellitter overvåker maritim trafikk (AIS) i mer enn to millioner kvadratkilometer havområder hvert døgn."
+  - "Den nye romloven trådte i kraft 1. juli 2026 og erstatter loven fra 1969 om oppskyting fra norsk territorium."
+  - "I mars 2025 gjennomførte Isar Aerospace den første testoppskytingen fra Andøya, som ifølge Direktoratet for romvirksomhet ga det europeiske kontinentet sin første romhavn for oppskyting i bane."
+  - "Norsk industri fikk 833,4 millioner kroner i ESA-kontrakter i 2025, og KSAT har en verdensledende posisjon på nedlesing av data fra polare satellitter."
 ---
 
-Takket være sin beliggenhet langt mot nord, store havområder og sterke maritime teknologimiljøer har Norge bygget opp en internasjonalt ledende romsektor. Ifølge tall fra Norsk Romsenter og kartlegginger utført av NIFU passerte den samlede omsetningen i norsk romrelatert virksomhet 20,1 milliarder kroner i 2025 – opp fra 13,8 milliarder kroner i 2019.
+Norsk romvirksomhet handler i stor grad om å bruke satellitter til å overvåke store havområder, drive navigasjon og kommunikasjon i nord og levere tjenester til europeiske romprogrammer. Fra 1. september 2025 heter etaten som forvalter de statlige virkemidlene Direktoratet for romvirksomhet. Tidligere het den Norsk Romsenter, som ble opprettet i 1987.
 
-Næringen sysselsetter mer enn 3 200 høyt kvalifiserte fagfolk i bedrifter og forskningsmiljøer over hele landet, fra Andøya og Tromsø i nord til Trondheim, Oslo, Raufoss, Horten og Kongsberg i sør.
+## Ny romlov trådte i kraft 1. juli 2026
 
-## Hver krone gjennom ESA gir flerdobbel verdiskaping
+Stortinget behandlet forslaget til ny lov om aktiviteter i verdensrommet (romloven) i desember 2025. Loven erstatter lov av 13. juni 1969 om oppskyting av gjenstander fra norsk territorium og er en rammelov der detaljkrav presiseres i forskrifter. Ifølge Nærings- og fiskeridepartementet trådte den nye romloven i kraft 1. juli 2026, og departementet omtaler 2026 som et nasjonalt romår for å styrke Norge som en ledende romfartsnasjon i Europa.
 
-Norge har vært fullt medlem av Den europeiske romorganisasjonen (ESA) siden 1987 og deltar også i EUs romprogram – inkludert jordobservasjonsprogrammet *Copernicus* og navigasjonssystemet *Galileo*. Norsk Romsenter opplyser at hver statlig krone som investeres gjennom ESA, i snitt gir over fire kroner tilbake i form av høyteknologiske kontrakter og langsiktig kommersiell omsetning for norske bedrifter.
+## Andøya: første testoppskyting
 
-![Stolpediagram over omsetning i norsk romrelatert virksomhet fra 2019 til 2025 i milliarder kroner: 13,8 i 2019, 14,5 i 2020, 15,6 i 2021, 16,9 i 2022, 18,7 i 2024 og 20,1 i 2025.](./graf-1.svg)
-*Årlig omsetning i norsk romrelatert virksomhet (milliarder kroner), 2019–2025. Kilde: Norsk Romsenter og NIFU.*
+I mars 2025 utførte Isar Aerospace den første testoppskytingen fra Andøya. Oppskytingen ble avbrutt kort tid etter start på grunn av en feil, og raketten falt ned i sikkerhetssonen. Direktoratet for romvirksomhet regnet likevel oppskytingen som en suksess, fordi den viste at det europeiske kontinentet har fått sin første romhavn der raketter kan skytes ut i bane.
 
-## Nøkkelknutepunkter i den norske rominfrastrukturen
+Våren 2025 signerte direktoratet også en oppskytingskontrakt med Isar fra Andøya for de to norske maritime overvåkingssatellittene som bygges i prosjektet Arctic Ocean Surveillance. Satellittene skal blant annet overvåke skipstrafikk i nordområdene.
 
-Norges geografiske posisjon fra 58 til 81 grader nord gir et unikt fortrinn for romvirksomhet, fordi satellitter i polare baner passerer over nordområdene på samtlige fjorten daglige omløp rundt jorden:
+## Norsk industri i europeiske romprogrammer
 
-| Knutepunkt / program | Lokalisering | Hovedoppgave |
-|---|---|---|
-| Svalbard satellittstasjon (SvalSat / KSAT) | Platåberget ved Longyearbyen (78° N) | Verdens største polarstasjon med over 170 antenner for vær- og miljøsatellitter |
-| Andøya Space | Andenes i Nordland (69° N) | Romhavn for småsatellitter, forskningsraketter og atmosfæreforskning |
-| Tromsø satellittstasjon og KSAT-hovedkontor | Tromsø | Sanntidsanalyse av satellittbilder for oljevern, iskartlegging og skipstrafikk |
-| Nasjonale AIS- og radarsatellitter | Kystverket / Forsvarets forskningsinstitutt / Norsk Romsenter | Overvåking av skipstrafikk og maritim sikkerhet i norske havområder |
-| Arctic Satellite Broadband Mission (ASBM) | Space Norway (polar høyelliptisk bane) | Bredbåndsdekning for fly, skip og beredskap i hele Arktis nord for 65° N |
+Ifølge direktoratets årsrapport for 2025 ble det tildelt 833,4 millioner kroner i ESA-kontrakter til norske aktører i 2025, og 20,6 millioner kroner i innovasjonstilskudd, til sammen 854 millioner kroner. I 2024 var tilsvarende tall 667 millioner kroner. I tillegg ble det sommeren 2025 signert flere kontrakter med norsk industri (Nammo og Kongsberg Defence & Aerospace) for 27 Ariane 6-raketter. Samlet kontraktomfang kan passere 700 millioner kroner over tre år.
 
-*Kilde: Norsk Romsenter, Nærings- og fiskeridepartementet og Kystverket.*
+Norge har også gode resultater i EU-programmet Copernicus. Fra 2021 til og med første halvår 2025 hadde norske aktører kontrakter for 92,3 millioner euro, noe som gjør Norge til den sjette største nasjonen i EU-delen av programmet.
 
-Gjennom det statlige selskapet Space Norways oppskyting av de to ASBM-satellittene har Arktis for første gang fått sammenhengende bredbåndsdekning via satellitt helt opp til Nordpolen – et stort løft for kystvakten, redningstjenesten, fiskeriflåten og sivil luftfart over polhavet.
-
-![Liggende stolpediagram over bruksområder for norske satellitt- og bakkestasjonstjenester: Satellittkommunikasjon 44,0 prosent, bakkestasjoner og nedlasting av jorddata 26,5 prosent, romindustri og oppskyting 16,5 prosent, og jordobservasjon, kystovervåking og navigasjon 13,0 prosent.](./graf-2.svg)
-*Fordeling av verdiskapingen i norsk romsektor etter hovedsegment. Kilde: Norsk Romsenter.*
-
-## Sikrere skipsfart og ny romlov for fremtidens romfart
-
-Satellittdata fra de norske NORSAT-mikrosatellittene og det europeiske Copernicus-programmet strømmer døgnet rundt inn til Kystverkets sjøtrafikksentraler i Vardø og ellers langs kysten, samt til Meteorologisk institutt. Dermed kan norske myndigheter oppdage drivende skip i uvær, ulovlig fiske og oljeutslipp på havet i løpet av minutter, samtidig som presise iskart trygger ferdselen ved Svalbard.
-
-I 2026 har regjeringen også lagt frem forslag til en helt ny og moderne romlov til erstatning for den gamle loven fra 1969, slik at Norge har et fremtidsrettet og trygt regelverk for bærekraftig aktivitet i rommet og ved romhavnen på Andøya.
+Direktoratet beskriver norsk romnæring som etablert i det internasjonale markedet, med høy eksportandel. KSAT, som driver bakkestasjoner blant annet på Svalbard, har ifølge årsrapporten en verdensledende posisjon på nedlesing av data fra polare satellitter. Ved ESAs ministerrådskonferanse i november 2025 ble det gitt rekordhøye deklarasjoner på 22,1 milliarder euro for perioden 2026–2028.
 
 ## Kilder
 
-- [Norsk Romsenter: Nøkkeltall, årsrapporter og norske satellittprogrammer](https://www.romsenter.no/)
-- [Nærings- og fiskeridepartementet: Regjeringens rompolitikk og arbeid med ny romlov](https://www.regjeringen.no/no/tema/naringsliv/romvirksomhet/id2009204/)
-- [Kystverket: Satellittovervåking (AIS) og maritim beredskap i norske havområder](https://www.kystverket.no/sjovegen/ais/)
+- [Direktoratet for romvirksomhet: Årsrapport 2025](https://www.regjeringen.no/contentassets/036ffda0c81e4b3f99456a78ec31df0e/arsrapport-2025-direktoratet-for-romvirksomhet.pdf)
+- [Nærings- og fiskeridepartementet: Romåret 2026](https://www.regjeringen.no/no/tema/naringsliv/forskning-og-innovasjon/romvirksomhet/romaret2026/id3169970/)
+- [Stortinget: Innst. 32 L (2025–2026) om ny lov om aktiviteter i verdensrommet](https://stortinget.no/no/Saker-og-publikasjoner/Publikasjoner/Innstillinger/Stortinget/2025-2026/inns-202526-032l/?all=true)

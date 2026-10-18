@@ -1,6 +1,6 @@
 ---
 title: "Over 1,2 millioner kunder i Lånekassen – økt studiestøtte og opptil 60 000 kroner i årlig gjeldssletting i nord"
-description: "Statens lånekasse for utdanning utbetaler over 42 milliarder kroner årlig i stipend og studielån. Økt basisstøtte og nye ordninger for sletting av studielån i distriktskommuner gjør det mer attraktivt å studere og bosette seg i hele landet."
+description: "Lånekassen utbetalte over 47 milliarder kroner i utdanningsstøtte i studieåret 2025–2026. Basislånet for heltidsstudenter er økt, og nye ordninger for sletting av studielån i distriktskommuner skal gjøre det mer attraktivt å bosette seg i hele landet."
 date: 2026-11-01T08:00:00+01:00
 category: okonomi
 cover: ./cover.png
@@ -8,52 +8,47 @@ coverAlt: "Illustrasjon: «Over 1,2 millioner kunder i Lånekassen – økt stud
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Lånekassen sikrer at både ungdom og voksne kan ta videregående opplæring, fagskole og universitetsstudier med trygg studiefinansiering, og brukes samtidig aktivt for å rekruttere fagfolk til distriktene."
+why_matters: "Lånekassen sikrer at både ungdom og voksne kan ta videregående opplæring, fagskole og universitetsstudier med studiefinansiering, og ordningene for gjeldssletting brukes samtidig for å rekruttere folk til distriktene."
 key_points:
-  - "Lånekassen har over 1,2 millioner kunder og utbetaler mer enn 42 milliarder kroner årlig i utdanningsstøtte til om lag 415 000 elever og studenter."
-  - "Basisstøtten for heltidsstudenter er hevet i flere store trinn fra 123 519 kroner i studieåret 2020/2021 til over 161 000 kroner i studieåret 2026/2027."
-  - "Yrkesaktive i tiltakssonen i Finnmark og Nord-Troms kan få slettet opptil 60 000 kroner av studielånet hvert år, mens en ny distriktsordning i 212 kommuner gir 25 000 kroner i årlig gjeldssletting."
+  - "Rundt 1,2 millioner nordmenn mottar utdanningsstøtte eller betaler ned på studielånet, og Lånekassen utbetalte over 47 milliarder kroner i utdanningsstøtte i studieåret 2025–2026."
+  - "Basislånet for heltidsstudenter med elleve måneders støtte er 166 859 kroner i 2025–2026 og 170 368 kroner i 2026–2027, opp fra 151 690 kroner i 2024–2025."
+  - "Yrkesaktive i Finnmark og Nord-Troms kan få slettet inntil 60 000 kroner av studielånet hvert år, mens yrkesaktive i utvalgte distriktskommuner kan få slettet inntil 25 000 kroner i året."
 ---
 
-Statens lånekasse for utdanning (Lånekassen) ble opprettet i 1947 og er et av de mest sentrale velferds- og likestillingsvirkemidlene i Norge. I 2026 har Lånekassen over 1,2 millioner kunder – fordelt på rundt 415 000 elever og studenter som mottar utdanningsstøtte i løpet av studieåret, og nærmere 800 000 tidligere studenter som betaler tilbake lånene sine.
+Statens lånekasse for utdanning (Lånekassen) ble opprettet i 1947. Ifølge Lånekassens rapport *Utdanningsstøtten 2026* mottar omtrent 1,2 millioner nordmenn utdanningsstøtte eller betaler ned på studielånet, og hver femte innbygger er kunde i Lånekassen. I studieåret 2025–2026 utbetalte Lånekassen over 47 milliarder kroner i utdanningsstøtte.
 
-Samlet utbetaler Lånekassen over 42 milliarder kroner i lån og stipend hvert år, viser den offisielle statistikken fra etaten og Kunnskapsdepartementet.
+## Økt basislån for heltidsstudenter
 
-## Kraftig opptrapping av basisstøtten for studenter
+For heltidsstudenter i høyere utdanning utbetales støtten i hovedsak som et basislån, som kan gjøres om til stipend. Inntil 40 prosent av lånet kan omgjøres til stipend. Fra studieåret 2025–2026 er fordelingen 25 prosent for bestått studiepoeng og 15 prosent for fullført grad.
 
-For borteboende studenter i høyere utdanning og på fagskole utbetales utdanningsstøtten i første omgang som et basislån over elleve måneder. Når studenten består eksamen og fullfører graden sin, blir inntil 40 prosent av basislånet gjort om til utdanningsstipend som man ikke skal betale tilbake.
+Basislånet for en heltidsstudent med rett til elleve måneders støtte har utviklet seg slik:
 
-![Stolpediagram over basisstøtte for heltidsstudenter i Lånekassen fra 2020/21 til 2026/27 i kroner: 123 519 i 2020/21, 128 887 i 2022/23, 137 907 i 2023/24, 151 690 i 2024/25, 156 190 i 2025/26 og 161 800 i 2026/27.](./graf-1.svg)
-*Årlig basisstøtte (elleve måneder) for borteboende heltidsstudenter i Lånekassen, 2020/21–2026/27. Kilde: Lånekassen og Kunnskapsdepartementet.*
+| Studieår | Basislån per måned | Basislån i alt (11 måneder) |
+|---|---:|---:|
+| 2024–2025 | 13 790 kr | 151 690 kr |
+| 2025–2026 | 15 169 kr | 166 859 kr |
+| 2026–2027 | 15 488 kr | 170 368 kr |
 
-De siste årene har regjeringen og Stortinget gjennomført ekstraordinære økninger i studiestøtten – blant annet et løft på 10 prosent i studieåret 2024/2025 – slik at basislånet har steget fra 123 519 kroner i 2020/2021 til over 161 000 kroner i studieåret 2026/2027. Studenter som har barn, eller som på grunn av nedsatt funksjonsevne ikke kan jobbe ved siden av studiene, har i tillegg rett til særskilte ekstrastipender.
+*Kilde: Lånekassen, nye satser for studieåret 2025–2026 og 2026–2027.*
 
-## Slik virker støtteordningene for elever, studenter og voksne
+Basislånet ble justert med 10 prosent fra 2024–2025 til 2025–2026, og de fleste andre støttesatsene økte med 2,9 prosent. For 2026–2027 øker borteboerstipendet til 7 015 kroner per måned.
 
-Tabellen gir en oversikt over de viktigste ordningene i Lånekassen:
+## Sletting av studielån i distriktene
 
-| Utdanningsnivå / gruppe | Hovedstøtte i Lånekassen | Stipendandel / særfordel |
-|---|---|---|
-| Videregående opplæring (ungdomsrett) | Utstyrsstipend og evt. borteboerstipend | 100 % stipend (ikke lån) |
-| Høyere utdanning og fagskole | Basislån over 11 måneder + evt. skolepengelån | Inntil 40 % omgjøres til stipend ved bestått eksamen og grad |
-| Voksne i grunnskole og videregående | Voksenstipend og lån til livsopphold | Fleksible ordninger for å fullføre fagbrev eller studiekompetanse |
-| Yrkesaktive i etter- og videreutdanning | Deltidslån og tilleggslån for voksne | Tilpasset kombinasjon av jobb og nett-/samlingsbaserte studier |
+Lånekassen har to ordninger for sletting av studiegjeld for dem som bor og arbeider i utvalgte områder:
 
-*Kilde: Lånekassen, forskrift om utdanningsstøtte.*
+- **Finnmark og Nord-Troms:** Ordningen gjelder alle kommuner i Finnmark og sju kommuner i Nord-Troms (Lyngen, Storfjord, Kåfjord, Skjervøy, Nordreisa, Kvænangen og Karlsøy). Her kan du få slettet inntil 60 000 kroner av studielånet hvert år.
+- **Utvalgte distriktskommuner:** Ordningen gjelder kommuner i sentralitetsklasse 5 og 6, til sammen 212 kommuner i Lånekassens liste. Her kan du få slettet inntil 25 000 kroner i året.
 
-Også personer med beskyttelse (flyktningstatus) eller opphold på humanitært grunnlag i Norge har rett til utdanningsstøtte fra Lånekassen på lik linje med norske statsborgere, inkludert flyktningstipend ved grunnskole- og videregående opplæring.
+For begge ordningene må du bo i en godkjent kommune i en opptjeningsperiode på tolv sammenhengende måneder og søke innen tre måneder etter at perioden er over. Du må søke på nytt hvert år. I Finnmark og Nord-Troms kreves det at du er i arbeid i minst 50 prosent stilling.
 
-![Liggende stolpediagram over maksimal årlig sletting av studiegjeld etter ordning i 2026: Tiltakssonen i Finnmark og Nord-Troms 60 000 kr per år, distriktskommuner i sentralitetsklasse 5 og 6 25 000 kr per år, og lærerutdanning med opptjening i skolen inntil 50 000 kr.](./graf-2.svg)
-*Maksimal årlig sletting av studiegjeld i utvalgte regionale og yrkesrettede ordninger. Kilde: Lånekassen.*
-
-## Opptil 60 000 kroner i årlig gjeldssletting i distriktene
-
-Et av de mest treffsikre grepene i distriktspolitikken de siste årene er utvidelsen av ordningene for sletting av studiegjeld. I tiltakssonen i Finnmark og sju kommuner i Nord-Troms er den årlige gjeldsslettingen doblet til 20 prosent av opprinnelig lån, opptil **60 000 kroner i året**, for alle yrkesaktive som bor og arbeider i regionen i minst tolv måneder.
-
-I tillegg har regjeringen innført en helt ny nasjonal distriktsordning som omfatter alle de 212 kommunene i sentralitetsklasse 5 og 6 over hele landet: Her kan yrkesaktive som bor og jobber i kommunen, få slettet **25 000 kroner** av studielånet sitt hvert eneste år frem til gjelden er nedbetalt.
+Lånekassen opplyser at det til nå i 2026 er slettet studielån for over 1,36 milliarder kroner gjennom de to ordningene, hvorav om lag 260 millioner kroner i Finnmark og Nord-Troms.
 
 ## Kilder
 
-- [Lånekassen: Offisiell statistikk og nøkkeltall om utdanningsstøtte](https://www.lanekassen.no/nb-NO/presse-og-samfunnskontakt/statistikk/)
-- [Lånekassen: Sletting av gjeld når du bor i Finnmark, Nord-Troms eller utvalgte distriktskommuner](https://www.lanekassen.no/nb-NO/gjeld-og-betaling/finnmark-eller-nord-troms/)
-- [Kunnskapsdepartementet: Utdanningsstøtte og forskrift om tildeling av utdanningsstøtte](https://www.regjeringen.no/no/tema/utdanning/utdanningsfinansiering/id1415/)
+- [Lånekassen: Utdanningsstøtten 2026](https://lanekassen.no/nb-NO/statistikk-og-analyse/innsikt-og-analyse/utdanningsstotten-2026/)
+- [Lånekassen: Nye satser for studieåret 2026–2027](https://lanekassen.no/nb-NO/laresteder/nyheter/forskriftene-for-2026-2027-er-klare/)
+- [Lånekassen: Endringer for elever og studenter studieåret 2025–2026](https://lanekassen.no/nb-NO/laresteder/nyheter/endringer-i-lanekassens-regler-2025-2026/)
+- [Lånekassen: Sletting av gjeld i Finnmark eller Nord-Troms](https://lanekassen.no/nb-NO/gjeld-og-betaling/finnmark-eller-nord-troms/)
+- [Lånekassen: Kommuner hvor du kan få slettet studielån](https://lanekassen.no/nb-NO/gjeld-og-betaling/sletting-av-gjeld-i-utvalgte-kommuner/utvalgte-distriktskommuner-liste/)
+- [Lånekassen: Har slettet studielån for 1,36 milliarder](https://lanekassen.no/nb-NO/presse-og-samfunnskontakt/nyheter/har-slettet-studielan-for-136-milliarder/)

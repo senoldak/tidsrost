@@ -1,57 +1,43 @@
 ---
-title: "Over 95 prosent norsk kjøtt, melk og egg – slik styrkes matsikkerheten og beredskapen"
-description: "Rundt 37 500 jordbruksbedrifter holder kulturlandskapet i hevd i alle norske kommuner. Bedre matkornavlinger, nytt beredskapslagring av korn og historisk lav antibiotikabruk kjennetegner norsk matproduksjon."
+title: "Rundt 36 600 gårdsbruk og mål om 50 prosent selvforsyning – slik styrkes matberedskapen"
+description: "Om lag 36 600 jordbruksbedrifter driver nesten 9,8 millioner dekar jordbruksareal. Regjeringen har som mål å øke selvforsyningen til 50 prosent korrigert for importert fôr, og staten bygger opp et nasjonalt beredskapslager av matkorn."
 date: 2026-10-30T08:00:00+01:00
 category: okonomi
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Over 95 prosent norsk kjøtt, melk og egg – slik styrkes matsikkerheten og beredskapen»"
+coverAlt: "Illustrasjon: «Rundt 36 600 gårdsbruk og mål om 50 prosent selvforsyning – slik styrkes matberedskapen»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Et livskraftig landbruk over hele landet sikrer trygg matforsyning i urolige tider, skaper arbeidsplasser i næringsmiddelindustrien og tar vare på artsrike kulturlandskap."
+why_matters: "Et landbruk over hele landet bidrar til trygg matforsyning i urolige tider, skaper arbeidsplasser i næringsmiddelindustrien og holder kulturlandskapet i hevd."
 key_points:
-  - "Norske bønder dekker rundt 98 prosent av innenlands forbruk av melk og egg og over 95 prosent av kjøttforbruket."
-  - "Regjeringen og Stortinget har satt et mål om å løfte den fôrkorrigerte selvforsyningsgraden til 50 prosent og bygger opp nasjonale beredskapslagre for matkorn."
-  - "Norge har den laveste bruken av antibiotika til husdyr i hele Europa, viser overvåkingsdata fra Veterinærinstituttet (NORM-VET) og EMA."
+  - "I 2025 var det om lag 36 600 jordbruksbedrifter i Norge, og jordbruksarealet i drift var rundt 9,84 millioner dekar."
+  - "Selvforsyningsgraden korrigert for importert fôr var 41 prosent i 2023 og 34 prosent (foreløpig) i 2024, mens målet er 50 prosent."
+  - "Staten bygger opp et beredskapslager av mathvete som innen 2029 skal være på 82 500 tonn, tilsvarende om lag tre måneders normalt forbruk."
 ---
 
-Ved inngangen til 2026 var om lag 37 500 jordbruksbedrifter i drift i Norge, viser landbruksstatistikken fra Statistisk sentralbyrå (SSB). Til sammen skjøtter bøndene rundt 9,8 millioner dekar jordbruksareal i drift – fra korn- og grønnsaksbygdene rundt Oslofjorden, Mjøsa, Jæren og Trondheimsfjorden til melke- og sauebrukene i fjell- og fjordbygdene og i Nord-Norge.
+I 2025 var det om lag 36 600 jordbruksbedrifter i Norge, ifølge landbruksproposisjonen Prop. 98 S (2025–2026) fra Landbruks- og matdepartementet. Statistisk sentralbyrå (SSB) oppgir foreløpige tall på 36 439 jordbruksbedrifter og 9 839 227 dekar jordbruksareal i drift i 2025. Gjennomsnittsbruket hadde 270 dekar jordbruksareal, 15 prosent mer enn i 2015, mens antall bruk har gått ned med 13,3 prosent i samme periode.
 
-I tillegg til selve gårdsbrukene sysselsetter den norske mat- og drikkevareindustrien over 40 000 ansatte, og er dermed landets største fastlandsindustri målt i sysselsetting.
+Næringsmiddelindustrien omtales i samme proposisjon som Norges største fastlandsindustri, både målt i sysselsetting og verdiskaping. Den landbruksbaserte delen av industrien hadde om lag 39 000 sysselsatte, og verdiskapingen var 53 milliarder kroner i 2024.
 
-## Strategi for 50 prosent selvforsyning og nye beredskapslagre
+## Mål om 50 prosent selvforsyning
 
-Målt på energibasis dekker norskprodusert mat nær 50 prosent av kostholdet i Norge, og når det korrigeres for importerte fôrråvarer, økte selvforsyningsgraden til om lag 45,1 prosent i 2025 etter gode korn- og grovfôravlinger, viser beregninger fra Norsk institutt for bioøkonomi (NIBIO) og Helsedirektoratet.
+Selvforsyningsgraden uttrykker hvor stor del av kostholdet som kan dekkes av norsk jordbruk. Regjeringen har som mål å øke selvforsyningsgraden for jordbruksvarer til 50 prosent, korrigert for import av fôrråvarer. Målet ble behandlet i Meld. St. 11 (2023–2024) *Strategi for auka sjølvforsyning av jordbruksvarer og plan for opptrapping av inntektsmoglegheitene i jordbruket*, og et flertall på Stortinget, alle unntatt Fremskrittspartiet, støttet målet.
 
-I stortingsmeldingen om selvforsyning og matsikkerhet har regjeringen fastsatt en tydelig strategi for å løfte den fôrkorrigerte selvforsyningsgraden til 50 prosent innen 2030. Satsingen omfatter økt planteproduksjon av matkorn, frukt, bær, poteter og grønnsaker, samt høyere andel norske råvarer i husdyrfôret.
+Tallene viser at det er et godt stykke igjen. Ifølge Prop. 98 S (2025–2026) var den fôrkorrigerte selvforsyningsgraden for jordbruksvarer 40 prosent i 2021 og 2022, 41 prosent i 2023 og foreløpig 34 prosent i 2024. Nedgangen i 2024 skyldes i hovedsak svært dårlige kornavlinger i 2023. Andelen norskprodusert råvare i kraftfôr var 60 prosent i 2025, mot 49 prosent i 2024, og 85 prosent av fôret til husdyrene var produsert i Norge i 2025.
 
-![Stolpediagram over norsk selvforsyningsgrad korrigert for fôrimport fra 2021 til 2025 samt 2030-målet: 40,2 prosent i 2021, 41,8 prosent i 2022, 38,9 prosent i 2023, 43,5 prosent i 2024, 45,1 prosent i 2025 og målet på 50,0 prosent i 2030.](./graf-1.svg)
-*Norsk selvforsyningsgrad av matvarer korrigert for import av fôrråvarer, 2021–2025 og mål for 2030. Kilde: NIBIO, Helsedirektoratet og Landbruks- og matdepartementet.*
+## Beredskapslager for matkorn
 
-Parallelt har staten gjenopprettet den nasjonale beredskapslagringen av matkorn gjennom langsiktige avtaler mellom Landbruksdirektoratet og kornaktørene, med mål om at lagrene skal romme 82 500 tonn matkorn – tilsvarende tre måneders forbruk av mel og kornvarer for hele befolkningen.
+Staten bygger opp et beredskapslager av mathvete. Ifølge regjeringen skal lageret tilsvare om lag tre måneders normalt forbruk, det vil si 82 500 tonn. Oppbyggingen skjer i trinn, med 15 000 tonn hvert år fra 2024 til 2028 og 7 500 tonn i 2029. Staten eier kornet, mens kornaktørene lagrer det på kontrakt. I juni 2024 inngikk staten avtaler om 30 000 tonn med fire aktører i kornbransjen. Kornet kan bare tas ut ved alvorlig forsyningssvikt, og det krever en regjeringsbeslutning.
 
-## Norskprodusert andel og dyrehelse i europatoppen
+## Rekordlavt salg av antibiotika til landdyr
 
-Tabellen viser nøkkeltall for norsk jordbruksproduksjon og selvforsyning på enkeltområder:
-
-| Varegruppe | Norsk markedsandel (ca.) | Årlig norsk produksjon (ca.) |
-|---|---:|---|
-| Kumelk og meierivarer | 98 % | 1 450 millioner liter |
-| Egg | 98 % | 70 000 tonn |
-| Kjøtt i alt (storfe, svin, sau, fjørfe) | 95,5 % | 355 000 tonn |
-| Poteter | 78 % | 360 000 tonn |
-| Korn (matkorn og fôrkorn samlet) | 65–75 % | 1,2–1,4 millioner tonn (avhengig av vekstsesong) |
-
-*Kilde: Landbruksdirektoratet, NIBIO og SSB.*
-
-![Liggende stolpediagram over norsk markedsandel for sentrale jordbruksvarer i 2025: Drikkemelk og egg 98,0 prosent, kjøtt 95,5 prosent, poteter 78,0 prosent og matkorn i gode høstår 68,0 prosent.](./graf-2.svg)
-*Andel av innenlands forbruk dekket av norsk produksjon for utvalgte jordbruksvarer. Kilde: Landbruksdirektoratet og NIBIO.*
-
-En særlig styrke ved det norske landbruket er god dyrehelse og plantehelse. Ifølge Det europeiske legemiddelbyråets (EMA) ESVAC-rapporter og det norske overvåkingsprogrammet NORM-VET har Norge det aller laveste forbruket av antibiotika til matproduserende dyr i Europa – bare en brøkdel av gjennomsnittet ellers i verden – noe som gir trygg mat og lav forekomst av antibiotikaresistens.
+Salget av antibiotika til landdyr i Norge var i 2025 på det laveste nivået siden rapporteringen startet i 1993, ifølge regjeringen. Forekomsten av antibiotikaresistens hos dyr og i mat er fortsatt lav, og Folkehelseinstituttet knytter det til lavt forbruk av antibiotika. Regjeringen peker på god dyrehelse, spredt husdyrhold og tett samarbeid i næringen som viktige årsaker.
 
 ## Kilder
 
-- [SSB: Jordbruksbedrifter, areal og husdyrhold i Norge](https://www.ssb.no/jord-skog-jakt-og-fiskeri/jordbruk/statistikk/struktur-i-jordbruket)
-- [Landbruksdirektoratet: Markedsrapporter, kornberedskap og jordbruksstatistikk](https://www.landbruksdirektoratet.no/nb/statistikk-og-utviklingstrekk)
-- [Landbruks- og matdepartementet: Meld. St. 11 (2023–2024) Strategi for auka sjølvforsyning av jordbruksvarer](https://www.regjeringen.no/no/dokumenter/meld.-st.-11-20232024/id3028379/)
-- [Veterinærinstituttet: NORM-VET – Overvåking av antibiotikaresistens og antibiotikaforbruk hos dyr](https://www.vetinst.no/overvaking/antibiotikaresistens-norm-vet)
+- [Landbruks- og matdepartementet: Prop. 98 S (2025–2026) Endringer i statsbudsjettet 2026 under Landbruks- og matdepartementet (Jordbruksoppgjøret 2026)](https://www.regjeringen.no/no/dokumenter/prop.-98-s-20252026/id3162996/?ch=3)
+- [Stortinget: Innst. 258 S (2023–2024) om Meld. St. 11 (2023–2024)](https://stortinget.no/no/Saker-og-publikasjoner/Publikasjoner/Innstillinger/Stortinget/2023-2024/inns-202324-258s/?m=1)
+- [SSB: Gardsbruk, jordbruksareal og husdyr (tabell 05981)](https://www.ssb.no/statbank1/table/05981/)
+- [Regjeringen: Nye kontraktar for beredskapslagring av matkorn](https://www.regjeringen.no/no/aktuelt/nye-kontraktar-for-beredskapslagring-av-matkorn/id3061307/)
+- [Folkehelseinstituttet: NORM og NORM-VET 2025](https://www.fhi.no/publ/2026/norm-og-norm-vet-2025-usage-of-antimicrobial-agents-and-occurrence-of-antimicrobial-resistance-in-norway/)
+- [Regjeringen: Fortsatt rekordlav forekomst av antibiotikaresistens hos dyr og i mat i Norge](https://www.regjeringen.no/no/aktuelt/fortsatt-rekordlav-forekomst-av-antibiotikaresistens-hos-dyr-og-i-mat-i-norge/id3173217/)
