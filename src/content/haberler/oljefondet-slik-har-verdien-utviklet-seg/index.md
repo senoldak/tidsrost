@@ -8,6 +8,7 @@ coverAlt: "Illustrasjon: «Oljefondet har syvdoblet seg på 15 år – passerte 
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Formuleringen om at fondet «passerte» 6 000 og 10 000 milliarder kroner ved utgangen av henholdsvis 2014 og 2019 er presisert til at fondet var verdt mer enn dette ved utgangen av de årene; tidspunktet for når grensene ble krysset lot seg ikke bekrefte. En grammatisk feil i ingressen er rettet. Alle tall for markedsverdi, avkastning, fordeling og budsjettuttak er kontrollert mot NBIM, SSB og regjeringen.no og er uendret."
 why_matters: "Avkastningen fra oljefondet finansierer en stor del av statsbudsjettet. Hvor mye fondet er verdt, avgjør hvor mye politikerne kan bruke innenfor handlingsregelen."
 key_points:
   - "Statens pensjonsfond utland var verdt 22 683 milliarder kroner per 30. juni 2026."
@@ -15,7 +16,7 @@ key_points:
   - "Regjeringen foreslår å bruke 608,4 milliarder kroner fra fondet i 2027, anslått til 2,7 prosent av fondsverdien."
 ---
 
-Ved halvårsskiftet 30. juni 2026 nådde Statens pensjonsfond utland – oljefondet – en markedsverdi på 22 683 milliarder kroner, viser halvårsrapporten Norges Bank Investment Management (NBIM) la fram 12. august. Ved utgangen av 2010 sto fondet i 3 077 milliarder kroner. På 15 år har formuen dermed blitt drøyt sju ganger så stor.
+Ved halvårsskiftet 30. juni 2026 nådde Statens pensjonsfond utland – oljefondet – en markedsverdi på 22 683 milliarder kroner, viser halvårsrapporten som Norges Bank Investment Management (NBIM) la fram 12. august. Ved utgangen av 2010 sto fondet i 3 077 milliarder kroner. På 15 år har formuen dermed blitt drøyt sju ganger så stor.
 
 ## Tidenes høyeste kroneavkastning på et halvår
 
@@ -29,7 +30,7 @@ Til tross for gevinsten på 1 753 milliarder kroner økte den samlede fondsverdi
 
 ## Fra 3 000 til over 22 000 milliarder kroner
 
-Ser man på utviklingen siden 2010, har fondet vokst i nesten samtlige kalenderår. Milepælen på 6 000 milliarder kroner ble passert ved utgangen av 2014, og fem år senere, ved årsskiftet 2019/2020, krysset fondet 10 000 milliarder kroner. Veksten skjøt ytterligere fart mellom 2022 og 2024, da verdien hoppet fra 12 429 til 19 742 milliarder kroner, før den nådde 21 268 milliarder ved utgangen av 2025.
+Ser man på utviklingen siden 2010, har fondet vokst i nesten samtlige kalenderår, målt i kroner. Ved utgangen av 2014 var fondet verdt over 6 000 milliarder kroner, og ved utgangen av 2019 over 10 000 milliarder kroner (10 088 milliarder). Veksten skjøt ytterligere fart mellom 2022 og 2024, da verdien hoppet fra 12 429 til 19 742 milliarder kroner, før den nådde 21 268 milliarder ved utgangen av 2025.
 
 Det eneste kalenderåret med verdifall i denne perioden var 2018, da markedsverdien gikk ned fra 8 488 til 8 256 milliarder kroner.
 

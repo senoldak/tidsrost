@@ -8,16 +8,17 @@ coverAlt: "Illustrasjon: «Styringsrenten på 4,50 prosent skal bringe prisvekst
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen siterte sentralbanksjef Ida Wolden Bache og pressekonferansen med ordlyd som ikke lar seg bekrefte i Norges Banks pressemelding og rapport. Sitatene er erstattet med parafraser og et sitat fra Pengepolitisk rapport 3/2026. Påstanden om at lønnsveksten ventes å overstige prisveksten er fjernet (Norges Bank skriver at lønnsveksten ventes å bli lavere i år enn i fjor). Ledighetstallet er presisert til omtrent 2,1 prosent slik Norges Bank oppgir det, og beskrivelsen av KPI-JAE er rettet (var 3,0 prosent i september 2026, ikke «kommet ned»). Øvrige tall og begge figurer er kontrollert mot Norges Bank og SSB og er uendret."
 why_matters: "Styringsrenten påvirker renten på boliglån og bankinnskudd for norske husholdninger, og er Norges Banks viktigste virkemiddel for å sikre lav og stabil prisvekst."
 key_points:
   - "Norges Bank satte styringsrenten opp fra 4,25 til 4,50 prosent 24. september 2026 for å dempe prisveksten."
-  - "Prisveksten (KPI) var 3,4 prosent i september 2026, mens den underliggende inflasjonen (KPI-JAE) er kommet ned til 3,0 prosent."
+  - "Prisveksten (KPI) var 3,4 prosent i september 2026, mens den underliggende inflasjonen (KPI-JAE) var 3,0 prosent."
   - "Norges Bank anslår at husholdningenes disponible realinntekt vokser med 2,5 prosent i 2026 og 1,1 prosent i 2027."
 ---
 
 Den 24. september 2026 satte Norges Bank styringsrenten opp fra 4,25 til 4,50 prosent. Beslutningen følger opp renteøkningen fra 4,00 til 4,25 prosent i mai, og har som formål å bringe prisveksten trygt tilbake til inflasjonsmålet på 2 prosent.
 
-Fra september 2025 til september 2026 var tolvmånedersveksten i konsumprisindeksen (KPI) 3,4 prosent, mens den underliggende prisveksten (KPI-JAE) er kommet ned på 3,0 prosent, viser tall fra Statistisk sentralbyrå (SSB). Samtidig venter Norges Bank at god lønnsvekst gir norske husholdninger økt kjøpekraft både i 2026 og 2027. Neste rentemøte i Norges Bank avsluttes 5. november 2026.
+Fra september 2025 til september 2026 var tolvmånedersveksten i konsumprisindeksen (KPI) 3,4 prosent, mens den underliggende prisveksten (KPI-JAE) var 3,0 prosent, viser tall fra Statistisk sentralbyrå (SSB). Samtidig anslår Norges Bank at husholdningenes kjøpekraft fortsetter å øke de nærmeste årene, også etter at økte renteutgifter er tatt hensyn til. Neste rentemøte i Norges Bank avsluttes 5. november 2026.
 
 ## Stabilt rentenivå for å trygge kronekurs og kjøpekraft
 
@@ -30,11 +31,11 @@ Etter to rentekutt i juni og september 2025 ned til 4,00 prosent, har Norges Ban
 
 ## Lavere underliggende inflasjon og sterkere krone
 
-Da Norges Banks komité for pengepolitikk og finansiell stabilitet la fram septemberbeslutningen, viste den til at det er «behov for en noe strammere pengepolitikk for å få prisveksten ned til målet innen rimelig tid».
+Da Norges Banks komité for pengepolitikk og finansiell stabilitet la fram septemberbeslutningen, viste den til at prisveksten har ligget over målet i flere år, og at det trengs en noe strammere pengepolitikk for å få prisveksten ned til målet innen rimelig tid.
 
-– Prisveksten har ligget over målet i flere år. Ved å sette opp renten bidrar vi til å dempe prisveksten, uttalte sentralbanksjef Ida Wolden Bache.
+Sentralbanksjef Ida Wolden Bache sa at renten trolig må bli liggende høyt en tid fremover, og at komiteen er forberedt på å sette den opp igjen hvis utsiktene for prisveksten tilsier det.
 
-Komiteen pekte på at den underliggende prisveksten – målt ved KPI justert for avgiftsendringer og uten energivarer (KPI-JAE) – har avtatt og vært lavere enn ventet, mens internasjonale råvare- og energipriser har trukket den samlede konsumprisindeksen noe opp. Samtidig bidrar en sterkere kronekurs til å dempe prisveksten på varer Norge importerer fra utlandet.
+Komiteen pekte på at den underliggende prisveksten – målt ved KPI justert for avgiftsendringer og uten energivarer (KPI-JAE) – har avtatt og vært lavere enn ventet i juni, mens den samlede konsumprisindeksen har vært høyere enn ventet. Olje-, gass- og andre råvarepriser har steget. En sterkere krone ventes samtidig å dempe prisene på importerte varer.
 
 SSBs konsumpristall fra 9. oktober viser en tolvmånedersvekst i KPI på 3,4 prosent og i KPI-JAE på 3,0 prosent i september 2026. Det er klart lavere enn under pristoppen høsten 2022 og sommeren 2023 – da KPI nådde 7,5 prosent i oktober 2022 og KPI-JAE 6,9 prosent i juni 2023 – men begge indeksene har nå ligget sammenhengende over 2-prosentmålet siden februar 2022.
 
@@ -64,9 +65,9 @@ For norske boligeiere slår rentehevingene raskt ut på lånekostnadene. Allered
 
 Hvor mye den enkelte familie må ut med i ekstra renteutgifter, avhenger av gjeldsgrad, om lånet har flytende eller fast rente, og hvordan den enkelte bank priser utlånene sine.
 
-Til tross for dyrere boliglån anslår Norges Bank i *Pengepolitisk rapport 3/2026* at husholdningenes disponible realinntekt (utenom aksjeutbytte) vil vokse med 2,5 prosent i 2026 og 1,1 prosent i 2027. På pressekonferansen i september pekte sentralbanksjefen på at lønnsveksten fortsatt ventes å overstige prisveksten: «Med lavere prisvekst er det likevel utsikter til at husholdningenes kjøpekraft vil øke videre – også når vi tar hensyn til de økte rentekostnadene.»
+Til tross for dyrere boliglån anslår Norges Bank i *Pengepolitisk rapport 3/2026* at husholdningenes disponible realinntekt (utenom aksjeutbytte) vil vokse med 2,5 prosent i 2026 og 1,1 prosent i 2027. Norges Bank skriver i rapporten at husholdningenes kjøpekraft trolig vil fortsette å stige de nærmeste årene, «også når vi tar hensyn til renteutgiftene».
 
-I arbeidsmarkedet var 2,1 prosent av arbeidsstyrken registrert som helt ledige i august, og Norges Bank ser for seg at ledigheten vil stige svakt til litt over nivået fra før pandemien. For dem som har penger på bok, betyr det høye rentenivået på sin side høyere avkastning på bankinnskudd.
+Ifølge Norges Bank er den registrerte ledigheten nå omtrent 2,1 prosent, og den ventes å stige svakt til litt over nivået fra før pandemien. For dem som har penger på bok, betyr det høye rentenivået på sin side høyere avkastning på bankinnskudd.
 
 ## Kilder
 

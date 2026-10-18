@@ -8,6 +8,7 @@ coverAlt: "Illustrasjon: «Norgespris og strømstønad kuttet strømregningen me
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Et sitat som var tilskrevet seniorrådgiver Ståle Skrede i SSB er erstattet med en parafrase av SSBs egen omtale (uten støtteordningene måtte man tilbake til 2022 for å finne høyere pris i 2. kvartal). Påstanden om at kunder med Norgespris sto for knapt 58 prosent av husholdningenes forbruk ved utgangen av juni er fjernet fordi den ikke lot seg bekrefte i Energidepartementets eller NVEs materiale. Det er presisert at kraftprisen på 100,1 øre er uten mva., at Norgespris ville gitt høyere kostnad enn strømstønad i Nord-Norge (3 265 mot 2 631 kroner), og at budsjettforslaget er i underkant av 16,4 milliarder kroner. Priser, magasinfylling og begge figurer er kontrollert mot SSB (tabell 09387) og NVE og er uendret."
 why_matters: "Strøm er en viktig utgiftspost for husholdningene gjennom vinterhalvåret. Norgespris og den ordinære strømstønaden skjermer forbrukerne når engrosprisene svinger mellom landsdelene."
 key_points:
   - "Før støtte var gjennomsnittlig strømpris for husholdningene 173,2 øre/kWh i 2. kvartal 2026, mens støtteordningene trakk sluttprisen ned til 117,9 øre/kWh."
@@ -32,11 +33,11 @@ I uke 40 (28. september–4. oktober) var ukesnittet i engrosmarkedet 156 øre/k
 
 ## Støtteordningene kuttet regningen med en tredjedel
 
-SSBs prisstatistikk viser hva husholdningene faktisk betaler når både kraftpris, nettleie og offentlige avgifter summeres. Før fradrag for støtte kom totalprisen i 2. kvartal 2026 opp i 173,2 øre/kWh på landsbasis – sammensatt av 100,1 øre for kraften, 33,9 øre i nettleie og 39,2 øre i avgifter.
+SSBs prisstatistikk viser hva husholdningene faktisk betaler når både kraftpris, nettleie og offentlige avgifter summeres. Før fradrag for støtte kom totalprisen i 2. kvartal 2026 opp i 173,2 øre/kWh på landsbasis – sammensatt av 100,1 øre for kraften (uten mva.), 33,9 øre i nettleie og 39,2 øre i avgifter.
 
 De statlige støtteordningene trakk i snitt fra hele 55,3 øre/kWh i 2. kvartal, opp fra 4,8 øre/kWh i samme kvartal året før. Dermed endte husholdningenes gjennomsnittspris etter støtte på 117,9 øre/kWh – en nedgang på 6,6 prosent sammenlignet med 2. kvartal 2025.
 
-– Dersom vi ser bort i fra støtteordningene, må vi tilbake til 2022, da det var energikrise i Europa, for å finne høyere strømpris i 2. kvartal, uttalte seniorrådgiver Ståle Skrede i SSB da tallene ble publisert.
+Uten støtteordningene måtte man tilbake til 2022, da det var energikrise i Europa, for å finne en høyere strømpris i 2. kvartal, opplyser SSB.
 
 ![Linjediagram over strømprisen for husholdninger per kvartal fra 3. kvartal 2024 til 2. kvartal 2026. Før støtte steg prisen fra 112,4 til 195,1 øre/kWh i 1. kvartal 2026 og var 173,2 øre/kWh i 2. kvartal 2026. Etter støtte lå prisen mellom 112,3 og 132,3 øre/kWh og var 117,9 øre/kWh i 2. kvartal 2026.](./graf-2.svg)
 *Gjennomsnittlig strømpris for husholdninger inkludert nettleie og avgifter, før og etter støtte. Kilde: SSB.*
@@ -50,13 +51,13 @@ Siden 1. oktober 2025 har strømkundene kunnet velge mellom to statlige støtteo
 - **Norgespris** gir en fast kraftpris på 40 øre/kWh (eksklusive merverdiavgift) i 2026 for inntil 5 000 kWh i måneden i helårsboliger og 1 000 kWh i fritidsboliger. Nettleie, avgifter og eventuelt påslag fra strømleverandøren kommer i tillegg.
 - **Strømstønad** gjelder automatisk for husholdninger som ikke har bestilt Norgespris. Her dekker staten 90 prosent av kraftprisen i enkelttimer der spotprisen overstiger 77 øre/kWh (eksklusive merverdiavgift).
 
-Ved utgangen av september 2026 var det registrert i underkant av 1,9 millioner bestillinger av Norgespris, opplyser Energidepartementet. I Sørvest-Norge har rundt 78 prosent av husholdningene valgt fastprisordningen, og på landsbasis sto kunder med Norgespris for knapt 58 prosent av husholdningenes strømforbruk ved utgangen av juni.
+Ved utgangen av september 2026 var det registrert i underkant av 1,9 millioner bestillinger av Norgespris, opplyser Energidepartementet. I Sørvest-Norge har rundt 78 prosent av husholdningene valgt fastprisordningen.
 
-NVEs beregninger for en gjennomsnittsbolig med 20 000 kWh i årsforbruk og spotprisavtale illustrerer hvordan valgfriheten kommer kundene i ulike landsdeler til gode: I Vest-Norge kom strømregningen i 2. kvartal på anslagsvis 4 457 kroner med Norgespris, mot 6 252 kroner med ordinær strømstønad. I Nord-Norge, der spotprisen er svært lav, kostet strømmen 2 631 kroner med ordinær strømstønad.
+NVEs beregninger for en gjennomsnittsbolig med 20 000 kWh i årsforbruk og spotprisavtale illustrerer hvordan valgfriheten kommer kundene i ulike landsdeler til gode: I Vest-Norge kom strømregningen i 2. kvartal på anslagsvis 4 457 kroner med Norgespris, mot 6 252 kroner med ordinær strømstønad. I Nord-Norge, der spotprisen er svært lav, kostet strømmen 2 631 kroner med ordinær strømstønad, mot 3 265 kroner med Norgespris.
 
 ## Viderefører Norgespris og strømstønad med 16,4 milliarder i 2027
 
-I forslaget til statsbudsjett for 2027, lagt fram 7. oktober 2026, foreslår regjeringen å bevilge 16,4 milliarder kroner for å videreføre både Norgespris og strømstønad gjennom hele 2027. For neste år foreslås satsen i Norgespris prisjustert fra 40 til 45 øre/kWh uten merverdiavgift, mens innslagspunktet i strømstønaden foreslås satt til 79 øre/kWh. Kunder som ønsker å benytte Norgespris i 2027, kan bestille avtalen for det nye kalenderåret.
+I forslaget til statsbudsjett for 2027, lagt fram 7. oktober 2026, foreslår regjeringen å bevilge i underkant av 16,4 milliarder kroner for å videreføre både Norgespris og strømstønad gjennom hele 2027. For neste år foreslås satsen i Norgespris prisjustert fra 40 til 45 øre/kWh uten merverdiavgift, mens innslagspunktet i strømstønaden foreslås satt til 79 øre/kWh. Kunder som ønsker å benytte Norgespris i 2027, kan bestille avtalen for det nye kalenderåret.
 
 ## Magasinfyllingen ved inngangen til høsten
 

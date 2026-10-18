@@ -8,10 +8,11 @@ coverAlt: "Illustrasjon: «Hver fjerde budsjettkrone hentes fra oljefondet – 6
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Begge figurene er fjernet fordi de historiske tallene (bruk av fondsmidler i prosent av fondet og som andel av utgiftene, 2014–2024) ikke lot seg bekrefte mot Finansdepartementets publiserte tekst. Påstanden om at fondsmidlene dekket 13,7 prosent av utgiftene i 2014 og overskriften om «doblet bidrag siden 2014» er fjernet. Fjernet er også et regneeksempel om en familie med to inntekter på 750 000 kroner og 3 500 kroner lavere skatt, påstanden om elbilandelen på 97 prosent og påstander om hva som ligger bak nøytral budsjettvirkning og effekten på rentesettingen, som ikke finnes i Finansdepartementets materiale. Beskrivelsen av forventet realavkastning er rettet (nedsatt fra 4 til 3 prosent i Perspektivmeldingen 2017), og strømtiltakene og elbilmomsen er presisert. Hovedtallene (608,4 milliarder kroner, 2,7 prosent av fondet, 26,6 prosent av utgiftene, 794,1 milliarder kroner til folketrygden m.fl.) er kontrollert mot regjeringen.no og er uendret."
 why_matters: "Oljefondet finansierer nå mer enn hver fjerde krone staten bruker. Et ansvarlig uttak innenfor handlingsregelen sikrer at fellesskapets formue kommer både dagens innbyggere og fremtidige generasjoner til gode."
 key_points:
-  - "Regjeringen foreslår en bruk av fondsmidler på 608,4 milliarder kroner i 2027, som tilsvarer 2,7 prosent av Statens pensjonsfond utland – klart under treprosentbanen."
-  - "Fondsmidlene dekker anslagsvis 26,6 prosent av statsbudsjettets utgifter i 2027, opp fra 13,7 prosent i 2014."
+  - "Regjeringen foreslår en bruk av fondsmidler på 608,4 milliarder kroner i 2027, som tilsvarer 2,7 prosent av Statens pensjonsfond utland – under forventet realavkastning på 3 prosent."
+  - "Fondsmidlene dekker anslagsvis 26,6 prosent av statsbudsjettets utgifter i 2027, mot 26,5 prosent i 2026 og 24,5 prosent i 2025."
   - "Budsjettforslaget inneholder 85 milliarder kroner til Ukraina, styrkede rammer til kommuner og sykehus, og en reduksjon i inntektsskatten på 6,4 milliarder kroner."
 ---
 
@@ -19,18 +20,15 @@ I sitt forslag til statsbudsjett for 2027, lagt fram 7. oktober 2026, foreslår 
 
 ## Slik virker handlingsregelen
 
-Handlingsregelen legger til grunn at oljepengebruken over tid skal følge den forventede realavkastningen av fondet. Siden 2018 har dette avkastningsanslaget ligget på 3 prosent, etter at det tidligere var satt til 4 prosent.
+Handlingsregelen legger til grunn at oljepengebruken over tid skal følge den forventede realavkastningen av fondet. Forventet realavkastning ble satt ned fra 4 til 3 prosent i Perspektivmeldingen 2017.
 
 Det offisielle målet for oljepengebruken er det strukturelle, oljekorrigerte budsjettunderskuddet. Dette tallet viser hvor stort statens underskudd er når petroleumsinntektene holdes utenfor, og når det samtidig korrigeres for konjunktursvingninger i skatter, avgifter og arbeidsledighetstrygd. I Nasjonalbudsjettet 2027 peker Finansdepartementet på at uttaket bør holdes under 3 prosent i normale konjunkturer, og viser til analyser der et uttak på 2,7 prosent tilsvarer forventet realavkastning over tid.
 
-Selve den faktiske overføringen fra oljefondet til statskassen – det ujusterte oljekorrigerte underskuddet – er anslått til 561,7 milliarder kroner i 2027.
+Selve den faktiske overføringen fra oljefondet til statskassen – det ujusterte oljekorrigerte underskuddet – er anslått til om lag 562 milliarder kroner i 2027.
 
-![Stolpediagram over bruken av fondsmidler i prosent av Statens pensjonsfond utland fra 2014 til 2027. Andelen var 3,0 prosent i 2014, 2,4 prosent i 2018, 3,6 prosent i 2020 under pandemien, 2,6 prosent i 2024 og 2025, 2,7 prosent i 2026 og 2,7 prosent i budsjettforslaget for 2027.](./graf-1.svg)
-*Uttaket fra fondet har ligget under 3 prosent de fleste år siden 2015, med unntak av 2020 og 2021. Kilde: Finansdepartementet, Nasjonalbudsjettet 2027.*
+## Fondsbruken i tall
 
-## Doblet bidrag til fellesvelferden siden 2014
-
-I takt med at oljefondet har vokst kraftig i verdi, har også de årlige overføringene til statsbudsjettet økt innenfor handlingsregelens rammer. Det strukturelle underskuddet endte på 507,4 milliarder kroner i 2025, og er for 2026 anslått til 583,4 milliarder kroner – omtrent på linje med revidert nasjonalbudsjett.
+Det strukturelle underskuddet endte på 507,4 milliarder kroner i 2025, og er for 2026 anslått til 583,4 milliarder kroner – omtrent på linje med revidert nasjonalbudsjett.
 
 | År | Mrd. kr (løpende priser) | Mrd. 2027-kroner | Prosent av fondet | Prosent av trend-BNP for Fastlands-Norge |
 |---|---|---|---|---|
@@ -40,12 +38,9 @@ I takt med at oljefondet har vokst kraftig i verdi, har også de årlige overfø
 
 *Kilde: Finansdepartementet, nøkkeltall i Nasjonalbudsjettet 2027.*
 
-Regnet i faste 2027-priser øker fondsbruken med 4,9 milliarder kroner fra 2026 til 2027. Målt som andel av verdiskapingen i fastlandsøkonomien (trend-BNP) er oljepengebruken uendret, med en budsjettindikator på 0,0, og den reelle, underliggende utgiftsveksten i statsbudsjettet er beregnet til 0,2 prosent. Ifølge Finansdepartementet går deler av fondsuttaket til skatte- og avgiftslettelser, slik at budsjettet samlet sett virker tilnærmet nøytralt på den økonomiske aktiviteten.
+Regnet i faste 2027-priser øker fondsbruken med 4,9 milliarder kroner fra 2026 til 2027. Målt som andel av verdiskapingen i fastlandsøkonomien (trend-BNP) er oljepengebruken uendret, med en budsjettindikator på 0,0, og den reelle, underliggende utgiftsveksten i statsbudsjettet er beregnet til 0,2 prosent. Finansdepartementet venter at budsjettet virker tilnærmet nøytralt på den økonomiske aktiviteten.
 
-Over tid har avkastningen fra fondet gitt et stadig større bidrag til finansieringen av fellesoppgavene. Mens fondsmidlene dekket 13,7 prosent av statens utgifter i 2014, er andelen anslått til 26,6 prosent i 2027. I Nasjonalbudsjettet framheves det at oljekronene har finansiert et bredt offentlig tjenestetilbud, og at handlingsregelens ramme sikrer en jevn og forutsigbar innfasing også når de internasjonale finansmarkedene svinger.
-
-![Linjediagram over bruken av fondsmidler som andel av utgiftene på statsbudsjettet fra 2014 til 2027. Andelen steg fra 13,7 prosent i 2014 til 23,6 prosent i 2020, falt til 19,7 prosent i 2022 og er anslått til 26,5 prosent i 2026 og 26,6 prosent i 2027.](./graf-2.svg)
-*Fondet finansierer i dag mer enn hver fjerde utgiftskrone på statsbudsjettet. Kilde: Finansdepartementet, Nasjonalbudsjettet 2027.*
+Fondsmidlene finansierer i overkant av hver fjerde utgiftskrone på statsbudsjettet. Andelen av utgiftene som dekkes av fondsmidler er anslått til 24,5 prosent i 2025, 26,5 prosent i 2026 og 26,6 prosent i 2027, ifølge Nasjonalbudsjettet 2027.
 
 ## Forsvar, Ukraina og folketrygd topper utgiftssiden
 
@@ -55,10 +50,10 @@ Folketrygden er den klart største utgiftsposten med 794,1 milliarder kroner –
 
 Blant hovedgrepene i regjeringens budsjettforslag er:
 
-- **Forsvar:** 6,5 milliarder kroner i økte bevilgninger i tråd med langtidsplanen, slik at forsvarsutgiftene anslås til 3,4 prosent av BNP i 2027.
-- **Ukraina:** 85 milliarder kroner gjennom Nansen-programmet, regnet inn i det strukturelle fondsuttaket.
+- **Forsvar:** 6,5 milliarder kroner i økte bevilgninger, slik at forsvarsutgiftene anslås til 3,4 prosent av BNP i 2027.
+- **Ukraina:** 85 milliarder kroner gjennom Nansen-programmet, inkludert i fondsbruken på 608,4 milliarder kroner.
 - **Kommuner og sykehus:** 3,2 milliarder kroner i økte frie inntekter til kommunesektoren og 3,1 milliarder kroner mer til sykehusene.
-- **Strømtiltak:** Videreføring av både strømstønaden og Norgespris, med en samlet kostnadsramme for husholdningene på i underkant av 16,4 milliarder kroner.
+- **Strømtiltak:** Strømstønaden dekker 90 prosent av kostnadene over 79 øre per kilowattime før avgifter, og Norgespris settes til 45 øre per kilowattime pluss avgifter i 2027. Strømstøtten er anslått å koste 16,4 milliarder kroner i 2027.
 
 Finansminister Jens Stoltenberg (Ap) oppsummerte rammen slik da budsjettet ble lagt fram: «Bruken av fondsmidler er i tråd med handlingsregelen og klart under den forventede realavkastningen på tre prosent.»
 
@@ -66,15 +61,15 @@ Finansminister Jens Stoltenberg (Ap) oppsummerte rammen slik da budsjettet ble l
 
 På skattesiden foreslår regjeringen å lette inntektsskatten for personer med 6,4 milliarder kroner. Hovedgrepet er et kutt i trygdeavgiften på 0,2 prosentpoeng, som alene utgjør 4,9 milliarder kroner, kombinert med at personfradraget heves til 120 180 kroner.
 
-Samtidig videreføres den planlagte innfasingen av merverdiavgift for de dyreste elbilene etter at elbilandelen i nybilsalget har passert 97 prosent: Beløpsgrensen for momsfritak foreslås satt til 150 000 kroner i 2027, mens veibruksavgiften på bensin, mineralolje og biodiesel foreslås satt ned med 50 øre per liter.
+Beløpsgrensen for momsfritak for elbiler foreslås senket fra 300 000 til 150 000 kroner, mens veibruksavgiften på bensin, mineralolje og biodiesel foreslås satt ned med 50 øre per liter.
 
-Isolert sett gir de nye skatte- og avgiftsforslagene en samlet lettelse på 1,8 milliarder kroner i 2027. Regnet sammen med helårsvirkningen av endringer som ble vedtatt i 2026, holdes det samlede skatte- og avgiftsnivået stabilt – i tråd med regjeringens skatteløfte.
+Isolert sett gir de nye skatte- og avgiftsforslagene en samlet lettelse på 1,8 milliarder kroner i 2027. Regnet sammen med helårsvirkningen av tiltak fra 2026 blir den samlede endringen i skatter og avgifter tilnærmet null.
 
 ## Slik slår budsjettforslaget ut for husholdningene
 
-For vanlige lønnstakere gir kuttet i trygdeavgiften og det økte personfradraget lavere skattetrekk: Ifølge regjeringens beregninger vil en familie med to inntekter på 750 000 kroner hver få 3 500 kroner lavere skatt med det foreslåtte opplegget.
+For lønnstakere gir kuttet i trygdeavgiften og det økte personfradraget lavere skattetrekk. Finansminister Jens Stoltenberg kaller kuttet i inntektsskatten på 6,4 milliarder kroner «den største lettelsen i inntektsskatten på 20 år».
 
-Størrelsen på oljepengebruken bidrar også til stabilitet i norsk økonomi. Finansdepartementet framholder at et konjunkturnøytralt budsjett støtter opp under arbeidet med å bringe prisveksten videre ned uten å legge ekstra press på rentesettingen i Norges Bank. Det endelige statsbudsjettet for 2027 vedtas av Stortinget før jul.
+Stortinget behandler forslaget, og statsbudsjettet for 2027 vedtas normalt i desember.
 
 ## Kilder
 

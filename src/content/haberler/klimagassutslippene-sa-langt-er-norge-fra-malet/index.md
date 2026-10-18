@@ -8,6 +8,7 @@ coverAlt: "Illustrasjon: «Klimagassutslippene har falt hvert år siden 2019 –
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Forklaringen på økte industriutslipp i 2025 var tilskrevet Miljødirektoratet; den er rettet til SSBs forklaring (driftsstans i 2024 ga lavere utslipp det året). Påstanden om at utslippene fra veitrafikken er lavest ifølge Miljødirektoratet er rettet til SSBs tidsserie fra 1990. Datoen 4. november for SSBs endelige tall er fjernet (SSB oppgir november 2026). Omtalen av EU-samarbeidet og utslippsgapet på 5,3 millioner tonn er presisert slik den står i regjeringens klimastatus og -plan for 2027, og drivstoffavgiftene holdes reelt uendret. Utslippstall, tabell og begge figurer er kontrollert mot SSB (tabell 13931) og er uendret."
 why_matters: "Klimaloven fastsetter at Norge skal redusere utslippene med minst 55 prosent fra 1990 til 2030. Innenlandske virkemidler og klimasamarbeidet med EU danner rammen for hvordan målet oppfylles."
 key_points:
   - "Foreløpige tall fra SSB viser at klimagassutslippene i Norge var 44,1 millioner tonn CO₂-ekvivalenter i 2025 – 1,2 prosent lavere enn i 2024 og 13,9 prosent under 1990-nivå."
@@ -28,13 +29,13 @@ Siden 2019 har utslippene blitt redusert hvert eneste år. Som Klima- og miljød
 
 – Utslippene fortsetter å synke, men nedgangen er noe svakere enn det vi har sett de siste par årene, sier seniorrådgiver Trude Melby Bothner i SSB i byråets omtale av tallene.
 
-SSB legger fram det endelige klimaregnskapet for 2025 den 4. november 2026. Da tas det samtidig i bruk en oppdatert versjon av beregningsmodellen for veitrafikk for hele tidsserien tilbake til 1990.
+SSB legger fram det endelige klimaregnskapet for 2025 i november 2026. Da tas det samtidig i bruk en oppdatert versjon av beregningsmodellen for veitrafikk for hele tidsserien tilbake til 1990.
 
 ## 44 prosent lavere industriutslipp enn i 1990
 
-Olje- og gassutvinning utgjorde 10,9 millioner tonn i 2025 – rundt en fjerdedel av de norske utslippene. Sektoren reduserte utslippene sine med 0,9 prosent fra 2024 til 2025 som følge av lavere utslipp ved landanleggene, men ligger samlet sett 32,5 prosent høyere enn i 1990.
+Olje- og gassutvinning utgjorde 10,9 millioner tonn i 2025 – rundt en fjerdedel av de norske utslippene. Sektoren reduserte utslippene sine med 0,9 prosent fra 2024 til 2025. Utslippene fra landanleggene gikk ned, mens de på sokkelen økte litt. Samlet ligger sektoren 32,5 prosent høyere enn i 1990.
 
-Industri og bergverk sto for 10,7 millioner tonn i 2025. Siden 1990 har norsk industri redusert klimagassutslippene sine med hele 44,0 prosent. Fra 2024 til 2025 gikk utslippene i industrien opp med 1,6 prosent, noe Miljødirektoratet knytter til høyere kapasitetsutnyttelse etter at flere anlegg hadde lengre vedlikeholdsstans i 2024.
+Industri og bergverk sto for 10,7 millioner tonn i 2025. Siden 1990 har norsk industri redusert klimagassutslippene sine med hele 44,0 prosent. Fra 2024 til 2025 gikk utslippene i industrien opp med 1,6 prosent, noe SSB forklarer med at flere anlegg hadde driftsstans i 2024, som ga lavere utslipp det året.
 
 ![Liggende stolpediagram over klimagassutslipp etter kilde i 2025. Olje- og gassutvinning 10,9 millioner tonn CO₂-ekvivalenter, industri og bergverk 10,7, luftfart, sjøfart, fiske m.m. 7,4, veitrafikk 6,9, jordbruk 4,4, andre kilder 2,1, energiforsyning 1,1 og oppvarming 0,5.](./graf-2.svg)
 *Olje- og gassutvinning og industri var de største utslippskildene i 2025. Foreløpige tall. Kilde: SSB, tabell 13931.*
@@ -50,7 +51,7 @@ Industri og bergverk sto for 10,7 millioner tonn i 2025. Siden 1990 har norsk in
 
 ## Rekordlavt utslipp fra norske veier
 
-Veitrafikken sto for den største utslippsreduksjonen i 2025, med et fall på hele 8,2 prosent på ett år ned til 6,9 millioner tonn. Ifølge Miljødirektoratet har utslippene fra veitrafikken aldri vært lavere i måleperioden, etter at de lå på 10,3 millioner tonn på toppen i 2015.
+Veitrafikken sto for den største utslippsreduksjonen i 2025, med et fall på hele 8,2 prosent på ett år ned til 6,9 millioner tonn. I SSBs tidsserie tilbake til 1990 har utslippene fra veitrafikken aldri vært lavere, etter at de lå på 10,3 millioner tonn på toppen i 2015.
 
 Den raske elektrifiseringen av bilparken og bruk av biodrivstoff driver utviklingen: I løpet av 2025 økte antallet elbiler på norske veier med 20 prosent, og 95 prosent av alle nyregistrerte personbiler var elektriske.
 
@@ -62,11 +63,11 @@ Etter klimaloven § 3 er målet at «klimagassutslippene i 2030 reduseres med mi
 
 Regjeringens framskrivinger i Grønn bok viser at allerede vedtatt politikk vil bringe de innenlandske utslippene ned fra dagens 44,1 millioner tonn til rundt 37 millioner tonn i 2030 – tilsvarende et nasjonalt kutt på 27 prosent fra 1990. Med regjeringens planlagte nye tiltak anslås utslippene på norsk jord til 34 millioner tonn, eller 33 prosent reduksjon.
 
-Gjennom klimaavtalen med EU deltar Norge i det europeiske kvotesystemet og innsatsfordelingsforordningen. Når utslippskuttene i EUs kvotesystem og oppfyllelsen av EU-forpliktelsene regnes sammen med de nasjonale tiltakene, anslår regjeringen at Norge ligger an til rundt 51 prosent utslippsreduksjon i 2030, og arbeider videre med både nasjonale grep og fleksibilitetsmekanismer innenfor EØS-rammen for å dekke det resterende behovet på 5,3 millioner tonn i ikke-kvotepliktig sektor over perioden 2021–2030.
+Gjennom klimaavtalen med EU deltar Norge i det europeiske kvotesystemet og innsatsfordelingsforordningen. Når utslippskuttene i EUs kvotesystem og oppfyllelsen av EU-forpliktelsene regnes sammen med de nasjonale tiltakene, anslår regjeringen at Norge ligger an til rundt 51 prosent utslippsreduksjon i 2030. Anslaget er usikkert og forutsetter at Norge oppfyller innsatsfordelingen. Selv om Norge bruker eksisterende fleksibilitet i EU-regelverket, anslår regjeringen et samlet utslippsgap i innsatsfordelingen på 5,3 millioner tonn.
 
 ## Grønn skatteveksling og utslippsfrie varebiler i 2027
 
-I budsjettforslaget for 2027 viderefører regjeringen opptrappingen av CO₂-avgiften samtidig som husholdningene skjermes. Klima- og miljødepartementet foreslår å føre merinntektene tilbake gjennom lavere inntektsskatt og redusert veibruksavgift fra 1. januar 2027, slik at de samlede drivstoffavgiftene på bensin og diesel holdes uendret ved pumpen.
+I budsjettforslaget for 2027 viderefører regjeringen opptrappingen av CO₂-avgiften samtidig som husholdningene skjermes. Regjeringen foreslår å føre merinntektene tilbake gjennom lavere inntektsskatt og redusert veibruksavgift fra 1. januar 2027, slik at de samlede avgiftene på bensin og diesel til bruk i veitrafikken holdes reelt uendret.
 
 Fra mars 2027 foreslås dessuten elektriske varebiler fritatt for trafikkforsikringsavgift, og regjeringen varsler nye virkemidler for å støtte overgangen til nullutslippsløsninger også for lastebiler og busser.
 

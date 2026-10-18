@@ -1,13 +1,14 @@
 ---
-title: "Fødselstallene stiger for andre år på rad – slik ruster Norge seg for en eldre befolkning"
+title: "Fødselstallene stiger for tredje år på rad – slik ruster Norge seg for en eldre befolkning"
 description: "Fruktbarheten i Norge steg til 1,48 barn per kvinne i 2025 etter bunnoteringen på 1,40 i 2023. Samtidig viser SSBs framskrivinger at andelen over 80 år nesten dobles innen 2050."
 date: 2026-10-02T08:00:00+02:00
 category: innenriks
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Fødselstallene stiger for andre år på rad – slik ruster Norge seg for en eldre befolkning»"
+coverAlt: "Illustrasjon: «Fødselstallene stiger for tredje år på rad – slik ruster Norge seg for en eldre befolkning»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Tittelen oppga at fødselstallene stiger «for andre år på rad». Antall levendefødte har økt tre år på rad (51 480 i 2022, 51 980 i 2023, 54 013 i 2024 og 55 401 i 2025), og tittelen er rettet til «tredje år på rad». Det samlede fruktbarhetstallet har økt to år på rad (1,40 i 2023, 1,44 i 2024 og 1,48 i 2025), slik teksten oppgir. Øvrige tall, framskrivinger, sitater og figurer er kontrollert mot SSB og regjeringen.no og er uendret."
 why_matters: "Samspillet mellom fødselstall og levealder avgjør behovet for barnehager, skoler, sykehjemsplasser og arbeidskraft i kommunene. Regjeringens fødselstallsutvalg har lagt fram en rekke tiltak som nå følges opp."
 key_points:
   - "Samlet fruktbarhetstall var 1,48 barn per kvinne i 2025, opp fra 1,40 i 2023. I 2009 lå tallet på 1,98."

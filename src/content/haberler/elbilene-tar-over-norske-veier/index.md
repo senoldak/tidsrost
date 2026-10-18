@@ -8,6 +8,7 @@ coverAlt: "Illustrasjon: «97,9 prosent av nye personbiler er elbiler – elbile
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Sitatet fra finansminister Stoltenberg er forkortet til den delen som kan bekreftes i Finansdepartementets pressemelding (15. oktober 2025). Påstanden om at hele momsfritaket avvikles fra 2028 er rettet: Stortinget har bedt regjeringen om å senke grensen med ytterligere 150 000 kroner i 2028, forutsatt ESA-godkjenning, men dette er ikke foreslått i budsjettet for 2027. Beskrivelsen av overgangsregelen for leasing er rettet (grensen på 150 000 kroner gjelder biler levert etter 31. desember 2026), og det er presisert hvordan Finansdepartementet har regnet prosentøkningen i prisen. Tall for nybilsalg, bilpark, avgifter og klimagassutslipp og begge figurer er kontrollert mot SSB og Finansdepartementet og er uendret."
 why_matters: "Elbilen har i praksis overtatt nybilsalget i Norge, og i 2025 passerte antallet elbiler på veiene både diesel- og bensinbiler. Overgangen gir store utslippskutt i veitrafikken."
 key_points:
   - "Fra januar til september 2026 var 97,9 prosent av nyregistrerte personbiler elektriske eller nullutslipp, viser tall fra SSB."
@@ -26,7 +27,7 @@ Tallene over førstegangsregistrerte personbiler hos SSB viser hvor bratt overga
 ![Søylediagram over elbilandelen av nye personbiler i Norge. Andelen var 17,1 prosent i 2015, 54,3 prosent i 2020, 88,9 prosent i 2024, 95,9 prosent i 2025 og 97,9 prosent i januar–september 2026.](./graf-1.svg)
 *Andel elektrisk/nullutslipp av førstegangsregistrerte nye personbiler. 2026 gjelder januar–september. Kilde: SSB, tabell 14020.*
 
-Da statsbudsjettet for 2026 ble lagt fram i oktober 2025, konstaterte finansminister Jens Stoltenberg (Ap) at skiftet i nybilsalget var gjennomført: «Vi har hatt som mål at alle nye personbiler skal være elektriske i 2025, og med en elbilandel på 95 prosent i år kan vi si at målet i praksis er nådd.»
+Da statsbudsjettet for 2026 ble lagt fram i oktober 2025, konstaterte finansminister Jens Stoltenberg (Ap) at målet i praksis var nådd med en elbilandel på 95 prosent i 2025: «Vi har hatt som mål at alle nye personbiler skal være elektriske i 2025.»
 
 ## Flere elbiler enn dieselbiler på norske veier
 
@@ -37,13 +38,13 @@ Siden en personbil ifølge Finansdepartementet har en typisk levetid på 15 til 
 ![Linjediagram over elbilenes andel av alle registrerte personbiler i Norge per 31. desember. Andelen økte fra 2,6 prosent i 2015 til 12,1 prosent i 2020, 27,4 prosent i 2024 og 32,2 prosent i 2025.](./graf-2.svg)
 *Andel personbiler med elektrisk drivstoff av alle registrerte personbiler, per 31. desember. Kilde: SSB, tabell 07849.*
 
-Siden 2017 har antallet personbiler med ren forbrenningsmotor krympet med nær 600 000 biler fram til utgangen av 2025, en nedgang på rundt 23 prosent, opplyser Finansdepartementet i budsjettproposisjonen for 2027.
+Fra 2017 til 2025 ble beholdningen av personbiler med forbrenningsmotor redusert med nær 600 000, tilsvarende om lag 23 prosent, opplyser Finansdepartementet i budsjettproposisjonen for 2027. Beholdningen av personbiler samlet har likevel fortsatt å øke.
 
 ## Slik trappes momsfritaket ned mot 2028
 
 Fram til nyttår 2023 var elbiler helt fritatt for merverdiavgift. Fra 2023 ble det innført 25 prosent moms på den delen av kjøpesummen som oversteg 500 000 kroner, og i 2026-budsjettet ble denne fribeløpsgrensen senket til 300 000 kroner.
 
-I statsbudsjettet for 2027, lagt fram 7. oktober, foreslår regjeringen – i tråd med et tidligere anmodningsvedtak fra Stortinget – å kutte grensen videre til 150 000 kroner fra 1. januar 2027, før hele fritaket avvikles fra 2028. Endringen er beregnet å gi statskassen 3,8 milliarder kroner i merinntekter i 2027. Forslaget krever vedtak i Stortinget, og en videreføring av et delvis fritak etter 2026 må også godkjennes av EFTAs overvåkningsorgan ESA.
+I statsbudsjettet for 2027, lagt fram 7. oktober, foreslår regjeringen – i tråd med et tidligere anmodningsvedtak fra Stortinget – å kutte grensen videre til 150 000 kroner fra 1. januar 2027. Stortinget har bedt regjeringen om å senke grensen med ytterligere 150 000 kroner i 2028, forutsatt godkjenning fra ESA. Endringen er beregnet å gi statskassen 3,8 milliarder kroner i merinntekter i 2027. Forslaget krever vedtak i Stortinget, og en videreføring av et delvis fritak etter 2026 må også godkjennes av EFTAs overvåkningsorgan ESA.
 
 Finansdepartementet har regnet ut hvor mye ekstra moms som påløper ved ulike bilpriser dersom hele avgiftsøkningen veltes over i utsalgsprisen:
 
@@ -54,7 +55,7 @@ Finansdepartementet har regnet ut hvor mye ekstra moms som påløper ved ulike b
 | 300 000 kr | 37 500 kr | 11,7 % |
 | 500 000 kr | 37 500 kr | 6,6 % |
 
-Begrunnelsen fra departementet er at avgiftsfritaket har utspilt sin opprinnelige rolle: «Nå som tilnærmet alle nye biler er elbiler, er fritaket i praksis en generell støtte til kjøp av personbil.» I proposisjonen pekes det også på fordelingsvirkningen: Husholdningene blant de 20 prosentene med høyest inntekt sto for rundt 40 prosent av alle nye elbilkjøp i 2025.
+Begrunnelsen fra departementet er at avgiftsfritaket har utspilt sin opprinnelige rolle: «Nå som tilnærmet alle nye biler er elbiler, er fritaket i praksis en generell støtte til kjøp av personbil.» I proposisjonen pekes det også på fordelingsvirkningen: Husholdningene med de 20 prosent høyeste inntektene kjøpte om lag 40 prosent av alle nye elbiler i 2025. Finansdepartementet understreker at økningen i prosent av prisen er beregnet inkludert 20 000 kroner i engangsavgift og merverdiavgift, og at den forutsetter full overvelting i prisen.
 
 ## Vektavgift på elbiler og høy engangsavgift på fossilbiler
 
@@ -72,7 +73,7 @@ Når de endelige utslippstallene for 2025 legges fram i november 2026, varsler S
 
 ## Opptil 37 500 kroner dyrere etter nyttår
 
-Dersom Stortinget vedtar regjeringens budsjettforslag, vil enhver ny elbil med en pris før avgift på 300 000 kroner eller mer få 37 500 kroner i økt merverdiavgift fra 1. januar 2027. For biler mellom 150 000 og 300 000 kroner før avgift øker momsen gradvis. For leasingavtaler som er signert før 1. januar 2027, foreslås det en overgangsregel der dagens fribeløp på 300 000 kroner beholdes såfremt bilen også er levert til kunden før årsskiftet.
+Dersom Stortinget vedtar regjeringens budsjettforslag, vil enhver ny elbil med en pris før avgift på 300 000 kroner eller mer få 37 500 kroner i økt merverdiavgift fra 1. januar 2027. For biler mellom 150 000 og 300 000 kroner før avgift øker momsen gradvis. Biler som leveres til kunden etter 31. desember 2026, får beløpsgrensen på 150 000 kroner, også ved leasing.
 
 ## Kilder
 
