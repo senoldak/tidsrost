@@ -156,10 +156,10 @@
   "volodymyr-zelenskyj-anklager-usa-for-a-presse-ukraina-til-a-overgi-seg": {
     "tarih": "2026-10-18T20:04:43.592Z",
     "deneme": {
-      "ig_post": 1,
-      "ig_story": 1,
-      "fb_post": 1,
-      "fb_story": 1
+      "ig_post": 2,
+      "ig_story": 2,
+      "fb_post": 2,
+      "fb_story": 2
     },
     "son_hata": "Graph 400: Error validating access token: The user has not authorized application 1127775303074017."
   }
