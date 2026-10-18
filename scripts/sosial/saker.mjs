@@ -78,8 +78,19 @@ export const sakUrl = (id, kanal) => `${SITE}/artikkel/${id}/${kanal ? `?utm_sou
 // Norveç kitlesine ulaşmak için (sahibin isteği 2026-10-19): haberde geçen şehir etiket ve konum olur.
 export const BYER = ['Oslo', 'Bergen', 'Trondheim', 'Stavanger', 'Tromsø', 'Kristiansand', 'Bodø', 'Ålesund', 'Drammen', 'Fredrikstad'];
 // Instagram/Facebook konum etiketi: şehrin Facebook yer sayfası kimliği. Graph API yer aramasına izin vermediği için
-// elle doğrulanıp yazılır (del.mjs --kontrol listedekileri sınar). Boş olan şehir konumsuz gider.
-export const YERLER = {};
+// elle bulunur: Sayfanın "Yaşadığı şehir" kutusunun önerilerinden (2026-10-19). del.mjs --kontrol listedekileri sınar.
+export const YERLER = {
+  Oslo: '110848678937314',
+  Bergen: '106562399381316',
+  Trondheim: '110429825645017',
+  Stavanger: '115341461813501',
+  Tromsø: '113908368625565',
+  Kristiansand: '110737722288187',
+  Bodø: '114686248548744',
+  Ålesund: '105840952789550',
+  Drammen: '111988662160584',
+  Fredrikstad: '108211792532249',
+};
 
 /** Başlıkta, özette ya da ana noktalarda geçen ilk şehir. */
 export function sakBy(s) {
