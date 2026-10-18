@@ -1,4 +1,4 @@
-// Haberin Fjord story kartından 8 saniyelik Reels videosu (1080×1920, 30 kare/sn, H.264 + sessiz AAC) üretir.
+// Haberin Fjord story kartından 8 saniyelik Reels videosu (1080×1920, 30 kare/sn, H.264 + AAC, Pixabay'dan telifsiz haber jeneriği: lyd/KILDE.md) üretir.
 // Ücretsiz: kareler sharp ile çizilir, ffmpeg ile birleşir (GitHub ubuntu-latest'te kurulu; yerelde FFMPEG ile yol verilir).
 // Hareket: zemin dokusu yavaşça yakınlaşır, parçalar sırayla aşağıdan süzülerek belirir; son 3 saniye sabit (döngüde okunur).
 // Kullanım: node scripts/sosial/reels.mjs [haber-id] [--cikis dosya.mp4]
@@ -15,6 +15,7 @@ const SURE = 8;
 const GIRIS = { logo: 0, omslag: 0.15, etiket: 0.3, kick: 0.45, ana: 0.7, alt: 1.5, ing: 1.5, imza: 1.9, cta: 2.3 };
 const GECIS = 0.55;
 const KAYMA = 48;
+const MUZIK = path.join(path.dirname(fileURLToPath(import.meta.url)), 'lyd', 'nyhetsintro.mp3');
 
 const yumusak = (x) => 1 - Math.pow(1 - Math.min(Math.max(x, 0), 1), 3);
 
@@ -66,7 +67,9 @@ export async function reelsCiz(s, cikis) {
   const ff = spawn(process.env.FFMPEG || 'ffmpeg', [
     '-y', '-loglevel', 'error',
     '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', `${W}x${H}`, '-r', String(FPS), '-i', 'pipe:0',
-    '-f', 'lavfi', '-i', 'anullsrc=channel_layout=stereo:sample_rate=44100',
+    '-i', MUZIK,
+    // Müzik video boyunca kesilir, son saniyede kısılır; döngüde başa sert dönmesin.
+    '-af', `atrim=0:${SURE},afade=t=out:st=${SURE - 1}:d=1,volume=0.8`,
     '-shortest', '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-pix_fmt', 'yuv420p', '-profile:v', 'high',
     '-c:a', 'aac', '-b:a', '128k', '-movflags', '+faststart', cikis,
   ], { stdio: ['pipe', 'inherit', 'inherit'] });
