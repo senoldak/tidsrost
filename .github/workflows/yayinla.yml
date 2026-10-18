@@ -19,6 +19,8 @@ on:
 
 permissions:
   contents: read
+  # Yayından sonra Facebook/Instagram paylaşımını (sosial.yml) başlatmak için.
+  actions: write
 
 # Sırada bekleyen yayın varsa eskisi iptal edilir; her yayın dalın en son hâlini derler.
 concurrency:
@@ -68,3 +70,11 @@ jobs:
         continue-on-error: true
         timeout-minutes: 2
         run: node scripts/indexnow.mjs
+
+      # Facebook/Instagram paylaşımı. sosial.yml'yi "workflow_run" ile tetiklemek işe yaramıyor: GitHub, botun
+      # (GITHUB_TOKEN) başlattığı yayınlar bitince workflow_run olayı üretmiyor. workflow_dispatch ise serbest.
+      - name: Sosyal medya paylaşımını başlat
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run sosial.yml --ref "${{ github.ref_name }}" -f mod=paylas

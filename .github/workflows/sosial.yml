@@ -1,14 +1,12 @@
 # Yeni tam haberleri Facebook Sayfasına ve Instagram'a post + story olarak gönderir (scripts/sosial/del.mjs).
-# Her başarılı yayından sonra çalışır: post/story görselleri o yayınla tidsrost.com/sosial/ altına çıkar.
+# Her başarılı yayının son adımı (yayinla.yml) başlatır: post/story görselleri o yayınla tidsrost.com/sosial/ altına
+# çıkar. workflow_run kullanılmaz: GitHub botun başlattığı yayınlardan sonra o olayı üretmiyor.
 # Elle: mod=kontrol (hiçbir şey yayımlamadan erişim), mod=baslat (penceredeki haberleri gönderilmiş say), mod=paylas,
 # mod=test (tek haberi gece kuralı ve tavana bakmadan seçilen kanallara gönderir).
 # Sayfa ve Instagram kimlikleri repo değişkeni (META_PAGE_ID, INSTAGRAM_USER_ID), token gizli (META_TOKEN).
 name: Sosyal medya
 
 on:
-  workflow_run:
-    workflows: ['Yayınla']
-    types: [completed]
   workflow_dispatch:
     inputs:
       mod:
@@ -32,7 +30,6 @@ concurrency:
 
 jobs:
   paylas:
-    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
