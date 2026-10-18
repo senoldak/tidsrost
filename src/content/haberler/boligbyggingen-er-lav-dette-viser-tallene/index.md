@@ -1,14 +1,14 @@
 ---
 title: "20 184 boliger fikk byggetillatelse i 2025 – nå forenkler regjeringen byggereglene"
 description: "Etter en roligere periode i byggebransjen økte antall igangsettingstillatelser til 20 184 boliger i 2025. Nå moderniseres byggereglene for å nå målet om 130 000 nye boliger innen 2030."
-date: 2026-09-30T08:00:00+02:00
+date: 2026-10-14T12:16:00+02:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «20 184 boliger fikk byggetillatelse i 2025 – nå forenkler regjeringen byggereglene»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Innledningen hadde en uklar setning om årsgjennomsnittet; riktig er at 20 184 igangsatte boliger i 2025 fortsatt ligger godt under snittet på rundt 27 800 per år for 2000–2025 (SSB). Januar–september 2022 var ikke «toppåret» for januar–september (2016 og 2017 var høyere); formuleringen er rettet. Sitatet fra Kommunal- og distriktsdepartementet er gjengitt fullstendig, og omtalen av Norges Banks forventninger til boliginvesteringene er presisert. Alle tall i tabeller og figurer er kontrollert mot SSB og er uendret."
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Innledningen hadde en uklar setning om årsgjennomsnittet; riktig er at 20 184 igangsatte boliger i 2025 fortsatt ligger godt under snittet på rundt 27 800 per år for 2000–2025 (SSB). Januar–september 2022 var ikke «toppåret» for januar–september (2016 og 2017 var høyere); formuleringen er rettet. Sitatet fra Kommunal- og distriktsdepartementet er gjengitt fullstendig, og omtalen av Norges Banks forventninger til boliginvesteringene er presisert. Alle tall i tabeller og figurer er kontrollert mot SSB og er uendret. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.16, men var datert 30. september 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 why_matters: "Hvor mange boliger som bygges, styrer tilbudet i boligmarkedet på sikt. Regjeringen har satt som mål å sette i gang 130 000 nye boliger innen 2030 og forenkler nå regelverket for å få opp byggetakten."
 key_points:
   - "I 2025 fikk 20 184 boliger igangsettingstillatelse, opp fra 18 679 året før."

@@ -1,12 +1,12 @@
 ---
 title: "Forsvarsbudsjettet øker til 191,7 milliarder kroner i 2027 – 68,7 milliarder går til Ukraina"
 description: "Regjeringen foreslår en forsvarsramme på 191,7 milliarder kroner for 2027. Trekker man fra den militære Ukraina-støtten, øker det ordinære forsvarsbudsjettet fra 112 til 123 milliarder."
-date: 2026-10-10T08:00:00+02:00
+date: 2026-10-14T12:31:00+02:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Forsvarsbudsjettet øker til 191,7 milliarder kroner i 2027 – 68,7 milliarder går til Ukraina»"
 coverKreditt: "Illustrasjon: tidsrøst"
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen forklarte forskjellen mellom bevilgningen på kapittel 1750 (68,7 milliarder kroner) og rammen på 70 milliarder kroner for militær Ukraina-støtte med donert materiell fra Forsvarets lagre; det lar seg ikke bekrefte i Prop. 1 S (2026–2027), og forklaringen er byttet ut med det proposisjonen oppgir (481,4 millioner kroner på kapittel 1760). Oppgaven om Nansen-programmets samlede ramme for 2023–2030 (359,5 milliarder kroner) er fjernet fordi offisielle dokumenter oppgir ulike beløp, og påstanden om Finansdepartementets anslag for sikkerhetsrelaterte utgifter (1,5 og 3,1 prosent av BNP) er fjernet fordi den ikke lot seg bekrefte. Budsjettets hovedtall (191,7 milliarder kroner) er kontrollert mot Prop. 1 S og er riktige."
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen forklarte forskjellen mellom bevilgningen på kapittel 1750 (68,7 milliarder kroner) og rammen på 70 milliarder kroner for militær Ukraina-støtte med donert materiell fra Forsvarets lagre; det lar seg ikke bekrefte i Prop. 1 S (2026–2027), og forklaringen er byttet ut med det proposisjonen oppgir (481,4 millioner kroner på kapittel 1760). Oppgaven om Nansen-programmets samlede ramme for 2023–2030 (359,5 milliarder kroner) er fjernet fordi offisielle dokumenter oppgir ulike beløp, og påstanden om Finansdepartementets anslag for sikkerhetsrelaterte utgifter (1,5 og 3,1 prosent av BNP) er fjernet fordi den ikke lot seg bekrefte. Budsjettets hovedtall (191,7 milliarder kroner) er kontrollert mot Prop. 1 S og er riktige. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.31, men var datert 10. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Forsvarets andel av økonomien har vokst kraftig de siste årene. Budsjettallene skiller mellom den løpende opptrappingen av Norges eget forsvar og den militære bistanden til Ukraina."

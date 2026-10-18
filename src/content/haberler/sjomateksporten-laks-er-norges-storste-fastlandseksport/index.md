@@ -1,12 +1,12 @@
 ---
 title: "Fisken drar lasset i norsk fastlandseksport – nesten tre ganger så mye som aluminium"
 description: "Norge eksporterte fisk, krepsdyr og bløtdyr for 173,9 milliarder kroner i 2025, og laks alene sto for 124,3 milliarder. Fisk utgjorde 22,6 prosent av all norsk fastlandseksport."
-date: 2026-10-11T08:00:00+02:00
+date: 2026-10-14T12:31:00+02:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Fisken drar lasset i norsk fastlandseksport – nesten tre ganger så mye som aluminium»"
 coverKreditt: "Illustrasjon: tidsrøst"
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen bygde på tall fra Norges sjømatråd, som ikke er en offisiell statistikkilde; alle tall er nå hentet fra SSB. Tittelen oppga at laksen var «verdt tre ganger så mye som aluminium»; riktig er at fersk, kjølt og fryst fisk er nesten tre ganger så stor som aluminiumseksporten (156,7 mot 52,9 milliarder kroner), mens laks alene er om lag 2,3 ganger så stor (SSB, tabell 08818 og 09283). Rekordtallet på 181,5 milliarder kroner og laksetallet på 124,7 milliarder er erstattet med SSBs 173,9 og 124,3 milliarder kroner. Sitater, kvartalstall, markedstall for 2026 og omtale av USA-eksporten er fjernet fordi de ikke lot seg bekrefte hos SSB. Kommentarer om konsekvenser langs kysten er fjernet."
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen bygde på tall fra Norges sjømatråd, som ikke er en offisiell statistikkilde; alle tall er nå hentet fra SSB. Tittelen oppga at laksen var «verdt tre ganger så mye som aluminium»; riktig er at fersk, kjølt og fryst fisk er nesten tre ganger så stor som aluminiumseksporten (156,7 mot 52,9 milliarder kroner), mens laks alene er om lag 2,3 ganger så stor (SSB, tabell 08818 og 09283). Rekordtallet på 181,5 milliarder kroner og laksetallet på 124,7 milliarder er erstattet med SSBs 173,9 og 124,3 milliarder kroner. Sitater, kvartalstall, markedstall for 2026 og omtale av USA-eksporten er fjernet fordi de ikke lot seg bekrefte hos SSB. Kommentarer om konsekvenser langs kysten er fjernet. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.31, men var datert 11. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Fisk utgjør over en femdel av fastlandseksporten. Utviklingen påvirker sysselsetting og verdiskaping langs kysten."

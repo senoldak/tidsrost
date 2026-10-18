@@ -1,12 +1,12 @@
 ---
 title: "Innvandring og høyere fødselstall ga en folkevekst på 33 060 personer i 2025"
 description: "Nettoinnvandringen til Norge var 22 324 personer i 2025, mens fødselsoverskuddet økte til 10 361. I første halvår 2026 har flere nyfødte stått for den største delen av folkeveksten."
-date: 2026-10-12T08:00:00+02:00
+date: 2026-10-14T12:31:00+02:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Innvandring og høyere fødselstall ga en folkevekst på 33 060 personer i 2025»"
 coverKreditt: "Illustrasjon: tidsrøst"
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen oppga at endringen i ordningen for kollektiv beskyttelse hadde virkning fra 5. mai 2026; regjeringen oppgir bare at endringen ble kunngjort 27. mars 2026 og trer i kraft kort tid etter, og datoen er fjernet. Artikkelen forklarte også utvandringstallene i 2. kvartal 2026 som en følge av en teknisk kvalitetsgjennomgang; SSB opplyser bare at Skattedirektoratet har en pågående opprydding i folkeregisteret, og koblingen til kvartalstallene er fjernet. Alle befolknings-, flytte- og innvandringsgrunntall er kontrollert mot SSB og er riktige."
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen oppga at endringen i ordningen for kollektiv beskyttelse hadde virkning fra 5. mai 2026; regjeringen oppgir bare at endringen ble kunngjort 27. mars 2026 og trer i kraft kort tid etter, og datoen er fjernet. Artikkelen forklarte også utvandringstallene i 2. kvartal 2026 som en følge av en teknisk kvalitetsgjennomgang; SSB opplyser bare at Skattedirektoratet har en pågående opprydding i folkeregisteret, og koblingen til kvartalstallene er fjernet. Alle befolknings-, flytte- og innvandringsgrunntall er kontrollert mot SSB og er riktige. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.31, men var datert 12. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Samspillet mellom innvandring og fødselsoverskudd viser hvordan befolkningen i Norge utvikler seg – og gir grunnlaget for kommunenes planlegging av skoler, boliger, helsetjenester og arbeidskraft."

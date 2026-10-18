@@ -1,14 +1,14 @@
 ---
 title: "Nansen-programmet utvides til 344,5 milliarder kroner med ny Ukraina-støtte i 2027"
 description: "Regjeringen foreslår å videreføre Ukraina-støtten på 85 milliarder kroner i 2027, med 70 milliarder til militære formål og 15 milliarder til sivil bistand."
-date: 2026-10-06T08:00:00+02:00
+date: 2026-10-14T12:16:00+02:00
 category: utenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Nansen-programmet utvides til 344,5 milliarder kroner med ny Ukraina-støtte i 2027»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen oppga at gjennomganger våren 2026 «bekreftet at midlene treffer Ukrainas behov». Riksrevisjonens undersøkelser fra mai 2026 viser at midlene forvaltes i tråd med Ukrainas behov, men påpeker også mangelfulle vurderinger av korrupsjonsrisiko i noen av avtalene; teksten er rettet. Påstanden om at Nansen-programmet er blant de største enkeltpostene på statsbudsjettet er erstattet med Utenriksdepartementets egen beskrivelse, og forvaltningen av den sivile støtten er presisert (UD, Norad og Norfund, ikke bare Norad). «Fjerdedel av all norsk utviklingshjelp» er rettet til en fjerdedel av den foreslåtte bistandsrammen på 57,6 milliarder kroner. Beløp, rammer og figur er kontrollert mot regjeringen.no og Prop. 1 S (2026–2027) og er uendret."
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen oppga at gjennomganger våren 2026 «bekreftet at midlene treffer Ukrainas behov». Riksrevisjonens undersøkelser fra mai 2026 viser at midlene forvaltes i tråd med Ukrainas behov, men påpeker også mangelfulle vurderinger av korrupsjonsrisiko i noen av avtalene; teksten er rettet. Påstanden om at Nansen-programmet er blant de største enkeltpostene på statsbudsjettet er erstattet med Utenriksdepartementets egen beskrivelse, og forvaltningen av den sivile støtten er presisert (UD, Norad og Norfund, ikke bare Norad). «Fjerdedel av all norsk utviklingshjelp» er rettet til en fjerdedel av den foreslåtte bistandsrammen på 57,6 milliarder kroner. Beløp, rammer og figur er kontrollert mot regjeringen.no og Prop. 1 S (2026–2027) og er uendret. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.16, men var datert 6. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 why_matters: "Ifølge Utenriksdepartementets budsjettproposisjon er Nansen-programmet det største støtteprogrammet i Norges historie, og alle partier på Stortinget står bak det."
 key_points:
   - "Regjeringen foreslår 85 milliarder kroner til Ukraina i 2027 – 70 milliarder til militær støtte og 15 milliarder til sivil og humanitær bistand."

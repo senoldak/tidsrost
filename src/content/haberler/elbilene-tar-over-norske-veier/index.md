@@ -1,14 +1,14 @@
 ---
 title: "97,9 prosent av nye personbiler er elbiler – elbilene har passert dieselbilene på norske veier"
 description: "Nesten alle nye personbiler i 2026 er elektriske, og elbilene utgjør nå nær en tredjedel av hele bilparken. Etter at 2025-målet i praksis er nådd, fases momsfritaket gradvis inn i det ordinære avgiftssystemet."
-date: 2026-10-03T08:00:00+02:00
+date: 2026-10-14T12:16:00+02:00
 category: teknologi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «97,9 prosent av nye personbiler er elbiler – elbilene har passert dieselbilene på norske veier»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Sitatet fra finansminister Stoltenberg er forkortet til den delen som kan bekreftes i Finansdepartementets pressemelding (15. oktober 2025). Påstanden om at hele momsfritaket avvikles fra 2028 er rettet: Stortinget har bedt regjeringen om å senke grensen med ytterligere 150 000 kroner i 2028, forutsatt ESA-godkjenning, men dette er ikke foreslått i budsjettet for 2027. Beskrivelsen av overgangsregelen for leasing er rettet (grensen på 150 000 kroner gjelder biler levert etter 31. desember 2026), og det er presisert hvordan Finansdepartementet har regnet prosentøkningen i prisen. Tall for nybilsalg, bilpark, avgifter og klimagassutslipp og begge figurer er kontrollert mot SSB og Finansdepartementet og er uendret."
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Sitatet fra finansminister Stoltenberg er forkortet til den delen som kan bekreftes i Finansdepartementets pressemelding (15. oktober 2025). Påstanden om at hele momsfritaket avvikles fra 2028 er rettet: Stortinget har bedt regjeringen om å senke grensen med ytterligere 150 000 kroner i 2028, forutsatt ESA-godkjenning, men dette er ikke foreslått i budsjettet for 2027. Beskrivelsen av overgangsregelen for leasing er rettet (grensen på 150 000 kroner gjelder biler levert etter 31. desember 2026), og det er presisert hvordan Finansdepartementet har regnet prosentøkningen i prisen. Tall for nybilsalg, bilpark, avgifter og klimagassutslipp og begge figurer er kontrollert mot SSB og Finansdepartementet og er uendret. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.16, men var datert 3. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 why_matters: "Elbilen har i praksis overtatt nybilsalget i Norge, og i 2025 passerte antallet elbiler på veiene både diesel- og bensinbiler. Overgangen gir store utslippskutt i veitrafikken."
 key_points:
   - "Fra januar til september 2026 var 97,9 prosent av nyregistrerte personbiler elektriske eller nullutslipp, viser tall fra SSB."

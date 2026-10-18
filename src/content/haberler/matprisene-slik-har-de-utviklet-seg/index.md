@@ -1,12 +1,12 @@
 ---
 title: "Matprisveksten har roet seg til 2,4 prosent – nye tiltak skal styrke konkurransen i dagligvaremarkedet"
 description: "Mat og alkoholfrie drikkevarer steg 2,4 prosent det siste året, lavere enn den generelle prisveksten på 3,4 prosent. Samtidig styrker regjeringen Konkurransetilsynet og foreslår nye regler for grossisttilgang."
-date: 2026-10-09T08:00:00+02:00
+date: 2026-10-14T12:31:00+02:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Matprisveksten har roet seg til 2,4 prosent – nye tiltak skal styrke konkurransen i dagligvaremarkedet»"
 coverKreditt: "Illustrasjon: tidsrøst"
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Overskriften «Kaffe og sjømat trakk opp i september» er endret til «Kaffe trakk opp i september»; fisk og sjømat ble 0,5 prosent billigere fra august til september (SSB, tabell 14700). Artikkelen sa at matprisveksten lå under den samlede inflasjonen «siden våren 2026»; riktig er fra juni 2026, og matprisveksten lå over KPI i april og mai. Beskrivelsen av Konkurransetilsynets budsjett (5 millioner kroner var foreslått) og kartleggingen av innkjøpspriser (nær uendret fra 2024 til 2025) er presisert etter regjeringen.no og Konkurransetilsynet."
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Overskriften «Kaffe og sjømat trakk opp i september» er endret til «Kaffe trakk opp i september»; fisk og sjømat ble 0,5 prosent billigere fra august til september (SSB, tabell 14700). Artikkelen sa at matprisveksten lå under den samlede inflasjonen «siden våren 2026»; riktig er fra juni 2026, og matprisveksten lå over KPI i april og mai. Beskrivelsen av Konkurransetilsynets budsjett (5 millioner kroner var foreslått) og kartleggingen av innkjøpspriser (nær uendret fra 2024 til 2025) er presisert etter regjeringen.no og Konkurransetilsynet. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.31, men var datert 9. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Mat og alkoholfrie drikkevarer utgjør drøyt ti prosent av husholdningenes forbruk. Etter flere år med internasjonal råvareprisvekst har matprisveksten i 2026 avtatt til under den generelle inflasjonen."

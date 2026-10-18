@@ -1,12 +1,12 @@
 ---
 title: "Sykehuskøene krymper i hele landet – ti dager kortere ventetid etter Ventetidsløftet"
 description: "Ventetiden i norske sykehus falt med ti dager fra våren 2025 til våren 2026, og køene er redusert i samtlige fire hovedområder i spesialisthelsetjenesten. Rusbehandlingen innfrir allerede det langsiktige målet."
-date: 2026-10-13T08:00:00+02:00
+date: 2026-10-14T12:31:00+02:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Sykehuskøene krymper i hele landet – ti dager kortere ventetid etter Ventetidsløftet»"
 coverKreditt: "Illustrasjon: tidsrøst"
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen siterte helse- og omsorgsminister Jan Christian Vestre på «Ventetidsløftet har virket»; sitatet i regjeringens pressemelding 19. juni 2026 er «Ventetidsløftet har gitt svært gode resultater». Det nye 60-dagersmålet ble presentert som et mål «på sikt», ikke innført med en frist, og beskrivelsen av det som et mål for tiden mellom utredning og behandling er fjernet. Påstanden om at registreringen av «start helsehjelp» ble presisert 1. juni 2024, om økt kapasitet i helseregionene og om økte ventetider i mange land etter pandemien er fjernet fordi den ikke lot seg bekrefte. Fristbruddtallene er presisert (7,7 prosent i 2024 gjelder somatikk hos Helsedirektoratet og alle sektorer hos regjeringen). Ventetidstallene er kontrollert mot FHI og er riktige."
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen siterte helse- og omsorgsminister Jan Christian Vestre på «Ventetidsløftet har virket»; sitatet i regjeringens pressemelding 19. juni 2026 er «Ventetidsløftet har gitt svært gode resultater». Det nye 60-dagersmålet ble presentert som et mål «på sikt», ikke innført med en frist, og beskrivelsen av det som et mål for tiden mellom utredning og behandling er fjernet. Påstanden om at registreringen av «start helsehjelp» ble presisert 1. juni 2024, om økt kapasitet i helseregionene og om økte ventetider i mange land etter pandemien er fjernet fordi den ikke lot seg bekrefte. Fristbruddtallene er presisert (7,7 prosent i 2024 gjelder somatikk hos Helsedirektoratet og alle sektorer hos regjeringen). Ventetidstallene er kontrollert mot FHI og er riktige. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.31, men var datert 13. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Om lag 2,9 millioner pasienter fikk helsehjelp i spesialisthelsetjenesten i 2025. Kortere ventetider gir raskere behandling, bedre livskvalitet og raskere tilbakevending til arbeid og hverdag."

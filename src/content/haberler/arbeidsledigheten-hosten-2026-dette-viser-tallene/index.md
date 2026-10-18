@@ -1,14 +1,14 @@
 ---
 title: "Stabilt lav arbeidsledighet høsten 2026 med 2,0 prosent hos Nav og 4,5 prosent hos SSB"
 description: "59 400 personer var registrert helt ledige hos Nav i september, mens SSBs arbeidskraftundersøkelse måler ledigheten til 4,5 prosent. Samtidig har 24 000 flere kommet i jobb det siste året."
-date: 2026-10-07T08:00:00+02:00
+date: 2026-10-14T12:16:00+02:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Stabilt lav arbeidsledighet høsten 2026 med 2,0 prosent hos Nav og 4,5 prosent hos SSB»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Sitatet fra Navs arbeids- og velferdsdirektør Hege Nilssen er forkortet til den delen som står i Navs pressemelding; resten av sitatet lot seg ikke bekrefte. Påstanden om at Nav knytter oppgangen i ledighet blant ingeniører og IKT-folk til lavere etterspørsel fra petroleumsnæringen er fjernet, og det samme er påstanden om at SSB regner AKU som det mest dekkende målet på arbeidsledighet. Tallene for Nav og SSB, fylkene, yrkesgruppene og begge figurer er kontrollert mot Navs og SSBs publiserte tall og er uendret."
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Sitatet fra Navs arbeids- og velferdsdirektør Hege Nilssen er forkortet til den delen som står i Navs pressemelding; resten av sitatet lot seg ikke bekrefte. Påstanden om at Nav knytter oppgangen i ledighet blant ingeniører og IKT-folk til lavere etterspørsel fra petroleumsnæringen er fjernet, og det samme er påstanden om at SSB regner AKU som det mest dekkende målet på arbeidsledighet. Tallene for Nav og SSB, fylkene, yrkesgruppene og begge figurer er kontrollert mot Navs og SSBs publiserte tall og er uendret. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.16, men var datert 7. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 why_matters: "Ledighetstallene brukes når politikere, Nav og Norges Bank vurderer norsk økonomi. Fordi de to hovedmålene bygger på ulike definisjoner, gir de svært forskjellige svar på hvor mange som faktisk står uten jobb."
 key_points:
   - "59 400 personer var registrert som helt ledige hos Nav i september 2026 – 2,0 prosent av arbeidsstyrken."

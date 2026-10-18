@@ -1,14 +1,14 @@
 ---
 title: "Styringsrenten på 4,50 prosent skal bringe prisveksten ned – kjøpekraften ventes å øke videre"
 description: "Norges Bank hevet styringsrenten til 4,50 prosent i september 2026 for å sikre at inflasjonen kommer tilbake til målet på 2 prosent. Samtidig anslås husholdningenes reelle kjøpekraft å vokse med 2,5 prosent i år."
-date: 2026-09-28T08:00:00+02:00
+date: 2026-10-14T12:16:00+02:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Styringsrenten på 4,50 prosent skal bringe prisveksten ned – kjøpekraften ventes å øke videre»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen siterte sentralbanksjef Ida Wolden Bache og pressekonferansen med ordlyd som ikke lar seg bekrefte i Norges Banks pressemelding og rapport. Sitatene er erstattet med parafraser og et sitat fra Pengepolitisk rapport 3/2026. Påstanden om at lønnsveksten ventes å overstige prisveksten er fjernet (Norges Bank skriver at lønnsveksten ventes å bli lavere i år enn i fjor). Ledighetstallet er presisert til omtrent 2,1 prosent slik Norges Bank oppgir det, og beskrivelsen av KPI-JAE er rettet (var 3,0 prosent i september 2026, ikke «kommet ned»). Øvrige tall og begge figurer er kontrollert mot Norges Bank og SSB og er uendret."
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen siterte sentralbanksjef Ida Wolden Bache og pressekonferansen med ordlyd som ikke lar seg bekrefte i Norges Banks pressemelding og rapport. Sitatene er erstattet med parafraser og et sitat fra Pengepolitisk rapport 3/2026. Påstanden om at lønnsveksten ventes å overstige prisveksten er fjernet (Norges Bank skriver at lønnsveksten ventes å bli lavere i år enn i fjor). Ledighetstallet er presisert til omtrent 2,1 prosent slik Norges Bank oppgir det, og beskrivelsen av KPI-JAE er rettet (var 3,0 prosent i september 2026, ikke «kommet ned»). Øvrige tall og begge figurer er kontrollert mot Norges Bank og SSB og er uendret. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.16, men var datert 28. september 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 why_matters: "Styringsrenten påvirker renten på boliglån og bankinnskudd for norske husholdninger, og er Norges Banks viktigste virkemiddel for å sikre lav og stabil prisvekst."
 key_points:
   - "Norges Bank satte styringsrenten opp fra 4,25 til 4,50 prosent 24. september 2026 for å dempe prisveksten."

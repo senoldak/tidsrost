@@ -1,14 +1,14 @@
 ---
 title: "Hver fjerde budsjettkrone hentes fra oljefondet – 608,4 milliarder i 2027-forslaget"
 description: "Regjeringen foreslår å bruke 608,4 milliarder oljekroner i 2027 – tilsvarende 2,7 prosent av fondet og trygt innenfor handlingsregelen. Midlene styrker forsvar, sykehus, kommuner og skattelettelser på arbeidsinntekt."
-date: 2026-09-29T08:00:00+02:00
+date: 2026-10-14T12:16:00+02:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Hver fjerde budsjettkrone hentes fra oljefondet – 608,4 milliarder i 2027-forslaget»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Begge figurene er fjernet fordi de historiske tallene (bruk av fondsmidler i prosent av fondet og som andel av utgiftene, 2014–2024) ikke lot seg bekrefte mot Finansdepartementets publiserte tekst. Påstanden om at fondsmidlene dekket 13,7 prosent av utgiftene i 2014 og overskriften om «doblet bidrag siden 2014» er fjernet. Fjernet er også et regneeksempel om en familie med to inntekter på 750 000 kroner og 3 500 kroner lavere skatt, påstanden om elbilandelen på 97 prosent og påstander om hva som ligger bak nøytral budsjettvirkning og effekten på rentesettingen, som ikke finnes i Finansdepartementets materiale. Beskrivelsen av forventet realavkastning er rettet (nedsatt fra 4 til 3 prosent i Perspektivmeldingen 2017), og strømtiltakene og elbilmomsen er presisert. Hovedtallene (608,4 milliarder kroner, 2,7 prosent av fondet, 26,6 prosent av utgiftene, 794,1 milliarder kroner til folketrygden m.fl.) er kontrollert mot regjeringen.no og er uendret."
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Begge figurene er fjernet fordi de historiske tallene (bruk av fondsmidler i prosent av fondet og som andel av utgiftene, 2014–2024) ikke lot seg bekrefte mot Finansdepartementets publiserte tekst. Påstanden om at fondsmidlene dekket 13,7 prosent av utgiftene i 2014 og overskriften om «doblet bidrag siden 2014» er fjernet. Fjernet er også et regneeksempel om en familie med to inntekter på 750 000 kroner og 3 500 kroner lavere skatt, påstanden om elbilandelen på 97 prosent og påstander om hva som ligger bak nøytral budsjettvirkning og effekten på rentesettingen, som ikke finnes i Finansdepartementets materiale. Beskrivelsen av forventet realavkastning er rettet (nedsatt fra 4 til 3 prosent i Perspektivmeldingen 2017), og strømtiltakene og elbilmomsen er presisert. Hovedtallene (608,4 milliarder kroner, 2,7 prosent av fondet, 26,6 prosent av utgiftene, 794,1 milliarder kroner til folketrygden m.fl.) er kontrollert mot regjeringen.no og er uendret. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.16, men var datert 29. september 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 why_matters: "Oljefondet finansierer nå mer enn hver fjerde krone staten bruker. Et ansvarlig uttak innenfor handlingsregelen sikrer at fellesskapets formue kommer både dagens innbyggere og fremtidige generasjoner til gode."
 key_points:
   - "Regjeringen foreslår en bruk av fondsmidler på 608,4 milliarder kroner i 2027, som tilsvarer 2,7 prosent av Statens pensjonsfond utland – under forventet realavkastning på 3 prosent."

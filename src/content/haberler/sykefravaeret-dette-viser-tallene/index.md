@@ -1,12 +1,12 @@
 ---
 title: "Rekordhøy bruk av gradert sykmelding holder flere i kontakt med arbeidslivet"
 description: "31 prosent av alle sykmeldinger i 2. kvartal 2026 ble gitt som gradert sykmelding – det høyeste nivået Nav har målt. Samtidig styrker regjeringen innsatsen for tettere oppfølging mellom fastleger, Nav og arbeidsplassene."
-date: 2026-10-08T08:00:00+02:00
+date: 2026-10-14T12:31:00+02:00
 category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Rekordhøy bruk av gradert sykmelding holder flere i kontakt med arbeidslivet»"
 coverKreditt: "Illustrasjon: tidsrøst"
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen oppga feil prosentvis endring fra 2. kvartal 2025 i næringstabellen (for eksempel industri +3,6 prosent; riktig beregnet tall er +3,3 prosent, SSB tabell 13935). Alders-, kjønns- og diagnosetall som ikke lot seg bekrefte mot Nav og SSB, samt datoen for neste kvartalsmåling, er fjernet, og diagnosediagrammet er tatt ut. Beskrivelsen av tiltakene i 2027-budsjettet er presisert etter regjeringens pressemelding."
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen oppga feil prosentvis endring fra 2. kvartal 2025 i næringstabellen (for eksempel industri +3,6 prosent; riktig beregnet tall er +3,3 prosent, SSB tabell 13935). Alders-, kjønns- og diagnosetall som ikke lot seg bekrefte mot Nav og SSB, samt datoen for neste kvartalsmåling, er fjernet, og diagnosediagrammet er tatt ut. Beskrivelsen av tiltakene i 2027-budsjettet er presisert etter regjeringens pressemelding. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.31, men var datert 8. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Sykepengeordningen gir økonomisk trygghet ved sykdom, mens gradert sykmelding og aktiv tilrettelegging hjelper ansatte med å bevare tilknytningen til arbeidsplassen."
