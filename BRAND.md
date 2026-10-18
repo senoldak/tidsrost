@@ -142,6 +142,11 @@ su `#7fb2e5`.
 **Sosyal biyografi:**
 > tidsrøst – hør tidens røst. Rolige nyheter fra Norge og verden, bygget på offentlige kilder. Uten reklame.
 
+**Altbilgi tanıtımı (sitede, `Base.astro`):**
+> Uavhengig og reklamefri nyhetsside fra Norge og verden: korte nyheter, forklarende saker og oppdaterte data, bygget på offentlige kilder.
+
+Abartılı iddia yazılmaz: sitenin çoğu kısa haberdir; "dybdejournalistikk" gibi bir vaat yapılmaz.
+
 **Tek cümle tanıtım:**
 > tidsrøst er en reklamefri nyhetstjeneste som forteller hva som skjer i Norge og verden, rett fra de offentlige kildene. Hør tidens røst.
 
