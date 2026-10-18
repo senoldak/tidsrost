@@ -66,7 +66,7 @@ function tohumla(s) {
   for (const c of String(s)) h = Math.imul(h ^ c.charCodeAt(0), 16777619);
   return () => ((h = Math.imul(h ^ (h >>> 15), 2246822507) ^ Math.imul(h ^ (h >>> 13), 3266489909)) >>> 0) / 4294967296;
 }
-function konturlar({ cx, cy, rx, ry, adet, tohum, kalin = 1, renk = R.doku }) {
+export function konturlar({ cx, cy, rx, ry, adet, tohum, kalin = 1, renk = R.doku }) {
   const r = tohumla(tohum);
   const faz = Array.from({ length: 4 }, () => r() * 6.283);
   const g = [0.16, 0.1, 0.06, 0.04].map((x) => x * (0.7 + r() * 0.6));

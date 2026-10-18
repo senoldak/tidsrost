@@ -1,6 +1,6 @@
 # tidsrøst — Kimlik Kılavuzu
 
-> Sürüm 1 · 18 Ekim 2026. Sahibiyle 10–18 Ekim arasında verilen kararların toplu hâli; site (N50 harita yaprağı,
+> Sürüm 1.1 · 18 Ekim 2026 (logo yazının kendisi, ø simgesi; sosyal kapak görselleri). Sahibiyle 10–18 Ekim arasında verilen kararların toplu hâli; site (N50 harita yaprağı,
 > 10 Ekim) ve kapaklar (Fjord, 18 Ekim) bu kararlarla canlıda. Bu belge kimliğin tek kaynağıdır; ayrıntılı site kuralları
 > `DESIGN.md`'de, ürün kararları `PRODUCT.md`'de. Okur dili Norveççe (Bokmål); bu belge editör içindir.
 > "Öneri" diye işaretli maddeler sahibin onayına açıktır.
@@ -62,6 +62,11 @@ sakin, dürüst ve kolay okunur bir alternatif.
     renklerinde, SVG + saydam PNG.
   - `brand/sosyal/`: `profil-lys.png` (kâğıt zemin, mavi ø) ve `profil-mork.png` (gece zemini, açık mavi ø), 1080 kare;
     ø yuvarlak kırpmada da tam görünür.
+  - `brand/sosyal/` kapak görselleri ve `public/og-default.png` (`node scripts/sosyal-kapak.mjs` üretir, logoyu
+    `tidsrost-ordmerke-hvit.svg`'den alır): Fjord zemin, eş yükselti dokusu, kısa kırmızı çizgi, beyaz logo, altında slogan
+    "Siste nytt fra Norge og verden". `x-kapak-1500x500.png`, `facebook-kapak-1640x624.png`,
+    `linkedin-kapak-1128x191.png` (logo ortada: profil fotoğrafından ve mobil kırpmadan uzak); `og-default.png`
+    1200×630 (kapaksız haberlerin paylaşım görseli, logo solda).
 - Yapılmaz: ø'yü yeniden çizmek ya da başka yazı tipinden almak, döndürmek, gölge, degrade, kontur; logonun yanına ayrıca
   simge koymak.
 
@@ -142,8 +147,9 @@ su `#7fb2e5`.
 | Site, gece yaprağı, Temaer, `/styringsrenten/`, `/farevarsler/` | Canlı (harita yaprağı) |
 | Haber kapağı, Forklart kapağı, FB/IG gönderi ve hikâye | Canlı (Fjord, ters Fjord) |
 | Telegram | Canlı (`@tidsrost`) |
-| Logo paketi, favicon, yayıncı logosu, profil fotoğrafı | Hazır (ø simgesi, 18 Ekim); profil fotoğrafını sahibi yükler |
-| Sosyal kapak görseli (banner) | Henüz yok |
+| Logo paketi, favicon, yayıncı logosu, profil fotoğrafı | Hazır (ø simgesi, 18 Ekim) |
+| Sosyal kapak görselleri (X, Facebook, LinkedIn), varsayılan paylaşım görseli | Hazır (Fjord, 18 Ekim) |
+| Hesaplara yükleme (profil ve kapak görselleri) | Sahibi yapar |
 
 ## 12. Yapılmayacaklar
 
