@@ -138,6 +138,15 @@ if (kontrol) {
   const { data } = await graph('GET', `${igId}/content_publishing_limit`, { fields: 'quota_usage,config' });
   console.log(`[sosial] ✓ Facebook Sayfası: ${name}`);
   console.log(`[sosial] ✓ Instagram: @${username}, 24 saatlik kota ${data?.[0]?.quota_usage ?? '?'}/${data?.[0]?.config?.quota_total ?? '?'}`);
+  // Konum etiketi için yer sayfaları (geçici keşif: kimlikler bulunup saker.mjs'e yazılacak).
+  for (const q of ['Oslo, Norway', 'Bergen, Norway', 'Trondheim, Norway', 'Stavanger, Norway', 'Tromsø, Norway', 'Kristiansand, Norway', 'Bodø, Norway', 'Ålesund, Norway', 'Drammen, Norway', 'Fredrikstad, Norway', 'Norway']) {
+    try {
+      const r = await graph('GET', 'pages/search', { q, fields: 'id,name,location{city,country,latitude,longitude}', limit: '3' }, await sayfaTokeni());
+      console.log(`[sosial] yer ${q}: ${JSON.stringify(r.data)}`);
+    } catch (e) {
+      console.log(`[sosial] yer ${q}: ${gizle(e.message).slice(0, 200)}`);
+    }
+  }
   process.exit(0);
 }
 
