@@ -9,7 +9,9 @@ export const SITE = {
   // Hesap açılınca tam adresi yaz (ör. 'https://x.com/tidsrost').
   social: {
     x: '',
-    facebook: '',
+    // Haberler sosyal.yml ile FB/IG'ye post+story olarak gider (scripts/sosial/).
+    facebook: 'https://www.facebook.com/tidsrost',
+    instagram: 'https://www.instagram.com/tidsrost/',
     // Haberlerin gönderildiği Telegram kanalı (mecmua-saat/worker.js, hedefler: '@tidsrost').
     telegram: 'https://t.me/tidsrost',
   },
