@@ -99,7 +99,11 @@ const norm = (s) =>
     .trim()
     .toLowerCase();
 
-const helTekst = (sak) => `${sak.title}\n${sak.description}\n${sak.body}`;
+// Yayınlanan her metin alanı (başlık, giriş, gövde, neden önemli, anahtar noktalar) taranır.
+const helTekst = (sak) =>
+  [sak.title, sak.description, sak.body, sak.why_matters, ...(Array.isArray(sak.key_points) ? sak.key_points : [])]
+    .filter((x) => typeof x === 'string' && x)
+    .join('\n');
 
 // ── 1. Kesin kontroller ────────────────────────────────────────────────
 
@@ -238,7 +242,10 @@ UTKAST:
 Tittel: ${sak.title}
 Ingress: ${sak.description}
 
-${sak.body}`,
+${sak.body}
+${sak.why_matters ? `
+Hvorfor viktig: ${sak.why_matters}` : ""}${Array.isArray(sak.key_points) && sak.key_points.length ? `
+Nøkkelpunkter: ${sak.key_points.join(" | ")}` : ""}`,
   });
 
   if (!svar) return { godkjent: false, problemer: [...problemer, 'KI-kontroll kunne ikke kjøres'] };
@@ -263,7 +270,10 @@ UTKAST:
 Tittel: ${sak.title}
 Ingress: ${sak.description}
 
-${sak.body}`,
+${sak.body}
+${sak.why_matters ? `
+Hvorfor viktig: ${sak.why_matters}` : ""}${Array.isArray(sak.key_points) && sak.key_points.length ? `
+Nøkkelpunkter: ${sak.key_points.join(" | ")}` : ""}`,
   });
   return svar ? { ...sak, ...svar } : sak;
 }
@@ -299,7 +309,10 @@ Er teksten allerede korrekt, returner den uendret.
 Tittel: ${sak.title}
 Ingress: ${sak.description}
 
-${sak.body}`,
+${sak.body}
+${sak.why_matters ? `
+Hvorfor viktig: ${sak.why_matters}` : ""}${Array.isArray(sak.key_points) && sak.key_points.length ? `
+Nøkkelpunkter: ${sak.key_points.join(" | ")}` : ""}`,
   });
   return svar ? { ...sak, ...svar } : sak;
 }

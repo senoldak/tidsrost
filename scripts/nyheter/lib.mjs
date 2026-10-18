@@ -211,6 +211,25 @@ export function trygg(tekst = '') {
     .replace(/\[([^\]]*)\]\(\s*((?:[^()\s]|\([^()\s]*\))*)[^)]*\)/g, (m, txt, url) => (/^https:\/\/[^\s"'<>]+$/i.test(url) ? `[${txt}](${url})` : txt));
 }
 
+// Dış kaynaktan gelen adresi güvenli https adresine çevirir; geçersizse null.
+// new URL(...).href boşluk, <, >, " karakterlerini kodlar; Markdown linkini bozabilecek ( ) ' ` [ ] | \ de kodlanır.
+export function normaliserUrl(x) {
+  try {
+    const u = new URL(String(x ?? '').trim());
+    if (u.protocol !== 'https:' || u.username || u.password) return null;
+    return u.href.replace(/[()'`\[\]|\\]/g, (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`);
+  } catch {
+    return null;
+  }
+}
+
+// Markdown link metninde köşeli parantezleri ve satır sonlarını etkisizleştirir.
+export const mdMetin = (s = '') => String(s).replace(/[\[\]\\<>]/g, '').replace(/\s+/g, ' ').trim();
+
+// GitHub Actions özeti (Markdown) için üçüncü taraf metni: HTML/Markdown özel karakterleri kaçırılır, tek satıra indirilir.
+export const mdKacir = (s = '') =>
+  String(s).replace(/\s+/g, ' ').trim().replace(/[\\`*_{}\[\]()<>#+!|~&@]/g, (c) => `\\${c}`);
+
 // Norveç yazım kuralları (Språkrådet); yapay zekâya bırakmadan her habere en son uygulanır.
 // Tablolar (| ile başlayan satırlar) ve linklerin adresleri değiştirilmez.
 export function typografi(tekst = '', { tittel = false } = {}) {
@@ -265,8 +284,11 @@ export function avsnitt(tekst = '') {
 // Haberi src/content/haberler/<slug>/index.md olarak yazar, slug'ı döner.
 export async function skrivSak(rot, sak) {
   if (!KATEGORIER.includes(sak.category)) sak.category = 'innenriks';
-  const kilder = sak.kilder ?? [sak.kilde];
-  for (const k of kilder) if (!/^https:\/\//.test(k.url)) throw new Error(`Ugyldig kilde-URL: ${k.url}`);
+  const kilder = (sak.kilder ?? [sak.kilde]).map((k) => {
+    const url = normaliserUrl(k.url);
+    if (!url) throw new Error(`Ugyldig kilde-URL: ${k.url}`);
+    return { ...k, url };
+  });
   sak = {
     ...sak,
     title: typografi(trygg(sak.title), { tittel: true }),
@@ -303,7 +325,7 @@ export async function skrivSak(rot, sak) {
     sak.kildeSpor ? `kildeSpor: ${yamlStr(sak.kildeSpor)}` : null,
   ].filter(Boolean);
   // Üretim şekli notu sayfada ayrıca gösterilir; burada sadece kaynak (VVP 3.1).
-  const lenke = (k) => `[${k.navn}](${k.url})${k.lisens ? ` (${k.lisens})` : ''}`;
+  const lenke = (k) => `[${mdMetin(k.navn)}](${k.url})${k.lisens ? ` (${mdMetin(k.lisens)})` : ''}`;
   // Haber sitelerine dayanan haberde kaynak satırı yazılmaz (kilder: []; sahibin kuralı).
   const kilde = kilder.length ? `*${kilder.length > 1 ? 'Kilder' : 'Kilde'}: ${kilder.map(lenke).join(', ')}*` : '';
   await mkdir(path.join(base, slug), { recursive: true });

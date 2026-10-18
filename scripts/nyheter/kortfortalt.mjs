@@ -4,7 +4,7 @@
 // Sadece resmi kaynaklar için: haber sitesi adayları (skjult) buraya girmez.
 import path from 'node:path';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
-import { htmlTilTekst, osloIso, norskDato, trygg, typografi } from './lib.mjs';
+import { normaliserUrl, mdMetin, htmlTilTekst, osloIso, norskDato, trygg, typografi } from './lib.mjs';
 
 const yamlStr = (s) => JSON.stringify(String(s));
 const ren = (s = '') => typografi(trygg(htmlTilTekst(s))).replace(/\s+/g, ' ').trim();
@@ -20,14 +20,15 @@ export const slugFor = (d) => {
 
 // Kaynaktan gelen kısa duyuruyu satıra çevirir. Döner: { tittel, ingress, kilde } ya da geçersizse null.
 export function kortMelding({ tittel, ingress, kilde }) {
-  if (!tittel || !kilde?.url || !/^https:\/\//.test(kilde.url)) return null;
+  const url = normaliserUrl(kilde?.url);
+  if (!tittel || !url) return null;
   const t = ren(tittel).replace(/[.:]+$/, '');
   const i = ren(ingress);
-  return t ? { tittel: t, ingress: i && i !== t ? i : '', kilde } : null;
+  return t ? { tittel: t, ingress: i && i !== t ? i : '', kilde: { ...kilde, url } } : null;
 }
 
 export const linje = (m) =>
-  `- **${m.tittel}.**${m.ingress ? ` ${m.ingress}` : ''} *([${m.kilde.navn}](${m.kilde.url}))*`;
+  `- **${m.tittel}.**${m.ingress ? ` ${m.ingress}` : ''} *([${mdMetin(m.kilde.navn)}](${m.kilde.url}))*`;
 
 // Günün sayfasını oluşturur ya da günceller. Aynı adresli satır iki kez eklenmez.
 // Döner: eklenen satır sayısı.

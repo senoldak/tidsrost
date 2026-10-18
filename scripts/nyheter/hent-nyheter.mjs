@@ -5,7 +5,7 @@
 import path from 'node:path';
 import { writeFile, appendFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import { skrivSak, lesJsonFil } from './lib.mjs';
+import { skrivSak, lesJsonFil, mdKacir } from './lib.mjs';
 import { butceYukle, geminiPayiBitti } from './butce.mjs';
 import { vurder, velg, UTEN_VURDERING } from './viktighet.mjs';
 import { lesHukommelse, finnDublett, nokkel } from './dublett.mjs';
@@ -193,10 +193,10 @@ if (process.env.GITHUB_STEP_SUMMARY) {
   const ozet = [
     `### Nyhetsbot: ${antall} nye saker`,
     ...(kortLagt ? [`- 🗒️ Kort fortalt: ${kortLagt} kısa resmi duyuru eklendi`] : []),
-    ...stoppListe.map((t) => `- ⛔ Yayınlanmadı (kaynakta olmayan rakam/alıntı), taslakta bekliyor: ${t}`),
-    ...utkastListe.map((t) => `- 📝 Taslak, kontrol edilip yayınlanmayı bekliyor: ${t}`),
-    ...rettetListe.map((t) => `- ✏️ Kontrol düzeltti ve yayınlandı: ${t}`),
-    ...feilListe.map((f) => `- ❌ ${f}`),
+    ...stoppListe.map((t) => `- ⛔ Yayınlanmadı (kaynakta olmayan rakam/alıntı), taslakta bekliyor: ${mdKacir(t)}`),
+    ...utkastListe.map((t) => `- 📝 Taslak, kontrol edilip yayınlanmayı bekliyor: ${mdKacir(t)}`),
+    ...rettetListe.map((t) => `- ✏️ Kontrol düzeltti ve yayınlandı: ${mdKacir(t)}`),
+    ...feilListe.map((f) => `- ❌ ${mdKacir(f)}`),
   ].join('\n');
   await appendFile(process.env.GITHUB_STEP_SUMMARY, ozet + '\n');
 }
