@@ -47,3 +47,16 @@ test('fjordKart: imzalı yazı ters Fjord alır (açık zemin, etiket, yazar ad�
   const png = await kapakCiz(fjordKart({ tittel: 'Styringsrenten – kjøpekraften øker', forfatter: 'Şenol Dak', sjanger: 'forklart' }, 'story'));
   assert.equal((await sharp(png).metadata()).height, 1920);
 });
+
+test('kursgraf ve tallkort Fjord: 1200×675 PNG, yazılar katman (denetimli yazı tipi), ▲ üçgen olarak çizilir', async () => {
+  const { kursgraf, tallkort } = await import('./bilde.mjs');
+  const punkter = [['2026-10-01', 10.8], ['2026-10-02', 10.9], ['2026-10-03', 10.7]].map(([dato, verdi]) => ({ dato, verdi }));
+  const graf = await kursgraf({ tittel: 'Euro i norske kroner', serier: [{ navn: '1 euro', punkter }] });
+  assert.ok(graf.katmanlar.length > 5);
+  assert.doesNotMatch(graf.svg, /<text/);
+  assert.equal((await sharp(await kapakCiz(graf)).metadata()).width, 1200);
+  const kart = await tallkort({ overlinje: 'Styringsrenten', tall: '4,50 %', underlinje: '▲ opp fra 4,25 prosent' });
+  assert.match(kart.svg, /<polygon points="[^"]+" fill="#c8281e"\/>/);
+  assert.doesNotMatch(kart.svg, /<text/);
+  assert.equal((await sharp(await kapakCiz(kart)).metadata()).height, 675);
+});

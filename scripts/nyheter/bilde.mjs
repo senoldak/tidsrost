@@ -5,7 +5,7 @@ import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { hentJson, sleep } from './lib.mjs';
-import { fjordKart } from './fjord.mjs';
+import { fjordKart, fjordAraclari, fontlariDenetle } from './fjord.mjs';
 
 const HER = path.dirname(fileURLToPath(import.meta.url));
 const FONT_DIR = path.join(HER, 'fonts');
@@ -415,63 +415,104 @@ const kortDato = (iso) => `${Number(iso.slice(8, 10))}. ${MND[Number(iso.slice(5
 
 // Yan yana küçük grafikler: her para birimi kendi ölçeğinde (ör. euro ve dolar).
 // serier: [{ navn: '1 euro', punkter: [{ dato: '2026-10-09', verdi: 10.72 }] }]
-export function kursgraf({ serier, tittel }) {
-  const pad = 48;
-  const gap = 40;
+export async function kursgraf({ serier, tittel }) {
+  // Fjord dili (2026-10-18): koyu fjord zemin, beyaz çizgi, son değerde kırmızı nokta, bizim yazı tiplerimiz.
+  await fontlariDenetle();
+  const { R, tekst } = fjordAraclari;
+  const pad = 64;
+  const gap = 56;
   const pw = (B - pad * 2 - gap * (serier.length - 1)) / serier.length;
-  const top = 150;
-  const bunn = H - 70;
-  const paneler = serier.map((s, i) => {
+  const katmanlar = [];
+  let ic = `<rect width="${B}" height="${H}" fill="${R.fjord}"/>`;
+
+  const baslik = await tekst(tittel, { font: 'TidsrostTittel', boy: 54, renk: R.hvit });
+  katmanlar.push({ input: baslik.input, left: pad, top: 34 });
+  const top = 34 + baslik.h + 26;
+  const altBant = H - 76;
+
+  for (const [i, s] of serier.entries()) {
     const x0 = pad + i * (pw + gap);
     const verdier = s.punkter.map((p) => p.verdi);
     let [lo, hi] = [Math.min(...verdier), Math.max(...verdier)];
     const marg = Math.max((hi - lo) * 0.15, hi * 0.002);
     lo -= marg;
     hi += marg;
-    const gx0 = x0 + 4;
-    const gx1 = x0 + pw - 72;
-    const gy0 = top + 120;
-    const gy1 = bunn - 40;
+    const ad = await tekst(s.navn, { font: 'TidsrostSemi', boy: 28, renk: R.lys });
+    const deger = await tekst(`${tall(s.punkter.at(-1).verdi)} kr`, { font: 'TidsrostTittel', boy: 76, renk: R.hvit });
+    katmanlar.push({ input: ad.input, left: x0, top });
+    katmanlar.push({ input: deger.input, left: x0, top: top + ad.h + 6 });
+    const gx0 = x0;
+    const gx1 = x0 + pw - 70;
+    const gy0 = top + ad.h + 6 + deger.h + 34;
+    const gy1 = altBant - 44;
     const px = (j) => gx0 + ((gx1 - gx0) * j) / Math.max(1, s.punkter.length - 1);
     const py = (v) => gy1 - ((v - lo) / (hi - lo)) * (gy1 - gy0);
     const linje = s.punkter.map((p, j) => `${j ? 'L' : 'M'}${px(j).toFixed(1)} ${py(p.verdi).toFixed(1)}`).join('');
-    const flate = `${linje}L${gx1} ${gy1}L${gx0} ${gy1}Z`;
-    const siste = s.punkter.at(-1);
-    const første = s.punkter[0];
     const steg = [0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 5].find((t) => (hi - lo) / t <= 4) ?? 10;
-    const ticks = [];
-    for (let v = Math.ceil(lo / steg) * steg; v <= hi; v += steg) ticks.push(v);
     const desimaler = steg < 0.1 ? 2 : steg < 1 ? 1 : 0;
-    const rutenett = ticks
-      .map((v) => `<line x1="${gx0}" y1="${py(v).toFixed(1)}" x2="${gx1}" y2="${py(v).toFixed(1)}" stroke="${FARGE.delestrek}" stroke-width="1" stroke-dasharray="4 6"/>
-<text x="${x0 + pw}" y="${(py(v) + 7).toFixed(1)}" text-anchor="end" font-family="${FONT_SANS}" font-size="20" fill="${FARGE.dempet}">${tall(v, desimaler)}</text>`)
-      .join('');
-    return `<g>
-<text x="${x0}" y="${top}" font-family="${FONT_SANS}" font-size="28" font-weight="600" fill="${FARGE.dempet}">${esc(s.navn)}</text>
-<text x="${x0}" y="${top + 62}" font-family="${FONT_SERIF}" font-size="60" font-weight="700" fill="${FARGE.tekst}">${tall(siste.verdi)} kr</text>
-${rutenett}
-<line x1="${gx0}" y1="${gy1}" x2="${gx1}" y2="${gy1}" stroke="${FARGE.linje}" stroke-width="2"/>
-<path d="${flate}" fill="${FARGE.aksent}" fill-opacity="0.1"/>
-<path d="${linje}" fill="none" stroke="${FARGE.aksent}" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="${px(s.punkter.length - 1)}" cy="${py(siste.verdi)}" r="6" fill="${FARGE.aksent}"/>
-<text x="${gx0}" y="${bunn}" font-family="${FONT_SANS}" font-size="22" fill="${FARGE.dempet}">${kortDato(første.dato)}</text>
-<text x="${gx1}" y="${bunn}" text-anchor="end" font-family="${FONT_SANS}" font-size="22" fill="${FARGE.dempet}">${kortDato(siste.dato)}</text>
-</g>`;
-  });
-  return svg(`<rect width="${B}" height="${H}" fill="${FARGE.bg}"/>
-<text x="${pad}" y="74" font-family="${FONT_SERIF}" font-size="44" font-weight="700" fill="${FARGE.tekst}">${esc(tittel)}</text>
-<line x1="${pad}" y1="100" x2="${B - pad}" y2="100" stroke="${FARGE.linje}" stroke-width="2"/>
-${paneler.join('')}`);
+    for (let v = Math.ceil(lo / steg) * steg; v <= hi; v += steg) {
+      ic += `<line x1="${gx0}" y1="${py(v).toFixed(1)}" x2="${gx1}" y2="${py(v).toFixed(1)}" stroke="${R.doku}" stroke-width="1.5" stroke-dasharray="4 6"/>`;
+      const t = await tekst(tall(v, desimaler), { font: 'TidsrostBrod', boy: 22, renk: R.lys });
+      katmanlar.push({ input: t.input, left: Math.round(x0 + pw - t.w), top: Math.round(py(v) - t.h / 2) });
+    }
+    ic += `<line x1="${gx0}" y1="${gy1}" x2="${gx1}" y2="${gy1}" stroke="${R.lys}" stroke-width="2"/>`;
+    ic += `<path d="${linje}L${gx1} ${gy1}L${gx0} ${gy1}Z" fill="${R.hvit}" fill-opacity="0.08"/>`;
+    ic += `<path d="${linje}" fill="none" stroke="${R.hvit}" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>`;
+    ic += `<circle cx="${px(s.punkter.length - 1)}" cy="${py(s.punkter.at(-1).verdi)}" r="8" fill="${R.rod}" stroke="${R.hvit}" stroke-width="2"/>`;
+    const d0 = await tekst(kortDato(s.punkter[0].dato), { font: 'TidsrostBrod', boy: 22, renk: R.lys });
+    const d1 = await tekst(kortDato(s.punkter.at(-1).dato), { font: 'TidsrostBrod', boy: 22, renk: R.lys });
+    katmanlar.push({ input: d0.input, left: gx0, top: gy1 + 10 });
+    katmanlar.push({ input: d1.input, left: Math.round(gx1 - d1.w), top: gy1 + 10 });
+  }
+
+  const logo = await tekst('tidsrøst', { font: 'TidsrostTung', boy: 30, renk: R.hvit });
+  katmanlar.push({ input: logo.input, left: pad, top: H - 30 - logo.h });
+  ic += `<rect x="${pad}" y="${H - 30 - logo.h - 18}" width="64" height="6" fill="${R.rod}"/>`;
+  return { svg: svg(ic), katmanlar };
 }
 
 // ── Büyük rakam kartı (ör. politika faizi) ─────────────────────────────
 
-export function tallkort({ overlinje, tall: verdi, underlinje }) {
-  return svg(`<rect width="${B}" height="${H}" fill="${FARGE.bg}"/>
-<rect x="0" y="0" width="16" height="${H}" fill="${FARGE.aksent}"/>
-<text x="96" y="200" font-family="${FONT_SANS}" font-size="36" font-weight="600" fill="${FARGE.dempet}">${esc(overlinje)}</text>
-<text x="88" y="420" font-family="${FONT_SERIF}" font-size="220" font-weight="700" fill="${FARGE.tekst}">${esc(verdi)}</text>
-<text x="96" y="530" font-family="${FONT_SANS}" font-size="36" font-weight="600" fill="${FARGE.tekst}">${esc(underlinje)}</text>`);
+export async function tallkort({ overlinje, tall: verdi, underlinje }) {
+  // Fjord dili: koyu fjord zemin, dev beyaz rakam, kırmızı vurgu, sağda eş yükselti dokusu.
+  // ▲/▼ yazı tipinde yok; metnin başındaysa üçgen olarak çizilir.
+  await fontlariDenetle();
+  const { R, tekst, konturlar } = fjordAraclari;
+  const pad = 72;
+  const katmanlar = [];
+  let ic = `<rect width="${B}" height="${H}" fill="${R.fjord}"/>`;
+  ic += konturlar({ cx: B * 0.86, cy: H * 0.3, rx: 520, ry: 360, adet: 14, tohum: `${overlinje}${verdi}`, kalin: 0.9 });
+
+  const ust = await tekst(overlinje.toLocaleUpperCase('nb-NO'), { font: 'TidsrostTung', boy: 34, renk: R.lys });
+  const rakam = await tekst(verdi, { font: 'TidsrostTittel', boy: 230, renk: R.hvit });
+  const ok = underlinje?.match(/^([▲▼])\s*/);
+  const alt = underlinje ? await tekst(ok ? underlinje.slice(ok[0].length) : underlinje, { font: 'TidsrostSemi', boy: 40, renk: R.hvit }) : null;
+  // Blok, üst kenar ile alttaki logo bandı arasında dikey ortalanır.
+  const araUst = 34;
+  const araAlt = 26;
+  const blok = ust.h + araUst + rakam.h + (alt ? araAlt + alt.h : 0);
+  let y = Math.round(40 + (H - 48 - 34 - 22 - 40 - 40 - blok) / 2);
+  katmanlar.push({ input: ust.input, left: pad, top: y });
+  y += ust.h + araUst;
+  katmanlar.push({ input: rakam.input, left: pad - 6, top: y });
+  y += rakam.h + araAlt;
+  if (alt) {
+    let x = pad;
+    if (ok) {
+      const s = 30;
+      const ty = y + Math.round((alt.h - s) / 2);
+      ic += ok[1] === '▲'
+        ? `<polygon points="${x},${ty + s} ${x + s},${ty + s} ${x + s / 2},${ty}" fill="${R.rod}"/>`
+        : `<polygon points="${x},${ty} ${x + s},${ty} ${x + s / 2},${ty + s}" fill="${R.rod}"/>`;
+      x += s + 16;
+    }
+    katmanlar.push({ input: alt.input, left: x, top: y });
+  }
+
+  const logo = await tekst('tidsrøst', { font: 'TidsrostTung', boy: 34, renk: R.hvit });
+  katmanlar.push({ input: logo.input, left: pad, top: H - 48 - logo.h });
+  ic += `<rect x="${pad}" y="${H - 48 - logo.h - 22}" width="72" height="7" fill="${R.rod}"/>`;
+  return { svg: svg(ic), katmanlar };
 }
 
 // ── Genel kart (fotoğrafı ve verisi olmayan haberler) ──────────────────

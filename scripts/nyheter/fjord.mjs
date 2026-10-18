@@ -202,3 +202,6 @@ export async function fjordKart(m, bicim = 'kapak') {
     katmanlar,
   };
 }
+
+// Veri kapakları (bilde.mjs kursgraf, tallkort) aynı renkleri, yazı tiplerini ve dokuyu kullanır.
+export const fjordAraclari = { R, tekst, konturlar };
