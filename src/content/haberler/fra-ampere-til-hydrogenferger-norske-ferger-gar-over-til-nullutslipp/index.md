@@ -21,7 +21,7 @@ Statens vegvesen oppgir at det er om lag 130 ferjesamband i Norge. Vegvesenet ha
 
 ## Hvor mange ferger går på strøm?
 
-Norge har ikke noe offentlig register med et samlet, løpende tall for elektriske ferger. Norsk klimastiftelse har laget en oversikt over elektriske fartøy i rute (tilnull.no). Per oktober 2026 oppgir den 85 elektriske bilferger fordelt på 58 samband, og 114 elektriske bilferger og passasjerbåter til sammen på 77 samband. Tallet er ikke et offisielt statistikktall og kan avvike fra oversikter hos Statens vegvesen og fylkeskommunene.
+Norge har ikke noe offentlig register med et samlet, løpende tall for elektriske ferger. Oversikter over hvilke samband som går på strøm, finnes hos Statens vegvesen for riksvegsambandene og hos fylkeskommunene for fylkesvegsambandene.
 
 ## Hydrogen der batteriene ikke strekker til
 
@@ -36,4 +36,3 @@ Sjøfartsdirektoratet har fastsatt nullutslippskrav for turistskip og ferger i d
 - [Regjeringen: Mer miljøvennlig ferjedrift](https://www.regjeringen.no/no/tema/transport-og-kommunikasjon/veg_og_vegtrafikk/faktaartikler-vei-og-ts/mer-miljovennlig-ferjedrift/id2903565/)
 - [Statens vegvesen: Ferje](https://www.vegvesen.no/fag/trafikk/ferje/)
 - [Regjeringen: Nullutslippskrav til passasjerskip i verdensarvfjordene](https://www.regjeringen.no/no/aktuelt/nullutslippskrav-til-passasjerskip-i-verdensarvfjordene/id3097475/)
-- [Norsk klimastiftelse: Elektriske fergesamband (tilnull.no)](https://www.tilnull.no/energi/ferger)
