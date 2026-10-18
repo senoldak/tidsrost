@@ -9,7 +9,7 @@
 //   --test: tek haberi (verilmezse görseli yayında olan en yeni tam haberi) gece kuralı ve tavana bakmadan seçilen
 //   kanallara gönderir; giden kanallar delt.json'a işlenir, haber sonraki turlarda tekrar gitmez.
 import { readFile, writeFile } from 'node:fs/promises';
-import { sakerOku, paylasilir, bildetekst, bildeUrl } from './saker.mjs';
+import { sakerOku, paylasilir, bildetekst, bildeUrl, varselSeviye, varselSuz } from './saker.mjs';
 
 const API = 'https://graph.facebook.com/v25.0';
 const DURUM = 'scripts/sosial/delt.json';
@@ -150,7 +150,11 @@ const eksik = (k) => KANALLAR.filter((c) => !k?.[c] && (k?.deneme?.[c] ?? 0) < A
 const son24 = Object.values(delt).filter((k) => !k.atlandi && Date.parse(k.tarih) > simdi - 86400e3).length;
 let kalanTavan = tavan - son24;
 
-const sira = saker.filter((s) => !delt[s.id] || eksik(delt[s.id]).length);
+const son24Varsel = Object.entries(delt).filter(([id, k]) => !k.atlandi && Date.parse(k.tarih) > simdi - 86400e3 && varselSeviye({ id }) === 'oransje').length;
+// Yarım kalan (bir kanalı gitmiş) haber tamamlanır; yeni haberlere farevarsel kuralı uygulanır.
+const yarim = saker.filter((s) => delt[s.id] && eksik(delt[s.id]).length);
+const yeniler = varselSuz(saker.filter((s) => !delt[s.id]), son24Varsel);
+const sira = [...yarim, ...yeniler].sort((a, b) => a.dato - b.dato || a.id.localeCompare(b.id));
 console.log(`[sosial] Sırada ${sira.length} haber; son 24 saatte ${son24} haber paylaşıldı (tavan ${tavan === Infinity ? 'yok' : tavan}).`);
 
 let hata = 0;

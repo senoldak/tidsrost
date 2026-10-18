@@ -37,6 +37,29 @@ export function sakOku(id, md) {
 export const paylasilir = (s, simdi = Date.now(), pencere = PENCERE_MS) =>
   Boolean(s && !s.taslak && s.indeks && s.tittel && s.dato.getTime() <= simdi && s.dato.getTime() > simdi - pencere);
 
+// Farevarsel (MET/NVE) haberleri akışı boğuyordu (18 Ekim: 10 paylaşımın 6'sı). Gult hiç gitmez, oransje 24 saatte
+// en çok bir, rødt her zaman gider.
+export const VARSEL_GUNLUK = 1;
+export const varselSeviye = (s) => {
+  const m = /^(gult|oransje|rødt|rodt)[- ]farevarsel/i.exec(s.tittel || s.id || '');
+  return m ? m[1].toLowerCase().replace('rodt', 'rødt') : null;
+};
+
+/**
+ * Sıradaki haberlerden farevarsel kuralına uymayanları ayıklar.
+ * @param {object[]} saker paylaşılmamış adaylar (eskiden yeniye)
+ * @param {number} son24Varsel son 24 saatte paylaşılmış oransje farevarsel sayısı
+ */
+export function varselSuz(saker, son24Varsel = 0) {
+  const kalan = Math.max(VARSEL_GUNLUK - son24Varsel, 0);
+  // Kota varsa en yenisi gider: aynı hava olayının en güncel uyarısı.
+  const oransje = kalan ? saker.filter((s) => varselSeviye(s) === 'oransje').slice(-kalan) : [];
+  return saker.filter((s) => {
+    const v = varselSeviye(s);
+    return !v || v === 'rødt' || oransje.includes(s);
+  });
+}
+
 export async function sakerOku(dizin = DIZIN) {
   const out = [];
   for (const f of await readdir(dizin, { recursive: true })) {

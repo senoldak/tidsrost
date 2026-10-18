@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { sakOku, paylasilir, bildetekst, bildeFil, bildeUrl } from './saker.mjs';
+import { sakOku, paylasilir, bildetekst, bildeFil, bildeUrl, varselSeviye, varselSuz } from './saker.mjs';
 
 const govde = (n) => Array.from({ length: n }, (_, i) => `ord${i}`).join(' ');
 const md = (fm, n = 200) => `---\n${fm}\n---\n\n${govde(n)}\n`;
@@ -38,4 +38,20 @@ test('bildetekst Instagram: başlık, özet, noktalar, yönlendirme ve etiketler
 test('görsel adları', () => {
   assert.equal(bildeFil('a/b', 'post'), 'a-b-post.png');
   assert.equal(bildeUrl('togstreiken', 'story'), 'https://tidsrost.com/sosial/togstreiken-story.png');
+});
+
+test('farevarsel: gult gitmez, oransje 24 saatte bir (en yenisi), rødt hep gider', () => {
+  const h = (id, tittel) => ({ id, tittel });
+  const liste = [
+    h('a', 'Togstreiken er over'),
+    h('b', 'Gult farevarsel for kraftige vindkast i Finnmark'),
+    h('c', 'Oransje farevarsel for jordskred i Nordland'),
+    h('d', 'Oransje farevarsel for svært mye regn i Troms'),
+    h('e', 'Rødt farevarsel for ekstremvær'),
+  ];
+  assert.equal(varselSeviye({ id: 'oransje-farevarsel-for-flom' }), 'oransje');
+  assert.equal(varselSeviye({ id: 'rodt-farevarsel-for-flom' }), 'rødt');
+  assert.equal(varselSeviye(h('x', 'Farevarsel-systemet forklart')), null);
+  assert.deepEqual(varselSuz(liste).map((s) => s.id), ['a', 'd', 'e']);
+  assert.deepEqual(varselSuz(liste, 1).map((s) => s.id), ['a', 'e']);
 });
