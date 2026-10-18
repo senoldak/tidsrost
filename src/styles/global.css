@@ -362,7 +362,7 @@ main.container {
 
 .breaking-label {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5em;
   padding: var(--u) calc(var(--u) * 2);
   border-right: 1px solid var(--ink);
@@ -375,15 +375,17 @@ main.container {
 
 .breaking-items {
   display: flex;
-  gap: calc(var(--u) * 4);
-  padding: var(--u) calc(var(--u) * 2);
-  overflow-x: auto;
-  scrollbar-width: none;
+  flex-direction: column;
+  min-width: 0;
   font: 600 1rem/1.4 var(--read);
 }
 
 .breaking-items a {
-  white-space: nowrap;
+  padding: var(--u) calc(var(--u) * 2);
+}
+
+.breaking-items a + a {
+  border-top: 1px solid var(--rule);
 }
 
 /* ——— Manşet ——— */
@@ -1128,6 +1130,15 @@ main.container {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--u);
+  }
+
+  .breaking {
+    flex-direction: column;
+  }
+
+  .breaking-label {
+    border-right: 0;
+    border-bottom: 1px solid var(--ink);
   }
 
   .edition {
