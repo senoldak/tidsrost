@@ -354,38 +354,47 @@ main.container {
 
 /* ——— Siste nytt şeridi ——— */
 .breaking {
-  display: flex;
-  align-items: stretch;
-  border: 1px solid var(--ink);
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
   margin-bottom: calc(var(--u) * 5);
 }
 
 .breaking-label {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.5em;
-  padding: var(--u) calc(var(--u) * 2);
-  border-right: 1px solid var(--ink);
+  padding-top: calc(var(--u) * 1.5);
   color: var(--red);
   font: 700 0.75rem var(--frame);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  white-space: nowrap;
 }
 
 .breaking-items {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  font: 600 1rem/1.4 var(--read);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breaking-items li {
+  display: grid;
+  grid-template-columns: 3.25rem minmax(0, 1fr);
+  align-items: baseline;
+  padding: calc(var(--u) * 1.25) 0;
+}
+
+.breaking-items li + li {
+  border-top: 1px solid var(--rule);
+}
+
+.breaking-items time {
+  color: var(--ink-2);
+  font: 500 0.8125rem var(--frame);
+  font-variant-numeric: tabular-nums;
 }
 
 .breaking-items a {
-  padding: var(--u) calc(var(--u) * 2);
-}
-
-.breaking-items a + a {
-  border-top: 1px solid var(--rule);
+  font: 600 1.0625rem/1.35 var(--read);
 }
 
 /* ——— Manşet ——— */
@@ -1132,14 +1141,6 @@ main.container {
     gap: var(--u);
   }
 
-  .breaking {
-    flex-direction: column;
-  }
-
-  .breaking-label {
-    border-right: 0;
-    border-bottom: 1px solid var(--ink);
-  }
 
   .edition {
     text-align: left;

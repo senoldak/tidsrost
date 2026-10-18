@@ -5,12 +5,17 @@ import StoryRow from '../components/StoryRow.astro';
 import Symbol from '../components/Symbol.astro';
 import StoryMeta from '../components/StoryMeta.astro';
 import { FORKLART, erForklart, getActiveCategories, getNews, groupByDay, newsUrl } from '../lib/news';
-import { SITE, gorselVar } from '../lib/site';
+import { SITE, formatTime, gorselVar } from '../lib/site';
 import { RENTE, aktiveVarsler, datoTekst, prosent } from '../lib/data';
 import { aktiveTemaer } from '../lib/temaer';
 
 const news = await getNews();
-const breaking = news.filter((h) => h.data.breaking).slice(0, 5);
+// Siste nytt: son 24 saatin breaking haberleri; aynı başlık (tekrarlanan varsel) bir kez, en fazla üç.
+const sisteGrense = Date.now() - 24 * 60 * 60 * 1000;
+const breaking = news
+  .filter((h) => h.data.breaking && h.data.date.getTime() > sisteGrense)
+  .filter((h, i, a) => a.findIndex((x) => x.data.title === h.data.title) === i)
+  .slice(0, 3);
 const hero = news.find((h) => h.data.featured) ?? news[0];
 const rest = news.filter((h) => h !== hero);
 const side = rest.slice(0, 4);
@@ -34,11 +39,14 @@ const sterke = varsler.filter((v) => v.niva !== 'gult').length;
           <Symbol kind="breaking" />
           Siste nytt
         </span>
-        <div class="breaking-items">
+        <ul class="breaking-items">
           {breaking.map((h) => (
-            <a href={newsUrl(h)}>{h.data.title}</a>
+            <li>
+              <time datetime={h.data.date.toISOString()}>{formatTime(h.data.date).replace(':', '.')}</time>
+              <a href={newsUrl(h)}>{h.data.title}</a>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     )
   }
