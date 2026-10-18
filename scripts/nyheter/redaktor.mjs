@@ -372,9 +372,8 @@ Er teksten allerede korrekt, returner den uendret i «redigert».`,
   let vasket;
   if (godkjent && svar.redigert?.title && svar.redigert?.description && svar.redigert?.body) {
     const kandidat = { ...sak, ...svar.redigert };
-    const nyeFeil = [...sjekkSitater(helTekst(kandidat), kilde), ...sjekkTall(helTekst(kandidat), kilde), ...sjekkLengde(kandidat)];
-    const foerFeil = [...sjekkSitater(helTekst(sak), kilde), ...sjekkTall(helTekst(sak), kilde), ...sjekkLengde(sak)];
-    if (nyeFeil.length <= foerFeil.length) vasket = kandidat;
+    // Onaylı metin bütün kesin kontrollerden geçmişti; redaksiyon da hepsinden (ad, medya, başlık dahil) geçmeli.
+    if (kesinProblemer(kandidat, kilde, medier).length === 0) vasket = kandidat;
   }
   return { godkjent, problemer, vasket };
 }
