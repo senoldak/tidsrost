@@ -75,8 +75,38 @@ export async function sakerOku(dizin = DIZIN) {
 /** Haberin adresi; Facebook'ta ölçüm için kanal parametreleriyle. */
 export const sakUrl = (id, kanal) => `${SITE}/artikkel/${id}/${kanal ? `?utm_source=${kanal}&utm_medium=social` : ''}`;
 
+// Norveç kitlesine ulaşmak için (sahibin isteği 2026-10-19): haberde geçen şehir etiket ve konum olur.
+export const BYER = ['Oslo', 'Bergen', 'Trondheim', 'Stavanger', 'Tromsø', 'Kristiansand', 'Bodø', 'Ålesund', 'Drammen', 'Fredrikstad'];
+// Instagram/Facebook konum etiketi: şehrin Facebook yer sayfası kimliği. Graph API yer aramasına izin vermediği için
+// elle doğrulanıp yazılır (del.mjs --kontrol listedekileri sınar). Boş olan şehir konumsuz gider.
+export const YERLER = {};
+
+/** Başlıkta, özette ya da ana noktalarda geçen ilk şehir. */
+export function sakBy(s) {
+  const metin = [s.tittel, s.ingress, ...(s.punkter ?? [])].join(' ');
+  return BYER.find((b) => new RegExp(`(^|[^\\p{L}])${b}([^\\p{L}]|$)`, 'u').test(metin)) ?? null;
+}
+export const sakYeri = (s) => YERLER[sakBy(s)] ?? null;
+
+// Sonda kısa soru: yorum en güçlü dağıtım sinyali. Ölüm, kaza ve suç haberlerinde sorulmaz (saygısız durur).
+const SORULAR = ['Hva tenker du om dette?', 'Hva mener du? Skriv gjerne i kommentarfeltet.', 'Hvordan påvirker dette deg?'];
+const HASSAS = /(^|[^\p{L}])(omkom|død|døde|dødsfall|drept|drap|ulykke|savnet|skadd|skadet|overgrep|selvmord|skyting|knivstikk)/iu;
+export function sakSorusu(s) {
+  if (HASSAS.test(`${s.tittel} ${s.ingress}`)) return null;
+  let h = 0;
+  for (const c of String(s.id)) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+  return SORULAR[h % SORULAR.length];
+}
+
+/** Instagram etiketleri: en çok 5, Norveççe. */
+export function etiketler(s) {
+  const by = sakBy(s);
+  return ['#nyheter', '#norge', KATEGORI_ETIKET[s.kategori] && `#${KATEGORI_ETIKET[s.kategori]}`, by && `#${by.toLocaleLowerCase('nb-NO')}`, s.sjanger === 'forklart' && '#forklart']
+    .filter(Boolean).slice(0, 5);
+}
+
 /**
- * Paylaşım metni: başlık, özet, ana noktalar ve yönlendirme.
+ * Paylaşım metni: başlık, özet, ana noktalar, soru ve yönlendirme.
  * Instagram'da bağlantı tıklanmadığı için adres yok, sonda etiketler var; Facebook'ta haberin bağlantısı var,
  * etiket yok (sahibin isteği 2026-10-18: Facebook'a bağlantı gitsin, Instagram'a gitmesin).
  * @param {'instagram'|'facebook'} kanal
@@ -84,10 +114,12 @@ export const sakUrl = (id, kanal) => `${SITE}/artikkel/${id}/${kanal ? `?utm_sou
 export function bildetekst(s, kanal = 'instagram') {
   const satirlar = [s.tittel, '', s.ingress];
   if (s.punkter.length) satirlar.push('', ...s.punkter.slice(0, 3).map((p) => `• ${p}`));
+  const soru = sakSorusu(s);
+  if (soru) satirlar.push('', soru);
   if (kanal === 'facebook') {
     satirlar.push('', `Les hele saken: ${sakUrl(s.id, 'facebook')}`);
   } else {
-    satirlar.push('', 'Les hele saken på tidsrost.com', '', ['#nyheter', '#norge', KATEGORI_ETIKET[s.kategori] && `#${KATEGORI_ETIKET[s.kategori]}`].filter(Boolean).join(' '));
+    satirlar.push('', 'Les hele saken på tidsrost.com', '', etiketler(s).join(' '));
   }
   return satirlar.join('\n').replace(/\n{3,}/g, '\n\n').trim();
 }
@@ -96,12 +128,12 @@ export function bildetekst(s, kanal = 'instagram') {
 export const bildeFil = (id, bicim) => `${id.replace(/\//g, '-')}-${bicim}.png`;
 export const bildeUrl = (id, bicim) => `${SITE}/sosial/${bildeFil(id, bicim)}`;
 
-// Reels (sahibin kararı 2026-10-19): günde 1–2, en güçlü haberler. İki dilim, Oslo saatiyle: öğle her gün bir Reels
-// (en iyi aday), akşam yalnız güçlü bir aday varsa. İmzalı yazılar (Forklart) sitenin vitrini olduğu için öne alınır;
+// Reels (sahibin kararı 2026-10-19): günde 1–2, en güçlü haberler. İki dilim, Oslo saatiyle ve Norveç'te en çok
+// bakılan saatlerde: sabah 07–09 her gün bir Reels (en iyi aday), akşam 19–21 yalnız güçlü bir aday varsa. İmzalı yazılar (Forklart) sitenin vitrini olduğu için öne alınır;
 // puanı olmayan eski haberler eşik değeri (70) sayılır. Farevarsel Reels olmaz (rødt bile: video üretimi sürerken eskir).
 export const REELS_DILIMLERI = [
-  { ad: 'midt', bas: 11, son: 14, esik: 70 },
-  { ad: 'kveld', bas: 18, son: 21, esik: 80 },
+  { ad: 'morgen', bas: 7, son: 9, esik: 70 },
+  { ad: 'kveld', bas: 19, son: 21, esik: 80 },
 ];
 export const reelsPuan = (s) => (s.forfatter ? 90 : s.nyhetsverdi ?? 70);
 

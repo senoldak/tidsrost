@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { sakOku, paylasilir, bildetekst, bildeFil, bildeUrl, varselSeviye, varselSuz, reelsDilimi, reelsSec, REELS_DILIMLERI } from './saker.mjs';
+import { sakOku, paylasilir, bildetekst, bildeFil, bildeUrl, varselSeviye, varselSuz, reelsDilimi, reelsSec, REELS_DILIMLERI, sakBy, etiketler, sakSorusu } from './saker.mjs';
 
 const govde = (n) => Array.from({ length: n }, (_, i) => `ord${i}`).join(' ');
 const md = (fm, n = 200) => `---\n${fm}\n---\n\n${govde(n)}\n`;
@@ -26,12 +26,13 @@ test('paylasilir: kısa (noindex), taslak, gelecek ve eski haber gitmez', () => 
 
 test('bildetekst Facebook: bağlantı var, etiket yok', () => {
   const t = bildetekst(sakOku('togstreiken', md(fm)), 'facebook');
-  assert.equal(t, 'Togstreiken er over\n\nPartene er enige.\n\n• Ett\n• To\n\nLes hele saken: https://tidsrost.com/artikkel/togstreiken/?utm_source=facebook&utm_medium=social');
+  assert.match(t, /^Togstreiken er over\n\nPartene er enige\.\n\n• Ett\n• To\n\n(Hva|Hvordan)[^\n]+\n\nLes hele saken: https:\/\/tidsrost\.com\/artikkel\/togstreiken\/\?utm_source=facebook&utm_medium=social$/);
+  assert.doesNotMatch(t, /#/);
 });
 
 test('bildetekst Instagram: başlık, özet, noktalar, yönlendirme ve etiketler; bağlantı yok', () => {
   const t = bildetekst(sakOku('a', md(fm)));
-  assert.equal(t, 'Togstreiken er over\n\nPartene er enige.\n\n• Ett\n• To\n\nLes hele saken på tidsrost.com\n\n#nyheter #norge #økonomi');
+  assert.match(t, /\n\nLes hele saken på tidsrost\.com\n\n#nyheter #norge #økonomi$/);
   assert.doesNotMatch(t, /https?:\/\//);
 });
 
@@ -57,10 +58,12 @@ test('farevarsel: gult gitmez, oransje 24 saatte bir (en yenisi), rødt hep gide
 });
 
 test('reelsDilimi: Oslo saatiyle öğle ve akşam dilimi, yaz ve kış saati', () => {
-  assert.deepEqual(reelsDilimi(Date.parse('2026-10-19T10:20:00Z')), { ...REELS_DILIMLERI[0], gun: '2026-10-19' }); // 12:20 CEST
-  assert.equal(reelsDilimi(Date.parse('2026-10-19T17:20:00Z')).ad, 'kveld'); // 19:20 CEST
-  assert.equal(reelsDilimi(Date.parse('2026-10-19T14:20:00Z')), null); // 16:20
-  assert.equal(reelsDilimi(Date.parse('2026-11-02T10:20:00Z')).ad, 'midt'); // 11:20 CET
+  assert.deepEqual(reelsDilimi(Date.parse('2026-10-19T05:17:00Z')), { ...REELS_DILIMLERI[0], gun: '2026-10-19' }); // 07:17 CEST
+  assert.equal(reelsDilimi(Date.parse('2026-10-19T07:17:00Z')), null); // 09:17 CEST
+  assert.equal(reelsDilimi(Date.parse('2026-10-19T17:17:00Z')).ad, 'kveld'); // 19:17 CEST
+  assert.equal(reelsDilimi(Date.parse('2026-11-02T05:17:00Z')), null); // 06:17 CET
+  assert.equal(reelsDilimi(Date.parse('2026-11-02T07:17:00Z')).ad, 'morgen'); // 08:17 CET
+  assert.equal(reelsDilimi(Date.parse('2026-11-02T19:17:00Z')).ad, 'kveld'); // 20:17 CET
 });
 
 test('reelsSec: en yüksek puan, imzalı öne, farevarsel ve eşik altı yok, dilimde bir kez', () => {
@@ -70,8 +73,23 @@ test('reelsSec: en yüksek puan, imzalı öne, farevarsel ve eşik altı yok, di
   assert.equal(reelsSec(saker, {}, dilim).id, 'guclu');
   assert.equal(reelsSec([...saker, s('forklart', '\nauthor: "Şenol Dak"')], {}, dilim).id, 'forklart');
   assert.equal(reelsSec([saker[0]], {}, dilim), null);
-  assert.equal(reelsSec([saker[0]], {}, { ...dilim, ad: 'midt', esik: 70 }).id, 'zayif');
+  assert.equal(reelsSec([saker[0]], {}, { ...dilim, ad: 'morgen', esik: 70 }).id, 'zayif');
   assert.equal(reelsSec(saker, { guclu: { reels: { gun: '2026-10-17', dilim: 'kveld' } } }, dilim), null);
   assert.equal(reelsSec(saker, { guclu: { reels: { gun: '2026-10-16', dilim: 'kveld' } } }, dilim), null);
   assert.equal(reelsSec(saker, { guclu: { reels: { gun: '2026-10-16', dilim: 'kveld' } } }, { ...dilim, esik: 70 }).id, 'zayif');
+});
+
+test('sakBy ve etiketler: şehir kelime olarak aranır, en çok 5 Norveççe etiket', () => {
+  const s = (tittel, ek = '') => sakOku('x', md(`${fm.replace('Togstreiken er over', tittel)}${ek}`));
+  assert.equal(sakBy(s('Ny bybane i Bergen åpner')), 'Bergen');
+  assert.equal(sakBy(s('Tromsø får nytt sykehus')), 'Tromsø');
+  assert.equal(sakBy(s('Oslobørsen stiger')), null);
+  assert.deepEqual(etiketler(s('Ny bybane i Bergen åpner', '\nsjanger: forklart')), ['#nyheter', '#norge', '#økonomi', '#bergen', '#forklart']);
+});
+
+test('sakSorusu: ölüm, kaza ve suç haberinde soru yok', () => {
+  const s = (tittel) => sakOku('x', md(fm.replace('Togstreiken er over', tittel)));
+  assert.ok(sakSorusu(s('Togstreiken er over')));
+  assert.equal(sakSorusu(s('Mann funnet omkommet etter ulykke')), null);
+  assert.equal(sakSorusu(s('To døde i brann i Bodø')), null);
 });

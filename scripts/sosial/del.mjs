@@ -13,7 +13,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
-import { sakerOku, paylasilir, bildetekst, bildeUrl, varselSeviye, varselSuz, reelsDilimi, reelsSec } from './saker.mjs';
+import { sakerOku, paylasilir, bildetekst, bildeUrl, varselSeviye, varselSuz, reelsDilimi, reelsSec, sakYeri, YERLER } from './saker.mjs';
 import { reelsCiz } from './reels.mjs';
 
 const API = 'https://graph.facebook.com/v25.0';
@@ -95,11 +95,14 @@ async function rupload(url, tok, veri) {
   if (!res.ok || v.error || v.success === false) throw new Error(`Graph ${res.status}: yükleme reddedildi (${v.error?.message ?? v.debug_info?.message ?? 'bilinmeyen hata'})`);
 }
 
+// Haberde geçen şehrin yer sayfası varsa konum etiketi (saker.mjs YERLER).
+const yer = (s, alan) => (sakYeri(s) ? { [alan]: sakYeri(s) } : {});
+
 const GONDER = {
-  ig_post: (s) => igYayimla({ image_url: bildeUrl(s.id, 'post'), caption: bildetekst(s, 'instagram') }),
+  ig_post: (s) => igYayimla({ image_url: bildeUrl(s.id, 'post'), caption: bildetekst(s, 'instagram'), ...yer(s, 'location_id') }),
   ig_story: (s) => igYayimla({ image_url: bildeUrl(s.id, 'story'), media_type: 'STORIES' }),
   fb_post: async (s) => {
-    const r = await graph('POST', `${sayfaId}/photos`, { url: bildeUrl(s.id, 'post'), message: bildetekst(s, 'facebook'), published: 'true' }, await sayfaTokeni());
+    const r = await graph('POST', `${sayfaId}/photos`, { url: bildeUrl(s.id, 'post'), message: bildetekst(s, 'facebook'), published: 'true', ...yer(s, 'place') }, await sayfaTokeni());
     return r.post_id ?? r.id;
   },
   fb_story: async (s) => {
@@ -110,7 +113,7 @@ const GONDER = {
   },
   ig_reels: async (s) => {
     const veri = await video(s);
-    const kap = await graph('POST', `${igId}/media`, { media_type: 'REELS', upload_type: 'resumable', share_to_feed: 'true', caption: bildetekst(s, 'instagram') });
+    const kap = await graph('POST', `${igId}/media`, { media_type: 'REELS', upload_type: 'resumable', share_to_feed: 'true', caption: bildetekst(s, 'instagram'), ...yer(s, 'location_id') });
     await rupload(`https://rupload.facebook.com/ig-api-upload/v25.0/${kap.id}`, token, veri);
     // Video işlenmesi bir dakikayı bulabilir.
     for (let i = 0; ; i++) {
@@ -138,13 +141,13 @@ if (kontrol) {
   const { data } = await graph('GET', `${igId}/content_publishing_limit`, { fields: 'quota_usage,config' });
   console.log(`[sosial] ✓ Facebook Sayfası: ${name}`);
   console.log(`[sosial] ✓ Instagram: @${username}, 24 saatlik kota ${data?.[0]?.quota_usage ?? '?'}/${data?.[0]?.config?.quota_total ?? '?'}`);
-  // Konum etiketi için yer sayfaları (geçici keşif: kimlikler bulunup saker.mjs'e yazılacak).
-  for (const q of ['Oslo, Norway', 'Bergen, Norway', 'Trondheim, Norway', 'Stavanger, Norway', 'Tromsø, Norway', 'Kristiansand, Norway', 'Bodø, Norway', 'Ålesund, Norway', 'Drammen, Norway', 'Fredrikstad, Norway', 'Norway']) {
+  // Konum etiketi kimlikleri (saker.mjs YERLER) yer sayfası olarak okunabiliyor mu.
+  for (const [by, id] of Object.entries(YERLER)) {
     try {
-      const r = await graph('GET', 'pages/search', { q, fields: 'id,name,location{city,country,latitude,longitude}', limit: '3' }, await sayfaTokeni());
-      console.log(`[sosial] yer ${q}: ${JSON.stringify(r.data)}`);
+      const r = await graph('GET', id, { fields: 'name,location{city,country}' }, await sayfaTokeni());
+      console.log(`[sosial] ✓ yer ${by}: ${r.name} (${r.location?.city ?? '?'}, ${r.location?.country ?? '?'})`);
     } catch (e) {
-      console.log(`[sosial] yer ${q}: ${gizle(e.message).slice(0, 200)}`);
+      console.log(`[sosial] ! yer ${by} (${id}): ${gizle(e.message).slice(0, 200)}`);
     }
   }
   process.exit(0);

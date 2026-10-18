@@ -3,15 +3,15 @@
 # çıkar. workflow_run kullanılmaz: GitHub botun başlattığı yayınlardan sonra o olayı üretmiyor.
 # Elle: mod=kontrol (hiçbir şey yayımlamadan erişim), mod=baslat (penceredeki haberleri gönderilmiş say), mod=paylas,
 # mod=test (tek haberi gece kuralı ve tavana bakmadan seçilen kanallara gönderir; ig_reels,fb_reels de seçilebilir).
-# Zamanlayıcı mod=reels: Oslo öğle ve akşam diliminde günün en güçlü haberi IG + FB Reels (del.mjs --reels). Yaz/kış saati
-# için her dilime iki UTC saati; dilim dolunca ikinci tur bir şey yapmaz.
+# Zamanlayıcı mod=reels: Oslo sabah (07–09) ve akşam (19–21) diliminde günün en güçlü haberi IG + FB Reels (del.mjs --reels). Yaz/kış saati
+# için her dilime üç UTC saati; dilim dolunca ikinci tur bir şey yapmaz.
 # Sayfa ve Instagram kimlikleri repo değişkeni (META_PAGE_ID, INSTAGRAM_USER_ID), token gizli (META_TOKEN).
 name: Sosyal medya
 
 on:
   schedule:
-    - cron: '17 10,11 * * *'
-    - cron: '17 17,18 * * *'
+    - cron: '17 5,6,7 * * *'
+    - cron: '17 17,18,19 * * *'
   workflow_dispatch:
     inputs:
       mod:
