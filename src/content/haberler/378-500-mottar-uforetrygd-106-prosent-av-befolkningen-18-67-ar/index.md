@@ -8,11 +8,11 @@ coverAlt: "Illustrasjon: «378 500 mottar uføretrygd – 10,6 prosent av befolk
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Uføretrygd er en av folketrygdens største ytelser, og utviklingen sier noe om helse, arbeidsliv og hvor mange som står utenfor jobb. Tallene viser hvem som mottar ytelsen, og hvor veksten kommer."
+why_matters: "Utviklingen sier noe om helse og arbeidsliv."
 key_points:
   - "378 502 personer mottok uføretrygd 30. juni 2026, en økning på 3 699 fra juni 2025. Det tilsvarer 10,6 prosent av befolkningen i alderen 18–67 år."
   - "Andelen er 12,8 prosent blant kvinner og 8,5 prosent blant menn. Over halvparten av mottakerne er 55 år eller eldre."
-  - "22 300 mottakere er under 30 år, 150 færre enn ett år tidligere. Nav venter 385 500 mottakere i desember 2027."
+  - "22 300 mottakere er under 30 år, 150 færre enn ett år tidligere."
 ---
 
 Ved utgangen av juni 2026 mottok 378 502 personer uføretrygd, ifølge Navs kvartalsstatistikk som ble oppdatert 13. august 2026. Det er 3 699 flere enn i juni 2025, en økning på 1,0 prosent. Mottakerne utgjør 10,6 prosent av befolkningen i alderen 18–67 år.
@@ -32,7 +32,7 @@ Antall mottakere har økt hvert år siden 2017, da tallet var 321 837. Til samme
 
 I første halvår 2026 fikk om lag 15 700 personer uføretrygd for første gang. Det er om lag 1 900 flere enn i samme periode i 2025. Tabelltallene viser 15 720 mot 13 840, hvorav 9 086 kvinner og 6 634 menn. I samme periode gikk om lag 12 100 ut av ordningen. Flest gikk over til alderspensjon, og 67-åringer utgjorde 75,7 prosent av dem som sluttet.
 
-Tall fra Navs saksunivers viser at det ble fattet vedtak i 17 700 nye uføresaker i første halvår 2026. Av dem ble 14 100 innvilget og 3 400 avslått, mot 11 800 innvilget og 3 400 avslått i samme periode i 2025. I andre kvartal 2026 kom 81,9 prosent av de nye mottakerne fra arbeidsavklaringspenger, 2,0 prosentpoeng mer enn i samme kvartal året før.
+I andre kvartal 2026 kom 81,9 prosent av de nye mottakerne fra arbeidsavklaringspenger, 2,0 prosentpoeng mer enn i samme kvartal året før.
 
 ## Kvinner og menn
 
@@ -44,13 +44,13 @@ Tall fra Navs saksunivers viser at det ble fattet vedtak i 17 700 nye uføresake
 
 *Kilde: Nav, uføretrygd – kvartalsstatistikk, tabeller per 30. juni 2026.*
 
-Kvinner utgjør 58,9 prosent av mottakerne. Andelen blant kvinner økte med 0,1 prosentpoeng siste år, mens den var uendret for menn. Blant alle mottakere fikk 85,7 prosent full uføretrygd ved utgangen av juni 2026, mens 14,3 prosent har gradert ytelse. Nav oppgir at flere kvinner enn menn har gradert uføretrygd.
+Kvinner utgjør 58,9 prosent av mottakerne. Andelen blant kvinner økte med 0,1 prosentpoeng siste år, mens den var uendret for menn. Blant alle mottakere fikk 85,7 prosent full uføretrygd ved utgangen av juni 2026, mens 14,3 prosent har gradert ytelse.
 
-Gjennomsnittlig årlig uføretrygd var 371 196 kroner i juni 2026, opp fra 353 611 kroner året før. For kvinner var snittet 357 308 kroner, og for menn 391 082 kroner.
+Gjennomsnittlig årlig uføretrygd var 371 196 kroner i juni 2026, opp fra 353 611 kroner året før.
 
-## Alder: flest eldre, vekst blant 30–44-åringer
+## Alder
 
-Andelen som mottar uføretrygd stiger kraftig med alderen. Blant 18–19-åringene er den 1,3 prosent, mens den er 28,4 prosent blant 65–67-åringene. Totalt er 191 468 av mottakerne, eller 50,6 prosent, i alderen 55–67 år.
+Andelen som mottar uføretrygd øker med alderen. Blant 18–19-åringene er den 1,3 prosent, mens den er 28,4 prosent blant 65–67-åringene. Totalt er 191 468 av mottakerne, eller 50,6 prosent, i alderen 55–67 år.
 
 ![Liggende søylediagram over andelen som mottar uføretrygd per aldersgruppe, 30. juni 2026: 1,3 prosent for 18–19 år, 2,1 for 20–24, 3,7 for 25–29, 5,3 for 30–34, 6,3 for 35–39, 8,0 for 40–44, 10,4 for 45–49, 14,0 for 50–54, 19,0 for 55–59, 24,7 for 60–64 og 28,4 for 65–67 år.](./graf-2.svg)
 *Mottakere av uføretrygd som andel av befolkningen i samme aldersgruppe, prosent. Kilde: Nav, uføretrygd – kvartalsstatistikk.*
@@ -69,17 +69,11 @@ Over tid har andelen blant de eldste gått ned: for 65–67-åringer fra 32,4 pr
 
 ## Unge uføre
 
-Nav regner unge uføre som mottakere i alderen 18–29 år. Per juni 2026 var de 22 300, noe som tilsvarer 2,7 prosent av befolkningen i samme aldersgruppe: 2,6 prosent blant kvinner og 2,8 prosent blant menn. Det er 150 færre enn ett år tidligere. Andelen er 0,9 prosentpoeng høyere enn for ti år siden, men har ifølge Nav vært stabil de siste tre årene. Det er flest i Østfold (3,9 prosent) og færrest i Oslo (1,5 prosent).
+Nav regner unge uføre som mottakere i alderen 18–29 år. Per juni 2026 var de 22 300, noe som tilsvarer 2,7 prosent av befolkningen i samme aldersgruppe: 2,6 prosent blant kvinner og 2,8 prosent blant menn. Det er 150 færre enn ett år tidligere. Andelen er 0,9 prosentpoeng høyere enn for ti år siden, men har ifølge Nav vært stabil de siste tre årene.
 
-I pressemeldingen 13. august 2026 sa arbeids- og velferdsdirektør Hege Nilssen: «det er svært positivt å se at antallet unge uføre har stabilisert seg og til og med gått litt ned etter perioden med sterk vekst». Nav opplyser at de i høst skal sende melding til unge som har hatt uføretrygd i minst to år, med informasjon om arbeidsrettet oppfølging.
+## Fylkesforskjeller
 
-## Store forskjeller mellom fylkene
-
-Andelen mottakere varierer mye mellom fylkene. Høyest er den i Innlandet og Agder (14,5 prosent), Telemark (14,4 prosent) og Østfold (14,0 prosent), lavest i Oslo (6,4 prosent). Nav peker på at Oslo har en yngre befolkning, men skriver at betydelige fylkesforskjeller består også når tallene aldersstandardiseres.
-
-## Navs prognose
-
-Nav forventer 379 500 mottakere i desember 2026 og 385 500 i desember 2027. Det tilsvarer en andel på 10,6 prosent ved utgangen av 2026 og 10,7 prosent ved utgangen av 2027, og vekst på 1,2 og 1,6 prosent. Prognosen er nedjustert sammenlignet med januar, hovedsakelig på grunn av lavere forventet tilstrømming i andre halvår 2026.
+Ifølge Nav varierer andelen mottakere mellom fylkene, og forskjellene består også når tallene aldersstandardiseres.
 
 ## Kilder
 

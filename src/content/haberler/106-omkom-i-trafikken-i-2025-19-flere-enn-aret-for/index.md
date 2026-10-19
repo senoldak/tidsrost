@@ -1,6 +1,6 @@
 ---
 title: "106 omkom i trafikken i 2025 – 19 flere enn året før"
-description: "Antall drepte i trafikken økte fra 87 til 106 i 2025, og antall hardt skadde fra 578 til 645, viser SSB. Det er likevel under halvparten av nivået i begynnelsen av 2000-tallet."
+description: "Antall drepte i trafikken økte fra 87 til 106 i 2025, og antall hardt skadde fra 578 til 645, viser SSB. I 2001 omkom 275 personer."
 date: 2026-11-13T08:00:00+01:00
 category: innenriks
 cover: ./cover.png
@@ -8,7 +8,7 @@ coverAlt: "Illustrasjon: «106 omkom i trafikken i 2025 – 19 flere enn året f
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Trafikksikkerhet er et av få områder der utviklingen over tid er målt nøyaktig. Tallene viser hvilke trafikantgrupper som er mest utsatt, og om utviklingen går i riktig retning."
+why_matters: "Tallene viser hvor mange som omkom og ble hardt skadd i trafikken i 2025, og hvilke trafikantgrupper tallene gjelder."
 key_points:
   - "106 personer omkom i trafikkulykker med personskade i 2025, 19 flere enn i 2024, mens 645 ble hardt skadd, opp fra 578."
   - "Økningen i antall drepte var størst for motorsyklister (pluss 5), syklister (pluss 5) og fotgjengere (pluss 4)."
@@ -19,7 +19,7 @@ I 2025 omkom 106 personer i trafikkulykker med personskade i Norge. Det er 19 fl
 
 ## Utviklingen over tid
 
-Antall drepte i trafikken har falt kraftig siden begynnelsen av 2000-tallet. I 2001 omkom 275 personer, mens tallet var 106 i 2025, en nedgang på 61 prosent. Lavest i den siste tiårsperioden var 2021 med 80 drepte, og 2024 med 87 var det nest laveste. I 2025 økte antallet igjen.
+Antall drepte i trafikken har falt siden begynnelsen av 2000-tallet. I 2001 omkom 275 personer, mens tallet var 106 i 2025, en nedgang på 61 prosent. Lavest i den siste tiårsperioden var 2021 med 80 drepte, og 2024 med 87 var det nest laveste. I 2025 økte antallet igjen.
 
 ![Stolpediagram over antall drepte i vegtrafikkulykker per år: 117 i 2015, 135 i 2016, 106 i 2017, 108 i 2018, 108 i 2019, 93 i 2020, 80 i 2021, 116 i 2022, 110 i 2023, 87 i 2024 og 106 i 2025.](./graf-1.svg)
 *Antall drepte i trafikkulykker med personskade per år. Kilde: SSB, tabell 06752.*
@@ -43,15 +43,11 @@ I 2025 omkom flere bilførere, bilpassasjerer, motorsyklister, syklister og fotg
 
 *Kilde: SSB, tabell 06752.*
 
-Blant de hardt skadde økte antall bilførere fra 173 til 211, som er den største økningen i noen gruppe. Antall hardt skadde motorsyklister gikk ned fra 143 til 133. Elsparkesykler inngår i gruppen «andre trafikanter» i statistikken. To personer omkom på elsparkesykkel i 2025, om lag 2 prosent av alle drepte, og 34 ble hardt skadd, om lag 5 prosent av alle hardt skadde.
+Blant de hardt skadde økte antall bilførere fra 173 til 211, som er den største økningen i noen gruppe. Antall hardt skadde motorsyklister gikk ned fra 143 til 133.
 
 ## Alder
 
 Etter alder økte antallet drepte med 9 i aldersgruppen 18–34 år, med 12 i aldersgruppen 55–74 år og med 6 blant dem på 75 år og eldre. I aldersgruppen 35–54 år omkom 8 færre enn året før, og blant barn og unge under 18 år var antallet uendret.
-
-## Norge sammenlignet med Norden
-
-Med nesten 19 drepte per million innbyggere i 2025 lå Norge på nivå med Sverige (19) og under Danmark (23) og Finland (34), ifølge SSB.
 
 ## Kilder
 

@@ -1,6 +1,6 @@
 ---
 title: "452 367 hytter i Norge – 1 973 fritidsboliger fikk igangsettingstillatelse i 2025, mot 7 454 i 2021"
-description: "Per januar 2026 var det 452 367 hytter, sommerhus og lignende fritidsbygg i Norge, viser SSB. Antall igangsettingstillatelser til nye fritidsboliger har falt fra 7 454 i 2021 til 1 973 i 2025."
+description: "Per januar 2026 var det 452 367 hytter, sommerhus og lignende fritidsbygg i Norge, viser SSB. Antall igangsettingstillatelser til nye fritidsboliger var 1 973 i 2025, mot 7 454 i 2021."
 date: 2026-11-17T08:00:00+01:00
 category: innenriks
 cover: ./cover.png
@@ -8,14 +8,14 @@ coverAlt: "Illustrasjon: «452 367 hytter i Norge – 1 973 fritidsboliger fikk 
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Hytter utgjør 10,4 prosent av alle bygninger i Norge. Tallene viser hvor de ligger, hvor raskt bestanden vokser, og at nybyggingen har falt kraftig siden 2021."
+why_matters: "Hytter utgjør 10,4 prosent av alle bygninger i Norge. Tallene viser hvor de ligger og hvordan bestanden og antall igangsettingstillatelser har utviklet seg."
 key_points:
-  - "Det var 452 367 hytter, sommerhus og lignende fritidsbygg i Norge i 2026, 29 326 flere (6,9 prosent) enn i 2016. I tillegg brukes 31 958 helårsboliger og våningshus som fritidsbolig."
+  - "Det var 452 367 hytter, sommerhus og lignende fritidsbygg i Norge per januar 2026, 29 326 flere (6,9 prosent) enn i 2016. I tillegg brukes 31 958 helårsboliger og våningshus som fritidsbolig."
   - "Ringsaker (7 251), Trysil (7 063) og Hol (6 060) har flest hytter. Innlandet har 19,7 prosent av alle hyttene i landet."
-  - "Igangsettingstillatelsene til nye fritidsboliger falt fra 7 454 i 2021 til 1 973 i 2025. Gjennomsnittlig kjøpesum for omsatte fritidseiendommer var 2,72 millioner kroner i 2025."
+  - "Antall igangsettingstillatelser til nye fritidsboliger var 1 973 i 2025, mot 7 454 i 2021. Gjennomsnittlig kjøpesum for omsatte fritidseiendommer var 2,72 millioner kroner i 2025."
 ---
 
-Per januar 2026 var det 452 367 hytter, sommerhus og lignende fritidsbygg i Norge, viser Statistisk sentralbyrå (SSB) i statistikken Bygningsmassen, publisert 4. februar 2026. Det er 973 flere enn året før og 29 326 flere enn i 2016. Samtidig har nybyggingen falt kraftig: i 2025 ble det gitt igangsettingstillatelse til 1 973 nye fritidsboliger, mot 7 454 i 2021.
+Per januar 2026 var det 452 367 hytter, sommerhus og lignende fritidsbygg i Norge, viser Statistisk sentralbyrå (SSB) i statistikken Bygningsmassen, publisert 4. februar 2026. Det er 973 flere enn året før og 29 326 flere enn i 2016. I 2025 ble det gitt igangsettingstillatelse til 1 973 nye fritidsboliger, mot 7 454 i 2021.
 
 ## Hvor mange hytter finnes det?
 
@@ -34,7 +34,7 @@ I tillegg regner SSB med en egen gruppe: helårsboliger og våningshus som bruke
 
 *Kilde: SSB, tabell 03174. Tallene gjelder situasjonen per januar.*
 
-SSBs faktaside om hytter og fritidsboliger oppgir 452 150 hytter og andre fritidsbygg i 2026 (tabell 05467). Det er 217 færre enn tallet over, og det samme som antallet SSB viser for Svalbard (217) i både tabell 03174 og tabell 05467. SSB forklarer ikke forskjellen på faktasiden.
+SSBs faktaside om hytter og fritidsboliger oppgir 452 150 hytter og andre fritidsbygg i 2026 (tabell 05467). Det er 217 færre enn tallet over. SSB forklarer ikke forskjellen på faktasiden.
 
 ## Hvor ligger hyttene?
 
@@ -45,9 +45,9 @@ Blant kommunene har Ringsaker flest hytter med 7 251, tett fulgt av Trysil med 7
 ![Liggende søylediagram over kommunene med flest hytter, sommerhus og lignende fritidsbygg i 2026: Ringsaker 7 251, Trysil 7 063, Hol 6 060, Vinje 5 904, Sigdal 5 227, Larvik 4 908, Nord-Aurdal 4 865, Orkland 4 594, Ringebu 4 549 og Fredrikstad 4 484.](./graf-2.svg)
 *Kommunene med flest hytter, sommerhus og lignende fritidsbygg, 2026. Kilde: SSB, tabell 03174.*
 
-## Nybyggingen har falt
+## Nybygging
 
-Antall igangsettingstillatelser til nye fritidsboliger nådde en topp i 2021 med 7 454, og ble så redusert til 1 973 i 2025. Det er en nedgang på 73,5 prosent, og det laveste tallet i serien som starter i 2010. Antall fullførte fritidsboliger var høyest i 2022 med 6 690 og var 2 950 i 2025, ned 55,9 prosent. Ifølge SSB var 2 744 av dem hytter og 206 fritidsleiligheter.
+Antall igangsettingstillatelser til nye fritidsboliger var 7 454 i 2021 og 1 973 i 2025. Det er 73,5 prosent lavere, og 2025 er det laveste tallet i serien som starter i 2010. Antall fullførte fritidsboliger var 6 690 i 2022 og 2 950 i 2025, 55,9 prosent lavere. Ifølge SSB var 2 744 av dem hytter og 206 fritidsleiligheter.
 
 ![Linjediagram over nye fritidsboliger per år fra 2010 til 2025. Igangsettingstillatelser: 5 034, 4 705, 4 551, 4 514, 4 087, 5 091, 5 603, 5 756, 5 635, 5 373, 4 830, 7 454, 5 676, 3 028, 2 343 og 1 973. Fullførte fritidsboliger: 3 988, 4 021, 4 259, 4 157, 4 131, 5 180, 5 284, 5 380, 5 228, 5 532, 5 298, 5 305, 6 690, 4 663, 3 737 og 2 950.](./graf-1.svg)
 *Igangsettingstillatelser og fullførte fritidsboliger per år. Kilde: SSB, tabell 13633.*
@@ -72,7 +72,7 @@ I 2025 ble det omsatt 11 358 fritidseiendommer med bygning i fritt salg, 12,0 pr
 
 Gjennomsnittet er ikke en prisindeks, og det varierer med hvilke eiendommer som selges. Blant de ti største hyttekommunene var det i 2025 store forskjeller: Ringebu hadde 157 omsetninger til et gjennomsnitt på 5,00 millioner kroner, Hol 234 til 4,66 millioner, mens Orkland hadde 86 til 1,43 millioner.
 
-Foreløpige tall for 2. kvartal 2026 viser 2 767 omsetninger av fritidsboliger i fritt salg, 0,9 prosent færre enn i samme kvartal i 2025. Gjennomsnittlig kjøpesum per omsetning var 2,785 millioner kroner. Ifølge SSB hadde 4,5 prosent av fritidseiendommene som ble omsatt i fritt salg i 2025 minst én kjøper fra utlandet, mot 1,8 prosent i 2020.
+Foreløpige tall for 2. kvartal 2026 viser 2 767 omsetninger av fritidsboliger i fritt salg, 0,9 prosent færre enn i samme kvartal i 2025. Gjennomsnittlig kjøpesum per omsetning var 2,785 millioner kroner.
 
 ## Kilder
 

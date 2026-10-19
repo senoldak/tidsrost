@@ -1,6 +1,6 @@
 ---
 title: "379 kilo husholdningsavfall per innbygger i 2025 – 49 prosent levert til materialgjenvinning"
-description: "Hver innbygger kastet 379 kilo husholdningsavfall i 2025, og 48,9 prosent ble levert til materialgjenvinning, viser SSB. EU-målet er 55 prosent innen 2025, men måles på annet grunnlag."
+description: "Husholdningsavfallet var 379 kilo per innbygger i 2025, og 48,9 prosent ble levert til materialgjenvinning, viser SSB. EU-målet er 55 prosent innen 2025, men måles på annet grunnlag."
 date: 2026-11-15T08:00:00+01:00
 category: innenriks
 cover: ./cover.png
@@ -8,14 +8,14 @@ coverAlt: "Illustrasjon: «379 kilo husholdningsavfall per innbygger i 2025 – 
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Avfallsgebyret, sorteringskravene og EUs gjenvinningsmål handler om samme tall. Statistikken viser hvor mye vi kaster, hva det består av og hvor stor andel som sendes til gjenvinning."
+why_matters: "Statistikken viser hvor mye husholdningsavfall det er, hva det består av og hvor stor andel som leveres til gjenvinning."
 key_points:
   - "Husholdningsavfallet var 379,1 kilo per innbygger i 2025, mot 448,6 kilo i 2020, det høyeste i serien fra 2015. Totalt ble det 2 131 000 tonn."
   - "48,9 prosent ble levert til materialgjenvinning inkludert biogass og kompostering, opp fra 37,9 prosent i 2015."
-  - "EU-målet er 55 prosent forberedelse til ombruk og materialgjenvinning innen 2025, målt på annet grunnlag enn SSBs andel. Ifølge Miljødirektoratets høringsutkast til avfallsplan nådde Norge 42,9 prosent i 2023 etter justering for tap."
+  - "EU-målet er 55 prosent forberedelse til ombruk og materialgjenvinning innen 2025, målt på annet grunnlag enn SSBs andel. Miljødirektoratets høringsutkast til avfallsplan oppgir 42,9 prosent for 2023 etter justering for tap."
 ---
 
-Hver innbygger i Norge kastet i gjennomsnitt 379 kilo husholdningsavfall i 2025, viser Statistisk sentralbyrå (SSB) i statistikken «Avfall frå hushalda», oppdatert 15. juni 2026. Totalt ble det 2 131 000 tonn. Av dette ble 48,9 prosent levert til materialgjenvinning, inkludert biogassproduksjon og kompostering. Året før var andelen 46,3 prosent, og i 2015 var den 37,9 prosent.
+Husholdningsavfallet var i gjennomsnitt 379 kilo per innbygger i Norge i 2025, viser Statistisk sentralbyrå (SSB) i statistikken «Avfall frå hushalda», oppdatert 15. juni 2026. Totalt ble det 2 131 000 tonn. Av dette ble 48,9 prosent levert til materialgjenvinning, inkludert biogassproduksjon og kompostering. Året før var andelen 46,3 prosent, og i 2015 var den 37,9 prosent.
 
 ## Mengden per innbygger
 
@@ -42,7 +42,7 @@ Restavfall er den største gruppen. I 2025 utgjorde det 810 000 tonn, som er 38 
 ![Liggende søylediagram over husholdningsavfall etter materiale i 2025, i 1 000 tonn: restavfall 810, treavfall 249, matavfall 241, papp 183, hageavfall 169, metall 92, farlig avfall 82, glass 81, byggavfall 59, plast 57 og EE-avfall 50.](./graf-2.svg)
 *Husholdningsavfall etter materiale i 2025, 1 000 tonn. Kilde: SSB, tabell 13136.*
 
-Matavfallet økte med 14 000 tonn, eller 6 prosent, fra 2024, mens restavfallet gikk ned med 31 000 tonn, eller 4 prosent (regnet fra tabell 13136). I SSBs artikkel uttaler en seniorrådgiver at tallene viser at kravene om kildesortering av matavfall fra private husholdninger fungerer.
+Matavfallet økte med 14 000 tonn, eller 6 prosent, fra 2024, mens restavfallet gikk ned med 31 000 tonn, eller 4 prosent (regnet fra tabell 13136).
 
 ## Hvor havner avfallet?
 
@@ -60,7 +60,7 @@ I 2025 ble 1 042 000 tonn levert til materialgjenvinning, biogassproduksjon og k
 
 *Kilde: SSB, tabell 13136. Tall i 1 000 tonn.*
 
-SSB understreker at tallene viser hvor mye avfall som ble levert til materialgjenvinning, ikke hvor mye som faktisk ble gjenvunnet. Andelen varierer mye mellom fylkene: fra 36,7 prosent i Vestland til 70,1 prosent i Vestfold i 2025.
+SSB skriver at tallene viser hvor mye avfall som ble levert til materialgjenvinning, ikke hvor mye som faktisk ble gjenvunnet.
 
 ## EU-målet: 55 prosent innen 2025
 
@@ -68,9 +68,9 @@ Etter EUs avfallsdirektiv, som er omtalt i regjeringens EØS-notatbase, skal 55 
 
 Målet måles dermed på et annet grunnlag enn SSBs andel på 48,9 prosent. Miljødirektoratet opplyser at gips, bildekk og byggavfall fra husholdninger ikke regnes med i oppfyllelsen av EU-målet. Næringsavfall regnes derimot med, og det justeres for tap i sorterings- og gjenvinningsleddet.
 
-Miljødirektoratets utkast til nasjonal avfallsplan 2026–2031, som var på høring fra 9. februar til 7. april 2026, oppgir at Norge i 2023 nådde 42,9 prosent reell forberedelse til ombruk og materialgjenvinning etter slik justering. Av husholdningsavfallet alene var andelen om lag 46 prosent, og av husholdningslignende næringsavfall om lag 38 prosent. For 2022 rapporterte Norge til EU 37,3 prosent i juni 2024, noe som var nesten 18 prosentpoeng under målet. Tallet for 2022 er senere justert av SSB etter en metodeendring. Norge nådde heller ikke det bindende målet for 2020, som var 50 prosent.
+Miljødirektoratets utkast til nasjonal avfallsplan 2026–2031, som var på høring fra 9. februar til 7. april 2026, oppgir 42,9 prosent reell forberedelse til ombruk og materialgjenvinning for 2023 etter slik justering. Av husholdningsavfallet alene var andelen om lag 46 prosent, og av husholdningslignende næringsavfall om lag 38 prosent.
 
-Utkastet viser til tidligere beregninger som tilsier at dagens virkemidler kan gi 49 prosent forberedelse til ombruk og materialgjenvinning av husholdningsavfall og lignende næringsavfall i 2030. Beregningene beskrives som beheftet med stor usikkerhet. Utkastet er ikke endelig.
+Utkastet er ikke endelig.
 
 ## Kilder
 

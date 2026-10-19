@@ -1,15 +1,16 @@
 ---
-title: "Fisken drar lasset i norsk fastlandseksport – nesten tre ganger så mye som aluminium"
+title: "Fisk sto for 22,6 prosent av norsk fastlandseksport i 2025 – 173,9 milliarder kroner"
 description: "Norge eksporterte fisk, krepsdyr og bløtdyr for 173,9 milliarder kroner i 2025, og laks alene sto for 124,3 milliarder. Fisk utgjorde 22,6 prosent av all norsk fastlandseksport."
 date: 2026-10-14T12:31:00+02:00
+oppdatert: 2026-10-19T13:00:00+02:00
 category: okonomi
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Fisken drar lasset i norsk fastlandseksport – nesten tre ganger så mye som aluminium»"
+coverAlt: "Illustrasjon: «Fisk sto for 22,6 prosent av norsk fastlandseksport i 2025 – 173,9 milliarder kroner»"
 coverKreditt: "Illustrasjon: tidsrøst"
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen bygde på tall fra Norges sjømatråd, som ikke er en offisiell statistikkilde; alle tall er nå hentet fra SSB. Tittelen oppga at laksen var «verdt tre ganger så mye som aluminium»; riktig er at fersk, kjølt og fryst fisk er nesten tre ganger så stor som aluminiumseksporten (156,7 mot 52,9 milliarder kroner), mens laks alene er om lag 2,3 ganger så stor (SSB, tabell 08818 og 09283). Rekordtallet på 181,5 milliarder kroner og laksetallet på 124,7 milliarder er erstattet med SSBs 173,9 og 124,3 milliarder kroner. Sitater, kvartalstall, markedstall for 2026 og omtale av USA-eksporten er fjernet fordi de ikke lot seg bekrefte hos SSB. Kommentarer om konsekvenser langs kysten er fjernet. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.31, men var datert 11. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen bygde på tall fra en ikke-offisiell kilde; alle tall er nå hentet fra SSB. Tittelen oppga at laksen var «verdt tre ganger så mye som aluminium»; riktig er at fersk, kjølt og fryst fisk er nesten tre ganger så stor som aluminiumseksporten (156,7 mot 52,9 milliarder kroner), mens laks alene er om lag 2,3 ganger så stor (SSB, tabell 08818 og 09283). Tallet på 181,5 milliarder kroner og laksetallet på 124,7 milliarder er erstattet med SSBs 173,9 og 124,3 milliarder kroner. Sitater, kvartalstall, markedstall for 2026 og omtale av USA-eksporten er fjernet fordi de ikke lot seg bekrefte hos SSB. Kommentarer om konsekvenser langs kysten er fjernet. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.31, men var datert 11. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Fisk utgjør over en femdel av fastlandseksporten. Utviklingen påvirker sysselsetting og verdiskaping langs kysten."
+why_matters: "Fisk utgjør 22,6 prosent av fastlandseksporten, ifølge SSB."
 key_points:
   - "Norges eksport av fisk, krepsdyr og bløtdyr var 173,9 milliarder kroner i 2025, hvorav laks sto for 124,3 milliarder (SSB)."
   - "I perioden januar–august 2026 var eksportverdien 110,4 milliarder kroner, 2,0 prosent høyere enn i samme periode i 2025."
@@ -30,7 +31,7 @@ Med 124,3 av 173,9 milliarder kroner utgjorde laksen 71,5 prosent av eksportverd
 
 ## Polen største marked, Kina vokste raskest
 
-Polen var det største enkeltmarkedet for norsk fisk, krepsdyr og bløtdyr i 2025. Eksporten til Kina vokste raskest blant de største markedene, mens den til Danmark gikk markant tilbake:
+Polen var det største enkeltmarkedet for norsk fisk, krepsdyr og bløtdyr i 2025. Eksporten til Kina vokste raskest blant de største markedene, mens den til Danmark gikk tilbake med 21,4 prosent:
 
 | Marked | 2025 (mrd. kr) | Endring fra 2024 |
 |---|---|---|
@@ -43,20 +44,16 @@ Polen var det største enkeltmarkedet for norsk fisk, krepsdyr og bløtdyr i 202
 
 *Eksport av fisk, krepsdyr og bløtdyr etter mottaksland. Kilde: SSB, tabell 09283.*
 
-## Nesten tre ganger større enn aluminiumseksporten
+## Fisk i fastlandseksporten
 
 Når råolje, naturgass, kondensat, skip og oljeplattformer holdes utenfor, sto Norge igjen med en fastlandseksport på 768,1 milliarder kroner i 2025. Med 173,9 milliarder kroner i SSBs statistikk sto fisk, krepsdyr og bløtdyr for 22,6 prosent av hele den norske fastlandseksporten.
 
-Bryter man statistikken ned på enkeltvaregrupper, blir sjømatens særstilling enda tydeligere: Varegruppen fersk, kjølt eller fryst fisk alene utgjorde 156,7 milliarder kroner i 2025. Det er nesten tre ganger så mye som eksporten av både aluminium (52,9 milliarder kroner) og raffinerte oljeprodukter (51,8 milliarder kroner). Laks alene (124,3 milliarder kroner) er om lag 2,3 ganger større enn aluminiumseksporten.
+Fordelt på enkeltvaregrupper utgjorde varegruppen fersk, kjølt eller fryst fisk alene 156,7 milliarder kroner i 2025. Det er nesten tre ganger så mye som eksporten av både aluminium (52,9 milliarder kroner) og raffinerte oljeprodukter (51,8 milliarder kroner). Laks alene (124,3 milliarder kroner) er om lag 2,3 ganger større enn aluminiumseksporten.
 
 ![Liggende søylediagram over utvalgte varegrupper i vareeksporten utenom råolje og gass i 2025. Fisk, fersk, kjølt eller fryst: 156,7 milliarder kroner. Aluminium: 52,9. Raffinerte mineraloljeprodukter: 51,8. Elektriske kraftmaskiner: 28,6. Elektrisk strøm: 26,6. Måle- og kontrollinstrumenter: 20,9. Nikkel: 16,0. Fisk, tørket, saltet eller røkt: 11,4.](./graf-2.svg)
-*Fersk og fryst fisk er den klart største varegruppen utenom olje og gass. Kilde: SSB, tabell 08818.*
+*Fersk og fryst fisk er den største varegruppen utenom olje og gass. Kilde: SSB, tabell 08818.*
 
 Gjennom perioden januar–august 2026 bokførte SSB en fiskeeksport på 110,4 milliarder kroner, en økning på 2,0 prosent fra samme periode i 2025. Det tilsvarer 21,1 prosent av den samlede fastlandseksporten på 523,8 milliarder kroner i åttemånedersperioden.
-
-## Uendret grunnrenteskatt i 2027-budsjettet
-
-Oppdrettsnæringen er underlagt grunnrenteskatt på havbruk. I Finansdepartementets oversikt over skattesatser, lagt fram 7. oktober 2026, videreføres den formelle satsen på 32,1 prosent fra 2026 til 2027. Ettersom grunnrenterelatert selskapsskatt trekkes fra i skattegrunnlaget, tilsvarer dette en effektiv grunnrenteskatt på 25 prosent, med et bunnfradrag på 70 millioner kroner per konsern.
 
 ## Kilder
 
@@ -65,4 +62,3 @@ Oppdrettsnæringen er underlagt grunnrenteskatt på havbruk. I Finansdepartement
 - [SSB Statistikkbanken, tabell 08804: Utenrikshandel med varer, hovedtall, årstall](https://www.ssb.no/statbank/table/08804/)
 - [SSB Statistikkbanken, tabell 08803: Utenrikshandel med varer, hovedtall, måned](https://www.ssb.no/statbank/table/08803/)
 - [SSB: Utenrikshandel med varer](https://www.ssb.no/utenriksokonomi/utenrikshandel/statistikk/utenrikshandel-med-varer)
-- [Regjeringen.no: Skattesatser 2027](https://www.regjeringen.no/no/tema/okonomi-og-budsjett/skatter-og-avgifter/skatte-og-avgiftssatser/skattesatser-2027/id3173438/)

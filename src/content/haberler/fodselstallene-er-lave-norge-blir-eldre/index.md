@@ -1,22 +1,23 @@
 ---
-title: "Fødselstallene stiger for tredje år på rad – slik ruster Norge seg for en eldre befolkning"
-description: "Fruktbarheten i Norge steg til 1,48 barn per kvinne i 2025 etter bunnoteringen på 1,40 i 2023. Samtidig viser SSBs framskrivinger at andelen over 80 år nesten dobles innen 2050."
+title: "Fødselstallene har steget tre år på rad – og andelen eldre øker"
+description: "Fruktbarheten i Norge steg til 1,48 barn per kvinne i 2025, opp fra 1,40 i 2023. SSBs framskrivinger viser at andelen over 80 år nesten dobles innen 2050."
 date: 2026-10-14T12:16:00+02:00
+oppdatert: 2026-10-19T13:00:00+02:00
 category: innenriks
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Fødselstallene stiger for tredje år på rad – slik ruster Norge seg for en eldre befolkning»"
+coverAlt: "Illustrasjon: «Fødselstallene har steget tre år på rad – og andelen eldre øker»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Tittelen oppga at fødselstallene stiger «for andre år på rad». Antall levendefødte har økt tre år på rad (51 480 i 2022, 51 980 i 2023, 54 013 i 2024 og 55 401 i 2025), og tittelen er rettet til «tredje år på rad». Det samlede fruktbarhetstallet har økt to år på rad (1,40 i 2023, 1,44 i 2024 og 1,48 i 2025), slik teksten oppgir. Øvrige tall, framskrivinger, sitater og figurer er kontrollert mot SSB og regjeringen.no og er uendret. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.16, men var datert 2. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
-why_matters: "Samspillet mellom fødselstall og levealder avgjør behovet for barnehager, skoler, sykehjemsplasser og arbeidskraft i kommunene. Regjeringens fødselstallsutvalg har lagt fram en rekke tiltak som nå følges opp."
+rettelse: "Rettet 18. oktober 2026 kl. 14.00: Tittelen oppga at fødselstallene stiger «for andre år på rad». Antall levendefødte har økt tre år på rad (51 480 i 2022, 51 980 i 2023, 54 013 i 2024 og 55 401 i 2025), og tittelen er rettet til «tredje år på rad». Det samlede fruktbarhetstallet har økt to år på rad (1,40 i 2023, 1,44 i 2024 og 1,48 i 2025), slik teksten oppgir. Øvrige tall, framskrivinger og figurer er kontrollert mot SSB og er uendret. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.16, men var datert 2. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
+why_matters: "Fødselstall og levealder påvirker behovet for barnehager, skoler, sykehjemsplasser og arbeidskraft i kommunene. SSBs framskrivinger viser utviklingen fram mot 2060."
 key_points:
   - "Samlet fruktbarhetstall var 1,48 barn per kvinne i 2025, opp fra 1,40 i 2023. I 2009 lå tallet på 1,98."
   - "I SSBs hovedalternativ øker andelen av befolkningen som er 80 år eller eldre, fra 5,1 prosent i 2026 til 9,5 prosent i 2050."
   - "Fra og med 2046 venter SSB at det vil dø flere enn det blir født i Norge."
 ---
 
-Kvinner i Norge fikk i gjennomsnitt 1,48 barn i 2025, viser statistikk fra Statistisk sentralbyrå (SSB). Det er andre år på rad med oppgang etter at fruktbarheten i 2023 var nede i 1,40 barn per kvinne – det laveste nivået i SSBs tidsserie tilbake til 1968 – og deretter økte til 1,44 i 2024. Samtidig lever befolkningen stadig lenger. I befolkningsframskrivingene fra juni 2026 anslår SSB at andelen innbyggere på 80 år eller mer nesten dobles fram mot 2050.
+Kvinner i Norge fikk i gjennomsnitt 1,48 barn i 2025, viser statistikk fra Statistisk sentralbyrå (SSB). Fruktbarhetstallet har dermed økt to år på rad etter at det i 2023 var nede i 1,40 barn per kvinne – det laveste nivået i SSBs tidsserie tilbake til 1968 – og deretter økte til 1,44 i 2024. Antall levendefødte har økt tre år på rad. Samtidig lever befolkningen stadig lenger. I befolkningsframskrivingene fra juni 2026 anslår SSB at andelen innbyggere på 80 år eller mer nesten dobles fram mot 2050.
 
 ## Fra 1,98 til 1,48 barn per kvinne
 
@@ -60,21 +61,19 @@ Samme år – i 2046 – anslår hovedalternativet at fødselsoverskuddet går o
 
 ## Lengre levealder og store etterkrigskull
 
-I hovedalternativet legger SSB til grunn at fruktbarhetstallet gradvis løfter seg videre til 1,50 i 2026, 1,56 i 2030 og 1,63 i 2050 (med et spenn fra 1,19 i lavalternativet til 1,87 i høyalternativet).
+I hovedalternativet legger SSB til grunn at fruktbarhetstallet gradvis øker videre til 1,50 i 2026, 1,56 i 2030 og 1,63 i 2050 (med et spenn fra 1,19 i lavalternativet til 1,87 i høyalternativet).
 
-Fødselstallsutvalget peker i sin utredning på at endringer i fødselstallene virker på svært lang sikt: «Ulike nivåer på fødselstallene i framskrivingene vil ikke påvirke antallet eldre før etter 2090.» At antallet eldre øker nå, skyldes den positive utviklingen i levealder kombinert med at de store etterkrigskullene når høy alder.
+Fødselstallsutvalget peker i sin utredning på at endringer i fødselstallene virker på svært lang sikt, og at ulike nivåer på fødselstallene i framskrivingene ikke påvirker antallet eldre før etter 2090. At antallet eldre øker nå, skyldes økt levealder kombinert med at de store etterkrigskullene når høy alder.
 
 ## Fødselstallsutvalgets forslag til familierettede tiltak
 
-Fødselstallsutvalget, som ble oppnevnt av regjeringen i august 2024 under ledelse av Rannveig Kaldager Hart, overleverte utredningen NOU 2026: 2 «Politikk for nye generasjoner» 9. februar 2026.
+Fødselstallsutvalget, som ble oppnevnt i august 2024, overleverte utredningen NOU 2026: 2 «Politikk for nye generasjoner» 9. februar 2026.
 
-Utvalget belyser hvordan endret alderssammensetning påvirker kommunenes planlegging. Lavere barnekull reduserer utgiftene til barnehager og skoler på kort sikt, men «gir likevel mindre grunnlag for tilbud til barn og unge» i mindre lokalsamfunn, samtidig som «aldringen gir en sterk og varig vekst i behovet for helse- og omsorgstjenester». For statsfinansene viser utvalget til beregninger fra SSB-forskere som viser at utslaget på nasjonalinntekten per innbygger på lang sikt – etter rundt 65 år – er begrenset.
+Utvalget belyser hvordan endret alderssammensetning påvirker kommunenes planlegging. Lavere barnekull reduserer utgiftene til barnehager og skoler på kort sikt, men gir mindre grunnlag for tilbud til barn og unge i mindre lokalsamfunn, samtidig som aldringen øker behovet for helse- og omsorgstjenester. For statsfinansene viser utvalget til beregninger fra SSB-forskere som viser at utslaget på nasjonalinntekten per innbygger på lang sikt – etter rundt 65 år – er begrenset.
 
-Utvalgets hovedanbefaling er å videreutvikle de norske velferdsordningene slik at det blir enda enklere å kombinere familieliv, utdanning og arbeid. Blant forslagene er styrket økonomisk støtte til foreldre under 30 år, løpende rett til barnehageplass fra barnet fyller ett år kombinert med mer fleksible foreldrepenger, styrkede barsel- og helsetjenester for nybakte foreldre og utprøving av kortere arbeidstid for småbarnsforeldre.
+Utvalget mener at familiepolitikken bør ha som mål at folk kan realisere sine ønsker om å få barn. Blant utvalgets forslag er økt økonomisk støtte til foreldre under 30 år, tilbud om barnehageplass fra barnet fyller ett år kombinert med mer fleksible foreldrepenger, styrkede barsel- og helsetjenester for nybakte foreldre og utprøving av kortere arbeidstid for småbarnsforeldre.
 
-– Fleksibilitet og tid til familieliv er vel så viktig som økonomiske tilskudd og insentiver, sa barne- og familieminister Lene Vågslid da hun mottok rapporten.
-
-Utredningen ble sendt på bred høring 22. april 2026 med høringsfrist 1. august 2026, og følges nå opp av Barne- og familiedepartementet.
+Utredningen ble sendt på høring 22. april 2026 med høringsfrist 1. august 2026.
 
 ## Kilder
 
@@ -87,5 +86,5 @@ Utredningen ble sendt på bred høring 22. april 2026 med høringsfrist 1. augus
 - [SSB Statistikkbanken, tabell 14742: Framskrevet befolkningsendringer](https://www.ssb.no/statbank/table/14742) – framskrevne fødte og døde
 - [SSB Statistikkbanken, tabell 14743: Framskrevet fruktbarhet](https://www.ssb.no/statbank/table/14743) – fruktbarhetsforutsetninger
 - [Regjeringen: NOU 2026: 2 Politikk for nye generasjoner (PDF)](https://www.regjeringen.no/contentassets/a931edce166d4f5fb0dd282e5149784b/no/pdfs/nou202620260002000dddpdfs.pdf) – utvalgets vurderinger av konsekvenser og forslag
-- [Regjeringen: Utvalg med tiltak for å øke fødselstallene (9. februar 2026)](https://www.regjeringen.no/no/aktuelt/utvalg-med-tiltak-for-a-oke-fodselstallene/id3148493/) – overlevering, sitat fra statsråd
+- [Regjeringen: Utvalg med tiltak for å øke fødselstallene (9. februar 2026)](https://www.regjeringen.no/no/aktuelt/utvalg-med-tiltak-for-a-oke-fodselstallene/id3148493/) – oppnevning og overlevering
 - [Regjeringen: Høring av NOU 2026: 2](https://www.regjeringen.no/no/dokumenter/horing-av-nou-20262-politikk-for-nye-generasjoner/id3157086/) – høringsdato og frist

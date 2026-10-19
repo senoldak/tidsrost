@@ -1,6 +1,6 @@
 ---
 title: "Grunnbeløpet er 136 549 kroner – slik reguleres folketrygden og pensjonene i 2026"
-description: "Grunnbeløpet i folketrygden økte 4,91 prosent til 136 549 kroner 1. mai 2026. Alderspensjon under utbetaling ble regulert med 4,69 prosent, og om lag 1,5 millioner alderspensjonister og trygdede får økt utbetaling."
+description: "Grunnbeløpet i folketrygden økte 4,91 prosent til 136 549 kroner 1. mai 2026. Alderspensjon under utbetaling ble regulert med 4,69 prosent, og trygdeoppgjøret gjelder om lag 1,5 millioner alderspensjonister og trygdede."
 date: 2026-11-12T08:00:00+01:00
 category: innenriks
 cover: ./cover.png
@@ -8,7 +8,7 @@ coverAlt: "Illustrasjon: «Grunnbeløpet er 136 549 kroner – slik reguleres fo
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Grunnbeløpet (G) brukes til å beregne mange av Navs ytelser. Den årlige reguleringen avgjør hvordan pensjoner og trygdeytelser følger lønns- og prisutviklingen."
+why_matters: "Grunnbeløpet (G) brukes til å beregne mange av Navs ytelser. Grunnbeløpet reguleres hvert år, og reguleringen gjelder pensjoner og trygdeytelser."
 key_points:
   - "Grunnbeløpet økte fra 130 160 til 136 549 kroner 1. mai 2026, en økning på 6 389 kroner eller 4,91 prosent."
   - "Alderspensjon under utbetaling ble regulert med 4,69 prosent, mens alderspensjon under opptjening og uføretrygd økte med 4,91 prosent."
@@ -19,7 +19,7 @@ Grunnbeløpet i folketrygden, ofte kalt G, ble 1. mai 2026 økt med 4,91 prosent
 
 ## Slik fastsettes grunnbeløpet
 
-Grunnbeløpet oppdateres 1. mai hvert år og bestemmes av Stortinget etter trygdeoppgjøret. Arbeids- og inkluderingsdepartementet kunngjorde årets trygdeoppgjør 20. mai 2026, og Nav oppgir at grunnbeløpet formelt ble vedtatt 22. mai 2026. Gjennomsnittlig G for 2026 er 134 419 kroner, fordi beløpet er lavere i årets første måneder før reguleringen.
+Grunnbeløpet oppdateres 1. mai hvert år, etter trygdeoppgjøret. Arbeids- og inkluderingsdepartementet kunngjorde årets trygdeoppgjør 20. mai 2026, og Nav oppgir at grunnbeløpet formelt ble vedtatt 22. mai 2026. Gjennomsnittlig G for 2026 er 134 419 kroner, fordi beløpet er lavere i årets første måneder før reguleringen.
 
 ![Stolpediagram over folketrygdens grunnbeløp fra 1. mai hvert år, i kroner: 92 576 i 2016, 93 634 i 2017, 96 883 i 2018, 99 858 i 2019, 101 351 i 2020, 106 399 i 2021, 111 477 i 2022, 118 620 i 2023, 124 028 i 2024, 130 160 i 2025 og 136 549 i 2026.](./graf-1.svg)
 *Folketrygdens grunnbeløp (G) fra 1. mai hvert år, kroner. Kilde: Nav.*
@@ -30,7 +30,7 @@ Siden 2016 har grunnbeløpet økt fra 92 576 til 136 549 kroner, altså med 47,5
 
 Ikke alle ytelser reguleres likt. Regjeringen oppgir at alderspensjoner under utbetaling økte med 4,69 prosent fra 1. mai 2026. Alderspensjon under opptjening, uføretrygd og andre ytelser som reguleres gjennom G økte med 4,91 prosent. Avtalefestet pensjon (AFP) i offentlig sektor reguleres på samme måte som alderspensjon under utbetaling.
 
-Regjeringen oppgir en forventet prisvekst på 3,5 prosent. Trygdeoppgjøret gjelder om lag 1,5 millioner alderspensjonister og trygdede, ifølge regjeringen.
+Trygdeoppgjøret gjelder om lag 1,5 millioner alderspensjonister og trygdede, ifølge regjeringen.
 
 | Ytelse | Regulering 1. mai 2026 |
 |---|---:|
@@ -57,12 +57,12 @@ Pensjonister med lav eller ingen opptjent tilleggspensjon får en minste årlige
 
 En enslig minstepensjonist født i 1953 med full trygdetid får ifølge regjeringen årlig pensjon økt fra 279 933 til 293 062 kroner, altså 13 129 kroner. For uføretrygd er minste årlige ytelse med ordinær sats 318 023 kroner (2,329 G), og for unge uføre 369 911 kroner (2,709 G).
 
-## Når kommer økningen?
+## Utbetaling av økningen
 
-Ifølge Nav kommer økningen for alderspensjon og uføretrygd fra 1. mai med den månedlige utbetalingen 19. juni. Arbeidsavklaringspenger får en egen utbetaling tidlig i juni.
+Ifølge Nav ble økningen for alderspensjon og uføretrygd fra 1. mai utbetalt med den månedlige utbetalingen 19. juni. Arbeidsavklaringspenger fikk en egen utbetaling tidlig i juni.
 
 ## Kilder
 
 - [Nav: Grunnbeløpet i folketrygden](https://www.nav.no/grunnbelopet)
 - [Nav: Regulering 2026](https://www.nav.no/regulering-2026)
-- [Regjeringen.no: Trygdeoppgjøret er klart – økt kjøpekraft for pensjonister og trygdede (20. mai 2026)](https://www.regjeringen.no/no/aktuelt/trygdeoppgjoret-er-klart-okt-kjopekraft-for-pensjonister-og-trygdede/id3160284/)
+- [Regjeringen.no: Trygdeoppgjøret 2026 (20. mai 2026)](https://www.regjeringen.no/no/aktuelt/trygdeoppgjoret-er-klart-okt-kjopekraft-for-pensjonister-og-trygdede/id3160284/)

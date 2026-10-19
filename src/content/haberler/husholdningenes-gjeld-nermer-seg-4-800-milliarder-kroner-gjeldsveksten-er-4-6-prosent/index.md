@@ -8,7 +8,7 @@ coverAlt: "Illustrasjon: «Husholdningenes gjeld nærmer seg 4 800 milliarder kr
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Gjeld er den viktigste måten norske husholdninger finansierer boligkjøp på. Hvor raskt gjelden vokser, sier noe om presset på privatøkonomien og om utviklingen i boligmarkedet."
+why_matters: "Kredittindikatoren K2 fra SSB viser hvor mye husholdninger, ikke-finansielle foretak og kommuneforvaltningen har i innenlandsk lånegjeld, og hvor raskt gjelden vokser."
 key_points:
   - "Husholdninger mv. hadde en innenlandsk lånegjeld på 4 790 milliarder kroner ved utgangen av august 2026."
   - "Tolvmånedersveksten i husholdningenes gjeld var 4,6 prosent, uendret fra juli og opp fra 4,3 prosent i august 2025."
@@ -26,7 +26,7 @@ Kredittindikatoren K2 viser hvor mye publikum, altså husholdninger, ikke-finans
 
 Gjelden har økt fra 3 742 milliarder kroner i august 2020 til 4 790 milliarder kroner i august 2026. Det er en økning på 1 048 milliarder kroner, eller om lag 28 prosent, over seks år.
 
-## Gjeldsveksten har tatt seg opp
+## Utviklingen i gjeldsveksten
 
 Tolvmånedersveksten i husholdningenes gjeld var 3,5 prosent i august 2024, 4,3 prosent i august 2025 og 4,6 prosent i august 2026. Til sammenligning var veksten 5,2 prosent i august 2021.
 
@@ -46,11 +46,11 @@ Den samlede innenlandske lånegjelden til publikum var 8 048 milliarder kroner v
 
 *Innenlandsk lånegjeld, utgangen av august 2026. Kilde: SSB, tabell 11599.*
 
-Gjeldsveksten for kommuneforvaltningen har falt kraftig, fra 8,3 prosent i august 2025 til 3,0 prosent i august 2026. For ikke-finansielle foretak økte veksten fra 2,0 til 4,8 prosent i samme periode.
+Gjeldsveksten for kommuneforvaltningen falt fra 8,3 prosent i august 2025 til 3,0 prosent i august 2026. For ikke-finansielle foretak økte veksten fra 2,0 til 4,8 prosent i samme periode.
 
-## Hva betyr tallene?
+## Hva viser tallene?
 
-Gjeldsveksten sier hvor mye husholdningene låner netto, og må sees i sammenheng med boligprisene, rentenivået og inntektsutviklingen. SSB publiserer neste oppdatering av kredittindikatoren 28. oktober 2026.
+Gjeldsveksten viser hvor mye husholdningene låner netto.
 
 ## Kilder
 

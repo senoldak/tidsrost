@@ -8,7 +8,7 @@ coverAlt: "Illustrasjon: «38,3 prosent har høyere utdanning – kvinner 43,7 o
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Utdanningsnivået forteller hvilken kompetanse befolkningen har, og hvor store forskjellene er mellom kjønn, aldersgrupper og landsdeler. Tallene brukes i planlegging av alt fra utdanningstilbud til arbeidsmarkedspolitikk."
+why_matters: "Utdanningsnivået forteller hvilken kompetanse befolkningen har, og hvor store forskjellene er mellom kjønn, aldersgrupper og landsdeler."
 key_points:
   - "38,3 prosent av befolkningen på 16 år og over hadde utdanning på universitets- og høgskolenivå i 2025, mot 22,0 prosent i 2000 og 11,3 prosent i 1980."
   - "43,7 prosent av kvinnene og 32,8 prosent av mennene hadde høyere utdanning i 2025. Kvinnene har siden 2023 også høyere andel med lang utdanning, 13,4 mot 12,5 prosent."
@@ -33,7 +33,7 @@ SSB deler befolkningen etter høyeste fullførte utdanning. Universitets- og hø
 
 *Kilde: SSB, tabell 09429.*
 
-Andelen med bare grunnskole er høy fordi tallene også omfatter unge som fortsatt er i utdanning. Blant 16–19-åringer hadde 86,2 prosent grunnskolenivå som høyeste fullførte utdanning i 2025.
+Tallene omfatter også unge som fortsatt er i utdanning. Blant 16–19-åringer hadde 86,2 prosent grunnskolenivå som høyeste fullførte utdanning i 2025.
 
 ## Utviklingen siden 1980
 
@@ -46,7 +46,7 @@ Andelene i grafen er summen av SSBs publiserte, avrundede andeler for kort og la
 
 ## Kvinner og menn
 
-I 1980 hadde menn høyest andel med høyere utdanning, 13,2 prosent mot 9,5 prosent for kvinner. I 2000 var andelen lik, 22,0 prosent for begge kjønn. Siden har kvinnene gått forbi. I 2025 var forskjellen 10,9 prosentpoeng, 43,7 mot 32,8 prosent.
+I 1980 hadde menn høyest andel med høyere utdanning, 13,2 prosent mot 9,5 prosent for kvinner. I 2000 var andelen lik, 22,0 prosent for begge kjønn. Siden har andelen vært høyest blant kvinner. I 2025 var forskjellen 10,9 prosentpoeng, 43,7 mot 32,8 prosent.
 
 Kvinnene har høyest andel med kort utdanning, 30,3 prosent mot 20,3 prosent for menn. Med lang utdanning lå menn lenge foran: i 2020 var andelen 10,9 prosent for menn og 10,3 prosent for kvinner. I 2022 var andelen lik, 11,6 prosent, og i 2023 var den 12,2 prosent for kvinner og 11,9 prosent for menn. I 2025 var andelen med lang utdanning 13,4 prosent for kvinner og 12,5 prosent for menn.
 
@@ -73,15 +73,12 @@ Oslo har den høyeste andelen med høyere utdanning med 56,4 prosent i 2025, og 
 
 Kjønnsforskjellen varierer også. Størst er den i Finnmark, der 40,7 prosent av kvinnene og 22,9 prosent av mennene har høyere utdanning, en forskjell på 17,8 prosentpoeng. Minst er den i Oslo, med 60,0 prosent for kvinner og 52,9 prosent for menn, en forskjell på 7,1 prosentpoeng. Andelen blant menn i Oslo er høyere enn blant kvinner i alle andre fylker; høyest utenfor Oslo er kvinnene i Akershus med 46,4 prosent.
 
-Også innad i Oslo er forskjellene store. SSBs tall for bydelene (tabell 09434, beregnet uten uoppgitt utdanning i nevneren) viser en andel med universitets- og høgskolenivå på 68,5 prosent i St. Hanshaugen og 30,4 prosent i Stovner.
-
 ## Hva tallene dekker
 
-Statistikken omfatter personer bosatt i Norge per 1. oktober som er 16 år eller eldre ved utgangen av rapporteringsåret. SSB oppgir at de mangler opplysninger om utdanningen til mange innvandrere, og at tall fra og med 2014 inneholder beregnede verdier for denne gruppen. Fagskolenivå ble skilt ut som eget nivå fra 2016. Andelene er summen av SSBs publiserte andeler for kort og lang utdanning og kan avvike med inntil 0,1 prosentpoeng fra en utregning på antall. SSB har ikke fastsatt tidspunkt for neste oppdatering.
+Statistikken omfatter personer bosatt i Norge per 1. oktober som er 16 år eller eldre ved utgangen av rapporteringsåret. SSB opplyser at tall for utdanningsnivå fra og med 2014 inneholder beregnede verdier. Fagskolenivå ble skilt ut som eget nivå fra 2016. Andelene er summen av SSBs publiserte andeler for kort og lang utdanning og kan avvike med inntil 0,1 prosentpoeng fra en utregning på antall. SSB har ikke fastsatt tidspunkt for neste oppdatering.
 
 ## Kilder
 
 - [SSB: Befolkningens utdanningsnivå (statistikkside, publisert 17. juni 2026, tall for 2025 republisert 1. juli 2026)](https://www.ssb.no/utdanning/utdanningsniva/statistikk/befolkningens-utdanningsniva)
 - [SSB Statistikkbanken: Tabell 09429 – Personer 16 år og over, etter region, nivå, kjønn, statistikkvariabel og år](https://www.ssb.no/statbank/table/09429)
-- [SSB Statistikkbanken: Tabell 09434 – Personer 16 år og over, etter region (Oslo-bydeler), kjønn, utdanningsnivå, statistikkvariabel og år](https://www.ssb.no/statbank/table/09434)
-- [SSB Statistikkbanken: Tabell 09430 – Personer 16 år og over, etter alder, kjønn, utdanningsnivå, fagfelt, innvandringskategori, statistikkvariabel og år](https://www.ssb.no/statbank/table/09430)
+- [SSB Statistikkbanken: Tabell 09430 – Personer 16 år og over, etter alder, kjønn, utdanningsnivå, fagfelt, statistikkvariabel og år](https://www.ssb.no/statbank/table/09430)

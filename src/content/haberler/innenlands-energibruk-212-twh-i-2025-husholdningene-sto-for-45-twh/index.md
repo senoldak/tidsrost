@@ -8,7 +8,7 @@ coverAlt: "Illustrasjon: «Innenlands energibruk var 212 TWh i 2025 – husholdn
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Energibalansen viser hvem som bruker energien i Norge og hva slags energi som brukes. Den gjør det mulig å se hvordan elbiler, varmepumper og mildere vintre flytter forbruket mellom energivarer og sektorer."
+why_matters: "Energibalansen viser hvem som bruker energien i Norge og hva slags energi som brukes. Den viser også hvordan forbruket fordeler seg mellom energivarer og sektorer."
 key_points:
   - "Innenlands energibruk utenom råstoff var 212,0 TWh i 2025, 1,0 prosent lavere enn i 2024 og det laveste nivået siden 2014."
   - "Industri og bergverk brukte 73,4 TWh, transport 50,3 TWh og private husholdninger 45,3 TWh; husholdningenes bruk falt 2,7 prosent."
@@ -21,7 +21,7 @@ Tallene i energibalansen viser tilført energi, målt som energiinnholdet i ener
 
 ## Hvem bruker energien?
 
-Industri og bergverk var største forbrukssektor i 2025 med 73,4 TWh, 34,6 prosent av totalen. Transport kom på andreplass med 50,3 TWh, foran private husholdninger med 45,3 TWh og privat og offentlig tjenesteyting, inkludert forsvar, med 35,0 TWh. Jordbruk, skogbruk og fiske brukte til sammen 8,0 TWh.
+Industri og bergverk var største forbrukssektor i 2025 med 73,4 TWh, 34,6 prosent av totalen. Transport kom på andreplass med 50,3 TWh, foran private husholdninger med 45,3 TWh og privat og offentlig tjenesteyting med 35,0 TWh. Jordbruk, skogbruk og fiske brukte til sammen 8,0 TWh.
 
 ![Liggende søylediagram over innenlands energibruk etter sektor i 2025: industri og bergverk 73,4 TWh, transport 50,3 TWh, private husholdninger 45,3 TWh, privat og offentlig tjenesteyting 35,0 TWh, jordbruk, skogbruk og fiske 8,0 TWh.](./graf-1.svg)
 *Innenlands energibruk etter sektor i 2025, utenom råstoff. Kilde: SSB, tabell 11561.*
@@ -31,7 +31,7 @@ Industri og bergverk var største forbrukssektor i 2025 med 73,4 TWh, 34,6 prose
 | Industri og bergverk | 72 432 | 73 371 | +1,3 % |
 | Transport | 52 504 | 50 313 | −4,2 % |
 | Private husholdninger | 46 586 | 45 323 | −2,7 % |
-| Privat og offentlig tjenesteyting, inkl. forsvar | 34 840 | 35 047 | +0,6 % |
+| Privat og offentlig tjenesteyting | 34 840 | 35 047 | +0,6 % |
 | Jordbruk og skogbruk | 3 957 | 3 904 | −1,3 % |
 | Fiske | 3 896 | 4 062 | +4,3 % |
 | **Totalt (utenom råstoff)** | **214 215** | **212 019** | **−1,0 %** |
@@ -46,7 +46,7 @@ SSB fører noen store poster utenfor tallet for innenlands energibruk. Energi br
 
 ## Husholdningene: strøm dominerer
 
-Private husholdninger brukte 45 323 GWh i 2025, ned 2,7 prosent fra 46 586 GWh i 2024. Elektrisitet utgjorde 38 209 GWh, eller 84,3 prosent. Ifølge SSB inkluderer husholdningstallene i energibalansen også fritidshus. Strømbruken falt 2,2 prosent, mens bruken av ved falt 7,0 prosent. SSB skriver at 2025 ifølge Meteorologisk institutt var et rekordvarmt år, som ga lavere behov for oppvarming, og at flere husholdninger som lader elbil hjemme demper nedgangen i strømbruken.
+Private husholdninger brukte 45 323 GWh i 2025, ned 2,7 prosent fra 46 586 GWh i 2024. Elektrisitet utgjorde 38 209 GWh, eller 84,3 prosent. Ifølge SSB inkluderer husholdningstallene i energibalansen også fritidshus. Strømbruken falt 2,2 prosent, mens bruken av ved falt 7,0 prosent. SSB skriver at 2025 ifølge Meteorologisk institutt (met.no) var et rekordvarmt år, som førte til et lavere behov for oppvarming av boliger, og at flere husholdninger som lader elbil hjemme demper nedgangen i strømbruken.
 
 | Energivare | 2000 (GWh) | 2024 (GWh) | 2025 (GWh) |
 |---|---:|---:|---:|
