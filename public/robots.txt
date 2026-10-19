@@ -39,5 +39,10 @@ User-agent: DeepSeekBot
 User-agent: TikTokSpider
 Disallow: /
 
+# İnternet arşivleri (Wayback Machine) sayfaların kalıcı kopyasını almaz; silinen ya da düzeltilen içerik arşivde kalmaz.
+User-agent: archive.org_bot
+User-agent: ia_archiver
+Disallow: /
+
 Sitemap: https://tidsrost.com/sitemap-index.xml
 Sitemap: https://tidsrost.com/news-sitemap.xml
