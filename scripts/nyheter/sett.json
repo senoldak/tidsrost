@@ -2151,7 +2151,44 @@
     "medier:67e32ac7495a2043": "2026-10-19T12:03:57.104Z",
     "medier:e40fc7250e28f1e3": "2026-10-19T12:04:02.492Z",
     "medier:64d321885174bd95": "2026-10-19T12:04:02.492Z",
-    "medier:7d18b1be4bc6d769": "2026-10-19T12:04:02.492Z"
+    "medier:7d18b1be4bc6d769": "2026-10-19T12:04:02.492Z",
+    "medier:4e0f99420e8901d4": "2026-10-19T14:01:23.534Z",
+    "medier:2b7b8b8dcf632980": "2026-10-19T14:01:23.534Z",
+    "medier:6884f2678555344a": "2026-10-19T14:01:23.534Z",
+    "medier:573a483eef881102": "2026-10-19T14:01:23.534Z",
+    "medier:1cb6038b72b736e9": "2026-10-19T14:01:23.534Z",
+    "medier:d39bac94495d05cc": "2026-10-19T14:02:29.584Z",
+    "medier:0af71db33deea1a5": "2026-10-19T14:02:29.584Z",
+    "medier:72ad5fa8061f4f08": "2026-10-19T14:02:29.584Z",
+    "medier:665a5b54df8d8f80": "2026-10-19T14:02:29.584Z",
+    "regjeringen:3179052": "2026-10-19T14:02:29.584Z",
+    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/esma-offentliggjor-prioriterte-omrader-for-tilsyn-av-finansiell-rapportering-og/": "2026-10-19T14:02:29.584Z",
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/10/nattarbeid-ved-e16-asbrekkegjelet/": "2026-10-19T14:02:29.584Z",
+    "idrettsforbundet:https://www.idrettsforbundet.no/nyheter/2026/statsbudsjettet-2027-innspill-til-utdannings--og-forskningskomiteen-pa-stortinget/": "2026-10-19T14:02:29.584Z",
+    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/sanksjoner-og-tiltak-rettet-mot-markedsaktorer-i-verdipapirmarkedet-i-eos-i-2025/": "2026-10-19T14:02:29.584Z",
+    "idrettsforbundet:https://www.idrettsforbundet.no/nyheter/2026/statsbudsjettet-2027-nifs-innspill-til-familie--og-kulturkomiteen/": "2026-10-19T14:02:29.584Z",
+    "medier:06fb4b48dbc91d69": "2026-10-19T14:02:29.584Z",
+    "medier:9888ff5174d60264": "2026-10-19T14:02:29.584Z",
+    "medier:c973313fcf4c04a4": "2026-10-19T14:02:29.584Z",
+    "medier:7aa5a80a225b8476": "2026-10-19T14:02:29.584Z",
+    "medier:214a6126d0e1d6f6": "2026-10-19T14:02:29.584Z",
+    "medier:698387b50737ef53": "2026-10-19T14:02:29.584Z",
+    "medier:9dfae705c5cd87a3": "2026-10-19T14:02:29.584Z",
+    "medier:e6bfc2d4de102b15": "2026-10-19T14:02:29.584Z",
+    "medier:30cc1702b8bae3be": "2026-10-19T14:02:29.584Z",
+    "medier:aba340e9847540e9": "2026-10-19T14:02:29.584Z",
+    "medier:cd3921200b2be642": "2026-10-19T14:02:29.584Z",
+    "medier:ec982c6c5d4b8f04": "2026-10-19T14:02:29.584Z",
+    "medier:fdf46514f9907d70": "2026-10-19T14:03:56.136Z",
+    "medier:bcc19c2a7254c237": "2026-10-19T14:03:56.136Z",
+    "medier:da676883935dcad4": "2026-10-19T14:05:13.333Z",
+    "medier:f7b567d2cfdf452d": "2026-10-19T14:05:13.333Z",
+    "medier:0001c09c3f7d4c34": "2026-10-19T14:05:13.333Z",
+    "medier:a7ca606f91fbbd1d": "2026-10-19T14:05:13.333Z",
+    "medier:76799713409bf28c": "2026-10-19T14:05:13.333Z",
+    "medier:6fea834b1aab59d7": "2026-10-19T14:06:31.463Z",
+    "medier:77fd4e0f59d3fb70": "2026-10-19T14:06:31.463Z",
+    "unnews:https://news.un.org/en/story/2026/10/1168622": "2026-10-19T14:06:59.778Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -2778,6 +2815,86 @@
       "p": 30,
       "v": "b34cb0de5bde",
       "t": "2026-10-19T12:02:11.904Z"
+    },
+    "medier:d39bac94495d05cc": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T14:02:05.863Z"
+    },
+    "medier:da676883935dcad4": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T14:02:05.863Z"
+    },
+    "medier:06fb4b48dbc91d69": {
+      "p": 42,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T14:02:05.863Z"
+    },
+    "medier:fdf46514f9907d70": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T14:02:05.863Z"
+    },
+    "medier:7aa5a80a225b8476": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T14:02:05.863Z"
+    },
+    "medier:698387b50737ef53": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T14:02:05.863Z"
+    },
+    "medier:e6bfc2d4de102b15": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T14:02:05.863Z"
+    },
+    "medier:cd3921200b2be642": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T14:02:05.863Z"
+    },
+    "medier:6fea834b1aab59d7": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T14:02:05.863Z"
+    },
+    "regjeringen:3179052": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T14:02:05.863Z"
+    },
+    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/esma-offentliggjor-prioriterte-omrader-for-tilsyn-av-finansiell-rapportering-og/": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T14:02:05.863Z"
+    },
+    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/sanksjoner-og-tiltak-rettet-mot-markedsaktorer-i-verdipapirmarkedet-i-eos-i-2025/": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T14:02:05.863Z"
+    },
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/10/nattarbeid-ved-e16-asbrekkegjelet/": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T14:02:05.863Z"
+    },
+    "idrettsforbundet:https://www.idrettsforbundet.no/nyheter/2026/statsbudsjettet-2027-innspill-til-utdannings--og-forskningskomiteen-pa-stortinget/": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T14:02:05.863Z"
+    },
+    "idrettsforbundet:https://www.idrettsforbundet.no/nyheter/2026/statsbudsjettet-2027-nifs-innspill-til-familie--og-kulturkomiteen/": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T14:02:05.863Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/10/1168622": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T14:02:05.863Z"
     }
   }
 }
