@@ -2063,7 +2063,45 @@
     "medier:2b78fc0f986a4faa": "2026-10-19T08:02:31.213Z",
     "medier:f346f72b8ee0cf6d": "2026-10-19T08:02:40.291Z",
     "medier:026023b3443ab967": "2026-10-19T08:02:40.291Z",
-    "medier:bd2f1fd085e0eb94": "2026-10-19T08:02:40.291Z"
+    "medier:bd2f1fd085e0eb94": "2026-10-19T08:02:40.291Z",
+    "medier:96f8e6e9b592ecb1": "2026-10-19T10:01:29.916Z",
+    "medier:54a0120d22f3a1fa": "2026-10-19T10:01:29.916Z",
+    "medier:e163cfe8f8fe0804": "2026-10-19T10:01:29.916Z",
+    "medier:8682759bffbea9c9": "2026-10-19T10:01:29.916Z",
+    "regjeringen:3178851": "2026-10-19T10:02:21.830Z",
+    "unnews:https://news.un.org/en/story/2026/10/1168620": "2026-10-19T10:02:21.831Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2187": "2026-10-19T10:02:21.831Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2184": "2026-10-19T10:02:21.831Z",
+    "medier:d011dc9b28779962": "2026-10-19T10:02:21.831Z",
+    "medier:6ad504b7391027d6": "2026-10-19T10:02:21.831Z",
+    "medier:c016f2a816e5c11c": "2026-10-19T10:02:21.831Z",
+    "medier:03d4856cd3e74715": "2026-10-19T10:02:21.831Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2178": "2026-10-19T10:02:21.831Z",
+    "medier:8eea3c0dd4ccf3ee": "2026-10-19T10:02:21.831Z",
+    "medier:154ede73a94240c1": "2026-10-19T10:02:21.831Z",
+    "medier:beccf5f99364b5df": "2026-10-19T10:02:21.831Z",
+    "medier:24f2bac75164cbac": "2026-10-19T10:02:21.831Z",
+    "medier:4f8776fbd80b091e": "2026-10-19T10:02:21.831Z",
+    "medier:2b79923b943c1f43": "2026-10-19T10:02:21.831Z",
+    "medier:c577211bdd283e9b": "2026-10-19T10:02:21.831Z",
+    "medier:7479ce6669e7b005": "2026-10-19T10:02:21.831Z",
+    "medier:dce9fe75eb555652": "2026-10-19T10:02:21.831Z",
+    "medier:5031fc33308ae5ff": "2026-10-19T10:02:21.831Z",
+    "medier:77657957befc9d76": "2026-10-19T10:02:21.831Z",
+    "medier:b15dad14525629ea": "2026-10-19T10:02:21.831Z",
+    "medier:0f58554d2d577689": "2026-10-19T10:02:21.831Z",
+    "medier:c6667c60585a23f3": "2026-10-19T10:02:21.831Z",
+    "medier:e6d3bb2421a039d4": "2026-10-19T10:02:21.831Z",
+    "medier:f504b5ae10a3681e": "2026-10-19T10:02:21.831Z",
+    "medier:3cf4fa30b6271e07": "2026-10-19T10:02:21.831Z",
+    "medier:fc5912fb786ec16d": "2026-10-19T10:02:23.422Z",
+    "medier:ef6481c26c88e568": "2026-10-19T10:02:23.422Z",
+    "medier:6efef6ae223e918c": "2026-10-19T10:02:25.402Z",
+    "medier:5cc925380912c207": "2026-10-19T10:02:25.402Z",
+    "medier:cc07c27f06f0805d": "2026-10-19T10:02:47.043Z",
+    "medier:86cd592e8445b70b": "2026-10-19T10:02:47.043Z",
+    "medier:1f15401cbc4a3bcb": "2026-10-19T10:02:49.411Z",
+    "medier:caf640694b0546e5": "2026-10-19T10:02:49.411Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -2495,6 +2533,91 @@
       "p": 40,
       "v": "b34cb0de5bde",
       "t": "2026-10-19T08:02:00.324Z"
+    },
+    "medier:cc07c27f06f0805d": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T10:02:20.194Z"
+    },
+    "medier:fc5912fb786ec16d": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T10:02:20.194Z"
+    },
+    "medier:d011dc9b28779962": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T10:02:20.194Z"
+    },
+    "medier:8eea3c0dd4ccf3ee": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T10:02:20.194Z"
+    },
+    "medier:beccf5f99364b5df": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T10:02:20.194Z"
+    },
+    "medier:4f8776fbd80b091e": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T10:02:20.194Z"
+    },
+    "medier:6efef6ae223e918c": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T10:02:20.194Z"
+    },
+    "medier:c577211bdd283e9b": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T10:02:20.194Z"
+    },
+    "medier:1f15401cbc4a3bcb": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T10:02:20.194Z"
+    },
+    "medier:5031fc33308ae5ff": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T10:02:20.194Z"
+    },
+    "medier:0f58554d2d577689": {
+      "p": 58,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T10:02:20.194Z"
+    },
+    "medier:f504b5ae10a3681e": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T10:02:20.194Z"
+    },
+    "regjeringen:3178851": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T10:02:20.194Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/10/1168620": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T10:02:20.194Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2187": {
+      "p": 42,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T10:02:20.194Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2184": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T10:02:20.194Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2178": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-19T10:02:20.194Z"
     }
   }
 }
