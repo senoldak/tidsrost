@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 432" width="760" height="432" role="img" aria-label="Anmeldte lovbrudd per 1 000 innbyggere">
+<title>Anmeldte lovbrudd per 1 000 innbyggere</title>
+<rect width="760" height="432" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Anmeldte lovbrudd per 1 000 innbyggere</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Alle lovbruddsgrupper, 2003–2025</text>
+<text x="24" y="92" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Lovbrudd per 1 000 innbyggere</text>
+<line x1="74" x2="736" y1="352" y2="352" stroke="#16191c" stroke-width="1"/>
+<text x="66" y="356" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">0,0</text>
+<line x1="74" x2="736" y1="291" y2="291" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="295" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">25,0</text>
+<line x1="74" x2="736" y1="230" y2="230" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="234" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">50,0</text>
+<line x1="74" x2="736" y1="169" y2="169" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="173" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">75,0</text>
+<line x1="74" x2="736" y1="108" y2="108" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="112" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">100,0</text>
+<rect x="79.8" y="126.5" width="17.3" height="225.5" fill="#1f5f99"/>
+<text x="88.4" y="120.5" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">92,4</text>
+<text x="88.4" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2003</text>
+<rect x="108.5" y="134.8" width="17.3" height="217.2" fill="#1f5f99"/>
+<text x="117.2" y="128.8" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">89,0</text>
+<rect x="137.3" y="143.1" width="17.3" height="208.9" fill="#1f5f99"/>
+<text x="146" y="137.1" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">85,6</text>
+<text x="146" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2005</text>
+<rect x="166.1" y="141.4" width="17.3" height="210.6" fill="#1f5f99"/>
+<text x="174.7" y="135.4" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">86,3</text>
+<rect x="194.9" y="144.4" width="17.3" height="207.6" fill="#1f5f99"/>
+<text x="203.5" y="138.4" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">85,1</text>
+<text x="203.5" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2007</text>
+<rect x="223.7" y="153.1" width="17.3" height="198.9" fill="#1f5f99"/>
+<text x="232.3" y="147.1" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">81,5</text>
+<rect x="252.5" y="150" width="17.3" height="202" fill="#1f5f99"/>
+<text x="261.1" y="144" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">82,8</text>
+<text x="261.1" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2009</text>
+<rect x="281.2" y="154.1" width="17.3" height="197.9" fill="#1f5f99"/>
+<text x="289.9" y="148.1" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">81,1</text>
+<rect x="310" y="163.6" width="17.3" height="188.4" fill="#1f5f99"/>
+<text x="318.7" y="157.6" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">77,2</text>
+<text x="318.7" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2011</text>
+<rect x="338.8" y="159.2" width="17.3" height="192.8" fill="#1f5f99"/>
+<text x="347.4" y="153.2" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">79,0</text>
+<rect x="367.6" y="164.4" width="17.3" height="187.6" fill="#1f5f99"/>
+<text x="376.2" y="158.4" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">76,9</text>
+<text x="376.2" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2013</text>
+<rect x="396.4" y="174.4" width="17.3" height="177.6" fill="#1f5f99"/>
+<text x="405" y="168.4" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">72,8</text>
+<rect x="425.1" y="186.1" width="17.3" height="165.9" fill="#1f5f99"/>
+<text x="433.8" y="180.1" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">68,0</text>
+<text x="433.8" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2015</text>
+<rect x="453.9" y="194.6" width="17.3" height="157.4" fill="#1f5f99"/>
+<text x="462.6" y="188.6" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">64,5</text>
+<rect x="482.7" y="204.1" width="17.3" height="147.9" fill="#1f5f99"/>
+<text x="491.3" y="198.1" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">60,6</text>
+<text x="491.3" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2017</text>
+<rect x="511.5" y="205.6" width="17.3" height="146.4" fill="#1f5f99"/>
+<text x="520.1" y="199.6" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">60,0</text>
+<rect x="540.3" y="210" width="17.3" height="142" fill="#1f5f99"/>
+<text x="548.9" y="204" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">58,2</text>
+<text x="548.9" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2019</text>
+<rect x="569.1" y="215.4" width="17.3" height="136.6" fill="#1f5f99"/>
+<text x="577.7" y="209.4" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">56,0</text>
+<rect x="597.8" y="225.9" width="17.3" height="126.1" fill="#16191c"/>
+<text x="606.5" y="219.9" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">51,7</text>
+<text x="606.5" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2021</text>
+<rect x="626.6" y="215.1" width="17.3" height="136.9" fill="#1f5f99"/>
+<text x="635.3" y="209.1" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">56,1</text>
+<rect x="655.4" y="206.1" width="17.3" height="145.9" fill="#1f5f99"/>
+<text x="664" y="200.1" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">59,8</text>
+<text x="664" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2023</text>
+<rect x="684.2" y="201.9" width="17.3" height="150.1" fill="#1f5f99"/>
+<text x="692.8" y="195.9" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">61,5</text>
+<rect x="713" y="200" width="17.3" height="152" fill="#16191c"/>
+<text x="721.6" y="194" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#16191c">62,3</text>
+<text x="721.6" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2025</text>
+<line x1="24" x2="736" y1="392" y2="392" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="410" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 08484</text>
+<text x="736" y="410" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

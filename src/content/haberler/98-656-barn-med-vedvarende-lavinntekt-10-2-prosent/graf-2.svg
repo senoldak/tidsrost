@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 706" width="760" height="706" role="img" aria-label="Barn med vedvarende lavinntekt etter fylke">
+<title>Barn med vedvarende lavinntekt etter fylke</title>
+<rect width="760" height="706" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Barn med vedvarende lavinntekt etter fylke</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Andel av barn 0–17 år, treårsperioden 2022–2024</text>
+<text x="24" y="92" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Prosent</text>
+<text x="24" y="121" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Østfold</text>
+<rect x="184" y="108" width="506" height="20" fill="#1f5f99"/>
+<text x="696" y="122" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">14,8 %</text>
+<text x="24" y="155" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Telemark</text>
+<rect x="184" y="142" width="495.7" height="20" fill="#1f5f99"/>
+<text x="685.7" y="156" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">14,5 %</text>
+<text x="24" y="189" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Oslo</text>
+<rect x="184" y="176" width="451.3" height="20" fill="#1f5f99"/>
+<text x="641.3" y="190" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">13,2 %</text>
+<text x="24" y="223" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Innlandet</text>
+<rect x="184" y="210" width="413.7" height="20" fill="#1f5f99"/>
+<text x="603.7" y="224" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">12,1 %</text>
+<text x="24" y="257" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Agder</text>
+<rect x="184" y="244" width="410.3" height="20" fill="#1f5f99"/>
+<text x="600.3" y="258" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">12,0 %</text>
+<text x="24" y="291" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Buskerud</text>
+<rect x="184" y="278" width="396.6" height="20" fill="#1f5f99"/>
+<text x="586.6" y="292" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">11,6 %</text>
+<text x="24" y="325" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Vestfold</text>
+<rect x="184" y="312" width="386.3" height="20" fill="#1f5f99"/>
+<text x="576.3" y="326" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">11,3 %</text>
+<text x="24" y="359" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Hele landet</text>
+<rect x="184" y="346" width="348.7" height="20" fill="#16191c"/>
+<text x="538.7" y="360" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">10,2 %</text>
+<text x="24" y="393" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Vestland</text>
+<rect x="184" y="380" width="290.6" height="20" fill="#1f5f99"/>
+<text x="480.6" y="394" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">8,5 %</text>
+<text x="24" y="427" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Møre og Romsdal</text>
+<rect x="184" y="414" width="290.6" height="20" fill="#1f5f99"/>
+<text x="480.6" y="428" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">8,5 %</text>
+<text x="24" y="461" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Nordland</text>
+<rect x="184" y="448" width="290.6" height="20" fill="#1f5f99"/>
+<text x="480.6" y="462" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">8,5 %</text>
+<text x="24" y="495" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Trøndelag</text>
+<rect x="184" y="482" width="287.2" height="20" fill="#1f5f99"/>
+<text x="477.2" y="496" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">8,4 %</text>
+<text x="24" y="529" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Akershus</text>
+<rect x="184" y="516" width="287.2" height="20" fill="#1f5f99"/>
+<text x="477.2" y="530" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">8,4 %</text>
+<text x="24" y="563" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Finnmark</text>
+<rect x="184" y="550" width="280.4" height="20" fill="#1f5f99"/>
+<text x="470.4" y="564" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">8,2 %</text>
+<text x="24" y="597" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Rogaland</text>
+<rect x="184" y="584" width="280.4" height="20" fill="#1f5f99"/>
+<text x="470.4" y="598" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">8,2 %</text>
+<text x="24" y="631" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Troms</text>
+<rect x="184" y="618" width="276.9" height="20" fill="#1f5f99"/>
+<text x="466.9" y="632" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">8,1 %</text>
+<line x1="24" x2="736" y1="666" y2="666" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="684" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 12944</text>
+<text x="736" y="684" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 482" width="760" height="482" role="img" aria-label="Barn og unge med barnevernstiltak ved årsslutt">
+<title>Barn og unge med barnevernstiltak ved årsslutt</title>
+<rect width="760" height="482" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Barn og unge med barnevernstiltak ved årsslutt</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Hjelpetiltak og omsorgstiltak per 31. desember, 2016–2025</text>
+<text x="24" y="92" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Antall barn og unge</text>
+<line x1="74" x2="736" y1="376" y2="376" stroke="#16191c" stroke-width="1"/>
+<text x="66" y="380" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">0</text>
+<line x1="74" x2="736" y1="309" y2="309" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="313" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">10 000</text>
+<line x1="74" x2="736" y1="242" y2="242" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="246" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">20 000</text>
+<line x1="74" x2="736" y1="175" y2="175" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="179" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">30 000</text>
+<line x1="74" x2="736" y1="108" y2="108" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="112" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">40 000</text>
+<polyline points="79.0,173.8 151.4,171.1 223.9,173.8 296.3,179.9 368.8,183.7 441.2,192.2 513.7,208.2 586.1,214.8 658.6,223.5 731.0,222.1" fill="none" stroke="#1f5f99" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="731.0" cy="222.1" r="4" fill="#1f5f99"/>
+<text x="723" y="212.1" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">Hjelpetiltak 22 974</text>
+<polyline points="79.0,315.2 151.4,315.5 223.9,316.6 296.3,318.4 368.8,321.4 441.2,324.7 513.7,327.6 586.1,330.7 658.6,333.1 731.0,333.6" fill="none" stroke="#c8102e" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="731.0" cy="333.6" r="4" fill="#c8102e"/>
+<text x="723" y="323.6" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">Omsorgstiltak 6 324</text>
+<text x="79" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2016</text>
+<text x="151.4" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2017</text>
+<text x="223.9" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2018</text>
+<text x="296.3" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2019</text>
+<text x="368.8" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2020</text>
+<text x="441.2" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2021</text>
+<text x="513.7" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2022</text>
+<text x="586.1" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2023</text>
+<text x="658.6" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2024</text>
+<text x="731" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2025</text>
+<text x="24" y="424" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Hjelpetiltak omfatter også akutt- og atferdstiltak. Barn og unge 0–24 år.</text>
+<line x1="24" x2="736" y1="442" y2="442" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="460" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 09050</text>
+<text x="736" y="460" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

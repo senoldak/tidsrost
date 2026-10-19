@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 482" width="760" height="482" role="img" aria-label="Sysselsatte innvandrere etter botid">
+<title>Sysselsatte innvandrere etter botid</title>
+<rect width="760" height="482" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Sysselsatte innvandrere etter botid</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Andel sysselsatte 20–66 år, to landgrupper, 4. kvartal 2025</text>
+<text x="24" y="92" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Prosent</text>
+<line x1="74" x2="736" y1="376" y2="376" stroke="#16191c" stroke-width="1"/>
+<text x="66" y="380" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">0,0</text>
+<line x1="74" x2="736" y1="309" y2="309" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="313" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">20,0</text>
+<line x1="74" x2="736" y1="242" y2="242" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="246" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">40,0</text>
+<line x1="74" x2="736" y1="175" y2="175" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="179" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">60,0</text>
+<line x1="74" x2="736" y1="108" y2="108" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="112" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">80,0</text>
+<polyline points="79.0,156.2 151.4,147.5 223.9,154.9 296.3,162.9 368.8,153.9 441.2,145.2 513.7,148.2 586.1,130.1 658.6,119.7 731.0,112.4" fill="none" stroke="#1f5f99" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="731.0" cy="112.4" r="4" fill="#1f5f99"/>
+<text x="723" y="96.4" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">Norden, EU/EFTA, Storbritannia, USA m.fl. 78,7</text>
+<polyline points="79.0,305.3 151.4,234.3 223.9,201.1 296.3,171.7 368.8,157.6 441.2,147.5 513.7,138.5 586.1,147.9 658.6,134.5 731.0,158.3" fill="none" stroke="#c8102e" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="731.0" cy="158.3" r="4" fill="#c8102e"/>
+<text x="723" y="172.3" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">Resten av verden 65,0</text>
+<text x="79" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">Under 1 år</text>
+<text x="151.4" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">1–2 år</text>
+<text x="223.9" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2–3 år</text>
+<text x="296.3" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">3–4 år</text>
+<text x="368.8" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">4–5 år</text>
+<text x="441.2" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">5–6 år</text>
+<text x="513.7" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">6–7 år</text>
+<text x="586.1" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">7–10 år</text>
+<text x="658.6" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">10–15 år</text>
+<text x="731" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">15+ år</text>
+<text x="24" y="424" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Resten av verden: Europa utenom EU/EFTA og Storbritannia, Afrika, Asia m.fl.</text>
+<line x1="24" x2="736" y1="442" y2="442" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="460" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, Sysselsetting blant innvandrere, kildetabell 11609</text>
+<text x="736" y="460" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>
