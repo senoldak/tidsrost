@@ -2324,7 +2324,39 @@
     "medier:05c4c4420a7e6a28": "2026-10-20T00:01:50.065Z",
     "medier:5cb0f6248043bc8f": "2026-10-20T00:01:50.065Z",
     "medier:86742e60fe76543f": "2026-10-20T00:01:50.065Z",
-    "medier:7dead7d13339abdc": "2026-10-20T00:01:50.065Z"
+    "medier:7dead7d13339abdc": "2026-10-20T00:01:50.065Z",
+    "medier:32f2bb1bf23a02f5": "2026-10-20T06:02:08.583Z",
+    "medier:1b97028960c6e318": "2026-10-20T06:02:08.583Z",
+    "medier:3a93a69979fbc863": "2026-10-20T06:02:08.583Z",
+    "medier:bf01b457117640b3": "2026-10-20T06:02:08.583Z",
+    "medier:9a07fb8beea3c537": "2026-10-20T06:02:08.583Z",
+    "medier:3ff7424e21f9281c": "2026-10-20T06:02:08.583Z",
+    "medier:174c2d3c333716f6": "2026-10-20T06:02:08.583Z",
+    "regjeringen:3179024": "2026-10-20T06:02:08.583Z",
+    "fhi:https://www.fhi.no/nyheter/2026/fhi-flere-bor-ta-anbefalte-vaksiner/": "2026-10-20T06:02:08.583Z",
+    "helsedirektoratet:https://www.helsedirektoratet.no/nyheter/bekymret-for-lav-vaksinasjonsvilje-blant-helsepersonell": "2026-10-20T06:02:08.583Z",
+    "medier:38134020aa4e7e5c": "2026-10-20T06:02:08.583Z",
+    "medier:1f3862c7975d3147": "2026-10-20T06:02:08.583Z",
+    "medier:00b2872cc390b373": "2026-10-20T06:02:08.583Z",
+    "medier:3b08af64b9abe395": "2026-10-20T06:02:08.583Z",
+    "medier:f7a8543b5d37e3e7": "2026-10-20T06:02:20.811Z",
+    "medier:ade89180527be1cc": "2026-10-20T06:02:20.811Z",
+    "medier:e6726c800fd72f0b": "2026-10-20T06:02:20.811Z",
+    "medier:217bd3b5ac5cb873": "2026-10-20T06:02:20.811Z",
+    "medier:24ed8a83d651d9a6": "2026-10-20T06:02:20.811Z",
+    "medier:f5011648b13f0891": "2026-10-20T06:02:20.811Z",
+    "medier:f05d5ece38ded9d9": "2026-10-20T06:02:20.811Z",
+    "medier:1d641701641c2e72": "2026-10-20T06:02:20.811Z",
+    "medier:9327bbe81f8617bf": "2026-10-20T06:02:20.811Z",
+    "medier:98dc873bfcc3182f": "2026-10-20T06:02:20.811Z",
+    "medier:e0c8af1a373bb14d": "2026-10-20T06:02:20.811Z",
+    "medier:55ab76dceba3bb8e": "2026-10-20T06:02:20.811Z",
+    "regjeringen:3178996": "2026-10-20T06:02:20.830Z",
+    "medier:f5e3ad5c1a8cfbb4": "2026-10-20T06:02:45.805Z",
+    "medier:9e194f9e83738b68": "2026-10-20T06:02:45.805Z",
+    "medier:297faaf3af06b623": "2026-10-20T06:02:47.622Z",
+    "medier:dd306035bf0f1625": "2026-10-20T06:02:47.622Z",
+    "medier:116bb41005438dd2": "2026-10-20T06:02:47.622Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -3261,6 +3293,56 @@
       "p": 65,
       "v": "b34cb0de5bde",
       "t": "2026-10-20T00:01:49.113Z"
+    },
+    "medier:32f2bb1bf23a02f5": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T06:02:07.586Z"
+    },
+    "medier:f7a8543b5d37e3e7": {
+      "p": 95,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T06:02:07.586Z"
+    },
+    "medier:297faaf3af06b623": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T06:02:07.586Z"
+    },
+    "medier:38134020aa4e7e5c": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T06:02:07.586Z"
+    },
+    "medier:f5e3ad5c1a8cfbb4": {
+      "p": 92,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T06:02:07.586Z"
+    },
+    "medier:00b2872cc390b373": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T06:02:07.586Z"
+    },
+    "regjeringen:3179024": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T06:02:07.586Z"
+    },
+    "regjeringen:3178996": {
+      "p": 95,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T06:02:07.586Z"
+    },
+    "fhi:https://www.fhi.no/nyheter/2026/fhi-flere-bor-ta-anbefalte-vaksiner/": {
+      "p": 62,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T06:02:07.586Z"
+    },
+    "helsedirektoratet:https://www.helsedirektoratet.no/nyheter/bekymret-for-lav-vaksinasjonsvilje-blant-helsepersonell": {
+      "p": 58,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T06:02:07.586Z"
     }
   }
 }
