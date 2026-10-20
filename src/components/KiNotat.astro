@@ -1,6 +1,7 @@
 ---
 // Sayfa sonu yapay zekâ notu (src/lib/kinote.mjs): küçük, sakin tek satır; kutu ve ikon yok.
-// Bot sayfaları (canlı tablolar) bot=true ile çağrılır; haberlerde yazar ve sjanger notu belirler.
+// Bot sayfaları (canlı tablolar) bot=true ile çağrılır; haberlerde produksjon (zincir: ki-redigert), yazar ve sjanger
+// notu belirler.
 import { kiNotat } from '../lib/kinote.mjs';
 
 interface Props {
@@ -8,10 +9,11 @@ interface Props {
   url: string;
   author?: string;
   sjanger?: string;
+  produksjon?: string;
   bot?: boolean;
 }
-const { tittel, url, author, sjanger, bot } = Astro.props;
-const n = kiNotat({ author, sjanger, tittel, url, bot });
+const { tittel, url, author, sjanger, produksjon, bot } = Astro.props;
+const n = kiNotat({ author, sjanger, produksjon, tittel, url, bot });
 ---
 
-<p class="ki-notat" data-ki-notat={n.eier ? 'eier' : 'bot'}>{n.tekst} <a href={n.href}>{n.lenkeTekst}</a></p>
+<p class="ki-notat" data-ki-notat={n.kjede ? 'kjede' : n.eier ? 'eier' : 'bot'}>{n.tekst} <a href={n.href}>{n.lenkeTekst}</a></p>
