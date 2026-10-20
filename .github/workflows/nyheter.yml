@@ -46,6 +46,8 @@ jobs:
           # Haber sitelerinin şifreli listesi ve izi için (bkz. scripts/nyheter/hemmelig.mjs).
           KILDE_NOKKEL: ${{ secrets.KILDE_NOKKEL }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          # Gölge denetim (20 Ekim): turda en çok bu kadar denetim kararı Gemma'ya da sorulur, yalnız loga yazılır (golge.mjs).
+          GEMINI_GOLGE: ${{ vars.GEMINI_GOLGE }}
           MAKS_PER_KJORING: ${{ vars.MAKS_PER_KJORING }}
           SURE_DK: ${{ vars.SURE_DK }}
         run: |
