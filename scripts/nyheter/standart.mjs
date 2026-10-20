@@ -6,7 +6,9 @@
 //   Bulgu: { kural, ham }. gerekce: motor kaydına yazılan kısa metin ('standart:kirmizi:suc,teror').
 //   dil: 'tr', 'nb' ya da 'en'. İki dilli yazı her dili ayrı çağırır.
 //   Kırmızı kurallar: suc, intihar, cocuk, turkiye-devlet, teror, savas-dili, grup-genelleme, yatirim-tavsiyesi,
-//   ozel-haber (yazıda ya da kaynak metinde), medya-adi (yalnız yazıda), kaynak-benzerligi (yazı kaynağa çok yakın).
+//   ozel-haber (yazıda ya da kaynak metinde), medya-adi (yalnız yazıda; medyaAdlari verilirse), kaynak-benzerligi.
+//   medyaAdlari: sitenin şifreli kaynak listesinden çözülmüş yayın adları. Repo herkese açık olduğu için adlar bu
+//   modülde ve kural dosyasında YAZILMAZ; çağıran verir. Verilmezse medya-adi denetimi atlanır.
 //   Sarı kurallar: olum-kaza, turkiye-resmi, savas-konu, secim, grup-konu.
 //   Belirsizlikte kapalı kalır: yanlış alarm kabul edilir, kaçan kırmızı edilmez.
 // yayinDurduMu({ url, anahtar, site }) -> { durdu, neden }: mecmua-saat'in acil durdurma bayrağı. Saate
@@ -42,7 +44,7 @@ let kurallarOnbellek = null;
 function kurallar() {
   if (!kurallarOnbellek) {
     const ham = JSON.parse(readFileSync(new URL('./standart-kurallar.json', import.meta.url), 'utf8'));
-    const derli = { medya: (ham.medya ?? []).map((m) => new RegExp(`${ONCE}${kacis(m)}${SONRA}`, 'gu')) };
+    const derli = {};
     for (const dil of DILLER) {
       const d = ham[dil] ?? {};
       const liste = (l) => (l ?? []).map((g) => kalip(g, dil));
@@ -68,6 +70,16 @@ function ilkEslesme(metin, kaliplar) {
   }
   return null;
 }
+
+// Tanınabilir kişi işareti (belirlenimci, kapalı yönde): ad soyad gibi art arda iki büyük harfli sözcük (cümle başı
+// sözcüğü sayılmaz), yaş ya da kişiyi tanımlayan kalıplar. Şirket ve kurum adları da bazen eşleşir; o zaman kırmızı kalır.
+const AD_SOYAD = /(?<=[\s(«"„“])\p{Lu}[\p{Ll}'’-]+(?:\s+(?:de|van|von|al|el|bin|ibn))?\s+\p{Lu}[\p{Ll}'’-]+/u;
+const KISI_KALIP = {
+  tr: /\d+\s*yaşında|yaşındaki|(?<![\p{L}])(adlı|isimli|adındaki)(?![\p{L}])|\p{Lu}\.\s?\p{Lu}\./u,
+  nb: /\d+-åring|i\s+\d0-årene|(?<![\p{L}])(mann|kvinne|gutt|jente|mannen|kvinnen)(?![\p{L}])/iu,
+  en: /\d+-year-old|aged\s+\d+|(?<![\p{L}])(man|woman|boy|girl)(?![\p{L}])/iu,
+};
+const kisiVar = (cumle, dil) => AD_SOYAD.test(cumle) || KISI_KALIP[dil].test(cumle);
 
 const cumleler = (metin) => metin.split(/(?<=[.!?…])\s+|\n+/u).filter((c) => c.trim());
 
@@ -103,7 +115,15 @@ export function kaynakBenzerligi(metin, kaynak) {
   return { kopya: Boolean(ardisik) || oran >= BENZER_ORAN, oran: Math.round(oran * 100) / 100, ardisik };
 }
 
-export function standartDenetle({ baslik = '', ozet = '', metin = '', ekler = [], dil, kaynakMetni = '' } = {}) {
+const medyaOnbellek = new Map();
+function medyaKaliplari(adlar) {
+  const liste = [...new Set((adlar ?? []).map((a) => String(a).trim()).filter((a) => a.length >= 2))];
+  const anahtar = liste.join('|');
+  if (!medyaOnbellek.has(anahtar)) medyaOnbellek.set(anahtar, liste.map((m) => new RegExp(`${ONCE}${kacis(m)}${SONRA}`, 'gu')));
+  return medyaOnbellek.get(anahtar);
+}
+
+export function standartDenetle({ baslik = '', ozet = '', metin = '', ekler = [], dil, kaynakMetni = '', medyaAdlari = [] } = {}) {
   if (!DILLER.includes(dil)) throw new Error(`standart: dil desteklenmiyor: ${dil}`);
   const k = kurallar();
   const s = k[dil];
@@ -113,11 +133,29 @@ export function standartDenetle({ baslik = '', ozet = '', metin = '', ekler = []
   const sari = [];
   const ekle = (liste, kural, kaynakMetin, e) => liste.push({ kural, ham: kaynakMetin.slice(e.bas, e.son).slice(0, 80) });
 
+  const cumleListesi = cumleler(yazi);
   for (const { kural, kaliplar } of s.kirmizi) {
+    if (kural === 'suc') continue; // aşağıda, kişiye göre
     const e = ilkEslesme(kucuk, kaliplar);
     if (e) ekle(kirmizi, kural, yazi, e);
   }
-  const cumleListesi = cumleler(yazi);
+  // Suç (K2): aynı cümlede tanınabilir bir kişi (ad soyad, yaş, "adlı" vb.) varsa kırmızı; yoksa sarı 'suc-genel'
+  // (kurum, şirket, devlet ya da kimliksiz kişiler hakkında suç ve yargı haberi yayımlanır, özette işaretlenir).
+  const suc = s.kirmizi.find((x) => x.kural === 'suc');
+  if (suc) {
+    let genel = null;
+    for (const c of cumleListesi) {
+      const e = ilkEslesme(kucult(c, dil), suc.kaliplar);
+      if (!e) continue;
+      if (kisiVar(c, dil)) {
+        ekle(kirmizi, 'suc', c, { bas: 0, son: c.length });
+        genel = null;
+        break;
+      }
+      genel ??= { c, e };
+    }
+    if (genel) ekle(sari, 'suc-genel', genel.c, genel.e);
+  }
   for (const b of s.birlikte) {
     for (const c of cumleListesi) {
       const kc = kucult(c, dil);
@@ -138,7 +176,7 @@ export function standartDenetle({ baslik = '', ozet = '', metin = '', ekler = []
     if (eb) ekle(kirmizi, 'yatirim-tavsiyesi', tavsiyeMetni, eb);
   }
   // Medya adı: büyük/küçük harf duyarlı, yalnız yazıda (kaynak metinde zaten geçer).
-  const em = ilkEslesme(yazi, k.medya);
+  const em = ilkEslesme(yazi, medyaKaliplari(medyaAdlari));
   if (em) ekle(kirmizi, 'medya-adi', yazi, em);
   // Tek bir yayının özel haberi: kaynak metin de taranır.
   if (kaynakMetni && !kirmizi.some((b) => b.kural === 'ozel-haber')) {

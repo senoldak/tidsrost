@@ -12,14 +12,23 @@ test('temiz ekonomi haberi geçer', () => {
   assert.equal(s.gerekce, '');
 });
 
-test('suç ve tutuklama kırmızı (tr, nb, en)', () => {
-  assert.deepEqual(kurallar(standartDenetle({ dil: 'tr', baslik: 'Şirketin mühendisi tutuklandı' })), ['suc']);
-  assert.ok(kurallar(standartDenetle({ dil: 'nb', baslik: 'Mann i 40-årene siktet etter brann' })).includes('suc'));
-  assert.ok(kurallar(standartDenetle({ dil: 'en', metin: 'The founder was arrested on Monday.' })).includes('suc'));
+test('suç: kişi tanınabiliyorsa kırmızı (tr, nb, en)', () => {
+  assert.ok(kurallar(standartDenetle({ dil: 'tr', metin: 'Eski mühendis Ahmet Yılmaz tutuklandı.' })).includes('suc'));
+  assert.ok(kurallar(standartDenetle({ dil: 'tr', metin: 'Şirketin 34 yaşındaki çalışanı tutuklandı.' })).includes('suc'));
+  assert.ok(kurallar(standartDenetle({ dil: 'nb', metin: 'En mann i 40-årene er siktet for brannen.' })).includes('suc'));
+  assert.ok(kurallar(standartDenetle({ dil: 'en', metin: 'The founder, John Smith, was arrested on Monday.' })).includes('suc'));
+});
+
+test('suç: kişi yoksa sarı suc-genel, haber yayımlanır', () => {
+  const s = standartDenetle({ dil: 'tr', metin: "Fransa'daki gösterilerde yüzlerce kişi gözaltına alındı." });
+  assert.equal(s.karar, 'sari');
+  assert.ok(sarilar(s).includes('suc-genel'));
+  assert.equal(standartDenetle({ dil: 'en', metin: 'Prosecutors charged the company with fraud.' }).karar, 'sari');
+  assert.equal(standartDenetle({ dil: 'nb', metin: 'Selskapet er dømt for bedrageri, ifølge tingretten.' }).karar, 'sari');
 });
 
 test('Türkçe büyük İ ve ı doğru küçülür', () => {
-  assert.ok(kurallar(standartDenetle({ dil: 'tr', baslik: 'İDDİANAME KABUL EDİLDİ' })).includes('suc'));
+  assert.ok(sarilar(standartDenetle({ dil: 'tr', baslik: 'İDDİANAME KABUL EDİLDİ' })).includes('suc-genel'));
 });
 
 test('çocuk ve ölüm aynı cümlede kırmızı, ayrı cümlelerde değil', () => {
@@ -59,10 +68,12 @@ test('yatırım tavsiyesi kırmızı; sorumluluk reddi değil', () => {
   assert.equal(standartDenetle({ dil: 'tr', metin: 'Bu içerik yatırım tavsiyesi değildir.' }).karar, 'temiz');
 });
 
-test('medya adı büyük/küçük harf duyarlı', () => {
-  assert.ok(kurallar(standartDenetle({ dil: 'en', metin: 'According to Reuters, the deal closed.' })).includes('medya-adi'));
-  assert.ok(kurallar(standartDenetle({ dil: 'tr', metin: 'AP\'nin haberine göre anlaşma imzalandı.' })).includes('medya-adi'));
-  assert.ok(!kurallar(standartDenetle({ dil: 'tr', metin: 'Şirket sabah bülteninde açıklama yaptı. Uygulama apı güncellendi.' })).includes('medya-adi'));
+test('medya adı: yalnız verilen liste, büyük/küçük harf duyarlı; liste yoksa denetim yok', () => {
+  const medyaAdlari = ['Örnek Haber', 'XY'];
+  assert.ok(kurallar(standartDenetle({ dil: 'en', metin: 'According to Örnek Haber, the deal closed.', medyaAdlari })).includes('medya-adi'));
+  assert.ok(kurallar(standartDenetle({ dil: 'tr', metin: "XY'nin haberine göre anlaşma imzalandı.", medyaAdlari })).includes('medya-adi'));
+  assert.ok(!kurallar(standartDenetle({ dil: 'tr', metin: 'Şirket örnek haber paylaştı. Uygulama xy güncellendi.', medyaAdlari })).includes('medya-adi'));
+  assert.ok(!kurallar(standartDenetle({ dil: 'en', metin: 'According to Örnek Haber, the deal closed.' })).includes('medya-adi'));
 });
 
 test('özel haber kalıbı yazıda ya da kaynak metinde kırmızı', () => {
@@ -88,7 +99,7 @@ test('sarı kurallar yayını durdurmaz ama işaretlenir', () => {
 });
 
 test('iki dilli birleştirme en ağır kararı alır', () => {
-  const b = standartBirlestir(standartDenetle({ dil: 'tr', metin: 'Temiz metin.' }), standartDenetle({ dil: 'en', metin: 'The suspect was arrested.' }));
+  const b = standartBirlestir(standartDenetle({ dil: 'tr', metin: 'Temiz metin.' }), standartDenetle({ dil: 'en', metin: 'The suspect, John Smith, was arrested.' }));
   assert.equal(b.karar, 'kirmizi');
   assert.match(b.gerekce, /^standart:kirmizi:suc/);
 });
