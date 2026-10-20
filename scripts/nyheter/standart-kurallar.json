@@ -198,6 +198,55 @@
           "hırsız",
           "kaçak"
         ]
+      },
+      {
+        "kural": "kurum-degerlendirme",
+        "seviye": "kirmizi",
+        "a": [
+          "cumhurbaşkan",
+          "hükümet",
+          "tbmm",
+          "meclis",
+          "bakan",
+          "merkez bankas",
+          "tcmb",
+          "spk",
+          "bddk",
+          "yargı",
+          "mahkeme",
+          "yargıtay",
+          "danıştay",
+          "savcı",
+          "emniyet",
+          "polis",
+          "jandarma",
+          "valilik",
+          "/(?<![\\p{L}\\p{N}])vali(?![\\p{L}\\p{N}])/",
+          "kaymakam",
+          "tüik",
+          "hazine",
+          "sermaye piyasası kurulu",
+          "bankacılık düzenleme",
+          "rekabet kurumu",
+          "devlet",
+          "kurul",
+          "norges bank",
+          "storting",
+          "regjering",
+          "/(?<![\\p{L}\\p{N}])fed(?![\\p{L}\\p{N}])/",
+          "/(?<![\\p{L}\\p{N}])ecb(?![\\p{L}\\p{N}])/",
+          "avrupa merkez"
+        ],
+        "b": [
+          "beceriksiz",
+          "/(?<![\\p{L}\\p{N}])başarısız(\\s+(oldu|olmuş|olmuştur|olmuştu|kaldı)|dır|dı|lık|lığı|lığa|lığını|lığıdır)(?![\\p{L}\\p{N}])/",
+          "/(?<![\\p{L}\\p{N}])yetersiz\\s+(kal(dı|mış|mıştır|mıştı)|olmuş|olmuştur)(?![\\p{L}\\p{N}])/",
+          "sınıfta kal",
+          "fiyasko",
+          "rezalet",
+          "hezimet",
+          "liyakatsiz"
+        ]
       }
     ],
     "sariGruplar": {
@@ -221,63 +270,7 @@
         "etnik"
       ]
     },
-    "yatirimTavsiyesi": [
-      "al tavsiyesi",
-      "sat tavsiyesi",
-      "tut tavsiyesi",
-      "hedef fiyat",
-      "almalısınız",
-      "satmalısınız",
-      "kaçırmayın",
-      "kesin kazanç",
-      "alım fırsatı",
-      "satış fırsatı",
-      "portföyünüze",
-      "güçlü al",
-      "mutlaka alın",
-      "kaçırılmayacak fırsat",
-      "garantili getiri",
-      "kesin getiri",
-      "tutmalısınız",
-      "yatırım yapmalısınız",
-      "/(al|sat|tut)(ma|me)n(ız)?ı\\s+(öner|tavsiye)/",
-      "tavsiye eder",
-      "öneririz",
-      "öneriyoruz",
-      "/(?<![\\p{L}\\p{N}])satın\\s+alın(ız)?(?![\\p{L}\\p{N}])/",
-      "/(?<![\\p{L}\\p{N}])alım\\s+yapın(ız)?(?![\\p{L}\\p{N}])/",
-      "satın alınmalı",
-      "alım yapılmalı",
-      "alınmalı",
-      "satılmalı",
-      "elde tutulmalı",
-      "satın alınması gerek",
-      "satın alınması öneril",
-      "satın alınması tavsiye edil",
-      "alım yapılması gerek",
-      "alım yapılması öneril",
-      "alım yapılması tavsiye edil",
-      "/(?<![\\p{L}\\p{N}])(alın|satıl|tutul|elde\\s+tutul)ma(sı|ları)\\s+(gerek|öneril|tavsiye\\s+edil|mantıklı|doğru\\s+olur)/",
-      "tutulmalı",
-      "/(?<![\\p{L}\\p{N}])(al|sat|tut)ma(nız|nızı)\\s+(öner|tavsiye)/",
-      "alınmamalı",
-      "satılmamalı",
-      "tutulmamalı",
-      "satmamalısınız",
-      "almamalısınız",
-      "satmayın",
-      "almayın",
-      "/(?<![\\p{L}\\p{N}])(alın|satıl)abilir(?=[ \\t]*(?:[.!…]|\\r?\\n|$))/",
-      "al önerisi",
-      "sat önerisi",
-      "tut önerisi",
-      "endeksin üzerinde getiri"
-    ],
-    "yatirimTavsiyesiBuyukHarf": [
-      "AL",
-      "SAT",
-      "TUT"
-    ]
+    "yatirimTavsiyesi": []
   },
   "nb": {
     "kirmizi": {
@@ -435,6 +428,47 @@
           "ran",
           "tyveri"
         ]
+      },
+      {
+        "kural": "kurum-degerlendirme",
+        "seviye": "kirmizi",
+        "a": [
+          "/(?<![\\p{L}\\p{N}])[\\p{L}\\p{N}]*regjering[\\p{L}\\p{N}]*/",
+          "storting",
+          "statsminister",
+          "statsråd",
+          "/(?<![\\p{L}\\p{N}])navs?(?![\\p{L}\\p{N}])/",
+          "/(?<![\\p{L}\\p{N}])udis?(?![\\p{L}\\p{N}])/",
+          "/(?<![\\p{L}\\p{N}])politi(et|ets)?(?![\\p{L}\\p{N}])/",
+          "politimester",
+          "politidirektorat",
+          "/(?<![\\p{L}\\p{N}])[\\p{L}\\p{N}]*domstol[\\p{L}\\p{N}]*/",
+          "tingrett",
+          "lagmannsrett",
+          "høyesterett",
+          "norges bank",
+          "sentralbank",
+          "kongehus",
+          "/(?<![\\p{L}\\p{N}])konge(n|ns)?(?![\\p{L}\\p{N}])/",
+          "kongefamilie",
+          "dronning",
+          "kronprins",
+          "/(?<![\\p{L}\\p{N}])[\\p{L}\\p{N}]*departement[\\p{L}\\p{N}]*/",
+          "/(?<![\\p{L}\\p{N}])[\\p{L}\\p{N}]*direktorat[\\p{L}\\p{N}]*/",
+          "skatteetaten",
+          "statsforvalter",
+          "/(?<![\\p{L}\\p{N}])[\\p{L}\\p{N}]*tilsyn(et|ets)?(?![\\p{L}\\p{N}])/",
+          "riksrevisjon",
+          "sametinget",
+          "/(?<![\\p{L}\\p{N}])[\\p{L}\\p{N}]*minister[\\p{L}\\p{N}]*/"
+        ],
+        "b": [
+          "udugelig",
+          "inkompetent",
+          "feilslått",
+          "fiasko",
+          "/(?<![\\p{L}\\p{N}])har\\s+feilet(?![\\p{L}\\p{N}])(?!\\s+(med\\s+)?å(?![\\p{L}\\p{N}]))/"
+        ]
       }
     ],
     "sariGruplar": {
@@ -453,18 +487,7 @@
         "etnisk"
       ]
     },
-    "yatirimTavsiyesi": [
-      "kjøpsanbefaling",
-      "salgsanbefaling",
-      "kursmål",
-      "bør kjøpe",
-      "bør selge",
-      "kjøp nå",
-      "selg nå",
-      "garantert avkastning",
-      "sikker gevinst",
-      "ikke gå glipp av"
-    ]
+    "yatirimTavsiyesi": []
   },
   "en": {
     "kirmizi": {
@@ -655,6 +678,43 @@
           "theft",
           "illegal"
         ]
+      },
+      {
+        "kural": "kurum-degerlendirme",
+        "seviye": "kirmizi",
+        "a": [
+          "government",
+          "parliament",
+          "storting",
+          "central bank",
+          "norges bank",
+          "ministry",
+          "minister",
+          "/(?<![\\p{L}\\p{N}])courts?(?![\\p{L}\\p{N}])/",
+          "supreme court",
+          "police",
+          "royal",
+          "/(?<![\\p{L}\\p{N}])king(?![\\p{L}\\p{N}])/",
+          "/(?<![\\p{L}\\p{N}])queen(?![\\p{L}\\p{N}])/",
+          "/(?<![\\p{L}\\p{N}])fed(?![\\p{L}\\p{N}])/",
+          "federal reserve",
+          "/(?<![\\p{L}\\p{N}])ecb(?![\\p{L}\\p{N}])/",
+          "commission",
+          "agency",
+          "directorate",
+          "regulator",
+          "/(?<![\\p{L}\\p{N}])navs?(?![\\p{L}\\p{N}])/",
+          "/(?<![\\p{L}\\p{N}])udis?(?![\\p{L}\\p{N}])/",
+          "tax authorit",
+          "judiciary",
+          "cabinet"
+        ],
+        "b": [
+          "incompetent",
+          "botched",
+          "fiasco",
+          "/(?<![\\p{L}\\p{N}])(has|have|had)\\s+(failed|bungled)(?![\\p{L}\\p{N}])(?!\\s+to(?![\\p{L}\\p{N}]))/"
+        ]
       }
     ],
     "sariGruplar": {
@@ -677,20 +737,6 @@
         "ethnic"
       ]
     },
-    "yatirimTavsiyesi": [
-      "buy recommendation",
-      "sell recommendation",
-      "strong buy",
-      "strong sell",
-      "price target",
-      "target price",
-      "you should buy",
-      "you should sell",
-      "guaranteed return",
-      "do not miss",
-      "must-buy",
-      "buy now",
-      "sell now"
-    ]
+    "yatirimTavsiyesi": []
   }
 }

@@ -1,7 +1,12 @@
 // TEK KAYNAK: mecmua/standartlar/standart.test.mjs (kopyala.mjs ile sitelere yazılır).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { standartDenetle, standartBirlestir, kaynakBenzerligi, yayinDurduMu } from './standart.mjs';
+
+// Yatırım tavsiyesi kuralı yalnız finfolis ve kifobu kopyalarında dolu (kopyala.mjs).
+const KURAL = JSON.parse(readFileSync(new URL('./standart-kurallar.json', import.meta.url), 'utf8'));
+const tavsiyeVar = KURAL.tr.yatirimTavsiyesi.length > 0;
 
 const kurallar = (s) => s.kirmizi.map((b) => b.kural);
 const sarilar = (s) => s.sari.map((b) => b.kural);
@@ -61,7 +66,7 @@ test('grup ve suç aynı cümlede kırmızı; grup tek başına sarı', () => {
   assert.ok(!kurallar(standartDenetle({ dil: 'tr', metin: 'Birleşik Arap Emirlikleri merkezli fon yatırımcılar arasında.' })).includes('grup-genelleme'));
 });
 
-test('yatırım tavsiyesi kırmızı; sorumluluk reddi değil', () => {
+test('yatırım tavsiyesi kırmızı; sorumluluk reddi değil', { skip: !tavsiyeVar && 'bu sitede tavsiye kuralı yok' }, () => {
   assert.ok(kurallar(standartDenetle({ dil: 'tr', metin: 'Analistler hisse için hedef fiyatı 120 liraya yükseltti.' })).includes('yatirim-tavsiyesi'));
   assert.ok(kurallar(standartDenetle({ dil: 'tr', metin: 'Uzmanlar hisse için AL diyor.' })).includes('yatirim-tavsiyesi'));
   assert.ok(kurallar(standartDenetle({ dil: 'en', metin: 'The bank set a price target of $40.' })).includes('yatirim-tavsiyesi'));
@@ -115,4 +120,11 @@ test('yayinDurduMu: bayrak, kapalı, ulaşılamaz', async () => {
   assert.equal((await yayinDurduMu({ url: 'https://s', anahtar: 'a', site: 'x', fetchFn: yanit({}, false) })).durdu, false);
   assert.equal((await yayinDurduMu({ url: 'https://s', anahtar: 'a', site: 'x', fetchFn: async () => { throw new Error('ağ'); } })).durdu, false);
   assert.equal((await yayinDurduMu({})).durdu, false);
+});
+
+test('kurum ve açık olumsuz yargı aynı cümlede kırmızı; olgu cümlesi temiz', () => {
+  assert.ok(kurallar(standartDenetle({ dil: 'tr', metin: 'Hükümet bu konuda beceriksizdir.' })).includes('kurum-degerlendirme'));
+  assert.ok(kurallar(standartDenetle({ dil: 'nb', metin: 'Regjeringen har feilet.' })).includes('kurum-degerlendirme'));
+  assert.ok(!kurallar(standartDenetle({ dil: 'tr', metin: 'Merkez bankası faizi indirdi.' })).includes('kurum-degerlendirme'));
+  assert.ok(!kurallar(standartDenetle({ dil: 'en', metin: 'The ministry said the company has failed to pay taxes.' })).includes('kurum-degerlendirme'));
 });
