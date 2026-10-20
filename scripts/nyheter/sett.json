@@ -2702,7 +2702,36 @@
     "medier:02d6bd2f79c9baca": "2026-10-20T20:02:40.570Z",
     "medier:ece923f2b243e4c4": "2026-10-20T20:04:27.631Z",
     "medier:e7b2360cfb80113f": "2026-10-20T20:04:27.631Z",
-    "datatilsynet:https://www.datatilsynet.no/aktuelt/aktuelle-nyheter-2026/rekordmange-meldinger-om-tilsiktede-angrep/": "2026-10-20T20:05:05.188Z"
+    "datatilsynet:https://www.datatilsynet.no/aktuelt/aktuelle-nyheter-2026/rekordmange-meldinger-om-tilsiktede-angrep/": "2026-10-20T20:05:05.188Z",
+    "medier:b0ee1b2a59102f5d": "2026-10-20T22:01:28.980Z",
+    "medier:35f6ab49c38137d2": "2026-10-20T22:01:28.980Z",
+    "medier:853621944b94339e": "2026-10-20T22:01:28.980Z",
+    "medier:eb07a4ed414a6cf7": "2026-10-20T22:01:28.980Z",
+    "medier:d4d35b363ef91866": "2026-10-20T22:01:28.980Z",
+    "medier:68637c89ea1afb11": "2026-10-20T22:01:28.980Z",
+    "medier:dc6ae92dd24372b1": "2026-10-20T22:01:28.980Z",
+    "medier:3ce61b7e98cf2e0d": "2026-10-20T22:01:28.980Z",
+    "medier:3a0df1f783d9ee90": "2026-10-20T22:01:28.980Z",
+    "medier:fbcc251597045135": "2026-10-20T22:01:28.980Z",
+    "medier:9dc4469877b11055": "2026-10-20T22:02:37.697Z",
+    "medier:7ec523315adae261": "2026-10-20T22:02:37.697Z",
+    "medier:4d0c6d4f2aa9fb86": "2026-10-20T22:02:37.697Z",
+    "medier:b8606f9e2fca10f4": "2026-10-20T22:02:37.697Z",
+    "medier:fa861e2e125ce364": "2026-10-20T22:02:37.697Z",
+    "medier:c4f70822690c8ee2": "2026-10-20T22:02:37.697Z",
+    "medier:2a80966c6ad5616b": "2026-10-20T22:02:37.697Z",
+    "medier:e0b568411486c23a": "2026-10-20T22:02:37.697Z",
+    "medier:ba13fed4bfc9a8a7": "2026-10-20T22:02:37.697Z",
+    "medier:9f436eb82673efca": "2026-10-20T22:02:37.697Z",
+    "medier:2dac3868aff0ea18": "2026-10-20T22:02:37.697Z",
+    "medier:ead23f4c89a13b9f": "2026-10-20T22:02:37.697Z",
+    "medier:51d1c8e4b67dffd3": "2026-10-20T22:02:37.697Z",
+    "medier:6b3f55a11548378b": "2026-10-20T22:02:37.697Z",
+    "medier:4618ebcbb81b6683": "2026-10-20T22:02:37.697Z",
+    "medier:7e423ae3071efc2c": "2026-10-20T22:02:37.697Z",
+    "medier:4e0437a40b5051f3": "2026-10-20T22:02:37.697Z",
+    "medier:2304a4cbb4cdb347": "2026-10-20T22:02:37.697Z",
+    "medier:d4453c20806acda0": "2026-10-20T22:02:37.697Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -4259,6 +4288,31 @@
       "p": 40,
       "v": "b34cb0de5bde",
       "t": "2026-10-20T20:02:22.380Z"
+    },
+    "medier:9dc4469877b11055": {
+      "p": 52,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T22:02:36.786Z"
+    },
+    "medier:b8606f9e2fca10f4": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T22:02:36.786Z"
+    },
+    "medier:ead23f4c89a13b9f": {
+      "p": 48,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T22:02:36.786Z"
+    },
+    "medier:6b3f55a11548378b": {
+      "p": 46,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T22:02:36.786Z"
+    },
+    "medier:2304a4cbb4cdb347": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T22:02:36.786Z"
     }
   }
 }
