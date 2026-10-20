@@ -3,6 +3,7 @@
 // Veri scripts/data/hent-data.mjs ile Nyhetsbot çalışmalarında alınır (src/data/farevarsler.json).
 // Bitişi derleme anında geçmiş uyarılar gösterilmez; veri eskiyse sayfa bunu açıkça söyler.
 import { jsonLdMetni } from '../lib/json-ld.mjs';
+import KiNotat from '../components/KiNotat.astro';
 import Base from '../layouts/Base.astro';
 import Symbol from '../components/Symbol.astro';
 import Brodsmuler from '../components/Brodsmuler.astro';
@@ -133,4 +134,5 @@ const grupper = [
     </span>
   </p>
   {harMetTema && <p class="tema-alle"><a href={temaUrl('meteorologisk-institutt')}>Saker om farevarsler fra MET</a></p>}
+  <KiNotat tittel={tittel} url={pageUrl} bot />
 </Base>

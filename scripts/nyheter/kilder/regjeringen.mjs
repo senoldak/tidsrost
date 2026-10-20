@@ -157,13 +157,15 @@ export default {
 
           const kildeTekst = `Avsender: ${side.departement}\nTittel: ${item.title}\nIngress: ${side.ingress || item.description}\n\n${side.body}`;
           // Yazı işleri: kontrol → düzeltme → Norveççe redaksiyon → son kesin kontrol (bkz. redaktor.mjs).
-          const { sak: ferdig, merknader, stopp } = await redigerSak(sak, kildeTekst);
+          const { sak: ferdig, merknader, stopp, bekle } = await redigerSak(sak, kildeTekst);
+          if (bekle) return { bekle: `vaktsjef-onay alınamadı: ${merknader.join(' / ')}`.slice(0, 400) };
           // Uydurma alıntı ya da kaynakta olmayan rakam kaldıysa yayınlanmaz, taslak da açılmaz.
           if (stopp.length) return { hopp: `kontroll: ${stopp.join(' / ')}` };
           return {
             ...felles,
             ...ferdig,
             produksjon: 'ki-kontrollert',
+            kildeTekst,
             ...(merknader.length && { merknader }),
           };
         },

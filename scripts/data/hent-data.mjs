@@ -8,7 +8,11 @@
 import { readFile, writeFile, mkdir, appendFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { acilDurdurma } from '../nyheter/kapi.mjs';
 import { RENTE_KILDE, VARSEL_KILDE, farevarsler, lesSdmxCsv, sammeInnhold, styringsrente } from './data.mjs';
+
+// Standartlar: acil durdurma açıksa veri sayfaları da güncellenmez.
+if (await acilDurdurma()) process.exit(0);
 
 const ROT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const DIR = path.join(ROT, 'src/data');

@@ -126,13 +126,15 @@ export function lagKilde(etat) {
             if (kontroll === 'manuell') return { ...felles, draft: true, produksjon: 'ki-assistert' };
 
             const kildeTekst = `Avsender: ${etat.avsender}\nTittel: ${item.title}\nIngress: ${side.ingress}\n\n${side.body}`;
-            const { sak: ferdig, merknader, stopp } = await redigerSak(sak, kildeTekst, { pressemelding: etat.pressemelding ?? true });
+            const { sak: ferdig, merknader, stopp, bekle } = await redigerSak(sak, kildeTekst, { pressemelding: etat.pressemelding ?? true });
+            if (bekle) return { bekle: `vaktsjef-onay alınamadı: ${merknader.join(' / ')}`.slice(0, 400) };
             // Düzeltme turlarından sonra hâlâ sorunluysa yayınlanmaz, taslak da açılmaz.
             if (stopp.length) return { hopp: `kontroll: ${stopp.join(' / ')}` };
             return {
               ...felles,
               ...ferdig,
               produksjon: 'ki-kontrollert',
+              kildeTekst,
               ...(merknader.length && { merknader }),
             };
           },

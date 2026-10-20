@@ -8,7 +8,6 @@ import { gemini } from './lib.mjs';
 // (tam sayılı 1–5'te 3,5 pratikte 4 olurdu).
 export const MIN_VIKTIGHET = 70;
 export const UTEN_VURDERING = new Set(['met', 'nve', 'norgesbank', 'udi']);
-const STANDARD = 70;
 // Puanlanmayan veri kaynakları (resmî uyarılar vb.) sıralamada sıradan bir haberin önünde durur.
 const DATA_POENG = 80;
 const MAKS_I_KALL = 150;
@@ -43,7 +42,7 @@ const rentTittel = (k) => k.tittel.replace(/\s*\([^)]*\)\s*$/, '');
 /**
  * hukommelse: kalıcı puan önbelleği { id: { p, v, t } } (çağıran durum dosyasında saklar; bu fonksiyon yeni puanları yazar).
  * kandidater: { kildenavn: [kandidat] }. Döner: Map(kandidat → puan), ya da Gemini cevap vermezse null
- * (o zaman çağıran eski usulle, puansız seçer).
+ * (o zaman puanlanan haberler bu tur yazılmaz).
  */
 export async function vurder(kandidater, { kall = gemini, hukommelse = {}, na = Date.now() } = {}) {
   const liste = Object.entries(kandidater)
@@ -83,8 +82,10 @@ ${sor.map(({ navn, k }, i) => `${i}. [${navn}] ${rentTittel(k)}`).join('\n')}`,
 }
 
 /**
- * Seçim. poeng null ise eski usul (sadece sırayla). Döner: { valgt, forkastet }.
- * forkastet: eşiğin altında kalan adaylar (çağıran bunları görüldü işaretler).
+ * Seçim. Standartlar: puanı olmayan aday seçilmez (puanlama çökerse ya da adayı atlarsa haber yayımlanmaz).
+ * poeng null ise yalnız puanlanmayan veri kaynakları (UTEN_VURDERING) seçilir; diğerleri havuzda kalır.
+ * Döner: { valgt, forkastet }. forkastet: puanı eşiğin altında kalan adaylar (çağıran bunları görüldü işaretler);
+ * puansız adaylar ne seçilir ne forkastet sayılır, sonraki turda yeniden puanlanır.
  */
 export function velg(kandidater, poeng, maks) {
   const kopi = Object.fromEntries(Object.entries(kandidater).map(([n, l]) => [n, [...l]]));
@@ -93,11 +94,11 @@ export function velg(kandidater, poeng, maks) {
   while (Object.values(kopi).some((l) => l.length)) {
     for (const [navn, l] of Object.entries(kopi)) if (l.length) sirali.push({ navn, k: l.shift() });
   }
-  const puan = ({ navn, k }) => (UTEN_VURDERING.has(navn) ? DATA_POENG : !poeng ? STANDARD : poeng.get(k) ?? STANDARD);
-  const forkastet = poeng ? sirali.filter((x) => puan(x) < MIN_VIKTIGHET).map((x) => x.k) : [];
+  const puan = ({ navn, k }) => (UTEN_VURDERING.has(navn) ? DATA_POENG : poeng?.get(k) ?? null);
+  const forkastet = sirali.filter((x) => puan(x) !== null && puan(x) < MIN_VIKTIGHET).map((x) => x.k);
   const valgt = sirali
     .map((x, i) => ({ ...x, i, p: puan(x) }))
-    .filter((x) => x.p >= MIN_VIKTIGHET)
+    .filter((x) => x.p !== null && x.p >= MIN_VIKTIGHET)
     .sort((a, b) => b.p - a.p || a.i - b.i)
     .slice(0, maks)
     .map((x) => x.k);

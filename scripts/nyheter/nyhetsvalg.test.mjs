@@ -53,10 +53,18 @@ test('velg: lav verdi forkastes, høy verdi først, dataskilder slipper vurderin
   assert.deepEqual(forkastet.map((x) => x.id), ['n1']);
 });
 
-test('velg uten poeng: rundgang som før, ingenting forkastes', () => {
-  const kandidater = { a: [k('a1'), k('a2')], b: [k('b1')] };
-  const { valgt, forkastet } = velg(kandidater, null, 2);
-  assert.deepEqual(valgt.map((x) => x.id), ['a1', 'b1']);
+test('velg uten poeng (puanlama çöktü): yalnız veri kaynakları seçilir, diğerleri havuzda kalır, hiçbiri forkastet değil', () => {
+  const kandidater = { a: [k('a1'), k('a2')], b: [k('b1')], met: [k('m1')] };
+  const { valgt, forkastet } = velg(kandidater, null, 5);
+  assert.deepEqual(valgt.map((x) => x.id), ['m1']);
+  assert.equal(forkastet.length, 0);
+});
+
+test('velg: puanı dönmeyen aday seçilmez ve forkastet sayılmaz', () => {
+  const kandidater = { a: [k('a1'), k('a2')] };
+  const poeng = new Map([[kandidater.a[0], 80]]);
+  const { valgt, forkastet } = velg(kandidater, poeng, 5);
+  assert.deepEqual(valgt.map((x) => x.id), ['a1']);
   assert.equal(forkastet.length, 0);
 });
 

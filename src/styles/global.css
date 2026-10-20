@@ -850,9 +850,7 @@ main.container {
   color: var(--water);
 }
 
-.produksjon {
-  display: flex;
-  gap: calc(var(--u) * 1.5);
+.ki-notat {
   margin: calc(var(--u) * 5) 0 0;
   padding-top: calc(var(--u) * 2);
   border-top: 1px solid var(--ink);
@@ -861,11 +859,7 @@ main.container {
   color: var(--muted);
 }
 
-.produksjon .sym {
-  margin-top: 0.3em;
-}
-
-.produksjon a {
+.ki-notat a {
   color: var(--water);
   text-decoration: underline;
   text-underline-offset: 0.18em;

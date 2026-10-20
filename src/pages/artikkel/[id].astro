@@ -5,7 +5,7 @@ import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import StoryRow from '../../components/StoryRow.astro';
 import Symbol from '../../components/Symbol.astro';
-import { SITE, PRODUKSJON, categoryName, formatDay, formatTime, produksjonMerke, varsel, gorselVar } from '../../lib/site';
+import { SITE, categoryName, formatDay, formatTime, varsel, gorselVar } from '../../lib/site';
 import { FORKLART, erForklart, forfatterSlug, getNews, kilde, type Haber } from '../../lib/news';
 import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs, headline } from '../../lib/seo';
 import SentezBlok from '../../components/SentezBlok.astro';
@@ -13,6 +13,7 @@ import { matchEntities } from '../../lib/entities';
 import { indekserbar } from '../../lib/ordtelling.mjs';
 import { relaterteSaker } from '../../lib/relaterte';
 import Brodsmuler from '../../components/Brodsmuler.astro';
+import KiNotat from '../../components/KiNotat.astro';
 import DelSaken from '../../components/DelSaken.astro';
 import ForfatterKort, { FORFATTER_BESKRIVELSE } from '../../components/ForfatterKort.astro';
 import { aktiveTemaer, temaerPerSak, temaUrl, type Tema } from '../../lib/temaer';
@@ -42,7 +43,6 @@ const { Content } = await render(haber);
 const cover = kapak;
 const yeniKapak = cover && gorselVar(date);
 const source = kilde(haber);
-const made = produksjonMerke(produksjon);
 const warn = varsel(title);
 const forklart = erForklart(haber);
 // Kişi adıyla yayımlanan yazıların yazar sayfası vardır (/forfatter/<slug>/).
@@ -167,14 +167,6 @@ const jsonLd = {
           </div>
         )
       }
-      {
-        made && (
-          <div>
-            <dt>Laget</dt>
-            <dd><span class="mark"><Symbol kind={made.kind} />{made.label}</span></dd>
-          </div>
-        )
-      }
       <div>
         <dt>Av</dt>
         <dd>{forfatterUrl ? <a href={forfatterUrl} rel="author">{author}</a> : author}</dd>
@@ -214,26 +206,9 @@ const jsonLd = {
       <Content />
     </div>
 
-    {forfatterUrl && <ForfatterKort name={author} heading="h3" />}
+    <KiNotat tittel={title} url={pageUrl} author={author} sjanger={haber.data.sjanger} />
 
-    {
-      PRODUKSJON[produksjon] ? (
-        <p class="produksjon">
-          {made && <Symbol kind={made.kind} />}
-          <span>
-            {PRODUKSJON[produksjon]} <a href="/om-oss/#ki">Informasjon om KI i {SITE.name}-artikler.</a>
-          </span>
-        </p>
-      ) : (
-        produksjon?.startsWith('ki-') && (
-          <p class="produksjon">
-            <span>
-              <a href="/om-oss/#ki">Informasjon om KI i {SITE.name}-artikler</a>
-            </span>
-          </p>
-        )
-      )
-    }
+    {forfatterUrl && <ForfatterKort name={author} heading="h3" />}
 
     <DelSaken url={pageUrl} title={title} />
   </article>

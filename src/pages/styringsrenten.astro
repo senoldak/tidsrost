@@ -2,6 +2,7 @@
 // "Styringsrenten nå": Norges Bank'ın açık verisinden (SDMX API) güncel politika faizi ve son değişiklikler.
 // Veri scripts/data/hent-data.mjs ile Nyhetsbot çalışmalarında alınır (src/data/styringsrente.json).
 import { jsonLdMetni } from '../lib/json-ld.mjs';
+import KiNotat from '../components/KiNotat.astro';
 import Base from '../layouts/Base.astro';
 import Symbol from '../components/Symbol.astro';
 import Brodsmuler from '../components/Brodsmuler.astro';
@@ -163,4 +164,5 @@ const jsonLd = {
     )
   }
   <p class="tema-alle"><a href="/tema/">Alle temaer hos {SITE.name}</a></p>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
 </Base>

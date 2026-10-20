@@ -380,28 +380,35 @@ Er teksten allerede korrekt, returner den uendret i «redigert».`,
 
 // ── Tüm süreç ──────────────────────────────────────────────────────────
 
-// Döner: { sak, merknader, stopp } — stopp doluysa haber yayınlanmamalı (taslak da açılmaz; kaynak hopp döner).
+// Döner: { sak, merknader, stopp, bekle } — stopp doluysa haber yayınlanmamalı (taslak da açılmaz; kaynak hopp döner).
+// bekle: true ise vaktsjef onayı (iki tur sonunda ya da KI çalışmadığı için) alınamadı: haber bu tur yayınlanmaz,
+// havuzda kalır ve sonraki turda yeniden denenir (standartlar: emin değilse yayımlama).
 const SISTE_RUNDER = 3;
+const ONAY_RUNDER = 2;
 export async function redigerSak(sak, kilde, opts = {}) {
   // Yazar taslağındaki basit sorunlar (cümle ortası göreli zaman, medya atfı) önce yerelde silinir.
   let utkast = lokalRett(sak);
   const merknader = [];
   // Katman 2.4: onay turu aynı çağrıda redaksiyonu da yapar; onaylanırsa ayrı språkvask çağrısı gerekmez.
   let ferdigVasket;
-  for (let runde = 0; runde < 2; runde++) {
+  let onaylandi = false;
+  for (let runde = 0; runde < ONAY_RUNDER; runde++) {
     const vurdering = await vurderOgVask(utkast, kilde, opts);
     if (vurdering.godkjent) {
       // Redaksiyon kesin kontrolden geçmediyse onaylı ham metin korunur (ayrı çağrı yapılmaz).
       ferdigVasket = vurdering.vasket ?? utkast;
+      onaylandi = true;
       break;
     }
     merknader.push(...vurdering.problemer);
-    utkast = await rett(utkast, kilde, vurdering.problemer);
+    // Son turda düzeltilen metin yeniden denetlenmeyeceği için düzeltme çağrısı yapılmaz.
+    if (runde < ONAY_RUNDER - 1) utkast = await rett(utkast, kilde, vurdering.problemer);
   }
+  // Onay gelmediyse yayınlanmaz: sonraki tur yeniden dener.
+  if (!onaylandi) return { sak: utkast, merknader, stopp: [], bekle: true };
 
   const foer = utkast;
-  // Onay gelmediyse (düzeltme turları bitti) eski usul ayrı redaksiyon çağrısı.
-  const vasket = ferdigVasket ?? (await språkvask(utkast));
+  const vasket = ferdigVasket;
   // Redaksiyon olguları değiştirdiyse redaksiyondan önceki hâli kullan.
   const nyeFeil = [...sjekkSitater(helTekst(vasket), kilde), ...sjekkTall(helTekst(vasket), kilde)];
   const foerFeil = [...sjekkSitater(helTekst(foer), kilde), ...sjekkTall(helTekst(foer), kilde)];
@@ -448,5 +455,5 @@ export async function redigerSak(sak, kilde, opts = {}) {
     if (sluttsjekk(nyTittel).length === 0 && sjekkTittel(nyTittel.title).length < tittelFeil.length) utkast = nyTittel;
     else merknader.push(...tittelFeil);
   }
-  return { sak: utkast, merknader, stopp };
+  return { sak: utkast, merknader, stopp, bekle: false };
 }

@@ -3,10 +3,14 @@
 // Kullanım: node scripts/planlagt.mjs  (GITHUB_OUTPUT varsa oraya da yazar)
 import { readdir, readFile, appendFile } from 'node:fs/promises';
 import path from 'node:path';
+import { acilDurdurma } from './nyheter/kapi.mjs';
 
 const SITE = process.env.SITE ?? 'https://tidsrost.com';
 const DIZIN = 'src/content/haberler';
 const PENCERE_MS = 3 * 86400e3; // son 3 günde tarihi gelenlere bakılır
+
+// Standartlar: acil durdurma açıksa planlı yazılar yayına alınmaz (yayin çıktısı yazılmaz).
+if (await acilDurdurma()) process.exit(0);
 
 const simdi = Date.now();
 const eksik = [];

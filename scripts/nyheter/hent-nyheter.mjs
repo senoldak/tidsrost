@@ -11,7 +11,9 @@ import { vurder, velg, puanTemizle, UTEN_VURDERING } from './viktighet.mjs';
 import { lesHukommelse, finnDublett, nokkel } from './dublett.mjs';
 import { fjernAdresser } from './hemmelig.mjs';
 import { maskerMedier } from './tekstverktoy.mjs';
-import { leggTilKortFortalt } from './kortfortalt.mjs';
+import { leggTilKortFortalt, slugFor } from './kortfortalt.mjs';
+import { acilDurdurma, yayinKapisi, sakDenetimGirdisi } from './kapi.mjs';
+import { motorKaydet, sariKayit } from './motor.mjs';
 import regjeringen from './kilder/regjeringen.mjs';
 import norgesbank from './kilder/norgesbank.mjs';
 import met from './kilder/met.mjs';
@@ -37,6 +39,9 @@ const MAKS = Number(process.env.MAKS_PER_KJORING || 12);
 const SURE_MS = Number(process.env.SURE_DK || 15) * 60_000;
 const BASLANGIC = Date.now();
 
+// Standartlar: acil durdurma bayrağı açıksa tur Gemini'ye ilk çağrıdan önce, hiçbir şey yazmadan ve commit etmeden biter.
+if (!TORR && (await acilDurdurma())) process.exit(0);
+
 // Katman 3 (Gemini kota planı): bu turun Gemini payı; yeni habere başlamadan önce geminiPayiBitti() sorulur.
 if (!TORR) console.log(await butceYukle({ url: process.env.MOTOR_URL, anahtar: process.env.MOTOR_ANAHTARI, site: 'tidsrost' }));
 // Bir kaynak ilk kez çalıştığında eski birikim yayınlanmaz: sadece son 24 saatin haberleri alınır
@@ -48,6 +53,8 @@ const tilstand = await lesJsonFil(TILSTAND_FIL, { sett: {}, feil: {}, kilder: {}
 // Repo ve Actions logları herkese açık: haber sitelerinden gelen adayın (skjult) başlığı loglanmaz, mesajlarındaki
 // adresler ve medya adları maskelenir (bkz. hemmelig.mjs). Resmi kaynaklarda her şey olduğu gibi yazılır.
 const rens = (k, tekst) => (k.skjult ? maskerMedier(fjernAdresser(tekst)) : tekst);
+// Standart logu bulunan ifadeyi gösterir (ör. medya adı): Actions logları herkese açık, her zaman maskelenir.
+const standartLogg = (m) => console.log(maskerMedier(fjernAdresser(m)));
 const etikett = (k) => (k.skjult ? k.id : `${k.id} «${k.tittel}»`);
 // Son 72 saatte yayınlanmış haberler (bkz. dublett.mjs): aynı olay başka adresten gelince yeniden yazılmasın.
 const hukommelse = await lesHukommelse(ROT);
@@ -87,7 +94,7 @@ const poeng = await vurder(kandidater, { hukommelse: tilstand.puan }).catch((e) 
   console.error(`viktighet: FEIL ${e.message}`);
   return null;
 });
-if (!poeng) console.warn('viktighet: ingen vurdering; velger uten poeng');
+if (!poeng) console.warn('viktighet: ingen vurdering; bare datakilder uten poeng velges, resten sparer vi til neste kjøring');
 const { valgt, forkastet } = velg(kandidater, poeng, MAKS);
 for (const k of forkastet) {
   console.log(`  - ${k.id}: lav nyhetsverdi (${poeng.get(k)})`);
@@ -100,6 +107,8 @@ const utkastListe = [];
 const rettetListe = [];
 const stoppListe = [];
 const kortListe = [];
+const ventListe = [];
+const standartElendi = [];
 for (const k of valgt) {
   // Ön denetim (Gemini çağrısından önce): kaynağın kendi başlığı yayınlanmış bir haberle aynı olayı anlatıyor mu?
   // Şablonlu veri kaynaklarında kaynak başlığı yayınlanan başlıktan farklıdır; onlar yazıldıktan sonra denetlenir.
@@ -130,9 +139,30 @@ for (const k of valgt) {
     }
     // Tam haber için kaynak yetmedi: resmi duyuru günün "Kort fortalt" sayfasına satır olur (bkz. kortfortalt.mjs).
     if ('kort' in sak) {
-      merkSett(k);
-      if (sak.kort) kortListe.push(sak.kort);
+      if (sak.kort) {
+        // Satır da standart süzgecinden geçer: kırmızıysa yalnız o satır atlanır; denetim hatasında satır bekler.
+        const kapi = await yayinKapisi({ girdi: { dil: 'nb', baslik: sak.kort.tittel, ozet: '', metin: sak.kort.ingress ?? '' }, kimlik: k.id, log: standartLogg });
+        if (kapi.karar === 'bekle') {
+          ventListe.push(`${etikett(k)}: standartkontroll feilet, ${kapi.hata}`);
+          console.log(`  - ${k.id}: venter (standartkontroll feilet)`);
+          continue;
+        }
+        merkSett(k);
+        if (kapi.karar === 'elendi') {
+          standartElendi.push(`${etikett(k)}: ${kapi.s.gerekce}`);
+          console.log(`  - ${k.id}: Kort fortalt-linje droppet (${kapi.s.gerekce})`);
+          continue;
+        }
+        if (kapi.s.karar === 'sari') await motorKaydet({ url: process.env.MOTOR_URL, anahtar: process.env.MOTOR_ANAHTARI, site: 'tidsrost', kayit: sariKayit(k.id, slugFor(new Date()), kapi.s) });
+        kortListe.push(sak.kort);
+      } else merkSett(k);
       console.log(`  ~ ${k.id}: ${sak.kort ? 'Kort fortalt' : 'hoppet over (for lite kildemateriale)'}`);
+      continue;
+    }
+    // Vaktsjef-onayı alınamadı: haber görüldü sayılmaz, havuzda kalır ve sonraki turda yeniden denenir.
+    if (sak.bekle) {
+      console.log(`  - ${k.id}: venter (${rens(k, sak.bekle)})`);
+      ventListe.push(`${etikett(k)}: ${rens(k, sak.bekle)}`);
       continue;
     }
     if (sak.hopp) {
@@ -150,7 +180,21 @@ for (const k of valgt) {
     }
     // Haber değeri künyeye yazılır; sosyal medyada günün Reels haberleri buna göre seçilir (scripts/sosial/saker.mjs).
     if (Number.isInteger(poeng?.get(k))) sak.nyhetsverdi = poeng.get(k);
+    // Standart süzgeci: yazılmadan hemen önce. Kırmızı: yazılmaz, motor kaydı 'elendi'. Hata: bekler.
+    const kapi = await yayinKapisi({ girdi: sakDenetimGirdisi(sak), kimlik: k.id, log: standartLogg });
+    if (kapi.karar === 'bekle') {
+      console.log(`  - ${k.id}: venter (standartkontroll feilet: ${kapi.hata})`);
+      ventListe.push(`${etikett(k)}: standartkontroll feilet, ${kapi.hata}`);
+      continue;
+    }
+    if (kapi.karar === 'elendi') {
+      merkSett(k);
+      console.log(`  - ${k.id}: droppet (${kapi.s.gerekce})`);
+      standartElendi.push(`${etikett(k)}: ${kapi.s.gerekce}`);
+      continue;
+    }
     const slug = await skrivSak(ROT, sak);
+    if (kapi.s.karar === 'sari') await motorKaydet({ url: process.env.MOTOR_URL, anahtar: process.env.MOTOR_ANAHTARI, site: 'tidsrost', kayit: sariKayit(k.id, slug, kapi.s) });
     if (!sak.draft) hukommelse.push(nokkel({ slug, tittel: sak.title, ingress: sak.description, tekst: sak.body, tid: Date.now(), produksjon: sak.produksjon }));
     merkSett(k);
     delete tilstand.feil[k.id];
@@ -200,6 +244,8 @@ if (process.env.GITHUB_STEP_SUMMARY) {
     ...stoppListe.map((t) => `- ⛔ Yayınlanmadı (kaynakta olmayan rakam/alıntı), taslakta bekliyor: ${mdKacir(t)}`),
     ...utkastListe.map((t) => `- 📝 Taslak, kontrol edilip yayınlanmayı bekliyor: ${mdKacir(t)}`),
     ...rettetListe.map((t) => `- ✏️ Kontrol düzeltti ve yayınlandı: ${mdKacir(t)}`),
+    ...ventListe.map((t) => `- ⏸️ Bekliyor (onay ya da standart denetimi alınamadı, sonraki turda yeniden denenir): ${mdKacir(t)}`),
+    ...standartElendi.map((t) => `- 🚫 Standart süzgeci düşürdü: ${mdKacir(t)}`),
     ...feilListe.map((f) => `- ❌ ${mdKacir(f)}`),
   ].join('\n');
   await appendFile(process.env.GITHUB_STEP_SUMMARY, ozet + '\n');

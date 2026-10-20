@@ -60,6 +60,9 @@ jobs:
         id: data
         continue-on-error: true
         timeout-minutes: 3
+        env:
+          MOTOR_URL: ${{ vars.MOTOR_URL }}
+          MOTOR_ANAHTARI: ${{ secrets.MOTOR_ANAHTARI }}
         run: node scripts/data/hent-data.mjs
 
       - name: Commit
@@ -95,6 +98,9 @@ jobs:
       - name: Planlanmış saker
         id: planlagt
         if: steps.commit.outputs.yayin != '1'
+        env:
+          MOTOR_URL: ${{ vars.MOTOR_URL }}
+          MOTOR_ANAHTARI: ${{ secrets.MOTOR_ANAHTARI }}
         run: node scripts/planlagt.mjs
 
       # Botun push'u yayın iş akışını kendiliğinden tetiklemez (GITHUB_TOKEN); elle başlatılır.

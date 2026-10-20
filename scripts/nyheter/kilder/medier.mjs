@@ -218,10 +218,11 @@ function lagKandidat(valgt, alle) {
       if (kontroll === 'ingen') return { ...felles, produksjon: 'ki-medier' };
       if (kontroll === 'manuell') return { ...felles, draft: true, produksjon: 'ki-assistert' };
       const kildeTekst = valgt.map((k) => `Medie: ${k.medie}\nTittel: ${k.tittel}\nIngress: ${k.ingress}\n\n${k.tekst}`).join('\n\n---\n\n');
-      const { sak: ferdig, merknader, stopp } = await redigerSak(sak, kildeTekst, { medier: true });
+      const { sak: ferdig, merknader, stopp, bekle } = await redigerSak(sak, kildeTekst, { medier: true });
+      if (bekle) return { bekle: `vaktsjef-onay alınamadı: ${merknader.join(' / ')}`.slice(0, 400) };
       // Son kontrolde sorun kalırsa (medya adı, kaynakta olmayan rakam/alıntı) yayınlanmaz, taslak da açılmaz.
       if (stopp.length) return { hopp: `kontroll: ${stopp.join(' / ')}` };
-      return { ...felles, ...ferdig, produksjon: 'ki-medier', ...(merknader.length && { merknader }) };
+      return { ...felles, ...ferdig, produksjon: 'ki-medier', kildeTekst, ...(merknader.length && { merknader }) };
     },
   };
 }

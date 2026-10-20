@@ -124,13 +124,15 @@ export default {
           if (forLiteKilde(kildeTekst)) return { kort: kortMelding({ tittel: d.korttittel ?? d.tittel, ingress: vedtak, kilde }) };
           const ai = await gemini({ prompt: prompt(kildeTekst), schema: SKJEMA });
           if (!ai) return null;
-          const { sak: ferdig, merknader, stopp } = await redigerSak(ai, kildeTekst, { pressemelding: false });
+          const { sak: ferdig, merknader, stopp, bekle } = await redigerSak(ai, kildeTekst, { pressemelding: false });
+          if (bekle) return { bekle: `vaktsjef-onay alınamadı: ${merknader.join(' / ')}`.slice(0, 400) };
           if (stopp.length) return { hopp: `kontroll: ${stopp.join(' / ')}` };
           return {
             ...ferdig,
             date: osloIso(),
             kilde,
             produksjon: 'ki-kontrollert',
+            kildeTekst,
             ...(merknader.length && { merknader }),
           };
         },
