@@ -77,6 +77,6 @@ Tall for enkeltnæringer i den gamle og den nye tabellen er derfor ikke direkte 
 
 ## Kilder
 
-- [SSB: Konkurser, ansatte og omsetning etter næring, ny næringsgruppering](https://data.ssb.no/api/v0/no/table/14728)
-- [SSB: Konkurser, ansatte og omsetning etter næring, gammel næringsgruppering](https://data.ssb.no/api/v0/no/table/09122)
-- [SSB: Åpnede konkurser per måned](https://data.ssb.no/api/v0/no/table/09695)
+- [SSB: Konkurser, ansatte og omsetning etter næring, ny næringsgruppering](https://www.ssb.no/statbank/table/14728/)
+- [SSB: Konkurser, ansatte og omsetning etter næring, gammel næringsgruppering](https://www.ssb.no/statbank/table/09122/)
+- [SSB: Åpnede konkurser per måned](https://www.ssb.no/statbank/table/09695/)
