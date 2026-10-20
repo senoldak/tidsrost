@@ -53,8 +53,17 @@ jobs:
       - name: ffmpeg
         run: command -v ffmpeg || (sudo apt-get update -q && sudo apt-get install -y -q ffmpeg)
 
+      # Standartlar: acil durdurma açıksa paylaşım yapılmaz (GitHub zamanlayıcısıyla başlayan tur dahil).
+      - name: Acil durdurma kontrolü
+        id: dur
+        env:
+          MOTOR_URL: ${{ vars.MOTOR_URL }}
+          MOTOR_ANAHTARI: ${{ secrets.MOTOR_ANAHTARI }}
+        run: node scripts/nyheter/durdu.mjs
+
       - name: Paylaş
         id: paylas
+        if: steps.dur.outputs.durdu != '1'
         env:
           META_TOKEN: ${{ secrets.META_TOKEN }}
           META_PAGE_ID: ${{ vars.META_PAGE_ID }}
