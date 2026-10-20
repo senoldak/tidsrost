@@ -17,7 +17,7 @@ coverKreditt: "Illustrasjon: tidsrøst"
 
 Tankrederiet Bruton opplever en tung start på dagen etter at det fredag morgen ble kjent at selskapet skal slås sammen med amerikanske International Seaways. Bare fem minutter etter børsåpning faller aksjen 8,33 prosent til 55 kroner. Nedturen kommer etter at det ble kjent at rederiet skal slås sammen med den amerikanske giganten.
 
-Avtalen verdsetter Bruton til rundt 370 millioner dollar, tilsvarende omtrent 3,5 milliarder kroner. Investor Tor Olav Trøim er nest største aksjonær i Bruton, mens John Fredriksens kypriotiske selskap Famatown er største aksjonær i International Seaways. Fredriksen kjøpte seg inn i tankrederiet våren 2022, da han sikret seg 16,7 prosent av aksjene for rundt 168 millioner dollar, skriver Finansavisen.
+Avtalen verdsetter Bruton til rundt 370 millioner dollar, tilsvarende omtrent 3,5 milliarder kroner. Investor Tor Olav Trøim er nest største aksjonær i Bruton, mens John Fredriksens kypriotiske selskap Famatown er største aksjonær i International Seaways. Fredriksen kjøpte seg inn i tankrederiet våren 2022, da han sikret seg 16,7 prosent av aksjene for rundt 168 millioner dollar.
 
 Bruton eier fire gigantiske oljetankskip av typen VLCC. Ett av skipene er allerede levert, mens de tre andre fortsatt er under bygging. Planen er å fjerne Bruton fra Oslo Børs etter at sammenslåingen er gjennomført, og avtalen ventes ferdigstilt i november.
 

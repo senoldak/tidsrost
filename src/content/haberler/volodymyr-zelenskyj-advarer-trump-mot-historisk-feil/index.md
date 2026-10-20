@@ -15,12 +15,12 @@ coverAlt: "Illustrasjon: «Volodymyr Zelenskyj advarer Trump mot historisk feil�
 coverKreditt: "Illustrasjon: tidsrøst"
 ---
 
-Ukrainas president Volodymyr Zelenskyj sier til NBC-programmet «Meet the Press» at det vil være en historisk feil om USA tar Putins side. – Jeg håper at han vil endre beslutningene sine, fordi jeg mener at alt dette er feilgrep, og det vil ikke hjelpe oss, og det vil ikke hjelpe USA. Uttalelsen kommer etter at Trump fredag stanset nye sanksjoner mot russisk olje og gass.
+Ukrainas president Volodymyr Zelenskyj sier i et amerikansk TV-intervju at det vil være en historisk feil om USA tar Putins side. – Jeg håper at han vil endre beslutningene sine, fordi jeg mener at alt dette er feilgrep, og det vil ikke hjelpe oss, og det vil ikke hjelpe USA. Uttalelsen kommer etter at Trump fredag stanset nye sanksjoner mot russisk olje og gass.
 
 Zelenskyj nevnte også mistanken om at USAs regjering sto bak SpaceX sin beslutning om å begrense Ukrainas bruk av Starlink. Krigen i Ukraina preger situasjonen dypt. Russland invaderte Krim og deler av fylkene Luhansk og Donetsk i Øst-Ukraina i 2014.
 
 Den 24. februar 2022 gikk Russland til fullskala invasjon. Krigen medfører store militære tap og rammer sivile hardt. Samtidig skjer det store politiske endringer i USA.
 
-Fra 20. januar 2025 er Donald Trump igjen president i USA, hvor det bor mer enn 330 millioner mennesker fordelt på 50 stater. Den europeiske kritikken av USA skjerpes etter Trumps sanksjonsbrems mot Russland, og det spørs om ikke dette er et vendepunkt i alliansens historie, sier forsker Iver B.
+Fra 20. januar 2025 er Donald Trump igjen president i USA, hvor det bor mer enn 330 millioner mennesker fordelt på 50 stater. Den europeiske kritikken av USA skjerpes etter Trumps sanksjonsbrems mot Russland, og det spørs om ikke dette er et vendepunkt i alliansens historie, sier forsker Iver B. Neumann.
 
-Neumann. Utviklingen følges nøye i både USA, Ukraina og i resten av Europa, hvor de politiske og militære beslutningene vekker oppsikt og skaper debatt om forholdet mellom allierte.
+Utviklingen følges nøye i både USA, Ukraina og i resten av Europa, hvor de politiske og militære beslutningene vekker oppsikt og skaper debatt om forholdet mellom allierte.

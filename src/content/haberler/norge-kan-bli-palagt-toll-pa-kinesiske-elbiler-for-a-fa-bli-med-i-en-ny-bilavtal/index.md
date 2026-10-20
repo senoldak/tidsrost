@@ -1,16 +1,18 @@
 ---
 title: "Norge kan bli pålagt toll på kinesiske elbiler for å få bli med i en ny bilavtale"
-description: "Frankrike og Tyskland vil stille krav om at Norge innfører EUs straffetoll på kinesiske elbiler for å få bli med i en ny bilavtale."
+description: "Et fransk-tysk forslag kan innebære at Norge må innføre EUs straffetoll på kinesiske elbiler for å delta i en ny bilavtale. Ordningen er foreløpig ikke vedtatt."
 date: 2026-10-19T10:02:07+02:00
 category: okonomi
 why_matters: "Saken er viktig fordi den viser hvordan nye europeiske industrikrav kan ramme Norge og kreve at landet innfører toll på kinesiske elbiler for å delta i et fremtidig bilsamarbeid."
 key_points:
-  - "Frankrike og Tyskland vil kreve at Norge innfører straffetoll på kinesiske elbiler"
-  - "Kravet kommer for at Norge skal få bli med i en ny bilavtale"
+  - "Et fransk-tysk forslag kan innebære at Norge må innføre straffetoll på kinesiske elbiler"
+  - "Forslaget gjelder deltakelse i en ny bilavtale, og er foreløpig ikke vedtatt"
   - "Forslaget er en del av arbeidet for å styrke europeisk bilindustri mot konkurranse fra Kina"
 produksjon: ki-medier
 kildeSpor: "v1.mYYbSckRoyKo+yEE.lFwnC475L0195NRV+9QtDoRvLnGozU7aJASToJkQb1pFM9FOhz7PG9Ds7lry1KdorNF49oMV7VP/FbBkiBx3vDkzqRCbG1L188uEL8c7U6sAIpgb2VYFPDTzQfonHNDkE5ySvdx7bKQ7xS3UgSnsHAFreCIhU+Hmw4IBTuogudXD8ts89JXcFBJfyksesYuxClgqZ232pgwGnlHtlrwCqPQhKup8mM/CETR6tnVhVwefjv//Wlg6etltSPMvttU39fxFBN8VHd3x05iEZw1T6jayCSivpC6hO6nG/FH85Fo4SIJRvAKyVqhYweios4/sBmLzRnQcjJyQ9CtrZ3GhbM+/6lIpDbqcgi4vOH8KePOMTV4S2R/hB91jsbojubuIMlIgbz81MunLqJZ7XqiwkXBjScjbfpt8ASo8G49zxwQVFDhleIsyMekCri2midJ/MzdNQZokQOgXo3Q5muOWWSE9xnorP9e7cuMFYRPdnJXzzM4Bc7XmbLbbCoS3xr9uslo9rg11wqCLc6/rM9CZ6POUljyxt8qXhTgiv+sK72VQ1+wQrAgoqnz6vmytSQoc0Own"
 nyhetsverdi: 78
+rettelse: "Ingressen og nøkkelpunktene fremstilte et mulig krav som et fastslått krav. Teksten er presisert: forslaget er foreløpig ikke vedtatt."
+oppdatert: 2026-10-20T12:00:00+02:00
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Norge kan bli pålagt toll på kinesiske elbiler for å få bli med i en ny bilavtale»"
 coverKreditt: "Illustrasjon: tidsrøst"

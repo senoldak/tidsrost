@@ -1,17 +1,19 @@
 ---
-title: "Donald Trump opphever sanksjoner mot Russland"
-description: "USAs president Donald Trump fjerner flere eksisterende sanksjoner, restriksjoner og tollavgifter mot Russland i en ny presidentordre."
+title: "Donald Trump gjør unntak fra flere sanksjoner mot Russland"
+description: "USAs president Donald Trump har signert en presidentordre som gjør unntak fra flere sanksjoner, restriksjoner og tollavgifter mot Russland."
 date: 2026-10-17T08:02:13+02:00
 category: utenriks
 why_matters: "Sanksjonsletten og dieselavtalen vekker oppsikt internasjonalt og kan påvirke både krigen i Ukraina og energiprisene i USA."
 key_points:
-  - "Trump opphever sanksjoner mot Russland"
+  - "Trump gjør unntak fra flere sanksjoner mot Russland"
   - "Inngår dieselavtale med Putin"
   - "Møter kraftige reaksjoner internasjonalt"
 produksjon: ki-medier
 kildeSpor: "v1.KzN5SiyfR1vCdWZ+.Z0mEegasUsI42X7+i5JjYN4VObgHrvbRIwzxK3AEk/2+irGeyvMhRvY19uf95wnVZieUiGDVVuJAnArFj3QkgjObZ6PX9wu8Aem8xJqf1N7YCtlAe4bpZ8nBKAyrQdYk3DPo8w9T0vJ9vDYRyj5KRHPa0PaX3f+Isb5hK6Jq9Pi493D0Z77KVsTU+dgC+7SsE4Bm9OCPosioYXHyqvmiD4eSpPp4g9qcLNOnlqLPBuAejf7cS8EEVxO/5WJVLpSDeHlgbjj8xXiEqj+xHxc2THa2qAcqm8Zcus7asLwBX2Uy80rUjS2ZAAI9NLnJKWZ9GlVJ4QWyRHV8QnxVOGsqEpa/JPeAzQfGdxWXVnWn2U8gXD0mDc3jUSJaXApiO5xEJphtAHAUF5hGju1WabDrB8vaxczMdMmgBfA5bTPTfaV86SqbUPVa0AzNTSdU8ke7CEy9Eyjgg0HdJdMROccbJU8zfOI2fqeJI2HKbK8R0lSvtz4wJ7bTLNAJH8AMs79wX9Y2Q90bCHFaAdfHaCaP5HEttwkBQgvjDnRqhuiNRsL4C7AA5ajYzBDaGDDsDKxEZsLy/dOyx9fkLNCzmeATRN+574lW+F19ZP+9QhYIQouW36caDfIRGrzkwSscScfZShYR14QwvRkmMHOGDJ7CFLzNu94LQT9FhWN+lgMNq/RzRsRF09snZVqhPOvnsUcwXUnpjeNjAs+oFHlv1+0IGuQWdlyl"
+rettelse: "Tittelen og ingressen sa at sanksjoner var opphevet. Presidentordren gjør unntak fra flere sanksjoner. Tittel og ingress er rettet."
+oppdatert: 2026-10-20T12:00:00+02:00
 cover: ./cover.png
-coverAlt: "Illustrasjon: «Donald Trump opphever sanksjoner mot Russland»"
+coverAlt: "Illustrasjon: «Donald Trump gjør unntak fra flere sanksjoner mot Russland»"
 coverKreditt: "Illustrasjon: tidsrøst"
 ---
 

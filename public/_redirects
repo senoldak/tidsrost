@@ -66,3 +66,9 @@
 /arkiv/2026-10-09 /arkiv/2026-10-14/ 301
 /arkiv/uke/2026-40/ /arkiv/uke/2026-42/ 301
 /arkiv/uke/2026-40 /arkiv/uke/2026-42/ 301
+
+# Kaldırılan haberler (2026-10-20): adres Düzeltmeler sayfasına gider; kayıt src/data/rettelser-avpublisert.json içinde.
+/artikkel/ap-radgiver-domt-for-hallikvirksomhet/ /rettelser/ 301
+/artikkel/ap-radgiver-domt-for-hallikvirksomhet /rettelser/ 301
+/artikkel/*-far-fri-fra-terrorrettssaken-for-a-delta-i-sjakk-vm/ /rettelser/ 301
+/artikkel/*-far-fri-fra-terrorrettssaken-for-a-delta-i-sjakk-vm /rettelser/ 301

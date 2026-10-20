@@ -1,7 +1,7 @@
 ---
 import { jsonLdMetni } from '../lib/json-ld.mjs';
 import Base from '../layouts/Base.astro';
-import { SITE, formatDay } from '../lib/site';
+import { SITE } from '../lib/site';
 import { SITE_URL, breadcrumbs } from '../lib/seo';
 import { getNews, newsUrl } from '../lib/news';
 import avpublisert from '../data/rettelser-avpublisert.json';
@@ -9,6 +9,7 @@ import avpublisert from '../data/rettelser-avpublisert.json';
 // To kilder, slått sammen og sortert nyeste først:
 //  1. saker med rettelse-felt (rettelsesnoten under saken); dato = oppdatert ?? publiseringsdato;
 //  2. avpubliserte saker (src/data/rettelser-avpublisert.json): { dato, type, tittel?, forstPublisert, begrunnelse }.
+const formatDay = (d: Date) => d.toLocaleDateString('nb-NO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Oslo' });
 type Oppforing = { dato: Date; type: string; tittel?: string; href?: string; forstPublisert?: Date; tekst: string };
 
 const rettet: Oppforing[] = (await getNews())
