@@ -12,6 +12,7 @@
 import { gemini } from './lib.mjs';
 import { RELATIV_TID, MEDIER, lokalRett, ilgiliKisim } from './tekstverktoy.mjs';
 import { ordtelling } from '../../src/lib/ordtelling.mjs';
+import { olcekKontrol } from './olcek.mjs';
 
 // ── Ortak yazım kuralları (bütün kaynakların istemlerinde) ─────────────
 
@@ -157,8 +158,12 @@ export function sjekkTall(tekst, kilde) {
     if (!årstall && stemmer(n, kjente)) continue;
     problemer.push(`Tallet «${raw}» finnes ikke i kilden`);
   }
-  return problemer;
+  return [...problemer, ...sjekkSkala(tekst, kilde)];
 }
+
+// Standartlar Faz 1: beløp der tallet finnes i kilden, men enheten er feil (millioner ↔ milliarder, 10× eller mer).
+const skalaMelding = (tekst, kilde) => `Feil størrelsesorden: «${tekst}» avviker minst 10 ganger fra «${kilde}» i kilden (sjekk millioner/milliarder)`;
+export const sjekkSkala = (tekst, kilde) => olcekKontrol(tekst, kilde, { dil: 'nb', mesaj: skalaMelding });
 
 // Özel isimler (cümle ortasında büyük harfle başlayan kelimeler) kaynakta geçiyor mu?
 // Norveççede sadece özel isimler büyük harfle yazılır; uydurma kişi/kurum adlarını yakalar.
