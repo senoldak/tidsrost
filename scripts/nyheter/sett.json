@@ -2536,7 +2536,43 @@
     "medier:123bcb7bbb24fd20": "2026-10-20T12:03:51.482Z",
     "medier:c239ff053e8b0f7d": "2026-10-20T12:03:51.482Z",
     "medier:9590458becf4248c": "2026-10-20T12:04:00.846Z",
-    "medier:e556dc981b17ab84": "2026-10-20T12:04:00.846Z"
+    "medier:e556dc981b17ab84": "2026-10-20T12:04:00.846Z",
+    "medier:a5a18417959026f4": "2026-10-20T14:01:29.930Z",
+    "medier:76002e39447c2d27": "2026-10-20T14:01:29.930Z",
+    "medier:b93281a93265b047": "2026-10-20T14:01:29.930Z",
+    "medier:93fbe5a92856ccbb": "2026-10-20T14:01:29.930Z",
+    "medier:ddb8105ef94075a0": "2026-10-20T14:01:29.930Z",
+    "medier:5948b7e755a34358": "2026-10-20T14:01:29.930Z",
+    "medier:0d10e990dd0ffef6": "2026-10-20T14:01:29.930Z",
+    "medier:8618fb7d5a143b9b": "2026-10-20T14:01:29.930Z",
+    "medier:3f5acb4e7aa6b3a1": "2026-10-20T14:01:29.930Z",
+    "medier:7731aa8269448891": "2026-10-20T14:01:29.930Z",
+    "medier:99eeca5ee7e20134": "2026-10-20T14:01:29.930Z",
+    "forbrukerradet:https://www.forbrukerradet.no/?p=56440": "2026-10-20T14:02:26.673Z",
+    "unnews:https://news.un.org/en/story/2026/10/1168629": "2026-10-20T14:02:26.673Z",
+    "medier:49d76c5f0cbc5ed5": "2026-10-20T14:02:26.673Z",
+    "medier:001934079da9c684": "2026-10-20T14:02:26.673Z",
+    "medier:a570a6b8e02eac70": "2026-10-20T14:02:26.673Z",
+    "medier:09c4c5122da9f85f": "2026-10-20T14:02:26.673Z",
+    "medier:3a40da58683a0ea4": "2026-10-20T14:02:26.673Z",
+    "medier:9835ee2bb27ee465": "2026-10-20T14:02:26.673Z",
+    "regjeringen:3179078": "2026-10-20T14:02:26.673Z",
+    "medier:d8ad0e88a5c7b292": "2026-10-20T14:02:26.673Z",
+    "medier:7d315d34664a9fbc": "2026-10-20T14:02:26.673Z",
+    "medier:16232a1a9b65b263": "2026-10-20T14:02:26.673Z",
+    "medier:460110cbb857842f": "2026-10-20T14:02:26.673Z",
+    "medier:e026dae722a6c095": "2026-10-20T14:02:26.673Z",
+    "medier:7d59feb1739a8c75": "2026-10-20T14:02:26.673Z",
+    "regjeringen:3179149": "2026-10-20T14:02:26.674Z",
+    "medier:d220c26ae8a80787": "2026-10-20T14:04:35.571Z",
+    "medier:3425eb37121adf7f": "2026-10-20T14:04:35.571Z",
+    "medier:df49e891573b6308": "2026-10-20T14:04:35.571Z",
+    "medier:e381ccd61c228a8d": "2026-10-20T14:04:35.571Z",
+    "medier:341dca4dde85d3a1": "2026-10-20T14:04:35.571Z",
+    "medier:c2e26499e06eba04": "2026-10-20T14:04:35.571Z",
+    "medier:61d60f6645621ae9": "2026-10-20T14:04:35.571Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2203": "2026-10-20T14:07:59.486Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2204": "2026-10-20T14:09:38.916Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -3868,6 +3904,56 @@
       "p": 20,
       "v": "b34cb0de5bde",
       "t": "2026-10-20T12:02:06.490Z"
+    },
+    "medier:d220c26ae8a80787": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T14:02:00.673Z"
+    },
+    "medier:49d76c5f0cbc5ed5": {
+      "p": 42,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T14:02:00.673Z"
+    },
+    "medier:d8ad0e88a5c7b292": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T14:02:00.673Z"
+    },
+    "medier:460110cbb857842f": {
+      "p": 48,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T14:02:00.673Z"
+    },
+    "regjeringen:3179149": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T14:02:00.673Z"
+    },
+    "regjeringen:3179078": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T14:02:00.673Z"
+    },
+    "forbrukerradet:https://www.forbrukerradet.no/?p=56440": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T14:02:00.673Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/10/1168629": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T14:02:00.673Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2204": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T14:02:00.673Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2203": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T14:02:00.673Z"
     }
   }
 }
