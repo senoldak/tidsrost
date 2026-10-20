@@ -2405,7 +2405,36 @@
     "medier:ffe166d613be20b0": "2026-10-20T08:02:24.448Z",
     "medier:93b6ac8cace285a6": "2026-10-20T08:02:24.448Z",
     "medier:bee7bcf25e31287e": "2026-10-20T08:02:24.448Z",
-    "regjeringen:3179077": "2026-10-20T08:02:24.496Z"
+    "regjeringen:3179077": "2026-10-20T08:02:24.496Z",
+    "medier:6daae7c6e27e2e0f": "2026-10-20T10:01:26.779Z",
+    "medier:3785b7b1b43a98b8": "2026-10-20T10:01:26.779Z",
+    "medier:27d175df8882e1b0": "2026-10-20T10:01:26.779Z",
+    "medier:cdc5d70f820204a9": "2026-10-20T10:01:26.779Z",
+    "medier:db441bcd73f09951": "2026-10-20T10:01:26.779Z",
+    "medier:d0e48ef5fc09e78e": "2026-10-20T10:01:26.779Z",
+    "medier:d8fb3e8c334833bd": "2026-10-20T10:01:26.779Z",
+    "medier:7e4ab8d46c7d5bcf": "2026-10-20T10:01:26.779Z",
+    "medier:2901e4724d68f8b3": "2026-10-20T10:01:26.779Z",
+    "medier:e2c243919ba52b6f": "2026-10-20T10:01:26.779Z",
+    "medier:fd0d5f48ba5b67ae": "2026-10-20T10:01:26.779Z",
+    "medier:b71cea343e54b2d4": "2026-10-20T10:01:26.779Z",
+    "regjeringen:3179140": "2026-10-20T10:01:56.229Z",
+    "fhi:https://www.fhi.no/nyheter/2026/aktivitet-og-ventetid-i-spesialisthelsetjenesten-ved-utgangen-av-august-2026/": "2026-10-20T10:01:56.229Z",
+    "havforskning:https://www.hi.no/hi/nyheter/2026/oktober/nytt-gjennombrudd-for-levendelagring-av-makrellstorje": "2026-10-20T10:01:56.229Z",
+    "medier:687d91e34d5dec56": "2026-10-20T10:01:56.229Z",
+    "medier:7a706b801a329d72": "2026-10-20T10:01:56.229Z",
+    "medier:b6fe1aa39c2d84c5": "2026-10-20T10:01:56.229Z",
+    "medier:20eb623742f93726": "2026-10-20T10:01:56.229Z",
+    "medier:add91e35db27ecaf": "2026-10-20T10:01:56.897Z",
+    "medier:e25e33d65ba6fefd": "2026-10-20T10:01:56.897Z",
+    "medier:db5cca8a72cf672b": "2026-10-20T10:02:00.434Z",
+    "medier:ac2a26f68beea434": "2026-10-20T10:02:00.434Z",
+    "medier:f8e436de16f2a31f": "2026-10-20T10:02:26.190Z",
+    "medier:481ba97203eb7b8f": "2026-10-20T10:02:26.190Z",
+    "medier:6f8d11c42984a93a": "2026-10-20T10:02:29.328Z",
+    "medier:2d501ed599e8011c": "2026-10-20T10:02:29.328Z",
+    "medier:8d377dd658e13a92": "2026-10-20T10:02:50.945Z",
+    "medier:f847d3f39bac68df": "2026-10-20T10:02:50.945Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -3492,6 +3521,66 @@
       "p": 35,
       "v": "b34cb0de5bde",
       "t": "2026-10-20T08:02:04.162Z"
+    },
+    "medier:6f8d11c42984a93a": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T10:01:54.996Z"
+    },
+    "medier:687d91e34d5dec56": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T10:01:54.996Z"
+    },
+    "medier:add91e35db27ecaf": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T10:01:54.996Z"
+    },
+    "medier:b6fe1aa39c2d84c5": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T10:01:54.996Z"
+    },
+    "medier:f8e436de16f2a31f": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T10:01:54.996Z"
+    },
+    "medier:db5cca8a72cf672b": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T10:01:54.996Z"
+    },
+    "medier:8d377dd658e13a92": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T10:01:54.996Z"
+    },
+    "regjeringen:3179140": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T10:01:54.996Z"
+    },
+    "datatilsynet:https://www.datatilsynet.no/aktuelt/aktuelle-nyheter-2026/rekordmange-meldinger-om-tilsiktede-angrep/": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T10:01:54.996Z"
+    },
+    "fhi:https://www.fhi.no/nyheter/2026/aktivitet-og-ventetid-i-spesialisthelsetjenesten-ved-utgangen-av-august-2026/": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T10:01:54.996Z"
+    },
+    "havforskning:https://www.hi.no/hi/nyheter/2026/oktober/nytt-gjennombrudd-for-levendelagring-av-makrellstorje": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T10:01:54.996Z"
+    },
+    "forbrukerradet:https://www.forbrukerradet.no/?p=56428": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-20T10:01:54.996Z"
     }
   }
 }
