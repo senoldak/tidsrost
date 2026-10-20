@@ -758,7 +758,7 @@ main.container {
 .rettelse {
   display: flex;
   gap: calc(var(--u) * 1.5);
-  margin: 0 0 calc(var(--u) * 4);
+  margin: calc(var(--u) * 4) 0;
   padding: calc(var(--u) * 1.5) calc(var(--u) * 2);
   border: 1px solid var(--ink);
   background: var(--surface);
@@ -1344,7 +1344,7 @@ main.container {
 
 .data-varsel {
   max-width: 70ch;
-  margin: 0 0 calc(var(--u) * 4);
+  margin: calc(var(--u) * 4) 0;
   padding: calc(var(--u) * 1.5) calc(var(--u) * 2);
   border: 1px solid var(--ink);
   background: var(--surface);

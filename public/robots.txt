@@ -39,7 +39,7 @@ User-agent: DeepSeekBot
 User-agent: TikTokSpider
 Disallow: /
 
-# İnternet arşivleri (Wayback Machine) sayfaların kalıcı kopyasını almaz; silinen ya da düzeltilen içerik arşivde kalmaz.
+# Dış arşiv kapalıdır; düzeltme ve kaldırmalar sitenin Düzeltmeler sayfasında (/rettelser/) kayıtlıdır.
 User-agent: archive.org_bot
 User-agent: ia_archiver
 Disallow: /

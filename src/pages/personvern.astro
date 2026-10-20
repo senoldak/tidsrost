@@ -4,7 +4,7 @@ import { SITE } from '../lib/site';
 
 // Bu sayfadaki bilgiler sitenin gerçek durumuna dayanır: çerez yok, analiz/izleme yok, harici script yok.
 // Siteye analiz, reklam, yorum vb. eklenirse bu sayfa da güncellenmeli.
-const OPPDATERT = '17. oktober 2026';
+const OPPDATERT = '20. oktober 2026';
 ---
 
 <Base title="Personvern" description={`Hvordan ${SITE.name} behandler personopplysninger.`}>
@@ -26,8 +26,7 @@ const OPPDATERT = '17. oktober 2026';
       <h2>Personvernvennlig webstatistikk</h2>
       <p>
         For å følge med på aggregert trafikk og sikre stabil drift benytter {SITE.name} Cloudflare Web Analytics. Dette
-        er en personvernvennlig statistikkløsning som ikke bruker informasjonskapsler, ikke samler inn IP-adresser eller
-        personidentifiserende opplysninger, og ikke sporer deg på tvers av nettsteder. Målingen er begrenset til aggregerte
+        er en personvernvennlig statistikkløsning som ikke bruker informasjonskapsler og ikke sporer deg på tvers av nettsteder. Målingen er begrenset til aggregerte
         tall (sidevisninger og teknisk responstid).
       </p>
 
@@ -59,7 +58,9 @@ const OPPDATERT = '17. oktober 2026';
       <p>
         Nyhetssakene våre kan inneholde opplysninger om personer, for eksempel navn på offentlige personer. Slik
         behandling skjer i journalistisk øyemed og er i stor grad unntatt fra personvernregelverket. Mener du at en sak
-        inneholder feil eller omtaler deg på en urimelig måte, kan du kontakte redaksjonen.
+        inneholder feil eller omtaler deg på en urimelig måte, kan du kontakte redaksjonen. Se også{' '}
+        <a href="/juridisk/">Juridisk informasjon og kolofon</a> (punkt 12 og 13) og{' '}
+        <a href="/rettelsespolitikk/">Rettelsespolitikk</a>.
       </p>
 
       <h2>Dine rettigheter</h2>
@@ -69,11 +70,11 @@ const OPPDATERT = '17. oktober 2026';
         til <a href="https://www.datatilsynet.no/">Datatilsynet</a>.
       </p>
 
-      <h2>Ansvarlig</h2>
+      <h2>Behandlingsansvarlig</h2>
       <p>
         {
           SITE.redaktor
-            ? `Behandlingsansvarlig er ${SITE.redaktor}, ansvarlig redaktør i ${SITE.name}.`
+            ? `Behandlingsansvarlig er ${SITE.redaktor}, utgiver og redaktør i ${SITE.name}.`
             : `Behandlingsansvarlig er redaksjonen i ${SITE.name}.`
         }
       </p>

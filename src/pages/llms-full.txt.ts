@@ -13,7 +13,7 @@ export const GET: APIRoute = async () => {
   const top40 = sorted.slice(0, 40);
 
   let output = `# tidsrøst - Full Content Feed (llms-full.txt)\n\n`;
-  output += `> Siste nytt fra Norge og verden.\n\n`;
+  output += `> Siste nytt og forklarende saker.\n\n`;
   output += `Last updated / Sist oppdatert: ${new Date().toISOString()}\n\n`;
 
   for (const haber of top40) {

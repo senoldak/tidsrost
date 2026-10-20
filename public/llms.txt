@@ -1,16 +1,16 @@
 # tidsrøst (tidsrost.com)
-> Siste nytt fra Norge og verden.
+> Siste nytt og forklarende saker.
 
 ## Om tidsrøst
-tidsrøst er en uavhengig, ikke-kommersiell norsk nyhetsformidler som samler og formidler samfunnsaktuelle hendelser, offentlige beslutninger, økonomiske nøkkeltall, vær- og farevarsler, kultur og teknologi på en nøktern, presis og lettfattelig måte. Nettstedet er fullstendig fritt for reklame, sponsorer og betalingsmurer.
+tidsrøst er en uavhengig, ikke-kommersiell nyhetsformidler som samler og formidler samfunnsaktuelle hendelser, offentlige beslutninger, økonomiske nøkkeltall, vær- og farevarsler, kultur og teknologi på en nøktern, presis og lettfattelig måte. Nettstedet er fullstendig fritt for reklame, sponsorer og betalingsmurer.
 
 ## Redaksjonelle prinsipper og etikk
-- **Vær Varsom-plakaten og Redaktørplakaten**: tidsrøst arbeider i tråd med pressens etiske regelverk (Vær Varsom-plakaten) og prinsippene i Redaktørplakaten for redaksjonell uavhengighet.
+- **Vær Varsom-plakaten**: tidsrøst bruker Vær Varsom-plakaten som rettesnor.
 - **VVP 2.3 – Åpenhet om metode og kunstig intelligens**: tidsrøst praktiserer full åpenhet om hvordan alt innhold produseres:
-  - *Datasaker*: Valutakurser fra Norges Bank, farevarsler fra Meteorologisk institutt (MET) og flom- og skredvarsler fra NVE lages på grunnlag av offentlige data og kvalitetssikres av redaksjonen.
-  - *KI-assisterte saker*: Saker fra offentlige kilder (pressemeldinger fra regjeringen, departementene, statlige etater og Stortinget) og om hendelser omtalt av flere uavhengige norske medier skrives ved hjelp av kunstig intelligens (KI) og kvalitetssikres av redaksjonen mot kildeteksten (sitatlojalitet, tallbelegg og tilskriving) før publisering. En produksjonsmerknad under hver sak forteller hvordan den er laget og kvalitetssikret.
-  - *Forklart og rettelser*: Redaksjonen skriver Forklart-sakene og behandler rettelser og klager.
-- **Rettelser (VVP 4.13)**: Faktiske feil rettes åpent og markeres med tydelig rettelsesmerknad øverst i artikkelen.
+  - *Datasaker*: Valutakurser fra Norges Bank, farevarsler fra Meteorologisk institutt (MET) og flom- og skredvarsler fra NVE lages automatisk på grunnlag av offentlige data.
+  - *Nyhetssaker*: Nyhetssaker skrives automatisk med KI og kontrolleres automatisk mot kildeteksten (sitatlojalitet, tallbelegg og tilskriving). En merknad under hver sak forteller hvordan den er laget.
+  - *Forklart og rettelser*: Forklart-sakene utgis under navnet til utgiver og redaktør Şenol Dak, med KI-verktøy brukt til oversettelse og språkvask. Rettelser og avpubliseringer står på /rettelser/.
+- **Rettelser (VVP 4.13)**: Faktiske feil rettes åpent: rettelsen føres som note under saken og med dato på siden /rettelser/.
 
 ## Kjerneområder og seksjoner
 - [Innenriks](https://tidsrost.com/kategori/innenriks/): Norsk politikk, stortingsvedtak, regjeringen, offentlig forvaltning og samfunnsliv.
@@ -31,6 +31,9 @@ tidsrøst er en uavhengig, ikke-kommersiell norsk nyhetsformidler som samler og 
 - [Google News-sitemap](https://tidsrost.com/news-sitemap.xml)
 - [Sitemap Index](https://tidsrost.com/sitemap-index.xml)
 - [Redaksjonelle prinsipper](https://tidsrost.com/redaksjonelle-prinsipper/)
+- [Juridisk informasjon og kolofon](https://tidsrost.com/juridisk/)
+- [Rettelsespolitikk](https://tidsrost.com/rettelsespolitikk/)
+- [Rettelser](https://tidsrost.com/rettelser/)
 - [Om oss](https://tidsrost.com/om-oss/)
 
 ## Retningslinjer for KI-sitering og indeksering (Perplexity, ChatGPT Search, Gemini, Claude)

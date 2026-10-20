@@ -1,11 +1,11 @@
 export const SITE = {
   name: 'tidsrøst',
-  description: 'Siste nytt fra Norge og verden.',
+  description: 'Siste nytt og forklarende saker.',
   // Slogan (sahibin seçimi, 2026-10-18): başlıkta logonun altında ve marka görsellerinde. description meta/RSS içindir.
   slogan: 'Hør tidens røst.',
   // Ana sayfanın meta açıklaması (SEO, 140–155 karakter); kısa description diğer sayfaların meta ve RSS açıklamasıdır.
   forsideBeskrivelse:
-    'Siste nytt fra Norge og verden – økonomi, politikk, samfunn og teknologi forklart enkelt, basert på flere uavhengige kilder og offisielle data.',
+    'Siste nytt – økonomi, politikk, samfunn og teknologi forklart enkelt, basert på offentlig tilgjengelig informasjon og offisielle data.',
   locale: 'nb-NO',
   // Sosyal medya hesapları; boş bırakılan link sitede görünmez.
   // Hesap açılınca tam adresi yaz (ör. 'https://x.com/tidsrost').
@@ -18,7 +18,7 @@ export const SITE = {
     // Haberlerin gönderildiği Telegram kanalı (mecmua-saat/worker.js, hedefler: '@tidsrost').
     telegram: 'https://t.me/tidsrost',
   },
-  // Sorumlu editör ve iletişim; sitenin altbilgisinde ve "Om oss" sayfasında gösterilir.
+  // Yayıncı ve editör ve iletişim; sitenin altbilgisinde ve "Om oss" sayfasında gösterilir.
   // Boş bırakılan alanlar sitede görünmez.
   redaktor: 'Şenol Dak',
   epost: 'redaksjon@tidsrost.com',

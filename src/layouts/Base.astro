@@ -25,7 +25,7 @@ const metaDesc = metaDescription(description);
 const robots = noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 const siteLd = { '@context': 'https://schema.org', '@graph': [organization, website] };
 // Uzun başlıklarda site adı eklenmez (Google ~60 karakterden sonrasını keser); ana sayfa açıklayıcı başlık alır.
-const fullTitle = title ? (title.length > 55 ? title : `${title} | ${SITE.name}`) : `${SITE.name} – siste nytt fra Norge og verden`;
+const fullTitle = title ? (title.length > 55 ? title : `${title} | ${SITE.name}`) : `${SITE.name} – siste nytt`;
 const ogTitle = title ?? fullTitle;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(image || '/og-default.png', Astro.site).href;
@@ -103,7 +103,7 @@ const [nameHead, nameTail] = SITE.name.split('ø');
       <div class="sheet-margin">
         <div class="container">
           {/* Haberlerin bir kısmı resmi kaynaklardan, bir kısmı birden fazla medyada doğrulanmış olaylardan (ki-medier); medya adı yazılmaz. */}
-          <span class="sources"><Symbol kind="kilde" />Kilder: offentlige etater · hendelser bekreftet av flere medier</span>
+          <span class="sources"><Symbol kind="kilde" />Kilder: offentlige etater og åpent tilgjengelig informasjon</span>
           <span class="tagline">{SITE.slogan}</span>
           <nav aria-label="Følg oss">
             {SITE.social.x && <a href={SITE.social.x} rel="noopener noreferrer" target="_blank" aria-label="X (åpnes i ny fane)">X</a>}
@@ -170,14 +170,13 @@ const [nameHead, nameTail] = SITE.name.split('ø');
             {nameTail === undefined ? SITE.name : <>{nameHead}<span class="o">ø</span>{nameTail}</>}
           </a>
           <p>
-            Uavhengig og reklamefri nyhetsside fra Norge og verden: korte nyheter, forklarende saker og oppdaterte
-            data, bygget på offentlige kilder.
+            Uavhengig og ikke-kommersiell nyhetsside: korte nyheter, forklarende saker og oppdaterte data.
           </p>
           <dl class="footer-ansvar">
             {
               SITE.redaktor && (
                 <div>
-                  <dt>Ansvarlig redaktør og journalist</dt>
+                  <dt>Utgiver og redaktør</dt>
                   <dd><a href="/forfatter/senol-dak/">{SITE.redaktor}</a></dd>
                 </div>
               )
@@ -200,9 +199,7 @@ const [nameHead, nameTail] = SITE.name.split('ø');
             }
           </dl>
           <p class="footer-etikk">
-            Redaksjonen arbeider etter <a href="https://www.presse.no/vaer-varsom-plakaten">Vær Varsom-plakaten</a> og{' '}
-            <a href="https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/redaktorplakaten">Redaktørplakaten</a>{' '}
-            for god presseskikk.
+            {SITE.name} bruker <a href="https://www.presse.no/vaer-varsom-plakaten">Vær Varsom-plakaten</a> som rettesnor.
           </p>
         </div>
 
@@ -244,7 +241,9 @@ const [nameHead, nameTail] = SITE.name.split('ø');
             <li><a href="/om-oss/#ki">Bruk av KI i {SITE.name}-artikler</a></li>
             <li><a href="/apenhet/">Åpenhet: slik velger vi nyheter</a></li>
             <li><a href="/arkiv/">Arkiv</a></li>
-            <li><a href="/redaksjonelle-prinsipper/#rettelser">Rettelser og klager (PFU)</a></li>
+            <li><a href="/rettelser/">Rettelser</a></li>
+            <li><a href="/rettelsespolitikk/">Rettelsespolitikk</a></li>
+            <li><a href="/juridisk/">Juridisk informasjon og kolofon</a></li>
             {SITE.redaktor && <li><a href="/forfatter/senol-dak/">Redaksjonen: {SITE.redaktor}</a></li>}
             <li><a href="/personvern/">Personvern og informasjonskapsler</a></li>
             {SITE.social.facebook && <li><a href={SITE.social.facebook} rel="noopener noreferrer">Facebook</a></li>}
@@ -258,7 +257,7 @@ const [nameHead, nameTail] = SITE.name.split('ø');
       <div class="container copyright">
         <span>
           © {new Date().getFullYear()} {SITE.name}
-          {SITE.redaktor && ` · Ansvarlig redaktør: ${SITE.redaktor}`}
+          {SITE.redaktor && ` · Utgiver og redaktør: ${SITE.redaktor}`}
           {SITE.ikkeKommersiell && ' · Ikke-kommersielt nettsted uten annonser'}
         </span>
         <span>Ark {sheet} · {today}</span>

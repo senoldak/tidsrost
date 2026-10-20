@@ -53,7 +53,7 @@ const G = {
   <header class="page-head">
     <h1 class="page-title">Åpenhet</h1>
     <p class="page-intro">
-      Mange av sakene våre lages med hjelp av en nyhetsrobot og kontrolleres før publisering. Her ser du hvor mye
+      Sakene våre skrives automatisk av en nyhetsrobot med KI og går gjennom automatiske kontroller før publisering. Her ser du hvor mye
       roboten har gått gjennom, og hvor lite av det som blir til artikler. Tallene oppdateres ved hver publisering.
     </p>
   </header>
@@ -100,12 +100,11 @@ const G = {
         <thead><tr><th scope="col">Kildetype</th><th scope="col">Saker gjennomgått</th></tr></thead>
         <tbody>
           <tr><th scope="row">Offentlige etater og organisasjoner ({v.offentlige.kilder} kilder)</th><td>{tall(v.offentlige.saker)}</td></tr>
-          <tr><th scope="row">Norske og internasjonale medier</th><td>{tall(v.medier.saker)}</td></tr>
+          <tr><th scope="row">Medier</th><td>{tall(v.medier.saker)}</td></tr>
         </tbody>
       </table>
       <p class="merknad">
-        Vi oppgir ikke navnene på mediene roboten leser. Vi gjengir ikke andres saker: vi sjekker opplysningene mot flere
-        kilder og skriver nyheten selv. Offentlige kilder lenkes alltid i artikkelen. Mer om arbeidsmetoden står under
+        Vi oppgir ikke navnene på mediene roboten leser. Offentlige kilder lenkes i saker som bygger på dem. Mer om arbeidsmetoden står under
         <a href="/redaksjonelle-prinsipper/">redaksjonelle prinsipper</a>.
       </p>
     </section>

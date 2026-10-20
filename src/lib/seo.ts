@@ -36,10 +36,10 @@ export const organization = {
   ...(SITE.epost ? { email: SITE.epost } : {}),
   publishingPrinciples: REDAKSJONELLE_PRINSIPPER,
   ethicsPolicy: REDAKSJONELLE_PRINSIPPER,
-  correctionsPolicy: `${REDAKSJONELLE_PRINSIPPER}#rettelser`,
+  correctionsPolicy: `${SITE_URL}/rettelsespolitikk/`,
   actionableFeedbackPolicy: `${REDAKSJONELLE_PRINSIPPER}#rettelser`,
   inLanguage: 'nb',
-  knowsAbout: ['Norske nyheter', 'Økonomi', 'Samfunn', 'Vær og farevarsler', 'Teknologi'],
+  knowsAbout: ['Nyheter', 'Økonomi', 'Samfunn', 'Vær og farevarsler', 'Teknologi'],
 };
 
 export const website = {

@@ -1,0 +1,83 @@
+---
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import Base from '../layouts/Base.astro';
+import { SITE, formatDay } from '../lib/site';
+import { SITE_URL, breadcrumbs } from '../lib/seo';
+import { getNews, newsUrl } from '../lib/news';
+import avpublisert from '../data/rettelser-avpublisert.json';
+
+// To kilder, slått sammen og sortert nyeste først:
+//  1. saker med rettelse-felt (rettelsesnoten under saken); dato = oppdatert ?? publiseringsdato;
+//  2. avpubliserte saker (src/data/rettelser-avpublisert.json): { dato, type, tittel?, forstPublisert, begrunnelse }.
+type Oppforing = { dato: Date; type: string; tittel?: string; href?: string; forstPublisert?: Date; tekst: string };
+
+const rettet: Oppforing[] = (await getNews())
+  .filter((h) => h.data.rettelse)
+  .map((h) => ({
+    dato: h.data.oppdatert ?? h.data.date,
+    type: 'Rettelse',
+    tittel: h.data.title,
+    href: newsUrl(h),
+    forstPublisert: h.data.date,
+    tekst: h.data.rettelse as string,
+  }));
+
+const tatt: Oppforing[] = (avpublisert as { dato: string; type?: string; tittel?: string; forstPublisert: string; begrunnelse: string }[]).map((a) => ({
+  dato: new Date(a.dato),
+  type: a.type ?? 'Avpublisert',
+  tittel: a.tittel,
+  forstPublisert: new Date(a.forstPublisert),
+  tekst: a.begrunnelse,
+}));
+
+const alle = [...rettet, ...tatt].sort((a, b) => b.dato.getTime() - a.dato.getTime());
+---
+
+<Base title="Rettelser" description={`Rettelser, presiseringer og avpubliseringer i ${SITE.name}, med dato.`}>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={jsonLdMetni(
+        breadcrumbs([
+          { name: 'Forsiden', url: `${SITE_URL}/` },
+          { name: 'Rettelser', url: `${SITE_URL}/rettelser/` },
+        ])
+      )}
+    />
+  </Fragment>
+
+  <article class="article">
+    <h1>Rettelser</h1>
+    <div class="prose">
+      <p class="lead">
+        Hvis vi gjør en feil i en sak, retter vi den, og tar vi ned en sak, sier vi hvorfor. Alle endringer føres med
+        dato på denne siden.
+      </p>
+      <p>
+        Slik retter vi feil: se <a href="/rettelsespolitikk/">Rettelsespolitikk</a>. Fant du en feil? Skriv til
+        <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a>.
+      </p>
+
+      {
+        alle.length === 0 ? (
+          <p>Ingen oppføringer ennå.</p>
+        ) : (
+          <ul class="rettelser-liste">
+            {alle.map((o) => (
+              <li>
+                <strong>
+                  <time datetime={o.dato.toISOString()}>{formatDay(o.dato)}</time> · {o.type}
+                </strong>
+                {' · '}
+                {o.tittel && (o.href ? <a href={o.href}>«{o.tittel}»</a> : <>«{o.tittel}»</>)}
+                {o.tittel && ': '}
+                {o.tekst}
+                {o.forstPublisert && <> (først publisert {formatDay(o.forstPublisert)})</>}
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+  </article>
+</Base>

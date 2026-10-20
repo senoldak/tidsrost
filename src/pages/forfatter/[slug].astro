@@ -3,7 +3,7 @@
 import { jsonLdMetni } from '../../lib/json-ld.mjs';
 import Base from '../../layouts/Base.astro';
 import StoryRow from '../../components/StoryRow.astro';
-import ForfatterKort, { FORFATTER_BESKRIVELSE } from '../../components/ForfatterKort.astro';
+import ForfatterKort, { forfatterBeskrivelse } from '../../components/ForfatterKort.astro';
 import { SITE } from '../../lib/site';
 import { forfatterSlug, getNews, newsUrl, type Haber } from '../../lib/news';
 import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs } from '../../lib/seo';
@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 
 const { name, items } = Astro.props;
 const pageUrl = `${SITE_URL}/forfatter/${forfatterSlug(name)}/`;
-const description = FORFATTER_BESKRIVELSE;
+const description = forfatterBeskrivelse(name);
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -36,12 +36,11 @@ const jsonLd = {
         '@type': 'Person',
         '@id': `${pageUrl}#person`,
         name,
-        jobTitle: 'Journalist',
+        jobTitle: 'Utgiver og redaktør',
         description,
         url: pageUrl,
         ...(SITE.epost ? { email: SITE.epost } : {}),
         worksFor: { '@id': ORG_ID },
-        knowsAbout: ['Norsk økonomi', 'Offentlig forvaltning', 'Datajournalistikk', 'Samfunn og arbeidsliv', 'Energi og klima'],
       },
       hasPart: items.slice(0, 50).map((h) => ({ '@type': 'NewsArticle', url: new URL(newsUrl(h), SITE_URL).href, headline: h.data.title })),
     },
@@ -53,7 +52,7 @@ const jsonLd = {
 };
 ---
 
-<Base title={`${name} – Journalist`} description={description}>
+<Base title={`${name} – Utgiver og redaktør`} description={description}>
   <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
   <ForfatterKort name={name} antallSaker={items.length} heading="h1" />
   <section class="day">

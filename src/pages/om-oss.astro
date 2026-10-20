@@ -3,7 +3,6 @@ import Base from '../layouts/Base.astro';
 import { SITE } from '../lib/site';
 
 const VVP = 'https://www.presse.no/vaer-varsom-plakaten';
-const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/redaktorplakaten';
 ---
 
 <Base title="Om oss">
@@ -11,66 +10,63 @@ const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/reda
     <h1>Om oss</h1>
     <div class="prose">
       <p>
-        {SITE.name} er en uavhengig nyhetsside som formidler de viktigste nyhetene fra
-        Norge og verden på en klar og lettfattelig måte.
+        {SITE.name} er en uavhengig og ikke-kommersiell nyhetsside som formidler de viktigste nyhetene på en klar og
+        lettfattelig måte. Det finnes ingen annonser, sponset innhold eller betalt samarbeid. Endrer dette seg, sier vi
+        tydelig fra til leserne.
       </p>
 
-      <h2>Redaksjonelt ansvar</h2>
+      <h2>Utgiver og redaktør</h2>
       {
         SITE.redaktor && (
           <p>
-            Journalist og ansvarlig redaktør (uten arbeidsgiveransvar) er{' '}
+            Utgiver og redaktør er{' '}
             <a href="/forfatter/senol-dak/"><strong>{SITE.redaktor}</strong></a>.
           </p>
         )
       }
       <p>
-        Vi arbeider etter <a href={VVP}>Vær Varsom-plakaten</a> og <a href={RP}>Redaktørplakaten</a>. Ansvarlig redaktør har
-        det fulle ansvaret for alt redaksjonelt innhold, også det som lages med hjelp av automatikk eller kunstig
-        intelligens.
+        Vi bruker <a href={VVP}>Vær Varsom-plakaten</a> som rettesnor. Nyhetssakene skrives automatisk med KI og
+        kontrolleres automatisk, og de leses ikke av et menneske før publisering. Sensitive temaer publiseres ikke
+        automatisk. Se <a href="/juridisk/">Juridisk informasjon og kolofon</a>.
       </p>
       <p>
         Våre fullstendige etiske retningslinjer, standarder for redaksjonell uavhengighet, The Trust Project-indikatorer,
         KI-deklarasjon og kildekredittering er samlet på siden for <a href="/redaksjonelle-prinsipper/"><strong>redaksjonelle prinsipper</strong></a>.
       </p>
 
-      <h2>Utgiver og finansiering</h2>
+      <h2>Finansiering</h2>
       <p>
-        Redaksjonen holder til i Norge.{' '}
         {SITE.utgiver && <>Utgiver er {SITE.utgiver}{SITE.orgnr && `, org.nr. ${SITE.orgnr}`}. </>}
-        {
-          SITE.ikkeKommersiell &&
-            `${SITE.name} er et ikke-kommersielt nettsted. Siden har ingen annonser, ingen betalte abonnementer, ingen sponsorer og ingen inntekter.`
-        }
+        {SITE.name} er en uavhengig og ikke-kommersiell publikasjon. Det finnes ingen annonser, sponset innhold eller
+        betalt samarbeid. Endrer dette seg, sier vi tydelig fra til leserne.
       </p>
 
       <h2 id="arbeidsmetode">Slik arbeider redaksjonen</h2>
       <p>
-        Redaksjonen i {SITE.name} kombinerer forklarende dybde- og datajournalistikk med løpende nyhetsdekning basert på
-        verifiserbare primærkilder:
+        {SITE.name} kombinerer forklarende saker og datasaker med løpende nyhetsdekning basert på offentlig tilgjengelig
+        informasjon:
       </p>
       <ul>
         <li>
-          <strong>Forklart og datajournalistikk:</strong> Dybdesakene under <a href="/forklart/">Forklart</a> er skrevet av
-          navngitt journalist i redaksjonen (<a href="/forfatter/senol-dak/">{SITE.redaktor}</a>) og bygger på egne sammenstillinger av offisiell
-          statistikk, offentlige utredninger, statsbudsjetter og forskningsrapporter fra blant annet Statistisk sentralbyrå (SSB),
-          Norges Bank, Folkehelseinstituttet (FHI), NVE og departementene, med egenproduserte tabeller og datagrafer.
+          <strong>Forklart og datajournalistikk:</strong> Dybdesakene under <a href="/forklart/">Forklart</a> utgis under navnet til
+          utgiver og redaktør <a href="/forfatter/senol-dak/">{SITE.redaktor}</a>. De bygger på offisiell statistikk, offentlige utredninger,
+          statsbudsjetter og forskningsrapporter fra blant annet Statistisk sentralbyrå (SSB), Norges Bank, Folkehelseinstituttet (FHI),
+          NVE og departementene. KI-verktøy er brukt til oversettelse og språkvask. Alle tall er hentet fra offisielle kilder og kontrollert.
         </li>
         <li>
-          <strong>Løpende nyhetssaker fra primærkilder:</strong> Nyhetssaker om politiske vedtak, økonomiske nøkkeltall og
-          myndighetsbeslutninger tar alltid utgangspunkt i primærkilden – som Stortinget, regjeringen, departementene,
-          statlige tilsyn og internasjonale organer (FN og Europakommisjonen). Påstander og vurderinger tilskrives tydelig
-          avsenderen, og vi skiller klart mellom fakta og synspunkter.
+          <strong>Løpende nyhetssaker fra offisielle kilder:</strong> Nyhetssaker om politiske vedtak, økonomiske nøkkeltall og
+          myndighetsbeslutninger bygger på offisielle kilder – som Stortinget, regjeringen, departementene,
+          statlige tilsyn og internasjonale organer (FN og Europakommisjonen). Påstander og vurderinger tilskrives
+          avsenderen, og vi etterstreber et tydelig skille mellom fakta og synspunkter.
         </li>
         <li>
-          <strong>Løpende hendelsesnyheter:</strong> Saker om aktuelle hendelser omtales når faktiske opplysninger er
-          bekreftet av flere uavhengige redaktørstyrte medier eller offentlige etater. Vi skriver ikke saker som bygger på
-          ett enkelt medies egne eksklusive avsløringer uten selvstendig kildegrunnlag.
+          <strong>Løpende hendelsesnyheter:</strong> Saker om aktuelle hendelser skrives automatisk på grunnlag av offentlig
+          tilgjengelig informasjon. Vi publiserer ikke saker som bygger på ett enkelt mediums eksklusive avsløringer.
         </li>
         <li>
           <strong>Datatjenester:</strong> Løpende oversikter over <a href="/styringsrenten/">styringsrenten</a> fra Norges Bank
-          og <a href="/farevarsler/">farevarsler</a> fra Meteorologisk institutt og NVE hentes fra etatenes åpne datagrensesnitt
-          og kvalitetssikres redaksjonelt.
+          og <a href="/farevarsler/">farevarsler</a> fra Meteorologisk institutt og NVE hentes automatisk fra etatenes åpne datagrensesnitt
+          og kontrolleres automatisk.
         </li>
       </ul>
 
@@ -85,8 +81,7 @@ const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/reda
       <p>
         Redaksjonen har bygget systemer som automatisk samler og sammenstiller informasjon fra åpne primærkilder. For
         redaksjonen kan utkast til artikler eller andre innholdselementer genereres løpende, og KI-verktøy brukes ofte
-        for å heve brukervennligheten av hver enkelt publisering. Det gjøres redaksjonelle vurderinger på hva og på
-        hvilken måte innhold skal videreutvikles.
+        for å heve brukervennligheten av hver enkelt publisering.
       </p>
       <p>
         Der kunstig intelligens er brukt utover dette, opplyser {SITE.name} om det som en del av god presseskikk ved å
@@ -94,8 +89,8 @@ const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/reda
         innholdet.
       </p>
       <p>
-        Det er alltid redaksjonen og ansvarlig redaktør som bestemmer og har ansvaret for hva som skal publiseres i{' '}
-        {SITE.name}, uavhengig av om kunstig intelligens har vært benyttet i prosessen.
+        Nyhetssaker publiseres automatisk. Utgiver og redaktør {SITE.redaktor} bestemmer retningslinjene for hva som kan
+        publiseres automatisk. Sensitive temaer publiseres ikke automatisk.
       </p>
 
       <h3>Våre fem hovedregler for bruk av KI</h3>
@@ -107,48 +102,48 @@ const RP = 'https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/reda
         <li>
           <strong>Første hovedregel:</strong> Redaksjonen skal forholde seg til bruk av tekst, data, bilder, lyd og
           annet innhold skapt ved hjelp av generativ KI på samme måte som andre kilder til informasjon – med åpen
-          nysgjerrighet og med kildekritisk varsomhet (VVP 3.2). En språkmodell er et verktøy, aldri en kilde i seg selv.
+          nysgjerrighet og med kildekritisk varsomhet. En språkmodell er et verktøy, aldri en kilde i seg selv.
         </li>
         <li>
-          <strong>Andre hovedregel:</strong> Bruk av generativ KI kvalitetssikres og godkjennes før publisering. Unntak
-          merkes tydelig.
+          <strong>Andre hovedregel:</strong> Automatisk kontroll: Saker skrives automatisk og kontrolleres automatisk før
+          publisering. Hvis kontrollen svikter eller er usikker, publiseres ikke saken.
         </li>
         <li>
           <strong>Tredje hovedregel:</strong> {SITE.name} bruker aldri KI til å generere fotorealistiske bilder. Bruk av
-          KI-generert innhold må aldri rokke ved det journalistiske fotografiets troverdighet (VVP 4.11). Vi kan derimot
+          KI-generert innhold må aldri rokke ved det journalistiske fotografiets troverdighet. Vi kan derimot
           bruke digitale verktøy og KI til å generere redaksjonelle illustrasjoner, grafikk og datamodeller; dette merkes
-          alltid tydelig som illustrasjon og godkjennes av redaktør.
+          alltid tydelig som illustrasjon.
         </li>
         <li>
           <strong>Fjerde hovedregel:</strong> {SITE.name} skal på en tydelig og forståelig måte informere om hvordan
           kunstig intelligens inngår i det journalistiske arbeidet.
         </li>
         <li>
-          <strong>Femte hovedregel:</strong> Redaksjonen sikrer at sensitive eller personlige opplysninger, og materiale
-          som er underlagt kildevern (VVP 3.4 og 3.5), ikke deles med eksterne KI-tjenester.
+          <strong>Femte hovedregel:</strong> Kildetekstene sendes til en KI-tjeneste (Google Gemini) for at
+          nyhetssakene skal kunne skrives. Vi bruker bare offentlig tilgjengelig kildemateriale og deler ikke upublisert
+          eller sensitivt materiale med KI-tjenester.
         </li>
       </ul>
 
-      <h3>KI-verktøy redaksjonen per nå benytter</h3>
+      <h3>KI-verktøy vi benytter</h3>
       <ul>
-        <li>Google Gemini (Google)</li>
-        <li>Claude (Anthropic)</li>
-        <li>ChatGPT (OpenAI)</li>
+        <li>Google Gemini (Google): skriving av nyhetssaker</li>
+        <li>Claude (Anthropic): oversettelse og språkvask i saker under utgiverens navn</li>
       </ul>
 
       <h2>Kilder og åpne data</h2>
       <p>
-        Vi oppgir alltid primærkilden og lenker til originaldokumentet når en sak bygger på offentlige rapporter, statistikk
-        eller vedtak. Data fra Norges Bank, SSB, NVE og Stortinget benyttes under Norsk lisens for offentlige data (NLOD),
+        Når en sak bygger på en offisiell kilde, lenker vi til kilden under saken. Vi er i ferd med å innføre dette på alle slike saker. Data fra Norges Bank, SSB, NVE og Stortinget benyttes under Norsk lisens for offentlige data (NLOD),
         og meteorologiske data fra Meteorologisk institutt under CC BY 4.0.
       </p>
 
       <h2 id="rettelser">Rettelser og klager</h2>
       <p>
-        Feil skal rettes så raskt som mulig. Rettelser markeres tydelig øverst i saken. Har du funnet en feil, eller mener
+        Feil skal rettes så raskt som mulig. Rettelser føres som note under saken og på siden <a href="/rettelser/">Rettelser</a>. Har du funnet en feil, eller mener
         du at vi har brutt god presseskikk?
         {SITE.epost ? <>Skriv til oss på <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a>.</> : 'Ta kontakt med redaksjonen.'}
         {' '}Les mer om vår fremgangsmåte og klagebehandling under <a href="/redaksjonelle-prinsipper/#rettelser">redaksjonelle prinsipper for rettelser</a>.
+        Se også <a href="/rettelsespolitikk/">Rettelsespolitikk</a> og <a href="/juridisk/">Juridisk informasjon og kolofon</a>.
       </p>
     </div>
   </article>
