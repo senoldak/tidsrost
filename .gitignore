@@ -40,3 +40,10 @@ scripts/nyheter/kilder/hemmelige-kilder.json
 
 # Facebook/Instagram görselleri yayında üretilir (scripts/sosial/bilder.mjs)
 public/sosial/
+
+# strateji ve kimlik belgeleri yalnız yerelde durur (repo herkese açık)
+docs/superpowers/
+PRODUCT.md
+DESIGN.md
+BRAND.md
+AGENTS.md
