@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-21T08:10:48.571Z",
+  "hentet": "2026-10-21T10:02:30.415Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-21T08:10:18+00:00",
+  "sistEndretHosMet": "2026-10-21T10:01:15+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.20261021074144.093",
@@ -21,45 +21,6 @@
       "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
       "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.261020220000.7010_1_0",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Fladen",
-      "domene": "hav",
-      "start": "2026-10-20T22:00:00+00:00",
-      "slutt": "2026-10-22T10:00:00+00:00",
-      "beskrivelse": "Sørøst sterk kuling 20 m/s fra 20 oktober 22:00 UTC til 21 oktober 01:00 UTC og nordvest sterk kuling 20 m/s fra 22 oktober 06:00 UTC til 10:00 UTC.",
-      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.261020220000.7011_1_0",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Utsira Sør",
-      "domene": "hav",
-      "start": "2026-10-20T22:00:00+00:00",
-      "slutt": "2026-10-21T17:00:00+00:00",
-      "beskrivelse": "Østlig sterk kuling 20 m/s.",
-      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.261020220000.7008_1_0",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Viking",
-      "domene": "hav",
-      "start": "2026-10-20T22:00:00+00:00",
-      "slutt": "2026-10-21T23:00:00+00:00",
-      "beskrivelse": "Sørøst sterk kuling 20 m/s.",
-      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
     },
     {
       "id": "2.49.0.1.578.0.20261021075253.058",
@@ -114,14 +75,40 @@
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
-      "id": "2.49.0.1.578.0.261020220000.7009_1_0",
+      "id": "2.49.0.1.578.0.261021100000.7010_1_0",
+      "niva": "gult",
+      "hendelse": "Storm",
+      "omrade": "Fladen",
+      "domene": "hav",
+      "start": "2026-10-21T13:00:00+00:00",
+      "slutt": "2026-10-22T16:00:00+00:00",
+      "beskrivelse": "Sørøst periodevis sterk kuling 20 m/s fra 21 oktober 13:00 UTC til 14:00 UTC og vestlig liten storm 22 m/s fra 22 oktober 05:00 UTC til 16:00 UTC.",
+      "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.261021100000.7008_1_0",
+      "niva": "gult",
+      "hendelse": "Storm",
+      "omrade": "Viking",
+      "domene": "hav",
+      "start": "2026-10-21T14:00:00+00:00",
+      "slutt": "2026-10-22T22:00:00+00:00",
+      "beskrivelse": "Sørøst periodevis sterk kuling 20 m/s fra 21 oktober 14:00 UTC til 21:00 UTC og skiftende liten storm 22 m/s fra 22 oktober 11:00 UTC til 22:00 UTC.",
+      "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.261021100000.7011_1_0",
       "niva": "gult",
       "hendelse": "Kuling",
-      "omrade": "Utsira Nord",
+      "omrade": "Utsira Sør",
       "domene": "hav",
       "start": "2026-10-21T15:00:00+00:00",
-      "slutt": "2026-10-21T19:00:00+00:00",
-      "beskrivelse": "Sørøst sterk kuling 20 m/s.",
+      "slutt": "2026-10-22T16:00:00+00:00",
+      "beskrivelse": "Sørøst sterk kuling 20 m/s fra 21 oktober 15:00 UTC til 17:00 UTC og sørvest sterk kuling 20 m/s fra 22 oktober 10:00 UTC til 16:00 UTC.",
       "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
@@ -140,6 +127,19 @@
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
+      "id": "2.49.0.1.578.0.261021100000.7009_1_0",
+      "niva": "gult",
+      "hendelse": "Storm",
+      "omrade": "Utsira Nord",
+      "domene": "hav",
+      "start": "2026-10-21T16:00:00+00:00",
+      "slutt": "2026-10-22T22:00:00+00:00",
+      "beskrivelse": "Sørøst sterk kuling 20 m/s fra 21 oktober 16:00 UTC til 18:00 UTC og sørlig liten storm 22 m/s fra 22 oktober 11:00 UTC til 22:00 UTC.",
+      "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": null
+    },
+    {
       "id": "2.49.0.1.578.0.20261021065920.049",
       "niva": "gult",
       "hendelse": "Kuling",
@@ -153,15 +153,119 @@
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
-      "id": "2.49.0.1.578.0.261020220000.7012_1_0",
+      "id": "2.49.0.1.578.0.261021100000.52077_1_0",
       "niva": "gult",
       "hendelse": "Kuling",
-      "omrade": "Fisker",
+      "omrade": "BnS",
       "domene": "hav",
-      "start": "2026-10-22T08:00:00+00:00",
-      "slutt": "2026-10-22T10:00:00+00:00",
-      "beskrivelse": "Vestlig sterk kuling 20 m/s.",
+      "start": "2026-10-22T07:00:00+00:00",
+      "slutt": "2026-10-22T17:00:00+00:00",
+      "beskrivelse": "Vestlig periodevis sterk kuling 20 m/s fra 22 oktober 07:00 UTC til 14:00 UTC, nordvest periodevis sterk kuling 20 m/s fra 22 oktober 14:00 UTC til 17:00 UTC.",
       "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.261021100000.0835_1_0",
+      "niva": "gult",
+      "hendelse": "Storm",
+      "omrade": "A4",
+      "domene": "hav",
+      "start": "2026-10-22T14:00:00+00:00",
+      "slutt": "2026-10-22T17:00:00+00:00",
+      "beskrivelse": "Nordvest liten storm 22 m/s.",
+      "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.261021100000.0836_1_0",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "A5",
+      "domene": "hav",
+      "start": "2026-10-22T15:00:00+00:00",
+      "slutt": "2026-10-22T18:00:00+00:00",
+      "beskrivelse": "Nordvest sterk kuling 20 m/s.",
+      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.261021100000.7007_1_0",
+      "niva": "gult",
+      "hendelse": "Storm",
+      "omrade": "Aust-Tampen",
+      "domene": "hav",
+      "start": "2026-10-22T16:00:00+00:00",
+      "slutt": "2026-10-22T22:00:00+00:00",
+      "beskrivelse": "Sørlig liten storm 22 m/s.",
+      "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.261021100000.7004_1_0",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "Haltenbanken",
+      "domene": "hav",
+      "start": "2026-10-22T19:00:00+00:00",
+      "slutt": "2026-10-22T22:00:00+00:00",
+      "beskrivelse": "Sørøst periodevis sterk kuling 20 m/s",
+      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.261021100000.0839_1_0",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "B2",
+      "domene": "hav",
+      "start": "2026-10-22T20:00:00+00:00",
+      "slutt": "2026-10-22T22:00:00+00:00",
+      "beskrivelse": "Nordøst sterk kuling 20 m/s.",
+      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.261021100000.0861_1_0",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "F3",
+      "domene": "hav",
+      "start": "2026-10-22T20:00:00+00:00",
+      "slutt": "2026-10-22T22:00:00+00:00",
+      "beskrivelse": "Sørøst periodevis sterk kuling 20 m/s",
+      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.261021100000.7063_1_0",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "Sklinnabanken",
+      "domene": "hav",
+      "start": "2026-10-22T20:00:00+00:00",
+      "slutt": "2026-10-22T22:00:00+00:00",
+      "beskrivelse": "Sørøst periodevis sterk kuling 20 m/s",
+      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.261021100000.7006_1_0",
+      "niva": "gult",
+      "hendelse": "Storm",
+      "omrade": "Storegga",
+      "domene": "hav",
+      "start": "2026-10-22T20:00:00+00:00",
+      "slutt": "2026-10-22T22:00:00+00:00",
+      "beskrivelse": "Sørlig liten storm 22 m/s.",
+      "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
     }
