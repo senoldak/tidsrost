@@ -2,6 +2,8 @@
 date: 2026-10-29T08:00:00+01:00
 sjanger: forklart
 author: "Şenol Dak"
+cover: ./cover.png
+coverAlt: "Antall konkurser falt med 14,1 prosent fra 3. kvartal 2025 til 3. kvartal 2026, og antall berørte ansatte gikk ned med 20,1 prosent"
 produksjon: ki-redigert
 title: "Antall konkurser falt med 14,1 prosent fra 3. kvartal 2025 til 3. kvartal 2026, og antall berørte ansatte gikk ned med 20,1 prosent"
 description: "Bygg og anlegg, varehandel samt overnatting og servering sto for 48,3 prosent av konkursene i 3. kvartal 2026, men 65,1 prosent av de berørte ansatte."
