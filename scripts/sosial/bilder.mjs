@@ -1,16 +1,27 @@
 // Yayın derlemesinden önce (yayinla.yml) paylaşılacak haberlerin post (1080×1350) ve story (1080×1920) görsellerini
 // public/sosial/ altına Fjord diliyle çizer. Dosyalar repoya girmez (.gitignore); yalnız son pencere çizildiği için
 // dosya sayısı küçük kalır. Meta görselleri tidsrost.com/sosial/… adresinden çeker.
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile, appendFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fjordKart } from '../nyheter/fjord.mjs';
 import { kapakCiz } from '../nyheter/bilde.mjs';
 import { DIZIN, PENCERE_MS, sakerOku, paylasilir, bildeFil } from './saker.mjs';
 
 const CIKIS = 'public/sosial';
+const DURUM = 'scripts/sosial/delt.json';
+const KANALLAR = ['ig_post', 'ig_story', 'fb_post', 'fb_story'];
 // Biraz geniş pencere: derleme ile paylaşım arasında birkaç saat geçebilir.
 const simdi = Date.now();
-const saker = (await sakerOku()).filter((s) => paylasilir(s, simdi, PENCERE_MS + 6 * 3600e3));
+const tumu = await sakerOku();
+const saker = tumu.filter((s) => paylasilir(s, simdi, PENCERE_MS + 6 * 3600e3));
+
+// Yayınla'ya "paylaşılacak haber var mı" bilgisi: del.mjs'in penceresinde (24 saat) olup delt.json'da hiç olmayan ya da
+// bir kanalı eksik kalan haber sayısı. Sıfırsa sosial.yml başlatılmaz (boş koşu 1 dk sayılıyordu). Kaba sayım: kalıcı
+// olarak düşmüş kanal da "eksik" görünür; o zaman del.mjs fazladan bir kez boş çalışır, zararı yok.
+let delt = {};
+try { delt = JSON.parse(await readFile(DURUM, 'utf8')) ?? {}; } catch {}
+const paylasilacak = tumu.filter((s) => paylasilir(s, simdi)).filter((s) => !delt[s.id] || (!delt[s.id].atlandi && KANALLAR.some((c) => !delt[s.id][c]))).length;
+if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `paylasilacak=${paylasilacak}\n`);
 
 await mkdir(CIKIS, { recursive: true });
 let n = 0;
@@ -26,4 +37,4 @@ for (const s of saker) {
     console.error(`${s.id}: sosyal görsel çizilemedi: ${e.message}`);
   }
 }
-console.log(`sosial: ${n} haber için post + story görseli (${CIKIS})`);
+console.log(`sosial: ${n} haber için post + story görseli (${CIKIS}); paylaşılacak ${paylasilacak} haber`);

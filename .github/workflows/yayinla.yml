@@ -45,8 +45,9 @@ jobs:
         run: npm ci --no-audit --no-fund
 
       # Facebook/Instagram post ve story görselleri (Fjord): son haberler için public/sosial/ altına (scripts/sosial).
-      # Hata yayını durdurmaz; görseli olmayan haber paylaşılmaz.
+      # Hata yayını durdurmaz; görseli olmayan haber paylaşılmaz. Çıktı paylasilacak=N: henüz paylaşılmamış haber sayısı.
       - name: Sosyal medya görselleri
+        id: bilder
         continue-on-error: true
         run: node scripts/sosial/bilder.mjs
 
@@ -73,7 +74,10 @@ jobs:
 
       # Facebook/Instagram paylaşımı. sosial.yml'yi "workflow_run" ile tetiklemek işe yaramıyor: GitHub, botun
       # (GITHUB_TOKEN) başlattığı yayınlar bitince workflow_run olayı üretmiyor. workflow_dispatch ise serbest.
+      # Paylaşılacak haber yoksa (kod değişikliği, veri sayfası yayını) başlatılmaz: her boş koşu 1 dk sayılıyordu.
+      # Görsel adımı düşerse çıktı boş kalır ve yine başlatılır (güvenli taraf).
       - name: Sosyal medya paylaşımını başlat
+        if: steps.bilder.outputs.paylasilacak != '0'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
