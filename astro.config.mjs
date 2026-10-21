@@ -24,9 +24,15 @@ const kullanilmayanGorseller = () => ({
       const dosyalar = await readdir(kok, { recursive: true });
       const gorsel = /\.(png|jpe?g|webp|avif|gif)$/i;
       const adaylar = dosyalar.filter((f) => f.startsWith(`_astro${path.sep}`) && gorsel.test(f));
-      let metin = '';
-      for (const f of dosyalar) if (/\.(html|xml|css|js|json|txt)$/i.test(f)) metin += await readFile(path.join(kok, f), 'utf8');
-      const silinecek = adaylar.filter((f) => !metin.includes(path.basename(f)));
+      // Çıktı dosyalarında geçen görsel adları tek geçişte toplanır (O(N)); eskiden bütün metin tek dizede birleştirilip
+      // her aday için includes() çalıştırılıyordu (O(N²): 2.000 haberde 30–40 sn, 5.000'de dakikalar).
+      const kullanilan = new Set();
+      const ad = /[\w.-]+\.(?:png|jpe?g|webp|avif|gif)\b/gi;
+      for (const f of dosyalar) {
+        if (!/\.(html|xml|css|js|json|txt)$/i.test(f)) continue;
+        for (const m of (await readFile(path.join(kok, f), 'utf8')).matchAll(ad)) kullanilan.add(m[0].toLowerCase());
+      }
+      const silinecek = adaylar.filter((f) => !kullanilan.has(path.basename(f).toLowerCase()));
       for (const f of silinecek) await rm(path.join(kok, f));
       logger.info(`${silinecek.length} kullanılmayan görsel silindi.`);
     },
