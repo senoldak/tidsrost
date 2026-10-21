@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-21T16:10:58.786Z",
+  "hentet": "2026-10-21T18:04:16.801Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-21T16:10:00+00:00",
+  "sistEndretHosMet": "2026-10-21T18:04:02+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.20261021074144.093",
@@ -127,14 +127,14 @@
       "web": null
     },
     {
-      "id": "2.49.0.1.578.0.20261021065920.049",
+      "id": "2.49.0.1.578.0.20261021171232.062",
       "niva": "gult",
       "hendelse": "Kuling",
       "omrade": "Støtt - Lødingen",
       "domene": "hav",
       "start": "2026-10-21T17:00:00+00:00",
       "slutt": "2026-10-22T04:00:00+00:00",
-      "beskrivelse": "Fra i kveld, onsdag sørøst periodevis liten kuling 15 m/s. Torsdag morgen minkende.",
+      "beskrivelse": "Fra i kveld, onsdag sørøst periodevis stiv kuling 15 m/s. Torsdag morgen minkende.",
       "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
       "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
