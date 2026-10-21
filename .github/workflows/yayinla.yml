@@ -44,6 +44,15 @@ jobs:
       - name: Bağımlılıkları kur
         run: npm ci --no-audit --no-fund
 
+      # Astro görsel önbelleği (node_modules/.astro): kapakların JPEG/WebP türevleri her derlemede sıfırdan kodlanıyordu
+      # (~660 dönüşüm, 30–60 sn; haber sayısıyla artar). npm ci node_modules'ı sildiği için adım ondan sonra gelir.
+      - name: Astro görsel önbelleği
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: node_modules/.astro
+          key: astro-gorsel-${{ hashFiles('package-lock.json') }}-${{ github.run_id }}
+          restore-keys: astro-gorsel-${{ hashFiles('package-lock.json') }}-
+
       # Facebook/Instagram post ve story görselleri (Fjord): son haberler için public/sosial/ altına (scripts/sosial).
       # Hata yayını durdurmaz; görseli olmayan haber paylaşılmaz. Çıktı paylasilacak=N: henüz paylaşılmamış haber sayısı.
       - name: Sosyal medya görselleri
