@@ -109,6 +109,7 @@ const stoppListe = [];
 const kortListe = [];
 const ventListe = [];
 const standartElendi = [];
+let geminiKesintisi = 0; // arka arkaya "çok fazla deneme" ile düşen aday sayısı (A6)
 for (const k of valgt) {
   // Ön denetim (Gemini çağrısından önce): kaynağın kendi başlığı yayınlanmış bir haberle aynı olayı anlatıyor mu?
   // Şablonlu veri kaynaklarında kaynak başlığı yayınlanan başlıktan farklıdır; onlar yazıldıktan sonra denetlenir.
@@ -199,6 +200,7 @@ for (const k of valgt) {
     merkSett(k);
     delete tilstand.feil[k.id];
     antall++;
+    geminiKesintisi = 0;
     console.log(`  + ${slug}${sak.draft ? ' (utkast)' : ''}`);
     if (sak.stopp?.length) stoppListe.push(`${sak.title} — ${rens(k, sak.stopp.join(' / '))}`);
     else if (sak.draft) utkastListe.push(`${sak.title}${sak.merknader?.length ? ` — ${rens(k, sak.merknader.join(' / '))}` : ''}`);
@@ -216,6 +218,14 @@ for (const k of valgt) {
       merkSett(k);
       delete tilstand.feil[k.id];
     }
+    // Google tümüyle kapalıyken her aday 2 deneme × 45 sn bekleyip düşüyordu ve tur bütçeye kadar boşa sürüyordu
+    // (ücretsiz plan denetimi A6): arka arkaya ikinci kesintide tur erken biter, kalan adaylar sonraki tura kalır.
+    if (/çok fazla deneme/.test(e.message)) {
+      if (++geminiKesintisi >= 2) {
+        console.log('\nGemini svarer ikke; resten av sakene spares til neste kjøring.');
+        break;
+      }
+    } else geminiKesintisi = 0;
   }
 }
 
