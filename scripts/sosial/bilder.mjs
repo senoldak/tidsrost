@@ -13,14 +13,18 @@ const KANALLAR = ['ig_post', 'ig_story', 'fb_post', 'fb_story'];
 // Biraz geniş pencere: derleme ile paylaşım arasında birkaç saat geçebilir.
 const simdi = Date.now();
 const tumu = await sakerOku();
-const saker = tumu.filter((s) => paylasilir(s, simdi, PENCERE_MS + 6 * 3600e3));
-
-// Yayınla'ya "paylaşılacak haber var mı" bilgisi: del.mjs'in penceresinde (24 saat) olup delt.json'da hiç olmayan ya da
-// bir kanalı eksik kalan haber sayısı. Sıfırsa sosial.yml başlatılmaz (boş koşu 1 dk sayılıyordu). Kaba sayım: kalıcı
-// olarak düşmüş kanal da "eksik" görünür; o zaman del.mjs fazladan bir kez boş çalışır, zararı yok.
 let delt = {};
 try { delt = JSON.parse(await readFile(DURUM, 'utf8')) ?? {}; } catch {}
-const paylasilacak = tumu.filter((s) => paylasilir(s, simdi)).filter((s) => !delt[s.id] || (!delt[s.id].atlandi && KANALLAR.some((c) => !delt[s.id][c]))).length;
+// Paylaşımı bitmemiş haber: delt.json'da hiç yok ya da bir kanalı eksik. Kaba ölçü: kalıcı olarak düşmüş kanal da
+// "eksik" görünür; o zaman görsel fazladan çizilir ve del.mjs bir kez boş çalışır, zararı yok.
+const eksikVar = (s) => !delt[s.id] || (!delt[s.id].atlandi && KANALLAR.some((c) => !delt[s.id][c]));
+// Yalnız paylaşımı bitmemiş haberlerin görseli çizilir (C4): her yayında penceredeki 20–45 haberin hepsi yeniden
+// çiziliyordu, oysa paylaşılmış haberin görseline Meta bir daha bakmaz.
+const saker = tumu.filter((s) => paylasilir(s, simdi, PENCERE_MS + 6 * 3600e3)).filter(eksikVar);
+
+// Yayınla'ya "paylaşılacak haber var mı" bilgisi: del.mjs'in penceresinde (24 saat) paylaşımı bitmemiş haber sayısı.
+// Sıfırsa sosial.yml başlatılmaz (boş koşu 1 dk sayılıyordu).
+const paylasilacak = tumu.filter((s) => paylasilir(s, simdi)).filter(eksikVar).length;
 if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `paylasilacak=${paylasilacak}\n`);
 
 await mkdir(CIKIS, { recursive: true });
