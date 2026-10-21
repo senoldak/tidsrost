@@ -3076,7 +3076,33 @@
     "medier:aa6c961ba421dd86": "2026-10-21T18:03:58.006Z",
     "medier:5e3e790ee26f6a3f": "2026-10-21T18:04:15.686Z",
     "medier:896af31da629c502": "2026-10-21T18:04:15.686Z",
-    "medier:08e758589a75551b": "2026-10-21T18:04:15.686Z"
+    "medier:08e758589a75551b": "2026-10-21T18:04:15.686Z",
+    "medier:817e197339cfed0a": "2026-10-21T20:02:55.826Z",
+    "medier:51a9e310f652ab09": "2026-10-21T20:02:55.826Z",
+    "idrettsforbundet:https://www.idrettsforbundet.no/nyheter/2026/statsbudsjettet-2027-innspill-til-helse--og-omsorgskomiteen-pa-stortinget/": "2026-10-21T20:02:55.826Z",
+    "unnews:https://news.un.org/en/story/2026/10/1168645": "2026-10-21T20:02:55.826Z",
+    "unnews:https://news.un.org/en/story/2026/10/1168644": "2026-10-21T20:02:55.826Z",
+    "medier:3d20df7edebf8921": "2026-10-21T20:02:55.826Z",
+    "medier:050ea9aaf487ce8e": "2026-10-21T20:02:55.826Z",
+    "medier:0410d50316fc72aa": "2026-10-21T20:02:55.826Z",
+    "medier:669e93bf60cb70cd": "2026-10-21T20:02:55.826Z",
+    "medier:91151346ffa9d862": "2026-10-21T20:02:55.826Z",
+    "medier:16119f9e8aea8df0": "2026-10-21T20:02:55.826Z",
+    "medier:025301b12a4b2564": "2026-10-21T20:02:55.826Z",
+    "medier:5dc76fabff980bdf": "2026-10-21T20:02:55.826Z",
+    "medier:6b41166553af8edf": "2026-10-21T20:02:55.826Z",
+    "medier:90bdaec0997286f1": "2026-10-21T20:02:55.826Z",
+    "medier:1990fde7b9af224c": "2026-10-21T20:02:55.826Z",
+    "medier:6086fe903da161d2": "2026-10-21T20:02:55.826Z",
+    "medier:4eca007f57e8859f": "2026-10-21T20:02:55.826Z",
+    "medier:d68ac02d61d18107": "2026-10-21T20:02:55.826Z",
+    "medier:38d089c9a0ff8028": "2026-10-21T20:02:55.826Z",
+    "medier:86577218513cea46": "2026-10-21T20:03:15.340Z",
+    "medier:3d1b0fb76fcbebc2": "2026-10-21T20:03:15.340Z",
+    "medier:364f112b8a4e94bb": "2026-10-21T20:03:15.340Z",
+    "medier:c940588b9be38818": "2026-10-21T20:03:16.584Z",
+    "medier:9678dddc1d339c2e": "2026-10-21T20:03:16.584Z",
+    "medier:9152404ce2d4bfcb": "2026-10-21T20:03:16.584Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -3124,21 +3150,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:eec831c2f372e7c2": {
-      "p": 92,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-18T20:02:07.243Z"
-    },
-    "medier:f936aaa25c6760ee": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-18T20:02:07.243Z"
-    },
-    "medier:7e5f0b14edafce59": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-18T20:02:07.243Z"
-    },
     "medier:226fca0b6172dbb1": {
       "p": 85,
       "v": "b34cb0de5bde",
@@ -5008,6 +5019,61 @@
       "p": 55,
       "v": "b34cb0de5bde",
       "t": "2026-10-21T18:02:00.613Z"
+    },
+    "medier:817e197339cfed0a": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-21T20:02:54.729Z"
+    },
+    "medier:fe645d07aa015235": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-21T20:02:54.729Z"
+    },
+    "medier:c940588b9be38818": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-21T20:02:54.729Z"
+    },
+    "medier:3d20df7edebf8921": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-21T20:02:54.729Z"
+    },
+    "medier:16119f9e8aea8df0": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-21T20:02:54.729Z"
+    },
+    "medier:1990fde7b9af224c": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-21T20:02:54.729Z"
+    },
+    "medier:86577218513cea46": {
+      "p": 88,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-21T20:02:54.729Z"
+    },
+    "medier:d68ac02d61d18107": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-21T20:02:54.729Z"
+    },
+    "idrettsforbundet:https://www.idrettsforbundet.no/nyheter/2026/statsbudsjettet-2027-innspill-til-helse--og-omsorgskomiteen-pa-stortinget/": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-21T20:02:54.729Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/10/1168645": {
+      "p": 62,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-21T20:02:54.729Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/10/1168644": {
+      "p": 58,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-21T20:02:54.729Z"
     }
   }
 }
