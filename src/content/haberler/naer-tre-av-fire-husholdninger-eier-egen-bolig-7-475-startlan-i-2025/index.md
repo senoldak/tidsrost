@@ -15,17 +15,27 @@ key_points:
   - "Antall utbetalte startlån gikk ned fra 8 027 i 2024 til 7 475 i 2025."
 ---
 
-Ifølge SSBs boforholdsstatistikk eide 72,7 prosent av norske husholdninger boligen sin i 2025: 59,2 prosent som selveiere og 13,5 prosent som andels- eller aksjeeiere, for eksempel i borettslag. De øvrige 27,3 prosent leide.
+72,7 prosent av norske husholdninger eide boligen sin i 2025, viser boforholdsstatistikken fra Statistisk sentralbyrå (SSB): 59,2 prosent som selveiere og 13,5 prosent som andels- eller aksjeeiere, for eksempel i borettslag. De øvrige 27,3 prosent leide. Andelen leiere var høyest i Oslo med 33,8 prosent og lavest i Akershus med 24,1 prosent.
 
-Husbanken er statens virkemiddel på boligområdet. Husbanken gir blant annet lån og tilskudd, og forvalter bostøtten.
+![Andelsdiagram over Nær tre av fire eier boligen de bor i: Andel: Selveiere: 59,2 %, Andels- eller aksjeeiere: 13,5 %, Leiere: 27,3 %.](./graf-1.svg)
+*Husholdninger i Norge etter eierstatus, 2025. Kilde: SSB, tabell 14891.*
+
+## Fylkene
+
+Etter Oslo hadde Finnmark (31,4 prosent), Troms (30,3 prosent) og Trøndelag (29,0 prosent) den høyeste andelen husholdninger som leier. Lavest var andelen i Akershus (24,1 prosent), Rogaland (24,4 prosent) og Telemark (24,5 prosent).
+
+![Stolpediagram over Flest leier i Oslo: Leiere: Hele landet: 27,3 %, Rogaland: 24,4 %, Møre og Romsdal: 25,1 %, Nordland: 26,3 %, Østfold: 26,1 %, Akershus: 24,1 %, Buskerud: 27,1 %, Innlandet: 26,7 %, Vestfold: 25,8 %, Telemark: 24,5 %, Agder: 25,4 %, Vestland: 27,5 %, Trøndelag: 29,0 %, Troms: 30,3 %, Finnmark: 31,4 %, Oslo: 33,8 %.](./graf-2.svg)
+*Andel husholdninger som leier boligen, etter fylke, 2025. Den stiplede linjen viser hele landet. Kilde: SSB, tabell 14891.*
+
+## Hele landet over tid
+
+Fordelingen har vært stabil i ti år. I 2015 var 58,8 prosent av husholdningene selveiere, 13,5 prosent andels- eller aksjeeiere og 27,7 prosent leiere.
 
 ## Startlån
 
-Husbankens største enkeltvirkemiddel er startlånet, som kommunene formidler. Ifølge Husbanken er startlån en låneordning for innbyggere som ikke får lån til boligkjøp i private banker. I 2025 utbetalte kommunene 7 475 startlån på til sammen 16 165 millioner kroner, mot 8 027 lån og 17 048 millioner kroner i 2024. Ifølge Husbankens årsrapport var 61 prosent av husstandene som fikk startlån, barnefamilier.
+Husbanken er statens virkemiddel på boligområdet. Husbanken gir blant annet lån og tilskudd, og forvalter bostøtten. Husbankens største enkeltvirkemiddel er startlånet, som kommunene formidler. Ifølge Husbanken er startlån en låneordning for innbyggere som ikke får lån til boligkjøp i private banker.
 
-## Eierformer og Husbankens ordninger
-
-Tabellen viser noen av Husbankens ordninger:
+I 2025 utbetalte kommunene 7 475 startlån på til sammen 16 165 millioner kroner, mot 8 027 lån og 17 048 millioner kroner i 2024. Ifølge Husbankens årsrapport var 61 prosent av husstandene som fikk startlån, barnefamilier.
 
 | Virkemiddel i Husbanken | Målgruppe | Hovedformål |
 |---|---|---|
@@ -36,8 +46,9 @@ Tabellen viser noen av Husbankens ordninger:
 
 *Kilde: Husbanken.*
 
-![Liggende stolpediagram over husholdninger i Norge etter eierstatus i 2025: selveiere 59,2 prosent, andels- eller aksjeeiere 13,5 prosent og leietakere 27,3 prosent.](./graf-2.svg)
-*Fordeling av husholdninger i Norge etter eierstatus, 2025. Kilde: SSB, tabell 14891.*
+## Hva tallene ikke viser
+
+Statistikken viser hvem som eier eller leier boligen de bor i, ikke hvor store boliglån eierne har eller hva leien koster.
 
 ## Kilder
 
