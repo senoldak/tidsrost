@@ -14,7 +14,7 @@ export const SITE = {
     // Haberler sosyal.yml ile FB/IG'ye post+story olarak gider (scripts/sosial/).
     facebook: 'https://www.facebook.com/tidsrost',
     instagram: 'https://www.instagram.com/tidsrost/',
-    linkedin: 'https://www.linkedin.com/in/tidsrost/',
+    linkedin: 'https://www.linkedin.com/company/146751554/',
     // Haberlerin gönderildiği Telegram kanalı (mecmua-saat/worker.js, hedefler: '@tidsrost').
     telegram: 'https://t.me/tidsrost',
   },
