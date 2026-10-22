@@ -3211,7 +3211,24 @@
     "medier:a614b386b933b5d5": "2026-10-22T07:55:12.435Z",
     "medier:02bfa28de83170ae": "2026-10-22T07:55:12.435Z",
     "medier:dbca109ff6b81c29": "2026-10-22T07:55:12.435Z",
-    "medier:87809decd3551b8b": "2026-10-22T07:55:12.435Z"
+    "medier:87809decd3551b8b": "2026-10-22T07:55:12.435Z",
+    "medier:e765ad2a9980c928": "2026-10-22T08:01:05.933Z",
+    "medier:f7efdfa8c9f62c77": "2026-10-22T08:01:05.933Z",
+    "medier:95676c6021b96ba0": "2026-10-22T08:01:05.933Z",
+    "medier:e06b82903f6d38e4": "2026-10-22T08:01:05.933Z",
+    "medier:f2e98db8f0351c92": "2026-10-22T08:01:05.933Z",
+    "havforskning:https://www.hi.no/hi/nyheter/2026/oktober/fann-store-mengder-kveis-i-brosme": "2026-10-22T08:01:05.933Z",
+    "medier:8208786219812a01": "2026-10-22T08:01:05.933Z",
+    "medier:295377e53f5dd1ec": "2026-10-22T08:01:05.933Z",
+    "medier:75e1fe93d833412b": "2026-10-22T08:01:05.933Z",
+    "medier:4c1ea32209413313": "2026-10-22T08:01:05.933Z",
+    "medier:cf4799072b52244f": "2026-10-22T08:01:05.933Z",
+    "medier:314939bbfcfcc0af": "2026-10-22T08:01:05.933Z",
+    "medier:01d33d240396a0dd": "2026-10-22T08:01:05.933Z",
+    "medier:80af435e66c2af96": "2026-10-22T08:01:05.933Z",
+    "medier:87640fd57ab770f5": "2026-10-22T08:01:05.933Z",
+    "medier:0b7ef2bcf971b922": "2026-10-22T08:01:05.933Z",
+    "medier:e47b60d4e4642c8f": "2026-10-22T08:01:05.933Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -3259,76 +3276,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:1380cd0072e4a447": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T08:02:00.324Z"
-    },
-    "medier:53c3b708d4c54ffd": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T08:02:00.324Z"
-    },
-    "medier:be8f55ed0411ddf7": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T08:02:00.324Z"
-    },
-    "medier:695e4b696acd1a37": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T08:02:00.324Z"
-    },
-    "medier:8eb65becfc2d0d9f": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T08:02:00.324Z"
-    },
-    "medier:b5f813f8e358f348": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T08:02:00.324Z"
-    },
-    "medier:f346f72b8ee0cf6d": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T08:02:00.324Z"
-    },
-    "medier:6241db73ed3855af": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T08:02:00.324Z"
-    },
-    "medier:c15fe5c4daf07298": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T08:02:00.324Z"
-    },
-    "medier:8fa73df1d1d949ed": {
-      "p": 92,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T08:02:00.324Z"
-    },
-    "medier:407b34e1828a120a": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T08:02:00.324Z"
-    },
-    "havforskning:https://www.hi.no/hi/nyheter/2026/oktober/no-kan-oppdrettarar-fa-risikovarsel-i-lomma": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T08:02:00.324Z"
-    },
-    "statnett:https://www.statnett.no/om-statnett/nyheter-og-pressemeldinger/nyhetsarkiv-2026/new-page/": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T08:02:00.324Z"
-    },
-    "arbeidstilsynet:https://www.arbeidstilsynet.no/nyheter/er-det-de-ansatte-som-ma-tale-mer-eller-jobben-som-ma-endres-tre-misforstaelser-om-psykososialt-arbeidsmiljo/": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T08:02:00.324Z"
-    },
     "medier:cc07c27f06f0805d": {
       "p": 75,
       "v": "b34cb0de5bde",
@@ -5308,6 +5255,41 @@
       "p": 35,
       "v": "b34cb0de5bde",
       "t": "2026-10-22T07:56:21.269Z"
+    },
+    "medier:e765ad2a9980c928": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T08:02:05.258Z"
+    },
+    "medier:0b7ef2bcf971b922": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T08:02:05.258Z"
+    },
+    "medier:8208786219812a01": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T08:02:05.258Z"
+    },
+    "medier:75e1fe93d833412b": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T08:02:05.258Z"
+    },
+    "medier:80af435e66c2af96": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T08:02:05.258Z"
+    },
+    "medier:cf4799072b52244f": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T08:02:05.258Z"
+    },
+    "havforskning:https://www.hi.no/hi/nyheter/2026/oktober/fann-store-mengder-kveis-i-brosme": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T08:02:05.258Z"
     }
   }
 }
