@@ -15,16 +15,16 @@ key_points:
   - "Elektrisitet utgjorde 84,3 prosent av husholdningenes energibruk i 2025, mens strømbruken i veitransport økte 18,9 prosent til 3,3 TWh."
 ---
 
-Innenlands energibruk i Norge, utenom energi brukt som råstoff, var 212,0 TWh (212 019 GWh) i 2025. Det er 1,0 prosent, eller 2,2 TWh, lavere enn i 2024 og det laveste nivået siden 2014, viser energibalansen fra Statistisk sentralbyrå (SSB), publisert 12. juni 2026. Private husholdninger sto for 45,3 TWh av totalen.
+Innenlands energibruk i Norge, utenom energi brukt som råstoff, var 212,0 TWh (212 019 GWh) i 2025. Det viser energibalansen fra Statistisk sentralbyrå (SSB), publisert 12. juni 2026. Bruken var 1,0 prosent, eller 2,2 TWh, lavere enn i 2024, og det laveste nivået siden 2014. Private husholdninger sto for 45,3 TWh.
 
-Tallene i energibalansen viser tilført energi, målt som energiinnholdet i energiproduktene (netto energiinnhold), ifølge SSB. Det betyr at energitap ved bruk, for eksempel varme som går tapt i en vedovn, også er med i tallene, skriver SSB.
+Energibalansen viser tilført energi, målt som energiinnholdet i energiproduktene. Det betyr at energi som går tapt ved bruk, for eksempel varme som forsvinner fra en vedovn, også er med i tallene.
 
-## Hvem bruker energien?
+## Hvem bruker energien
 
-Industri og bergverk var største forbrukssektor i 2025 med 73,4 TWh, 34,6 prosent av totalen. Transport kom på andreplass med 50,3 TWh, foran private husholdninger med 45,3 TWh og privat og offentlig tjenesteyting med 35,0 TWh. Jordbruk, skogbruk og fiske brukte til sammen 8,0 TWh.
+Industri og bergverk var den største forbrukssektoren i 2025, med 73,4 TWh, 34,6 prosent av totalen. Deretter fulgte transport med 50,3 TWh, private husholdninger med 45,3 TWh og privat og offentlig tjenesteyting med 35,0 TWh.
 
-![Liggende søylediagram over innenlands energibruk etter sektor i 2025: industri og bergverk 73,4 TWh, transport 50,3 TWh, private husholdninger 45,3 TWh, privat og offentlig tjenesteyting 35,0 TWh, jordbruk, skogbruk og fiske 8,0 TWh.](./graf-1.svg)
-*Innenlands energibruk etter sektor i 2025, utenom råstoff. Kilde: SSB, tabell 11561.*
+![Stolpediagram over Industrien bruker mest: Energibruk: Industri og bergverk: 73 371, Transport: 50 313, Private husholdninger: 45 323, Tjenesteyting: 35 047, Jordbruk, skogbruk og fiske: 7 966.](./graf-1.svg)
+*Innenlands energibruk utenom råstoff etter sektor, 2025, GWh. Kilde: SSB, tabell 11561.*
 
 | Sektor | 2024 (GWh) | 2025 (GWh) | Endring |
 |---|---:|---:|---:|
@@ -36,17 +36,22 @@ Industri og bergverk var største forbrukssektor i 2025 med 73,4 TWh, 34,6 prose
 | Fiske | 3 896 | 4 062 | +4,3 % |
 | **Totalt (utenom råstoff)** | **214 215** | **212 019** | **−1,0 %** |
 
-*Kilde: SSB, tabell 11561. Prosentene er regnet fra GWh-tallene. Delsummene i 2025 gir 212 020 på grunn av avrunding.*
+*Kilde: SSB, tabell 11561.*
 
-Transport hadde størst nedgang. SSB forklarer industriens økning med at 2024 hadde flere tilfeller av driftsstans, mens produksjonen var tilbake på et mer normalt nivå i 2025. Fra 2000 til 2025 har industriens energibruk falt fra 82 938 til 73 371 GWh (minus 11,5 prosent), mens privat og offentlig tjenesteyting har økt fra 26 390 til 35 047 GWh (pluss 32,8 prosent).
+SSB forklarer økningen i industrien med at 2024 hadde flere tilfeller av driftsstans. Over tid har industriens energibruk falt med 11,5 prosent siden 2000, mens tjenesteytingen har økt med 32,8 prosent.
 
-## Det som ikke er med i 212 TWh
+## Det som ikke er med
 
-SSB fører noen store poster utenfor tallet for innenlands energibruk. Energi brukt som råstoff, for eksempel til ammoniakk, metanol og plast, var 25,7 TWh i 2025, opp 22,3 prosent fra 21,0 TWh året før. Eget forbruk i den energiproduserende sektoren var 61,4 TWh, hvorav olje- og gassutvinning sto for 52,4 TWh, mot 53,0 TWh i 2024. Internasjonal bunkers var 9,5 TWh.
+Noe energibruk holder SSB utenfor tallet på 212 TWh. Energi brukt som råstoff, for eksempel til ammoniakk, metanol og plast, var 25,7 TWh i 2025, 22,3 prosent mer enn året før. Eget forbruk i den energiproduserende sektoren var 61,4 TWh, og olje- og gassutvinningen sto for 52,4 TWh av det. Internasjonal bunkers, drivstoff til skip og fly i utenriks fart, var 9,5 TWh.
 
-## Husholdningene: strøm dominerer
+## Husholdningene
 
-Private husholdninger brukte 45 323 GWh i 2025, ned 2,7 prosent fra 46 586 GWh i 2024. Elektrisitet utgjorde 38 209 GWh, eller 84,3 prosent. Ifølge SSB inkluderer husholdningstallene i energibalansen også fritidshus. Strømbruken falt 2,2 prosent, mens bruken av ved falt 7,0 prosent. SSB skriver at 2025 ifølge Meteorologisk institutt (met.no) var et rekordvarmt år, som førte til et lavere behov for oppvarming av boliger, og at flere husholdninger som lader elbil hjemme demper nedgangen i strømbruken.
+Private husholdninger brukte 45 323 GWh i 2025, 2,7 prosent mindre enn i 2024. Tallene omfatter også fritidshus. Elektrisitet utgjorde 84,3 prosent. Strømbruken falt 2,2 prosent, og vedbruken 7,0 prosent.
+
+Ifølge SSB var 2025 et rekordvarmt år, slik at det trengtes mindre oppvarming. SSB skriver også at flere husholdninger lader elbil hjemme, og at det demper nedgangen i strømbruken.
+
+![Linjediagram over Strøm er det meste av husholdningenes energi: Alle energivarer: 39 982 i 1990, 41 348 i 1991, 41 008 i 1992, 41 791 i 1993, 43 377 i 1994, 44 161 i 1995, 46 236 i 1996, 44 349 i 1997, 44 551 i 1998, 44 987 i 1999, 43 562 i 2000, 45 218 i 2001, 45 150 i 2002, 43 361 i 2003, 42 957 i 2004, 43 656 i 2005, 44 028 i 2006, 44 631 i 2007, 44 281 i 2008, 45 844 i 2009, 50 855 i 2010, 45 168 i 2011, 47 908 i 2012, 47 171 i 2013, 43 867 i 2014, 45 808 i 2015, 47 137 i 2016, 47 690 i 2017, 47 638 i 2018, 46 487 i 2019, 46 655 i 2020, 49 089 i 2021, 44 199 i 2022, 46 566 i 2023, 46 586 i 2024, 45 323 i 2025; Elektrisitet: 30 299 i 1990, 32 614 i 1991, 32 650 i 1992, 32 787 i 1993, 34 015 i 1994, 34 627 i 1995, 35 288 i 1996, 33 978 i 1997, 35 048 i 1998, 35 046 i 1999, 34 628 i 2000, 35 876 i 2001, 34 647 i 2002, 32 023 i 2003, 32 405 i 2004, 34 005 i 2005, 33 644 i 2006, 34 946 i 2007, 34 887 i 2008, 36 311 i 2009, 39 731 i 2010, 36 057 i 2011, 38 247 i 2012, 38 902 i 2013, 36 871 i 2014, 38 570 i 2015, 39 843 i 2016, 40 130 i 2017, 40 404 i 2018, 40 007 i 2019, 39 943 i 2020, 41 533 i 2021, 36 345 i 2022, 38 828 i 2023, 39 054 i 2024, 38 209 i 2025.](./graf-2.svg)
+*Energibruk i private husholdninger, alle energivarer og elektrisitet, 1990–2025, GWh. Kilde: SSB, tabell 11561.*
 
 | Energivare | 2000 (GWh) | 2024 (GWh) | 2025 (GWh) |
 |---|---:|---:|---:|
@@ -54,19 +59,15 @@ Private husholdninger brukte 45 323 GWh i 2025, ned 2,7 prosent fra 46 586 GWh i
 | Ved og andre faste biobrensler | 6 094 | 5 603 | 5 213 |
 | Fjernvarme | 238 | 1 873 | 1 863 |
 | Olje og oljeprodukter | 2 571 | 43 | 27 |
-| Annet | 31 | 13 | 11 |
-| **Sum** | **43 562** | **46 586** | **45 323** |
+| **Alle energivarer** | **43 562** | **46 586** | **45 323** |
 
-*Kilde: SSB, tabell 11561. «Annet» er regnet som differansen mellom summen og de fire energivarene.*
+*Kilde: SSB, tabell 11561. Andre energivarer er ikke vist.*
 
-Bruken av olje og oljeprodukter i husholdningene har så godt som opphørt. SSB viser til fyringsoljeforbudet fra 2020. Siden 1990 har husholdningenes strømbruk økt fra 30 299 til 38 209 GWh (pluss 26,1 prosent), mens samlet energibruk har økt 13,4 prosent, fra 39 982 til 45 323 GWh. SSB justerte i 2025 faktoren for energiinnholdet i ved ned fra 4,67 til 4,3 kWh per kilo, og den nye faktoren er brukt for hele serien tilbake til 1990.
+Bruken av olje i boliger har så godt som opphørt etter forbudet mot fyringsolje fra 2020. Fra 1990 til 2025 økte husholdningenes strømbruk med 26,1 prosent, og den samlede energibruken med 13,4 prosent. I 2025 justerte SSB ned faktoren for energiinnholdet i ved, fra 4,67 til 4,3 kWh per kilo.
 
-![Linjediagram over energibruken i private husholdninger 1990–2025 i TWh. Alle energivarer: 40,0 i 1990, 41,3 i 1991, 41,0 i 1992, 41,8 i 1993, 43,4 i 1994, 44,2 i 1995, 46,2 i 1996, 44,3 i 1997, 44,6 i 1998, 45,0 i 1999, 43,6 i 2000, 45,2 i 2001, 45,2 i 2002, 43,4 i 2003, 43,0 i 2004, 43,7 i 2005, 44,0 i 2006, 44,6 i 2007, 44,3 i 2008, 45,8 i 2009, 50,9 i 2010, 45,2 i 2011, 47,9 i 2012, 47,2 i 2013, 43,9 i 2014, 45,8 i 2015, 47,1 i 2016, 47,7 i 2017, 47,6 i 2018, 46,5 i 2019, 46,7 i 2020, 49,1 i 2021, 44,2 i 2022, 46,6 i 2023, 46,6 i 2024, 45,3 i 2025. Elektrisitet: 30,3 i 1990, 32,6 i 1991, 32,7 i 1992, 32,8 i 1993, 34,0 i 1994, 34,6 i 1995, 35,3 i 1996, 34,0 i 1997, 35,0 i 1998, 35,0 i 1999, 34,6 i 2000, 35,9 i 2001, 34,6 i 2002, 32,0 i 2003, 32,4 i 2004, 34,0 i 2005, 33,6 i 2006, 34,9 i 2007, 34,9 i 2008, 36,3 i 2009, 39,7 i 2010, 36,1 i 2011, 38,2 i 2012, 38,9 i 2013, 36,9 i 2014, 38,6 i 2015, 39,8 i 2016, 40,1 i 2017, 40,4 i 2018, 40,0 i 2019, 39,9 i 2020, 41,5 i 2021, 36,3 i 2022, 38,8 i 2023, 39,1 i 2024, 38,2 i 2025. Ved og andre faste biobrensler: 5,2 i 1990, 4,7 i 1991, 4,6 i 1992, 5,3 i 1993, 5,6 i 1994, 5,5 i 1995, 5,8 i 1996, 6,1 i 1997, 5,8 i 1998, 5,9 i 1999, 6,1 i 2000, 6,4 i 2001, 7,3 i 2002, 7,2 i 2003, 6,8 i 2004, 6,8 i 2005, 6,9 i 2006, 6,8 i 2007, 6,7 i 2008, 6,9 i 2009, 7,7 i 2010, 6,8 i 2011, 7,1 i 2012, 5,7 i 2013, 4,9 i 2014, 5,2 i 2015, 5,0 i 2016, 5,3 i 2017, 5,2 i 2018, 4,8 i 2019, 5,2 i 2020, 5,8 i 2021, 6,1 i 2022, 5,7 i 2023, 5,6 i 2024, 5,2 i 2025.](./graf-2.svg)
-*Energibruk i private husholdninger, 1990–2025. Kilde: SSB, tabell 11561.*
+## Per husholdning
 
-## Per husholdning og varmepumper
-
-SSB anslår at en norsk husholdning i gjennomsnitt brukte om lag 14 700 kWh strøm i 2024 og om lag 17 200 kWh energi totalt, begge tall uten fritidsboliger og med lading av elbil hjemme. Forskjellene mellom boligtyper er store. Tallene under er fra SSBs undersøkelse for 2022.
+SSB anslår at en norsk husholdning i gjennomsnitt brukte om lag 14 700 kWh strøm og 17 200 kWh energi i alt i 2024, uten fritidsboliger og med lading av elbil hjemme. Forskjellene mellom boligtyper er store.
 
 | Boligtype | Strøm per husholdning 2022 (kWh) |
 |---|---:|
@@ -75,13 +76,16 @@ SSB anslår at en norsk husholdning i gjennomsnitt brukte om lag 14 700 kWh str�
 | Rekkehus | 13 747 |
 | Blokkleiligheter | 8 951 |
 
-*Kilde: SSB, «Hva er gjennomsnittlig strømforbruk i husholdningene?» (endret 19. desember 2025).*
+*Kilde: SSB, «Hva er gjennomsnittlig strømforbruk i husholdningene?».*
 
-Ifølge SSB steg andelen eneboliger med varmepumpe fra 44 til 65 prosent fra 2012 til 2022, og SSB skriver at en varmepumpe kan gi 2–4 ganger mer energi enn den bruker av strøm. I 2024 hadde 6 prosent av blokkleilighetene luft-luft-varmepumpe.
+Andelen eneboliger med varmepumpe steg fra 44 til 65 prosent fra 2012 til 2022, ifølge SSB. En varmepumpe kan gi 2–4 ganger mer energi enn den bruker av strøm.
 
-## Elbiler flytter forbruket i transport
+## Veitransport
 
-I veitransport falt forbruket av bensin og diesel fra 28 181 GWh i 2024 til 25 875 GWh i 2025, ned 8,2 prosent, mens strømbruken økte 18,9 prosent, fra 2 783 til 3 309 GWh. Strøm utgjorde 9,8 prosent av energibruken i veitransport i 2025, mot 7,7 prosent i 2024. SSB opplyser at det var 20 prosent flere elektriske personbiler i 2025 enn i 2024, og at 95 prosent av nybilsalget i 2025 var elbiler.
+I veitransport falt bruken av bensin og diesel med 8,2 prosent fra 2024 til 2025, mens strømbruken økte 18,9 prosent, til 3 309 GWh. Strøm utgjorde 9,8 prosent av energibruken i veitransport, mot 7,7 prosent året før. Ifølge SSB var det 20 prosent flere elektriske personbiler i 2025 enn i 2024, og 95 prosent av nybilsalget var elbiler.
+
+![Helningsdiagram over Mindre diesel og bensin, mer strøm på veien: i 2015: Diesel: 28 867, Bensin: 9 771, Elektrisitet: 162; i 2025: Diesel: 20 742, Bensin: 5 133, Elektrisitet: 3 309.](./graf-3.svg)
+*Energibruk i veitransport, diesel og bensin (uten innblandet biodrivstoff) og elektrisitet, 2015 og 2025, GWh. Kilde: SSB, tabell 11561.*
 
 | Veitransport (GWh) | 2015 | 2019 | 2024 | 2025 |
 |---|---:|---:|---:|---:|
@@ -94,7 +98,7 @@ I veitransport falt forbruket av bensin og diesel fra 28 181 GWh i 2024 til 25 8
 
 ## Kilder
 
-- [SSB: Lavere energibruk i veitransport 2025 (12. juni 2026)](https://www.ssb.no/energi-og-industri/energi/statistikk/produksjon-og-forbruk-av-energi-energibalanse-og-energiregnskap/artikler/lavere-energibruk-i-transport-i-2025)
+- [SSB: Lavere energibruk i transport i 2025 (12. juni 2026)](https://www.ssb.no/energi-og-industri/energi/statistikk/produksjon-og-forbruk-av-energi-energibalanse-og-energiregnskap/artikler/lavere-energibruk-i-transport-i-2025)
 - [SSB: Produksjon og forbruk av energi, energibalanse og energiregnskap](https://www.ssb.no/energi-og-industri/energi/statistikk/produksjon-og-forbruk-av-energi-energibalanse-og-energiregnskap)
-- [SSB: Tabell 11561 – Energibalansen. Tilgang og forbruk, etter energibalansepost, energiprodukt, statistikkvariabel og år](https://www.ssb.no/statbank/table/11561)
-- [SSB: Hva er gjennomsnittlig strømforbruk i husholdningene? (publisert 5. desember 2023, endret 19. desember 2025)](https://www.ssb.no/energi-og-industri/energi/artikler/hva-er-gjennomsnittlig-stromforbruk-i-husholdningene)
+- [SSB: Tabell 11561 – Energibalansen](https://www.ssb.no/statbank/table/11561)
+- [SSB: Hva er gjennomsnittlig strømforbruk i husholdningene?](https://www.ssb.no/energi-og-industri/energi/artikler/hva-er-gjennomsnittlig-stromforbruk-i-husholdningene)
