@@ -96,6 +96,8 @@ const siteHaritasi = sitemap({
 
 // https://astro.build/config
 export default defineConfig({
+  // Astro 7 varsayılanı "jsx": satır sonundaki boşluğu etiket kenarında siler (ör. "</a>" + yeni satır + "kelime" bitişik çıkar). true: tek boşluğa indirir.
+  compressHTML: true,
   site: 'https://tidsrost.com',
   integrations: [siteHaritasi, kullanilmayanGorseller()],
   // CSP (public/_headers) satır içi stile izin vermez; tüm CSS ayrı dosya olarak yüklenir.
