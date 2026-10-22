@@ -15,24 +15,37 @@ key_points:
   - "I 2025 ble det tegnet nesten 700 flere lærekontrakter enn året før, på nivå med toppåret 2022."
 ---
 
-Ifølge søkertallene fra Utdanningsdirektoratet, som Kunnskapsdepartementet presenterte 24. mars 2026, hadde 54,5 prosent av søkerne til Vg1 et yrkesfaglig utdanningsprogram som førsteønske for skoleåret 2026/2027. Året før var andelen 53,9 prosent. Departementet skriver at andelen har økt fra rundt 47 prosent i skoleåret 2016–2017.
+Ifølge søkertallene fra Utdanningsdirektoratet, som Kunnskapsdepartementet la fram 24. mars 2026, hadde 54,5 prosent av søkerne til Vg1 et yrkesfaglig utdanningsprogram som førsteønske for skoleåret 2026/2027. Året før var andelen 53,9 prosent. Departementet skriver at andelen har økt fra rundt 47 prosent i skoleåret 2016–2017.
 
-## Store forskjeller mellom fylkene
+## Fylkene
 
-Andelen som søker seg til yrkesfag varierer mye. Finnmark hadde høyest andel i 2026, med 72,8 prosent, mens Oslo hadde lavest med 29,1 prosent og Akershus nest lavest med 43,3 prosent. I 13 av landets 15 fylker hadde mer enn halvparten av søkerne yrkesfag som førsteønske.
+Finnmark hadde høyest andel i 2026, med 72,8 prosent. Oslo hadde lavest, med 29,1 prosent, og Akershus nest lavest, med 43,3 prosent. I de øvrige 13 fylkene hadde mer enn halvparten av søkerne yrkesfag som førsteønske. Lavest av dem var Buskerud, med 55,4 prosent.
 
-![Liggende stolpediagram over andelen Vg1-søkere med yrkesfag som førsteønske i 2026 etter fylke: Finnmark 72,8 prosent, Møre og Romsdal 64,4, Innlandet 63,0, Nordland 62,3, Telemark 61,4, Vestland 61,2, Agder 60,8, Rogaland 59,7, Trøndelag 58,9, Vestfold 58,9, Troms 58,6, Østfold 56,2, Buskerud 55,4, Akershus 43,3 og Oslo 29,1 prosent.](./graf-1.svg)
-*Andel av søkerne til Vg1 som har yrkesfag som førsteønske, etter fylke, 2026. Hele landet: 54,5 prosent. Kilde: Utdanningsdirektoratet og Kunnskapsdepartementet.*
+![Stolpediagram over Høyest andel i Finnmark, lavest i Oslo: Yrkesfag: Hele landet: 54,5 %, Oslo: 29,1 %, Akershus: 43,3 %, Buskerud: 55,4 %, Østfold: 56,2 %, Troms: 58,6 %, Trøndelag: 58,9 %, Vestfold: 58,9 %, Rogaland: 59,7 %, Agder: 60,8 %, Vestland: 61,2 %, Telemark: 61,4 %, Nordland: 62,3 %, Innlandet: 63,0 %, Møre og Romsdal: 64,4 %, Finnmark: 72,8 %.](./graf-1.svg)
+*Andel av søkerne til Vg1 som har yrkesfag som førsteønske, etter fylke, 2026. Den stiplede linjen viser hele landet. Kilde: Utdanningsdirektoratet, via Kunnskapsdepartementet.*
+
+## Endringen fra i fjor
+
+Andelen økte i de fleste fylkene. Ifølge departementet var økningen størst i Oslo, der andelen gikk fra 26,4 til 29,1 prosent. Akershus og Finnmark økte begge med 2,1 prosentpoeng. I fire fylker gikk andelen ned: Nordland, Telemark, Innlandet og Troms. I Møre og Romsdal var den uendret.
+
+![Helningsdiagram over Oslo økte mest fra i fjor: i 2025: Hele landet: 53,9 %, Oslo: 26,4 %, Akershus: 41,2 %, Finnmark: 70,7 %, Nordland: 64,0 %, Telemark: 62,4 %; i 2026: Hele landet: 54,5 %, Oslo: 29,1 %, Akershus: 43,3 %, Finnmark: 72,8 %, Nordland: 62,3 %, Telemark: 61,4 %.](./graf-2.svg)
+*Andel av søkerne til Vg1 med yrkesfag som førsteønske, 2025 og 2026, i hele landet og et utvalg fylker. Kilde: Utdanningsdirektoratet, via Kunnskapsdepartementet.*
+
+## Hvem søker
+
+Ifølge departementet kommer økningen de siste årene hovedsakelig av at flere 16-åringer søker yrkesfag. Blant 16-åringene søker 49 prosent yrkesfag, opp fra 43 prosent i 2020. Blant søkere som er eldre enn 16 år, søker rundt 75 prosent yrkesfag, og den andelen har vært stabil. 16-åringene utgjør rundt 80 prosent av søkerne til Vg1.
+
+Helse- og oppvekstfag er det yrkesfaglige programmet flest har som førsteønske, med 13 prosent av alle søkerne. Elektro og datateknologi økte mest, fra 9 til 10 prosent.
 
 ## Lærekontrakter og fagbrev
 
-Den norske hovedmodellen for yrkesfag er den såkalte 2+2-modellen, der elevene går to år på skole og deretter to år som lærling i en godkjent lærebedrift, før de tar fag- eller svenneprøve.
+Den vanlige modellen for yrkesfag er to år i skole og deretter to år som lærling i en godkjent lærebedrift, før fag- eller svenneprøven.
 
-Ifølge Kunnskapsdepartementet ble det tegnet nesten 700 flere lærekontrakter mellom elever og bedrifter i 2025 enn året før, og antallet nye kontrakter er på nivå med toppåret 2022. De siste ti årene har antallet nye lærlinger økt med over 5 000. I 2024/25 ble det avlagt rundt 30 800 fag- og svennebrev, 1 000 flere enn året før. Antall kontrakter for «fagbrev på jobb» tredoblet seg fra 2020 til 2025.
+Ifølge Kunnskapsdepartementet ble det tegnet nesten 700 flere lærekontrakter i 2025 enn året før, og antallet nye kontrakter er på nivå med toppåret 2022. I 2024/25 ble det avlagt rundt 30 800 fag- og svennebrev, 1 000 flere enn året før. Antallet løpende kontrakter i ordningen «Fagbrev på jobb» ble tredoblet fra 2020 til 2025.
 
 ## Ny opplæringslov
 
-Den nye opplæringsloven trådte i kraft høsten 2024. Ifølge Kunnskapsdepartementet er kravene til bruk av lærlinger i offentlige oppdrag skjerpet, og Nasjonalt senter for yrkesfag åpnet høsten 2025.
+Den nye opplæringsloven trådte i kraft høsten 2024. Den gir blant annet en fullføringsrett og rett til å ta et nytt fagbrev, selv om man har ett fra før. Kravene til bruk av lærlinger i offentlige oppdrag er skjerpet, og Nasjonalt senter for yrkesfag åpnet høsten 2025.
 
 ## Kilder
 

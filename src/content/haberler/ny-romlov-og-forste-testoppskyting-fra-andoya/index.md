@@ -15,23 +15,36 @@ key_points:
   - "Norsk industri fikk 833,4 millioner kroner i ESA-kontrakter i 2025, ifølge direktoratets årsrapport."
 ---
 
-Norsk romvirksomhet handler i stor grad om å bruke satellitter til å overvåke store havområder, drive navigasjon og kommunikasjon i nord og levere tjenester til europeiske romprogrammer. Fra 1. september 2025 heter etaten som forvalter de statlige virkemidlene Direktoratet for romvirksomhet. Tidligere het den Norsk Romsenter, som ble opprettet i 1987.
+Den nye romloven trådte i kraft 1. juli 2026, ifølge Nærings- og fiskeridepartementet. Den erstatter en lov fra 1969 som bare handlet om oppskyting fra norsk territorium. Samtidig har Andøya fått sin første testoppskyting, og norske aktører fikk mer i europeiske romkontrakter i 2025 enn året før.
 
-## Ny romlov trådte i kraft 1. juli 2026
+## Hva er nytt
 
-Stortingets næringskomité avga 25. november 2025 innstilling om forslaget til ny lov om aktiviteter i verdensrommet (romloven). Loven erstatter lov av 13. juni 1969 om oppskyting av gjenstander fra norsk territorium og er en rammelov der detaljkrav presiseres i forskrifter. Ifølge Nærings- og fiskeridepartementet trådte den nye romloven i kraft 1. juli 2026.
+Stortingets næringskomité avga 25. november 2025 innstilling om lov om aktiviteter i verdensrommet (romloven). Loven avløser lov 13. juni 1969 nr. 38 om oppskyting av gjenstander fra norsk territorium ut i verdensrommet.
+
+Den nye loven er en rammelov. Detaljkravene skal fastsettes i forskrifter. Ifølge innstillingen er formålet å legge til rette for en sikker og bærekraftig bruk av verdensrommet.
+
+## Hva det betyr for aktørene
+
+Ifølge lovforslaget som komiteen tilrådde, må den som allerede driver romaktivitet når loven trer i kraft, søke om tillatelse innen 12 måneder for å kunne fortsette.
 
 ## Andøya: første testoppskyting
 
-I mars 2025 ble den første testoppskytingen gjennomført fra Andøya. Ifølge Direktoratet for romvirksomhet ble oppskytingen avbrutt kort tid etter start. Direktoratet skriver at testen ble «regnet som en suksess» for romhavnen, fordi den viste at det europeiske kontinentet har fått sin første romhavn der raketter kan skytes ut i bane.
+I mars 2025 gjennomførte ISAR den første testoppskytingen fra Andøya. Ifølge årsrapporten til Direktoratet for romvirksomhet ble oppskytingen avbrutt etter kort tid på grunn av feil, og raketten falt ned i sikkerhetssonen. Direktoratet skriver at oppskytingen likevel ble «regnet som en suksess», fordi den viste at det europeiske kontinentet har fått sin første romhavn der raketter kan skytes ut i bane.
 
-## Norsk industri i europeiske romprogrammer
+## Kontrakter til norsk romindustri
 
-Ifølge direktoratets årsrapport for 2025 ble det tildelt 833,4 millioner kroner i ESA-kontrakter til norske aktører i 2025, og 20,6 millioner kroner i innovasjonstilskudd, til sammen 854 millioner kroner. I 2024 var tilsvarende tall 667 millioner kroner.
+Ifølge årsrapporten fikk norske aktører 833,4 millioner kroner i ESA-kontrakter og 20,6 millioner kroner i innovasjonstilskudd i 2025, til sammen 854 millioner kroner. I 2024 var tilsvarende tall 667 millioner kroner.
 
-Ifølge årsrapporten hadde norske aktører fra 2021 til og med første halvår 2025 kontrakter for 92,3 millioner euro i EU-programmet Copernicus, noe som ifølge direktoratet gjør Norge til den sjette største nasjonen i programmet.
+![Nøkkeltall om Mer i kontrakter og tilskudd: I fjor: Tildelt i 2025: 854 millioner kroner; Sammenligning: i 2025: 854 millioner kroner, i 2024: 667 millioner kroner.](./graf-1.svg)
+*ESA-kontrakter og innovasjonstilskudd tildelt norske aktører, 2024 og 2025. Kilde: Direktoratet for romvirksomhet, årsrapport 2025.*
 
-Direktoratet beskriver norsk romnæring som etablert i det internasjonale markedet, med høy eksportandel. Ifølge årsrapporten var deklarasjonene ved ESAs ministerrådskonferanse i november 2025 på 22,1 milliarder euro, som årsrapporten omtaler som rekord.
+I EU-programmet Copernicus hadde norske aktører kontrakter for 92,3 millioner euro fra 2021 til 30. juni 2025. Ifølge direktoratet gjør det Norge til den sjette største nasjonen i programmet.
+
+## Europa
+
+Ved ESAs ministerrådskonferanse i november 2025 fikk ESA deklarasjoner fra medlemslandene på til sammen 22,1 milliarder euro for perioden 2026–2028. Årsrapporten omtaler det som rekord.
+
+Etaten som forvalter de statlige virkemidlene på området, het Norsk Romsenter fra 1987. Fra 1. september 2025 heter den Direktoratet for romvirksomhet.
 
 ## Kilder
 

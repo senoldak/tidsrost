@@ -15,16 +15,32 @@ key_points:
   - "Aksjeselskap og enkeltpersonforetak utgjorde til sammen 98,7 prosent av de nye foretakene i 2025. Minste aksjekapital i et aksjeselskap er 30 000 kroner."
 ---
 
-Statistisk sentralbyrå (SSB) registrerte 62 408 nye foretak i Norge i 2025, målt som summen av de fire kvartalene i statistikktabell 08076. Tallet gjelder alle næringer unntatt offentlig forvaltning og primærnæringene. Det er 1,3 prosent flere enn i 2024, da det ble registrert 61 582 nye foretak.
+Statistisk sentralbyrå (SSB) registrerte 62 408 nye foretak i Norge i 2025, summert fra de fire kvartalene i statistikktabell 08076. Det er 1,3 prosent flere enn i 2024, da tallet var 61 582. Tallene gjelder alle næringer unntatt offentlig forvaltning og primærnæringene.
 
-SSB registrerte 18 092 nye foretak i første kvartal og 17 052 i andre kvartal, til sammen 35 144. Det er 14,7 prosent flere enn i første halvår 2025. I andre kvartal alene var økningen 20,8 prosent, og SSB peker på at antallet nyetableringer i informasjon og kommunikasjon nesten ble doblet.
+I første halvår 2026 ble det registrert 35 144 nye foretak: 18 092 i første kvartal og 17 052 i andre. Det er 14,7 prosent flere enn i første halvår 2025.
 
-![Stolpediagram over nye foretak i Norge fra 2019 til 2025 i tusen: 67,1 i 2019, 70,3 i 2020, 76,2 i 2021, 71,0 i 2022, 68,5 i 2023, 61,6 i 2024 og 62,4 i 2025.](./graf-1.svg)
-*Antall nye foretak i Norge per år (tusen), 2019–2025, summert fra kvartalstall. Kilde: SSB, tabell 08076.*
+![Nøkkeltall om Flere nye foretak i første halvår: I år: Januar–juni 2026: 35 144; Sammenligning: i 2026: 35 144, i 2025: 30 637, i 2024: 30 588.](./graf-1.svg)
+*Nye foretak registrert i første halvår (januar–juni), 2024–2026. Kilde: SSB, tabell 08076.*
 
-## Enkeltpersonforetak og aksjeselskap dominerer
+## Toppen kom i 2021
 
-De fleste som starter virksomhet i Norge velger enten enkeltpersonforetak (ENK) eller aksjeselskap (AS). I 2025 ble det registrert 33 130 nye enkeltpersonforetak og 28 433 nye aksjeselskaper. Antallet nye aksjeselskaper økte med 5,9 prosent fra 2024, mens antallet nye enkeltpersonforetak gikk ned med 2,1 prosent.
+Antallet nye foretak har ligget over 60 000 hvert år siden 2014. Det høyeste tallet i perioden fra 2008 kom i 2021, med 76 233 nye foretak. Deretter gikk antallet ned tre år på rad, til 61 582 i 2024, før det steg litt igjen i 2025.
+
+![Linjediagram over Flest nye foretak i 2021: Nye foretak: 46 400 i 2008, 42 176 i 2009, 45 710 i 2010, 47 914 i 2011, 55 696 i 2012, 58 862 i 2013, 61 937 i 2014, 62 837 i 2015, 62 855 i 2016, 64 082 i 2017, 62 852 i 2018, 67 114 i 2019, 70 298 i 2020, 76 233 i 2021, 71 003 i 2022, 68 490 i 2023, 61 582 i 2024, 62 408 i 2025.](./graf-2.svg)
+*Nye foretak per år, 2008–2025, summert fra kvartalstall. Kilde: SSB, tabell 08076.*
+
+## Andre kvartal 2026
+
+I andre kvartal alene var økningen 20,8 prosent, fra 14 112 nye foretak i andre kvartal 2025 til 17 052. Nyetableringene innen informasjon og kommunikasjon nesten doblet seg i samme periode, fra 789 til 1 551.
+
+## Enkeltpersonforetak og aksjeselskap
+
+De fleste nye foretak er enten enkeltpersonforetak (ENK) eller aksjeselskap (AS). I 2025 ble det registrert 33 130 nye enkeltpersonforetak og 28 433 nye aksjeselskaper. Til sammen utgjorde de 98,7 prosent av de nye foretakene. De øvrige organisasjonsformene sto for 845.
+
+![Stolpediagram over Over halvparten er enkeltpersonforetak: Nye foretak: Enkeltpersonforetak: 33 130, Aksjeselskap: 28 433, Øvrige former: 845.](./graf-3.svg)
+*Nye foretak etter organisasjonsform, 2025. Kilde: SSB, tabell 08076.*
+
+Antallet nye aksjeselskaper økte med 5,9 prosent fra 2024, mens antallet nye enkeltpersonforetak gikk ned med 2,1 prosent.
 
 | Organisasjonsform | 2023 | 2024 | 2025 | Andel 2025 |
 |---|---:|---:|---:|---:|
@@ -35,13 +51,13 @@ De fleste som starter virksomhet i Norge velger enten enkeltpersonforetak (ENK) 
 
 *Kilde: SSB, tabell 08076. Unntatt offentlig forvaltning og primærnæringene.*
 
-## Stiftelse av aksjeselskap
+## Hva skiller AS fra ENK
 
-Minste aksjekapital i et aksjeselskap er 30 000 kroner. Aksjeselskap gir eierne begrenset personlig økonomisk ansvar. Aksjekapitalen skal være innbetalt, og innbetalingen må bekreftes, blant annet av et finansforetak, en advokat eller en statsautorisert regnskapsfører. Bekreftelsen brukes når selskapet registreres i Foretaksregisteret, som kan gjøres gjennom Altinn.
+I et enkeltpersonforetak er eieren personlig ansvarlig for foretakets forpliktelser. Et aksjeselskap gir eierne begrenset økonomisk ansvar. Minste aksjekapital er 30 000 kroner. Aksjekapitalen skal være innbetalt, og innbetalingen må bekreftes, blant annet av et finansforetak, en advokat eller en statsautorisert regnskapsfører, før selskapet registreres i Foretaksregisteret.
 
-## Merknad om tallgrunnlaget
+## Om tallene
 
-Tallene i denne artikkelen bygger på SSBs kvartalsstatistikk over nye foretak, som viser registrerte nye foretak og ikke er justert for eierskifter.
+SSBs kvartalsstatistikk viser registrerte nye foretak og er ikke justert for eierskifter. Årstallene i denne artikkelen er summen av fire kvartaler.
 
 ## Kilder
 
