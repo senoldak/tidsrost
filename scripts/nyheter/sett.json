@@ -3296,7 +3296,51 @@
     "medier:b8be13e404b31be9": "2026-10-22T12:01:07.831Z",
     "medier:5cfb5a032815f96a": "2026-10-22T12:01:07.831Z",
     "medier:d797c396e834ae4b": "2026-10-22T12:01:07.831Z",
-    "medier:b9e9838e0d96c4fa": "2026-10-22T12:01:07.831Z"
+    "medier:b9e9838e0d96c4fa": "2026-10-22T12:01:07.831Z",
+    "medier:6f1d432ed7d52482": "2026-10-22T14:01:06.229Z",
+    "regjeringen:3181360": "2026-10-22T14:01:06.229Z",
+    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/samarbeid-i-scenekunsten-trenger-bedre-rammer": "2026-10-22T14:01:06.229Z",
+    "kystverket:https://www.kystverket.no/nyheter/ny-kunnskap-om-vannutskiftningen-i-indre-oslofjord/": "2026-10-22T14:01:06.229Z",
+    "medier:fb50a7987cc29e78": "2026-10-22T14:01:06.229Z",
+    "medier:6d75397fb3a6cdac": "2026-10-22T14:01:06.229Z",
+    "medier:6fbd8c1c250a48be": "2026-10-22T14:01:06.229Z",
+    "medier:fcbac4e6cd21aa57": "2026-10-22T14:01:06.229Z",
+    "medier:08c99f23a96b4e93": "2026-10-22T14:01:06.229Z",
+    "medier:5a56badf9219040f": "2026-10-22T14:01:06.229Z",
+    "medier:b1f33ffd03bac9f0": "2026-10-22T14:01:06.229Z",
+    "medier:3640e08c42422272": "2026-10-22T14:01:06.229Z",
+    "medier:f5bd2453591e1254": "2026-10-22T14:01:06.229Z",
+    "medier:d519773ecd41694c": "2026-10-22T14:01:06.229Z",
+    "medier:91a5cee756dbc438": "2026-10-22T14:01:06.229Z",
+    "medier:ea59241096fd805c": "2026-10-22T14:01:06.229Z",
+    "medier:ede104b388528a15": "2026-10-22T14:01:06.229Z",
+    "medier:6a9f3857d2fc00e5": "2026-10-22T14:01:06.229Z",
+    "medier:f09d4df32c5229dd": "2026-10-22T14:01:06.229Z",
+    "medier:a2471322f3c9dcb3": "2026-10-22T14:01:06.229Z",
+    "medier:d38f97f8957b14e0": "2026-10-22T14:01:06.229Z",
+    "medier:7dd730ad181e6b9b": "2026-10-22T14:01:06.229Z",
+    "medier:01756fadbbc18cbb": "2026-10-22T14:01:06.229Z",
+    "medier:d60228fa6f3f3def": "2026-10-22T14:01:06.229Z",
+    "medier:c3a00827e8ee89b6": "2026-10-22T14:01:06.229Z",
+    "medier:ada8f3b4cc7d131b": "2026-10-22T14:01:06.229Z",
+    "medier:e3a8ad24151c9126": "2026-10-22T14:01:06.229Z",
+    "medier:acd8aba84353558e": "2026-10-22T14:01:06.229Z",
+    "medier:057a0960d64476dc": "2026-10-22T14:01:06.229Z",
+    "medier:49768f348c6f6104": "2026-10-22T14:01:06.229Z",
+    "medier:b00fe4132b1aca0f": "2026-10-22T14:01:06.229Z",
+    "medier:5a9e1ca5e7c355a6": "2026-10-22T14:01:06.229Z",
+    "medier:adcc77a9b9ecda4f": "2026-10-22T14:01:06.229Z",
+    "medier:03ef3dc132dbae32": "2026-10-22T14:01:06.229Z",
+    "medier:2ff0c208798bcf2a": "2026-10-22T14:01:06.229Z",
+    "medier:ab2bac337e7da842": "2026-10-22T14:01:06.229Z",
+    "medier:2bbd5df960074668": "2026-10-22T14:01:06.229Z",
+    "medier:3805793d59c73506": "2026-10-22T14:01:06.229Z",
+    "medier:f5e28c3ed5c54698": "2026-10-22T14:01:06.229Z",
+    "medier:065fb5f539b3520c": "2026-10-22T14:01:06.229Z",
+    "medier:73b04aaa0a1c645e": "2026-10-22T14:01:06.229Z",
+    "medier:734d97c19d93e40e": "2026-10-22T14:01:06.229Z",
+    "medier:26c2ee501c002a56": "2026-10-22T14:01:06.229Z",
+    "medier:22b8f0d6e955312d": "2026-10-22T14:01:06.229Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -3344,86 +3388,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:d39bac94495d05cc": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T14:02:05.863Z"
-    },
-    "medier:da676883935dcad4": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T14:02:05.863Z"
-    },
-    "medier:06fb4b48dbc91d69": {
-      "p": 42,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T14:02:05.863Z"
-    },
-    "medier:fdf46514f9907d70": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T14:02:05.863Z"
-    },
-    "medier:7aa5a80a225b8476": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T14:02:05.863Z"
-    },
-    "medier:698387b50737ef53": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T14:02:05.863Z"
-    },
-    "medier:e6bfc2d4de102b15": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T14:02:05.863Z"
-    },
-    "medier:cd3921200b2be642": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T14:02:05.863Z"
-    },
-    "medier:6fea834b1aab59d7": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T14:02:05.863Z"
-    },
-    "regjeringen:3179052": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T14:02:05.863Z"
-    },
-    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/esma-offentliggjor-prioriterte-omrader-for-tilsyn-av-finansiell-rapportering-og/": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T14:02:05.863Z"
-    },
-    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/sanksjoner-og-tiltak-rettet-mot-markedsaktorer-i-verdipapirmarkedet-i-eos-i-2025/": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T14:02:05.863Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/10/nattarbeid-ved-e16-asbrekkegjelet/": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T14:02:05.863Z"
-    },
-    "idrettsforbundet:https://www.idrettsforbundet.no/nyheter/2026/statsbudsjettet-2027-innspill-til-utdannings--og-forskningskomiteen-pa-stortinget/": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T14:02:05.863Z"
-    },
-    "idrettsforbundet:https://www.idrettsforbundet.no/nyheter/2026/statsbudsjettet-2027-nifs-innspill-til-familie--og-kulturkomiteen/": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T14:02:05.863Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/10/1168622": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T14:02:05.863Z"
-    },
     "medier:1db3818516aea05b": {
       "p": 75,
       "v": "b34cb0de5bde",
@@ -5288,6 +5252,86 @@
       "p": 70,
       "v": "b34cb0de5bde",
       "t": "2026-10-22T12:02:46.439Z"
+    },
+    "medier:acd8aba84353558e": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T14:02:27.763Z"
+    },
+    "medier:b00fe4132b1aca0f": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T14:02:27.763Z"
+    },
+    "medier:fb50a7987cc29e78": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T14:02:27.763Z"
+    },
+    "medier:f5e28c3ed5c54698": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T14:02:27.763Z"
+    },
+    "medier:adcc77a9b9ecda4f": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T14:02:27.763Z"
+    },
+    "medier:fcbac4e6cd21aa57": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T14:02:27.763Z"
+    },
+    "medier:73b04aaa0a1c645e": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T14:02:27.763Z"
+    },
+    "medier:5a56badf9219040f": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T14:02:27.763Z"
+    },
+    "medier:d519773ecd41694c": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T14:02:27.763Z"
+    },
+    "medier:a7bfabc27d2912cf": {
+      "p": 88,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T14:02:27.763Z"
+    },
+    "medier:a2471322f3c9dcb3": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T14:02:27.763Z"
+    },
+    "medier:c3a00827e8ee89b6": {
+      "p": 86,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T14:02:27.763Z"
+    },
+    "medier:01756fadbbc18cbb": {
+      "p": 62,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T14:02:27.763Z"
+    },
+    "regjeringen:3181360": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T14:02:27.763Z"
+    },
+    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/samarbeid-i-scenekunsten-trenger-bedre-rammer": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T14:02:27.763Z"
+    },
+    "kystverket:https://www.kystverket.no/nyheter/ny-kunnskap-om-vannutskiftningen-i-indre-oslofjord/": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T14:02:27.763Z"
     }
   }
 }
