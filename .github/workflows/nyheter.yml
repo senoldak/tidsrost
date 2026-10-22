@@ -113,7 +113,8 @@ jobs:
             exit 0
           fi
           # Sadece durum dosyası (ya da veri dosyalarının alma zamanı) değiştiyse siteyi boşuna yeniden derletme.
-          # Veri içeriği değiştiyse (yeni faiz, yeni/biten farevarsel) site yeni haber olmasa da yeniden derlenir.
+          # Faiz ya da turuncu/kırmızı farevarsel değiştiyse site yeni haber olmasa da yeniden derlenir; yalnız sarı
+          # uyarılar değiştiyse veri commit edilir, bir sonraki gerçek yayınla çıkar (hent-data.mjs, denetim B7).
           if [ "$SAYI" != "0" ]; then
             git commit -m "Nyhetsbot: $SAYI nye saker"
             echo "yayin=1" >> "$GITHUB_OUTPUT"

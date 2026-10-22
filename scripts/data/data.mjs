@@ -88,3 +88,14 @@ export function sammeInnhold(a, b) {
   const ren = (o) => JSON.stringify({ ...(o ?? {}), hentet: undefined });
   return ren(a) === ren(b);
 }
+
+/**
+ * Değişiklik siteyi beklemeden yeniden derletmeli mi? Faiz ve turuncu/kırmızı uyarılar hemen yayımlanır. Yalnız sarı
+ * uyarılar değiştiyse yeni veri dosyaya yazılıp commit edilir, siteye bir sonraki gerçek yayınla çıkar (denetim B7).
+ */
+export function hasterPublisering(fil, gammel, ny) {
+  if (sammeInnhold(gammel, ny)) return false;
+  if (fil !== 'farevarsler.json') return true;
+  const alvorlige = (o) => JSON.stringify((o?.varsler ?? []).filter((v) => v.niva !== 'gult'));
+  return alvorlige(gammel) !== alvorlige(ny);
+}

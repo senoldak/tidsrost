@@ -3,13 +3,14 @@
 //   - Farevarsler: MET Norway MetAlerts 2.0 (api.met.no), lisans CC BY 4.0. MET'in kullanım şartı gereği istekte
 //     siteyi ve iletişim adresini tanıtan bir User-Agent gönderilir; Nyhetsbot ile ~2 saatte bir, tek istek.
 // Bir kaynak başarısız olursa o dosyaya dokunulmaz: sayfa son bilinen değeri ve alındığı zamanı göstermeye devam eder.
-// İçerik (alma zamanı hariç) değiştiyse GITHUB_OUTPUT'a "endret=1" yazar; iş akışı siteyi yeniden derletir.
+// Faiz ya da turuncu/kırmızı uyarı değiştiyse GITHUB_OUTPUT'a "endret=1" yazar; iş akışı siteyi yeniden derletir.
+// Yalnız sarı uyarılar değiştiyse dosya yine yazılır, siteye bir sonraki gerçek yayınla çıkar (hasterPublisering).
 // Kullanım: node scripts/data/hent-data.mjs
 import { readFile, writeFile, mkdir, appendFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { acilDurdurma } from '../nyheter/kapi.mjs';
-import { RENTE_KILDE, VARSEL_KILDE, farevarsler, lesSdmxCsv, sammeInnhold, styringsrente } from './data.mjs';
+import { RENTE_KILDE, VARSEL_KILDE, farevarsler, hasterPublisering, lesSdmxCsv, sammeInnhold, styringsrente } from './data.mjs';
 
 // Standartlar: acil durdurma açıksa veri sayfaları da güncellenmez.
 if (await acilDurdurma()) process.exit(0);
@@ -64,8 +65,11 @@ for (const jobb of JOBBER) {
     const gammel = await lesJson(fil);
     const ulik = !sammeInnhold(gammel, ny);
     await writeFile(fil, JSON.stringify(ny, null, 2) + '\n', 'utf8');
-    if (ulik) endret = true;
-    console.log(`${jobb.fil}: ${ulik ? 'oppdatert (nytt innhold)' : 'uendret innhold, tidspunkt oppdatert'}`);
+    const haster = hasterPublisering(jobb.fil, gammel, ny);
+    if (haster) endret = true;
+    console.log(
+      `${jobb.fil}: ${!ulik ? 'uendret innhold, tidspunkt oppdatert' : haster ? 'oppdatert (nytt innhold)' : 'oppdatert (bare gule varsler, venter på neste publisering)'}`,
+    );
   } catch (e) {
     // Eski dosya kalır; veri uydurulmaz.
     console.error(`${jobb.fil}: FEIL ${e.message}. Beholder siste kjente data.`);

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { farevarsler, lesSdmxCsv, sammeInnhold, styringsrente } from './data.mjs';
+import { farevarsler, hasterPublisering, lesSdmxCsv, sammeInnhold, styringsrente } from './data.mjs';
 
 const CSV = `FREQ;Frequency;INSTRUMENT_TYPE;Instrument Type;TENOR;Tenor;UNIT_MEASURE;Unit of Measure;DECIMALS;COLLECTION;Collection Indicator;TIME_PERIOD;OBS_VALUE;CALC_METHOD;Calculation Method
 B;Business;KPRA;Key policy rate;SD;Policy rate;R;Rate;2;E;End of day;2025-01-02;4.5;;
@@ -88,4 +88,17 @@ test('sammeInnhold ser bort fra hentetidspunktet', () => {
   assert.equal(sammeInnhold({ hentet: '1', rente: 4 }, { hentet: '2', rente: 4 }), true);
   assert.equal(sammeInnhold({ hentet: '1', rente: 4 }, { hentet: '1', rente: 4.25 }), false);
   assert.equal(sammeInnhold(null, { hentet: '1', rente: 4 }), false);
+});
+
+test('hasterPublisering: rente og oransje/røde varsler publiseres straks, bare gule venter', () => {
+  const gult = { id: 'g1', niva: 'gult', hendelse: 'Vind' };
+  const rodt = { id: 'r1', niva: 'rodt', hendelse: 'Flom' };
+  const v = (...varsler) => ({ hentet: '1', varsler });
+  assert.equal(hasterPublisering('styringsrente.json', { hentet: '1', rente: 4 }, { hentet: '2', rente: 4.25 }), true);
+  assert.equal(hasterPublisering('styringsrente.json', { hentet: '1', rente: 4 }, { hentet: '2', rente: 4 }), false);
+  assert.equal(hasterPublisering('farevarsler.json', v(), v(gult)), false);
+  assert.equal(hasterPublisering('farevarsler.json', v(rodt, gult), v(rodt)), false);
+  assert.equal(hasterPublisering('farevarsler.json', v(gult), v(rodt, gult)), true);
+  assert.equal(hasterPublisering('farevarsler.json', v(rodt), v()), true);
+  assert.equal(hasterPublisering('farevarsler.json', v({ ...rodt, niva: 'oransje' }), v(rodt)), true);
 });
