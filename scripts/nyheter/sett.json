@@ -3156,7 +3156,36 @@
     "medier:7fee4d62de4cb0ef": "2026-10-22T00:02:52.389Z",
     "medier:4d4d261c41b44bbb": "2026-10-22T00:02:52.389Z",
     "medier:7019aed1768fc971": "2026-10-22T00:02:55.276Z",
-    "medier:c080e13937721188": "2026-10-22T00:02:55.277Z"
+    "medier:c080e13937721188": "2026-10-22T00:02:55.277Z",
+    "regjeringen:3179051": "2026-10-22T06:02:17.777Z",
+    "arbeidstilsynet:https://www.arbeidstilsynet.no/nyheter/gratulerer-med-dagen-alle-verneombud/": "2026-10-22T06:02:17.777Z",
+    "ssb:96db894d-f372-48a8-9496-ae1058d98f2c": "2026-10-22T06:02:17.777Z",
+    "medier:cc303bdf0d7d3d31": "2026-10-22T06:02:17.777Z",
+    "medier:9d63b1e957d49f90": "2026-10-22T06:02:17.777Z",
+    "medier:3a8611f4b14a6eab": "2026-10-22T06:02:17.777Z",
+    "ssb:fe74fc1f-aafe-445a-a490-c4835fe755e9": "2026-10-22T06:02:17.777Z",
+    "medier:1419d90131c7a45a": "2026-10-22T06:02:17.777Z",
+    "medier:bf64c77afdac0917": "2026-10-22T06:02:17.777Z",
+    "medier:c2d42bbffc342336": "2026-10-22T06:02:17.777Z",
+    "medier:d3654de7847ec2e8": "2026-10-22T06:02:17.777Z",
+    "medier:2cc84133d255c2b0": "2026-10-22T06:02:17.777Z",
+    "medier:7c917a207e5f2674": "2026-10-22T06:02:17.777Z",
+    "medier:0ec441bf1099d86f": "2026-10-22T06:02:17.777Z",
+    "medier:7adf57d46de642ca": "2026-10-22T06:02:17.777Z",
+    "medier:e2d69544441481c2": "2026-10-22T06:02:17.777Z",
+    "medier:b44e7313678f8f83": "2026-10-22T06:02:17.778Z",
+    "medier:fc49ebf4e9322efb": "2026-10-22T06:02:41.931Z",
+    "medier:3e2c6599e335a59b": "2026-10-22T06:02:41.931Z",
+    "medier:e2f1a14a24fc15e3": "2026-10-22T06:03:04.349Z",
+    "medier:ff9efafbc2e0b8d1": "2026-10-22T06:03:04.349Z",
+    "ssb:84e5e7bf-3a81-4be2-aab6-d59846d77f6d": "2026-10-22T06:03:15.167Z",
+    "medier:656292074eee4a00": "2026-10-22T06:03:23.874Z",
+    "medier:087bbd3459f6db24": "2026-10-22T06:03:23.875Z",
+    "medier:ff37d8fb895bdb06": "2026-10-22T06:03:23.875Z",
+    "medier:1b25b578df623513": "2026-10-22T06:03:23.875Z",
+    "medier:7393a95133a737e3": "2026-10-22T06:03:23.875Z",
+    "medier:40cc7791dcfed3c9": "2026-10-22T06:03:43.135Z",
+    "medier:5c3eef3403cf3d7b": "2026-10-22T06:03:43.135Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -3204,46 +3233,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:b869f40d8d0c1e71": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T06:01:51.662Z"
-    },
-    "medier:99cd43bac3499cbc": {
-      "p": 92,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T06:01:51.662Z"
-    },
-    "medier:5495fae5a6e2c5a1": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T06:01:51.662Z"
-    },
-    "medier:35ff57f6dcc6b1b6": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T06:01:51.662Z"
-    },
-    "medier:77fdc9269d43cd8a": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T06:01:51.662Z"
-    },
-    "regjeringen:3178283": {
-      "p": 90,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T06:01:51.662Z"
-    },
-    "ssb:c488604b-f0dc-42cd-aa4e-6c351826f297": {
-      "p": 58,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T06:01:51.662Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/10/styrker-innsatsen-for-tryggare-vinterturisme/": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T06:01:51.662Z"
-    },
     "medier:1380cd0072e4a447": {
       "p": 55,
       "v": "b34cb0de5bde",
@@ -5153,6 +5142,81 @@
       "p": 72,
       "v": "b34cb0de5bde",
       "t": "2026-10-22T00:02:22.893Z"
+    },
+    "medier:fc49ebf4e9322efb": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T06:02:10.215Z"
+    },
+    "medier:656292074eee4a00": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T06:02:10.215Z"
+    },
+    "medier:cc303bdf0d7d3d31": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T06:02:10.215Z"
+    },
+    "medier:e2f1a14a24fc15e3": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T06:02:10.215Z"
+    },
+    "medier:1419d90131c7a45a": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T06:02:10.215Z"
+    },
+    "medier:d3654de7847ec2e8": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T06:02:10.215Z"
+    },
+    "medier:40cc7791dcfed3c9": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T06:02:10.215Z"
+    },
+    "medier:0ec441bf1099d86f": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T06:02:10.215Z"
+    },
+    "medier:e2d69544441481c2": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T06:02:10.215Z"
+    },
+    "regjeringen:3179051": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T06:02:10.215Z"
+    },
+    "ssb:84e5e7bf-3a81-4be2-aab6-d59846d77f6d": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T06:02:10.215Z"
+    },
+    "ssb:96db894d-f372-48a8-9496-ae1058d98f2c": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T06:02:10.215Z"
+    },
+    "ssb:fe74fc1f-aafe-445a-a490-c4835fe755e9": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T06:02:10.215Z"
+    },
+    "sivilombudet:https://www.sivilombudet.no/?p=63767": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T06:02:10.215Z"
+    },
+    "arbeidstilsynet:https://www.arbeidstilsynet.no/nyheter/gratulerer-med-dagen-alle-verneombud/": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T06:02:10.215Z"
     }
   }
 }

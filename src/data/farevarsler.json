@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-22T00:02:56.241Z",
+  "hentet": "2026-10-22T06:03:43.840Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,21 +7,8 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-22T00:01:06+00:00",
+  "sistEndretHosMet": "2026-10-22T06:02:35+00:00",
   "varsler": [
-    {
-      "id": "2.49.0.1.578.0.20261021145815.039",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Frøya - Rørvik",
-      "domene": "hav",
-      "start": "2026-10-21T06:00:00+00:00",
-      "slutt": "2026-10-22T03:00:00+00:00",
-      "beskrivelse": "I dag, onsdag, søraust periodevis sterk kuling 20 m/s, sent i kveld stiv kuling 15 m/s, natt til torsdag morgen minkende.",
-      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
     {
       "id": "2.49.0.1.578.0.20261021135121.003",
       "niva": "gult",
@@ -33,45 +20,6 @@
       "beskrivelse": "Onsdag sørlig stiv kuling 15 m/s, torsdag morgen periodevis sterk kuling 20.",
       "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
       "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261021065642.038",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Rørvik - Støtt",
-      "domene": "hav",
-      "start": "2026-10-21T10:00:00+00:00",
-      "slutt": "2026-10-22T03:00:00+00:00",
-      "beskrivelse": "Fra sent onsdag formiddag sørøst stiv kuling 15 m/s utsatte steder. Natt til torsdag minkende.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261021171232.062",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Støtt - Lødingen",
-      "domene": "hav",
-      "start": "2026-10-21T17:00:00+00:00",
-      "slutt": "2026-10-22T04:00:00+00:00",
-      "beskrivelse": "Fra i kveld, onsdag sørøst periodevis stiv kuling 15 m/s. Torsdag morgen minkende.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261021181046.097",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Torsvåg - Loppa",
-      "domene": "hav",
-      "start": "2026-10-21T18:35:00+00:00",
-      "slutt": "2026-10-22T06:00:00+00:00",
-      "beskrivelse": "Fra onsdag kveld sørøst periodevis stiv til sterk kuling 20 m/s, minkende torsdag morgen.",
-      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
