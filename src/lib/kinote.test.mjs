@@ -47,3 +47,10 @@ test('zincir değeri olmayan yazı eski kuralla; canlı tablo (bot=true) her zam
   assert.equal(kiNotat({ bot: true, produksjon: 'ki-redigert', tittel: 't', url }).tekst, BOT_NOTAT);
   assert.doesNotMatch(KJEDE_NOTAT, /ansvarlig/i);
 });
+
+test('analyse (sjanger analyse, produksjon ki-redigert): zincir notu; Şenol Dak imzası eski sahip notuna düşmez', () => {
+  const n = kiNotat({ author: 'Şenol Dak', sjanger: 'analyse', produksjon: 'ki-redigert', tittel: 'En analyse', url });
+  assert.equal(n.tekst, KJEDE_NOTAT);
+  assert.equal(n.kjede, true);
+  assert.equal(n.eier, false);
+});

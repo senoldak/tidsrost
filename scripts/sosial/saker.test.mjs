@@ -85,6 +85,7 @@ test('sakBy ve etiketler: şehir kelime olarak aranır, en çok 5 Norveççe eti
   assert.equal(sakBy(s('Tromsø får nytt sykehus')), 'Tromsø');
   assert.equal(sakBy(s('Oslobørsen stiger')), null);
   assert.deepEqual(etiketler(s('Ny bybane i Bergen åpner', '\nsjanger: forklart')), ['#nyheter', '#norge', '#økonomi', '#bergen', '#forklart']);
+  assert.deepEqual(etiketler(s('Ny bybane i Bergen åpner', '\nsjanger: analyse')), ['#nyheter', '#norge', '#økonomi', '#bergen', '#analyse']);
 });
 
 test('sakSorusu: ölüm, kaza ve suç haberinde soru yok', () => {

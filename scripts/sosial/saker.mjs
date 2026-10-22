@@ -112,7 +112,7 @@ export function sakSorusu(s) {
 /** Instagram etiketleri: en çok 5, Norveççe. */
 export function etiketler(s) {
   const by = sakBy(s);
-  return ['#nyheter', '#norge', KATEGORI_ETIKET[s.kategori] && `#${KATEGORI_ETIKET[s.kategori]}`, by && `#${by.toLocaleLowerCase('nb-NO')}`, s.sjanger === 'forklart' && '#forklart']
+  return ['#nyheter', '#norge', KATEGORI_ETIKET[s.kategori] && `#${KATEGORI_ETIKET[s.kategori]}`, by && `#${by.toLocaleLowerCase('nb-NO')}`, s.sjanger === 'forklart' && '#forklart', s.sjanger === 'analyse' && '#analyse']
     .filter(Boolean).slice(0, 5);
 }
 

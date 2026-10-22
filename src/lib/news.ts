@@ -25,6 +25,10 @@ export async function getActiveCategories() {
 export const FORKLART = { slug: 'forklart', name: 'Forklart' } as const;
 export const erForklart = (h: Haber) => h.data.sjanger === 'forklart';
 
+// "Analyse" bölümü: yazı işleri zincirinin analiz yazıları (yatırım tavsiyesi değildir).
+export const ANALYSE = { slug: 'analyse', name: 'Analyse' } as const;
+export const erAnalyse = (h: Haber) => h.data.sjanger === 'analyse';
+
 // Yazar sayfası adresi; sitenin kendi adıyla (bot) yayımlanan haberlerin yazar sayfası yoktur.
 export function forfatterSlug(navn: string) {
   return navn

@@ -3,7 +3,7 @@ import { jsonLdMetni } from '../lib/json-ld.mjs';
 import { SITE } from '../lib/site';
 import { LISENS_URL } from '../lib/lisens.mjs';
 import { metaDescription, organization, website } from '../lib/seo';
-import { FORKLART, erForklart, getActiveCategories, getNews } from '../lib/news';
+import { ANALYSE, FORKLART, erAnalyse, erForklart, getActiveCategories, getNews } from '../lib/news';
 import Symbol from '../components/Symbol.astro';
 import { aktiveTemaer } from '../lib/temaer';
 import '../styles/global.css';
@@ -38,6 +38,7 @@ const categories = await getActiveCategories();
 // "Forklart" menüde sadece yayımlanmış en az bir açıklayıcı yazı varsa görünür.
 const alleSaker = await getNews();
 const harForklart = alleSaker.some(erForklart);
+const harAnalyse = alleSaker.some(erAnalyse);
 // "Temaer" menüde sadece sayfası olan en az bir tema varsa görünür (src/lib/tema.mjs).
 const harTemaer = aktiveTemaer(alleSaker).length > 0;
 
@@ -129,6 +130,14 @@ const [nameHead, nameTail] = SITE.name.split('ø');
         <div class="container">
           <a href="/" aria-current={current === '/' ? 'page' : undefined}>Forsiden</a>
           {
+            harAnalyse && (
+              <a href={`/${ANALYSE.slug}/`} class={harForklart ? undefined : 'nav-forklart'} aria-current={current.startsWith(`/${ANALYSE.slug}`) ? 'page' : undefined}>
+                <Symbol kind="forklart" />
+                {ANALYSE.name}
+              </a>
+            )
+          }
+          {
             harForklart && (
               <a href={`/${FORKLART.slug}/`} class="nav-forklart" aria-current={current.startsWith(`/${FORKLART.slug}`) ? 'page' : undefined}>
                 <Symbol kind="forklart" />
@@ -207,6 +216,16 @@ const [nameHead, nameTail] = SITE.name.split('ø');
         <section aria-labelledby="footer-seksjoner">
           <h2 id="footer-seksjoner">Seksjoner og innhold</h2>
           <ul>
+            {
+              harAnalyse && (
+                <li>
+                  <a href={`/${ANALYSE.slug}/`}>
+                    <Symbol kind="forklart" />
+                    <strong>{ANALYSE.name} – vurderinger</strong>
+                  </a>
+                </li>
+              )
+            }
             {
               harForklart && (
                 <li>

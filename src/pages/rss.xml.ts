@@ -22,7 +22,7 @@ export async function GET(context: APIContext) {
         description: h.data.description,
         pubDate: h.data.date,
         link: newsUrl(h),
-        categories: [categoryName(h.data.category), ...(h.data.sjanger === 'forklart' ? ['Forklart'] : [])],
+        categories: [categoryName(h.data.category), ...(h.data.sjanger === 'forklart' ? ['Forklart'] : []), ...(h.data.sjanger === 'analyse' ? ['Analyse'] : [])],
         ...(media ? { customData: media } : {}),
       };
     }),

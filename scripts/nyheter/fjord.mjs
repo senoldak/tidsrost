@@ -131,7 +131,7 @@ export async function fjordKart(m, bicim = 'kapak') {
   const { kicker, ana, alt: altBaslik } = bol(m.tittel);
   const imzali = Boolean(m.forfatter);
   const P = imzali ? PALET.ters : PALET.fjord;
-  const tur = (m.sjanger === 'forklart' ? 'Forklart' : 'Kommentar').toLocaleUpperCase('nb-NO');
+  const tur = (m.sjanger === 'forklart' ? 'Forklart' : m.sjanger === 'analyse' ? 'Analyse' : 'Kommentar').toLocaleUpperCase('nb-NO');
   const katmanlar = [];
   const parcalar = [];
   let svg = `<rect width="${W}" height="${H}" fill="${P.bg}"/>`;

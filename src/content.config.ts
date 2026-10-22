@@ -35,8 +35,8 @@ const haberler = defineCollection({
       // Redaksjonell oppsummering / GEO syntese (Kort oppsummert)
       why_matters: z.string().optional(),
       key_points: z.array(z.string()).optional(),
-      // Yazı türü: 'forklart' = tablo ve grafiklerle açıklayıcı yazı; menüdeki "Forklart" bölümünde listelenir.
-      sjanger: z.enum(['nyhet', 'forklart']).default('nyhet'),
+      // Yazı türü: 'forklart' = tablo ve grafiklerle açıklayıcı yazı (menüde "Forklart"); 'analyse' = yazı işleri zincirinin analiz yazısı (menüde "Analyse").
+      sjanger: z.enum(['nyhet', 'forklart', 'analyse']).default('nyhet'),
       // Resmi olmayan kaynakların şifreli kaydı; sitede gösterilmez (bkz. scripts/nyheter/hemmelig.mjs).
       kildeSpor: z.string().optional(),
       // Botun seçimde verdiği haber değeri (1–100, bkz. scripts/nyheter/viktighet.mjs); sitede gösterilmez, Reels seçiminde kullanılır.

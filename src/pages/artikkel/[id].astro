@@ -7,7 +7,7 @@ import Base from '../../layouts/Base.astro';
 import StoryRow from '../../components/StoryRow.astro';
 import Symbol from '../../components/Symbol.astro';
 import { SITE, categoryName, formatDay, formatTime, varsel, gorselVar } from '../../lib/site';
-import { FORKLART, erForklart, forfatterSlug, getNews, kilde, kildeUrl, type Haber } from '../../lib/news';
+import { ANALYSE, FORKLART, erAnalyse, erForklart, forfatterSlug, getNews, kilde, kildeUrl, type Haber } from '../../lib/news';
 import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs, headline } from '../../lib/seo';
 import SentezBlok from '../../components/SentezBlok.astro';
 import { matchEntities } from '../../lib/entities';
@@ -47,6 +47,7 @@ const source = kilde(haber);
 const sourceUrl = kildeUrl(haber);
 const warn = varsel(title);
 const forklart = erForklart(haber);
+const analyse = erAnalyse(haber);
 const medieKilde = visMedieKilde({ produksjon, forklart, harOffentligKilde: Boolean(source) });
 // Kişi adıyla yayımlanan yazıların yazar sayfası vardır (/forfatter/<slug>/).
 const forfatterUrl = author !== SITE.name ? `/forfatter/${forfatterSlug(author)}/` : undefined;
@@ -76,7 +77,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': forklart ? 'ExplanatoryNewsArticle' : 'NewsArticle',
+      '@type': analyse ? 'AnalysisNewsArticle' : forklart ? 'ExplanatoryNewsArticle' : 'NewsArticle',
       '@id': `${pageUrl}#article`,
       headline: headline(title),
       description,
@@ -91,7 +92,7 @@ const jsonLd = {
       publisher: { '@id': ORG_ID },
       mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
       url: pageUrl,
-      articleSection: forklart ? [section, FORKLART.name] : section,
+      articleSection: analyse ? [section, ANALYSE.name] : forklart ? [section, FORKLART.name] : section,
       inLanguage: 'nb',
       isAccessibleForFree: true,
       license: LISENS_JSONLD_URL,
@@ -109,6 +110,7 @@ const jsonLd = {
     <meta property="article:modified_time" content={modifiedIso} />
     <meta property="article:section" content={section} />
     {forklart && <meta property="article:tag" content={FORKLART.name} />}
+    {analyse && <meta property="article:tag" content={ANALYSE.name} />}
     {forfatterUrl && <meta name="author" content={author} />}
     <script type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
   </Fragment>
@@ -124,6 +126,14 @@ const jsonLd = {
           <div>
             <dt>Varsel</dt>
             <dd><a class="mark mark-varsel" href="/farevarsler/"><Symbol kind="varsel" class={`sym-varsel-${warn.level}`} />{warn.label}</a></dd>
+          </div>
+        )
+      }
+      {
+        analyse && (
+          <div>
+            <dt>Sjanger</dt>
+            <dd><a class="mark" href={`/${ANALYSE.slug}/`}><Symbol kind="forklart" />{ANALYSE.name}</a></dd>
           </div>
         )
       }
@@ -218,6 +228,8 @@ const jsonLd = {
         </aside>
       )
     }
+
+    {analyse && <p class="ikke-rad">Analysen er ikke investeringsråd.</p>}
 
     <KiNotat tittel={title} url={pageUrl} author={author} sjanger={haber.data.sjanger} produksjon={produksjon} />
 

@@ -850,6 +850,13 @@ main.container {
   color: var(--water);
 }
 
+.ikke-rad {
+  margin: calc(var(--u) * 4) 0 0;
+  font: 500 0.875rem/1.55 var(--frame);
+  font-stretch: 94%;
+  color: var(--muted);
+}
+
 .ki-notat {
   margin: calc(var(--u) * 5) 0 0;
   padding-top: calc(var(--u) * 2);
