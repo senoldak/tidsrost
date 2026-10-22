@@ -68,6 +68,9 @@ export function periode(tekst = '') {
   return m ? m[1].replace(/\s+/g, ' ').trim().toLowerCase() : undefined;
 }
 
+// Haberin ilk iki paragrafı (olay en açık burada anlatılır).
+const ledd = (tekst = '') => String(tekst ?? '').replace(/^\s+/, '').split(/\n\s*\n/).slice(0, 2).join(' ');
+
 /** Karşılaştırılacak kayıt: { tittel, ingress?, tekst?, kildeId?, tid? }. Hafızada termler bir kez hesaplanır. */
 export function nokkel(sak) {
   const tittel = sak.tittel ?? '';
@@ -79,6 +82,8 @@ export function nokkel(sak) {
     _tT: termer(tittel),
     _tD: termer(`${tittel} ${ingress}`),
     _e: enheter(`${tittel}. ${ingress}`),
+    // Başlık + giriş + ilk iki paragraftaki özel isimler (rakamsız): nadir isim çakışması için (bkz. finnDublett).
+    _eL: new Set([...enheter(`${tittel}. ${ingress}. ${ledd(sak.tekst)}`)].filter((t) => !/\d/.test(t))),
   };
 }
 
@@ -118,8 +123,18 @@ export function sammeHendelse(x, y, { strengt = false } = {}) {
   if (fellesEnheter.length >= 3 && unionD && fellesD / unionD >= 0.5) return true;
 
   if (a.ingress && b.ingress && likhet(a.ingress, b.ingress) >= 0.5) return true;
+  // Kısa başlığın bütün terimleri uzun başlıkta da varsa (aynı kurumun "legger fram ny strategi" / "legger fram ny
+  // europeisk strategi" başlıkları) tek ayırt edici terim yeter.
+  if (oran === 1 && felles.length >= 4 && ayirt >= 1) return true;
   return false;
 }
+
+// Aynı olayın farklı kaleme alınmış anlatımları (Zelenskyj'in Oslo ziyareti: üç başlık, üç haber) başlık/giriş
+// terimlerinden yakalanamaz, ama olaya özgü nadir özel isimleri (Stubb, Witkoff, Kushner…) paylaşırlar. Sürekli
+// konuların sık isimleri (Zelenskyj, Ukraina, Trump) nadir sayılmaz; böylece "aynı konu, farklı olay" çiftleri geçmez.
+export const SJELDEN_MAKS_DF = 4;
+export const SJELDEN_MIN_FELLES = 7;
+export const SJELDEN_TIMER = 48;
 
 /** Hafıza: son `timer` saatin yayınlanmış haberleri (taslaklar dahil değil). */
 export async function lesHukommelse(rot, { timer = HUKOMMELSE_TIMER, naa = Date.now() } = {}) {
@@ -152,5 +167,13 @@ export async function lesHukommelse(rot, { timer = HUKOMMELSE_TIMER, naa = Date.
 /** Hafızada aynı olayı anlatan haber varsa onu döner, yoksa undefined. */
 export function finnDublett(hukommelse, sak, opts) {
   const n = nokkel(sak);
-  return hukommelse.find((h) => sammeHendelse(h, n, opts));
+  const direkte = hukommelse.find((h) => sammeHendelse(h, n, opts));
+  if (direkte || opts?.strengt || n.produksjon === 'automatisk' || n._eL.size < SJELDEN_MIN_FELLES) return direkte;
+  // Nadir özel isim çakışması: yalnız son 48 saatteki, şablonsuz haberlerle. df: isim → (hafıza + aday) haber sayısı.
+  const naa = opts?.naa ?? Date.now();
+  const son = hukommelse.filter((h) => h.produksjon !== 'automatisk' && h._eL && !(naa - h.tid > SJELDEN_TIMER * 36e5));
+  const df = new Map();
+  for (const h of [...son, n]) for (const t of h._eL) df.set(t, (df.get(t) ?? 0) + 1);
+  const sjelden = (h) => [...h._eL].filter((t) => n._eL.has(t) && df.get(t) <= SJELDEN_MAKS_DF).length;
+  return son.find((h) => sjelden(h) >= SJELDEN_MIN_FELLES);
 }

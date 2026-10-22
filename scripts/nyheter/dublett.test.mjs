@@ -107,3 +107,32 @@ test('hukommelsen leser publiserte saker fra de siste 72 timene og hopper over u
     await rm(rot, { recursive: true, force: true });
   }
 });
+
+// Canlı denetimde bulunan çiftler (20 Ekim 2026): farklı başlık ve giriş, aynı olay.
+test('kısa başlık uzun başlığın alt kümesi: aynı kurumun aynı olayı', () => {
+  const a = { tittel: 'Europakommisjonen legger fram ny europeisk strategi', ingress: 'Europakommisjonen har vedtatt en ny europeisk strategi for å møte endrede sikkerhetsforhold.' };
+  const b = { tittel: 'Europakommisjonen legger fram ny strategi', ingress: 'Europakommisjonen og høyrepresentanten har presentert en ny strategi som fokuserer på sikkerhet og klima.' };
+  assert.equal(sammeHendelse(a, b), true);
+  // ayırt edici terimsiz kısa başlık alt kümesi sayılmaz
+  assert.equal(sammeHendelse({ tittel: 'Ny bil funnet drept', ingress: 'a' }, { tittel: 'Ny bil funnet drept etter angrep', ingress: 'b' }), false);
+});
+
+const lead = (txt) => `${txt}\n\nAndre avsnitt.`;
+const oslo = (tittel, ingress, tekst, tid) => ({ tittel, ingress, tekst: lead(tekst), tid, slug: tittel });
+const NAA = Date.parse('2026-10-20T15:00:00Z');
+const olsoTekst = 'Ukrainas president Volodymyr Zelenskyj møter statsminister Jonas Gahr Støre og Finlands president Alexander Stubb i Oslo. De amerikanske utsendingene Steve Witkoff og Jared Kushner deltar.';
+
+test('nadir ortak özel isimler: aynı olayın farklı anlatımı yakalanır', () => {
+  const minne = [
+    nokkel(oslo('Volodymyr Zelenskyj besøker Oslo', 'Samtaler tirsdag.', olsoTekst, NAA - 5 * 36e5)),
+    nokkel(oslo('Hungersnød i Sudan', 'FN advarer.', 'FN-sjefen Antonio Guterres advarer mot hungersnød i Sudan.', NAA - 4 * 36e5)),
+  ];
+  const ny = { tittel: 'Toppmøte om Ukraina i Norge', ingress: 'Zelenskyj har landet.', tekst: lead(olsoTekst) };
+  assert.equal(finnDublett(minne, ny, { naa: NAA })?.slug, 'Volodymyr Zelenskyj besøker Oslo');
+  // 48 saatten eski hafıza sayılmaz
+  const eski = [nokkel(oslo('Volodymyr Zelenskyj besøker Oslo', 'Samtaler tirsdag.', olsoTekst, NAA - 60 * 36e5))];
+  assert.equal(finnDublett(eski, ny, { naa: NAA }), undefined);
+  // yalnız sık isimler (Zelenskyj, Ukraina, Trump...) paylaşılıyorsa farklı olay
+  const baska = { tittel: 'Zelenskyj kritiserer Trump', ingress: 'Krigen i Ukraina.', tekst: lead('Zelenskyj kritiserer Donald Trump og USA for Ukraina-politikken i Russland-krigen.') };
+  assert.equal(finnDublett(minne, baska, { naa: NAA }), undefined);
+});
