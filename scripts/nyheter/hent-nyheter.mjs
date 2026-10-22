@@ -6,9 +6,11 @@ import path from 'node:path';
 import { writeFile, appendFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { lesJsonFil, mdKacir } from './lib.mjs';
-import { butceYukle } from './butce.mjs';
+import { butceYukle, geminiPayiBitti } from './butce.mjs';
 import { acilDurdurma } from './kapi.mjs';
 import { uyarlayiciKur, yerelTur, durumuTemizle } from './uyarlayici.mjs';
+import { turSec } from './motor-modu.mjs';
+import { fjernAdresser } from './hemmelig.mjs';
 
 const HER = path.dirname(fileURLToPath(import.meta.url));
 const ROT = path.resolve(HER, '../..');
@@ -30,7 +32,26 @@ export async function main({ argv = process.argv, ortam = process.env } = {}) {
 
   const tilstand = await lesJsonFil(TILSTAND_FIL, { sett: {}, feil: {}, kilder: {} });
   const u = uyarlayiciKur({ tilstand, simdi: new Date(), ayar: { rot: ROT, maks: MAKS, sureMs: SURE_MS, baslangic: BASLANGIC, torr: TORR } });
-  const { ayarHatasi } = await yerelTur(u, tilstand);
+  // MOTOR_TUR=1: tur ortak motorla (MOTOR_DIZIN), aksi hâlde yerel tur. Motor modunda hata yerel tura düşmez; hatada da durum
+  // ve yazılan haberler aşağıda yazılır (yerel durum kaybolmasın), GITHUB_OUTPUT antall verilir ve süreç hata koduyla çıkar.
+  let turHatasi = null;
+  let ayarHatasi = null;
+  try {
+    const r = await turSec({
+      env: ortam,
+      uyarlayici: u,
+      durum: tilstand,
+      simdi: u.simdi,
+      rot: ROT,
+      yerel: yerelTur,
+      // Motorun surVar'ı varsayılan olarak hep true sayar; süre bütçesi ve Gemini turu payı sınırı burada verilir.
+      surVar: () => Date.now() - BASLANGIC <= SURE_MS && !geminiPayiBitti(),
+    });
+    ayarHatasi = r?.ayarHatasi ?? null;
+  } catch (e) {
+    turHatasi = e;
+    console.error(`Tur hatayla bitti: ${fjernAdresser(e?.message ?? e)}`);
+  }
   const { antall, kortLagt, stoppListe, utkastListe, rettetListe, ventListe, standartElendi, feilListe } = u.ozet;
 
   durumuTemizle(tilstand);
@@ -52,6 +73,7 @@ export async function main({ argv = process.argv, ortam = process.env } = {}) {
     await appendFile(ortam.GITHUB_STEP_SUMMARY, ozet + '\n');
   }
   if (ayarHatasi) throw ayarHatasi;
+  if (turHatasi) return 1;
   return 0;
 }
 

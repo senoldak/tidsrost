@@ -101,6 +101,13 @@ test('adayYuku: { id, kaynak, tittel, tid }', () => {
   assert.deepEqual(adayYuku(k), { id: 'met:1', kaynak: 'met', tittel: 'Farevarsel', tid: k.tid.toISOString() });
 });
 
+test('adayYuku: uzun başlık 300 karaktere kısalır; yük JSON 11000 bayt altında kalır', () => {
+  const k = { ...aday('met:2', 'Ø'.repeat(5000), null), kildeNavn: 'met' };
+  const yuk = adayYuku(k);
+  assert.equal(yuk.tittel.length, 300);
+  assert.ok(Buffer.byteLength(JSON.stringify(yuk)) < 11000);
+});
+
 test('adaylar: taze adayları kimlikle döner; ilk çalıştırmada 24 saatten eski olanlar sett\'e işaretlenir, alleredeSett işaretlenir', async () => {
   const eski = aday('a:eski', 'Eski haber', sak('x'), { saatOnce: 30 });
   const yeni = aday('a:yeni', 'Yeni haber', sak('y'), { saatOnce: 2 });

@@ -36,6 +36,16 @@ jobs:
       - name: Installer avhengigheter
         run: npm ci --no-audit --no-fund
 
+      - name: Motoru getir
+        if: ${{ vars.MOTOR_TUR == '1' }}
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: senoldak/mecmua
+          ssh-key: '${{ secrets.MECMUA_OKUMA }}'
+          path: .mecmua
+          sparse-checkout: motor
+          persist-credentials: false
+
       - name: Hent nyheter
         id: hent
         env:
@@ -50,6 +60,9 @@ jobs:
           GEMINI_GOLGE: ${{ vars.GEMINI_GOLGE }}
           MAKS_PER_KJORING: ${{ vars.MAKS_PER_KJORING }}
           SURE_DK: ${{ vars.SURE_DK }}
+          # Ortak motor modu (private mecmua'dan salt-okur çekilir): vars.MOTOR_TUR=1 iken tur motorla sürülür.
+          MOTOR_TUR: ${{ vars.MOTOR_TUR }}
+          MOTOR_DIZIN: ${{ github.workspace }}/.mecmua/motor
         run: |
           if [ -z "$KILDE_NOKKEL" ]; then echo "::error::KILDE_NOKKEL secret'ı yok; haber sitelerinin akışları okunamaz."; exit 1; fi
           node scripts/nyheter/hent-nyheter.mjs
@@ -58,6 +71,7 @@ jobs:
       # API'leri (bkz. scripts/data/hent-data.mjs). Hata haber botunu durdurmaz; son bilinen veri dosyada kalır.
       - name: Oppdater datasider
         id: data
+        if: ${{ !cancelled() }}
         continue-on-error: true
         timeout-minutes: 3
         env:
@@ -65,8 +79,13 @@ jobs:
           MOTOR_ANAHTARI: ${{ secrets.MOTOR_ANAHTARI }}
         run: node scripts/data/hent-data.mjs
 
+      # Bot adımı hatayla bitse de (motor modu) yazılan haberler ve sett.json commit edilir: defter ile repo ayrışmasın.
+      # Bot adımı zaten kırmızı olduğundan iş kırmızı kalır; hiçbir şey yazılmadıysa "Ingen endringer." ile temiz çıkar.
       - name: Commit
         id: commit
+        if: ${{ !cancelled() }}
+        env:
+          SAYI: ${{ steps.hent.outputs.antall || '0' }}
         run: |
           git config user.name "tidsrost-nyhetsbot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -77,8 +96,8 @@ jobs:
           fi
           # Sadece durum dosyası (ya da veri dosyalarının alma zamanı) değiştiyse siteyi boşuna yeniden derletme.
           # Veri içeriği değiştiyse (yeni faiz, yeni/biten farevarsel) site yeni haber olmasa da yeniden derlenir.
-          if [ "${{ steps.hent.outputs.antall }}" != "0" ]; then
-            git commit -m "Nyhetsbot: ${{ steps.hent.outputs.antall }} nye saker"
+          if [ "$SAYI" != "0" ]; then
+            git commit -m "Nyhetsbot: $SAYI nye saker"
             echo "yayin=1" >> "$GITHUB_OUTPUT"
           elif [ "${{ steps.data.outputs.endret }}" = "1" ]; then
             git commit -m "Nyhetsbot: oppdater datasider"
@@ -97,7 +116,7 @@ jobs:
       # Planlanmış haberler (gelecek tarihli, ör. Forklart yazıları) tarihleri gelince bu çalışmayla yayına girer.
       - name: Planlanmış saker
         id: planlagt
-        if: steps.commit.outputs.yayin != '1'
+        if: ${{ !cancelled() && steps.commit.outputs.yayin != '1' }}
         env:
           MOTOR_URL: ${{ vars.MOTOR_URL }}
           MOTOR_ANAHTARI: ${{ secrets.MOTOR_ANAHTARI }}
@@ -105,7 +124,7 @@ jobs:
 
       # Botun push'u yayın iş akışını kendiliğinden tetiklemez (GITHUB_TOKEN); elle başlatılır.
       - name: Siteyi yayınla
-        if: steps.commit.outputs.yayin == '1' || steps.planlagt.outputs.yayin == '1'
+        if: ${{ !cancelled() && (steps.commit.outputs.yayin == '1' || steps.planlagt.outputs.yayin == '1') }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run yayinla.yml --ref "${{ github.ref_name }}"

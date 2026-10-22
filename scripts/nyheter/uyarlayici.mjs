@@ -22,7 +22,7 @@ const FORSTE_GANG_TIMER = 24;
 const MAKS_FEIL = 3;
 
 /** Motora giden aday yükü: kaynak yalnız adıyla (resmi kaynak adı ya da 'medier'); yük motorda şifrelenir. */
-export const adayYuku = (a) => ({ id: a.id, kaynak: a.kildeNavn, tittel: a.tittel, tid: a.tid.toISOString() });
+export const adayYuku = (a) => ({ id: a.id, kaynak: a.kildeNavn, tittel: String(a.tittel).slice(0, 300), tid: a.tid.toISOString() });
 
 // Sonuc gerekçesi ve hata metni deftere, sabah özetine ve loga gider: adres ve medya adı maskelenir.
 const temiz = (m) => maskerMedier(fjernAdresser(String(m)));
