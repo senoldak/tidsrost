@@ -15,13 +15,23 @@ key_points:
   - "Ifølge regjeringen gjelder nullutslippskrav fra 2026 for passasjerskip under 10 000 bruttotonn i de fem verdensarvfjordene, og for større skip fra 2032."
 ---
 
-Da bilfergen MF «Ampere» ble satt i rutetrafikk mellom Lavik og Oppedal over Sognefjorden i 2015, var den verdens første helelektriske ferge, ifølge regjeringens oversikt over miljøvennlig ferjedrift.
+Fra 2026 gjelder et nullutslippskrav for passasjerskip under 10 000 bruttotonn i de fem verdensarvfjordene Nærøyfjorden, Aurlandsfjorden, Geirangerfjorden, Sunnylvsfjorden og Tafjorden, ifølge regjeringen. For større passasjerskip gjelder samme krav fra 1. januar 2032. Kravet kommer elleve år etter at verdens første helelektriske bilferge, MF «Ampere», ble satt i rute over Sognefjorden.
 
-Statens vegvesen oppgir at det er om lag 130 ferjesamband i Norge. Vegvesenet har selv ansvaret for 16 riksvegferjesamband, mens fylkeskommunene og kommunene har ansvaret for de øvrige sambandene.
+## Før: Den første elektriske fergen
 
-## Nullutslippskrav i verdensarvfjordene
+MF «Ampere» var verdens første helelektriske ferge da den startet å trafikkere ruten mellom Lavik og Oppedal over Sognefjorden i 2015, ifølge regjeringens oversikt over miljøvennlig ferjedrift. Ifølge regjeringen skulle 12 av de 16 ferjesambandene på riksvei bruke strøm som energikilde innen utgangen av 2022.
 
-Ifølge regjeringen gjelder det nullutslippskrav for passasjerskip i de fem verdensarvfjordene Nærøyfjorden, Aurlandsfjorden, Geirangerfjorden, Sunnylvsfjorden og Tafjorden. Kravet gjelder for passasjerskip under 10 000 bruttotonn fra 2026. For passasjerskip på 10 000 bruttotonn eller mer gjelder det samme kravet fra 1. januar 2032.
+## Nå: Krav i verdensarvfjordene
+
+Kravet i verdensarvfjordene er fastsatt av Sjøfartsdirektoratet på vegne av Klima- og miljødepartementet. Det innføres gradvis fordi teknologien for de største skipene ennå ikke er god nok, og regjeringen vil holde fjordene åpne for anløp. Biogass er tillatt som alternativ, og skipene må bruke landstrøm der det er tilgjengelig.
+
+## Hvem det gjelder
+
+Statens vegvesen oppgir at det er om lag 130 ferjesamband i Norge. Vegvesenet har direkte ansvar for 16 av dem, mens fylkeskommunene og kommunene har ansvar for de øvrige. Kravet i verdensarvfjordene gjelder passasjerskip som seiler inn i de fem fjordene.
+
+## Hva som kommer
+
+For passasjerskip på 10 000 bruttotonn eller mer gjelder nullutslippskravet fra 1. januar 2032. På riksveisambandet Bodø–Røst–Værøy–Moskenes over Vestfjorden er kravet ifølge regjeringen at 85 prosent av energien på de to fergene som skal gå i ruten hele året, skal komme fra hydrogen. Regjeringen anslår at de nye fergene vil kutte CO₂-utslippene på strekningen med 26 500 tonn i året sammenlignet med dagens ferger.
 
 ## Kilder
 
