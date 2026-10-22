@@ -92,16 +92,16 @@ export const YERLER = {
   Fredrikstad: '108211792532249',
 };
 
-/** Başlıkta, özette ya da ana noktalarda geçen ilk şehir. */
+/** Başlıkta ya da özette geçen ilk şehir. Yalnız ana noktada geçen şehir haberin şehri sayılmaz (ulusal haberde örnek olabilir). */
 export function sakBy(s) {
-  const metin = [s.tittel, s.ingress, ...(s.punkter ?? [])].join(' ');
+  const metin = [s.tittel, s.ingress].join(' ');
   return BYER.find((b) => new RegExp(`(^|[^\\p{L}])${b}([^\\p{L}]|$)`, 'u').test(metin)) ?? null;
 }
 export const sakYeri = (s) => YERLER[sakBy(s)] ?? null;
 
-// Sonda kısa soru: yorum en güçlü dağıtım sinyali. Ölüm, kaza ve suç haberlerinde sorulmaz (saygısız durur).
+// Sonda kısa soru: yorum en güçlü dağıtım sinyali. Ölüm, kaza, suç ve açlık haberlerinde sorulmaz (saygısız durur).
 const SORULAR = ['Hva tenker du om dette?', 'Hva mener du? Skriv gjerne i kommentarfeltet.', 'Hvordan påvirker dette deg?'];
-const HASSAS = /(^|[^\p{L}])(omkom|død|døde|dødsfall|drept|drap|ulykke|savnet|skadd|skadet|overgrep|selvmord|skyting|knivstikk)/iu;
+const HASSAS = /(^|[^\p{L}])(omkom|død|døde|dødsfall|drept|drap|ulykke|savnet|skadd|skadet|overgrep|selvmord|skyting|knivstikk|menneskeliv|tap av liv|mistet livet|sult)/iu;
 export function sakSorusu(s) {
   if (HASSAS.test(`${s.tittel} ${s.ingress}`)) return null;
   let h = 0;

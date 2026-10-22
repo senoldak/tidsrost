@@ -92,4 +92,15 @@ test('sakSorusu: ölüm, kaza ve suç haberinde soru yok', () => {
   assert.ok(sakSorusu(s('Togstreiken er over')));
   assert.equal(sakSorusu(s('Mann funnet omkommet etter ulykke')), null);
   assert.equal(sakSorusu(s('To døde i brann i Bodø')), null);
+  // 20 Ekim: Gaza'da can kaybı haberine soru eklendi
+  assert.equal(sakSorusu(s('FN advarer om vold og tap av liv i Gaza')), null);
+  assert.equal(sakSorusu(s('Angrepene har krevd flere menneskeliv')), null);
+  assert.equal(sakSorusu(s('Mann mistet livet i trafikken')), null);
+  assert.equal(sakSorusu(s('Millioner rammes av sult i Afghanistan')), null);
+});
+
+test('sakBy: yalnız ana noktada geçen şehir haberi o şehre bağlamaz (22 Ekim, ulusal kürtaj haberi #tromsø aldı)', () => {
+  const sak = { tittel: 'Abortventetiden varierer kraftig ved norske sykehus', ingress: 'Store forskjeller mellom sykehusene.', punkter: ['Universitetssykehuset i Tromsø venter til uke ni'] };
+  assert.equal(sakBy(sak), null);
+  assert.equal(sakBy({ ...sak, ingress: 'I Tromsø må kvinner vente lengst.' }), 'Tromsø');
 });
