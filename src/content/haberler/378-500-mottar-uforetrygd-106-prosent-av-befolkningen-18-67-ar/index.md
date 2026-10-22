@@ -15,9 +15,9 @@ key_points:
   - "22 300 mottakere er under 30 år, 150 færre enn ett år tidligere."
 ---
 
-Ved utgangen av juni 2026 mottok 378 502 personer uføretrygd, ifølge Navs kvartalsstatistikk som ble oppdatert 13. august 2026. Det er 3 699 flere enn i juni 2025, en økning på 1,0 prosent. Mottakerne utgjør 10,6 prosent av befolkningen i alderen 18–67 år.
+Ved utgangen av juni 2026 mottok 378 502 personer uføretrygd, ifølge Navs kvartalsstatistikk, oppdatert 13. august 2026. Det er 3 699 flere enn i juni 2025, en økning på 1,0 prosent. Mottakerne utgjør 10,6 prosent av befolkningen i alderen 18–67 år, 0,1 prosentpoeng mer enn ett år tidligere.
 
-## Slik regnes tallene
+## Hva uføretrygd er
 
 Uføretrygd skal sikre inntekt for personer som har fått inntektsevnen varig nedsatt med minst halvparten på grunn av sykdom, skade eller lyte. Ytelsen tilsvarer 66 prosent av tidligere inntekt, opp til seks ganger grunnbeløpet i folketrygden.
 
@@ -25,16 +25,21 @@ Nav teller personer med løpende utbetaling i alderen 18–67 år. Av 18-åringe
 
 ## Utviklingen siden 2017
 
-Antall mottakere har økt hvert år siden 2017, da tallet var 321 837. Til sammen er det 56 665 flere, en økning på 17,6 prosent. Andelen av befolkningen steg fra 9,6 prosent i 2017 til 10,5 prosent i 2020. Den var 10,5 prosent hvert år til og med 2025 og er 10,6 prosent i 2026.
+Antallet mottakere har økt hvert år siden 2017, da det var 321 837. Det er 56 665 flere, eller 17,6 prosent. Andelen av befolkningen steg fra 9,6 prosent i 2017 til 10,5 prosent i 2020, lå på 10,5 prosent hvert år til og med 2025 og er 10,6 prosent i 2026.
 
-![Stolpediagram over antall mottakere av uføretrygd per 30. juni: 321 837 i 2017, 332 084 i 2018, 346 825 i 2019, 357 505 i 2020, 360 652 i 2021, 362 766 i 2022, 366 323 i 2023, 369 803 i 2024, 374 803 i 2025 og 378 502 i 2026.](./graf-1.svg)
-*Mottakere av uføretrygd per 30. juni, alder 18–67 år. Kilde: Nav, uføretrygd – kvartalsstatistikk.*
+![Linjediagram over Flere mottakere hvert år: Mottakere: 321 837 i 2017, 332 084 i 2018, 346 825 i 2019, 357 505 i 2020, 360 652 i 2021, 362 766 i 2022, 366 323 i 2023, 369 803 i 2024, 374 803 i 2025, 378 502 i 2026.](./graf-1.svg)
+*Mottakere av uføretrygd per 30. juni, alder 18–67 år, 2017–2026. Kilde: Nav.*
 
-I første halvår 2026 fikk om lag 15 700 personer uføretrygd for første gang. Det er om lag 1 900 flere enn i samme periode i 2025. Tabelltallene viser 15 720 mot 13 840, hvorav 9 086 kvinner og 6 634 menn. I samme periode gikk om lag 12 100 ut av ordningen. Flest gikk over til alderspensjon, og 67-åringer utgjorde 75,7 prosent av dem som sluttet.
+I første halvår 2026 fikk 15 720 personer uføretrygd for første gang, mot 13 840 i samme periode i 2025. Av de nye mottakerne var 9 086 kvinner og 6 634 menn. Ifølge Nav gikk om lag 12 100 personer ut av ordningen i samme periode, de fleste over til alderspensjon. 67-åringer utgjorde 75,7 prosent av dem som sluttet.
 
 I andre kvartal 2026 kom 81,9 prosent av de nye mottakerne fra arbeidsavklaringspenger, 2,0 prosentpoeng mer enn i samme kvartal året før.
 
 ## Kvinner og menn
+
+12,8 prosent av kvinnene i alderen 18–67 år mottar uføretrygd, mot 8,5 prosent av mennene. Kvinner utgjør 58,9 prosent av mottakerne.
+
+![Linjediagram over Andelen er høyere blant kvinner: Kvinner: 11,4 % i 2017, 11,7 % i 2018, 12,2 % i 2019, 12,5 % i 2020, 12,6 % i 2021, 12,5 % i 2022, 12,5 % i 2023, 12,5 % i 2024, 12,7 % i 2025, 12,8 % i 2026; Alle: 9,6 % i 2017, 9,8 % i 2018, 10,2 % i 2019, 10,5 % i 2020, 10,5 % i 2021, 10,5 % i 2022, 10,5 % i 2023, 10,5 % i 2024, 10,5 % i 2025, 10,6 % i 2026; Menn: 7,8 % i 2017, 8,0 % i 2018, 8,3 % i 2019, 8,5 % i 2020, 8,6 % i 2021, 8,5 % i 2022, 8,5 % i 2023, 8,5 % i 2024, 8,5 % i 2025, 8,5 % i 2026.](./graf-2.svg)
+*Mottakere av uføretrygd som andel av befolkningen 18–67 år, etter kjønn, 2017–2026. Kilde: Nav.*
 
 | Kjønn | Mottakere juni 2025 | Mottakere juni 2026 | Andel av befolkningen 2026 |
 |---|---:|---:|---:|
@@ -42,20 +47,18 @@ I andre kvartal 2026 kom 81,9 prosent av de nye mottakerne fra arbeidsavklarings
 | Menn | 154 411 | 155 639 | 8,5 % |
 | Alle | 374 803 | 378 502 | 10,6 % |
 
-*Kilde: Nav, uføretrygd – kvartalsstatistikk, tabeller per 30. juni 2026.*
-
-Kvinner utgjør 58,9 prosent av mottakerne. Andelen blant kvinner økte med 0,1 prosentpoeng siste år, mens den var uendret for menn. Blant alle mottakere fikk 85,7 prosent full uføretrygd ved utgangen av juni 2026, mens 14,3 prosent har gradert ytelse.
+*Kilde: Nav, tabeller per 30. juni 2026.*
 
 Gjennomsnittlig årlig uføretrygd var 371 196 kroner i juni 2026, opp fra 353 611 kroner året før.
 
 ## Alder
 
-Andelen som mottar uføretrygd øker med alderen. Blant 18–19-åringene er den 1,3 prosent, mens den er 28,4 prosent blant 65–67-åringene. Totalt er 191 468 av mottakerne, eller 50,6 prosent, i alderen 55–67 år.
+Andelen øker med alderen, fra 1,3 prosent blant 18–19-åringene til 28,4 prosent blant 65–67-åringene. 191 468 av mottakerne, 50,6 prosent, er mellom 55 og 67 år.
 
-![Liggende søylediagram over andelen som mottar uføretrygd per aldersgruppe, 30. juni 2026: 1,3 prosent for 18–19 år, 2,1 for 20–24, 3,7 for 25–29, 5,3 for 30–34, 6,3 for 35–39, 8,0 for 40–44, 10,4 for 45–49, 14,0 for 50–54, 19,0 for 55–59, 24,7 for 60–64 og 28,4 for 65–67 år.](./graf-2.svg)
-*Mottakere av uføretrygd som andel av befolkningen i samme aldersgruppe, prosent. Kilde: Nav, uføretrygd – kvartalsstatistikk.*
+Over tid har andelen gått ned blant de eldste og opp blant de yngre. Blant 65–67-åringene falt den fra 32,4 prosent i 2017 til 28,4 prosent i 2026. Blant 30–34-åringene steg den fra 2,9 til 5,3 prosent. Ifølge Nav skjer veksten nå hovedsakelig i aldersgruppene mellom 30 og 44 år.
 
-Over tid har andelen blant de eldste gått ned: for 65–67-åringer fra 32,4 prosent i 2017 til 28,4 prosent i 2026. Blant 30–34-åringene har den økt fra 2,9 til 5,3 prosent, og blant 40–44-åringene fra 6,4 til 8,0 prosent.
+![Helningsdiagram over Økt blant yngre, falt blant de eldste: i 2017: Tjuefem til tjueni år: 2,2 %, Tretti til trettifire år: 2,9 %, Førti til førtifire år: 6,4 %, Femti til femtifire år: 13,5 %, Seksti til sekstifire år: 26,5 %, Sekstifem til sekstisju år: 32,4 %; i 2026: Tjuefem til tjueni år: 3,7 %, Tretti til trettifire år: 5,3 %, Førti til førtifire år: 8,0 %, Femti til femtifire år: 14,0 %, Seksti til sekstifire år: 24,7 %, Sekstifem til sekstisju år: 28,4 %.](./graf-3.svg)
+*Mottakere av uføretrygd som andel av befolkningen i samme aldersgruppe, 2017 og 2026, utvalgte aldersgrupper. Kilde: Nav.*
 
 | Aldersgruppe | Juni 2025 | Juni 2026 | Endring |
 |---|---:|---:|---:|
@@ -65,15 +68,19 @@ Over tid har andelen blant de eldste gått ned: for 65–67-åringer fra 32,4 pr
 | 60–67 år | 118 569 | 120 228 | +1 659 |
 | Alle | 374 803 | 378 502 | +3 699 |
 
-*Kilde: Nav, uføretrygd – kvartalsstatistikk. Aldersgruppene er summert fra femårsgrupper; to personer med uoppgitt alder i 2025 er bare med i totalen.*
+*Kilde: Nav. Aldersgruppene er summert fra femårsgrupper; to personer med uoppgitt alder i 2025 er bare med i totalen.*
 
 ## Unge uføre
 
-Nav regner unge uføre som mottakere i alderen 18–29 år. Per juni 2026 var de 22 300, noe som tilsvarer 2,7 prosent av befolkningen i samme aldersgruppe: 2,6 prosent blant kvinner og 2,8 prosent blant menn. Det er 150 færre enn ett år tidligere. Andelen er 0,9 prosentpoeng høyere enn for ti år siden, men har ifølge Nav vært stabil de siste tre årene.
+Nav regner unge uføre som mottakere i alderen 18–29 år. Per juni 2026 var de 22 300, 150 færre enn ett år tidligere. Det tilsvarer 2,7 prosent av befolkningen i samme aldersgruppe. Andelen er 0,9 prosentpoeng høyere enn for ti år siden, men har ifølge Nav vært stabil de siste tre årene.
 
-## Fylkesforskjeller
+## Fylkene
 
-Ifølge Nav varierer andelen mottakere mellom fylkene, og forskjellene består også når tallene aldersstandardiseres.
+Andelen var høyest i Innlandet og Agder (begge 14,5 prosent), Telemark (14,4 prosent) og Østfold (14,0 prosent), og lavest i Oslo (6,4 prosent). Oslo har en yngre befolkning, noe som trekker andelen ned. Nav skriver at det likevel er betydelige forskjeller mellom fylkene også når det korrigeres for alder.
+
+## Navs prognose
+
+Nav venter 379 500 mottakere i desember 2026 og 385 500 i desember 2027. Det vil tilsvare 10,6 og 10,7 prosent av befolkningen.
 
 ## Kilder
 
