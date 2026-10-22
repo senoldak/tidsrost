@@ -2,7 +2,7 @@
 title: "Norges Bank satte styringsrenten til 4,50 prosent – anslår 2,5 prosent vekst i husholdningenes realinntekt"
 description: "Norges Bank satte i september 2026 styringsrenten opp fra 4,25 til 4,50 prosent. Banken anslår at husholdningenes disponible realinntekt vokser med 2,5 prosent i 2026."
 date: 2026-10-14T12:16:00+02:00
-oppdatert: 2026-10-19T13:00:00+02:00
+oppdatert: 2026-10-22T21:24:00+02:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Norges Bank satte styringsrenten til 4,50 prosent – anslår 2,5 prosent vekst i husholdningenes realinntekt»"
@@ -16,35 +16,39 @@ key_points:
   - "Norges Bank anslår at husholdningenes disponible realinntekt vokser med 2,5 prosent i 2026 og 1,1 prosent i 2027."
 ---
 
-Den 24. september 2026 satte Norges Bank styringsrenten opp fra 4,25 til 4,50 prosent. Beslutningen følger etter en økning fra 4,00 til 4,25 prosent i mai. Ifølge Norges Bank skyldes det behovet for en noe strammere pengepolitikk for å få prisveksten ned til inflasjonsmålet på 2 prosent innen rimelig tid.
+Fra 25. september 2026 er Norges Banks styringsrente 4,50 prosent. Dagen før besluttet banken å sette renten opp fra 4,25 prosent, etter en økning fra 4,00 til 4,25 prosent i mai. Ifølge Norges Bank trengs en noe strammere pengepolitikk for å få prisveksten ned til målet på 2 prosent innen rimelig tid. Renten påvirker blant annet renten på boliglån og bankinnskudd. Neste rentebeslutning publiseres 5. november 2026.
 
-Fra september 2025 til september 2026 var tolvmånedersveksten i konsumprisindeksen (KPI) 3,4 prosent, mens den underliggende prisveksten (KPI-JAE) var 3,0 prosent, viser tall fra Statistisk sentralbyrå (SSB). Norges Bank anslår samtidig at husholdningenes kjøpekraft øker de nærmeste årene, også når økte renteutgifter er tatt hensyn til. Neste rentebeslutning publiseres 5. november 2026.
+## Hva styringsrenten er
 
-## Rentebeslutningen i september 2026
+Styringsrenten er renten bankene får på sine innskudd i Norges Bank. Den danner utgangspunktet for rentene bankene tilbyr husholdninger og bedrifter.
 
-Styringsrenten angir hva bankene får i rente på sine innskudd i Norges Bank, og danner utgangspunktet for rentene bankene tilbyr husholdninger og bedrifter. Ved starten av 2021 var styringsrenten 0 prosent. Fra september 2021 ble den hevet gradvis gjennom 2022 og 2023 til 4,50 prosent i desember 2023.
+## Før: Fra null til 4,50 prosent
 
-Etter to rentekutt i juni og september 2025 ned til 4,00 prosent har Norges Bank økt styringsrenten i mai og september 2026 til 4,50 prosent.
+Ved starten av 2021 var styringsrenten 0 prosent. Fra september 2021 ble den satt opp i fjorten trinn, til 4,50 prosent i desember 2023. Der ble den liggende til juni 2025, da den ble satt ned til 4,25 prosent. I september 2025 ble den satt ned igjen, til 4,00 prosent.
 
-![Linjediagram som viser styringsrenten og renten på nye nedbetalingslån med pant i bolig for husholdninger fra januar 2021 til september 2026. Styringsrenten steg fra 0 prosent i 2021 til 4,50 prosent fra desember 2023, falt til 4,00 prosent høsten 2025 og var 4,30 prosent i gjennomsnitt i september 2026. Boliglånsrenten steg fra 1,77 prosent i januar 2021 til 5,73 prosent i 2024, falt til 5,05 prosent i mars 2026 og var 5,31 prosent i august 2026.](./graf-1.svg)
-*Styringsrenten (månedsgjennomsnitt) og renten på nye boliglån til husholdninger. Kilde: Norges Bank og SSB.*
+![Linjediagram over Renten er satt opp to ganger i 2026: Styringsrenten: januar 2021: 0,00 %, september 2021: 0,25 %, desember 2021: 0,50 %, mars 2022: 0,75 %, juni 2022: 1,25 %, august 2022: 1,75 %, september 2022: 2,25 %, november 2022: 2,50 %, desember 2022: 2,75 %, mars 2023: 3,00 %, mai 2023: 3,25 %, juni 2023: 3,75 %, august 2023: 4,00 %, september 2023: 4,25 %, desember 2023: 4,50 %, juni 2025: 4,25 %, september 2025: 4,00 %, mai 2026: 4,25 %, september 2026: 4,50 %.](./graf-1.svg)
+*Norges Banks styringsrente, januar 2021–september 2026. Hvert trinn viser når en ny rente fikk virkning. Kilde: Norges Bank.*
 
-## Prisvekst og inflasjonsutsikter
+## Nå: To økninger i 2026
 
-Norges Banks komité for pengepolitikk og finansiell stabilitet skriver i pressemeldingen at prisveksten har ligget over målet i flere år, og at komiteen mener det er behov for en noe strammere pengepolitikk for å få prisveksten ned til målet innen rimelig tid.
+I mai 2026 ble renten satt opp til 4,25 prosent, og i september til 4,50 prosent. Norges Banks komité for pengepolitikk og finansiell stabilitet skriver i pressemeldingen at prisveksten har ligget over målet i flere år.
 
-Komiteen peker på at den underliggende prisveksten – målt ved KPI justert for avgiftsendringer og uten energivarer (KPI-JAE) – har avtatt og vært lavere enn ventet siden juni, mens den samlede konsumprisindeksen har vært høyere enn ventet. Komiteen peker også på at prisene på olje, gass og flere andre råvarer har steget siden juni, og at en sterkere krone bidrar til å dempe prisveksten på varer som kjøpes fra utlandet.
+Komiteen peker på at den underliggende prisveksten, målt ved KPI justert for avgiftsendringer og uten energivarer (KPI-JAE), har avtatt og vært lavere enn ventet siden juni, mens den samlede konsumprisindeksen har vært høyere enn ventet. Prisene på olje, gass og flere andre råvarer har steget siden juni, og en sterkere krone bidrar ifølge komiteen til å dempe prisveksten på varer som kjøpes fra utlandet.
 
 SSBs konsumpristall fra 9. oktober viser en tolvmånedersvekst i KPI på 3,4 prosent og i KPI-JAE på 3,0 prosent i september 2026. Til sammenligning nådde KPI 7,5 prosent i oktober 2022 og KPI-JAE 6,9 prosent i juni 2023.
 
-![Linjediagram som viser tolvmånedersveksten i KPI og KPI-JAE fra januar 2021 til september 2026, sammen med inflasjonsmålet på 2 prosent. KPI-veksten nådde 7,5 prosent i oktober 2022 og var 3,4 prosent i september 2026. KPI-JAE nådde 6,9 prosent i juni 2023 og var 3,0 prosent i september 2026.](./graf-2.svg)
-*Tolvmånedersvekst i konsumprisene sammenlignet med inflasjonsmålet. Kilde: SSB og Norges Bank.*
+![Linjediagram over Prisveksten er fortsatt over målet: KPI: januar 2021: 2,5 %, februar 2021: 3,2 %, mars 2021: 3,0 %, april 2021: 3,0 %, mai 2021: 2,7 %, juni 2021: 2,8 %, juli 2021: 3,0 %, august 2021: 3,3 %, september 2021: 4,1 %, oktober 2021: 3,5 %, november 2021: 5,1 %, desember 2021: 5,2 %, januar 2022: 3,3 %, februar 2022: 3,7 %, mars 2022: 4,6 %, april 2022: 5,4 %, mai 2022: 5,9 %, juni 2022: 6,3 %, juli 2022: 6,7 %, august 2022: 6,5 %, september 2022: 6,8 %, oktober 2022: 7,5 %, november 2022: 6,5 %, desember 2022: 5,9 %, januar 2023: 7,0 %, februar 2023: 6,2 %, mars 2023: 6,6 %, april 2023: 6,4 %, mai 2023: 6,6 %, juni 2023: 6,4 %, juli 2023: 5,3 %, august 2023: 4,9 %, september 2023: 3,4 %, oktober 2023: 4,0 %, november 2023: 4,7 %, desember 2023: 4,7 %, januar 2024: 4,8 %, februar 2024: 4,6 %, mars 2024: 3,9 %, april 2024: 3,6 %, mai 2024: 3,0 %, juni 2024: 2,6 %, juli 2024: 2,8 %, august 2024: 2,7 %, september 2024: 3,0 %, oktober 2024: 2,6 %, november 2024: 2,4 %, desember 2024: 2,3 %, januar 2025: 2,3 %, februar 2025: 3,5 %, mars 2025: 2,6 %, april 2025: 2,5 %, mai 2025: 3,1 %, juni 2025: 3,0 %, juli 2025: 3,2 %, august 2025: 3,5 %, september 2025: 3,6 %, oktober 2025: 3,1 %, november 2025: 3,0 %, desember 2025: 3,2 %, januar 2026: 3,6 %, februar 2026: 2,7 %, mars 2026: 3,6 %, april 2026: 3,4 %, mai 2026: 3,1 %, juni 2026: 2,7 %, juli 2026: 3,0 %, august 2026: 3,3 %, september 2026: 3,4 %; KPI-JAE: januar 2021: 2,7 %, februar 2021: 2,7 %, mars 2021: 2,7 %, april 2021: 2,0 %, mai 2021: 1,6 %, juni 2021: 1,4 %, juli 2021: 1,2 %, august 2021: 1,1 %, september 2021: 1,3 %, oktober 2021: 1,0 %, november 2021: 1,3 %, desember 2021: 1,8 %, januar 2022: 1,3 %, februar 2022: 2,1 %, mars 2022: 2,1 %, april 2022: 2,6 %, mai 2022: 3,4 %, juni 2022: 3,7 %, juli 2022: 4,6 %, august 2022: 4,6 %, september 2022: 5,3 %, oktober 2022: 5,8 %, november 2022: 5,8 %, desember 2022: 5,7 %, januar 2023: 6,5 %, februar 2023: 5,9 %, mars 2023: 6,1 %, april 2023: 6,4 %, mai 2023: 6,6 %, juni 2023: 6,9 %, juli 2023: 6,4 %, august 2023: 6,3 %, september 2023: 5,6 %, oktober 2023: 6,0 %, november 2023: 5,8 %, desember 2023: 5,5 %, januar 2024: 5,3 %, februar 2024: 4,8 %, mars 2024: 4,6 %, april 2024: 4,3 %, mai 2024: 4,1 %, juni 2024: 3,5 %, juli 2024: 3,3 %, august 2024: 3,3 %, september 2024: 3,1 %, oktober 2024: 2,6 %, november 2024: 2,9 %, desember 2024: 2,7 %, januar 2025: 2,7 %, februar 2025: 3,5 %, mars 2025: 3,3 %, april 2025: 3,0 %, mai 2025: 2,8 %, juni 2025: 3,1 %, juli 2025: 3,2 %, august 2025: 3,0 %, september 2025: 3,0 %, oktober 2025: 3,4 %, november 2025: 3,0 %, desember 2025: 3,2 %, januar 2026: 3,4 %, februar 2026: 3,0 %, mars 2026: 3,0 %, april 2026: 3,2 %, mai 2026: 3,4 %, juni 2026: 2,7 %, juli 2026: 2,7 %, august 2026: 3,0 %, september 2026: 3,0 %; Inflasjonsmålet: Mål: 2,0 %.](./graf-2.svg)
+*Tolvmånedersvekst i KPI og KPI-JAE, januar 2021–september 2026. Den stiplede linjen viser inflasjonsmålet på 2 prosent. Kilde: SSB, tabell 14704, og forskrift om pengepolitikken.*
 
-## Norges Banks anslag for styringsrenten
+## Hvem merker det
 
-I *Pengepolitisk rapport 3/2026*, som ble lagt fram samtidig med rentebeslutningen i september, skriver Norges Bank at styringsrenten i prognosene ligger «nær dagens nivå i en periode fremover, før den etter hvert avtar noe». Norges Bank skriver at den nye prognosen indikerer en rente som holdes oppe noe lenger enn i prognosen fra juni. Komiteen skriver også at den er forberedt på å sette renten videre opp dersom inflasjonsutsiktene skulle tilsi det, og at renteutsiktene vil endres dersom utsiktene for økonomien endrer seg.
+Gjennomsnittsrenten på nye nedbetalingslån med pant i bolig var 5,31 prosent i august 2026, opp fra 5,05 prosent i mars 2026. I januar 2021 var den 1,77 prosent, og på det høyeste var den 5,73 prosent i april 2024.
 
-Slik ser Norges Banks egne årsanslag ut i rapporten:
+Norges Bank anslår i *Pengepolitisk rapport 3/2026* at husholdningenes disponible realinntekt vokser med 2,5 prosent i 2026 og 1,1 prosent i 2027. Banken skriver at husholdningenes kjøpekraft trolig vil fortsette å stige de nærmeste årene, «også når vi tar hensyn til renteutgiftene». Ifølge Norges Bank er den registrerte ledigheten omtrent 2,1 prosent.
+
+## Hva som skjer videre
+
+I rapporten skriver Norges Bank at styringsrenten i prognosene ligger «nær dagens nivå i en periode fremover, før den etter hvert avtar noe». Komiteen skriver også at den er forberedt på å sette renten videre opp dersom inflasjonsutsiktene skulle tilsi det.
 
 | År | Styringsrente (nivå) | KPI (vekst) | KPI-JAE (vekst) |
 |---|---|---|---|
@@ -55,15 +59,11 @@ Slik ser Norges Banks egne årsanslag ut i rapporten:
 
 *Prosent. Anslag fra Pengepolitisk rapport 3/2026. Kilde: Norges Bank.*
 
-Med dette anslaget for styringsrenten anslår Norges Bank at prisveksten avtar fra 2027 og kommer ned til 2 prosent i 2029. Norges Bank understreker at prognosene ikke er bindende, og at de vil bli justert dersom de økonomiske utsiktene endrer seg.
+Med dette anslaget for styringsrenten venter Norges Bank at prisveksten avtar fra 2027 og kommer ned til 2 prosent i 2029. Neste rentebeslutning publiseres 5. november 2026.
 
-## Boliglånsrente og husholdningenes inntekt
+## Hva tallene ikke viser
 
-Gjennomsnittsrenten på nye nedbetalingslån med pant i bolig var 5,31 prosent i august 2026, opp fra 5,05 prosent i mars 2026. Til sammenligning var snittrenten på nye boliglån 1,77 prosent i januar 2021 og 5,73 prosent på det høyeste i 2024.
-
-Norges Bank anslår i *Pengepolitisk rapport 3/2026* at husholdningenes disponible realinntekt (utenom aksjeutbytte) vokser med 2,5 prosent i 2026 og 1,1 prosent i 2027. Norges Bank skriver i rapporten at husholdningenes kjøpekraft trolig vil fortsette å stige de nærmeste årene, «også når vi tar hensyn til renteutgiftene».
-
-Ifølge Norges Bank er den registrerte ledigheten omtrent 2,1 prosent.
+Prognosene er ikke løfter. Norges Bank understreker at de blir justert dersom de økonomiske utsiktene endrer seg. Gjennomsnittsrenten på nye boliglån sier ikke hva den enkelte låntaker betaler.
 
 ## Kilder
 
@@ -76,3 +76,5 @@ Ifølge Norges Bank er den registrerte ledigheten omtrent 2,1 prosent.
 - [SSB: Konsumprisindeksen, september 2026](https://www.ssb.no/priser-og-prisindekser/konsumpriser/statistikk/konsumprisindeksen)
 - [SSB: Tabell 14704 – KPI, KPI-JA og KPI-JAE](https://www.ssb.no/statbank/table/14704/)
 - [SSB: Tabell 10748 – Renter på nye boliglån](https://www.ssb.no/statbank/table/10748/)
+- [Norges Bank: Styringsrenten, daglige data (API)](https://data.norges-bank.no/api/data/IR/B.KPRA.SD.R?format=csv&startPeriod=2021-01-01&endPeriod=2026-10-21&locale=no)
+- [Lovdata: Forskrift om pengepolitikken](https://lovdata.no/dokument/SF/forskrift/2018-03-02-199)

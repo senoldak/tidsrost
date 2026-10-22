@@ -2,7 +2,7 @@
 title: "Oljefondet har syvdoblet seg på 15 år – passerte 22 683 milliarder kroner"
 description: "På 15 år har Statens pensjonsfond utland vokst fra drøyt 3 000 til 22 683 milliarder kroner. Over to tredjedeler av formuen stammer nå fra avkastning i finansmarkedene."
 date: 2026-10-14T12:16:00+02:00
-oppdatert: 2026-10-19T13:00:00+02:00
+oppdatert: 2026-10-22T21:24:00+02:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Oljefondet har syvdoblet seg på 15 år – passerte 22 683 milliarder kroner»"
@@ -17,28 +17,11 @@ key_points:
   - "Forslaget til statsbudsjett for 2027 legger til grunn en overføring fra fondet på 608,4 milliarder kroner, anslått til 2,7 prosent av fondsverdien."
 ---
 
-Ved halvårsskiftet 30. juni 2026 nådde Statens pensjonsfond utland – oljefondet – en markedsverdi på 22 683 milliarder kroner, viser halvårsrapporten som Norges Bank Investment Management (NBIM) la fram 12. august. Ved utgangen av 2010 sto fondet i 3 077 milliarder kroner. På 15 år har formuen dermed blitt drøyt sju ganger så stor.
+Statens pensjonsfond utland, oljefondet, var verdt 22 683 milliarder kroner per 30. juni 2026, viser halvårsrapporten som Norges Bank Investment Management (NBIM) la fram 12. august. Ved utgangen av 2010 var fondet verdt 3 077 milliarder kroner. På 15 år har formuen dermed blitt drøyt sju ganger så stor. Avkastning i finansmarkedene står for 15 210 milliarder kroner av verdien.
 
-## Avkastningen i første halvår 2026
+## Hva fondet består av
 
-I første halvår 2026 ga fondet en avkastning på 9,4 prosent, noe som tilsvarer en regnskapsmessig avkastning på 1 753 milliarder kroner. Ifølge NBIM er dette den høyeste kroneavkastningen i et halvår, og 0,22 prosentpoeng bedre enn fondets referanseindeks.
-
-Aksjeporteføljen ga en avkastning på 13,0 prosent, mens renteinvesteringene steg med 0,9 prosent. Unotert eiendom ga 3,0 prosent, mens unotert infrastruktur for fornybar energi gikk tilbake med 0,2 prosent.
-
-NBIM oppgir at resultatet skyldes god avkastning i aksjemarkedet, særlig i asiatiske teknologiaksjer.
-
-Til tross for gevinsten på 1 753 milliarder kroner økte den samlede fondsverdien med et lavere beløp – 1 416 milliarder kroner – gjennom halvåret. Forklaringen ligger i valutamarkedet: En sterkere norsk krone mot flere av hovedvalutaene trakk verdien målt i norske kroner ned med 427 milliarder. Samtidig var netto tilførsel fra staten 89 milliarder kroner etter fradrag for forvaltningskostnader.
-
-## Fra 3 000 til over 22 000 milliarder kroner
-
-Ser man på utviklingen siden 2010, har fondet vokst i nesten samtlige kalenderår, målt i kroner. Ved utgangen av 2014 var fondet verdt over 6 000 milliarder kroner, og ved utgangen av 2019 over 10 000 milliarder kroner (10 088 milliarder). Mellom 2022 og 2024 økte verdien fra 12 429 til 19 742 milliarder kroner, og den var 21 268 milliarder ved utgangen av 2025.
-
-Det eneste kalenderåret med verdifall i denne perioden var 2018, da markedsverdien gikk ned fra 8 488 til 8 256 milliarder kroner.
-
-![Stolpediagram over oljefondets markedsverdi i milliarder kroner ved utgangen av hvert år fra 2011 til 2025, og per 30. juni 2026. Verdien stiger fra 3 312 milliarder i 2011 til 7 475 i 2015, 10 088 i 2019, 12 429 i 2022, 19 742 i 2024, 21 268 i 2025 og 22 683 milliarder per 30. juni 2026. Det eneste fallet i perioden er fra 8 488 i 2017 til 8 256 i 2018.](./graf-1.svg)
-*Oljefondets markedsverdi ved utgangen av hvert år, og per 30. juni 2026. Kilde: Norges Bank Investment Management.*
-
-Tre faktorer avgjør hvor stort fondet er til enhver tid: gevinst eller tap i finansmarkedene, netto innskudd eller uttak fra den norske staten, og svingninger i kronekursen. Per 30. juni 2026 fordelte den samlede verdien seg slik:
+Tre faktorer avgjør hvor stort fondet er: gevinst eller tap i finansmarkedene, netto innskudd eller uttak fra staten, og svingninger i kronekursen. Per 30. juni 2026 fordelte verdien seg slik:
 
 | Kilde til fondets verdi | Milliarder kroner |
 |---|---|
@@ -47,26 +30,40 @@ Tre faktorer avgjør hvor stort fondet er til enhver tid: gevinst eller tap i fi
 | Endringer i kronekursen | 1 965 |
 | **Samlet verdi** | **22 683** |
 
-*(Tallene i tabellen summerer ikke nøyaktig på grunn av avrunding.)*
+*Tallene summerer ikke nøyaktig på grunn av avrunding. Kilde: NBIM.*
 
-## Eier 1,5 prosent av verdens børsnoterte selskaper
+Nesten tre fjerdedeler av formuen er plassert i aksjer. Per 30. juni 2026 var 72,1 prosent investert i aksjer, 25,8 prosent i rentepapirer, 1,6 prosent i unotert eiendom og 0,5 prosent i unotert infrastruktur for fornybar energi.
 
-Nesten tre fjerdedeler av formuen er plassert i aksjemarkedet. Per 30. juni 2026 var 72,1 prosent investert i aksjer, 25,8 prosent i rentepapirer, 1,6 prosent i unotert eiendom og 0,5 prosent i unotert infrastruktur for fornybar energi.
+![Rutediagram over Nesten tre fjerdedeler er aksjer: Andel: Aksjer: 72,1 %, Rentepapirer: 25,8 %, Unotert eiendom: 1,6 %, Unotert fornybar infrastruktur: 0,5 %.](./graf-2.svg)
+*Fondets fordeling på aktivaklasser per 30. juni 2026. Andelen unotert fornybar infrastruktur er under én rute. Kilde: NBIM.*
 
-Fondet har handlet aksjer og rentepapirer siden 1998. De første kjøpene i unotert eiendom kom i 2011, mens investeringer i unotert fornybar infrastruktur ble åpnet i 2021.
+Aksjeporteføljen er spredt på eierposter i rundt 7 100 selskaper verden over. I gjennomsnitt eier fondet 1,5 prosent av alle børsnoterte selskaper. Fondet har handlet aksjer og rentepapirer siden 1998. De første kjøpene i unotert eiendom kom i 2011, mens investeringer i unotert fornybar infrastruktur ble åpnet i 2021.
 
-![Liggende stolpediagram over oljefondets fordeling per 30. juni 2026: aksjer 72,1 prosent, rentepapirer 25,8 prosent, unotert eiendom 1,6 prosent og unotert infrastruktur for fornybar energi 0,5 prosent.](./graf-2.svg)
-*Andel av fondets verdi per aktivaklasse per 30. juni 2026. Kilde: Norges Bank Investment Management.*
+## Første halvår 2026
 
-Aksjeporteføljen er spredt på eierposter i rundt 7 100 selskaper verden over. I gjennomsnitt eier det norske fondet 1,5 prosent av samtlige børsnoterte selskaper globalt.
+I første halvår 2026 ga fondet en avkastning på 9,4 prosent, eller 1 753 milliarder kroner. Ifølge NBIM er det den høyeste kroneavkastningen i et halvår, og 0,22 prosentpoeng bedre enn fondets referanseindeks. NBIM oppgir at resultatet skyldes god avkastning i aksjemarkedet, særlig i asiatiske teknologiaksjer.
 
-## Handlingsregelen og 2027-budsjettet
+![Stolpediagram over Aksjene trakk avkastningen opp: Avkastning: Aksjer: 13,0 %, Unotert eiendom: 3,0 %, Renteinvesteringer: 0,9 %, Unotert fornybar infrastruktur: −0,2 %, Fondet samlet: 9,4 %.](./graf-3.svg)
+*Avkastning i første halvår 2026 etter aktivaklasse. Den stiplede linjen viser fondet samlet. Kilde: NBIM.*
+
+Fondsverdien økte likevel med et lavere beløp, 1 416 milliarder kroner. En sterkere krone mot flere av hovedvalutaene trakk verdien målt i norske kroner ned med 427 milliarder kroner. Netto tilførsel fra staten var 89 milliarder kroner etter fradrag for forvaltningskostnader.
+
+## Fondet over tid
+
+Fondet har økt i verdi hvert kalenderår siden 2010 med ett unntak: I 2018 gikk verdien ned fra 8 488 til 8 256 milliarder kroner. Ved utgangen av 2014 var fondet verdt 6 431 milliarder kroner, og ved utgangen av 2019 10 088 milliarder. Mellom 2022 og 2024 økte verdien fra 12 429 til 19 742 milliarder kroner, og den var 21 268 milliarder ved utgangen av 2025.
+
+![Linjediagram over Fondet har falt i verdi bare ett år siden 2010: Fondets verdi: 3 077 milliarder kroner i 2010, 3 312 milliarder kroner i 2011, 3 816 milliarder kroner i 2012, 5 038 milliarder kroner i 2013, 6 431 milliarder kroner i 2014, 7 475 milliarder kroner i 2015, 7 510 milliarder kroner i 2016, 8 488 milliarder kroner i 2017, 8 256 milliarder kroner i 2018, 10 088 milliarder kroner i 2019, 10 914 milliarder kroner i 2020, 12 340 milliarder kroner i 2021, 12 429 milliarder kroner i 2022, 15 757 milliarder kroner i 2023, 19 742 milliarder kroner i 2024, 21 268 milliarder kroner i 2025.](./graf-1.svg)
+*Fondets verdi ved utgangen av hvert år, 2010–2025, milliarder kroner. Kilde: NBIM, årsrapporter.*
+
+## Hvor mye som brukes
 
 Ingen penger kan hentes ut av oljefondet uten vedtak i Stortinget. Siden 2002 har uttaket blitt styrt av handlingsregelen, som slår fast at pengebruken over statsbudsjettet over tid skal følge forventet realavkastning av fondet.
 
-I sitt forslag til statsbudsjett for 2027, lagt fram 7. oktober 2026, er det lagt til grunn en overføring på 608,4 milliarder kroner fra fondet. Finansdepartementet har beregningsteknisk anslått fondsverdien ved inngangen til 2027 til 22 400 milliarder kroner. Overføringen tilsvarer dermed 2,7 prosent av fondet.
+I forslaget til statsbudsjett for 2027, lagt fram 7. oktober 2026, foreslår regjeringen å bruke 608,4 milliarder kroner fra fondet. Finansdepartementet har beregningsteknisk anslått fondsverdien ved inngangen til 2027 til 22 400 milliarder kroner, slik at bruken tilsvarer 2,7 prosent av fondet. Målt som andel av trend-BNP for Fastlands-Norge utgjør bruken av fondsmidler 12,6 prosent.
 
-Målt mot verdiskapingen i norsk økonomi dekker overføringen fra oljefondet 12,6 prosent av trend-BNP for Fastlands-Norge.
+## Hva tallene ikke viser
+
+Verdien er målt i norske kroner. Når kronen styrker seg, faller verdien målt i kroner, selv om investeringene er like mye verdt i utenlandsk valuta.
 
 ## Kilder
 
@@ -76,3 +73,7 @@ Målt mot verdiskapingen i norsk økonomi dekker overføringen fra oljefondet 12
 - [Regjeringen: Nøkkeltall i nasjonalbudsjettet 2027](https://www.regjeringen.no/no/aktuelt/nokkeltall-i-nasjonalbudsjettet-2027/id3174610/)
 - [Regjeringen: Handlingsregelen](https://www.regjeringen.no/no/tema/okonomi-og-budsjett/statsbudsjett/ord-og-begreper-i-statsbudsjettet/handlingsregelen/id2860044/)
 - [Regjeringen: Hvor mye av olje- og gassinntektene bruker vi?](https://www.regjeringen.no/no/tema/okonomi-og-budsjett/norsk_okonomi/hvor-mye-av-olje--og-gassinntektene-bruker-vi/id450461/)
+- [NBIM: Årsrapport 2019 (tabell 7, fondets markedsverdi 2007–2019)](https://www.nbim.no/contentassets/3d447c795db84a18b54df8dd87d3b60e/spu_arsrapport_2019_no_web.pdf)
+- [NBIM: Årsrapport 2020](https://www.nbim.no/en/news-and-insights/reports/2020/annual-report-2020/)
+- [NBIM: Årsrapport 2025](https://www.nbim.no/contentassets/6db259ec684645ebbf171cacbe7cc7de/spu_arsrapport-2025.pdf)
+- [NBIM: Investeringene](https://www.nbim.no/en/investments/)
