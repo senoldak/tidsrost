@@ -9,7 +9,6 @@ key_points:
   - "Knyttet til det svenske nettverket Foxtrot"
 produksjon: ki-medier
 kildeSpor: "v1.Skm1/kI/J11gPG0Z.uYyTIJcNmioIQa6L1FxOYbm5wW9BNUllwN96XaVFfQagjevVFIa/4WUL0JkKKRXSf3d76DTsBAlW1EgoB/kfVQik9nHfIsLn67Xbmu/dxH+l0tYTs24QF+5I6PMKjM8AXvDsYU3rByWd3PIEJGUYMGH0eaYzxlif82DGWSUpgi3BdOdOE7e7iAgkgQtKfPy/ySVoSvbpBoW08ZXmsSTqVmjFSkmwLnRKIXPFqW8/OkID89CbU7HP0XJFY/hunDQiuLPdyHoyn91HT1ZIT6OOKhcX4TMiTrkmsM+2NW5WMoMgu1wP9KW5YlAw7TtoG63VJS+2Vxpv4XEwIidHFK71sYegS0Nk/plG+aE2z6ZA8ahkQXlAYt1KG0LdjSZfK7MrRpFd0vU2eefiRw1hcq41McD4VWsDzy5c+4xC7PsXGkbTDdKjDjIvdBtmmXLh65AZqf67T9/u+TiFXo5Z8Avy0mKAvVmMuT/J0y0nSXYa4g=="
-rettelse: "Opplysninger som kunne gjøre en privatperson identifiserbar er fjernet fra saken."
 oppdatert: 2026-10-20T12:00:00+02:00
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Norsk 19-åring dømt til 20 års fengsel i England for drapsplaner»"

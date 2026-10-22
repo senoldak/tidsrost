@@ -11,7 +11,6 @@ key_points:
 produksjon: ki-medier
 kildeSpor: "v1.mYYbSckRoyKo+yEE.lFwnC475L0195NRV+9QtDoRvLnGozU7aJASToJkQb1pFM9FOhz7PG9Ds7lry1KdorNF49oMV7VP/FbBkiBx3vDkzqRCbG1L188uEL8c7U6sAIpgb2VYFPDTzQfonHNDkE5ySvdx7bKQ7xS3UgSnsHAFreCIhU+Hmw4IBTuogudXD8ts89JXcFBJfyksesYuxClgqZ232pgwGnlHtlrwCqPQhKup8mM/CETR6tnVhVwefjv//Wlg6etltSPMvttU39fxFBN8VHd3x05iEZw1T6jayCSivpC6hO6nG/FH85Fo4SIJRvAKyVqhYweios4/sBmLzRnQcjJyQ9CtrZ3GhbM+/6lIpDbqcgi4vOH8KePOMTV4S2R/hB91jsbojubuIMlIgbz81MunLqJZ7XqiwkXBjScjbfpt8ASo8G49zxwQVFDhleIsyMekCri2midJ/MzdNQZokQOgXo3Q5muOWWSE9xnorP9e7cuMFYRPdnJXzzM4Bc7XmbLbbCoS3xr9uslo9rg11wqCLc6/rM9CZ6POUljyxt8qXhTgiv+sK72VQ1+wQrAgoqnz6vmytSQoc0Own"
 nyhetsverdi: 78
-rettelse: "Ingressen og nøkkelpunktene fremstilte et mulig krav som et fastslått krav. Teksten er presisert: forslaget er foreløpig ikke vedtatt."
 oppdatert: 2026-10-20T12:00:00+02:00
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Norge kan bli pålagt toll på kinesiske elbiler for å få bli med i en ny bilavtale»"

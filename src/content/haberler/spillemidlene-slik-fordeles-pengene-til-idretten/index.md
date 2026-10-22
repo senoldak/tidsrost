@@ -7,7 +7,6 @@ category: sport
 cover: ./cover.png
 coverAlt: "Illustrasjon: «4,1 milliarder kroner i spillemidler til idretten i 2026»"
 coverKreditt: "Illustrasjon: tidsrøst"
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen la ikke fram at årets hovedfordeling (4 116 millioner kroner) er 138 millioner kroner lavere enn i 2025 (4 254 millioner kroner); dette er nå oppgitt. Påstander om hvordan midlene fordeles til lokale lag, om renteutgifter og om lavere treningsavgifter, samt en forklaring på økte søknadsbeløp, er fjernet fordi de ikke lot seg bekrefte. Fordelingsnøkkelen for fylkesrammene er presisert (befolkningstetthet, ikke befolkning). Hovedtallene er kontrollert mot departementets fordelingstabeller og er riktige."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Spillemidlene finansierer idrettsanlegg i kommunene, og en del av midlene går også direkte til lokale idrettslag."

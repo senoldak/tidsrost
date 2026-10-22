@@ -9,7 +9,6 @@ coverAlt: "Illustrasjon: «Stabilt lav arbeidsledighet høsten 2026 med 2,0 pros
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-rettelse: "Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.16, men var datert 7. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt. Oppdatert 22. oktober 2026: Tallene fra SSBs arbeidskraftundersøkelse er oppdatert til september 2026. Etter at septembertallene kom, har SSB revidert trendtallet for august fra 4,5 til 4,6 prosent. Tall for sysselsetting og ungdomsledighet som ikke lot seg bekrefte i SSBs gjeldende tall, er erstattet."
 why_matters: "Ledighetstallene brukes i vurderinger av norsk økonomi. Fordi de to hovedmålene bygger på ulike definisjoner, gir de ulike svar på hvor mange som er uten jobb."
 key_points:
   - "59 400 personer var registrert som helt ledige hos Nav i september 2026 – 2,0 prosent av arbeidsstyrken."

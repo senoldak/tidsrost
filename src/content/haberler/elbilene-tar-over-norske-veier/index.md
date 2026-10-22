@@ -9,7 +9,6 @@ coverAlt: "Illustrasjon: «97,9 prosent av nye personbiler er elbiler – elbile
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Beskrivelsen av overgangsregelen for leasing er rettet (grensen på 150 000 kroner gjelder biler levert etter 31. desember 2026). Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.16, men var datert 3. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 why_matters: "Elbilen har i praksis overtatt nybilsalget i Norge, og i 2025 passerte antallet elbiler på veiene både diesel- og bensinbiler."
 key_points:
   - "Fra januar til september 2026 var 97,9 prosent av nyregistrerte personbiler elektriske eller nullutslipp, viser tall fra SSB."

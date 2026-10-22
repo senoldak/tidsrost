@@ -3,6 +3,10 @@ import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 import { CATEGORIES } from './lib/site';
 
+// Düzeltme notları 1 Kasım 2026'dan önce gösterilmez (yapım aşaması; sahibinin kararı, 22 Ekim 2026).
+// Zincir de bu tarihten önce not yazmaz (mecmua yazi-isleri/guncelleme/icerik.mjs DUZELTME_ACILIS).
+const DUZELTME_ACILIS = Date.parse('2026-11-01T00:00:00+03:00');
+const duzeltmeKapisi = (v: string | undefined) => (Date.now() < DUZELTME_ACILIS ? undefined : v);
 const slugs = CATEGORIES.map((c) => c.slug) as [string, ...string[]];
 
 const haberler = defineCollection({
@@ -25,7 +29,7 @@ const haberler = defineCollection({
       // 'ki-redigert': yazı işleri zincirinin yazısı (yerleştirme yazar); sayfa sonunda zincir notunu alır (src/lib/kinote.mjs).
       produksjon: z.enum(['manuell', 'automatisk', 'ki-assistert', 'ki-kontrollert', 'ki-automatisk', 'ki-medier', 'ki-redigert']).default('manuell'),
       // Düzeltme notu; haberin en üstünde gösterilir (VVP 4.13).
-      rettelse: z.string().optional(),
+      rettelse: z.string().optional().transform(duzeltmeKapisi),
       // Düzeltme ya da güncelleme tarihi; yapılandırılmış veride dateModified ve haberde "Oppdatert" olarak gösterilir.
       oppdatert: z.coerce.date().optional(),
       // Redaksjonell oppsummering / GEO syntese (Kort oppsummert)

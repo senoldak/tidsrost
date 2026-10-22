@@ -9,7 +9,6 @@ coverAlt: "Illustrasjon: «94,5 prosent av alle barn går i barnehage – makspr
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-rettelse: "Rettet 22. oktober 2026: Artikkelen oppga at maksprisen først ble satt ned til 3 000 kroner fra januar 2023. Den første nedsettelsen kom 1. august 2022, til 3 050 kroner i måneden."
 why_matters: "Dekningsgrad og foreldrebetaling viser hvor mange barn som har barnehageplass og hva en plass koster."
 key_points:
   - "94,5 prosent av alle barn i alderen 1–5 år gikk i barnehage i 2025, og blant 3–5-åringene var dekningsgraden 97,5 prosent."

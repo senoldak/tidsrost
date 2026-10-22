@@ -9,7 +9,6 @@ coverAlt: "Illustrasjon: «311 100 studenter tar høyere utdanning ved norske un
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-rettelse: "Rettet 22. oktober 2026: Oversikten over de største lærestedene manglet Handelshøyskolen BI, som med 22 291 studenter er landets fjerde største. Tabellen viser nå de seks største lærestedene. Andelen studenter i øvrige fagfelt i 2025 er rettet fra 5,7 til 5,8 prosent."
 why_matters: "Utdanningsnivået i befolkningen og antall studenter er sentrale størrelser i utdanningsstatistikken."
 key_points:
   - "311 148 studenter var registrert ved universiteter og høgskoler i Norge høsten 2025, en økning på om lag 9 300 fra året før, viser SSB."

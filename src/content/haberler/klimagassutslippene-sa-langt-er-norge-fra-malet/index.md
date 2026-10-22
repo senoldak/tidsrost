@@ -9,7 +9,6 @@ coverAlt: "Illustrasjon: «Klimagassutslippene har falt hvert år siden 2019 –
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Forklaringen på økte industriutslipp i 2025 var tilskrevet Miljødirektoratet; den er rettet til SSBs forklaring (driftsstans i 2024 ga lavere utslipp det året). Påstanden om at utslippene fra veitrafikken er lavest ifølge Miljødirektoratet er rettet til SSBs tidsserie fra 1990. Datoen 4. november for SSBs endelige tall er fjernet (SSB oppgir november 2026). Utslippstall, tabell og begge figurer er kontrollert mot SSB (tabell 13931) og er uendret. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.16, men var datert 5. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 why_matters: "Klimaloven fastsetter at Norge skal redusere utslippene med minst 55 prosent fra 1990 til 2030. Utslippsstatistikken viser hvor utslippene kommer fra og hvordan de har utviklet seg over tid."
 key_points:
   - "Foreløpige tall fra SSB viser at klimagassutslippene i Norge var 44,1 millioner tonn CO₂-ekvivalenter i 2025 – 1,2 prosent lavere enn i 2024 og 13,9 prosent under 1990-nivå."

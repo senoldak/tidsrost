@@ -9,7 +9,6 @@ coverAlt: "Illustrasjon: «20 184 boliger fikk igangsettingstillatelse i 2025»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-rettelse: "Publiseringsdato rettet 18. oktober 2026."
 why_matters: "Antall igangsatte boliger sier noe om tilbudet i boligmarkedet på sikt."
 key_points:
   - "I 2025 fikk 20 184 boliger igangsettingstillatelse, opp fra 18 679 året før."

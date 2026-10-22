@@ -10,7 +10,6 @@ key_points:
   - "Politiet har ingen mistanke om noe straffbart"
 produksjon: ki-medier
 kildeSpor: "v1.ahUUuhh+jP/4bCF4.oBzWxQihK/A5b3b8uTeEFQzHWLNhMqD5tLl+rmBUSNNbgesSzSXftEzLqbnq5tPPWUxYQJsAO7zgegpg847b1PpnxXH80STBEHyL8973FI06YQ7CI8jlI74rYBWjF16Xv8+slMzivfLDMBZr83015winl6Rd057KsTtOeX1iNZk+syld5iU5PGmKHDSClxulDUaEb2zz6C2zlraFksNWL2s2kWWtSFyLGSgv6aEtbbqfsske6FQYK+nhw1CT15BqnoDRRPWbDGRJd+/LrGMMcw7rzdUBY771S8kHwGd+0103va6GcIRkO73u8pHMDcsLTT0pvOVwelS8XcfRuG/1KSkAFYsKKmn4Xs9xFvzN1ePI2X0HJbQ5av0CKr7e+1PIwJJAg8r+ecSK2uMfmkKufxlzwJv6UbOCWkWjmTC2kiZgJ0Zkr9i9ZHlaSZXSz+LpiksUF091gUCWIRGF9tehE09sxu3+AezApJcuxB4KJWIMIzXFzf4+7lYab0zKwQhcsKbWg1MQTqtL/47dF01Jns5iS5vf4Jl81Feoi33YvnWnEwliFENOBurHXZuPLFXVPRwa4DPER1TswB7rrQZQ+JiUlNp0rZj6hp+NqeP/a5sWsk6b1HmTsLYCMUEghTCAJVXM7BEtTQfizzaygXzYkXXo+41rxUVBRhxyn912hbcUaeCkbCtses+fdD63UA32P8h+TZAGWA=="
-rettelse: "En formulering som kunne gi inntrykk av mistanke mot en person er fjernet."
 oppdatert: 2026-10-20T12:00:00+02:00
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Mann i 30-årene funnet omkommet etter vannskuterulykke i Bodø»"

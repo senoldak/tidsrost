@@ -7,7 +7,6 @@ category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Ventetiden i sykehusene var 62 dager i 1. tertial 2026 – ti dager kortere enn året før»"
 coverKreditt: "Illustrasjon: tidsrøst"
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Fristbruddtallene er presisert (7,7 prosent i 2024 gjelder somatikk hos Helsedirektoratet og alle sektorer hos regjeringen). Ventetidstallene er kontrollert mot FHI og er riktige. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.31, men var datert 13. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt. Rettet 22. oktober 2026: De langsiktige ventetidsmålene for de fire tjenesteområdene var tilskrevet Nasjonal helse- og samhandlingsplan; de står i departementets oppdragsdokumenter til de regionale helseforetakene. Antallet ventende i desember 2024 (om lag 257 900) er tatt ut fordi det ikke lot seg bekrefte."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Om lag 2,9 millioner pasienter fikk helsehjelp i spesialisthelsetjenesten i 2025. FHI publiserer ventetidene for sykehusene hvert tertial og for hele året."

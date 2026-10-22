@@ -9,7 +9,6 @@ coverAlt: "Illustrasjon: «Oljefondet har syvdoblet seg på 15 år – passerte 
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Formuleringen om at fondet «passerte» 6 000 og 10 000 milliarder kroner ved utgangen av henholdsvis 2014 og 2019 er presisert til at fondet var verdt mer enn dette ved utgangen av de årene; tidspunktet for når grensene ble krysset lot seg ikke bekrefte. En grammatisk feil i ingressen er rettet. Alle tall for markedsverdi, avkastning, fordeling og budsjettuttak er kontrollert mot NBIM og regjeringen.no og er uendret. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.16, men var datert 4. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 why_matters: "Fondets verdi inngår i beregningen av hvor mye som kan overføres til statsbudsjettet innenfor handlingsregelen."
 key_points:
   - "Statens pensjonsfond utland var verdt 22 683 milliarder kroner per 30. juni 2026."

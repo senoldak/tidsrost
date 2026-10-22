@@ -7,7 +7,6 @@ category: utenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «To av tre norske eksportkroner gikk til EU i 2025»"
 coverKreditt: "Illustrasjon: tidsrøst"
-rettelse: "Rettet 18. oktober 2026: Tittel og beskrivelse er presisert, og tallene for januar–august 2026 er oppdatert til SSBs gjeldende tall. Rettet 22. oktober 2026: Figuren over de ti største mottakerlandene viste Kina på tiendeplass. Riktig er Finland med 58,3 milliarder kroner; Kina, med 48,7 milliarder kroner, er ikke blant de ti største."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Handelsbalansen varierer med verdien av olje- og gasseksporten."

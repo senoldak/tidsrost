@@ -7,7 +7,6 @@ category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Matprisveksten var 2,4 prosent i september 2026, mot 3,4 prosent for KPI samlet»"
 coverKreditt: "Illustrasjon: tidsrøst"
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Overskriften «Kaffe og sjømat trakk opp i september» er endret til «Kaffe trakk opp i september»; fisk og sjømat ble 0,5 prosent billigere fra august til september (SSB, tabell 14700). Artikkelen sa at matprisveksten lå under den samlede inflasjonen «siden våren 2026»; riktig er fra juni 2026, og matprisveksten lå over KPI i april og mai. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.31, men var datert 9. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Mat og alkoholfrie drikkevarer utgjør drøyt ti prosent av husholdningenes forbruk. Matprisveksten lå fra juni 2026 under den generelle inflasjonen."

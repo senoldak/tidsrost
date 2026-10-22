@@ -7,7 +7,6 @@ category: kultur
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Folkebibliotekene hadde 27,8 millioner besøk i 2025 – 62 prosent gikk på kino, mot 72 prosent i 2016»"
 coverKreditt: "Illustrasjon: tidsrøst"
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Tittelen, beskrivelsen og et nøkkelpunkt omtalte 27,8 millioner besøk på folkebibliotekene som «rekord». SSB omtaler ikke tallet som rekord, og tallene i SSBs statistikkbank (tabell 11758) starter først i 2015; riktig er at 27,8 millioner er det høyeste i SSBs tall fra 2015 og 7,6 prosent over 2019. Tittelen er endret, og «sterk vekst for konserter» er tatt ut siden andelen som gikk på konsert bare økte fra 58 til 60 prosent fra 2023 til 2025 (SSB, tabell 13503). Øvrige tall er kontrollert mot SSB og er riktige."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Undersøkelsen viser hvilke kulturtilbud folk oppsøker, og hvilke hindringer de oppgir, som billettpriser og tid."

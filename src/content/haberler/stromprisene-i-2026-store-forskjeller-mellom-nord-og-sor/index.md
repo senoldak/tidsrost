@@ -9,7 +9,6 @@ coverAlt: "Illustrasjon: «Strømprisen for husholdninger var 32 prosent lavere 
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Et sitat er erstattet med en parafrase av SSBs egen omtale. En påstand om andel av forbruket er fjernet fordi den ikke lot seg bekrefte. Det er presisert at kraftprisen på 100,1 øre er uten mva., og at budsjettforslaget er i underkant av 16,4 milliarder kroner. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.16, men var datert 1. oktober 2026 kl. 08.00."
 why_matters: "Strøm er en viktig utgiftspost for husholdningene gjennom vinterhalvåret. Norgespris og den ordinære strømstønaden reduserer prisen forbrukerne betaler, mens engrosprisene varierer mellom landsdelene."
 key_points:
   - "Før støtte var gjennomsnittlig strømpris for husholdningene 173,2 øre/kWh i 2. kvartal 2026, mens støtteordningene trakk sluttprisen ned til 117,9 øre/kWh."

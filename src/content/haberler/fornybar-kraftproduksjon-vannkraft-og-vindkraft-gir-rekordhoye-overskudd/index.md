@@ -7,7 +7,6 @@ category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Over 98 prosent av norsk strøm kommer fra vann, vind og sol»"
 coverKreditt: "Illustrasjon: tidsrøst"
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Flere hovedtall var feil. Artikkelen oppga samlet kraftproduksjon i 2025 på 159,1 TWh; riktig tall er 161,8 TWh (SSB, tabell 08307). Vannkraft var 145,5 TWh (89,9 prosent), ikke 140,3 TWh (88,2 prosent); vindkraft var 13,9 TWh (8,6 prosent), ikke 15,6 TWh (9,8 prosent); solkraft var 0,2 prosent, ikke 0,5 prosent. Andelen fra vann, vind og sol var 98,7 prosent, ikke 98,5 prosent, og økningen fra 2019 var 20,0 prosent, ikke «drøyt 18». Bruttoforbruket var 139,0 TWh (ikke 140,2), og nettoeksporten 22,8 TWh (ikke 18,9). Kraftintensiv industri sto for om lag 29 prosent av nettoforbruket, ikke «drøyt en tredjedel». Påstanden om at Norge har den høyeste fornybarandelen i Europa, og uverifiserte opplysninger om regulerbar kapasitet, magasiner, opprustingssøknader, solkraft og nettinvesteringer er fjernet. Begge diagrammene er rettet."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Vannkraft er hovedkilden til norsk strømproduksjon. Kraftbalansen viser produksjon, forbruk og nettoeksport av strøm."

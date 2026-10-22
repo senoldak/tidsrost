@@ -10,7 +10,6 @@ key_points:
   - "FN melder om økt vold under oliveninnhøstingen"
 produksjon: ki-medier
 kildeSpor: "v1.AF1Uz0rXauA070Tc./RMin+ch7RWm/Xw5nEsXruPV6ahPlyT16DCN+Ntd28I43OpZhcdsbr26AePSaO/z0E1TsLM8Z7aoiYOcoVRrWIKMtm06RvEYQDfKNY0Hj2acaxvHf0+WV42byGu8rZ/c8seJVNACKd1dkPH7AUydd0EIo2T5kBTh0Z3tNajfRrd90ck0SbNiAzbRKJAY1q8VibDqqP20SHk39mIETu/hJysD6Lrpxn4fme5pIbZq9p3nisgubtTa6k7RbdAo0tuuFE5pm8dRoLveDoaHgbEheTFKbv0fZvvbdYQt9htxwiJ0+Qf3oshHnCXpQmXfyQ5D6g37eLdh0QBlm/2WShxRWy56G4xF8AdY7uMj4YmbzbTzI9OKLgv9Od2Ip6VbrdLdZhsaHBaWmkvFSFZvqxuQkOPcbQqEjtJIeIIY8qgqyHoxyZE6I0ckt/QRY+b13w2C6DpBaEUAMUV0mKriyH1+BHDbbdOLKPKGmPCfMOvEFH8dID3ZP9+YK0R6kPTd+mQCLu16FQH0YKptSlj+BudtjZAR"
-rettelse: "Tittelen er rettet slik at den viser at beskrivelsen av angrepet bygger på vitner. Et rettslig utsagn uten kildehenvisning er nå tilskrevet FN."
 oppdatert: 2026-10-20T12:00:00+02:00
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Amerikansk fotograf og palestinere skadet i angrep ved Abu Falah, ifølge vitner»"

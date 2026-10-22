@@ -9,7 +9,6 @@ coverAlt: "Illustrasjon: «Fødselstallene har steget tre år på rad – og and
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Tittelen oppga at fødselstallene stiger «for andre år på rad». Antall levendefødte har økt tre år på rad (51 480 i 2022, 51 980 i 2023, 54 013 i 2024 og 55 401 i 2025), og tittelen er rettet til «tredje år på rad». Det samlede fruktbarhetstallet har økt to år på rad (1,40 i 2023, 1,44 i 2024 og 1,48 i 2025), slik teksten oppgir. Øvrige tall, framskrivinger og figurer er kontrollert mot SSB og er uendret. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.16, men var datert 2. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 why_matters: "Fødselstall og levealder påvirker behovet for barnehager, skoler, sykehjemsplasser og arbeidskraft i kommunene. SSBs framskrivinger viser utviklingen fram mot 2060."
 key_points:
   - "Samlet fruktbarhetstall var 1,48 barn per kvinne i 2025, opp fra 1,40 i 2023. I 2009 lå tallet på 1,98."

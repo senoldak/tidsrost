@@ -7,7 +7,6 @@ category: teknologi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «99,3 prosent av norske husstander har nå raskt bredbånd – videre utbygging i distriktene»"
 coverKreditt: "Illustrasjon: tidsrøst"
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen oppga at 78,5 prosent av husstandene hadde et aktivt fiberabonnement; riktig er at 78,5 prosent var fysisk tilkoblet fibernett, med eller uten aktivt abonnement (Nkom). Opplysningen om at det ble bevilget 415 millioner kroner i 2025 er fjernet fordi den ikke lot seg bekrefte. Øvrige dekningstall er kontrollert mot Nkoms rapporter og er riktige. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.31, men var datert 14. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Bredbåndsdekning bestemmer hvilke digitale tjenester husstander kan bruke hjemme. Ved utgangen av 2025 hadde 99,3 prosent av husstandene tilbud om minst 100 Mbit/s."

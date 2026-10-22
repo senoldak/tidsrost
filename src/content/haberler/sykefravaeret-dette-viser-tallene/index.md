@@ -7,7 +7,6 @@ category: innenriks
 cover: ./cover.png
 coverAlt: "Illustrasjon: «31 prosent av sykefraværene i 2. kvartal 2026 var graderte – høyeste andel som er målt»"
 coverKreditt: "Illustrasjon: tidsrøst"
-rettelse: "Rettet 18. oktober 2026 kl. 14.00: Artikkelen oppga feil prosentvis endring fra 2. kvartal 2025 i næringstabellen (for eksempel industri +3,6 prosent; riktig beregnet tall er +3,3 prosent, SSB tabell 13935). Alders-, kjønns- og diagnosetall som ikke lot seg bekrefte mot Nav og SSB, samt datoen for neste kvartalsmåling, er fjernet, og diagnosediagrammet er tatt ut. Publiseringsdato rettet 18. oktober 2026: Saken ble publisert 14. oktober 2026 kl. 12.31, men var datert 8. oktober 2026 kl. 08.00. Datoen viser nå faktisk publiseringstidspunkt."
 author: "Şenol Dak"
 sjanger: forklart
 why_matters: "Sykefraværsstatistikken viser hvor stor andel av arbeidstakernes avtalte dagsverk som går tapt på grunn av sykdom, og hvordan fraværet fordeler seg mellom kjønn og næringer. Ved gradert sykmelding er den sykmeldte delvis i arbeid."
