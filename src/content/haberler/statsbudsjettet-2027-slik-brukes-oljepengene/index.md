@@ -2,7 +2,7 @@
 title: "Hver fjerde budsjettkrone hentes fra oljefondet – 608,4 milliarder i 2027-forslaget"
 description: "Regjeringen foreslår å bruke 608,4 milliarder oljekroner i 2027 – tilsvarende 2,7 prosent av fondet og innenfor handlingsregelen, ifølge Finansdepartementet."
 date: 2026-10-14T12:16:00+02:00
-oppdatert: 2026-10-19T13:00:00+02:00
+oppdatert: 2026-10-22T21:43:00+02:00
 category: okonomi
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Hver fjerde budsjettkrone hentes fra oljefondet – 608,4 milliarder i 2027-forslaget»"
@@ -17,19 +17,14 @@ key_points:
   - "Budsjettforslaget inneholder 3,2 milliarder kroner i økte frie inntekter til kommunesektoren, 3,1 milliarder kroner mer til sykehusene og en reduksjon i inntektsskatten på 6,4 milliarder kroner."
 ---
 
-I sitt forslag til statsbudsjett for 2027, lagt fram 7. oktober 2026, foreslår regjeringen å bruke 608,4 milliarder kroner fra Statens pensjonsfond utland. Med en beregningsteknisk anslått fondsverdi på 22 400 milliarder kroner ved inngangen til 2027 tilsvarer uttaket 2,7 prosent av fondet – innenfor handlingsregelen og under den forventede realavkastningen på 3 prosent. Forslaget ligger nå til behandling i Stortinget.
+I forslaget til statsbudsjett for 2027, lagt fram 7. oktober 2026, foreslår regjeringen å bruke 608,4 milliarder kroner fra Statens pensjonsfond utland. Fondsmidlene dekker anslagsvis 26,6 prosent av statsbudsjettets utgifter, altså mer enn hver fjerde krone. Med en beregningsteknisk anslått fondsverdi på 22 400 milliarder kroner ved inngangen til 2027 tilsvarer bruken 2,7 prosent av fondet. Forslaget ligger nå til behandling i Stortinget.
 
-## Slik virker handlingsregelen
+![Nøkkeltall om Over hver fjerde krone kommer fra fondet: Forslag: Forslaget i 2027: 26,6 %; Sammenligning: i 2027: 26,6 %, i 2026: 26,5 %, i 2025: 24,5 %.](./graf-1.svg)
+*Bruk av fondsmidler i prosent av statsbudsjettets utgifter. Tallet for 2026 er et anslag og tallet for 2027 regjeringens forslag. Kilde: Finansdepartementet, Nasjonalbudsjettet 2027.*
 
-Handlingsregelen legger til grunn at oljepengebruken over tid skal følge den forventede realavkastningen av fondet. Forventet realavkastning ble satt ned fra 4 til 3 prosent i Perspektivmeldingen 2017.
+## Hvor mye som brukes
 
-Det offisielle målet for oljepengebruken er det strukturelle, oljekorrigerte budsjettunderskuddet. Dette tallet viser hvor stort statens underskudd er når petroleumsinntektene holdes utenfor, og når det samtidig korrigeres for konjunktursvingninger i skatter, avgifter og arbeidsledighetstrygd. I Nasjonalbudsjettet 2027 peker Finansdepartementet på at uttaket bør holdes under 3 prosent i normale konjunkturer, og viser til analyser der et uttak på 2,7 prosent tilsvarer forventet realavkastning over tid.
-
-Selve den faktiske overføringen fra oljefondet til statskassen – det ujusterte oljekorrigerte underskuddet – er anslått til om lag 562 milliarder kroner i 2027.
-
-## Fondsbruken i tall
-
-Det strukturelle underskuddet endte på 507,4 milliarder kroner i 2025, og er for 2026 anslått til 583,4 milliarder kroner – omtrent på linje med revidert nasjonalbudsjett.
+Det strukturelle underskuddet endte på 507,4 milliarder kroner i 2025, og er for 2026 anslått til 583,4 milliarder kroner.
 
 | År | Mrd. kr (løpende priser) | Mrd. 2027-kroner | Prosent av fondet | Prosent av trend-BNP for Fastlands-Norge |
 |---|---|---|---|---|
@@ -39,33 +34,37 @@ Det strukturelle underskuddet endte på 507,4 milliarder kroner i 2025, og er fo
 
 *Kilde: Finansdepartementet, nøkkeltall i Nasjonalbudsjettet 2027.*
 
-Regnet i faste 2027-priser øker fondsbruken med 4,9 milliarder kroner fra 2026 til 2027. Målt som andel av verdiskapingen i fastlandsøkonomien (trend-BNP) er oljepengebruken uendret, med en budsjettindikator på 0,0, og den reelle, underliggende utgiftsveksten i statsbudsjettet er beregnet til 0,2 prosent. Finansdepartementet venter at budsjettet virker tilnærmet nøytralt på den økonomiske aktiviteten.
+Regnet i faste 2027-priser øker fondsbruken med 4,9 milliarder kroner fra 2026 til 2027. Målt som andel av trend-BNP for Fastlands-Norge er oljepengebruken uendret, med en budsjettindikator på 0,0, og den reelle, underliggende utgiftsveksten i statsbudsjettet er beregnet til 0,2 prosent. Finansdepartementet anslår at budsjettet har en om lag nøytral effekt på aktiviteten i økonomien.
 
-Fondsmidlene finansierer i overkant av hver fjerde utgiftskrone på statsbudsjettet. Andelen av utgiftene som dekkes av fondsmidler er anslått til 24,5 prosent i 2025, 26,5 prosent i 2026 og 26,6 prosent i 2027, ifølge Nasjonalbudsjettet 2027.
+Selve overføringen fra oljefondet til statskassen, det ujusterte oljekorrigerte underskuddet, er anslått til om lag 562 milliarder kroner i 2027.
 
-## Største utgiftsposter
+## De store postene
 
-Utenom lånetransaksjoner er statens samlede utgifter i 2027 anslått til 2 322 milliarder kroner og inntektene til 2 328 milliarder kroner. Holdes petroleumsvirksomheten utenfor, beløper utgiftene seg til 2 287 milliarder kroner.
+Utenom lånetransaksjoner er statens samlede utgifter i 2027 anslått til 2 322 milliarder kroner og inntektene til 2 328 milliarder kroner. Holdes petroleumsvirksomheten utenfor, er utgiftene 2 287 milliarder kroner.
 
-Folketrygden er den største utgiftsposten med 794,1 milliarder kroner – der alderspensjonene alene utgjør 378,2 milliarder. Deretter følger rammetilskuddene til kommuner og fylkeskommuner (277,6 milliarder kroner), de regionale helseforetakene (250,4 milliarder) og samferdsel (99,9 milliarder).
+Folketrygden er den største utgiftsposten med 794,1 milliarder kroner, der alderspensjonene alene utgjør 378,2 milliarder. Deretter følger rammetilskuddene til kommuner og fylkeskommuner (277,6 milliarder kroner), de regionale helseforetakene (250,4 milliarder) og samferdsel (99,9 milliarder).
 
-![Liggende stolpediagram over utvalgte utgiftsposter i regjeringens forslag til statsbudsjett for 2027, i milliarder kroner: folketrygden 794,1, rammetilskudd til kommuner og fylkeskommuner 277,6, regionale helseforetak 250,4, samferdsel 99,9, høyere utdanning, forskning og fagskoler 68,6, bistand 53,4, politi og påtalemyndighet 33,6, jordbruksavtalen 33,4, barnetrygd og kontantstøtte 30,8 og renter på statsgjeld 24,4. Samlede utgifter utenom petroleum er 2 286,8 milliarder kroner.](./graf-1.png)
-*Utvalgte utgiftsposter i statsbudsjettet 2027 (milliarder kroner, utenom lånetransaksjoner og petroleumsvirksomheten). Kilde: regjeringen.no, Statsbudsjettet 2027, tabell 1.*
+![Stolpediagram over Folketrygden er den klart største posten: Utgifter: Folketrygden: 794,1 milliarder kroner, Rammetilskudd til kommunesektoren: 277,6 milliarder kroner, Regionale helseforetak: 250,4 milliarder kroner, Samferdsel: 99,9 milliarder kroner, Høyere utdanning og forskning: 68,6 milliarder kroner, Bistand: 53,4 milliarder kroner, Politi og påtalemyndighet: 33,6 milliarder kroner, Jordbruksavtalen: 33,4 milliarder kroner, Barnetrygd og kontantstøtte: 30,8 milliarder kroner, Renter på statsgjeld: 24,4 milliarder kroner.](./graf-2.svg)
+*Utvalgte utgiftsposter i statsbudsjettet 2027, milliarder kroner, utenom lånetransaksjoner og petroleumsvirksomheten. Samlede utgifter utenom petroleum er 2 286,8 milliarder kroner. Kilde: Finansdepartementet, Statsbudsjettet 2027, tabell 1.*
 
-Blant tiltakene i regjeringens budsjettforslag er:
+## Hva som endres
 
 - **Kommuner og sykehus:** 3,2 milliarder kroner i økte frie inntekter til kommunesektoren og 3,1 milliarder kroner mer til sykehusene.
-- **Strømtiltak:** Strømstønaden dekker 90 prosent av kostnadene over 79 øre per kilowattime før avgifter, og Norgespris settes til 45 øre per kilowattime pluss avgifter i 2027. Strømstøtten er anslått å koste 16,4 milliarder kroner i 2027.
-
-## Skatte- og avgiftsendringer
-
-På skattesiden foreslår regjeringen å redusere inntektsskatten for personer med 6,4 milliarder kroner. Forslaget omfatter en nedsettelse av trygdeavgiften med 0,2 prosentpoeng, som alene utgjør 4,9 milliarder kroner, kombinert med at personfradraget heves til 120 180 kroner. For lønnstakere gir dette lavere skattetrekk.
-
-Beløpsgrensen for momsfritak for elbiler foreslås senket fra 300 000 til 150 000 kroner, mens veibruksavgiften på bensin, mineralolje og biodiesel foreslås satt ned med 50 øre per liter.
+- **Strømtiltak:** Strømstønaden dekker 90 prosent av kostnadene over 79 øre per kilowattime før avgifter, og Norgespris settes til 45 øre per kilowattime pluss avgifter i 2027. Strømstøtteordningene for husholdningene er anslått å koste i underkant av 16,4 milliarder kroner.
+- **Inntektsskatt:** Regjeringen foreslår å redusere inntektsskatten for personer med 6,4 milliarder kroner. Nedsettelsen av trygdeavgiften med 0,2 prosentpoeng utgjør alene 4,9 milliarder kroner, og personfradraget heves til 120 180 kroner.
+- **Avgifter:** Beløpsgrensen for momsfritak for elbiler foreslås senket fra 300 000 til 150 000 kroner, mens veibruksavgiften på bensin, mineralolje og biodiesel foreslås satt ned med 50 øre per liter.
 
 Isolert sett gir de nye skatte- og avgiftsforslagene en samlet reduksjon på 1,8 milliarder kroner i 2027. Regnet sammen med helårsvirkningen av tiltak fra 2026 blir den samlede endringen i skatter og avgifter tilnærmet null.
 
-Stortinget behandler forslaget, og statsbudsjettet for 2027 vedtas normalt i desember.
+## Slik virker handlingsregelen
+
+Handlingsregelen legger til grunn at oljepengebruken over tid skal følge den forventede realavkastningen av fondet. Forventet realavkastning ble satt ned fra 4 til 3 prosent i Perspektivmeldingen 2017. I Nasjonalbudsjettet 2027 skriver Finansdepartementet at uttaket bør være under 3 prosent i normale tider, og at et uttak på 2,7 prosent over tid tilsvarer en forventet realavkastning på 3 prosent.
+
+Det offisielle målet for oljepengebruken er det strukturelle, oljekorrigerte budsjettunderskuddet. Det viser statens underskudd når petroleumsinntektene holdes utenfor, korrigert for konjunktursvingninger i skatter, avgifter og arbeidsledighetstrygd.
+
+## Hva tallene ikke viser
+
+Tallene er regjeringens forslag. Stortinget behandler budsjettet, og statsbudsjettet for 2027 vedtas normalt i desember. Beløpene kan derfor endres.
 
 ## Kilder
 
