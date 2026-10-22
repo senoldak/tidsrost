@@ -15,54 +15,56 @@ key_points:
   - "Antall lister uten fast lege gikk ned fra 322 ved utgangen av 2023 til 179 i mai 2026, ifølge Helsedirektoratet."
 ---
 
-Nesten 110 000 innbyggere sto på en fastlegeliste uten fast lege i mai 2026. Det viser Helsedirektoratets årsrapport for allmennlegetjenesten med status per mai 2026, som ble publisert på direktoratets nettsider 26. august 2026. Tallet i rapporten er 109 724, mot 214 106 ved utgangen av 2023. Det er en nedgang på 104 382 personer, eller 48,8 prosent.
+I mai 2026 sto 109 724 innbyggere på en fastlegeliste uten fast lege. Det viser Helsedirektoratets årsrapport for allmennlegetjenesten, med status per mai 2026. Ved utgangen av 2023 var tallet 214 106, så det har falt med 104 382, eller 48,8 prosent. De som står uten fast lege utgjør nå 1,9 prosent av listeinnbyggerne.
 
-## Hva tallet betyr
+![Nøkkeltall om Nesten halvert på to og et halvt år: Nå: I mai 2026: 109 724; Sammenligning: Mai 2026: 109 724, Desember 2024: 163 034, Desember 2023: 214 106.](./graf-1.svg)
+*Innbyggere på fastlegeliste uten fast lege, desember 2023, desember 2024 og mai 2026. Kilde: Helsedirektoratet, tabell 11.1.*
 
-En liste uten fast lege er en fastlegeliste der kommunen ikke har avtale med en fast lege, ifølge Helsedirektoratet. Listen kan dekkes av vikarer eller av andre fastleger, og innbyggerne på den skal likevel ha tilbud om allmennlegetjenester. Men de har ingen fast lege. I mai 2026 utgjorde de 1,9 prosent av listeinnbyggerne.
+## Hva det betyr å stå uten fast lege
 
-## Toppen i 2022 og veien ned
+En liste uten fast lege er en fastlegeliste der kommunen ikke har avtale med en fast lege. Listen kan dekkes av vikarer eller andre leger, og innbyggerne skal fortsatt ha tilbud om allmennlegetjenester. Men de har ingen fast lege å forholde seg til.
 
-Antallet på lister uten fast lege økte fra 2015 til 2022. Ifølge SSB sto 30 985 personer på slike lister i 2015, mens tallet nådde 213 173 i 2022, som var 3,9 prosent av listeinnbyggerne. Siden har det falt tre år på rad, til 117 899 i 2025 (2,1 prosent).
+## Toppen i 2022
 
-![Stolpediagram over antall personer på fastlegeliste uten fast lege per år: 30 985 i 2015, 45 134 i 2016, 36 218 i 2017, 54 098 i 2018, 75 539 i 2019, 107 595 i 2020, 138 453 i 2021, 213 173 i 2022, 206 772 i 2023, 163 030 i 2024 og 117 899 i 2025.](./graf-1.svg)
-*Antall personer på fastlegeliste uten fast lege. Kilde: SSB, tabell 12005.*
+Ifølge SSB sto 30 985 personer på lister uten fast lege i 2015. Tallet steg hvert år unntatt 2017, og nådde 213 173 i 2022, 3,9 prosent av listeinnbyggerne. Siden har det falt tre år på rad, til 117 899 i 2025.
 
-Antall lister uten fast lege viser samme mønster. SSB oppgir 321 slike lister i 2022 og 197 i 2025. Helsedirektoratet oppgir 179 lister uten fast lege i mai 2026.
+![Linjediagram over Toppen kom i 2022: Uten fast lege: 30 985 i 2015, 45 134 i 2016, 36 218 i 2017, 54 098 i 2018, 75 539 i 2019, 107 595 i 2020, 138 453 i 2021, 213 173 i 2022, 206 772 i 2023, 163 030 i 2024, 117 899 i 2025.](./graf-2.svg)
+*Personer på fastlegeliste uten fast lege, 2015–2025. Kilde: SSB, tabell 12005.*
 
-## Flere fastleger, men kortere lister
+Antallet lister uten fast lege viser samme mønster. SSB oppgir 321 slike lister i 2022 og 197 i 2025, og Helsedirektoratet oppgir 179 i mai 2026.
 
-Antall fastleger i ordningen økte fra 4 858 i 2019 til 5 720 ved utgangen av 2025, en økning på 862 eller 17,7 prosent. Tilveksten i 2025 var 203, mot 249 året før. I mai 2026 var det 5 767 fastleger.
+## Flere fastleger, kortere lister
 
-| Nøkkeltall (Helsedirektoratet) | 4. kv. 2023 | 4. kv. 2024 | 4. kv. 2025 | Mai 2026 |
+Ifølge Helsedirektoratet økte antallet fastleger fra 4 858 i 2019 til 5 720 ved utgangen av 2025, en økning på 862, eller 17,7 prosent. Netto tilvekst var 249 fastleger i 2024, det høyeste noensinne, og 203 i 2025. I mai 2026 var det 5 767 fastleger.
+
+| Nøkkeltall (Helsedirektoratet) | Des. 2023 | Des. 2024 | Des. 2025 | Mai 2026 |
 |---|---:|---:|---:|---:|
 | Fastleger | 5 268 | 5 517 | 5 720 | 5 767 |
 | Listeinnbyggere uten fast lege | 214 106 | 163 034 | 117 901 | 109 724 |
-| Andel listeinnbyggere uten fast lege (prosent) | 3,9 | 2,9 | 2,1 | 1,9 |
+| Andel uten fast lege | 3,9 % | 2,9 % | 2,1 % | 1,9 % |
 | Lister uten fast lege | 322 | 260 | 194 | 179 |
 | Gjennomsnittlig listelengde | 986 | 963 | 947 | 944 |
 | Vikarer | 1 322 | 1 355 | 1 254 | 1 070 |
 
-*Kilde: Helsedirektoratet, Allmennlegetjenesten – Årsrapport 2025, inklusive status mai 2026, tabell 11.1 (data fra FLO). Tall fra Helsedirektoratet kan avvike noe fra SSBs tall for samme år.*
+*Kilde: Helsedirektoratet, Allmennlegetjenesten – Årsrapport 2025, inklusive status mai 2026, tabell 11.1 (data fra FLO). Tallene kan avvike noe fra SSBs tall for samme år.*
 
-SSB peker på at fastlegene har kortere lister enn før. Innenfor en ramme på 500 til 2 500 pasienter bestemmer legene selv hvor mange de vil ha på listen. Gjennomsnittlig listelengde falt fra 1 128 i 2015 til 958 i 2025, en nedgang på 170 eller 15,1 prosent.
+Samtidig har legene færre pasienter hver. Ifølge SSB falt gjennomsnittlig listelengde fra 1 128 i 2015 til 958 i 2025, en nedgang på 170, eller 15,1 prosent. Listelengden avtales individuelt mellom fastlegen og kommunen.
 
-![Linjediagram over gjennomsnittlig listelengde per år: 1 128 i 2015, 1 120 i 2016, 1 106 i 2017, 1 097 i 2018, 1 084 i 2019, 1 068 i 2020, 1 057 i 2021, 1 033 i 2022, 1 005 i 2023, 977 i 2024 og 958 i 2025.](./graf-2.svg)
-*Gjennomsnittlig listelengde (antall personer per fastlegeliste). Aksen starter på 900. Kilde: SSB, tabell 12005.*
+![Linjediagram over Kortere lister hvert år: Listelengde: 1 128 i 2015, 1 120 i 2016, 1 106 i 2017, 1 097 i 2018, 1 084 i 2019, 1 068 i 2020, 1 057 i 2021, 1 033 i 2022, 1 005 i 2023, 977 i 2024, 958 i 2025.](./graf-3.svg)
+*Gjennomsnittlig listelengde (personer per fastlegeliste), 2015–2025. Kilde: SSB, tabell 12005.*
 
-I et lengre perspektiv økte antall fastleger med 2 020, eller 54 prosent, fra 2002 til 2025, mens folketallet økte med 24 prosent, ifølge SSB. Antall innbyggere per fastlege gikk fra 1 222 til 978.
+I et lengre perspektiv økte antallet fastleger med 2 020, eller 54 prosent, fra 2002 til 2025, mens folketallet økte med 24 prosent, ifølge SSB. Antall innbyggere per fastlege gikk ned fra 1 222 til 978.
 
-## Flere med fast lege og oppgavedeling
+## Andre utviklingstrekk
 
-Ifølge Helsedirektoratet var det 79 000 flere innbyggere med fast lege ved utgangen av 2025 enn ett år tidligere.
+Ifølge Helsedirektoratet var det 79 000 flere innbyggere med fast lege ved utgangen av 2025 enn ett år tidligere. Økningen er større enn befolkningsveksten, fordi flere ubesatte lister har fått fast lege. Samtidig har vikarbruken gått ned.
 
-Helsedirektoratet skriver at det fra 1. januar 2026 er innført takster for konsultasjoner som er delegert til sykepleiere. I perioden januar til mai 2026 ble ordningen tatt i bruk ved 106 legekontor, med 546 leger og 252 sykepleiere, og det ble gjennomført over 16 000 pasientkontakter.
+E-konsultasjoner utgjorde 17 prosent av konsultasjonene hos fastlegene i 2025. Videokonsultasjoner var bare om lag 1 prosent av e-konsultasjonene i andre halvår. Fra april 2026 må fastlegene kunne tilby videokonsultasjon.
 
 ## Kilder
 
 - [Helsedirektoratet: Allmennlegetjenesten – Årsrapport 2025, inklusive status mai 2026](https://www.helsedirektoratet.no/rapporter/allmennlegetjenesten-arsrapport-2025-inklusive-status-mai-2026)
 - [Helsedirektoratet: Nasjonale utviklingstrekk oppsummert (kapittel 11.1)](https://www.helsedirektoratet.no/rapporter/allmennlegetjenesten-arsrapport-2025-inklusive-status-mai-2026/utvikling-i-fastlegeordningen/nasjonale-utviklingstrekk-oppsummert)
 - [Helsedirektoratet: Hovedfunn og vurderinger](https://www.helsedirektoratet.no/rapporter/allmennlegetjenesten-arsrapport-2025-inklusive-status-mai-2026/hovedfunn-og-vurderinger)
-- [Helsedirektoratet: Innbyggere uten fast lege (nasjonale kvalitetsindikatorer)](https://www.helsedirektoratet.no/statistikk/kvalitetsindikatorer/allmennlegetjenesten/innbyggere-uten-fast-lege)
 - [SSB: Sju av ti nordmenn går til fastlegen minst én gang i året (25. juni 2026)](https://www.ssb.no/helse/helsetjenester/statistikk/allmennlegetjenesten/artikler/sju-av-ti-nordmenn-gar-til-fastlegen-minst-en-gang-i-aret)
 - [SSB: Tabell 12005 – Fastlegelister og fastlegekonsultasjoner](https://www.ssb.no/statbank/table/12005)
