@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-22T18:06:00.841Z",
+  "hentet": "2026-10-22T20:03:45.222Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-22T18:05:14+00:00",
+  "sistEndretHosMet": "2026-10-22T20:01:49+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.20261022153705.008",
@@ -20,19 +20,6 @@
       "beskrivelse": "Torsdag og fredag sørlig stiv kuling 15 m/s.",
       "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
       "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261022055648.076",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Åna-Sira - Obrestad",
-      "domene": "hav",
-      "start": "2026-10-22T06:00:00+00:00",
-      "slutt": "2026-10-22T19:00:00+00:00",
-      "beskrivelse": "Torsdag periodevis sørøst sterk kuling 20 m/s. Torsdag ettermiddag dreiende til sørlig stiv kuling 15.",
-      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
