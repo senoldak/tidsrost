@@ -15,39 +15,53 @@ key_points:
   - "I 2001 omkom 275 personer i trafikken; antallet har siden falt med 61 prosent."
 ---
 
-I 2025 omkom 106 personer i trafikkulykker med personskade i Norge. Det er 19 flere enn i 2024, viser Statistisk sentralbyrå (SSB) i en artikkel publisert 29. mai 2026. Antallet hardt skadde økte samtidig fra 578 i 2024 til 645 i 2025.
+I 2025 omkom 106 personer i trafikkulykker med personskade i Norge. Det er 19 flere enn i 2024, viser Statistisk sentralbyrå (SSB) i en artikkel publisert 29. mai 2026. Antallet hardt skadde økte fra 578 til 645.
+
+Ifølge SSB tilsvarer det nesten 19 trafikkdødsfall per million innbyggere. I Sverige var tallet 19, i Danmark 23 og i Finland 34.
 
 ## Utviklingen over tid
 
-Antall drepte i trafikken har falt siden begynnelsen av 2000-tallet. I 2001 omkom 275 personer, mens tallet var 106 i 2025, en nedgang på 61 prosent. Lavest i den siste tiårsperioden var 2021 med 80 drepte, og 2024 med 87 var det nest laveste. I 2025 økte antallet igjen.
+![Linjediagram over Færre drepte enn for tjue år siden: Drepte: 275 i 2001, 310 i 2002, 280 i 2003, 257 i 2004, 224 i 2005, 242 i 2006, 233 i 2007, 255 i 2008, 212 i 2009, 208 i 2010, 168 i 2011, 145 i 2012, 187 i 2013, 147 i 2014, 117 i 2015, 135 i 2016, 106 i 2017, 108 i 2018, 108 i 2019, 93 i 2020, 80 i 2021, 116 i 2022, 110 i 2023, 87 i 2024, 106 i 2025.](./graf-1.svg)
+*Drepte i trafikkulykker med personskade per år, 2001–2025. Kilde: SSB, tabell 06752.*
 
-![Stolpediagram over antall drepte i vegtrafikkulykker per år: 117 i 2015, 135 i 2016, 106 i 2017, 108 i 2018, 108 i 2019, 93 i 2020, 80 i 2021, 116 i 2022, 110 i 2023, 87 i 2024 og 106 i 2025.](./graf-1.svg)
-*Antall drepte i trafikkulykker med personskade per år. Kilde: SSB, tabell 06752.*
+I 2001 omkom 275 personer i trafikken, og i 2002 var tallet 310. Siden har antallet falt. Med 106 drepte i 2025 er nivået 61 prosent lavere enn i 2001. Det laveste tallet i perioden var 80, i 2021.
 
-Antall hardt skadde var 4 552 i 1970, som er det høyeste tallet i statistikken. Det laveste var 565 i 2019. Med 645 hardt skadde i 2025, ifølge SSBs artikkel, er nivået høyere enn i 2024.
+Det høyeste antallet hardt skadde i statistikken, som går tilbake til 1946, var 4 552 i 1970. Det laveste var 565 i 2019.
 
-## Hvem rammes?
+## Hvem som omkom
 
-I 2025 omkom flere bilførere, bilpassasjerer, motorsyklister, syklister og fotgjengere enn i 2024. Størst økning i antall drepte var det blant motorsyklister (pluss 5), syklister (pluss 5) og fotgjengere (pluss 4).
+I 2025 omkom flere bilførere, bilpassasjerer, motorsyklister, syklister og fotgjengere enn i 2024. Størst var økningen blant motorsyklister og syklister, med 5 flere drepte i hver gruppe, og blant fotgjengere, med 4 flere.
+
+![Helningsdiagram over Flere drepte i de fleste gruppene: i 2024: Bilførere: 38, Bilpassasjerer: 9, Motorsykkel: 20, Moped: 1, Sykkel: 6, Fotgjengere: 6, Andre: 7; i 2025: Bilførere: 39, Bilpassasjerer: 11, Motorsykkel: 25, Moped: 1, Sykkel: 11, Fotgjengere: 10, Andre: 9.](./graf-2.svg)
+*Drepte i trafikken etter trafikantgruppe, 2024 og 2025. Motorsykkel, moped og sykkel omfatter førere og passasjerer. Kilde: SSB, tabell 06752.*
 
 | Trafikantgruppe | Drepte 2024 | Drepte 2025 | Endring |
 |---|---:|---:|---:|
 | Bilførere | 38 | 39 | +1 |
 | Bilpassasjerer | 9 | 11 | +2 |
-| Motorsykkel (førere og passasjerer) | 20 | 25 | +5 |
-| Moped (førere og passasjerer) | 1 | 1 | 0 |
-| Sykkel (førere og passasjerer) | 6 | 11 | +5 |
+| Motorsykkel | 20 | 25 | +5 |
+| Moped | 1 | 1 | 0 |
+| Sykkel | 6 | 11 | +5 |
 | Fotgjengere | 6 | 10 | +4 |
 | Andre trafikanter | 7 | 9 | +2 |
 | **Sum** | **87** | **106** | **+19** |
 
 *Kilde: SSB, tabell 06752.*
 
-Blant de hardt skadde økte antall bilførere fra 173 til 211, som er den største økningen i noen gruppe. Antall hardt skadde motorsyklister gikk ned fra 143 til 133.
+Etter alder økte antallet drepte med 9 i gruppen 18–34 år, med 12 i gruppen 55–74 år og med 6 blant dem som var 75 år eller eldre. I gruppen 35–54 år omkom 8 færre enn året før. Blant barn og unge under 18 år var antallet uendret.
 
-## Alder
+## Hardt skadde
 
-Etter alder økte antallet drepte med 9 i aldersgruppen 18–34 år, med 12 i aldersgruppen 55–74 år og med 6 blant dem på 75 år og eldre. I aldersgruppen 35–54 år omkom 8 færre enn året før, og blant barn og unge under 18 år var antallet uendret.
+Blant de hardt skadde var økningen størst for bilførere, fra 173 til 211. Antallet hardt skadde motorsyklister gikk ned fra 143 til 133.
+
+![Stolpediagram over Flest hardt skadde bilførere: Hardt skadde: Bilførere: 211, Bilpassasjerer: 85, Motorsykkel: 133, Moped: 13, Sykkel: 67, Fotgjengere: 73, Andre: 58.](./graf-3.svg)
+*Hardt skadde (meget alvorlig og alvorlig skadd) i trafikken etter trafikantgruppe, 2025. Kilde: SSB, tabell 06752.*
+
+Elsparkesyklister er foreløpig ikke en egen gruppe i statistikken, men er med blant «andre trafikanter». SSB har for første gang regnet ut tallene: i 2025 omkom 2 elsparkesyklister, og 34 ble hardt skadd. Det er om lag 5 prosent av alle hardt skadde.
+
+## Om tallene
+
+Summen av hardt skadde i tabell 06752 er 642 for 2025, mens SSBs artikkel oppgir 645. Antallet drepte er det samme i begge.
 
 ## Kilder
 
