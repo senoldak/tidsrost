@@ -15,54 +15,47 @@ key_points:
   - "Arbeidsgiveravgift og trygdeavgift (510,3 mrd.), skatt på formue og inntekt (493,2 mrd.) og merverdiavgift (444,6 mrd.) er de tre største inntektspostene."
 ---
 
-Regjeringen la 7. oktober 2026 fram forslaget til statsbudsjett for 2027. Utenom petroleumsvirksomheten og lånetransaksjoner anslår Finansdepartementet statens inntekter til 1 725,1 milliarder kroner og utgiftene til 2 286,8 milliarder kroner. Forskjellen kaller Finansdepartementet «oljekorrigert underskudd», og den er anslått til 561,7 milliarder kroner. Netto kontantstrøm fra petroleumsvirksomheten er anslått til 568 milliarder kroner. Det strukturelle, oljekorrigerte underskuddet, som departementet regner som bruken av fondsmidler i budsjettet, er anslått til 608,4 milliarder kroner.
+Regjeringen la 7. oktober 2026 fram forslaget til statsbudsjett for 2027. Utenom petroleumsvirksomheten og lånetransaksjoner anslår Finansdepartementet statens inntekter til 1 725,1 milliarder kroner og utgiftene til 2 286,8 milliarder kroner. Folketrygden er den største utgiftsposten, med 794,1 milliarder kroner. Det er 34,7 prosent av utgiftene utenom petroleum.
 
-Tallene er regjeringens forslag. Stortinget skal behandle budsjettet, og tallene kan derfor endres.
+Tallene er regjeringens forslag. Stortinget behandler budsjettet, og tallene kan endres.
 
-## Hvor kommer pengene fra?
+## Hva pengene går til
 
-Skatter og avgifter fra Fastlands-Norge er den største inntektskilden med 1 560,4 milliarder kroner. Arbeidsgiveravgift og trygdeavgift utgjør nesten en tredel av dette beløpet.
+Etter folketrygden følger rammetilskuddet til kommuner og fylkeskommuner med 277,6 milliarder kroner, de regionale helseforetakene med 250,4 milliarder og forsvaret med 191,7 milliarder kroner.
 
-| Inntektspost 2027 | Milliarder kroner |
-|---|---:|
-| Arbeidsgiveravgift og trygdeavgift | 510,3 |
-| Skatt på formue og inntekt | 493,2 |
-| Merverdiavgift | 444,6 |
-| Avgifter på tobakk og alkohol | 24,8 |
-| Avgifter på motorvogner | 19,6 |
-| Elektrisitetsavgift | 6,0 |
-| Tollinntekter | 3,5 |
-| Andre avgifter | 58,4 |
-| **Sum skatter og avgifter fra Fastlands-Norge** | **1 560,4** |
-| Renter og aksjeutbytte mv. | 91,9 |
-| Inntekter fra statens forvaltningsbedrifter | 5,7 |
-| Andre inntekter | 67,0 |
+![Stolpediagram over Folketrygden er langt større enn andre utgifter: Utgifter: Folketrygden: 794,1 milliarder kroner, Kommuner og fylkeskommuner: 277,6 milliarder kroner, Regionale helseforetak: 250,4 milliarder kroner, Forsvar: 191,7 milliarder kroner, Samferdsel: 99,9 milliarder kroner, Høyere utdanning og forskning: 68,6 milliarder kroner, Bistand: 53,4 milliarder kroner, Politi og påtalemyndighet: 33,6 milliarder kroner, Jordbruksavtalen: 33,4 milliarder kroner, Barnetrygd og kontantstøtte: 30,8 milliarder kroner, Renter på statsgjeld: 24,4 milliarder kroner.](./graf-1.svg)
+*Utvalgte utgiftsområder i regjeringens forslag til statsbudsjett for 2027, milliarder kroner. Andre utgifter, til sammen 429,0 milliarder kroner, er ikke med. Kilde: Finansdepartementet.*
 
-*Regjeringens forslag til statsbudsjett for 2027, utenom petroleum og lånetransaksjoner. Kilde: regjeringen.no.*
+## Hva folketrygden består av
 
-## Hva brukes pengene til?
+Folketrygden betaler blant annet alderspensjon, uføretrygd, sykepenger, arbeidsavklaringspenger og foreldrepenger. Alderspensjonen er den største delen, med 378,2 milliarder kroner, eller 47,6 prosent av folketrygden. Uføretrygd utgjør 150,3 milliarder, sykepenger 80,6 milliarder og arbeidsavklaringspenger 59,8 milliarder kroner.
 
-Folketrygden er den største utgiftsposten med 794,1 milliarder kroner. Det tilsvarer omtrent 35 prosent av de samlede utgiftene utenom petroleum. Alderspensjon står for 378,2 milliarder kroner, uføretrygd for 150,3 milliarder, sykepenger for 80,6 milliarder og arbeidsavklaringspenger for 59,8 milliarder kroner.
+![Fossefallsdiagram over Alderspensjon er nesten halvparten av folketrygden: Folketrygden: Alderspensjon: 378,2 milliarder kroner, Uføretrygd: 150,3 milliarder kroner, Sykepenger: 80,6 milliarder kroner, Arbeidsavklaring (AAP): 59,8 milliarder kroner, Helsetjenester: 48,8 milliarder kroner, Foreldrepenger: 36,1 milliarder kroner, Øvrige sosiale formål: 21,4 milliarder kroner, Arbeidsliv: 18,9 milliarder kroner; Sum: Folketrygden i alt: 794,1 milliarder kroner.](./graf-2.svg)
+*Folketrygdens utgifter i forslaget til statsbudsjett for 2027, milliarder kroner. Kilde: Finansdepartementet.*
 
-![Liggende stolpediagram over utvalgte utgiftsposter i regjeringens forslag til statsbudsjett for 2027, i milliarder kroner: folketrygden 794,1, rammetilskudd til kommuner og fylkeskommuner 277,6, regionale helseforetak 250,4, samferdsel 99,9, høyere utdanning, forskning og fagskoler 68,6, jordbruksavtalen 33,4, barnetrygd og kontantstøtte 30,8 og renter på statsgjeld 24,4.](./graf-1.svg)
-*Utvalgte utgiftsposter i forslaget til statsbudsjett for 2027, milliarder kroner. Kilde: regjeringen.no, Statsbudsjettet 2027.*
+## Hvor pengene kommer fra
 
-Etter folketrygden følger rammetilskuddet til kommuner og fylkeskommuner (277,6 milliarder kroner) og tilskuddene til de regionale helseforetakene (250,4 milliarder kroner).
+Skatter og avgifter fra Fastlands-Norge gir 1 560,4 milliarder kroner. Tre inntekter er størst: arbeidsgiveravgift og trygdeavgift (510,3 milliarder), skatt på formue og inntekt (493,2 milliarder) og merverdiavgift (444,6 milliarder). Til sammen er det 83,9 prosent av inntektene utenom petroleum.
 
-## Økonomiske rammer for 2027
+![Stolpediagram over Tre inntekter står for det meste: Inntekter: Arbeidsgiver- og trygdeavgift: 510,3 milliarder kroner, Skatt på formue og inntekt: 493,2 milliarder kroner, Merverdiavgift: 444,6 milliarder kroner, Renter og aksjeutbytte: 91,9 milliarder kroner, Andre inntekter: 67,0 milliarder kroner, Andre avgifter: 58,4 milliarder kroner, Tobakk og alkohol: 24,8 milliarder kroner, Motorvogner: 19,6 milliarder kroner.](./graf-3.svg)
+*De største inntektene utenom petroleum i forslaget til statsbudsjett for 2027, milliarder kroner. Kilde: Finansdepartementet.*
 
-Tallene i tabellen er Finansdepartementets anslag, både for 2026 og 2027.
+## Forskjellen dekkes av oljefondet
 
-| Hovedtall | 2026 | 2027 |
+Forskjellen mellom inntektene og utgiftene utenom petroleum er det oljekorrigerte underskuddet, anslått til 561,7 milliarder kroner. Det dekkes ved en overføring fra Statens pensjonsfond utland. Netto kontantstrøm fra petroleumsvirksomheten er anslått til 568 milliarder kroner.
+
+Det strukturelle, oljekorrigerte underskuddet, som omtales som bruken av fondsmidler, er foreslått til 608,4 milliarder kroner. Det inkluderer 85 milliarder kroner i støtte til Ukraina, og tilsvarer 2,7 prosent av fondsverdien, som er anslått til om lag 22 400 milliarder kroner ved inngangen til 2027.
+
+## Økonomiske anslag
+
+| Finansdepartementets anslag | 2026 | 2027 |
 |---|---:|---:|
 | Vekst i fastlands-BNP (volum) | 1,1 % | 1,7 % |
 | Registrert arbeidsledighet | 2,1 % | 2,1 % |
 | Konsumprisindeksen (KPI) | 3,3 % | 2,7 % |
 | Årslønnsvekst | 4,6 % | 4,0 % |
 
-*Finansdepartementets anslag. Kilde: regjeringen.no, «Key figures in the National Budget for 2027».*
-
-Bruken av fondsmidler er foreslått til 608,4 milliarder kroner. Det tilsvarer 2,7 prosent av fondsverdien, som er anslått til om lag 22 400 milliarder kroner ved inngangen til 2027.
+*Kilde: Finansdepartementet, «Key figures in the National Budget for 2027».*
 
 ## Kilder
 
