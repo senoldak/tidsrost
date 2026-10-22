@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { normaliserUrl, mdKacir, skrivSak, lesRss } from './lib.mjs';
 import { kortMelding, linje } from './kortfortalt.mjs';
-import { sjekkMedier, vurder } from './redaktor.mjs';
+import { sjekkMedier, vurderOgVask } from './redaktor.mjs';
 
 test('normaliserUrl: https kreves, tegn som bryter lenker kodes', () => {
   assert.equal(normaliserUrl('http://a.no/x'), null);
@@ -40,10 +40,10 @@ test('Kort fortalt: kilde-URL normaliseres', () => {
   assert.equal(kortMelding({ tittel: 'Sak', ingress: 'I', kilde: { navn: 'A', url: 'https://' } }), null);
 });
 
-test('Medienavn i why_matters og key_points fanges av vurder()', async () => {
+test('Medienavn i why_matters og key_points fanges av vurderOgVask()', async () => {
   assert.ok(sjekkMedier('Dette melder NRK.').length);
   const sak = { title: 'Ren tittel', description: 'Ren ingress.', body: 'Ren tekst.', why_matters: 'Ifølge NRK er saken viktig.', key_points: ['Rent punkt', 'Avisa Nettavisen skriver det'] };
-  const r = await vurder(sak, 'Kilde.', { medier: true }).catch((e) => e);
+  const r = await vurderOgVask(sak, 'Kilde.', { medier: true }).catch((e) => e);
   const tekst = JSON.stringify(r instanceof Error ? r.message : r);
   assert.match(tekst, /NRK|Nettavisen|Medier nevnt/);
 });

@@ -11,8 +11,7 @@ Astro ile yapılmış, Cloudflare'de ücretsiz yayınlanan haber sitesi. Haberle
 | `src/styles/global.css` | Tasarım (renkler en üstte) |
 | `scripts/nyheter/bilde.mjs` | Botun kapak resimleri: uyarı haritası, kur grafiği, kaynak kartı. Dışarıdan fotoğraf alınmaz, telif derdi yok |
 | `scripts/nyheter/kilder/etater.mjs` | Botun RSS/haber listesinden okuduğu kurumlar (SSB, Nkom, Mattilsynet, Datatilsynet, Kulturdirektoratet, Norges Bank, Finanstilsynet, Konkurransetilsynet, Skatteetaten, Vegvesen, FHI, DSB, HI, Sivilombudet, Forbrukerrådet, Idrettsforbundet, Norfund). Yeni kurum buraya eklenir; ortak süreç `pressemelding.mjs` |
-| `scripts/nyheter/kilder/udi.mjs` | UDI aylık istatistikleri (iltica, çalışma ve aile izinleri): yeni ay gelince yapay zekâsız veri haberi |
-| `tidsur/` | Botu Oslo saatiyle çift saatlerde (08–02) başlatan Cloudflare Worker (GitHub'ın zamanlayıcısı güvenilmez). Kurulum: `tidsur/README.md` |
+| (repoda yok) | Botu mecmua-saat Worker'ı (private mecmua reposu, `saat/`; saatler `saat/src/ayarlar.js`) başlatır; GitHub'ın zamanlayıcısı güvenilmez |
 
 ## Kurulum (bir kerelik)
 

@@ -225,7 +225,7 @@ const kesinProblemer = (sak, kilde, medier) => {
   return [...sjekkSitater(tekst, kilde), ...sjekkTall(tekst, kilde), ...sjekkNavn(tekst, kilde), ...sprakSjekk(tekst), ...(medier ? sjekkMedier(tekst) : []), ...sjekkLengde(sak), ...sjekkTittel(utenAvsenderprefiks(sak.title))];
 };
 
-// Kontrol masasının istemi (vurder ve vurderOgVask ortak kullanır).
+// Kontrol masasının istemi (vurderOgVask kullanır).
 const sakBlokk = (sak) => `Tittel: ${sak.title}
 Ingress: ${sak.description}
 
@@ -260,19 +260,6 @@ ${sak.body}
 ${sak.why_matters ? `
 Hvorfor viktig: ${sak.why_matters}` : ""}${Array.isArray(sak.key_points) && sak.key_points.length ? `
 Nøkkelpunkter: ${sak.key_points.join(" | ")}` : ""}`;
-}
-
-export async function vurder(sak, kilde, { pressemelding = true, medier = false } = {}) {
-  const problemer = kesinProblemer(sak, kilde, medier);
-  const svar = await gemini({
-    denetim: true,
-    schema: VURDERING_SKJEMA,
-    prompt: vurderPrompt(sak, kilde, { pressemelding, medier }),
-  });
-
-  if (!svar) return { godkjent: false, problemer: [...problemer, 'KI-kontroll kunne ikke kjøres'] };
-  problemer.push(...svar.problemer);
-  return { godkjent: svar.godkjent && problemer.length === 0, problemer };
 }
 
 // ── 3. Düzeltme ────────────────────────────────────────────────────────

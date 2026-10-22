@@ -1,6 +1,6 @@
 # Açık kamu verilerinden haber üretir ve repoya ekler.
-# Cloudflare yeni commit'i görünce siteyi otomatik yeniden derler.
-# Zamanlama Cloudflare'deki tidsur Worker'ındadır (Oslo saatiyle 08, 10 … 22, 00, 02; bkz. tidsur/README.md).
+# Yeni yazı varsa bot, Yayınla iş akışını (yayinla.yml) başlatır; o da siteyi derleyip Cloudflare'e gönderir.
+# Zamanlama mecmua-saat Worker'ındadır (private mecmua reposu, saat/src/ayarlar.js).
 # GitHub'ın cron'u UTC'dir ve yaz/kış saatini izlemez, bu yüzden burada schedule yok.
 name: Nyhetsbot
 
