@@ -3272,7 +3272,31 @@
     "medier:f74079c0679ecbb6": "2026-10-22T10:01:10.724Z",
     "medier:e1076e686f64e299": "2026-10-22T10:01:10.724Z",
     "medier:c3a1e837af88c6a1": "2026-10-22T10:01:10.724Z",
-    "medier:82caf339aaa78d76": "2026-10-22T10:01:10.724Z"
+    "medier:82caf339aaa78d76": "2026-10-22T10:01:10.724Z",
+    "medier:ae25da0e30c73b9a": "2026-10-22T12:01:07.831Z",
+    "medier:f5e8cc6c362d93fd": "2026-10-22T12:01:07.831Z",
+    "medier:24153290dc117ec8": "2026-10-22T12:01:07.831Z",
+    "medier:5870f32db1335fff": "2026-10-22T12:01:07.831Z",
+    "medier:b2da18a8d9d05e76": "2026-10-22T12:01:07.831Z",
+    "medier:2154748b35137031": "2026-10-22T12:01:07.831Z",
+    "medier:587d2f09546a4d22": "2026-10-22T12:01:07.831Z",
+    "medier:5a593a9e428c81f5": "2026-10-22T12:01:07.831Z",
+    "medier:3a3e638f32aa5367": "2026-10-22T12:01:07.831Z",
+    "medier:36f657fee37df3d3": "2026-10-22T12:01:07.831Z",
+    "medier:6126cb8aedf774cf": "2026-10-22T12:01:07.831Z",
+    "medier:f6b9a1d0501ab6da": "2026-10-22T12:01:07.831Z",
+    "medier:b9da1c9fb8fff064": "2026-10-22T12:01:07.831Z",
+    "medier:aa96e18f3c65d583": "2026-10-22T12:01:07.831Z",
+    "medier:18e39c91b7f6208c": "2026-10-22T12:01:07.831Z",
+    "medier:dc2347651814bb66": "2026-10-22T12:01:07.831Z",
+    "medier:f9293ce3dc2778ad": "2026-10-22T12:01:07.831Z",
+    "medier:4b57bbed6d7ea661": "2026-10-22T12:01:07.831Z",
+    "medier:772ed8035d6a3254": "2026-10-22T12:01:07.831Z",
+    "medier:99445068f8035b2f": "2026-10-22T12:01:07.831Z",
+    "medier:b8be13e404b31be9": "2026-10-22T12:01:07.831Z",
+    "medier:5cfb5a032815f96a": "2026-10-22T12:01:07.831Z",
+    "medier:d797c396e834ae4b": "2026-10-22T12:01:07.831Z",
+    "medier:b9e9838e0d96c4fa": "2026-10-22T12:01:07.831Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -3320,116 +3344,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:fbd2766906d7ea73": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "medier:7ff1788da6e5bfe0": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "medier:d5793902514e7fff": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "medier:16943a1c6a7a2298": {
-      "p": 76,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "medier:e40fc7250e28f1e3": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "medier:beebd727f899f29e": {
-      "p": 74,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "medier:1c84da93deddbbe7": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "medier:574a29b921872479": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "medier:e2e11e1e2bd44d4f": {
-      "p": 58,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "medier:9fb3f88b79f9772d": {
-      "p": 88,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "medier:47f141b2bda8bd01": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "medier:114d3576c5e2ebd5": {
-      "p": 62,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "regjeringen:3179050": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "regjeringen:3179047": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "regjeringen:3178999": {
-      "p": 52,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "regjeringen:3178972": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/forlenget-leveringsfrist-for-harmonised-transparency-template-htt-skjemaet/": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/10/manuell-dirigering-nar-straumen-pa-maloybrua-vert-kobla-fra/": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "havforskning:https://www.hi.no/hi/nyheter/2026/oktober/snokrabbe-solid-okning-i-kvoteradet": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "havforskning:https://www.hi.no/hi/nyheter/2026/oktober/tilrar-fortsatt-fiskestopp-for-lodde-i-barentshavet-i-2027": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "sivilombudet:https://www.sivilombudet.no/?p=63741": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2182": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T12:02:11.904Z"
-    },
     "medier:d39bac94495d05cc": {
       "p": 45,
       "v": "b34cb0de5bde",
@@ -5329,6 +5243,51 @@
       "p": 55,
       "v": "b34cb0de5bde",
       "t": "2026-10-22T10:02:13.470Z"
+    },
+    "medier:ae25da0e30c73b9a": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T12:02:46.439Z"
+    },
+    "medier:18e39c91b7f6208c": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T12:02:46.439Z"
+    },
+    "medier:2ff0c208798bcf2a": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T12:02:46.439Z"
+    },
+    "medier:99445068f8035b2f": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T12:02:46.439Z"
+    },
+    "medier:b2da18a8d9d05e76": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T12:02:46.439Z"
+    },
+    "medier:5a593a9e428c81f5": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T12:02:46.439Z"
+    },
+    "medier:f9293ce3dc2778ad": {
+      "p": 74,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T12:02:46.439Z"
+    },
+    "medier:b9da1c9fb8fff064": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T12:02:46.439Z"
+    },
+    "medier:d797c396e834ae4b": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T12:02:46.439Z"
     }
   }
 }
