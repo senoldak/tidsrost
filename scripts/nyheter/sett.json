@@ -3185,7 +3185,33 @@
     "medier:1b25b578df623513": "2026-10-22T06:03:23.875Z",
     "medier:7393a95133a737e3": "2026-10-22T06:03:23.875Z",
     "medier:40cc7791dcfed3c9": "2026-10-22T06:03:43.135Z",
-    "medier:5c3eef3403cf3d7b": "2026-10-22T06:03:43.135Z"
+    "medier:5c3eef3403cf3d7b": "2026-10-22T06:03:43.135Z",
+    "regjeringen:3181279": "2026-10-22T07:55:12.435Z",
+    "idrettsforbundet:https://www.idrettsforbundet.no/nyheter/2026/statsbudsjettet-2027-horingsinnspill-til-naringskomiteen-pa-stortinget/": "2026-10-22T07:55:12.435Z",
+    "medier:a0f9a76c1460d207": "2026-10-22T07:55:12.435Z",
+    "medier:02ebffdd13be0444": "2026-10-22T07:55:12.435Z",
+    "regjeringen:3179383": "2026-10-22T07:55:12.435Z",
+    "medier:b2e1908775e9b330": "2026-10-22T07:55:12.435Z",
+    "medier:72acb3f482512853": "2026-10-22T07:55:12.435Z",
+    "medier:b02b83dc85cdb5ce": "2026-10-22T07:55:12.435Z",
+    "medier:890bcd48ced19575": "2026-10-22T07:55:12.435Z",
+    "medier:747800bfa15688ef": "2026-10-22T07:55:12.435Z",
+    "medier:010c33caf590bcd8": "2026-10-22T07:55:12.435Z",
+    "medier:9c0b421428dc2ad1": "2026-10-22T07:55:12.435Z",
+    "medier:196ac412e970c024": "2026-10-22T07:55:12.435Z",
+    "medier:b44dbb58de12014e": "2026-10-22T07:55:12.435Z",
+    "medier:2050dd496a1b9336": "2026-10-22T07:55:12.435Z",
+    "medier:e1c009e6d760cbc3": "2026-10-22T07:55:12.435Z",
+    "medier:de7c87113478503a": "2026-10-22T07:55:12.435Z",
+    "medier:1cc56dc71eaa308f": "2026-10-22T07:55:12.435Z",
+    "medier:a1dfb4759f6f204f": "2026-10-22T07:55:12.435Z",
+    "medier:b2c53f281638f308": "2026-10-22T07:55:12.435Z",
+    "medier:3b0af01612d22d0e": "2026-10-22T07:55:12.435Z",
+    "sivilombudet:https://www.sivilombudet.no/?p=63767": "2026-10-22T07:55:12.435Z",
+    "medier:a614b386b933b5d5": "2026-10-22T07:55:12.435Z",
+    "medier:02bfa28de83170ae": "2026-10-22T07:55:12.435Z",
+    "medier:dbca109ff6b81c29": "2026-10-22T07:55:12.435Z",
+    "medier:87809decd3551b8b": "2026-10-22T07:55:12.435Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -5217,6 +5243,71 @@
       "p": 15,
       "v": "b34cb0de5bde",
       "t": "2026-10-22T06:02:10.215Z"
+    },
+    "medier:a614b386b933b5d5": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T07:56:21.269Z"
+    },
+    "medier:a0f9a76c1460d207": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T07:56:21.269Z"
+    },
+    "medier:b2e1908775e9b330": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T07:56:21.269Z"
+    },
+    "medier:b02b83dc85cdb5ce": {
+      "p": 52,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T07:56:21.269Z"
+    },
+    "medier:010c33caf590bcd8": {
+      "p": 42,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T07:56:21.269Z"
+    },
+    "medier:196ac412e970c024": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T07:56:21.269Z"
+    },
+    "medier:dbca109ff6b81c29": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T07:56:21.269Z"
+    },
+    "medier:2050dd496a1b9336": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T07:56:21.269Z"
+    },
+    "medier:1cc56dc71eaa308f": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T07:56:21.269Z"
+    },
+    "medier:b2c53f281638f308": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T07:56:21.269Z"
+    },
+    "regjeringen:3181279": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T07:56:21.269Z"
+    },
+    "regjeringen:3179383": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T07:56:21.269Z"
+    },
+    "idrettsforbundet:https://www.idrettsforbundet.no/nyheter/2026/statsbudsjettet-2027-horingsinnspill-til-naringskomiteen-pa-stortinget/": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T07:56:21.269Z"
     }
   }
 }
