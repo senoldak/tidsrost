@@ -15,13 +15,11 @@ key_points:
   - "Ifølge Lånekassen kan yrkesaktive i Finnmark og Nord-Troms få slettet inntil 60 000 kroner av studielånet hvert år, og yrkesaktive i utvalgte distriktskommuner inntil 25 000 kroner i året."
 ---
 
-Ifølge rapporten *Utdanningsstøtten 2026* fra Statens lånekasse for utdanning (Lånekassen) mottar omtrent 1,2 millioner nordmenn utdanningsstøtte eller betaler ned på studielånet, og hver femte innbygger er kunde i Lånekassen. I studieåret 2025–2026 utbetalte Lånekassen over 47 milliarder kroner i utdanningsstøtte.
+Omtrent 1,2 millioner nordmenn mottar utdanningsstøtte eller betaler ned på studielånet, og hver femte innbygger er kunde i Statens lånekasse for utdanning (Lånekassen), ifølge rapporten *Utdanningsstøtten 2026*. I studieåret 2025–2026 utbetalte Lånekassen over 47 milliarder kroner i utdanningsstøtte.
 
-## Basislån for heltidsstudenter
+## Hvor mye kan en student låne?
 
-For heltidsstudenter i høyere utdanning utbetales støtten i hovedsak som et basislån, som kan gjøres om til stipend. Inntil 40 prosent av lånet kan omgjøres til stipend. Fra studieåret 2025–2026 er fordelingen 25 prosent for fullført grad og 15 prosent for beståtte studiepoeng.
-
-Basislånet for en heltidsstudent med rett til elleve måneders støtte har utviklet seg slik:
+166 859 kroner i basislån for en heltidsstudent med rett til elleve måneders støtte i 2025–2026. For 2026–2027 er beløpet 170 368 kroner, og i 2024–2025 var det 151 690 kroner.
 
 | Studieår | Basislån per måned | Basislån i alt (11 måneder) |
 |---|---:|---:|
@@ -33,16 +31,24 @@ Basislånet for en heltidsstudent med rett til elleve måneders støtte har utvi
 
 Basislånet ble justert med 10 prosent fra 2024–2025 til 2025–2026, og de fleste andre støttesatsene økte med 2,9 prosent. For 2026–2027 øker borteboerstipendet til 7 015 kroner per måned.
 
-## Sletting av studielån i utvalgte kommuner
+## Hvor mye kan bli stipend?
 
-Lånekassen har to ordninger for sletting av studiegjeld for dem som bor og arbeider i utvalgte kommuner:
+Inntil 40 prosent av basislånet kan gjøres om til stipend. Fra studieåret 2025–2026 er fordelingen 25 prosent for fullført grad og 15 prosent for beståtte studiepoeng.
+
+## Hvem kan få slettet studielån?
+
+To ordninger gjelder for dem som bor og arbeider i utvalgte kommuner:
 
 - **Finnmark og Nord-Troms:** Ordningen gjelder alle kommuner i Finnmark og sju kommuner i Nord-Troms (Lyngen, Storfjord, Kåfjord, Skjervøy, Nordreisa, Kvænangen og Karlsøy). Lånekassen oppgir at det kan slettes inntil 60 000 kroner av studielånet hvert år.
 - **Utvalgte distriktskommuner:** Ordningen gjelder kommuner i sentralitetsklasse 5 og 6 på SSBs sentralitetsindeks, ifølge Lånekassens liste. Lånekassen oppgir at det kan slettes inntil 25 000 kroner i året.
 
-Ifølge Lånekassen må man for begge ordningene bo i en godkjent kommune i en opptjeningsperiode på tolv sammenhengende måneder og søke innen tre måneder etter at perioden er over. For den generelle distriktsordningen må det søkes på nytt for hver tolvmånedersperiode. For Finnmark og Nord-Troms er arbeid i minst 50 prosent stilling ett av alternativene.
+## Hva kreves?
 
-Lånekassen opplyser at det til nå i 2026 er slettet studielån for over 1,36 milliarder kroner gjennom de to ordningene, hvorav om lag 260 millioner kroner i Finnmark og Nord-Troms.
+Tolv måneder: Ifølge Lånekassen må man for begge ordningene bo i en godkjent kommune i en opptjeningsperiode på tolv sammenhengende måneder og søke innen tre måneder etter at perioden er over. For den generelle distriktsordningen må det søkes på nytt for hver tolvmånedersperiode. For Finnmark og Nord-Troms er arbeid i minst 50 prosent stilling ett av alternativene.
+
+## Hvor mye er slettet?
+
+Over 1,36 milliarder kroner er slettet gjennom de to ordningene til nå i 2026, ifølge Lånekassen, hvorav om lag 260 millioner kroner i Finnmark og Nord-Troms.
 
 ## Kilder
 
