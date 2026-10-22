@@ -1,7 +1,10 @@
 // TEK KAYNAK: mecmua/standartlar/standart.test.mjs (kopyala.mjs ile sitelere yazılır).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdtempSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import * as standart from './standart.mjs';
 import { standartDenetle, standartBirlestir, kaynakBenzerligi, yayinDurduMu } from './standart.mjs';
 
 // Yatırım tavsiyesi kuralı yalnız finfolis ve kifobu kopyalarında dolu (kopyala.mjs).
@@ -127,4 +130,42 @@ test('kurum ve açık olumsuz yargı aynı cümlede kırmızı; olgu cümlesi te
   assert.ok(kurallar(standartDenetle({ dil: 'nb', metin: 'Regjeringen har feilet.' })).includes('kurum-degerlendirme'));
   assert.ok(!kurallar(standartDenetle({ dil: 'tr', metin: 'Merkez bankası faizi indirdi.' })).includes('kurum-degerlendirme'));
   assert.ok(!kurallar(standartDenetle({ dil: 'en', metin: 'The ministry said the company has failed to pay taxes.' })).includes('kurum-degerlendirme'));
+});
+
+test('medya adı: "The" + tek sözcüklü ad, ardından büyük harfli sözcük gelirse ad öbeğidir, yayın adı değildir', () => {
+  const medyaAdlari = ['The Ornek'];
+  assert.ok(kurallar(standartDenetle({ dil: 'en', metin: 'The Ornek reported that the deal closed.', medyaAdlari })).includes('medya-adi'));
+  assert.ok(kurallar(standartDenetle({ dil: 'en', metin: 'Data came from a survey by The Ornek.', medyaAdlari })).includes('medya-adi'));
+  assert.ok(!kurallar(standartDenetle({ dil: 'en', metin: 'The Ornek Bureau of Statistics published the data.', medyaAdlari })).includes('medya-adi'));
+});
+
+test('kurallar STANDART_KURALLAR dosyasından okunur; yoksa ya da bozuksa yerel kopyadan', () => {
+  const klasor = mkdtempSync(join(tmpdir(), 'standart-'));
+  const eski = process.env.STANDART_KURALLAR;
+  const metin = { dil: 'tr', metin: 'Bu çeyrekte zeytinyağı ihracatı arttı.' };
+  try {
+    // Ortak dosyadaki kural (burada yalnız test için eklenen 'zeytinyağı') kararı belirler.
+    const k = structuredClone(KURAL);
+    k.tr.kirmizi.deneme = ['zeytinyağı'];
+    writeFileSync(join(klasor, 'site.json'), JSON.stringify(k));
+    process.env.STANDART_KURALLAR = join(klasor, 'site.json');
+    standart.kurallariSifirla();
+    assert.equal(standartDenetle(metin).karar, 'kirmizi');
+    assert.equal(standart.kuralKaynagi, join(klasor, 'site.json'));
+    // Dosya yok: yerel kopya.
+    process.env.STANDART_KURALLAR = join(klasor, 'yok.json');
+    standart.kurallariSifirla();
+    assert.equal(standartDenetle(metin).karar, 'temiz');
+    assert.equal(standart.kuralKaynagi, 'yerel kopya');
+    // Bozuk dosya: yerel kopya.
+    writeFileSync(join(klasor, 'bozuk.json'), '{"tr":{}}');
+    process.env.STANDART_KURALLAR = join(klasor, 'bozuk.json');
+    standart.kurallariSifirla();
+    assert.equal(standartDenetle(metin).karar, 'temiz');
+    assert.equal(standart.kuralKaynagi, 'yerel kopya');
+  } finally {
+    if (eski === undefined) delete process.env.STANDART_KURALLAR;
+    else process.env.STANDART_KURALLAR = eski;
+    standart.kurallariSifirla();
+  }
 });

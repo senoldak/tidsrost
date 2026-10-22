@@ -6,7 +6,7 @@ import Base from '../../layouts/Base.astro';
 import StoryRow from '../../components/StoryRow.astro';
 import Symbol from '../../components/Symbol.astro';
 import { SITE, categoryName, formatDay, formatTime, varsel, gorselVar } from '../../lib/site';
-import { FORKLART, erForklart, forfatterSlug, getNews, kilde, type Haber } from '../../lib/news';
+import { FORKLART, erForklart, forfatterSlug, getNews, kilde, kildeUrl, type Haber } from '../../lib/news';
 import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs, headline } from '../../lib/seo';
 import SentezBlok from '../../components/SentezBlok.astro';
 import { matchEntities } from '../../lib/entities';
@@ -43,6 +43,7 @@ const { Content } = await render(haber);
 const cover = kapak;
 const yeniKapak = cover && gorselVar(date);
 const source = kilde(haber);
+const sourceUrl = kildeUrl(haber);
 const warn = varsel(title);
 const forklart = erForklart(haber);
 // Kişi adıyla yayımlanan yazıların yazar sayfası vardır (/forfatter/<slug>/).
@@ -163,7 +164,12 @@ const jsonLd = {
         source && (
           <div>
             <dt>Kilde</dt>
-            <dd><span class="mark"><Symbol kind="kilde" />{source}</span></dd>
+            <dd>
+              <span class="mark">
+                <Symbol kind="kilde" />
+                {sourceUrl ? <a href={sourceUrl} rel="noopener">{source}</a> : source}
+              </span>
+            </dd>
           </div>
         )
       }

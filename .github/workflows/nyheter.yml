@@ -43,7 +43,9 @@ jobs:
           repository: senoldak/mecmua
           ssh-key: '${{ secrets.MECMUA_OKUMA }}'
           path: .mecmua
-          sparse-checkout: motor
+          sparse-checkout: |
+            motor
+            standartlar
           persist-credentials: false
 
       - name: Hent nyheter
@@ -62,6 +64,8 @@ jobs:
           SURE_DK: ${{ vars.SURE_DK }}
           # Ortak motor modu (private mecmua'dan salt-okur çekilir): vars.MOTOR_TUR=1 iken tur motorla sürülür.
           MOTOR_TUR: ${{ vars.MOTOR_TUR }}
+          # Standartlar kural kitabı tek kaynaktan (mecmua/standartlar/siteler); dosya yoksa standart.mjs yerel kopyayı okur.
+          STANDART_KURALLAR: ${{ github.workspace }}/.mecmua/standartlar/siteler/tidsrost.json
           MOTOR_DIZIN: ${{ github.workspace }}/.mecmua/motor
         run: |
           if [ -z "$KILDE_NOKKEL" ]; then echo "::error::KILDE_NOKKEL secret'ı yok; haber sitelerinin akışları okunamaz."; exit 1; fi

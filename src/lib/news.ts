@@ -47,6 +47,11 @@ export function kilde(haber: Haber) {
   return haber.body?.match(/\*Kilde:\s*\[([^\]]+)\]/)?.[1];
 }
 
+// Aynı satırın bağlantısı (yalnız https). Bot bu satırı yalnız offentlig kilde için yazar; medya haberinde satır yoktur.
+export function kildeUrl(haber: Haber) {
+  return haber.body?.match(/\*Kilde:\s*\[[^\]]+\]\((https:\/\/[^\s)]+)\)/)?.[1];
+}
+
 // Haberleri gün bantlarına ayırır: I dag, I går, Tidligere (anasayfa ve kategori sayfaları).
 export function groupByDay(news: Haber[]) {
   const bands = new Map<string, Haber[]>();

@@ -1,5 +1,6 @@
 // Standartlar Faz 0: haber botlarının yayın kapısındaki belirlenimci süzgeç ve acil durdurma denetimi.
 // TEK KAYNAK: mecmua/standartlar/standart.mjs. Sitelerdeki kopyalar kopyala.mjs ile yazılır; sitede elle değiştirme.
+// Kurallar: STANDART_KURALLAR (mecmua/standartlar/siteler/<site>.json) ya da yanındaki kopya; bkz. kuralDosyasi.
 //
 // standartDenetle({ baslik, ozet, metin, ekler, dil, kaynakMetni }) -> { karar, kirmizi, sari, gerekce }
 //   karar: 'kirmizi' (yayımlanmaz, haber düşer), 'sari' (yayımlanır, günlük özette işaretlenir) ya da 'temiz'.
@@ -40,10 +41,33 @@ function kalip(girdi, dil) {
   return new RegExp(`${ONCE}${govde}${KUYRUK}`, 'gu');
 }
 
+// Kural dosyası: STANDART_KURALLAR (bot iş akışının mecmua'dan çektiği mecmua/standartlar/siteler/<site>.json, tek
+// kaynak) varsa o; yoksa ya da okunamazsa yanındaki kopya (standart-kurallar.json). Hangisinin okunduğu loga yazılır.
 let kurallarOnbellek = null;
+export let kuralKaynagi = null;
+function kuralDosyasi(ortam = process.env) {
+  const yol = ortam.STANDART_KURALLAR;
+  if (yol) {
+    try {
+      const ham = JSON.parse(readFileSync(yol, 'utf8'));
+      if (DILLER.every((d) => ham[d]?.kirmizi)) return { ham, kaynak: yol };
+      console.log(`standart: ${yol} geçersiz, yerel kopya okunuyor`);
+    } catch (e) {
+      console.log(`standart: ${yol} okunamadı (${e.code ?? e.message}), yerel kopya okunuyor`);
+    }
+  }
+  return { ham: JSON.parse(readFileSync(new URL('./standart-kurallar.json', import.meta.url), 'utf8')), kaynak: 'yerel kopya' };
+}
+// Testler için: önbelleği boşaltır, sonraki denetim kural dosyasını yeniden okur.
+export function kurallariSifirla() {
+  kurallarOnbellek = null;
+  kuralKaynagi = null;
+}
 function kurallar() {
   if (!kurallarOnbellek) {
-    const ham = JSON.parse(readFileSync(new URL('./standart-kurallar.json', import.meta.url), 'utf8'));
+    const { ham, kaynak } = kuralDosyasi();
+    if (kaynak !== 'yerel kopya') console.log(`standart: kurallar ${kaynak}`);
+    kuralKaynagi = kaynak;
     const derli = {};
     for (const dil of DILLER) {
       const d = ham[dil] ?? {};
@@ -119,7 +143,10 @@ const medyaOnbellek = new Map();
 function medyaKaliplari(adlar) {
   const liste = [...new Set((adlar ?? []).map((a) => String(a).trim()).filter((a) => a.length >= 2))];
   const anahtar = liste.join('|');
-  if (!medyaOnbellek.has(anahtar)) medyaOnbellek.set(anahtar, liste.map((m) => new RegExp(`${ONCE}${kacis(m)}${SONRA}`, 'gu')));
+  // "The" + tek sözcüklü ad, büyük harfle başlayan bir ad öbeğinin başı da olabilir ("The <Ad> Bureau of …"): ardından
+  // büyük harfli sözcük geliyorsa yayın adı sayılmaz (jendume İngilizce metinlerinde yanlış alarm, 22 Ekim).
+  const kuyruk = (m) => (/^The \S+$/u.test(m) ? String.raw`(?!\s+\p{Lu})` : '');
+  if (!medyaOnbellek.has(anahtar)) medyaOnbellek.set(anahtar, liste.map((m) => new RegExp(`${ONCE}${kacis(m)}${SONRA}${kuyruk(m)}`, 'gu')));
   return medyaOnbellek.get(anahtar);
 }
 

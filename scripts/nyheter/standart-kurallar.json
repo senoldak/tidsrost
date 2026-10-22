@@ -1,5 +1,5 @@
 {
-  "_aciklama": "Standartlar Faz 0: dört haber botunun kırmızı/sarı süzgeci (belirlenimci). Girdi biçimi yazi-isleri/kurallar/risk-*.json ile aynı: düz girdi kelime başı köküdür (sonrası serbest), '/.../' düzenli ifadedir (iu). yatirimTavsiyesi listeleri kopyala.mjs ile yazi-isleri/kurallar/risk-<dil>.json'dan eklenir; burada yazılmaz. Medya adları burada YAZILMAZ (repo herkese açık): sitenin şifreli kaynak listesinden çözülüp standartDenetle({ medyaAdlari }) ile verilir.",
+  "_aciklama": "Standartlar Faz 0: dört haber botunun kırmızı/sarı süzgeci (belirlenimci). Girdi biçimi risk-*.json ile aynı: düz girdi kelime başı köküdür (sonrası serbest), '/.../' düzenli ifadedir (iu). yatirimTavsiyesi listeleri kopyala.mjs ile risk-<dil>.json dosyalarından eklenir; burada yazılmaz. Medya adları burada YAZILMAZ (repo herkese açık): sitenin şifreli kaynak listesinden çözülüp standartDenetle({ medyaAdlari }) ile verilir.",
   "tr": {
     "kirmizi": {
       "suc": [
