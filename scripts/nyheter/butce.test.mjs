@@ -1,3 +1,4 @@
+// Kaynak: mecmua/site-ortak/gemini/butce.test.mjs. Burada düzenleme; kaynağı düzenleyip node site-ortak/kopyala.mjs çalıştır.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { turPayi, pasifikKalanSaat, butceYukle, geminiPayiBitti, butceDurumu } from './butce.mjs';

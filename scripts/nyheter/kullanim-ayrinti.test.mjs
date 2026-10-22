@@ -1,3 +1,4 @@
+// Kaynak: mecmua/site-ortak/gemini/kullanim-ayrinti.test.mjs. Burada düzenleme; kaynağı düzenleyip node site-ortak/kopyala.mjs çalıştır.
 // Katman 0 (Gemini kota planı): model ve amaç başına sayaç, iş sonu dosyası ve saate rapor.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';

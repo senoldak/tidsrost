@@ -1,3 +1,4 @@
+// Kaynak: mecmua/site-ortak/gemini/kullanim.mjs. Burada düzenleme; kaynağı düzenleyip node site-ortak/kopyala.mjs çalıştır.
 // Gemini kullanım ölçümü: her cevaptaki usageMetadata toplanır, süreç biterken log'a ve Actions özetine yazılır.
 // Fiyatlar 1 milyon token başına dolar; GEMINI_FIYAT_GIRIS / GEMINI_FIYAT_CIKIS ile değiştirilebilir.
 // Düşünme tokenları çıkış fiyatından faturalanır.

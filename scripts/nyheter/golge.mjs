@@ -1,3 +1,4 @@
+// Kaynak: mecmua/site-ortak/gemini/golge.mjs. Burada düzenleme; kaynağı düzenleyip node site-ortak/kopyala.mjs çalıştır.
 // Gölge denetim (Katman 4 denemesi, 20 Ekim 2026): GEMINI_GOLGE=N ise bir turda en çok N denetim kararı Gemma'ya da
 // sorulur. Yayına yalnız ana modelin kararı girer; Gemma'nın kararı karşılaştırma için loga yazılır (yalnız evet/hayır,
 // içerik yok). Gemma'nın dakikada 16 bin token sınırı için iki gölge çağrısı arasında en az GOLGE_ARALIK_MS geçer;

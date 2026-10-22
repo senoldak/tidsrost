@@ -1,7 +1,8 @@
+// Kaynak: mecmua/site-ortak/gemini/gemini-rapor.mjs. Burada düzenleme; kaynağı düzenleyip node site-ortak/kopyala.mjs çalıştır.
 // Katman 0 (Gemini kota planı): işin son adımı. Bu işteki betiklerin Gemini kullanımını (GEMINI_KULLANIM_DOSYASI,
 // bkz. kullanim.mjs) mecmua-saat'e gönderir: POST <MOTOR_URL>/motor/<site>/gemini. Hiçbir durumda işi düşürmez;
 // anahtar ve adres loga yazılmaz.
-// Kullanım: node tidsrost/scripts/nyheter/gemini-rapor.mjs <site>
+// Kullanım: node <bot klasörü>/gemini-rapor.mjs <site>
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';

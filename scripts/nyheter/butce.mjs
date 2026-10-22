@@ -1,3 +1,4 @@
+// Kaynak: mecmua/site-ortak/gemini/butce.mjs. Burada düzenleme; kaynağı düzenleyip node site-ortak/kopyala.mjs çalıştır.
 // Katman 3 (Gemini kota planı): bütçe yöneticisi. Tur başında saatten sitenin bugünkü (Google günü, Pasifik saati)
 // ana model kullanımını okur ve bu turun Gemini payını hesaplar:
 //   kalan = günlük sınır × 0,8 − bugün kullanılan
