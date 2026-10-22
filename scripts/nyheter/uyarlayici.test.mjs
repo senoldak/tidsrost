@@ -38,7 +38,7 @@ const kaynak = (navn, liste, ek = {}) => ({ navn, hent: async () => liste.map((k
 const kapi = async ({ girdi }) => {
   if (girdi.baslik.includes('KIRMIZI')) return { karar: 'elendi', s: { gerekce: 'standart:kirmizi:suc' } };
   if (girdi.baslik.includes('BEKLE')) return { karar: 'bekle', hata: 'denetim calismadi' };
-  if (girdi.baslik.includes('SARI')) return { karar: 'yaz', s: { karar: 'sari', gerekce: 'standart:sari:kaza' } };
+  if (girdi.baslik.includes('SARI')) return { karar: 'yaz', s: { karar: 'sari', kirmizi: [], sari: [{ kural: 'kaza', ham: 'x' }], gerekce: 'standart:sari:kaza' } };
   return { karar: 'yaz', s: { karar: 'temiz' } };
 };
 
@@ -455,4 +455,103 @@ test('yerel eşitlik: aynı sahte bağımlılıklarla eski akış ve yerelTur ay
     Object.fromEntries(Object.entries(eskiDurum.feil).map(([id, v]) => [id, v.antall ?? v])),
   );
   assert.deepEqual(Object.keys(k.tilstand.kilder).sort(), Object.keys(eskiDurum.kilder).sort());
+});
+
+// --- Ortak kapının ikinci okuması (kapi bağlamı) ---
+// Gerçek yayinKapisi + sahte denetle/kaydet: ikinci okumanın uyarlayıcıya bağlanışı.
+const gercekKapi = async () => {
+  const { yayinKapisi } = await import('./kapi.mjs');
+  return (denetle, kayitlar) => (p) =>
+    yayinKapisi({ ...p, ortam: {}, denetle, kaydet: async (a) => kayitlar.push(a.kayit), log: () => {} });
+};
+const sakinDenetle = (girdi) => (girdi.baslik.includes('SARI') ? { karar: 'sari', kirmizi: [], sari: [{ kural: 'kaza', ham: 'x' }], gerekce: 'standart:sari:kaza' } : girdi.baslik.includes('KIRMIZI') ? { karar: 'kirmizi', kirmizi: [{ kural: 'suc', ham: 'x' }], sari: [], gerekce: 'standart:kirmizi:suc' } : { karar: 'temiz', kirmizi: [], sari: [], gerekce: '' });
+
+async function ikinciTur(baslik, ikinci) {
+  const motorKayit = [];
+  const kapiYap = (await gercekKapi())(sakinDenetle, motorKayit);
+  const cagri = [];
+  const k = kur({
+    kaynaklar: [kaynak('a', [aday('a:1', baslik, sak(baslik))])],
+    bag: { yayinKapisi: (p) => kapiYap({ ...p, girdi: p.girdi, kimlik: p.kimlik, ikinci: p.ikinci }) },
+  });
+  const sarmal = ikinci === null ? null : async (m) => { cagri.push(m); return ikinci(m); };
+  const adaylar = await k.u.adaylar({});
+  const sonuclar = await k.u.isle(adaylar, { kapi: sarmal });
+  return { k, sonuclar, cagri, motorKayit };
+}
+
+test('ikinci okuma: elendi -> yazılmaz, elendi kaydı gider, sonuç elendi + gerekçe', async () => {
+  const { k, sonuclar, cagri, motorKayit } = await ikinciTur('Normal haber', async () => ({ karar: 'elendi', gerekce: 'kapi:elendi:hakaret' }));
+  assert.equal(k.yazilan.length, 0);
+  assert.equal(cagri.length, 1);
+  assert.equal(cagri[0][0].dil, 'nb');
+  assert.deepEqual(motorKayit, [{ kimlik: motorKimlik('a:1'), durum: 'elendi', gerekce: 'kapi:elendi:hakaret' }]);
+  assert.equal(sonucu(sonuclar, 'a:1').durum, 'elendi');
+  assert.equal(sonucu(sonuclar, 'a:1').gerekce, 'kapi:elendi:hakaret');
+});
+
+test('ikinci okuma: bekle -> yazılmaz, kayıt yok, haber havuzda kalır', async () => {
+  const { k, sonuclar, motorKayit } = await ikinciTur('Normal haber', async () => ({ karar: 'bekle', gerekce: '', hata: 'model yok' }));
+  assert.equal(k.yazilan.length, 0);
+  assert.equal(motorKayit.length, 0);
+  assert.equal(sonuclar.length, 0);
+  assert.equal(k.tilstand.sett['a:1'], undefined);
+  assert.ok(k.u.ozet.ventListe.some((s) => s.includes('model yok')));
+});
+
+test('ikinci okuma: gec + temiz haber -> yalnız kapı gerekçesiyle yazildi kaydı', async () => {
+  const kayitlar = [];
+  const kapiYap = (await gercekKapi())(sakinDenetle, []);
+  const k = kur({
+    kaynaklar: [kaynak('a', [aday('a:1', 'Normal haber', sak('Normal haber'))])],
+    bag: { yayinKapisi: kapiYap, motorKaydet: async (p) => { kayitlar.push(p.kayit); return true; } },
+  });
+  await k.u.isle(await k.u.adaylar({}), { kapi: async () => ({ karar: 'gec', gerekce: 'kapi:gec:not' }) });
+  assert.deepEqual(kayitlar, [sariKayit('a:1', 'haber-1', { gerekce: 'kapi:gec:not' })]);
+});
+
+test('ikinci okuma: sarı + gec -> gerekçe birleşik ve 300 karakterle kesilir', async () => {
+  const kayitlar = [];
+  const kapiYap = (await gercekKapi())(sakinDenetle, []);
+  const k = kur({
+    kaynaklar: [kaynak('a', [aday('a:1', 'SARI haber', sak('SARI haber'))])],
+    bag: { yayinKapisi: kapiYap, motorKaydet: async (p) => { kayitlar.push(p.kayit); return true; } },
+  });
+  await k.u.isle(await k.u.adaylar({}), { kapi: async () => ({ karar: 'gec', gerekce: 'x'.repeat(400) }) });
+  assert.equal(kayitlar.length, 1);
+  assert.ok(kayitlar[0].gerekce.startsWith('standart:sari:kaza xxx'));
+  assert.equal(kayitlar[0].gerekce.length, 300);
+  const kisa = [];
+  const k2 = kur({
+    kaynaklar: [kaynak('a', [aday('a:2', 'SARI haber', sak('SARI haber'))])],
+    bag: { yayinKapisi: kapiYap, motorKaydet: async (p) => { kisa.push(p.kayit); return true; } },
+  });
+  await k2.u.isle(await k2.u.adaylar({}), { kapi: async () => ({ karar: 'gec', gerekce: 'kapi:gec' }) });
+  assert.equal(kisa[0].gerekce, 'standart:sari:kaza kapi:gec');
+});
+
+test('ikinci okuma: kapi null iken eski davranış (sarı kayıt, ikinci çağrı yok)', async () => {
+  const kayitlar = [];
+  const kapiYap = (await gercekKapi())(sakinDenetle, []);
+  const k = kur({
+    kaynaklar: [kaynak('a', [aday('a:1', 'SARI haber', sak('SARI haber')), aday('a:2', 'Temiz haber', sak('Temiz haber'), { saatOnce: 2 })])],
+    bag: { yayinKapisi: kapiYap, motorKaydet: async (p) => { kayitlar.push(p.kayit); return true; } },
+  });
+  await k.u.isle(await k.u.adaylar({}), { kapi: null });
+  assert.equal(k.yazilan.length, 2);
+  assert.deepEqual(kayitlar, [sariKayit('a:1', 'haber-1', { gerekce: 'standart:sari:kaza' })]);
+});
+
+test('ikinci okuma: belirlenimci kırmızıda kapi hiç çağrılmaz', async () => {
+  const { k, cagri, motorKayit } = await ikinciTur('KIRMIZI haber', async () => ({ karar: 'gec', gerekce: '' }));
+  assert.equal(cagri.length, 0);
+  assert.equal(k.yazilan.length, 0);
+  assert.equal(motorKayit[0].gerekce, 'standart:kirmizi:suc');
+});
+
+test('ikinci okuma: ayar hatası turu durdurur ve yukarı gider', async () => {
+  await assert.rejects(
+    () => ikinciTur('Normal haber', async () => { throw Object.assign(new Error('token yok'), { ayar: true }); }),
+    (e) => e.ayar === true,
+  );
 });

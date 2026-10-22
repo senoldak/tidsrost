@@ -40,6 +40,9 @@ export function durumuTemizle(tilstand, simdi = new Date()) {
  *   ayar: { rot, maks, sureMs, baslangic, torr }   (torr: dosya yazmadan yalnız listeler)
  *   bag: bugünkü bağımlılıklar; yalnız testler değiştirir (Gemini/ağ/disk çağıran işlevler).
  */
+// Yazılan haberin motor kaydı gerekçesi: belirlenimci sarı gerekçesi + ikinci okumanın gerekçesi (boşlar atlanır, 300'de kesilir).
+const yazimGerekcesi = (kapi) => [kapi.s?.karar === 'sari' ? kapi.s.gerekce : '', kapi.kapiGerekce].filter(Boolean).join(' ').slice(0, 300);
+
 export function uyarlayiciKur({ tilstand, simdi = new Date(), ayar = {}, bag = {} }) {
   const A = { rot: '.', maks: 12, sureMs: 15 * 60_000, baslangic: Date.now(), torr: false, ...ayar };
   const B = {
@@ -101,7 +104,7 @@ export function uyarlayiciKur({ tilstand, simdi = new Date(), ayar = {}, bag = {
     return cikti;
   }
 
-  async function isle(girdi, { surVar, log = console.log } = {}) {
+  async function isle(girdi, { surVar, log = console.log, kapi: ikinciKapi = null } = {}) {
     const hukommelse = await B.lesHukommelse(A.rot);
     const standartLogg = (m) => log(temiz(m));
     const sonuclar = [];
@@ -192,7 +195,7 @@ export function uyarlayiciKur({ tilstand, simdi = new Date(), ayar = {}, bag = {
         if ('kort' in sak) {
           if (sak.kort) {
             // Satır da standart süzgecinden geçer: kırmızıysa yalnız o satır atlanır; denetim hatasında satır bekler.
-            const kapi = await B.yayinKapisi({ girdi: { dil: 'nb', baslik: sak.kort.tittel, ozet: '', metin: sak.kort.ingress ?? '' }, kimlik: k.id, log: standartLogg });
+            const kapi = await B.yayinKapisi({ girdi: { dil: 'nb', baslik: sak.kort.tittel, ozet: '', metin: sak.kort.ingress ?? '' }, kimlik: k.id, log: standartLogg, ikinci: ikinciKapi });
             if (kapi.karar === 'bekle') {
               ozet.ventListe.push(`${etikett(k)}: standartkontroll feilet, ${kapi.hata}`);
               log(`  - ${k.id}: venter (standartkontroll feilet)`);
@@ -206,7 +209,8 @@ export function uyarlayiciKur({ tilstand, simdi = new Date(), ayar = {}, bag = {
               continue;
             }
             const kortSlug = slugFor(new Date());
-            if (kapi.s.karar === 'sari') await B.motorKaydet({ site: 'tidsrost', kayit: sariKayit(k.id, kortSlug, kapi.s) });
+            const kortGerekce = yazimGerekcesi(kapi);
+            if (kapi.s.karar === 'sari' || kortGerekce) await B.motorKaydet({ site: 'tidsrost', kayit: sariKayit(k.id, kortSlug, { gerekce: kortGerekce }) });
             ozet.kortListe.push({ k, kort: sak.kort });
             log(`  ~ ${k.id}: Kort fortalt`);
             yazildi(k, kortSlug);
@@ -241,7 +245,7 @@ export function uyarlayiciKur({ tilstand, simdi = new Date(), ayar = {}, bag = {
         // Haber değeri künyeye yazılır; sosyal medyada günün Reels haberleri buna göre seçilir (scripts/sosial/saker.mjs).
         if (Number.isInteger(poeng?.get(k))) sak.nyhetsverdi = poeng.get(k);
         // Standart süzgeci: yazılmadan hemen önce. Kırmızı: yazılmaz, motor kaydı 'elendi'. Hata: bekler.
-        const kapi = await B.yayinKapisi({ girdi: sakDenetimGirdisi(sak), kimlik: k.id, log: standartLogg });
+        const kapi = await B.yayinKapisi({ girdi: sakDenetimGirdisi(sak), kimlik: k.id, log: standartLogg, ikinci: ikinciKapi });
         if (kapi.karar === 'bekle') {
           log(`  - ${k.id}: venter (standartkontroll feilet: ${kapi.hata})`);
           ozet.ventListe.push(`${etikett(k)}: standartkontroll feilet, ${kapi.hata}`);
@@ -255,7 +259,8 @@ export function uyarlayiciKur({ tilstand, simdi = new Date(), ayar = {}, bag = {
           continue;
         }
         const slug = await B.skrivSak(A.rot, sak);
-        if (kapi.s.karar === 'sari') await B.motorKaydet({ site: 'tidsrost', kayit: sariKayit(k.id, slug, kapi.s) });
+        const yazGerekce = yazimGerekcesi(kapi);
+        if (kapi.s.karar === 'sari' || yazGerekce) await B.motorKaydet({ site: 'tidsrost', kayit: sariKayit(k.id, slug, { gerekce: yazGerekce }) });
         if (!sak.draft) hukommelse.push(nokkel({ slug, tittel: sak.title, ingress: sak.description, tekst: sak.body, tid: Date.now(), produksjon: sak.produksjon }));
         merkSett(k);
         delete tilstand.feil[k.id];

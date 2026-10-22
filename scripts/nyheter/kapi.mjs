@@ -32,7 +32,9 @@ export function sakDenetimGirdisi(sak) {
  *   'elendi': kırmızı; kayıt zaten motora yazıldı.
  *   'bekle': denetim çalışamadı; haber bu tur yayımlanmaz, motor kaydı bekliyor kalır (hiçbir şey yazılmaz).
  */
-export async function yayinKapisi({ girdi, kimlik, ortam = process.env, denetle = standartDenetle, kaydet = motorKaydet, log = console.log }) {
+//   ikinci (isteğe bağlı): ortak kapının ikinci okuması; belirlenimci süzgeç kırmızı değilse sorulur.
+//   'elendi' kırmızıyla aynı yol; 'bekle' haberi havuzda tutar; 'gec' -> 'yaz' + kapiGerekce. Ayar hatası yukarı fırlar.
+export async function yayinKapisi({ girdi, kimlik, ortam = process.env, denetle = standartDenetle, kaydet = motorKaydet, log = console.log, ikinci = null }) {
   let s;
   try {
     s = denetle(girdi);
@@ -46,5 +48,15 @@ export async function yayinKapisi({ girdi, kimlik, ortam = process.env, denetle 
     return { karar: 'elendi', s };
   }
   if (s.karar === 'sari') log(`  ${standartOzeti(s)}`);
+  if (typeof ikinci === 'function') {
+    const r = await ikinci([girdi]);
+    if (r.karar === 'elendi') {
+      const es = { ...s, gerekce: r.gerekce };
+      await kaydet({ url: ortam.MOTOR_URL, anahtar: ortam.MOTOR_ANAHTARI, site: 'tidsrost', kayit: kirmiziKayit(kimlik, es) });
+      return { karar: 'elendi', s: es };
+    }
+    if (r.karar === 'bekle') return { karar: 'bekle', hata: r.hata };
+    return { karar: 'yaz', s, kapiGerekce: r.gerekce };
+  }
   return { karar: 'yaz', s };
 }
