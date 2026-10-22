@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 456" width="760" height="456" role="img" aria-label="Snus har passert røyk">
+<title>Snus har passert røyk</title>
+<rect width="760" height="456" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Snus har passert røyk</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Andel som bruker daglig, befolkningen 16–79 år, 2004–2025</text>
+<text x="24" y="92" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Prosent</text>
+<line x1="74" x2="736" y1="376" y2="376" stroke="#16191c" stroke-width="1"/>
+<text x="66" y="380" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">0</text>
+<line x1="74" x2="736" y1="286.7" y2="286.7" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="290.7" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">10</text>
+<line x1="74" x2="736" y1="197.3" y2="197.3" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="201.3" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">20</text>
+<line x1="74" x2="736" y1="108" y2="108" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="112" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">30</text>
+<polyline points="79.0,143.7 110.0,152.7 141.1,170.5 172.1,188.4 203.2,197.3 234.2,197.3 265.3,206.3 296.3,224.1 327.4,233.1 358.4,242.0 389.5,259.9 420.5,259.9 451.6,268.8 482.6,277.7 513.7,277.7 544.7,295.6 575.8,295.6 606.8,304.5 637.9,304.5 668.9,313.5 700.0,304.5 731.0,313.5" fill="none" stroke="#1f5f99" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="731.0" cy="313.5" r="4" fill="#1f5f99"/>
+<text x="723" y="303.5" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">Røyker daglig 7</text>
+<polyline points="79.0,340.3 110.0,331.3 141.1,322.4 172.1,322.4 203.2,331.3 234.2,322.4 265.3,322.4 296.3,304.5 327.4,304.5 358.4,295.6 389.5,295.6 420.5,286.7 451.6,286.7 482.6,277.7 513.7,268.8 544.7,259.9 575.8,259.9 606.8,250.9 637.9,242.0 668.9,242.0 700.0,242.0 731.0,233.1" fill="none" stroke="#c8102e" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="731.0" cy="233.1" r="4" fill="#c8102e"/>
+<text x="723" y="223.1" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">Snuser daglig 16</text>
+<text x="79" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2004</text>
+<text x="172.1" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2007</text>
+<text x="265.3" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2010</text>
+<text x="358.4" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2013</text>
+<text x="451.6" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2016</text>
+<text x="544.7" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2019</text>
+<text x="637.9" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2022</text>
+<text x="731" y="396" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2025</text>
+<line x1="24" x2="736" y1="416" y2="416" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="434" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 05307 og 07692</text>
+<text x="736" y="434" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

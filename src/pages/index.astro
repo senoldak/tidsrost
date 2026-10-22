@@ -1,0 +1,171 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import StoryRow from '../components/StoryRow.astro';
+import Symbol from '../components/Symbol.astro';
+import StoryMeta from '../components/StoryMeta.astro';
+import { FORKLART, erForklart, getActiveCategories, getNews, groupByDay, newsUrl } from '../lib/news';
+import { SITE, formatTime, gorselVar } from '../lib/site';
+import { RENTE, aktiveVarsler, datoTekst, prosent } from '../lib/data';
+import { aktiveTemaer } from '../lib/temaer';
+
+const news = await getNews();
+// Siste nytt: son 24 saatin breaking haberleri; aynı başlık (tekrarlanan varsel) bir kez, en fazla üç.
+const sisteGrense = Date.now() - 24 * 60 * 60 * 1000;
+const breaking = news
+  .filter((h) => h.data.breaking && h.data.date.getTime() > sisteGrense)
+  .filter((h, i, a) => a.findIndex((x) => x.data.title === h.data.title) === i)
+  .slice(0, 3);
+const hero = news.find((h) => h.data.featured) ?? news[0];
+const rest = news.filter((h) => h !== hero);
+const side = rest.slice(0, 4);
+const forklartSaker = news.filter(erForklart).slice(0, 4);
+const forklartSet = new Set(forklartSaker);
+const days = groupByDay(rest.slice(4, 28).filter((h) => !forklartSet.has(h)).slice(0, 20));
+const sections = (await getActiveCategories())
+  .map((c) => ({ ...c, items: news.filter((h) => h.data.category === c.slug).slice(0, 5) }))
+  .filter((s) => s.items.length > 0);
+const harTemaer = aktiveTemaer(news).length > 0;
+const varsler = aktiveVarsler();
+const sterke = varsler.filter((v) => v.niva !== 'gult').length;
+---
+
+<Base description={SITE.forsideBeskrivelse}>
+  <h1 class="sr-only">{SITE.name}: {SITE.description}</h1>
+  {
+    breaking.length > 0 && (
+      <div class="breaking" role="region" aria-label="Siste nytt">
+        <span class="breaking-label">
+          <Symbol kind="breaking" />
+          Siste nytt
+        </span>
+        <ul class="breaking-items">
+          {breaking.map((h) => (
+            <li>
+              <time datetime={h.data.date.toISOString()}>{formatTime(h.data.date).replace(':', '.')}</time>
+              <a href={newsUrl(h)}>{h.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
+  {
+    hero ? (
+      <section class="top" aria-label="Hovedsaker">
+        <article class="lead-story">
+          <h2>
+            <a href={newsUrl(hero)}>{hero.data.title}</a>
+          </h2>
+          <p class="standfirst">{hero.data.description}</p>
+          <StoryMeta haber={hero} time="full" />
+          {hero.data.cover && gorselVar(hero.data.date) && (
+            <figure>
+              <a href={newsUrl(hero)} tabindex="-1" aria-hidden="true">
+                <Image
+                  src={hero.data.cover}
+                  alt={hero.data.coverAlt ?? ''}
+                  width={1200}
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+              </a>
+            </figure>
+          )}
+        </article>
+
+        {side.length > 0 && (
+          <div class="side-list">
+            <h2 class="band">Siste</h2>
+            {side.map((h) => (
+              <article class="item">
+                <h3>
+                  <a href={newsUrl(h)}>{h.data.title}</a>
+                </h3>
+                <StoryMeta haber={h} time="short" />
+              </article>
+            ))}
+          </div>
+        )}
+      </section>
+    ) : (
+      <p class="empty">Ingen saker ennå.</p>
+    )
+  }
+
+  {
+    forklartSaker.length > 0 && (
+      <section class="day" aria-labelledby="forklart-forside">
+        <h2 class="band" id="forklart-forside">
+          <Symbol kind="forklart" />
+          Forklart – dybde og datajournalistikk
+          <a href={`/${FORKLART.slug}/`}>Alle forklarende saker</a>
+        </h2>
+        {forklartSaker.map((h) => (
+          <StoryRow haber={h} dato />
+        ))}
+      </section>
+    )
+  }
+
+  {
+    days.map((d) => (
+      <section class="day">
+        <h2 class="band">{d.label}</h2>
+        {d.items.map((h) => (
+          <StoryRow haber={h} />
+        ))}
+      </section>
+    ))
+  }
+
+  <section class="day forside-data" aria-labelledby="alltid-oppdatert">
+    <h2 class="band" id="alltid-oppdatert">
+      Alltid oppdatert
+      {harTemaer && <a href="/tema/">Alle temaer</a>}
+    </h2>
+    <ul class="data-lenker">
+      <li>
+        <a href="/styringsrenten/"><Symbol kind="data" />Styringsrenten nå</a>
+        <span><strong>{prosent(RENTE.rente)}</strong>{RENTE.gjeldendeFra && ` · gjeldende fra ${datoTekst(RENTE.gjeldendeFra)}`} · Norges Bank</span>
+      </li>
+      <li>
+        <a href="/farevarsler/"><Symbol kind="varsel" class="sym-varsel-gult" />Farevarsler i dag</a>
+        <span>
+          <strong>{varsler.length ? `${varsler.length} gjeldende varsler` : 'Ingen gjeldende varsler'}</strong>
+          {sterke > 0 && ` · ${sterke} på oransje eller rødt nivå`} · Meteorologisk institutt
+        </span>
+      </li>
+    </ul>
+  </section>
+
+  {
+    sections.length > 1 && (
+      <section class="day" aria-labelledby="etter-tema">
+        <h2 class="band" id="etter-tema">Etter tema</h2>
+        <div class="index">
+          {sections.map((s) => (
+            <div>
+              <h2>
+                <Symbol kind={s.slug} />
+                {s.name}
+              </h2>
+              <ul>
+                {s.items.map((h) => (
+                  <li>
+                    <a href={newsUrl(h)}>{h.data.title}</a>
+                  </li>
+                ))}
+              </ul>
+              <a class="all" href={`/kategori/${s.slug}/`}>
+                Alle saker i {s.name.toLowerCase()}
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+</Base>

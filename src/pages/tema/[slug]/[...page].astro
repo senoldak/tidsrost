@@ -1,0 +1,108 @@
+---
+import { jsonLdMetni } from '../../../lib/json-ld.mjs';
+import type { GetStaticPathsOptions, Page } from 'astro';
+import Base from '../../../layouts/Base.astro';
+import StoryRow from '../../../components/StoryRow.astro';
+import Symbol from '../../../components/Symbol.astro';
+import Brodsmuler from '../../../components/Brodsmuler.astro';
+import { getNews, newsUrl, type Haber } from '../../../lib/news';
+import { aktiveTemaer, temaAbsUrl, temaEntitet, type Tema } from '../../../lib/temaer';
+import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs } from '../../../lib/seo';
+
+// Tema sayfaları: /tema/<slug>/, /tema/<slug>/2/ … (sayfa başına 30 haber, kategori sayfalarıyla aynı düzen).
+// Sadece en az 3 haberi olan temalar üretilir (src/lib/tema.mjs MIN_SAKER); boş ya da ince tema sayfası olmaz.
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const news = await getNews();
+  return aktiveTemaer(news).flatMap(({ tema, saker }) =>
+    paginate(saker, { params: { slug: tema.slug }, props: { tema }, pageSize: 30 }),
+  );
+}
+
+// Temaya bağlı sürekli güncel veri sayfası (varsa) giriş metninin altında gösterilir.
+const DATA_SIDE: Record<string, { href: string; tekst: string; lenke: string }> = {
+  'norges-bank': { href: '/styringsrenten/', tekst: 'Se gjeldende nivå og siste endringer:', lenke: 'Styringsrenten nå' },
+  'meteorologisk-institutt': { href: '/farevarsler/', tekst: 'Se alle gjeldende varsler fra MET:', lenke: 'Farevarsler i dag' },
+};
+
+const { tema, page } = Astro.props as { tema: Tema; page: Page<Haber> };
+const items = page.data;
+const nr = page.currentPage;
+const forste = temaAbsUrl(tema.slug);
+const sideUrl = (n: number) => (n <= 1 ? forste : `${forste}${n}/`);
+const pageUrl = sideUrl(nr);
+const sideTekst = nr > 1 ? ` – side ${nr}` : '';
+const tittel = `${tema.navn} – nyheter og saker${sideTekst}`;
+const description = `${tema.intro}${nr > 1 ? ` Side ${nr} av ${page.lastPage}.` : ''}`;
+const forrige = nr > 1 ? sideUrl(nr - 1) : undefined;
+const neste = nr < page.lastPage ? sideUrl(nr + 1) : undefined;
+const data = nr === 1 ? DATA_SIDE[tema.slug] : undefined;
+const sti = [
+  { name: 'Forsiden', url: `${SITE_URL}/` },
+  { name: 'Temaer', url: `${SITE_URL}/tema/` },
+  { name: tema.navn, url: forste },
+  ...(nr > 1 ? [{ name: `Side ${nr}`, url: pageUrl }] : []),
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${pageUrl}#page`,
+      url: pageUrl,
+      name: tittel,
+      description,
+      inLanguage: 'nb',
+      isPartOf: { '@id': WEBSITE_ID },
+      publisher: { '@id': ORG_ID },
+      about: temaEntitet(tema),
+      mainEntity: {
+        '@type': 'ItemList',
+        itemListElement: items.map((h, i) => ({
+          '@type': 'ListItem',
+          position: page.start + i + 1,
+          url: new URL(newsUrl(h), SITE_URL).href,
+        })),
+      },
+    },
+    breadcrumbs(sti),
+  ],
+};
+---
+
+<Base title={tittel} description={description}>
+  <Fragment slot="head">
+    {forrige && <link rel="prev" href={forrige} />}
+    {neste && <link rel="next" href={neste} />}
+    <script type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  </Fragment>
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="tema" />{tema.navn}{nr > 1 && <span class="sr-only">, side {nr}</span>}</h1>
+    {nr === 1 && <p class="page-intro">{tema.intro}</p>}
+    <p class="meta">
+      {page.total} {page.total === 1 ? 'sak' : 'saker'}{page.lastPage > 1 && ` · side ${nr} av ${page.lastPage}`}
+    </p>
+  </header>
+  {
+    data && (
+      <p class="tema-data">
+        <Symbol kind="data" />
+        <span>{data.tekst} <a href={data.href}>{data.lenke}</a></span>
+      </p>
+    )
+  }
+  <section class="day">
+    {items.map((h) => <StoryRow haber={h} dato />)}
+  </section>
+  {
+    page.lastPage > 1 && (
+      <nav class="sider" aria-label="Sider">
+        {forrige ? <a href={new URL(forrige).pathname} rel="prev">← Nyere saker</a> : <span />}
+        <span class="side-nr">Side {nr} av {page.lastPage}</span>
+        {neste ? <a href={new URL(neste).pathname} rel="next">Eldre saker →</a> : <span />}
+      </nav>
+    )
+  }
+  <p class="tema-alle"><a href="/tema/">Alle temaer</a></p>
+</Base>

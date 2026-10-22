@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 366" width="760" height="366" role="img" aria-label="Daglig snusbruk er størst blant 25–34-åringer">
+<title>Daglig snusbruk er størst blant 25–34-åringer</title>
+<rect width="760" height="366" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Daglig snusbruk er størst blant 25–34-åringer</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Andel som snuser daglig etter alder, begge kjønn, 2025</text>
+<text x="24" y="92" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Prosent</text>
+<text x="24" y="121" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">16–24 år</text>
+<rect x="134" y="108" width="441" height="20" fill="#1f5f99"/>
+<text x="581" y="122" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">23 %</text>
+<text x="24" y="155" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">25–34 år</text>
+<rect x="134" y="142" width="556" height="20" fill="#16191c"/>
+<text x="696" y="156" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">29 %</text>
+<text x="24" y="189" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">35–44 år</text>
+<rect x="134" y="176" width="383.4" height="20" fill="#1f5f99"/>
+<text x="523.4" y="190" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">20 %</text>
+<text x="24" y="223" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">45–54 år</text>
+<rect x="134" y="210" width="306.8" height="20" fill="#1f5f99"/>
+<text x="446.8" y="224" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">16 %</text>
+<text x="24" y="257" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">55–64 år</text>
+<rect x="134" y="244" width="172.6" height="20" fill="#1f5f99"/>
+<text x="312.6" y="258" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">9 %</text>
+<text x="24" y="291" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">65–79 år</text>
+<rect x="134" y="278" width="38.3" height="20" fill="#1f5f99"/>
+<text x="178.3" y="292" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">2 %</text>
+<line x1="24" x2="736" y1="326" y2="326" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="344" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 07692</text>
+<text x="736" y="344" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

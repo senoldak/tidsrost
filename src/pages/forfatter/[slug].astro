@@ -1,0 +1,62 @@
+---
+// Yazar sayfası: kişi adıyla yayımlanan yazılar (author ≠ site adı). Biyografi uydurulmaz; sadece yazılar listelenir.
+import { jsonLdMetni } from '../../lib/json-ld.mjs';
+import Base from '../../layouts/Base.astro';
+import StoryRow from '../../components/StoryRow.astro';
+import ForfatterKort, { forfatterBeskrivelse } from '../../components/ForfatterKort.astro';
+import { SITE } from '../../lib/site';
+import { forfatterSlug, getNews, newsUrl, type Haber } from '../../lib/news';
+import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs } from '../../lib/seo';
+
+export async function getStaticPaths() {
+  const byAuthor = new Map<string, Haber[]>();
+  for (const h of await getNews()) {
+    if (h.data.author === SITE.name) continue;
+    byAuthor.set(h.data.author, [...(byAuthor.get(h.data.author) ?? []), h]);
+  }
+  return [...byAuthor].map(([name, items]) => ({ params: { slug: forfatterSlug(name) }, props: { name, items } }));
+}
+
+const { name, items } = Astro.props;
+const pageUrl = `${SITE_URL}/forfatter/${forfatterSlug(name)}/`;
+const description = forfatterBeskrivelse(name);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'ProfilePage',
+      '@id': `${pageUrl}#page`,
+      url: pageUrl,
+      name,
+      description,
+      inLanguage: 'nb',
+      isPartOf: { '@id': WEBSITE_ID },
+      mainEntity: {
+        '@type': 'Person',
+        '@id': `${pageUrl}#person`,
+        name,
+        jobTitle: 'Utgiver og redaktør',
+        description,
+        url: pageUrl,
+        ...(SITE.epost ? { email: SITE.epost } : {}),
+        worksFor: { '@id': ORG_ID },
+      },
+      hasPart: items.slice(0, 50).map((h) => ({ '@type': 'NewsArticle', url: new URL(newsUrl(h), SITE_URL).href, headline: h.data.title })),
+    },
+    breadcrumbs([
+      { name: 'Forsiden', url: `${SITE_URL}/` },
+      { name, url: pageUrl },
+    ]),
+  ],
+};
+---
+
+<Base title={`${name} – Utgiver og redaktør`} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <ForfatterKort name={name} antallSaker={items.length} heading="h1" />
+  <section class="day">
+    <h2 class="band">Siste saker av {name}</h2>
+    {items.map((h) => <StoryRow haber={h} dato />)}
+  </section>
+</Base>

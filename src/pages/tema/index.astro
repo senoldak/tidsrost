@@ -1,0 +1,97 @@
+---
+// Tema dizini: sayfası olan bütün kurum ve konu temaları (src/lib/tema.mjs) ve sürekli güncel veri sayfaları.
+import { jsonLdMetni } from '../../lib/json-ld.mjs';
+import Base from '../../layouts/Base.astro';
+import Symbol from '../../components/Symbol.astro';
+import Brodsmuler from '../../components/Brodsmuler.astro';
+import { SITE } from '../../lib/site';
+import { getNews, newsUrl } from '../../lib/news';
+import { aktiveTemaer, temaAbsUrl, temaUrl } from '../../lib/temaer';
+import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs } from '../../lib/seo';
+
+const temaer = aktiveTemaer(await getNews());
+const pageUrl = `${SITE_URL}/tema/`;
+const tittel = 'Temaer – institusjoner og saker';
+const description = `Sakene våre samlet etter institusjon og tema, som Norges Bank, Stortinget, regjeringen, SSB og Meteorologisk institutt. Fra ${SITE.name}.`;
+const sti = [
+  { name: 'Forsiden', url: `${SITE_URL}/` },
+  { name: 'Temaer', url: pageUrl },
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${pageUrl}#page`,
+      url: pageUrl,
+      name: tittel,
+      description,
+      inLanguage: 'nb',
+      isPartOf: { '@id': WEBSITE_ID },
+      publisher: { '@id': ORG_ID },
+      mainEntity: {
+        '@type': 'ItemList',
+        itemListElement: temaer.map(({ tema }, i) => ({ '@type': 'ListItem', position: i + 1, url: temaAbsUrl(tema.slug), name: tema.navn })),
+      },
+    },
+    breadcrumbs(sti),
+  ],
+};
+---
+
+<Base title={tittel} description={description} noindex={temaer.length === 0}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="tema" />Temaer</h1>
+    <p class="page-intro">
+      Her samler vi sakene våre etter institusjon og tema. Hver side har en kort forklaring og alle sakene vi har skrevet
+      om temaet, med de nyeste først.
+    </p>
+  </header>
+
+  <section class="day" aria-labelledby="alltid-oppdatert">
+    <h2 class="band" id="alltid-oppdatert">Alltid oppdatert</h2>
+    <ul class="data-lenker">
+      <li>
+        <a href="/styringsrenten/"><Symbol kind="data" />Styringsrenten nå</a>
+        <span>Gjeldende styringsrente og siste endringer, med data fra Norges Bank.</span>
+      </li>
+      <li>
+        <a href="/farevarsler/"><Symbol kind="varsel" class="sym-varsel-gult" />Farevarsler i dag</a>
+        <span>Gjeldende farevarsler fra Meteorologisk institutt.</span>
+      </li>
+    </ul>
+  </section>
+
+  {
+    temaer.length > 0 ? (
+      <section class="day" aria-labelledby="alle-temaer">
+        <h2 class="band" id="alle-temaer">Alle temaer</h2>
+        <div class="index">
+          {temaer.map(({ tema, saker }) => (
+            <div>
+              <h3>
+                <Symbol kind="tema" />
+                <a href={temaUrl(tema.slug)}>{tema.navn}</a>
+              </h3>
+              <ul>
+                {saker.slice(0, 3).map((h) => (
+                  <li>
+                    <a href={newsUrl(h)}>{h.data.title}</a>
+                  </li>
+                ))}
+              </ul>
+              <a class="all" href={temaUrl(tema.slug)}>
+                Alle {saker.length} saker
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+    ) : (
+      <p class="empty">Ingen temaer ennå.</p>
+    )
+  }
+</Base>

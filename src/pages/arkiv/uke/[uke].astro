@@ -1,0 +1,79 @@
+---
+// Ukesarkiv: artiklene i én ISO-uke, dag for dag. Summen av dagssidene, derfor noindex og utenfor nettstedskartet.
+import Base from '../../../layouts/Base.astro';
+import Brodsmuler from '../../../components/Brodsmuler.astro';
+import StoryRow from '../../../components/StoryRow.astro';
+import { getNews } from '../../../lib/news';
+import { SITE_URL } from '../../../lib/seo';
+import { dagTittel, delPaDager, delPaUker } from '../../../lib/arkiv.mjs';
+
+export async function getStaticPaths() {
+  const uker = delPaUker(delPaDager(await getNews()));
+  return uker.map((u, i) => ({
+    params: { uke: u.nokkel },
+    props: { u, forrige: uker[i + 1], neste: uker[i - 1] },
+  }));
+}
+
+const { u, forrige, neste } = Astro.props;
+const kort = (d: string) => dagTittel(d).replace(/ \d{4}$/, '');
+const periode = u.forste === u.siste ? dagTittel(u.forste) : `${kort(u.forste)} – ${dagTittel(u.siste)}`;
+const tittel = `Uke ${u.nr}`;
+---
+
+<Base title={`${tittel}, ${u.ar}: nyheter ${periode}`} description={`${u.antall} artikler publisert ${periode}.`} noindex>
+  <Brodsmuler
+    items={[
+      { name: 'Forsiden', url: `${SITE_URL}/` },
+      { name: 'Arkiv', url: `${SITE_URL}/arkiv/` },
+      { name: tittel, url: `${SITE_URL}/arkiv/uke/${u.nokkel}/` },
+    ]}
+  />
+  <header class="page-head">
+    <h1 class="page-title">{tittel}, {u.ar}</h1>
+    <p class="meta">{periode} · {u.antall} artikler</p>
+  </header>
+  {
+    u.dager.map((d) => (
+      <section class="day uke-dag" aria-labelledby={`d-${d.dag}`}>
+        <h2 id={`d-${d.dag}`}>
+          <a href={`/arkiv/${d.dag}/`}>{dagTittel(d.dag)}</a>
+          <span>{d.artikler.length} artikler</span>
+        </h2>
+        {d.artikler.map((h) => <StoryRow haber={h} />)}
+      </section>
+    ))
+  }
+  <nav class="ukenav" aria-label="Mellom uker">
+    {forrige ? <a href={`/arkiv/uke/${forrige.nokkel}/`} rel="prev">← Uke {forrige.nr}</a> : <span />}
+    {neste && <a href={`/arkiv/uke/${neste.nokkel}/`} rel="next">Uke {neste.nr} →</a>}
+  </nav>
+</Base>
+
+<style>
+  .uke-dag h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: calc(var(--u) * 4) 0 0;
+    padding-bottom: 6px;
+    border-bottom: 3px solid var(--ink);
+    font-family: var(--frame);
+    font-size: 1.05rem;
+  }
+  .uke-dag h2 a {
+    color: var(--ink);
+  }
+  .uke-dag h2 span {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--muted);
+  }
+  .ukenav {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: calc(var(--u) * 4);
+    font-family: var(--frame);
+  }
+</style>

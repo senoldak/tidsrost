@@ -1,0 +1,97 @@
+# Yeni tam haberleri Facebook Sayfasına ve Instagram'a post + story olarak gönderir (scripts/sosial/del.mjs).
+# Her başarılı yayının son adımı (yayinla.yml) başlatır: post/story görselleri o yayınla tidsrost.com/sosial/ altına
+# çıkar. workflow_run kullanılmaz: GitHub botun başlattığı yayınlardan sonra o olayı üretmiyor.
+# Elle: mod=kontrol (hiçbir şey yayımlamadan erişim), mod=baslat (penceredeki haberleri gönderilmiş say), mod=paylas,
+# mod=test (tek haberi gece kuralı ve tavana bakmadan seçilen kanallara gönderir; ig_reels,fb_reels de seçilebilir).
+# mod=reels: Oslo sabah (07:17) ve akşam (19:17) günün en güçlü haberi IG + FB Reels (del.mjs --reels). Bunu mecmua-saat
+# Worker'ı başlatır (saat/src/ayarlar.js, tur 'reels'); GitHub schedule'ı kaldırıldı: aynı işi günde 6 kez boş koşturuyordu.
+# Sayfa ve Instagram kimlikleri repo değişkeni (META_PAGE_ID, INSTAGRAM_USER_ID), token gizli (META_TOKEN).
+name: Sosyal medya
+
+on:
+  workflow_dispatch:
+    inputs:
+      mod:
+        description: 'Çalışma modu'
+        type: choice
+        default: paylas
+        options: [paylas, kontrol, baslat, test, reels]
+      test_id:
+        description: 'mod=test: haber kimliği (boş = görseli yayında olan en yeni tam haber)'
+        default: ''
+      kanallar:
+        description: 'mod=test: kanallar'
+        default: 'ig_post,ig_story'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sosial
+  cancel-in-progress: false
+
+jobs:
+  paylas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - run: npm ci --no-audit --no-fund
+
+      # Reels videosu ffmpeg ile üretilir (ubuntu-latest'te kurulu; değilse kurulur). Yalnız video üretebilecek modlarda:
+      # paylas modunda kurulum 25–35 sn boşa gidiyordu.
+      - name: ffmpeg
+        if: github.event.inputs.mod == 'reels' || github.event.inputs.mod == 'test'
+        run: command -v ffmpeg || (sudo apt-get update -q && sudo apt-get install -y -q ffmpeg)
+
+      # Standartlar: acil durdurma açıksa paylaşım yapılmaz (GitHub zamanlayıcısıyla başlayan tur dahil).
+      - name: Acil durdurma kontrolü
+        id: dur
+        env:
+          MOTOR_URL: ${{ vars.MOTOR_URL }}
+          MOTOR_ANAHTARI: ${{ secrets.MOTOR_ANAHTARI }}
+        run: node scripts/nyheter/durdu.mjs
+
+      - name: Paylaş
+        id: paylas
+        if: steps.dur.outputs.durdu != '1'
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          META_PAGE_ID: ${{ vars.META_PAGE_ID }}
+          INSTAGRAM_USER_ID: ${{ vars.INSTAGRAM_USER_ID }}
+          SOSIAL_GUNLUK_TAVAN: ${{ vars.SOSIAL_GUNLUK_TAVAN }}
+          # Haberler arası bekleme; Meta sınırı çağrı sayısıdır, aralık değil. Kod varsayılanı 60 sn runner'ı boşta tutuyordu.
+          SOSIAL_ARA_MS: ${{ vars.SOSIAL_ARA_MS || '15000' }}
+          MOD: ${{ github.event.inputs.mod || 'paylas' }}
+          TEST_ID: ${{ github.event.inputs.test_id }}
+          KANALLAR: ${{ github.event.inputs.kanallar || 'ig_post,ig_story' }}
+        run: |
+          case "$MOD" in
+            kontrol) node scripts/sosial/del.mjs --kontrol ;;
+            baslat) node scripts/sosial/del.mjs --baslat ;;
+            test) node scripts/sosial/del.mjs --test ${TEST_ID:+"$TEST_ID"} --kanallar "$KANALLAR" ;;
+            reels) node scripts/sosial/del.mjs --reels ;;
+            *) node scripts/sosial/del.mjs ;;
+          esac
+
+      # Hata olsa da gidenler kaydedilsin (aynı kanal ikinci kez gitmesin).
+      - name: Durumu kaydet
+        if: always()
+        run: |
+          git config user.name "tidsrost-nyhetsbot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/sosial/delt.json 2>/dev/null || exit 0
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -q -m "Sosyal medya: paylaşım durumu [skip ci]"
+          for i in 1 2 3 4 5; do git pull -q --rebase -X theirs && git push -q && exit 0; sleep 5; done
+          # Durum push edilemezse iş kırmızı bitmeli: aksi hâlde sonraki koşu aynı haberi ikinci kez paylaşır.
+          echo "::error::delt.json push edilemedi (5 deneme); sonraki koşu aynı haberleri yeniden paylaşabilir."
+          exit 1

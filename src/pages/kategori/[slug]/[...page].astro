@@ -1,0 +1,119 @@
+---
+import { jsonLdMetni } from '../../../lib/json-ld.mjs';
+import type { GetStaticPathsOptions, Page } from 'astro';
+import Base from '../../../layouts/Base.astro';
+import StoryRow from '../../../components/StoryRow.astro';
+import Symbol from '../../../components/Symbol.astro';
+import Brodsmuler from '../../../components/Brodsmuler.astro';
+import { CATEGORIES, SITE } from '../../../lib/site';
+import { getNews, groupByDay, newsUrl, type Haber } from '../../../lib/news';
+import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs } from '../../../lib/seo';
+
+// Kategori sayfaları sayfalanır: /kategori/<slug>/, /kategori/<slug>/2/ … Her sayfanın kendi canonical'ı vardır
+// (Base.astro, sayfanın kendi adresi) ve 2. sayfadan sonrası da site haritasına girer (astro.config.mjs).
+// Sayfa başına 30 haber (pageSize; getStaticPaths ayrı derlendiği için sabit içeride yazılır).
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const news = await getNews();
+  return CATEGORIES.flatMap((c) =>
+    paginate(
+      news.filter((h) => h.data.category === c.slug),
+      { params: { slug: c.slug }, props: { slug: c.slug, name: c.name }, pageSize: 30 },
+    ),
+  );
+}
+
+// Her kategori için arama sonuçlarında görünen özgün açıklama.
+const BESKRIVELSE: Record<string, string> = {
+  innenriks: 'Siste nytt fra Norge: politikk, Stortinget, regjeringen, vær, farevarsler og samfunn.',
+  utenriks: 'Siste nytt fra verden: internasjonal politikk, konflikter, diplomati og humanitære kriser.',
+  okonomi: 'Siste nytt om økonomi: renten, Norges Bank, kronekursen, næringsliv og arbeidsmarked.',
+  sport: 'Siste nytt fra sporten: fotball, vintersport og norske utøvere hjemme og ute.',
+  kultur: 'Siste nytt om kultur: film, musikk, litteratur, scenekunst og kulturpolitikk.',
+  teknologi: 'Siste nytt om teknologi: digitalisering, telekom, kunstig intelligens og forskning.',
+};
+
+const { slug, name, page } = Astro.props as { slug: string; name: string; page: Page<Haber> };
+const items = page.data;
+const nr = page.currentPage;
+const days = groupByDay(items);
+const forste = `${SITE_URL}/kategori/${slug}/`;
+const sideUrl = (n: number) => (n <= 1 ? forste : `${forste}${n}/`);
+const pageUrl = sideUrl(nr);
+const sideTekst = nr > 1 ? ` – side ${nr}` : '';
+const description = `${BESKRIVELSE[slug] ?? `Nyheter om ${name.toLowerCase()}.`}${nr > 1 ? ` Side ${nr} av ${page.lastPage}.` : ''} Saker fra ${SITE.name}.`;
+const forrige = nr > 1 ? sideUrl(nr - 1) : undefined;
+const neste = nr < page.lastPage ? sideUrl(nr + 1) : undefined;
+const sti = [
+  { name: 'Forsiden', url: `${SITE_URL}/` },
+  { name, url: forste },
+  ...(nr > 1 ? [{ name: `Side ${nr}`, url: pageUrl }] : []),
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${pageUrl}#page`,
+      url: pageUrl,
+      name: `${name} – siste nytt${sideTekst}`,
+      description,
+      inLanguage: 'nb',
+      isPartOf: { '@id': WEBSITE_ID },
+      publisher: { '@id': ORG_ID },
+      ...(items.length
+        ? {
+            mainEntity: {
+              '@type': 'ItemList',
+              itemListElement: items.map((h, i) => ({
+                '@type': 'ListItem',
+                position: page.start + i + 1,
+                url: new URL(newsUrl(h), SITE_URL).href,
+              })),
+            },
+          }
+        : {}),
+    },
+    breadcrumbs(sti),
+  ],
+};
+---
+
+<Base title={`${name} – siste nytt${sideTekst}`} description={description} noindex={page.total === 0}>
+  <Fragment slot="head">
+    {forrige && <link rel="prev" href={forrige} />}
+    {neste && <link rel="next" href={neste} />}
+    <script type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  </Fragment>
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind={slug} />{name}{nr > 1 && <span class="sr-only">, side {nr}</span>}</h1>
+    <p class="meta">
+      {page.total} {page.total === 1 ? 'sak' : 'saker'}{page.lastPage > 1 && ` · side ${nr} av ${page.lastPage}`}
+    </p>
+  </header>
+  {
+    days.length > 0 ? (
+      days.map((d) => (
+        <section class="day">
+          <h2 class="band">{d.label}</h2>
+          {d.items.map((h) => (
+            <StoryRow haber={h} showCategory={false} />
+          ))}
+        </section>
+      ))
+    ) : (
+      <p class="empty">Ingen saker i denne kategorien ennå.</p>
+    )
+  }
+  {
+    page.lastPage > 1 && (
+      <nav class="sider" aria-label="Sider">
+        {forrige ? <a href={new URL(forrige).pathname} rel="prev">← Nyere saker</a> : <span />}
+        <span class="side-nr">Side {nr} av {page.lastPage}</span>
+        {neste ? <a href={new URL(neste).pathname} rel="next">Eldre saker →</a> : <span />}
+      </nav>
+    )
+  }
+</Base>

@@ -1,0 +1,83 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
+
+// Bu sayfadaki bilgiler sitenin gerçek durumuna dayanır: çerez yok, analiz/izleme yok, harici script yok.
+// Siteye analiz, reklam, yorum vb. eklenirse bu sayfa da güncellenmeli.
+const OPPDATERT = '20. oktober 2026';
+---
+
+<Base title="Personvern" description={`Hvordan ${SITE.name} behandler personopplysninger.`}>
+  <article class="article">
+    <h1>Personvern</h1>
+    <p class="meta">Sist oppdatert {OPPDATERT}</p>
+    <div class="prose">
+      <p>
+        {SITE.name} samler inn så lite informasjon om deg som mulig. Her forklarer vi hva som skjer når du besøker
+        nettstedet eller kontakter oss.
+      </p>
+
+      <h2>Ingen informasjonskapsler (cookies)</h2>
+      <p>
+        Nettstedet benytter ingen informasjonskapsler (cookies), ingen tredjepartsreklame, ingen kommersielle sporere og
+        ingen profilering av enkeltpersoner.
+      </p>
+
+      <h2>Personvernvennlig webstatistikk</h2>
+      <p>
+        For å følge med på aggregert trafikk og sikre stabil drift benytter {SITE.name} Cloudflare Web Analytics. Dette
+        er en personvernvennlig statistikkløsning som ikke bruker informasjonskapsler og ikke sporer deg på tvers av nettsteder. Målingen er begrenset til aggregerte
+        tall (sidevisninger og teknisk responstid).
+      </p>
+
+      <h2>Drift og infrastruktur</h2>
+      <p>
+        Nettstedet driftes på Cloudflares globale nettverk. Ved nettverksforespørsler behandler Cloudflare nødvendige
+        tekniske data for å levere sidene hurtig og beskytte mot overbelastningsangrep (DDoS) og misbruk, i samsvar med
+        gjeldende personvernlovgivning (GDPR). Les mer i{' '}
+        <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">
+          Cloudflares personvernerklæring
+        </a>.
+      </p>
+
+      <h2>Deling i sosiale medier</h2>
+      <p>
+        Knappene for å dele saker på X, Facebook og WhatsApp er vanlige lenker. Ingen opplysninger sendes til disse
+        tjenestene før du selv klikker på en av dem. Da gjelder tjenestens egne personvernvilkår.
+      </p>
+
+      <h2>Når du kontakter oss</h2>
+      <p>
+        Sender du oss e-post{SITE.epost && <> til <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a></>}, behandler vi
+        navnet ditt, e-postadressen din og det du skriver, for å kunne svare deg og følge opp henvendelsen, for eksempel
+        en rettelse eller en klage. E-posten videresendes til redaksjonens e-postkonto. Vi deler ikke henvendelsen med
+        andre uten ditt samtykke, og vi sletter den når den ikke lenger trengs.
+      </p>
+
+      <h2>Journalistisk innhold</h2>
+      <p>
+        Nyhetssakene våre kan inneholde opplysninger om personer, for eksempel navn på offentlige personer. Slik
+        behandling skjer i journalistisk øyemed og er i stor grad unntatt fra personvernregelverket. Mener du at en sak
+        inneholder feil eller omtaler deg på en urimelig måte, kan du kontakte redaksjonen. Se også{' '}
+        <a href="/juridisk/">Juridisk informasjon og kolofon</a> (punkt 12 og 13) og{' '}
+        <a href="/rettelsespolitikk/">Rettelsespolitikk</a>.
+      </p>
+
+      <h2>Dine rettigheter</h2>
+      <p>
+        Du har rett til innsyn i opplysninger vi har om deg, og til å be om retting eller sletting. Ta kontakt
+        {SITE.epost ? <> på <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a></> : ' med redaksjonen'}. Du kan også klage
+        til <a href="https://www.datatilsynet.no/">Datatilsynet</a>.
+      </p>
+
+      <h2>Behandlingsansvarlig</h2>
+      <p>
+        {
+          SITE.redaktor
+            ? `Behandlingsansvarlig er ${SITE.redaktor}, utgiver og redaktør i ${SITE.name}.`
+            : `Behandlingsansvarlig er redaksjonen i ${SITE.name}.`
+        }
+      </p>
+    </div>
+  </article>
+</Base>

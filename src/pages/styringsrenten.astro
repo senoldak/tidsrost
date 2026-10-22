@@ -1,0 +1,168 @@
+---
+// "Styringsrenten nå": Norges Bank'ın açık verisinden (SDMX API) güncel politika faizi ve son değişiklikler.
+// Veri scripts/data/hent-data.mjs ile Nyhetsbot çalışmalarında alınır (src/data/styringsrente.json).
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import KiNotat from '../components/KiNotat.astro';
+import Base from '../layouts/Base.astro';
+import Symbol from '../components/Symbol.astro';
+import Brodsmuler from '../components/Brodsmuler.astro';
+import StoryRow from '../components/StoryRow.astro';
+import { SITE } from '../lib/site';
+import { getNews } from '../lib/news';
+import { GAMMEL_RENTE_MS, RENTE, datoTekst, erGammel, prosent, tidTekst } from '../lib/data';
+import { aktiveTemaer, temaUrl } from '../lib/temaer';
+import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs } from '../lib/seo';
+
+const pageUrl = `${SITE_URL}/styringsrenten/`;
+const r = RENTE;
+const gammel = erGammel(r.hentet, GAMMEL_RENTE_MS);
+const fra = r.gjeldendeFra ? datoTekst(r.gjeldendeFra) : undefined;
+const tittel = 'Styringsrenten nå';
+const description = `Styringsrenten er ${prosent(r.rente)}${fra ? `, gjeldende fra ${fra}` : ''}. Se gjeldende nivå og de siste endringene, med data hentet direkte fra Norges Bank.`;
+const endring = (e: { rente: number; forrige: number }) => {
+  const d = e.rente - e.forrige;
+  return `${d > 0 ? '+' : '−'}${Math.abs(d).toLocaleString('nb-NO', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} prosentpoeng`;
+};
+
+const tema = aktiveTemaer(await getNews()).find((t) => t.tema.slug === 'norges-bank');
+const saker = tema?.saker.slice(0, 4) ?? [];
+const sti = [
+  { name: 'Forsiden', url: `${SITE_URL}/` },
+  { name: 'Temaer', url: `${SITE_URL}/tema/` },
+  { name: tittel, url: pageUrl },
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `${pageUrl}#page`,
+      url: pageUrl,
+      name: tittel,
+      description,
+      inLanguage: 'nb',
+      dateModified: r.hentet,
+      isPartOf: { '@id': WEBSITE_ID },
+      publisher: { '@id': ORG_ID },
+      about: { '@type': 'Organization', name: 'Norges Bank', sameAs: 'https://www.wikidata.org/wiki/Q970769' },
+      mainEntity: { '@id': `${pageUrl}#data` },
+    },
+    {
+      '@type': 'Dataset',
+      '@id': `${pageUrl}#data`,
+      name: 'Norges Banks styringsrente',
+      description:
+        'Gjeldende styringsrente og de siste endringene i styringsrenten, hentet fra Norges Banks åpne data (dataserien for styringsrenten, daglige observasjoner).',
+      url: pageUrl,
+      inLanguage: 'nb',
+      creator: { '@type': 'Organization', name: 'Norges Bank', url: 'https://www.norges-bank.no/' },
+      isBasedOn: r.kilde.data,
+      license: 'https://data.norge.no/nlod/no/2.0',
+      isAccessibleForFree: true,
+      temporalCoverage: `${r.serieFra}/${r.sisteObservasjon}`,
+      dateModified: r.hentet,
+    },
+    breadcrumbs(sti),
+  ],
+};
+---
+
+<Base title={tittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="data" />{tittel}</h1>
+    <p class="page-intro">
+      Styringsrenten er renten bankene får på innskudd i Norges Bank, og den er sentralbankens viktigste verktøy i
+      pengepolitikken. Endringer i styringsrenten påvirker rentene på boliglån og sparing.
+    </p>
+  </header>
+
+  {
+    gammel && (
+      <p class="data-varsel" role="status">
+        Vi har ikke klart å hente nye tall siden {tidTekst(r.hentet)}. Sjekk <a href={r.kilde.url}>Norges Bank</a> for
+        siste informasjon.
+      </p>
+    )
+  }
+
+  <section class="data-tall" aria-labelledby="gjeldende">
+    <h2 class="band" id="gjeldende">Gjeldende styringsrente</h2>
+    <p class="data-verdi">{prosent(r.rente)}</p>
+    <dl class="data-fakta">
+      {
+        fra && (
+          <div>
+            <dt>Gjeldende fra</dt>
+            <dd>{fra}</dd>
+          </div>
+        )
+      }
+      <div>
+        <dt>Siste observasjon</dt>
+        <dd>{datoTekst(r.sisteObservasjon)}</dd>
+      </div>
+      <div>
+        <dt>Sist oppdatert</dt>
+        <dd><time datetime={r.hentet}>{tidTekst(r.hentet)}</time></dd>
+      </div>
+    </dl>
+  </section>
+
+  {
+    r.endringer.length > 0 && (
+      <section class="day" aria-labelledby="endringer">
+        <h2 class="band" id="endringer">Siste endringer</h2>
+        <div class="prose data-tabell">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Gjeldende fra</th>
+                <th scope="col">Ny rente</th>
+                <th scope="col">Fra</th>
+                <th scope="col">Endring</th>
+              </tr>
+            </thead>
+            <tbody>
+              {r.endringer.map((e) => (
+                <tr>
+                  <td>{datoTekst(e.fra)}</td>
+                  <td>{prosent(e.rente)}</td>
+                  <td>{prosent(e.forrige)}</td>
+                  <td>{endring(e)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="data-merknad">
+          Datoene viser første dag med nytt nivå i Norges Banks daglige dataserie for styringsrenten.
+        </p>
+      </section>
+    )
+  }
+
+  <p class="data-kilde">
+    <Symbol kind="kilde" />
+    <span>
+      Kilde: <a href={r.kilde.url}>Norges Bank</a>, åpne data fra <a href={r.kilde.data}>data.norges-bank.no</a>
+      ({r.kilde.lisens}). Tallene hentes automatisk flere ganger om dagen. Sist oppdatert {tidTekst(r.hentet)}.
+    </span>
+  </p>
+
+  {
+    saker.length > 0 && tema && (
+      <section class="related" aria-labelledby="saker">
+        <h2 class="band" id="saker">
+          Saker om Norges Bank
+          <a href={temaUrl('norges-bank')}>Alle saker</a>
+        </h2>
+        {saker.map((h) => <StoryRow haber={h} dato />)}
+      </section>
+    )
+  }
+  <p class="tema-alle"><a href="/tema/">Alle temaer hos {SITE.name}</a></p>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
+</Base>

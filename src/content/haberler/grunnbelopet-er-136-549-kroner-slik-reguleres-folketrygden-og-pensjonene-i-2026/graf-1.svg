@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" role="img" aria-label="Folketrygdens grunnbeløp (G) 2016–2026">
+<title>Folketrygdens grunnbeløp (G) 2016–2026</title>
+<rect width="760" height="430" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Folketrygdens grunnbeløp (G) 2016–2026</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Grunnbeløp fra 1. mai hvert år, kroner</text>
+<text x="24" y="92" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kroner</text>
+<line x1="74" x2="736" y1="352" y2="352" stroke="#16191c" stroke-width="1"/>
+<text x="66" y="356" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">0</text>
+<line x1="74" x2="736" y1="270.7" y2="270.7" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="274.7" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">50 000</text>
+<line x1="74" x2="736" y1="189.3" y2="189.3" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="193.3" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">100 000</text>
+<line x1="74" x2="736" y1="108" y2="108" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="112" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">150 000</text>
+<rect x="86" y="201.4" width="36.1" height="150.6" fill="#1f5f99"/>
+<text x="104.1" y="195.4" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">92 576</text>
+<text x="104.1" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2016</text>
+<rect x="146.2" y="199.7" width="36.1" height="152.3" fill="#1f5f99"/>
+<text x="164.3" y="193.7" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">93 634</text>
+<text x="164.3" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2017</text>
+<rect x="206.4" y="194.4" width="36.1" height="157.6" fill="#1f5f99"/>
+<text x="224.5" y="188.4" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">96 883</text>
+<text x="224.5" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2018</text>
+<rect x="266.6" y="189.6" width="36.1" height="162.4" fill="#1f5f99"/>
+<text x="284.6" y="183.6" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">99 858</text>
+<text x="284.6" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2019</text>
+<rect x="326.8" y="187.1" width="36.1" height="164.9" fill="#1f5f99"/>
+<text x="344.8" y="181.1" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">101 351</text>
+<text x="344.8" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2020</text>
+<rect x="386.9" y="178.9" width="36.1" height="173.1" fill="#1f5f99"/>
+<text x="405" y="172.9" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">106 399</text>
+<text x="405" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2021</text>
+<rect x="447.1" y="170.7" width="36.1" height="181.3" fill="#1f5f99"/>
+<text x="465.2" y="164.7" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">111 477</text>
+<text x="465.2" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2022</text>
+<rect x="507.3" y="159" width="36.1" height="193" fill="#1f5f99"/>
+<text x="525.4" y="153" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">118 620</text>
+<text x="525.4" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2023</text>
+<rect x="567.5" y="150.2" width="36.1" height="201.8" fill="#1f5f99"/>
+<text x="585.5" y="144.2" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">124 028</text>
+<text x="585.5" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2024</text>
+<rect x="627.7" y="140.3" width="36.1" height="211.7" fill="#1f5f99"/>
+<text x="645.7" y="134.3" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">130 160</text>
+<text x="645.7" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2025</text>
+<rect x="687.9" y="129.9" width="36.1" height="222.1" fill="#16191c"/>
+<text x="705.9" y="123.9" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">136 549</text>
+<text x="705.9" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2026</text>
+<line x1="24" x2="736" y1="390" y2="390" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="408" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: Nav, Grunnbeløpet i folketrygden</text>
+<text x="736" y="408" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

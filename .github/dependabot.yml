@@ -1,0 +1,23 @@
+# Bağımlılıklar ve GitHub Actions için haftalık güvenlik/sürüm güncellemeleri.
+# Astro ve @astrojs/* paketleri birbirine sürümle bağlı (jendume'de markdown-satteri tam sürüme sabit); tek tek
+# yükselten PR derlemeyi kırar, bu yüzden tek PR'da birlikte gelirler. Actions güncellemeleri de tek PR.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      astro:
+        patterns:
+          - 'astro'
+          - '@astrojs/*'
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns:
+          - '*'

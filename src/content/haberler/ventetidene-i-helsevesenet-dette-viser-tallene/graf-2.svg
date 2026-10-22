@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 326" width="760" height="326" role="img" aria-label="Ventetid 1. tertial 2026 sammenlignet med målene">
+<title>Ventetid 1. tertial 2026 sammenlignet med målene</title>
+<rect width="760" height="326" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Ventetid 1. tertial 2026 sammenlignet med målene</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Gjennomsnittlig ventetid i dager og langsiktig mål i dager</text>
+<rect x="24" y="86" width="12" height="12" fill="#1f5f99"/>
+<text x="42" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">1. tertial 2025</text>
+<rect x="162" y="86" width="12" height="12" fill="#a0643c"/>
+<text x="180" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">1. tertial 2026</text>
+<rect x="300" y="86" width="12" height="12" fill="#3a78b5"/>
+<text x="318" y="96" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Langsiktig mål (under)</text>
+<text x="252" y="143" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#16191c">Somatikk</text>
+<rect x="262" y="129" width="382.5" height="20" fill="#1f5f99"/>
+<text x="650.5" y="144" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">75 Dager</text>
+<text x="252" y="177" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#16191c">Psykisk helsevern voksne</text>
+<rect x="262" y="163" width="260.0999999999999" height="20" fill="#1f5f99"/>
+<text x="528.0999999999999" y="178" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">51 Dager</text>
+<text x="252" y="211" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#16191c">Psykisk helsevern barn og unge</text>
+<rect x="262" y="197" width="234.60000000000002" height="20" fill="#1f5f99"/>
+<text x="502.6" y="212" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">46 Dager</text>
+<text x="252" y="245" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#16191c">Rusbehandling (TSB)</text>
+<rect x="262" y="231" width="142.79999999999995" height="20" fill="#1f5f99"/>
+<text x="410.79999999999995" y="246" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">28 Dager</text>
+<line x1="262" x2="262" y1="122" y2="258" stroke="#16191c" stroke-width="1"/>
+<text x="24" y="270" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Målene er fra Nasjonal helse- og samhandlingsplan 2024–2027.</text>
+<line x1="24" x2="736" y1="288" y2="288" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="304" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: FHI, Helsedirektoratet</text>
+<text x="736" y="304" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

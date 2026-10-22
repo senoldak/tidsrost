@@ -1,0 +1,161 @@
+# Açık kamu verilerinden haber üretir ve repoya ekler.
+# Yeni yazı varsa bot, Yayınla iş akışını (yayinla.yml) başlatır; o da siteyi derleyip Cloudflare'e gönderir.
+# Zamanlama mecmua-saat Worker'ındadır (private mecmua reposu, saat/src/ayarlar.js).
+# GitHub'ın cron'u UTC'dir ve yaz/kış saatini izlemez, bu yüzden burada schedule yok.
+name: Nyhetsbot
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  # Yeni haber yazıldığında "Yayınla" iş akışını başlatmak için.
+  actions: write
+
+concurrency:
+  group: nyhetsbot
+  cancel-in-progress: false
+
+jobs:
+  hent:
+    runs-on: ubuntu-latest
+    # Süre bütçesi yeni yazıyı ~15–18. dakikada keser; Gemini 503 beklemeleri için pay bırakılır (repo açık, dakika ücretsiz).
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Sıradaki çalışma tetiklendiği anki commit'i değil, dalın en son hâlini alır; yoksa eski görülen listesiyle aynı haberleri yeniden yazar.
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      # Kapak resimlerini PNG'ye çevirmek için sharp gerekiyor (bkz. scripts/nyheter/bilde.mjs).
+      - name: Installer avhengigheter
+        run: npm ci --no-audit --no-fund
+
+      - name: Motoru getir
+        if: ${{ vars.MOTOR_TUR == '1' }}
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: senoldak/mecmua
+          ssh-key: '${{ secrets.MECMUA_OKUMA }}'
+          path: .mecmua
+          sparse-checkout: |
+            motor
+            standartlar
+          persist-credentials: false
+
+      - name: Hent nyheter
+        id: hent
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_KULLANIM_DOSYASI: ${{ runner.temp }}/gemini-kullanim.json
+          MOTOR_URL: ${{ vars.MOTOR_URL }} # Katman 3: tur başında Gemini bütçesi okunur
+          MOTOR_ANAHTARI: ${{ secrets.MOTOR_ANAHTARI }}
+          # Haber sitelerinin şifreli listesi ve izi için (bkz. scripts/nyheter/hemmelig.mjs).
+          KILDE_NOKKEL: ${{ secrets.KILDE_NOKKEL }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          # Gölge denetim (20 Ekim): turda en çok bu kadar denetim kararı Gemma'ya da sorulur, yalnız loga yazılır (golge.mjs).
+          GEMINI_GOLGE: ${{ vars.GEMINI_GOLGE }}
+          MAKS_PER_KJORING: ${{ vars.MAKS_PER_KJORING }}
+          # Ortak yayın kapısının ikinci okuması (motor/ortak/kapi.mjs): vars.KAPI_MOD = kapali | golge | acik (boşsa kapalı).
+          KAPI_MOD: ${{ vars.KAPI_MOD }}
+          SURE_DK: ${{ vars.SURE_DK }}
+          # Ortak motor modu (private mecmua'dan salt-okur çekilir): vars.MOTOR_TUR=1 iken tur motorla sürülür.
+          MOTOR_TUR: ${{ vars.MOTOR_TUR }}
+          # Standartlar kural kitabı tek kaynaktan (mecmua/standartlar/siteler); dosya yoksa standart.mjs yerel kopyayı okur.
+          STANDART_KURALLAR: ${{ github.workspace }}/.mecmua/standartlar/siteler/tidsrost.json
+          MOTOR_DIZIN: ${{ github.workspace }}/.mecmua/motor
+        run: |
+          if [ -z "$KILDE_NOKKEL" ]; then echo "::error::KILDE_NOKKEL secret'ı yok; haber sitelerinin akışları okunamaz."; exit 1; fi
+          node scripts/nyheter/hent-nyheter.mjs
+
+      # Sürekli güncel veri sayfaları (/styringsrenten/, /farevarsler/): Norges Bank ve MET'in resmi, anahtarsız açık
+      # API'leri (bkz. scripts/data/hent-data.mjs). Hata haber botunu durdurmaz; son bilinen veri dosyada kalır.
+      - name: Oppdater datasider
+        id: data
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        timeout-minutes: 3
+        env:
+          MOTOR_URL: ${{ vars.MOTOR_URL }}
+          MOTOR_ANAHTARI: ${{ secrets.MOTOR_ANAHTARI }}
+        run: node scripts/data/hent-data.mjs
+
+      # Bot adımı hatayla bitse de (motor modu) yazılan haberler ve sett.json commit edilir: defter ile repo ayrışmasın.
+      # Bot adımı zaten kırmızı olduğundan iş kırmızı kalır; hiçbir şey yazılmadıysa "Ingen endringer." ile temiz çıkar.
+      # Üç aylık standartlar raporu (yol haritası madde 22): biten çeyreğin ilk 31 gününde defter sayıları bir kez
+      # src/data/standartlar-raporu/<YYYY>-c<N>.json'a yazılır. Hata haber işini düşürmez.
+      - name: Çeyrek standartlar raporu
+        if: ${{ !cancelled() && vars.MOTOR_TUR == '1' }}
+        continue-on-error: true
+        timeout-minutes: 2
+        env:
+          MOTOR_URL: ${{ vars.MOTOR_URL }}
+          MOTOR_ANAHTARI: ${{ secrets.MOTOR_ANAHTARI }}
+          GH_TOKEN: ${{ github.token }}
+        run: node .mecmua/motor/bin/ceyrek-raporu.mjs --site tidsrost --dizin src/data/standartlar-raporu --kural scripts/nyheter/standart-kurallar.json
+
+      - name: Commit
+        id: commit
+        if: ${{ !cancelled() }}
+        env:
+          SAYI: ${{ steps.hent.outputs.antall || '0' }}
+        run: |
+          git config user.name "tidsrost-nyhetsbot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content/haberler scripts/nyheter/sett.json src/data
+          if git diff --cached --quiet; then
+            echo "Ingen endringer."
+            exit 0
+          fi
+          # Sadece durum dosyası (ya da veri dosyalarının alma zamanı) değiştiyse siteyi boşuna yeniden derletme.
+          # Faiz ya da turuncu/kırmızı farevarsel değiştiyse site yeni haber olmasa da yeniden derlenir; yalnız sarı
+          # uyarılar değiştiyse veri commit edilir, bir sonraki gerçek yayınla çıkar (hent-data.mjs, denetim B7).
+          if [ "$SAYI" != "0" ]; then
+            git commit -m "Nyhetsbot: $SAYI nye saker"
+            echo "yayin=1" >> "$GITHUB_OUTPUT"
+          elif [ "${{ steps.data.outputs.endret }}" = "1" ]; then
+            git commit -m "Nyhetsbot: oppdater datasider"
+            echo "yayin=1" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Nyhetsbot: oppdater tilstand [skip ci]"
+          fi
+          # Başka işler de depoya yazar; çakışmada yazılan haberler kaybolmasın diye 5 kez denenir.
+          for i in 1 2 3 4 5; do
+            git pull --rebase -X theirs && git push && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 5))
+          done
+          exit 1
+
+      # Planlanmış haberler (gelecek tarihli, ör. Forklart yazıları) tarihleri gelince bu çalışmayla yayına girer.
+      - name: Planlanmış saker
+        id: planlagt
+        if: ${{ !cancelled() && steps.commit.outputs.yayin != '1' }}
+        env:
+          MOTOR_URL: ${{ vars.MOTOR_URL }}
+          MOTOR_ANAHTARI: ${{ secrets.MOTOR_ANAHTARI }}
+        run: node scripts/planlagt.mjs
+
+      # Botun push'u yayın iş akışını kendiliğinden tetiklemez (GITHUB_TOKEN); elle başlatılır.
+      - name: Siteyi yayınla
+        if: ${{ !cancelled() && (steps.commit.outputs.yayin == '1' || steps.planlagt.outputs.yayin == '1') }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run yayinla.yml --ref "${{ github.ref_name }}"
+
+      # Telegram-utsending håndteres av Cloudflare-worker mecmua-saat (repo senoldak/mecmua, mappe saat/): saker spres utover vakten hvert 10. minutt.
+
+      # Katman 0 (Gemini kota planı): bu işin Gemini kullanımını model ve amaç başına mecmua-saat'e bildirir. İşi düşürmez.
+      - name: Gemini kullanımını saate bildir
+        if: always()
+        continue-on-error: true
+        env:
+          GEMINI_KULLANIM_DOSYASI: ${{ runner.temp }}/gemini-kullanim.json
+          MOTOR_URL: ${{ vars.MOTOR_URL }}
+          MOTOR_ANAHTARI: ${{ secrets.MOTOR_ANAHTARI }}
+        run: node scripts/nyheter/gemini-rapor.mjs tidsrost

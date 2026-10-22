@@ -1,0 +1,235 @@
+---
+import { jsonLdMetni } from '../../lib/json-ld.mjs';
+import { Image, getImage } from 'astro:assets';
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import StoryRow from '../../components/StoryRow.astro';
+import Symbol from '../../components/Symbol.astro';
+import { SITE, categoryName, formatDay, formatTime, varsel, gorselVar } from '../../lib/site';
+import { FORKLART, erForklart, forfatterSlug, getNews, kilde, kildeUrl, type Haber } from '../../lib/news';
+import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs, headline } from '../../lib/seo';
+import SentezBlok from '../../components/SentezBlok.astro';
+import { matchEntities } from '../../lib/entities';
+import { indekserbar } from '../../lib/ordtelling.mjs';
+import { relaterteSaker } from '../../lib/relaterte';
+import Brodsmuler from '../../components/Brodsmuler.astro';
+import KiNotat from '../../components/KiNotat.astro';
+import DelSaken from '../../components/DelSaken.astro';
+import ForfatterKort, { forfatterBeskrivelse } from '../../components/ForfatterKort.astro';
+import { aktiveTemaer, temaerPerSak, temaUrl, type Tema } from '../../lib/temaer';
+
+export async function getStaticPaths() {
+  const news = await getNews();
+  // İlgili haberler ortak kurum/özel isimlere göre bir kez hesaplanır (src/lib/relaterte.ts).
+  const relatert = relaterteSaker(news);
+  // Haberin girdiği, sayfası olan temalar (src/lib/tema.mjs): kenar sütununda "Emner" olarak bağlanır.
+  const temaer = temaerPerSak(aktiveTemaer(news));
+  return news.map((haber) => ({
+    params: { id: haber.id },
+    props: { haber, related: relatert.get(haber.id) ?? [], temaer: temaer.get(haber.id) ?? [] },
+  }));
+}
+
+interface Props {
+  haber: Haber;
+  related: Haber[];
+  temaer: Tema[];
+}
+
+const { haber, related, temaer } = Astro.props;
+const { title, description, date, category, cover: kapak, coverAlt, coverKreditt, author, produksjon, rettelse, oppdatert } = haber.data;
+const { Content } = await render(haber);
+// OG/JSON-LD görseli her haberde üretilir; büyük WebP kapak yalnızca yeni haberlerde (bkz. gorselVar).
+const cover = kapak;
+const yeniKapak = cover && gorselVar(date);
+const source = kilde(haber);
+const sourceUrl = kildeUrl(haber);
+const warn = varsel(title);
+const forklart = erForklart(haber);
+// Kişi adıyla yayımlanan yazıların yazar sayfası vardır (/forfatter/<slug>/).
+const forfatterUrl = author !== SITE.name ? `/forfatter/${forfatterSlug(author)}/` : undefined;
+
+// OG görseli en az 1200 px genişlikte (Google Discover); kaynak daha darsa kendi genişliği kullanılır.
+const ogWidth = cover ? Math.min(1200, cover.width) : 1200;
+const ogHeight = cover && ogWidth ? Math.round((ogWidth * cover.height) / cover.width) : 630;
+// Kapaksız haberde ortak varsayılan görsel (public/og-default.png, 1200×630).
+const ogImage = cover ? (await getImage({ src: cover, width: ogWidth, format: 'jpeg' })).src : '/og-default.png';
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
+
+const iso = date.toISOString();
+// Düzeltme ya da güncelleme tarihi (oppdatert) varsa dateModified odur; yayın tarihinden önce olamaz.
+const endret = oppdatert && oppdatert > date ? oppdatert : undefined;
+const modifiedIso = (endret ?? date).toISOString();
+// Çok kısa haberler arama motorlarına kapalı (noindex, follow) ve site haritalarında yok (src/lib/ordtelling.mjs).
+const noindex = !indekserbar(haber.body);
+const section = categoryName(category);
+const categoryUrl = `${SITE_URL}/kategori/${category}/`;
+const sti = [
+  { name: 'Forsiden', url: `${SITE_URL}/` },
+  { name: section, url: categoryUrl },
+  { name: headline(title), url: pageUrl },
+];
+const entities = matchEntities(`${title} ${description} ${source ?? ''} ${haber.body ?? ''}`);
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': forklart ? 'AnalysisNewsArticle' : 'NewsArticle',
+      '@id': `${pageUrl}#article`,
+      headline: headline(title),
+      description,
+      image: [{ '@type': 'ImageObject', url: new URL(ogImage, Astro.site).href, width: ogWidth, height: ogHeight }],
+      datePublished: iso,
+      dateModified: modifiedIso,
+      author: forfatterUrl
+        ? [{ '@type': 'Person', name: author, jobTitle: 'Utgiver og redaktør', description: forfatterBeskrivelse(author), url: `${SITE_URL}${forfatterUrl}` }]
+        : { '@id': ORG_ID },
+      // Yayıncının tam tanımı (publishingPrinciples dahil) Base.astro'daki Organization düğümünde (src/lib/seo.ts);
+      // burada aynı @id ile çelişen ikinci bir tanım yazılmaz, sadece ona bağlanılır.
+      publisher: { '@id': ORG_ID },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+      url: pageUrl,
+      articleSection: forklart ? [section, FORKLART.name] : section,
+      inLanguage: 'nb',
+      isAccessibleForFree: true,
+      isPartOf: { '@id': WEBSITE_ID },
+      ...(entities.length > 0 ? { about: entities } : {}),
+    },
+    breadcrumbs(sti),
+  ],
+};
+---
+
+<Base title={title} description={description} image={ogImage} imageWidth={ogWidth} imageHeight={ogHeight} imageAlt={coverAlt ?? title} type="article" noindex={noindex}>
+  <Fragment slot="head">
+    <meta property="article:published_time" content={iso} />
+    <meta property="article:modified_time" content={modifiedIso} />
+    <meta property="article:section" content={section} />
+    {forklart && <meta property="article:tag" content={FORKLART.name} />}
+    {forfatterUrl && <meta name="author" content={author} />}
+    <script type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  </Fragment>
+
+  <Brodsmuler items={sti} />
+  <article class="article">
+    <h1>{title}</h1>
+    <p class="lead">{description}</p>
+
+    <dl class="margin-info">
+      {
+        warn && (
+          <div>
+            <dt>Varsel</dt>
+            <dd><a class="mark mark-varsel" href="/farevarsler/"><Symbol kind="varsel" class={`sym-varsel-${warn.level}`} />{warn.label}</a></dd>
+          </div>
+        )
+      }
+      {
+        forklart && (
+          <div>
+            <dt>Sjanger</dt>
+            <dd><a class="mark" href={`/${FORKLART.slug}/`}><Symbol kind="forklart" />{FORKLART.name}</a></dd>
+          </div>
+        )
+      }
+      <div>
+        <dt>Tema</dt>
+        <dd><a class="mark" href={`/kategori/${category}/`}><Symbol kind={category} />{categoryName(category)}</a></dd>
+      </div>
+      {
+        temaer.length > 0 && (
+          <div>
+            <dt>Emner</dt>
+            <dd class="emner">
+              {temaer.map((t) => (
+                <a class="mark" href={temaUrl(t.slug)}><Symbol kind="tema" />{t.navn}</a>
+              ))}
+            </dd>
+          </div>
+        )
+      }
+      <div>
+        <dt>Publisert</dt>
+        <dd><time datetime={date.toISOString()}>{formatDay(date)} kl. {formatTime(date)}</time></dd>
+      </div>
+      {
+        endret && (
+          <div>
+            <dt>Oppdatert</dt>
+            <dd><time datetime={modifiedIso}>{formatDay(endret)} kl. {formatTime(endret)}</time></dd>
+          </div>
+        )
+      }
+      {
+        source && (
+          <div>
+            <dt>Kilde</dt>
+            <dd>
+              <span class="mark">
+                <Symbol kind="kilde" />
+                {sourceUrl ? <a href={sourceUrl} rel="noopener">{source}</a> : source}
+              </span>
+            </dd>
+          </div>
+        )
+      }
+      <div>
+        <dt>Av</dt>
+        <dd>{forfatterUrl ? <a href={forfatterUrl} rel="author">{author}</a> : author}</dd>
+      </div>
+    </dl>
+
+    <SentezBlok whyMatters={haber.data.why_matters} keyPoints={haber.data.key_points} />
+
+    {
+      cover && (
+        <figure>
+          {yeniKapak ? (
+            <Image src={cover} alt={coverAlt ?? title} width={1200} loading="eager" fetchpriority="high" decoding="async" />
+          ) : (
+            <img src={ogImage} alt={coverAlt ?? title} width={ogWidth} height={ogHeight} loading="eager" decoding="async" />
+          )}
+          {(coverAlt || coverKreditt) && (
+            <figcaption>
+              {coverAlt}
+              {coverKreditt && <span class="kreditt">{coverKreditt}</span>}
+            </figcaption>
+          )}
+        </figure>
+      )
+    }
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {
+      rettelse && (
+        <aside class="rettelse">
+          <Symbol kind="rettelse" />
+          <p>
+            <strong>Rettelse{oppdatert ? ` (${formatDay(oppdatert)})` : ''}:</strong> {rettelse}{' '}
+            <a href="/rettelser/">Alle rettelser</a>
+          </p>
+        </aside>
+      )
+    }
+
+    <KiNotat tittel={title} url={pageUrl} author={author} sjanger={haber.data.sjanger} produksjon={produksjon} />
+
+    {forfatterUrl && <ForfatterKort name={author} heading="h3" />}
+
+    <DelSaken url={pageUrl} title={title} />
+  </article>
+
+  {
+    related.length > 0 && (
+      <section class="related">
+        <h2 class="band">Relaterte saker</h2>
+        {related.map((h) => (
+          <StoryRow haber={h} showCategory={h.data.category !== category} dato />
+        ))}
+      </section>
+    )
+  }
+</Base>

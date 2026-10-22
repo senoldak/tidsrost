@@ -1,0 +1,63 @@
+# Görsel dil değişince son N günün editoryal kapaklarını Linux'ta (botla aynı ortam) yeniden çizer.
+# ornek=true: dosyalara dokunmaz, 6 örnek kapağı "kapak-ornekleri" eseri olarak yükler (önizleme).
+# ornek=false: kapakları yerinde yeniden çizer, commit eder ve siteyi yayınlar.
+name: Kapakları yeniden çiz
+
+on:
+  workflow_dispatch:
+    inputs:
+      gun:
+        description: 'Kaç günlük haber'
+        default: '14'
+      ornek:
+        description: 'Yalnız örnek üret (commit yok)'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: nyhetsbot
+  cancel-in-progress: false
+
+jobs:
+  ciz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Örnek kapaklar
+        if: inputs.ornek
+        run: node scripts/nyheter/kapak-yenile.mjs --gun "${{ inputs.gun }}" --ornek kapak-ornekleri
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: inputs.ornek
+        with:
+          name: kapak-ornekleri
+          path: kapak-ornekleri
+
+      - name: Kapakları yeniden çiz, commit et, yayınla
+        if: ${{ !inputs.ornek }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          node scripts/nyheter/kapak-yenile.mjs --gun "${{ inputs.gun }}"
+          git config user.name "tidsrost-nyhetsbot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content/haberler
+          if git diff --cached --quiet; then echo "Değişen kapak yok"; exit 0; fi
+          git commit -q -m "Kapaklar: son ${{ inputs.gun }} günün editoryal kapakları Fjord diliyle yeniden çizildi"
+          for i in 1 2 3 4 5; do git pull -q --rebase && git push -q && break; sleep 5; done
+          gh workflow run yayinla.yml --ref "${{ github.ref_name }}"

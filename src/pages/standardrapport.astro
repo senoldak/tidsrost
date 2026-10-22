@@ -1,0 +1,120 @@
+---
+// Kontrolloggtall: src/data/standartlar-raporu/*.json. Øvrige tall telles her fra innholdet (se src/lib/standardrapport.mjs).
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
+import { SITE_URL, breadcrumbs } from '../lib/seo';
+import { getNews } from '../lib/news';
+import avpublisert from '../data/rettelser-avpublisert.json';
+import klager from '../data/klager.json';
+import { kvartalSeksjon, sorterRapporter } from '../lib/standardrapport.mjs';
+
+const filer = import.meta.glob('../data/standartlar-raporu/*.json', { eager: true, import: 'default' });
+const rapporter = sorterRapporter(Object.values(filer) as any[]);
+
+const innhold = {
+  artikler: (await getNews()).map((h) => ({
+    date: h.data.date,
+    oppdatert: h.data.oppdatert,
+    author: h.data.author,
+    sjanger: h.data.sjanger,
+    produksjon: h.data.produksjon,
+    rettelse: h.data.rettelse,
+  })),
+  avpublisert: avpublisert as { dato: string }[],
+  klager: klager as { karar: string; sonuc: string }[],
+};
+const seksjoner = rapporter.map((r) => kvartalSeksjon(r, innhold));
+const regelTekst = (liste: { navn: string; antall: number }[]) => liste.map((r) => `${r.navn} ${r.antall}`).join(', ');
+---
+
+<Base title="Standardrapport" description={`Hvert kvartal viser ${SITE.name} med tall hvordan de redaksjonelle prinsippene er brukt.`}>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={jsonLdMetni(
+        breadcrumbs([
+          { name: 'Forsiden', url: `${SITE_URL}/` },
+          { name: 'Standardrapport', url: `${SITE_URL}/standardrapport/` },
+        ])
+      )}
+    />
+  </Fragment>
+
+  <article class="article">
+    <h1>Standardrapport</h1>
+    <div class="prose">
+      <p class="lead">
+        Hver tredje måned viser vi med tall hvordan vi har brukt våre redaksjonelle prinsipper. Tallene telles automatisk
+        fra nettstedets egne registre.
+      </p>
+
+      {
+        seksjoner.length === 0 && <p>Den første rapporten publiseres i begynnelsen av januar 2027.</p>
+      }
+
+      {
+        seksjoner.map((s) => (
+          <section>
+            <h2 id={s.ceyrek}>
+              {s.navn} ({s.periode})
+            </h2>
+
+            <h3>Publisert</h3>
+            <ul>
+              <li>Saker skrevet automatisk med KI: {s.bot}</li>
+              <li>Saker utgitt under utgiverens navn: {s.eier} (KI-verktøy er brukt til oversettelse og språkvask)</li>
+              {s.kjede > 0 && <li>Artikler skrevet med KI-verktøy og publisert etter redaktørens godkjenning: {s.kjede}</li>}
+              <li>
+                Saker publisert med merking for sensitivt tema: {s.sari}
+                {s.sariRegler.length > 0 && <> ({regelTekst(s.sariRegler)})</>}
+              </li>
+            </ul>
+
+            <h3>Ikke publisert</h3>
+            <ul>
+              <li>
+                Kandidater som ikke ble publisert etter den automatiske kontrollen: {s.elendi}. Av disse ble {s.kirmizi}{' '}
+                stoppet av filteret for sensitive temaer
+                {s.kirmiziRegler.length > 0 && <>: {regelTekst(s.kirmiziRegler)}</>}. De øvrige {s.ovrige} ble forkastet
+                av andre grunner, som nyhetsverdi, gjentakelse eller for lite opplysninger.
+              </li>
+            </ul>
+
+            <h3>Rettelser og klager</h3>
+            <ul>
+              <li>
+                Rettelser: {s.rettelser} · Avpublisert: {s.fjernet} (detaljer: <a href="/rettelser/">Rettelser</a>)
+              </li>
+              <li>
+                Registrerte klager: {s.klager.totalt} (tatt til følge {s.klager.yerinde}, delvis til følge{' '}
+                {s.klager.kismen}, ikke tatt til følge {s.klager.yerindeDegil}). Se <a href="/klager/">Klager</a>.
+              </li>
+            </ul>
+
+            <h3>Regler og verktøy</h3>
+            <ul>
+              <li>
+                Endringer i reglene for sensitive temaer:{' '}
+                {s.regelEndringer ? `${s.regelEndringer.length} (${s.regelEndringer.join(', ')})` : 'ingen registrering'}
+              </li>
+              <li>
+                Bruk av KI: sakene skrives og kontrolleres med Googles Gemini-modeller. I dette kvartalet ble det gjort{' '}
+                {s.geminiCagri} modellkall.
+              </li>
+            </ul>
+
+            {s.loggFra && (
+              <p>
+                <em>
+                  Merk: Den automatiske kontrolloggen føres fra {s.loggFra}. Tallene under «Ikke publisert» gjelder derfor
+                  bare tiden fra denne datoen.
+                </em>
+              </p>
+            )}
+          </section>
+        ))
+      }
+    </div>
+  </article>
+</Base>

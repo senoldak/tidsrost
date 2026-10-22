@@ -1,0 +1,193 @@
+---
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
+import { SITE_URL, breadcrumbs } from '../lib/seo';
+
+const OPPDATERT = '20. oktober 2026';
+---
+
+<Base
+  title="Juridisk informasjon og kolofon"
+  description={`Kolofon, uavhengighet, bruk av kunstig intelligens, opphavsrett og rettigheter i ${SITE.name}.`}
+>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={jsonLdMetni(
+        breadcrumbs([
+          { name: 'Forsiden', url: `${SITE_URL}/` },
+          { name: 'Juridisk informasjon og kolofon', url: `${SITE_URL}/juridisk/` },
+        ])
+      )}
+    />
+  </Fragment>
+
+  <article class="article">
+    <h1>Juridisk informasjon og kolofon</h1>
+    <p class="meta">Sist oppdatert {OPPDATERT}</p>
+    <div class="prose">
+      <h2 id="kolofon">1. Kolofon</h2>
+      <table>
+        <tbody>
+          <tr><th scope="row">Publikasjon</th><td>{SITE.name}</td></tr>
+          <tr><th scope="row">Utgiver og redaktør</th><td>{SITE.redaktor}</td></tr>
+          <tr><th scope="row">Publikasjonstype</th><td>Nettbasert nyhets- og informasjonspublikasjon</td></tr>
+          <tr><th scope="row">Kontakt</th><td><a href={`mailto:${SITE.epost}`}>{SITE.epost}</a></td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="formal">2. Formål og omfang</h2>
+      <p>
+        {SITE.name} er en nettbasert publikasjon som formidler nyheter og forklarende saker om samfunn, økonomi,
+        politikk, kultur, sport og teknologi, basert på offentlig tilgjengelig informasjon og offisielle kilder.
+        Publikasjonen drives for å bidra til at allmennheten får tilgang til korrekt og forståelig informasjon.
+      </p>
+
+      <h2 id="uavhengighet">3. Redaksjonell uavhengighet</h2>
+      <p>
+        3.1. {SITE.name} er en uavhengig publikasjon. Den har ingen organisatorisk, økonomisk eller redaksjonell
+        tilknytning til noe politisk parti, noen regjering, noe offentlig organ, noe selskap, noen forening, noen
+        stiftelse eller noen annen organisasjon.
+      </p>
+      <p>
+        3.2. Beslutninger om innholdet tas utelukkende på grunnlag av våre redaksjonelle prinsipper. Ingen person eller
+        organisasjon kan gi {SITE.name} instrukser om at innhold skal publiseres, endres eller ikke publiseres.
+      </p>
+
+      <h2 id="okonomi">4. Økonomi og ideelt formål</h2>
+      <p>4.1. {SITE.name} drives uten fortjenestehensikt.</p>
+      <p>
+        4.2. Publikasjonen har ingen annonser, sponset innhold, betalt samarbeid, produktplassering eller donasjoner.
+        {SITE.name} mottar ikke vederlag eller andre fordeler fra noen person eller organisasjon for innhold som publiseres.
+      </p>
+      <p>
+        4.3. Hvis dette endrer seg, vil leserne bli informert tydelig gjennom denne siden før endringen trer i kraft.
+        Dersom sponset eller betalt innhold publiseres, merkes det tydelig som slikt.
+      </p>
+
+      <h2 id="interessekonflikter">5. Interessekonflikter</h2>
+      <p>
+        5.1. Utgiveren har ingen forretningsmessig forbindelse til selskaper, organisasjoner, verdipapirer eller
+        kampanjer som omtales i sakene, som kan påvirke sakenes objektivitet.
+      </p>
+      <p>
+        5.2. Dersom en slik forbindelse oppstår, opplyses det tydelig om dette i det aktuelle innholdet, eller utgiveren
+        publiserer ikke innhold om saken.
+      </p>
+
+      <h2 id="upartiskhet">6. Upartiskhet</h2>
+      <p>
+        6.1. {SITE.name} tar ikke politisk stilling. Publikasjonen støtter ikke og motarbeider ikke noe parti, noen
+        kandidat, noen bevegelse eller noen ideologi.
+      </p>
+      <p>
+        6.2. Nyhetssaker gjengir fakta og uttalelser fra relevante kilder. Nyheter og kommentarer holdes adskilt, og
+        nyhetssaker inneholder ikke meninger.
+      </p>
+      <p>
+        6.3. Vi bruker ikke generaliseringer eller diskriminerende uttrykk om enkeltpersoner eller grupper på grunnlag av
+        opprinnelse, nasjonalitet, religion, kjønn eller lignende kjennetegn.
+      </p>
+
+      <h2 id="ki">7. Bruk av kunstig intelligens og automatisering</h2>
+      <p>
+        7.1. Nyhetssakene på {SITE.name} skrives automatisk med kunstig intelligens (KI) og går gjennom automatiske
+        kontroller før publisering. Kontrollene omfatter blant annet sammenligning av tall med kilden, og at sensitive
+        temaer ikke publiseres automatisk.
+      </p>
+      <p>
+        7.2. Ingen sak leses av et menneske før publisering. Innholdet kan derfor inneholde feil. Feil som oppdages,
+        rettes etter vår <a href="/rettelsespolitikk/">Rettelsespolitikk</a>.
+      </p>
+      <p>
+        7.3. Innhold som er produsert med KI, merkes med en merknad under saken. For saker som utgis under utgiverens
+        navn, opplyses det i tillegg om hvordan KI er brukt.
+      </p>
+      <p>
+        7.4. Vi bruker ikke KI til å lage bilder, lyd eller sitater som gir inntrykk av å vise virkelige personer,
+        hendelser eller dokumenter.
+      </p>
+      <p>
+        7.5. Hvilke KI-verktøy vi bruker og til hva, og hvordan sakene kontrolleres, er beskrevet nærmere på siden
+        <a href="/bruk-av-ki/">Bruk av kunstig intelligens</a>.
+      </p>
+
+      <h2 id="ansvarsbegrensning">8. Innholdets art og ansvarsbegrensning</h2>
+      <p>8.1. Innholdet på nettstedet er kun ment som generell informasjon.</p>
+      <p>
+        8.2. Vi legger vekt på at innholdet skal være korrekt og oppdatert. Vi garanterer likevel ikke at innholdet er
+        uten feil, fullstendig eller til enhver tid oppdatert. Tall og opplysninger bygger på kilder som var tilgjengelige
+        på publiseringstidspunktet, og kan senere endre seg.
+      </p>
+      <p>8.3. Før du tar viktige beslutninger, bør du kontrollere opplysningene mot den relevante offisielle kilden.</p>
+
+      <h2 id="eksterne-lenker">9. Eksterne lenker</h2>
+      <p>
+        Lenker på nettstedet er der kun for at leseren lettere skal finne frem til kilden. Eierne av de lenkede
+        nettstedene er ansvarlige for innholdet på og driften av disse nettstedene.
+      </p>
+
+      <h2 id="opphavsrett">10. Opphavsrett</h2>
+      <p>10.1. Rettighetene til tekst, grafikk og bilder på nettstedet tilhører {SITE.name}, med mindre annet er angitt.</p>
+      <p>
+        10.2. Det er tillatt å sitere kort fra innholdet, med kildehenvisning og lenke. Gjengivelse av hele innholdet
+        eller en vesentlig del av det uten tillatelse er ikke tillatt.
+      </p>
+      <p>
+        10.3. Bruk av innholdet i stor skala til å trene KI-modeller krever tillatelse. Søke- og svarsystemer kan sitere
+        kort, med kildehenvisning og lenke.
+      </p>
+
+      <h2 id="varsel">11. Varsel om rettighetsbrudd og krav om fjerning</h2>
+      <p>
+        11.1. Mener du at innhold på nettstedet krenker opphavsretten din, personvernet eller andre rettigheter du har,
+        kan du skrive til <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a>.
+      </p>
+      <p>11.2. Varselet bør inneholde:</p>
+      <ul>
+        <li>lenke til det aktuelle innholdet,</li>
+        <li>hvilken rettighet du mener er krenket,</li>
+        <li>hva du krever,</li>
+        <li>opplysninger vi kan bruke til å kontakte deg.</li>
+      </ul>
+      <p>
+        11.3. Varsler behandles med prioritet. Hvis kravet er berettiget, rettes innholdet, den aktuelle delen fjernes,
+        eller innholdet avpubliseres. Utfallet meddeles den som har sendt varselet.
+      </p>
+
+      <h2 id="tilsvar">12. Tilsvar og rettelse</h2>
+      <p>
+        12.1. Mener du at innhold som er publisert om deg er uriktig eller skader din ære og ditt omdømme, kan du sende
+        ditt tilsvar eller din rettelse til <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a>.
+      </p>
+      <p>
+        12.2. Henvendelser behandles med prioritet. Hvis kravet er berettiget, publiseres tilsvaret eller rettelsen
+        sammen med det aktuelle innholdet, med lenke til det.
+      </p>
+
+      <h2 id="personopplysninger">13. Vern av personopplysninger</h2>
+      <p>13.1. I nyhetssakene tar vi ikke med personopplysninger om privatpersoner ut over det saken krever.</p>
+      <p>
+        13.2. Mener du at personopplysninger om deg er tatt med i en sak uten at det er nødvendig, kan du skrive til oss.
+        Henvendelsen din vurderes, og om nødvendig fjernes navnet ditt eller den aktuelle opplysningen fra innholdet.
+      </p>
+      <p>
+        13.3. For informasjon om behandling av data om besøkende på nettstedet, se <a href="/personvern/">Personvern</a>.
+      </p>
+
+      <h2 id="endringer">14. Endringer</h2>
+      <p>
+        Denne teksten oppdateres ved behov. Vesentlige endringer som berører leserne, angis tydelig på denne siden.
+      </p>
+      <p>Sist oppdatert: {OPPDATERT}</p>
+
+      <h2 id="pressetikk">15. Pressetikk</h2>
+      <p>
+        {SITE.name} følger Vær Varsom-plakaten som rettesnor for sitt journalistiske arbeid. {SITE.name} er ikke
+        tilsluttet Norsk Presseforbund, og Pressens Faglige Utvalg (PFU) behandler derfor ikke klager på {SITE.name}.
+        Klager rettes direkte til redaksjonen.
+      </p>
+    </div>
+  </article>
+</Base>

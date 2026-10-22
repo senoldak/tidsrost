@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" role="img" aria-label="Slik er oljefondet investert">
+<title>Slik er oljefondet investert</title>
+<rect width="760" height="300" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Slik er oljefondet investert</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Andel av fondets verdi per 30. juni 2026</text>
+<text x="185.4" y="117" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#16191c">Aksjer</text>
+<rect x="195.4" y="103" width="427.73325" height="20" fill="#1f5f99"/>
+<text x="629.13325" y="118" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">72,1 %</text>
+<text x="185.4" y="151" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#16191c">Rentepapirer</text>
+<rect x="195.4" y="137" width="153.0585" height="20" fill="#1f5f99"/>
+<text x="354.4585" y="152" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">25,8 %</text>
+<text x="185.4" y="185" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#16191c">Unotert eiendom</text>
+<rect x="195.4" y="171" width="9.49199999999999" height="20" fill="#1f5f99"/>
+<text x="210.892" y="186" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">1,6 %</text>
+<text x="185.4" y="219" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#16191c">Unotert infrastruktur</text>
+<rect x="195.4" y="205" width="2.9662500000000023" height="20" fill="#1f5f99"/>
+<text x="204.36625" y="220" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">0,5 %</text>
+<line x1="195.4" x2="195.4" y1="96" y2="232" stroke="#16191c" stroke-width="1"/>
+<text x="24" y="244" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Infrastrukturen er unotert infrastruktur for fornybar energi.</text>
+<line x1="24" x2="736" y1="262" y2="262" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="278" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: Norges Bank Investment Management</text>
+<text x="736" y="278" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

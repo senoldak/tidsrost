@@ -1,0 +1,61 @@
+---
+// Dagsside i arkivet: alle artikler publisert den dagen (Oslo-tid).
+import Base from '../../layouts/Base.astro';
+import Brodsmuler from '../../components/Brodsmuler.astro';
+import StoryRow from '../../components/StoryRow.astro';
+import { getNews } from '../../lib/news';
+import { SITE } from '../../lib/site';
+import { SITE_URL } from '../../lib/seo';
+import { ARKIV_TERSKEL, dagTittel, delPaDager, manedTittel } from '../../lib/arkiv.mjs';
+
+export async function getStaticPaths() {
+  const dager = delPaDager(await getNews());
+  return dager.map((d, i) => ({
+    params: { dag: d.dag },
+    // Listen er nyeste først: forrige dag er neste element.
+    props: { d, forrige: dager[i + 1]?.dag, neste: dager[i - 1]?.dag },
+  }));
+}
+
+const { d, forrige, neste } = Astro.props;
+const tittel = dagTittel(d.dag);
+const mnd = d.dag.slice(0, 7);
+---
+
+<Base
+  title={`Nyheter ${tittel}`}
+  description={`${d.artikler.length} artikler fra ${SITE.name} ${tittel}.`}
+  noindex={d.artikler.length < ARKIV_TERSKEL}
+>
+  <Brodsmuler
+    items={[
+      { name: 'Forsiden', url: `${SITE_URL}/` },
+      { name: 'Arkiv', url: `${SITE_URL}/arkiv/` },
+      { name: tittel, url: `${SITE_URL}/arkiv/${d.dag}/` },
+    ]}
+  />
+  <header class="page-head">
+    <h1 class="page-title">{tittel}</h1>
+    <p class="meta">
+      {d.artikler.length} {d.artikler.length === 1 ? 'artikkel' : 'artikler'} ·{' '}
+      <a href={`/arkiv/#mnd-${mnd}`}>{manedTittel(mnd)} i kalenderen</a>
+    </p>
+  </header>
+  <section class="day">
+    {d.artikler.map((h) => <StoryRow haber={h} />)}
+  </section>
+  <nav class="dagnav" aria-label="Mellom dager">
+    {forrige ? <a href={`/arkiv/${forrige}/`} rel="prev">← {dagTittel(forrige)}</a> : <span />}
+    {neste && <a href={`/arkiv/${neste}/`} rel="next">{dagTittel(neste)} →</a>}
+  </nav>
+</Base>
+
+<style>
+  .dagnav {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: calc(var(--u) * 4);
+    font-family: var(--frame);
+  }
+</style>

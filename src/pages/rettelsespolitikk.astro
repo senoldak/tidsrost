@@ -1,0 +1,121 @@
+---
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
+import { SITE_URL, breadcrumbs } from '../lib/seo';
+
+const OPPDATERT = '20. oktober 2026';
+---
+
+<Base
+  title="Rettelsespolitikk: retting, oppdatering og avpublisering"
+  description={`Slik retter, oppdaterer og avpubliserer ${SITE.name} saker, og hvordan du melder fra om feil.`}
+>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={jsonLdMetni(
+        breadcrumbs([
+          { name: 'Forsiden', url: `${SITE_URL}/` },
+          { name: 'Rettelsespolitikk', url: `${SITE_URL}/rettelsespolitikk/` },
+        ])
+      )}
+    />
+  </Fragment>
+
+  <article class="article">
+    <h1>Rettelsespolitikk: retting, oppdatering og avpublisering</h1>
+    <p class="meta">Sist oppdatert {OPPDATERT}</p>
+    <div class="prose">
+      <h2 id="lofte">1. Vårt løfte</h2>
+      <p>
+        {SITE.name} har ansvar for at det vi publiserer er korrekt. Når vi gjør en feil, retter vi den. Når vi tar ned en
+        sak, forklarer vi hvorfor. Vi fører alle endringer med dato på siden <a href="/rettelser/">Rettelser</a>. Vi
+        endrer ikke en sak i det stille uten å opplyse om endringen.
+      </p>
+
+      <h2 id="virkeomrade">2. Virkeområde</h2>
+      <p>
+        Denne politikken gjelder alt innhold som publiseres på nettstedet. Dette omfatter både saker som skrives
+        automatisk og saker som utgis under utgiverens navn. Feil som oppdages i innlegg på sosiale medier, rettes eller
+        innlegget fjernes så langt det er mulig.
+      </p>
+
+      <h2 id="definisjoner">3. Definisjoner</h2>
+      <table>
+        <thead><tr><th scope="col">Begrep</th><th scope="col">Betydning</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Rettelse</th><td>Retting av en faktafeil i innholdet. Eksempler: feil tall, navn, tittel, dato, sted eller oversettelsesfeil.</td></tr>
+          <tr><th scope="row">Presisering</th><td>Avklaring av en formulering som ikke er teknisk feil, men som kan misforstås.</td></tr>
+          <tr><th scope="row">Oppdatering</th><td>Tillegg av ny informasjon som er kommet frem etter publisering.</td></tr>
+          <tr><th scope="row">Avpublisering</th><td>Innholdet gjøres utilgjengelig på nettstedet.</td></tr>
+          <tr><th scope="row">Språklig og formell retting</th><td>Retting av skrivefeil, tegnsetting og formatering som ikke endrer meningen.</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="rettelse">4. Rettelse og presisering</h2>
+      <p>
+        4.1. Under det rettede innholdet legges det til en datert note. Noten sier tydelig hva som var feil og hva som er
+        riktig.
+      </p>
+      <p>4.2. Hvis feilen er i tittelen, ingressen eller en grafikk, rettes også disse, og det opplyses om i noten.</p>
+      <p>4.3. Rettelsen føres i tillegg på rettelsessiden: <a href="/rettelser/">Rettelser</a>.</p>
+      <p>4.4. Språklige og formelle rettinger kan gjøres uten note.</p>
+
+      <h2 id="oppdatering">5. Oppdatering</h2>
+      <p>5.1. Når ny informasjon legges til i en sak, føres en datert «Oppdatert»-note under saken.</p>
+      <p>5.2. En oppdatering er ikke en rettelse. De to angis hver for seg.</p>
+      <p>5.3. Publiseringsdatoen for saken endres ikke. Oppdateringsdatoen vises i tillegg.</p>
+
+      <h2 id="avpublisering">6. Avpublisering</h2>
+      <p>6.1. En sak kan avpubliseres i følgende tilfeller:</p>
+      <ul>
+        <li>den inneholder en så alvorlig feil at den ikke kan rettes,</li>
+        <li>det viser seg at den strider mot våre redaksjonelle prinsipper,</li>
+        <li>det viser seg at den kan være ulovlig,</li>
+        <li>en berettiget anmodning fra en person som er omtalt i saken,</li>
+        <li>vedtak fra en kompetent myndighet.</li>
+      </ul>
+      <p>
+        6.2. Tittel, opprinnelig publiseringsdato, dato for avpublisering og begrunnelsen for avpubliseringen føres på
+        rettelsessiden: <a href="/rettelser/">Rettelser</a>.
+      </p>
+      <p>
+        6.3. Når en sak er avpublisert på grunn av personopplysninger eller personlighetsrettigheter, gjentas ikke
+        personens navn eller opplysninger som kan identifisere personen på rettelsessiden.
+      </p>
+
+      <h2 id="melding">7. Melding om feil</h2>
+      <p>
+        7.1. For å melde fra om en feil kan du bruke «Meld fra om feil»-lenken under hver sak, eller skrive til
+        <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a>.
+      </p>
+      <p>7.2. For rask behandling bør meldingen inneholde:</p>
+      <ul>
+        <li>lenke til saken,</li>
+        <li>hva som er feil,</li>
+        <li>eventuelt en kilde som viser riktig opplysning.</li>
+      </ul>
+      <p>7.3. Meldinger vurderes så raskt som mulig. Henvendelser som gjelder enkeltpersoners rettigheter behandles først.</p>
+      <p>7.4. Utfallet meddeles den som har meldt fra.</p>
+      <p>7.5. Identiteten til den som har meldt fra, deles ikke uten vedkommendes samtykke.</p>
+      <p>Hvordan vi behandler klager, står på siden <a href="/klager/">Klager</a>.</p>
+
+      <h2 id="tilsvarsrett">8. Tilsvarsrett</h2>
+      <p>
+        Krav om tilsvar og rettelse fra personer og organisasjoner det er publisert innhold om, behandles etter punkt 12 i
+        <a href="/juridisk/">Juridisk informasjon og kolofon</a>.
+      </p>
+
+      <h2 id="foring">9. Føring og åpenhet</h2>
+      <p>
+        9.1. Alle rettelser, presiseringer og avpubliseringer føres på siden <a href="/rettelser/">Rettelser</a>, med
+        nyeste først.
+      </p>
+      <p>9.2. Disse oppføringene slettes ikke.</p>
+      <p>
+        Antall rettelser, fjernede saker og klager publiseres hver tredje måned i <a href="/standardrapport/">standardrapporten</a>.
+      </p>
+    </div>
+  </article>
+</Base>

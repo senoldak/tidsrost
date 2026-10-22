@@ -1,0 +1,115 @@
+---
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
+import { SITE_URL, breadcrumbs } from '../lib/seo';
+
+// KI-bruk (Standartlar Faz 1). Utdyper punkt 7 i Juridisk informasjon; de to sidene må ikke motsi hverandre.
+const OPPDATERT = '20. oktober 2026';
+---
+
+<Base
+  title="Bruk av kunstig intelligens"
+  description={`Hvilke KI-verktøy ${SITE.name} bruker og til hva, hva KI aldri brukes til, hvordan sakene kontrolleres og hvordan du melder fra om feil.`}
+>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={jsonLdMetni(
+        breadcrumbs([
+          { name: 'Forsiden', url: `${SITE_URL}/` },
+          { name: 'Bruk av kunstig intelligens', url: `${SITE_URL}/bruk-av-ki/` },
+        ])
+      )}
+    />
+  </Fragment>
+
+  <article class="article">
+    <h1>Bruk av kunstig intelligens</h1>
+    <p class="meta">Sist oppdatert {OPPDATERT}</p>
+    <div class="prose">
+      <h2 id="kort">Kort fortalt</h2>
+      <p>
+        Nyhetssakene på {SITE.name} skrives automatisk med kunstig intelligens (KI) og kontrolleres automatisk før
+        publisering. Ingen sak leses av et menneske før den publiseres. Finner kontrollen et problem som ikke lar seg
+        rette, eller gir kontrollen ikke et klart svar, publiseres ikke saken. Denne siden utdyper
+        <a href="/juridisk/#ki">punkt 7 i Juridisk informasjon og kolofon</a>.
+      </p>
+
+      <h2 id="verktoy">Hvilke verktøy vi bruker, og til hva</h2>
+      <table>
+        <thead><tr><th scope="col">Verktøy</th><th scope="col">Brukes til</th></tr></thead>
+        <tbody>
+          <tr>
+            <th scope="row">Språkmodellene Gemini og Gemma (Google)</th>
+            <td>
+              Vurdering av hvor viktig en mulig sak er, skriving av nyhetssaker fra kildeteksten, en KI-kontroll som
+              sammenligner utkastet med kilden, og språkvask.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Claude (Anthropic)</th>
+            <td>Oversettelse og språkvask i saker som utgis under utgiverens navn.</td>
+          </tr>
+          <tr>
+            <th scope="row">Kontrollprogrammer uten KI</th>
+            <td>
+              Sammenligning av tall, beløp, navn og sitater med kildeteksten, og sortering bort av sensitive temaer og
+              navn på andre medier.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Noen saker, som farevarsler, lages automatisk fra offisielle data uten språkmodell. Bare offentlig tilgjengelig
+        kildemateriale sendes til KI-tjenester. Vi sender ikke personopplysninger om lesere eller upublisert
+        materiale.
+      </p>
+
+      <h2 id="kontroll">Slik skrives og kontrolleres sakene</h2>
+      <ol>
+        <li>Kildene gjennomgås jevnlig. Når noe vurderes som viktig, skrives en sak som bare bygger på det som står i kilden.</li>
+        <li>
+          Alle tall og sitater i saken, også i «Kort oppsummert», slås opp i kildeteksten av et program som ikke bruker
+          KI. Beløp kontrolleres også for feil enhet: et beløp som avviker 10 ganger eller mer fra beløpet i kilden (for
+          eksempel millioner forvekslet med milliarder), regnes som en feil.
+        </li>
+        <li>En egen KI-kontroll sammenligner saken med kilden: fakta, kildehenvisninger og om tittelen er dekkende.</li>
+        <li>Finnes det feil, skrives saken om og kontrolleres på nytt. Lar feilen seg ikke rette, publiseres ikke saken.</li>
+        <li>
+          Sensitive temaer publiseres ikke automatisk. En sak vi ikke kan være sikre på, publiseres heller ikke. En
+          nødstopp kan stanse all automatisk publisering ved behov.
+        </li>
+      </ol>
+
+      <h2 id="mennesker">Menneskelig kontroll</h2>
+      <p>
+        Nyhetssakene leses ikke av et menneske før publisering: de skrives automatisk og kontrolleres automatisk.
+        Utgiveren bestemmer hvilke temaer som kan publiseres automatisk, og hvilke kriterier kontrollene følger.
+        Automatiske kontroller fanger ikke alle feil, så innholdet kan inneholde feil.
+      </p>
+
+      <h2 id="aldri">Hva vi aldri bruker KI til</h2>
+      <ul>
+        <li>Vi lager ikke bilder, lyd eller sitater som gir inntrykk av å vise virkelige personer, hendelser eller dokumenter.</li>
+        <li>KI er aldri en kilde i seg selv: sakene bygger bare på det som står i kildeteksten.</li>
+        <li>Sitater som ikke står ordrett i kilden, og tall som ikke finnes i kilden, publiseres ikke.</li>
+      </ul>
+
+      <h2 id="merking">Slik ser du det</h2>
+      <p>
+        Saker som er skrevet med KI, har en merknad om det under saken. I saker som utgis under utgiverens navn, står det
+        i merknaden hvordan KI er brukt. Mer om retningslinjene våre finner du under
+        <a href="/om-oss/#ki">Bruk av KI</a> på Om oss-siden.
+      </p>
+
+      <h2 id="feil">Meld fra om feil</h2>
+      <p>
+        Har du funnet en feil, kan du bruke «Meld fra om feil»-lenken under hver sak eller skrive til
+        <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a>. Feil rettes etter vår
+        <a href="/rettelsespolitikk/">Rettelsespolitikk</a>, og alle rettelser føres med dato på siden
+        <a href="/rettelser/">Rettelser</a>.
+      </p>
+    </div>
+  </article>
+</Base>

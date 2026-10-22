@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 314" width="760" height="314" role="img" aria-label="Forventet levealder etter kjønn i 2025">
+<title>Forventet levealder etter kjønn i 2025</title>
+<rect width="760" height="314" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Forventet levealder etter kjønn i 2025</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Forventet levealder ved fødselen og ved fylte 65 år, i år</text>
+<text x="230" y="119" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Kvinner ved fødselen</text>
+<rect x="240" y="104" width="331.1" height="20" fill="#16191c"/>
+<text x="579.1" y="119" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">84,9 år</text>
+<text x="230" y="155" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Menn ved fødselen</text>
+<rect x="240" y="140" width="318.2" height="20" fill="#1f5f99"/>
+<text x="566.2" y="155" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">81,6 år</text>
+<text x="230" y="191" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Kvinner ved fylte 65 år</text>
+<rect x="240" y="176" width="338.9" height="20" fill="#1f5f99"/>
+<text x="586.9" y="191" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">86,9 år</text>
+<text x="230" y="227" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#16191c">Menn ved fylte 65 år</text>
+<rect x="240" y="212" width="330.3" height="20" fill="#1f5f99"/>
+<text x="578.3" y="227" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#16191c">84,7 år</text>
+<line x1="240" x2="240" y1="98" y2="240" stroke="#16191c" stroke-width="1"/>
+<line x1="24" x2="736" y1="276" y2="276" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="294" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 07902</text>
+<text x="736" y="294" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

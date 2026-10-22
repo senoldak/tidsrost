@@ -1,0 +1,1588 @@
+/* tidsrøst — topografisk kart (N50-paftası) dünyası.
+   Renkler en üstte; tüm ölçüler 8px'lik karelaja (rutenett) oturur. */
+@import '@fontsource-variable/archivo/wdth.css';
+@import '@fontsource-variable/source-serif-4/opsz.css';
+@import '@fontsource-variable/source-serif-4/opsz-italic.css';
+
+:root {
+  --paper: #fdfdfb;
+  --surface: #f1f5ec; /* skog: açık orman tonu */
+  --ink: #16191c;
+  --ink-2: #2f353a;
+  --muted: #5a6168;
+  --rule: #dcded8;
+  --water: #1f5f99;
+  --contour: #a8643a;
+  --warn: #f6d23a; /* MET gult farevarsel */
+  --warn-ink: #5c4600;
+  --red: #c8281e;
+
+  --frame: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
+  --read: 'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif;
+
+  --u: 8px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --max: 1280px;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Nattark: varm, trykksverte-mørk grunn, ikke blå skifer. */
+    --paper: #171612;
+    --surface: #1f1e19;
+    --ink: #ebe9e2;
+    --ink-2: #cdcac0;
+    --muted: #a19d92;
+    --rule: #33312b;
+    --water: #7fb2e5;
+    --contour: #a07a5c;
+    --warn: #e8c437;
+    --warn-ink: #1d1600;
+    --red: #ff7a6b;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 64px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--read);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  font-variant-numeric: lining-nums;
+}
+
+::selection {
+  background: var(--water);
+  color: var(--paper);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--water);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--water);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.skip {
+  position: absolute;
+  left: var(--gutter);
+  top: -100px;
+  background: var(--ink);
+  color: var(--paper);
+  padding: var(--u) calc(var(--u) * 2);
+  font: 600 0.875rem var(--frame);
+  z-index: 20;
+}
+
+.skip:focus {
+  top: var(--u);
+}
+
+.skip:hover {
+  color: var(--paper);
+}
+
+/* Ekranda görünmez, ekran okuyucu ve arama motorları için (anasayfa h1). */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Kart işaretleri (tegnforklaring) */
+.sym {
+  flex: none;
+  width: 12px;
+  height: 12px;
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+}
+
+.mark-breaking {
+  color: var(--red);
+  font-weight: 650;
+}
+
+/* MET/NVE farevarsel: nivået vises som merket, med tekst ved siden av. */
+.mark-varsel {
+  font-weight: 650;
+  color: var(--ink);
+}
+
+.sym-varsel-gult {
+  color: #f2c400;
+}
+
+.sym-varsel-oransje {
+  color: #f08a00;
+}
+
+.sym-varsel-rodt {
+  color: #d9261c;
+}
+
+.sym-varsel-gult path:last-child,
+.sym-varsel-oransje path:last-child,
+.sym-varsel-rodt path:last-child {
+  stroke: #16191c;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin: 0;
+  font: 500 0.8125rem/1.4 var(--frame);
+  font-stretch: 92%;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+}
+
+/* ——— Pafta kenarı (üst şerit) ——— */
+.sheet-margin {
+  border-bottom: 1px solid var(--ink);
+  font: 500 0.6875rem/1 var(--frame);
+  font-stretch: 88%;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.sheet-margin .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(var(--u) * 2);
+  min-height: 32px;
+}
+
+.sheet-margin nav {
+  display: flex;
+  gap: calc(var(--u) * 2);
+}
+
+.sources {
+  display: flex;
+  gap: 0.6em;
+  align-items: center;
+}
+
+/* ——— Masthead: kontur arazisi ——— */
+.mast {
+  position: relative;
+  border-bottom: 1px solid var(--ink);
+  overflow: hidden;
+  view-transition-name: mast;
+}
+
+.mast-terrain {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Paftanın kenar karelajı: alt çizgide 80px'de bir işaret. */
+.mast::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 7px;
+  background: repeating-linear-gradient(to right, var(--ink) 0 1px, transparent 1px 80px);
+  opacity: 0.6;
+}
+
+.mast-inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: calc(var(--u) * 3);
+  min-height: clamp(128px, 15vw, 184px);
+  padding-top: calc(var(--u) * 3);
+  padding-bottom: calc(var(--u) * 3);
+}
+
+/* Harita etiketleri gibi: yazının etrafında kâğıt renginde hale. */
+.label {
+  background: var(--paper);
+  padding: 0.06em 0.16em 0.1em;
+  margin-left: -0.16em;
+}
+
+.edition.label {
+  margin: 0 -0.6em 0 0;
+  padding: 0.4em 0.6em;
+}
+
+.logo {
+  font: 800 clamp(3rem, 8.4vw, 6rem) / 0.9 var(--frame);
+  font-stretch: 112%;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+
+.logo:hover {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.logo .o {
+  color: var(--water);
+}
+
+.edition {
+  text-align: right;
+  font: 500 0.75rem/1.5 var(--frame);
+  font-stretch: 88%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.edition b {
+  display: block;
+  font: 600 1.375rem/1.25 var(--read);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+}
+
+/* ——— Lejant menüsü ——— */
+.legend-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  view-transition-name: legend-nav;
+}
+
+.legend-nav .container {
+  display: flex;
+  gap: calc(var(--u) * 3);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.legend-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  min-height: 48px;
+  font: 600 0.9375rem var(--frame);
+  font-stretch: 96%;
+  white-space: nowrap;
+  box-shadow: inset 0 -3px transparent;
+}
+
+.legend-nav a:hover {
+  text-decoration: none;
+  box-shadow: inset 0 -3px var(--rule);
+}
+
+.legend-nav a[aria-current='page'] {
+  color: var(--water);
+  box-shadow: inset 0 -3px var(--water);
+}
+
+main.container {
+  padding-top: calc(var(--u) * 5);
+  padding-bottom: calc(var(--u) * 10);
+  min-height: 60vh;
+}
+
+/* ——— Siste nytt şeridi ——— */
+.breaking {
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: calc(var(--u) * 5);
+}
+
+.breaking-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding-top: calc(var(--u) * 1.5);
+  color: var(--red);
+  font: 700 0.75rem var(--frame);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.breaking-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breaking-items li {
+  display: grid;
+  grid-template-columns: 3.25rem minmax(0, 1fr);
+  align-items: baseline;
+  padding: calc(var(--u) * 1.25) 0;
+}
+
+.breaking-items li + li {
+  border-top: 1px solid var(--rule);
+}
+
+.breaking-items time {
+  color: var(--ink-2);
+  font: 500 0.8125rem var(--frame);
+  font-variant-numeric: tabular-nums;
+}
+
+.breaking-items a {
+  font: 600 1.0625rem/1.35 var(--read);
+}
+
+/* ——— Manşet ——— */
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: calc(var(--u) * 6);
+  margin-bottom: calc(var(--u) * 8);
+}
+
+.lead-story h2 {
+  font: 650 clamp(2rem, 4.2vw, 3.4rem) / 1.06 var(--read);
+  letter-spacing: -0.018em;
+  margin: 0 0 calc(var(--u) * 2);
+}
+
+.lead-story .standfirst {
+  font-size: clamp(1.125rem, 1.6vw, 1.3125rem);
+  line-height: 1.5;
+  color: var(--ink-2);
+  max-width: 62ch;
+  margin: 0 0 calc(var(--u) * 2.5);
+}
+
+.lead-story figure {
+  margin: calc(var(--u) * 3) 0 0;
+  max-width: 34rem;
+}
+
+.lead-story img {
+  width: 100%;
+  border: 1px solid var(--rule);
+}
+
+@media (prefers-color-scheme: dark) {
+  .lead-story img,
+  .article figure img {
+    filter: brightness(0.78);
+  }
+}
+
+/* ——— Bant başlıkları (gün, bölüm) ——— */
+.band {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--u) * 1.5);
+  margin: 0 0 var(--u);
+  font: 700 0.75rem/1 var(--frame);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.band::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--ink);
+}
+
+.band a {
+  order: 2;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.side-list .item {
+  padding: calc(var(--u) * 2) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.side-list h3 {
+  font: 600 1.1875rem/1.28 var(--read);
+  margin: 0 0 6px;
+}
+
+/* ——— Haber satırı (gazetteer) ——— */
+.day {
+  margin-bottom: calc(var(--u) * 7);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: calc(var(--u) * 3);
+  padding: calc(var(--u) * 2.5) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.row-time {
+  padding-top: 0.3em;
+  font: 600 0.875rem var(--frame);
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.row h3 {
+  font: 600 clamp(1.1875rem, 1.7vw, 1.4375rem) / 1.25 var(--read);
+  margin: 0 0 6px;
+}
+
+.row-desc {
+  margin: 0 0 var(--u);
+  color: var(--ink-2);
+  max-width: 68ch;
+}
+
+
+/* ——— Etter tema: kategori dizini ——— */
+.index {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: calc(var(--u) * 5) calc(var(--u) * 4);
+}
+
+.index h2,
+.index h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font: 700 0.9375rem var(--frame);
+  margin: 0 0 var(--u);
+  padding-bottom: var(--u);
+  border-bottom: 1px solid var(--ink);
+}
+
+.index ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.index li {
+  padding: calc(var(--u) * 1.25) 0;
+  border-bottom: 1px solid var(--rule);
+  font: 500 1.0625rem/1.35 var(--read);
+}
+
+.index .all {
+  display: inline-block;
+  margin-top: var(--u);
+  font: 600 0.8125rem var(--frame);
+  color: var(--water);
+}
+
+.empty {
+  color: var(--muted);
+  padding: calc(var(--u) * 5) 0;
+}
+
+/* ——— Sayfa başlığı (kategori, 404) ——— */
+.page-head {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--u) * 2);
+  flex-wrap: wrap;
+  padding-bottom: calc(var(--u) * 2);
+  margin-bottom: calc(var(--u) * 5);
+  border-bottom: 1px solid var(--ink);
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font: 650 clamp(2.25rem, 5vw, 3.5rem) / 1.05 var(--read);
+  letter-spacing: -0.018em;
+  margin: 0;
+}
+
+.page-title .sym {
+  margin-top: 0.08em;
+  color: var(--ink);
+}
+
+.page-head .meta {
+  font-size: 0.875rem;
+}
+
+/* Forklart: bölüm tanıtımı başlığın altında tam satır */
+.page-head .page-intro {
+  flex-basis: 100%;
+  max-width: 62ch;
+  margin: 0;
+  font: 400 clamp(1.0625rem, 1.4vw, 1.1875rem) / 1.5 var(--read);
+  color: var(--ink-2);
+}
+
+/* Menüde Forklart, kategorilerden ince bir çizgiyle ayrılır */
+.legend-nav .nav-forklart {
+  position: relative;
+  margin-right: calc(var(--u) * 1.5);
+}
+
+.legend-nav .nav-forklart::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  right: calc(var(--u) * -2.25);
+  border-right: 1px solid var(--rule);
+}
+
+/* ——— Artikkel: kenar boşluğu sistemi ——— */
+.article {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 70ch) 1fr;
+  gap: 0 calc(var(--u) * 5);
+}
+
+.article > * {
+  grid-column: 2;
+}
+
+.article h1 {
+  font: 650 clamp(2rem, 4.6vw, 3.25rem) / 1.08 var(--read);
+  letter-spacing: -0.018em;
+  margin: 0 0 calc(var(--u) * 2);
+}
+
+.article .lead {
+  font-size: clamp(1.1875rem, 1.8vw, 1.375rem);
+  line-height: 1.5;
+  color: var(--ink-2);
+  margin: 0 0 calc(var(--u) * 4);
+}
+
+.margin-info {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  align-self: start;
+  position: sticky;
+  top: 72px;
+  display: grid;
+  gap: calc(var(--u) * 2);
+  padding-top: 0.6em;
+  border-top: 1px solid var(--ink);
+  font: 500 0.8125rem/1.45 var(--frame);
+  font-stretch: 92%;
+  color: var(--muted);
+}
+
+.margin-info dt {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.margin-info dd {
+  margin: 2px 0 0;
+}
+
+.margin-info .mark {
+  color: var(--ink-2);
+}
+
+.article figure {
+  grid-column: 2 / 4;
+  max-width: 920px;
+  margin: 0 0 calc(var(--u) * 4);
+}
+
+.article figure img {
+  width: 100%;
+  border: 1px solid var(--rule);
+}
+
+.article figcaption {
+  margin-top: var(--u);
+  max-width: 70ch;
+  font: 500 0.875rem/1.45 var(--frame);
+  font-stretch: 94%;
+  color: var(--muted);
+}
+
+.article figcaption .kreditt {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+.prose {
+  font-size: 1.1875rem;
+  line-height: 1.7;
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+.prose h2,
+.prose h3 {
+  font-family: var(--read);
+  font-weight: 650;
+  line-height: 1.25;
+  margin: 1.9em 0 0.5em;
+}
+
+.prose h2 {
+  font-size: 1.5rem;
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+}
+
+.prose a {
+  color: var(--water);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.prose blockquote {
+  margin: 1.6em 0;
+  padding: 0 0 0 1.25em;
+  border-left: 1px solid var(--ink);
+  font-size: 1.3125rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.prose img {
+  margin: 1.5em 0;
+}
+
+.prose table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1.75em 0;
+  border-collapse: collapse;
+  border-top: 1px solid var(--ink);
+  font: 500 0.9375rem/1.4 var(--frame);
+  font-variant-numeric: tabular-nums;
+}
+
+.prose th,
+.prose td {
+  padding: 0.7em 1.2em 0.7em 0;
+  border-bottom: 1px solid var(--rule);
+  text-align: left;
+}
+
+.prose th {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.prose em:has(> a:only-child) {
+  font-style: normal;
+}
+
+.rettelse {
+  display: flex;
+  gap: calc(var(--u) * 1.5);
+  margin: calc(var(--u) * 4) 0;
+  padding: calc(var(--u) * 1.5) calc(var(--u) * 2);
+  border: 1px solid var(--ink);
+  background: var(--surface);
+  font: 500 0.9375rem/1.5 var(--frame);
+}
+
+.rettelse .sym {
+  margin-top: 0.4em;
+}
+
+/* ——— Sentez / Redaksjonell oppsummering (Kort oppsummert) ——— */
+.sentez-kutu {
+  margin: 0 0 calc(var(--u) * 4);
+  padding: calc(var(--u) * 2.5) calc(var(--u) * 3);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--contour);
+}
+
+.sentez-kutu-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(var(--u) * 1.5);
+  padding-bottom: var(--u);
+  border-bottom: 1px solid var(--rule);
+}
+
+.sentez-kutu-tittel {
+  font: 700 0.8125rem/1.2 var(--frame);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--contour);
+}
+
+.sentez-seksjon {
+  margin-bottom: calc(var(--u) * 2);
+}
+
+.sentez-seksjon:last-child {
+  margin-bottom: 0;
+}
+
+.sentez-seksjon-tittel {
+  font: 700 0.9375rem/1.35 var(--frame);
+  color: var(--ink);
+  margin: 0 0 calc(var(--u) * 0.75);
+}
+
+.sentez-tekst {
+  font: 500 1.0625rem/1.55 var(--read);
+  color: var(--ink-2);
+  margin: 0;
+}
+
+.sentez-liste {
+  margin: 0;
+  padding-left: calc(var(--u) * 2.5);
+  color: var(--ink-2);
+  font: 500 1rem/1.55 var(--read);
+}
+
+.sentez-liste li {
+  margin-bottom: calc(var(--u) * 0.75);
+}
+
+.sentez-liste li:last-child {
+  margin-bottom: 0;
+}
+
+.sentez-liste li::marker {
+  color: var(--contour);
+}
+
+.sentez-ki-lenke {
+  margin: calc(var(--u) * 1.5) 0 0;
+  padding-top: var(--u);
+  border-top: 1px solid var(--rule);
+  font: 500 0.75rem/1.4 var(--frame);
+  color: var(--muted);
+}
+
+.sentez-ki-lenke a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.sentez-ki-lenke a:hover {
+  color: var(--water);
+}
+
+.ki-notat {
+  margin: calc(var(--u) * 5) 0 0;
+  padding-top: calc(var(--u) * 2);
+  border-top: 1px solid var(--ink);
+  font: 500 0.875rem/1.55 var(--frame);
+  font-stretch: 94%;
+  color: var(--muted);
+}
+
+.ki-notat a {
+  color: var(--water);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.share {
+  display: flex;
+  gap: calc(var(--u) * 3);
+  flex-wrap: wrap;
+  margin: calc(var(--u) * 3) 0 0;
+  font: 600 0.875rem var(--frame);
+}
+
+.share span {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.share a {
+  color: var(--water);
+}
+
+.related {
+  margin-top: calc(var(--u) * 10);
+}
+
+/* Om oss / Personvern: kenar sütunu olmadan tek sütun */
+.article.plain {
+  grid-template-columns: 200px minmax(0, 70ch) 1fr;
+}
+
+.article.plain > .meta {
+  margin-bottom: calc(var(--u) * 3);
+}
+
+/* ——— Altbilgi: tegnforklaring ve künye ——— */
+.site-footer {
+  border-top: 1px solid var(--ink);
+  background: var(--surface);
+  padding: calc(var(--u) * 5) 0 calc(var(--u) * 3);
+  font: 500 0.875rem/1.55 var(--frame);
+  font-stretch: 94%;
+  color: var(--muted);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: calc(var(--u) * 5);
+}
+
+.footer-grid h2 {
+  margin: 0 0 calc(var(--u) * 1.5);
+  padding-bottom: var(--u);
+  border-bottom: 1px solid var(--ink);
+  font: 700 0.6875rem var(--frame);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.footer-grid p {
+  margin: 0 0 var(--u);
+  max-width: 44ch;
+}
+
+.footer-grid ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.footer-grid li a,
+.footer-grid li span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  color: var(--ink-2);
+}
+
+.footer-grid .mark-breaking {
+  color: var(--red);
+}
+
+.logo-sm {
+  display: inline-block;
+  margin-bottom: calc(var(--u) * 1.5);
+  font: 800 2rem/1 var(--frame);
+  font-stretch: 112%;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+}
+
+.logo-sm:hover {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.logo-sm .o {
+  color: var(--water);
+}
+
+.footer-ansvar {
+  display: grid;
+  gap: calc(var(--u) * 1.25);
+  margin: calc(var(--u) * 2) 0;
+  padding: calc(var(--u) * 1.5) 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.footer-ansvar dt {
+  font: 700 0.6875rem/1.2 var(--frame);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.footer-ansvar dd {
+  margin: 2px 0 0;
+  font: 600 0.9375rem/1.35 var(--frame);
+  color: var(--ink);
+}
+
+.footer-ansvar dd a {
+  color: var(--ink);
+}
+
+.footer-etikk {
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.footer-etikk a {
+  color: var(--ink-2);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.footer-grid a:not(.logo-sm):hover {
+  color: var(--water);
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--u);
+  margin-top: calc(var(--u) * 4);
+  padding-top: calc(var(--u) * 1.5);
+  border-top: 1px solid var(--rule);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+/* ——— Sayfa geçişi: masthead yerinde kalır, içerik kâğıt gibi yumuşakça değişir ——— */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: 160ms cubic-bezier(0.4, 0, 1, 1) both fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 320ms cubic-bezier(0.16, 1, 0.3, 1) both rise-in;
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ——— Dar ekranlar ——— */
+@media (max-width: 1080px) {
+  .article,
+  .article.plain {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 72ch;
+    margin: 0 auto;
+  }
+
+  .article > *,
+  .article figure {
+    grid-column: 1;
+  }
+
+  .margin-info {
+    grid-column: 1;
+    grid-row: auto;
+    position: static;
+    order: 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--u) calc(var(--u) * 3);
+    margin-bottom: calc(var(--u) * 4);
+    padding: calc(var(--u) * 1.25) 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .margin-info div {
+    display: flex;
+    gap: 0.5em;
+    align-items: baseline;
+  }
+
+  .margin-info dd {
+    margin: 0;
+  }
+
+  .article > h1 {
+    order: 1;
+  }
+
+  .article > .lead {
+    order: 2;
+  }
+
+  .article > :not(h1, .lead, .margin-info) {
+    order: 4;
+  }
+}
+
+@media (max-width: 860px) {
+  .top {
+    grid-template-columns: minmax(0, 1fr);
+    gap: calc(var(--u) * 5);
+  }
+
+  .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: calc(var(--u) * 4);
+  }
+
+  .sources {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 1rem;
+  }
+
+  /* Dar ekranda üst şeritte yer sosyal linklere kalır. */
+  .sheet-margin .tagline {
+    display: none;
+  }
+
+  .sheet-margin .container {
+    justify-content: flex-end;
+  }
+
+  .mast-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--u);
+  }
+
+
+  .edition {
+    text-align: left;
+  }
+
+  .edition b {
+    font-size: 1.0625rem;
+  }
+
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+
+  .row-time {
+    padding: 0;
+  }
+
+  .row-desc {
+    display: none;
+  }
+
+  .prose {
+    font-size: 1.0625rem;
+  }
+
+  .sentez-kutu {
+    padding: calc(var(--u) * 2);
+  }
+}
+
+/* Yazdırma & PDF Stilleri */
+@media print {
+  .site-header,
+  .site-footer,
+  .skip,
+  nav,
+  .mast-terrain,
+  button {
+    display: none !important;
+  }
+
+  body, html, main {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  article, table, figure, .sentez-kutu {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .sentez-kutu {
+    background: #fafafa !important;
+    border: 1px solid #ccc !important;
+    border-left: 3px solid #888 !important;
+  }
+
+  h1, h2, h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+    color: #000 !important;
+  }
+}
+
+
+/* ——— Brødsmulesti (haber ve kategori sayfaları) ——— */
+.brodsmuler {
+  margin: 0 0 calc(var(--u) * 3);
+  font: 500 0.8125rem var(--frame);
+  font-stretch: 94%;
+  color: var(--muted);
+}
+
+.brodsmuler ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--u);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.brodsmuler li + li::before {
+  content: '›';
+  margin-right: var(--u);
+  color: var(--muted);
+}
+
+.brodsmuler a {
+  color: var(--water);
+}
+
+.brodsmuler [aria-current='page'] {
+  overflow: hidden;
+  max-width: 48ch;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* ——— Del saken: kopier-knapp og Telegram ——— */
+.share .kopier {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--water);
+  cursor: pointer;
+}
+
+.share .kopiert {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.share .kopiert:empty {
+  display: none;
+}
+
+.folg {
+  margin: calc(var(--u) * 1.5) 0 0;
+  font: 500 0.875rem var(--frame);
+  color: var(--muted);
+}
+
+.folg a {
+  color: var(--water);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+/* ——— Kategori: sidenummerering ——— */
+.sider {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: calc(var(--u) * 2);
+  margin-top: calc(var(--u) * 5);
+  padding-top: calc(var(--u) * 2);
+  border-top: 1px solid var(--ink);
+  font: 600 0.875rem var(--frame);
+}
+
+.sider a {
+  color: var(--water);
+}
+
+.sider .side-nr {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+
+/* ——— Temaer og datasider (styringsrenten, farevarsler) ——— */
+.tema-data,
+.data-kilde {
+  display: flex;
+  gap: calc(var(--u) * 1.5);
+  max-width: 70ch;
+  margin: 0 0 calc(var(--u) * 4);
+  font: 500 0.875rem/1.55 var(--frame);
+  color: var(--muted);
+}
+
+.tema-data .sym,
+.data-kilde .sym {
+  flex: none;
+  margin-top: 0.35em;
+}
+
+.tema-data a,
+.data-kilde a,
+.data-varsel a,
+.tema-alle a {
+  color: var(--water);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.data-kilde {
+  margin-top: calc(var(--u) * 5);
+  padding-top: calc(var(--u) * 2);
+  border-top: 1px solid var(--ink);
+}
+
+.tema-alle {
+  margin: calc(var(--u) * 4) 0 0;
+  font: 600 0.875rem var(--frame);
+}
+
+.data-varsel {
+  max-width: 70ch;
+  margin: calc(var(--u) * 4) 0;
+  padding: calc(var(--u) * 1.5) calc(var(--u) * 2);
+  border: 1px solid var(--ink);
+  background: var(--surface);
+  font: 500 0.9375rem/1.5 var(--frame);
+}
+
+.data-tall {
+  margin-bottom: calc(var(--u) * 6);
+}
+
+.data-verdi {
+  margin: calc(var(--u) * 2) 0 calc(var(--u) * 2);
+  font: 650 clamp(3rem, 8vw, 5rem) / 1 var(--read);
+  letter-spacing: -0.02em;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.data-fakta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--u) calc(var(--u) * 5);
+  margin: 0;
+  font: 500 0.875rem/1.4 var(--frame);
+}
+
+.data-fakta dt {
+  font: 700 0.6875rem var(--frame);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.data-fakta dd {
+  margin: 4px 0 0;
+}
+
+.data-tabell table {
+  margin-top: var(--u);
+}
+
+.data-merknad {
+  max-width: 70ch;
+  margin: 0;
+  font: 500 0.8125rem/1.5 var(--frame);
+  color: var(--muted);
+}
+
+.data-lenker {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.data-lenker li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px calc(var(--u) * 2);
+  padding: calc(var(--u) * 2) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.data-lenker a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font: 600 clamp(1.1875rem, 1.7vw, 1.4375rem) / 1.25 var(--read);
+}
+
+.data-lenker span {
+  font: 500 0.875rem var(--frame);
+  color: var(--muted);
+}
+
+.varsel-rad {
+  padding: calc(var(--u) * 2.5) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.varsel-rad h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px calc(var(--u) * 1.5);
+  margin: 0 0 6px;
+}
+
+.varsel-rad .mark-varsel {
+  font: 650 0.8125rem var(--frame);
+}
+
+.varsel-hendelse {
+  font: 600 1.1875rem/1.28 var(--read);
+}
+
+.varsel-tid {
+  margin: 0;
+  font: 500 0.8125rem/1.4 var(--frame);
+  color: var(--muted);
+}
+
+.page-head .data-merknad {
+  flex-basis: 100%;
+}
+
+.varsel-tekst {
+  max-width: 68ch;
+  margin: var(--u) 0 0;
+  color: var(--ink-2);
+}
+
+/* Forside: "Alltid oppdatert" — datasidene med gjeldende verdi */
+.forside-data .data-lenker strong {
+  font: 600 0.875rem var(--frame);
+  color: var(--ink);
+}
+
+/* Menüde Temaer, kategorilerden ince bir çizgiyle ayrılır (Forklart'ın aynası) */
+.legend-nav .nav-tema {
+  position: relative;
+  margin-left: calc(var(--u) * 1.5);
+}
+
+.legend-nav .nav-tema::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: calc(var(--u) * -2.25);
+  border-left: 1px solid var(--rule);
+}
+
+.footer-grid p + h2 {
+  margin-top: calc(var(--u) * 3);
+}
+
+/* Artikkel: "Emner" (temaer) i margen, ett emne per linje */
+.margin-info .emner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px calc(var(--u) * 1.5);
+}
+
+/* ——— VG-stil forfatterkort («Tips meg» på forfatterside og under sak) ——— */
+.forfatter-kort {
+  margin: 0 0 calc(var(--u) * 5);
+  padding: calc(var(--u) * 3);
+  background: var(--surface);
+  border: 1px solid var(--ink);
+  max-width: 70ch;
+}
+
+.article .forfatter-kort {
+  margin: calc(var(--u) * 5) 0 0;
+}
+
+.forfatter-kort-etikett {
+  margin: 0 0 var(--u);
+  font: 700 0.75rem/1.2 var(--frame);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--contour);
+}
+
+.forfatter-kort-topp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(var(--u) * 2);
+  margin-bottom: calc(var(--u) * 2);
+}
+
+.forfatter-kort-navn {
+  margin: 0;
+  font: 650 clamp(1.625rem, 3vw, 2.25rem) / 1.15 var(--read);
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.forfatter-kort-tittel {
+  margin: 4px 0 0;
+  font: 500 0.875rem/1.4 var(--frame);
+  color: var(--muted);
+}
+
+.forfatter-kort-monogram {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  font: 700 1.25rem/1 var(--frame);
+  letter-spacing: 0.04em;
+  color: var(--water);
+}
+
+.forfatter-kort-beskrivelse {
+  margin: 0 0 calc(var(--u) * 2.5);
+  font: 400 1.0625rem/1.55 var(--read);
+  color: var(--ink-2);
+}
+
+.forfatter-kort-handling {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: calc(var(--u) * 2) calc(var(--u) * 3);
+}
+
+.forfatter-epost-knapp {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--u);
+  padding: 10px 18px;
+  background: var(--ink);
+  color: var(--paper);
+  font: 600 0.875rem/1.2 var(--frame);
+  text-decoration: none;
+}
+
+.forfatter-epost-knapp:hover {
+  background: var(--water);
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.forfatter-alle-lenke {
+  font: 600 0.875rem/1.3 var(--frame);
+  color: var(--water);
+}
+
+/* Søk-lenken ytterst til høyre i kategorimenyen */
+.legend-nav .nav-sok {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}

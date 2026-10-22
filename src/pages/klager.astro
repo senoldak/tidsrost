@@ -1,0 +1,100 @@
+---
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
+import { SITE_URL, breadcrumbs } from '../lib/seo';
+
+const OPPDATERT = '22. oktober 2026';
+---
+
+<Base
+  title="Klager"
+  description={`Slik behandler ${SITE.name} klager på publisert innhold: hva du kan klage på, frister og utfall.`}
+>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={jsonLdMetni(
+        breadcrumbs([
+          { name: 'Forsiden', url: `${SITE_URL}/` },
+          { name: 'Klager', url: `${SITE_URL}/klager/` },
+        ])
+      )}
+    />
+  </Fragment>
+
+  <article class="article">
+    <h1>Klager</h1>
+    <p class="meta">Sist oppdatert {OPPDATERT}</p>
+    <div class="prose">
+      <p>Denne siden forklarer hvordan vi behandler en klage på innhold publisert i {SITE.name}.</p>
+
+      <h2 id="hva">1. Hva du kan klage på</h2>
+      <ul>
+        <li>En faktafeil i en sak: feil tall, navn, dato eller oversettelse.</li>
+        <li>Brudd på våre redaksjonelle prinsipper: partisk eller diskriminerende språk, manglende KI-merking.</li>
+        <li>Innhold du mener krenker ditt personvern eller dine personopplysninger.</li>
+        <li>Innhold du mener krenker din opphavsrett.</li>
+      </ul>
+      <p>
+        Krav om tilsvar eller retting behandles også etter punkt 12 i <a href="/juridisk/">Juridisk informasjon</a>, og
+        varsler om rettighetsbrudd etter punkt 11.
+      </p>
+
+      <h2 id="slik">2. Slik klager du</h2>
+      <p>
+        Bruk lenken «Meld fra om feil» nederst i hver sak, eller skriv til
+        <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a>. Ta med:
+      </p>
+      <ul>
+        <li>lenken til innholdet,</li>
+        <li>hva problemet er, og eventuelt hvilket av våre prinsipper du mener er brutt,</li>
+        <li>en kilde som viser riktig informasjon, hvis du har en,</li>
+        <li>en e-postadresse vi kan svare til.</li>
+      </ul>
+
+      <h2 id="frister">3. Frister</h2>
+      <ul>
+        <li><strong>Innen 72 timer</strong> bekrefter vi at vi har mottatt klagen, og forteller hvordan vi behandler den.</li>
+        <li><strong>Innen 28 dager</strong> sender vi deg vår avgjørelse med begrunnelse.</li>
+        <li>Åpenbare faktafeil og krav som gjelder personvern retter vi, eller fjerner innholdet, uten å vente på disse fristene.</li>
+        <li>Hvis 28 dager ikke er nok, forteller vi deg hvorfor og gir deg en ny dato.</li>
+      </ul>
+
+      <h2 id="hvem">4. Hvem behandler klagen</h2>
+      <p>Klager behandles av utgiver og redaktør. {SITE.name} er en enmannsredaksjon og har ingen egen leserombudsmann.</p>
+
+      <h2 id="utfall">5. Mulige utfall</h2>
+      <ul>
+        <li>
+          <strong>Klagen tas til følge:</strong> innholdet rettes, presiseres, oppdateres eller fjernes etter vår
+          <a href="/rettelsespolitikk/">rettelsespolitikk</a>. Endringen publiseres med dato på siden
+          <a href="/rettelser/">Rettelser</a>.
+        </li>
+        <li>
+          <strong>Klagen tas delvis til følge:</strong> det samme gjelder for den delen som tas til følge; for resten
+          forklarer vi hvorfor.
+        </li>
+        <li><strong>Klagen tas ikke til følge:</strong> vi forklarer hvorfor vi ikke har endret innholdet.</li>
+      </ul>
+
+      <h2 id="ikke-fornoyd">6. Hvis du ikke er fornøyd</h2>
+      <p>
+        Pressens Faglige Utvalg (PFU) behandler bare klager på medier som er tilsluttet Norsk Presseforbund. {SITE.name}
+        er ikke tilsluttet, og PFU behandler derfor ikke klager på {SITE.name}. Hvis dette endres, oppdaterer vi denne
+        siden.
+      </p>
+      <p>Dine rettslige muligheter gjelder uansett.</p>
+
+      <h2 id="registrering">7. Registrering og personvern</h2>
+      <ul>
+        <li>
+          Klager og avgjørelser registreres. Antallet publiseres hver tredje måned i vår
+          <a href="/standardrapport/">standardrapport</a>.
+        </li>
+        <li>Identiteten til den som klager, deles ikke uten samtykke.</li>
+        <li>Henvendelser med trusler eller hets blir ikke nødvendigvis besvart.</li>
+      </ul>
+    </div>
+  </article>
+</Base>

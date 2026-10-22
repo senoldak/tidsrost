@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" role="img" aria-label="Nye foretak i Norge 2019–2025">
+<title>Nye foretak i Norge 2019–2025</title>
+<rect width="760" height="430" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Nye foretak i Norge 2019–2025</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Antall nye foretak registrert per år (tusen), summert fra SSBs kvartalstall</text>
+<text x="24" y="92" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Tusen</text>
+<line x1="74" x2="736" y1="352.0" y2="352.0" stroke="#16191c" stroke-width="1"/>
+<text x="66" y="356.0" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">0</text>
+<line x1="74" x2="736" y1="291.0" y2="291.0" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="295.0" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">20</text>
+<line x1="74" x2="736" y1="230.0" y2="230.0" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="234.0" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">40</text>
+<line x1="74" x2="736" y1="169.0" y2="169.0" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="173.0" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">60</text>
+<line x1="74" x2="736" y1="108.0" y2="108.0" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="112.0" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">80</text>
+<rect x="97.3" y="147.3" width="48" height="204.7" fill="#1f5f99"/>
+<text x="121.3" y="141.3" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">67,1</text>
+<text x="121.3" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2019</text>
+<rect x="191.9" y="137.6" width="48" height="214.4" fill="#1f5f99"/>
+<text x="215.9" y="131.6" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">70,3</text>
+<text x="215.9" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2020</text>
+<rect x="286.4" y="119.6" width="48" height="232.4" fill="#1f5f99"/>
+<text x="310.4" y="113.6" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">76,2</text>
+<text x="310.4" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2021</text>
+<rect x="381.0" y="135.5" width="48" height="216.5" fill="#1f5f99"/>
+<text x="405.0" y="129.5" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">71,0</text>
+<text x="405.0" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2022</text>
+<rect x="475.6" y="143.1" width="48" height="208.9" fill="#1f5f99"/>
+<text x="499.6" y="137.1" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">68,5</text>
+<text x="499.6" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2023</text>
+<rect x="570.1" y="164.1" width="48" height="187.9" fill="#1f5f99"/>
+<text x="594.1" y="158.1" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">61,6</text>
+<text x="594.1" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2024</text>
+<rect x="664.7" y="161.7" width="48" height="190.3" fill="#16191c"/>
+<text x="688.7" y="155.7" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">62,4</text>
+<text x="688.7" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2025</text>
+<line x1="24" x2="736" y1="390" y2="390" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="408" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 08076 (unntatt offentlig forvaltning og primærnæringene)</text>
+<text x="736" y="408" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

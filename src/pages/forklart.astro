@@ -1,0 +1,69 @@
+---
+// "Forklart" bölümü: tablo ve grafiklerle açıklayıcı yazılar (frontmatter: sjanger: forklart).
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import Base from '../layouts/Base.astro';
+import StoryRow from '../components/StoryRow.astro';
+import Symbol from '../components/Symbol.astro';
+import { SITE } from '../lib/site';
+import { FORKLART, erForklart, getNews, newsUrl } from '../lib/news';
+import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs } from '../lib/seo';
+
+const items = (await getNews()).filter(erForklart);
+const pageUrl = `${SITE_URL}/${FORKLART.slug}/`;
+const description = `Forklarende saker med tall, tabeller og grafer fra offentlige kilder som SSB, Norges Bank og regjeringen. Fra ${SITE.name}.`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${pageUrl}#page`,
+      url: pageUrl,
+      name: `${FORKLART.name} – tallene bak nyhetene`,
+      description,
+      inLanguage: 'nb',
+      isPartOf: { '@id': WEBSITE_ID },
+      publisher: { '@id': ORG_ID },
+      ...(items.length
+        ? {
+            mainEntity: {
+              '@type': 'ItemList',
+              itemListElement: items.slice(0, 50).map((h, i) => ({
+                '@type': 'ListItem',
+                position: i + 1,
+                url: new URL(newsUrl(h), SITE_URL).href,
+              })),
+            },
+          }
+        : {}),
+    },
+    breadcrumbs([
+      { name: 'Forsiden', url: `${SITE_URL}/` },
+      { name: FORKLART.name, url: pageUrl },
+    ]),
+  ],
+};
+---
+
+<Base title={`${FORKLART.name} – tallene bak nyhetene`} description={description} noindex={items.length === 0}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="forklart" />{FORKLART.name}</h1>
+    <p class="page-intro">
+      Tallene bak nyhetene. Her forklarer vi større saker med statistikk, tabeller og grafer fra offentlige kilder, og
+      lenker alltid til grunnlaget.
+    </p>
+    <p class="meta">{items.length} {items.length === 1 ? 'sak' : 'saker'}</p>
+  </header>
+  {
+    items.length > 0 ? (
+      <section class="day">
+        {items.map((h) => (
+          <StoryRow haber={h} dato />
+        ))}
+      </section>
+    ) : (
+      <p class="empty">Ingen forklarende saker ennå.</p>
+    )
+  }
+</Base>

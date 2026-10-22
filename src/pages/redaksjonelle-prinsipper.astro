@@ -1,0 +1,259 @@
+---
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
+import { SITE_URL, breadcrumbs } from '../lib/seo';
+
+const VVP_URL = 'https://www.presse.no/vaer-varsom-plakaten';
+const IFJ_URL = 'https://www.ifj.org/who/rules-and-policy/global-charter-of-ethics-for-journalists';
+const TRUST_PROJECT_URL = 'https://thetrustproject.org';
+const RSF_CHARTER_URL = 'https://rsf.org/en/paris-charter-ai-and-journalism';
+const NLOD_URL = 'https://data.norge.no/nlod/no/2.0';
+const CC_BY_URL = 'https://creativecommons.org/licenses/by/4.0/deed.no';
+
+const OPPDATERT = '20. oktober 2026';
+---
+
+<Base
+  title="Redaksjonelle prinsipper"
+  description={`Redaksjonelle prinsipper, presseetiske standarder, The Trust Project og retningslinjer for kunstig intelligens i ${SITE.name}.`}
+>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={jsonLdMetni(
+        breadcrumbs([
+          { name: 'Forsiden', url: `${SITE_URL}/` },
+          { name: 'Redaksjonelle prinsipper', url: `${SITE_URL}/redaksjonelle-prinsipper/` },
+        ])
+      )}
+    />
+  </Fragment>
+
+  <article class="article">
+    <h1>Redaksjonelle prinsipper</h1>
+    <p class="meta">Sist oppdatert {OPPDATERT}</p>
+    <div class="prose">
+      <p class="lead">
+        {SITE.name} er en uavhengig nyhetsformidler forankret i sannferdig, etterprøvbar og åpen journalistikk.
+        Her redegjør vi for våre etiske standarder, redaksjonelle uavhengighet, kildebruk, retningslinjer for kunstig
+        intelligens og rutiner for retting av feil. Nyhetssakene skrives automatisk med kunstig intelligens (KI) og
+        går gjennom automatiske kontroller. De leses ikke av et menneske før publisering. Sensitive temaer publiseres
+        ikke automatisk.
+      </p>
+
+      <h2 id="uavhengighet">1. Redaksjonell uavhengighet og IFJs etiske charter</h2>
+      <p>
+        {SITE.name} tar <strong>Det internasjonale journalistforbundets globale etiske
+        charter</strong> (<a href={IFJ_URL} target="_blank" rel="noopener noreferrer">IFJ Global Charter of Ethics for
+        Journalists</a>), vedtatt på IFJs 30. verdenskongress i Tunis i 2019, som forbilde.
+      </p>
+      <p>
+        Allmennhetens rett til sannferdig, usminket og etterprøvbar informasjon er journalistikkens fremste formål.
+        Vårt ansvar overfor offentligheten og leserne går foran ethvert annet hensyn, enten det gjelder kommersielle,
+        politiske eller personlige interesser.
+      </p>
+      <ul>
+        <li>
+          <strong>Uavhengighet:</strong> {SITE.name} er uavhengig av regjeringen, politiske partier,
+          næringslivsaktører, interesseorganisasjoner og andre maktgrupper. Ingen utenforstående kan bestemme hva vi
+          publiserer eller ikke publiserer.
+        </li>
+        <li>
+          <strong>Ikke-kommersiell profil:</strong> {SITE.name} er en uavhengig og ikke-kommersiell publikasjon. Det finnes ingen annonser,
+          sponset innhold eller betalt samarbeid. Endrer dette seg, sier vi tydelig fra til leserne.
+        </li>
+        <li>
+          <strong>Integritet og vern mot korrupsjon:</strong> {SITE.name} mottar ikke vederlag eller andre fordeler for innholdet vi publiserer.
+        </li>
+      </ul>
+
+      <h2 id="presseetikk">2. Presseetikk: Vær Varsom-plakaten som rettesnor</h2>
+      <p>
+        {SITE.name} følger Vær Varsom-plakaten som rettesnor for sitt journalistiske arbeid. {SITE.name} er ikke
+        tilsluttet Norsk Presseforbund, og Pressens Faglige Utvalg (PFU) behandler derfor ikke klager på {SITE.name}.
+        Klager rettes direkte til redaksjonen.
+      </p>
+      <ul>
+        <li>
+          <strong><a href={VVP_URL} target="_blank" rel="noopener noreferrer">Vær Varsom-plakaten (VVP)</a>:</strong>
+          Vi bruker plakatens normer for god presseskikk som rettesnor:
+          <ul>
+            <li><em>Samfunnsrolle (kapittel 1):</em> Vi verner om ytringsfriheten, informasjonsfriheten og det åpne ordskiftet, og formidler vesentlige samfunnsopplysninger hurtig og samvittighetsfullt.</li>
+            <li><em>Integritet og åpenhet (kapittel 2):</em> Vi er åpne om hvordan sakene våre blir til, og avviser ethvert forsøk på å svekke den redaksjonelle integriteten.</li>
+            <li><em>Kildearbeid og etterrettelighet (kapittel 3):</em> Vi etterstreber kildekritikk. I saker som bygger på offisielle kilder lenker vi til kilden.</li>
+            <li><em>Saklighet og omtanke (kapittel 4):</em> Tall, navn og sitater kontrolleres automatisk mot kildeteksten før publisering. Vi etterstreber å unngå villedende overskrifter, viser omtanke i omtale av personers privatliv og tragedier, og respekterer imøtegåelse og tilsvarsrett.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Utgiver og redaktør:</strong> <strong>{SITE.redaktor}</strong>.
+          Nyhetssakene skrives automatisk med KI og kontrolleres automatisk. Ingen sak leses av et menneske før
+          publisering, og saker kan derfor inneholde feil. Feil rettes etter vår <a href="/rettelsespolitikk/">rettelsespolitikk</a>.
+        </li>
+      </ul>
+
+      <h2 id="trust-project">3. The Trust Project: tillitsindikatorene</h2>
+      <p>
+        {SITE.name} bruker det globale initiativet
+        <a href={TRUST_PROJECT_URL} target="_blank" rel="noopener noreferrer">The Trust Project</a> som forbilde. Slik forholder vi
+        oss til sju av de åtte tillitsindikatorene («Trust Indicators»):
+      </p>
+      <ol>
+        <li>
+          <strong>Beste praksis (Best Practices):</strong> Våre standarder, finansiering og rutiner er beskrevet på denne siden, på
+          <a href="/om-oss/">Om oss</a>, i <a href="/juridisk/">Juridisk informasjon og kolofon</a> og i
+          <a href="/rettelsespolitikk/">Rettelsespolitikk</a>.
+        </li>
+        <li>
+          <strong>Forfatter- og redaksjonsekspertise (Author Expertise):</strong> Saker uten navn er skrevet automatisk med KI. Saker under navn er
+          utgitt under navnet til utgiver og redaktør {SITE.redaktor}, og merknaden under saken forteller hvordan KI-verktøy er brukt.
+          Kontakt: {SITE.epost}.
+        </li>
+        <li>
+          <strong>Merking av innholdstype (Type of Work):</strong> Vi skiller mellom nyhetssaker og forklarende saker («Forklart»).
+          Hver sak har en merknad om hvordan den er laget.
+        </li>
+        <li>
+          <strong>Kildehenvisninger og referanser (Citations & References):</strong> Når en sak bygger på en offisiell kilde, lenker vi til kilden under
+          saken. Vi er i ferd med å innføre dette på alle slike saker. Saker som bygger på andre kilder navngir ikke disse.
+        </li>
+        <li>
+          <strong>Metoder og fremgangsmåte (Methods):</strong> Vi forklarer åpent hvordan sakene lages: de skrives automatisk med KI og
+          går gjennom automatiske kontroller. Se <a href="/apenhet/">Åpenhet</a>.
+        </li>
+        <li>
+          <strong>Mangfoldige stemmer (Diverse Voices):</strong> Vi etterstreber bredde i dekningen og at ulike parter kommer til orde.
+        </li>
+        <li>
+          <strong>Handling og tilbakemelding (Actionable Feedback):</strong> Du kan melde fra om feil via «Meld fra om feil»-lenken under hver sak eller
+          på {SITE.epost}. Vi retter feil og svarer så raskt vi kan.
+        </li>
+      </ol>
+
+      <h2 id="kunstig-intelligens">4. Retningslinjer for kunstig intelligens og journalistikk</h2>
+      <p>
+        Bruk av teknologi skal styrke, ikke svekke, journalistisk kvalitet og troverdighet. {SITE.name}s retningslinjer for
+        bruk av kunstig intelligens (KI) tar <strong>Vær Varsom-plakaten</strong> (om redaksjonell integritet,
+        kildekritikk og vern av fotografiets troverdighet), anbefalinger fra <strong>Norsk Redaktørforening</strong> og
+        <strong>Paris-charteret om KI og journalistikk</strong> fra Reporters Without Borders
+        (<a href={RSF_CHARTER_URL} target="_blank" rel="noopener noreferrer">RSF, november 2023</a>) som forbilde.
+      </p>
+      <p>
+        Nyhetssakene på {SITE.name} skrives automatisk med KI og går gjennom automatiske kontroller før de publiseres.
+        Ingen sak leses av et menneske før publisering. Sensitive temaer (kriminalitet og rettsprosesser som gjelder
+        privatpersoner, barn, selvmord og selvskading, terror, partsspråk i krig, generaliserende omtale av grupper,
+        uttalelser som kan oppfattes som investeringsråd og saker som bare én enkelt utgivelse har) publiseres ikke
+        automatisk. Hvis en kontroll svikter eller er usikker, publiseres ikke saken. Vi har en nødbrems som stopper all
+        automatisk publisering. Utgiver og redaktør {SITE.redaktor} bestemmer retningslinjene for hva som kan publiseres
+        automatisk.
+      </p>
+      <h3>Våre fem hovedregler for bruk av KI</h3>
+      <ul>
+        <li>
+          <strong>Første hovedregel (Et verktøy, aldri en kilde):</strong> Redaksjonen skal forholde seg til bruk av
+          tekst, data, bilder og annet innhold skapt ved hjelp av generativ KI på samme måte som andre kilder til informasjon –
+          med åpen nysgjerrighet og med kildekritisk varsomhet. Tall, navn, datoer og sitater kontrolleres automatisk mot kildeteksten saken
+          bygger på.
+        </li>
+        <li>
+          <strong>Andre hovedregel (Automatisk kontroll):</strong> Saker skrives automatisk og
+          kontrolleres automatisk før publisering. Hvis kontrollen svikter eller er usikker, publiseres ikke saken.
+          Sensitive temaer publiseres ikke automatisk.
+        </li>
+        <li>
+          <strong>Tredje hovedregel (Vern om fotografiets troverdighet):</strong> {SITE.name} bruker aldri KI til å
+          generere fotorealistiske bilder. Bruk av KI-generert innhold må aldri rokke ved det journalistiske fotografiets
+          troverdighet. Vi kan bruke digitale verktøy og KI til å generere redaksjonelle illustrasjoner, grafikk og
+          datamodeller; dette merkes tydelig med <em>«Illustrasjon: tidsrøst»</em>.
+        </li>
+        <li>
+          <strong>Fjerde hovedregel (Åpenhet overfor leserne):</strong> {SITE.name} informerer tydelig om hvordan kunstig intelligens inngår i
+          arbeidet. Hver nyhetssak har en merknad om at den er skrevet automatisk med KI, og en «Meld fra om feil»-lenke.
+        </li>
+        <li>
+          <strong>Femte hovedregel (Datasikkerhet):</strong> Kildetekstene sendes til en KI-tjeneste (Google Gemini)
+          for at nyhetssakene skal kunne skrives. Vi bruker bare offentlig tilgjengelig kildemateriale og deler ikke
+          upublisert eller sensitivt materiale med KI-tjenester.
+        </li>
+      </ul>
+      <h3>KI-verktøy vi benytter</h3>
+      <ul>
+        <li>Google Gemini (Google): skriving av nyhetssaker</li>
+        <li>Claude (Anthropic): oversettelse og språkvask i saker under utgiverens navn</li>
+      </ul>
+
+      <h2 id="offentlige-data">5. Offentlige data, opphavsrett og åpne lisenser</h2>
+      <p>
+        {SITE.name} anvender åpne offentlige data for å gjøre samfunnsviktig informasjon tilgjengelig for allmennheten.
+        Vi respekterer opphavsrett og lisensvilkår for alle datakilder vi benytter:
+      </p>
+      <ul>
+        <li>
+          <strong><a href={NLOD_URL} target="_blank" rel="noopener noreferrer">Norsk lisens for offentlige data (NLOD 2.0)</a>:</strong>
+          Datasett fra Norges Bank (valutakurser og renter), Norges vassdrags- og energidirektorat (NVE, varsler for flom,
+          jordskred og snøskred) og Stortinget (vedtak og oppsummeringer) benyttes under NLOD.
+        </li>
+        <li>
+          <strong><a href={CC_BY_URL} target="_blank" rel="noopener noreferrer">Creative Commons Navngivelse 4.0 Internasjonal (CC BY 4.0)</a>:</strong>
+          Værdata, meteorologiske observasjoner og farevarsler fra Meteorologisk institutt (MET Norway) benyttes og krediteres i samsvar med CC BY 4.0.
+        </li>
+        <li>
+          <strong>Kildekredittering og lenking:</strong> Vi oppgir alltid opprinnelig kilde og lisens, og lenker til etatens
+          originalkilde eller åpne API der dette er hensiktsmessig.
+        </li>
+        <li>
+          <strong>Sitatrett og offentlige dokumenter:</strong> Bearbeidelse og sitering av pressemeldinger fra regjeringen,
+          departementene og offentlige instanser skjer i samsvar med god skikk og åndsverklovens bestemmelser.
+        </li>
+      </ul>
+
+      <h2 id="rettelser">6. Rettelser og klageadgang</h2>
+      <p>
+        Åpenhet om feil er grunnleggende for tillit. Dersom {SITE.name} publiserer feilaktige opplysninger eller
+        upresisheter, skal dette rettes så raskt og tydelig som mulig, i tråd med Vær Varsom-plakaten. Alle rettelser, presiseringer og
+        avpubliseringer føres med dato på siden <a href="/rettelser/">Rettelser</a>. Hele regelverket står i
+        <a href="/rettelsespolitikk/">Rettelsespolitikk</a>. Klager behandles etter <a href="/klager/">Klager</a>, og tall for rettelser og klager samles i <a href="/standardrapport/">standardrapporten</a>.
+      </p>
+      <h3>Retningslinjer for retting</h3>
+      <ul>
+        <li>
+          <strong>Ingen stille endringer:</strong> Vi endrer ikke en sak i det stille. En rettelse føres som note
+          under saken og på siden <a href="/rettelser/">Rettelser</a>, med dato. En sak vi tar ned (avpublisering) føres på samme side med begrunnelse.
+        </li>
+        <li>
+          <strong>Tydelig rettelsesnotat:</strong> Rettelsen skal redegjøre for hva som opprinnelig sto feil, hva de
+          korrekte opplysningene er, og dato for når rettelsen ble foretatt.
+        </li>
+        <li>
+          <strong>Skille mellom oppdatering og feilretting:</strong> Nye opplysninger merkes som oppdatering, uriktige fakta rettes som
+          rettelse, og uklare formuleringer som presisering. Ingen av disse blandes sammen.
+        </li>
+      </ul>
+
+      <h3>Klagebehandling og kontaktpunkt</h3>
+      <p>
+        Mener du at en sak på {SITE.name} inneholder feil, er mangelfull, eller er i strid med god presseskikk?
+        Vi oppfordrer alle lesere og berørte parter til å ta kontakt:
+      </p>
+      <p>
+        {
+          SITE.epost ? (
+            <>
+              E-post for henvendelser og klager: <a href={`mailto:${SITE.epost}`}><strong>{SITE.epost}</strong></a>
+            </>
+          ) : (
+            'Ta kontakt med redaksjonen via vårt kontaktpunkt.'
+          )
+        }
+      </p>
+      <p>
+        Henvendelser om feil vurderes så raskt som mulig. Henvendelser som gjelder enkeltpersoners rettigheter behandles først.
+      </p>
+      <p>
+        Mener du at {SITE.name} har brutt god presseskikk, kan du skrive til redaksjonen. {SITE.name} er ikke tilsluttet
+        Norsk Presseforbund, og PFU behandler derfor ikke klager på {SITE.name} (se
+        <a href="/juridisk/">Juridisk informasjon og kolofon</a>, punkt 15).
+      </p>
+    </div>
+  </article>
+</Base>

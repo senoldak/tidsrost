@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 432" width="760" height="432" role="img" aria-label="Andel husholdningsavfall levert til materialgjenvinning">
+<title>Andel husholdningsavfall levert til materialgjenvinning</title>
+<rect width="760" height="432" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Andel husholdningsavfall levert til materialgjenvinning</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Prosent av total mengde, 2015–2025 (inkl. biogass og kompostering)</text>
+<text x="24" y="92" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Prosent</text>
+<line x1="74" x2="736" y1="352" y2="352" stroke="#16191c" stroke-width="1"/>
+<text x="66" y="356" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">0,0</text>
+<line x1="74" x2="736" y1="270.7" y2="270.7" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="274.7" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">20,0</text>
+<line x1="74" x2="736" y1="189.3" y2="189.3" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="193.3" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">40,0</text>
+<line x1="74" x2="736" y1="108" y2="108" stroke="#dcded8" stroke-width="1"/>
+<text x="66" y="112" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">60,0</text>
+<rect x="86" y="197.9" width="36.1" height="154.1" fill="#1f5f99"/>
+<text x="104.1" y="191.9" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">37,9</text>
+<text x="104.1" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2015</text>
+<rect x="146.2" y="197.1" width="36.1" height="154.9" fill="#1f5f99"/>
+<text x="164.3" y="191.1" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">38,1</text>
+<text x="164.3" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2016</text>
+<rect x="206.4" y="193.4" width="36.1" height="158.6" fill="#1f5f99"/>
+<text x="224.5" y="187.4" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">39,0</text>
+<text x="224.5" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2017</text>
+<rect x="266.6" y="190.1" width="36.1" height="161.9" fill="#1f5f99"/>
+<text x="284.6" y="184.1" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">39,8</text>
+<text x="284.6" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2018</text>
+<rect x="326.8" y="186.5" width="36.1" height="165.5" fill="#1f5f99"/>
+<text x="344.8" y="180.5" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">40,7</text>
+<text x="344.8" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2019</text>
+<rect x="386.9" y="184.9" width="36.1" height="167.1" fill="#1f5f99"/>
+<text x="405" y="178.9" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">41,1</text>
+<text x="405" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2020</text>
+<rect x="447.1" y="176.3" width="36.1" height="175.7" fill="#1f5f99"/>
+<text x="465.2" y="170.3" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">43,2</text>
+<text x="465.2" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2021</text>
+<rect x="507.3" y="174.3" width="36.1" height="177.7" fill="#1f5f99"/>
+<text x="525.4" y="168.3" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">43,7</text>
+<text x="525.4" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2022</text>
+<rect x="567.5" y="168.6" width="36.1" height="183.4" fill="#1f5f99"/>
+<text x="585.5" y="162.6" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">45,1</text>
+<text x="585.5" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2023</text>
+<rect x="627.7" y="163.7" width="36.1" height="188.3" fill="#1f5f99"/>
+<text x="645.7" y="157.7" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">46,3</text>
+<text x="645.7" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2024</text>
+<rect x="687.9" y="153.1" width="36.1" height="198.9" fill="#16191c"/>
+<text x="705.9" y="147.1" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#16191c">48,9</text>
+<text x="705.9" y="372" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#2f353a">2025</text>
+<line x1="24" x2="736" y1="392" y2="392" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="410" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 12241</text>
+<text x="736" y="410" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 434" width="760" height="434" role="img" aria-label="Statsbudsjettets utgifter 2027, utvalgte poster">
+<title>Statsbudsjettets utgifter 2027, utvalgte poster</title>
+<rect width="760" height="434" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Statsbudsjettets utgifter 2027, utvalgte poster</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Regjeringens forslag, milliarder kroner (utenom petroleum og lånetransaksjoner)</text>
+<text x="24" y="92" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168"></text>
+<text x="24" y="121" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Folketrygden</text>
+<rect x="344" y="108" width="346" height="20" fill="#16191c"/>
+<text x="696" y="122" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">794,1</text>
+<text x="24" y="155" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Rammetilskudd til kommuner og fylkeskommuner</text>
+<rect x="344" y="142" width="121" height="20" fill="#1f5f99"/>
+<text x="471" y="156" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">277,6</text>
+<text x="24" y="189" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Regionale helseforetak</text>
+<rect x="344" y="176" width="109.1" height="20" fill="#1f5f99"/>
+<text x="459.1" y="190" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">250,4</text>
+<text x="24" y="223" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Samferdsel</text>
+<rect x="344" y="210" width="43.5" height="20" fill="#1f5f99"/>
+<text x="393.5" y="224" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">99,9</text>
+<text x="24" y="257" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Høyere utdanning, forskning og fagskoler</text>
+<rect x="344" y="244" width="29.9" height="20" fill="#1f5f99"/>
+<text x="379.9" y="258" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">68,6</text>
+<text x="24" y="291" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Jordbruksavtalen</text>
+<rect x="344" y="278" width="14.6" height="20" fill="#1f5f99"/>
+<text x="364.6" y="292" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">33,4</text>
+<text x="24" y="325" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Barnetrygd og kontantstøtte</text>
+<rect x="344" y="312" width="13.4" height="20" fill="#1f5f99"/>
+<text x="363.4" y="326" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">30,8</text>
+<text x="24" y="359" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Renter på statsgjeld</text>
+<rect x="344" y="346" width="10.6" height="20" fill="#1f5f99"/>
+<text x="360.6" y="360" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">24,4</text>
+<line x1="24" x2="736" y1="394" y2="394" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="412" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: regjeringen.no, Statsbudsjettet 2027, tabell 1. Utgifter i alt: 2 286,8 mrd. kr</text>
+<text x="736" y="412" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

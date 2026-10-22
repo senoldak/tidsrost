@@ -1,0 +1,52 @@
+# build output
+dist/
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+
+# editor / claude
+.claude/
+
+# impeccable çalışma dosyaları (taslaklar, ekran görüntüleri)
+.impeccable/mocks/
+.impeccable/questions/
+.impeccable/review/
+.wrangler/
+
+# örnek kapak çıktıları
+.kapak-ornekleri/
+
+# şifreli kaynak listesinin açık hali (bkz. scripts/nyheter/hemmelig.mjs)
+scripts/nyheter/kilder/hemmelige-kilder.json
+
+# Facebook/Instagram görselleri yayında üretilir (scripts/sosial/bilder.mjs)
+public/sosial/
+
+# strateji ve kimlik belgeleri yalnız yerelde durur (repo herkese açık)
+docs/superpowers/
+PRODUCT.md
+DESIGN.md
+BRAND.md
+AGENTS.md
+
+# ortak motor (private mecmua'dan CI'da salt-okur çekilir)
+.mecmua/

@@ -1,0 +1,742 @@
+{
+  "_aciklama": "Standartlar Faz 0: dört haber botunun kırmızı/sarı süzgeci (belirlenimci). Girdi biçimi risk-*.json ile aynı: düz girdi kelime başı köküdür (sonrası serbest), '/.../' düzenli ifadedir (iu). yatirimTavsiyesi listeleri kopyala.mjs ile risk-<dil>.json dosyalarından eklenir; burada yazılmaz. Medya adları burada YAZILMAZ (repo herkese açık): sitenin şifreli kaynak listesinden çözülüp standartDenetle({ medyaAdlari }) ile verilir.",
+  "tr": {
+    "kirmizi": {
+      "suc": [
+        "tutukla",
+        "tutuklu",
+        "gözaltı",
+        "cinayet",
+        "öldürül",
+        "öldürdü",
+        "bıçakla",
+        "silahlı saldırı",
+        "tecavüz",
+        "cinsel saldırı",
+        "taciz",
+        "istismar",
+        "hapis cezası",
+        "hapse gir",
+        "hapse gönderil",
+        "hapse atıl",
+        "hapsedildi",
+        "mahkûm edil",
+        "mahkum edil",
+        "iddianame",
+        "suç duyurusu",
+        "suçlamasıyla",
+        "suçlanan",
+        "suçlandı",
+        "sanık",
+        "şüpheli olarak",
+        "yakalandı",
+        "dolandırıcılıktan",
+        "dolandırıcılık suç",
+        "dolandırıcılık iddiası",
+        "dolandırıcılık soruşturma",
+        "rüşvet",
+        "zimmet",
+        "kara para",
+        "uyuşturucu",
+        "kaçakçılık",
+        "firari",
+        "cezaev",
+        "ceza davası",
+        "yargılan",
+        "hâkim karşısına",
+        "hakim karşısına",
+        "savcılık"
+      ],
+      "intihar": [
+        "intihar",
+        "kendine zarar",
+        "canına kıy"
+      ],
+      "turkiye-devlet": [
+        "erdoğan",
+        "türkiye cumhurbaşkan",
+        "türk silahlı kuvvet",
+        "/(?<![\\p{L}\\p{N}])tsk(?![\\p{L}\\p{N}])/",
+        "/(?<![\\p{L}\\p{N}])mit(?![\\p{L}\\p{N}])/",
+        "akp",
+        "ak parti",
+        "/(?<![\\p{L}\\p{N}])chp(?![\\p{L}\\p{N}])/",
+        "/(?<![\\p{L}\\p{N}])mhp(?![\\p{L}\\p{N}])/",
+        "dem parti",
+        "iyi parti",
+        "türklüğü",
+        "türk milletini",
+        "devletin kurum"
+      ],
+      "teror": [
+        "pkk",
+        "fetö",
+        "/(fethullah\\s+gülen|gülen\\s+(hareketi|cemaati|yapılanması))/",
+        "işid",
+        "ışid",
+        "/(?<![\\p{L}\\p{N}])isis(?![\\p{L}\\p{N}])/",
+        "deaş",
+        "el kaide",
+        "hamas",
+        "hizbullah",
+        "/(?<![\\p{L}\\p{N}])ypg(?![\\p{L}\\p{N}])/",
+        "/(?<![\\p{L}\\p{N}])pyd(?![\\p{L}\\p{N}])/",
+        "dhkp",
+        "terör örgüt",
+        "terör saldır",
+        "terörist"
+      ],
+      "savas-dili": [
+        "şehit",
+        "işgalci",
+        "siyonist",
+        "haçlı",
+        "mücahit",
+        "kâfir",
+        "kafir"
+      ],
+      "ozel-haber": [
+        "kulis",
+        "öğrendiğimize göre",
+        "edindiği bilgiye göre",
+        "edindiğimiz bilgiye göre",
+        "edindiği bilgilere göre",
+        "isim vermek istemeyen",
+        "kimliğini açıklamayan",
+        "adının açıklanmaması",
+        "konuya yakın kaynak",
+        "konuya yakın kişi",
+        "konuya yakın isim",
+        "özel haber"
+      ]
+    },
+    "sari": {
+      "olum-kaza": [
+        "hayatını kaybett",
+        "öldü",
+        "ölü bulun",
+        "kazada",
+        "trafik kaza",
+        "boğul",
+        "yaralandı"
+      ],
+      "turkiye-resmi": [
+        "bakanı",
+        "bakanlığı",
+        "tbmm",
+        "meclis",
+        "valilik",
+        "kaymakam",
+        "emniyet"
+      ],
+      "savas-konu": [
+        "savaş",
+        "çatışma",
+        "bombardıman",
+        "ateşkes",
+        "füze",
+        "hava saldırı"
+      ],
+      "secim": [
+        "seçim",
+        "seçmen",
+        "aday"
+      ]
+    },
+    "birlikte": [
+      {
+        "kural": "cocuk",
+        "seviye": "kirmizi",
+        "a": [
+          "çocuk",
+          "bebek",
+          "öğrenci",
+          "küçük yaşta",
+          "reşit olmayan"
+        ],
+        "b": [
+          "istismar",
+          "öldü",
+          "hayatını kaybett",
+          "kayıp",
+          "taciz",
+          "şiddet",
+          "kaçırıl",
+          "intihar"
+        ]
+      },
+      {
+        "kural": "grup-genelleme",
+        "seviye": "kirmizi",
+        "a": [
+          "göçmen",
+          "mülteci",
+          "sığınmacı",
+          "suriyeli",
+          "afgan",
+          "kürt",
+          "/(?<![\\p{L}\\p{N}])arap(?!\\s+emirlik)(?!\\s+birli)/",
+          "ermeni",
+          "yahudi",
+          "müslüman",
+          "hristiyan",
+          "hıristiyan",
+          "alevi",
+          "roman vatandaş",
+          "çingene",
+          "yabancı uyruklu"
+        ],
+        "b": [
+          "suç",
+          "tutukla",
+          "gözaltı",
+          "saldır",
+          "şiddet",
+          "cinayet",
+          "tecavüz",
+          "taciz",
+          "hırsız",
+          "kaçak"
+        ]
+      },
+      {
+        "kural": "kurum-degerlendirme",
+        "seviye": "kirmizi",
+        "a": [
+          "cumhurbaşkan",
+          "hükümet",
+          "tbmm",
+          "meclis",
+          "bakan",
+          "merkez bankas",
+          "tcmb",
+          "spk",
+          "bddk",
+          "yargı",
+          "mahkeme",
+          "yargıtay",
+          "danıştay",
+          "savcı",
+          "emniyet",
+          "polis",
+          "jandarma",
+          "valilik",
+          "/(?<![\\p{L}\\p{N}])vali(?![\\p{L}\\p{N}])/",
+          "kaymakam",
+          "tüik",
+          "hazine",
+          "sermaye piyasası kurulu",
+          "bankacılık düzenleme",
+          "rekabet kurumu",
+          "devlet",
+          "kurul",
+          "norges bank",
+          "storting",
+          "regjering",
+          "/(?<![\\p{L}\\p{N}])fed(?![\\p{L}\\p{N}])/",
+          "/(?<![\\p{L}\\p{N}])ecb(?![\\p{L}\\p{N}])/",
+          "avrupa merkez"
+        ],
+        "b": [
+          "beceriksiz",
+          "/(?<![\\p{L}\\p{N}])başarısız(\\s+(oldu|olmuş|olmuştur|olmuştu|kaldı)|dır|dı|lık|lığı|lığa|lığını|lığıdır)(?![\\p{L}\\p{N}])/",
+          "/(?<![\\p{L}\\p{N}])yetersiz\\s+(kal(dı|mış|mıştır|mıştı)|olmuş|olmuştur)(?![\\p{L}\\p{N}])/",
+          "sınıfta kal",
+          "fiyasko",
+          "rezalet",
+          "hezimet",
+          "liyakatsiz"
+        ]
+      }
+    ],
+    "sariGruplar": {
+      "kural": "grup-konu",
+      "a": [
+        "göçmen",
+        "mülteci",
+        "sığınmacı",
+        "suriyeli",
+        "afgan",
+        "kürt",
+        "ermeni",
+        "yahudi",
+        "müslüman",
+        "hristiyan",
+        "hıristiyan",
+        "alevi",
+        "çingene",
+        "yabancı uyruklu",
+        "/(?<![\\p{L}\\p{N}])din(i|in|e|de|den|ler|lerin|leri|sel|dar|darlar)?(?![\\p{L}\\p{N}])/",
+        "etnik"
+      ]
+    },
+    "yatirimTavsiyesi": []
+  },
+  "nb": {
+    "kirmizi": {
+      "suc": [
+        "pågrep",
+        "siktet for",
+        "siktet etter",
+        "er siktet",
+        "ble siktet",
+        "blitt siktet",
+        "siktelse",
+        "tiltalt",
+        "tiltale",
+        "dømt",
+        "domfelt",
+        "fengsel",
+        "varetekt",
+        "drap",
+        "voldtekt",
+        "overgrep",
+        "knivstikk",
+        "/(?<![\\p{L}\\p{N}])ran(et|ene)?(?![\\p{L}\\p{N}])/",
+        "arrestert",
+        "mistenkt",
+        "anmeldt",
+        "straffesak",
+        "økokrim",
+        "svindel",
+        "bedrageri",
+        "narkotika",
+        "skyting",
+        "skutt",
+        "kriminal"
+      ],
+      "intihar": [
+        "selvmord",
+        "selvskad",
+        "tok sitt eget liv",
+        "ta sitt eget liv"
+      ],
+      "turkiye-devlet": [
+        "erdoğan",
+        "erdogan",
+        "tyrkias president",
+        "tyrkisk president",
+        "/(?<![\\p{L}\\p{N}])akp(?![\\p{L}\\p{N}])/"
+      ],
+      "teror": [
+        "pkk",
+        "/(?<![\\p{L}\\p{N}])isis(?![\\p{L}\\p{N}])/",
+        "al-qaida",
+        "al qaida",
+        "hamas",
+        "hizbollah",
+        "hezbollah",
+        "/(?<![\\p{L}\\p{N}])ypg(?![\\p{L}\\p{N}])/",
+        "terrororganisasjon",
+        "terrorangrep",
+        "terrorist"
+      ],
+      "savas-dili": [
+        "martyr",
+        "sionist",
+        "okkupant",
+        "korsfarer",
+        "vantro"
+      ],
+      "ozel-haber": [
+        "erfarer",
+        "kilder sier",
+        "ifølge kilder",
+        "anonyme kilder",
+        "kilde med kjennskap",
+        "kilder med kjennskap",
+        "kilder nær",
+        "ønsker ikke å stå frem med navn"
+      ]
+    },
+    "sari": {
+      "olum-kaza": [
+        "omkom",
+        "døde",
+        "død etter",
+        "funnet død",
+        "drukn",
+        "ulykke",
+        "skadet",
+        "hardt skadd",
+        "drept"
+      ],
+      "savas-konu": [
+        "krig",
+        "angrep",
+        "bombing",
+        "våpenhvile",
+        "rakett",
+        "missil"
+      ],
+      "secim": [
+        "/(?<![\\p{L}\\p{N}])valg(et|ene|kamp\\p{L}*)?(?![\\p{L}\\p{N}])/",
+        "velger",
+        "stortingsvalg",
+        "kommunevalg"
+      ]
+    },
+    "birlikte": [
+      {
+        "kural": "cocuk",
+        "seviye": "kirmizi",
+        "a": [
+          "barn",
+          "gutt",
+          "jente",
+          "elev",
+          "baby",
+          "mindreårig",
+          "tenåring"
+        ],
+        "b": [
+          "overgrep",
+          "omkom",
+          "døde",
+          "drept",
+          "savnet",
+          "vold",
+          "mobb",
+          "selvmord",
+          "bortført"
+        ]
+      },
+      {
+        "kural": "grup-genelleme",
+        "seviye": "kirmizi",
+        "a": [
+          "innvandr",
+          "flyktning",
+          "asylsøk",
+          "muslim",
+          "jøde",
+          "jødisk",
+          "kristne",
+          "/(?<![\\p{L}\\p{N}])rom(folk)?(?![\\p{L}\\p{N}])/",
+          "sigøyner",
+          "somali",
+          "utlending"
+        ],
+        "b": [
+          "kriminal",
+          "siktet",
+          "pågrep",
+          "dømt",
+          "vold",
+          "voldtekt",
+          "drap",
+          "ran",
+          "tyveri"
+        ]
+      },
+      {
+        "kural": "kurum-degerlendirme",
+        "seviye": "kirmizi",
+        "a": [
+          "/(?<![\\p{L}\\p{N}])[\\p{L}\\p{N}]*regjering[\\p{L}\\p{N}]*/",
+          "storting",
+          "statsminister",
+          "statsråd",
+          "/(?<![\\p{L}\\p{N}])navs?(?![\\p{L}\\p{N}])/",
+          "/(?<![\\p{L}\\p{N}])udis?(?![\\p{L}\\p{N}])/",
+          "/(?<![\\p{L}\\p{N}])politi(et|ets)?(?![\\p{L}\\p{N}])/",
+          "politimester",
+          "politidirektorat",
+          "/(?<![\\p{L}\\p{N}])[\\p{L}\\p{N}]*domstol[\\p{L}\\p{N}]*/",
+          "tingrett",
+          "lagmannsrett",
+          "høyesterett",
+          "norges bank",
+          "sentralbank",
+          "kongehus",
+          "/(?<![\\p{L}\\p{N}])konge(n|ns)?(?![\\p{L}\\p{N}])/",
+          "kongefamilie",
+          "dronning",
+          "kronprins",
+          "/(?<![\\p{L}\\p{N}])[\\p{L}\\p{N}]*departement[\\p{L}\\p{N}]*/",
+          "/(?<![\\p{L}\\p{N}])[\\p{L}\\p{N}]*direktorat[\\p{L}\\p{N}]*/",
+          "skatteetaten",
+          "statsforvalter",
+          "/(?<![\\p{L}\\p{N}])[\\p{L}\\p{N}]*tilsyn(et|ets)?(?![\\p{L}\\p{N}])/",
+          "riksrevisjon",
+          "sametinget",
+          "/(?<![\\p{L}\\p{N}])[\\p{L}\\p{N}]*minister[\\p{L}\\p{N}]*/"
+        ],
+        "b": [
+          "udugelig",
+          "inkompetent",
+          "feilslått",
+          "fiasko",
+          "/(?<![\\p{L}\\p{N}])har\\s+feilet(?![\\p{L}\\p{N}])(?!\\s+(med\\s+)?å(?![\\p{L}\\p{N}]))/"
+        ]
+      }
+    ],
+    "sariGruplar": {
+      "kural": "grup-konu",
+      "a": [
+        "innvandr",
+        "flyktning",
+        "asylsøk",
+        "muslim",
+        "jøde",
+        "jødisk",
+        "sigøyner",
+        "somali",
+        "utlending",
+        "religi",
+        "etnisk"
+      ]
+    },
+    "yatirimTavsiyesi": []
+  },
+  "en": {
+    "kirmizi": {
+      "suc": [
+        "arrested",
+        "arrest of",
+        "charged with",
+        "indicted",
+        "indictment",
+        "convicted",
+        "sentenced",
+        "jailed",
+        "prison",
+        "murder",
+        "rape",
+        "sexual assault",
+        "sexual abuse",
+        "fraud charge",
+        "detained",
+        "in custody",
+        "suspect",
+        "prosecutors",
+        "pleaded guilty",
+        "pleads guilty",
+        "criminal case",
+        "criminal charge",
+        "money laundering",
+        "drug trafficking",
+        "smuggling",
+        "stabbing",
+        "shooting"
+      ],
+      "intihar": [
+        "suicide",
+        "self-harm",
+        "self harm",
+        "took his own life",
+        "took her own life",
+        "took their own life"
+      ],
+      "turkiye-devlet": [
+        "erdoğan",
+        "erdogan",
+        "turkish president",
+        "president of turkey",
+        "turkish armed forces",
+        "turkish army",
+        "/(?<![\\p{L}\\p{N}])akp(?![\\p{L}\\p{N}])/"
+      ],
+      "teror": [
+        "pkk",
+        "/(?<![\\p{L}\\p{N}])isis(?![\\p{L}\\p{N}])/",
+        "isil",
+        "daesh",
+        "al-qaeda",
+        "al qaeda",
+        "hamas",
+        "hezbollah",
+        "/(?<![\\p{L}\\p{N}])ypg(?![\\p{L}\\p{N}])/",
+        "fetö",
+        "/(fethullah\\s+gülen|gülen\\s+movement)/",
+        "terrorist",
+        "terror attack",
+        "terror group",
+        "terror organization",
+        "terror organisation"
+      ],
+      "savas-dili": [
+        "martyr",
+        "zionist",
+        "invaders",
+        "crusader",
+        "infidel"
+      ],
+      "ozel-haber": [
+        "people familiar with",
+        "person familiar with",
+        "sources familiar",
+        "source familiar",
+        "according to people",
+        "according to sources",
+        "according to a source",
+        "on condition of anonymity",
+        "who asked not to be named",
+        "declined to be named",
+        "has learned",
+        "have learned",
+        "exclusive:",
+        "sources said",
+        "sources say",
+        "a source said",
+        "a source close"
+      ]
+    },
+    "sari": {
+      "olum-kaza": [
+        "killed",
+        "died",
+        "/(?<![\\p{L}\\p{N}])dead(?![\\p{L}\\p{N}])/",
+        "death toll",
+        "found dead",
+        "drowned",
+        "crash",
+        "injured",
+        "accident"
+      ],
+      "turkiye-resmi": [
+        "turkish minister",
+        "turkish ministry",
+        "turkish parliament",
+        "grand national assembly"
+      ],
+      "savas-konu": [
+        "/(?<![\\p{L}\\p{N}])wars?(?![\\p{L}\\p{N}])/",
+        "conflict",
+        "airstrike",
+        "air strike",
+        "bombing",
+        "ceasefire",
+        "missile"
+      ],
+      "secim": [
+        "election",
+        "voter",
+        "ballot",
+        "candidate"
+      ]
+    },
+    "birlikte": [
+      {
+        "kural": "cocuk",
+        "seviye": "kirmizi",
+        "a": [
+          "child",
+          "children",
+          "/(?<![\\p{L}\\p{N}])boys?(?![\\p{L}\\p{N}])/",
+          "girl",
+          "/(?<![\\p{L}\\p{N}])minors?(?![\\p{L}\\p{N}])/",
+          "teen",
+          "toddler",
+          "baby",
+          "student",
+          "pupil"
+        ],
+        "b": [
+          "abuse",
+          "killed",
+          "died",
+          "/(?<![\\p{L}\\p{N}])dead(?![\\p{L}\\p{N}])/",
+          "missing",
+          "assault",
+          "kidnap",
+          "abduct",
+          "suicide",
+          "bullied"
+        ]
+      },
+      {
+        "kural": "grup-genelleme",
+        "seviye": "kirmizi",
+        "a": [
+          "immigrant",
+          "migrant",
+          "refugee",
+          "asylum",
+          "muslim",
+          "/(?<![\\p{L}\\p{N}])jews?(?![\\p{L}\\p{N}])/",
+          "jewish",
+          "christians",
+          "/(?<![\\p{L}\\p{N}])roma(?![\\p{L}\\p{N}])/",
+          "gypsy",
+          "gypsies",
+          "syrian",
+          "afghan",
+          "kurd",
+          "/(?<![\\p{L}\\p{N}])arabs?(?![\\p{L}\\p{N}])/",
+          "armenian",
+          "foreigner"
+        ],
+        "b": [
+          "crime",
+          "criminal",
+          "arrest",
+          "attack",
+          "violence",
+          "murder",
+          "rape",
+          "theft",
+          "illegal"
+        ]
+      },
+      {
+        "kural": "kurum-degerlendirme",
+        "seviye": "kirmizi",
+        "a": [
+          "government",
+          "parliament",
+          "storting",
+          "central bank",
+          "norges bank",
+          "ministry",
+          "minister",
+          "/(?<![\\p{L}\\p{N}])courts?(?![\\p{L}\\p{N}])/",
+          "supreme court",
+          "police",
+          "royal",
+          "/(?<![\\p{L}\\p{N}])king(?![\\p{L}\\p{N}])/",
+          "/(?<![\\p{L}\\p{N}])queen(?![\\p{L}\\p{N}])/",
+          "/(?<![\\p{L}\\p{N}])fed(?![\\p{L}\\p{N}])/",
+          "federal reserve",
+          "/(?<![\\p{L}\\p{N}])ecb(?![\\p{L}\\p{N}])/",
+          "commission",
+          "agency",
+          "directorate",
+          "regulator",
+          "/(?<![\\p{L}\\p{N}])navs?(?![\\p{L}\\p{N}])/",
+          "/(?<![\\p{L}\\p{N}])udis?(?![\\p{L}\\p{N}])/",
+          "tax authorit",
+          "judiciary",
+          "cabinet"
+        ],
+        "b": [
+          "incompetent",
+          "botched",
+          "fiasco",
+          "/(?<![\\p{L}\\p{N}])(has|have|had)\\s+(failed|bungled)(?![\\p{L}\\p{N}])(?!\\s+to(?![\\p{L}\\p{N}]))/"
+        ]
+      }
+    ],
+    "sariGruplar": {
+      "kural": "grup-konu",
+      "a": [
+        "immigrant",
+        "migrant",
+        "refugee",
+        "asylum",
+        "muslim",
+        "/(?<![\\p{L}\\p{N}])jews?(?![\\p{L}\\p{N}])/",
+        "jewish",
+        "gypsy",
+        "syrian",
+        "afghan",
+        "kurd",
+        "armenian",
+        "foreigner",
+        "religio",
+        "ethnic"
+      ]
+    },
+    "yatirimTavsiyesi": []
+  }
+}

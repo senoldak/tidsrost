@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 536" width="760" height="536" role="img" aria-label="Husholdningsavfall etter materiale, 2025">
+<title>Husholdningsavfall etter materiale, 2025</title>
+<rect width="760" height="536" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Husholdningsavfall etter materiale, 2025</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">De elleve største materialtypene</text>
+<text x="24" y="92" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">1 000 tonn</text>
+<text x="24" y="121" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Restavfall</text>
+<rect x="174" y="108" width="516" height="20" fill="#16191c"/>
+<text x="696" y="122" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">810</text>
+<text x="24" y="155" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Treavfall</text>
+<rect x="174" y="142" width="158.6" height="20" fill="#1f5f99"/>
+<text x="338.6" y="156" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">249</text>
+<text x="24" y="189" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Matavfall</text>
+<rect x="174" y="176" width="153.5" height="20" fill="#1f5f99"/>
+<text x="333.5" y="190" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">241</text>
+<text x="24" y="223" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Papp</text>
+<rect x="174" y="210" width="116.6" height="20" fill="#1f5f99"/>
+<text x="296.6" y="224" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">183</text>
+<text x="24" y="257" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Hageavfall</text>
+<rect x="174" y="244" width="107.7" height="20" fill="#1f5f99"/>
+<text x="287.7" y="258" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">169</text>
+<text x="24" y="291" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Metall</text>
+<rect x="174" y="278" width="58.6" height="20" fill="#1f5f99"/>
+<text x="238.6" y="292" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">92</text>
+<text x="24" y="325" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Farlig avfall</text>
+<rect x="174" y="312" width="52.2" height="20" fill="#1f5f99"/>
+<text x="232.2" y="326" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">82</text>
+<text x="24" y="359" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Glass</text>
+<rect x="174" y="346" width="51.6" height="20" fill="#1f5f99"/>
+<text x="231.6" y="360" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">81</text>
+<text x="24" y="393" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Byggavfall</text>
+<rect x="174" y="380" width="37.6" height="20" fill="#1f5f99"/>
+<text x="217.6" y="394" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">59</text>
+<text x="24" y="427" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Plast</text>
+<rect x="174" y="414" width="36.3" height="20" fill="#1f5f99"/>
+<text x="216.3" y="428" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">57</text>
+<text x="24" y="461" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">EE-avfall</text>
+<rect x="174" y="448" width="31.9" height="20" fill="#1f5f99"/>
+<text x="211.9" y="462" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">50</text>
+<line x1="24" x2="736" y1="496" y2="496" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="514" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 13136</text>
+<text x="736" y="514" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>

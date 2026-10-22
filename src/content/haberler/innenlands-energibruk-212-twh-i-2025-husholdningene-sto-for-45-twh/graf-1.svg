@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 358" width="760" height="358" role="img" aria-label="Innenlands energibruk etter sektor, 2025">
+<title>Innenlands energibruk etter sektor, 2025</title>
+<rect width="760" height="358" fill="#fdfdfb"/>
+<rect x="0" y="0" width="760" height="2" fill="#16191c"/>
+<text x="24" y="40" font-family="'Source Serif 4', Georgia, serif" font-size="22" font-weight="650" fill="#16191c">Innenlands energibruk etter sektor, 2025</text>
+<text x="24" y="66" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#2f353a">Totalt 212,0 TWh (utenom råstoff)</text>
+<text x="24" y="92" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">TWh</text>
+<text x="24" y="121" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Industri og bergverk</text>
+<rect x="274" y="108" width="416" height="20" fill="#1f5f99"/>
+<text x="696" y="122" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">73,4 TWh</text>
+<text x="24" y="155" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Transport</text>
+<rect x="274" y="142" width="285.1" height="20" fill="#1f5f99"/>
+<text x="565.1" y="156" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">50,3 TWh</text>
+<text x="24" y="189" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Private husholdninger</text>
+<rect x="274" y="176" width="256.7" height="20" fill="#16191c"/>
+<text x="536.7" y="190" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">45,3 TWh</text>
+<text x="24" y="223" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Privat og offentlig tjenesteyting</text>
+<rect x="274" y="210" width="198.4" height="20" fill="#1f5f99"/>
+<text x="478.4" y="224" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">35,0 TWh</text>
+<text x="24" y="257" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#2f353a">Jordbruk, skogbruk og fiske</text>
+<rect x="274" y="244" width="45.3" height="20" fill="#1f5f99"/>
+<text x="325.3" y="258" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#16191c">8,0 TWh</text>
+<text x="24" y="300" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Netto innenlands forbruk eksklusive råstoff. Tilført energi (netto energiinnhold).</text>
+<line x1="24" x2="736" y1="318" y2="318" stroke="#dcded8" stroke-width="1"/>
+<text x="24" y="336" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5a6168">Kilde: SSB, tabell 11561</text>
+<text x="736" y="336" text-anchor="end" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#16191c">tidsrøst</text>
+</svg>
