@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-22T14:11:29.092Z",
+  "hentet": "2026-10-22T16:13:53.645Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,19 +7,19 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-22T14:09:36+00:00",
+  "sistEndretHosMet": "2026-10-22T16:13:36+00:00",
   "varsler": [
     {
-      "id": "2.49.0.1.578.0.20261021135121.003",
+      "id": "2.49.0.1.578.0.20261022153705.008",
       "niva": "gult",
       "hendelse": "Kuling",
       "omrade": "Nordkapp - Vardø",
       "domene": "hav",
       "start": "2026-10-21T09:00:00+00:00",
-      "slutt": "2026-10-22T16:00:00+00:00",
-      "beskrivelse": "Onsdag sørlig stiv kuling 15 m/s, torsdag morgen periodevis sterk kuling 20.",
+      "slutt": "2026-10-23T16:00:00+00:00",
+      "beskrivelse": "Torsdag og fredag sørlig stiv kuling 15 m/s.",
       "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
+      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
