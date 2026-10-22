@@ -1,6 +1,7 @@
 ---
 import { jsonLdMetni } from '../lib/json-ld.mjs';
 import { SITE } from '../lib/site';
+import { LISENS_URL } from '../lib/lisens.mjs';
 import { metaDescription, organization, website } from '../lib/seo';
 import { FORKLART, erForklart, getActiveCategories, getNews } from '../lib/news';
 import Symbol from '../components/Symbol.astro';
@@ -263,6 +264,9 @@ const [nameHead, nameTail] = SITE.name.split('ø');
           {SITE.ikkeKommersiell && ' · Ikke-kommersielt nettsted uten annonser'}
         </span>
         <span>Ark {sheet} · {today}</span>
+      </div>
+      <div class="container copyright">
+        <span>Innhold: <a href={LISENS_URL} rel="license noopener">CC BY-NC 4.0</a> – fritt til ikke-kommersiell bruk med kildehenvisning til {SITE.name}. Logo og navn er ikke omfattet.</span>
       </div>
     </footer>
   </body>

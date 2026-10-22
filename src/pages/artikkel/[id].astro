@@ -1,5 +1,6 @@
 ---
 import { jsonLdMetni } from '../../lib/json-ld.mjs';
+import { LISENS_JSONLD_URL, MEDIA_KILDE_TEKST, visMedieKilde } from '../../lib/lisens.mjs';
 import { Image, getImage } from 'astro:assets';
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
@@ -46,6 +47,7 @@ const source = kilde(haber);
 const sourceUrl = kildeUrl(haber);
 const warn = varsel(title);
 const forklart = erForklart(haber);
+const medieKilde = visMedieKilde({ produksjon, forklart, harOffentligKilde: Boolean(source) });
 // Kişi adıyla yayımlanan yazıların yazar sayfası vardır (/forfatter/<slug>/).
 const forfatterUrl = author !== SITE.name ? `/forfatter/${forfatterSlug(author)}/` : undefined;
 
@@ -92,6 +94,7 @@ const jsonLd = {
       articleSection: forklart ? [section, FORKLART.name] : section,
       inLanguage: 'nb',
       isAccessibleForFree: true,
+      license: LISENS_JSONLD_URL,
       isPartOf: { '@id': WEBSITE_ID },
       ...(entities.length > 0 ? { about: entities } : {}),
     },
@@ -201,6 +204,7 @@ const jsonLd = {
 
     <div class="prose">
       <Content />
+      {medieKilde && <p><em>{MEDIA_KILDE_TEKST}</em></p>}
     </div>
 
     {
