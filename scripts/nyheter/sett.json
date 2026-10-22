@@ -3228,7 +3228,51 @@
     "medier:80af435e66c2af96": "2026-10-22T08:01:05.933Z",
     "medier:87640fd57ab770f5": "2026-10-22T08:01:05.933Z",
     "medier:0b7ef2bcf971b922": "2026-10-22T08:01:05.933Z",
-    "medier:e47b60d4e4642c8f": "2026-10-22T08:01:05.933Z"
+    "medier:e47b60d4e4642c8f": "2026-10-22T08:01:05.933Z",
+    "medier:67eef9e640fa6f34": "2026-10-22T10:01:10.724Z",
+    "medier:cea13fb8055660a8": "2026-10-22T10:01:10.724Z",
+    "medier:55f9a2369f54255a": "2026-10-22T10:01:10.724Z",
+    "medier:1d9dfb5e25975e16": "2026-10-22T10:01:10.724Z",
+    "regjeringen:3181283": "2026-10-22T10:01:10.724Z",
+    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/hvitvaskingskonferansen-2026/": "2026-10-22T10:01:10.724Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2238": "2026-10-22T10:01:10.724Z",
+    "helsedirektoratet:https://www.helsedirektoratet.no/nyheter/nye-eu-midler-til-helse-bred-satsing-pa-fremtidens-helseberedskap": "2026-10-22T10:01:10.724Z",
+    "medier:d1e7e472bc820db0": "2026-10-22T10:01:10.724Z",
+    "medier:4a795de017d1ba59": "2026-10-22T10:01:10.724Z",
+    "medier:cf83cdb59cfba81d": "2026-10-22T10:01:10.724Z",
+    "medier:7a54e74a2774bd48": "2026-10-22T10:01:10.724Z",
+    "medier:6cc132e06a5a5f86": "2026-10-22T10:01:10.724Z",
+    "medier:95f67edd6b6ea518": "2026-10-22T10:01:10.724Z",
+    "medier:ec353d532ed6a0c7": "2026-10-22T10:01:10.724Z",
+    "medier:af1cafd8f9327258": "2026-10-22T10:01:10.724Z",
+    "medier:9fc816e47ce5f22a": "2026-10-22T10:01:10.724Z",
+    "medier:c1393b45a8660ac4": "2026-10-22T10:01:10.724Z",
+    "medier:d5134ffc4156ed08": "2026-10-22T10:01:10.724Z",
+    "medier:b095207ba619e947": "2026-10-22T10:01:10.724Z",
+    "medier:0d4489b4957c730c": "2026-10-22T10:01:10.724Z",
+    "medier:a6fdd99f578bb56e": "2026-10-22T10:01:10.724Z",
+    "medier:7af220a3586a41c9": "2026-10-22T10:01:10.724Z",
+    "medier:e0ffc20ea3486a19": "2026-10-22T10:01:10.724Z",
+    "medier:d09519f28f2fb5a4": "2026-10-22T10:01:10.724Z",
+    "medier:c87137f5a88877a2": "2026-10-22T10:01:10.724Z",
+    "medier:b80a3870f4f36869": "2026-10-22T10:01:10.724Z",
+    "medier:cd187c46df3252c7": "2026-10-22T10:01:10.724Z",
+    "medier:6b65698937a9782d": "2026-10-22T10:01:10.724Z",
+    "medier:b915e7e0811bb6a9": "2026-10-22T10:01:10.724Z",
+    "medier:96936f96523a8b8e": "2026-10-22T10:01:10.724Z",
+    "medier:716105028e4eacff": "2026-10-22T10:01:10.724Z",
+    "medier:7b21a837cc78a61f": "2026-10-22T10:01:10.724Z",
+    "medier:65120ed486c8867f": "2026-10-22T10:01:10.724Z",
+    "medier:5d8cad4ac7299790": "2026-10-22T10:01:10.724Z",
+    "medier:d4ca95dbd85aa20e": "2026-10-22T10:01:10.724Z",
+    "medier:6b0a5a930aca128f": "2026-10-22T10:01:10.724Z",
+    "medier:8160bfe5f05997be": "2026-10-22T10:01:10.724Z",
+    "medier:ad99448119e6d359": "2026-10-22T10:01:10.724Z",
+    "medier:0b70e983baa39ea4": "2026-10-22T10:01:10.724Z",
+    "medier:f74079c0679ecbb6": "2026-10-22T10:01:10.724Z",
+    "medier:e1076e686f64e299": "2026-10-22T10:01:10.724Z",
+    "medier:c3a1e837af88c6a1": "2026-10-22T10:01:10.724Z",
+    "medier:82caf339aaa78d76": "2026-10-22T10:01:10.724Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -3276,91 +3320,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:cc07c27f06f0805d": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T10:02:20.194Z"
-    },
-    "medier:fc5912fb786ec16d": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T10:02:20.194Z"
-    },
-    "medier:d011dc9b28779962": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T10:02:20.194Z"
-    },
-    "medier:8eea3c0dd4ccf3ee": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T10:02:20.194Z"
-    },
-    "medier:beccf5f99364b5df": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T10:02:20.194Z"
-    },
-    "medier:4f8776fbd80b091e": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T10:02:20.194Z"
-    },
-    "medier:6efef6ae223e918c": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T10:02:20.194Z"
-    },
-    "medier:c577211bdd283e9b": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T10:02:20.194Z"
-    },
-    "medier:1f15401cbc4a3bcb": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T10:02:20.194Z"
-    },
-    "medier:5031fc33308ae5ff": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T10:02:20.194Z"
-    },
-    "medier:0f58554d2d577689": {
-      "p": 58,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T10:02:20.194Z"
-    },
-    "medier:f504b5ae10a3681e": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T10:02:20.194Z"
-    },
-    "regjeringen:3178851": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T10:02:20.194Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/10/1168620": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T10:02:20.194Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2187": {
-      "p": 42,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T10:02:20.194Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2184": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T10:02:20.194Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2178": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-19T10:02:20.194Z"
-    },
     "medier:fbd2766906d7ea73": {
       "p": 68,
       "v": "b34cb0de5bde",
@@ -5290,6 +5249,86 @@
       "p": 35,
       "v": "b34cb0de5bde",
       "t": "2026-10-22T08:02:05.258Z"
+    },
+    "medier:cea13fb8055660a8": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T10:02:13.470Z"
+    },
+    "medier:d1e7e472bc820db0": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T10:02:13.470Z"
+    },
+    "medier:0b70e983baa39ea4": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T10:02:13.470Z"
+    },
+    "medier:cf83cdb59cfba81d": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T10:02:13.470Z"
+    },
+    "medier:905b76d2303ccac9": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T10:02:13.470Z"
+    },
+    "medier:95f67edd6b6ea518": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T10:02:13.470Z"
+    },
+    "medier:9fc816e47ce5f22a": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T10:02:13.470Z"
+    },
+    "medier:d09519f28f2fb5a4": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T10:02:13.470Z"
+    },
+    "medier:b915e7e0811bb6a9": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T10:02:13.470Z"
+    },
+    "medier:e1076e686f64e299": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T10:02:13.470Z"
+    },
+    "medier:d5134ffc4156ed08": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T10:02:13.470Z"
+    },
+    "medier:0d4489b4957c730c": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T10:02:13.470Z"
+    },
+    "regjeringen:3181283": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T10:02:13.470Z"
+    },
+    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/hvitvaskingskonferansen-2026/": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T10:02:13.470Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2238": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T10:02:13.470Z"
+    },
+    "helsedirektoratet:https://www.helsedirektoratet.no/nyheter/nye-eu-midler-til-helse-bred-satsing-pa-fremtidens-helseberedskap": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-22T10:02:13.470Z"
     }
   }
 }
