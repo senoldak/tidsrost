@@ -23,7 +23,7 @@ test('kırmızı haber yazılmaz; motora elendi + gerekçe gider', async () => {
   const r = await yayinKapisi({ girdi: sakDenetimGirdisi(sak), kimlik: 'regjeringen:1', ortam, denetle: kirmizi, kaydet, log: sessiz });
   assert.equal(r.karar, 'elendi');
   assert.equal(kayitlar.length, 1);
-  assert.deepEqual(kayitlar[0].kayit, { kimlik: 'regjeringen:1', durum: 'elendi', gerekce: 'standart:kirmizi:suc' });
+  assert.deepEqual(kayitlar[0].kayit, { kimlik: motorKimlik('regjeringen:1'), durum: 'elendi', gerekce: 'standart:kirmizi:suc' });
   assert.equal(kayitlar[0].url, ortam.MOTOR_URL);
 });
 
@@ -34,7 +34,7 @@ test('sarı haber yazılır ve gerekçe çağırana döner (yazildi kaydı için
   assert.equal(r.karar, 'yaz');
   assert.equal(r.s.gerekce, 'standart:sari:olum-kaza');
   assert.equal(kayitlar.length, 0);
-  assert.deepEqual(sariKayit('a:1', 'bir-slug', r.s), { kimlik: 'a:1', durum: 'yazildi', slug: 'bir-slug', gerekce: 'standart:sari:olum-kaza' });
+  assert.deepEqual(sariKayit('a:1', 'bir-slug', r.s), { kimlik: motorKimlik('a:1'), durum: 'yazildi', slug: 'bir-slug', gerekce: 'standart:sari:olum-kaza' });
 });
 
 test('temiz haber yazılır; gerçek süzgeç sakin metinde temiz verir', async () => {
@@ -81,8 +81,9 @@ test('motorKaydet: doğru uç ve gövde; kimlikte adres karakterleri temizlenir;
   });
   assert.equal(ok, true);
   assert.equal(istek.u, 'https://saat.example/motor/tidsrost/kaydet');
-  assert.equal(JSON.parse(istek.i.body).haberler[0].kimlik, 'medier:a_b_c');
-  assert.equal(motorKimlik('a b'), 'a_b');
+  // Kimlik özetlenir: adres karakteri ve kaynak adı deftere gitmez.
+  assert.equal(JSON.parse(istek.i.body).haberler[0].kimlik, motorKimlik('medier:a/b?c'));
+  assert.match(motorKimlik('a b'), /^t:[0-9a-f]{24}$/);
   const kotu = await motorKaydet({
     url: ortam.MOTOR_URL,
     anahtar: ortam.MOTOR_ANAHTARI,
