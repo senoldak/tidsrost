@@ -13,6 +13,7 @@ import { gemini } from './lib.mjs';
 import { RELATIV_TID, MEDIER, lokalRett, ilgiliKisim } from './tekstverktoy.mjs';
 import { ordtelling } from '../../src/lib/ordtelling.mjs';
 import { olcekKontrol } from './olcek.mjs';
+import { naerhet, kildefriOmskriving } from './faktaark.mjs';
 
 // ── Ortak yazım kuralları (bütün kaynakların istemlerinde) ─────────────
 
@@ -102,7 +103,7 @@ const norm = (s) =>
     .toLowerCase();
 
 // Yayınlanan her metin alanı (başlık, giriş, gövde, neden önemli, anahtar noktalar) taranır.
-const helTekst = (sak) =>
+export const helTekst = (sak) =>
   [sak.title, sak.description, sak.body, sak.why_matters, ...(Array.isArray(sak.key_points) ? sak.key_points : [])]
     .filter((x) => typeof x === 'string' && x)
     .join('\n');
@@ -267,7 +268,7 @@ Nøkkelpunkter: ${sak.key_points.join(" | ")}` : ""}`;
 export async function rett(sak, kilde, problemer) {
   const svar = await gemini({
     schema: TEKST_SKJEMA,
-    prompt: `Du er journalist i en norsk nettavis. Vaktsjefen har funnet problemer i utkastet ditt. Rett alle problemene ved å holde deg strengt til kilden. Fjern opplysninger som ikke har dekning i kilden, tilskriv avsenderens påstander, og gjengi sitater ordrett. Er et tall eller navn markert som «finnes ikke i kilden», skal det fjernes eller skrives nøyaktig slik det står i kilden. Behold ellers formen, og ikke gjør saken kortere: brødteksten skal ha 250–400 ord. Er saken markert som for kort, utvid den med flere opplysninger fra kilden (bakgrunn, detaljer, hva saken betyr ifølge kilden), aldri med noe som ikke står der. Tittelen skal begynne med det leserne søker etter (hvem eller hva saken gjelder), være konkret og ikke ha kolon tidlig i tittelen («Departementet: …», «Støre: …»). Norsk bokmål.
+    prompt: `Du er journalist i en norsk nettavis. Vaktsjefen har funnet problemer i utkastet ditt. Rett alle problemene ved å holde deg strengt til kildens fakta. Ikke hent inn formuleringer fra kilden; behold dine egne setninger og endre bare det som er påpekt. Fjern opplysninger som ikke har dekning i kilden, tilskriv avsenderens påstander, og gjengi sitater ordrett. Er et tall eller navn markert som «finnes ikke i kilden», skal det fjernes eller skrives nøyaktig slik det står i kilden. Behold ellers formen, og ikke gjør saken kortere: brødteksten skal ha 250–400 ord. Er saken markert som for kort, utvid den med flere opplysninger fra kilden (bakgrunn, detaljer, hva saken betyr ifølge kilden), aldri med noe som ikke står der. Tittelen skal begynne med det leserne søker etter (hvem eller hva saken gjelder), være konkret og ikke ha kolon tidlig i tittelen («Departementet: …», «Støre: …»). Norsk bokmål.
 
 PROBLEMER:
 ${problemer.map((p) => `- ${p}`).join('\n')}
@@ -384,6 +385,13 @@ export async function redigerSak(sak, kilde, opts = {}) {
   // Yazar taslağındaki basit sorunlar (cümle ortası göreli zaman, medya atfı) önce yerelde silinir.
   let utkast = lokalRett(sak);
   const merknader = [];
+  // Faktaark: taslak kaynağa fazla yakınsa (kapıdan sıkı iç eşik) kaynağı görmeden olgu listesinden yeniden yazılır.
+  // Sonuç kullanılamazsa eski taslakla devam edilir; kapı ve kapıdaki yeniden yazma ağı yerinde (faktaark.mjs).
+  if (process.env.FAKTAARK !== '0' && naerhet(helTekst(utkast), kilde).tetik) {
+    const r = await kildefriOmskriving(utkast, kilde, { medier: opts.medier, sjekk: (x) => sluttProblemer(x, kilde, opts.medier) });
+    console.log(r ? `  faktaark: oran ${r.oranFoer.toFixed(2)} → ${r.oranEtter.toFixed(2)}` : '  faktaark: ny tekst ikke brukt');
+    if (r) utkast = r.sak;
+  }
   // Katman 2.4: onay turu aynı çağrıda redaksiyonu da yapar; onaylanırsa ayrı språkvask çağrısı gerekmez.
   let ferdigVasket;
   let onaylandi = false;
@@ -397,6 +405,8 @@ export async function redigerSak(sak, kilde, opts = {}) {
     }
     merknader.push(...vurdering.problemer);
     // Son turda düzeltilen metin yeniden denetlenmeyeceği için düzeltme çağrısı yapılmaz.
+    // Düzeltmeden sonra faktaark çalışmaz: yeni yazım kontrol masasının istediği düzeltmeleri silebilir.
+    // Düzeltme kopyayı geri getirirse kapıdaki tek yeniden yazma turu yakalar.
     if (runde < ONAY_RUNDER - 1) utkast = await rett(utkast, kilde, vurdering.problemer);
   }
   // Onay gelmediyse yayınlanmaz: sonraki tur yeniden dener.

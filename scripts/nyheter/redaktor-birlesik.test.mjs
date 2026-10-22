@@ -5,6 +5,8 @@ import assert from 'node:assert/strict';
 process.env.GEMINI_API_KEY = 'test';
 process.env.GEMINI_ARALIK_MS = '0';
 process.env.GEMINI_BEKLE_CARPAN = '0';
+// Taslaklar kaynağın aynısı; bu dosya onay zincirini sınar, faktaark adımı faktaark-rediger.test.mjs'te.
+process.env.FAKTAARK = '0';
 const { redigerSak } = await import('./redaktor.mjs');
 
 const avsnitt = 'Regjeringen la fram forslaget onsdag og la vekt på at ordningen skal gjelde alle kommuner i landet fra neste år. ';

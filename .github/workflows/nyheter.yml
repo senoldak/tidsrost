@@ -63,6 +63,8 @@ jobs:
           MAKS_PER_KJORING: ${{ vars.MAKS_PER_KJORING }}
           # Ortak yayın kapısının ikinci okuması (motor/ortak/kapi.mjs): vars.KAPI_MOD = kapali | golge | acik (boşsa kapalı).
           KAPI_MOD: ${{ vars.KAPI_MOD }}
+          # Kaynağa yakın taslağı kaynaksız yeniden yazma (scripts/nyheter/faktaark.mjs): vars.FAKTAARK=0 kapatır.
+          FAKTAARK: ${{ vars.FAKTAARK }}
           SURE_DK: ${{ vars.SURE_DK }}
           # Ortak motor modu (private mecmua'dan salt-okur çekilir): vars.MOTOR_TUR=1 iken tur motorla sürülür.
           MOTOR_TUR: ${{ vars.MOTOR_TUR }}
