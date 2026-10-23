@@ -611,7 +611,7 @@
   "full-stans-i-togtrafikken-mellom-oslo-s-og-nationaltheatret": {
     "tarih": "2026-10-23T18:05:08.314Z",
     "deneme": {
-      "ig_post": 2
+      "ig_post": 3
     },
     "son_hata": "Graph 403: Application request limit reached",
     "ig_story": "18125133043809954",
@@ -621,11 +621,31 @@
   "hoyhus-kollapset-i-nairobi": {
     "tarih": "2026-10-23T20:06:16.377Z",
     "deneme": {
-      "ig_post": 1
+      "ig_post": 2
     },
     "son_hata": "Graph 403: Application request limit reached",
     "ig_story": "18074893325596471",
     "fb_post": "1343803192154866_122109763929509504",
     "fb_story": "1690588469076829"
+  },
+  "fiskeriavtale-for-2027-mellom-norge-og-russland-er-klar-etter-fysiske-moter-i-ty": {
+    "tarih": "2026-10-23T22:07:45.546Z",
+    "deneme": {
+      "ig_post": 1
+    },
+    "son_hata": "Graph 403: Application request limit reached",
+    "ig_story": "17946935025351359",
+    "fb_post": "1343803192154866_122109812055509504",
+    "fb_story": "2374749440009623"
+  },
+  "oljeprisen-og-gassprisen-stiger-kraftig-til-nye-topper-pa-grunn-av-uro-i-midtost": {
+    "tarih": "2026-10-23T22:08:26.496Z",
+    "deneme": {
+      "ig_post": 1,
+      "ig_story": 1
+    },
+    "son_hata": "Graph 400: The requested resource does not exist",
+    "fb_post": "1343803192154866_122109812427509504",
+    "fb_story": "944326695113033"
   }
 }
