@@ -535,7 +535,7 @@
   "lavtrykket-boelo-treffer-sor-norge-med-farevarsler": {
     "tarih": "2026-10-23T10:06:13.131Z",
     "deneme": {
-      "ig_post": 2
+      "ig_post": 3
     },
     "son_hata": "Graph 403: Application request limit reached",
     "ig_story": "18199676050378743",
@@ -545,11 +545,51 @@
   "kabinansatte-i-sas-link-streiker-fra-onsdag-etter-nei-til-meklingsforslag": {
     "tarih": "2026-10-23T12:09:23.910Z",
     "deneme": {
-      "ig_post": 1
+      "ig_post": 2
     },
     "son_hata": "Graph 403: Application request limit reached",
     "ig_story": "18120254365988089",
     "fb_post": "1343803192154866_122109560817509504",
     "fb_story": "1092723320235673"
+  },
+  "melania-trump-har-sikret-midlertidig-vapenhvile-i-ukrainske-olesjky": {
+    "tarih": "2026-10-23T14:15:41.290Z",
+    "deneme": {
+      "ig_post": 1
+    },
+    "son_hata": "Graph 403: Application request limit reached",
+    "ig_story": "18357583069172925",
+    "fb_post": "1343803192154866_122109626577509504",
+    "fb_story": "1592526599580298"
+  },
+  "oransje-farevarsel-for-flom-i-agder-akershus-buskerud-telemark-og-vestfold": {
+    "tarih": "2026-10-23T14:16:33.975Z",
+    "deneme": {
+      "ig_post": 1
+    },
+    "son_hata": "Graph 403: Application request limit reached",
+    "ig_story": "17955198162277534",
+    "fb_post": "1343803192154866_122109627249509504",
+    "fb_story": "3016356925365097"
+  },
+  "sas-streik-gir-reisende-rettigheter-og-mulighet-for-tusenlapper": {
+    "tarih": "2026-10-23T14:17:19.968Z",
+    "deneme": {
+      "ig_post": 1
+    },
+    "son_hata": "Graph 403: Application request limit reached",
+    "ig_story": "18348496054250286",
+    "fb_post": "1343803192154866_122109627675509504",
+    "fb_story": "2066823887312987"
+  },
+  "volvo-cars-kutter-2-500-jobber-og-stuper-pa-borsen": {
+    "tarih": "2026-10-23T14:18:03.357Z",
+    "deneme": {
+      "ig_post": 1
+    },
+    "son_hata": "Graph 403: Application request limit reached",
+    "ig_story": "17962494678238178",
+    "fb_post": "1343803192154866_122109628161509504",
+    "fb_story": "1663926625526665"
   }
 }
