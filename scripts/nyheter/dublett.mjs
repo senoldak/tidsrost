@@ -9,6 +9,10 @@ import { likhet } from './uavhengighet.mjs';
 
 export const HUKOMMELSE_TIMER = 72;
 
+// Haber olmayan türler (Forklart, Analyse) mükerrer aramasına girmez: aynı konuyu anlatmaları beklenir.
+export const IKKE_NYHET_SJANGRE = Object.freeze(['forklart', 'analyse']);
+export const ikkeNyhet = (sjanger) => IKKE_NYHET_SJANGRE.includes(sjanger);
+
 // Olayı ayırt etmeyen sık kelimeler (bağlaçlar, edatlar, haber fiilleri).
 const STOPP = new Set(
   `og i på til for av med om etter fra som er en et ei den det de dem har hadde vil kan skal ved mot over under ut inn

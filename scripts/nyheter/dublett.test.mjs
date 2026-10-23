@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtemp, mkdir, writeFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { sammeHendelse, finnDublett, lesHukommelse, nokkel, termer } from './dublett.mjs';
+import { sammeHendelse, finnDublett, lesHukommelse, nokkel, termer, ikkeNyhet } from './dublett.mjs';
 
 // Gerçek mükerrer çiftler (aynı gün iki ayrı çalışmada yazıldılar).
 const botA = {
@@ -135,4 +135,11 @@ test('nadir ortak özel isimler: aynı olayın farklı anlatımı yakalanır', (
   // yalnız sık isimler (Zelenskyj, Ukraina, Trump...) paylaşılıyorsa farklı olay
   const baska = { tittel: 'Zelenskyj kritiserer Trump', ingress: 'Krigen i Ukraina.', tekst: lead('Zelenskyj kritiserer Donald Trump og USA for Ukraina-politikken i Russland-krigen.') };
   assert.equal(finnDublett(minne, baska, { naa: NAA }), undefined);
+});
+
+test('sjangre som ikke er nyheter (forklart, analyse) holdes utenfor dublettsøket', () => {
+  assert.equal(ikkeNyhet('forklart'), true);
+  assert.equal(ikkeNyhet('analyse'), true);
+  assert.equal(ikkeNyhet(''), false);
+  assert.equal(ikkeNyhet('nyhet'), false);
 });

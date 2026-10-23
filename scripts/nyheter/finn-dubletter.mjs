@@ -8,7 +8,7 @@
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { sammeHendelse, nokkel, termer } from './dublett.mjs';
+import { sammeHendelse, nokkel, termer, ikkeNyhet } from './dublett.mjs';
 import { ordtelling } from '../../src/lib/ordtelling.mjs';
 
 const ROT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
@@ -30,7 +30,7 @@ for (const slug of await readdir(BASE)) {
       return v;
     }
   };
-  if (felt('draft') === 'true' || felt('sjanger') === 'forklart') continue;
+  if (felt('draft') === 'true' || ikkeNyhet(felt('sjanger'))) continue;
   const kilder = (body.match(/^\*Kilder?:.*$/m)?.[0].match(/\]\(/g) ?? []).length;
   saker.push({
     ...nokkel({ slug, tittel: felt('title'), ingress: felt('description'), produksjon: felt('produksjon') || 'manuell' }),
