@@ -505,7 +505,7 @@
   "over-40-millioner-overnattinger-ved-hoteller-og-campingplasser-i-2025": {
     "tarih": "2026-10-23T06:03:53.543Z",
     "deneme": {
-      "ig_post": 1
+      "ig_post": 2
     },
     "son_hata": "Graph 403: Application request limit reached",
     "ig_story": "18130523665698879",
@@ -515,11 +515,21 @@
   "verdens-borser-faller-kraftig-etter-uro-rundt-kunstig-intelligens-og-oljepris": {
     "tarih": "2026-10-23T06:04:42.026Z",
     "deneme": {
-      "ig_post": 1
+      "ig_post": 2
     },
     "son_hata": "Graph 403: Application request limit reached",
     "ig_story": "18124004845929433",
     "fb_post": "1343803192154866_122109397251509504",
     "fb_story": "1773055630478863"
+  },
+  "foflekkreftvaksine-ga-solid-effekt-i-omfattende-fase-3-studie": {
+    "tarih": "2026-10-23T08:05:52.028Z",
+    "deneme": {
+      "ig_post": 1
+    },
+    "son_hata": "Graph 403: Application request limit reached",
+    "ig_story": "18125040793713138",
+    "fb_post": "1343803192154866_122109441333509504",
+    "fb_story": "1103859999028188"
   }
 }
