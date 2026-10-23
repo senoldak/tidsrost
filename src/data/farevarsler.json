@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-23T10:03:57.503Z",
+  "hentet": "2026-10-23T12:07:26.020Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-23T10:03:12+00:00",
+  "sistEndretHosMet": "2026-10-23T12:07:21+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.20261022153705.008",
@@ -203,6 +203,19 @@
       "konsekvenser": "Fare for innstilte avganger: Det er fare for innstillinger av flyavganger, båter og annen transport. Sikre løse gjenstander: Løse gjenstander kan blåse avgårde. Fare for hindringer i trafikken: Veier kan bli stengt på grunn av trær eller andre objekter i veibanen. Enkelte reiser vil kunne få lengre reisetid. Broer og utsatte veistrekninger kan bli stengt. Fare for strømbrudd: Strømforsyningen kan bli påvirket, for eksempel som følge av trær som knekker eller kommer i kontakt med strømnettet.",
       "rad": "Sikre løse gjenstander: Vurder tiltak for å begrense skade før hendelsen inntreffer. Unngå unødig ferdsel på utsatte steder. Fare for hindringer i trafikken: Sjekk veimeldinger på vegvesen.no/trafikk. Fare for innstilte avganger: Følg råd og sjekk status fra transportaktører. Lokalt høye bølger: Vis forsiktighet ved ferdsel på sjøen. Høye bølger treffer land: Vis forsiktighet ved ferdsel i strandsonen.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/vind-over-land"
+    },
+    {
+      "id": "2.49.0.1.578.0.20261023113827.060",
+      "niva": "gult",
+      "hendelse": "Styrtregn",
+      "omrade": "Deler av Rogaland og Agder",
+      "domene": "land",
+      "start": "2026-10-25T00:00:00+00:00",
+      "slutt": "2026-10-25T04:00:00+00:00",
+      "beskrivelse": "Kraftige regnbyger ventes i ditt område. Det er lokale variasjoner i intensitet og mengde, og været kan endres raskt. Nedbørens plassering er usikker. Lokalt er nedbøren ventet å passere 20 mm/1t.",
+      "konsekvenser": "Fare for vannskade: Det er fare for overvann i tettbygde områder, og vann som trenger inn i kjellere. Fare for lokale oversvømmelser, bekke- og elveløpsendringer, jord- og flomskred der de kraftigste regnbygene treffer. Lokalt vanskelige kjøreforhold: Lokalt vanskelige kjøreforhold grunnet overvann og fare for vannplaning. Utrygt for lyn: Det er også fare for lyn i forbindelse med regnbygene. Elektriske apparater kan bli skadet hvis de ikke frakobles.",
+      "rad": "Hold deg oppdatert på været: Følg utviklingen av regnbygene på yr.no/nb/kart/radar. Fare for vannskade: Vurder å rense stikkrenner og avløp slik at vannet kan renne unna. Lokalt vanskelige kjøreforhold: Tilpass farten og kjør etter forholdene. Ikke kjør bil i oversvømte områder. Sjekk veimeldinger på vegvesen.no/trafikk.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/styrtregn"
     },
     {
       "id": "2.49.0.1.578.0.20261023091104.052",
