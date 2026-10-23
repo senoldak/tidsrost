@@ -611,11 +611,21 @@
   "full-stans-i-togtrafikken-mellom-oslo-s-og-nationaltheatret": {
     "tarih": "2026-10-23T18:05:08.314Z",
     "deneme": {
-      "ig_post": 1
+      "ig_post": 2
     },
     "son_hata": "Graph 403: Application request limit reached",
     "ig_story": "18125133043809954",
     "fb_post": "1343803192154866_122109716457509504",
     "fb_story": "936278632649049"
+  },
+  "hoyhus-kollapset-i-nairobi": {
+    "tarih": "2026-10-23T20:06:16.377Z",
+    "deneme": {
+      "ig_post": 1
+    },
+    "son_hata": "Graph 403: Application request limit reached",
+    "ig_story": "18074893325596471",
+    "fb_post": "1343803192154866_122109763929509504",
+    "fb_story": "1690588469076829"
   }
 }
