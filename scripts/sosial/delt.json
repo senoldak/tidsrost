@@ -595,11 +595,21 @@
   "kort-fortalt-23-oktober-2026": {
     "tarih": "2026-10-23T16:09:05.401Z",
     "deneme": {
-      "ig_post": 2
+      "ig_post": 3
     },
     "son_hata": "Graph 403: Application request limit reached",
     "ig_story": "17920944759529989",
     "fb_post": "1343803192154866_122109672549509504",
     "fb_story": "1823895998732957"
+  },
+  "full-stans-i-togtrafikken-mellom-oslo-s-og-nationaltheatret": {
+    "tarih": "2026-10-23T18:05:08.314Z",
+    "deneme": {
+      "ig_post": 1
+    },
+    "son_hata": "Graph 403: Application request limit reached",
+    "ig_story": "18125133043809954",
+    "fb_post": "1343803192154866_122109716457509504",
+    "fb_story": "936278632649049"
   }
 }
