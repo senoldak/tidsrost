@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-23T14:13:25.152Z",
+  "hentet": "2026-10-23T16:07:58.829Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,16 +7,16 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-23T14:11:38+00:00",
+  "sistEndretHosMet": "2026-10-23T16:06:53+00:00",
   "varsler": [
     {
-      "id": "2.49.0.1.578.0.20261022153705.008",
+      "id": "2.49.0.1.578.0.20261023145943.063",
       "niva": "gult",
       "hendelse": "Kuling",
       "omrade": "Nordkapp - Vardø",
       "domene": "hav",
       "start": "2026-10-21T09:00:00+00:00",
-      "slutt": "2026-10-23T16:00:00+00:00",
+      "slutt": "2026-10-24T03:00:00+00:00",
       "beskrivelse": "Torsdag og fredag sørlig stiv kuling 15 m/s.",
       "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
       "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
