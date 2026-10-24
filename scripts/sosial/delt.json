@@ -678,6 +678,6 @@
   "kobenhavns-universitet-rammet-av-dataangrep": {
     "tarih": "2026-10-24T10:05:22.278Z",
     "son_hata": "Graph 403: Application request limit reached",
-    "limit": 2
+    "limit": 3
   }
 }
