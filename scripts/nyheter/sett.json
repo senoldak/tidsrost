@@ -3872,7 +3872,39 @@
     "medier:67cd8e2f04dbc546": "2026-10-24T08:01:06.743Z",
     "medier:b3ff9f4abe555dd5": "2026-10-24T08:01:06.743Z",
     "medier:e4b2e6a876bd1001": "2026-10-24T08:01:06.743Z",
-    "medier:ebbc9917ffcb67e5": "2026-10-24T08:01:06.743Z"
+    "medier:ebbc9917ffcb67e5": "2026-10-24T08:01:06.743Z",
+    "medier:25a6c8c34d3dd3e7": "2026-10-24T10:01:08.934Z",
+    "regjeringen:3181670": "2026-10-24T10:01:08.934Z",
+    "medier:c7e3331f8d780400": "2026-10-24T10:01:08.934Z",
+    "medier:072be1c196e90604": "2026-10-24T10:01:08.934Z",
+    "medier:6373733615a41970": "2026-10-24T10:01:08.934Z",
+    "medier:e0c38e7573b3bf54": "2026-10-24T10:01:08.934Z",
+    "medier:3872c7c6c49e6710": "2026-10-24T10:01:08.934Z",
+    "medier:561b2a032ec15403": "2026-10-24T10:01:08.934Z",
+    "medier:8b9ff6fd0bc1fea0": "2026-10-24T10:01:08.934Z",
+    "medier:caa7296f886413b7": "2026-10-24T10:01:08.934Z",
+    "medier:de0e55f61ded3fbd": "2026-10-24T10:01:08.934Z",
+    "medier:4af7c50eeaa4e180": "2026-10-24T10:01:08.934Z",
+    "medier:870f4d3fa199fece": "2026-10-24T10:01:08.934Z",
+    "medier:621513b3ab08cb36": "2026-10-24T10:01:08.934Z",
+    "medier:7a979df9be596ef3": "2026-10-24T10:01:08.934Z",
+    "medier:0fc69c5a323cedc4": "2026-10-24T10:01:08.934Z",
+    "medier:98fec75c847e7f6b": "2026-10-24T10:01:08.934Z",
+    "medier:f9575bf858211a07": "2026-10-24T10:01:08.934Z",
+    "medier:fb8987360ea8f6b2": "2026-10-24T10:01:08.934Z",
+    "medier:e8c82f917210b8e7": "2026-10-24T10:01:08.934Z",
+    "medier:2004a29c2e339510": "2026-10-24T10:01:08.934Z",
+    "medier:4c052cab796d1403": "2026-10-24T10:01:08.934Z",
+    "met:wind:deler-av-trondelag:2026-10-25": "2026-10-24T10:01:08.934Z",
+    "nve:landslide:148527": "2026-10-24T10:01:08.934Z",
+    "medier:501231342db1cf0d": "2026-10-24T10:01:08.934Z",
+    "medier:91459a58019b75fd": "2026-10-24T10:01:08.934Z",
+    "medier:320c05a0bb258b3c": "2026-10-24T10:01:08.934Z",
+    "medier:2222b057846fe339": "2026-10-24T10:01:08.934Z",
+    "medier:129611fe1c9733aa": "2026-10-24T10:01:08.934Z",
+    "medier:8616864f991a0cf2": "2026-10-24T10:01:08.934Z",
+    "medier:51c437ebda36767d": "2026-10-24T10:01:08.934Z",
+    "medier:607787ef9e81e91d": "2026-10-24T10:01:08.934Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -3925,191 +3957,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:9b78fe77f0214a5a": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "medier:abdfa6919f953cae": {
-      "p": 42,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "medier:d9488a395c86d6f2": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "medier:d2302c47462924fd": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "medier:8896e198bc4ec650": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "medier:d3bda534308422d3": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "medier:8e31297ac4fa9e27": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "medier:4663384dfb8f6c54": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "medier:74d7454d000ec825": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "medier:ef08a2dc5900c711": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "medier:c0fdfab7a5f34f59": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "medier:ce6189c154c1c335": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "medier:4b6b287c39d0be6f": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "medier:c7980bdae62b8a24": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "regjeringen:3180050": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "regjeringen:3179848": {
-      "p": 58,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/styrket-nordisk-tilsynssamarbeid/": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/10/kreativitet-loste-krevende-skredsikring/": {
-      "p": 28,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/10/oving-i-e39-bogstunnelen/": {
-      "p": 38,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T08:09:15.634Z"
-    },
-    "medier:5e23292a686bd163": {
-      "p": 42,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
-    "medier:a38e9106de2f9ed2": {
-      "p": 74,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
-    "medier:edfd4a0a876ded19": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
-    "medier:550412d1a8dbaf8c": {
-      "p": 38,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
-    "medier:f7a9ccf461cefb27": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
-    "medier:1eb0d3b50c8d5b1c": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
-    "medier:b7224cda4d548aa7": {
-      "p": 52,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
-    "medier:1170db9d77a1e189": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
-    "medier:0a85cd47354176a1": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
-    "regjeringen:3180075": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
-    "nkom:f54a337a-833e-4efb-bdd8-903686a9a90e": {
-      "p": 58,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
-    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/esma-oppdaterer-niva-3-veiledning-pa-transparenskravene-etter-mifid-iimifir/": {
-      "p": 12,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
-    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/soliditetsrapporter-for-forsikringsforetak-og-pensjonskasser-per-30.-juni-2026": {
-      "p": 22,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
-    "vegvesen:https://www.vegvesen.no/nn/om-oss/presse/aktuelt/2026/10/skredsikringa-i-fjara-er-i-hamn/": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/10/1168637": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2224": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2223": {
-      "p": 62,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
-    "arbeidstilsynet:https://www.arbeidstilsynet.no/nyheter/fra-krav-til-praksis-jobb-forebyggende-med-psykososialt-arbeidsmiljo/": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T10:02:03.860Z"
-    },
     "medier:99654d9b96dd0108": {
       "p": 55,
       "v": "b34cb0de5bde",
@@ -5844,6 +5691,61 @@
       "p": 45,
       "v": "b34cb0de5bde",
       "t": "2026-10-24T08:02:14.830Z"
+    },
+    "medier:8616864f991a0cf2": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T10:02:07.085Z"
+    },
+    "medier:c7e3331f8d780400": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T10:02:07.085Z"
+    },
+    "medier:561b2a032ec15403": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T10:02:07.085Z"
+    },
+    "medier:4af7c50eeaa4e180": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T10:02:07.085Z"
+    },
+    "medier:2222b057846fe339": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T10:02:07.085Z"
+    },
+    "medier:621513b3ab08cb36": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T10:02:07.085Z"
+    },
+    "medier:9677bd786e7ce579": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T10:02:07.085Z"
+    },
+    "medier:501231342db1cf0d": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T10:02:07.085Z"
+    },
+    "medier:fb8987360ea8f6b2": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T10:02:07.085Z"
+    },
+    "medier:2004a29c2e339510": {
+      "p": 62,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T10:02:07.085Z"
+    },
+    "regjeringen:3181670": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T10:02:07.085Z"
     }
   }
 }
