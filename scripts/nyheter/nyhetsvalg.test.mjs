@@ -126,3 +126,19 @@ test('puanbuffer: svikt i KI-kallet gir null og skriver ingenting', async () => 
   assert.equal(await vurder({ ssb: [k('x')] }, { kall: async () => null, hukommelse }), null);
   assert.deepEqual(hukommelse, {});
 });
+
+test('velg: bir turda en çok 3 farevarsel (met+nve) seçilir, kalanı havuzda kalır; öteki haberler etkilenmez', () => {
+  const v = (n) => Array.from({ length: n }, (_, i) => ({ id: `v${i}` }));
+  const kandidater = { met: v(6), nve: [{ id: 'n0' }, { id: 'n1' }], norgesbank: [{ id: 'nb' }], diger: [{ id: 'x' }] };
+  const poeng = new Map([[kandidater.diger[0], 90]]);
+  const { valgt } = velg(kandidater, poeng, 20);
+  const varsel = valgt.filter((k) => /^(v|n[01])/.test(k.id));
+  assert.equal(varsel.length, 3);
+  assert.ok(valgt.includes(kandidater.diger[0]) && valgt.includes(kandidater.norgesbank[0]));
+});
+
+test('velg: varselTavan seçeneği ve tavan altında kayıp yok', () => {
+  const kandidater = { met: [{ id: 'a' }, { id: 'b' }] };
+  assert.equal(velg(kandidater, null, 10).valgt.length, 2);
+  assert.equal(velg(kandidater, null, 10, { varselTavan: 1 }).valgt.length, 1);
+});

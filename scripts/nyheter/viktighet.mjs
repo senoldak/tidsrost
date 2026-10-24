@@ -87,7 +87,12 @@ ${sor.map(({ navn, k }, i) => `${i}. [${navn}] ${rentTittel(k)}`).join('\n')}`,
  * Döner: { valgt, forkastet }. forkastet: puanı eşiğin altında kalan adaylar (çağıran bunları görüldü işaretler);
  * puansız adaylar ne seçilir ne forkastet sayılır, sonraki turda yeniden puanlanır.
  */
-export function velg(kandidater, poeng, maks) {
+// Bir turda en çok VARSEL_TAVAN farevarsel (MET/NVE) haberi yazılır; fazlası seçilmez, havuzda kalır ve sonraki turlara gider
+// (aynı fırtına için tek turda 9 uyarı çıkmıştı, 23 Ekim). Geçerliliği biten uyarı sonraki turda kaynaktan zaten düşer.
+export const VARSEL_KAYNAKLAR = new Set(['met', 'nve']);
+export const VARSEL_TAVAN = 3;
+
+export function velg(kandidater, poeng, maks, { varselTavan = VARSEL_TAVAN } = {}) {
   const kopi = Object.fromEntries(Object.entries(kandidater).map(([n, l]) => [n, [...l]]));
   // Kaynaklar arasında sırayla dizilmiş tam liste (biri diğerlerini bastırmasın).
   const sirali = [];
@@ -96,10 +101,15 @@ export function velg(kandidater, poeng, maks) {
   }
   const puan = ({ navn, k }) => (UTEN_VURDERING.has(navn) ? DATA_POENG : poeng?.get(k) ?? null);
   const forkastet = sirali.filter((x) => puan(x) !== null && puan(x) < MIN_VIKTIGHET).map((x) => x.k);
+  let varselSayisi = 0;
   const valgt = sirali
     .map((x, i) => ({ ...x, i, p: puan(x) }))
     .filter((x) => x.p !== null && x.p >= MIN_VIKTIGHET)
     .sort((a, b) => b.p - a.p || a.i - b.i)
+    .filter((x) => {
+      if (!VARSEL_KAYNAKLAR.has(x.navn)) return true;
+      return ++varselSayisi <= varselTavan;
+    })
     .slice(0, maks)
     .map((x) => x.k);
   return { valgt, forkastet };
