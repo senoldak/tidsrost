@@ -627,7 +627,7 @@
   "hoyhus-kollapset-i-nairobi": {
     "tarih": "2026-10-23T20:06:16.377Z",
     "deneme": {
-      "ig_post": 2
+      "ig_post": 3
     },
     "son_hata": "Graph 403: Application request limit reached",
     "ig_story": "18074893325596471",
@@ -637,7 +637,7 @@
   "fiskeriavtale-for-2027-mellom-norge-og-russland-er-klar-etter-fysiske-moter-i-ty": {
     "tarih": "2026-10-23T22:07:45.546Z",
     "deneme": {
-      "ig_post": 1
+      "ig_post": 2
     },
     "son_hata": "Graph 403: Application request limit reached",
     "ig_story": "17946935025351359",
@@ -647,11 +647,32 @@
   "oljeprisen-og-gassprisen-stiger-kraftig-til-nye-topper-pa-grunn-av-uro-i-midtost": {
     "tarih": "2026-10-23T22:08:26.496Z",
     "deneme": {
-      "ig_post": 1,
+      "ig_post": 2,
       "ig_story": 1
     },
-    "son_hata": "Graph 400: The requested resource does not exist",
+    "son_hata": "Graph 403: Application request limit reached",
     "fb_post": "1343803192154866_122109812427509504",
-    "fb_story": "944326695113033"
+    "fb_story": "944326695113033",
+    "ig_story": "18100680995556934"
+  },
+  "minst-306-drept-i-droneangrep-i-sudan-i-oktober": {
+    "tarih": "2026-10-24T06:05:27.799Z",
+    "deneme": {
+      "ig_post": 1
+    },
+    "son_hata": "Graph 403: Application request limit reached",
+    "ig_story": "17976761799132458",
+    "fb_post": "1343803192154866_122109945279509504",
+    "fb_story": "1436481308459703"
+  },
+  "digitalisering-i-offentlig-sektor-91-prosent-fullforer-skattemeldingen-digitalt": {
+    "tarih": "2026-10-24T06:06:13.194Z",
+    "deneme": {
+      "ig_post": 1
+    },
+    "son_hata": "Graph 403: Application request limit reached",
+    "ig_story": "18396271300166872",
+    "fb_post": "1343803192154866_122109945717509504",
+    "fb_story": "1645558587306894"
   }
 }
