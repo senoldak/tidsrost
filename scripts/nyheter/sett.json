@@ -3904,7 +3904,35 @@
     "medier:129611fe1c9733aa": "2026-10-24T10:01:08.934Z",
     "medier:8616864f991a0cf2": "2026-10-24T10:01:08.934Z",
     "medier:51c437ebda36767d": "2026-10-24T10:01:08.934Z",
-    "medier:607787ef9e81e91d": "2026-10-24T10:01:08.934Z"
+    "medier:607787ef9e81e91d": "2026-10-24T10:01:08.934Z",
+    "medier:ad42be79fc9b2748": "2026-10-24T12:01:08.166Z",
+    "medier:9677bd786e7ce579": "2026-10-24T12:01:08.166Z",
+    "medier:b169e70bebe962b4": "2026-10-24T12:01:08.166Z",
+    "medier:8e7f2f50c71708a9": "2026-10-24T12:01:08.166Z",
+    "medier:7a2baac4a3bb2659": "2026-10-24T12:01:08.166Z",
+    "medier:33d51a7026599eb6": "2026-10-24T12:01:08.166Z",
+    "medier:0724c4db4211cb02": "2026-10-24T12:01:08.166Z",
+    "medier:40340d032a77435d": "2026-10-24T12:01:08.166Z",
+    "medier:b37567385a5fcbc1": "2026-10-24T12:01:08.166Z",
+    "medier:ec44b6bb02e9c9aa": "2026-10-24T12:01:08.166Z",
+    "medier:5aaf2f52166b30d0": "2026-10-24T12:01:08.166Z",
+    "medier:28fe351875c1bd21": "2026-10-24T12:01:08.166Z",
+    "medier:da53d75155f6f2d1": "2026-10-24T12:01:08.166Z",
+    "medier:3d639bddb61cb93f": "2026-10-24T12:01:08.166Z",
+    "medier:68ce54e8326d4c96": "2026-10-24T12:01:08.166Z",
+    "medier:e06539efffe040a7": "2026-10-24T12:01:08.166Z",
+    "medier:4aeedbacbbf8b30d": "2026-10-24T12:01:08.166Z",
+    "medier:e45c93c889d6c434": "2026-10-24T12:01:08.166Z",
+    "medier:0e8b79fd2ad92cf0": "2026-10-24T12:01:08.166Z",
+    "met:wind:deler-av-midt-nordland:2026-10-25": "2026-10-24T12:01:08.166Z",
+    "medier:3e2f88bd4d46a36f": "2026-10-24T12:01:08.166Z",
+    "medier:dee65d255719a20e": "2026-10-24T12:01:08.166Z",
+    "medier:2163d30a11dcae35": "2026-10-24T12:01:08.166Z",
+    "medier:f50efaa457883f4b": "2026-10-24T12:01:08.166Z",
+    "medier:c80aec4e7eafbaf3": "2026-10-24T12:01:08.166Z",
+    "medier:8103c1a6de8dd538": "2026-10-24T12:01:08.166Z",
+    "medier:b8a255f7f7a66bfa": "2026-10-24T12:01:08.166Z",
+    "medier:6d17743ccdf307e7": "2026-10-24T12:01:08.166Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -3957,86 +3985,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:99654d9b96dd0108": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T12:02:00.349Z"
-    },
-    "medier:3f9e90cf2d926275": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T12:02:00.349Z"
-    },
-    "medier:08f19b5096f18c1f": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T12:02:00.349Z"
-    },
-    "medier:a91daae6df660d55": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T12:02:00.349Z"
-    },
-    "medier:5a9faa9e99962747": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T12:02:00.349Z"
-    },
-    "medier:7370513c65990e8a": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T12:02:00.349Z"
-    },
-    "medier:1a0157c8c444b273": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T12:02:00.349Z"
-    },
-    "medier:f5a488bdeb1b4ecc": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T12:02:00.349Z"
-    },
-    "medier:96c50c6ec22dea44": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T12:02:00.349Z"
-    },
-    "medier:7e8b5d4f532935b1": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T12:02:00.349Z"
-    },
-    "medier:9e6a80bf8da4e8ab": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T12:02:00.349Z"
-    },
-    "medier:5c7348622aede520": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T12:02:00.349Z"
-    },
-    "medier:94ee88fe54ccc543": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T12:02:00.349Z"
-    },
-    "dsb:https://www.dsb.no/aktuelt/presseinvitasjon-justis--og-beredskapsministeren-apner-egenberedskapsuka/": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T12:02:00.349Z"
-    },
-    "havforskning:https://www.hi.no/hi/nyheter/2026/oktober/la-oss-fa-norgespris-pa-fisk": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T12:02:00.349Z"
-    },
-    "idrettsforbundet:https://www.idrettsforbundet.no/nyheter/2026/statsbudsjettet-2027-horingsinnspill-til-justis--og-beredskapskomiteen-pa-stortinget/": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-21T12:02:00.349Z"
-    },
     "medier:74a416ee9b570cd2": {
       "p": 55,
       "v": "b34cb0de5bde",
@@ -5746,6 +5694,66 @@
       "p": 50,
       "v": "b34cb0de5bde",
       "t": "2026-10-24T10:02:07.085Z"
+    },
+    "medier:2163d30a11dcae35": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T12:02:00.299Z"
+    },
+    "medier:b169e70bebe962b4": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T12:02:00.299Z"
+    },
+    "medier:33d51a7026599eb6": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T12:02:00.299Z"
+    },
+    "medier:b8a255f7f7a66bfa": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T12:02:00.299Z"
+    },
+    "medier:b37567385a5fcbc1": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T12:02:00.299Z"
+    },
+    "medier:fc101cfe6cf16ce4": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T12:02:00.299Z"
+    },
+    "medier:263f7c8f810ee01f": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T12:02:00.299Z"
+    },
+    "medier:3d639bddb61cb93f": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T12:02:00.299Z"
+    },
+    "medier:e06539efffe040a7": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T12:02:00.299Z"
+    },
+    "medier:3e2f88bd4d46a36f": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T12:02:00.299Z"
+    },
+    "medier:e45c93c889d6c434": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T12:02:00.299Z"
+    },
+    "medier:c80aec4e7eafbaf3": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-24T12:02:00.299Z"
     }
   }
 }
