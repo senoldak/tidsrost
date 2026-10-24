@@ -1,10 +1,11 @@
 ---
-// Yazar sayfası: kişi adıyla yayımlanan yazılar (author ≠ site adı). Biyografi uydurulmaz; sadece yazılar listelenir.
+// Yazar sayfası: yalnız özel yazılar (Forklart, Analyse) kişi imzasıyla listelenir; bot haberleri site adıyla çıkar. Biyografi uydurulmaz; sadece yazılar listelenir.
 import { jsonLdMetni } from '../../lib/json-ld.mjs';
 import Base from '../../layouts/Base.astro';
 import StoryRow from '../../components/StoryRow.astro';
 import ForfatterKort, { forfatterBeskrivelse } from '../../components/ForfatterKort.astro';
 import { SITE } from '../../lib/site';
+import { synligForfatter } from '../../lib/forfatter.mjs';
 import { forfatterSlug, getNews, newsUrl, type Haber } from '../../lib/news';
 import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs } from '../../lib/seo';
 

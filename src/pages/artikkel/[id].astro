@@ -1,5 +1,6 @@
 ---
 import { jsonLdMetni } from '../../lib/json-ld.mjs';
+import { synligForfatter as synligForfatterAv } from '../../lib/forfatter.mjs';
 import { LISENS_JSONLD_URL, MEDIA_KILDE_TEKST, visMedieKilde } from '../../lib/lisens.mjs';
 import { Image, getImage } from 'astro:assets';
 import { render } from 'astro:content';
@@ -48,9 +49,10 @@ const sourceUrl = kildeUrl(haber);
 const warn = varsel(title);
 const forklart = erForklart(haber);
 const analyse = erAnalyse(haber);
+const synligForfatter = synligForfatterAv({ sjanger: haber.data.sjanger, author }, SITE.name, SITE.redaktor);
 const medieKilde = visMedieKilde({ produksjon, forklart, harOffentligKilde: Boolean(source) });
 // Kişi adıyla yayımlanan yazıların yazar sayfası vardır (/forfatter/<slug>/).
-const forfatterUrl = author !== SITE.name ? `/forfatter/${forfatterSlug(author)}/` : undefined;
+const forfatterUrl = synligForfatter !== SITE.name ? `/forfatter/${forfatterSlug(synligForfatter)}/` : undefined;
 
 // OG görseli en az 1200 px genişlikte (Google Discover); kaynak daha darsa kendi genişliği kullanılır.
 const ogWidth = cover ? Math.min(1200, cover.width) : 1200;
@@ -85,7 +87,7 @@ const jsonLd = {
       datePublished: iso,
       dateModified: modifiedIso,
       author: forfatterUrl
-        ? [{ '@type': 'Person', name: author, jobTitle: 'Utgiver og redaktør', description: forfatterBeskrivelse(author), url: `${SITE_URL}${forfatterUrl}` }]
+        ? [{ '@type': 'Person', name: synligForfatter, jobTitle: 'Utgiver og redaktør', description: forfatterBeskrivelse(synligForfatter), url: `${SITE_URL}${forfatterUrl}` }]
         : { '@id': ORG_ID },
       // Yayıncının tam tanımı (publishingPrinciples dahil) Base.astro'daki Organization düğümünde (src/lib/seo.ts);
       // burada aynı @id ile çelişen ikinci bir tanım yazılmaz, sadece ona bağlanılır.
@@ -111,7 +113,7 @@ const jsonLd = {
     <meta property="article:section" content={section} />
     {forklart && <meta property="article:tag" content={FORKLART.name} />}
     {analyse && <meta property="article:tag" content={ANALYSE.name} />}
-    {forfatterUrl && <meta name="author" content={author} />}
+    <meta name="author" content={synligForfatter} />
     <script type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
   </Fragment>
 
@@ -188,7 +190,7 @@ const jsonLd = {
       }
       <div>
         <dt>Av</dt>
-        <dd>{forfatterUrl ? <a href={forfatterUrl} rel="author">{author}</a> : author}</dd>
+        <dd>{forfatterUrl ? <a href={forfatterUrl} rel="author">{synligForfatter}</a> : synligForfatter}</dd>
       </div>
     </dl>
 
@@ -233,7 +235,7 @@ const jsonLd = {
 
     <KiNotat tittel={title} url={pageUrl} author={author} sjanger={haber.data.sjanger} produksjon={produksjon} />
 
-    {forfatterUrl && <ForfatterKort name={author} heading="h3" />}
+    {forfatterUrl && <ForfatterKort name={synligForfatter} heading="h3" />}
 
     <DelSaken url={pageUrl} title={title} />
   </article>

@@ -3,6 +3,7 @@
 import Symbol from './Symbol.astro';
 import { SITE, categoryName, formatDay, formatTime, produksjonMerke, varsel } from '../lib/site';
 import { ANALYSE, erAnalyse, erForklart, FORKLART, forfatterSlug, kilde, type Haber } from '../lib/news';
+import { synligForfatter } from '../lib/forfatter.mjs';
 import { lesetid } from '../lib/ordtelling.mjs';
 
 interface Props {
@@ -16,7 +17,8 @@ const { title, date, category, breaking, produksjon, author } = haber.data;
 const warn = varsel(title);
 const source = kilde(haber);
 const made = produksjonMerke(produksjon);
-const harForfatter = Boolean(author && author !== SITE.name);
+const forfatter = synligForfatter({ sjanger: haber.data.sjanger, author }, SITE.name, SITE.redaktor);
+const harForfatter = forfatter !== SITE.name;
 // Lesetid bare for lengre saker (2 min eller mer), som Forklart-artikler.
 const minutter = lesetid(haber.body);
 ---
@@ -27,7 +29,7 @@ const minutter = lesetid(haber.body);
   {erForklart(haber) && <span class="mark mark-forklart"><Symbol kind="forklart" />{FORKLART.name}</span>}
   {erAnalyse(haber) && <span class="mark mark-analyse"><Symbol kind="forklart" />{ANALYSE.name}</span>}
   {showCategory && <span class="mark"><Symbol kind={category} />{categoryName(category)}</span>}
-  {harForfatter && <span class="mark">Av <a href={`/forfatter/${forfatterSlug(author)}/`}>{author}</a></span>}
+  {harForfatter && <span class="mark">Av <a href={`/forfatter/${forfatterSlug(forfatter)}/`}>{forfatter}</a></span>}
   {
     time && (
       <time datetime={date.toISOString()}>{time === 'full' ? `${formatDay(date)} kl. ${formatTime(date)}` : formatTime(date)}</time>

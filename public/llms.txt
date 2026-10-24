@@ -9,7 +9,7 @@ tidsrøst er en uavhengig, ikke-kommersiell nyhetsformidler som samler og formid
 - **VVP 2.3 – Åpenhet om metode og kunstig intelligens**: tidsrøst praktiserer full åpenhet om hvordan alt innhold produseres:
   - *Datasaker*: Valutakurser fra Norges Bank, farevarsler fra Meteorologisk institutt (MET) og flom- og skredvarsler fra NVE lages automatisk på grunnlag av offentlige data.
   - *Nyhetssaker*: Nyhetssaker skrives automatisk med KI og kontrolleres automatisk mot kildeteksten (sitatlojalitet, tallbelegg og tilskriving). En merknad under hver sak forteller hvordan den er laget.
-  - *Forklart og rettelser*: Forklart-sakene utgis under navnet til utgiver og redaktør Şenol Dak, med KI-verktøy brukt til oversettelse og språkvask. Rettelser og avpubliseringer står på /rettelser/.
+  - *Forklart, Analyse og rettelser*: Forklart- og Analyse-sakene utgis under navnet til utgiver og redaktør Şenol Dak, med KI-verktøy brukt til oversettelse og språkvask. Rettelser og avpubliseringer står på /rettelser/.
 - **Rettelser (VVP 4.13)**: Faktiske feil rettes åpent: rettelsen føres som note under saken og med dato på siden /rettelser/.
 
 ## Kjerneområder og seksjoner
