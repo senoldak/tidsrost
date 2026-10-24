@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-24T06:02:45.279Z",
+  "hentet": "2026-10-24T08:03:39.427Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-24T06:02:34+00:00",
+  "sistEndretHosMet": "2026-10-24T08:02:34+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.261023220000.7010_1_0",
@@ -34,6 +34,19 @@
       "konsekvenser": "Voldsomme bølger: På grunn av voldsomme bølger vil synsvidden nedsettes betydelig.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.20261024074124.083",
+      "niva": "gult",
+      "hendelse": "Storm",
+      "omrade": "Åna-Sira - Obrestad",
+      "domene": "hav",
+      "start": "2026-10-24T14:00:00+00:00",
+      "slutt": "2026-10-25T11:00:00+00:00",
+      "beskrivelse": "Fra i ettermiddag, lørdag, søraust stiv kuling 15 m/s, fra sent i ettermiddag sterk kuling 20, natt til søndag sterk storm 30. Fra tidlig søndag morgen søraust sterk kuling 20. Minkende søndag formiddag.",
+      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Voldsomme bølger: På grunn av voldsomme bølger vil synsvidden nedsettes betydelig.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
       "id": "2.49.0.1.578.0.261023220000.7007_1_0",
@@ -73,6 +86,19 @@
       "konsekvenser": "Meget høye bølger: Rullingen blir tung og støtende. Synsvidden nedsettes.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.20261024070909.039",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "Rørvik - Sandnessjøen",
+      "domene": "hav",
+      "start": "2026-10-24T19:00:00+00:00",
+      "slutt": "2026-10-25T08:00:00+00:00",
+      "beskrivelse": "Fra lørdag kveld sørøstlig stiv kuling 15 m/s.",
+      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt.",
+      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
       "id": "2.49.0.1.578.0.261023220000.7011_1_0",
