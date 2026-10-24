@@ -15,12 +15,13 @@ import os from 'node:os';
 import path from 'node:path';
 import { sakerOku, paylasilir, bildetekst, bildeUrl, varselSeviye, varselSuz, reelsDilimi, reelsSec, sakYeri, YERLER } from './saker.mjs';
 import { reelsCiz } from './reels.mjs';
+import { AZAMI_LIMIT, eksikKanallar, hataIsle } from './deneme.mjs';
 
 const API = 'https://graph.facebook.com/v25.0';
 const DURUM = 'scripts/sosial/delt.json';
 const KANALLAR = ['ig_post', 'ig_story', 'fb_post', 'fb_story'];
 const REELS_KANALLAR = ['ig_reels', 'fb_reels'];
-const AZAMI_DENEME = 3;
+const AZAMI_DENEME = 3; // deneme.mjs ile aynı
 const TUR_BASINA = 10; // bir turda en çok bu kadar haber; kalanı sonraki tura
 const ARA_MS = Number(process.env.SOSIAL_ARA_MS ?? 60_000); // haberler arası bekleme (akışı boğmamak için)
 
@@ -197,7 +198,7 @@ if (process.argv.includes('--reels')) {
   let durum;
   try { durum = JSON.parse(await readFile(DURUM, 'utf8')); } catch { console.log('[sosial] Reels: delt.json yok, atlandı.'); process.exit(0); }
   const simdi = Date.now();
-  const tukenmis = (k) => REELS_KANALLAR.every((c) => k?.[c] || (k?.deneme?.[c] ?? 0) >= AZAMI_DENEME);
+  const tukenmis = (k) => REELS_KANALLAR.every((c) => k?.[c] || (k?.deneme?.[c] ?? 0) >= AZAMI_DENEME || (k?.limit ?? 0) >= AZAMI_LIMIT);
   const s = reelsSec((await sakerOku()).filter((x) => paylasilir(x, simdi) && !tukenmis(durum[x.id])), durum, dilim);
   if (!s) { console.log(`[sosial] Reels (${dilim.gun} ${dilim.ad}): gönderilecek haber yok ya da dilim dolu.`); process.exit(0); }
   const k = (durum[s.id] ??= { tarih: new Date(simdi).toISOString() });
@@ -210,9 +211,10 @@ if (process.argv.includes('--reels')) {
       console.log(`[sosial] ✓ ${s.id} ${c} (${k[c]})`);
     } catch (e) {
       hata++;
-      k.deneme = { ...k.deneme, [c]: (k.deneme?.[c] ?? 0) + 1 };
-      k.son_hata = gizle(e.message).slice(0, 300);
+      const tur = hataIsle(k, c, gizle(e.message));
       console.error(`[sosial] ! ${s.id} ${c}: ${k.son_hata}`);
+      // Meta uygulama sınırı: öteki kanalı denemeden turu bırak.
+      if (tur === 'limit') { console.error('[sosial] Meta istek sınırı: tur bırakıldı.'); break; }
     }
   }
   // Bir kanal bile gittiyse dilim dolmuş sayılır; ikisi de düştüyse dilimin sonraki turu yeniden dener.
@@ -246,7 +248,7 @@ if (baslat || !delt) {
 // 7 günden eski kayıtlar budanır.
 for (const [id, k] of Object.entries(delt)) if (Date.parse(k.tarih) < simdi - 7 * 86400e3) delete delt[id];
 
-const eksik = (k) => KANALLAR.filter((c) => !k?.[c] && (k?.deneme?.[c] ?? 0) < AZAMI_DENEME && !k?.atlandi);
+const eksik = (k) => eksikKanallar(KANALLAR, k);
 const son24 = Object.values(delt).filter((k) => !k.atlandi && Date.parse(k.tarih) > simdi - 86400e3).length;
 let kalanTavan = tavan - son24;
 
@@ -259,7 +261,9 @@ console.log(`[sosial] Sırada ${sira.length} haber; son 24 saatte ${son24} haber
 
 let hata = 0;
 let islenen = 0;
+let sinir = false; // Meta uygulama istek sınırı: kalan haberler bu turda denenmez
 for (const s of sira) {
+  if (sinir) break;
   const yeni = !delt[s.id];
   if (yeni && kalanTavan <= 0) { console.log(`[sosial] Günlük tavan doldu; ${s.id} bekliyor.`); continue; }
   if (islenen >= TUR_BASINA) break;
@@ -277,9 +281,13 @@ for (const s of sira) {
       console.log(`[sosial] ✓ ${s.id} ${c}`);
     } catch (e) {
       hata++;
-      k.deneme = { ...k.deneme, [c]: (k.deneme?.[c] ?? 0) + 1 };
-      k.son_hata = gizle(e.message).slice(0, 300);
+      const tur = hataIsle(k, c, gizle(e.message));
       console.error(`[sosial] ! ${s.id} ${c}: ${k.son_hata}`);
+      if (tur === 'limit') {
+        sinir = true;
+        console.error('[sosial] Meta istek sınırı: tur bırakıldı, kalan kanal ve haberler denenmedi (sonraki tur).');
+        break;
+      }
     }
   }
   await kaydet();
