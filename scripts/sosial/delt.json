@@ -673,7 +673,13 @@
     "son_hata": "Graph 403: Application request limit reached",
     "ig_story": "18396271300166872",
     "fb_post": "1343803192154866_122109945717509504",
-    "fb_story": "1645558587306894"
+    "fb_story": "1645558587306894",
+    "ig_reels": "18360361054220563",
+    "fb_reels": "1610780100522374",
+    "reels": {
+      "gun": "2026-10-24",
+      "dilim": "kveld"
+    }
   },
   "kobenhavns-universitet-rammet-av-dataangrep": {
     "tarih": "2026-10-24T10:05:22.278Z",
