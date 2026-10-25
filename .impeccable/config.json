@@ -38,6 +38,15 @@
         ],
         "createdAt": "2026-10-10T13:32:00.782Z",
         "reason": "Claude: unshipped direction-round sketch; alternate worlds intentionally use other fonts"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/styles/global.css"
+        ],
+        "createdAt": "2026-10-25T21:59:18.715Z",
+        "reason": "Sahibi kararı Claude'a bıraktı (25 Ekim 2026); .sentez-kutu sol çizgisi tidsrost'un bilinçli tasarımı (kontur rengi), kalıyor"
       }
     ]
   }
