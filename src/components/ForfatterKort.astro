@@ -1,6 +1,7 @@
 ---
 import { SITE } from '../lib/site';
 import { forfatterSlug } from '../lib/news';
+import { kunyeParcalari } from '../lib/kunye.mjs';
 
 interface Props {
   name: string;
@@ -39,14 +40,20 @@ export const forfatterBeskrivelse = (_navn: string) => FORFATTER_KUNYE.join(' ')
         )
       }
       <p class="forfatter-kort-tittel" itemprop="jobTitle">
-        Utgiver og redaktør
+        Journalist
         {typeof antallSaker === 'number' && <span> · {antallSaker} publiserte {antallSaker === 1 ? 'sak' : 'saker'}</span>}
       </p>
     </div>
-    <div class="forfatter-kort-monogram" aria-hidden="true">{initialer}</div>
+    {
+      name === 'Şenol Dak' ? (
+        <img class="forfatter-kort-foto" src="/yazar-foto/senol-dak.jpg" width="56" height="56" alt={name} itemprop="image" />
+      ) : (
+        <div class="forfatter-kort-monogram" aria-hidden="true">{initialer}</div>
+      )
+    }
   </div>
   <div class="forfatter-kort-beskrivelse" itemprop="description">
-    {(heading === 'h1' ? FORFATTER_KUNYE : FORFATTER_KUNYE.slice(0, 1)).map((avsnitt) => <p>{avsnitt}</p>)}
+    {(heading === 'h1' ? FORFATTER_KUNYE : FORFATTER_KUNYE.slice(0, 1)).map((avsnitt) => <p>{kunyeParcalari(avsnitt).map((x) => (x.adres ? <a href={x.adres}>{x.metin}</a> : x.metin))}</p>)}
   </div>
   <div class="forfatter-kort-handling">
     {

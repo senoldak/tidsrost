@@ -33,6 +33,7 @@ export const METODE_RAD = { etikett: 'Metode', tekst: 'Beregningene er forklart 
 export const ANSVAR_RAD = {
   etikett: 'Ansvar',
   tekst: 'Redaktøren har det redaksjonelle ansvaret for saken. tidsrøst følger Vær Varsom-plakaten som rettesnor.',
+  lenke: { parca: 'Vær Varsom-plakaten', adres: '/redaksjonelle-prinsipper/' },
 };
 export const KI_SIDE = { tekst: 'Slik bruker vi KI →', href: '/bruk-av-ki/' };
 export const KJEDE_NOTAT =

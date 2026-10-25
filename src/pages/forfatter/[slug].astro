@@ -37,7 +37,8 @@ const jsonLd = {
         '@type': 'Person',
         '@id': `${pageUrl}#person`,
         name,
-        jobTitle: 'Utgiver og redaktør',
+        jobTitle: 'Journalist',
+        image: `${SITE_URL}/yazar-foto/senol-dak.jpg`,
         description,
         url: pageUrl,
         ...(SITE.epost ? { email: SITE.epost } : {}),
@@ -53,7 +54,7 @@ const jsonLd = {
 };
 ---
 
-<Base title={`${name} – Utgiver og redaktør`} description={description}>
+<Base title={`${name} – Journalist`} description={description}>
   <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
   <ForfatterKort name={name} antallSaker={items.length} heading="h1" />
   <section class="day">

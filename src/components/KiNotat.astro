@@ -3,6 +3,7 @@
 // Sahibin yazısı (Forklart, Analyse): aynı sakin dille "Slik er saken laget" satırları.
 // Bot sayfaları (canlı tablolar) bot=true ile çağrılır; haberlerde produksjon, yazar ve sjanger notu belirler.
 import { kiNotat, EIER_TITTEL, KI_SIDE } from '../lib/kinote.mjs';
+import { satirParcalari } from '../lib/kunye.mjs';
 
 interface Props {
   tittel: string;
@@ -24,7 +25,7 @@ const n = kiNotat({ author, sjanger, produksjon, tittel, url, bot });
         {n.rader.map((r) => (
           <div>
             <dt>{r.etikett}</dt>
-            <dd>{r.tekst}</dd>
+            <dd>{satirParcalari(r.tekst, r.lenke).map((x) => (x.adres ? <a href={x.adres}>{x.metin}</a> : x.metin))}</dd>
           </div>
         ))}
       </dl>

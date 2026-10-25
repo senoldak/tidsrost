@@ -87,7 +87,7 @@ const jsonLd = {
       datePublished: iso,
       dateModified: modifiedIso,
       author: forfatterUrl
-        ? [{ '@type': 'Person', name: synligForfatter, jobTitle: 'Utgiver og redaktør', description: forfatterBeskrivelse(synligForfatter), url: `${SITE_URL}${forfatterUrl}` }]
+        ? [{ '@type': 'Person', name: synligForfatter, jobTitle: 'Journalist', description: forfatterBeskrivelse(synligForfatter), url: `${SITE_URL}${forfatterUrl}` }]
         : { '@id': ORG_ID },
       // Yayıncının tam tanımı (publishingPrinciples dahil) Base.astro'daki Organization düğümünde (src/lib/seo.ts);
       // burada aynı @id ile çelişen ikinci bir tanım yazılmaz, sadece ona bağlanılır.

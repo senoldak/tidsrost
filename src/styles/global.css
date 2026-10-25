@@ -1570,6 +1570,14 @@ main.container {
   color: var(--muted);
 }
 
+.forfatter-kort-foto {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .forfatter-kort-monogram {
   flex: none;
   display: flex;
