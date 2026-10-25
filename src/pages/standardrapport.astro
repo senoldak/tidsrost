@@ -63,7 +63,7 @@ const regelTekst = (liste: { navn: string; antall: number }[]) => liste.map((r) 
             <h3>Publisert</h3>
             <ul>
               <li>Saker skrevet automatisk med KI: {s.bot}</li>
-              <li>Saker utgitt under utgiverens navn: {s.eier} (KI-verktøy er brukt til oversettelse og språkvask)</li>
+              <li>Saker utgitt under utgiverens navn: {s.eier} (skrevet av utgiveren; KI-verktøy er brukt til oversettelse og språkvask)</li>
               {s.kjede > 0 && <li>Artikler skrevet med KI-verktøy og publisert etter redaktørens godkjenning: {s.kjede}</li>}
               <li>
                 Saker publisert med merking for sensitivt tema: {s.sari}

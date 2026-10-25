@@ -872,6 +872,39 @@ main.container {
   text-underline-offset: 0.18em;
 }
 
+.ki-notat-tittel {
+  margin: 0 0 calc(var(--u) * 2);
+  font: 700 0.875rem/1.4 var(--frame);
+  color: var(--ink);
+}
+
+.ki-notat-eier dl {
+  margin: 0;
+}
+
+.ki-notat-eier dl > div {
+  margin: 0 0 calc(var(--u) * 1.5);
+}
+
+.ki-notat-eier dt {
+  display: inline;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.ki-notat-eier dt::after {
+  content: ': ';
+}
+
+.ki-notat-eier dd {
+  display: inline;
+  margin: 0;
+}
+
+.ki-notat-lenker {
+  margin: calc(var(--u) * 2) 0 0;
+}
+
 .share {
   display: flex;
   gap: calc(var(--u) * 3);

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { kiNotat, erEierSak, erKjedeSak, BOT_NOTAT, EIER_NOTAT, KJEDE_NOTAT, LENKE_TEKST } from './kinote.mjs';
+import { kiNotat, erEierSak, erKjedeSak, BOT_NOTAT, EIER_NOTAT, EIER_RADER, METODE_RAD, ANSVAR_RAD, KJEDE_NOTAT, LENKE_TEKST } from './kinote.mjs';
 
 const url = 'https://tidsrost.com/artikkel/en-sak/';
 
@@ -14,31 +14,43 @@ test('bot haberi: bot notu, mailto konusu ve gövdesi', () => {
   assert.equal(n.eier, false);
 });
 
-test('Forklart ve Şenol Dak yazısı: sahip notu', () => {
-  const metin = 'KI-verktøy er brukt til oversettelse og språkvask. Alle tall er hentet fra offisielle kilder og kontrollert.';
-  assert.equal(EIER_NOTAT, metin);
-  assert.equal(kiNotat({ author: 'Şenol Dak', sjanger: 'forklart', tittel: 't', url }).tekst, metin);
+test('Forklart ve Şenol Dak yazısı: sahip notu ve "Slik er saken laget" satırları', () => {
+  const n = kiNotat({ author: 'Şenol Dak', sjanger: 'forklart', tittel: 't', url });
+  assert.equal(n.tekst, EIER_NOTAT);
+  assert.deepEqual(n.rader.map((r) => r.etikett), ['Forfatter', 'Språk og KI', 'Tall og kilder', 'Ansvar']);
+  assert.match(n.rader[1].tekst, /skrevet på tyrkisk og oversatt til norsk/);
+  assert.match(n.rader[1].tekst, /lest og godkjent den norske teksten/);
+  assert.match(n.rader[1].tekst, /ikke brukt til innhold, vinkling eller tall/);
   assert.equal(kiNotat({ author: 'tidsrøst', sjanger: 'forklart', tittel: 't', url }).eier, true);
   assert.equal(erEierSak({ author: 'Şenol Dak', sjanger: 'nyhet' }), true);
+  assert.equal(kiNotat({ tittel: 't', url }).rader, undefined);
 });
 
 test('canlı tablo (bot=true) sahip yazarı olsa bile bot notu alır; notlar "Ansvarlig" içermez', () => {
   assert.equal(kiNotat({ bot: true, author: 'Şenol Dak', tittel: 't', url }).tekst, BOT_NOTAT);
-  for (const t of [BOT_NOTAT, EIER_NOTAT, LENKE_TEKST]) assert.doesNotMatch(t, /ansvarlig/i);
+  for (const t of [BOT_NOTAT, EIER_NOTAT, LENKE_TEKST, ...EIER_RADER.map((r) => r.tekst), METODE_RAD.tekst, ANSVAR_RAD.tekst])
+    assert.doesNotMatch(t, /ansvarlig/i);
 });
 
-test('yazı işleri zinciri (produksjon ki-redigert): Şenol Dak ve forklart olsa da zincir notu; bağlantı aynı', () => {
+test('yazı işleri zinciri (produksjon ki-redigert): sahibin olmayan yazı zincir notu alır; bağlantı aynı', () => {
   const metin =
     'Saken er skrevet med KI-verktøy. Tall og sitater er kontrollert mot offisielle kilder, og redaksjonen har lest og godkjent saken før publisering.';
   assert.equal(KJEDE_NOTAT, metin);
-  const n = kiNotat({ author: 'Şenol Dak', sjanger: 'forklart', produksjon: 'ki-redigert', tittel: 'En sak å lese', url });
+  const n = kiNotat({ author: 'tidsrøst', sjanger: 'nyhet', produksjon: 'ki-redigert', tittel: 'En sak å lese', url });
   assert.equal(n.tekst, metin);
-  assert.doesNotMatch(n.tekst, /oversettelse og språkvask/);
   assert.equal(n.kjede, true);
   assert.equal(n.eier, false);
+  assert.equal(n.rader, undefined);
   assert.equal(n.lenkeTekst, 'Meld fra om feil →');
   assert.equal(n.href, kiNotat({ tittel: 'En sak å lese', url }).href);
   assert.equal(erKjedeSak({ produksjon: 'ki-redigert' }), true);
+});
+
+test('ki-redigert Forklart med Şenol Dak: sahip notu, zincir notu değil', () => {
+  const n = kiNotat({ author: 'Şenol Dak', sjanger: 'forklart', produksjon: 'ki-redigert', tittel: 't', url });
+  assert.equal(n.eier, true);
+  assert.equal(n.kjede, false);
+  assert.equal(erKjedeSak({ author: 'Şenol Dak', sjanger: 'forklart', produksjon: 'ki-redigert' }), false);
 });
 
 test('zincir değeri olmayan yazı eski kuralla; canlı tablo (bot=true) her zaman bot notu', () => {
@@ -48,9 +60,11 @@ test('zincir değeri olmayan yazı eski kuralla; canlı tablo (bot=true) her zam
   assert.doesNotMatch(KJEDE_NOTAT, /ansvarlig/i);
 });
 
-test('analyse (sjanger analyse, produksjon ki-redigert): zincir notu; Şenol Dak imzası eski sahip notuna düşmez', () => {
+test('analyse (sjanger analyse, produksjon ki-redigert): sahip notu, metode satırı Ansvar satırından önce', () => {
   const n = kiNotat({ author: 'Şenol Dak', sjanger: 'analyse', produksjon: 'ki-redigert', tittel: 'En analyse', url });
-  assert.equal(n.tekst, KJEDE_NOTAT);
-  assert.equal(n.kjede, true);
-  assert.equal(n.eier, false);
+  assert.equal(n.tekst, EIER_NOTAT);
+  assert.equal(n.eier, true);
+  assert.equal(n.kjede, false);
+  assert.deepEqual(n.rader.map((r) => r.etikett), ['Forfatter', 'Språk og KI', 'Tall og kilder', 'Metode', 'Ansvar']);
+  assert.match(n.rader[3].tekst, /Slik regnet vi/);
 });

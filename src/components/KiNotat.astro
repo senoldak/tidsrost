@@ -1,8 +1,8 @@
 ---
-// Sayfa sonu yapay zekâ notu (src/lib/kinote.mjs): küçük, sakin tek satır; kutu ve ikon yok.
-// Bot sayfaları (canlı tablolar) bot=true ile çağrılır; haberlerde produksjon (zincir: ki-redigert), yazar ve sjanger
-// notu belirler.
-import { kiNotat } from '../lib/kinote.mjs';
+// Sayfa sonu yapay zekâ notu (src/lib/kinote.mjs). Bot ve zincir yazıları: küçük, sakin tek satır; kutu ve ikon yok.
+// Sahibin yazısı (Forklart, Analyse): aynı sakin dille "Slik er saken laget" satırları.
+// Bot sayfaları (canlı tablolar) bot=true ile çağrılır; haberlerde produksjon, yazar ve sjanger notu belirler.
+import { kiNotat, EIER_TITTEL, KI_SIDE } from '../lib/kinote.mjs';
 
 interface Props {
   tittel: string;
@@ -16,4 +16,25 @@ const { tittel, url, author, sjanger, produksjon, bot } = Astro.props;
 const n = kiNotat({ author, sjanger, produksjon, tittel, url, bot });
 ---
 
-<p class="ki-notat" data-ki-notat={n.kjede ? 'kjede' : n.eier ? 'eier' : 'bot'}>{n.tekst} <a href={n.href}>{n.lenkeTekst}</a></p>
+{
+  n.rader ? (
+    <section class="ki-notat ki-notat-eier" data-ki-notat="eier" aria-labelledby="slik-er-saken-laget">
+      <h2 id="slik-er-saken-laget" class="ki-notat-tittel">{EIER_TITTEL}</h2>
+      <dl>
+        {n.rader.map((r) => (
+          <div>
+            <dt>{r.etikett}</dt>
+            <dd>{r.tekst}</dd>
+          </div>
+        ))}
+      </dl>
+      <p class="ki-notat-lenker">
+        <a href={n.href}>{n.lenkeTekst}</a> · <a href={KI_SIDE.href}>{KI_SIDE.tekst}</a>
+      </p>
+    </section>
+  ) : (
+    <p class="ki-notat" data-ki-notat={n.kjede ? 'kjede' : 'bot'}>
+      {n.tekst} <a href={n.href}>{n.lenkeTekst}</a>
+    </p>
+  )
+}
