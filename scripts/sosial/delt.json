@@ -1,46 +1,4 @@
 {
-  "gult-farevarsel-for-kraftige-vindkast-i-troms-og-nordlige-deler-av-nordland": {
-    "tarih": "2026-10-18T12:03:29.250Z",
-    "ig_post": "18121484549287919",
-    "ig_story": "17952690354322064",
-    "fb_post": "1343803192154866_122104995123509504",
-    "fb_story": "2278842619574312"
-  },
-  "oransje-farevarsel-for-svaert-mye-regn-i-deler-av-troms-og-nordlige-deler-av-nor": {
-    "tarih": "2026-10-18T12:05:00.626Z",
-    "ig_post": "17912069133518283",
-    "ig_story": "18125726257897409",
-    "fb_post": "1343803192154866_122104996119509504",
-    "fb_story": "2978438799172305"
-  },
-  "mann-i-30-arene-funnet-omkommet-etter-vannskuterulykke-i-bodo": {
-    "tarih": "2026-10-18T12:06:31.406Z",
-    "ig_post": "18098954480532752",
-    "ig_story": "18114819857596103",
-    "fb_post": "1343803192154866_122104996995509504",
-    "fb_story": "1474345154568697"
-  },
-  "volodymyr-zelenskyj-advarer-trump-mot-historisk-feil": {
-    "tarih": "2026-10-18T14:05:01.949Z",
-    "ig_post": "18096500495444861",
-    "ig_story": "18021638570938332",
-    "fb_post": "1343803192154866_122105383413509504",
-    "fb_story": "2139398609992761"
-  },
-  "kunstig-intelligens-og-datasentre": {
-    "tarih": "2026-10-18T14:06:02.600Z",
-    "ig_post": "17972990937149378",
-    "ig_story": "17926667694429899",
-    "fb_post": "1343803192154866_122105383821509504",
-    "fb_story": "1419509926461801"
-  },
-  "donald-trump-gir-sin-fulle-stotte-til-benjamin-netanyahu-for-valget-i-israel": {
-    "tarih": "2026-10-18T16:06:11.253Z",
-    "ig_post": "18103091348278303",
-    "ig_story": "17951312973053604",
-    "fb_post": "1343803192154866_122105384451509504",
-    "fb_story": "1775562740403296"
-  },
   "volodymyr-zelenskyj-anklager-usa-for-a-presse-ukraina-til-a-overgi-seg": {
     "tarih": "2026-10-18T20:04:43.592Z",
     "ig_post": "18147029059642529",
@@ -596,6 +554,11 @@
   },
   "demonstrasjoner-og-taregass-i-paris": {
     "tarih": "2026-10-25T11:05:03.835Z",
+    "son_hata": "Graph 403: Application request limit reached",
+    "limit": 1
+  },
+  "ferjesamband-ampere-i-2015-og-nullutslippskrav-i-verdensarvfjordene": {
+    "tarih": "2026-10-25T17:04:09.722Z",
     "son_hata": "Graph 403: Application request limit reached",
     "limit": 1
   }
