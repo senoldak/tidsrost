@@ -5,6 +5,7 @@ import { motorKimlik, kirmiziKayit, sariKayit } from './motor.mjs';
 import { velg } from './viktighet.mjs';
 import { finnDublett, nokkel } from './dublett.mjs';
 import { slugFor } from './kortfortalt.mjs';
+import { slugFor as varselSlugFor } from './farevarsler.mjs';
 
 // Ağ, Gemini ve disk yok: kaynaklar, puanlama, kapı ve yazım sahte. Haber siteleri uydurma adlarla (haber.example.com).
 mock.method(console, 'log', () => {});
@@ -47,6 +48,7 @@ function kur({ kaynaklar, puanlar = {}, hukommelse = [], durum = {}, bag = {}, a
   const yazilan = [];
   const kayitlar = [];
   const kortSayfa = [];
+  const varselSayfa = [];
   const u = uyarlayiciKur({
     tilstand,
     simdi: SIMDI,
@@ -67,6 +69,10 @@ function kur({ kaynaklar, puanlar = {}, hukommelse = [], durum = {}, bag = {}, a
         kortSayfa.push(...satirlar);
         return satirlar.length;
       },
+      leggTilFarevarsler: async (_rot, varsler) => {
+        varselSayfa.push(...varsler);
+        return varsler.length;
+      },
       yayinKapisi: kapi,
       motorKaydet: async (p) => {
         kayitlar.push(p.kayit);
@@ -76,7 +82,7 @@ function kur({ kaynaklar, puanlar = {}, hukommelse = [], durum = {}, bag = {}, a
       ...bag,
     },
   });
-  return { u, tilstand, yazilan, kayitlar, kortSayfa };
+  return { u, tilstand, yazilan, kayitlar, kortSayfa, varselSayfa };
 }
 
 const sonucu = (sonuclar, id) => sonuclar.find((s) => s.kimlik === motorKimlik(id));
@@ -154,6 +160,30 @@ test('isle: kort -> Kort fortalt satırı, günlük sayfa slug\'ı ile yazildi; 
   assert.equal(k.kortSayfa.length, 1);
   assert.ok(k.tilstand.sett['a:1']);
   assert.equal(k.u.ozet.antall, 1); // sayfa değişti: iş akışı derleme yapsın
+});
+
+test('isle: sarı ve turuncu farevarsel günün Farevarsler sayfasına gider; kırmızı farevarsel tek haber kalır', async () => {
+  const gult = aday('met:a', 'Gult', sak('Gult farevarsel for høy vannstand i Agder'));
+  const oransje = aday('nve:b', 'Oransje', sak('Oransje farevarsel for flom i Telemark', { body: 'Annen tekst. '.repeat(30) }));
+  const rodt = aday('met:c', 'Rødt', sak('Rødt farevarsel for ekstremvær i Nordland', { body: 'Tredje tekst. '.repeat(30) }));
+  const k = kur({ kaynaklar: [kaynak('met', [gult, rodt]), kaynak('nve', [oransje])] });
+  const sonuclar = await tur(k);
+  assert.deepEqual(k.varselSayfa.map((v) => v.id).sort(), ['met:a', 'nve:b']);
+  assert.deepEqual(k.yazilan.map((s) => s.title), ['Rødt farevarsel for ekstremvær i Nordland']);
+  assert.equal(sonucu(sonuclar, 'met:a').slug, varselSlugFor(new Date()));
+  assert.equal(sonucu(sonuclar, 'nve:b').durum, 'yazildi');
+  assert.ok(k.tilstand.sett['met:a'] && k.tilstand.sett['nve:b']);
+  assert.equal(k.u.ozet.antall, 2); // kırmızı haber + değişen sayfa
+});
+
+test('isle: Farevarsler sayfası yazılamazsa uyarılar bekliyor kalır, sett işaretlenmez', async () => {
+  const gult = aday('met:a', 'Gult', sak('Gult farevarsel for høy vannstand i Agder'));
+  const k = kur({ kaynaklar: [kaynak('met', [gult])], bag: { leggTilFarevarsler: async () => { throw new Error('disk'); } } });
+  await assert.rejects(tur(k), (e) => {
+    assert.equal(sonucu(e.sonuclar, 'met:a').durum, 'bekliyor');
+    return true;
+  });
+  assert.equal(k.tilstand.sett['met:a'], undefined);
 });
 
 test('isle: kort satırı kırmızıysa elendi; kapı bekle derse sonuç yok ve sett işaretlenmez', async () => {

@@ -12,11 +12,14 @@ const ren = (s = '') => typografi(trygg(htmlTilTekst(s))).replace(/\s+/g, ' ').t
 // Oslo tarihi: YYYY-MM-DD (günün sayfası bu tarihe göre seçilir).
 const osloDag = (d) => osloIso(d).slice(0, 10);
 
-export const slugFor = (d) => {
+// Günlük sayfaların adresi (Kort fortalt, Farevarsler): "<önek>-15-oktober-2026".
+export const dagSlug = (onek, d) => {
   const [y, m, g] = osloDag(d).split('-').map(Number);
   const maned = new Date(Date.UTC(y, m - 1, 15)).toLocaleDateString('nb-NO', { month: 'long', timeZone: 'UTC' });
-  return `kort-fortalt-${g}-${maned.replace(/ø/g, 'o').replace(/å/g, 'a').replace(/æ/g, 'ae')}-${y}`;
+  return `${onek}-${g}-${maned.replace(/ø/g, 'o').replace(/å/g, 'a').replace(/æ/g, 'ae')}-${y}`;
 };
+
+export const slugFor = (d) => dagSlug('kort-fortalt', d);
 
 // Kaynaktan gelen kısa duyuruyu satıra çevirir. Döner: { tittel, ingress, kilde } ya da geçersizse null.
 export function kortMelding({ tittel, ingress, kilde }) {

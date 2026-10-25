@@ -13,6 +13,7 @@ import { lesHukommelse, finnDublett, nokkel } from './dublett.mjs';
 import { fjernAdresser } from './hemmelig.mjs';
 import { maskerMedier } from './tekstverktoy.mjs';
 import { leggTilKortFortalt, slugFor } from './kortfortalt.mjs';
+import { leggTilFarevarsler, varselSidesine, slugFor as varselSlugFor } from './farevarsler.mjs';
 import { yayinKapisi, sakDenetimGirdisi } from './kapi.mjs';
 import { omskrivNærKilde } from './redaktor.mjs';
 import { motorKaydet, motorKimlik, sariKayit } from './motor.mjs';
@@ -52,6 +53,7 @@ export function uyarlayiciKur({ tilstand, simdi = new Date(), ayar = {}, bag = {
     skrivSak,
     lesHukommelse,
     leggTilKortFortalt,
+    leggTilFarevarsler,
     yayinKapisi,
     omskrivNærKilde,
     geminiPayiBitti,
@@ -63,7 +65,7 @@ export function uyarlayiciKur({ tilstand, simdi = new Date(), ayar = {}, bag = {
   tilstand.kilder ??= {};
   tilstand.puan ??= {};
 
-  const ozet = { antall: 0, kortLagt: 0, feilListe: [], utkastListe: [], rettetListe: [], stoppListe: [], kortListe: [], ventListe: [], standartElendi: [] };
+  const ozet = { antall: 0, kortLagt: 0, feilListe: [], utkastListe: [], rettetListe: [], stoppListe: [], kortListe: [], varselListe: [], ventListe: [], standartElendi: [] };
   const taze = new Map(); // bu turda taranan adaylar (lag() kapanışlarıyla), motor kimliğine göre
   const zaman = () => simdi.toISOString();
 
@@ -271,6 +273,19 @@ export function uyarlayiciKur({ tilstand, simdi = new Date(), ayar = {}, bag = {
           elendi(k, kapi.s.gerekce);
           continue;
         }
+        // Sarı ve turuncu farevarsel tek haber olmaz: tur sonunda günün "Farevarsler" sayfasına bölüm olur (bkz. farevarsler.mjs).
+        if (varselSidesine(sak)) {
+          const varselSlug = varselSlugFor(new Date());
+          const varselGerekce = yazimGerekcesi(kapi);
+          if (kapi.s.karar === 'sari' || varselGerekce) await B.motorKaydet({ site: 'tidsrost', kayit: sariKayit(k.id, varselSlug, { gerekce: varselGerekce }) });
+          ozet.varselListe.push({ k, sak });
+          hukommelse.push(nokkel({ slug: varselSlug, tittel: sak.title, ingress: sak.description, tekst: sak.body, tid: Date.now(), produksjon: sak.produksjon }));
+          merkSett(k);
+          delete tilstand.feil[k.id];
+          log(`  ~ ${k.id}: Farevarsler`);
+          yazildi(k, varselSlug);
+          continue;
+        }
         const slug = await B.skrivSak(A.rot, sak);
         const yazGerekce = yazimGerekcesi(kapi);
         if (kapi.s.karar === 'sari' || yazGerekce) await B.motorKaydet({ site: 'tidsrost', kayit: sariKayit(k.id, slug, { gerekce: yazGerekce }) });
@@ -332,7 +347,24 @@ export function uyarlayiciKur({ tilstand, simdi = new Date(), ayar = {}, bag = {
       }
     }
 
-    const durdurucu = ayarHatasi ?? kortHatasi;
+    // Farevarsler sayfası da Kort fortalt gibi tur sonunda yazılır; değiştiyse yayın sayımına bir olarak girer.
+    let varselHatasi = null;
+    if (!A.torr && ozet.varselListe.length) {
+      try {
+        const lagt = await B.leggTilFarevarsler(A.rot, ozet.varselListe.map(({ k, sak }) => ({ id: k.id, sak })));
+        log(`  + Farevarsler: ${lagt} nye eller oppdaterte varsler`);
+        if (lagt) ozet.antall++;
+      } catch (e) {
+        // Sayfa yazılamadı: uyarılar yazıldı sayılmaz, sonraki turda yeniden denenir.
+        varselHatasi = e;
+        for (const { k } of ozet.varselListe) {
+          for (const id of k.ider ?? [k.id]) delete tilstand.sett[id];
+          uyeler(k).forEach((kimlik) => koy({ kimlik, durum: 'bekliyor', hata: new Error(temiz(e.message)) }));
+        }
+      }
+    }
+
+    const durdurucu = ayarHatasi ?? kortHatasi ?? varselHatasi;
     if (durdurucu) {
       durdurucu.sonuclar = sonuclar;
       throw durdurucu;
