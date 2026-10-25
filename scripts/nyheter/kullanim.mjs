@@ -15,7 +15,7 @@ const fiyat = (ad, varsayilan) => {
 const FIYAT_GIRIS = fiyat('GEMINI_FIYAT_GIRIS', 0.1);
 const FIYAT_CIKIS = fiyat('GEMINI_FIYAT_CIKIS', 0.4);
 const AZAMI_SATIR = 40; // saatin kabul ettiği en fazla satır (D1 sorgu sınırı)
-const ATLANAN = new Set(['kullanim.mjs', 'lib.mjs']);
+const ATLANAN = new Set(['kullanim.mjs', 'lib.mjs', 'istemci.mjs']);
 
 export const kullanim = { cagri: 0, giris: 0, cikis: 0, dusunme: 0 };
 // Günlük kotası dolan (429, PerDay) modeller: bu süreçte bir daha denenmez (lib.mjs), ana model doluysa bütçe
@@ -68,6 +68,14 @@ function sinirla(satirlar) {
   const diger = { model: 'karisik', amac: 'diger', cagri: 0, giris: 0, cikis: 0, h429: 0, h503: 0 };
   for (const s of kalan) for (const a of ['cagri', 'giris', 'cikis', 'h429', 'h503']) diger[a] += s[a];
   return [...sirali.slice(0, AZAMI_SATIR - 1), diger];
+}
+
+// Bu süreçte modelin bütün amaçlardaki başarılı + başarısız istekleri: Google'ın günlük sayacı hepsini sayar
+// (22 Ekim ölçümü); bütçe yöneticisi model payını bununla izler.
+export function modelHarcamasi(model) {
+  let n = 0;
+  for (const s of ayrinti.values()) if (s.model === model) n += s.cagri + s.h429 + s.h503;
+  return n;
 }
 
 export const ayrintiKayitlari = () => sinirla([...ayrinti.values()].map((s) => ({ ...s })));

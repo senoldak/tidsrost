@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { mkdtemp, readFile, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
-import { amacBul, kullanimEkle, hataEkle, ayrintiKayitlari, ayrintiSifirla, kullanimDosyasinaYaz } from './kullanim.mjs';
+import { amacBul, kullanimEkle, hataEkle, ayrintiKayitlari, ayrintiSifirla, kullanimDosyasinaYaz, modelHarcamasi } from './kullanim.mjs';
 import { raporla } from './gemini-rapor.mjs';
 
 const yigin = (...satirlar) => ['Error', ...satirlar.map((s) => `    at ${s}`)].join('\n');
@@ -68,4 +68,24 @@ test('raporla: dosyadaki kayıtları anahtarla saate gönderir; eksik ayar ya da
   assert.match(hata, /gönderilemedi/);
   const red = await raporla({ dosya, url: 'https://saat.example', anahtar: 'a', site: 'finfolis', fetchFn: async () => new Response('{}', { status: 401 }) });
   assert.match(red, /401/);
+});
+
+test('modelHarcamasi: modelin bütün amaçlardaki başarılı + başarısız istekleri (Google RPD hepsini sayar)', () => {
+  ayrintiSifirla();
+  kullanimEkle({ promptTokenCount: 1 }, { model: 'm1', amac: 'a/1' });
+  kullanimEkle({ promptTokenCount: 1 }, { model: 'm1', amac: 'a/2' });
+  hataEkle('m1', 'a/1', 503);
+  hataEkle('m1', 'a/2', 429);
+  kullanimEkle({ promptTokenCount: 1 }, { model: 'm2', amac: 'a/1' });
+  assert.equal(modelHarcamasi('m1'), 4);
+  assert.equal(modelHarcamasi('m2'), 1);
+  assert.equal(modelHarcamasi('yok'), 0);
+  ayrintiSifirla();
+});
+
+test('amacBul: istemci çekirdeği de atlanır (çağrı lib → istemci üzerinden geçer)', () => {
+  assert.equal(
+    amacBul(yigin('amacBul (file:///C:/r/scripts/bot/kullanim.mjs:10:5)', 'geminiCagir (file:///C:/r/scripts/bot/istemci.mjs:70:3)', 'gemini (file:///C:/r/scripts/bot/lib.mjs:190:3)', 'taslakYaz (file:///C:/r/scripts/bot/yazar.mjs:40:9)')),
+    'yazar/taslakYaz',
+  );
 });

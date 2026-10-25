@@ -9,6 +9,8 @@ delete process.env.GEMINI_MODEL;
 delete process.env.GEMINI_DENETIM_YEDEK_MODEL;
 const { gemini, DENETIM_YEDEK_MODEL } = await import('./lib.mjs');
 const { golgeKur } = await import('./golge.mjs');
+const { istemciSifirla } = await import('./istemci.mjs');
+istemciSifirla();
 
 function sahteAg(cevap) {
   const modeller = [];
@@ -30,7 +32,7 @@ test('gölge: denetim kararı Gemma\'ya da sorulur, ana karar döner, ayrılık 
   const ag = sahteAg((m) => (m === DENETIM_YEDEK_MODEL ? { onay: false } : { onay: true }));
   try {
     assert.deepEqual(await denetle(), { onay: true });
-    assert.deepEqual(ag.modeller, ['gemini-flash-lite-latest', DENETIM_YEDEK_MODEL]);
+    assert.deepEqual(ag.modeller, ['gemini-3.5-flash-lite', DENETIM_YEDEK_MODEL]);
     assert.deepEqual(sayac, { karar: 1, ayni: 0, anaEvet: 1, anaHayir: 0 });
     // hak bitti: ikinci denetim Gemma'ya gitmez
     assert.deepEqual(await denetle(), { onay: true });
@@ -46,7 +48,7 @@ test('gölge: hak yoksa ya da çağrı denetim değilse Gemma\'ya gidilmez; Gemm
   try {
     await denetle();
     await gemini({ prompt: 'x', schema: { type: 'object' } });
-    assert.deepEqual(ag.modeller, ['gemini-flash-lite-latest', 'gemini-flash-lite-latest']);
+    assert.deepEqual(ag.modeller, ['gemini-3.5-flash-lite', 'gemini-3.5-flash-lite']);
   } finally {
     ag.geri();
   }
@@ -54,7 +56,7 @@ test('gölge: hak yoksa ya da çağrı denetim değilse Gemma\'ya gidilmez; Gemm
   ag = sahteAg((m) => (m === DENETIM_YEDEK_MODEL ? 429 : { onay: true }));
   try {
     assert.deepEqual(await denetle(), { onay: true });
-    assert.deepEqual(ag.modeller, ['gemini-flash-lite-latest', DENETIM_YEDEK_MODEL]); // tek deneme
+    assert.deepEqual(ag.modeller, ['gemini-3.5-flash-lite', DENETIM_YEDEK_MODEL]); // tek deneme
     assert.equal(sayac.karar, 0);
   } finally {
     ag.geri();
