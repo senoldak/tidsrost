@@ -39,3 +39,10 @@ test('tablo: zincirlerdeki ve kapasitedeki her model tanımlı; takma ad kapasit
   assert.equal(MODELLER['gemma-4-26b-a4b-it'].semasiz, true);
   assert.ok(!ZINCIRLER.uzun.includes('gemma-4-26b-a4b-it'));
 });
+
+test('kapasiteSec: yeni zincirde iki Flash-Lite; GEMINI_ZINCIR=0 iken yalnız ana modelin hedefi', async () => {
+  const { kapasiteSec } = await import('./modeller.mjs');
+  assert.deepEqual(kapasiteSec({}), KAPASITE);
+  assert.deepEqual(kapasiteSec({ GEMINI_ZINCIR: '0' }), ['gemini-3.5-flash-lite']);
+  assert.deepEqual(kapasiteSec({ GEMINI_ZINCIR: '0', GEMINI_MODEL: 'gemini-3.1-flash-lite' }), ['gemini-3.1-flash-lite']);
+});

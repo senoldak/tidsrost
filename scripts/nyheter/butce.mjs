@@ -1,6 +1,7 @@
 // Kaynak: mecmua/site-ortak/gemini/butce.mjs. Burada düzenleme; kaynağı düzenleyip node site-ortak/kopyala.mjs çalıştır.
 // Katman 3 (Gemini kota planı): bütçe yöneticisi. Tur başında saatten sitenin bugünkü (Google günü, Pasifik saati)
-// model başına kullanımını okur ve her kapasite modeli (iki Flash-Lite, modeller.mjs KAPASITE) için ayrı tur payı
+// model başına kullanımını okur ve her kapasite modeli (iki Flash-Lite; GEMINI_ZINCIR=0 iken yalnız ana model,
+// modeller.mjs kapasiteSec) için ayrı tur payı
 // hesaplar:
 //   kalan = günlük sınır × 0,8 − bugün kullanılan
 //   pay   = kalan / ⌈kalan tur / 2⌉, ama sonraki her tura en az TABAN kalacak kadar (en az da eşit pay)
@@ -14,7 +15,7 @@
 // iki Flash-Lite da bitmişse kalan haberler görülmedi kalır, sonraki turda yazılır. Saate ulaşılamazsa güvenli
 // varsayılan: her kapasite modeline sınır × 0,8 / 12. Bu dosya dört botta aynıdır.
 import { modelHarcamasi, gunlukDolu } from './kullanim.mjs';
-import { MODELLER, KAPASITE, TAKMA_ADLAR } from './modeller.mjs';
+import { MODELLER, TAKMA_ADLAR, kapasiteSec } from './modeller.mjs';
 
 export const PAY_ORANI = 0.8;
 const TUR_ARALIGI_SAAT = 2; // saat botları iki saatte bir tetikler
@@ -48,7 +49,8 @@ const kisa = (m) => m.replace(/^gemini-/, '');
 
 // Döner: log satırı. Hiçbir durumda hata fırlatmaz.
 export async function butceYukle({ url, anahtar, site, simdi = new Date(), fetchFn = fetch } = {}) {
-  const sinir = (m) => Number(process.env.GEMINI_GUNLUK_SINIR) || MODELLER[m].rpd;
+  const sinir = (m) => Number(process.env.GEMINI_GUNLUK_SINIR) || MODELLER[m]?.rpd || 500;
+  const KAPASITE = kapasiteSec();
   const elle = Number(process.env.GEMINI_TUR_PAYI);
   if (process.env.GEMINI_TUR_PAYI && Number.isInteger(elle) && elle >= 0) {
     pay = Object.fromEntries(KAPASITE.map((m) => [m, elle]));
@@ -71,7 +73,12 @@ export async function butceYukle({ url, anahtar, site, simdi = new Date(), fetch
       const m = TAKMA_ADLAR[ad] ?? ad;
       kullanilan[m] = (kullanilan[m] ?? 0) + harcanmis(r);
     }
-    for (const [m, n] of Object.entries(kullanilan)) if (MODELLER[m] && n >= MODELLER[m].rpd) gunlukDolu.add(m);
+    for (const [m, n] of Object.entries(kullanilan)) {
+      if (!MODELLER[m] || n < MODELLER[m].rpd) continue;
+      gunlukDolu.add(m);
+      // eski düzen takma adla çağırır: dolu modeli o adla da kapat ki bir 429 harcanmasın
+      for (const [ad, hedef] of Object.entries(TAKMA_ADLAR)) if (hedef === m) gunlukDolu.add(ad);
+    }
     pay = Object.fromEntries(KAPASITE.map((m) => [m, turPayi({ kullanilan: kullanilan[m] ?? 0, simdi, sinir: sinir(m) })]));
     const satirlar = KAPASITE.map((m) => `${kisa(m)} ${kullanilan[m] ?? 0}/${sinir(m)} (pay ${pay[m]})`);
     return `Gemini bütçesi (Google günü ${j?.gun ?? '?'}): ${satirlar.join(', ')}`;
@@ -92,5 +99,5 @@ export const modelPayiVar = (model) => {
 
 // İki Flash-Lite da payını bitirdi ya da günlük kotası doldu: yeni habere başlanmaz.
 const dolu = (m) => gunlukDolu.has(m) || Object.entries(TAKMA_ADLAR).some(([ad, hedef]) => hedef === m && gunlukDolu.has(ad));
-export const geminiPayiBitti = () => KAPASITE.every((m) => dolu(m) || !modelPayiVar(m));
-export const butceDurumu = () => ({ pay: { ...pay }, harcanan: Object.fromEntries(KAPASITE.map((m) => [m, harcanan(m)])) });
+export const geminiPayiBitti = () => kapasiteSec().every((m) => dolu(m) || !modelPayiVar(m));
+export const butceDurumu = () => ({ pay: { ...pay }, harcanan: Object.fromEntries(kapasiteSec().map((m) => [m, harcanan(m)])) });

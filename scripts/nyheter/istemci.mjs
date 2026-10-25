@@ -13,7 +13,7 @@
 import { kullanimEkle, hataEkle, amacBul, gunlukDolu } from './kullanim.mjs';
 import { golge } from './golge.mjs';
 import { modelPayiVar } from './butce.mjs';
-import { MODELLER, ILK_HALKA_SURE, zincirSec } from './modeller.mjs';
+import { MODELLER, ILK_HALKA_SURE, TAKMA_ADLAR, zincirSec, kapasiteSec } from './modeller.mjs';
 
 const GEMINI_ARALIK_MS = Number(process.env.GEMINI_ARALIK_MS || 4500);
 const TUR_BEKLEMELERI_SN = [15, 30, 60];
@@ -36,12 +36,16 @@ export function istemciSifirla({ saat: s = Date.now } = {}) {
   soguma.clear();
 }
 
-// Sıra: payı olanlar, sonra payı bitenler; günlük dolular hiç, soğumadakiler (hepsi değilse) hiç.
+const kapasitede = (m) => kapasiteSec().includes(TAKMA_ADLAR[m] ?? m);
+
+// Sıra: payı olan kapasite modelleri, payı biten kapasite modelleri, sonra yedekler (20 RPD'li Flash'lar, Gemma); her
+// grupta zincir sırası. Günlük dolular hiç, soğumadakiler (hepsi değilse) hiç denenmez.
 function siraliAdaylar(zincir) {
   const acik = zincir.filter((m) => !gunlukDolu.has(m));
   const sicak = acik.filter((m) => !(soguma.get(m) > saat()));
   const adaylar = sicak.length ? sicak : acik;
-  return [...adaylar.filter(modelPayiVar), ...adaylar.filter((m) => !modelPayiVar(m))];
+  const kap = adaylar.filter(kapasitede);
+  return [...kap.filter(modelPayiVar), ...kap.filter((m) => !modelPayiVar(m)), ...adaylar.filter((m) => !kapasitede(m))];
 }
 
 // Gemma (şemasız) cevabı: ilk { ya da [ ile eşinin son görüldüğü yer arası; yoksa null.
@@ -82,7 +86,8 @@ export async function geminiCagir(
       const model = adaylar[k];
       const sonraki = adaylar[k + 1] ?? 'tur sonu';
       const semasiz = Boolean(MODELLER[model]?.semasiz);
-      const sure = (model === zincir[0] ? ILK_HALKA_SURE : MODELLER[model]?.sure ?? ILK_HALKA_SURE) * 1000;
+      // Kapasite modelleri (ve zincirin ilk halkası) meşru uzun yanıt için 180 sn bekler; kısa süre yalnız yedeklere.
+      const sure = (model === zincir[0] || kapasitede(model) ? ILK_HALKA_SURE : MODELLER[model]?.sure ?? ILK_HALKA_SURE) * 1000;
       let dusunme = semasiz || !seviye ? null : { thinkingLevel: seviye };
       let dakikaTekrari = false;
       let kesikTekrari = false;

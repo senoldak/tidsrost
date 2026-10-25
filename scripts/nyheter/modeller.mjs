@@ -30,6 +30,14 @@ export const KAPASITE = ['gemini-3.5-flash-lite', 'gemini-3.1-flash-lite'];
 // Takma ad hedef modelin kotasını kullanır (16 Ekim: AI Studio 3.5 Flash-Lite = D1'deki -latest sayısı).
 export const TAKMA_ADLAR = { 'gemini-flash-lite-latest': 'gemini-3.5-flash-lite' };
 
+// Bütçenin saydığı modeller bu süreçte: GEMINI_ZINCIR=0 (eski düzen) iki Flash-Lite'ı değil yalnız ana modeli kullanır;
+// 3.1 kapasite sayılsaydı hiç harcanmadığı için pay kapısı hiç kapanmazdı (son gözden geçirme, 25 Ekim).
+export function kapasiteSec(env = process.env) {
+  if (env.GEMINI_ZINCIR !== '0') return [...KAPASITE];
+  const ana = env.GEMINI_MODEL || 'gemini-flash-lite-latest';
+  return [TAKMA_ADLAR[ana] ?? ana];
+}
+
 // İstem + sistem bu kadar karakteri aşarsa "uzun" zincir (≈ 12K token).
 export const UZUN_ESIK = 48_000;
 

@@ -66,7 +66,7 @@ test('zaman aşımı sıradakine geçer ve 5xx sayılır', async () => {
   assert.equal(ayrintiKayitlari().find((s) => s.model === L35).h503, 1);
 });
 
-test('ilk halka 180 sn, yedek halka modelin süresi kadar bekler', async () => {
+test('kapasite modelleri 180 sn, yedek halka modelin süresi kadar bekler', async () => {
   const sureler = [];
   const gercek = AbortSignal.timeout;
   AbortSignal.timeout = (ms) => (sureler.push(ms), new AbortController().signal);
@@ -75,7 +75,7 @@ test('ilk halka 180 sn, yedek halka modelin süresi kadar bekler', async () => {
   } finally {
     AbortSignal.timeout = gercek;
   }
-  assert.deepEqual(sureler, [180_000, 120_000, 90_000]);
+  assert.deepEqual(sureler, [180_000, 180_000, 90_000]);
 });
 
 test('günlük 429 (PerDay): model kapanır, beklemeden sıradaki; sonraki çağrı onu hiç denemez', async () => {
@@ -131,17 +131,51 @@ test('soğuma: 5xx veren model 10 dk atlanır, sonra yeniden ilk sıraya döner'
   assert.deepEqual(a.modeller(), [L35]);
 });
 
-test('payı biten kapasite modeli sona kalır', async () => {
+test('payı biten kapasite modeli öbür kapasite modelinden sonra ama 20 RPD’li yedeklerden önce', async () => {
+  process.env.GEMINI_TUR_PAYI = '1';
+  const { butceYukle } = await import('./butce.mjs');
+  const { kullanimEkle } = await import('./kullanim.mjs');
+  try {
+    await butceYukle({});
+    kullanimEkle({}, { model: L35, amac: 'a' }); // 3.5'in payı bitti, 3.1'inki duruyor
+    let a = await ile([503, 200], async () => yaz());
+    assert.deepEqual(a.modeller(), [L31, L35]);
+    kullanimEkle({}, { model: L31, amac: 'a' }); // ikisi de bitti: süren haber yine Flash-Lite'la
+    istemciSifirla();
+    a = await ile([200], async () => yaz());
+    assert.deepEqual(a.modeller(), [L35]);
+  } finally {
+    delete process.env.GEMINI_TUR_PAYI;
+    await butceYukle({});
+  }
+});
+
+test('GEMINI_ZINCIR=0: ana modelin payı bitse de önce ana model, 20 RPD’li Flash sonra', async () => {
+  process.env.GEMINI_ZINCIR = '0';
   process.env.GEMINI_TUR_PAYI = '0';
   const { butceYukle } = await import('./butce.mjs');
   try {
     await butceYukle({});
     const a = await ile([200], async () => yaz());
-    assert.deepEqual(a.modeller(), [F36]);
+    assert.deepEqual(a.modeller(), ['gemini-flash-lite-latest']);
   } finally {
+    delete process.env.GEMINI_ZINCIR;
     delete process.env.GEMINI_TUR_PAYI;
     await butceYukle({});
   }
+});
+
+test('3.5 atlanınca ilk denenen kapasite modeli de 180 sn bekler (uzun meşru yanıt)', async () => {
+  gunlukDolu.add(L35);
+  const sureler = [];
+  const gercek = AbortSignal.timeout;
+  AbortSignal.timeout = (ms) => (sureler.push(ms), new AbortController().signal);
+  try {
+    await ile([503, 200], async () => yaz({ denetim: true }));
+  } finally {
+    AbortSignal.timeout = gercek;
+  }
+  assert.deepEqual(sureler, [180_000, 60_000]);
 });
 
 test('Gemma şemasız: responseSchema ve düşünme gönderilmez, biçim istemde; çitli JSON ayıklanır', async () => {

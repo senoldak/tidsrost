@@ -145,3 +145,42 @@ test('takma adın günlük kotası dolunca hedef model dolu sayılır', async ()
   assert.equal(geminiPayiBitti(), true);
   temiz();
 });
+
+test('GEMINI_ZINCIR=0: kapasite yalnız ana model; takma adın günlük kotası dolunca yeni habere başlanmaz', async () => {
+  temiz();
+  process.env.GEMINI_ZINCIR = '0';
+  try {
+    await butceYukle({ simdi: gunBasi });
+    assert.deepEqual(Object.keys(butceDurumu().pay), [L35]);
+    assert.equal(geminiPayiBitti(), false);
+    gunlukDolu.add('gemini-flash-lite-latest');
+    assert.equal(geminiPayiBitti(), true);
+  } finally {
+    delete process.env.GEMINI_ZINCIR;
+    temiz();
+  }
+});
+
+test('GEMINI_ZINCIR=0: pay bitince yeni habere başlanmaz (3.1 kullanılmadığı için kapıyı açık tutmaz)', async () => {
+  temiz();
+  process.env.GEMINI_ZINCIR = '0';
+  process.env.GEMINI_TUR_PAYI = '1';
+  try {
+    await butceYukle({ simdi: gunBasi });
+    kullanimEkle({}, { model: 'gemini-flash-lite-latest', amac: 'a' });
+    assert.equal(geminiPayiBitti(), true);
+  } finally {
+    delete process.env.GEMINI_ZINCIR;
+    delete process.env.GEMINI_TUR_PAYI;
+    temiz();
+  }
+});
+
+test('sınırına ulaşmış model takma adıyla da gunlukDolu\'ya girer (eski düzen 429 harcamasın)', async () => {
+  temiz();
+  const fetchFn = cevap({ gun: '2026-10-17', modeller: { 'gemini-flash-lite-latest': { cagri: 500 } } });
+  await butceYukle({ url: 'https://saat.example', anahtar: 'a', site: 'deneme', simdi: gunBasi, fetchFn });
+  assert.ok(gunlukDolu.has(L35));
+  assert.ok(gunlukDolu.has('gemini-flash-lite-latest'));
+  temiz();
+});
