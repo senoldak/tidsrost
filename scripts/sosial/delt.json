@@ -560,5 +560,10 @@
       "gun": "2026-10-25",
       "dilim": "kveld"
     }
+  },
+  "rentebaner-mot-fasit": {
+    "tarih": "2026-10-25T21:14:14.985Z",
+    "son_hata": "Graph 403: Application request limit reached",
+    "limit": 1
   }
 }
