@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-25T07:03:37.426Z",
+  "hentet": "2026-10-25T09:04:31.104Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,8 +7,21 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-25T07:01:31+00:00",
+  "sistEndretHosMet": "2026-10-25T09:03:02+00:00",
   "varsler": [
+    {
+      "id": "2.49.0.1.578.0.20261025070033.059",
+      "niva": "oransje",
+      "hendelse": "Svært høy vannstand",
+      "omrade": "Kyst- og fjordstrøk i Rogaland",
+      "domene": "land",
+      "start": "2026-10-26T06:00:00+00:00",
+      "slutt": "2026-10-26T12:00:00+00:00",
+      "beskrivelse": "Det er ventet svært høy vannstand. Mer informasjon om tidspunkt for høy vannstand og verdier for steder langs kysten finnes på sehavniva.no. Usikkerheten i varslet vannstand er 5-10 cm.",
+      "konsekvenser": "Fare for skader i strandsonen: Oversvømmelser kan gi omfattende skader på infrastruktur og bygninger flere steder i strandsonen. Unngå unødig ferdsel i strandsonen: Sterk vind og høye bølger i kombinasjon med høy vannstand kan øke skadeomfanget i strandsonen.",
+      "rad": "Fare for skader i strandsonen: Sjekk fortøyningen til båten og sikre løse gjenstander i strandsonen.",
+      "web": "https://www.met.no/nyhetsarkiv/oransje-farevarsel-om-svaert-hoy-vannstand-i-rogaland"
+    },
     {
       "id": "2.49.0.1.578.0.20261024074124.083",
       "niva": "gult",
@@ -62,16 +75,16 @@
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
-      "id": "2.49.0.1.578.0.20261024070909.039",
+      "id": "2.49.0.1.578.0.20261025071320.060",
       "niva": "gult",
       "hendelse": "Kuling",
       "omrade": "Rørvik - Sandnessjøen",
       "domene": "hav",
       "start": "2026-10-24T19:00:00+00:00",
-      "slutt": "2026-10-25T08:00:00+00:00",
-      "beskrivelse": "Fra lørdag kveld sørøstlig stiv kuling 15 m/s.",
-      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
+      "slutt": "2026-10-26T01:00:00+00:00",
+      "beskrivelse": "Sørøstlig stiv kuling 15 m/s, periodevis sterk kuling 17. Natt til mandag minkende.",
+      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
@@ -140,14 +153,14 @@
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
-      "id": "2.49.0.1.578.0.20261024094707.069",
+      "id": "2.49.0.1.578.0.20261025075301.081",
       "niva": "gult",
       "hendelse": "Kuling",
       "omrade": "Sandnessjøen - Bodø",
       "domene": "hav",
       "start": "2026-10-24T22:00:00+00:00",
-      "slutt": "2026-10-25T11:00:00+00:00",
-      "beskrivelse": "Fra sent lørdag kveld sørøstlig stiv kuling 15 m/s. Fra tidlig søndag morgen periodevis sterk kuling 17.",
+      "slutt": "2026-10-26T06:00:00+00:00",
+      "beskrivelse": "Stiv kuling 15 m/s, periodevis sterk kuling 17. Lokalt liten storm nær Støtt i ettermiddag. Minkende vind mandag morgen.",
       "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
@@ -335,30 +348,17 @@
       "web": null
     },
     {
-      "id": "2.49.0.1.578.0.20261024094215.099",
+      "id": "2.49.0.1.578.0.20261025072757.041",
       "niva": "gult",
       "hendelse": "Kuling",
       "omrade": "Bodø - Lødingen",
       "domene": "hav",
       "start": "2026-10-25T02:00:00+00:00",
-      "slutt": "2026-10-25T11:00:00+00:00",
-      "beskrivelse": "Natt til søndag sørøstlig stiv kuling 15 m/s. Mest vind i sør.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
+      "slutt": "2026-10-25T22:00:00+00:00",
+      "beskrivelse": "Sørøstlig stiv kuling 15 m/s. Periodevis sterk kuling 17 i sør.",
+      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt.",
       "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261023092537.043",
-      "niva": "gult",
-      "hendelse": "Kraftige vindkast",
-      "omrade": "Deler av Østlandet",
-      "domene": "land",
-      "start": "2026-10-25T02:00:00+00:00",
-      "slutt": "2026-10-25T09:00:00+00:00",
-      "beskrivelse": "Det ventes lokalt kraftige vindkast på 20-28 m/s fra sørøst, og liten storm på kysten. Vinden vil øke først i sør, og minke sist i nord.",
-      "konsekvenser": "Fare for innstilte avganger: Det er fare for innstillinger av flyavganger, båter og annen transport. Sikre løse gjenstander: Løse gjenstander kan blåse avgårde. Fare for hindringer i trafikken: Veier kan bli stengt på grunn av trær eller andre objekter i veibanen. Enkelte reiser vil kunne få lengre reisetid. Broer og utsatte veistrekninger kan bli stengt. Fare for strømbrudd: Strømforsyningen kan bli påvirket, for eksempel som følge av trær som knekker eller kommer i kontakt med strømnettet.",
-      "rad": "Sikre løse gjenstander: Vurder tiltak for å begrense skade før hendelsen inntreffer. Unngå unødig ferdsel på utsatte steder. Fare for hindringer i trafikken: Sjekk veimeldinger på vegvesen.no/trafikk. Fare for innstilte avganger: Følg råd og sjekk status fra transportaktører. Lokalt høye bølger: Vis forsiktighet ved ferdsel på sjøen. Høye bølger treffer land: Vis forsiktighet ved ferdsel i strandsonen.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/vind-over-land"
     },
     {
       "id": "2.49.0.1.578.0.261024220000.7003_1_0",
@@ -387,17 +387,30 @@
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/vind-over-land"
     },
     {
-      "id": "2.49.0.1.578.0.20261024131913.032",
+      "id": "2.49.0.1.578.0.20261025080000.031",
       "niva": "gult",
       "hendelse": "Kuling",
       "omrade": "Torsvåg - Vardø",
       "domene": "hav",
       "start": "2026-10-25T05:00:00+00:00",
-      "slutt": "2026-10-25T17:00:00+00:00",
-      "beskrivelse": "Fra tidlig søndag morgen sør periodevis stiv kuling 15 m/s.",
+      "slutt": "2026-10-26T00:00:00+00:00",
+      "beskrivelse": "Sørlig periodevis stiv kuling 15 m/s. Minkende vind søndag kveld.",
       "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
       "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
+    },
+    {
+      "id": "2.49.0.1.578.0.20261025070451.033",
+      "niva": "gult",
+      "hendelse": "Høy vannstand",
+      "omrade": "Kyst- og fjordstrøk i Hordaland",
+      "domene": "land",
+      "start": "2026-10-26T06:00:00+00:00",
+      "slutt": "2026-10-26T12:00:00+00:00",
+      "beskrivelse": "Det er ventet høy vannstand. Mer informasjon om tidspunkt for høy vannstand og verdier for steder langs kysten finnes på sehavniva.no. Usikkerheten i varslet vannstand er 5-10 cm.",
+      "konsekvenser": "Fare for skader i strandsonen: Oversvømmelser kan gi skader på infrastruktur og bygninger enkelte steder i strandsonen. Vis forsiktighet i strandsonen: Sterk vind og høye bølger i kombinasjon med høy vannstand kan øke skadeomfanget i strandsonen.",
+      "rad": "Fare for skader i strandsonen: Sjekk fortøyningen til båten og sikre løse gjenstander i strandsonen.",
+      "web": "https://www.met.no/nyhetsarkiv/oransje-farevarsel-om-svaert-hoy-vannstand-i-rogaland"
     }
   ]
 }
