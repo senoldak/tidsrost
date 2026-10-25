@@ -1,32 +1,4 @@
 {
-  "oransje-farevarsel-for-sterk-ising-pa-skip-i-b2-3": {
-    "tarih": "2026-10-18T10:04:35.215Z",
-    "ig_post": "18136216786655280",
-    "ig_story": "18104648030199331",
-    "fb_post": "1343803192154866_122104905807509504",
-    "fb_story": "1103360255993162"
-  },
-  "gult-farevarsel-for-flom-i-finnmark-nordland-og-troms": {
-    "tarih": "2026-10-18T10:06:01.900Z",
-    "ig_post": "18108991223221651",
-    "ig_story": "18104181320529275",
-    "fb_post": "1343803192154866_122104906809509504",
-    "fb_story": "1745433043193402"
-  },
-  "gult-farevarsel-for-jordskred-i-nordland": {
-    "tarih": "2026-10-18T10:07:23.988Z",
-    "ig_post": "18117115586077919",
-    "ig_story": "17990190345101205",
-    "fb_post": "1343803192154866_122104907811509504",
-    "fb_story": "1053422827740366"
-  },
-  "oransje-farevarsel-for-jordskred-i-nordland-og-troms": {
-    "tarih": "2026-10-18T10:08:45.047Z",
-    "ig_post": "18157500382510529",
-    "ig_story": "18052907882602120",
-    "fb_post": "1343803192154866_122104909845509504",
-    "fb_story": "3060222194330716"
-  },
   "gult-farevarsel-for-kraftige-vindkast-i-troms-og-nordlige-deler-av-nordland": {
     "tarih": "2026-10-18T12:03:29.250Z",
     "ig_post": "18121484549287919",
@@ -621,5 +593,10 @@
     "tarih": "2026-10-24T16:13:36.042Z",
     "son_hata": "Graph 403: Application request limit reached",
     "limit": 3
+  },
+  "demonstrasjoner-og-taregass-i-paris": {
+    "tarih": "2026-10-25T11:05:03.835Z",
+    "son_hata": "Graph 403: Application request limit reached",
+    "limit": 1
   }
 }
