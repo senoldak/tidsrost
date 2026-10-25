@@ -4179,7 +4179,20 @@
     "medier:5668ccf6a8b4f092": "2026-10-25T13:01:04.884Z",
     "medier:18a69305f13f843f": "2026-10-25T13:01:04.884Z",
     "medier:a55a9e8fcdfddaf2": "2026-10-25T13:01:04.884Z",
-    "medier:caf274c739aaac9b": "2026-10-25T13:01:04.884Z"
+    "medier:caf274c739aaac9b": "2026-10-25T13:01:04.884Z",
+    "medier:e00800bf4505feaf": "2026-10-25T15:01:08.587Z",
+    "medier:16eee559fb77361b": "2026-10-25T15:01:08.587Z",
+    "medier:f8acef93d654e160": "2026-10-25T15:01:08.587Z",
+    "medier:37063956165c1fdd": "2026-10-25T15:01:08.587Z",
+    "medier:7a517024b4392dc8": "2026-10-25T15:01:08.587Z",
+    "medier:075d19944c45817f": "2026-10-25T15:01:08.587Z",
+    "medier:c551533e61f48fd3": "2026-10-25T15:01:08.587Z",
+    "medier:986075626dc0f1a3": "2026-10-25T15:01:08.587Z",
+    "medier:5799223b91c59dfb": "2026-10-25T15:01:08.587Z",
+    "medier:f112ba08f3166edd": "2026-10-25T15:01:08.587Z",
+    "medier:214d68bc3ff8aa87": "2026-10-25T15:01:08.587Z",
+    "medier:9e83992eae470af3": "2026-10-25T15:01:08.587Z",
+    "medier:66954c6601a43415": "2026-10-25T15:01:08.587Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -4232,86 +4245,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:acd8aba84353558e": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-22T14:02:27.763Z"
-    },
-    "medier:b00fe4132b1aca0f": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-22T14:02:27.763Z"
-    },
-    "medier:fb50a7987cc29e78": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-22T14:02:27.763Z"
-    },
-    "medier:f5e28c3ed5c54698": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-22T14:02:27.763Z"
-    },
-    "medier:adcc77a9b9ecda4f": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-22T14:02:27.763Z"
-    },
-    "medier:fcbac4e6cd21aa57": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-22T14:02:27.763Z"
-    },
-    "medier:73b04aaa0a1c645e": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-22T14:02:27.763Z"
-    },
-    "medier:5a56badf9219040f": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-22T14:02:27.763Z"
-    },
-    "medier:d519773ecd41694c": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-22T14:02:27.763Z"
-    },
-    "medier:a7bfabc27d2912cf": {
-      "p": 88,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-22T14:02:27.763Z"
-    },
-    "medier:a2471322f3c9dcb3": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-22T14:02:27.763Z"
-    },
-    "medier:c3a00827e8ee89b6": {
-      "p": 86,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-22T14:02:27.763Z"
-    },
-    "medier:01756fadbbc18cbb": {
-      "p": 62,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-22T14:02:27.763Z"
-    },
-    "regjeringen:3181360": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-22T14:02:27.763Z"
-    },
-    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/samarbeid-i-scenekunsten-trenger-bedre-rammer": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-22T14:02:27.763Z"
-    },
-    "kystverket:https://www.kystverket.no/nyheter/ny-kunnskap-om-vannutskiftningen-i-indre-oslofjord/": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-22T14:02:27.763Z"
-    },
     "medier:d7a6faf46cbf2d59": {
       "p": 55,
       "v": "b34cb0de5bde",
@@ -5761,6 +5694,31 @@
       "p": 30,
       "v": "b34cb0de5bde",
       "t": "2026-10-25T13:01:50.568Z"
+    },
+    "medier:f112ba08f3166edd": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-25T15:02:10.023Z"
+    },
+    "medier:37063956165c1fdd": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-25T15:02:10.023Z"
+    },
+    "medier:9e83992eae470af3": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-25T15:02:10.023Z"
+    },
+    "medier:075d19944c45817f": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-25T15:02:10.023Z"
+    },
+    "medier:986075626dc0f1a3": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-25T15:02:10.023Z"
     }
   }
 }
