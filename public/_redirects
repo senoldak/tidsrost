@@ -41,7 +41,6 @@
 # E-posta bülteni (ukesbrev) kaldırıldı (2026-10-17): eski /nyhetsbrev/ adresleri ana sayfaya gider.
 /nyhetsbrev / 301
 /nyhetsbrev/ / 301
-/nyhetsbrev/* / 301
 # Forklart-yazılarının tarihi 14 Ekim'e düzeltildi (2026-10-18); bu günlerin arşiv sayfaları boşaldı
 /arkiv/2026-09-28/ /arkiv/2026-10-14/ 301
 /arkiv/2026-09-28 /arkiv/2026-10-14/ 301
@@ -73,8 +72,6 @@
 # Kaldırılan haberler (2026-10-20): adres Düzeltmeler sayfasına gider; kayıt src/data/rettelser-avpublisert.json içinde.
 /artikkel/ap-radgiver-domt-for-hallikvirksomhet/ /rettelser/ 301
 /artikkel/ap-radgiver-domt-for-hallikvirksomhet /rettelser/ 301
-/artikkel/*-far-fri-fra-terrorrettssaken-for-a-delta-i-sjakk-vm/ /rettelser/ 301
-/artikkel/*-far-fri-fra-terrorrettssaken-for-a-delta-i-sjakk-vm /rettelser/ 301
 
 # KI-siden fikk ny adresse (20.10.2026).
 /ki/ /bruk-av-ki/ 301
@@ -738,3 +735,10 @@
 /artikkel/oransje-farevarsel-for-sterk-ising-pa-skip-i-a2 /artikkel/farevarsler-15-oktober-2026/#oransje-farevarsel-for-sterk-ising-p%C3%A5-skip-i-a2 301
 /artikkel/oransje-farevarsel-for-sterk-ising-pa-skip-i-b2-2/ /artikkel/farevarsler-16-oktober-2026/#oransje-farevarsel-for-sterk-ising-p%C3%A5-skip-i-b2 301
 /artikkel/oransje-farevarsel-for-sterk-ising-pa-skip-i-b2-2 /artikkel/farevarsler-16-oktober-2026/#oransje-farevarsel-for-sterk-ising-p%C3%A5-skip-i-b2 301
+
+# Dinamik kurallar (* ya da :yer tutucu) EN SONDA kalmalı: wrangler ilk dinamik kuraldan sonra gelen her kuralı
+# dinamik sayar ve Cloudflare 100 dinamik kuraldan fazlasını reddeder (26 Ekim 2026 yayını bu yüzden düştü).
+# /nyhetsbrev/: e-posta bülteni kaldırıldı (17 Ekim). /artikkel/*-far-fri-…: kaldırılan haber, Düzeltmeler sayfasına.
+/nyhetsbrev/* / 301
+/artikkel/*-far-fri-fra-terrorrettssaken-for-a-delta-i-sjakk-vm/ /rettelser/ 301
+/artikkel/*-far-fri-fra-terrorrettssaken-for-a-delta-i-sjakk-vm /rettelser/ 301
