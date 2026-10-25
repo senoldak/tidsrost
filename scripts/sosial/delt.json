@@ -684,7 +684,13 @@
   "kobenhavns-universitet-rammet-av-dataangrep": {
     "tarih": "2026-10-24T10:05:22.278Z",
     "son_hata": "Graph 403: Application request limit reached",
-    "limit": 3
+    "limit": 3,
+    "ig_reels": "18178076428443308",
+    "fb_reels": "1084439604579615",
+    "reels": {
+      "gun": "2026-10-25",
+      "dilim": "morgen"
+    }
   },
   "oransje-farevarsel-for-jordskred-i-akershus-buskerud-oslo-telemark-og-vestfold": {
     "tarih": "2026-10-24T16:13:36.042Z",
