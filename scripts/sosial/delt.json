@@ -1,27 +1,4 @@
 {
-  "tv-aksjonen-samlet-inn-251-millioner-kroner-til-flyktninghjelpen": {
-    "tarih": "2026-10-18T22:10:34.776Z",
-    "ig_post": "18128457478874395",
-    "ig_story": "18046854551635650",
-    "fb_post": "1343803192154866_122105386869509504",
-    "fb_story": "28360255603676975"
-  },
-  "donald-trump-og-volodymyr-zelenskyj-i-ordkrig-om-krigen-i-ukraina": {
-    "tarih": "2026-10-18T22:12:05.939Z",
-    "ig_post": "17908106634592527",
-    "ig_story": "17925508542205533",
-    "fb_post": "1343803192154866_122105388291509504",
-    "fb_story": "1926864234959774"
-  },
-  "fiskebat-i-skagerrak-rammet-av-brann-og-fire-personer-funnet-pa-flate": {
-    "tarih": "2026-10-18T22:13:35.906Z",
-    "ig_post": "18106952978526454",
-    "ig_story": "18005423150991158",
-    "fb_post": "1343803192154866_122105389533509504",
-    "fb_story": "1134744348899793",
-    "ig_reels": "18106363012976459",
-    "fb_reels": "1870897167612972"
-  },
   "austrian-airlines-fly-fra-tel-aviv-omdirigert-til-sofia-etter-trussel": {
     "tarih": "2026-10-19T06:03:48.666Z",
     "ig_post": "18011506691963196",
@@ -564,6 +541,6 @@
   "rentebaner-mot-fasit": {
     "tarih": "2026-10-25T21:14:14.985Z",
     "son_hata": "Graph 403: Application request limit reached",
-    "limit": 3
+    "limit": 4
   }
 }
