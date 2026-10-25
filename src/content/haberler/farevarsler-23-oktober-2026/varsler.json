@@ -1,0 +1,184 @@
+{
+  "dato": "2026-10-23T12:03:18+02:00",
+  "varsler": [
+    {
+      "id": "eski:gult-farevarsel-for-flom-i-agder-akershus-buskerud-innlandet-oslo-telemark-og-ve",
+      "nr": 1,
+      "title": "Gult farevarsel for flom i Agder, Akershus, Buskerud, Innlandet, Oslo, Telemark og Vestfold",
+      "description": "Vannføringen vil øke i bekker og elver i løpet av lørdag kveld og søndag på grunn av mye nedbør, spesielt natt til søndag.",
+      "body": "NVE har sendt ut gult farevarsel for flom i Agder, Akershus, Buskerud, Innlandet, Oslo, Telemark og Vestfold.\n\nVarselet gjelder fra lørdag 24. oktober kl. 07.00 til mandag 26. oktober kl. 06.59.\n\nVannføringen vil øke i bekker og elver i løpet av lørdag kveld og søndag på grunn av mye nedbør, spesielt natt til søndag. Dette kan føre til lokale oversvømmelser og erosjonsskader.\n\n**Mulige konsekvenser:** Det er fare for lokale oversvømmelser og erosjonsskader i bekker og elver. Overvann i tettbygde områder.\n\n**Råd fra NVE:** Hold deg oppdatert om situasjonen. Sikre og flytt verdier bort fra utsatte områder (f.eks. i kjellere, og biler, campingvogner etc langs elver og bekker). Rens stikkrenner, kummer og andre vannveier for snø/is, jord og grus, kvist og løv, slik at vannet kan renne uhindret der det vanligvis renner. Hold deg unna elver og bekker med stor vannføring.",
+      "kilde": {
+        "navn": "NVE / Varsom",
+        "url": "https://www.varsom.no/",
+        "lisens": "NLOD"
+      },
+      "kart": null
+    },
+    {
+      "id": "eski:gult-farevarsel-for-kraftige-vindkast-i-deler-av-ostlandet",
+      "nr": 2,
+      "title": "Gult farevarsel for kraftige vindkast i deler av Østlandet",
+      "description": "Det ventes lokalt kraftige vindkast på 20-28 m/s fra sørøst, og liten storm på kysten.",
+      "body": "Meteorologisk institutt har sendt ut gult farevarsel for kraftige vindkast i deler av Østlandet.\n\nVarselet gjelder fra søndag 25. oktober kl. 03.00 til søndag 25. oktober kl. 10.00.\n\nDet ventes lokalt kraftige vindkast på 20-28 m/s fra sørøst, og liten storm på kysten. Vinden vil øke først i sør, og minke sist i nord.\n\n**Mulige konsekvenser:** Fare for innstilte avganger: Det er fare for innstillinger av flyavganger, båter og annen transport. Sikre løse gjenstander: Løse gjenstander kan blåse avgårde. Fare for hindringer i trafikken: Veier kan bli stengt på grunn av trær eller andre objekter i veibanen. Enkelte reiser vil kunne få lengre reisetid. Broer og utsatte veistrekninger kan bli stengt. Fare for strømbrudd: Strømforsyningen kan bli påvirket, for eksempel som følge av trær som knekker eller kommer i kontakt med strømnettet.\n\n**Råd fra MET:** Sikre løse gjenstander: Vurder tiltak for å begrense skade før hendelsen inntreffer. Unngå unødig ferdsel på utsatte steder. Fare for hindringer i trafikken: Sjekk veimeldinger på vegvesen.no/trafikk. Fare for innstilte avganger: Følg råd og sjekk status fra transportaktører. Lokalt høye bølger: Vis forsiktighet ved ferdsel på sjøen. Høye bølger treffer land: Vis forsiktighet ved ferdsel i strandsonen.",
+      "kilde": {
+        "navn": "Meteorologisk institutt",
+        "url": "https://www.met.no/",
+        "lisens": "CC BY 4.0"
+      },
+      "kart": {
+        "fil": "kart-2.png",
+        "alt": "Kart som viser området med gult farevarsel for kraftige vindkast i deler av Østlandet.",
+        "kreditt": "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    },
+    {
+      "id": "eski:gult-farevarsel-for-kraftige-vindkast-i-deler-av-agder",
+      "nr": 3,
+      "title": "Gult farevarsel for kraftige vindkast i deler av Agder",
+      "description": "Det ventes lokalt kraftige vindkast på 25-30 m/s fra sørøst, og liten storm på kysten.",
+      "body": "Meteorologisk institutt har sendt ut gult farevarsel for kraftige vindkast i deler av Agder.\n\nVarselet gjelder fra søndag 25. oktober kl. 02.00 til søndag 25. oktober kl. 07.00.\n\nDet ventes lokalt kraftige vindkast på 25-30 m/s fra sørøst, og liten storm på kysten. Vinden vil øke først i vest, og minke sist i øst.\n\n**Mulige konsekvenser:** Fare for innstilte avganger: Det er fare for innstillinger av flyavganger, båter og annen transport. Sikre løse gjenstander: Løse gjenstander kan blåse avgårde. Fare for hindringer i trafikken: Veier kan bli stengt på grunn av trær eller andre objekter i veibanen. Enkelte reiser vil kunne få lengre reisetid. Broer og utsatte veistrekninger kan bli stengt. Fare for strømbrudd: Strømforsyningen kan bli påvirket, for eksempel som følge av trær som knekker eller kommer i kontakt med strømnettet.\n\n**Råd fra MET:** Sikre løse gjenstander: Vurder tiltak for å begrense skade før hendelsen inntreffer. Unngå unødig ferdsel på utsatte steder. Fare for hindringer i trafikken: Sjekk veimeldinger på vegvesen.no/trafikk. Fare for innstilte avganger: Følg råd og sjekk status fra transportaktører. Lokalt høye bølger: Vis forsiktighet ved ferdsel på sjøen. Høye bølger treffer land: Vis forsiktighet ved ferdsel i strandsonen.",
+      "kilde": {
+        "navn": "Meteorologisk institutt",
+        "url": "https://www.met.no/",
+        "lisens": "CC BY 4.0"
+      },
+      "kart": {
+        "fil": "kart-3.png",
+        "alt": "Kart som viser området med gult farevarsel for kraftige vindkast i deler av Agder.",
+        "kreditt": "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    },
+    {
+      "id": "eski:gult-farevarsel-for-jordskred-i-buskerud-telemark-og-vestfold",
+      "nr": 4,
+      "title": "Gult farevarsel for jordskred i Buskerud, Telemark og Vestfold",
+      "description": "Det ventes mye regn og stedvis kraftige regnbyger fra lørdag ettermiddag som gir økt fare for jord- og flomskred.",
+      "body": "NVE har sendt ut gult farevarsel for jordskred i Buskerud, Telemark og Vestfold.\n\nVarselet gjelder fra lørdag 24. oktober kl. 07.00 til mandag 26. oktober kl. 06.59.\n\nDet ventes mye regn og stedvis kraftige regnbyger fra lørdag ettermiddag som gir økt fare for jord- og flomskred. Bratte skråninger, samt bekker og elveløp med stor vannføring er spesielt utsatt. Flomskred har lang rekkevidde og kan gå ned til dalbunnen selv om det løses ut høyt i terrenget.\n\n**Mulige konsekvenser:** Skredhendelser kan forekomme. Utsatte bane- og vegstrekninger kan bli stengt.\n\n**Råd fra NVE:** Hold deg unna bratte skråninger, samt bekker og elveløp med stor vannføring. Hold stikkrenner, kummer og andre vannveier fri for snø/is, grus, søppel, kvist og løv. Tette vannveier med oppdemmet vann kan forårsake skred. Hold deg oppdatert om utviklingen av været, skred- og flomsituasjonen, og følg med på værradaren.",
+      "kilde": {
+        "navn": "NVE / Varsom",
+        "url": "https://www.varsom.no/",
+        "lisens": "NLOD"
+      },
+      "kart": {
+        "fil": "kart-4.png",
+        "alt": "Kart som viser kommunene med gult farevarsel for jordskred i Buskerud, Telemark og Vestfold.",
+        "kreditt": "Kart: tidsrøst. Varselområde: NVE (NLOD). Kommunegrenser: © Kartverket (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    },
+    {
+      "id": "eski:gult-farevarsel-for-kraftige-vindkast-i-delar-av-sor-norge",
+      "nr": 5,
+      "title": "Gult farevarsel for kraftige vindkast i Delar av Sør-Norge",
+      "description": "Det er venta lokalt kraftige vindkast på 27-33 m/s fra søraust, og liten storm utsette stader.",
+      "body": "Meteorologisk institutt har sendt ut gult farevarsel for kraftige vindkast i Delar av Sør-Norge.\n\nVarselet gjelder fra søndag 25. oktober kl. 02.00 til søndag 25. oktober kl. 11.00.\n\nDet er venta lokalt kraftige vindkast på 27-33 m/s fra søraust, og liten storm utsette stader.\n\n**Mulige konsekvenser:** Fare for innstilte avganger: Det er fare for innstillinger av flyavganger, båter og annen transport. Sikre løse gjenstander: Løse gjenstander kan blåse avgårde. Fare for hindringer i trafikken: Veier kan bli stengt på grunn av trær eller andre objekter i veibanen. Enkelte reiser vil kunne få lengre reisetid. Broer og utsatte veistrekninger kan bli stengt. Fare for strømbrudd: Strømforsyningen kan bli påvirket, for eksempel som følge av trær som knekker eller kommer i kontakt med strømnettet. Lokalt høye bølger: Den sterke vinden kan gi lokalt høye bølger i fjordstrøk og innsjøer.\n\n**Råd fra MET:** Sikre løse gjenstander: Vurder tiltak for å begrense skade før hendelsen inntreffer. Unngå unødig ferdsel på utsatte steder. Fare for hindringer i trafikken: Sjekk veimeldinger på vegvesen.no/trafikk. Fare for innstilte avganger: Følg råd og sjekk status fra transportaktører. Lokalt høye bølger: Vis forsiktighet ved ferdsel på sjøen.",
+      "kilde": {
+        "navn": "Meteorologisk institutt",
+        "url": "https://www.met.no/",
+        "lisens": "CC BY 4.0"
+      },
+      "kart": {
+        "fil": "kart-5.png",
+        "alt": "Kart som viser området med gult farevarsel for kraftige vindkast i Delar av Sør-Norge.",
+        "kreditt": "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    },
+    {
+      "id": "eski:gult-farevarsel-for-kraftige-vindkast-i-hordaland",
+      "nr": 6,
+      "title": "Gult farevarsel for kraftige vindkast i Hordaland",
+      "description": "Det ventes lokalt kraftige vindkast på 27-35 m/s fra søraust, og full storm på kysten.",
+      "body": "Meteorologisk institutt har sendt ut gult farevarsel for kraftige vindkast i Hordaland.\n\nVarselet gjelder fra søndag 25. oktober kl. 01.00 til søndag 25. oktober kl. 06.00.\n\nDet ventes lokalt kraftige vindkast på 27-35 m/s fra søraust, og full storm på kysten. Vinden vil øke først i sør, og minke sist i nord.\n\n**Mulige konsekvenser:** Fare for innstilte avganger: Det er fare for innstillinger av flyavganger, båter og annen transport. Sikre løse gjenstander: Løse gjenstander kan blåse avgårde. Fare for hindringer i trafikken: Veier kan bli stengt på grunn av trær eller andre objekter i veibanen. Enkelte reiser vil kunne få lengre reisetid. Broer og utsatte veistrekninger kan bli stengt. Fare for strømbrudd: Strømforsyningen kan bli påvirket, for eksempel som følge av trær som knekker eller kommer i kontakt med strømnettet. Lokalt høye bølger: Den sterke vinden kan gi lokalt høye bølger i fjordstrøk og innsjøer.\n\n**Råd fra MET:** Sikre løse gjenstander: Vurder tiltak for å begrense skade før hendelsen inntreffer. Unngå unødig ferdsel på utsatte steder. Fare for hindringer i trafikken: Sjekk veimeldinger på vegvesen.no/trafikk. Fare for innstilte avganger: Følg råd og sjekk status fra transportaktører. Lokalt høye bølger: Vis forsiktighet ved ferdsel på sjøen.",
+      "kilde": {
+        "navn": "Meteorologisk institutt",
+        "url": "https://www.met.no/",
+        "lisens": "CC BY 4.0"
+      },
+      "kart": {
+        "fil": "kart-6.png",
+        "alt": "Kart som viser området med gult farevarsel for kraftige vindkast i Hordaland.",
+        "kreditt": "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    },
+    {
+      "id": "eski:gult-farevarsel-for-kraftige-vindkast-i-rogaland",
+      "nr": 7,
+      "title": "Gult farevarsel for kraftige vindkast i Rogaland",
+      "description": "Det ventes lokalt kraftige vindkast på 27-37 m/s fra søraust, og full og kortvarig sterk storm på kysten.",
+      "body": "Meteorologisk institutt har sendt ut gult farevarsel for kraftige vindkast i Rogaland.\n\nVarselet gjelder fra lørdag 24. oktober kl. 23.00 til søndag 25. oktober kl. 05.00.\n\nDet ventes lokalt kraftige vindkast på 27-37 m/s fra søraust, og full og kortvarig sterk storm på kysten. Vinden vil øke først i sør, og minke sist i nord.\n\n**Mulige konsekvenser:** Fare for innstilte avganger: Det er fare for innstillinger av flyavganger, båter og annen transport. Sikre løse gjenstander: Løse gjenstander kan blåse avgårde. Fare for hindringer i trafikken: Veier kan bli stengt på grunn av trær eller andre objekter i veibanen. Enkelte reiser vil kunne få lengre reisetid. Broer og utsatte veistrekninger kan bli stengt. Fare for strømbrudd: Strømforsyningen kan bli påvirket, for eksempel som følge av trær som knekker eller kommer i kontakt med strømnettet. Lokalt høye bølger: Den sterke vinden kan gi lokalt høye bølger i fjordstrøk og innsjøer.\n\n**Råd fra MET:** Sikre løse gjenstander: Vurder tiltak for å begrense skade før hendelsen inntreffer. Unngå unødig ferdsel på utsatte steder. Fare for hindringer i trafikken: Sjekk veimeldinger på vegvesen.no/trafikk. Fare for innstilte avganger: Følg råd og sjekk status fra transportaktører. Lokalt høye bølger: Vis forsiktighet ved ferdsel på sjøen.",
+      "kilde": {
+        "navn": "Meteorologisk institutt",
+        "url": "https://www.met.no/",
+        "lisens": "CC BY 4.0"
+      },
+      "kart": {
+        "fil": "kart-7.png",
+        "alt": "Kart som viser området med gult farevarsel for kraftige vindkast i Rogaland.",
+        "kreditt": "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    },
+    {
+      "id": "eski:gult-farevarsel-for-mye-regn-i-deler-av-vestfold-telemark-og-buskerud",
+      "nr": 8,
+      "title": "Gult farevarsel for mye regn i deler av Vestfold, Telemark og Buskerud",
+      "description": "Det ventes mye regn første del av søndag, lokalt 40-60 mm/12t.",
+      "body": "Meteorologisk institutt har sendt ut gult farevarsel for mye regn i deler av Vestfold, Telemark og Buskerud.\n\nVarselet gjelder fra søndag 25. oktober kl. 02.00 til søndag 25. oktober kl. 16.00.\n\nDet ventes mye regn første del av søndag, lokalt 40-60 mm/12t.\n\n**Mulige konsekvenser:** Overvann kan forekomme: Det kan bli overvann i tettbygde områder. Vanskelige kjøreforhold: Det kan bli vanskelige kjøreforhold noen steder på grunn av overvann og fare for vannplaning. Veier kan bli stengt og det kan være vann i veibanen, særlig ved bekke- og elveløp. Noen reiser kan få lengre reisetid.\n\n**Råd fra MET:** Overvann kan forekomme: Vurder å rense stikkrenner og avløp slik at vannet kan renne unna. Vanskelige kjøreforhold: Sjekk veimeldingene på vegvesen.no/trafikk. Tilpass farten og kjør etter forholdene.",
+      "kilde": {
+        "navn": "Meteorologisk institutt",
+        "url": "https://www.met.no/",
+        "lisens": "CC BY 4.0"
+      },
+      "kart": {
+        "fil": "kart-8.png",
+        "alt": "Kart som viser området med gult farevarsel for mye regn i deler av Vestfold, Telemark og Buskerud.",
+        "kreditt": "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    },
+    {
+      "id": "eski:gult-farevarsel-for-kraftige-vindkast-i-trondelag",
+      "nr": 9,
+      "title": "Gult farevarsel for kraftige vindkast i Trøndelag",
+      "description": "Det er venta lokalt kraftige vindkast på 27-35 m/s fra søraust, og liten storm utsette stader.",
+      "body": "Meteorologisk institutt har sendt ut gult farevarsel for kraftige vindkast i Trøndelag.\n\nVarselet gjelder fra lørdag 24. oktober kl. 23.00 til søndag 25. oktober kl. 17.00.\n\nDet er venta lokalt kraftige vindkast på 27-35 m/s fra søraust, og liten storm utsette stader.\n\n**Mulige konsekvenser:** Fare for innstilte avganger: Det er fare for innstillinger av flyavganger, båter og annen transport. Sikre løse gjenstander: Løse gjenstander kan blåse avgårde. Fare for hindringer i trafikken: Veier kan bli stengt på grunn av trær eller andre objekter i veibanen. Enkelte reiser vil kunne få lengre reisetid. Broer og utsatte veistrekninger kan bli stengt. Fare for strømbrudd: Strømforsyningen kan bli påvirket, for eksempel som følge av trær som knekker eller kommer i kontakt med strømnettet. Lokalt høye bølger: Den sterke vinden kan gi lokalt høye bølger i fjordstrøk og innsjøer.\n\n**Råd fra MET:** Sikre løse gjenstander: Vurder tiltak for å begrense skade før hendelsen inntreffer. Unngå unødig ferdsel på utsatte steder. Fare for hindringer i trafikken: Sjekk veimeldinger på vegvesen.no/trafikk. Fare for innstilte avganger: Følg råd og sjekk status fra transportaktører. Lokalt høye bølger: Vis forsiktighet ved ferdsel på sjøen.",
+      "kilde": {
+        "navn": "Meteorologisk institutt",
+        "url": "https://www.met.no/",
+        "lisens": "CC BY 4.0"
+      },
+      "kart": {
+        "fil": "kart-9.png",
+        "alt": "Kart som viser området med gult farevarsel for kraftige vindkast i Trøndelag.",
+        "kreditt": "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    },
+    {
+      "id": "eski:gult-farevarsel-for-styrtregn-i-deler-av-rogaland-og-agder",
+      "nr": 10,
+      "title": "Gult farevarsel for styrtregn i deler av Rogaland og Agder",
+      "description": "Kraftige regnbyger ventes i ditt område.",
+      "body": "Meteorologisk institutt har sendt ut gult farevarsel for styrtregn i deler av Rogaland og Agder.\n\nVarselet gjelder fra søndag 25. oktober kl. 02.00 til søndag 25. oktober kl. 05.00.\n\nKraftige regnbyger ventes i ditt område. Det er lokale variasjoner i intensitet og mengde, og været kan endres raskt. Nedbørens plassering er usikker. Lokalt er nedbøren ventet å passere 20 mm/1t.\n\n**Mulige konsekvenser:** Fare for vannskade: Det er fare for overvann i tettbygde områder, og vann som trenger inn i kjellere. Fare for lokale oversvømmelser, bekke- og elveløpsendringer, jord- og flomskred der de kraftigste regnbygene treffer. Lokalt vanskelige kjøreforhold: Lokalt vanskelige kjøreforhold grunnet overvann og fare for vannplaning. Utrygt for lyn: Det er også fare for lyn i forbindelse med regnbygene. Elektriske apparater kan bli skadet hvis de ikke frakobles.\n\n**Råd fra MET:** Hold deg oppdatert på været: Følg utviklingen av regnbygene på yr.no/nb/kart/radar. Fare for vannskade: Vurder å rense stikkrenner og avløp slik at vannet kan renne unna. Lokalt vanskelige kjøreforhold: Tilpass farten og kjør etter forholdene. Ikke kjør bil i oversvømte områder. Sjekk veimeldinger på vegvesen.no/trafikk.",
+      "kilde": {
+        "navn": "Meteorologisk institutt",
+        "url": "https://www.met.no/",
+        "lisens": "CC BY 4.0"
+      },
+      "kart": {
+        "fil": "kart-10.png",
+        "alt": "Kart som viser området med gult farevarsel for styrtregn i deler av Rogaland og Agder.",
+        "kreditt": "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    },
+    {
+      "id": "eski:oransje-farevarsel-for-flom-i-agder-akershus-buskerud-telemark-og-vestfold",
+      "nr": 11,
+      "title": "Oransje farevarsel for flom i Agder, Akershus, Buskerud, Telemark og Vestfold",
+      "description": "Vannføringen er allerede stor i området og vil øke raskt i bekker og elver i løpet av natt til søndag på grunn av mye nedbør.",
+      "body": "NVE har sendt ut oransje farevarsel for flom i Agder, Akershus, Buskerud, Telemark og Vestfold.\n\nVarselet gjelder fra søndag 25. oktober kl. 07.00 til mandag 26. oktober kl. 06.59.\n\nVannføringen er allerede stor i området og vil øke raskt i bekker og elver i løpet av natt til søndag på grunn av mye nedbør. Det er ventet stedvis 40-60 mm regn på 12 timer. Dette kan føre til omfattende oversvømmelser, erosjonsskader og flomskader på utsatte steder.\n\n**Mulige konsekvenser:** Omfattende oversvømmelser, erosjonsskader og flomskader på utsatte steder. Kan føre til stengte veier og bruer.\n\n**Råd fra NVE:** Hold deg oppdatert om situasjonen. Sikre og flytt verdier bort fra utsatte områder (f.eks. i kjellere, og biler, campingvogner etc langs elver og bekker).  Rens stikkrenner, kummer og andre vannveier for jord og grus, kvist og løv, slik at vannet kan renne uhindret der det vanligvis renner. Hold deg unna elver og bekker med stor vannføring.  Beredskapsmyndigheter skal vurdere fortløpende behov for beredskap og forebyggende tiltak.",
+      "kilde": {
+        "navn": "NVE / Varsom",
+        "url": "https://www.varsom.no/",
+        "lisens": "NLOD"
+      },
+      "kart": null
+    }
+  ]
+}

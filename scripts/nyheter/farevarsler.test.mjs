@@ -70,6 +70,18 @@ test('leggTilFarevarsler: samme varsel uendret gir ingen endring; oppdatert teks
   assert.equal(await leggTilFarevarsler(rot, [{ id: 'met:9', sak: sak('Rødt farevarsel for ekstremvær i Nordland') }], NAA, { bilde }), 0, 'rødt går ikke på siden');
 });
 
+test('leggTilFarevarsler: uten kart på det alvorligste varselet tas kapak fra neste varsel med kart', async () => {
+  const rot = await mkdtemp(path.join(os.tmpdir(), 'varsel-'));
+  const utenKartFor = (tittel) => async (s) => (s.title === tittel ? null : bilde(s));
+  await leggTilFarevarsler(rot, [
+    { id: 'met:1', sak: sak('Gult farevarsel for høy vannstand i Agder') },
+    { id: 'nve:2', sak: sak('Oransje farevarsel for flom i Telemark', NVE, 'Mye vann.') },
+  ], NAA, { bilde: utenKartFor('Oransje farevarsel for flom i Telemark') });
+  const md = await readFile(path.join(rot, 'src/content/haberler', slugFor(NAA), 'index.md'), 'utf8');
+  assert.match(md, /^cover: \.\/kart-1\.png$/m);
+  assert.doesNotMatch(md, /\]\(\.\/kart-1\.png\)/);
+});
+
 test('leggTilFarevarsler: én varsel gir egen ingress', async () => {
   const rot = await mkdtemp(path.join(os.tmpdir(), 'varsel-'));
   await leggTilFarevarsler(rot, [{ id: 'met:1', sak: sak('Gult farevarsel for høy vannstand i Agder') }], NAA, { bilde });

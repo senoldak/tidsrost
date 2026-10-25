@@ -71,7 +71,9 @@ export async function leggTilFarevarsler(rot, saker, naa = new Date(), { bilde =
       ? `${forste.title}, ${dag}. ${forste.description}`
       : `${varsler.length} farevarsler fra ${avsendere} ${dag}, blant dem ${forste.title.charAt(0).toLowerCase()}${forste.title.slice(1)}.`;
   const lenke = (k) => `[${mdMetin(k.navn)}](${k.url})${k.lisens ? ` (${mdMetin(k.lisens)})` : ''}`;
-  const kapak = forste.kart;
+  // Kapak: haritası olan en ciddi uyarınınki (harita çizilemeyen uyarı kapaksız bırakmasın).
+  const kapakVarsel = varsler.find((v) => v.kart);
+  const kapak = kapakVarsel?.kart;
   const md = [
     '---',
     `title: ${yamlStr(`Farevarsler ${dag}`)}`,
@@ -88,7 +90,7 @@ export async function leggTilFarevarsler(rot, saker, naa = new Date(), { bilde =
     '',
     `Farevarsler fra ${avsendere} i dag, med de mest alvorlige først. Teksten under hvert varsel er avsenderens egen.`,
     '',
-    varsler.map((v, i) => bolum(v, i === 0)).join('\n\n'),
+    varsler.map((v) => bolum(v, v === kapakVarsel)).join('\n\n'),
     '',
     'Følg med på oppdaterte varsler på [yr.no](https://www.yr.no/nb/farevarsler) og [varsom.no](https://www.varsom.no/).',
     '',

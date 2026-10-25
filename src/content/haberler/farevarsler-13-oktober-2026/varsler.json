@@ -1,0 +1,107 @@
+{
+  "dato": "2026-10-13T00:01:36+02:00",
+  "varsler": [
+    {
+      "id": "eski:oransje-farevarsel-for-sterk-ising-pa-skip-i-b1",
+      "nr": 1,
+      "title": "Oransje farevarsel for sterk ising på skip i B1",
+      "description": "Utrygt for sterk ising.",
+      "body": "Meteorologisk institutt har sendt ut oransje farevarsel for sterk ising på skip i B1.\n\nVarselet gjelder fra tirsdag 13. oktober kl. 11.00 til onsdag 14. oktober kl. 12.00.\n\nUtrygt for sterk ising.\n\n**Mulige konsekvenser:** Stor fare for at småbåter kan synke: Det ventes sterk isvekst på fronten/styrhuset til båten. Det er stor fare for at båten mister stabilitet, velter og synker. Sterk isvekst kan gjøre det vanskelig å få fjernet isen raskt nok før uhellet er ute. Kraftig isvekst på overflater: Det er stor risiko for en betydelig mengde is på overflater på båter som ferdes i området. Isen vil føre til glatte dekk, gelender og stiger, og operasjoner utendørs blir utfordrende. Redningsutstyr kan bli påvirket: Nedising av redningsteknisk utstyr kan forekomme, og isingen kan ødelegge samband- og kommunikasjonsutstyr.\n\n**Råd fra MET:** Kraftig isvekst på overflater: Fjern is raskt fra båten.",
+      "kilde": {
+        "navn": "Meteorologisk institutt",
+        "url": "https://www.met.no/",
+        "lisens": "CC BY 4.0"
+      },
+      "kart": {
+        "fil": "kart-1.png",
+        "alt": "Kart som viser området med oransje farevarsel for sterk ising på skip i B1.",
+        "kreditt": "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    },
+    {
+      "id": "eski:gult-farevarsel-for-is-i-deler-av-trondelag-helgeland-og-sor-salten",
+      "nr": 2,
+      "title": "Gult farevarsel for is i deler av Trøndelag, Helgeland og Sør-Salten",
+      "description": "Fra sent tirsdag ettermiddag ventes lokal fare for is på grunn av overgang til mildvær og regn som fryser på kald bakke.",
+      "body": "Meteorologisk institutt har sendt ut gult farevarsel for is i deler av Trøndelag, Helgeland og Sør-Salten.\n\nVarselet gjelder fra tirsdag 13. oktober kl. 17.00 til onsdag 14. oktober kl. 04.00.\n\nFra sent tirsdag ettermiddag ventes lokal fare for is på grunn av overgang til mildvær og regn som fryser på kald bakke.\n\n**Mulige konsekvenser:** Lokalt vanskelige kjøreforhold: Det kan være lokalt vanskelige kjøreforhold. Transporttjenester kan også bli påvirket.\n\n**Råd fra MET:** Lokalt vanskelige kjøreforhold: Beregn ekstra tid til transport og kjøring. Bruk riktige dekk og kjør etter forholdene. Vurder bruk av brodder eller piggsko: Vær oppmerksom på at isen kan være vanskelig å se. Følg utviklingen: Følg med på oppdaterte farevarsler. Sjekk veimeldinger på vegvesen.no/trafikk.",
+      "kilde": {
+        "navn": "Meteorologisk institutt",
+        "url": "https://www.met.no/",
+        "lisens": "CC BY 4.0"
+      },
+      "kart": {
+        "fil": "kart-2.png",
+        "alt": "Kart som viser området med gult farevarsel for is i deler av Trøndelag, Helgeland og Sør-Salten.",
+        "kreditt": "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    },
+    {
+      "id": "eski:gult-farevarsel-for-styrtregn-i-sor-i-rogaland-og-agder",
+      "nr": 3,
+      "title": "Gult farevarsel for styrtregn i Sør i Rogaland og Agder",
+      "description": "Tirsdag ettermiddag ventes kraftige regnbyger i ditt område.",
+      "body": "Meteorologisk institutt har sendt ut gult farevarsel for styrtregn i Sør i Rogaland og Agder.\n\nVarselet gjelder fra tirsdag 13. oktober kl. 14.00 til tirsdag 13. oktober kl. 19.00.\n\nTirsdag ettermiddag ventes kraftige regnbyger i ditt område. Det er lokale variasjoner i intensitet og mengde, og været kan endres raskt. Nedbørens plassering er usikker. Lokalt er nedbøren ventet å passere 20 mm/1t.\n\n**Mulige konsekvenser:** Lokalt vanskelige kjøreforhold: Lokalt vanskelige kjøreforhold grunnet overvann og fare for vannplaning. Utrygt for lyn: Det er også fare for lyn i forbindelse med regnbygene. Elektriske apparater kan bli skadet hvis de ikke frakobles.\n\n**Råd fra MET:** Hold deg oppdatert på været: Følg utviklingen av regnbygene på yr.no/nb/kart/radar. Fare for vannskade: Vurder å rense stikkrenner og avløp slik at vannet kan renne unna. Lokalt vanskelige kjøreforhold: Tilpass farten og kjør etter forholdene. Ikke kjør bil i oversvømte områder. Sjekk veimeldinger på vegvesen.no/trafikk. Unngå unødvendig ferdsel: Hold deg unna bratte skråninger, samt bekker med stor vannføring. Unngå unødvendig ferdsel på utsatte steder. Utrygt for lyn: Unngå utendørsaktiviteter på utsatte områder, som på fjellet, i vann eller på åpne sletter. Følg utviklingen av tordenværet på yr.no/nb/kart/lyn.",
+      "kilde": {
+        "navn": "Meteorologisk institutt",
+        "url": "https://www.met.no/",
+        "lisens": "CC BY 4.0"
+      },
+      "kart": {
+        "fil": "kart-3.png",
+        "alt": "Kart som viser området med gult farevarsel for styrtregn i Sør i Rogaland og Agder.",
+        "kreditt": "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    },
+    {
+      "id": "eski:gult-farevarsel-for-mye-regn-i-deler-av-vestland-fylke",
+      "nr": 4,
+      "title": "Gult farevarsel for mye regn i deler av Vestland fylke",
+      "description": "Det ventes mye regn, lokalt 60-80 mm/12t.",
+      "body": "Meteorologisk institutt har sendt ut gult farevarsel for mye regn i deler av Vestland fylke.\n\nVarselet gjelder fra torsdag 15. oktober kl. 02.00 til torsdag 15. oktober kl. 17.00.\n\nDet ventes mye regn, lokalt 60-80 mm/12t. Nedbøren øker først i nord og minker sist i sør.\n\n**Mulige konsekvenser:** Overvann kan forekomme: Det kan bli overvann i tettbygde områder. Vanskelige kjøreforhold: Det kan bli vanskelige kjøreforhold noen steder på grunn av overvann og fare for vannplaning. Veier kan bli stengt og det kan være vann i veibanen, særlig ved bekke- og elveløp. Noen reiser kan få lengre reisetid. Flom og skred: NVE sender ut egne flom og skredvarsler.\n\n**Råd fra MET:** Overvann kan forekomme: Vurder å rense stikkrenner og avløp slik at vannet kan renne unna. Vanskelige kjøreforhold: Sjekk veimeldingene på vegvesen.no/trafikk. Tilpass farten og kjør etter forholdene. Flom og skred: Sjekk varslene på Varsom.no.",
+      "kilde": {
+        "navn": "Meteorologisk institutt",
+        "url": "https://www.met.no/",
+        "lisens": "CC BY 4.0"
+      },
+      "kart": {
+        "fil": "kart-4.png",
+        "alt": "Kart som viser området med gult farevarsel for mye regn i deler av Vestland fylke.",
+        "kreditt": "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    },
+    {
+      "id": "eski:oransje-farevarsel-for-sterk-ising-pa-skip-i-b2",
+      "nr": 5,
+      "title": "Oransje farevarsel for sterk ising på skip i B2",
+      "description": "Utrygt for sterk ising.",
+      "body": "Meteorologisk institutt har sendt ut oransje farevarsel for sterk ising på skip i B2.\n\nVarselet gjelder fra onsdag 14. oktober kl. 17.00 til torsdag 15. oktober kl. 00.00.\n\nUtrygt for sterk ising.\n\n**Mulige konsekvenser:** Stor fare for at småbåter kan synke: Det ventes sterk isvekst på fronten/styrhuset til båten. Det er stor fare for at båten mister stabilitet, velter og synker. Sterk isvekst kan gjøre det vanskelig å få fjernet isen raskt nok før uhellet er ute. Kraftig isvekst på overflater: Det er stor risiko for en betydelig mengde is på overflater på båter som ferdes i området. Isen vil føre til glatte dekk, gelender og stiger, og operasjoner utendørs blir utfordrende. Redningsutstyr kan bli påvirket: Nedising av redningsteknisk utstyr kan forekomme, og isingen kan ødelegge samband- og kommunikasjonsutstyr.\n\n**Råd fra MET:** Kraftig isvekst på overflater: Fjern is raskt fra båten.",
+      "kilde": {
+        "navn": "Meteorologisk institutt",
+        "url": "https://www.met.no/",
+        "lisens": "CC BY 4.0"
+      },
+      "kart": {
+        "fil": "kart-5.png",
+        "alt": "Kart som viser området med oransje farevarsel for sterk ising på skip i B2.",
+        "kreditt": "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    },
+    {
+      "id": "eski:gult-farevarsel-for-jordskred-i-innlandet-rogaland-og-vestland",
+      "nr": 6,
+      "title": "Gult farevarsel for jordskred i Innlandet, Rogaland og Vestland",
+      "description": "Det ventes mye regn fra natt til torsdag, lokalt 60-80 mm på 12 timer.",
+      "body": "NVE har sendt ut gult farevarsel for jordskred i Innlandet, Rogaland og Vestland.\n\nVarselet gjelder fra torsdag 15. oktober kl. 07.00 til fredag 16. oktober kl. 06.59.\n\nDet ventes mye regn fra natt til torsdag, lokalt 60-80 mm på 12 timer. Skredfaren er størst der bygene treffer. Følg værradar. Bratte skråninger, samt bekker og elveløp med stor vannføring er spesielt utsatt. Flomskred har lang rekkevidde og kan gå ned til dalbunnen selv om det løses ut høyt i terrenget.\n\n**Mulige konsekvenser:** Skredhendelser kan forekomme. Utsatte bane- og vegstrekninger kan bli stengt.\n\n**Råd fra NVE:** Hold deg unna bratte skråninger, samt bekker og elveløp med stor vannføring. Hold deg oppdatert om utviklingen av været og skredsituasjonen, og følg med på værradaren. Hold stikkrenner, kummer og andre vannveier fri for grus, søppel, kvist og løv. Tette vannveier med oppdemmet vann kan forårsake skred.",
+      "kilde": {
+        "navn": "NVE / Varsom",
+        "url": "https://www.varsom.no/",
+        "lisens": "NLOD"
+      },
+      "kart": {
+        "fil": "kart-6.png",
+        "alt": "Kart som viser kommunene med gult farevarsel for jordskred i Innlandet, Rogaland og Vestland.",
+        "kreditt": "Kart: tidsrøst. Varselområde: NVE (NLOD). Kommunegrenser: © Kartverket (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    }
+  ]
+}

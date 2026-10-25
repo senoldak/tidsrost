@@ -1,0 +1,73 @@
+{
+  "dato": "2026-10-25T10:04:00+01:00",
+  "varsler": [
+    {
+      "id": "eski:gult-farevarsel-for-hoy-vannstand-i-kyst-og-fjordstrok-i-hordaland",
+      "nr": 1,
+      "title": "Gult farevarsel for høy vannstand i Kyst- og fjordstrøk i Hordaland",
+      "description": "Det er ventet høy vannstand.",
+      "body": "Meteorologisk institutt har sendt ut gult farevarsel for høy vannstand i Kyst- og fjordstrøk i Hordaland.\n\nVarselet gjelder fra mandag 26. oktober kl. 07.00 til mandag 26. oktober kl. 13.00.\n\nDet er ventet høy vannstand. Mer informasjon om tidspunkt for høy vannstand og verdier for steder langs kysten finnes på sehavniva.no. Usikkerheten i varslet vannstand er 5-10 cm.\n\n**Mulige konsekvenser:** Fare for skader i strandsonen: Oversvømmelser kan gi skader på infrastruktur og bygninger enkelte steder i strandsonen. Vis forsiktighet i strandsonen: Sterk vind og høye bølger i kombinasjon med høy vannstand kan øke skadeomfanget i strandsonen.\n\n**Råd fra MET:** Fare for skader i strandsonen: Sjekk fortøyningen til båten og sikre løse gjenstander i strandsonen.",
+      "kilde": {
+        "navn": "Meteorologisk institutt",
+        "url": "https://www.met.no/",
+        "lisens": "CC BY 4.0"
+      },
+      "kart": {
+        "fil": "kart-1.png",
+        "alt": "Kart som viser området med gult farevarsel for høy vannstand i Kyst- og fjordstrøk i Hordaland.",
+        "kreditt": "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    },
+    {
+      "id": "eski:oransje-farevarsel-for-svaert-hoy-vannstand-i-kyst-og-fjordstrok-i-rogaland",
+      "nr": 2,
+      "title": "Oransje farevarsel for svært høy vannstand i Kyst- og fjordstrøk i Rogaland",
+      "description": "Det er ventet svært høy vannstand.",
+      "body": "Meteorologisk institutt har sendt ut oransje farevarsel for svært høy vannstand i Kyst- og fjordstrøk i Rogaland.\n\nVarselet gjelder fra mandag 26. oktober kl. 07.00 til mandag 26. oktober kl. 13.00.\n\nDet er ventet svært høy vannstand. Mer informasjon om tidspunkt for høy vannstand og verdier for steder langs kysten finnes på sehavniva.no. Usikkerheten i varslet vannstand er 5-10 cm.\n\n**Mulige konsekvenser:** Fare for skader i strandsonen: Oversvømmelser kan gi omfattende skader på infrastruktur og bygninger flere steder i strandsonen. Unngå unødig ferdsel i strandsonen: Sterk vind og høye bølger i kombinasjon med høy vannstand kan øke skadeomfanget i strandsonen.\n\n**Råd fra MET:** Fare for skader i strandsonen: Sjekk fortøyningen til båten og sikre løse gjenstander i strandsonen.",
+      "kilde": {
+        "navn": "Meteorologisk institutt",
+        "url": "https://www.met.no/",
+        "lisens": "CC BY 4.0"
+      },
+      "kart": {
+        "fil": "kart-2.png",
+        "alt": "Kart som viser området med oransje farevarsel for svært høy vannstand i Kyst- og fjordstrøk i Rogaland.",
+        "kreditt": "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    },
+    {
+      "id": "eski:gult-farevarsel-for-hoy-vannstand-i-deler-av-kysten-av-agder",
+      "nr": 3,
+      "title": "Gult farevarsel for høy vannstand i deler av kysten av Agder",
+      "description": "Det er ventet høy vannstand.",
+      "body": "Meteorologisk institutt har sendt ut gult farevarsel for høy vannstand i deler av kysten av Agder.\n\nVarselet gjelder fra mandag 26. oktober kl. 07.00 til mandag 26. oktober kl. 13.00.\n\nDet er ventet høy vannstand. Mer informasjon om tidspunkt for høy vannstand og verdier for steder langs kysten finnes på sehavniva.no. Usikkerheten i varslet vannstand er 5-10 cm.\n\n**Mulige konsekvenser:** Fare for skader i strandsonen: Oversvømmelser kan gi skader på infrastruktur og bygninger enkelte steder i strandsonen. Vis forsiktighet i strandsonen: Sterk vind og høye bølger i kombinasjon med høy vannstand kan øke skadeomfanget i strandsonen.\n\n**Råd fra MET:** Fare for skader i strandsonen: Sjekk fortøyningen til båten og sikre løse gjenstander i strandsonen.",
+      "kilde": {
+        "navn": "Meteorologisk institutt",
+        "url": "https://www.met.no/",
+        "lisens": "CC BY 4.0"
+      },
+      "kart": {
+        "fil": "kart-3.png",
+        "alt": "Kart som viser området med gult farevarsel for høy vannstand i deler av kysten av Agder.",
+        "kreditt": "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    },
+    {
+      "id": "eski:gult-farevarsel-for-hoy-vannstand-i-kyst-og-fjordstrok-i-sogn-og-fjordane",
+      "nr": 4,
+      "title": "Gult farevarsel for høy vannstand i Kyst- og fjordstrøk i Sogn og Fjordane",
+      "description": "Det er ventet høy vannstand.",
+      "body": "Meteorologisk institutt har sendt ut gult farevarsel for høy vannstand i Kyst- og fjordstrøk i Sogn og Fjordane.\n\nVarselet gjelder fra mandag 26. oktober kl. 08.00 til mandag 26. oktober kl. 12.00.\n\nDet er ventet høy vannstand. Mer informasjon om tidspunkt for høy vannstand og verdier for steder langs kysten finnes på sehavniva.no. Usikkerheten i varslet vannstand er 5-10 cm.\n\n**Mulige konsekvenser:** Fare for skader i strandsonen: Oversvømmelser kan gi skader på infrastruktur og bygninger enkelte steder i strandsonen. Vis forsiktighet i strandsonen: Sterk vind og høye bølger i kombinasjon med høy vannstand kan øke skadeomfanget i strandsonen.\n\n**Råd fra MET:** Fare for skader i strandsonen: Sjekk fortøyningen til båten og sikre løse gjenstander i strandsonen.",
+      "kilde": {
+        "navn": "Meteorologisk institutt",
+        "url": "https://www.met.no/",
+        "lisens": "CC BY 4.0"
+      },
+      "kart": {
+        "fil": "kart-4.png",
+        "alt": "Kart som viser området med gult farevarsel for høy vannstand i Kyst- og fjordstrøk i Sogn og Fjordane.",
+        "kreditt": "Kart: tidsrøst. Varselområde: Meteorologisk institutt (CC BY 4.0). Kartgrunnlag: Natural Earth."
+      }
+    }
+  ]
+}
