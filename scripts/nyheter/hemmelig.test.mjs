@@ -35,6 +35,9 @@ test('fjernAdresser fjerner adresser fra feilmeldinger', () => {
 
 test('maskerMedier skjuler medienavn i loggtekst', () => {
   assert.equal(maskerMedier('Medier nevnt ved navn (Reuters, Klassekampen)'), 'Medier nevnt ved navn ([medie], [medie])');
+  // Genitiv: navnet med s skal også fanges.
+  assert.equal(maskerMedier('Nettavisens kongehusekspert og Reuters’ kilde'), '[medie] kongehusekspert og [medie]’ kilde');
+  assert.equal(maskerMedier('Nettavisenes'), 'Nettavisenes');
 });
 
 test('hemmeligeKilder: leser fra fil, tom liste uten nøkkel', () => {

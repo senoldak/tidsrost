@@ -49,7 +49,8 @@ const regexKilde = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 export const MEDIE_NAVN = [...new Set([...GENEL_MEDIER, ...hemmeligeMedienavn().map(regexKilde)])]
   .sort((a, b) => b.length - a.length)
   .join('|');
-export const MEDIER = new RegExp(`(?<![\\p{L}\\d])(${MEDIE_NAVN})(?![\\p{L}\\d])`, 'gu');
+// Norveççe iyelik eki de yakalanır: "Nettavisens kongehusekspert" (19 Ekim'de denetimden böyle geçmişti), "NRKs".
+export const MEDIER = new RegExp(`(?<![\\p{L}\\d])(${MEDIE_NAVN})s?(?![\\p{L}\\d])`, 'gu');
 
 // Log ve durum dosyası için: metindeki medya adlarını maskeler (açık Actions loglarına ad düşmesin).
 export const maskerMedier = (tekst) => String(tekst).replace(MEDIER, '[medie]');

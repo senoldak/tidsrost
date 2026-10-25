@@ -23,4 +23,4 @@ For å trygge innbyggerne og samle inn mest mulig informasjon, varsler politiet 
 
 – Har du sett aktivitet, personer, kjøretøy eller andre forhold som skiller seg ut, ber vi om at du melder fra så raskt som mulig, sier hun. Politiet ønsker tips på 02800 eller via politiet.no. Politiet håper at tips fra publikum vil hjelpe dem i arbeidet med å oppklare brannene.
 
-Sunnmørsposten har kartlagt elleve hyttebranner i området siden 2023. Politiet opplyser at branner er krevende å etterforske fordi fysiske spor blir ødelagte av selve brannen. Derfor er de avhengige av tips fra allmennheten for å komme videre i saken, og de understreker at folk ikke selv skal ta stilling til om informasjonen er viktig eller ikke, men at det må meldes til dem uansett.
+Politiet opplyser at branner er krevende å etterforske fordi fysiske spor blir ødelagte av selve brannen. Derfor er de avhengige av tips fra allmennheten for å komme videre i saken, og de understreker at folk ikke selv skal ta stilling til om informasjonen er viktig eller ikke, men at det må meldes til dem uansett.

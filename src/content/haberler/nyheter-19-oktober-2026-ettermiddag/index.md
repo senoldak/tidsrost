@@ -23,7 +23,7 @@ Under audiensen tar hun imot fire ungdomsaktivister fra sørafrikanske Equal Edu
 
 Årets innsamling går til ungdoms arbeid for trygge og mer rettferdige skoler i Sør-Afrika. Valget av møtested trekkes fram av en kongehusekspert som et symbolsk øyeblikk. Før tronskiftet var det kong Haakon som benyttet Arkadeværelset som sitt kontor, og kronprinsessen har overtatt dette.
 
-Nettavisens kongehusekspert Tove Taalesen peker på at det å flytte inn i Arkadeværelset er et sterkt symbol på at kronprinsessen ikke bare har overtatt tittelen, men også er i ferd med å finne sin plass som tronfølger. Slik markerer hun sin nye hverdag og viser tydelig at hun trer inn i de voksnes rekker i kongefamilien.
+Kongehusekspert Tove Taalesen peker på at det å flytte inn i Arkadeværelset er et sterkt symbol på at kronprinsessen ikke bare har overtatt tittelen, men også er i ferd med å finne sin plass som tronfølger. Slik markerer hun sin nye hverdag og viser tydelig at hun trer inn i de voksnes rekker i kongefamilien.
 
 ## Elisabeth Thand Ringqvist får i oppdrag å danne ny regjering i Sverige
 

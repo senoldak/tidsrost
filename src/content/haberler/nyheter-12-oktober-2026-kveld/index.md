@@ -59,6 +59,6 @@ Blant annet gikk 158 millioner dollar til Senate Leadership Fund, mens over 76 m
 
 *Publisert 12. oktober kl. 20.57*
 
-Flere eksplosjoner ble hørt i Saudi-Arabias hovedstad Riyadh mandag. Flere missiler ble avskåret, og trusselen er over, ifølge landets myndigheter. Også AFPs journalister melder om flere eksplosjoner.
+Flere eksplosjoner ble hørt i Saudi-Arabias hovedstad Riyadh mandag. Flere missiler ble avskåret, og trusselen er over, ifølge landets myndigheter.
 
 King Khalid internasjonale lufthavn i Riyadh er stengt i flere dager etter minst tre angrep de siste dagene. Minst 18 personer er drept og flere hundre såret i angrepene.
