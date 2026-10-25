@@ -18,7 +18,12 @@ const initialer = name
   .slice(0, 2)
   .toUpperCase();
 
-export const forfatterBeskrivelse = (navn: string) => `${navn} er utgiver og redaktør i ${SITE.name}. Sakene under Forklart og Analyse utgis under dette navnet. Sakene skrives på tyrkisk av forfatteren og oversettes til norsk med KI-verktøy, som også brukes til språkvask. Forfatteren leser og godkjenner den norske teksten. KI brukes ikke til innhold, vinkling eller tall. Alle tall hentes fra offisielle kilder og kontrolleres av forfatteren og maskinelt. Kontakt: ${SITE.epost}.`;
+// Künye (sahibinin onayladığı metin; dört sitede aynı kişi, aynı dört yayın). Profilde iki paragraf, sak altındaki kartta ilki.
+export const FORFATTER_KUNYE = [
+  'Jeg er lærer i tyrkisk og kunstig intelligens, og arbeider med generative KI-systemer i programvarebransjen. Den 10. august 2022 publiserte jeg det første nyhetsbrevet fra kifobu, og siden da har jeg drevet med journalistikk.',
+  'Gjennom kifobu, finfolis, JEN DUME og tidsrøst utforsker jeg temaer som oppstartsbedrifter og folkefinansiering, finansmarkeder, kunstig intelligens, vitenskap og aktuelle saker fra Norge og resten av verden. På tvers av disse områdene er jeg opptatt av å se sammenhengene og forstå hvorfor det som skjer, betyr noe.',
+];
+export const forfatterBeskrivelse = (_navn: string) => FORFATTER_KUNYE.join(' ');
 ---
 
 <section class="forfatter-kort" itemprop="mainEntity" itemscope itemtype="https://schema.org/Person" aria-label={`Om ${name}`}>
@@ -40,9 +45,9 @@ export const forfatterBeskrivelse = (navn: string) => `${navn} er utgiver og red
     </div>
     <div class="forfatter-kort-monogram" aria-hidden="true">{initialer}</div>
   </div>
-  <p class="forfatter-kort-beskrivelse" itemprop="description">
-    {forfatterBeskrivelse(name)}
-  </p>
+  <div class="forfatter-kort-beskrivelse" itemprop="description">
+    {(heading === 'h1' ? FORFATTER_KUNYE : FORFATTER_KUNYE.slice(0, 1)).map((avsnitt) => <p>{avsnitt}</p>)}
+  </div>
   <div class="forfatter-kort-handling">
     {
       SITE.epost && (

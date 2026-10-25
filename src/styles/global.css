@@ -1590,6 +1590,14 @@ main.container {
   color: var(--ink-2);
 }
 
+.forfatter-kort-beskrivelse p {
+  margin: 0 0 calc(var(--u) * 1.5);
+}
+
+.forfatter-kort-beskrivelse p:last-child {
+  margin-bottom: 0;
+}
+
 .forfatter-kort-handling {
   display: flex;
   flex-wrap: wrap;
