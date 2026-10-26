@@ -1,18 +1,4 @@
 {
-  "norge-kan-bli-palagt-toll-pa-kinesiske-elbiler-for-a-fa-bli-med-i-en-ny-bilavtal": {
-    "tarih": "2026-10-19T08:29:31.281Z",
-    "ig_post": "18099500315390635",
-    "ig_story": "18179801293437292",
-    "fb_post": "1343803192154866_122105718663509504",
-    "fb_story": "1109469798137370"
-  },
-  "verdens-matvareprogram-ma-kutte-mathjelp-til-en-halv-million-palestinere-i-gaza": {
-    "tarih": "2026-10-19T08:31:03.725Z",
-    "ig_post": "17910610683558616",
-    "ig_story": "18099449552081133",
-    "fb_post": "1343803192154866_122105719287509504",
-    "fb_story": "2270213813760886"
-  },
   "kort-fortalt-19-oktober-2026": {
     "tarih": "2026-10-19T12:06:02.534Z",
     "ig_post": "18109104365614513",
@@ -528,6 +514,8 @@
     "reels": {
       "gun": "2026-10-26",
       "dilim": "morgen"
-    }
+    },
+    "son_hata": "Graph 403: Application request limit reached",
+    "limit": 1
   }
 }
