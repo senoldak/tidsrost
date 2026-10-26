@@ -466,5 +466,14 @@
     "tarih": "2026-10-26T15:24:14.404Z",
     "son_hata": "Graph 403: Application request limit reached",
     "limit": 1
+  },
+  "frivillig-innsats-142-000-arsverk-og-over-72-000-enheter-i-frivillighetsregisteret": {
+    "tarih": "2026-10-26T18:21:37.982Z",
+    "ig_reels": "17947517895349286",
+    "fb_reels": "2218322012390786",
+    "reels": {
+      "gun": "2026-10-26",
+      "dilim": "kveld"
+    }
   }
 }
