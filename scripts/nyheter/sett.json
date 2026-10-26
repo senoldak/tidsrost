@@ -4354,7 +4354,50 @@
     "medier:1b79a54969cc9f89": "2026-10-26T07:01:10.810Z",
     "medier:32e7a88bacc4172e": "2026-10-26T07:01:10.810Z",
     "medier:4d9906e8f52ae81a": "2026-10-26T07:01:10.810Z",
-    "medier:32f5e2207c82af8e": "2026-10-26T07:01:10.810Z"
+    "medier:32f5e2207c82af8e": "2026-10-26T07:01:10.810Z",
+    "regjeringen:3182372": "2026-10-26T09:01:12.497Z",
+    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/rekordmange-museumsbesoek-i-2025": "2026-10-26T09:01:12.497Z",
+    "havforskning:https://www.hi.no/hi/nyheter/2026/oktober/langt-mindre-lus-med-oppdrettsanlegg-ute-i-havet": "2026-10-26T09:01:12.497Z",
+    "medier:e9a3128e821340c3": "2026-10-26T09:01:12.497Z",
+    "medier:8706426050876daa": "2026-10-26T09:01:12.497Z",
+    "havforskning:https://www.hi.no/hi/nyheter/2026/oktober/havbruk-til-havs-mulig-a-fa-til-men-med-klare-begrensninger": "2026-10-26T09:01:12.497Z",
+    "havforskning:https://www.hi.no/hi/nyheter/2026/oktober/forurensningen-i-norske-havomrader-har-gatt-ned": "2026-10-26T09:01:12.497Z",
+    "medier:cad7d8368fd337eb": "2026-10-26T09:01:12.497Z",
+    "medier:6fc53e6347f08ce0": "2026-10-26T09:01:12.497Z",
+    "medier:deffeb0f5a5de989": "2026-10-26T09:01:12.497Z",
+    "medier:68065ff1d79c13ec": "2026-10-26T09:01:12.497Z",
+    "medier:9c23742893f10cbe": "2026-10-26T09:01:12.497Z",
+    "medier:c16b4e5c95765278": "2026-10-26T09:01:12.497Z",
+    "medier:e2683d303dae7d6e": "2026-10-26T09:01:12.497Z",
+    "medier:00ce1b549e84cd68": "2026-10-26T09:01:12.497Z",
+    "medier:943efb09ee6963fd": "2026-10-26T09:01:12.497Z",
+    "medier:d65f4aab0ed32d64": "2026-10-26T09:01:12.497Z",
+    "medier:c45e0807b7cf0afe": "2026-10-26T09:01:12.497Z",
+    "medier:e7f7ca7dc7f840ed": "2026-10-26T09:01:12.497Z",
+    "medier:a1203e9c7cb9e029": "2026-10-26T09:01:12.497Z",
+    "medier:d9412412795fd695": "2026-10-26T09:01:12.497Z",
+    "medier:6b6e7e6bc32f2905": "2026-10-26T09:01:12.497Z",
+    "medier:06e666046274071c": "2026-10-26T09:01:12.497Z",
+    "medier:a4cb1b9a1752499d": "2026-10-26T09:01:12.497Z",
+    "medier:3736668516e04920": "2026-10-26T09:01:12.497Z",
+    "medier:703117570852b643": "2026-10-26T09:01:12.497Z",
+    "medier:e4b7599df260251b": "2026-10-26T09:01:12.497Z",
+    "medier:753857404996932e": "2026-10-26T09:01:12.497Z",
+    "medier:0e0818b2ac2ee2a6": "2026-10-26T09:01:12.497Z",
+    "medier:e9df388f679af9f5": "2026-10-26T09:01:12.497Z",
+    "medier:0a0ae2ea5924f037": "2026-10-26T09:01:12.497Z",
+    "medier:0e36d2eb47504f79": "2026-10-26T09:01:12.497Z",
+    "medier:568e02b319526a68": "2026-10-26T09:01:12.497Z",
+    "medier:59b9eebb1c6613d7": "2026-10-26T09:01:12.497Z",
+    "medier:a98ff9c791292ada": "2026-10-26T09:01:12.497Z",
+    "medier:95e026d60de9b92d": "2026-10-26T09:01:12.497Z",
+    "medier:7e8a78a209f91876": "2026-10-26T09:01:12.497Z",
+    "medier:30f7eccc0e74f5e9": "2026-10-26T09:01:12.497Z",
+    "medier:c2f5e5cb93b7323e": "2026-10-26T09:01:12.497Z",
+    "medier:e30e2995803d820c": "2026-10-26T09:01:12.497Z",
+    "medier:e985349481faf854": "2026-10-26T09:01:12.497Z",
+    "medier:346a0e14c936ced6": "2026-10-26T09:01:12.497Z",
+    "medier:aaf9fd8c345b25a0": "2026-10-26T09:01:12.497Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -4407,76 +4450,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:d101c3003be8adf2": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T08:02:18.653Z"
-    },
-    "medier:70a0d28443eb6dd7": {
-      "p": 74,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T08:02:18.653Z"
-    },
-    "medier:76c3a74e9fa12503": {
-      "p": 76,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T08:02:18.653Z"
-    },
-    "medier:b8c580207f2214ae": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T08:02:18.653Z"
-    },
-    "medier:15cfeed1baf44ce2": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T08:02:18.653Z"
-    },
-    "medier:67572a7f7e645584": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T08:02:18.653Z"
-    },
-    "medier:104a991dbb5ba4e5": {
-      "p": 58,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T08:02:18.653Z"
-    },
-    "medier:0622400f802b5bf7": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T08:02:18.653Z"
-    },
-    "medier:a02a2abe4766f60b": {
-      "p": 42,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T08:02:18.653Z"
-    },
-    "medier:9e3dea4d5916fda2": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T08:02:18.653Z"
-    },
-    "regjeringen:3181448": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T08:02:18.653Z"
-    },
-    "regjeringen:3181425": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T08:02:18.653Z"
-    },
-    "regjeringen:3181414": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T08:02:18.653Z"
-    },
-    "regjeringen:3181362": {
-      "p": 48,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T08:02:18.653Z"
-    },
     "medier:338ffb30c12df38a": {
       "p": 82,
       "v": "b34cb0de5bde",
@@ -5786,6 +5759,81 @@
       "p": 78,
       "v": "b34cb0de5bde",
       "t": "2026-10-26T07:02:15.172Z"
+    },
+    "medier:e9a3128e821340c3": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T09:02:15.709Z"
+    },
+    "medier:e30e2995803d820c": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T09:02:15.709Z"
+    },
+    "medier:cad7d8368fd337eb": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T09:02:15.709Z"
+    },
+    "medier:9c23742893f10cbe": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T09:02:15.709Z"
+    },
+    "medier:e2683d303dae7d6e": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T09:02:15.709Z"
+    },
+    "medier:7e8a78a209f91876": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T09:02:15.709Z"
+    },
+    "medier:a1203e9c7cb9e029": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T09:02:15.709Z"
+    },
+    "medier:346a0e14c936ced6": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T09:02:15.709Z"
+    },
+    "medier:753857404996932e": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T09:02:15.709Z"
+    },
+    "regjeringen:3182372": {
+      "p": 10,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T09:02:15.709Z"
+    },
+    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/rekordmange-museumsbesoek-i-2025": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T09:02:15.709Z"
+    },
+    "dsb:https://www.dsb.no/aktuelt/dsb-og-nkom-slik-bor-du-forberede-deg-pa-at-nettet-forsvinner/": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T09:02:15.709Z"
+    },
+    "havforskning:https://www.hi.no/hi/nyheter/2026/oktober/langt-mindre-lus-med-oppdrettsanlegg-ute-i-havet": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T09:02:15.709Z"
+    },
+    "havforskning:https://www.hi.no/hi/nyheter/2026/oktober/havbruk-til-havs-mulig-a-fa-til-men-med-klare-begrensninger": {
+      "p": 48,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T09:02:15.709Z"
+    },
+    "havforskning:https://www.hi.no/hi/nyheter/2026/oktober/forurensningen-i-norske-havomrader-har-gatt-ned": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T09:02:15.709Z"
     }
   }
 }
