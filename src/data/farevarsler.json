@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-26T11:02:43.305Z",
+  "hentet": "2026-10-26T13:18:17.997Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,73 +7,8 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-26T11:00:52+00:00",
+  "sistEndretHosMet": "2026-10-26T13:16:02+00:00",
   "varsler": [
-    {
-      "id": "2.49.0.1.578.0.20261026065255.076",
-      "niva": "gult",
-      "hendelse": "Storm",
-      "omrade": "Oksøy - Åna-Sira",
-      "domene": "hav",
-      "start": "2026-10-25T09:00:00+00:00",
-      "slutt": "2026-10-26T13:00:00+00:00",
-      "beskrivelse": "Mandag morgen fortsatt vestlig sterk kuling 20 og ved Lindesnes periodevis liten storm 22, minkende utover ettermiddagen.",
-      "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261025103617.017",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Åna-Sira - Karmøy",
-      "domene": "hav",
-      "start": "2026-10-25T18:00:00+00:00",
-      "slutt": "2026-10-26T12:00:00+00:00",
-      "beskrivelse": "Søndag kveld økende til vestlig stiv kuling 15 m/s, natt til mandag sterk kuling 20. Minkende mandag ettermiddag.",
-      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261025110107.068",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Torsvåg - Loppa",
-      "domene": "hav",
-      "start": "2026-10-26T00:00:00+00:00",
-      "slutt": "2026-10-26T12:00:00+00:00",
-      "beskrivelse": "Periodevis sørøstlig stiv kuling 15 m/s. Mandag formiddag minkende.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261026073814.056",
-      "niva": "gult",
-      "hendelse": "Høy vannstand",
-      "omrade": "Kyst- og fjordstrøk i Hordaland",
-      "domene": "land",
-      "start": "2026-10-26T06:00:00+00:00",
-      "slutt": "2026-10-26T12:00:00+00:00",
-      "beskrivelse": "Det er ventet høy vannstand. Mer informasjon om tidspunkt for høy vannstand og verdier for steder langs kysten finnes på sehavniva.no. Usikkerheten i varslet vannstand er 5-10 cm.",
-      "konsekvenser": "Fare for skader i strandsonen: Oversvømmelser kan gi skader på infrastruktur og bygninger enkelte steder i strandsonen. Vis forsiktighet i strandsonen: Sterk vind og høye bølger i kombinasjon med høy vannstand kan øke skadeomfanget i strandsonen.",
-      "rad": "Fare for skader i strandsonen: Sjekk fortøyningen til båten og sikre løse gjenstander i strandsonen.",
-      "web": "https://www.met.no/nyhetsarkiv/oransje-farevarsel-om-svaert-hoy-vannstand-i-rogaland"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261026073333.057",
-      "niva": "gult",
-      "hendelse": "Høy vannstand",
-      "omrade": "Kyst- og fjordstrøk i Rogaland",
-      "domene": "land",
-      "start": "2026-10-26T06:00:00+00:00",
-      "slutt": "2026-10-26T12:00:00+00:00",
-      "beskrivelse": "Det er ventet høy vannstand. Mer informasjon om tidspunkt for høy vannstand og verdier for steder langs kysten finnes på sehavniva.no. Usikkerheten i varslet vannstand er 5-10 cm.",
-      "konsekvenser": "Fare for skader i strandsonen: Oversvømmelser kan gi skader på infrastruktur og bygninger enkelte steder i strandsonen. Vis forsiktighet i strandsonen: Sterk vind og høye bølger i kombinasjon med høy vannstand kan øke skadeomfanget i strandsonen.",
-      "rad": "Fare for skader i strandsonen: Sjekk fortøyningen til båten og sikre løse gjenstander i strandsonen.",
-      "web": "https://www.met.no/nyhetsarkiv/oransje-farevarsel-om-svaert-hoy-vannstand-i-rogaland"
-    },
     {
       "id": "2.49.0.1.578.0.261026100000.0817_1_0",
       "niva": "gult",
@@ -192,6 +127,84 @@
       "web": null
     },
     {
+      "id": "2.49.0.1.578.0.20261026082937.026",
+      "niva": "gult",
+      "hendelse": "Storm",
+      "omrade": "Karmøy - Slåtterøy",
+      "domene": "hav",
+      "start": "2026-10-26T21:00:00+00:00",
+      "slutt": "2026-10-27T13:00:00+00:00",
+      "beskrivelse": "Fra mandag kveld sørlig økende til sterk kuling 20 m/s, fra tirsdag morgen periodevis full storm 25. Tirsdag ettermiddag minkende til sterk kuling 20.",
+      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Meget høye bølger: Rullingen blir tung og støtende. Synsvidden nedsettes.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
+    },
+    {
+      "id": "2.49.0.1.578.0.20261026080722.092",
+      "niva": "gult",
+      "hendelse": "Storm",
+      "omrade": "Måløy - Stad",
+      "domene": "hav",
+      "start": "2026-10-26T21:00:00+00:00",
+      "slutt": "2026-10-27T13:00:00+00:00",
+      "beskrivelse": "Fra mandag kveld sørlig sterk kuling 20 m/s, natt til tirsdag sørøst liten storm 22, tirsdag morgen sørlig full storm 25, økende til sterk storm 30.",
+      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Meget høye bølger: Rullingen blir tung og støtende. Synsvidden nedsettes.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
+    },
+    {
+      "id": "2.49.0.1.578.0.20261026082341.073",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "Obrestad - Karmøy",
+      "domene": "hav",
+      "start": "2026-10-26T21:00:00+00:00",
+      "slutt": "2026-10-27T13:00:00+00:00",
+      "beskrivelse": "Fra mandag kveld sørøst sterk kuling 20 m/s, natt til tirsdag sørlig stiv kuling 15, fra tirsdag morgen periodevis sterk kuling 20 i nord. Tirsdag ettermiddag stiv kuling 15.",
+      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
+    },
+    {
+      "id": "2.49.0.1.578.0.20261026083642.022",
+      "niva": "gult",
+      "hendelse": "Storm",
+      "omrade": "Slåtterøy - Bulandet",
+      "domene": "hav",
+      "start": "2026-10-26T21:00:00+00:00",
+      "slutt": "2026-10-27T13:00:00+00:00",
+      "beskrivelse": "Fra mandag kveld sørlig økende til sterk kuling 20 m/s. Natt til tirsdag økende til periodevis full storm 25. Tirsdag morgen forbigående sterk storm 30. Tirsdag ettermiddag minkende til liten storm 22.",
+      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Meget høye bølger: Rullingen blir tung og støtende. Synsvidden nedsettes.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
+    },
+    {
+      "id": "2.49.0.1.578.0.20261026081330.059",
+      "niva": "gult",
+      "hendelse": "Storm",
+      "omrade": "Stad - Svinøy",
+      "domene": "hav",
+      "start": "2026-10-26T21:00:00+00:00",
+      "slutt": "2026-10-27T13:00:00+00:00",
+      "beskrivelse": "Fra mandag kveld økende til sterk kuling 20 m/s. Natt til tirsdag dreiende sørøst. Tirsdag morgen økende til sørlig full storm 25 ved Stad. Tirsdag ettermiddag sterk storm 30 ved Stad",
+      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Meget høye bølger: Rullingen blir tung og støtende. Synsvidden nedsettes.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
+    },
+    {
+      "id": "2.49.0.1.578.0.20261026084618.084",
+      "niva": "gult",
+      "hendelse": "Storm",
+      "omrade": "Bulandet - Måløy",
+      "domene": "hav",
+      "start": "2026-10-26T22:00:00+00:00",
+      "slutt": "2026-10-27T13:00:00+00:00",
+      "beskrivelse": "Fra mandag kveld sørøst økende til sterk kuling 20 m/s, natt til tirsdag økende til full storm 25. Tirsdag formiddag sørlig kan hende sterk storm 30.",
+      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Meget høye bølger: Rullingen blir tung og støtende. Synsvidden nedsettes.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
+    },
+    {
       "id": "2.49.0.1.578.0.261026100000.7009_1_0",
       "niva": "gult",
       "hendelse": "Storm",
@@ -244,6 +257,19 @@
       "web": null
     },
     {
+      "id": "2.49.0.1.578.0.20261026112925.047",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "Oksøy - Lindesnes",
+      "domene": "hav",
+      "start": "2026-10-27T03:00:00+00:00",
+      "slutt": "2026-10-27T11:00:00+00:00",
+      "beskrivelse": "Natt til tirsdag økning til sørlig periodevis stiv kuling 15 m/s.",
+      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
+      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
+    },
+    {
       "id": "2.49.0.1.578.0.261026100000.7006_1_0",
       "niva": "gult",
       "hendelse": "Storm",
@@ -255,6 +281,19 @@
       "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.20261026112306.077",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "Svenskegrensa - Torungen",
+      "domene": "hav",
+      "start": "2026-10-27T04:00:00+00:00",
+      "slutt": "2026-10-27T12:00:00+00:00",
+      "beskrivelse": "Tidlig tirsdag morgen økning til sørlig stiv kuling 15 m/s.",
+      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
+      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
       "id": "2.49.0.1.578.0.261026100000.7003_1_0",
