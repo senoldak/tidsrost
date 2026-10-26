@@ -71,6 +71,8 @@ Når et forholdstall svinger, kan det være telleren eller nevneren som beveger 
 
 Én ting kan vi si om nevneren. Statistisk sentralbyrå (SSB) skiller mellom BNP og Fastlands-BNP. Fastlands-BNP holder oljevirksomhet og utenriks sjøfart utenfor. I 2024 var BNP 5 382,4 milliarder kroner og Fastlands-BNP 4 191,8 milliarder kroner, så BNP var 1,28 ganger så stort. Forskjellen på 1 190,6 milliarder kroner er verdien av oljevirksomheten og utenriks sjøfart.
 
+Også BNP-tallet varierer mellom kilder. Deler man skatteinntektene på 2 088,5 milliarder kroner på SSBs BNP, blir andelen 38,8 prosent, ikke 40,2. OECDs andel bygger på et BNP på om lag 5 197 milliarder kroner, lavere enn SSBs tall. I sammenligningen mellom land bruker vi OECDs tall, fordi de er regnet likt for alle land.
+
 Skatteinntektene på 2 088,5 milliarder kroner utgjør 49,8 prosent av Fastlands-BNP. Det er vår egen regning, og tallet kan ikke settes ved siden av andre lands forholdstall, som er regnet mot hele BNP. Regnestykket viser først og fremst at hvilken nevner man bruker, flytter tallet mye.
 
 ## Samme tall, ulik sammensetning
@@ -83,7 +85,7 @@ To land med nesten lik andel kan ha helt ulike skattesystemer. I 2024 fikk Norge
 | Danmark | 30,9 % | 0,1 % | 0,3 % | 1,4 % | 12,3 % |
 | Sverige | 15,1 % | 9,0 % | 5,3 % | 0,8 % | 11,2 % |
 
-*Prosent av BNP i 2024. Kilde: OECD.*
+*Prosent av BNP i 2024. OECDs restkategori «andre skatter» er ikke med, så radene summerer ikke helt til totalen. Kilde: OECD.*
 
 Regnet i prosentpoeng henter Danmark 11,1 prosentpoeng mer av BNP fra skatt på inntekt enn Norge, men 9,4 prosentpoeng mindre fra trygdeavgifter. Sverige henter 5,2 prosentpoeng mer enn Norge fra lønnsskatter. Slike forskjeller betyr at samme totaltall kan skjule ulike måter å finansiere det offentlige på, og at en rangering etter totaltallet ikke sier noe om hvem som betaler.
 
