@@ -1,60 +1,4 @@
 {
-  "kort-fortalt-19-oktober-2026": {
-    "tarih": "2026-10-19T12:06:02.534Z",
-    "ig_post": "18109104365614513",
-    "ig_story": "18007413473990386",
-    "fb_post": "1343803192154866_122105860527509504",
-    "fb_story": "1420452420235165"
-  },
-  "elon-musk-vil-gi-bort-spacex-aksjer-til-alle-barn-i-usa": {
-    "tarih": "2026-10-19T12:07:33.223Z",
-    "ig_post": "18135703567642168",
-    "ig_story": "18170844358409910",
-    "fb_post": "1343803192154866_122105861211509504",
-    "fb_story": "1792619788654762"
-  },
-  "starlink-norway-okte-inntektene-til-831-millioner-kroner-i-fjor": {
-    "tarih": "2026-10-19T12:09:01.740Z",
-    "ig_post": "18199266694386927",
-    "ig_story": "18112934711126762",
-    "fb_post": "1343803192154866_122105862105509504",
-    "fb_story": "2011246052923213"
-  },
-  "elisabeth-thand-ringqvist-far-i-oppdrag-a-danne-ny-regjering-i-sverige": {
-    "tarih": "2026-10-19T12:10:33.321Z",
-    "ig_post": "17971858188168921",
-    "ig_story": "18099071219665498",
-    "fb_post": "1343803192154866_122105862981509504",
-    "fb_story": "28688637104139773"
-  },
-  "erling-braut-haaland-usikker-til-mesterligakamp-etter-skade": {
-    "tarih": "2026-10-19T12:12:02.537Z",
-    "ig_post": "18355584169175878",
-    "ig_story": "17994736554062786",
-    "fb_post": "1343803192154866_122105863899509504",
-    "fb_story": "1596264464964357"
-  },
-  "kronprinsesse-ingrid-alexandra-skal-ha-sin-forste-audiens-alene": {
-    "tarih": "2026-10-19T14:08:47.716Z",
-    "ig_post": "18023528606716969",
-    "ig_story": "18093132416664030",
-    "fb_post": "1343803192154866_122105946039509504",
-    "fb_story": "1024955767277555"
-  },
-  "kongsberg-gruppen-skal-levere-missiler-til-danmark": {
-    "tarih": "2026-10-19T14:10:19.589Z",
-    "ig_post": "17913602673501469",
-    "ig_story": "18114687350045652",
-    "fb_post": "1343803192154866_122105946861509504",
-    "fb_story": "1174469761605081"
-  },
-  "kutt-i-finansiering-rammer-en-halv-million-mennesker-uten-matvarehjelp-pa-gaza": {
-    "tarih": "2026-10-19T14:11:48.248Z",
-    "ig_post": "18108788141617743",
-    "ig_story": "17931543435162751",
-    "fb_post": "1343803192154866_122105947713509504",
-    "fb_story": "1119124130621995"
-  },
   "norske-kronen-pa-sin-sterkeste-kurs-pa-mer-enn-tre-ar": {
     "tarih": "2026-10-19T16:07:22.071Z",
     "ig_post": "18125211062314608",
@@ -515,6 +459,11 @@
       "gun": "2026-10-26",
       "dilim": "morgen"
     },
+    "son_hata": "Graph 403: Application request limit reached",
+    "limit": 1
+  },
+  "handballjentene-slo-danmark-i-golden-league": {
+    "tarih": "2026-10-26T15:24:14.404Z",
     "son_hata": "Graph 403: Application request limit reached",
     "limit": 1
   }
