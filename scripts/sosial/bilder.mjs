@@ -20,7 +20,11 @@ try { delt = JSON.parse(await readFile(DURUM, 'utf8')) ?? {}; } catch {}
 const eksikVar = (s) => !delt[s.id] || (!delt[s.id].atlandi && KANALLAR.some((c) => !delt[s.id][c]));
 // Yalnız paylaşımı bitmemiş haberlerin görseli çizilir (C4): her yayında penceredeki 20–45 haberin hepsi yeniden
 // çiziliyordu, oysa paylaşılmış haberin görseline Meta bir daha bakmaz.
-const saker = tumu.filter((s) => paylasilir(s, simdi, PENCERE_MS + 6 * 3600e3)).filter(eksikVar);
+// yeniden.json: pencereden çıkmış ama sahibin isteğiyle elle (sosial.yml mod=test) yeniden gönderilecek haber
+// kimlikleri (en çok 7 gün geriye). Gönderim bitince dosyadan çıkarılır.
+let yeniden = [];
+try { yeniden = JSON.parse(await readFile('scripts/sosial/yeniden.json', 'utf8')); } catch {}
+const saker = tumu.filter((s) => paylasilir(s, simdi, PENCERE_MS + 6 * 3600e3) || (yeniden.includes(s.id) && paylasilir(s, simdi, 7 * 86400e3))).filter(eksikVar);
 
 // Yayınla'ya "paylaşılacak haber var mı" bilgisi: del.mjs'in penceresinde (24 saat) paylaşımı bitmemiş haber sayısı.
 // Sıfırsa sosial.yml başlatılmaz (boş koşu 1 dk sayılıyordu).

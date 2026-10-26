@@ -194,8 +194,9 @@ const gorselHazir = async (id) =>
 
 if (process.argv.includes('--test')) {
   const kanallar = (argDeger('kanallar') ?? 'ig_post,ig_story').split(',').filter((c) => KANALLAR.includes(c) || REELS_KANALLAR.includes(c));
-  const adaylar = (await sakerOku()).filter((s) => paylasilir(s, Date.now(), 30 * 3600e3)).reverse();
   const istenen = argDeger('test');
+  // Adıyla istenen haber 7 gün geriye bakılarak bulunur (kaybolan haberi yeniden göndermek; görseli yeniden.json çizer).
+  const adaylar = (await sakerOku()).filter((s) => paylasilir(s, Date.now(), (istenen ? 7 * 24 : 30) * 3600e3)).reverse();
   let s = null;
   for (const a of istenen ? adaylar.filter((x) => x.id === istenen) : adaylar) if (await gorselHazir(a.id)) { s = a; break; }
   if (!s) { console.error(`[sosial] Test: ${istenen ?? 'görseli yayında olan tam haber'} bulunamadı.`); process.exit(1); }
