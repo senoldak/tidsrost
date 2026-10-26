@@ -4397,7 +4397,27 @@
     "medier:e30e2995803d820c": "2026-10-26T09:01:12.497Z",
     "medier:e985349481faf854": "2026-10-26T09:01:12.497Z",
     "medier:346a0e14c936ced6": "2026-10-26T09:01:12.497Z",
-    "medier:aaf9fd8c345b25a0": "2026-10-26T09:01:12.497Z"
+    "medier:aaf9fd8c345b25a0": "2026-10-26T09:01:12.497Z",
+    "medier:ba2bb887729fe60a": "2026-10-26T11:01:09.603Z",
+    "medier:54a12d6601626cdc": "2026-10-26T11:01:09.603Z",
+    "regjeringen:3183373": "2026-10-26T11:01:09.603Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2256": "2026-10-26T11:01:09.603Z",
+    "medier:e97fdc6e5c71bae4": "2026-10-26T11:01:09.603Z",
+    "medier:0ab49b0b7960e205": "2026-10-26T11:01:09.603Z",
+    "medier:10f586ae1e6792bd": "2026-10-26T11:01:09.603Z",
+    "medier:57e27dc208625d1b": "2026-10-26T11:01:09.603Z",
+    "medier:ec45fe22369688dd": "2026-10-26T11:01:09.603Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2231": "2026-10-26T11:01:09.603Z",
+    "medier:d92547133e8eafe9": "2026-10-26T11:01:09.603Z",
+    "medier:0e26b9c25a88402b": "2026-10-26T11:01:09.603Z",
+    "medier:c974960a0a20279f": "2026-10-26T11:01:09.603Z",
+    "medier:ab4586a93a12a1b6": "2026-10-26T11:01:09.603Z",
+    "medier:a13d14cdefe10ac3": "2026-10-26T11:01:09.603Z",
+    "medier:f6bcd95fe828c46e": "2026-10-26T11:01:09.603Z",
+    "dsb:https://www.dsb.no/aktuelt/dsb-og-nkom-slik-bor-du-forberede-deg-pa-at-nettet-forsvinner/": "2026-10-26T11:01:09.603Z",
+    "medier:0cd6031127daffed": "2026-10-26T11:01:09.603Z",
+    "medier:3693d665b1dd51e3": "2026-10-26T11:01:09.603Z",
+    "medier:02d45b5939932479": "2026-10-26T11:01:09.603Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -4450,121 +4470,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:338ffb30c12df38a": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "medier:ca0603ccb1d46907": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "medier:ac9b61b050e7a12e": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "medier:a0014dd5fdb61da6": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "medier:e2bbf0dd841de139": {
-      "p": 62,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "medier:6ee12f515bff8c2c": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "medier:a0b43349543c9189": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "medier:7e8fdcd656472328": {
-      "p": 58,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "medier:e329105a7e658159": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "medier:a9ddff06e8af6e3a": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "medier:88ac195c3d67d436": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "medier:1496a0ea90d824fc": {
-      "p": 74,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "medier:396d2fe59ba4d5c9": {
-      "p": 73,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "medier:90b3ecce4b54cace": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "medier:7d3d08458265b5ba": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "regjeringen:3181454": {
-      "p": 52,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "regjeringen:3181393": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "regjeringen:3181412": {
-      "p": 38,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "regjeringen:3181284": {
-      "p": 64,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2250": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2248": {
-      "p": 12,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2247": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2232": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-23T10:02:22.513Z"
-    },
     "medier:38fe21334e51dcfb": {
       "p": 15,
       "v": "b34cb0de5bde",
@@ -5834,6 +5739,46 @@
       "p": 55,
       "v": "b34cb0de5bde",
       "t": "2026-10-26T09:02:15.709Z"
+    },
+    "medier:0cd6031127daffed": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T11:02:08.997Z"
+    },
+    "medier:e97fdc6e5c71bae4": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T11:02:08.997Z"
+    },
+    "medier:a13d14cdefe10ac3": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T11:02:08.997Z"
+    },
+    "medier:d92547133e8eafe9": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T11:02:08.997Z"
+    },
+    "medier:c974960a0a20279f": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T11:02:08.997Z"
+    },
+    "regjeringen:3183373": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T11:02:08.997Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2256": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T11:02:08.997Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2231": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-26T11:02:08.997Z"
     }
   }
 }
