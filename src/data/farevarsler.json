@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-26T01:03:09.228Z",
+  "hentet": "2026-10-26T07:03:58.555Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-26T01:01:26+00:00",
+  "sistEndretHosMet": "2026-10-26T07:03:02+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.20261025185249.017",
@@ -36,40 +36,14 @@
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
-      "id": "2.49.0.1.578.0.20261025075301.081",
+      "id": "2.49.0.1.578.0.20261026065255.076",
       "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Sandnessjøen - Bodø",
-      "domene": "hav",
-      "start": "2026-10-24T22:00:00+00:00",
-      "slutt": "2026-10-26T06:00:00+00:00",
-      "beskrivelse": "Stiv kuling 15 m/s, periodevis sterk kuling 17. Lokalt liten storm nær Støtt i ettermiddag. Minkende vind mandag morgen.",
-      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261025092208.073",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Lyngør - Oksøy",
-      "domene": "hav",
-      "start": "2026-10-25T09:00:00+00:00",
-      "slutt": "2026-10-26T09:00:00+00:00",
-      "beskrivelse": "Sørlig stiv kuling 15. Fra i ettermiddag sørvest stiv kuling 15.",
-      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261025091756.063",
-      "niva": "gult",
-      "hendelse": "Kuling",
+      "hendelse": "Storm",
       "omrade": "Oksøy - Åna-Sira",
       "domene": "hav",
       "start": "2026-10-25T09:00:00+00:00",
-      "slutt": "2026-10-26T09:00:00+00:00",
-      "beskrivelse": "Sørlig stiv kuling 15. Fra i ettermiddag sørvestlig stiv kuling 15. Fra natt til mandag vestlig sterk kuling 20.",
+      "slutt": "2026-10-26T13:00:00+00:00",
+      "beskrivelse": "Mandag morgen fortsatt vestlig sterk kuling 20 og ved Lindesnes periodevis liten storm 22, minkende utover ettermiddagen.",
       "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
@@ -85,19 +59,6 @@
       "beskrivelse": "Sørlig periodevis sterk kuling 20. Fra natt til mandag sørvest periodevis stiv kuling 15.",
       "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261025105801.081",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Skomvær - Melbu",
-      "domene": "hav",
-      "start": "2026-10-25T18:00:00+00:00",
-      "slutt": "2026-10-26T02:00:00+00:00",
-      "beskrivelse": "Fra søndag kveld østlig periodevis stiv kuling 15 m/s. Natt til mandag minkende.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
@@ -229,19 +190,6 @@
       "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.20261025105453.037",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Bodø - Lødingen",
-      "domene": "hav",
-      "start": "2026-10-26T02:00:00+00:00",
-      "slutt": "2026-10-26T06:00:00+00:00",
-      "beskrivelse": "Natt til mandag periodevis østlig stiv kuling 15 m/s. Mest vind i sør. Mandag morgen minkende.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
       "id": "2.49.0.1.578.0.20261025185325.051",
