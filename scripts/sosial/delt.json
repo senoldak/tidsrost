@@ -1,17 +1,4 @@
 {
-  "18-900-uforetrygdede-ma-betale-tilbake-penger-til-nav": {
-    "tarih": "2026-10-19T20:05:16.803Z",
-    "ig_post": "17882054040691851",
-    "ig_story": "17968318389033859",
-    "fb_post": "1343803192154866_122106237963509504",
-    "fb_story": "1424643383122839",
-    "ig_reels": "18133252525690641",
-    "fb_reels": "1465805095438689",
-    "reels": {
-      "gun": "2026-10-20",
-      "dilim": "morgen"
-    }
-  },
   "minst-50-soldater-drept-i-houthiangrep-mot-militaerleir-i-jemen": {
     "tarih": "2026-10-20T06:04:18.848Z",
     "ig_post": "18121478326952183",
@@ -462,12 +449,14 @@
     },
     "ig_story": "18078930266555159",
     "fb_post": "1343803192154866_122111147013509504",
-    "fb_story": "2388452921967220"
+    "fb_story": "2388452921967220",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "_sinir": {
     "ig_post": {
-      "sayi": 1,
-      "kadar": "2026-10-26T19:57:51.682Z"
+      "sayi": 2,
+      "kadar": "2026-10-26T23:06:02.469Z"
     }
   },
   "benjamin-netanyahu-advarer-om-nytt-holocaust-for-valget-i-israel": {
@@ -495,5 +484,11 @@
     "ig_story": "18288112867290694",
     "fb_post": "1343803192154866_122111151255509504",
     "fb_story": "3317514745102184"
+  },
+  "krigsforbrytelser-og-angrep-pa-sivile-og-energiinfrastruktur-slas-fast-i-ny-rapp": {
+    "tarih": "2026-10-26T21:06:17.644Z",
+    "ig_story": "18495212383107149",
+    "fb_post": "1343803192154866_122111187657509504",
+    "fb_story": "1096808169919908"
   }
 }
