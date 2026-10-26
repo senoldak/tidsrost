@@ -15,7 +15,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { sakerOku, paylasilir, bildetekst, bildeUrl, varselSeviye, varselSuz, reelsDilimi, reelsSec, sakYeri, YERLER } from './saker.mjs';
 import { reelsCiz } from './reels.mjs';
-import { AZAMI_LIMIT, eksikKanallar, hataIsle } from './deneme.mjs';
+import { SINIR_UZUN, eksikKanallar, hataIsle, limitHatasi, sinirde, sinirKaydet } from './deneme.mjs';
 
 const API = 'https://graph.facebook.com/v25.0';
 const DURUM = 'scripts/sosial/delt.json';
@@ -49,7 +49,7 @@ async function graph(yontem, yol, alanlar, tok = token) {
         signal: AbortSignal.timeout(60_000),
       });
       const v = await res.json();
-      if (!res.ok || v.error) throw new Error(`Graph ${res.status}: ${v.error?.message ?? 'bilinmeyen hata'}`);
+      if (!res.ok || v.error) throw new Error(`Graph ${res.status}: ${hataMetni(v.error, res.headers)}`);
       return v;
     } catch (e) {
       // Meta'nın reddettiği istek tekrarlanmaz; yalnız ağ hatası ve zaman aşımı.
@@ -57,6 +57,24 @@ async function graph(yontem, yol, alanlar, tok = token) {
       await bekle(deneme * 5000);
     }
   }
+}
+
+// Meta hatasının kodu/alt kodu ve kullanıcı mesajı: "Application request limit reached" hem uygulama çağrı sınırı
+// hem Instagram'ın hesap kısıtlaması olabilir; ayırt etmek için alt kod ve kullanım başlıkları gerekir.
+function hataMetni(h = {}, basliklar) {
+  const kod = h.code ? ` (#${h.code}${h.error_subcode ? `/${h.error_subcode}` : ''})` : '';
+  const kullanici = [h.error_user_title, h.error_user_msg].filter(Boolean).join(': ');
+  return `${h.message ?? 'bilinmeyen hata'}${kod}${kullanici ? ` [${kullanici}]` : ''}${limitHatasi(h.message) ? kullanim(basliklar) : ''}`;
+}
+// Uygulama ve iş kullanım başlıkları (yüzde); kimlikler yazılmaz.
+function kullanim(basliklar) {
+  const oku = (ad) => { try { return JSON.parse(basliklar?.get(ad) ?? 'null'); } catch { return null; } };
+  const parca = [];
+  const app = oku('x-app-usage');
+  if (app) parca.push(`app çağrı ${app.call_count}% cpu ${app.total_cputime}% süre ${app.total_time}%`);
+  for (const liste of Object.values(oku('x-business-use-case-usage') ?? {}))
+    for (const u of liste) parca.push(`${u.type} çağrı ${u.call_count}% bekleme ${u.estimated_time_to_regain_access ?? 0} dk`);
+  return parca.length ? ` {${parca.join('; ')}}` : ' {kullanım başlığı yok}';
 }
 
 // META_TOKEN bir sistem kullanıcısı token'ıysa Sayfa token'ı ondan alınır; zaten Sayfa token'ıysa (token-kur.mjs)
@@ -67,15 +85,18 @@ async function sayfaTokeni() {
   return sayfaToken;
 }
 
+// Hata hangi adımda (kap / durum / yayın): sınır kaba mı yayına mı geliyor, loglardan görülsün.
+const adim = (ad, p) => p.catch((e) => { e.message = `${ad}: ${e.message}`; throw e; });
 async function igYayimla(alanlar) {
-  const kap = await graph('POST', `${igId}/media`, alanlar);
+  const kap = await adim('kap', graph('POST', `${igId}/media`, alanlar));
+  // Görsel kabı çoğu zaman birkaç saniyede hazır: önce beklenir, durum sorgusu (çağrı) genelde bir kez yapılır.
   for (let i = 0; i < 20; i++) {
-    const { status_code } = await graph('GET', kap.id, { fields: 'status_code' });
+    await bekle(3000);
+    const { status_code } = await adim('durum', graph('GET', kap.id, { fields: 'status_code' }));
     if (status_code === 'FINISHED') break;
     if (status_code === 'ERROR' || status_code === 'EXPIRED') throw new Error(`Instagram medya kabı: ${status_code}`);
-    await bekle(3000);
   }
-  return (await graph('POST', `${igId}/media_publish`, { creation_id: kap.id })).id;
+  return (await adim('yayın', graph('POST', `${igId}/media_publish`, { creation_id: kap.id }))).id;
 }
 
 // Video bir kez üretilir, iki kanala da aynı dosya gider.
@@ -103,7 +124,8 @@ const konumlu = (gonder) => async (s) => {
   try {
     return await gonder(s, true);
   } catch (e) {
-    if (!sakYeri(s)) throw e;
+    // Sınır hatasında konumsuz deneme yalnız bir çağrı daha harcar.
+    if (!sakYeri(s) || limitHatasi(e.message)) throw e;
     console.warn(`[sosial] ${s.id}: konumla olmadı (${gizle(e.message).slice(0, 150)}), konumsuz deneniyor`);
     return gonder(s, false);
   }
@@ -184,8 +206,8 @@ if (process.argv.includes('--test')) {
   console.log(`[sosial] Test: ${s.id} → ${kanallar.join(', ')}`);
   for (const c of kanallar) {
     if (k[c]) { console.log(`[sosial] ${c} zaten gönderilmiş (${k[c]})`); continue; }
-    try { k[c] = await GONDER[c](s); console.log(`[sosial] ✓ ${c} (${k[c]})`); }
-    catch (e) { hata++; console.error(`[sosial] ! ${c}: ${gizle(e.message).slice(0, 300)}`); }
+    try { k[c] = await GONDER[c](s); delete durum._sinir?.[c]; console.log(`[sosial] ✓ ${c} (${k[c]})`); }
+    catch (e) { hata++; console.error(`[sosial] ! ${c}: ${gizle(e.message).slice(0, 500)}`); }
   }
   await writeFile(DURUM, `${JSON.stringify(durum, null, 2)}
 `);
@@ -198,7 +220,8 @@ if (process.argv.includes('--reels')) {
   let durum;
   try { durum = JSON.parse(await readFile(DURUM, 'utf8')); } catch { console.log('[sosial] Reels: delt.json yok, atlandı.'); process.exit(0); }
   const simdi = Date.now();
-  const tukenmis = (k) => REELS_KANALLAR.every((c) => k?.[c] || (k?.deneme?.[c] ?? 0) >= AZAMI_DENEME || (k?.limit ?? 0) >= AZAMI_LIMIT);
+  const sinir = (durum._sinir ??= {});
+  const tukenmis = (k) => REELS_KANALLAR.every((c) => k?.[c] || (k?.deneme?.[c] ?? 0) >= AZAMI_DENEME);
   const s = reelsSec((await sakerOku()).filter((x) => paylasilir(x, simdi) && !tukenmis(durum[x.id])), durum, dilim);
   if (!s) { console.log(`[sosial] Reels (${dilim.gun} ${dilim.ad}): gönderilecek haber yok ya da dilim dolu.`); process.exit(0); }
   const k = (durum[s.id] ??= { tarih: new Date(simdi).toISOString() });
@@ -206,15 +229,20 @@ if (process.argv.includes('--reels')) {
   let hata = 0;
   for (const c of REELS_KANALLAR) {
     if (k[c] || (k.deneme?.[c] ?? 0) >= AZAMI_DENEME) continue;
+    if (sinirde(sinir, c)) { console.log(`[sosial] ${c}: sınır beklemesinde (${sinir[c].kadar}'a kadar).`); continue; }
     try {
       k[c] = await GONDER[c](s);
+      delete sinir[c];
       console.log(`[sosial] ✓ ${s.id} ${c} (${k[c]})`);
     } catch (e) {
-      hata++;
       const tur = hataIsle(k, c, gizle(e.message));
       console.error(`[sosial] ! ${s.id} ${c}: ${k.son_hata}`);
-      // Meta uygulama sınırı: öteki kanalı denemeden turu bırak.
-      if (tur === 'limit') { console.error('[sosial] Meta istek sınırı: tur bırakıldı.'); break; }
+      // Sınır kanalı beklemeye alır; öteki kanal yine denenir.
+      if (tur === 'limit') {
+        const { sayi, kadar } = sinirKaydet(sinir, c);
+        console.error(`[sosial] ${c}: Meta istek sınırı (${sayi}. kez), ${kadar}'a kadar denenmez.`);
+        if (sayi >= SINIR_UZUN) hata++;
+      } else hata++;
     }
   }
   // Bir kanal bile gittiyse dilim dolmuş sayılır; ikisi de düştüyse dilimin sonraki turu yeniden dener.
@@ -245,28 +273,35 @@ if (baslat || !delt) {
   process.exit(0);
 }
 
+// _sinir: kanal sınır beklemeleri (deneme.mjs); öteki anahtarlar haber kimliği.
+const sinir = (delt._sinir ??= {});
+const kayitlar = () => Object.entries(delt).filter(([id]) => !id.startsWith('_'));
+
 // 7 günden eski kayıtlar budanır.
-for (const [id, k] of Object.entries(delt)) if (Date.parse(k.tarih) < simdi - 7 * 86400e3) delete delt[id];
+for (const [id, k] of kayitlar()) if (Date.parse(k.tarih) < simdi - 7 * 86400e3) delete delt[id];
 
 const eksik = (k) => eksikKanallar(KANALLAR, k);
-const son24 = Object.values(delt).filter((k) => !k.atlandi && Date.parse(k.tarih) > simdi - 86400e3).length;
+const son24 = kayitlar().filter(([, k]) => !k.atlandi && Date.parse(k.tarih) > simdi - 86400e3).length;
 let kalanTavan = tavan - son24;
 
-const son24Varsel = Object.entries(delt).filter(([id, k]) => !k.atlandi && Date.parse(k.tarih) > simdi - 86400e3 && varselSeviye({ id }) === 'oransje').length;
+const son24Varsel = kayitlar().filter(([id, k]) => !k.atlandi && Date.parse(k.tarih) > simdi - 86400e3 && varselSeviye({ id }) === 'oransje').length;
 // Yarım kalan (bir kanalı gitmiş) haber tamamlanır; yeni haberlere farevarsel kuralı uygulanır.
 const yarim = saker.filter((s) => delt[s.id] && eksik(delt[s.id]).length);
 const yeniler = varselSuz(saker.filter((s) => !delt[s.id]), son24Varsel);
 const sira = [...yarim, ...yeniler].sort((a, b) => a.dato - b.dato || a.id.localeCompare(b.id));
 console.log(`[sosial] Sırada ${sira.length} haber; son 24 saatte ${son24} haber paylaşıldı (tavan ${tavan === Infinity ? 'yok' : tavan}).`);
 
+const beklemede = KANALLAR.filter((c) => sinirde(sinir, c));
+if (beklemede.length) console.log(`[sosial] Sınır beklemesinde: ${beklemede.map((c) => `${c} (${sinir[c].kadar}'a kadar)`).join(', ')}.`);
+
 let hata = 0;
 let islenen = 0;
-let sinir = false; // Meta uygulama istek sınırı: kalan haberler bu turda denenmez
 for (const s of sira) {
-  if (sinir) break;
   const yeni = !delt[s.id];
   if (yeni && kalanTavan <= 0) { console.log(`[sosial] Günlük tavan doldu; ${s.id} bekliyor.`); continue; }
   if (islenen >= TUR_BASINA) break;
+  // Eksik kanallarının hepsi sınır beklemesindeyse haber bu turda hiç denenmez (çağrı da bekleme de yok).
+  if (!eksik(delt[s.id]).some((c) => !sinirde(sinir, c))) continue;
 
   // Görsel henüz yayında değilse (derleme sürüyor) haber sonraki tura kalır; deneme sayılmaz.
   if (!(await gorselHazir(s.id))) { console.log(`[sosial] ${s.id}: görsel yayında değil, sonraki tur.`); continue; }
@@ -276,22 +311,26 @@ for (const s of sira) {
   const k = (delt[s.id] ??= { tarih: new Date().toISOString() });
   if (yeni) kalanTavan--;
   for (const c of eksik(k)) {
+    if (sinirde(sinir, c)) continue;
     try {
       k[c] = await GONDER[c](s);
+      delete sinir[c];
       console.log(`[sosial] ✓ ${s.id} ${c}`);
     } catch (e) {
-      hata++;
       const tur = hataIsle(k, c, gizle(e.message));
       console.error(`[sosial] ! ${s.id} ${c}: ${k.son_hata}`);
+      // Sınır yalnız bu kanalı beklemeye alır: haber düşmez, öteki kanallar ve haberler sürer.
       if (tur === 'limit') {
-        sinir = true;
-        console.error('[sosial] Meta istek sınırı: tur bırakıldı, kalan kanal ve haberler denenmedi (sonraki tur).');
-        break;
-      }
+        const { sayi, kadar } = sinirKaydet(sinir, c);
+        console.error(`[sosial] ${c}: Meta istek sınırı (${sayi}. kez), ${kadar}'a kadar denenmez.`);
+        // Kısa süreli sınır işi kırmızı yapmaz; art arda SINIR_UZUN kez sürüyorsa kırmızı (kalıcı kısıtlama şüphesi).
+        if (sayi >= SINIR_UZUN) hata++;
+      } else hata++;
     }
   }
   await kaydet();
 }
 await kaydet();
 console.log(`[sosial] ${islenen} haber işlendi, ${hata} kanal hatası.`);
+for (const [c, { sayi }] of Object.entries(sinir)) if (sayi >= SINIR_UZUN) console.log(`::warning::${c} art arda ${sayi} kez Meta istek sınırına takıldı; Instagram/Meta hesabında kısıtlama olabilir.`);
 if (hata) process.exitCode = 1;
