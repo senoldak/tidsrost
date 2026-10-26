@@ -547,5 +547,14 @@
     "tarih": "2026-10-25T23:06:46.884Z",
     "son_hata": "Graph 403: Application request limit reached",
     "limit": 1
+  },
+  "nyheter-25-oktober-2026-ettermiddag": {
+    "tarih": "2026-10-26T06:21:50.347Z",
+    "ig_reels": "17882020287629680",
+    "fb_reels": "1798963281343531",
+    "reels": {
+      "gun": "2026-10-26",
+      "dilim": "morgen"
+    }
   }
 }
