@@ -295,14 +295,22 @@ console.log(`[sosial] Sırada ${sira.length} haber; son 24 saatte ${son24} haber
 const beklemede = KANALLAR.filter((c) => sinirde(sinir, c));
 if (beklemede.length) console.log(`[sosial] Sınır beklemesinde: ${beklemede.map((c) => `${c} (${sinir[c].kadar}'a kadar)`).join(', ')}.`);
 
+// Instagram akış gönderisi 24 saatte en çok IG_POST_TAVAN (sahibin kararı 2026-10-26): takipçisi az hesabın günde
+// 10–15 gönderisi Instagram'ın spam frenine takıldı (#4/2207051). Story ve Facebook tavansız. Tavan dolunca ig_post
+// denenmez, deneme hakkı yenmez; haber pencerede kaldıkça sonraki turlarda yer açılırsa gider.
+const IG_POST_TAVAN = Number(process.env.SOSIAL_IG_POST_TAVAN) || 5;
+let igPostKalan = IG_POST_TAVAN - kayitlar().filter(([, k]) => k.ig_post && Date.parse(k.zaman?.ig_post ?? k.tarih) > simdi - 86400e3).length;
+console.log(`[sosial] ig_post: son 24 saatte ${IG_POST_TAVAN - igPostKalan}/${IG_POST_TAVAN}.`);
+const kapali = (c) => sinirde(sinir, c) || (c === 'ig_post' && igPostKalan <= 0);
+
 let hata = 0;
 let islenen = 0;
 for (const s of sira) {
   const yeni = !delt[s.id];
   if (yeni && kalanTavan <= 0) { console.log(`[sosial] Günlük tavan doldu; ${s.id} bekliyor.`); continue; }
   if (islenen >= TUR_BASINA) break;
-  // Eksik kanallarının hepsi sınır beklemesindeyse haber bu turda hiç denenmez (çağrı da bekleme de yok).
-  if (!eksik(delt[s.id]).some((c) => !sinirde(sinir, c))) continue;
+  // Eksik kanallarının hepsi sınır beklemesinde ya da tavanda ise haber bu turda hiç denenmez (çağrı da bekleme de yok).
+  if (!eksik(delt[s.id]).some((c) => !kapali(c))) continue;
 
   // Görsel henüz yayında değilse (derleme sürüyor) haber sonraki tura kalır; deneme sayılmaz.
   if (!(await gorselHazir(s.id))) { console.log(`[sosial] ${s.id}: görsel yayında değil, sonraki tur.`); continue; }
@@ -312,10 +320,11 @@ for (const s of sira) {
   const k = (delt[s.id] ??= { tarih: new Date().toISOString() });
   if (yeni) kalanTavan--;
   for (const c of eksik(k)) {
-    if (sinirde(sinir, c)) continue;
+    if (kapali(c)) continue;
     try {
       k[c] = await GONDER[c](s);
       delete sinir[c];
+      if (c === 'ig_post') { igPostKalan--; k.zaman = { ...k.zaman, ig_post: new Date().toISOString() }; }
       console.log(`[sosial] ✓ ${s.id} ${c}`);
     } catch (e) {
       const tur = hataIsle(k, c, gizle(e.message));
