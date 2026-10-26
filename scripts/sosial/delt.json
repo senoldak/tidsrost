@@ -1,25 +1,4 @@
 {
-  "norske-kronen-pa-sin-sterkeste-kurs-pa-mer-enn-tre-ar": {
-    "tarih": "2026-10-19T16:07:22.071Z",
-    "ig_post": "18125211062314608",
-    "ig_story": "18166052473435409",
-    "fb_post": "1343803192154866_122106048165509504",
-    "fb_story": "2185803762349371"
-  },
-  "kenyansk-sektleder-domt-for-drap-pa-190-barn": {
-    "tarih": "2026-10-19T16:08:52.674Z",
-    "ig_post": "18219525817345582",
-    "ig_story": "18464311891187755",
-    "fb_post": "1343803192154866_122106048807509504",
-    "fb_story": "1430231225907065"
-  },
-  "norges-import-fra-kina-oker-kraftig": {
-    "tarih": "2026-10-19T16:10:22.390Z",
-    "ig_post": "17869401987663064",
-    "ig_story": "17996700122833602",
-    "fb_post": "1343803192154866_122106049911509504",
-    "fb_story": "1092384830103030"
-  },
   "18-900-uforetrygdede-ma-betale-tilbake-penger-til-nav": {
     "tarih": "2026-10-19T20:05:16.803Z",
     "ig_post": "17882054040691851",
@@ -474,6 +453,35 @@
     "reels": {
       "gun": "2026-10-26",
       "dilim": "kveld"
+    },
+    "ig_story": "18078930266555159",
+    "fb_post": "1343803192154866_122111147013509504",
+    "fb_story": "2388452921967220"
+  },
+  "_sinir": {
+    "ig_post": {
+      "sayi": 1,
+      "kadar": "2026-10-26T19:57:51.682Z"
     }
+  },
+  "benjamin-netanyahu-advarer-om-nytt-holocaust-for-valget-i-israel": {
+    "tarih": "2026-10-26T18:57:40.438Z",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1,
+    "ig_story": "18598981612066362",
+    "fb_post": "1343803192154866_122111146107509504",
+    "fb_story": "1419005236527070"
+  },
+  "nyheter-25-oktober-2026-kveld": {
+    "tarih": "2026-10-26T18:58:28.481Z",
+    "ig_story": "18141862972720821",
+    "fb_post": "1343803192154866_122111146461509504",
+    "fb_story": "1912074943494846"
+  },
+  "hundrevis-evakuert-etter-at-tarnkran-ble-skjev-i-oslo-sentrum": {
+    "tarih": "2026-10-26T18:59:42.443Z",
+    "ig_story": "18129182510482251",
+    "fb_post": "1343803192154866_122111147571509504",
+    "fb_story": "1138602148503673"
   }
 }
