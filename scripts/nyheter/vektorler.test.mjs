@@ -76,3 +76,51 @@ test('oku: dosya yoksa boş, bozuk satır atlanır', () => {
   const dosya = dosyaYap([JSON.stringify({ id: 'a', v: V }), '{bozuk', JSON.stringify({ id: 'b' })]);
   assert.deepEqual([...vektorDosyasiOku(dosya).keys()], ['a']);
 });
+
+// Tur sonu (Task 4): içerik klasöründen haber listesi, vektör dosyası ve önbellek kaydı.
+import { mkdirSync } from 'node:fs';
+const { haberMetinleri, gommeTurSonu, ortakOnbellek } = await import('./vektorler.mjs');
+
+function site() {
+  const kok = mkdtempSync(path.join(tmpdir(), 'site-'));
+  const yaz = (yol, fm) => {
+    mkdirSync(path.dirname(path.join(kok, yol)), { recursive: true });
+    writeFileSync(path.join(kok, yol), `---\ntitle: "${fm.t}"\ndescription: "${fm.d}"\ndate: ${fm.z}\n---\nGövde\n`);
+  };
+  yaz('src/content/haberler/eski-haber/index.md', { t: 'Eski', d: 'Eski açıklama', z: '2026-10-01T10:00:00Z' });
+  yaz('src/content/haberler/yeni-haber/index.md', { t: 'Yeni', d: 'Yeni açıklama', z: '2026-10-26T10:00:00+03:00' });
+  yaz('src/content/haberler/tr/duz-dosya.md', { t: 'Düz', d: 'Düz açıklama', z: '2026-10-20T10:00:00Z' });
+  return kok;
+}
+
+test('haberMetinleri: klasör/index.md ve düz .md, en yeniden eskiye, başlık + açıklama', () => {
+  const kok = site();
+  const a = haberMetinleri(path.join(kok, 'src/content/haberler'));
+  assert.deepEqual(a.map((h) => h.id), ['yeni-haber', 'eski-haber']);
+  assert.equal(a[0].metin, 'Yeni\nYeni açıklama');
+  assert.deepEqual(haberMetinleri(path.join(kok, 'src/content/haberler/tr')).map((h) => h.id), ['duz-dosya']);
+  assert.deepEqual(haberMetinleri(path.join(kok, 'yok')), []);
+});
+
+test('gommeTurSonu: GOMME_VEKTOR=1 iken dosyayı doldurur, önbelleği kaydeder; kapalıyken dokunmaz', async () => {
+  const kok = site();
+  const onbellekDosyasi = path.join(kok, 'o.json');
+  const kapali = await gommeTurSonu({ kok, icerik: 'src/content/haberler', onbellekDosyasi, env: {}, vektorle: sahte() });
+  assert.equal(kapali, null);
+  assert.equal(existsSync(path.join(kok, 'src/data/vektorler.jsonl')), false);
+  const r = await gommeTurSonu({ kok, icerik: 'src/content/haberler', onbellekDosyasi, env: { GOMME_VEKTOR: '1' }, vektorle: sahte() });
+  assert.deepEqual(r, { eklenen: 2, eksik: 0 });
+  assert.deepEqual([...vektorDosyasiOku(path.join(kok, 'src/data/vektorler.jsonl')).keys()], ['eski-haber', 'yeni-haber']);
+  assert.ok(existsSync(onbellekDosyasi));
+});
+
+test('gommeTurSonu: hata turu düşürmez', async () => {
+  const kok = site();
+  const r = await gommeTurSonu({ kok, icerik: 'src/content/haberler', onbellekDosyasi: path.join(kok, 'o.json'), env: { GOMME_VEKTOR: '1' }, vektorle: async () => { throw new Error('patladı'); } });
+  assert.equal(r, null);
+});
+
+test('ortakOnbellek: aynı dosya için aynı nesne', () => {
+  const d = path.join(mkdtempSync(path.join(tmpdir(), 'ob-')), 'o.json');
+  assert.equal(ortakOnbellek(d), ortakOnbellek(d));
+});

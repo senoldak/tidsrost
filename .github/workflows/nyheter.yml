@@ -60,6 +60,11 @@ jobs:
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           # Gemini yönlendirici (25 Ekim): vars.GEMINI_ZINCIR=0 iken eski düzen (ana model + tek yedek); geri dönüş yolu.
           GEMINI_ZINCIR: ${{ vars.GEMINI_ZINCIR }}
+          # Gemini Faz 2 (27 Ekim): gömme ön elemesi (yok/golge/1), eşikler ve vektör dosyası (1 = aç).
+          GOMME_ON_ELEME: ${{ vars.GOMME_ON_ELEME }}
+          GOMME_ALT_ESIK: ${{ vars.GOMME_ALT_ESIK }}
+          GOMME_UST_ESIK: ${{ vars.GOMME_UST_ESIK }}
+          GOMME_VEKTOR: ${{ vars.GOMME_VEKTOR }}
           # Gölge denetim (20 Ekim): turda en çok bu kadar denetim kararı Gemma'ya da sorulur, yalnız loga yazılır (golge.mjs).
           GEMINI_GOLGE: ${{ vars.GEMINI_GOLGE }}
           MAKS_PER_KJORING: ${{ vars.MAKS_PER_KJORING }}
@@ -112,6 +117,8 @@ jobs:
           git config user.name "tidsrost-nyhetsbot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/content/haberler scripts/nyheter/sett.json src/data
+          # Gömme dosyaları ilk açılışa kadar yoktur; yoksa git add pathspec hatası verir.
+          [ -f scripts/nyheter/gomme-onbellek.json ] && git add scripts/nyheter/gomme-onbellek.json
           if git diff --cached --quiet; then
             echo "Ingen endringer."
             exit 0

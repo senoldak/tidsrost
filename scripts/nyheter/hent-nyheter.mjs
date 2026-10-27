@@ -5,6 +5,7 @@
 import path from 'node:path';
 import { writeFile, appendFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
+import { gommeTurSonu } from './vektorler.mjs';
 import { lesJsonFil, mdKacir } from './lib.mjs';
 import { butceYukle, geminiPayiBitti } from './butce.mjs';
 import { acilDurdurma } from './kapi.mjs';
@@ -55,6 +56,8 @@ export async function main({ argv = process.argv, ortam = process.env } = {}) {
   const { antall, kortLagt, stoppListe, utkastListe, rettetListe, ventListe, standartElendi, feilListe } = u.ozet;
 
   durumuTemizle(tilstand);
+  // Gemini Faz 2: yayımlanan haberlerin vektör dosyası (GOMME_VEKTOR=1) ve gömme önbelleği; hata turu düşürmez.
+  if (!TORR) await gommeTurSonu({ kok: ROT, icerik: 'src/content/haberler', onbellekDosyasi: path.join(HER, 'gomme-onbellek.json'), env: ortam });
   if (!TORR) await writeFile(TILSTAND_FIL, JSON.stringify(tilstand, null, 2) + '\n', 'utf8');
   console.log(`Ferdig: ${antall} nye saker.`);
   if (ortam.GITHUB_OUTPUT) await appendFile(ortam.GITHUB_OUTPUT, `antall=${antall}\n`);
