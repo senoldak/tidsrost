@@ -2,7 +2,10 @@
 // Yerel model gölgesi (28 Ekim 2026).
 import { test, beforeEach } from 'node:test';
 import assert from 'node:assert/strict';
-import { cevapCoz, sec, yerelOlcum, yerelSatiri, yerelSifirla, GOMME_ADRESI, SOHBET_ADRESI } from './yerel-model.mjs';
+import { mkdtempSync, readFileSync, existsSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import path from 'node:path';
+import { kaliteKaydet, cevapCoz, sec, yerelOlcum, yerelSatiri, yerelSifirla, GOMME_ADRESI, SOHBET_ADRESI } from './yerel-model.mjs';
 
 beforeEach(() => yerelSifirla());
 
@@ -103,4 +106,17 @@ test('yerelOlcum: süre bütçesi aşılınca kalan çiftler atlanır', async ()
   const ozet = await yerelOlcum(ciftler, { env, fetchFn: sahteSunucu(), log: () => {}, saat });
   assert.ok(ozet.atlanan > 0);
   assert.equal(ozet.n + ozet.atlanan, 5);
+});
+
+test('kaliteKaydet: yalnız gölge açıkken ve dosya verilmişse yazar, kimlik kısaltılır', () => {
+  const dosya = path.join(mkdtempSync(path.join(tmpdir(), 'kalite-')), 'k.jsonl');
+  const k = { id: 'medier:gizli-kimlik', dil: 'nb', metin: 'Tittel\nTekst 3,2 prosent.', kaynak: 'Kilde 3,2 prosent.' };
+  assert.equal(kaliteKaydet(k, { YEREL_KALITE_DOSYASI: dosya }), false);
+  assert.equal(existsSync(dosya), false);
+  assert.equal(kaliteKaydet({ ...k, kaynak: '' }, { YEREL_GOLGE: '1', YEREL_KALITE_DOSYASI: dosya }), false);
+  assert.equal(kaliteKaydet(k, { YEREL_GOLGE: '1', YEREL_KALITE_DOSYASI: dosya }), true);
+  const j = JSON.parse(readFileSync(dosya, 'utf8').trim());
+  assert.equal(j.id.length, 8);
+  assert.equal(j.metin, k.metin);
+  assert.equal(kaliteKaydet(k, { YEREL_GOLGE: '1', YEREL_KALITE_DOSYASI: path.join(dosya, 'yok', 'x') }), false);
 });

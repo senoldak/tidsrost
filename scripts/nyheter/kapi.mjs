@@ -2,6 +2,7 @@
 //   kırmızı -> yazılmaz, motor kaydı 'elendi' + gerekçe; denetim hatası -> bekle (havuzda kalır); sarı -> yazılır.
 import { standartDenetle, standartOzeti, yayinDurduMu } from './standart.mjs';
 import { motorKaydet, kirmiziKayit } from './motor.mjs';
+import { kaliteKaydet } from './yerel-model.mjs';
 
 // Acil durdurma: tur başında, Gemini'ye ilk çağrıdan önce. Döner: true ise tur hiçbir şey yazmadan bitmeli.
 export async function acilDurdurma({ ortam = process.env, fetchFn, log = console.log } = {}) {
@@ -70,6 +71,8 @@ export async function yayinKapisi({ girdi, kimlik, ortam = process.env, denetle 
     }
   }
   const sonuc = await kapiDevam({ girdi, kimlik, ortam, kaydet, log, ikinci, s });
+  // Yerel kalite gölgesi (yerel-model.mjs): yalnız YEREL_GOLGE=1 iken runner'ın geçici dosyasına yazılır.
+  if (sonuc.karar === 'yaz') kaliteKaydet({ id: kimlik, dil: girdi.dil, metin: `${girdi.baslik}\n${girdi.ozet}\n${girdi.metin}`, kaynak: girdi.kaynakMetni }, ortam);
   return { ...sonuc, ...(omskrevet && { omskrevet }) };
 }
 

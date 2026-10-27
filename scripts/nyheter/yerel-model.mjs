@@ -5,6 +5,11 @@
 // sayı, karar, dil, kısaltılmış kimlik; metin yok). Metinler makineden çıkmaz, gizli kaynak başlıkları için de güvenli.
 // YEREL_GOLGE=1 değilse ya da sunucuya ulaşılamazsa hiçbir şey yapılmaz; tur etkilenmez. Şimdilik jendume (TR/EN) ve
 // tidsrost (NO) kullanır.
+//
+// Kalite gölgesi (kaliteKaydet): yayına giden haberin metni ve kaynağı YEREL_KALITE_DOSYASI'na (runner'ın geçici
+// klasörü; commit'lenmez, iş bitince silinir) bir satır olarak yazılır. Sonraki adımda yerel-kalite.py LangExtract ve
+// yerel Gemma ile metindeki rakam ve alıntıları kaynakta arar; sonuç yalnız loga girer.
+import { appendFileSync } from 'node:fs';
 import { benzerlik, metinAnahtari } from './gomme.mjs';
 
 export const GOMME_ADRESI = 'http://127.0.0.1:8091';
@@ -130,4 +135,15 @@ export async function yerelOlcum(ciftler, { env = process.env, log = console.log
   }
   log(`yerel-özet ${JSON.stringify({ ...ozet, ms: saat() - bas })}`);
   return ozet;
+}
+
+/** Yayına giden haberi kalite gölgesi için kaydeder (YEREL_GOLGE=1 ve YEREL_KALITE_DOSYASI varsa). Asla fırlatmaz. */
+export function kaliteKaydet({ id, dil, metin, kaynak }, env = process.env) {
+  if (env.YEREL_GOLGE !== '1' || !env.YEREL_KALITE_DOSYASI || !metin || !kaynak) return false;
+  try {
+    appendFileSync(env.YEREL_KALITE_DOSYASI, `${JSON.stringify({ id: metinAnahtari(String(id)).slice(0, 8), dil, metin, kaynak })}\n`);
+    return true;
+  } catch {
+    return false;
+  }
 }
