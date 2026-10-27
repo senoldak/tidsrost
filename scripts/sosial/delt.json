@@ -1,11 +1,4 @@
 {
-  "usas-spesialutsending-reiser-til-russland-etter-ukraina-samtaler-i-oslo": {
-    "tarih": "2026-10-20T18:19:28.404Z",
-    "ig_post": "18001333913813909",
-    "ig_story": "18130461910868031",
-    "fb_post": "1343803192154866_122107198419509504",
-    "fb_story": "950294967915681"
-  },
   "743-millioner-passasjerer-i-kollektivtransporten-i-2025": {
     "tarih": "2026-10-21T06:04:59.601Z",
     "ig_post": "18107393618195242",
@@ -380,8 +373,8 @@
   },
   "_sinir": {
     "ig_post": {
-      "sayi": 4,
-      "kadar": "2026-10-27T19:07:19.720Z"
+      "sayi": 5,
+      "kadar": "2026-10-28T09:05:18.427Z"
     }
   },
   "benjamin-netanyahu-advarer-om-nytt-holocaust-for-valget-i-israel": {
@@ -428,7 +421,9 @@
     "tarih": "2026-10-27T07:05:50.459Z",
     "ig_story": "18130704154838725",
     "fb_post": "1343803192154866_122111324733509504",
-    "fb_story": "28812067845078705"
+    "fb_story": "28812067845078705",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "husholdningsgjeld-norden-oecd": {
     "tarih": "2026-10-27T07:06:23.590Z",
