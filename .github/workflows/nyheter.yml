@@ -65,6 +65,9 @@ jobs:
           GOMME_ALT_ESIK: ${{ vars.GOMME_ALT_ESIK }}
           GOMME_UST_ESIK: ${{ vars.GOMME_UST_ESIK }}
           GOMME_VEKTOR: ${{ vars.GOMME_VEKTOR }}
+          # Gömme önbelleği açık repoda şifreli durur (aday başlıklar gizli kaynakları ele vermesin): kaynak anahtarından
+          # ayrı amaçla türetilen anahtar (gomme.mjs). Anahtar yoksa önbellek dosyası yazılmaz.
+          GOMME_ANAHTARI: ${{ secrets.KILDE_NOKKEL }}
           # Gölge denetim (20 Ekim): turda en çok bu kadar denetim kararı Gemma'ya da sorulur, yalnız loga yazılır (golge.mjs).
           GEMINI_GOLGE: ${{ vars.GEMINI_GOLGE }}
           MAKS_PER_KJORING: ${{ vars.MAKS_PER_KJORING }}

@@ -2,11 +2,13 @@
 // Gömme çekirdeği (Faz 2, 27 Ekim 2026).
 import { test, beforeEach } from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync, writeFileSync, readFileSync } from 'node:fs';
+import { mkdtempSync, writeFileSync, readFileSync, existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 
 process.env.GEMINI_API_KEY = 'test';
+process.env.GOMME_ARALIK_MS = '0';
+process.env.GOMME_ANAHTARI = 'test-anahtari';
 const g = await import('./gomme.mjs');
 const { ayrintiSifirla, gommeEkle, modelHarcamasi } = await import('./kullanim.mjs');
 
@@ -27,7 +29,10 @@ function ag(cevap = (govde) => ({ embeddings: govde.requests.map((r) => ({ value
   return { istekler, fetchFn };
 }
 
-beforeEach(() => ayrintiSifirla());
+beforeEach(() => {
+  ayrintiSifirla();
+  g.gommeSifirla();
+});
 
 test('kodla/coz/benzerlik: aynı vektör ~1, dik vektörler ~0', () => {
   const a = g.coz(g.kodla([0.3, 0.5, -0.2, 0.1]));
@@ -36,15 +41,15 @@ test('kodla/coz/benzerlik: aynı vektör ~1, dik vektörler ~0', () => {
   assert.equal(g.coz(g.kodla(birim(3))).length, g.BOYUT);
 });
 
-test('vektorle: 150 metin 100+50 iki çağrı, 256 boyut; ikinci turda önbellekten (istek yok)', async () => {
+test('vektorle: 150 metin 50’lik üç çağrı, 256 boyut; ikinci turda önbellekten (istek yok)', async () => {
   const onbellek = g.onbellekYukle(null);
   const metinler = Array.from({ length: 150 }, (_, i) => `m${i}`);
   const a = ag();
   const v = await g.vektorle(metinler, { onbellek, amac: 't', fetchFn: a.fetchFn });
   assert.equal(v.length, 150);
   assert.ok(v.every((x) => x instanceof Int8Array));
-  assert.equal(a.istekler.length, 2);
-  assert.deepEqual(a.istekler.map((i) => i.govde.requests.length), [100, 50]);
+  assert.equal(a.istekler.length, 3);
+  assert.deepEqual(a.istekler.map((i) => i.govde.requests.length), [50, 50, 50]);
   assert.equal(a.istekler[0].govde.requests[0].outputDimensionality, 256);
   assert.match(a.istekler[0].url, /gemini-embedding-2:batchEmbedContents/);
   assert.equal(modelHarcamasi(g.GOMME_MODELI), 150);
@@ -56,6 +61,7 @@ test('vektorle: 150 metin 100+50 iki çağrı, 256 boyut; ikinci turda önbellek
 
 test('vektorle: 429, 503, ağ hatası ve eksik gövde null döner', async () => {
   for (const c of [429, 503, new TypeError('ağ'), {}]) {
+    g.gommeSifirla();
     const a = ag(() => c);
     assert.equal(await g.vektorle(['x'], { onbellek: g.onbellekYukle(null), amac: 't', fetchFn: a.fetchFn }), null);
   }
@@ -97,7 +103,7 @@ test('bilesenler ve komsusuzlar', () => {
   const v = [[1, 0.95, 0], [1, 1, 0], [0, 0, 1], [0, 1, -1]].map((x) => g.coz(g.kodla(x)));
   assert.deepEqual(g.bilesenler(v, 0.8), [[0, 1], [2], [3]]);
   assert.deepEqual([...g.komsusuzlar(v, [], 0.8)].sort(), [2, 3]);
-  assert.deepEqual([...g.komsusuzlar([...v, null], [g.coz(g.kodla([0, 0, 1]))], 0.8)], [3]);
+  assert.deepEqual([...g.komsusuzlar(v, [g.coz(g.kodla([0, 0, 1]))], 0.8)], [3]);
 });
 
 test('gommeKipi ve esikler', () => {
@@ -127,8 +133,65 @@ test('önbellek: kaydet/yükle, 3 günden eski kayıt atılır, bozuk dosya boş
   await g.vektorle(['eski', 'yeni'], { onbellek: o, amac: 't', fetchFn: ag().fetchFn, simdi: new Date('2026-10-23T12:00:00Z') });
   o.kayitlar[g.metinAnahtari('yeni')].z = simdi.toISOString();
   g.onbellekKaydet(o, dosya, simdi);
-  const j = JSON.parse(readFileSync(dosya, 'utf8'));
-  assert.deepEqual(Object.keys(j.kayitlar), [g.metinAnahtari('yeni')]);
+  assert.deepEqual(Object.keys(g.onbellekYukle(dosya).kayitlar), [g.metinAnahtari('yeni')]);
   writeFileSync(dosya, '{bozuk');
   assert.deepEqual(g.onbellekYukle(dosya).kayitlar, {});
+});
+
+// Son gözden geçirme düzeltmeleri (27 Ekim).
+test('esikler: yalnız 0 ile 1 arası; 55 ya da boşluk geçersiz', () => {
+  assert.deepEqual(g.esikler({ GOMME_ALT_ESIK: '55', GOMME_UST_ESIK: ' ' }), { alt: null, ust: null });
+  assert.deepEqual(g.esikler({ GOMME_ALT_ESIK: ' 0.55 ', GOMME_UST_ESIK: '1' }), { alt: 0.55, ust: null });
+  assert.equal(g.gommeKipi({ GOMME_ON_ELEME: '1', GOMME_ALT_ESIK: '55' }), 'golge');
+});
+
+test('komsusuzlar: listede ya da diğerlerinde vektörsüz öğe varsa kimse çıkarılmaz', () => {
+  const v = [[1, 0, 0], [0, 1, 0]].map((x) => g.coz(g.kodla(x)));
+  assert.equal(g.komsusuzlar([...v, null], [], 0.8).size, 0);
+  assert.equal(g.komsusuzlar(v, [null], 0.8).size, 0);
+});
+
+test('vektorle: ikinci parça 429 verirse ilk parça önbelleğe girer, kalanlar null; süreç gömmeyi bırakır', async () => {
+  const onbellek = g.onbellekYukle(null);
+  let n = 0;
+  const a = ag((govde) => (++n === 2 ? 429 : { embeddings: govde.requests.map((r) => ({ values: vektorOf(r.content.parts[0].text) })) }));
+  const metinler = Array.from({ length: 100 }, (_, i) => `p${i}`);
+  const v = await g.vektorle(metinler, { onbellek, amac: 't', fetchFn: a.fetchFn });
+  assert.equal(v.filter(Boolean).length, 50);
+  assert.equal(Object.keys(onbellek.kayitlar).length, 50);
+  const b = ag();
+  assert.equal(await g.vektorle(['yeni'], { onbellek, amac: 't', fetchFn: b.fetchFn }), null);
+  assert.equal(b.istekler.length, 0);
+});
+
+test('vektorle: turda en çok TUR_AZAMI metin gönderilir', async () => {
+  const a = ag();
+  const v = await g.vektorle(Array.from({ length: g.TUR_AZAMI + 30 }, (_, i) => `t${i}`), { onbellek: g.onbellekYukle(null), amac: 't', fetchFn: a.fetchFn });
+  assert.equal(v.filter(Boolean).length, g.TUR_AZAMI);
+});
+
+test('önbellek isabeti kaydın zamanını yeniler (hafıza 3 günde bir yeniden vektörlenmesin)', async () => {
+  const onbellek = g.onbellekYukle(null);
+  await g.vektorle(['x'], { onbellek, amac: 't', fetchFn: ag().fetchFn, simdi: new Date('2026-10-20T00:00:00Z') });
+  await g.vektorle(['x'], { onbellek, amac: 't', fetchFn: ag().fetchFn, simdi: new Date('2026-10-27T00:00:00Z') });
+  assert.equal(onbellek.kayitlar[g.metinAnahtari('x')].z, '2026-10-27T00:00:00.000Z');
+});
+
+test('önbellek dosyası şifreli; anahtar yoksa hiç yazılmaz', async () => {
+  const dizin = mkdtempSync(path.join(tmpdir(), 'gomme-s-'));
+  const dosya = path.join(dizin, 'o.json');
+  const o = g.onbellekYukle(dosya);
+  await g.vektorle(['Gizli başlık metni'], { onbellek: o, amac: 't', fetchFn: ag().fetchFn });
+  g.onbellekKaydet(o, dosya);
+  const ham = readFileSync(dosya, 'utf8');
+  assert.doesNotMatch(ham, new RegExp(g.metinAnahtari('Gizli başlık metni')));
+  assert.doesNotMatch(ham, /"kayitlar"/);
+  assert.equal(Object.keys(g.onbellekYukle(dosya).kayitlar).length, 1);
+  const k = process.env.GOMME_ANAHTARI;
+  delete process.env.GOMME_ANAHTARI;
+  assert.deepEqual(g.onbellekYukle(dosya).kayitlar, {}); // anahtarsız okunamaz
+  const yok = path.join(dizin, 'yok.json');
+  g.onbellekKaydet(o, yok);
+  assert.equal(existsSync(yok), false);
+  process.env.GOMME_ANAHTARI = k;
 });

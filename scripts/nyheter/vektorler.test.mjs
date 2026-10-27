@@ -5,7 +5,9 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, writeFileSync, readFileSync, existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { kodla } from './gomme.mjs';
+import { kodla, onbellekYukle } from './gomme.mjs';
+
+process.env.GOMME_ANAHTARI = 'test-anahtari';
 import { vektorDosyasiOku, vektorDosyasiGuncelle } from './vektorler.mjs';
 
 const dosyaYap = (satirlar = null) => {
@@ -133,7 +135,7 @@ test('ortakOnbellek: göreli ve mutlak yol aynı nesne; tur sonu eşlemenin önb
   assert.equal(o, ortakOnbellek(mutlak));
   o.kayitlar.x = { v: 'AA==', z: new Date().toISOString() };
   await gommeTurSonu({ kok: dizin, icerik: 'yok', onbellekDosyasi: mutlak, env: {} });
-  assert.ok(JSON.parse(readFileSync(mutlak, 'utf8')).kayitlar.x);
+  assert.ok(onbellekYukle(mutlak).kayitlar.x);
 });
 
 test('gommeAyari: kapalıyken null, gölgede kip ve önbellek', () => {
