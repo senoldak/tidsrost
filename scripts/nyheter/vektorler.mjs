@@ -5,7 +5,7 @@
 // ekler; geriye dönük doldurma da böyle, ayrı betik olmadan ilerler (turda 25, günde ≤ 300).
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, statSync } from 'node:fs';
 import path from 'node:path';
-import { kodla, vektorle as gommeVektorle, onbellekYukle, onbellekKaydet } from './gomme.mjs';
+import { esikler, gommeKipi, kodla, vektorle as gommeVektorle, onbellekYukle, onbellekKaydet } from './gomme.mjs';
 
 const AZAMI_BAYT = 2 * 1024 * 1024;
 
@@ -67,8 +67,9 @@ export async function vektorDosyasiGuncelle({ dosya, haberler, azami = 25, onbel
 // Bir süreçte gömme önbelleği tek nesnedir: eşleme ve tur sonu aynı dosyayı okuyup yazar.
 const onbellekler = new Map();
 export function ortakOnbellek(dosya) {
-  if (!onbellekler.has(dosya)) onbellekler.set(dosya, onbellekYukle(dosya));
-  return onbellekler.get(dosya);
+  const k = path.resolve(dosya); // çağıranlar yolu farklı kurabilir (göreli kök, mutlak klasör)
+  if (!onbellekler.has(k)) onbellekler.set(k, onbellekYukle(k));
+  return onbellekler.get(k);
 }
 
 const alan = (fm, ad) => {
@@ -128,9 +129,17 @@ export async function gommeTurSonu({ kok, icerik, onbellekDosyasi, env = process
     sonuc = null;
   }
   try {
-    if (onbellekler.has(onbellekDosyasi)) onbellekKaydet(onbellekler.get(onbellekDosyasi), onbellekDosyasi, simdi);
+    const k = path.resolve(onbellekDosyasi);
+    if (onbellekler.has(k)) onbellekKaydet(onbellekler.get(k), k, simdi);
   } catch (e) {
     console.warn(`  gömme: önbellek yazılamadı (${e.message})`);
   }
   return sonuc;
+}
+
+/** Ön eleme ayarı (finfolis olaylar, tidsrost medier): kip kapalıysa null. */
+export function gommeAyari({ onbellekDosyasi, env = process.env, log = console.log }) {
+  const kip = gommeKipi(env);
+  if (kip === 'kapali') return null;
+  return { kip, alt: esikler(env).alt, vektorle: gommeVektorle, onbellek: ortakOnbellek(onbellekDosyasi), log };
 }

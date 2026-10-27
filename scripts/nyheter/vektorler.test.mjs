@@ -124,3 +124,24 @@ test('ortakOnbellek: aynı dosya için aynı nesne', () => {
   const d = path.join(mkdtempSync(path.join(tmpdir(), 'ob-')), 'o.json');
   assert.equal(ortakOnbellek(d), ortakOnbellek(d));
 });
+
+test('ortakOnbellek: göreli ve mutlak yol aynı nesne; tur sonu eşlemenin önbelleğini kaydeder', async () => {
+  const dizin = mkdtempSync(path.join(tmpdir(), 'ob2-'));
+  const mutlak = path.join(dizin, 'o.json');
+  const goreli = path.relative(process.cwd(), mutlak);
+  const o = ortakOnbellek(goreli);
+  assert.equal(o, ortakOnbellek(mutlak));
+  o.kayitlar.x = { v: 'AA==', z: new Date().toISOString() };
+  await gommeTurSonu({ kok: dizin, icerik: 'yok', onbellekDosyasi: mutlak, env: {} });
+  assert.ok(JSON.parse(readFileSync(mutlak, 'utf8')).kayitlar.x);
+});
+
+test('gommeAyari: kapalıyken null, gölgede kip ve önbellek', () => {
+  return import('./vektorler.mjs').then(({ gommeAyari }) => {
+    assert.equal(gommeAyari({ onbellekDosyasi: 'x.json', env: {} }), null);
+    const a = gommeAyari({ onbellekDosyasi: 'x.json', env: { GOMME_ON_ELEME: 'golge' } });
+    assert.equal(a.kip, 'golge');
+    assert.equal(a.alt, null);
+    assert.equal(a.onbellek, ortakOnbellek('x.json'));
+  });
+});
