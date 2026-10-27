@@ -1,32 +1,4 @@
 {
-  "minst-50-soldater-drept-i-houthiangrep-mot-militaerleir-i-jemen": {
-    "tarih": "2026-10-20T06:04:18.848Z",
-    "ig_post": "18121478326952183",
-    "ig_story": "18040089611836503",
-    "fb_post": "1343803192154866_122106641355509504",
-    "fb_story": "1048183951597525"
-  },
-  "portforbud-i-flere-franske-byer-etter-voldsomme-opptoyer": {
-    "tarih": "2026-10-20T06:05:49.502Z",
-    "ig_post": "18106186358199715",
-    "ig_story": "18145666744601271",
-    "fb_post": "1343803192154866_122106642771509504",
-    "fb_story": "2230587120820810"
-  },
-  "fn-advarer-om-vold-og-tap-av-liv-i-gaza-og-pa-okkupert-land": {
-    "tarih": "2026-10-20T06:07:19.235Z",
-    "ig_post": "18490170457109100",
-    "ig_story": "18014027555974479",
-    "fb_post": "1343803192154866_122106644205509504",
-    "fb_story": "1763345781385861"
-  },
-  "norge-kan-bli-motested-for-nye-samtaler-mellom-usa-og-ukraina": {
-    "tarih": "2026-10-20T06:08:53.449Z",
-    "ig_post": "18119233997069737",
-    "ig_story": "17925971643201309",
-    "fb_post": "1343803192154866_122106645165509504",
-    "fb_story": "1897005071680372"
-  },
   "94-5-prosent-av-alle-barn-gar-i-barnehage": {
     "tarih": "2026-10-20T08:03:57.179Z",
     "ig_post": "18126023611816812",
@@ -455,8 +427,8 @@
   },
   "_sinir": {
     "ig_post": {
-      "sayi": 2,
-      "kadar": "2026-10-26T23:06:02.469Z"
+      "sayi": 3,
+      "kadar": "2026-10-27T11:05:35.340Z"
     }
   },
   "benjamin-netanyahu-advarer-om-nytt-holocaust-for-valget-i-israel": {
@@ -477,7 +449,9 @@
     "tarih": "2026-10-26T18:59:42.443Z",
     "ig_story": "18129182510482251",
     "fb_post": "1343803192154866_122111147571509504",
-    "fb_story": "1138602148503673"
+    "fb_story": "1138602148503673",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "statnett-planlegger-ny-kraftledning-fra-gran-til-oslo": {
     "tarih": "2026-10-26T19:06:21.271Z",
@@ -496,5 +470,23 @@
       "gun": "2026-10-27",
       "dilim": "morgen"
     }
+  },
+  "forventet-levealder-i-norge-er-84-9-ar-for-kvinner-og-81-6-ar-for-menn": {
+    "tarih": "2026-10-27T07:05:50.459Z",
+    "ig_story": "18130704154838725",
+    "fb_post": "1343803192154866_122111324733509504",
+    "fb_story": "28812067845078705"
+  },
+  "husholdningsgjeld-norden-oecd": {
+    "tarih": "2026-10-27T07:06:23.590Z",
+    "ig_story": "18082313444348667",
+    "fb_post": "1343803192154866_122111325051509504",
+    "fb_story": "2224149758130500"
+  },
+  "antonio-guterres-advarer-mot-opptrapping": {
+    "tarih": "2026-10-27T07:06:55.170Z",
+    "ig_story": "18028774157697252",
+    "fb_post": "1343803192154866_122111325387509504",
+    "fb_story": "2370444417055184"
   }
 }
