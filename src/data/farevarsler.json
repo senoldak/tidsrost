@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-27T19:03:35.299Z",
+  "hentet": "2026-10-27T21:03:46.111Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,21 +7,8 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-27T19:02:36+00:00",
+  "sistEndretHosMet": "2026-10-27T21:03:45+00:00",
   "varsler": [
-    {
-      "id": "2.49.0.1.578.0.20261027070757.095",
-      "niva": "gult",
-      "hendelse": "Storm",
-      "omrade": "Karmøy - Slåtterøy",
-      "domene": "hav",
-      "start": "2026-10-26T21:00:00+00:00",
-      "slutt": "2026-10-27T20:00:00+00:00",
-      "beskrivelse": "Tirsdag sørlig sterk kuling 20, periodevis liten storm 22. Tirsdag ettermiddag minkende til stiv kuling 15. Minkende sent tirsdag kveld.",
-      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
     {
       "id": "2.49.0.1.578.0.20261027083116.024",
       "niva": "gult",
