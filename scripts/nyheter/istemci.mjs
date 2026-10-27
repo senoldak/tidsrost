@@ -157,7 +157,8 @@ export async function geminiCagir(
         geminiKesik = false;
         const data = await res.json();
         kullanimEkle(data.usageMetadata, { model, amac });
-        const metin = data.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') ?? '';
+        // Düşünme parçaları (thought: true, Gemma 4) cevaba girmez: içlerindeki süslü parantez JSON ayıklamayı bozar.
+        const metin = data.candidates?.[0]?.content?.parts?.filter((p) => !p.thought).map((p) => p.text ?? '').join('') ?? '';
         let sonuc;
         if (semasiz) {
           sonuc = jsonAyikla(metin);

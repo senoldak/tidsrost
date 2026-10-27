@@ -190,6 +190,27 @@ test('Gemma şemasız: responseSchema ve düşünme gönderilmez, biçim istemde
   assert.ok(a.istekler[0].govde.generationConfig.responseSchema);
 });
 
+// 27 Ekim: Gemma 4 cevabın başına düşünme parçaları koyuyor; içlerinde süslü parantez geçince JSON ayıklanamıyordu.
+const parcali = (parts) => () => new Response(JSON.stringify({ candidates: [{ content: { parts } }], usageMetadata: {} }));
+
+test('Gemma düşünme parçaları cevaba karışmaz', async () => {
+  const cevap = parcali([
+    { thought: true, text: 'Biçim: {"onay": boolean, "sorunlar": [...]} olmalı' },
+    { thought: true, text: '`' },
+    { text: '```json\n{"onay": true, "sorunlar": []}\n```' },
+  ]);
+  await ile([cevap], async () => {
+    assert.deepEqual(await yaz({ denetim: true, _model: GEMMA }), { onay: true, sorunlar: [] });
+  });
+});
+
+test('şemalı modelde de düşünme parçası JSON.parse\'a girmez', async () => {
+  const cevap = parcali([{ thought: true, text: 'düşünüyorum' }, { text: '{"ok":true}' }]);
+  await ile([cevap], async () => {
+    assert.deepEqual(await yaz(), { ok: true });
+  });
+});
+
 test('Gemma JSON dışı cevap: bozuk hatası', async () => {
   await ile([503, 503, () => tamam('merhaba')], async () => {
     await assert.rejects(yaz({ denetim: true }), (e) => e.bozuk === true);
