@@ -121,7 +121,11 @@ export async function gommeTurSonu({ kok, icerik, onbellekDosyasi, env = process
   try {
     if (env.GOMME_VEKTOR === '1') {
       const onbellek = ortakOnbellek(onbellekDosyasi);
-      sonuc = await vektorDosyasiGuncelle({ dosya: path.join(kok, 'src/data/vektorler.jsonl'), haberler: haberMetinleri(path.join(kok, icerik)), onbellek, vektorle });
+      // Birden çok klasör (jendume tr/en): kimlik klasör adıyla öneklenir ("tr/<slug>"), haberler tarihe göre karışır.
+      const haberler = Array.isArray(icerik)
+        ? icerik.flatMap((k) => haberMetinleri(path.join(kok, k)).map((h) => ({ ...h, id: `${path.basename(k)}/${h.id}` }))).sort((a, b) => b.zaman - a.zaman || a.id.localeCompare(b.id))
+        : haberMetinleri(path.join(kok, icerik));
+      sonuc = await vektorDosyasiGuncelle({ dosya: path.join(kok, 'src/data/vektorler.jsonl'), haberler, onbellek, vektorle });
       console.log(`  gömme: vektör dosyasına ${sonuc.eklenen} haber eklendi, ${sonuc.eksik} eksik`);
     }
   } catch (e) {

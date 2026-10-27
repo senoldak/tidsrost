@@ -145,3 +145,10 @@ test('gommeAyari: kapalıyken null, gölgede kip ve önbellek', () => {
     assert.equal(a.onbellek, ortakOnbellek('x.json'));
   });
 });
+
+test('gommeTurSonu: birden çok içerik klasörü (jendume tr/en) kimlikleri klasörle önekler', async () => {
+  const kok = site();
+  const r = await gommeTurSonu({ kok, icerik: ['src/content/haberler/tr', 'src/content/haberler'], onbellekDosyasi: path.join(kok, 'o.json'), env: { GOMME_VEKTOR: '1' }, vektorle: sahte() });
+  assert.equal(r.eklenen, 3);
+  assert.deepEqual([...vektorDosyasiOku(path.join(kok, 'src/data/vektorler.jsonl')).keys()], ['haberler/eski-haber', 'haberler/yeni-haber', 'tr/duz-dosya']);
+});
