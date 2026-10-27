@@ -4,14 +4,17 @@
 // Yeterince ortak varlığı olan haber yoksa aynı kategorinin en yeni haberleriyle tamamlanır.
 // Kort fortalt (günlük toplu kısa haber listesi) ve bültenler, kısa (noindex) haberler ve haberin kendisi seçilmez.
 import { enheter, termer } from '../../scripts/nyheter/dublett.mjs';
-import { matchEntities } from './entities';
+import { matchEntities } from './entities.ts';
 import { indekserbar } from './ordtelling.mjs';
-import type { Haber } from './news';
+import type { Haber } from './news.ts';
 import { anlamBenzerligi, anlamPuani, vektorleriOku } from './anlam.mjs';
 
 // Gemini Faz 2 (27 Ekim): ortaklık puanına anlam benzerliği eklenir (src/data/vektorler.jsonl, kimlik = haber id'si).
 // Vektör yoksa 0 puan: seçim bugünkü gibi. MIN_POENG anlam payını da içeren toplamla karşılaştırılır.
 export type Anlam = (a: Haber, b: Haber) => number | null;
+// Buradaki ölçek öbür sitelerden büyük (kurum 3, isim 2, terim 1; eşik MIN_POENG 4): anlam payı (0–4) iki katı sayılır,
+// yoksa tek başına eşiğe ancak benzerlik 1 iken ulaşırdı. 2 kat ile ≈0,78 ve üstü tek başına yeter.
+const ANLAM_KATSAYI = 2;
 const varsayilanAnlam: Anlam = (a, b) => anlamBenzerligi(vektorleriOku(), a.id, b.id);
 
 export const RELATERT_ANTALL = 4;
@@ -88,7 +91,7 @@ export function relaterteSaker(news: Haber[], antall = RELATERT_ANTALL, anlam: A
     ekle('i', p.isim);
     ekle('b', p.baslik);
     adaylar.forEach((a, j) => {
-      const ek = a === h ? 0 : anlamPuani(anlam(h, a));
+      const ek = a === h ? 0 : ANLAM_KATSAYI * anlamPuani(anlam(h, a));
       if (ek > 0) puan.set(j, (puan.get(j) ?? 0) + ek);
     });
 

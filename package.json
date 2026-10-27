@@ -10,7 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "node --test scripts/nyheter/*.test.mjs scripts/*.test.mjs scripts/data/*.test.mjs scripts/sosial/*.test.mjs src/lib/*.test.mjs"
+    "test": "node --test scripts/nyheter/*.test.mjs scripts/*.test.mjs scripts/data/*.test.mjs scripts/sosial/*.test.mjs src/lib/*.test.mjs src/lib/*.test.ts"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
