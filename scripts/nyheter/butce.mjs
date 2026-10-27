@@ -23,6 +23,10 @@ const VARSAYILAN_TUR = 12;
 const TABAN = 10; // ön yüklemede sonraki her tura bırakılan en az çağrı
 
 let pay = {}; // model → tur payı; butceYukle çağrılmadıysa boş = sınır yok (testler, yerel araçlar)
+let saatte = {}; // model → saatin bugünkü kaydı (başarılı + başarısız); gömme günlük sayacı da bunu okur
+
+// Saatin bugünkü kaydında modelin kullanımı (butceYukle çağrılmadıysa 0).
+export const saatKullanimi = (model) => saatte[model] ?? 0;
 
 // Google'ın günlük sayacı Pasifik gece yarısında sıfırlanır.
 export function pasifikKalanSaat(simdi = new Date()) {
@@ -73,6 +77,7 @@ export async function butceYukle({ url, anahtar, site, simdi = new Date(), fetch
       const m = TAKMA_ADLAR[ad] ?? ad;
       kullanilan[m] = (kullanilan[m] ?? 0) + harcanmis(r);
     }
+    saatte = kullanilan;
     for (const [m, n] of Object.entries(kullanilan)) {
       if (!MODELLER[m] || n < MODELLER[m].rpd) continue;
       gunlukDolu.add(m);

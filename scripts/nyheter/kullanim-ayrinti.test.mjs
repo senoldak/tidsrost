@@ -89,3 +89,12 @@ test('amacBul: istemci çekirdeği de atlanır (çağrı lib → istemci üzerin
     'yazar/taslakYaz',
   );
 });
+
+test('gommeEkle: metin sayısı kadar istek, model harcamasına girer', async () => {
+  const k = await import('./kullanim.mjs');
+  k.ayrintiSifirla();
+  k.gommeEkle(37, 'esleme/olcum');
+  assert.equal(k.modelHarcamasi('gemini-embedding-2'), 37);
+  assert.deepEqual(k.ayrintiKayitlari().map((s) => [s.model, s.amac, s.cagri]), [['gemini-embedding-2', 'esleme/olcum', 37]]);
+  k.ayrintiSifirla();
+});

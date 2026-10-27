@@ -53,6 +53,11 @@ export function kullanimEkle(u, { model = 'bilinmiyor', amac = 'diger' } = {}) {
   s.cikis += (u?.candidatesTokenCount ?? 0) + (u?.thoughtsTokenCount ?? 0);
 }
 
+// Gömme (Faz 2): toplu çağrıdaki her metin bir istek sayılır (en kötü varsayım); token sayılmaz.
+export function gommeEkle(adet, amac = 'diger', model = 'gemini-embedding-2') {
+  satirAl(model, amac).cagri += adet;
+}
+
 // 429 (kota) ve 5xx (Google meşgul) yanıtları; başarılı çağrı sayılmaz.
 export function hataEkle(model, amac, durum) {
   const s = satirAl(model, amac);
