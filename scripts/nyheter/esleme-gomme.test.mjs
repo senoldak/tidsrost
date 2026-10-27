@@ -68,6 +68,28 @@ test('gölge: ek çift kararları uygulanmaz, ayrı sorulur; ölçüm satırı m
   for (const s of olcum) assert.doesNotMatch(s, /başlık|yazılmış/);
 });
 
+test('gölge: ölçülen çiftler metinleriyle yerel gölgeye gider; yerel düşerse eşleme etkilenmez', async () => {
+  const { gruplar, yazilmis, ciftler } = kur();
+  let giden = null;
+  const r = await gommeliEsle({
+    ciftler, gruplar, yazilmis, ayrikMi: () => false,
+    esle: async () => new Set([1]),
+    sor: async () => new Set([0]),
+    env: { GOMME_ON_ELEME: 'golge' }, vektorle, log: () => {},
+    yerel: async (c) => {
+      giden = c;
+      throw new Error('sunucu yok');
+    },
+  });
+  assert.deepEqual([...r.ayni], [1]);
+  assert.deepEqual(giden.map((c) => [c.tur, c.karar, c.a, c.b]), [
+    ['yazili', 'farkli', 'A1 başlık', 'C yazılmış'],
+    ['uye', 'ayni', 'A1 başlık', 'a2 başlık'],
+    ['ek', 'ayni', 'B1 başlık', 'b yazılmış'],
+  ]);
+  assert.ok(giden.every((c) => typeof c.bg === 'number'));
+});
+
 test('açık: alt eşik altındaki çift sorulmaz ve ayrık sayılmaz; üye elenirse grupta kalır', async () => {
   const { gruplar, yazilmis, ciftler } = kur();
   let soru = null;

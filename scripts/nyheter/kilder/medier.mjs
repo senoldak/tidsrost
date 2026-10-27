@@ -19,6 +19,7 @@ import { redigerSak, forLiteKilde, LENGDE_REGEL, TITTEL_REGEL } from '../redakto
 import { uavhengigeKilder } from '../uavhengighet.mjs';
 import { benzerlik, komsusuzlar, olcumSatiri } from '../gomme.mjs';
 import { gommeAyari } from '../vektorler.mjs';
+import { yerelOlcum } from '../yerel-model.mjs';
 import { fjernAdresser, hemmeligeKilder, hmacId, kildeKode, kildeSpor } from '../hemmelig.mjs';
 
 const { kontroll } = JSON.parse(await readFile(new URL('../../../src/lib/redaksjon.json', import.meta.url), 'utf8'));
@@ -163,17 +164,28 @@ export async function gommeOnEleme(saker, publisert, ayar) {
   return { secilen, publisert: publisert.filter((_, j) => !vp[j] || yakin(j)), vs, vp };
 }
 
-/** Ölçüm (golge): grup içi ve kjente "aynı", farklı gruplardan en çok 20 rastgele çift "farklı". g indeksleri saker'e göre. */
-export function gommeOlcumu(g, r, log = console.log) {
-  const yaz = (x, y, tur, karar, id) => {
-    if (x && y) log(olcumSatiri({ tur, karar, b: benzerlik(x, y), id }));
+/**
+ * Ölçüm (golge): grup içi ve kjente "aynı", farklı gruplardan en çok 20 rastgele çift "farklı". g indeksleri saker'e göre.
+ * metin: { s: saker metinleri, p: yayımlananların metinleri } (gommeMetni ile aynı). Döner: yerel gölgeye (yerel-model.mjs)
+ * gidecek çiftler; metin yoksa boş.
+ */
+export function gommeOlcumu(g, r, log = console.log, metin = null) {
+  const ciftler = [];
+  const yaz = (x, y, tur, karar, id, a, b) => {
+    if (!x || !y) return;
+    const bg = benzerlik(x, y);
+    log(olcumSatiri({ tur, karar, b: bg, id }));
+    if (metin && a && b) ciftler.push({ tur, karar, a, b, bg, dil: 'no', id });
   };
-  for (const grp of g.grupper) for (const i of grp.slice(1)) yaz(r.vs[grp[0]], r.vs[i], 'grup', 'ayni', String(grp[0]));
+  const s = (i) => metin?.s[i];
+  for (const grp of g.grupper) for (const i of grp.slice(1)) yaz(r.vs[grp[0]], r.vs[i], 'grup', 'ayni', String(grp[0]), s(grp[0]), s(i));
   for (const i of g.kjente) {
     if (!r.vs[i]) continue;
-    let enYakin = null;
-    for (const p of r.vp) if (p && (!enYakin || benzerlik(r.vs[i], p) > benzerlik(r.vs[i], enYakin))) enYakin = p;
-    yaz(r.vs[i], enYakin, 'kjent', 'ayni', String(i));
+    let enYakin = -1;
+    r.vp.forEach((p, j) => {
+      if (p && (enYakin < 0 || benzerlik(r.vs[i], p) > benzerlik(r.vs[i], r.vp[enYakin]))) enYakin = j;
+    });
+    yaz(r.vs[i], r.vp[enYakin], 'kjent', 'ayni', String(i), s(i), metin?.p[enYakin]);
   }
   const grubu = new Map();
   g.grupper.forEach((grp, k) => grp.forEach((i) => grubu.set(i, k)));
@@ -185,7 +197,8 @@ export function gommeOlcumu(g, r, log = console.log) {
     const m = Math.floor(Math.random() * (k + 1));
     [farkli[k], farkli[m]] = [farkli[m], farkli[k]];
   }
-  for (const [i, j] of farkli.slice(0, 20)) yaz(r.vs[i], r.vs[j], 'aday', 'farkli', String(i));
+  for (const [i, j] of farkli.slice(0, 20)) yaz(r.vs[i], r.vs[j], 'aday', 'farkli', String(i), s(i), s(j));
+  return ciftler;
 }
 
 export default {
@@ -225,7 +238,14 @@ export default {
     // Gruplama seçilen başlıklarla; indeksler saker'e geri çevrilir.
     const ham = secilen.length ? await grupper(secilen.map((i) => saker[i]), on ? on.publisert : publisert) : { grupper: [], kjente: new Set() };
     const g = ham && { grupper: ham.grupper.map((grp) => grp.map((i) => secilen[i])), kjente: new Set([...ham.kjente].map((i) => secilen[i])) };
-    if (g && on && ayar.kip === 'golge') gommeOlcumu(g, on, ayar.log);
+    if (g && on && ayar.kip === 'golge') {
+      const metin = { s: saker.map(gommeMetni), p: on.publisert.map((p) => p.tekst ?? p.tittel) };
+      try {
+        await yerelOlcum(gommeOlcumu(g, on, ayar.log, metin), { log: ayar.log });
+      } catch {
+        // yerel gölge düşerse gruplama etkilenmez
+      }
+    }
     if (!g) {
       console.warn('  medier: gruppering mislyktes; prøver igjen neste kjøring');
       return [];

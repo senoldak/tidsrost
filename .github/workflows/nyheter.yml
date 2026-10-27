@@ -48,6 +48,23 @@ jobs:
             standartlar
           persist-credentials: false
 
+      # Yerel model gölgesi (28 Ekim, yerel-model.mjs): llama.cpp + EmbeddingGemma 2 + Gemma 4 E4B bu makinede açılır; "aynı
+      # olay" ölçümü bunlara da sorulur, yalnız loga yazılır. vars.YEREL_GOLGE=1 açar. Modeller (~4,5 GB) önbellekte durur;
+      # bir şey düşerse bot sunucuya ulaşamaz ve gölgeyi atlar. Sürüm/model değişirse anahtar da değişmeli (yerel-model-baslat.sh).
+      - name: Yerel modelleri önbellekten getir
+        if: ${{ vars.YEREL_GOLGE == '1' }}
+        continue-on-error: true
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/yerel-model
+          key: yerel-model-b11936-eg2q8-g4e4b-q4kxl
+
+      - name: Yerel model sunucuları
+        if: ${{ vars.YEREL_GOLGE == '1' }}
+        continue-on-error: true
+        timeout-minutes: 12
+        run: bash scripts/nyheter/yerel-model-baslat.sh
+
       - name: Hent nyheter
         id: hent
         env:
@@ -70,6 +87,8 @@ jobs:
           GOMME_ANAHTARI: ${{ secrets.KILDE_NOKKEL }}
           # Gölge denetim (20 Ekim): turda en çok bu kadar denetim kararı Gemma'ya da sorulur, yalnız loga yazılır (golge.mjs).
           GEMINI_GOLGE: ${{ vars.GEMINI_GOLGE }}
+          # Yerel model gölgesi (28 Ekim): 1 ise ölçülen çiftler yerel modellere de sorulur (yerel-model.mjs).
+          YEREL_GOLGE: ${{ vars.YEREL_GOLGE }}
           MAKS_PER_KJORING: ${{ vars.MAKS_PER_KJORING }}
           # Ortak yayın kapısının ikinci okuması (motor/ortak/kapi.mjs): vars.KAPI_MOD = kapali | golge | acik (boşsa kapalı).
           KAPI_MOD: ${{ vars.KAPI_MOD }}

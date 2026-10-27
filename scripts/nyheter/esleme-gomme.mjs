@@ -8,7 +8,9 @@
 //   acik:   alt eşiğin altındaki çiftler sorulmaz ve "farklı" sayılmaz (ayrik'e yazılmaz; uye çifti elenirse üye
 //           kelime grubunda kalır). Üst eşik tanımlıysa ek çiftler gerçek çift olarak sorulur.
 // Gömme düşerse (vektorle null) her kipte bugünkü yol. "Aynı olay" kararını her zaman Gemini verir.
+// Gölgede ölçülen çiftler ayrıca yerel modellere de sorulur (yerel-model.mjs, YEREL_GOLGE=1); yalnız loga girer.
 import { benzerlik, ciftleriSuz, esikler, gommeKipi, olcumSatiri, vektorle as gommeVektorle } from './gomme.mjs';
+import { yerelOlcum } from './yerel-model.mjs';
 
 export const EK_AZAMI = 10;
 const OLCUM_EK_ESIGI = 0.7; // ölçümde üst eşik yoksa (256 boyut sınamasında aynı olay 0,82 çıktı)
@@ -47,7 +49,7 @@ export function ekCiftler(gruplar, yazilmis, vek, esik, mevcut, ayrikMi, azami =
  * ciftler: ciftleriKur çıktısı. esle(ciftler) → Set | null (önbellekli Gemini eşlemesi); sor(ciftler) → Set | null
  * (önbelleksiz ayniOlayMi, yalnız gölgedeki ek çiftler için). Döner: { ciftler: uygula'ya verilecek liste, ayni, ozet }.
  */
-export async function gommeliEsle({ ciftler, gruplar, yazilmis, ayrikMi, esle, sor, dil = () => 'tr', env = process.env, onbellek = null, vektorle = gommeVektorle, log = console.log }) {
+export async function gommeliEsle({ ciftler, gruplar, yazilmis, ayrikMi, esle, sor, dil = () => 'tr', env = process.env, onbellek = null, vektorle = gommeVektorle, yerel = yerelOlcum, log = console.log }) {
   const kip = gommeKipi(env);
   const bugunku = async () => ({ ciftler, ayni: await esle(ciftler), ozet: null });
   if (kip === 'kapali') return bugunku();
@@ -65,9 +67,13 @@ export async function gommeliEsle({ ciftler, gruplar, yazilmis, ayrikMi, esle, s
     const [x, y] = [vek.get(c.a), vek.get(c.b)];
     return x && y ? benzerlik(x, y) : null;
   };
+  const olculen = [];
   const olc = (c, tur, evet) => {
     const s = b(c);
-    if (s !== null) log(olcumSatiri({ tur, karar: evet ? 'ayni' : 'farkli', b: s, dil: dil(c.a, c.b), id: c.idA }));
+    if (s === null) return;
+    const satir = { tur, karar: evet ? 'ayni' : 'farkli', b: s, dil: dil(c.a, c.b), id: c.idA };
+    log(olcumSatiri(satir));
+    olculen.push({ ...satir, a: c.a, b: c.b, bg: s });
   };
 
   if (kip === 'golge') {
@@ -81,6 +87,11 @@ export async function gommeliEsle({ ciftler, gruplar, yazilmis, ayrikMi, esle, s
       } catch {
         // ölçüm sorusu düşerse eşleme etkilenmez
       }
+    }
+    try {
+      await yerel(olculen, { env, log });
+    } catch {
+      // yerel gölge düşerse eşleme etkilenmez
     }
     return { ciftler, ayni, ozet: null };
   }
