@@ -4873,7 +4873,38 @@
     "medier:2511593fc855e742": "2026-10-27T13:01:06.259Z",
     "unnews:https://news.un.org/en/story/2026/10/1168672": "2026-10-27T13:01:06.259Z",
     "medier:8882e74024beb079": "2026-10-27T13:01:06.259Z",
-    "medier:df3559bfee6955d6": "2026-10-27T13:01:06.259Z"
+    "medier:df3559bfee6955d6": "2026-10-27T13:01:06.259Z",
+    "medier:8c61e3210943ccb6": "2026-10-27T15:01:12.914Z",
+    "medier:5c43f821089720ab": "2026-10-27T15:01:12.914Z",
+    "helsedirektoratet:https://www.helsedirektoratet.no/nyheter/lovende-resultater-fra-14-samhandlingsforsok-i-helsetjenesten": "2026-10-27T15:01:12.914Z",
+    "regjeringen:3183603": "2026-10-27T15:01:12.914Z",
+    "mattilsynet:https://www.mattilsynet.no/fisk-og-akvakultur/fiskesykdommer/francisella-sp/pavist-francisellose-i-nytt-oppdrettsanlegg-i-froya-kommune-i-trondelag-fylke": "2026-10-27T15:01:12.914Z",
+    "mattilsynet:https://www.mattilsynet.no/tilbakekallinger/brodr-ringsdad-kaller-tilbake-blodklubb-pa-grunn-av-utilstrekkelig-varmebehandling": "2026-10-27T15:01:12.914Z",
+    "medier:6530889a72a0c16f": "2026-10-27T15:01:12.914Z",
+    "medier:65cce79bfba68b7f": "2026-10-27T15:01:12.914Z",
+    "medier:a9ed178e8a85cad9": "2026-10-27T15:01:12.914Z",
+    "medier:4c9d1bff3827b47a": "2026-10-27T15:01:12.914Z",
+    "medier:b2f3dd3fda135b71": "2026-10-27T15:01:12.914Z",
+    "medier:320d49673a2c7f74": "2026-10-27T15:01:12.914Z",
+    "medier:5b2c9c3fd5bf83f6": "2026-10-27T15:01:12.914Z",
+    "medier:405ffb186ea5c420": "2026-10-27T15:01:12.914Z",
+    "medier:3065ba0e17c15fe2": "2026-10-27T15:01:12.914Z",
+    "medier:e36a92ac3e01c3a9": "2026-10-27T15:01:12.914Z",
+    "medier:a30cd10deeb4838a": "2026-10-27T15:01:12.914Z",
+    "medier:831c260d482673f5": "2026-10-27T15:01:12.914Z",
+    "medier:7f1dc5e1020f8cea": "2026-10-27T15:01:12.914Z",
+    "medier:07663d5de5539f1f": "2026-10-27T15:01:12.914Z",
+    "medier:6f1ea1f7434b2f66": "2026-10-27T15:01:12.914Z",
+    "medier:96af219820543a8e": "2026-10-27T15:01:12.914Z",
+    "unnews:https://news.un.org/en/story/2026/10/1168677": "2026-10-27T15:01:12.914Z",
+    "regjeringen:3183922": "2026-10-27T15:01:12.914Z",
+    "medier:182edb71e83133ee": "2026-10-27T15:01:12.914Z",
+    "medier:168aa2b856aba3fa": "2026-10-27T15:01:12.914Z",
+    "medier:1371763d9429dfea": "2026-10-27T15:01:12.914Z",
+    "medier:3af99e32bf9c82f4": "2026-10-27T15:01:12.914Z",
+    "medier:548eec3ffb8c2e06": "2026-10-27T15:01:12.914Z",
+    "medier:ee6181979b88a5a3": "2026-10-27T15:01:12.914Z",
+    "medier:bbc69e7fe442716e": "2026-10-27T15:01:12.914Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -4926,36 +4957,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:9615f2c873e2deb2": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-24T14:02:22.356Z"
-    },
-    "medier:c560f9eaabb67cf4": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-24T14:02:22.356Z"
-    },
-    "medier:0e79b4d745bf27f5": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-24T14:02:22.356Z"
-    },
-    "medier:fe7bdd44425252b5": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-24T14:02:22.356Z"
-    },
-    "medier:33c6f835ae734815": {
-      "p": 62,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-24T14:02:22.356Z"
-    },
-    "regjeringen:3182285": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-24T14:02:22.356Z"
-    },
     "medier:6cbfdfbc44f505a6": {
       "p": 40,
       "v": "b34cb0de5bde",
@@ -6450,6 +6451,91 @@
       "p": 58,
       "v": "b34cb0de5bde",
       "t": "2026-10-27T13:02:08.151Z"
+    },
+    "medier:8c61e3210943ccb6": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-27T15:02:14.251Z"
+    },
+    "medier:a6ba412eca50dcc0": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-27T15:02:14.251Z"
+    },
+    "medier:cf9265c3a5566e4f": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-27T15:02:14.251Z"
+    },
+    "medier:6530889a72a0c16f": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-27T15:02:14.251Z"
+    },
+    "medier:182edb71e83133ee": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-27T15:02:14.251Z"
+    },
+    "medier:4c9d1bff3827b47a": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-27T15:02:14.251Z"
+    },
+    "medier:320d49673a2c7f74": {
+      "p": 48,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-27T15:02:14.251Z"
+    },
+    "medier:adb1d1c418700388": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-27T15:02:14.251Z"
+    },
+    "medier:6f1ea1f7434b2f66": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-27T15:02:14.251Z"
+    },
+    "medier:ee6181979b88a5a3": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-27T15:02:14.251Z"
+    },
+    "regjeringen:3184399": {
+      "p": 73,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-27T15:02:14.251Z"
+    },
+    "regjeringen:3183603": {
+      "p": 62,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-27T15:02:14.251Z"
+    },
+    "regjeringen:3183922": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-27T15:02:14.251Z"
+    },
+    "mattilsynet:https://www.mattilsynet.no/tilbakekallinger/arla-protein-pudding-chocolate-og-salted-caramel-tilbakekalles-pa-grunn-av-fare-for-glassbiter-i-produktene": {
+      "p": 74,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-27T15:02:14.251Z"
+    },
+    "mattilsynet:https://www.mattilsynet.no/fisk-og-akvakultur/fiskesykdommer/francisella-sp/pavist-francisellose-i-nytt-oppdrettsanlegg-i-froya-kommune-i-trondelag-fylke": {
+      "p": 52,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-27T15:02:14.251Z"
+    },
+    "mattilsynet:https://www.mattilsynet.no/tilbakekallinger/brodr-ringsdad-kaller-tilbake-blodklubb-pa-grunn-av-utilstrekkelig-varmebehandling": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-27T15:02:14.251Z"
+    },
+    "helsedirektoratet:https://www.helsedirektoratet.no/nyheter/lovende-resultater-fra-14-samhandlingsforsok-i-helsetjenesten": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-27T15:02:14.251Z"
     }
   }
 }
