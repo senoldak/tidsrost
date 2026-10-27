@@ -30,3 +30,14 @@ test('anlamBenzerligi: kosinüs; bilinmeyen kimlik null', () => {
   assert.ok(Math.abs(anlamBenzerligi(h, 'a', 'c')) < 0.01);
   assert.equal(anlamBenzerligi(h, 'a', 'yok'), null);
 });
+
+test('anlamPuani: alt sınırın altı 0, üstü 0–AGIRLIK arası doğrusal, null 0', async () => {
+  const { anlamPuani, ANLAM_ALT, ANLAM_AGIRLIK } = await import('./anlam.mjs');
+  assert.equal(ANLAM_ALT, 0.55);
+  assert.equal(ANLAM_AGIRLIK, 4);
+  assert.equal(anlamPuani(null), 0);
+  assert.equal(anlamPuani(0.5), 0);
+  assert.equal(anlamPuani(0.55), 0);
+  assert.equal(anlamPuani(1), 4);
+  assert.ok(Math.abs(anlamPuani(0.9) - 4 * (0.35 / 0.45)) < 1e-9);
+});

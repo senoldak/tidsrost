@@ -54,3 +54,9 @@ export function anlamBenzerligi(harita, idA, idB) {
   const b = harita.get(idB);
   return a && b ? benzerlik(a, b) : null;
 }
+
+// İlgili haberler puanına eklenen anlam payı (Faz 2, 27 Ekim; ölçümden sonra ayarlanabilir): benzerlik ANLAM_ALT'ın
+// altındaysa 0, üstünde 0 ile ANLAM_AGIRLIK arasında doğrusal. Vektör yoksa (null) 0: bugünkü sıra değişmez.
+export const ANLAM_ALT = 0.55;
+export const ANLAM_AGIRLIK = 4;
+export const anlamPuani = (b) => (b === null || b === undefined || b <= ANLAM_ALT ? 0 : (ANLAM_AGIRLIK * (b - ANLAM_ALT)) / (1 - ANLAM_ALT));

@@ -7,6 +7,12 @@ import { enheter, termer } from '../../scripts/nyheter/dublett.mjs';
 import { matchEntities } from './entities';
 import { indekserbar } from './ordtelling.mjs';
 import type { Haber } from './news';
+import { anlamBenzerligi, anlamPuani, vektorleriOku } from './anlam.mjs';
+
+// Gemini Faz 2 (27 Ekim): ortaklık puanına anlam benzerliği eklenir (src/data/vektorler.jsonl, kimlik = haber id'si).
+// Vektör yoksa 0 puan: seçim bugünkü gibi. MIN_POENG anlam payını da içeren toplamla karşılaştırılır.
+export type Anlam = (a: Haber, b: Haber) => number | null;
+const varsayilanAnlam: Anlam = (a, b) => anlamBenzerligi(vektorleriOku(), a.id, b.id);
 
 export const RELATERT_ANTALL = 4;
 // En az bu puanda ortaklık "ilgili" sayılır (ör. bir kurum + bir özel isim ya da iki özel isim).
@@ -53,7 +59,7 @@ function profil(h: Haber): Profil {
  * Her haber için ilgili haberleri hesaplar (haber listesi yeniden eskiye sıralı gelir, bkz. getNews).
  * Ters dizinle çalışır: yalnızca en az bir ortak terimi olan çiftler puanlanır.
  */
-export function relaterteSaker(news: Haber[], antall = RELATERT_ANTALL): Map<string, Haber[]> {
+export function relaterteSaker(news: Haber[], antall = RELATERT_ANTALL, anlam: Anlam = varsayilanAnlam): Map<string, Haber[]> {
   const adaylar = news.filter(kanRelateres);
   const profiller = adaylar.map(profil);
   const grense = Math.max(3, Math.ceil(adaylar.length * MAKS_ANDEL));
@@ -81,6 +87,10 @@ export function relaterteSaker(news: Haber[], antall = RELATERT_ANTALL): Map<str
     ekle('k', p.kurum);
     ekle('i', p.isim);
     ekle('b', p.baslik);
+    adaylar.forEach((a, j) => {
+      const ek = a === h ? 0 : anlamPuani(anlam(h, a));
+      if (ek > 0) puan.set(j, (puan.get(j) ?? 0) + ek);
+    });
 
     const secilen = [...puan]
       .filter(([j, n]) => n >= MIN_POENG && adaylar[j] !== h)
