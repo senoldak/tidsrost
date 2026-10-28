@@ -1,0 +1,70 @@
+# Haftalık yazım uyarısı (28 Ekim 2026): son 7 günün yazılarında divvunspell'in (speller-nob) tanımadığı yeni sözcükleri listeler
+# (scripts/nyheter/yazim-uyari.py). Yalnız uyarıdır: yayını durdurmaz, repoya yazmaz. Liste iş özetine ve repodaki açık
+# "Yazım uyarısı (haftalık)" konusuna yorum olarak düşer (yoksa açılır).
+name: Yazım uyarısı
+
+on:
+  workflow_dispatch:
+    inputs:
+      gun:
+        description: Kaç günlük yazı
+        default: '7'
+  schedule:
+    - cron: '30 5 * * 1' # pazartesi 05:30 UTC
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: yazim-uyari
+  cancel-in-progress: true
+
+jobs:
+  uyar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            src/content
+            scripts/nyheter
+
+      # divvunspell sürümü sabit; speller-nob sözlüğü Giellatekno'nun güncel derlemesi (dev-latest).
+      - name: Kur (divvunspell)
+        run: |
+          d="$RUNNER_TEMP/divvun" && mkdir -p "$d/indir" && cd "$d/indir"
+          gh release download 'divvunspell/v1.0.0-beta.13' -R divvun/divvunspell -p '*x86_64-unknown-linux-gnu*.tgz'
+          gh release download 'speller-nob/dev-latest' -R giellalt/lang-nob -p '*mobile.pkt.tar.zst'
+          for f in *.tgz; do tar -xzf "$f"; done
+          for f in *.tar.zst; do mkdir -p "z-$f" && tar --zstd -xf "$f" -C "z-$f"; done
+          cp "$(find . -type f -name divvunspell | head -1)" "$d/divvunspell"
+          cp "$(find . -type f \( -name '*.bhfst' -o -name '*.zhfst' \) | head -1)" "$d/nob.bhfst"
+          find . -name '*.so*' -exec cp {} "$d" \;
+          chmod +x "$d/divvunspell"
+
+      - name: Denetle
+        id: denetle
+        env:
+          GUN: ${{ inputs.gun || '7' }}
+        run: |
+          export LD_LIBRARY_PATH="$RUNNER_TEMP/divvun"
+          python3 scripts/nyheter/yazim-uyari.py nb src/content/haberler "$GUN" "$RUNNER_TEMP/yazim.md" "$RUNNER_TEMP/divvun"
+          cat "$RUNNER_TEMP/yazim.md" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Konuya yaz
+        if: steps.denetle.outputs.bulgu != '' && steps.denetle.outputs.bulgu != '0'
+        env:
+          GH_REPO: ${{ github.repository }}
+        run: |
+          baslik='Yazım uyarısı (haftalık)'
+          n=$(gh issue list --state open --search "in:title \"$baslik\"" --json number,title -q ".[] | select(.title == \"$baslik\") | .number" | head -1)
+          if [ -z "$n" ]; then
+            printf '%s\n\n' 'Her pazartesi yazım denetleyicisinin (divvunspell) tanımadığı yeni sözcükler buraya yorum olarak yazılır.' 'Yalnız uyarıdır, yayını durdurmaz. Çoğu doğru sözcüktür; gerçek hatayı yazıda düzelt, doğru sözcük bir daha listelenmez.' 'Kaynak: scripts/nyheter/yazim-uyari.py, .github/workflows/yazim-uyari.yml.' > "$RUNNER_TEMP/aciklama.md"
+            n=$(basename "$(gh issue create --title "$baslik" --body-file "$RUNNER_TEMP/aciklama.md")")
+          fi
+          gh issue comment "$n" --body-file "$RUNNER_TEMP/yazim.md"
