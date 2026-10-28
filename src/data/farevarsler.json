@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-28T01:09:04.164Z",
+  "hentet": "2026-10-28T07:10:33.138Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,19 +7,19 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-28T01:07:05+00:00",
+  "sistEndretHosMet": "2026-10-28T07:09:43+00:00",
   "varsler": [
     {
-      "id": "2.49.0.1.578.0.20261027083116.024",
+      "id": "2.49.0.1.578.0.20261028062157.074",
       "niva": "gult",
       "hendelse": "Storm",
       "omrade": "Måløy - Stad",
       "domene": "hav",
       "start": "2026-10-26T21:00:00+00:00",
-      "slutt": "2026-10-28T10:00:00+00:00",
-      "beskrivelse": "Tirsdag sørlig liten storm 22 m/s, fra tirsdag ettermiddag sør og sørvest opp i sterk storm 28. Natt til onsdag sørvest liten storm 22.",
+      "slutt": "2026-10-29T10:00:00+00:00",
+      "beskrivelse": "Onsdag sørvest full storm 25 m/s, periodevis sterk storm 28 m/s. Fra onsdag ettermiddag periodevis liten storm 22.",
       "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Meget høye bølger: Rullingen blir tung og støtende. Synsvidden nedsettes.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
