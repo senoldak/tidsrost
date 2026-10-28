@@ -3,7 +3,9 @@
 # geçici dosyasına yazılır; bu betik onları okur. LangExtract, yerel Gemma ile (yerel-model-baslat.sh, 8092) haberdeki
 # rakamları ve doğrudan alıntıları çıkarır; her biri kaynakta aranır:
 #   rakam:  sayı kaynakta var mı (biçim farkı ve %0,5 pay); varsa Gemma'ya "kaynak bunu destekliyor mu?" sorulur.
-#   alıntı: alıntının sözcükleri kaynakta sırasıyla geçiyor mu (en iyi pencerede ≥ 0,8 benzerlik).
+#   alıntı: alıntının sözcükleri kaynakta sırasıyla geçiyor mu (en iyi pencerede ≥ 0,8 benzerlik). Yalnız haberde tırnak
+#           içindeki metin alıntı sayılır; haber kaynaktan başka dilde yazıldıysa (jendume TR, İngilizce kaynak) alıntı
+#           çeviridir, harfi harfine aranamaz: sayılır ama şüphe yazılmaz (ilk jendume turunda hepsi yanlış alarmdı).
 # Yalnız loga yazar ve hiçbir şeyi durdurmaz. Kaynak metni loga girmez: şüpheli satırda yalnız haberin kendi (yayımlanmış)
 # metninden en çok 80 karakter durur. Kullanım: python3 yerel-kalite.py <kalite.jsonl>
 import difflib
@@ -119,6 +121,28 @@ def alinti_kaynakta(alinti, kaynak):
     return False
 
 
+TIRNAK = '"“”„«»‘’‚\''
+
+
+def tirnakta(metin, aralik):
+    """Çıkarım haberde tırnak içinde mi (LangExtract düz cümleleri de alıntı sanabiliyor)."""
+    once = metin[max(0, aralik.start_pos - 3):aralik.start_pos]
+    sonra = metin[aralik.end_pos:aralik.end_pos + 3]
+    return any(c in TIRNAK for c in once) and any(c in TIRNAK for c in sonra)
+
+
+def ayni_dil(metin, kaynak):
+    """Haberin en sık 40 sözcüğünün en az %40'ı kaynakta geçiyorsa ikisi aynı dildedir."""
+    sayac = {}
+    for w in sade(metin):
+        sayac[w] = sayac.get(w, 0) + 1
+    sik = sorted(sayac, key=sayac.get, reverse=True)[:40]
+    if not sik:
+        return True
+    k = set(sade(kaynak))
+    return sum(w in k for w in sik) / len(sik) >= 0.4
+
+
 def satir(ad, alan):
     print(f'{ad} {json.dumps(alan, ensure_ascii=False)}', flush=True)
 
@@ -130,7 +154,8 @@ def isle(h):
                        show_progress=False)
     kaynak_sayilari = sayilar(kaynak)
     o = {'id': h['id'], 'dil': h['dil'], 'rakam': 0, 'rakam_kaynakta': 0, 'gemma_evet': 0, 'gemma_hayir': 0, 'alinti': 0,
-         'alinti_kaynakta': 0}
+         'alinti_kaynakta': 0, 'alinti_ceviri': 0}
+    ayni = ayni_dil(metin, kaynak)
     for e in sonuc.extractions:
         if not e.char_interval:
             continue  # metinde bulunamayan çıkarım (örnekten uydurma)
@@ -154,7 +179,12 @@ def isle(h):
                 o['gemma_hayir'] += 1
                 satir('kalite-şüphe', {'id': h['id'], 'dil': h['dil'], 'tur': 'rakam', 'metin': kisa, 'neden': 'gemma-hayir'})
         elif e.extraction_class == 'alinti':
+            if not tirnakta(metin, e.char_interval):
+                continue
             o['alinti'] += 1
+            if not ayni:
+                o['alinti_ceviri'] += 1
+                continue
             if alinti_kaynakta(e.extraction_text, kaynak):
                 o['alinti_kaynakta'] += 1
             else:
