@@ -305,8 +305,8 @@
   },
   "_sinir": {
     "ig_post": {
-      "sayi": 6,
-      "kadar": "2026-10-28T21:10:26.460Z"
+      "sayi": 7,
+      "kadar": "2026-10-29T11:05:54.628Z"
     }
   },
   "benjamin-netanyahu-advarer-om-nytt-holocaust-for-valget-i-israel": {
@@ -411,7 +411,9 @@
     "tarih": "2026-10-28T07:39:25.006Z",
     "ig_story": "18156707689517557",
     "fb_post": "1343803192154866_122111763453509504",
-    "fb_story": "1630601701806027"
+    "fb_story": "1630601701806027",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "naer-tre-av-fire-husholdninger-eier-egen-bolig-7-475-startlan-i-2025": {
     "tarih": "2026-10-28T07:40:03.707Z",
@@ -460,5 +462,17 @@
     "ig_story": "18107804087526205",
     "fb_post": "1343803192154866_122112056061509504",
     "fb_story": "1660940412347047"
+  },
+  "rekordmange-varmerelaterte-dodsfall-i-2023-ifolge-ny-rapport": {
+    "tarih": "2026-10-28T23:06:09.754Z",
+    "ig_story": "18014014634990086",
+    "fb_post": "1343803192154866_122112082203509504",
+    "fb_story": "4526583490922656"
+  },
+  "liverpool-slo-chelsea-ut-av-ligacupen-etter-straffedrama": {
+    "tarih": "2026-10-28T23:06:41.763Z",
+    "ig_story": "18134082121783906",
+    "fb_post": "1343803192154866_122112082449509504",
+    "fb_story": "1143818495269020"
   }
 }
