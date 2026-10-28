@@ -5126,7 +5126,31 @@
     "medier:a2d9afca6d0c37cc": "2026-10-28T07:32:36.535Z",
     "medier:ddcb2daa67989f73": "2026-10-28T07:32:36.535Z",
     "medier:d168fae692554ae1": "2026-10-28T07:32:36.535Z",
-    "medier:3afed6b0d76a38c5": "2026-10-28T07:32:36.535Z"
+    "medier:3afed6b0d76a38c5": "2026-10-28T07:32:36.535Z",
+    "medier:03e8e2a78755bfdd": "2026-10-28T09:01:56.439Z",
+    "medier:64703199d9785d71": "2026-10-28T09:01:56.439Z",
+    "medier:b334e4a17c4fecc6": "2026-10-28T09:01:56.439Z",
+    "medier:45d5163a1711e358": "2026-10-28T09:01:56.439Z",
+    "medier:419634d7e6407e9a": "2026-10-28T09:01:56.439Z",
+    "medier:f231202d45edb95d": "2026-10-28T09:01:56.439Z",
+    "regjeringen:3184805": "2026-10-28T09:01:56.439Z",
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/10/vegvesenet-skal-sikre-kraft-til-utslippsfrie-anleggsplasser/": "2026-10-28T09:01:56.439Z",
+    "dsb:https://www.dsb.no/aktuelt/finn-ditt-informasjonspunkt/": "2026-10-28T09:01:56.439Z",
+    "medier:19cb94790f49437a": "2026-10-28T09:01:56.439Z",
+    "medier:ac75ae1a75f204d9": "2026-10-28T09:01:56.439Z",
+    "medier:e744f0c6db34afdc": "2026-10-28T09:01:56.439Z",
+    "medier:fb98c7e4904a0d6e": "2026-10-28T09:01:56.439Z",
+    "medier:04c39b1bf4acdff3": "2026-10-28T09:01:56.439Z",
+    "medier:41903103672b6909": "2026-10-28T09:01:56.439Z",
+    "medier:5b9f808a890d290c": "2026-10-28T09:01:56.439Z",
+    "medier:471d858cdafb8584": "2026-10-28T09:01:56.439Z",
+    "medier:ef9223f4c699f6b6": "2026-10-28T09:01:56.439Z",
+    "medier:82aee861193e0cf8": "2026-10-28T09:01:56.439Z",
+    "medier:81289888d42c0ac2": "2026-10-28T09:01:56.439Z",
+    "medier:030b1c26fbbe003c": "2026-10-28T09:01:56.439Z",
+    "medier:528a05036ab10ccf": "2026-10-28T09:01:56.439Z",
+    "medier:9c2993fdcf361cc4": "2026-10-28T09:01:56.439Z",
+    "regjeringen:3184228": "2026-10-28T09:01:56.439Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -5179,61 +5203,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:3f04375cd9a50e64": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-25T09:02:14.890Z"
-    },
-    "medier:f1f808cbedb97e0d": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-25T09:02:14.890Z"
-    },
-    "medier:3e8b2c8aef606e17": {
-      "p": 88,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-25T09:02:14.890Z"
-    },
-    "medier:65efce82749444b7": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-25T09:02:14.890Z"
-    },
-    "medier:b3f4ab162d5a7cf8": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-25T09:02:14.890Z"
-    },
-    "medier:c6c6aa41c710c22c": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-25T09:02:14.890Z"
-    },
-    "medier:2cb3454ec3501eb2": {
-      "p": 86,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-25T09:02:14.890Z"
-    },
-    "medier:037eb4aba79c3e17": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-25T09:02:14.890Z"
-    },
-    "medier:f9338f45dd969aa2": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-25T09:02:14.890Z"
-    },
-    "medier:43e6c78a31ce44ca": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-25T09:02:14.890Z"
-    },
-    "medier:43f1af8cef127414": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-25T09:02:14.890Z"
-    },
     "medier:2619c552ba131e04": {
       "p": 72,
       "v": "b34cb0de5bde",
@@ -6958,6 +6927,56 @@
       "p": 45,
       "v": "b34cb0de5bde",
       "t": "2026-10-28T07:37:10.646Z"
+    },
+    "medier:ef9223f4c699f6b6": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-28T09:07:08.087Z"
+    },
+    "medier:19cb94790f49437a": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-28T09:07:08.087Z"
+    },
+    "medier:73cb760fe41ba5a0": {
+      "p": 88,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-28T09:07:08.087Z"
+    },
+    "medier:7a89cfc1ca1056d2": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-28T09:07:08.087Z"
+    },
+    "medier:41903103672b6909": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-28T09:07:08.087Z"
+    },
+    "medier:528a05036ab10ccf": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-28T09:07:08.087Z"
+    },
+    "regjeringen:3184805": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-28T09:07:08.087Z"
+    },
+    "regjeringen:3184228": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-28T09:07:08.087Z"
+    },
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/10/vegvesenet-skal-sikre-kraft-til-utslippsfrie-anleggsplasser/": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-28T09:07:08.087Z"
+    },
+    "dsb:https://www.dsb.no/aktuelt/finn-ditt-informasjonspunkt/": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-28T09:07:08.087Z"
     }
   }
 }
