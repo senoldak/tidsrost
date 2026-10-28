@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, readFileSync, existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { kaliteKaydet, cevapCoz, sec, yerelOlcum, yerelSatiri, yerelSifirla, GOMME_ADRESI, SOHBET_ADRESI } from './yerel-model.mjs';
+import { kaliteKaydet, cevapCoz, sec, yerelOlcum, yerelSatiri, yerelSifirla, GOMME_ADRESI, SOHBET_ADRESI, GRANITE_ADRESI } from './yerel-model.mjs';
 
 beforeEach(() => yerelSifirla());
 
@@ -14,8 +14,9 @@ const json = (j, status = 200) => ({ ok: status < 400, status, json: async () =>
 const sahteSunucu = (cagri = []) => async (url, { body }) => {
   const g = JSON.parse(body);
   cagri.push(url);
-  if (url.startsWith(GOMME_ADRESI)) {
-    const v = (m) => (m.slice(m.indexOf('query: ') + 7)[0].toLowerCase() === 'a' ? [1, 0.1] : [0, 1]);
+  if (url.startsWith(GOMME_ADRESI) || url.startsWith(GRANITE_ADRESI)) {
+    if (url.startsWith(GRANITE_ADRESI)) assert.ok(g.input.every((m) => !m.includes('query: ')), 'Granite önek almaz');
+    const v = (m) => (m.replace(/^.*query: /, '')[0].toLowerCase() === 'a' ? [1, 0.1] : [0, 1]);
     return json({ data: g.input.map((m, index) => ({ index, embedding: v(m) })) });
   }
   const s = g.messages[1].content;
@@ -45,9 +46,10 @@ test('sec: aynılara en az yarı yer, toplam azami', () => {
 });
 
 test('yerelSatiri: metin yok, kimlik kısaltılmış, sayılar yuvarlanmış', () => {
-  const s = yerelSatiri({ tur: 'uye', karar: 'ayni', bg: 0.81234, yb: 0.7777, gemma: 'ayni', ms: 812, dil: 'no', id: 'Gizlimedya başlığı' });
+  const s = yerelSatiri({ tur: 'uye', karar: 'ayni', bg: 0.81234, yb: 0.7777, gr: 0.6543, gemma: 'ayni', ms: 812, dil: 'no', id: 'Gizlimedya başlığı' });
   const j = JSON.parse(s.slice('yerel-ölçüm '.length));
-  assert.deepEqual(Object.keys(j), ['tur', 'karar', 'bg', 'yb', 'gemma', 'ms', 'dil', 'id']);
+  assert.deepEqual(Object.keys(j), ['tur', 'karar', 'bg', 'yb', 'gr', 'gemma', 'ms', 'dil', 'id']);
+  assert.equal(j.gr, 0.65);
   assert.equal(j.bg, 0.81);
   assert.equal(j.yb, 0.78);
   assert.equal(j.id.length, 8);
@@ -70,6 +72,7 @@ test('yerelOlcum: her çifte satır, uyum sayılır, metin loga girmez', async (
   assert.equal(olcum[0].gemma, 'ayni');
   assert.ok(olcum[0].yb > 0.9);
   assert.ok(olcum[1].yb < 0.2);
+  assert.ok(olcum[0].gr > 0.9);
   assert.ok(satirlar.some((s) => s.startsWith('yerel-özet ')));
   for (const s of satirlar) assert.doesNotMatch(s, /gizli/);
 });
@@ -119,4 +122,18 @@ test('kaliteKaydet: yalnız gölge açıkken ve dosya verilmişse yazar, kimlik 
   assert.equal(j.id.length, 8);
   assert.equal(j.metin, k.metin);
   assert.equal(kaliteKaydet(k, { YEREL_GOLGE: '1', YEREL_KALITE_DOSYASI: path.join(dosya, 'yok', 'x') }), false);
+});
+
+test('yerelOlcum: Granite yoksa yalnız gr alanı boş kalır, gölge sürer', async () => {
+  const satirlar = [];
+  const sunucu = sahteSunucu();
+  const fetchFn = async (url, o) => {
+    if (url.startsWith(GRANITE_ADRESI)) throw new TypeError('fetch failed');
+    return sunucu(url, o);
+  };
+  const ozet = await yerelOlcum([cift('A x', 'a y', 'ayni')], { env, fetchFn, log: (s) => satirlar.push(s) });
+  assert.equal(ozet.n, 1);
+  const j = JSON.parse(satirlar.find((s) => s.startsWith('yerel-ölçüm ')).slice(12));
+  assert.equal(j.gr, undefined);
+  assert.ok(j.yb > 0.9);
 });

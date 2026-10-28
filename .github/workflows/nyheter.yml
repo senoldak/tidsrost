@@ -49,7 +49,7 @@ jobs:
           persist-credentials: false
 
       # Yerel model gölgesi (28 Ekim, yerel-model.mjs): llama.cpp + EmbeddingGemma 2 + Gemma 4 E4B bu makinede açılır; "aynı
-      # olay" ölçümü bunlara da sorulur, yalnız loga yazılır. vars.YEREL_GOLGE=1 açar. Modeller (~4,5 GB) önbellekte durur;
+      # olay" ölçümü bunlara da sorulur, yalnız loga yazılır. vars.YEREL_GOLGE=1 açar. Modeller (~4,7 GB) önbellekte durur;
       # bir şey düşerse bot sunucuya ulaşamaz ve gölgeyi atlar. Sürüm/model değişirse anahtar da değişmeli (yerel-model-baslat.sh).
       - name: Yerel modelleri önbellekten getir
         if: ${{ vars.YEREL_GOLGE == '1' }}
@@ -57,7 +57,7 @@ jobs:
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ~/yerel-model
-          key: yerel-model-b11936-eg2q8-g4e4b-q4kxl
+          key: yerel-model-b11936-eg2q8-g4e4b-q4kxl-gr97r2
 
       - name: Yerel model sunucuları
         if: ${{ vars.YEREL_GOLGE == '1' }}
