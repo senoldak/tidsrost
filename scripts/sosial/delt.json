@@ -1,25 +1,4 @@
 {
-  "veiarbeid-slo-ut-mobilnettet-ost-og-sorost-for-tromso": {
-    "tarih": "2026-10-21T08:12:20.843Z",
-    "ig_post": "18012956531986674",
-    "ig_story": "18117916370326927",
-    "fb_post": "1343803192154866_122107850979509504",
-    "fb_story": "3052048581808974"
-  },
-  "global-oppvarming-vil-overskride-1-5-grader": {
-    "tarih": "2026-10-21T08:13:49.713Z",
-    "ig_post": "18348281743265713",
-    "ig_story": "17902542756603026",
-    "fb_post": "1343803192154866_122107852005509504",
-    "fb_story": "1767100714358267"
-  },
-  "syv-biler-i-kjedekollisjon-pa-e6": {
-    "tarih": "2026-10-21T08:15:20.232Z",
-    "ig_post": "17987495118116837",
-    "ig_story": "17897085276415994",
-    "fb_post": "1343803192154866_122107853355509504",
-    "fb_story": "1490094429597565"
-  },
   "store-kritiserer-frp-skolen-i-more-og-romsdal-i-stortinget": {
     "tarih": "2026-10-21T10:03:57.314Z",
     "ig_post": "18113966936597790",
@@ -353,8 +332,8 @@
   },
   "_sinir": {
     "ig_post": {
-      "sayi": 5,
-      "kadar": "2026-10-28T09:05:18.427Z"
+      "sayi": 6,
+      "kadar": "2026-10-28T21:10:26.460Z"
     }
   },
   "benjamin-netanyahu-advarer-om-nytt-holocaust-for-valget-i-israel": {
@@ -427,7 +406,9 @@
     "tarih": "2026-10-27T11:07:34.827Z",
     "ig_story": "17911476849588554",
     "fb_post": "1343803192154866_122111414691509504",
-    "fb_story": "1702956008138581"
+    "fb_story": "1702956008138581",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "klimagasser-og-karbondioksid-nadde-rekordhoye-nivaer-i-2025": {
     "tarih": "2026-10-27T15:18:16.933Z",
