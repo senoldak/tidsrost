@@ -423,7 +423,13 @@
     "fb_post": "1343803192154866_122111324733509504",
     "fb_story": "28812067845078705",
     "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
+    "limit": 1,
+    "ig_reels": "18075740897744264",
+    "fb_reels": "1445834817682190",
+    "reels": {
+      "gun": "2026-10-28",
+      "dilim": "morgen"
+    }
   },
   "husholdningsgjeld-norden-oecd": {
     "tarih": "2026-10-27T07:06:23.590Z",
