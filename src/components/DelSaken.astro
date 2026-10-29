@@ -1,8 +1,12 @@
 ---
-// Paylaşım bağlantıları: düz bağlantılardır, dışarıdan script yüklenmez (CSP: public/_headers).
-// "Kopier lenke" düğmesi JavaScript ve pano izni olan tarayıcıda görünür (aşamalı geliştirme);
-// script Astro'nun derlediği ayrı dosyadır, satır içi değildir.
+// Yazı sonu: paylaşma ve takip.
+// - Paylaşma: düz bağlantılar (dışarıdan script yüklenmez, CSP: public/_headers). "Del…" (telefonun paylaşma menüsü,
+//   navigator.share) ve "Kopier lenke" düğmeleri yalnız destekleyen tarayıcıda görünür (aşamalı geliştirme); script
+//   Astro'nun derlediği ayrı dosyadır, satır içi değildir.
+// - Takip: sitenin sosyal hesapları kısa açıklamayla; okur takip için footer'a inmek zorunda kalmasın (29.10.2026).
+//   Açıklamalar gerçeği söyler: FB/IG'ye her haber gider (scripts/sosial), Telegram kanalına her haber gider.
 import { SITE } from '../lib/site';
+import SosialIkon from './SosialIkon.astro';
 
 interface Props {
   url: string;
@@ -12,40 +16,87 @@ const { url, title } = Astro.props;
 const u = encodeURIComponent(url);
 const t = encodeURIComponent(title);
 const lenker = [
-  { navn: 'Telegram', href: `https://t.me/share/url?url=${u}&text=${t}` },
-  { navn: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${u}` },
-  { navn: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${u}` },
-  { navn: 'Bluesky', href: `https://bsky.app/intent/compose?text=${encodeURIComponent(`${title} ${url}`)}` },
-  { navn: 'X', href: `https://x.com/intent/post?url=${u}&text=${t}` },
-  { navn: 'WhatsApp', href: `https://wa.me/?text=${t}%20${u}` },
-];
+  { ad: 'facebook', navn: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${u}` },
+  { ad: 'whatsapp', navn: 'WhatsApp', href: `https://wa.me/?text=${t}%20${u}` },
+  { ad: 'linkedin', navn: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${u}` },
+  { ad: 'telegram', navn: 'Telegram', href: `https://t.me/share/url?url=${u}&text=${t}` },
+  { ad: 'x', navn: 'X', href: `https://x.com/intent/post?url=${u}&text=${t}` },
+  { ad: 'bluesky', navn: 'Bluesky', href: `https://bsky.app/intent/compose?text=${encodeURIComponent(`${title} ${url}`)}` },
+  { ad: 'epost', navn: 'E-post', href: `mailto:?subject=${t}&body=${encodeURIComponent(`${title}\n\n${url}`)}` },
+] as const;
+
+const folg = [
+  SITE.social.facebook && { ad: 'facebook', navn: 'Facebook', tekst: 'Alle nyhetene i feeden din', href: SITE.social.facebook },
+  SITE.social.instagram && { ad: 'instagram', navn: 'Instagram', tekst: 'Sakene som bilder og stories', href: SITE.social.instagram },
+  SITE.social.telegram && { ad: 'telegram', navn: 'Telegram', tekst: 'Hver sak rett i kanalen', href: SITE.social.telegram },
+  SITE.social.linkedin && { ad: 'linkedin', navn: 'LinkedIn', tekst: 'Følg siden vår', href: SITE.social.linkedin },
+].filter(Boolean) as { ad: 'facebook' | 'instagram' | 'telegram' | 'linkedin'; navn: string; tekst: string; href: string }[];
 ---
 
-<div class="share">
-  <span>Del saken:</span>
-  {
-    lenker.map((l) => (
-      <a href={l.href} target="_blank" rel="noopener noreferrer" aria-label={`Del på ${l.navn} (åpnes i ny fane)`}>
-        {l.navn}
-      </a>
-    ))
-  }
-  <button type="button" class="kopier" data-url={url} hidden>Kopier lenke</button>
+<section class="del-saken" aria-labelledby="del-tittel">
+  <h2 class="del-tittel" id="del-tittel">Del saken</h2>
+  <div class="del-knapper">
+    <button type="button" class="del-knapp del-system" data-url={url} data-tittel={title} hidden>
+      <SosialIkon ad="del" />
+      Del …
+    </button>
+    {
+      lenker.map((l) => (
+        <a class="del-knapp" href={l.href} target={l.ad === 'epost' ? undefined : '_blank'} rel="noopener noreferrer" aria-label={`Del på ${l.navn}${l.ad === 'epost' ? '' : ' (åpnes i ny fane)'}`}>
+          <SosialIkon ad={l.ad} />
+          {l.navn}
+        </a>
+      ))
+    }
+    <button type="button" class="del-knapp kopier" data-url={url} hidden>
+      <SosialIkon ad="lenke" />
+      Kopier lenke
+    </button>
+  </div>
   <span class="kopiert" role="status" aria-live="polite"></span>
-</div>
+</section>
+
 {
-  SITE.social.telegram && (
-    <p class="folg">
-      Følg {SITE.name} på <a href={SITE.social.telegram} rel="noopener noreferrer" target="_blank">Telegram</a> og få sakene rett i kanalen.
-    </p>
+  folg.length > 0 && (
+    <section class="folg-boks" aria-labelledby="folg-tittel">
+      <h2 class="folg-tittel" id="folg-tittel">Følg {SITE.name}</h2>
+      <ul class="folg-liste">
+        {folg.map((f) => (
+          <li>
+            <a href={f.href} target="_blank" rel="noopener noreferrer" aria-label={`${SITE.name} på ${f.navn} (åpnes i ny fane)`}>
+              <SosialIkon ad={f.ad} storrelse={22} />
+              <span>
+                <strong>{f.navn}</strong>
+                <small>{f.tekst}</small>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p class="folg-rss">
+        <SosialIkon ad="rss" storrelse={14} />
+        <span>Eller følg med i nyhetsleseren din via <a href="/rss.xml">RSS</a>.</span>
+      </p>
+    </section>
   )
 }
 
 <script>
-  for (const knapp of document.querySelectorAll<HTMLButtonElement>('.share .kopier')) {
+  for (const knapp of document.querySelectorAll<HTMLButtonElement>('.del-saken .del-system')) {
+    if (typeof navigator.share !== 'function') continue;
+    knapp.hidden = false;
+    knapp.addEventListener('click', async () => {
+      try {
+        await navigator.share({ title: knapp.dataset.tittel ?? document.title, url: knapp.dataset.url ?? location.href });
+      } catch {
+        // Okur menüyü kapattı; bir şey yapılmaz.
+      }
+    });
+  }
+  for (const knapp of document.querySelectorAll<HTMLButtonElement>('.del-saken .kopier')) {
     if (!navigator.clipboard?.writeText) continue;
     knapp.hidden = false;
-    const melding = knapp.parentElement?.querySelector('.kopiert');
+    const melding = knapp.closest('.del-saken')?.querySelector('.kopiert');
     knapp.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText(knapp.dataset.url ?? location.href);

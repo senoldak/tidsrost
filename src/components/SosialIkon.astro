@@ -1,0 +1,68 @@
+---
+// Tek renkli sosyal medya ve paylaşma simgeleri (currentColor). Satır içi SVG: dış dosya ya da script yok (CSP).
+// Markaların resmî renkleri kullanılmaz; simge sitenin metin rengini alır.
+interface Props {
+  ad: 'facebook' | 'instagram' | 'linkedin' | 'telegram' | 'x' | 'bluesky' | 'whatsapp' | 'epost' | 'lenke' | 'del' | 'rss';
+  storrelse?: number;
+}
+const { ad, storrelse = 18 } = Astro.props;
+---
+
+<svg class="sosial-ikon" viewBox="0 0 24 24" width={storrelse} height={storrelse} aria-hidden="true" focusable="false">
+  {ad === 'facebook' && <path fill="currentColor" d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1Z" />}
+  {
+    ad === 'instagram' && (
+      <g fill="none" stroke="currentColor" stroke-width="1.9">
+        <rect x="3.5" y="3.5" width="17" height="17" rx="4.8" />
+        <circle cx="12" cy="12" r="3.9" />
+        <circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none" />
+      </g>
+    )
+  }
+  {ad === 'linkedin' && <path fill="currentColor" d="M5 3.8a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM3.3 9.3h3.4V20H3.3V9.3Zm5.6 0h3.3v1.5c.5-.9 1.6-1.8 3.3-1.8 3.5 0 4.2 2.3 4.2 5.3V20h-3.4v-5c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V20H8.9V9.3Z" />}
+  {ad === 'telegram' && <path fill="currentColor" d="M20.7 4.3 3.4 11c-1.2.5-1.2 1.2-.2 1.5l4.4 1.4 1.7 5.2c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2.1-2 4.4 3.2c.8.5 1.4.2 1.6-.8l2.9-13.6c.3-1.2-.4-1.7-1.3-1.3Zm-3.9 3.2-7.7 7-.3 3.2-1.4-4.6 9.4-5.9Z" />}
+  {ad === 'x' && <path fill="currentColor" d="M17.6 3.5h3l-6.6 7.5 7.7 10.1h-6l-4.7-6.2-5.4 6.2h-3l7-8L2.3 3.5h6.2l4.3 5.7 4.8-5.7Zm-1 15.8h1.7L7.5 5.2H5.7l10.9 14.1Z" />}
+  {ad === 'bluesky' && <path fill="currentColor" d="M6.3 4.6C8.4 6.2 10.6 9.4 12 11.2c1.4-1.8 3.6-5 5.7-6.6 1.5-1.1 3.9-2 3.9.8 0 .6-.3 4.6-.5 5.3-.7 2.4-3.1 3-5.3 2.6 3.8.7 4.8 2.8 2.7 5-4 4.1-5.7-1-6.2-2.3l-.3-.8-.3.8c-.5 1.3-2.2 6.4-6.2 2.3-2.1-2.2-1.1-4.3 2.7-5-2.2.4-4.6-.2-5.3-2.6-.2-.7-.5-4.7-.5-5.3 0-2.8 2.4-1.9 3.9-.8Z" />}
+  {
+    ad === 'whatsapp' && (
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+        <path d="M4 20l1.2-3.9A8.2 8.2 0 1 1 8 19l-4 1Z" />
+        <path d="M9.2 8.6c.2-.5.6-.5.9-.5.3 0 .5.4.7 1 .2.5-.2.9-.4 1.1.6 1.1 1.4 1.9 2.5 2.5.2-.2.6-.6 1.1-.4.6.2 1 .4 1 .7 0 .3 0 .7-.5.9-.8.4-1.8.3-3.1-.5a8 8 0 0 1-2.6-2.6c-.8-1.3-.9-2.3-.5-3.1Z" fill="currentColor" stroke="none" />
+      </g>
+    )
+  }
+  {
+    ad === 'epost' && (
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round">
+        <rect x="3" y="5.5" width="18" height="13" rx="2" />
+        <path d="m3.6 6.6 8.4 6.4 8.4-6.4" />
+      </g>
+    )
+  }
+  {
+    ad === 'lenke' && (
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+        <path d="M10.2 13.8a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1.3 1.3" />
+        <path d="M13.8 10.2a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1.3-1.3" />
+      </g>
+    )
+  }
+  {
+    ad === 'del' && (
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3.5v11" />
+        <path d="m7.5 7.5 4.5-4 4.5 4" />
+        <path d="M6 11.5H5a1.5 1.5 0 0 0-1.5 1.5v6A1.5 1.5 0 0 0 5 20.5h14a1.5 1.5 0 0 0 1.5-1.5v-6a1.5 1.5 0 0 0-1.5-1.5h-1" />
+      </g>
+    )
+  }
+  {
+    ad === 'rss' && (
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+        <path d="M5 11a8 8 0 0 1 8 8" />
+        <path d="M5 5a14 14 0 0 1 14 14" />
+        <circle cx="6" cy="18" r="1.4" fill="currentColor" stroke="none" />
+      </g>
+    )
+  }
+</svg>

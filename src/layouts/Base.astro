@@ -5,6 +5,7 @@ import { LISENS_URL } from '../lib/lisens.mjs';
 import { metaDescription, organization, website } from '../lib/seo';
 import { ANALYSE, FORKLART, erAnalyse, erForklart, getActiveCategories, getNews } from '../lib/news';
 import Symbol from '../components/Symbol.astro';
+import SosialIkon from '../components/SosialIkon.astro';
 import { aktiveTemaer } from '../lib/temaer';
 import '../styles/global.css';
 
@@ -112,7 +113,17 @@ const [nameHead, nameTail] = SITE.name.split('ø');
           <a href="/" class="logo label" aria-label={`${SITE.name}, til forsiden`}>
             {nameTail === undefined ? SITE.name : <>{nameHead}<span class="o">ø</span>{nameTail}</>}
           </a>
-          <p class="edition label">Ark {sheet} · {weekday}<b>{today}</b></p>
+          <div class="mast-hoyre">
+            <p class="edition label">Ark {sheet} · {weekday}<b>{today}</b></p>
+            {/* Takip simgeleri: okur footer'a inmeden hesaplara ulaşsın (29.10.2026). */}
+            <nav class="mast-folg label" aria-label={`Følg ${SITE.name}`}>
+              {SITE.social.facebook && <a href={SITE.social.facebook} rel="noopener noreferrer" target="_blank" aria-label="Facebook (åpnes i ny fane)"><SosialIkon ad="facebook" /></a>}
+              {SITE.social.instagram && <a href={SITE.social.instagram} rel="noopener noreferrer" target="_blank" aria-label="Instagram (åpnes i ny fane)"><SosialIkon ad="instagram" /></a>}
+              {SITE.social.telegram && <a href={SITE.social.telegram} rel="noopener noreferrer" target="_blank" aria-label="Telegram (åpnes i ny fane)"><SosialIkon ad="telegram" /></a>}
+              {SITE.social.linkedin && <a href={SITE.social.linkedin} rel="noopener noreferrer" target="_blank" aria-label="LinkedIn (åpnes i ny fane)"><SosialIkon ad="linkedin" /></a>}
+              <a href="/rss.xml" aria-label="RSS-strøm"><SosialIkon ad="rss" /></a>
+            </nav>
+          </div>
         </div>
       </div>
       <nav class="legend-nav" aria-label="Kategorier">

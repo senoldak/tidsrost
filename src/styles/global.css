@@ -896,23 +896,6 @@ main.container {
   margin: calc(var(--u) * 2) 0 0;
 }
 
-.share {
-  display: flex;
-  gap: calc(var(--u) * 3);
-  flex-wrap: wrap;
-  margin: calc(var(--u) * 3) 0 0;
-  font: 600 0.875rem var(--frame);
-}
-
-.share span {
-  color: var(--muted);
-  font-weight: 500;
-}
-
-.share a {
-  color: var(--water);
-}
-
 .related {
   margin-top: calc(var(--u) * 10);
 }
@@ -1273,36 +1256,6 @@ main.container {
   text-overflow: ellipsis;
 }
 
-/* ——— Del saken: kopier-knapp og Telegram ——— */
-.share .kopier {
-  padding: 0;
-  border: 0;
-  background: none;
-  font: inherit;
-  color: var(--water);
-  cursor: pointer;
-}
-
-.share .kopiert {
-  color: var(--muted);
-  font-weight: 500;
-}
-
-.share .kopiert:empty {
-  display: none;
-}
-
-.folg {
-  margin: calc(var(--u) * 1.5) 0 0;
-  font: 500 0.875rem var(--frame);
-  color: var(--muted);
-}
-
-.folg a {
-  color: var(--water);
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
-}
 
 /* ——— Kategori: sidenummerering ——— */
 .sider {
@@ -2030,4 +1983,164 @@ main.container {
   .footer-brand {
     grid-column: 1 / -1;
   }
+}
+
+/* Masthode: dato og følg-ikoner til høyre */
+.mast-hoyre {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--u);
+}
+
+.mast-folg {
+  display: flex;
+  gap: 2px;
+  margin-right: -0.6em;
+  padding: 0.25em 0.35em;
+}
+
+.mast-folg a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: var(--ink);
+}
+
+.mast-folg a:hover {
+  color: var(--water);
+  background: var(--surface);
+}
+
+@media (max-width: 640px) {
+  .mast-hoyre {
+    align-items: flex-start;
+  }
+
+  .mast-folg {
+    margin: 0 0 0 -0.35em;
+  }
+}
+
+/* Del saken: knapper med ikon */
+.del-saken {
+  margin: calc(var(--u) * 4) 0 0;
+  padding-top: calc(var(--u) * 2);
+  border-top: 1px solid var(--rule);
+}
+
+.del-tittel,
+.folg-tittel {
+  margin: 0 0 calc(var(--u) * 1.5);
+  font: 700 0.75rem var(--frame);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.del-knapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--u);
+}
+
+.del-knapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  min-height: 40px;
+  padding: 0 calc(var(--u) * 1.75);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  font: 600 0.875rem var(--frame);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.del-knapp:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.del-knapp.del-system {
+  border-color: var(--ink);
+}
+
+.del-saken .kopiert {
+  display: block;
+  margin-top: var(--u);
+  font: 500 0.875rem var(--frame);
+  color: var(--muted);
+}
+
+.del-saken .kopiert:empty {
+  display: none;
+}
+
+/* Følg tidsrøst: boks etter saken */
+.folg-boks {
+  margin: calc(var(--u) * 4) 0 0;
+  padding: calc(var(--u) * 2.5);
+  border: 1px solid var(--ink);
+  background: var(--surface);
+}
+
+.folg-liste {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--u);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.folg-liste a {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--u) * 1.5);
+  padding: calc(var(--u) * 1.25) calc(var(--u) * 1.5);
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.folg-liste a:hover {
+  border-color: var(--ink);
+  text-decoration: none;
+}
+
+.folg-liste span {
+  display: flex;
+  flex-direction: column;
+}
+
+.folg-liste strong {
+  font: 700 0.9375rem/1.2 var(--frame);
+}
+
+.folg-liste small {
+  font: 500 0.8125rem/1.3 var(--frame);
+  color: var(--muted);
+}
+
+.folg-rss {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  margin: calc(var(--u) * 1.5) 0 0;
+  font: 500 0.8125rem var(--frame);
+  color: var(--muted);
+}
+
+.folg-rss a {
+  color: var(--water);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
