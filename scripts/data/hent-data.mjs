@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 import { acilDurdurma } from '../nyheter/kapi.mjs';
 import { RENTE_KILDE, VARSEL_KILDE, farevarsler, hasterPublisering, lesSdmxCsv, sammeInnhold, styringsrente } from './data.mjs';
 import { SSB_KILDE, ssbUrl } from './ssb.mjs';
-import { arbeidsledighet, boligpriser, prisstigning } from './ssb-sider.mjs';
+import { arbeidsledighet, boligpriser, kpiHistorisk, prisstigning } from './ssb-sider.mjs';
 import { birlestirMaaned, dagsTall, hendelser, nesteArkivmaaned, oppdaterLopende } from './varselarkiv.mjs';
 
 // Standartlar: acil durdurma açıksa veri sayfaları da güncellenmez.
@@ -107,6 +107,17 @@ const JOBBER = [
     async lag() {
       const url = ssbUrl('13760', { Kjonn: ['0', '1', '2'], Alder: ['15-74', '15-24', '25-74'], Justering: 'S', ContentsCode: 'ArbledProsArbstyrk', Tid: 'top(24)' });
       return { kilde: SSB_KILDE, tabell: '13760', ...arbeidsledighet(JSON.parse(await hent(url, 'application/json'))) };
+    },
+  },
+  {
+    // Tarihsel KPI (yıllık 1865–, aylık 1920M03–): yılda birkaç kez değişir, günde en çok bir kez denenir.
+    fil: 'kpi-historisk.json',
+    kompakt: true,
+    aralikSaat: 24,
+    async lag() {
+      const aar = JSON.parse(await hent(ssbUrl('14711', { ContentsCode: 'KpiAar', Tid: '*' }), 'application/json'));
+      const mnd = JSON.parse(await hent(ssbUrl('14710', { ContentsCode: 'KpiIndMnd', Tid: '*' }), 'application/json'));
+      return { kilde: SSB_KILDE, tabell: '14711, 14710', ...kpiHistorisk(aar, mnd) };
     },
   },
 ];

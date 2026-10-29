@@ -13,6 +13,8 @@ import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs } from '../lib/seo';
 import pris from '../data/prisstigning.json';
 import bolig from '../data/boligpriser.json';
 import arbeid from '../data/arbeidsledighet.json';
+import kpiHist from '../data/kpi-historisk.json';
+import { omregn } from '../lib/prisomregner.mjs';
 
 const pageUrl = `${SITE_URL}/tall/`;
 const tittel = 'Tall og data';
@@ -27,6 +29,9 @@ const fra = dk.egneFra && dk.egneFra > fraIdeal && (!dk.arkivTil || dk.arkivTil 
 const dagerTall = Math.round((Date.parse(`${til}T00:00:00Z`) - Date.parse(`${fra}T00:00:00Z`)) / 86_400_000) + 1;
 const varsler30 = dagerTall >= 7 && erKomplett(dk, fra, til) ? periodeTall(dagerFraArkiv(VARSELARKIV), fra, til).total.reduce((a, b) => a + b, 0) : null;
 
+const kpiEksFra = String(Number(kpiHist.sisteAar) - 30);
+const kpiEks = omregn(kpiHist, 100, kpiEksFra, kpiHist.sisteAar);
+
 const kort = [
   { url: '/prisstigning/', navn: 'Prisstigningen nå', verdi: `${tallTekst(pris.tolvMnd)} %`, tekst: `Endring i konsumprisene siste tolv måneder, ${maanedTekst(pris.sisteMaaned)}.`, kilde: 'SSB', sym: 'data' },
   {
@@ -38,6 +43,14 @@ const kort = [
     sym: 'data',
   },
   { url: '/arbeidsledighet/', navn: 'Arbeidsledigheten nå', verdi: `${tallTekst(arbeid.prosent)} %`, tekst: `Arbeidsledige i prosent av arbeidsstyrken, ${maanedTekst(arbeid.sisteMaaned)}.`, kilde: 'SSB', sym: 'data' },
+  {
+    url: '/prisomregner/',
+    navn: 'Hva er pengene verdt?',
+    verdi: typeof kpiEks === 'number' ? `${Math.round(kpiEks).toLocaleString('nb-NO')} kr` : '–',
+    tekst: `Hundre kroner fra ${kpiEksFra} regnet om til prisnivået i ${kpiHist.sisteAar}. Regn om beløp mellom alle år siden ${Object.keys(kpiHist.aar)[0]}.`,
+    kilde: 'SSB',
+    sym: 'data',
+  },
   { url: '/styringsrenten/', navn: 'Styringsrenten nå', verdi: prosent(RENTE.rente), tekst: RENTE.gjeldendeFra ? `Gjeldende fra ${datoTekst(RENTE.gjeldendeFra)}.` : 'Norges Banks styringsrente.', kilde: 'Norges Bank', sym: 'data' },
   {
     url: '/farevarsler/',

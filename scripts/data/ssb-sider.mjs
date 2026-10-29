@@ -93,3 +93,29 @@ export function arbeidsledighet(json) {
     .map((p) => ({ maaned: maaned(p), prosent: v('0', '15-74', p) }));
   return { oppdatert: t.oppdatert, sisteMaaned: maaned(siste), prosent, grupper, serie };
 }
+
+/**
+ * Tablo 14711 (yıllık, 1865–) ve 14710 (aylık, 1920M03–): tarihsel KPI (2025=100). Bastırılmış (null) hücreler atlanır;
+ * sisteAar / sisteMnd serinin son dolu dönemidir. İstek: ContentsCode KpiAar / KpiIndMnd, Tid '*'.
+ */
+export function kpiHistorisk(aarJson, mndJson) {
+  const a = tabell(aarJson);
+  const m = tabell(mndJson);
+  const aar = {};
+  for (const p of a.perioder) {
+    const v = a.finn({ ContentsCode: 'KpiAar', Tid: p });
+    if (tall(v)) aar[p] = v;
+  }
+  const mnd = {};
+  for (const p of m.perioder) {
+    const v = m.finn({ ContentsCode: 'KpiIndMnd', Tid: p });
+    if (tall(v)) mnd[maaned(p)] = v;
+  }
+  const sisteAar = Object.keys(aar).at(-1);
+  const sisteMnd = Object.keys(mnd).at(-1);
+  if (!sisteAar || !sisteMnd) throw new Error('SSB 14711/14710: mangler indeksverdier');
+  for (const [k, v] of [...Object.entries(aar), ...Object.entries(mnd)]) {
+    if (!innen(v, 0, 100_000)) throw new Error(`SSB 14711/14710: urimelig indeks ${v} for ${k}`);
+  }
+  return { oppdatert: a.oppdatert ?? m.oppdatert, aar, mnd, sisteAar, sisteMnd };
+}

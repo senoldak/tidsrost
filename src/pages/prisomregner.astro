@@ -1,0 +1,254 @@
+---
+// Priskalkulator: SSB'nin tarihsel KPI'si (14711 yıllık, 14710 aylık; src/data/kpi-historisk.json).
+// Hesap src/lib/prisomregner.mjs'te (derleme ve istemci aynı kod). Sabit metinde rakam yok; JS'siz tablo veriden.
+// İstemci betiği Astro'nun paketlediği harici dosyadır; veri sayfaya gömülü application/json bloğundan okunur.
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import KiNotat from '../components/KiNotat.astro';
+import Base from '../layouts/Base.astro';
+import Symbol from '../components/Symbol.astro';
+import Brodsmuler from '../components/Brodsmuler.astro';
+import Linjegraf from '../components/data/Linjegraf.astro';
+import DataKilde from '../components/data/DataKilde.astro';
+import { GAMMEL_MAANED_MS, dataGammel, datasideLd, maanedTekst } from '../lib/datasider';
+import { SITE_URL } from '../lib/seo';
+import { omregn } from '../lib/prisomregner.mjs';
+import data from '../data/kpi-historisk.json';
+
+const pageUrl = `${SITE_URL}/prisomregner/`;
+const tittel = 'Hva er pengene verdt?';
+const seoTittel = 'Priskalkulator: hva er kronene verdt i dag?';
+const aar = data.aar as Record<string, number>;
+const aarListe = Object.keys(aar);
+const forsteAar = aarListe[0];
+const sisteAar = data.sisteAar;
+const sisteMnd = data.sisteMnd;
+const krone = (v: number) => Math.round(v).toLocaleString('nb-NO');
+// Sluttåret kan være et år som ikke er avsluttet (har bare månedsindeks).
+const tilAar = [...aarListe, ...(Number(sisteMnd.slice(0, 4)) > Number(sisteAar) ? [sisteMnd.slice(0, 4)] : [])].reverse();
+const MND = ['januar', 'februar', 'mars', 'april', 'mai', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'desember'];
+const standardFra = String(Number(sisteAar) - 10);
+
+const eksFra = String(Number(sisteAar) - 30);
+const eks = omregn(data, 100, eksFra, sisteAar);
+const description = `${eks === null ? 'Kroner' : `100 kroner i ${eksFra} tilsvarer ${krone(eks)} kroner i ${sisteAar}`}, regnet med SSBs konsumprisindeks fra ${forsteAar}. Regn om kroner mellom år og måneder.`;
+
+// Hvert tiår fra første hele tiår etter seriestart.
+const tiaar: { aar: string; verdi: number }[] = [];
+for (let y = Math.ceil(Number(forsteAar) / 10) * 10; y <= Number(sisteAar); y += 10) {
+  const v = omregn(data, 100, String(y), sisteAar);
+  if (v !== null) tiaar.push({ aar: String(y), verdi: v });
+}
+
+const { sti, jsonLd } = datasideLd({
+  url: pageUrl,
+  tittel,
+  description,
+  datasettNavn: 'Konsumprisindeksen (KPI), historisk serie',
+  datasettBeskrivelse: `Konsumprisindeks for hvert år fra ${forsteAar} og for hver måned fra 1920, fra SSB tabell 14711 og 14710.`,
+  kildeData: 'https://www.ssb.no/statbank/table/14711',
+  lisensUrl: data.kilde.lisensUrl,
+  periode: `${forsteAar}/${sisteMnd}`,
+  oppdatert: data.oppdatert ?? data.hentet,
+});
+const kpiData = { aar: data.aar, mnd: data.mnd, sisteAar, sisteMnd };
+---
+
+<Base title={seoTittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="data" />{tittel}</h1>
+    <p class="page-intro">
+      Priskalkulatoren regner om kroner fra ett år eller én måned til et annet. Den bruker konsumprisindeksen fra
+      Statistisk sentralbyrå, som går tilbake til {forsteAar}.
+    </p>
+  </header>
+
+  <section class="day" aria-labelledby="kalkulator">
+    <h2 class="band" id="kalkulator">Regn om kroner</h2>
+    <form class="pr-skjema" id="pr-skjema" novalidate>
+      <div class="pr-felt">
+        <label for="pr-belop">Beløp (kroner)</label>
+        <input id="pr-belop" type="text" inputmode="decimal" value="100" required />
+      </div>
+      <div class="pr-felt">
+        <label for="pr-fra">Fra år</label>
+        <select id="pr-fra">
+          {[...aarListe].reverse().map((a) => <option value={a} selected={a === standardFra}>{a}</option>)}
+        </select>
+      </div>
+      <div class="pr-felt">
+        <label for="pr-fra-mnd">Måned (valgfritt)</label>
+        <select id="pr-fra-mnd">
+          <option value="">Hele året</option>
+          {MND.map((m, i) => <option value={String(i + 1).padStart(2, '0')}>{m}</option>)}
+        </select>
+      </div>
+      <div class="pr-felt">
+        <label for="pr-til">Til år</label>
+        <select id="pr-til">
+          {tilAar.map((a) => <option value={a} selected={a === sisteAar}>{a}</option>)}
+        </select>
+      </div>
+      <div class="pr-felt">
+        <label for="pr-til-mnd">Måned (valgfritt)</label>
+        <select id="pr-til-mnd">
+          <option value="">Hele året</option>
+          {MND.map((m, i) => <option value={String(i + 1).padStart(2, '0')}>{m}</option>)}
+        </select>
+      </div>
+      <button type="submit">Regn om</button>
+    </form>
+    <output class="pr-svar" id="pr-svar" for="pr-belop pr-fra pr-fra-mnd pr-til pr-til-mnd" aria-live="polite"></output>
+    <noscript><p class="data-merknad">Kalkulatoren krever JavaScript. Tabellen under viser hva hundre kroner fra ulike tiår tilsvarer i dag.</p></noscript>
+    <script type="application/json" id="kpi-data" set:html={jsonLdMetni(kpiData)} />
+  </section>
+
+  <section class="day" aria-labelledby="tiar">
+    <h2 class="band" id="tiar">Hva var hundre kroner verdt?</h2>
+    <p class="data-merknad">Hundre kroner fra starten av hvert tiår, regnet om til prisnivået i {sisteAar}.</p>
+    <div class="prose data-tabell">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Hundre kroner i</th>
+            <th scope="col">tilsvarer i {sisteAar}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tiaar.map((t) => (
+            <tr>
+              <td>{t.aar}</td>
+              <td>{krone(t.verdi)} kr</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="day" aria-labelledby="indeks">
+    <h2 class="band" id="indeks">Prisnivået siden {forsteAar}</h2>
+    <Linjegraf
+      serier={[{ navn: 'KPI', punkter: aarListe.map((a) => ({ etikett: a, verdi: aar[a] })) }]}
+      enhet={`Konsumprisindeks, ${sisteAar} = 100`}
+      beskrivelse={`Konsumprisindeksen for hvert år fra ${forsteAar} til ${sisteAar}, med ${sisteAar} satt til 100`}
+      desimaler={0}
+    />
+  </section>
+
+  <section class="day" aria-labelledby="slik">
+    <h2 class="band" id="slik">Slik regnes det</h2>
+    <div class="prose">
+      <p>
+        Beløpet ganges med indeksen i sluttperioden og deles på indeksen i startperioden. Resultatet viser hva samme
+        prisnivå tilsvarer i kroner.
+      </p>
+      <p>
+        KPI følger prisene på det husholdningene kjøper. Handlekurven har endret seg mye over tid, så omregninger langt
+        tilbake er grove.
+      </p>
+      <p>
+        For de eldste årene er indeksen oppgitt med få desimaler, så omregningene blir grovere jo lenger tilbake de går.
+        Siste måned i serien er {maanedTekst(sisteMnd)}.
+      </p>
+    </div>
+  </section>
+
+  <DataKilde
+    kilde={{ navn: data.kilde.navn, url: 'https://www.ssb.no/priser-og-prisindekser/konsumpriser/statistikk/konsumprisindeksen', data: data.kilde.data, lisens: data.kilde.lisens, lisensUrl: data.kilde.lisensUrl }}
+    hentet={data.hentet}
+    oppdatert={data.oppdatert}
+    gammel={dataGammel(data.hentet, data.oppdatert, GAMMEL_MAANED_MS * 12)}
+    merknad="Tallene er fra SSB tabell 14711 og 14710."
+  />
+
+  <p class="tema-alle"><a href="/prisstigning/">Prisstigningen nå</a> · <a href="/tall/">Flere tall og data</a></p>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
+</Base>
+
+<script>
+  import { endringProsent, omregn } from '../lib/prisomregner.mjs';
+
+  const data = JSON.parse(document.getElementById('kpi-data')!.textContent ?? '{}');
+  const $ = (id: string) => document.getElementById(id) as HTMLInputElement & HTMLSelectElement;
+  const svar = document.getElementById('pr-svar')!;
+  const MND = ['januar', 'februar', 'mars', 'april', 'mai', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'desember'];
+  const periode = (aar: string, mnd: string) => (mnd ? `${aar}-${mnd}` : aar);
+  const tekst = (p: string) => (p.length > 4 ? `${MND[Number(p.slice(5)) - 1]} ${p.slice(0, 4)}` : p);
+  const tall = (v: number, d = 0) => v.toLocaleString('nb-NO', { minimumFractionDigits: d, maximumFractionDigits: d });
+
+  function regn() {
+    const belop = Number($('pr-belop').value.replace(/\s/g, '').replace(',', '.'));
+    const fra = periode($('pr-fra').value, $('pr-fra-mnd').value);
+    const til = periode($('pr-til').value, $('pr-til-mnd').value);
+    const res = omregn(data, belop, fra, til);
+    const pst = endringProsent(data, fra, til);
+    if (res === null || pst === null) {
+      svar.textContent =
+        !Number.isFinite(belop) || belop <= 0
+          ? 'Beløpet må være et tall over null.'
+          : 'Fant ikke indeks for valgt periode. Velg måned for både start og slutt, eller et avsluttet år.';
+      return;
+    }
+    svar.textContent = `${tall(belop, belop % 1 ? 2 : 0)} kroner i ${tekst(fra)} tilsvarer ${tall(res)} kroner i ${tekst(til)}. Prisnivået har endret seg med ${tall(pst, 1)} prosent.`;
+  }
+
+  document.getElementById('pr-skjema')!.addEventListener('submit', (e) => {
+    e.preventDefault();
+    regn();
+  });
+  for (const id of ['pr-belop', 'pr-fra', 'pr-fra-mnd', 'pr-til', 'pr-til-mnd']) $(id).addEventListener('change', regn);
+  regn();
+</script>
+
+<style>
+  .pr-skjema {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    align-items: flex-end;
+    max-width: 760px;
+    font-family: var(--frame);
+  }
+  .pr-felt {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 140px;
+    min-width: 0;
+  }
+  .pr-felt label {
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .pr-felt input,
+  .pr-felt select {
+    width: 100%;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid var(--ink);
+    border-radius: 3px;
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+    font-size: 1rem;
+  }
+  .pr-skjema button {
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 3px;
+    background: var(--ink);
+    color: var(--paper);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .pr-svar {
+    display: block;
+    max-width: 70ch;
+    margin: 16px 0 0;
+    font: 650 1.25rem/1.35 var(--read);
+    font-variant-numeric: lining-nums tabular-nums;
+  }
+</style>

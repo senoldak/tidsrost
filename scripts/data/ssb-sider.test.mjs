@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { arbeidsledighet, boligpriser, prisstigning } from './ssb-sider.mjs';
+import { arbeidsledighet, boligpriser, kpiHistorisk, prisstigning } from './ssb-sider.mjs';
 
 // Küçük JSON-stat2 kurucusu: dims = [[ad, [[kod, etiket], ...]], ...]; deger(satır) → sayı ya da null.
 function lag(dims, deger) {
@@ -116,4 +116,26 @@ test('arbeidsledighet: hovedtall, grupper og serie', () => {
   assert.equal(a.grupper[2].prosent, 11.2);
   assert.equal(a.serie.length, 24);
   assert.deepEqual(a.serie.at(-1), { maaned: '2026-09', prosent: 5 });
+});
+
+test('kpiHistorisk: null-hücre atlanır, siste år/måned er siste fylte periode', () => {
+  const aarJs = lag(
+    [['ContentsCode', [['KpiAar', 'Konsumprisindeks']]], ['Tid', [['1865', '1865'], ['1866', '1866'], ['2025', '2025'], ['2026', '2026']]]],
+    (r) => ({ 1865: 4.1, 1866: null, 2025: 100, 2026: null })[r.Tid],
+  );
+  const mndJs = lag(
+    [['ContentsCode', [['KpiIndMnd', 'Konsumprisindeks']]], ['Tid', [['2026M07', 'a'], ['2026M08', 'b'], ['2026M09', 'c'], ['2026M10', 'd']]]],
+    (r) => ({ '2026M07': 101, '2026M08': null, '2026M09': 102.5, '2026M10': null })[r.Tid],
+  );
+  const k = kpiHistorisk(aarJs, mndJs);
+  assert.deepEqual(k.aar, { 1865: 4.1, 2025: 100 });
+  assert.deepEqual(k.mnd, { '2026-07': 101, '2026-09': 102.5 });
+  assert.equal(k.sisteAar, '2025');
+  assert.equal(k.sisteMnd, '2026-09');
+  assert.equal(k.oppdatert, '2026-10-09T06:00:00Z');
+});
+
+test('kpiHistorisk: ingen verdier → feil', () => {
+  const tom = lag([['ContentsCode', [['KpiAar', 'x']]], ['Tid', [['2025', '2025']]]], () => null);
+  assert.throws(() => kpiHistorisk(tom, tom));
 });

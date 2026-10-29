@@ -79,6 +79,7 @@ for (const [yol, fil, alan] of [
   ['/prisstigning/', 'prisstigning.json'],
   ['/boligpriser/', 'boligpriser.json'],
   ['/arbeidsledighet/', 'arbeidsledighet.json'],
+  ['/prisomregner/', 'kpi-historisk.json'],
   ['/farevarsler/', 'varselarkiv.json', 'lopende'],
 ]) {
   try {
