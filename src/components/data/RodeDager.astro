@@ -1,0 +1,116 @@
+---
+// Ett års røde dager: tabell, antall på hverdager og (med detaljer) inneklemte dager og arbeidsdager per måned.
+// Alt regnes i src/lib/helligdager.mjs; ingen rakam står i den faste teksten. Ingen klientskript.
+import { arbeidsdager, arbeidsdagerTotalt, helligdager, inneklemteDager } from '../../lib/helligdager.mjs';
+
+interface Props {
+  aar: number;
+  detaljer?: boolean;
+  /** Unik id for årets tittel (flere år kan stå på samme side). */
+  tittelId: string;
+}
+const { aar, detaljer = false, tittelId } = Astro.props;
+
+const MND = ['januar', 'februar', 'mars', 'april', 'mai', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'desember'];
+const UKEDAGER = ['søndag', 'mandag', 'tirsdag', 'onsdag', 'torsdag', 'fredag', 'lørdag'];
+const dagTekst = (dato: string) => `${Number(dato.slice(8, 10))}. ${MND[Number(dato.slice(5, 7)) - 1]}`;
+const ukedag = (dato: string) => UKEDAGER[new Date(`${dato}T00:00:00Z`).getUTCDay()];
+const erHverdag = (dato: string) => {
+  const u = new Date(`${dato}T00:00:00Z`).getUTCDay();
+  return u >= 1 && u <= 5;
+};
+
+const dager = helligdager(aar);
+const hverdagsDatoer = [...new Set(dager.map((d) => d.dato).filter(erHverdag))];
+const samme = dager.filter((d, i) => dager.some((e, j) => j !== i && e.dato === d.dato));
+const inneklemte = detaljer ? inneklemteDager(aar) : [];
+const maaneder = detaljer ? arbeidsdager(aar) : [];
+const totalt = detaljer ? arbeidsdagerTotalt(aar) : 0;
+---
+
+<section class="day" aria-labelledby={tittelId}>
+  <h2 class="band" id={tittelId}>Røde dager {aar}</h2>
+  <div class="prose data-tabell">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Dato</th>
+          <th scope="col">Ukedag</th>
+          <th scope="col">Navn</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          dager.map((d) => (
+            <tr>
+              <td>{dagTekst(d.dato)}</td>
+              <td>{d.ukedag}</td>
+              <td>{d.navn}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+  <p class="data-merknad">
+    Røde dager på hverdager i {aar}: {hverdagsDatoer.length}.
+    {
+      samme.length > 1 && (
+        <> {samme.map((d) => d.navn).join(' og ')} faller på samme dato, {dagTekst(samme[0].dato)}.</>
+      )
+    }
+  </p>
+</section>
+
+{
+  detaljer && (
+    <section class="day" aria-labelledby={`${tittelId}-inne`}>
+      <h2 class="band" id={`${tittelId}-inne`}>Inneklemte dager {aar}</h2>
+      <p class="data-merknad">
+        Inneklemte dager er vanlige arbeidsdager som ligger mellom en rød dag og en helg eller en annen rød dag.
+      </p>
+      {inneklemte.length > 0 ? (
+        <ul class="data-lenker">
+          {inneklemte.map((d) => (
+            <li>
+              <span>{ukedag(d)} {dagTekst(d)}</span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="varsel-setning">Ingen dager er inneklemt i {aar}.</p>
+      )}
+    </section>
+  )
+}
+
+{
+  detaljer && (
+    <section class="day" aria-labelledby={`${tittelId}-arb`}>
+      <h2 class="band" id={`${tittelId}-arb`}>Arbeidsdager per måned {aar}</h2>
+      <p class="varsel-setning">{aar} har {totalt} arbeidsdager.</p>
+      <div class="prose data-tabell">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Måned</th>
+              <th scope="col">Arbeidsdager</th>
+            </tr>
+          </thead>
+          <tbody>
+            {maaneder.map((m) => (
+              <tr>
+                <td>{MND[m.maaned - 1]}</td>
+                <td>{m.antall}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="data-merknad">
+        Arbeidsdager er mandag til fredag, uten røde dager som faller på hverdager. Julaften og nyttårsaften er ikke røde
+        dager og er regnet som arbeidsdager.
+      </p>
+    </section>
+  )
+}

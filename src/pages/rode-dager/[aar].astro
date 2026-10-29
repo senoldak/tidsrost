@@ -1,0 +1,90 @@
+---
+// /rode-dager/<år>/: ett års røde dager, inneklemte dager og arbeidsdager. Rene beregninger (src/lib/helligdager.mjs),
+// ingen datafil. JSON-LD: WebPage + ItemList + BreadcrumbList (ikke Event).
+import { jsonLdMetni } from '../../lib/json-ld.mjs';
+import KiNotat from '../../components/KiNotat.astro';
+import Base from '../../layouts/Base.astro';
+import Symbol from '../../components/Symbol.astro';
+import Brodsmuler from '../../components/Brodsmuler.astro';
+import RodeDager from '../../components/data/RodeDager.astro';
+import { AARSPENN, arbeidsdagerTotalt, helligdager } from '../../lib/helligdager.mjs';
+import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs } from '../../lib/seo';
+
+export function getStaticPaths() {
+  const ut = [];
+  for (let aar = AARSPENN.fra; aar <= AARSPENN.til; aar++) ut.push({ params: { aar: String(aar) } });
+  return ut;
+}
+
+const aar = Number(Astro.params.aar);
+const pageUrl = `${SITE_URL}/rode-dager/${aar}/`;
+const tittel = `Røde dager ${aar}`;
+const seoTittel = `Røde dager ${aar}: helligdager og fridager i Norge`;
+const dager = helligdager(aar);
+const erHverdag = (dato: string) => {
+  const u = new Date(`${dato}T00:00:00Z`).getUTCDay();
+  return u >= 1 && u <= 5;
+};
+const paaHverdag = new Set(dager.map((d) => d.dato).filter(erHverdag)).size;
+const description = `${aar} har ${paaHverdag} røde dager på hverdager og ${arbeidsdagerTotalt(aar)} arbeidsdager. Se alle helligdager, inneklemte dager og arbeidsdager per måned.`;
+const sti = [
+  { name: 'Forsiden', url: `${SITE_URL}/` },
+  { name: 'Tall og data', url: `${SITE_URL}/tall/` },
+  { name: 'Røde dager', url: `${SITE_URL}/rode-dager/` },
+  { name: String(aar), url: pageUrl },
+];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `${pageUrl}#page`,
+      url: pageUrl,
+      name: tittel,
+      description,
+      inLanguage: 'nb',
+      isPartOf: { '@id': WEBSITE_ID },
+      publisher: { '@id': ORG_ID },
+      mainEntity: {
+        '@type': 'ItemList',
+        name: `Røde dager ${aar}`,
+        numberOfItems: dager.length,
+        itemListElement: dager.map((d, i) => ({ '@type': 'ListItem', position: i + 1, name: `${d.navn}, ${d.dato}` })),
+      },
+    },
+    breadcrumbs(sti),
+  ],
+};
+const forrige = aar > AARSPENN.fra ? aar - 1 : null;
+const neste = aar < AARSPENN.til ? aar + 1 : null;
+---
+
+<Base title={seoTittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="data" />{tittel}</h1>
+    <p class="page-intro">
+      Alle røde dager i {aar} med dato og ukedag, dagene som blir inneklemt, og antall arbeidsdager i hver måned.
+      Søndager er også helligdager etter loven, og er ikke tatt med i listen.
+    </p>
+  </header>
+
+  <RodeDager aar={aar} detaljer tittelId="rd" />
+
+  <p class="data-kilde">
+    <Symbol kind="kilde" />
+    <span>
+      Kilde: <a href="https://lovdata.no/dokument/NL/lov/1995-02-24-12">Lov om helligdager og helligdagsfred</a> og
+      <a href="https://lovdata.no/dokument/NL/lov/1947-04-26-1">Lov om 1 og 17 mai som høgtidsdager</a> på Lovdata. Datoene
+      er regnet ut fra reglene i lovene.
+    </span>
+  </p>
+
+  <nav class="tema-alle" aria-label="Andre år">
+    {forrige && <><a href={`/rode-dager/${forrige}/`}>Røde dager {forrige}</a> · </>}
+    {neste && <><a href={`/rode-dager/${neste}/`}>Røde dager {neste}</a> · </>}
+    <a href="/rode-dager/">Røde dager nå</a> · <a href="/tall/">Flere tall og data</a>
+  </nav>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
+</Base>

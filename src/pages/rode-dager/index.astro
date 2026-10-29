@@ -1,0 +1,81 @@
+---
+// /rode-dager/: inneværende og neste års røde dager (kort oversikt), lenker til årssidene. Rene beregninger.
+import { jsonLdMetni } from '../../lib/json-ld.mjs';
+import KiNotat from '../../components/KiNotat.astro';
+import Base from '../../layouts/Base.astro';
+import Symbol from '../../components/Symbol.astro';
+import Brodsmuler from '../../components/Brodsmuler.astro';
+import RodeDager from '../../components/data/RodeDager.astro';
+import { AARSPENN, arbeidsdagerTotalt, helligdager } from '../../lib/helligdager.mjs';
+import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs } from '../../lib/seo';
+
+const pageUrl = `${SITE_URL}/rode-dager/`;
+const tittel = 'Røde dager';
+const naa = Math.max(Number(new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Oslo' }).slice(0, 4)), AARSPENN.fra);
+const aarene = [naa, naa + 1].filter((a) => a <= AARSPENN.til);
+const alleAar = Array.from({ length: AARSPENN.til - AARSPENN.fra + 1 }, (_, i) => AARSPENN.fra + i);
+const seoTittel = `Røde dager ${naa} og ${naa + 1}: helligdager i Norge`;
+const description = `Røde dager i ${naa}: ${helligdager(naa).length} helligdager og ${arbeidsdagerTotalt(naa)} arbeidsdager. Datoer og ukedager for ${naa} og ${naa + 1}, med lenker til hvert år, inneklemte dager og arbeidsdager per måned.`;
+const sti = [
+  { name: 'Forsiden', url: `${SITE_URL}/` },
+  { name: 'Tall og data', url: `${SITE_URL}/tall/` },
+  { name: tittel, url: pageUrl },
+];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `${pageUrl}#page`,
+      url: pageUrl,
+      name: tittel,
+      description,
+      inLanguage: 'nb',
+      isPartOf: { '@id': WEBSITE_ID },
+      publisher: { '@id': ORG_ID },
+      mainEntity: {
+        '@type': 'ItemList',
+        name: `Røde dager ${naa}`,
+        numberOfItems: helligdager(naa).length,
+        itemListElement: helligdager(naa).map((d, i) => ({ '@type': 'ListItem', position: i + 1, name: `${d.navn}, ${d.dato}` })),
+      },
+    },
+    breadcrumbs(sti),
+  ],
+};
+---
+
+<Base title={seoTittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="data" />{tittel}</h1>
+    <p class="page-intro">
+      Røde dager er helligdagene i Norge. Her står datoene for {naa}{aarene.length > 1 && <> og {aarene[1]}</>},
+      regnet ut fra reglene i lovene. Søndager er også helligdager, og er ikke tatt med i listene.
+    </p>
+  </header>
+
+  {
+    aarene.map((a) => (
+      <>
+        <RodeDager aar={a} tittelId={`rd-${a}`} />
+        <p class="tema-alle"><a href={`/rode-dager/${a}/`}>Inneklemte dager og arbeidsdager {a}</a></p>
+      </>
+    ))
+  }
+
+  <p class="data-kilde">
+    <Symbol kind="kilde" />
+    <span>
+      Kilde: <a href="https://lovdata.no/dokument/NL/lov/1995-02-24-12">Lov om helligdager og helligdagsfred</a> og
+      <a href="https://lovdata.no/dokument/NL/lov/1947-04-26-1">Lov om 1 og 17 mai som høgtidsdager</a> på Lovdata.
+    </span>
+  </p>
+
+  <p class="tema-alle">
+    {alleAar.map((a) => <><a href={`/rode-dager/${a}/`}>{a}</a> · </>)}
+    <a href="/tall/">Flere tall og data</a>
+  </p>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
+</Base>
