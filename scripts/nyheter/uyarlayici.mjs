@@ -14,6 +14,7 @@ import { fjernAdresser } from './hemmelig.mjs';
 import { maskerMedier } from './tekstverktoy.mjs';
 import { leggTilKortFortalt, slugFor } from './kortfortalt.mjs';
 import { leggTilFarevarsler, varselSidesine, slugFor as varselSlugFor } from './farevarsler.mjs';
+import { dagssideAktiv } from './farevarsel-bryter.mjs';
 import { yayinKapisi, sakDenetimGirdisi } from './kapi.mjs';
 import { omskrivNærKilde } from './redaktor.mjs';
 import { motorKaydet, motorKimlik, sariKayit } from './motor.mjs';
@@ -275,6 +276,14 @@ export function uyarlayiciKur({ tilstand, simdi = new Date(), ayar = {}, bag = {
         }
         // Sarı ve turuncu farevarsel tek haber olmaz: tur sonunda günün "Farevarsler" sayfasına bölüm olur (bkz. farevarsler.mjs).
         if (varselSidesine(sak)) {
+          // 29.10.2026'dan beri günlük derleme kapalı: uyarı /farevarsler/ sayfasının arşivinde (farevarsel-bryter.mjs).
+          if (!dagssideAktiv()) {
+            merkSett(k);
+            delete tilstand.feil[k.id];
+            log(`  ~ ${k.id}: dekkes av /farevarsler/`);
+            elendi(k, 'farevarsel: dekkes av /farevarsler/ (dagsside av)');
+            continue;
+          }
           const varselSlug = varselSlugFor(new Date());
           const varselGerekce = yazimGerekcesi(kapi);
           if (kapi.s.karar === 'sari' || varselGerekce) await B.motorKaydet({ site: 'tidsrost', kayit: sariKayit(k.id, varselSlug, { gerekce: varselGerekce }) });

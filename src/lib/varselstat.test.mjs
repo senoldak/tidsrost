@@ -64,3 +64,9 @@ test('oppsummering: tall, nivåer, flest varsler og tom periode', () => {
   assert.deepEqual(oppsummering({ total: [0, 0, 0], fylker: {} }, 'hittil i år'), ['Det er ikke sendt ut farevarsler på land hittil i år.']);
   assert.equal(oppsummering({ total: [1, 0, 0], fylker: { '03': 1 } }, 'de siste 30 dagene')[0], 'Meteorologisk institutt har sendt ut 1 farevarsel på land de siste 30 dagene.');
 });
+
+test('periodeTall: nivåfordeling per fylke', () => {
+  const p = periodeTall(dagerFraArkiv(arkiv), '2025-03-01', '2025-04-30');
+  assert.deepEqual(p.fylkerNiva['18'], [1, 1, 0]);
+  assert.deepEqual(p.fylkerNiva['46'], [0, 0, 1]);
+});

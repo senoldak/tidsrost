@@ -2,6 +2,7 @@
 // Değerler olduğu gibi gösterilir; hiçbir şey tahmin edilmez. Veri eskiyse sayfa bunu açıkça söyler.
 import renteData from '../data/styringsrente.json';
 import varselData from '../data/farevarsler.json';
+import arkivData from '../data/varselarkiv.json';
 
 export interface Renteendring {
   fra: string;
@@ -29,6 +30,19 @@ export const VARSLER = varselData as typeof varselData & { varsler: Farevarsel[]
 // Bu süreden eski veri "güncellenemedi" uyarısıyla gösterilir (bot ~2 saatte bir çalışır; gece arası var).
 export const GAMMEL_RENTE_MS = 3 * 86_400_000;
 export const GAMMEL_VARSEL_MS = 12 * 3_600_000;
+export const GAMMEL_ARKIV_MS = 2 * 86_400_000;
+
+// Farevarsel arşivi (scripts/data/varselarkiv.mjs): MET arşivi ay ay + son 30 günün kendi kaydı.
+export const VARSELARKIV = arkivData as unknown as {
+  hentet: string;
+  kilde: typeof varselData.kilde;
+  maaneder: Record<string, { hentet: string; dager: Record<string, unknown> }>;
+  lopende: { hentet: string; fra: string; dager: Record<string, unknown> } | null;
+};
+
+/** Oslo saatine göre bugünün tarihi (YYYY-MM-DD), derleme anında. */
+export const osloIdag = (naa = new Date()) =>
+  new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Oslo', year: 'numeric', month: '2-digit', day: '2-digit' }).format(naa);
 
 export const erGammel = (hentet: string, grense: number, naa = new Date()) => naa.getTime() - new Date(hentet).getTime() > grense;
 

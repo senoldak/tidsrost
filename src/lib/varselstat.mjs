@@ -54,18 +54,22 @@ export function erKomplett(dk, fra, til) {
   return true;
 }
 
-/** Dönem sayıları: kara toplamı [gult, oransje, rødt], fylke başına uyarı sayısı, deniz. */
+/** Dönem sayıları: kara toplamı [gult, oransje, rødt], fylke başına uyarı sayısı ve seviye kırılımı, deniz. */
 export function periodeTall(dager, fra, til) {
   let total = [0, 0, 0];
   let hav = [0, 0, 0];
   const fylker = {};
+  const fylkerNiva = {};
   for (const [d, v] of Object.entries(dager)) {
     if (d < fra || d > til) continue;
     total = topla(total, v.landTotal);
     hav = topla(hav, v.hav);
-    for (const [f, c] of Object.entries(v.land ?? {})) fylker[f] = (fylker[f] ?? 0) + c[0] + c[1] + c[2];
+    for (const [f, c] of Object.entries(v.land ?? {})) {
+      fylker[f] = (fylker[f] ?? 0) + c[0] + c[1] + c[2];
+      fylkerNiva[f] = topla(fylkerNiva[f] ?? [0, 0, 0], c);
+    }
   }
-  return { total, fylker, hav };
+  return { total, fylker, fylkerNiva, hav };
 }
 
 export const hittilIAar = (dager, idag) => periodeTall(dager, `${idag.slice(0, 4)}-01-01`, idag);

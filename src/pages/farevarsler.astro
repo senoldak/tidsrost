@@ -1,13 +1,30 @@
 ---
-// "Farevarsler i dag": MET Norway'in açık MetAlerts verisinden (CC BY 4.0) geçerli ve yaklaşan farevarsler.
-// Veri scripts/data/hent-data.mjs ile Nyhetsbot çalışmalarında alınır (src/data/farevarsler.json).
-// Bitişi derleme anında geçmiş uyarılar gösterilmez; veri eskiyse sayfa bunu açıkça söyler.
+// "Farevarsler i Norge": MET Norway'in açık uyarı verisi (CC BY 4.0). Üstte son 30 günün fylke haritası ve özeti
+// (kendi kaydımız, src/data/varselarkiv.json), ortada şu an geçerli uyarılar (src/data/farevarsler.json), altta tam
+// takvim yıllarının karşılaştırması (MET arşivi, 2019'dan beri). Veri tam kaplamadığı dönem gösterilmez (erKomplett).
+// Taslak A (tasarım 2026-10-29). Bütün rakamlar veriden; sabit metinlerde rakam yok.
 import { jsonLdMetni } from '../lib/json-ld.mjs';
 import KiNotat from '../components/KiNotat.astro';
 import Base from '../layouts/Base.astro';
 import Symbol from '../components/Symbol.astro';
 import Brodsmuler from '../components/Brodsmuler.astro';
-import { GAMMEL_VARSEL_MS, NIVA_NAVN, VARSLER, aktiveVarsler, erGammel, tidTekst, type Farevarsel } from '../lib/data';
+import FylkeKart from '../components/data/FylkeKart.astro';
+import Stolpegraf from '../components/data/Stolpegraf.astro';
+import DataKilde from '../components/data/DataKilde.astro';
+import {
+  GAMMEL_ARKIV_MS,
+  GAMMEL_VARSEL_MS,
+  NIVA_NAVN,
+  VARSELARKIV,
+  VARSLER,
+  aktiveVarsler,
+  datoTekst,
+  erGammel,
+  osloIdag,
+  tidTekst,
+} from '../lib/data';
+import { FYLKER } from '../lib/fylker.mjs';
+import { dagerFraArkiv, dekning, erKomplett, helAar, hittilIAar, oppsummering, periodeTall, sammenlign } from '../lib/varselstat.mjs';
 import { getNews } from '../lib/news';
 import { aktiveTemaer, temaUrl } from '../lib/temaer';
 import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs } from '../lib/seo';
@@ -19,21 +36,46 @@ const gammel = erGammel(hentet, GAMMEL_VARSEL_MS);
 const varsler = aktiveVarsler();
 const land = varsler.filter((v) => v.domene === 'land');
 const hav = varsler.filter((v) => v.domene === 'hav');
-const antall = (niva: Farevarsel['niva']) => varsler.filter((v) => v.niva === niva).length;
-const oppsummering = (['rodt', 'oransje', 'gult'] as const)
-  .map((n) => ({ n, tall: antall(n) }))
-  .filter((x) => x.tall > 0)
-  .map((x) => `${x.tall} ${NIVA_NAVN[x.n].toLowerCase()}`)
-  .join(', ');
 
-const tittel = 'Farevarsler i dag';
-const description = varsler.length
-  ? `Gjeldende farevarsler fra Meteorologisk institutt: ${oppsummering}. Se område, tidsrom og råd for hvert varsel.`
-  : 'Gjeldende farevarsler fra Meteorologisk institutt, med område, tidsrom og råd for hvert varsel.';
+// Arşiv ve kaplama
+const dager = dagerFraArkiv(VARSELARKIV);
+const dk = dekning(VARSELARKIV);
+const arkivGammel = erGammel(VARSELARKIV.lopende?.hentet ?? VARSELARKIV.hentet, GAMMEL_ARKIV_MS);
+const minusDager = (d: string, n: number) => new Date(Date.parse(`${d}T00:00:00Z`) - n * 86_400_000).toISOString().slice(0, 10);
+const idag = osloIdag();
+const til30 = dk.egneTil && dk.egneTil < idag ? dk.egneTil : idag;
+const fra30 = minusDager(til30, 29);
+const har30 = erKomplett(dk, fra30, til30);
+const siste30 = har30 ? periodeTall(dager, fra30, til30) : null;
+const sum = (t: number[]) => t[0] + t[1] + t[2];
+const antallTekst = (n: number) => `${n} ${n === 1 ? 'varsel' : 'varsler'}`;
+
+// Haritanın altındaki tablo: fylke başına seviye kırılımı, çoktan aza.
+const fylkeRader = siste30
+  ? FYLKER.map((f) => ({ ...f, niva: siste30.fylkerNiva[f.kode] ?? [0, 0, 0] }))
+      .map((f) => ({ ...f, total: sum(f.niva) }))
+      .sort((a, b) => b.total - a.total || a.navn.localeCompare(b.navn, 'nb'))
+  : [];
+
+// Tam takvim yılları (MET arşivi) ve, yıl eksiksizse, bu yıl şimdiye kadar
+const iAar = Number(idag.slice(0, 4));
+const aar: { aar: number; total: number }[] = [];
+for (let y = 2019; y < iAar; y++) if (erKomplett(dk, `${y}-01-01`, `${y}-12-31`)) aar.push({ aar: y, total: helAar(dager, y) });
+const sisteHeleAar = aar.at(-1);
+const flestAar = [...aar].sort((a, b) => b.total - a.total)[0];
+const hittilKomplett = erKomplett(dk, `${iAar}-01-01`, til30);
+const hittil = hittilKomplett ? hittilIAar(dager, til30) : null;
+const sammenligning = hittilKomplett ? sammenlign(dager, til30, iAar - 1, iAar) : [];
+const hull = dk.arkivTil && dk.egneFra && dk.egneFra > dk.arkivTil ? { fra: minusDager(dk.arkivTil, -1), til: minusDager(dk.egneFra, 1) } : null;
+
+const tittel = 'Farevarsler i Norge';
+const description = siste30
+  ? `${antallTekst(sum(siste30.total))} på land fra Meteorologisk institutt de siste 30 dagene, fylke for fylke. Se gjeldende varsler og hvordan året står seg mot tidligere år.`
+  : 'Gjeldende farevarsler fra Meteorologisk institutt, og hvor ofte det varsles farlig vær i Norge, fylke for fylke og år for år.';
 const harMetTema = aktiveTemaer(await getNews()).some((t) => t.tema.slug === 'meteorologisk-institutt');
 const sti = [
   { name: 'Forsiden', url: `${SITE_URL}/` },
-  { name: 'Temaer', url: `${SITE_URL}/tema/` },
+  { name: 'Tall og data', url: `${SITE_URL}/tall/` },
   { name: tittel, url: pageUrl },
 ];
 
@@ -47,12 +89,25 @@ const jsonLd = {
       name: tittel,
       description,
       inLanguage: 'nb',
-      dateModified: hentet,
+      dateModified: VARSELARKIV.lopende?.hentet ?? hentet,
       isPartOf: { '@id': WEBSITE_ID },
       publisher: { '@id': ORG_ID },
       about: { '@type': 'Organization', name: 'Meteorologisk institutt', sameAs: 'https://www.wikidata.org/wiki/Q665666' },
+    },
+    {
+      '@type': 'Dataset',
+      '@id': `${pageUrl}#data`,
+      name: 'Farevarsler fra Meteorologisk institutt, telt per fylke og år',
+      description: 'Antall farevarsler på land (gult, oransje, rødt) per fylke og år, beregnet fra MET Norways åpne varselarkiv.',
+      url: pageUrl,
+      inLanguage: 'nb',
+      creator: { '@id': ORG_ID },
       isBasedOn: kilde.data,
       license: kilde.lisensUrl,
+      isAccessibleForFree: true,
+      spatialCoverage: 'Norge',
+      temporalCoverage: `${dk.arkivFra ?? '2019-01-01'}/${til30}`,
+      dateModified: VARSELARKIV.lopende?.hentet ?? hentet,
     },
     breadcrumbs(sti),
   ],
@@ -70,69 +125,165 @@ const grupper = [
   <header class="page-head">
     <h1 class="page-title"><Symbol kind="varsel" class="sym-varsel-gult" />{tittel}</h1>
     <p class="page-intro">
-      Meteorologisk institutt (MET) sender ut farevarsler når det ventes vær som kan gi skader eller fare. Her er alle
-      gjeldende og kommende varsler fra MET, med det mest alvorlige nivået først.
-    </p>
-    <p class="data-merknad">
-      {varsler.length ? `${varsler.length} varsler: ${oppsummering}` : 'Ingen gjeldende farevarsler'} · Sist oppdatert
-      <time datetime={hentet}>{tidTekst(hentet)}</time>
+      Meteorologisk institutt sender ut farevarsler når det ventes vær som kan gjøre skade. Her ser du hvor varslene har
+      truffet den siste måneden, hvilke som gjelder nå, og hvordan årene står seg mot hverandre.
     </p>
   </header>
 
   {
-    gammel && (
-      <p class="data-varsel" role="status">
-        Vi har ikke klart å hente nye varsler siden {tidTekst(hentet)}. Varslene kan ha endret seg. Følg de siste
-        varslene fra <a href={kilde.url}>Meteorologisk institutt</a>.
-      </p>
-    )
-  }
-
-  {
-    grupper.length === 0 && (
-      <p class="empty">Det var ingen gjeldende farevarsler fra MET da siden sist ble oppdatert.</p>
-    )
-  }
-
-  {
-    grupper.map((g) => (
-      <section class="day" aria-labelledby={`varsler-${g.id}`}>
-        <h2 class="band" id={`varsler-${g.id}`}>{g.navn}</h2>
-        {g.liste.map((v) => (
-          <article class="varsel-rad">
-            <h3>
-              <span class="mark mark-varsel">
-                <Symbol kind="varsel" class={`sym-varsel-${v.niva}`} />
-                {NIVA_NAVN[v.niva]} farevarsel
-              </span>
-              <span class="varsel-hendelse">{v.hendelse}, {v.omrade}</span>
-            </h3>
-            {v.start && v.slutt && (
-              <p class="varsel-tid">
-                Gjelder fra <time datetime={v.start}>{tidTekst(v.start)}</time> til <time datetime={v.slutt}>{tidTekst(v.slutt)}</time>
-              </p>
-            )}
-            {v.beskrivelse && <p class="varsel-tekst">{v.beskrivelse}</p>}
-            {v.rad && (
-              <p class="varsel-tekst">
-                <strong>Råd fra MET:</strong> {v.rad}
-              </p>
-            )}
-          </article>
-        ))}
+    siste30 && (
+      <section class="day" aria-labelledby="siste30">
+        <h2 class="band" id="siste30">De siste 30 dagene</h2>
+        <div class="varselkart">
+          <FylkeKart
+            verdier={siste30.fylker}
+            etikett={`Farevarsler på land per fylke, ${datoTekst(fra30)}–${datoTekst(til30)}.`}
+          />
+          <div class="varselkart-tekst">
+            <p class="data-verdi">{sum(siste30.total)}</p>
+            <p class="varsel-nivaer">
+              <span class="mark mark-varsel"><Symbol kind="varsel" class="sym-varsel-gult" />{siste30.total[0]} gule</span>
+              <span class="mark mark-varsel"><Symbol kind="varsel" class="sym-varsel-oransje" />{siste30.total[1]} oransje</span>
+              <span class="mark mark-varsel"><Symbol kind="varsel" class="sym-varsel-rodt" />{siste30.total[2]} {siste30.total[2] === 1 ? 'rødt' : 'røde'}</span>
+            </p>
+            {oppsummering(siste30, 'de siste 30 dagene').map((s) => <p class="varsel-setning">{s}</p>)}
+            <p class="varsel-setning">
+              Til havs og langs kysten kom det {antallTekst(sum(siste30.hav))} i samme periode.
+            </p>
+          </div>
+        </div>
+        <details class="data-detaljer">
+          <summary>Alle fylker</summary>
+          <div class="prose data-tabell">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Fylke</th>
+                  <th scope="col">Gule</th>
+                  <th scope="col">Oransje</th>
+                  <th scope="col">Røde</th>
+                  <th scope="col">Totalt</th>
+                </tr>
+              </thead>
+              <tbody>
+                {fylkeRader.map((f) => (
+                  <tr>
+                    <td>{f.navn}</td>
+                    <td>{f.niva[0]}</td>
+                    <td>{f.niva[1]}</td>
+                    <td>{f.niva[2]}</td>
+                    <td>{f.total}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </details>
       </section>
-    ))
+    )
   }
 
-  <p class="data-kilde">
-    <Symbol kind="kilde" />
-    <span>
-      Kilde: varsler fra <a href={kilde.url}>Meteorologisk institutt (MET Norway)</a>, lisensiert under
-      <a href={kilde.lisensUrl}>CC BY 4.0</a>. Hentet automatisk fra MET sitt åpne API flere ganger om dagen, sist
-      {tidTekst(hentet)}. Teksten i varslene er gjengitt slik MET har publisert den. Varsler kan endres raskt; følg alltid
-      de siste varslene fra MET.
-    </span>
-  </p>
+  <section class="day" aria-labelledby="naa">
+    <h2 class="band" id="naa">Gjeldende varsler</h2>
+    <p class="data-merknad">
+      {varsler.length ? `${antallTekst(varsler.length)} gjelder nå eller er varslet` : 'Ingen gjeldende farevarsler'} · Sist oppdatert
+      <time datetime={hentet}>{tidTekst(hentet)}</time>
+    </p>
+    {
+      gammel && (
+        <p class="data-varsel" role="status">
+          Vi har ikke klart å hente nye varsler siden {tidTekst(hentet)}. Varslene kan ha endret seg. Følg de siste
+          varslene fra <a href={kilde.url}>Meteorologisk institutt</a>.
+        </p>
+      )
+    }
+    {grupper.length === 0 && <p class="empty">Det var ingen gjeldende farevarsler fra MET da siden sist ble oppdatert.</p>}
+    {
+      grupper.map((g) => (
+        <div class="varsel-gruppe">
+          <h3 class="varsel-gruppe-tittel">{g.navn}</h3>
+          {g.liste.map((v) => (
+            <article class="varsel-rad">
+              <h3>
+                <span class="mark mark-varsel">
+                  <Symbol kind="varsel" class={`sym-varsel-${v.niva}`} />
+                  {NIVA_NAVN[v.niva]} farevarsel
+                </span>
+                <span class="varsel-hendelse">{v.hendelse}, {v.omrade}</span>
+              </h3>
+              {v.start && v.slutt && (
+                <p class="varsel-tid">
+                  Gjelder fra <time datetime={v.start}>{tidTekst(v.start)}</time> til <time datetime={v.slutt}>{tidTekst(v.slutt)}</time>
+                </p>
+              )}
+              {v.beskrivelse && <p class="varsel-tekst">{v.beskrivelse}</p>}
+              {v.rad && (
+                <p class="varsel-tekst">
+                  <strong>Råd fra MET:</strong> {v.rad}
+                </p>
+              )}
+            </article>
+          ))}
+        </div>
+      ))
+    }
+  </section>
+
+  {
+    aar.length > 0 && (
+      <section class="day" aria-labelledby="aar">
+        <h2 class="band" id="aar">År for år</h2>
+        {sisteHeleAar && (
+          <p class="varsel-setning">
+            I {sisteHeleAar.aar} sendte Meteorologisk institutt ut {antallTekst(sisteHeleAar.total)} på land.
+            {flestAar && flestAar.aar !== sisteHeleAar.aar && <> Flest var det i {flestAar.aar}, med {flestAar.total}.</>}
+          </p>
+        )}
+        {hittil && sammenligning.length === 2 && (
+          <p class="varsel-setning">
+            Hittil i år er det sendt ut {antallTekst(sum(hittil.total))} på land. På samme tid i fjor var tallet {sammenligning[0].total}.
+          </p>
+        )}
+        <Stolpegraf
+          rader={aar.map((a) => ({ navn: String(a.aar), verdi: a.total, fremhev: a.aar === sisteHeleAar?.aar }))}
+          enhet="Farevarsler på land per år (gult, oransje og rødt)"
+          beskrivelse="Antall farevarsler på land per kalenderår"
+          desimaler={0}
+          sorter={false}
+        />
+        {hull && (
+          <p class="data-merknad">
+            Meteorologisk institutt oppdaterer varselarkivet sitt én gang i året. Varsler fra {datoTekst(hull.fra)} til
+            {' '}{datoTekst(hull.til)} er ikke med ennå, og derfor viser vi ikke tall for hele {iAar} før arkivet er oppdatert.
+          </p>
+        )}
+      </section>
+    )
+  }
+
+  <section class="day" aria-labelledby="slik-teller-vi">
+    <h2 class="band" id="slik-teller-vi">Slik teller vi</h2>
+    <div class="prose">
+      <p>
+        Et farevarsel telles én gang, også når Meteorologisk institutt oppdaterer det underveis. Blir et gult varsel
+        oppgradert til oransje, teller det som oransje. Varselet telles på dagen det begynner å gjelde.
+      </p>
+      <p>
+        På kartet teller et varsel i hvert fylke det gjelder for. Et varsel for to fylker gir derfor ett varsel i hvert av
+        dem, men bare ett i tallet for hele landet. Varsler til havs og langs kysten telles for seg og er ikke med på kartet.
+      </p>
+      <p>
+        Fylkene er dagens fylker. Varsler fra årene før fylkesendringene er fordelt på fylkene som tok over området.
+      </p>
+    </div>
+  </section>
+
+  <DataKilde
+    kilde={{ navn: 'Meteorologisk institutt (MET Norway)', url: kilde.url, data: kilde.data, lisens: kilde.lisens, lisensUrl: kilde.lisensUrl }}
+    hentet={VARSELARKIV.lopende?.hentet ?? hentet}
+    gammel={arkivGammel && !gammel}
+    merknad="Teksten i varslene er gjengitt slik MET har publisert den. Varsler kan endres raskt, så følg alltid de siste varslene fra MET."
+  />
   {harMetTema && <p class="tema-alle"><a href={temaUrl('meteorologisk-institutt')}>Saker om farevarsler fra MET</a></p>}
   <KiNotat tittel={tittel} url={pageUrl} bot />
 </Base>

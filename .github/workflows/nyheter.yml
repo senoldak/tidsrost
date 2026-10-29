@@ -95,6 +95,8 @@ jobs:
           KAPI_MOD: ${{ vars.KAPI_MOD }}
           # Kaynağa yakın taslağı kaynaksız yeniden yazma (scripts/nyheter/faktaark.mjs): vars.FAKTAARK=0 kapatır.
           FAKTAARK: ${{ vars.FAKTAARK }}
+          # Günlük "Farevarsler <dag>" derlemesi kapalı (scripts/nyheter/farevarsel-bryter.mjs); vars.FAREVARSEL_DAGSSIDE=1 geri açar.
+          FAREVARSEL_DAGSSIDE: ${{ vars.FAREVARSEL_DAGSSIDE }}
           SURE_DK: ${{ vars.SURE_DK }}
           # Ortak motor modu (private mecmua'dan salt-okur çekilir): vars.MOTOR_TUR=1 iken tur motorla sürülür.
           MOTOR_TUR: ${{ vars.MOTOR_TUR }}

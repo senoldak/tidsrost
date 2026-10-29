@@ -162,7 +162,31 @@ test('isle: kort -> Kort fortalt satırı, günlük sayfa slug\'ı ile yazildi; 
   assert.equal(k.u.ozet.antall, 1); // sayfa değişti: iş akışı derleme yapsın
 });
 
-test('isle: sarı ve turuncu farevarsel günün Farevarsler sayfasına gider; kırmızı farevarsel tek haber kalır', async () => {
+// Günlük derleme 29.10.2026'dan beri varsayılan olarak kapalı; eski yol FAREVARSEL_DAGSSIDE=1 ile hâlâ çalışır.
+const dagssidePaa = (fn) => async () => {
+  const eski = process.env.FAREVARSEL_DAGSSIDE;
+  process.env.FAREVARSEL_DAGSSIDE = '1';
+  try {
+    await fn();
+  } finally {
+    if (eski === undefined) delete process.env.FAREVARSEL_DAGSSIDE;
+    else process.env.FAREVARSEL_DAGSSIDE = eski;
+  }
+};
+
+test('isle: dagsside av (standard) — gule og oransje farevarsler skrives ikke, markeres som sett; rødt blir egen sak', async () => {
+  const gult = aday('met:a', 'Gult', sak('Gult farevarsel for høy vannstand i Agder'));
+  const rodt = aday('met:c', 'Rødt', sak('Rødt farevarsel for ekstremvær i Nordland', { body: 'Tredje tekst. '.repeat(30) }));
+  const k = kur({ kaynaklar: [kaynak('met', [gult, rodt])] });
+  const sonuclar = await tur(k);
+  assert.equal(k.varselSayfa.length, 0);
+  assert.deepEqual(k.yazilan.map((s) => s.title), ['Rødt farevarsel for ekstremvær i Nordland']);
+  assert.equal(sonucu(sonuclar, 'met:a').durum, 'elendi');
+  assert.ok(k.tilstand.sett['met:a']);
+  assert.equal(k.u.ozet.antall, 1);
+});
+
+test('isle: sarı ve turuncu farevarsel günün Farevarsler sayfasına gider; kırmızı farevarsel tek haber kalır', dagssidePaa(async () => {
   const gult = aday('met:a', 'Gult', sak('Gult farevarsel for høy vannstand i Agder'));
   const oransje = aday('nve:b', 'Oransje', sak('Oransje farevarsel for flom i Telemark', { body: 'Annen tekst. '.repeat(30) }));
   const rodt = aday('met:c', 'Rødt', sak('Rødt farevarsel for ekstremvær i Nordland', { body: 'Tredje tekst. '.repeat(30) }));
@@ -174,9 +198,9 @@ test('isle: sarı ve turuncu farevarsel günün Farevarsler sayfasına gider; k�
   assert.equal(sonucu(sonuclar, 'nve:b').durum, 'yazildi');
   assert.ok(k.tilstand.sett['met:a'] && k.tilstand.sett['nve:b']);
   assert.equal(k.u.ozet.antall, 2); // kırmızı haber + değişen sayfa
-});
+}));
 
-test('isle: Farevarsler sayfası yazılamazsa uyarılar bekliyor kalır, sett işaretlenmez', async () => {
+test('isle: Farevarsler sayfası yazılamazsa uyarılar bekliyor kalır, sett işaretlenmez', dagssidePaa(async () => {
   const gult = aday('met:a', 'Gult', sak('Gult farevarsel for høy vannstand i Agder'));
   const k = kur({ kaynaklar: [kaynak('met', [gult])], bag: { leggTilFarevarsler: async () => { throw new Error('disk'); } } });
   await assert.rejects(tur(k), (e) => {
@@ -184,7 +208,7 @@ test('isle: Farevarsler sayfası yazılamazsa uyarılar bekliyor kalır, sett i�
     return true;
   });
   assert.equal(k.tilstand.sett['met:a'], undefined);
-});
+}));
 
 test('isle: kort satırı kırmızıysa elendi; kapı bekle derse sonuç yok ve sett işaretlenmez', async () => {
   const kortlu = (t) => ({ kort: { tittel: t, ingress: '', kilde: { navn: 'K', url: 'https://haber.example.com/k' } } });
