@@ -216,35 +216,6 @@ p {
   color: var(--muted);
 }
 
-/* ——— Pafta kenarı (üst şerit) ——— */
-.sheet-margin {
-  border-bottom: 1px solid var(--ink);
-  font: 500 0.6875rem/1 var(--frame);
-  font-stretch: 88%;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.sheet-margin .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: calc(var(--u) * 2);
-  min-height: 32px;
-}
-
-.sheet-margin nav {
-  display: flex;
-  gap: calc(var(--u) * 2);
-}
-
-.sources {
-  display: flex;
-  gap: 0.6em;
-  align-items: center;
-}
-
 /* ——— Masthead: kontur arazisi ——— */
 .mast {
   position: relative;
@@ -967,7 +938,7 @@ main.container {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.3fr) repeat(3, minmax(0, 1fr));
   gap: calc(var(--u) * 5);
 }
 
@@ -1174,28 +1145,20 @@ main.container {
     gap: calc(var(--u) * 5);
   }
 
+  /* Smal skjerm: merkevaren over hele bredden, lenkelistene i to spalter. */
   .footer-grid {
-    grid-template-columns: minmax(0, 1fr);
-    gap: calc(var(--u) * 4);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: calc(var(--u) * 4) calc(var(--u) * 3);
   }
 
-  .sources {
-    display: none;
+  .footer-brand {
+    grid-column: 1 / -1;
   }
 }
 
 @media (max-width: 640px) {
   body {
     font-size: 1rem;
-  }
-
-  /* Dar ekranda üst şeritte yer sosyal linklere kalır. */
-  .sheet-margin .tagline {
-    display: none;
-  }
-
-  .sheet-margin .container {
-    justify-content: flex-end;
   }
 
   .mast-inner {
@@ -2029,4 +1992,42 @@ main.container {
 
 :root[data-tema='mork'] .tema-bryter .til-lys {
   display: inline-flex;
+}
+
+/* Bunnlinje: følg oss + opphavsrett */
+.footer-bunn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--u) calc(var(--u) * 3);
+  margin-top: calc(var(--u) * 4);
+  padding-top: calc(var(--u) * 2);
+  border-top: 1px solid var(--ink);
+  font: 500 0.8125rem/1.4 var(--frame);
+}
+
+.footer-bunn nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--u) calc(var(--u) * 2.5);
+}
+
+.footer-bunn nav a {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.footer-bunn + .copyright {
+  margin-top: calc(var(--u) * 1.5);
+}
+
+@media (max-width: 1080px) and (min-width: 861px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
 }

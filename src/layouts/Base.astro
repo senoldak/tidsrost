@@ -106,21 +106,6 @@ const [nameHead, nameTail] = SITE.name.split('ø');
   <body>
     <a class="skip" href="#innhold">Hopp til innholdet</a>
     <header class="site-header">
-      <div class="sheet-margin">
-        <div class="container">
-          {/* Haberlerin bir kısmı resmi kaynaklardan, bir kısmı birden fazla medyada doğrulanmış olaylardan (ki-medier); medya adı yazılmaz. */}
-          <span class="sources"><Symbol kind="kilde" />Kilder: offentlige etater og andre nyhetsmedier</span>
-          <span class="tagline">{SITE.slogan}</span>
-          <nav aria-label="Følg oss">
-            {SITE.social.x && <a href={SITE.social.x} rel="noopener noreferrer" target="_blank" aria-label="X (åpnes i ny fane)">X</a>}
-            {SITE.social.facebook && <a href={SITE.social.facebook} rel="noopener noreferrer" target="_blank" aria-label="Facebook (åpnes i ny fane)">Facebook</a>}
-            {SITE.social.instagram && <a href={SITE.social.instagram} rel="noopener noreferrer" target="_blank" aria-label="Instagram (åpnes i ny fane)">Instagram</a>}
-            {SITE.social.linkedin && <a href={SITE.social.linkedin} rel="noopener noreferrer" target="_blank" aria-label="LinkedIn (åpnes i ny fane)">LinkedIn</a>}
-            {SITE.social.telegram && <a href={SITE.social.telegram} rel="noopener noreferrer" target="_blank" aria-label="Telegram (åpnes i ny fane)">Telegram</a>}
-            <a href="/rss.xml">RSS</a>
-          </nav>
-        </div>
-      </div>
       <div class="mast">
         <img class="mast-terrain" src="/kart.svg" alt="" width="1440" height="200" />
         <div class="container mast-inner">
@@ -236,83 +221,63 @@ const [nameHead, nameTail] = SITE.name.split('ø');
           </p>
         </div>
 
-        <section aria-labelledby="footer-seksjoner">
-          <h2 id="footer-seksjoner">Seksjoner og innhold</h2>
+        <section aria-labelledby="footer-saker">
+          <h2 id="footer-saker">Saker</h2>
           <ul>
-            {
-              harAnalyse && (
-                <li>
-                  <a href={`/${ANALYSE.slug}/`}>
-                    <Symbol kind="forklart" />
-                    <strong>{ANALYSE.name} – vurderinger</strong>
-                  </a>
-                </li>
-              )
-            }
-            {
-              harForklart && (
-                <li>
-                  <a href={`/${FORKLART.slug}/`}>
-                    <Symbol kind="forklart" />
-                    <strong>{FORKLART.name} – dybde og data</strong>
-                  </a>
-                </li>
-              )
-            }
-            {
-              categories.map((c) => (
-                <li>
-                  <a href={`/kategori/${c.slug}/`}>
-                    <Symbol kind={c.slug} />
-                    {c.name}
-                  </a>
-                </li>
-              ))
-            }
-            <li><a href="/tall/"><Symbol kind="data" />Tall og data</a></li>
-            <li><a href="/prisstigning/"><Symbol kind="data" />Prisstigningen nå</a></li>
-            <li><a href="/boligpriser/"><Symbol kind="data" />Boligprisene nå</a></li>
-            <li><a href="/arbeidsledighet/"><Symbol kind="data" />Arbeidsledigheten nå</a></li>
-            <li><a href="/styringsrenten/"><Symbol kind="data" />Styringsrenten nå</a></li>
-            <li><a href="/farevarsler/"><Symbol kind="varsel" class="sym-varsel-gult" />Farevarsler i Norge</a></li>
-            {harTemaer && <li><a href="/tema/"><Symbol kind="tema" />Alle temaer</a></li>}
+            {harAnalyse && <li><a href={`/${ANALYSE.slug}/`}>{ANALYSE.name}</a></li>}
+            {harForklart && <li><a href={`/${FORKLART.slug}/`}>{FORKLART.name}</a></li>}
+            {categories.map((c) => <li><a href={`/kategori/${c.slug}/`}>{c.name}</a></li>)}
+            {harTemaer && <li><a href="/tema/">Temaer</a></li>}
+            <li><a href="/arkiv/">Arkiv</a></li>
           </ul>
         </section>
 
-        <section aria-labelledby="footer-apenhet">
-          <h2 id="footer-apenhet">Åpenhet og informasjon</h2>
+        <section aria-labelledby="footer-tall">
+          <h2 id="footer-tall">Tall og data</h2>
           <ul>
-            <li><a href="/om-oss/">Om {SITE.name}</a></li>
+            <li><a href="/tall/">Alle tall og data</a></li>
+            <li><a href="/prisstigning/">Prisstigningen nå</a></li>
+            <li><a href="/boligpriser/">Boligprisene nå</a></li>
+            <li><a href="/arbeidsledighet/">Arbeidsledigheten nå</a></li>
+            <li><a href="/styringsrenten/">Styringsrenten nå</a></li>
+            <li><a href="/farevarsler/">Farevarsler i Norge</a></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="footer-om">
+          <h2 id="footer-om">Om {SITE.name}</h2>
+          <ul>
+            <li><a href="/om-oss/">Om oss</a></li>
             <li><a href="/redaksjonelle-prinsipper/">Redaksjonelle prinsipper</a></li>
             <li><a href="/om-oss/#arbeidsmetode">Slik arbeider redaksjonen</a></li>
-            <li><a href="/bruk-av-ki/">Bruk av KI i {SITE.name}</a></li>
-            <li><a href="/apenhet/">Åpenhet: slik velger vi nyheter</a></li>
-            <li><a href="/arkiv/">Arkiv</a></li>
+            <li><a href="/bruk-av-ki/">Bruk av KI</a></li>
+            <li><a href="/apenhet/">Slik velger vi nyheter</a></li>
             <li><a href="/rettelser/">Rettelser</a></li>
             <li><a href="/rettelsespolitikk/">Rettelsespolitikk</a></li>
             <li><a href="/klager/">Klager</a></li>
             <li><a href="/standardrapport/">Standardrapport</a></li>
-            <li><a href="/juridisk/">Juridisk informasjon og kolofon</a></li>
-            {SITE.redaktor && <li><a href="/forfatter/senol-dak/">Redaksjonen: {SITE.redaktor}</a></li>}
-            <li><a href="/personvern/">Personvern og informasjonskapsler</a></li>
-            {SITE.social.facebook && <li><a href={SITE.social.facebook} rel="noopener noreferrer">Facebook</a></li>}
-            {SITE.social.instagram && <li><a href={SITE.social.instagram} rel="noopener noreferrer">Instagram</a></li>}
-            {SITE.social.linkedin && <li><a href={SITE.social.linkedin} rel="noopener noreferrer">LinkedIn</a></li>}
-            {SITE.social.telegram && <li><a href={SITE.social.telegram} rel="noopener noreferrer">Telegram-kanalen</a></li>}
-            <li><a href="/rss.xml">RSS-strøm</a></li>
+            <li><a href="/personvern/">Personvern</a></li>
+            <li><a href="/juridisk/">Juridisk informasjon</a></li>
           </ul>
         </section>
       </div>
-      <div class="container copyright">
+      <div class="container footer-bunn">
+        <nav aria-label={`Følg ${SITE.name}`}>
+          {SITE.social.facebook && <a href={SITE.social.facebook} rel="noopener noreferrer">Facebook</a>}
+          {SITE.social.instagram && <a href={SITE.social.instagram} rel="noopener noreferrer">Instagram</a>}
+          {SITE.social.linkedin && <a href={SITE.social.linkedin} rel="noopener noreferrer">LinkedIn</a>}
+          {SITE.social.telegram && <a href={SITE.social.telegram} rel="noopener noreferrer">Telegram</a>}
+          {SITE.social.x && <a href={SITE.social.x} rel="noopener noreferrer">X</a>}
+          <a href="/rss.xml">RSS</a>
+        </nav>
         <span>
           © {new Date().getFullYear()} {SITE.name}
-          {SITE.redaktor && ` · Utgiver og redaktør: ${SITE.redaktor}`}
           {SITE.ikkeKommersiell && ' · Ikke-kommersielt nettsted uten annonser'}
+          {' · '}Ark {sheet}
         </span>
-        <span>Ark {sheet} · {today}</span>
       </div>
       <div class="container copyright">
-        <span>Innhold: <a href={LISENS_URL} rel="license noopener">CC BY-NC 4.0</a> – fritt til ikke-kommersiell bruk med kildehenvisning til {SITE.name}. Logo og navn er ikke omfattet.</span>
+        <span>Innhold: <a href={LISENS_URL} rel="license noopener">CC BY-NC 4.0</a>, fritt til ikke-kommersiell bruk med kildehenvisning til {SITE.name}. Logo og navn er ikke omfattet.</span>
       </div>
     </footer>
   </body>
