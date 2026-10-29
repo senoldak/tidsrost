@@ -117,6 +117,11 @@ for (const jobb of JOBBER) {
   const fil = path.join(DIR, jobb.fil);
   try {
     const gammel = await lesJson(fil);
+    // Yıllık tablolar: aralikSaat içinde alınmışsa dosyaya hiç dokunulmaz.
+    if (jobb.aralikSaat && gammel?.hentet && Date.now() - Date.parse(gammel.hentet) < jobb.aralikSaat * 3_600_000) {
+      console.log(`${jobb.fil}: atlandı (aralık)`);
+      continue;
+    }
     const ny = { hentet: new Date().toISOString(), ...(await jobb.lag(gammel)) };
     const ulik = !sammeInnhold(gammel, ny);
     await writeFile(fil, (jobb.kompakt ? JSON.stringify(ny) : JSON.stringify(ny, null, 2)) + '\n', 'utf8');

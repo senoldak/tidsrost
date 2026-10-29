@@ -43,7 +43,10 @@ export function datasideLd(p: {
   lisensUrl: string;
   periode: string;
   oppdatert: string;
+  /** Kaynak kurum; verilmezse SSB. */
+  utgiver?: { navn: string; wikidata?: string };
 }) {
+  const utgiver = p.utgiver ?? { navn: 'Statistisk sentralbyrå', wikidata: 'https://www.wikidata.org/wiki/Q2367019' };
   const sti = [
     { name: 'Forsiden', url: `${SITE_URL}/` },
     { name: 'Tall og data', url: `${SITE_URL}/tall/` },
@@ -64,7 +67,7 @@ export function datasideLd(p: {
           dateModified: p.oppdatert,
           isPartOf: { '@id': WEBSITE_ID },
           publisher: { '@id': ORG_ID },
-          about: { '@type': 'GovernmentOrganization', name: 'Statistisk sentralbyrå', sameAs: 'https://www.wikidata.org/wiki/Q2367019' },
+          about: { '@type': 'GovernmentOrganization', name: utgiver.navn, ...(utgiver.wikidata ? { sameAs: utgiver.wikidata } : {}) },
         },
         {
           '@type': 'Dataset',
@@ -73,7 +76,7 @@ export function datasideLd(p: {
           description: p.datasettBeskrivelse,
           url: p.url,
           inLanguage: 'nb',
-          creator: { '@type': 'GovernmentOrganization', name: 'Statistisk sentralbyrå' },
+          creator: { '@type': 'GovernmentOrganization', name: utgiver.navn },
           isBasedOn: p.kildeData,
           license: p.lisensUrl,
           isAccessibleForFree: true,
