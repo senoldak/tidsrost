@@ -1,0 +1,125 @@
+---
+// "Arbeidsledigheten nå": SSB'nin işgücü anketi (AKU), tablo 13760, sezondan arındırılmış (src/data/arbeidsledighet.json).
+// Bütün rakamlar veriden; sabit metinlerde rakam yok.
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import KiNotat from '../components/KiNotat.astro';
+import Base from '../layouts/Base.astro';
+import Symbol from '../components/Symbol.astro';
+import Brodsmuler from '../components/Brodsmuler.astro';
+import StoryRow from '../components/StoryRow.astro';
+import Linjegraf from '../components/data/Linjegraf.astro';
+import Stolpegraf from '../components/data/Stolpegraf.astro';
+import DataKilde from '../components/data/DataKilde.astro';
+import { tallTekst } from '../lib/graf.mjs';
+import { tidTekst } from '../lib/data';
+import { GAMMEL_MAANED_MS, dataGammel, datasideLd, maanedKort, maanedTekst, relaterteSaker } from '../lib/datasider';
+import { SITE_URL } from '../lib/seo';
+import data from '../data/arbeidsledighet.json';
+
+const d = data as typeof data & { grupper: { kode: string; navn: string; prosent: number | null }[] };
+const pageUrl = `${SITE_URL}/arbeidsledighet/`;
+const tittel = 'Arbeidsledigheten nå';
+const maaned = maanedTekst(d.sisteMaaned);
+const pst = (v: number | null | undefined) => (typeof v === 'number' ? `${tallTekst(v)} %` : '–');
+const forrige = d.serie.at(-2);
+const ifjor = d.serie.at(-13);
+const endring = (a: number, b: number) => (a > b ? 'opp fra' : a < b ? 'ned fra' : 'det samme som');
+const unge = d.grupper.find((g) => g.kode === '15-24');
+const description = `Arbeidsledigheten var ${tallTekst(d.prosent)} prosent i ${maaned}, viser SSBs arbeidskraftundersøkelse. Se utviklingen de siste to årene og forskjeller mellom kjønn og aldersgrupper.`;
+const { sti, jsonLd } = datasideLd({
+  url: pageUrl,
+  tittel,
+  description,
+  datasettNavn: 'Arbeidsledige i prosent av arbeidsstyrken, sesongjustert (AKU)',
+  datasettBeskrivelse: 'Arbeidsledighet i prosent av arbeidsstyrken, 15–74 år, sesongjustert, etter kjønn og alder, fra SSB tabell 13760.',
+  kildeData: 'https://www.ssb.no/statbank/table/13760',
+  lisensUrl: d.kilde.lisensUrl,
+  periode: `${d.serie[0].maaned}/${d.sisteMaaned}`,
+  oppdatert: d.oppdatert ?? d.hentet,
+});
+const saker = await relaterteSaker(/arbeidsledig|ledighet|sysselsett|arbeidsstyrke/i);
+---
+
+<Base title={tittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="data" />{tittel}</h1>
+    <p class="page-intro">
+      Statistisk sentralbyrå spør hver måned et stort utvalg av befolkningen om arbeid. Svarene viser hvor stor del av
+      arbeidsstyrken som står uten jobb, og hvilke grupper som rammes mest.
+    </p>
+  </header>
+
+  <section class="data-tall" aria-labelledby="siste">
+    <h2 class="band" id="siste">Arbeidsledige i prosent av arbeidsstyrken</h2>
+    <p class="data-verdi">{pst(d.prosent)}</p>
+    <p class="varsel-setning">
+      Arbeidsledigheten var {tallTekst(d.prosent)} prosent i {maaned}{forrige && <>, {endring(d.prosent, forrige.prosent)} {tallTekst(forrige.prosent)} prosent måneden før</>}.
+      {ifjor && <> For ett år siden var den {tallTekst(ifjor.prosent)} prosent.</>}
+      {unge && typeof unge.prosent === 'number' && <> Blant unge mellom 15 og 24 år var ledigheten {tallTekst(unge.prosent)} prosent.</>}
+    </p>
+    <dl class="data-fakta">
+      <div>
+        <dt>Gjelder</dt>
+        <dd>{maaned}</dd>
+      </div>
+      <div>
+        <dt>Publisert av SSB</dt>
+        <dd>{d.oppdatert ? tidTekst(d.oppdatert) : '–'}</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="day" aria-labelledby="utvikling">
+    <h2 class="band" id="utvikling">De siste to årene</h2>
+    <Linjegraf
+      serier={[{ navn: 'Arbeidsledighet', punkter: d.serie.map((p) => ({ etikett: maanedKort(p.maaned), verdi: p.prosent })) }]}
+      enhet="Prosent av arbeidsstyrken, 15–74 år, sesongjustert"
+      beskrivelse={`Arbeidsledigheten de siste to årene, nå ${pst(d.prosent)}`}
+    />
+  </section>
+
+  <section class="day" aria-labelledby="grupper">
+    <h2 class="band" id="grupper">Kjønn og alder</h2>
+    <Stolpegraf
+      rader={[{ navn: 'Alle, 15–74 år', verdi: d.prosent, fremhev: true }, ...d.grupper.map((g) => ({ navn: g.navn, verdi: g.prosent }))]}
+      enhet={`Prosent av arbeidsstyrken i gruppen, sesongjustert, ${maaned}`}
+      beskrivelse={`Arbeidsledighet etter kjønn og alder, ${maaned}`}
+    />
+  </section>
+
+  <section class="day" aria-labelledby="hvordan">
+    <h2 class="band" id="hvordan">Hvordan måles arbeidsledighet?</h2>
+    <div class="prose">
+      <p>
+        Tallene kommer fra arbeidskraftundersøkelsen. Arbeidsledig er den som ikke har arbeid, har søkt jobb den siste
+        tiden og kan begynne raskt. Andelen regnes av alle som er i arbeid eller søker arbeid, det som kalles
+        arbeidsstyrken.
+      </p>
+      <p>
+        NAV teller bare dem som er registrert som arbeidssøkere hos NAV, og deres tall er derfor lavere. Tallene her er
+        sesongjustert, slik at faste svingninger gjennom året, som sommerjobber, ikke påvirker dem.
+      </p>
+    </div>
+  </section>
+
+  <DataKilde
+    kilde={{ navn: d.kilde.navn, url: 'https://www.ssb.no/arbeid-og-lonn/sysselsetting/statistikk/arbeidskraftundersokelsen', data: d.kilde.data, lisens: d.kilde.lisens, lisensUrl: d.kilde.lisensUrl }}
+    hentet={d.hentet}
+    oppdatert={d.oppdatert}
+    gammel={dataGammel(d.hentet, d.oppdatert, GAMMEL_MAANED_MS)}
+    merknad="Tallene er fra SSB tabell 13760."
+  />
+
+  {
+    saker.length > 0 && (
+      <section class="related" aria-labelledby="saker">
+        <h2 class="band" id="saker">Saker om tall fra SSB</h2>
+        {saker.map((h) => <StoryRow haber={h} dato />)}
+      </section>
+    )
+  }
+  <p class="tema-alle"><a href="/tall/">Flere tall og data</a></p>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
+</Base>
