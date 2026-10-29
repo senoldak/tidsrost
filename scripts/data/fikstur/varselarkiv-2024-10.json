@@ -1,0 +1,156 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "2.49.0.1.578.0.241031220000.0817_1_0",
+    "type": "Update",
+    "status": "Actual",
+    "awareness_level": "2; yellow; Moderate",
+    "event": "gale",
+    "county": [],
+    "area": "Indre Skagerrak",
+    "geographicDomain": "marine"
+   },
+   "when": {
+    "interval": [
+     "2024-10-31T22:00:00+00:00",
+     "2024-11-01T13:00:00+00:00"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "2.49.0.1.578.0.20241031123413.084",
+    "type": "Update",
+    "status": "Actual",
+    "awareness_level": "1; green; Minor",
+    "event": "snow",
+    "county": [
+     "55",
+     "56"
+    ],
+    "area": "Deler av Troms og Vest-Finnmark",
+    "geographicDomain": "land"
+   },
+   "when": {
+    "interval": [
+     "2024-10-31T12:34:00+00:00",
+     "2024-10-31T13:34:00+00:00"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "2.49.0.1.578.0.20241030070422.093",
+    "type": "Alert",
+    "status": "Actual",
+    "awareness_level": "4; red; Extreme",
+    "event": "rain",
+    "county": [
+     "46",
+     "33"
+    ],
+    "area": "Midtre og indre strøk av Vestland",
+    "geographicDomain": "land"
+   },
+   "when": {
+    "interval": [
+     "2024-10-31T00:00:00+00:00",
+     "2024-11-01T02:00:00+00:00"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "2.49.0.1.578.0.20241020085643.084",
+    "type": "Update",
+    "status": "Actual",
+    "awareness_level": "3; orange; Severe",
+    "event": "wind",
+    "county": [
+     "46",
+     "15"
+    ],
+    "area": "Ytre strøk nord for Sognefjorden til og med Sunnmøre",
+    "geographicDomain": "land"
+   },
+   "when": {
+    "interval": [
+     "2024-10-21T02:00:00+00:00",
+     "2024-10-21T15:00:00+00:00"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "2.49.0.1.578.0.20241020085658.026",
+    "type": "Alert",
+    "status": "Actual",
+    "awareness_level": "2; yellow; Moderate",
+    "event": "wind",
+    "county": [
+     "46",
+     "15",
+     "34",
+     "33"
+    ],
+    "area": "Deler av Vestland, Innland, Møre og Romsdal og Sør-Trøndelag",
+    "geographicDomain": "land"
+   },
+   "when": {
+    "interval": [
+     "2024-10-21T02:00:00+00:00",
+     "2024-10-21T15:00:00+00:00"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "2.49.0.1.578.0.20241019103945.072",
+    "type": "Update",
+    "status": "Actual",
+    "awareness_level": "2; yellow; Moderate",
+    "event": "wind",
+    "county": [
+     "46"
+    ],
+    "area": "Ytre strøk nord for Sognefjorden til og med Sunnmøre",
+    "geographicDomain": "land"
+   },
+   "when": {
+    "interval": [
+     "2024-10-21T07:00:00+00:00",
+     "2024-10-21T13:00:00+00:00"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "2.49.0.1.578.0.20241019092018.070",
+    "type": "Alert",
+    "status": "Actual",
+    "awareness_level": "2; yellow; Moderate",
+    "event": "wind",
+    "county": [
+     "46"
+    ],
+    "area": "Ytre strøk nord for Sognefjorden til og med Sunnmøre",
+    "geographicDomain": "land"
+   },
+   "when": {
+    "interval": [
+     "2024-10-21T07:00:00+00:00",
+     "2024-10-21T13:00:00+00:00"
+    ]
+   }
+  }
+ ]
+}

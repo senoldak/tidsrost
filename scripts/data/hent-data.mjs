@@ -1,7 +1,7 @@
 // Sürekli güncel veri sayfalarının verisini resmi, anahtarsız açık API'lerden çeker ve src/data/*.json'a yazar.
 //   - Styringsrenten: Norges Bank SDMX API (data.norges-bank.no), lisans NLOD.
 //   - Prisstigning, boligpriser, arbeidsledighet: SSB PxWebApi v2 (tablo 14700, 07221, 13760), lisans NLOD.
-//   - Farevarsler: MET Norway MetAlerts 2.0 (api.met.no), lisans CC BY 4.0. MET'in kullanım şartı gereği istekte
+//   - Farevarsler ve arşivi (varselarkiv.json, 2019'dan beri): MET Norway MetAlerts 2.0 (api.met.no), lisans CC BY 4.0. MET'in kullanım şartı gereği istekte
 //     siteyi ve iletişim adresini tanıtan bir User-Agent gönderilir; Nyhetsbot ile ~2 saatte bir, tek istek.
 // Bir kaynak başarısız olursa o dosyaya dokunulmaz: sayfa son bilinen değeri ve alındığı zamanı göstermeye devam eder.
 // Faiz ya da turuncu/kırmızı uyarı değiştiyse GITHUB_OUTPUT'a "endret=1" yazar; iş akışı siteyi yeniden derletir.
@@ -14,6 +14,7 @@ import { acilDurdurma } from '../nyheter/kapi.mjs';
 import { RENTE_KILDE, VARSEL_KILDE, farevarsler, hasterPublisering, lesSdmxCsv, sammeInnhold, styringsrente } from './data.mjs';
 import { SSB_KILDE, ssbUrl } from './ssb.mjs';
 import { arbeidsledighet, boligpriser, prisstigning } from './ssb-sider.mjs';
+import { birlestirMaaned, dagsTall, hendelser, nesteArkivmaaned, oppdaterLopende } from './varselarkiv.mjs';
 
 // Standartlar: acil durdurma açıksa veri sayfaları da güncellenmez.
 if (await acilDurdurma()) process.exit(0);
@@ -58,6 +59,35 @@ const JOBBER = [
     },
   },
   {
+    // MET'in arşivi (ay ay, yılda bir güncellenir) + her turda son 30 günün akışı (all.json) kendi kaydımıza.
+    // Arşivin yeni ayı en çok günde bir denenir. Bir parça alınamazsa o parça eskisi gibi kalır.
+    // İlk doldurma: node scripts/data/varselarkiv-fyll.mjs --fra 2019-01
+    fil: 'varselarkiv.json',
+    kompakt: true,
+    async lag(gammel) {
+      let arkiv = gammel ?? { fra: '2019-01', maaneder: {} };
+      const naa = new Date();
+      try {
+        const json = JSON.parse(await hent('https://api.met.no/weatherapi/metalerts/2.0/all.json', 'application/json'));
+        arkiv = oppdaterLopende(arkiv, json.features, naa);
+      } catch (e) {
+        console.error(`varselarkiv.json: all.json FEIL ${e.message}. Beholder egne dager.`);
+      }
+      for (let i = 0, m = nesteArkivmaaned(arkiv, naa); i < 3 && m; i++, m = nesteArkivmaaned(arkiv, naa)) {
+        try {
+          const json = JSON.parse(await hent(`https://api.met.no/weatherapi/metalerts/2.0/archive.json?period=${m}`, 'application/json'));
+          arkiv = birlestirMaaned(arkiv, m, dagsTall(hendelser(json.features, m)), naa.toISOString());
+        } catch (e) {
+          // 400: ay henüz arşivde değil (yılda bir güncellenir). Yarın yeniden denenir.
+          arkiv = { ...arkiv, arkivForsok: naa.toISOString() };
+          console.log(`varselarkiv.json: ${m} ikke i MET-arkivet ennå (${e.message.slice(0, 40)})`);
+          break;
+        }
+      }
+      return { kilde: VARSEL_KILDE, fra: arkiv.fra ?? '2019-01', arkivForsok: arkiv.arkivForsok ?? null, maaneder: arkiv.maaneder, lopende: arkiv.lopende ?? null };
+    },
+  },
+  {
     fil: 'prisstigning.json',
     async lag() {
       const grupper = ['00', '01', '01.1', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13'];
@@ -86,10 +116,10 @@ let endret = false;
 for (const jobb of JOBBER) {
   const fil = path.join(DIR, jobb.fil);
   try {
-    const ny = { hentet: new Date().toISOString(), ...(await jobb.lag()) };
     const gammel = await lesJson(fil);
+    const ny = { hentet: new Date().toISOString(), ...(await jobb.lag(gammel)) };
     const ulik = !sammeInnhold(gammel, ny);
-    await writeFile(fil, JSON.stringify(ny, null, 2) + '\n', 'utf8');
+    await writeFile(fil, (jobb.kompakt ? JSON.stringify(ny) : JSON.stringify(ny, null, 2)) + '\n', 'utf8');
     const haster = hasterPublisering(jobb.fil, gammel, ny);
     if (haster) endret = true;
     console.log(
