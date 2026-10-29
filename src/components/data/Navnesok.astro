@@ -1,0 +1,130 @@
+---
+// Navnesøk: fornavn og etternavn fra /navn/sok.json (hentes første gang feltet får fokus). Treff vises som liste;
+// navn med egen side er lenker. Resultatene lages med textContent (ingen innerHTML). CSP-vennlig: pakket script, ingen stil-attributt.
+---
+
+<div class="navnesok" data-kilde="/navn/sok.json">
+  <label for="navnesok-felt" class="navnesok-label">Søk etter et fornavn eller etternavn</label>
+  <input id="navnesok-felt" class="navnesok-felt" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="For eksempel Ola eller Hansen" />
+  <p class="navnesok-status data-merknad" role="status" aria-live="polite"></p>
+  <ul class="navnesok-liste"></ul>
+</div>
+
+<script>
+  type Post = { n: string; k: 'J' | 'G' | 'E'; a: number | null; s?: string };
+  const rot = document.querySelector<HTMLElement>('.navnesok');
+  if (rot) {
+    const felt = rot.querySelector<HTMLInputElement>('.navnesok-felt')!;
+    const liste = rot.querySelector<HTMLUListElement>('.navnesok-liste')!;
+    const status = rot.querySelector<HTMLElement>('.navnesok-status')!;
+    const TYPE = { J: 'jentenavn', G: 'guttenavn', E: 'etternavn' };
+    let poster: Post[] | null = null;
+    let laster: Promise<void> | null = null;
+
+    const normaliser = (t: string) => t.trim().toLocaleLowerCase('nb');
+
+    async function last() {
+      if (poster) return;
+      laster ??= fetch(rot!.dataset.kilde!)
+        .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+        .then((j: Post[]) => {
+          poster = j;
+        })
+        .catch(() => {
+          laster = null;
+          status.textContent = 'Kunne ikke laste navnelisten. Prøv igjen senere.';
+        });
+      await laster;
+    }
+
+    function vis() {
+      liste.replaceChildren();
+      const q = normaliser(felt.value);
+      if (!q || !poster) {
+        if (!q) status.textContent = '';
+        return;
+      }
+      const treff = poster
+        .map((p) => {
+          const n = normaliser(p.n);
+          return { p, rang: n === q ? 0 : n.startsWith(q) ? 1 : n.includes(q) ? 2 : 3 };
+        })
+        .filter((x) => x.rang < 3)
+        .sort((x, y) => x.rang - y.rang || (y.p.a ?? -1) - (x.p.a ?? -1) || x.p.n.localeCompare(y.p.n, 'nb'))
+        .slice(0, 12);
+      if (!treff.length) {
+        status.textContent = 'Ingen treff. SSB oppgir bare navn som mange har.';
+        return;
+      }
+      status.textContent = treff.length === 12 ? 'Viser de første treffene.' : `${treff.length} treff`;
+      for (const { p } of treff) {
+        const li = document.createElement('li');
+        const navn = document.createElement(p.s ? 'a' : 'span');
+        navn.textContent = p.n;
+        navn.className = 'navnesok-navn';
+        if (p.s) (navn as HTMLAnchorElement).href = `/navn/${p.s}/`;
+        const info = document.createElement('span');
+        info.className = 'navnesok-info';
+        info.textContent = `${TYPE[p.k]} · ${p.a === null ? 'antall ikke oppgitt' : `${p.a.toLocaleString('nb-NO')} personer`}`;
+        li.append(navn, info);
+        liste.append(li);
+      }
+    }
+
+    felt.addEventListener('focus', () => void last());
+    felt.addEventListener('input', async () => {
+      await last();
+      vis();
+    });
+    rot.closest('form')?.addEventListener('submit', (e) => e.preventDefault());
+  }
+</script>
+
+<style is:global>
+  .navnesok {
+    max-width: 640px;
+    font-family: var(--frame);
+  }
+  .navnesok-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .navnesok-felt {
+    width: 100%;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid var(--ink);
+    border-radius: 3px;
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+    font-size: 1rem;
+  }
+  .navnesok-status {
+    min-height: 1.5em;
+    margin-top: 8px;
+  }
+  .navnesok-liste {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .navnesok-liste li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .navnesok-navn {
+    font: 650 1.25rem/1.25 var(--read);
+    overflow-wrap: anywhere;
+  }
+  .navnesok-info {
+    font: 500 0.875rem var(--frame);
+    color: var(--muted);
+  }
+</style>

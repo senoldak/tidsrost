@@ -1,0 +1,233 @@
+---
+// /navn/<navn>/: ett fornavn med eget tallgrunnlag (terskel: scripts/data/ssb-navn.mjs navnSider). Alt kommer fra
+// src/data/navn.json: antall personer, plass blant navn av samme kjønn, utvikling siden 2013-tallene, fødte per år
+// (Linjegraf), tiårssnitt og setninger regnet ut av tallene (src/lib/navn-tekst.mjs). Ingen vurderinger av navn.
+import { jsonLdMetni } from '../../lib/json-ld.mjs';
+import KiNotat from '../../components/KiNotat.astro';
+import Base from '../../layouts/Base.astro';
+import Symbol from '../../components/Symbol.astro';
+import Brodsmuler from '../../components/Brodsmuler.astro';
+import Linjegraf from '../../components/data/Linjegraf.astro';
+import DataKilde from '../../components/data/DataKilde.astro';
+import { GAMMEL_MAANED_MS, dataGammel, datasideLd } from '../../lib/datasider';
+import { SITE_URL, breadcrumbs } from '../../lib/seo';
+import { harHull, kjonnNavn, naboer, navnBeskrivelse, navnSetninger, navnTittel, tiaarSnitt, toppAar } from '../../lib/navn-tekst.mjs';
+import { navnSider, rangeringer } from '../../../scripts/data/ssb-navn.mjs';
+import data from '../../data/navn.json';
+
+export function getStaticPaths() {
+  return navnSider(data).map((s) => ({ params: { slug: s.slug } }));
+}
+
+type Rec = Record<string, number>;
+const sider = navnSider(data);
+const side = sider.find((s) => s.slug === Astro.params.slug)!;
+const n = data.fornavn.find((x) => x.navn === side.navn && x.kjonn === side.kjonn)! as { navn: string; kjonn: 'J' | 'G'; antall: number; serie: Rec; fodte: Rec };
+const rang = rangeringer(data, n.kjonn).get(n as never) ?? null;
+const type = kjonnNavn(n.kjonn);
+const nb = (v: number) => v.toLocaleString('nb-NO');
+const pageUrl = `${SITE_URL}/navn/${side.slug}/`;
+const tittel = `Hvor mange heter ${n.navn}?`;
+const seoTittel = navnTittel(n.navn);
+const description = navnBeskrivelse(n, rang);
+if (!description) throw new Error(`/navn/${side.slug}/: beskrivelse utenfor 120–160 tegn`);
+
+const fodtAar = Object.keys(n.fodte).sort();
+const serieAar = Object.keys(n.serie).sort();
+const setninger = navnSetninger(data, n, rang);
+const topp = toppAar(n.fodte);
+const tiar = tiaarSnitt(n.fodte);
+const alleAar = [...new Set([...serieAar, ...fodtAar.filter((a) => a >= serieAar[0])])].sort();
+const hull = harHull(n.fodte) || harHull(n.serie);
+const motsatt = sider.find((s) => s.navn === n.navn && s.kjonn !== n.kjonn);
+const naboSider = naboer(sider, side.slug, 5);
+
+const { sti: sti3, jsonLd } = datasideLd({
+  url: pageUrl,
+  tittel,
+  description,
+  datasettNavn: `Fornavnet ${n.navn} i Norge`,
+  datasettBeskrivelse: `Antall personer med fornavnet ${n.navn} fra ${serieAar[0]}, og antall barn som fikk navnet per år fra ${fodtAar[0]}, fra SSB tabell 10501 og 10467.`,
+  kildeData: 'https://www.ssb.no/statbank/table/10501',
+  lisensUrl: data.kilde.lisensUrl,
+  periode: `${fodtAar[0]}/${fodtAar.at(-1)}`,
+  oppdatert: data.oppdatert ?? data.hentet,
+});
+// Brødsmulen har ett ledd mer enn de andre datasidene (Navnestatistikk).
+const sti = [sti3[0], sti3[1], { name: 'Navnestatistikk', url: `${SITE_URL}/navn/` }, { name: n.navn, url: pageUrl }];
+(jsonLd['@graph'] as unknown[])[2] = breadcrumbs(sti);
+---
+
+<Base title={seoTittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="data" />{tittel}</h1>
+    <p class="page-intro">
+      Ved utgangen av {data.sisteAar} het {nb(n.antall)} personer i Norge {n.navn}. {n.navn} er et {type}.
+    </p>
+  </header>
+
+  <section class="day" aria-labelledby="tall">
+    <h2 class="band" id="tall">{n.navn} i tall</h2>
+    <dl class="data-fakta">
+      <div>
+        <dt>Personer med navnet</dt>
+        <dd>{nb(n.antall)}</dd>
+      </div>
+      {
+        rang && (
+          <div>
+            <dt>Plass blant {type}ene</dt>
+            <dd>{rang}.</dd>
+          </div>
+        )
+      }
+      {
+        fodtAar.length > 0 && (
+          <div>
+            <dt>Gitt til barn i {fodtAar.at(-1)}</dt>
+            <dd>{nb(n.fodte[fodtAar.at(-1)!])}</dd>
+          </div>
+        )
+      }
+      {
+        topp && (
+          <div>
+            <dt>Toppår</dt>
+            <dd>
+              {topp.aar} ({nb(topp.antall)} barn)
+            </dd>
+          </div>
+        )
+      }
+    </dl>
+    <div class="prose navn-setninger">
+      {setninger.map((s) => <p>{s}</p>)}
+    </div>
+  </section>
+
+  {
+    fodtAar.length >= 3 && (
+      <section class="day" aria-labelledby="fodte">
+        <h2 class="band" id="fodte">Barn som fikk navnet, år for år</h2>
+        <Linjegraf
+          serier={[{ navn: n.navn, punkter: fodtAar.map((a) => ({ etikett: a, verdi: n.fodte[a] })) }]}
+          enhet={`Barn som fikk navnet ${n.navn} per år`}
+          beskrivelse={`Antall barn som fikk fornavnet ${n.navn} hvert år fra ${fodtAar[0]} til ${fodtAar.at(-1)}`}
+          desimaler={0}
+        />
+        {hull && <p class="data-merknad">SSB oppgir ikke tall for alle år. Linjen går da rett mellom årene som har tall.</p>}
+      </section>
+    )
+  }
+
+  {
+    tiar.length >= 2 && (
+      <section class="day" aria-labelledby="tiar">
+        <h2 class="band" id="tiar">Per tiår</h2>
+        <p class="data-merknad">Gjennomsnittlig antall barn per år i hvert tiår. Tiår med få år i tallene er utelatt.</p>
+        <div class="prose data-tabell navn-enkel">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Tiår</th>
+                <th scope="col">Barn per år</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tiar.map((t) => (
+                <tr>
+                  <td>{t.tiaar}-årene</td>
+                  <td>{nb(t.snitt)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    serieAar.length >= 3 && (
+      <section class="day" aria-labelledby="personer">
+        <h2 class="band" id="personer">Personer med navnet, år for år</h2>
+        <Linjegraf
+          serier={[{ navn: n.navn, punkter: serieAar.map((a) => ({ etikett: a, verdi: n.serie[a] })) }]}
+          enhet={`Personer med navnet ${n.navn} ved årets slutt`}
+          beskrivelse={`Antall personer med fornavnet ${n.navn} ved utgangen av hvert år fra ${serieAar[0]} til ${serieAar.at(-1)}`}
+          desimaler={0}
+        />
+        <div class="prose data-tabell navn-enkel">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">År</th>
+                <th scope="col">Personer</th>
+                <th scope="col">Barn som fikk navnet</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[...alleAar].reverse().map((a) => (
+                <tr>
+                  <td>{a}</td>
+                  <td>{typeof n.serie[a] === 'number' ? nb(n.serie[a]) : '–'}</td>
+                  <td>{typeof n.fodte[a] === 'number' ? nb(n.fodte[a]) : '–'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="day" aria-labelledby="slik">
+    <h2 class="band" id="slik">Om tallene</h2>
+    <div class="prose">
+      <p>
+        «Personer med navnet» teller alle med norsk personnummer som har {n.navn} som fornavn. «Barn som fikk navnet» viser hvor mange som fikk det i hvert årskull. I de siste årene teller SSB
+        navngivningsår, ikke fødselsår.
+      </p>
+      {hull && <p>Der et år mangler, har SSB ikke oppgitt tall for navnet det året.</p>}
+    </div>
+  </section>
+
+  <DataKilde
+    kilde={{ navn: data.kilde.navn, url: 'https://www.ssb.no/befolkning/navn/statistikk/navn', data: data.kilde.data, lisens: data.kilde.lisens, lisensUrl: data.kilde.lisensUrl }}
+    hentet={data.hentet}
+    oppdatert={data.oppdatert}
+    gammel={dataGammel(data.hentet, data.oppdatert, GAMMEL_MAANED_MS * 14)}
+    merknad="Tallene er fra SSB tabell 10501 og 10467."
+  />
+
+  <section class="day" aria-labelledby="flere">
+    <h2 class="band" id="flere">Flere navn</h2>
+    <ul class="navn-naboer">
+      {motsatt && <li><a href={`/navn/${motsatt.slug}/`}>{n.navn} som {kjonnNavn(motsatt.kjonn)}</a></li>}
+      {naboSider.map((s) => <li><a href={`/navn/${s.slug}/`}>{s.navn}</a></li>)}
+    </ul>
+  </section>
+
+  <p class="tema-alle"><a href="/navn/">Navnestatistikk: søk og lister</a> · <a href="/tall/">Flere tall og data</a></p>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
+</Base>
+
+<style>
+  .navn-setninger {
+    margin-top: calc(var(--u) * 3);
+  }
+  .navn-enkel {
+    max-width: 480px;
+  }
+  .navn-naboer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font: 600 1.0625rem var(--read);
+  }
+</style>

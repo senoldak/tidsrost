@@ -1,0 +1,243 @@
+---
+// /navn/: navnestatistikk (SSB 10501, 10467, 12891; src/data/navn.json). Søk, mest brukte for- og etternavn og navn gitt til
+// flest barn i siste år. Navn med egen side (terskel i scripts/data/ssb-navn.mjs) er lenker. Rakamlar veriden.
+import { jsonLdMetni } from '../../lib/json-ld.mjs';
+import KiNotat from '../../components/KiNotat.astro';
+import Base from '../../layouts/Base.astro';
+import Symbol from '../../components/Symbol.astro';
+import Brodsmuler from '../../components/Brodsmuler.astro';
+import Navnesok from '../../components/data/Navnesok.astro';
+import DataKilde from '../../components/data/DataKilde.astro';
+import { GAMMEL_MAANED_MS, dataGammel, datasideLd } from '../../lib/datasider';
+import { SITE_URL } from '../../lib/seo';
+import { navnSider } from '../../../scripts/data/ssb-navn.mjs';
+import data from '../../data/navn.json';
+
+const pageUrl = `${SITE_URL}/navn/`;
+const tittel = 'Navnestatistikk';
+const seoTittel = 'Hvor mange heter …? Navnestatistikk for Norge';
+const sisteAar = data.sisteAar;
+const fodteAar = data.fornavn.flatMap((n) => Object.keys(n.fodte)).sort();
+const sisteFodt = fodteAar.at(-1)!;
+const forsteFodt = fodteAar[0];
+const description = `Søk i SSBs tall for fornavn og etternavn i Norge: hvor mange som heter det samme, de mest brukte navnene og hva barna fikk i ${sisteFodt}.`;
+
+const sider = navnSider(data);
+const slugFor = new Map(sider.map((s) => [`${s.kjonn}${s.navn}`, s.slug]));
+const nb = (v: number) => v.toLocaleString('nb-NO');
+const etter = (k: 'J' | 'G') =>
+  data.fornavn
+    .filter((n) => n.kjonn === k && n.antall !== null)
+    .sort((a, b) => (b.antall as number) - (a.antall as number) || a.navn.localeCompare(b.navn, 'nb'))
+    .slice(0, 20);
+const fodtEtter = (k: 'J' | 'G') =>
+  data.fornavn
+    .filter((n) => n.kjonn === k && typeof (n.fodte as Record<string, number>)[sisteFodt] === 'number')
+    .sort((a, b) => (b.fodte as Record<string, number>)[sisteFodt] - (a.fodte as Record<string, number>)[sisteFodt] || a.navn.localeCompare(b.navn, 'nb'))
+    .slice(0, 20);
+const topper = { jente: etter('J'), gutt: etter('G') };
+const babyer = { jente: fodtEtter('J'), gutt: fodtEtter('G') };
+const etternavn = data.etternavn.slice(0, 20);
+const bokstaver = [...new Set(sider.map((s) => s.navn[0].toLocaleUpperCase('nb')))];
+
+const { sti, jsonLd } = datasideLd({
+  url: pageUrl,
+  tittel,
+  description,
+  datasettNavn: 'Fornavn og etternavn i Norge',
+  datasettBeskrivelse: `Antall personer med hvert fornavn fra ${Math.min(...data.fornavn.flatMap((n) => Object.keys(n.serie).map(Number)))}, antall barn som fikk hvert fornavn fra ${forsteFodt}, og antall personer med hvert etternavn, fra SSB tabell 10501, 10467 og 12891.`,
+  kildeData: 'https://www.ssb.no/statbank/table/10501',
+  lisensUrl: data.kilde.lisensUrl,
+  periode: `${forsteFodt}/${sisteFodt}`,
+  oppdatert: data.oppdatert ?? data.hentet,
+});
+---
+
+<Base title={seoTittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="data" />{tittel}</h1>
+    <p class="page-intro">
+      Statistikken viser hvor mange i Norge som har et bestemt fornavn eller etternavn, og hvilke navn som ble gitt til
+      flest barn i siste år med tall. Tallene kommer fra Statistisk sentralbyrå (SSB).
+    </p>
+  </header>
+
+  <section class="day" aria-labelledby="sok">
+    <h2 class="band" id="sok">Søk i navnene</h2>
+    <Navnesok />
+    <noscript><p class="data-merknad">Søket krever JavaScript. Listene under fungerer uten.</p></noscript>
+  </section>
+
+  <section class="day" aria-labelledby="mest">
+    <h2 class="band" id="mest">De mest brukte fornavnene</h2>
+    <p class="data-merknad">Antall personer i Norge med navnet ved utgangen av {sisteAar}. Navn med egen side er lenker.</p>
+    <div class="navn-par">
+      {
+        (['jente', 'gutt'] as const).map((t) => (
+          <div class="prose data-tabell">
+            <table>
+              <caption>{t === 'jente' ? 'Jentenavn' : 'Guttenavn'}</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Nr.</th>
+                  <th scope="col">Navn</th>
+                  <th scope="col">Personer</th>
+                </tr>
+              </thead>
+              <tbody>
+                {topper[t].map((n, i) => {
+                  const slug = slugFor.get(`${n.kjonn}${n.navn}`);
+                  return (
+                    <tr>
+                      <td>{i + 1}</td>
+                      <td>{slug ? <a href={`/navn/${slug}/`}>{n.navn}</a> : n.navn}</td>
+                      <td>{nb(n.antall as number)}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="day" aria-labelledby="baby">
+    <h2 class="band" id="baby">Navn gitt til flest barn i {sisteFodt}</h2>
+    <p class="data-merknad">Antall barn som fikk navnet i {sisteFodt}, blant navnene i SSBs liste.</p>
+    <div class="navn-par">
+      {
+        (['jente', 'gutt'] as const).map((t) => (
+          <div class="prose data-tabell">
+            <table>
+              <caption>{t === 'jente' ? 'Jentenavn' : 'Guttenavn'}</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Nr.</th>
+                  <th scope="col">Navn</th>
+                  <th scope="col">Barn</th>
+                </tr>
+              </thead>
+              <tbody>
+                {babyer[t].map((n, i) => {
+                  const slug = slugFor.get(`${n.kjonn}${n.navn}`);
+                  return (
+                    <tr>
+                      <td>{i + 1}</td>
+                      <td>{slug ? <a href={`/navn/${slug}/`}>{n.navn}</a> : n.navn}</td>
+                      <td>{nb((n.fodte as Record<string, number>)[sisteFodt])}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="day" aria-labelledby="etternavn">
+    <h2 class="band" id="etternavn">De vanligste etternavnene</h2>
+    <p class="data-merknad">Antall personer i Norge med etternavnet. Etternavn har ikke egne sider, men kan søkes opp.</p>
+    <div class="prose data-tabell navn-enkel">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Nr.</th>
+            <th scope="col">Etternavn</th>
+            <th scope="col">Personer</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            etternavn.map((n, i) => (
+              <tr>
+                <td>{i + 1}</td>
+                <td>{n.navn}</td>
+                <td>{nb(n.antall)}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="day" aria-labelledby="alle">
+    <h2 class="band" id="alle">Navn med egen side</h2>
+    <details class="data-detaljer">
+      <summary>Vis alle navnene, ordnet alfabetisk</summary>
+      {
+        bokstaver.map((b) => (
+          <>
+            <h3 class="varsel-gruppe-tittel">{b}</h3>
+            <ul class="navn-alle">
+              {sider
+                .filter((s) => s.navn[0].toLocaleUpperCase('nb') === b)
+                .map((s) => (
+                  <li>
+                    <a href={`/navn/${s.slug}/`}>{s.navn}</a>
+                  </li>
+                ))}
+            </ul>
+          </>
+        ))
+      }
+    </details>
+  </section>
+
+  <section class="day" aria-labelledby="slik">
+    <h2 class="band" id="slik">Slik er tallene laget</h2>
+    <div class="prose">
+      <p>
+        SSB oppgir tall bare for navn som mange har. Sjeldnere navn finnes ikke i tabellene, og bindestrekfornavn mangler i
+        enkelte år.
+      </p>
+      <p>
+        Antall personer gjelder alle med norsk personnummer ved utgangen av {sisteAar}. Tallene for hvor mange barn som fikk
+        et navn går tilbake til {forsteFodt}. I de siste årene teller SSB navngivningsår, ikke fødselsår.
+      </p>
+      <p>Sidene for enkeltnavn viser tall for de mest brukte navnene. Øvrige navn kan søkes opp.</p>
+    </div>
+  </section>
+
+  <DataKilde
+    kilde={{ navn: data.kilde.navn, url: 'https://www.ssb.no/befolkning/navn/statistikk/navn', data: data.kilde.data, lisens: data.kilde.lisens, lisensUrl: data.kilde.lisensUrl }}
+    hentet={data.hentet}
+    oppdatert={data.oppdatert}
+    gammel={dataGammel(data.hentet, data.oppdatert, GAMMEL_MAANED_MS * 14)}
+    merknad="Tallene er fra SSB tabell 10501, 10467 og 12891."
+  />
+
+  <p class="tema-alle"><a href="/tall/">Flere tall og data</a></p>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
+</Base>
+
+<style>
+  .navn-par {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0 calc(var(--u) * 5);
+  }
+  @media (min-width: 720px) {
+    .navn-par {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .navn-enkel {
+    max-width: 480px;
+  }
+  .navn-alle {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: var(--frame);
+  }
+</style>

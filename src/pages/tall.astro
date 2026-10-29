@@ -16,6 +16,7 @@ import arbeid from '../data/arbeidsledighet.json';
 import kpiHist from '../data/kpi-historisk.json';
 import snoskredData from '../data/snoskred.json';
 import flomData from '../data/flom.json';
+import navnData from '../data/navn.json';
 import { dagNivaaer } from '../../scripts/data/nve.mjs';
 import { omregn } from '../lib/prisomregner.mjs';
 import { arbeidsdagerTotalt } from '../lib/helligdager.mjs';
@@ -41,6 +42,8 @@ const snoAntall = snoDag ? dagNivaaer(snoskredData, snoDag).length : null;
 
 const flomFylker = new Set([...Object.keys(flomData.flom), ...Object.keys(flomData.jordskred)]).size;
 
+const vanligsteEtternavn = navnData.etternavn[0];
+
 const rodeAar = Number(new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Oslo' }).slice(0, 4));
 
 const kort = [
@@ -59,6 +62,14 @@ const kort = [
     navn: 'Hva er pengene verdt?',
     verdi: typeof kpiEks === 'number' ? `${Math.round(kpiEks).toLocaleString('nb-NO')} kr` : '–',
     tekst: `Hundre kroner fra ${kpiEksFra} regnet om til prisnivået i ${kpiHist.sisteAar}. Regn om beløp mellom alle år siden ${Object.keys(kpiHist.aar)[0]}.`,
+    kilde: 'SSB',
+    sym: 'data',
+  },
+  {
+    url: '/navn/',
+    navn: 'Navnestatistikk',
+    verdi: vanligsteEtternavn?.navn ?? '–',
+    tekst: vanligsteEtternavn ? `Det vanligste etternavnet i Norge, med ${vanligsteEtternavn.antall.toLocaleString('nb-NO')} personer. Søk i fornavn og etternavn, og se hva barna fikk i ${navnData.sisteAar}.` : 'Søk i fornavn og etternavn.',
     kilde: 'SSB',
     sym: 'data',
   },

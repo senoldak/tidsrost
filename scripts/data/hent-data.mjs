@@ -16,6 +16,7 @@ import { RENTE_KILDE, VARSEL_KILDE, farevarsler, hasterPublisering, lesSdmxCsv, 
 import { NVE_KILDE, fareKommuner, nveFareUrl, nveSnoskredUrl, snoskred } from './nve.mjs';
 import { SSB_KILDE, ssbUrl } from './ssb.mjs';
 import { arbeidsledighet, boligpriser, kpiHistorisk, prisstigning } from './ssb-sider.mjs';
+import { komprimer, navnData } from './ssb-navn.mjs';
 import { birlestirMaaned, dagsTall, hendelser, nesteArkivmaaned, oppdaterLopende } from './varselarkiv.mjs';
 
 // Standartlar: acil durdurma açıksa veri sayfaları da güncellenmez.
@@ -123,6 +124,19 @@ const JOBBER = [
       const aar = JSON.parse(await hent(ssbUrl('14711', { ContentsCode: 'KpiAar', Tid: '*' }), 'application/json'));
       const mnd = JSON.parse(await hent(ssbUrl('14710', { ContentsCode: 'KpiIndMnd', Tid: '*' }), 'application/json'));
       return { kilde: SSB_KILDE, tabell: '14711, 14710', ...kpiHistorisk(aar, mnd) };
+    },
+  },
+  {
+    // Fornavn (10501: 2013–, 10467: 1880–) og etternavn (12891): her bir tablo tek istekte gelir. Yılda bir değişir, günde en çok bir kez denenir.
+    // Dosya küçültülür: tam seriler yalnız kendi sayfası olan adlarda kalır (komprimer).
+    fil: 'navn.json',
+    kompakt: true,
+    aralikSaat: 24,
+    async lag() {
+      const p = JSON.parse(await hent(ssbUrl('10501', { Fornavn: '*', ContentsCode: 'Personer', Tid: '*' }), 'application/json'));
+      const f = JSON.parse(await hent(ssbUrl('10467', { Fornavn: '*', ContentsCode: 'Personer', Tid: '*' }), 'application/json'));
+      const e = JSON.parse(await hent(ssbUrl('12891', { Etternavn: '*', ContentsCode: 'Personer', Tid: 'top(1)' }), 'application/json'));
+      return { kilde: SSB_KILDE, tabell: '10501, 10467, 12891', ...komprimer(navnData(p, f, e)) };
     },
   },
   {
