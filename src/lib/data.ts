@@ -24,7 +24,7 @@ export interface Farevarsel {
   web: string | null;
 }
 
-export const RENTE = renteData as typeof renteData & { gjeldendeFra: string | null; endringer: Renteendring[] };
+export const RENTE = renteData as typeof renteData & { gjeldendeFra: string | null; endringer: Renteendring[]; trinn?: { fra: string; rente: number }[] };
 export const VARSLER = varselData as typeof varselData & { varsler: Farevarsel[] };
 
 // Bu süreden eski veri "güncellenemedi" uyarısıyla gösterilir (bot ~2 saatte bir çalışır; gece arası var).

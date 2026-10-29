@@ -109,3 +109,19 @@ test('hasterPublisering: SSB-filer venter på neste vanlige publisering, styring
   }
   assert.equal(hasterPublisering('styringsrente.json', { rente: 4 }, { rente: 4.25 }), true);
 });
+
+test('styringsrente: trinn = seriens første dag + hver endring, eldst først', () => {
+  const serie = [
+    { dato: '2016-01-04', verdi: 0.75 },
+    { dato: '2016-03-18', verdi: 0.5 },
+    { dato: '2016-03-21', verdi: 0.5 },
+    { dato: '2018-09-21', verdi: 0.75 },
+    { dato: '2019-03-22', verdi: 1 },
+  ];
+  assert.deepEqual(styringsrente(serie).trinn, [
+    { fra: '2016-01-04', rente: 0.75 },
+    { fra: '2016-03-18', rente: 0.5 },
+    { fra: '2018-09-21', rente: 0.75 },
+    { fra: '2019-03-22', rente: 1 },
+  ]);
+});

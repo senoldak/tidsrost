@@ -51,6 +51,8 @@ export function styringsrente(serie, maksEndringer = 10) {
     gjeldendeFra: endringer.at(-1)?.fra ?? null,
     serieFra: serie[0].dato,
     endringer: endringer.slice(-maksEndringer).reverse(),
+    // Grafik için bütün pencere: serinin ilk günü + her değişiklik, eskiden yeniye.
+    trinn: [{ fra: serie[0].dato, rente: serie[0].verdi }, ...endringer.map((e) => ({ fra: e.fra, rente: e.rente }))],
   };
 }
 

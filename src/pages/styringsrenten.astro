@@ -7,6 +7,7 @@ import Base from '../layouts/Base.astro';
 import Symbol from '../components/Symbol.astro';
 import Brodsmuler from '../components/Brodsmuler.astro';
 import StoryRow from '../components/StoryRow.astro';
+import Linjegraf from '../components/data/Linjegraf.astro';
 import { SITE } from '../lib/site';
 import { getNews } from '../lib/news';
 import { GAMMEL_RENTE_MS, RENTE, datoTekst, erGammel, prosent, tidTekst } from '../lib/data';
@@ -23,6 +24,19 @@ const endring = (e: { rente: number; forrige: number }) => {
   const d = e.rente - e.forrige;
   return `${d > 0 ? '+' : '−'}${Math.abs(d).toLocaleString('nb-NO', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} prosentpoeng`;
 };
+
+// Grafik: her ayın ilk günündeki düzey (basamaklı çizgi), on yıllık pencere. Aylık örnek ekseni zamana orantılı tutar.
+const trinn = r.trinn ?? [];
+const maaneder: { etikett: string; verdi: number }[] = [];
+if (trinn.length) {
+  const start = new Date(`${trinn[0].fra.slice(0, 7)}-01T00:00:00Z`);
+  const slutt = new Date(`${r.sisteObservasjon.slice(0, 7)}-01T00:00:00Z`);
+  for (let d = start; d <= slutt; d = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 1))) {
+    const dag = d.toISOString().slice(0, 10);
+    const gjeldende = [...trinn].reverse().find((t) => t.fra <= dag) ?? trinn[0];
+    maaneder.push({ etikett: String(d.getUTCFullYear()), verdi: gjeldende.rente });
+  }
+}
 
 const tema = aktiveTemaer(await getNews()).find((t) => t.tema.slug === 'norges-bank');
 const saker = tema?.saker.slice(0, 4) ?? [];
@@ -110,6 +124,21 @@ const jsonLd = {
       </div>
     </dl>
   </section>
+
+  {
+    maaneder.length > 1 && (
+      <section class="day" aria-labelledby="historikk">
+        <h2 class="band" id="historikk">Styringsrenten de siste ti årene</h2>
+        <Linjegraf
+          serier={[{ navn: 'Styringsrenten', punkter: maaneder }]}
+          enhet="Prosent, nivå ved inngangen til hver måned"
+          trinn
+          desimaler={2}
+          beskrivelse={`Styringsrenten fra ${maaneder[0].etikett} til i dag, nå ${prosent(r.rente)}`}
+        />
+      </section>
+    )
+  }
 
   {
     r.endringer.length > 0 && (
