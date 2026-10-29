@@ -12,7 +12,8 @@ import { ANALYSE, FORKLART, erAnalyse, erForklart, forfatterSlug, getNews, kilde
 import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs, headline } from '../../lib/seo';
 import SentezBlok from '../../components/SentezBlok.astro';
 import { matchEntities } from '../../lib/entities';
-import { apenForSok } from '../../lib/sok-synlighet.mjs';
+import { indekserbar } from '../../lib/ordtelling.mjs';
+import { skjultForSok } from '../../lib/sok-synlighet.mjs';
 import { relaterteSaker } from '../../lib/relaterte';
 import Brodsmuler from '../../components/Brodsmuler.astro';
 import KiNotat from '../../components/KiNotat.astro';
@@ -65,9 +66,10 @@ const iso = date.toISOString();
 // Düzeltme ya da güncelleme tarihi (oppdatert) varsa dateModified odur; yayın tarihinden önce olamaz.
 const endret = oppdatert && oppdatert > date ? oppdatert : undefined;
 const modifiedIso = (endret ?? date).toISOString();
-// Çok kısa haberler, medya yeniden yazımları ve farevarsel derlemeleri arama motorlarına kapalı (noindex, follow)
-// ve site haritalarında yok (src/lib/sok-synlighet.mjs).
-const noindex = !apenForSok({ body: haber.body, produksjon: haber.data.produksjon, id: haber.id, title });
+// Çok kısa haberler bütün arama motorlarına kapalı (noindex, follow). Medya yeniden yazımları ve farevarsel
+// derlemeleri yalnız Google'a kapalı (googlebot); ikisi de site haritalarında yok (src/lib/sok-synlighet.mjs).
+const noindex = !indekserbar(haber.body);
+const googleNoindex = skjultForSok({ produksjon: haber.data.produksjon, id: haber.id, title });
 const section = categoryName(category);
 const categoryUrl = `${SITE_URL}/kategori/${category}/`;
 const sti = [
@@ -107,7 +109,7 @@ const jsonLd = {
 };
 ---
 
-<Base title={title} description={description} image={ogImage} imageWidth={ogWidth} imageHeight={ogHeight} imageAlt={coverAlt ?? title} type="article" noindex={noindex}>
+<Base title={title} description={description} image={ogImage} imageWidth={ogWidth} imageHeight={ogHeight} imageAlt={coverAlt ?? title} type="article" noindex={noindex} googleNoindex={googleNoindex}>
   <Fragment slot="head">
     <meta property="article:published_time" content={iso} />
     <meta property="article:modified_time" content={modifiedIso} />

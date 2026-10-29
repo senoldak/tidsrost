@@ -18,9 +18,11 @@ interface Props {
   type?: 'website' | 'article';
   // 404 ve içeriksiz sayfalar arama sonuçlarına girmez.
   noindex?: boolean;
+  // Yalnız Google'a kapalı (googlebot meta etiketi); robots etiketi ve canonical açık kalır.
+  googleNoindex?: boolean;
 }
 
-const { title, description: desc, image, imageWidth, imageHeight, imageAlt, type = 'website', noindex = false } = Astro.props;
+const { title, description: desc, image, imageWidth, imageHeight, imageAlt, type = 'website', noindex = false, googleNoindex = false } = Astro.props;
 const description = desc?.trim() ? desc.trim() : SITE.description;
 const metaDesc = metaDescription(description);
 const robots = noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
@@ -62,6 +64,8 @@ const [nameHead, nameTail] = SITE.name.split('ø');
     <title>{fullTitle}</title>
     <meta name="description" content={metaDesc} />
     <meta name="robots" content={robots} />
+    {/* Yalnız Google'a kapalı sayfa: diğer arama motorları ve yapay zekâ arama botları (ChatGPT, Perplexity, Bing) görmeye devam eder. */}
+    {googleNoindex && !noindex && <meta name="googlebot" content="noindex, follow" />}
     <meta name="theme-color" content="#fdfdfb" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#171612" media="(prefers-color-scheme: dark)" />
     {!noindex && <link rel="canonical" href={canonical} />}

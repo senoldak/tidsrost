@@ -5,7 +5,8 @@
 // 29.10.2026 (sahibinin kararı): Google 21 Ekim'de siteyi toplu taradıktan sonra en yeni yazıların hiçbirini
 // dizine almadı ("taranmış, dizine eklenmemiş"). Okurun neredeyse tamamı Facebook'tan geliyor. Başka medyanın
 // haberinden yeniden yazılan haberler (produksjon: ki-medier) ve günlük farevarsel derlemeleri sitede ve
-// paylaşımlarda kalır, ama arama motorlarına kapatılır (noindex, follow) ve site haritalarına girmez.
+// paylaşımlarda kalır, ama Google'a kapatılır (googlebot: noindex, follow) ve site haritalarına girmez.
+// Aynı gün: kapatma yalnız Google'a özel yapıldı; ChatGPT, Perplexity, Bing gibi aramalar bu haberleri görmeye devam eder.
 // Google siteyi resmî kaynaklı haberler, Forklart ve Analyse üzerinden tartsın. Geri almak için
 // SKJULT_PRODUKSJON'u boşalt ve erFarevarsel kontrolünü kaldır.
 import { indekserbar } from './ordtelling.mjs';
