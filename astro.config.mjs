@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import { readdir, readFile, rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { indekserbar } from './src/lib/ordtelling.mjs';
+import { apenForSok } from './src/lib/sok-synlighet.mjs';
 import { osloDag } from './src/lib/apenhet.mjs';
 import { ARKIV_TERSKEL } from './src/lib/arkiv.mjs';
 
@@ -40,8 +40,8 @@ const kullanilmayanGorseller = () => ({
 });
 
 // Site haritası için haber tarihleri: frontmatter'dan okunur (lastmod). Taslaklar ve
-// içeriksiz kategoriler site haritasına girmez. Çok kısa haberler (noindex, bkz. src/lib/ordtelling.mjs)
-// de girmez; ölçü haber sayfasının robots etiketiyle aynı yardımcıdan gelir.
+// içeriksiz kategoriler site haritasına girmez. Arama motorlarına kapalı haberler (kısa, medya yeniden yazımı,
+// farevarsel; bkz. src/lib/sok-synlighet.mjs) de girmez; ölçü haber sayfasının robots etiketiyle aynı yardımcıdan gelir.
 const haberDizini = fileURLToPath(new URL('./src/content/haberler/', import.meta.url));
 const haberTarihleri = new Map();
 const doluKategoriler = new Set();
@@ -62,7 +62,7 @@ for (const f of await readdir(haberDizini, { recursive: true })) {
   const oppdatert = new Date(alan('oppdatert') ?? '');
   const sist = !Number.isNaN(oppdatert.getTime()) && oppdatert > tarih ? oppdatert : tarih;
   if (!Number.isNaN(tarih.getTime())) haberTarihleri.set(`/artikkel/${id}/`, sist);
-  if (!indekserbar(metin)) kisaHaberler.add(`/artikkel/${id}/`);
+  if (!apenForSok({ body: metin, produksjon: alan('produksjon'), id, title: alan('title') })) kisaHaberler.add(`/artikkel/${id}/`);
   const kategori = alan('category');
   if (kategori) doluKategoriler.add(kategori);
   if (!Number.isNaN(tarih.getTime())) {

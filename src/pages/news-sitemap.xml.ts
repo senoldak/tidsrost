@@ -1,17 +1,17 @@
 import type { APIContext } from 'astro';
 import { SITE } from '../lib/site';
 import { getNews, newsUrl } from '../lib/news';
-import { indekserbar } from '../lib/ordtelling.mjs';
+import { apenForSok } from '../lib/sok-synlighet.mjs';
 
 // Google News site haritası: son 48 saatte yayımlanan haberler (Google'ın sınırı).
 // Site her bot commit'inden sonra yeniden derlendiği için derleme anındaki pencere yeterlidir.
-// Çok kısa (noindex) haberler girmez; ölçü haber sayfasıyla aynı (src/lib/ordtelling.mjs).
+// Arama motorlarına kapalı (noindex) haberler girmez; ölçü haber sayfasıyla aynı (src/lib/sok-synlighet.mjs).
 const esc = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
 
 export async function GET(context: APIContext) {
   const limit = Date.now() - 48 * 3600 * 1000;
-  const items = (await getNews()).filter((h) => h.data.date.getTime() >= limit && indekserbar(h.body)).slice(0, 1000);
+  const items = (await getNews()).filter((h) => h.data.date.getTime() >= limit && apenForSok({ body: h.body, produksjon: h.data.produksjon, id: h.id, title: h.data.title })).slice(0, 1000);
   const urls = items
     .map(
       (h) => `  <url>

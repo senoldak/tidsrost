@@ -12,7 +12,7 @@ import { ANALYSE, FORKLART, erAnalyse, erForklart, forfatterSlug, getNews, kilde
 import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs, headline } from '../../lib/seo';
 import SentezBlok from '../../components/SentezBlok.astro';
 import { matchEntities } from '../../lib/entities';
-import { indekserbar } from '../../lib/ordtelling.mjs';
+import { apenForSok } from '../../lib/sok-synlighet.mjs';
 import { relaterteSaker } from '../../lib/relaterte';
 import Brodsmuler from '../../components/Brodsmuler.astro';
 import KiNotat from '../../components/KiNotat.astro';
@@ -65,8 +65,9 @@ const iso = date.toISOString();
 // Düzeltme ya da güncelleme tarihi (oppdatert) varsa dateModified odur; yayın tarihinden önce olamaz.
 const endret = oppdatert && oppdatert > date ? oppdatert : undefined;
 const modifiedIso = (endret ?? date).toISOString();
-// Çok kısa haberler arama motorlarına kapalı (noindex, follow) ve site haritalarında yok (src/lib/ordtelling.mjs).
-const noindex = !indekserbar(haber.body);
+// Çok kısa haberler, medya yeniden yazımları ve farevarsel derlemeleri arama motorlarına kapalı (noindex, follow)
+// ve site haritalarında yok (src/lib/sok-synlighet.mjs).
+const noindex = !apenForSok({ body: haber.body, produksjon: haber.data.produksjon, id: haber.id, title });
 const section = categoryName(category);
 const categoryUrl = `${SITE_URL}/kategori/${category}/`;
 const sti = [
