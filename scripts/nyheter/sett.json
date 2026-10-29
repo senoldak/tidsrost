@@ -6048,7 +6048,38 @@
     "medier:25e546badeece3c1": "2026-10-29T15:01:45.802Z",
     "medier:7d88d69b0ca58105": "2026-10-29T15:01:45.802Z",
     "nkom:348b802c-5a49-42b2-bf62-af2b3c383143": "2026-10-29T15:01:45.802Z",
-    "unnews:https://news.un.org/en/story/2026/10/1168698": "2026-10-29T15:01:45.802Z"
+    "unnews:https://news.un.org/en/story/2026/10/1168698": "2026-10-29T15:01:45.802Z",
+    "medier:cc6c7a27e325a592": "2026-10-29T17:01:44.909Z",
+    "medier:d2e533cf4b4ba31a": "2026-10-29T17:01:44.909Z",
+    "medier:d1b2a16fc72470fb": "2026-10-29T17:01:44.909Z",
+    "medier:e003b954e6ae749b": "2026-10-29T17:01:44.909Z",
+    "medier:1f61cd85b7e36d6a": "2026-10-29T17:01:44.909Z",
+    "medier:d68e029aded91f83": "2026-10-29T17:01:44.909Z",
+    "medier:3f627ac489f28ba2": "2026-10-29T17:01:44.909Z",
+    "medier:3f65daf47f68c2e7": "2026-10-29T17:01:44.909Z",
+    "medier:3ab5d451d198cb66": "2026-10-29T17:01:44.909Z",
+    "medier:9e67464daef0b736": "2026-10-29T17:01:44.909Z",
+    "regjeringen:3186522": "2026-10-29T17:01:44.909Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2294": "2026-10-29T17:01:44.909Z",
+    "unnews:https://news.un.org/en/story/2026/10/1168700": "2026-10-29T17:01:44.909Z",
+    "medier:551e54403af627da": "2026-10-29T17:01:44.909Z",
+    "medier:1f2fa18063f7a401": "2026-10-29T17:01:44.909Z",
+    "medier:ad7c28cc9ab99f2d": "2026-10-29T17:01:44.909Z",
+    "medier:730e02aa8d033ca0": "2026-10-29T17:01:44.909Z",
+    "medier:238376091bcf9ca2": "2026-10-29T17:01:44.909Z",
+    "medier:cec60a1c269cce93": "2026-10-29T17:01:44.909Z",
+    "medier:29ef25ae8e970368": "2026-10-29T17:01:44.909Z",
+    "medier:248223c03aa8ad50": "2026-10-29T17:01:44.909Z",
+    "unnews:https://news.un.org/en/story/2026/10/1168702": "2026-10-29T17:01:44.909Z",
+    "dsb:https://www.dsb.no/aktuelt/ber-befolkningen-vare-forberedt-pa-cyberangrep/": "2026-10-29T17:01:44.909Z",
+    "medier:c2e99173ef6f008c": "2026-10-29T17:01:44.909Z",
+    "medier:209921f72d5816e6": "2026-10-29T17:01:44.909Z",
+    "medier:7343fe1a8b25445f": "2026-10-29T17:01:44.909Z",
+    "medier:7ca8c93920369960": "2026-10-29T17:01:44.909Z",
+    "medier:7c6b08d6f31befab": "2026-10-29T17:01:44.909Z",
+    "medier:77915f122045d47d": "2026-10-29T17:01:44.909Z",
+    "medier:472c2ef5c8b9552b": "2026-10-29T17:01:44.909Z",
+    "medier:a69e97a087681f53": "2026-10-29T17:01:44.909Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -6101,36 +6132,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "unnews:https://news.un.org/en/story/2026/10/1168670": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-26T17:02:45.539Z"
-    },
-    "medier:3f76258d06d40037": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-26T17:02:45.539Z"
-    },
-    "medier:234bb2e35ad3ace7": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-26T17:02:45.539Z"
-    },
-    "medier:aec40f1db55134f0": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-26T17:02:45.539Z"
-    },
-    "medier:d74abaefd91d6ebb": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-26T17:02:45.539Z"
-    },
-    "medier:20f63946f56937c2": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-26T17:02:45.539Z"
-    },
     "medier:1308ef28549413d0": {
       "p": 75,
       "v": "b34cb0de5bde",
@@ -7955,6 +7956,66 @@
       "p": 45,
       "v": "b34cb0de5bde",
       "t": "2026-10-29T15:09:18.602Z"
+    },
+    "medier:1f61cd85b7e36d6a": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-29T17:03:36.901Z"
+    },
+    "medier:c2e99173ef6f008c": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-29T17:03:36.901Z"
+    },
+    "medier:551e54403af627da": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-29T17:03:36.901Z"
+    },
+    "medier:ad7c28cc9ab99f2d": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-29T17:03:36.901Z"
+    },
+    "medier:1d90a2d1823b1bfe": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-29T17:03:36.901Z"
+    },
+    "medier:cec60a1c269cce93": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-29T17:03:36.901Z"
+    },
+    "medier:472c2ef5c8b9552b": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-29T17:03:36.901Z"
+    },
+    "regjeringen:3186522": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-29T17:03:36.901Z"
+    },
+    "dsb:https://www.dsb.no/aktuelt/ber-befolkningen-vare-forberedt-pa-cyberangrep/": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-29T17:03:36.901Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/10/1168702": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-29T17:03:36.901Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/10/1168700": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-29T17:03:36.901Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2294": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-29T17:03:36.901Z"
     }
   }
 }
