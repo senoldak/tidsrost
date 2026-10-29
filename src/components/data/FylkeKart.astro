@@ -1,0 +1,53 @@
+---
+// Fylke kare haritası: 15 fylke Norveç'in şeklini veren karelerde (yerleşim CSS'te, .fk-<kod>). Renk basamağı sayıdan,
+// her karede ad ve sayı yazılı; renk tek başına anlam taşımaz. Karenin altındaki <details> fylkenin kısa özetini açar.
+import { FYLKER } from '../../lib/fylker.mjs';
+
+interface Props {
+  verdier: Record<string, number>;
+  etikett: string;
+  detaljer?: Record<string, string>;
+}
+
+const { verdier, etikett, detaljer = {} } = Astro.props;
+const KORT: Record<string, string> = { '15': 'Møre og R.', '03': 'Oslo' };
+const maks = Math.max(0, ...Object.values(verdier));
+const trinn = (v: number) => (v <= 0 || maks === 0 ? 0 : Math.min(4, Math.ceil((v / maks) * 4)));
+const grenser = [0, 1, 2, 3, 4].map((t) => (t === 0 ? '0' : `${Math.floor(((t - 1) / 4) * maks) + 1}–${Math.ceil((t / 4) * maks)}`));
+---
+
+<figure class="fylkekart">
+  <ul class="fylkekart-rutenett" aria-label={etikett}>
+    {
+      FYLKER.map((f) => {
+        const v = verdier[f.kode] ?? 0;
+        return (
+          <li class:list={['fk', `fk-${f.kode}`, `fk-t${trinn(v)}`]}>
+            {detaljer[f.kode] ? (
+              <details>
+                <summary>
+                  <span class="fk-navn">{KORT[f.kode] ?? f.navn}</span>
+                  <span class="fk-tall">{v}</span>
+                </summary>
+                <p class="fk-detalj">
+                  <strong>{f.navn}:</strong> {detaljer[f.kode]}
+                </p>
+              </details>
+            ) : (
+              <>
+                <span class="fk-navn">{KORT[f.kode] ?? f.navn}</span>
+                <span class="fk-tall">{v}</span>
+              </>
+            )}
+          </li>
+        );
+      })
+    }
+  </ul>
+  <figcaption class="graf-tekst">
+    <span class="fk-skala" aria-hidden="true">
+      {grenser.map((g, t) => (maks > 0 || t === 0) && <span class={`fk-t${t}`}>{g}</span>)}
+    </span>
+    <span>{etikett}</span>
+  </figcaption>
+</figure>

@@ -1,0 +1,39 @@
+---
+// Veri sayfalarının kaynak satırı ve eski veri uyarısı (mevcut .data-kilde / .data-varsel kalıbı).
+import Symbol from '../Symbol.astro';
+import { tidTekst } from '../../lib/data';
+
+interface Props {
+  kilde: { navn: string; url: string; data?: string; lisens: string; lisensUrl?: string };
+  hentet: string;
+  oppdatert?: string | null;
+  gammel: boolean;
+  merknad?: string;
+}
+
+const { kilde, hentet, oppdatert, gammel, merknad } = Astro.props;
+---
+
+{
+  gammel && (
+    <p class="data-varsel" role="status">
+      Vi har ikke klart å hente nye tall siden {tidTekst(hentet)}. Sjekk <a href={kilde.url}>{kilde.navn}</a> for siste
+      informasjon.
+    </p>
+  )
+}
+<p class="data-kilde">
+  <Symbol kind="kilde" />
+  <span>
+    Kilde: <a href={kilde.url}>{kilde.navn}</a>
+    {kilde.data && (
+      <>
+        , åpne data fra <a href={kilde.data}>{new URL(kilde.data).host}</a>
+      </>
+    )}
+    {' '}({kilde.lisensUrl ? <a href={kilde.lisensUrl}>{kilde.lisens}</a> : kilde.lisens}).
+    {oppdatert && <> Kilden oppdaterte tallene {tidTekst(oppdatert)}.</>}
+    {' '}Vi henter tallene automatisk, sist {tidTekst(hentet)}.
+    {merknad && <> {merknad}</>}
+  </span>
+</p>

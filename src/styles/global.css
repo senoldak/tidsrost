@@ -1642,3 +1642,219 @@ main.container {
   align-items: center;
   gap: 6px;
 }
+
+/* ——— Datasider: grafer, stolper og fylkeskart (src/components/data) ——— */
+.graf,
+.stolper,
+.fylkekart {
+  margin: calc(var(--u) * 2) 0 calc(var(--u) * 4);
+}
+
+.graf {
+  max-width: 560px;
+}
+
+.graf-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.graf-tikk line {
+  stroke: var(--rule);
+  stroke-width: 1;
+}
+
+.graf-tikk line.graf-null {
+  stroke: var(--ink-2);
+}
+
+.graf-tikk text,
+.graf-x {
+  fill: var(--muted);
+  font: 500 14px var(--frame);
+  font-variant-numeric: tabular-nums;
+}
+
+.graf-serie path {
+  fill: none;
+  stroke: var(--water);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+
+.graf-serie circle {
+  fill: var(--water);
+}
+
+.graf-serie.graf-s1 path {
+  stroke: var(--contour);
+}
+
+.graf-serie.graf-s1 circle {
+  fill: var(--contour);
+}
+
+.graf-siste {
+  fill: var(--ink);
+  font: 700 14px var(--frame);
+  font-variant-numeric: tabular-nums;
+}
+
+.graf-tekst {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px calc(var(--u) * 2);
+  margin-top: var(--u);
+  font: 500 0.8125rem/1.45 var(--frame);
+  color: var(--muted);
+}
+
+.graf-nokkel::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 3px;
+  margin-right: 6px;
+  vertical-align: middle;
+  background: var(--water);
+}
+
+.graf-nokkel.graf-s1::before {
+  background: var(--contour);
+}
+
+.stolper {
+  max-width: 640px;
+}
+
+.stolper-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stolpe {
+  display: grid;
+  grid-template-columns: minmax(7rem, 38%) 1fr 3.5rem;
+  align-items: center;
+  gap: calc(var(--u) * 1.5);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--rule);
+  font: 500 0.9375rem/1.3 var(--frame);
+}
+
+.stolpe-svg {
+  display: block;
+  width: 100%;
+  height: 14px;
+}
+
+.stolpe-svg rect {
+  fill: var(--water);
+}
+
+.stolpe-null {
+  stroke: var(--ink-2);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.stolpe-verdi {
+  text-align: right;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.stolpe-fremhev .stolpe-navn {
+  font-weight: 700;
+}
+
+.stolpe-fremhev .stolpe-svg rect {
+  fill: var(--ink);
+}
+
+.fylkekart-rutenett {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-auto-rows: minmax(56px, auto);
+  gap: 4px;
+  max-width: 420px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fk {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  padding: 5px 6px;
+  border: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
+  border-radius: 3px;
+  font: 600 0.75rem/1.15 var(--frame);
+}
+
+.fk details,
+.fk summary {
+  display: contents;
+}
+
+.fk summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.fk summary::-webkit-details-marker {
+  display: none;
+}
+
+.fk-navn {
+  overflow-wrap: anywhere;
+}
+
+.fk-tall {
+  font: 700 1.0625rem/1 var(--frame);
+  font-variant-numeric: tabular-nums;
+}
+
+.fk-detalj {
+  margin: 4px 0 0;
+  font-weight: 500;
+}
+
+.fk-56 { grid-column: 5; grid-row: 1; }
+.fk-55 { grid-column: 4; grid-row: 2; }
+.fk-18 { grid-column: 3; grid-row: 3; }
+.fk-50 { grid-column: 3; grid-row: 4; }
+.fk-15 { grid-column: 2; grid-row: 5; }
+.fk-34 { grid-column: 3; grid-row: 5; }
+.fk-46 { grid-column: 1; grid-row: 6; }
+.fk-33 { grid-column: 2; grid-row: 6; }
+.fk-32 { grid-column: 3; grid-row: 6; }
+.fk-03 { grid-column: 4; grid-row: 6; }
+.fk-11 { grid-column: 1; grid-row: 7; }
+.fk-40 { grid-column: 2; grid-row: 7; }
+.fk-39 { grid-column: 3; grid-row: 7; }
+.fk-31 { grid-column: 4; grid-row: 7; }
+.fk-42 { grid-column: 2; grid-row: 8; }
+
+/* Antall varsler: lys til mørk; teksten er alltid mørk på de gule/oransje trinnene. */
+.fk-t0 { background: var(--surface); color: var(--ink); }
+.fk-t1 { background: #fbeeb0; color: #16191c; }
+.fk-t2 { background: #f6d23a; color: #16191c; }
+.fk-t3 { background: #eba13a; color: #16191c; }
+.fk-t4 { background: #df7a2e; color: #16191c; }
+
+.fk-skala {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.fk-skala span {
+  padding: 1px 6px;
+  border-radius: 2px;
+  font: 600 0.75rem var(--frame);
+}

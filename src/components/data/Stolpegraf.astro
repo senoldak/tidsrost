@@ -1,0 +1,40 @@
+---
+// Yatay çubuk grafiği, büyükten küçüğe. Eksi değerler sıfır çizgisinin soluna uzanır. Çubuk uzunluğu SVG
+// özniteliğiyle verilir (CSP satır içi stile izin vermez); yazılar HTML'de, telefonda kendi boyutunda kalır.
+import { tallTekst } from '../../lib/graf.mjs';
+
+interface Props {
+  rader: { navn: string; verdi: number | null; fremhev?: boolean }[];
+  enhet: string;
+  beskrivelse: string;
+  desimaler?: number;
+  sorter?: boolean;
+}
+
+const { rader, enhet, beskrivelse, desimaler = 1, sorter = true } = Astro.props;
+const liste = sorter ? [...rader].sort((a, b) => (b.verdi ?? -Infinity) - (a.verdi ?? -Infinity)) : rader;
+const verdier = liste.map((r) => r.verdi).filter((v): v is number => typeof v === 'number');
+const min = Math.min(0, ...verdier);
+const max = Math.max(0, ...verdier);
+const spenn = max - min || 1;
+const nullX = (-min / spenn) * 100;
+const bar = (v: number) => ({ x: v >= 0 ? nullX : nullX - (-v / spenn) * 100, w: (Math.abs(v) / spenn) * 100 });
+---
+
+<figure class="stolper" aria-label={beskrivelse}>
+  <ol class="stolper-liste">
+    {
+      liste.map((r) => (
+        <li class:list={['stolpe', { 'stolpe-fremhev': r.fremhev }]}>
+          <span class="stolpe-navn">{r.navn}</span>
+          <svg viewBox="0 0 100 10" preserveAspectRatio="none" class="stolpe-svg" aria-hidden="true">
+            <line x1={nullX} x2={nullX} y1="0" y2="10" class="stolpe-null" />
+            {typeof r.verdi === 'number' && <rect x={bar(r.verdi).x} y="1.5" width={Math.max(bar(r.verdi).w, 0.4)} height="7" />}
+          </svg>
+          <span class="stolpe-verdi">{typeof r.verdi === 'number' ? tallTekst(r.verdi, desimaler) : '–'}</span>
+        </li>
+      ))
+    }
+  </ol>
+  <figcaption class="graf-tekst">{enhet}</figcaption>
+</figure>

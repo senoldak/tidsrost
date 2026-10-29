@@ -1,0 +1,82 @@
+---
+// Derleme anında çizilen çizgi grafiği (veri sayfaları). İstemci betiği yok; CSP'ye uygun (yalnız SVG öznitelikleri).
+// viewBox 400 birim genişlik: telefonda (~343 px) 14 birimlik yazı ~12 px'e iner; masaüstünde .graf en çok 560 px.
+import { fineTikker, linjeSti, skala, tallTekst, trinnSti } from '../../lib/graf.mjs';
+
+interface Punkt {
+  etikett: string;
+  verdi: number;
+}
+interface Props {
+  serier: { navn: string; punkter: Punkt[] }[];
+  enhet: string;
+  trinn?: boolean;
+  beskrivelse: string;
+  desimaler?: number;
+}
+
+const { serier, enhet, trinn = false, beskrivelse, desimaler = 1 } = Astro.props;
+const B = 400;
+const H = 220;
+const V = 44; // sol: eksen yazıları
+const S = 52; // sağ: son değer
+const U = 12;
+const A = 30; // alt: dönem yazıları
+const alle = serier.flatMap((s) => s.punkter.map((p) => p.verdi));
+const tikker = alle.length ? fineTikker(Math.min(...alle), Math.max(...alle)) : [0, 1];
+const yMin = tikker[0];
+const yMax = tikker.at(-1);
+const y = skala(yMin, yMax, H - U - A);
+const yPx = (v: number) => H - A - y(v);
+const lengde = Math.max(...serier.map((s) => s.punkter.length), 1);
+const xPx = (i: number) => V + (lengde === 1 ? 0 : (i / (lengde - 1)) * (B - V - S));
+const etiketter = serier[0]?.punkter.map((p) => p.etikett) ?? [];
+const antallX = Math.min(4, etiketter.length);
+const xValg = [...new Set(Array.from({ length: antallX }, (_, i) => Math.round((i / Math.max(antallX - 1, 1)) * (etiketter.length - 1))))];
+const stier = serier.map((s) => {
+  const punkter = s.punkter.map((p, i) => ({ x: xPx(i), y: yPx(p.verdi) }));
+  return { navn: s.navn, d: trinn ? trinnSti(punkter) : linjeSti(punkter), siste: s.punkter.at(-1), sistePx: punkter.at(-1) };
+});
+---
+
+<figure class="graf">
+  <svg viewBox={`0 0 ${B} ${H}`} role="img" aria-label={beskrivelse} class="graf-svg">
+    <title>{beskrivelse}</title>
+    {
+      tikker.map((t) => (
+        <g class="graf-tikk">
+          <line x1={V} x2={B - S} y1={yPx(t)} y2={yPx(t)} class={t === 0 ? 'graf-null' : undefined} />
+          <text x={V - 6} y={yPx(t) + 5} text-anchor="end">
+            {tallTekst(t, Number.isInteger(t) ? 0 : 1)}
+          </text>
+        </g>
+      ))
+    }
+    {
+      xValg.map((i) => (
+        <text x={xPx(i)} y={H - 8} text-anchor={i === 0 ? 'start' : i === etiketter.length - 1 ? 'end' : 'middle'} class="graf-x">
+          {etiketter[i]}
+        </text>
+      ))
+    }
+    {
+      stier.map((s, i) => (
+        <g class={`graf-serie graf-s${i}`}>
+          <path d={s.d} />
+          {s.sistePx && s.siste && (
+            <>
+              <circle cx={s.sistePx.x} cy={s.sistePx.y} r="3.5" />
+              <text x={s.sistePx.x + 7} y={s.sistePx.y + 5} class="graf-siste">
+                {tallTekst(s.siste.verdi, desimaler)}
+              </text>
+            </>
+          )}
+        </g>
+      ))
+    }
+  </svg>
+  <figcaption class="graf-tekst">
+    {serier.length > 1 && serier.map((s, i) => <span class={`graf-nokkel graf-s${i}`}>{s.navn}</span>)}
+    <span>{enhet}</span>
+  </figcaption>
+</figure>
