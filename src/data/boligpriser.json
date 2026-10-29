@@ -1,0 +1,137 @@
+{
+  "hentet": "2026-10-29T18:12:58.000Z",
+  "kilde": {
+    "navn": "Statistisk sentralbyrå (SSB)",
+    "url": "https://www.ssb.no/",
+    "data": "https://data.ssb.no/api/pxwebapi/v2/",
+    "lisens": "NLOD",
+    "lisensUrl": "https://data.norge.no/nlod/no/2.0"
+  },
+  "tabell": "07221",
+  "oppdatert": "2026-10-12T06:00:00Z",
+  "sisteKvartal": "2026K3",
+  "regioner": [
+    {
+      "kode": "TOTAL",
+      "navn": "Hele landet",
+      "indeks": 158.3,
+      "endringAar": 3.3
+    },
+    {
+      "kode": "001",
+      "navn": "Oslo med Bærum",
+      "indeks": 170.5,
+      "endringAar": 0.1
+    },
+    {
+      "kode": "002",
+      "navn": "Stavanger",
+      "indeks": 154.9,
+      "endringAar": 5.7
+    },
+    {
+      "kode": "003",
+      "navn": "Bergen",
+      "indeks": 164.4,
+      "endringAar": 11.2
+    },
+    {
+      "kode": "004",
+      "navn": "Trondheim",
+      "indeks": 144.4,
+      "endringAar": 2.8
+    },
+    {
+      "kode": "005",
+      "navn": "Akershus uten Bærum",
+      "indeks": 158,
+      "endringAar": 1.6
+    },
+    {
+      "kode": "006",
+      "navn": "Østfold, Buskerud, Vestfold og Telemark",
+      "indeks": 157.9,
+      "endringAar": 1
+    },
+    {
+      "kode": "007",
+      "navn": "Innlandet",
+      "indeks": 145.7,
+      "endringAar": 0.9
+    },
+    {
+      "kode": "008",
+      "navn": "Agder og Rogaland uten Stavanger",
+      "indeks": 157.5,
+      "endringAar": 6.9
+    },
+    {
+      "kode": "009",
+      "navn": "Møre og Romsdal og Vestland uten Bergen",
+      "indeks": 151.5,
+      "endringAar": 7.1
+    },
+    {
+      "kode": "010",
+      "navn": "Trøndelag uten Trondheim",
+      "indeks": 141.5,
+      "endringAar": 1.7
+    },
+    {
+      "kode": "011",
+      "navn": "Nord-Norge",
+      "indeks": 161.3,
+      "endringAar": 6.6
+    }
+  ],
+  "serie": [
+    {
+      "kvartal": "2023K4",
+      "indeks": 136.4
+    },
+    {
+      "kvartal": "2024K1",
+      "indeks": 141.7
+    },
+    {
+      "kvartal": "2024K2",
+      "indeks": 147.7
+    },
+    {
+      "kvartal": "2024K3",
+      "indeks": 145.9
+    },
+    {
+      "kvartal": "2024K4",
+      "indeks": 143
+    },
+    {
+      "kvartal": "2025K1",
+      "indeks": 150.9
+    },
+    {
+      "kvartal": "2025K2",
+      "indeks": 154.4
+    },
+    {
+      "kvartal": "2025K3",
+      "indeks": 153.2
+    },
+    {
+      "kvartal": "2025K4",
+      "indeks": 151.5
+    },
+    {
+      "kvartal": "2026K1",
+      "indeks": 156.7
+    },
+    {
+      "kvartal": "2026K2",
+      "indeks": 161.2
+    },
+    {
+      "kvartal": "2026K3",
+      "indeks": 158.3
+    }
+  ]
+}

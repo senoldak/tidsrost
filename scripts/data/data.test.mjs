@@ -102,3 +102,10 @@ test('hasterPublisering: rente og oransje/røde varsler publiseres straks, bare 
   assert.equal(hasterPublisering('farevarsler.json', v(rodt), v()), true);
   assert.equal(hasterPublisering('farevarsler.json', v({ ...rodt, niva: 'oransje' }), v(rodt)), true);
 });
+
+test('hasterPublisering: SSB-filer venter på neste vanlige publisering, styringsrenten haster', () => {
+  for (const fil of ['prisstigning.json', 'boligpriser.json', 'arbeidsledighet.json', 'varselarkiv.json']) {
+    assert.equal(hasterPublisering(fil, { a: 1 }, { a: 2 }), false, fil);
+  }
+  assert.equal(hasterPublisering('styringsrente.json', { rente: 4 }, { rente: 4.25 }), true);
+});

@@ -1,0 +1,134 @@
+{
+  "hentet": "2026-10-29T18:12:58.660Z",
+  "kilde": {
+    "navn": "Statistisk sentralbyrå (SSB)",
+    "url": "https://www.ssb.no/",
+    "data": "https://data.ssb.no/api/pxwebapi/v2/",
+    "lisens": "NLOD",
+    "lisensUrl": "https://data.norge.no/nlod/no/2.0"
+  },
+  "tabell": "13760",
+  "oppdatert": "2026-10-22T06:00:00Z",
+  "sisteMaaned": "2026-09",
+  "prosent": 5,
+  "grupper": [
+    {
+      "kode": "kvinner",
+      "navn": "Kvinner",
+      "prosent": 4.8
+    },
+    {
+      "kode": "menn",
+      "navn": "Menn",
+      "prosent": 5.2
+    },
+    {
+      "kode": "15-24",
+      "navn": "15–24 år",
+      "prosent": 16.7
+    },
+    {
+      "kode": "25-74",
+      "navn": "25–74 år",
+      "prosent": 2.9
+    }
+  ],
+  "serie": [
+    {
+      "maaned": "2024-10",
+      "prosent": 4.1
+    },
+    {
+      "maaned": "2024-11",
+      "prosent": 3.9
+    },
+    {
+      "maaned": "2024-12",
+      "prosent": 4.3
+    },
+    {
+      "maaned": "2025-01",
+      "prosent": 3.8
+    },
+    {
+      "maaned": "2025-02",
+      "prosent": 4.1
+    },
+    {
+      "maaned": "2025-03",
+      "prosent": 4.3
+    },
+    {
+      "maaned": "2025-04",
+      "prosent": 4.4
+    },
+    {
+      "maaned": "2025-05",
+      "prosent": 4.6
+    },
+    {
+      "maaned": "2025-06",
+      "prosent": 5.3
+    },
+    {
+      "maaned": "2025-07",
+      "prosent": 4.5
+    },
+    {
+      "maaned": "2025-08",
+      "prosent": 4.9
+    },
+    {
+      "maaned": "2025-09",
+      "prosent": 4.7
+    },
+    {
+      "maaned": "2025-10",
+      "prosent": 4.5
+    },
+    {
+      "maaned": "2025-11",
+      "prosent": 4.6
+    },
+    {
+      "maaned": "2025-12",
+      "prosent": 4.2
+    },
+    {
+      "maaned": "2026-01",
+      "prosent": 4.6
+    },
+    {
+      "maaned": "2026-02",
+      "prosent": 4.8
+    },
+    {
+      "maaned": "2026-03",
+      "prosent": 4.8
+    },
+    {
+      "maaned": "2026-04",
+      "prosent": 4.6
+    },
+    {
+      "maaned": "2026-05",
+      "prosent": 4.5
+    },
+    {
+      "maaned": "2026-06",
+      "prosent": 4.6
+    },
+    {
+      "maaned": "2026-07",
+      "prosent": 4.1
+    },
+    {
+      "maaned": "2026-08",
+      "prosent": 4.6
+    },
+    {
+      "maaned": "2026-09",
+      "prosent": 5
+    }
+  ]
+}

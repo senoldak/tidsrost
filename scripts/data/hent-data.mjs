@@ -1,5 +1,6 @@
 // Sürekli güncel veri sayfalarının verisini resmi, anahtarsız açık API'lerden çeker ve src/data/*.json'a yazar.
 //   - Styringsrenten: Norges Bank SDMX API (data.norges-bank.no), lisans NLOD.
+//   - Prisstigning, boligpriser, arbeidsledighet: SSB PxWebApi v2 (tablo 14700, 07221, 13760), lisans NLOD.
 //   - Farevarsler: MET Norway MetAlerts 2.0 (api.met.no), lisans CC BY 4.0. MET'in kullanım şartı gereği istekte
 //     siteyi ve iletişim adresini tanıtan bir User-Agent gönderilir; Nyhetsbot ile ~2 saatte bir, tek istek.
 // Bir kaynak başarısız olursa o dosyaya dokunulmaz: sayfa son bilinen değeri ve alındığı zamanı göstermeye devam eder.
@@ -11,6 +12,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { acilDurdurma } from '../nyheter/kapi.mjs';
 import { RENTE_KILDE, VARSEL_KILDE, farevarsler, hasterPublisering, lesSdmxCsv, sammeInnhold, styringsrente } from './data.mjs';
+import { SSB_KILDE, ssbUrl } from './ssb.mjs';
+import { arbeidsledighet, boligpriser, prisstigning } from './ssb-sider.mjs';
 
 // Standartlar: acil durdurma açıksa veri sayfaları da güncellenmez.
 if (await acilDurdurma()) process.exit(0);
@@ -54,6 +57,28 @@ const JOBBER = [
       return { kilde: VARSEL_KILDE, sistEndretHosMet: json.lastChange ?? null, varsler: farevarsler(json) };
     },
   },
+  {
+    fil: 'prisstigning.json',
+    async lag() {
+      const grupper = ['00', '01', '01.1', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13'];
+      const url = ssbUrl('14700', { VareTjenesteGrp: grupper, ContentsCode: ['Tolvmanedersendring', 'KpiVektMnd'], Tid: 'top(24)' });
+      return { kilde: SSB_KILDE, tabell: '14700', ...prisstigning(JSON.parse(await hent(url, 'application/json'))) };
+    },
+  },
+  {
+    fil: 'boligpriser.json',
+    async lag() {
+      const url = ssbUrl('07221', { Region: '*', Boligtype: '00', ContentsCode: 'Boligindeks', Tid: 'top(13)' });
+      return { kilde: SSB_KILDE, tabell: '07221', ...boligpriser(JSON.parse(await hent(url, 'application/json'))) };
+    },
+  },
+  {
+    fil: 'arbeidsledighet.json',
+    async lag() {
+      const url = ssbUrl('13760', { Kjonn: ['0', '1', '2'], Alder: ['15-74', '15-24', '25-74'], Justering: 'S', ContentsCode: 'ArbledProsArbstyrk', Tid: 'top(24)' });
+      return { kilde: SSB_KILDE, tabell: '13760', ...arbeidsledighet(JSON.parse(await hent(url, 'application/json'))) };
+    },
+  },
 ];
 
 await mkdir(DIR, { recursive: true });
@@ -68,7 +93,7 @@ for (const jobb of JOBBER) {
     const haster = hasterPublisering(jobb.fil, gammel, ny);
     if (haster) endret = true;
     console.log(
-      `${jobb.fil}: ${!ulik ? 'uendret innhold, tidspunkt oppdatert' : haster ? 'oppdatert (nytt innhold)' : 'oppdatert (bare gule varsler, venter på neste publisering)'}`,
+      `${jobb.fil}: ${!ulik ? 'uendret innhold, tidspunkt oppdatert' : haster ? 'oppdatert (nytt innhold)' : jobb.fil === 'farevarsler.json' ? 'oppdatert (bare gule varsler, venter på neste publisering)' : 'oppdatert (venter på neste publisering)'}`,
     );
   } catch (e) {
     // Eski dosya kalır; veri uydurulmaz.

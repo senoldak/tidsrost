@@ -27,7 +27,7 @@ export function ssbUrl(tabell, valg = {}) {
 /**
  * JSON-stat2 veri kümesini düz satırlara çevirir: her satırda her boyutun kodu ve `verdi` (sayı ya da null).
  * Satır sırası JSON-stat kuralıdır: son boyut en hızlı değişir.
- * @returns {{ oppdatert: string, rader: Array<Record<string, string> & { verdi: number | null }> }}
+ * @returns {{ oppdatert: string, rader: Array<Record<string, string> & { verdi: number | null }>, etiketter: Record<string, Record<string, string>> }}
  */
 export function lesJsonStat2(json) {
   if (!json || json.class !== 'dataset' || !Array.isArray(json.value) || !Array.isArray(json.id) || !Array.isArray(json.size)) {
@@ -54,5 +54,6 @@ export function lesJsonStat2(json) {
     ordnet.verdi = typeof v === 'number' && Number.isFinite(v) ? v : null;
     rader.push(ordnet);
   }
-  return { oppdatert: json.updated ?? null, rader };
+  const etiketter = Object.fromEntries(json.id.map((dim) => [dim, { ...(json.dimension?.[dim]?.category?.label ?? {}) }]));
+  return { oppdatert: json.updated ?? null, rader, etiketter };
 }

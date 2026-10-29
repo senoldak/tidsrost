@@ -90,12 +90,15 @@ export function sammeInnhold(a, b) {
 }
 
 /**
- * Değişiklik siteyi beklemeden yeniden derletmeli mi? Faiz ve turuncu/kırmızı uyarılar hemen yayımlanır. Yalnız sarı
+ * Değişiklik siteyi beklemeden yeniden derletmeli mi? Faiz ve turuncu/kırmızı uyarılar hemen yayımlanır; SSB verisi ve
+ * uyarı arşivi bir sonraki olağan yayınla çıkar. Yalnız sarı
  * uyarılar değiştiyse yeni veri dosyaya yazılıp commit edilir, siteye bir sonraki gerçek yayınla çıkar (denetim B7).
  */
 export function hasterPublisering(fil, gammel, ny) {
   if (sammeInnhold(gammel, ny)) return false;
-  if (fil !== 'farevarsler.json') return true;
+  if (fil === 'styringsrente.json') return true;
+  // SSB-tall og varselarkivet endrer seg sjelden og haster ikke: de kommer ut med neste vanlige publisering.
+  if (fil !== 'farevarsler.json') return false;
   const alvorlige = (o) => JSON.stringify((o?.varsler ?? []).filter((v) => v.niva !== 'gult'));
   return alvorlige(gammel) !== alvorlige(ny);
 }

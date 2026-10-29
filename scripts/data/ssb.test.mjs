@@ -18,7 +18,7 @@ const ornek = {
   id: ['Region', 'Tid'],
   size: [2, 2],
   dimension: {
-    Region: { category: { index: { TOTAL: 0, '001': 1 } } },
+    Region: { category: { index: { TOTAL: 0, '001': 1 }, label: { TOTAL: 'Hele landet', '001': 'Oslo med Bærum' } } },
     Tid: { category: { index: { '2026K2': 0, '2026K3': 1 } } },
   },
   value: [100, 101.5, null, 103],
@@ -32,6 +32,12 @@ test('lesJsonStat2: düz satırlar, son boyut en hızlı değişir, null korunur
   assert.deepEqual(rader[1], { Region: 'TOTAL', Tid: '2026K3', verdi: 101.5 });
   assert.deepEqual(rader[2], { Region: '001', Tid: '2026K2', verdi: null });
   assert.deepEqual(rader[3], { Region: '001', Tid: '2026K3', verdi: 103 });
+});
+
+test('lesJsonStat2: boyut etiketleri', () => {
+  const { etiketter } = lesJsonStat2(ornek);
+  assert.equal(etiketter.Region['001'], 'Oslo med Bærum');
+  assert.deepEqual(etiketter.Tid, {});
 });
 
 test('lesJsonStat2: dataset değilse ya da value yoksa hata', () => {

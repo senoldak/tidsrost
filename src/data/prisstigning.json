@@ -1,0 +1,198 @@
+{
+  "hentet": "2026-10-29T18:12:57.393Z",
+  "kilde": {
+    "navn": "Statistisk sentralbyrå (SSB)",
+    "url": "https://www.ssb.no/",
+    "data": "https://data.ssb.no/api/pxwebapi/v2/",
+    "lisens": "NLOD",
+    "lisensUrl": "https://data.norge.no/nlod/no/2.0"
+  },
+  "tabell": "14700",
+  "oppdatert": "2026-10-09T06:00:00Z",
+  "sisteMaaned": "2026-09",
+  "tolvMnd": 3.4,
+  "grupper": [
+    {
+      "kode": "10",
+      "navn": "Utdanning",
+      "tolvMnd": 4.3,
+      "vekt": 6.1
+    },
+    {
+      "kode": "11",
+      "navn": "Serverings- og overnattingstjenester",
+      "tolvMnd": 6,
+      "vekt": 59.4
+    },
+    {
+      "kode": "12",
+      "navn": "Forsikring og finansielle tjenester",
+      "tolvMnd": 7.9,
+      "vekt": 27.2
+    },
+    {
+      "kode": "13",
+      "navn": "Andre varer og tjenester",
+      "tolvMnd": 3.9,
+      "vekt": 48.3
+    },
+    {
+      "kode": "01",
+      "navn": "Matvarer og alkoholfrie drikkevarer",
+      "tolvMnd": 2.4,
+      "vekt": 104.7
+    },
+    {
+      "kode": "01.1",
+      "navn": "Matvarer",
+      "tolvMnd": 2.2,
+      "vekt": 90.6
+    },
+    {
+      "kode": "02",
+      "navn": "Alkoholholdige drikkevarer og tobakk",
+      "tolvMnd": 2.6,
+      "vekt": 34.1
+    },
+    {
+      "kode": "03",
+      "navn": "Klær og skotøy",
+      "tolvMnd": 2.2,
+      "vekt": 42.8
+    },
+    {
+      "kode": "04",
+      "navn": "Bolig, elektrisitet og brensel",
+      "tolvMnd": 3.5,
+      "vekt": 312.3
+    },
+    {
+      "kode": "05",
+      "navn": "Møbler, husholdningsartikler og vedlikehold av innbo",
+      "tolvMnd": -1.1,
+      "vekt": 58.5
+    },
+    {
+      "kode": "06",
+      "navn": "Helse",
+      "tolvMnd": 4.9,
+      "vekt": 31.6
+    },
+    {
+      "kode": "07",
+      "navn": "Transport",
+      "tolvMnd": 4.8,
+      "vekt": 138.1
+    },
+    {
+      "kode": "08",
+      "navn": "Informasjon og kommunikasjon",
+      "tolvMnd": 1.7,
+      "vekt": 52.5
+    },
+    {
+      "kode": "09",
+      "navn": "Fritid, sport og kultur",
+      "tolvMnd": 4,
+      "vekt": 84.5
+    }
+  ],
+  "serie": [
+    {
+      "maaned": "2024-10",
+      "tolvMnd": 2.6
+    },
+    {
+      "maaned": "2024-11",
+      "tolvMnd": 2.4
+    },
+    {
+      "maaned": "2024-12",
+      "tolvMnd": 2.3
+    },
+    {
+      "maaned": "2025-01",
+      "tolvMnd": 2.3
+    },
+    {
+      "maaned": "2025-02",
+      "tolvMnd": 3.5
+    },
+    {
+      "maaned": "2025-03",
+      "tolvMnd": 2.6
+    },
+    {
+      "maaned": "2025-04",
+      "tolvMnd": 2.5
+    },
+    {
+      "maaned": "2025-05",
+      "tolvMnd": 3.1
+    },
+    {
+      "maaned": "2025-06",
+      "tolvMnd": 3
+    },
+    {
+      "maaned": "2025-07",
+      "tolvMnd": 3.2
+    },
+    {
+      "maaned": "2025-08",
+      "tolvMnd": 3.5
+    },
+    {
+      "maaned": "2025-09",
+      "tolvMnd": 3.6
+    },
+    {
+      "maaned": "2025-10",
+      "tolvMnd": 3.1
+    },
+    {
+      "maaned": "2025-11",
+      "tolvMnd": 3
+    },
+    {
+      "maaned": "2025-12",
+      "tolvMnd": 3.2
+    },
+    {
+      "maaned": "2026-01",
+      "tolvMnd": 3.6
+    },
+    {
+      "maaned": "2026-02",
+      "tolvMnd": 2.7
+    },
+    {
+      "maaned": "2026-03",
+      "tolvMnd": 3.6
+    },
+    {
+      "maaned": "2026-04",
+      "tolvMnd": 3.4
+    },
+    {
+      "maaned": "2026-05",
+      "tolvMnd": 3.1
+    },
+    {
+      "maaned": "2026-06",
+      "tolvMnd": 2.7
+    },
+    {
+      "maaned": "2026-07",
+      "tolvMnd": 3
+    },
+    {
+      "maaned": "2026-08",
+      "tolvMnd": 3.3
+    },
+    {
+      "maaned": "2026-09",
+      "tolvMnd": 3.4
+    }
+  ]
+}
