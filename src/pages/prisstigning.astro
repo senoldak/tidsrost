@@ -1,0 +1,152 @@
+---
+// "Prisstigningen nå": SSB'nin KPI tablosu 14700 (src/data/prisstigning.json, scripts/data/ssb-sider.mjs).
+// Bütün rakamlar veriden; sabit metinlerde rakam yok. Tavsiye ve tahmin yok.
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import KiNotat from '../components/KiNotat.astro';
+import Base from '../layouts/Base.astro';
+import Symbol from '../components/Symbol.astro';
+import Brodsmuler from '../components/Brodsmuler.astro';
+import StoryRow from '../components/StoryRow.astro';
+import Linjegraf from '../components/data/Linjegraf.astro';
+import Stolpegraf from '../components/data/Stolpegraf.astro';
+import DataKilde from '../components/data/DataKilde.astro';
+import { tallTekst } from '../lib/graf.mjs';
+import { tidTekst } from '../lib/data';
+import { GAMMEL_MAANED_MS, dataGammel, datasideLd, maanedKort, maanedTekst, relaterteSaker } from '../lib/datasider';
+import { SITE_URL } from '../lib/seo';
+import data from '../data/prisstigning.json';
+
+const d = data as typeof data & { grupper: { kode: string; navn: string; tolvMnd: number | null; vekt: number | null }[] };
+const pageUrl = `${SITE_URL}/prisstigning/`;
+const tittel = 'Prisstigningen nå';
+const maaned = maanedTekst(d.sisteMaaned);
+const pst = (v: number | null) => (typeof v === 'number' ? `${tallTekst(v)} %` : '–');
+const retning = d.tolvMnd >= 0 ? 'høyere' : 'lavere';
+const hovedgrupper = d.grupper.filter((g) => g.kode.length === 2);
+const mat = d.grupper.find((g) => g.kode === '01.1');
+const forrige = d.serie.at(-2);
+const description = `Prisene var ${tallTekst(Math.abs(d.tolvMnd))} prosent ${retning} i ${maaned} enn ett år før, viser konsumprisindeksen fra SSB. Se utviklingen og hvilke varer og tjenester som har steget mest.`;
+const { sti, jsonLd } = datasideLd({
+  url: pageUrl,
+  tittel,
+  description,
+  datasettNavn: 'Konsumprisindeksen (KPI), tolvmånedersendring etter vare- og tjenestegruppe',
+  datasettBeskrivelse: 'Tolvmånedersendring i konsumprisindeksen for i alt og hovedgruppene, fra SSB tabell 14700.',
+  kildeData: 'https://www.ssb.no/statbank/table/14700',
+  lisensUrl: d.kilde.lisensUrl,
+  periode: `${d.serie[0].maaned}/${d.sisteMaaned}`,
+  oppdatert: d.oppdatert ?? d.hentet,
+});
+const saker = await relaterteSaker(/pris|kpi|konsumpris|inflasjon/i);
+---
+
+<Base title={tittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="data" />{tittel}</h1>
+    <p class="page-intro">
+      Konsumprisindeksen fra Statistisk sentralbyrå måler hvordan prisene på det vi kjøper, endrer seg over tid. Her ser
+      du den siste prisstigningen, utviklingen de siste to årene og hvilke deler av forbruket som har økt mest i pris.
+    </p>
+  </header>
+
+  <section class="data-tall" aria-labelledby="siste">
+    <h2 class="band" id="siste">Prisstigning siste tolv måneder</h2>
+    <p class="data-verdi">{pst(d.tolvMnd)}</p>
+    <p class="varsel-setning">
+      Prisene var {tallTekst(Math.abs(d.tolvMnd))} prosent {retning} i {maaned} enn i samme måned året før.
+      {forrige && <> Måneden før var tallet {tallTekst(forrige.tolvMnd)} prosent.</>}
+      {mat && typeof mat.tolvMnd === 'number' && <> Matvarer ble {tallTekst(Math.abs(mat.tolvMnd))} prosent {mat.tolvMnd >= 0 ? 'dyrere' : 'billigere'}.</>}
+    </p>
+    <dl class="data-fakta">
+      <div>
+        <dt>Gjelder</dt>
+        <dd>{maaned}</dd>
+      </div>
+      <div>
+        <dt>Publisert av SSB</dt>
+        <dd>{d.oppdatert ? tidTekst(d.oppdatert) : '–'}</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="day" aria-labelledby="utvikling">
+    <h2 class="band" id="utvikling">De siste to årene</h2>
+    <Linjegraf
+      serier={[{ navn: 'KPI', punkter: d.serie.map((p) => ({ etikett: maanedKort(p.maaned), verdi: p.tolvMnd })) }]}
+      enhet="Tolvmånedersendring i KPI, prosent"
+      beskrivelse={`Prisstigningen målt med KPI de siste to årene, nå ${pst(d.tolvMnd)}`}
+    />
+  </section>
+
+  <section class="day" aria-labelledby="grupper">
+    <h2 class="band" id="grupper">Hva har steget mest?</h2>
+    <Stolpegraf
+      rader={[
+        ...hovedgrupper.map((g) => ({ navn: g.navn, verdi: g.tolvMnd })),
+        ...(mat ? [{ navn: `${mat.navn} (alene)`, verdi: mat.tolvMnd, fremhev: true }] : []),
+      ]}
+      enhet={`Tolvmånedersendring, prosent, ${maaned}`}
+      beskrivelse={`Prisendring siste tolv måneder per vare- og tjenestegruppe, ${maaned}`}
+    />
+    <details class="data-detaljer">
+      <summary>Tabell med vekter</summary>
+      <div class="prose data-tabell">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Gruppe</th>
+              <th scope="col">Endring siste 12 mnd.</th>
+              <th scope="col">Vekt i KPI (promille)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              d.grupper.map((g) => (
+                <tr>
+                  <td>{g.navn}</td>
+                  <td>{pst(g.tolvMnd)}</td>
+                  <td>{typeof g.vekt === 'number' ? tallTekst(g.vekt) : '–'}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+
+  <section class="day" aria-labelledby="hva-er-kpi">
+    <h2 class="band" id="hva-er-kpi">Hva er KPI?</h2>
+    <div class="prose">
+      <p>
+        Konsumprisindeksen følger prisene på en fast handlekurv med varer og tjenester som husholdninger kjøper, fra mat og
+        strøm til husleie og reiser. Hver gruppe teller like mye som den utgjør av forbruket, og det er det vektene viser.
+      </p>
+      <p>
+        Tolvmånedersendringen sammenligner prisnivået med samme måned året før. Det er dette tallet som vanligvis kalles
+        prisstigningen eller inflasjonen.
+      </p>
+    </div>
+  </section>
+
+  <DataKilde
+    kilde={{ navn: d.kilde.navn, url: 'https://www.ssb.no/priser-og-prisindekser/konsumpriser/statistikk/konsumprisindeksen', data: d.kilde.data, lisens: d.kilde.lisens, lisensUrl: d.kilde.lisensUrl }}
+    hentet={d.hentet}
+    oppdatert={d.oppdatert}
+    gammel={dataGammel(d.hentet, d.oppdatert, GAMMEL_MAANED_MS)}
+    merknad="Tallene er fra SSB tabell 14700."
+  />
+
+  {
+    saker.length > 0 && (
+      <section class="related" aria-labelledby="saker">
+        <h2 class="band" id="saker">Saker om tall fra SSB</h2>
+        {saker.map((h) => <StoryRow haber={h} dato />)}
+      </section>
+    )
+  }
+  <p class="tema-alle"><a href="/tall/">Flere tall og data</a></p>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
+</Base>
