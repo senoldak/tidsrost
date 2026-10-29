@@ -1,0 +1,420 @@
+{
+  "hentet": "2026-10-29T22:15:31.495Z",
+  "kilde": {
+    "navn": "Norges vassdrags- og energidirektorat (NVE), Varsom",
+    "url": "https://www.varsom.no/",
+    "data": "https://api01.nve.no/",
+    "lisens": "NLOD",
+    "lisensUrl": "https://data.norge.no/nlod/no/2.0"
+  },
+  "regioner": [
+    {
+      "id": 3003,
+      "navn": "Nordenskiöld Land",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3006,
+      "navn": "Finnmarkskysten",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3007,
+      "navn": "Vest-Finnmark",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3009,
+      "navn": "Nord-Troms",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3010,
+      "navn": "Lyngen",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3011,
+      "navn": "Tromsø",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3012,
+      "navn": "Sør-Troms",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3013,
+      "navn": "Indre Troms",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3014,
+      "navn": "Lofoten og Vesterålen",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3015,
+      "navn": "Ofoten",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3016,
+      "navn": "Salten",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3017,
+      "navn": "Svartisen",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3018,
+      "navn": "Helgeland",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3022,
+      "navn": "Trollheimen",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3023,
+      "navn": "Romsdal",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3024,
+      "navn": "Sunnmøre",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3027,
+      "navn": "Indre Fjordane",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3028,
+      "navn": "Jotunheimen",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3029,
+      "navn": "Indre Sogn",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3031,
+      "navn": "Voss",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3032,
+      "navn": "Hallingdal",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3034,
+      "navn": "Hardanger",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3035,
+      "navn": "Vest-Telemark",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    },
+    {
+      "id": 3037,
+      "navn": "Heiane",
+      "type": "A",
+      "dager": [
+        {
+          "dato": "2026-10-29",
+          "nivaa": 0,
+          "tekst": null
+        },
+        {
+          "dato": "2026-10-30",
+          "nivaa": 0,
+          "tekst": null
+        }
+      ]
+    }
+  ]
+}

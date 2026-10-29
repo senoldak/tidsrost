@@ -1,0 +1,131 @@
+---
+// "Snøskredvarsel": NVE/Varsom RegionSummary (src/data/snoskred.json), A-regioner, to dager. Sezon dışında (hepsi seviye 0,
+// "Ikke vurdert") sayfa boş tablo değil açık bir cümle gösterir. NVE'nin metinleri değiştirilmeden, kaynak belirtilerek verilir.
+// Statik sayfa: "i dag" yerine tarih yazılır, çünkü sayfa veri değişene kadar yeniden derlenmez. Sabit metinde rakam yok.
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import KiNotat from '../components/KiNotat.astro';
+import Base from '../layouts/Base.astro';
+import Symbol from '../components/Symbol.astro';
+import Brodsmuler from '../components/Brodsmuler.astro';
+import DataKilde from '../components/data/DataKilde.astro';
+import { datasideLd } from '../lib/datasider';
+import { GAMMEL_VARSEL_MS, erGammel } from '../lib/data';
+import { SITE_URL } from '../lib/seo';
+import { dagNivaaer, iSesong } from '../../scripts/data/nve.mjs';
+import data from '../data/snoskred.json';
+
+const pageUrl = `${SITE_URL}/snoskredvarsel/`;
+const tittel = 'Snøskredvarsel';
+const seoTittel = 'Snøskredvarsel i dag: faregrad per region';
+const NAVN: Record<number, string> = { 1: 'Liten', 2: 'Moderat', 3: 'Betydelig', 4: 'Stor', 5: 'Meget stor' };
+const SYM: Record<number, string> = { 1: 'sym-snoskred-1', 2: 'sym-varsel-gult', 3: 'sym-varsel-oransje', 4: 'sym-varsel-rodt', 5: 'sym-snoskred-5' };
+const dagTekst = (iso: string) =>
+  new Date(`${iso}T12:00:00Z`).toLocaleDateString('nb-NO', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Oslo' });
+
+const antallRegioner = data.regioner.length;
+const datoer = [...new Set(data.regioner.flatMap((r) => r.dager.map((d) => d.dato)))].sort();
+const sesong = iSesong(data);
+const dager = datoer.map((dato) => ({ dato, regioner: dagNivaaer(data, dato) }));
+const forste = dager[0];
+const hoyest = forste?.regioner[0];
+const gammel = erGammel(data.hentet, GAMMEL_VARSEL_MS);
+
+const description =
+  sesong && forste && hoyest
+    ? `NVE melder snøskredfare i ${forste.regioner.length} av ${antallRegioner} varslingsregioner ${dagTekst(forste.dato)}, høyest faregrad ${NAVN[hoyest.nivaa].toLowerCase()}. Faregrad og varseltekst per region, fra Varsom.`
+    : `NVE har ikke gitt faregrad for snøskred i noen av de ${antallRegioner} varslingsregionene akkurat nå. Siden viser faregrad per region når sesongen er i gang.`;
+
+const { sti, jsonLd } = datasideLd({
+  url: pageUrl,
+  tittel,
+  description,
+  datasettNavn: 'Snøskredvarsel fra NVE (Varsom), faregrad per varslingsregion',
+  datasettBeskrivelse: 'Faregrad for snøskred (liten til meget stor) per varslingsregion for de nærmeste dagene, fra NVEs Varsom-API.',
+  kildeData: data.kilde.data,
+  lisensUrl: data.kilde.lisensUrl,
+  periode: datoer.length ? `${datoer[0]}/${datoer[datoer.length - 1]}` : data.hentet.slice(0, 10),
+  oppdatert: data.hentet,
+  utgiver: { navn: 'Norges vassdrags- og energidirektorat', wikidata: 'https://www.wikidata.org/wiki/Q3357659' },
+});
+---
+
+<Base title={seoTittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="varsel" class="sym-varsel-gult" />{tittel}</h1>
+    <p class="page-intro">
+      NVE varsler snøskredfare gjennom Varsom, region for region i fjellet. Faregraden går fra liten til meget stor. Her
+      står regionene som har varsel.
+    </p>
+  </header>
+
+  {
+    gammel && (
+      <p class="data-varsel" role="status">
+        Vi har ikke klart å hente nye varsler siden {new Date(data.hentet).toLocaleDateString('nb-NO', { day: 'numeric', month: 'long', timeZone: 'Europe/Oslo' })}. Varslene kan ha endret seg. Følg de siste
+        varslene på <a href={data.kilde.url}>Varsom</a>.
+      </p>
+    )
+  }
+
+  {
+    !sesong && (
+      <section class="day" aria-labelledby="ingen">
+        <h2 class="band" id="ingen">Ingen varsel nå</h2>
+        <p class="varsel-setning">
+          NVE har ikke gitt noen faregrad for snøskred i noen av varslingsregionene. Status hos NVE er «Ikke vurdert».
+          Faregrad og varseltekst per region kommer her når sesongen er i gang.
+        </p>
+        <p class="varsel-setning">Siste varsler finnes på <a href={data.kilde.url}>varsom.no</a>.</p>
+      </section>
+    )
+  }
+
+  {
+    sesong &&
+      dager.map((d) => (
+        <section class="day" aria-labelledby={`dag-${d.dato}`}>
+          <h2 class="band" id={`dag-${d.dato}`}>{dagTekst(d.dato).charAt(0).toUpperCase() + dagTekst(d.dato).slice(1)}</h2>
+          {d.regioner.length === 0 && <p class="empty">Ingen av varslingsregionene har snøskredvarsel denne dagen.</p>}
+          {d.regioner.map((r) => (
+            <article class="varsel-rad">
+              <h3>
+                <span class="mark mark-varsel">
+                  <Symbol kind="varsel" class={SYM[r.nivaa]} />
+                  Faregrad {r.nivaa} {NAVN[r.nivaa]}
+                </span>
+                <span class="varsel-hendelse">{r.navn}</span>
+              </h3>
+              {r.tekst && (
+                <p class="varsel-tekst">
+                  <strong>NVE skriver:</strong> {r.tekst}
+                </p>
+              )}
+            </article>
+          ))}
+        </section>
+      ))
+  }
+
+  <section class="day" aria-labelledby="om-varslene">
+    <h2 class="band" id="om-varslene">Om varslene</h2>
+    <div class="prose">
+      <p>
+        Siden viser varslingsregionene NVE varsler jevnlig. Teksten under hver region er NVEs egen, gjengitt uendret.
+      </p>
+      <p>
+        Farevarsler for vær står på <a href="/farevarsler/">siden om farevarsler fra Meteorologisk institutt</a>.
+      </p>
+    </div>
+  </section>
+
+  <DataKilde
+    kilde={{ navn: data.kilde.navn, url: data.kilde.url, data: data.kilde.data, lisens: data.kilde.lisens, lisensUrl: data.kilde.lisensUrl }}
+    hentet={data.hentet}
+    gammel={false}
+    merknad="Varslene kan endres raskt. Følg alltid de siste varslene fra NVE."
+  />
+  <p class="tema-alle"><a href="/tall/">Flere tall og data</a></p>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
+</Base>

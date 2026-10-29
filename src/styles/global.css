@@ -205,6 +205,23 @@ p {
   stroke: #16191c;
 }
 
+/* Snøskred faregrad 1 (grønn) og 5 (mørk rød); 2–4 bruker gult, oransje og rødt over. */
+.sym-snoskred-1 {
+  color: #5aa02c;
+}
+
+.sym-snoskred-5 {
+  color: #7a0b12;
+}
+
+.sym-snoskred-1 path:last-child {
+  stroke: #16191c;
+}
+
+.sym-snoskred-5 path:last-child {
+  stroke: #fff;
+}
+
 .meta {
   display: flex;
   flex-wrap: wrap;

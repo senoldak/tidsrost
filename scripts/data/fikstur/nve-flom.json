@@ -1,0 +1,978 @@
+{
+ "PublishTimeList": [
+  {
+   "ValidFrom": "2026-10-29T00:00:00",
+   "PublishDateTime": "2026-10-29T14:11:26.3771987",
+   "NextWarningTime": "2026-10-30T11:00:00"
+  },
+  {
+   "ValidFrom": "2026-10-30T00:00:00",
+   "PublishDateTime": "2026-10-29T14:11:26.3771987",
+   "NextWarningTime": "2026-10-30T11:00:00"
+  }
+ ],
+ "EmergencyWarningSummary": {
+  "EmergencyWarningList": [],
+  "FrontPageEmergencyWarningList": [],
+  "AllPageEmergencyWarningList": []
+ },
+ "MapCommentaryList": [],
+ "CountyList": [
+  {
+   "Id": "21",
+   "Name": "Svalbard",
+   "MunicipalityList": [
+    {
+     "Id": "2100",
+     "Name": "Svalbard, Bjørnøya, Hopen",
+     "WarningList": [
+      {
+       "EventId": "xxx",
+       "Id": "xxx",
+       "MasterId": "xxx",
+       "Version": 1,
+       "LangKey": 1,
+       "CapStatus": "actual",
+       "MetId": null,
+       "MetName": null,
+       "CountyList": [
+        {
+         "Id": "21",
+         "Name": "Svalbard",
+         "MunicipalityList": null,
+         "HighestActivityLevel": null
+        }
+       ],
+       "MunicipalityList": [
+        {
+         "Id": "2100",
+         "Name": "Svalbard, Bjørnøya, Hopen",
+         "WarningList": null
+        }
+       ],
+       "MunicipalityCsvString": "2100",
+       "MunicipalityCsvStringBefore2024": null,
+       "MunicipalityCsvStringBefore2020": null,
+       "ActivityLevel": "1",
+       "ActivityLevelName": null,
+       "DangerType": null,
+       "DangerTypeName": null,
+       "ValidFrom": "2026-10-29T07:00:00",
+       "ValidTo": "2026-10-30T06:59:59",
+       "NextWarningTime": "2026-10-30T11:00:00",
+       "PublishTime": "2026-10-29T14:11:26.3771987",
+       "FirstPublishTime": "2026-10-29T23:13:39.0106339+01:00",
+       "CreatedTime": "2026-10-29T23:13:39.0106339+01:00",
+       "DangerIncreaseDateTime": null,
+       "DangerDecreaseDateTime": null,
+       "MainText": "Grønt nivå",
+       "WarningText": null,
+       "AdviceText": null,
+       "ConsequenceText": null,
+       "LevelMeaningText": null,
+       "CauseText": null,
+       "Area": null,
+       "ExposedHeightType": 0,
+       "ExposedHeightValue": -1,
+       "ExposedHeightValue2": -1,
+       "ExposedClimateType": 0,
+       "CauseList": [],
+       "MicroBlogPostList": [],
+       "StationList": [],
+       "ImageUrlList": []
+      },
+      {
+       "EventId": "xxx",
+       "Id": "xxx",
+       "MasterId": "xxx",
+       "Version": 1,
+       "LangKey": 1,
+       "CapStatus": "actual",
+       "MetId": null,
+       "MetName": null,
+       "CountyList": [
+        {
+         "Id": "21",
+         "Name": "Svalbard",
+         "MunicipalityList": null,
+         "HighestActivityLevel": null
+        }
+       ],
+       "MunicipalityList": [
+        {
+         "Id": "2100",
+         "Name": "Svalbard, Bjørnøya, Hopen",
+         "WarningList": null
+        }
+       ],
+       "MunicipalityCsvString": "2100",
+       "MunicipalityCsvStringBefore2024": null,
+       "MunicipalityCsvStringBefore2020": null,
+       "ActivityLevel": "1",
+       "ActivityLevelName": null,
+       "DangerType": null,
+       "DangerTypeName": null,
+       "ValidFrom": "2026-10-30T07:00:00",
+       "ValidTo": "2026-10-31T06:59:59",
+       "NextWarningTime": "2026-10-30T11:00:00",
+       "PublishTime": "2026-10-29T14:11:26.3771987",
+       "FirstPublishTime": "2026-10-29T23:13:39.0106339+01:00",
+       "CreatedTime": "2026-10-29T23:13:39.0106339+01:00",
+       "DangerIncreaseDateTime": null,
+       "DangerDecreaseDateTime": null,
+       "MainText": "Grønt nivå",
+       "WarningText": null,
+       "AdviceText": null,
+       "ConsequenceText": null,
+       "LevelMeaningText": null,
+       "CauseText": null,
+       "Area": null,
+       "ExposedHeightType": 0,
+       "ExposedHeightValue": -1,
+       "ExposedHeightValue2": -1,
+       "ExposedClimateType": 0,
+       "CauseList": [],
+       "MicroBlogPostList": [],
+       "StationList": [],
+       "ImageUrlList": []
+      }
+     ]
+    }
+   ],
+   "HighestActivityLevel": "1"
+  },
+  {
+   "Id": "34",
+   "Name": "Innlandet",
+   "MunicipalityList": [
+    {
+     "Id": "3452",
+     "Name": "Vestre Slidre",
+     "WarningList": [
+      {
+       "EventId": "xxx",
+       "Id": "xxx",
+       "MasterId": "xxx",
+       "Version": 1,
+       "LangKey": 1,
+       "CapStatus": "actual",
+       "MetId": null,
+       "MetName": null,
+       "CountyList": [
+        {
+         "Id": "34",
+         "Name": "Innlandet",
+         "MunicipalityList": null,
+         "HighestActivityLevel": null
+        }
+       ],
+       "MunicipalityList": [
+        {
+         "Id": "3452",
+         "Name": "Vestre Slidre",
+         "WarningList": null
+        }
+       ],
+       "MunicipalityCsvString": "3452",
+       "MunicipalityCsvStringBefore2024": null,
+       "MunicipalityCsvStringBefore2020": null,
+       "ActivityLevel": "1",
+       "ActivityLevelName": null,
+       "DangerType": null,
+       "DangerTypeName": null,
+       "ValidFrom": "2026-10-29T07:00:00",
+       "ValidTo": "2026-10-30T06:59:59",
+       "NextWarningTime": "2026-10-30T11:00:00",
+       "PublishTime": "2026-10-29T14:11:26.3771987",
+       "FirstPublishTime": "2026-10-29T23:13:39.0106339+01:00",
+       "CreatedTime": "2026-10-29T23:13:39.0106339+01:00",
+       "DangerIncreaseDateTime": null,
+       "DangerDecreaseDateTime": null,
+       "MainText": "Grønt nivå",
+       "WarningText": null,
+       "AdviceText": null,
+       "ConsequenceText": null,
+       "LevelMeaningText": null,
+       "CauseText": null,
+       "Area": null,
+       "ExposedHeightType": 0,
+       "ExposedHeightValue": -1,
+       "ExposedHeightValue2": -1,
+       "ExposedClimateType": 0,
+       "CauseList": [],
+       "MicroBlogPostList": [],
+       "StationList": [],
+       "ImageUrlList": []
+      },
+      {
+       "EventId": "xxx",
+       "Id": "xxx",
+       "MasterId": "xxx",
+       "Version": 1,
+       "LangKey": 1,
+       "CapStatus": "actual",
+       "MetId": null,
+       "MetName": null,
+       "CountyList": [
+        {
+         "Id": "34",
+         "Name": "Innlandet",
+         "MunicipalityList": null,
+         "HighestActivityLevel": null
+        }
+       ],
+       "MunicipalityList": [
+        {
+         "Id": "3452",
+         "Name": "Vestre Slidre",
+         "WarningList": null
+        }
+       ],
+       "MunicipalityCsvString": "3452",
+       "MunicipalityCsvStringBefore2024": null,
+       "MunicipalityCsvStringBefore2020": null,
+       "ActivityLevel": "1",
+       "ActivityLevelName": null,
+       "DangerType": null,
+       "DangerTypeName": null,
+       "ValidFrom": "2026-10-30T07:00:00",
+       "ValidTo": "2026-10-31T06:59:59",
+       "NextWarningTime": "2026-10-30T11:00:00",
+       "PublishTime": "2026-10-29T14:11:26.3771987",
+       "FirstPublishTime": "2026-10-29T23:13:39.0106339+01:00",
+       "CreatedTime": "2026-10-29T23:13:39.0106339+01:00",
+       "DangerIncreaseDateTime": null,
+       "DangerDecreaseDateTime": null,
+       "MainText": "Grønt nivå",
+       "WarningText": null,
+       "AdviceText": null,
+       "ConsequenceText": null,
+       "LevelMeaningText": null,
+       "CauseText": null,
+       "Area": null,
+       "ExposedHeightType": 0,
+       "ExposedHeightValue": -1,
+       "ExposedHeightValue2": -1,
+       "ExposedClimateType": 0,
+       "CauseList": [],
+       "MicroBlogPostList": [],
+       "StationList": [],
+       "ImageUrlList": []
+      }
+     ]
+    },
+    {
+     "Id": "3435",
+     "Name": "Vågå",
+     "WarningList": [
+      {
+       "EventId": "xxx",
+       "Id": "xxx",
+       "MasterId": "xxx",
+       "Version": 1,
+       "LangKey": 1,
+       "CapStatus": "actual",
+       "MetId": null,
+       "MetName": null,
+       "CountyList": [
+        {
+         "Id": "34",
+         "Name": "Innlandet",
+         "MunicipalityList": null,
+         "HighestActivityLevel": null
+        }
+       ],
+       "MunicipalityList": [
+        {
+         "Id": "3435",
+         "Name": "Vågå",
+         "WarningList": null
+        }
+       ],
+       "MunicipalityCsvString": "3435",
+       "MunicipalityCsvStringBefore2024": null,
+       "MunicipalityCsvStringBefore2020": null,
+       "ActivityLevel": "1",
+       "ActivityLevelName": null,
+       "DangerType": null,
+       "DangerTypeName": null,
+       "ValidFrom": "2026-10-29T07:00:00",
+       "ValidTo": "2026-10-30T06:59:59",
+       "NextWarningTime": "2026-10-30T11:00:00",
+       "PublishTime": "2026-10-29T14:11:26.3771987",
+       "FirstPublishTime": "2026-10-29T23:13:39.0106339+01:00",
+       "CreatedTime": "2026-10-29T23:13:39.0106339+01:00",
+       "DangerIncreaseDateTime": null,
+       "DangerDecreaseDateTime": null,
+       "MainText": "Grønt nivå",
+       "WarningText": null,
+       "AdviceText": null,
+       "ConsequenceText": null,
+       "LevelMeaningText": null,
+       "CauseText": null,
+       "Area": null,
+       "ExposedHeightType": 0,
+       "ExposedHeightValue": -1,
+       "ExposedHeightValue2": -1,
+       "ExposedClimateType": 0,
+       "CauseList": [],
+       "MicroBlogPostList": [],
+       "StationList": [],
+       "ImageUrlList": []
+      },
+      {
+       "EventId": "xxx",
+       "Id": "xxx",
+       "MasterId": "xxx",
+       "Version": 1,
+       "LangKey": 1,
+       "CapStatus": "actual",
+       "MetId": null,
+       "MetName": null,
+       "CountyList": [
+        {
+         "Id": "34",
+         "Name": "Innlandet",
+         "MunicipalityList": null,
+         "HighestActivityLevel": null
+        }
+       ],
+       "MunicipalityList": [
+        {
+         "Id": "3435",
+         "Name": "Vågå",
+         "WarningList": null
+        }
+       ],
+       "MunicipalityCsvString": "3435",
+       "MunicipalityCsvStringBefore2024": null,
+       "MunicipalityCsvStringBefore2020": null,
+       "ActivityLevel": "1",
+       "ActivityLevelName": null,
+       "DangerType": null,
+       "DangerTypeName": null,
+       "ValidFrom": "2026-10-30T07:00:00",
+       "ValidTo": "2026-10-31T06:59:59",
+       "NextWarningTime": "2026-10-30T11:00:00",
+       "PublishTime": "2026-10-29T14:11:26.3771987",
+       "FirstPublishTime": "2026-10-29T23:13:39.0106339+01:00",
+       "CreatedTime": "2026-10-29T23:13:39.0106339+01:00",
+       "DangerIncreaseDateTime": null,
+       "DangerDecreaseDateTime": null,
+       "MainText": "Grønt nivå",
+       "WarningText": null,
+       "AdviceText": null,
+       "ConsequenceText": null,
+       "LevelMeaningText": null,
+       "CauseText": null,
+       "Area": null,
+       "ExposedHeightType": 0,
+       "ExposedHeightValue": -1,
+       "ExposedHeightValue2": -1,
+       "ExposedClimateType": 0,
+       "CauseList": [],
+       "MicroBlogPostList": [],
+       "StationList": [],
+       "ImageUrlList": []
+      }
+     ]
+    },
+    {
+     "Id": "3451",
+     "Name": "Nord-Aurdal",
+     "WarningList": [
+      {
+       "EventId": "xxx",
+       "Id": "xxx",
+       "MasterId": "xxx",
+       "Version": 1,
+       "LangKey": 1,
+       "CapStatus": "actual",
+       "MetId": null,
+       "MetName": null,
+       "CountyList": [
+        {
+         "Id": "34",
+         "Name": "Innlandet",
+         "MunicipalityList": null,
+         "HighestActivityLevel": null
+        }
+       ],
+       "MunicipalityList": [
+        {
+         "Id": "3451",
+         "Name": "Nord-Aurdal",
+         "WarningList": null
+        }
+       ],
+       "MunicipalityCsvString": "3451",
+       "MunicipalityCsvStringBefore2024": null,
+       "MunicipalityCsvStringBefore2020": null,
+       "ActivityLevel": "1",
+       "ActivityLevelName": null,
+       "DangerType": null,
+       "DangerTypeName": null,
+       "ValidFrom": "2026-10-29T07:00:00",
+       "ValidTo": "2026-10-30T06:59:59",
+       "NextWarningTime": "2026-10-30T11:00:00",
+       "PublishTime": "2026-10-29T14:11:26.3771987",
+       "FirstPublishTime": "2026-10-29T23:13:39.0106339+01:00",
+       "CreatedTime": "2026-10-29T23:13:39.0106339+01:00",
+       "DangerIncreaseDateTime": null,
+       "DangerDecreaseDateTime": null,
+       "MainText": "Grønt nivå",
+       "WarningText": null,
+       "AdviceText": null,
+       "ConsequenceText": null,
+       "LevelMeaningText": null,
+       "CauseText": null,
+       "Area": null,
+       "ExposedHeightType": 0,
+       "ExposedHeightValue": -1,
+       "ExposedHeightValue2": -1,
+       "ExposedClimateType": 0,
+       "CauseList": [],
+       "MicroBlogPostList": [],
+       "StationList": [],
+       "ImageUrlList": []
+      },
+      {
+       "EventId": "xxx",
+       "Id": "xxx",
+       "MasterId": "xxx",
+       "Version": 1,
+       "LangKey": 1,
+       "CapStatus": "actual",
+       "MetId": null,
+       "MetName": null,
+       "CountyList": [
+        {
+         "Id": "34",
+         "Name": "Innlandet",
+         "MunicipalityList": null,
+         "HighestActivityLevel": null
+        }
+       ],
+       "MunicipalityList": [
+        {
+         "Id": "3451",
+         "Name": "Nord-Aurdal",
+         "WarningList": null
+        }
+       ],
+       "MunicipalityCsvString": "3451",
+       "MunicipalityCsvStringBefore2024": null,
+       "MunicipalityCsvStringBefore2020": null,
+       "ActivityLevel": "1",
+       "ActivityLevelName": null,
+       "DangerType": null,
+       "DangerTypeName": null,
+       "ValidFrom": "2026-10-30T07:00:00",
+       "ValidTo": "2026-10-31T06:59:59",
+       "NextWarningTime": "2026-10-30T11:00:00",
+       "PublishTime": "2026-10-29T14:11:26.3771987",
+       "FirstPublishTime": "2026-10-29T23:13:39.0106339+01:00",
+       "CreatedTime": "2026-10-29T23:13:39.0106339+01:00",
+       "DangerIncreaseDateTime": null,
+       "DangerDecreaseDateTime": null,
+       "MainText": "Grønt nivå",
+       "WarningText": null,
+       "AdviceText": null,
+       "ConsequenceText": null,
+       "LevelMeaningText": null,
+       "CauseText": null,
+       "Area": null,
+       "ExposedHeightType": 0,
+       "ExposedHeightValue": -1,
+       "ExposedHeightValue2": -1,
+       "ExposedClimateType": 0,
+       "CauseList": [],
+       "MicroBlogPostList": [],
+       "StationList": [],
+       "ImageUrlList": []
+      }
+     ]
+    }
+   ],
+   "HighestActivityLevel": "1"
+  },
+  {
+   "Id": "46",
+   "Name": "Vestland",
+   "MunicipalityList": [
+    {
+     "Id": "4601",
+     "Name": "Bergen",
+     "WarningList": [
+      {
+       "EventId": "xxx",
+       "Id": "xxx",
+       "MasterId": "xxx",
+       "Version": 1,
+       "LangKey": 1,
+       "CapStatus": "actual",
+       "MetId": null,
+       "MetName": null,
+       "CountyList": [
+        {
+         "Id": "46",
+         "Name": "Vestland",
+         "MunicipalityList": null,
+         "HighestActivityLevel": null
+        }
+       ],
+       "MunicipalityList": [
+        {
+         "Id": "4601",
+         "Name": "Bergen",
+         "WarningList": null
+        }
+       ],
+       "MunicipalityCsvString": "4601",
+       "MunicipalityCsvStringBefore2024": null,
+       "MunicipalityCsvStringBefore2020": null,
+       "ActivityLevel": "1",
+       "ActivityLevelName": null,
+       "DangerType": null,
+       "DangerTypeName": null,
+       "ValidFrom": "2026-10-29T07:00:00",
+       "ValidTo": "2026-10-30T06:59:59",
+       "NextWarningTime": "2026-10-30T11:00:00",
+       "PublishTime": "2026-10-29T14:11:26.3771987",
+       "FirstPublishTime": "2026-10-29T23:13:39.0106339+01:00",
+       "CreatedTime": "2026-10-29T23:13:39.0106339+01:00",
+       "DangerIncreaseDateTime": null,
+       "DangerDecreaseDateTime": null,
+       "MainText": "Grønt nivå",
+       "WarningText": null,
+       "AdviceText": null,
+       "ConsequenceText": null,
+       "LevelMeaningText": null,
+       "CauseText": null,
+       "Area": null,
+       "ExposedHeightType": 0,
+       "ExposedHeightValue": -1,
+       "ExposedHeightValue2": -1,
+       "ExposedClimateType": 0,
+       "CauseList": [],
+       "MicroBlogPostList": [],
+       "StationList": [],
+       "ImageUrlList": []
+      },
+      {
+       "EventId": "xxx",
+       "Id": "xxx",
+       "MasterId": "xxx",
+       "Version": 1,
+       "LangKey": 1,
+       "CapStatus": "actual",
+       "MetId": null,
+       "MetName": null,
+       "CountyList": [
+        {
+         "Id": "46",
+         "Name": "Vestland",
+         "MunicipalityList": null,
+         "HighestActivityLevel": null
+        }
+       ],
+       "MunicipalityList": [
+        {
+         "Id": "4601",
+         "Name": "Bergen",
+         "WarningList": null
+        }
+       ],
+       "MunicipalityCsvString": "4601",
+       "MunicipalityCsvStringBefore2024": null,
+       "MunicipalityCsvStringBefore2020": null,
+       "ActivityLevel": "1",
+       "ActivityLevelName": null,
+       "DangerType": null,
+       "DangerTypeName": null,
+       "ValidFrom": "2026-10-30T07:00:00",
+       "ValidTo": "2026-10-31T06:59:59",
+       "NextWarningTime": "2026-10-30T11:00:00",
+       "PublishTime": "2026-10-29T14:11:26.3771987",
+       "FirstPublishTime": "2026-10-29T23:13:39.0106339+01:00",
+       "CreatedTime": "2026-10-29T23:13:39.0106339+01:00",
+       "DangerIncreaseDateTime": null,
+       "DangerDecreaseDateTime": null,
+       "MainText": "Grønt nivå",
+       "WarningText": null,
+       "AdviceText": null,
+       "ConsequenceText": null,
+       "LevelMeaningText": null,
+       "CauseText": null,
+       "Area": null,
+       "ExposedHeightType": 0,
+       "ExposedHeightValue": -1,
+       "ExposedHeightValue2": -1,
+       "ExposedClimateType": 0,
+       "CauseList": [],
+       "MicroBlogPostList": [],
+       "StationList": [],
+       "ImageUrlList": []
+      }
+     ]
+    },
+    {
+     "Id": "4627",
+     "Name": "Askøy",
+     "WarningList": [
+      {
+       "EventId": "xxx",
+       "Id": "xxx",
+       "MasterId": "xxx",
+       "Version": 1,
+       "LangKey": 1,
+       "CapStatus": "actual",
+       "MetId": null,
+       "MetName": null,
+       "CountyList": [
+        {
+         "Id": "46",
+         "Name": "Vestland",
+         "MunicipalityList": null,
+         "HighestActivityLevel": null
+        }
+       ],
+       "MunicipalityList": [
+        {
+         "Id": "4627",
+         "Name": "Askøy",
+         "WarningList": null
+        }
+       ],
+       "MunicipalityCsvString": "4627",
+       "MunicipalityCsvStringBefore2024": null,
+       "MunicipalityCsvStringBefore2020": null,
+       "ActivityLevel": "1",
+       "ActivityLevelName": null,
+       "DangerType": null,
+       "DangerTypeName": null,
+       "ValidFrom": "2026-10-29T07:00:00",
+       "ValidTo": "2026-10-30T06:59:59",
+       "NextWarningTime": "2026-10-30T11:00:00",
+       "PublishTime": "2026-10-29T14:11:26.3771987",
+       "FirstPublishTime": "2026-10-29T23:13:39.0106339+01:00",
+       "CreatedTime": "2026-10-29T23:13:39.0106339+01:00",
+       "DangerIncreaseDateTime": null,
+       "DangerDecreaseDateTime": null,
+       "MainText": "Grønt nivå",
+       "WarningText": null,
+       "AdviceText": null,
+       "ConsequenceText": null,
+       "LevelMeaningText": null,
+       "CauseText": null,
+       "Area": null,
+       "ExposedHeightType": 0,
+       "ExposedHeightValue": -1,
+       "ExposedHeightValue2": -1,
+       "ExposedClimateType": 0,
+       "CauseList": [],
+       "MicroBlogPostList": [],
+       "StationList": [],
+       "ImageUrlList": []
+      },
+      {
+       "EventId": "xxx",
+       "Id": "xxx",
+       "MasterId": "xxx",
+       "Version": 1,
+       "LangKey": 1,
+       "CapStatus": "actual",
+       "MetId": null,
+       "MetName": null,
+       "CountyList": [
+        {
+         "Id": "46",
+         "Name": "Vestland",
+         "MunicipalityList": null,
+         "HighestActivityLevel": null
+        }
+       ],
+       "MunicipalityList": [
+        {
+         "Id": "4627",
+         "Name": "Askøy",
+         "WarningList": null
+        }
+       ],
+       "MunicipalityCsvString": "4627",
+       "MunicipalityCsvStringBefore2024": null,
+       "MunicipalityCsvStringBefore2020": null,
+       "ActivityLevel": "1",
+       "ActivityLevelName": null,
+       "DangerType": null,
+       "DangerTypeName": null,
+       "ValidFrom": "2026-10-30T07:00:00",
+       "ValidTo": "2026-10-31T06:59:59",
+       "NextWarningTime": "2026-10-30T11:00:00",
+       "PublishTime": "2026-10-29T14:11:26.3771987",
+       "FirstPublishTime": "2026-10-29T23:13:39.0106339+01:00",
+       "CreatedTime": "2026-10-29T23:13:39.0106339+01:00",
+       "DangerIncreaseDateTime": null,
+       "DangerDecreaseDateTime": null,
+       "MainText": "Grønt nivå",
+       "WarningText": null,
+       "AdviceText": null,
+       "ConsequenceText": null,
+       "LevelMeaningText": null,
+       "CauseText": null,
+       "Area": null,
+       "ExposedHeightType": 0,
+       "ExposedHeightValue": -1,
+       "ExposedHeightValue2": -1,
+       "ExposedClimateType": 0,
+       "CauseList": [],
+       "MicroBlogPostList": [],
+       "StationList": [],
+       "ImageUrlList": []
+      }
+     ]
+    },
+    {
+     "Id": "4650",
+     "Name": "Gloppen",
+     "WarningList": [
+      {
+       "EventId": "xxx",
+       "Id": "xxx",
+       "MasterId": "xxx",
+       "Version": 1,
+       "LangKey": 1,
+       "CapStatus": "actual",
+       "MetId": null,
+       "MetName": null,
+       "CountyList": [
+        {
+         "Id": "46",
+         "Name": "Vestland",
+         "MunicipalityList": null,
+         "HighestActivityLevel": null
+        }
+       ],
+       "MunicipalityList": [
+        {
+         "Id": "4650",
+         "Name": "Gloppen",
+         "WarningList": null
+        }
+       ],
+       "MunicipalityCsvString": "4650",
+       "MunicipalityCsvStringBefore2024": null,
+       "MunicipalityCsvStringBefore2020": null,
+       "ActivityLevel": "1",
+       "ActivityLevelName": null,
+       "DangerType": null,
+       "DangerTypeName": null,
+       "ValidFrom": "2026-10-29T07:00:00",
+       "ValidTo": "2026-10-30T06:59:59",
+       "NextWarningTime": "2026-10-30T11:00:00",
+       "PublishTime": "2026-10-29T14:11:26.3771987",
+       "FirstPublishTime": "2026-10-29T23:13:39.0106339+01:00",
+       "CreatedTime": "2026-10-29T23:13:39.0106339+01:00",
+       "DangerIncreaseDateTime": null,
+       "DangerDecreaseDateTime": null,
+       "MainText": "Grønt nivå",
+       "WarningText": null,
+       "AdviceText": null,
+       "ConsequenceText": null,
+       "LevelMeaningText": null,
+       "CauseText": null,
+       "Area": null,
+       "ExposedHeightType": 0,
+       "ExposedHeightValue": -1,
+       "ExposedHeightValue2": -1,
+       "ExposedClimateType": 0,
+       "CauseList": [],
+       "MicroBlogPostList": [],
+       "StationList": [],
+       "ImageUrlList": []
+      },
+      {
+       "EventId": "xxx",
+       "Id": "xxx",
+       "MasterId": "xxx",
+       "Version": 1,
+       "LangKey": 1,
+       "CapStatus": "actual",
+       "MetId": null,
+       "MetName": null,
+       "CountyList": [
+        {
+         "Id": "46",
+         "Name": "Vestland",
+         "MunicipalityList": null,
+         "HighestActivityLevel": null
+        }
+       ],
+       "MunicipalityList": [
+        {
+         "Id": "4650",
+         "Name": "Gloppen",
+         "WarningList": null
+        }
+       ],
+       "MunicipalityCsvString": "4650",
+       "MunicipalityCsvStringBefore2024": null,
+       "MunicipalityCsvStringBefore2020": null,
+       "ActivityLevel": "1",
+       "ActivityLevelName": null,
+       "DangerType": null,
+       "DangerTypeName": null,
+       "ValidFrom": "2026-10-30T07:00:00",
+       "ValidTo": "2026-10-31T06:59:59",
+       "NextWarningTime": "2026-10-30T11:00:00",
+       "PublishTime": "2026-10-29T14:11:26.3771987",
+       "FirstPublishTime": "2026-10-29T23:13:39.0106339+01:00",
+       "CreatedTime": "2026-10-29T23:13:39.0106339+01:00",
+       "DangerIncreaseDateTime": null,
+       "DangerDecreaseDateTime": null,
+       "MainText": "Grønt nivå",
+       "WarningText": null,
+       "AdviceText": null,
+       "ConsequenceText": null,
+       "LevelMeaningText": null,
+       "CauseText": null,
+       "Area": null,
+       "ExposedHeightType": 0,
+       "ExposedHeightValue": -1,
+       "ExposedHeightValue2": -1,
+       "ExposedClimateType": 0,
+       "CauseList": [],
+       "MicroBlogPostList": [],
+       "StationList": [],
+       "ImageUrlList": []
+      }
+     ]
+    }
+   ],
+   "HighestActivityLevel": "1"
+  },
+  {
+   "Id": "03",
+   "Name": "Oslo",
+   "MunicipalityList": [
+    {
+     "Id": "0301",
+     "Name": "Oslo",
+     "WarningList": [
+      {
+       "EventId": "xxx",
+       "Id": "xxx",
+       "MasterId": "xxx",
+       "Version": 1,
+       "LangKey": 1,
+       "CapStatus": "actual",
+       "MetId": null,
+       "MetName": null,
+       "CountyList": [
+        {
+         "Id": "03",
+         "Name": "Oslo",
+         "MunicipalityList": null,
+         "HighestActivityLevel": null
+        }
+       ],
+       "MunicipalityList": [
+        {
+         "Id": "0301",
+         "Name": "Oslo",
+         "WarningList": null
+        }
+       ],
+       "MunicipalityCsvString": "0301",
+       "MunicipalityCsvStringBefore2024": null,
+       "MunicipalityCsvStringBefore2020": null,
+       "ActivityLevel": "1",
+       "ActivityLevelName": null,
+       "DangerType": null,
+       "DangerTypeName": null,
+       "ValidFrom": "2026-10-29T07:00:00",
+       "ValidTo": "2026-10-30T06:59:59",
+       "NextWarningTime": "2026-10-30T11:00:00",
+       "PublishTime": "2026-10-29T14:11:26.3771987",
+       "FirstPublishTime": "2026-10-29T23:13:39.0418844+01:00",
+       "CreatedTime": "2026-10-29T23:13:39.0418844+01:00",
+       "DangerIncreaseDateTime": null,
+       "DangerDecreaseDateTime": null,
+       "MainText": "Grønt nivå",
+       "WarningText": null,
+       "AdviceText": null,
+       "ConsequenceText": null,
+       "LevelMeaningText": null,
+       "CauseText": null,
+       "Area": null,
+       "ExposedHeightType": 0,
+       "ExposedHeightValue": -1,
+       "ExposedHeightValue2": -1,
+       "ExposedClimateType": 0,
+       "CauseList": [],
+       "MicroBlogPostList": [],
+       "StationList": [],
+       "ImageUrlList": []
+      },
+      {
+       "EventId": "xxx",
+       "Id": "xxx",
+       "MasterId": "xxx",
+       "Version": 1,
+       "LangKey": 1,
+       "CapStatus": "actual",
+       "MetId": null,
+       "MetName": null,
+       "CountyList": [
+        {
+         "Id": "03",
+         "Name": "Oslo",
+         "MunicipalityList": null,
+         "HighestActivityLevel": null
+        }
+       ],
+       "MunicipalityList": [
+        {
+         "Id": "0301",
+         "Name": "Oslo",
+         "WarningList": null
+        }
+       ],
+       "MunicipalityCsvString": "0301",
+       "MunicipalityCsvStringBefore2024": null,
+       "MunicipalityCsvStringBefore2020": null,
+       "ActivityLevel": "1",
+       "ActivityLevelName": null,
+       "DangerType": null,
+       "DangerTypeName": null,
+       "ValidFrom": "2026-10-30T07:00:00",
+       "ValidTo": "2026-10-31T06:59:59",
+       "NextWarningTime": "2026-10-30T11:00:00",
+       "PublishTime": "2026-10-29T14:11:26.3771987",
+       "FirstPublishTime": "2026-10-29T23:13:39.0418844+01:00",
+       "CreatedTime": "2026-10-29T23:13:39.0418844+01:00",
+       "DangerIncreaseDateTime": null,
+       "DangerDecreaseDateTime": null,
+       "MainText": "Grønt nivå",
+       "WarningText": null,
+       "AdviceText": null,
+       "ConsequenceText": null,
+       "LevelMeaningText": null,
+       "CauseText": null,
+       "Area": null,
+       "ExposedHeightType": 0,
+       "ExposedHeightValue": -1,
+       "ExposedHeightValue2": -1,
+       "ExposedClimateType": 0,
+       "CauseList": [],
+       "MicroBlogPostList": [],
+       "StationList": [],
+       "ImageUrlList": []
+      }
+     ]
+    }
+   ],
+   "HighestActivityLevel": "1"
+  }
+ ]
+}

@@ -2,6 +2,8 @@
 // Ağ işi hent-data.mjs'te; burası test edilebilir (data.test.mjs). Hiçbir değer tahmin edilmez ya da uydurulmaz:
 // beklenen alan yoksa hata fırlatılır ve çağıran eski dosyayı olduğu gibi bırakır.
 
+import { hasterNve } from './nve.mjs';
+
 export const RENTE_KILDE = {
   navn: 'Norges Bank',
   url: 'https://www.norges-bank.no/tema/pengepolitikk/Styringsrenten/',
@@ -99,6 +101,8 @@ export function sammeInnhold(a, b) {
 export function hasterPublisering(fil, gammel, ny) {
   if (sammeInnhold(gammel, ny)) return false;
   if (fil === 'styringsrente.json') return true;
+  // NVE: snøskred (≥ faregrad 3) og flom/jordskred (oransje/rødt) haster; resten kommer med neste publisering.
+  if (fil === 'snoskred.json' || fil === 'flom.json') return hasterNve(fil, gammel, ny);
   // SSB-tall og varselarkivet endrer seg sjelden og haster ikke: de kommer ut med neste vanlige publisering.
   if (fil !== 'farevarsler.json') return false;
   const alvorlige = (o) => JSON.stringify((o?.varsler ?? []).filter((v) => v.niva !== 'gult'));

@@ -1,0 +1,13 @@
+{
+  "hentet": "2026-10-29T22:15:31.577Z",
+  "kilde": {
+    "navn": "Norges vassdrags- og energidirektorat (NVE), Varsom",
+    "url": "https://www.varsom.no/",
+    "data": "https://api01.nve.no/",
+    "lisens": "NLOD",
+    "lisensUrl": "https://data.norge.no/nlod/no/2.0"
+  },
+  "dato": "2026-10-29",
+  "flom": {},
+  "jordskred": {}
+}

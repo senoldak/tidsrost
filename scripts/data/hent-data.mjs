@@ -1,6 +1,7 @@
 // Sürekli güncel veri sayfalarının verisini resmi, anahtarsız açık API'lerden çeker ve src/data/*.json'a yazar.
 //   - Styringsrenten: Norges Bank SDMX API (data.norges-bank.no), lisans NLOD.
 //   - Prisstigning, boligpriser, arbeidsledighet: SSB PxWebApi v2 (tablo 14700, 07221, 13760), lisans NLOD.
+//   - Snøskredvarsel (snoskred.json) og flom-/jordskredvarsel (flom.json): NVE Varsom API (api01.nve.no), lisens NLOD.
 //   - Farevarsler ve arşivi (varselarkiv.json, 2019'dan beri): MET Norway MetAlerts 2.0 (api.met.no), lisans CC BY 4.0. MET'in kullanım şartı gereği istekte
 //     siteyi ve iletişim adresini tanıtan bir User-Agent gönderilir; Nyhetsbot ile ~2 saatte bir, tek istek.
 // Bir kaynak başarısız olursa o dosyaya dokunulmaz: sayfa son bilinen değeri ve alındığı zamanı göstermeye devam eder.
@@ -12,6 +13,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { acilDurdurma } from '../nyheter/kapi.mjs';
 import { RENTE_KILDE, VARSEL_KILDE, farevarsler, hasterPublisering, lesSdmxCsv, sammeInnhold, styringsrente } from './data.mjs';
+import { NVE_KILDE, fareKommuner, nveFareUrl, nveSnoskredUrl, snoskred } from './nve.mjs';
 import { SSB_KILDE, ssbUrl } from './ssb.mjs';
 import { arbeidsledighet, boligpriser, kpiHistorisk, prisstigning } from './ssb-sider.mjs';
 import { birlestirMaaned, dagsTall, hendelser, nesteArkivmaaned, oppdaterLopende } from './varselarkiv.mjs';
@@ -42,6 +44,9 @@ function renteUrl(naa = new Date()) {
   const fra = `${naa.getUTCFullYear() - 10}-01-01`;
   return `https://data.norges-bank.no/api/data/IR/B.KPRA.SD.R?startPeriod=${fra}&format=csv&locale=en`;
 }
+
+// Oslo tarihi (NVE varsel günleri yerel tarihe göre); gun=1 → yarın.
+const osloDato = (gun = 0) => new Date(Date.now() + gun * 86_400_000).toLocaleDateString('sv-SE', { timeZone: 'Europe/Oslo' });
 
 const JOBBER = [
   {
@@ -118,6 +123,24 @@ const JOBBER = [
       const aar = JSON.parse(await hent(ssbUrl('14711', { ContentsCode: 'KpiAar', Tid: '*' }), 'application/json'));
       const mnd = JSON.parse(await hent(ssbUrl('14710', { ContentsCode: 'KpiIndMnd', Tid: '*' }), 'application/json'));
       return { kilde: SSB_KILDE, tabell: '14711, 14710', ...kpiHistorisk(aar, mnd) };
+    },
+  },
+  {
+    // NVE snøskredvarsel: A-bölgeleri, bugün ve yarın. Sezon dışında hepsi seviye 0 (Ikke vurdert).
+    fil: 'snoskred.json',
+    async lag() {
+      const json = JSON.parse(await hent(nveSnoskredUrl(osloDato(), osloDato(1)), 'application/json'));
+      return { kilde: NVE_KILDE, ...snoskred(json) };
+    },
+  },
+  {
+    // NVE flom- og jordskredvarsel: fylke → kommune, yalnız bugünün seviye ≥2 uyarıları (iki ayrı API, ~400 KB'lık yanıtlar).
+    fil: 'flom.json',
+    async lag() {
+      const dag = osloDato();
+      const flom = fareKommuner(JSON.parse(await hent(nveFareUrl('flom', dag, osloDato(1)), 'application/json')), 'flom', dag);
+      const jord = fareKommuner(JSON.parse(await hent(nveFareUrl('jordskred', dag, osloDato(1)), 'application/json')), 'jordskred', dag);
+      return { kilde: NVE_KILDE, dato: dag, flom: flom.fylker, jordskred: jord.fylker };
     },
   },
 ];

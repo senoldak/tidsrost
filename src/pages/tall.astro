@@ -14,6 +14,8 @@ import pris from '../data/prisstigning.json';
 import bolig from '../data/boligpriser.json';
 import arbeid from '../data/arbeidsledighet.json';
 import kpiHist from '../data/kpi-historisk.json';
+import snoskredData from '../data/snoskred.json';
+import { dagNivaaer } from '../../scripts/data/nve.mjs';
 import { omregn } from '../lib/prisomregner.mjs';
 import { arbeidsdagerTotalt } from '../lib/helligdager.mjs';
 
@@ -32,6 +34,9 @@ const varsler30 = dagerTall >= 7 && erKomplett(dk, fra, til) ? periodeTall(dager
 
 const kpiEksFra = String(Number(kpiHist.sisteAar) - 30);
 const kpiEks = omregn(kpiHist, 100, kpiEksFra, kpiHist.sisteAar);
+
+const snoDag = snoskredData.regioner[0]?.dager[0]?.dato;
+const snoAntall = snoDag ? dagNivaaer(snoskredData, snoDag).length : null;
 
 const rodeAar = Number(new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Oslo' }).slice(0, 4));
 
@@ -61,6 +66,14 @@ const kort = [
     tekst: `Arbeidsdager i ${rodeAar}. Datoer for helligdagene, inneklemte dager og arbeidsdager per måned.`,
     kilde: 'Lovdata',
     sym: 'data',
+  },
+  {
+    url: '/snoskredvarsel/',
+    navn: 'Snøskredvarsel',
+    verdi: snoAntall === null ? '–' : String(snoAntall),
+    tekst: `Varslingsregioner med snøskredvarsel fra NVE, ${snoDag ? datoTekst(snoDag) : 'siste varsel'}. Faregrad per region.`,
+    kilde: 'NVE',
+    sym: 'varsel',
   },
   { url: '/styringsrenten/', navn: 'Styringsrenten nå', verdi: prosent(RENTE.rente), tekst: RENTE.gjeldendeFra ? `Gjeldende fra ${datoTekst(RENTE.gjeldendeFra)}.` : 'Norges Banks styringsrente.', kilde: 'Norges Bank', sym: 'data' },
   {

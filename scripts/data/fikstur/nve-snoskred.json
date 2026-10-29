@@ -1,0 +1,282 @@
+[
+ {
+  "Id": 3001,
+  "Name": "Svalbard øst",
+  "TypeId": 20,
+  "TypeName": "B",
+  "AvalancheWarningList": [
+   {
+    "RegId": 0,
+    "RegionId": 3001,
+    "RegionName": "Svalbard øst",
+    "RegionTypeId": 20,
+    "RegionTypeName": "B",
+    "DangerLevel": "0",
+    "ValidFrom": "2026-10-29T00:00:00",
+    "ValidTo": "2026-10-29T23:59:59",
+    "NextWarningTime": "2026-10-28T17:00:00",
+    "PublishTime": "2026-10-29T00:00:00",
+    "DangerIncreaseTime": null,
+    "DangerDecreaseTime": null,
+    "MainText": "Ikke vurdert",
+    "LangKey": 1
+   },
+   {
+    "RegId": 0,
+    "RegionId": 3001,
+    "RegionName": "Svalbard øst",
+    "RegionTypeId": 20,
+    "RegionTypeName": "B",
+    "DangerLevel": "0",
+    "ValidFrom": "2026-10-30T00:00:00",
+    "ValidTo": "2026-10-30T23:59:59",
+    "NextWarningTime": "2026-10-30T17:00:00",
+    "PublishTime": "2026-10-30T00:00:00",
+    "DangerIncreaseTime": null,
+    "DangerDecreaseTime": null,
+    "MainText": "Ikke vurdert",
+    "LangKey": 1
+   }
+  ]
+ },
+ {
+  "Id": 3003,
+  "Name": "Nordenskiöld Land",
+  "TypeId": 10,
+  "TypeName": "A",
+  "AvalancheWarningList": [
+   {
+    "RegId": 0,
+    "RegionId": 3003,
+    "RegionName": "Nordenskiöld Land",
+    "RegionTypeId": 10,
+    "RegionTypeName": "A",
+    "DangerLevel": "0",
+    "ValidFrom": "2026-10-29T00:00:00",
+    "ValidTo": "2026-10-29T23:59:59",
+    "NextWarningTime": "2026-10-28T17:00:00",
+    "PublishTime": "2026-10-29T00:00:00",
+    "DangerIncreaseTime": null,
+    "DangerDecreaseTime": null,
+    "MainText": "Ikke vurdert",
+    "LangKey": 1
+   },
+   {
+    "RegId": 0,
+    "RegionId": 3003,
+    "RegionName": "Nordenskiöld Land",
+    "RegionTypeId": 10,
+    "RegionTypeName": "A",
+    "DangerLevel": "0",
+    "ValidFrom": "2026-10-30T00:00:00",
+    "ValidTo": "2026-10-30T23:59:59",
+    "NextWarningTime": "2026-10-30T17:00:00",
+    "PublishTime": "2026-10-30T00:00:00",
+    "DangerIncreaseTime": null,
+    "DangerDecreaseTime": null,
+    "MainText": "Ikke vurdert",
+    "LangKey": 1
+   }
+  ]
+ },
+ {
+  "Id": 3006,
+  "Name": "Finnmarkskysten",
+  "TypeId": 10,
+  "TypeName": "A",
+  "AvalancheWarningList": [
+   {
+    "RegId": 0,
+    "RegionId": 3006,
+    "RegionName": "Finnmarkskysten",
+    "RegionTypeId": 10,
+    "RegionTypeName": "A",
+    "DangerLevel": "0",
+    "ValidFrom": "2026-10-29T00:00:00",
+    "ValidTo": "2026-10-29T23:59:59",
+    "NextWarningTime": "2026-10-28T17:00:00",
+    "PublishTime": "2026-10-29T00:00:00",
+    "DangerIncreaseTime": null,
+    "DangerDecreaseTime": null,
+    "MainText": "Ikke vurdert",
+    "LangKey": 1
+   },
+   {
+    "RegId": 0,
+    "RegionId": 3006,
+    "RegionName": "Finnmarkskysten",
+    "RegionTypeId": 10,
+    "RegionTypeName": "A",
+    "DangerLevel": "0",
+    "ValidFrom": "2026-10-30T00:00:00",
+    "ValidTo": "2026-10-30T23:59:59",
+    "NextWarningTime": "2026-10-30T17:00:00",
+    "PublishTime": "2026-10-30T00:00:00",
+    "DangerIncreaseTime": null,
+    "DangerDecreaseTime": null,
+    "MainText": "Ikke vurdert",
+    "LangKey": 1
+   }
+  ]
+ },
+ {
+  "Id": 3010,
+  "Name": "Lyngen",
+  "TypeId": 10,
+  "TypeName": "A",
+  "AvalancheWarningList": [
+   {
+    "RegId": 0,
+    "RegionId": 3010,
+    "RegionName": "Lyngen",
+    "RegionTypeId": 10,
+    "RegionTypeName": "A",
+    "DangerLevel": "0",
+    "ValidFrom": "2026-10-29T00:00:00",
+    "ValidTo": "2026-10-29T23:59:59",
+    "NextWarningTime": "2026-10-28T17:00:00",
+    "PublishTime": "2026-10-29T00:00:00",
+    "DangerIncreaseTime": null,
+    "DangerDecreaseTime": null,
+    "MainText": "Ikke vurdert",
+    "LangKey": 1
+   },
+   {
+    "RegId": 0,
+    "RegionId": 3010,
+    "RegionName": "Lyngen",
+    "RegionTypeId": 10,
+    "RegionTypeName": "A",
+    "DangerLevel": "0",
+    "ValidFrom": "2026-10-30T00:00:00",
+    "ValidTo": "2026-10-30T23:59:59",
+    "NextWarningTime": "2026-10-30T17:00:00",
+    "PublishTime": "2026-10-30T00:00:00",
+    "DangerIncreaseTime": null,
+    "DangerDecreaseTime": null,
+    "MainText": "Ikke vurdert",
+    "LangKey": 1
+   }
+  ]
+ },
+ {
+  "Id": 3011,
+  "Name": "Tromsø",
+  "TypeId": 10,
+  "TypeName": "A",
+  "AvalancheWarningList": [
+   {
+    "RegId": 0,
+    "RegionId": 3011,
+    "RegionName": "Tromsø",
+    "RegionTypeId": 10,
+    "RegionTypeName": "A",
+    "DangerLevel": "0",
+    "ValidFrom": "2026-10-29T00:00:00",
+    "ValidTo": "2026-10-29T23:59:59",
+    "NextWarningTime": "2026-10-28T17:00:00",
+    "PublishTime": "2026-10-29T00:00:00",
+    "DangerIncreaseTime": null,
+    "DangerDecreaseTime": null,
+    "MainText": "Ikke vurdert",
+    "LangKey": 1
+   },
+   {
+    "RegId": 0,
+    "RegionId": 3011,
+    "RegionName": "Tromsø",
+    "RegionTypeId": 10,
+    "RegionTypeName": "A",
+    "DangerLevel": "0",
+    "ValidFrom": "2026-10-30T00:00:00",
+    "ValidTo": "2026-10-30T23:59:59",
+    "NextWarningTime": "2026-10-30T17:00:00",
+    "PublishTime": "2026-10-30T00:00:00",
+    "DangerIncreaseTime": null,
+    "DangerDecreaseTime": null,
+    "MainText": "Ikke vurdert",
+    "LangKey": 1
+   }
+  ]
+ },
+ {
+  "Id": 3023,
+  "Name": "Romsdal",
+  "TypeId": 10,
+  "TypeName": "A",
+  "AvalancheWarningList": [
+   {
+    "RegId": 0,
+    "RegionId": 3023,
+    "RegionName": "Romsdal",
+    "RegionTypeId": 10,
+    "RegionTypeName": "A",
+    "DangerLevel": "0",
+    "ValidFrom": "2026-10-29T00:00:00",
+    "ValidTo": "2026-10-29T23:59:59",
+    "NextWarningTime": "2026-10-28T17:00:00",
+    "PublishTime": "2026-10-29T00:00:00",
+    "DangerIncreaseTime": null,
+    "DangerDecreaseTime": null,
+    "MainText": "Ikke vurdert",
+    "LangKey": 1
+   },
+   {
+    "RegId": 0,
+    "RegionId": 3023,
+    "RegionName": "Romsdal",
+    "RegionTypeId": 10,
+    "RegionTypeName": "A",
+    "DangerLevel": "0",
+    "ValidFrom": "2026-10-30T00:00:00",
+    "ValidTo": "2026-10-30T23:59:59",
+    "NextWarningTime": "2026-10-30T17:00:00",
+    "PublishTime": "2026-10-30T00:00:00",
+    "DangerIncreaseTime": null,
+    "DangerDecreaseTime": null,
+    "MainText": "Ikke vurdert",
+    "LangKey": 1
+   }
+  ]
+ },
+ {
+  "Id": 3046,
+  "Name": "Østfold",
+  "TypeId": 20,
+  "TypeName": "B",
+  "AvalancheWarningList": [
+   {
+    "RegId": 0,
+    "RegionId": 3046,
+    "RegionName": "Østfold",
+    "RegionTypeId": 20,
+    "RegionTypeName": "B",
+    "DangerLevel": "0",
+    "ValidFrom": "2026-10-29T00:00:00",
+    "ValidTo": "2026-10-29T23:59:59",
+    "NextWarningTime": "2026-10-28T17:00:00",
+    "PublishTime": "2026-10-29T00:00:00",
+    "DangerIncreaseTime": null,
+    "DangerDecreaseTime": null,
+    "MainText": "Ikke vurdert",
+    "LangKey": 1
+   },
+   {
+    "RegId": 0,
+    "RegionId": 3046,
+    "RegionName": "Østfold",
+    "RegionTypeId": 20,
+    "RegionTypeName": "B",
+    "DangerLevel": "0",
+    "ValidFrom": "2026-10-30T00:00:00",
+    "ValidTo": "2026-10-30T23:59:59",
+    "NextWarningTime": "2026-10-30T17:00:00",
+    "PublishTime": "2026-10-30T00:00:00",
+    "DangerIncreaseTime": null,
+    "DangerDecreaseTime": null,
+    "MainText": "Ikke vurdert",
+    "LangKey": 1
+   }
+  ]
+ }
+]
