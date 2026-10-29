@@ -67,8 +67,7 @@ const [nameHead, nameTail] = SITE.name.split('ø');
     {/* Yalnız Google'a kapalı sayfa: diğer arama motorları ve yapay zekâ arama botları (ChatGPT, Perplexity, Bing) görmeye devam eder. */}
     {googleNoindex && !noindex && <meta name="googlebot" content="noindex, follow" />}
     <script is:inline src="/tema.js"></script>
-    <meta name="theme-color" content="#fdfdfb" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#171612" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fdfdfb" />
     {!noindex && <link rel="canonical" href={canonical} />}
     <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />

@@ -1,6 +1,5 @@
-// Lyst/mørkt tema: leserens valg i menyen huskes i nettleseren (localStorage 'tema' = 'lys' | 'mork').
-// Uten valg følger siden enhetens innstilling (prefers-color-scheme). Lastes i <head> før siden tegnes,
-// som egen fil fordi CSP ikke tillater innebygde skript.
+// Lyst/mørkt tema: lyst er standard; leserens valg i menyen huskes i nettleseren (localStorage 'tema' = 'lys' | 'mork').
+// Lastes i <head> før siden tegnes, som egen fil fordi CSP ikke tillater innebygde skript.
 (function () {
   var rot = document.documentElement;
   var lagret = null;
@@ -9,11 +8,8 @@
   } catch (e) {}
   if (lagret === 'lys' || lagret === 'mork') rot.setAttribute('data-tema', lagret);
 
-  var morkMedia = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
   var erMork = function () {
-    var valgt = rot.getAttribute('data-tema');
-    if (valgt) return valgt === 'mork';
-    return !!(morkMedia && morkMedia.matches);
+    return rot.getAttribute('data-tema') === 'mork';
   };
   var oppdaterMeta = function () {
     var farge = erMork() ? '#171612' : '#fdfdfb';

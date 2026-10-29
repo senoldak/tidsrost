@@ -102,7 +102,6 @@ export const GET: APIRoute = () => {
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice"><style>
 path{fill:none;stroke-linejoin:round;stroke-linecap:round}
 .kote{stroke:#b07a55;stroke-width:.8;opacity:.6}.tell{stroke:#a0643c;stroke-width:1.5;opacity:.75}.sjo{stroke:#3a78b5;stroke-width:1.3}
-@media (prefers-color-scheme:dark){.kote{stroke:#b08a6a;opacity:.7}.tell{stroke:#c49470;opacity:.9}.sjo{stroke:#7fb2e5}}
 </style>${lines}</svg>`;
 
   return new Response(svg, { headers: { 'Content-Type': 'image/svg+xml' } });

@@ -1,7 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import { readdir, readFile, rm } from 'node:fs/promises';
+import { readdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { koyuMediaSil } from './scripts/svg-lys.mjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { apenForSok } from './src/lib/sok-synlighet.mjs';
@@ -16,6 +17,28 @@ import { ARKIV_TERSKEL } from './src/lib/arkiv.mjs';
 //   son GORSEL_GUN (14) gündeki haberler: + sayfa kapağı (1200 px WebP); kategori sayfası: 30 haberde 1 sayfa.
 //   Sabit kısım (site sayfaları, yazı tipleri, CSS/JS, public/) ~100 dosya. ~250 haberde dist ≈ 750 dosya;
 //   15.000'lik uyarıya ~7.000 haberde varılır. O zaman eski OG görselleri ortak bir görsele çevrilebilir.
+// Açık tema varsayılan: grafik SVG'lerinden cihazın koyu ayarına bakan blok silinir (scripts/svg-lys.mjs).
+const svgLys = () => ({
+  name: 'svg-lys',
+  hooks: {
+    'astro:build:done': async ({ dir, logger }) => {
+      const kok = fileURLToPath(dir);
+      let n = 0;
+      for (const f of await readdir(kok, { recursive: true })) {
+        if (!f.toLowerCase().endsWith('.svg')) continue;
+        const yol = path.join(kok, f);
+        const eski = await readFile(yol, 'utf8');
+        const ny = koyuMediaSil(eski);
+        if (ny !== eski) {
+          await writeFile(yol, ny, 'utf8');
+          n++;
+        }
+      }
+      logger.info(`${n} SVG: mørk @media fjernet (lyst tema er standard).`);
+    },
+  },
+});
+
 const kullanilmayanGorseller = () => ({
   name: 'kullanilmayan-gorseller',
   hooks: {
@@ -119,7 +142,7 @@ export default defineConfig({
   // Astro 7 varsayılanı "jsx": satır sonundaki boşluğu etiket kenarında siler (ör. "</a>" + yeni satır + "kelime" bitişik çıkar). true: tek boşluğa indirir.
   compressHTML: true,
   site: 'https://tidsrost.com',
-  integrations: [siteHaritasi, kullanilmayanGorseller()],
+  integrations: [siteHaritasi, kullanilmayanGorseller(), svgLys()],
   // CSP (public/_headers) satır içi stile izin vermez; tüm CSS ayrı dosya olarak yüklenir.
   build: { inlineStylesheets: 'never' },
   // CSP satır içi script'e de izin vermez: Astro küçük script'leri (ör. DelSaken'deki "Kopier lenke") satır içine

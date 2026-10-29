@@ -23,27 +23,10 @@
   --u: 8px;
   --gutter: clamp(16px, 4vw, 40px);
   --max: 1280px;
-  color-scheme: light dark;
+  color-scheme: light;
 }
 
-/* Nattark: enhetens innstilling, med mindre leseren har valgt lyst tema i menyen (public/tema.js, data-tema). */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-tema='lys']) {
-    /* Nattark: varm, trykksverte-mørk grunn, ikke blå skifer. */
-    --paper: #171612;
-    --surface: #1f1e19;
-    --ink: #ebe9e2;
-    --ink-2: #cdcac0;
-    --muted: #a19d92;
-    --rule: #33312b;
-    --water: #7fb2e5;
-    --contour: #a07a5c;
-    --warn: #e8c437;
-    --warn-ink: #1d1600;
-    --red: #ff7a6b;
-  }
-}
-
+/* Lyst tema er standard. Nattark bare når leseren velger mørkt tema i menyen (public/tema.js, data-tema). */
 /* Leseren har valgt mørkt tema i menyen. */
 :root[data-tema='mork'] {
   color-scheme: dark;
@@ -466,13 +449,6 @@ main.container {
 .lead-story img {
   width: 100%;
   border: 1px solid var(--rule);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-tema='lys']) .lead-story img,
-  :root:not([data-tema='lys']) .article figure img {
-    filter: brightness(0.78);
-  }
 }
 
 :root[data-tema='mork'] .lead-story img,
@@ -2045,16 +2021,6 @@ main.container {
   display: none;
   align-items: center;
   gap: 0.4em;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-tema='lys']) .tema-bryter .til-mork {
-    display: none;
-  }
-
-  :root:not([data-tema='lys']) .tema-bryter .til-lys {
-    display: inline-flex;
-  }
 }
 
 :root[data-tema='mork'] .tema-bryter .til-mork {
