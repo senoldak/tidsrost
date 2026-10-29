@@ -115,7 +115,7 @@ export function kommuneSetninger(k, fylke, land, rangFylke, rangLand, aar, innte
   const uvanlig = mestUvanlig(rangLand, u?.fra);
   if (uvanlig.length >= 2) {
     const biter = uvanlig.map((x) => `${x.navn} (plass nummer ${x.plass} av ${x.av})`);
-    ut.push(`Blant tallene i denne oversikten ligger ${n} lengst fra midten av kommunene på ${biter.join(' og ')}.`);
+    ut.push(`På ${biter.join(' og ')} ligger ${n} lengst fra midten av kommunene.`);
   }
 
   // 1) Folketall og sıra.
