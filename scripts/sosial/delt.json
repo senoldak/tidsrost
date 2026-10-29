@@ -258,8 +258,8 @@
   },
   "_sinir": {
     "ig_post": {
-      "sayi": 8,
-      "kadar": "2026-10-29T23:12:59.413Z"
+      "sayi": 9,
+      "kadar": "2026-10-30T11:14:06.788Z"
     }
   },
   "benjamin-netanyahu-advarer-om-nytt-holocaust-for-valget-i-israel": {
@@ -446,7 +446,9 @@
     "reels": {
       "gun": "2026-10-29",
       "dilim": "kveld"
-    }
+    },
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "produktivitet-knekk": {
     "tarih": "2026-10-29T07:16:12.505Z",
