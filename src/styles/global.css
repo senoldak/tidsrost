@@ -26,8 +26,9 @@
   color-scheme: light dark;
 }
 
+/* Nattark: enhetens innstilling, med mindre leseren har valgt lyst tema i menyen (public/tema.js, data-tema). */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-tema='lys']) {
     /* Nattark: varm, trykksverte-mørk grunn, ikke blå skifer. */
     --paper: #171612;
     --surface: #1f1e19;
@@ -41,6 +42,27 @@
     --warn-ink: #1d1600;
     --red: #ff7a6b;
   }
+}
+
+/* Leseren har valgt mørkt tema i menyen. */
+:root[data-tema='mork'] {
+  color-scheme: dark;
+  /* Nattark: varm, trykksverte-mørk grunn, ikke blå skifer. */
+  --paper: #171612;
+  --surface: #1f1e19;
+  --ink: #ebe9e2;
+  --ink-2: #cdcac0;
+  --muted: #a19d92;
+  --rule: #33312b;
+  --water: #7fb2e5;
+  --contour: #a07a5c;
+  --warn: #e8c437;
+  --warn-ink: #1d1600;
+  --red: #ff7a6b;
+}
+
+:root[data-tema='lys'] {
+  color-scheme: light;
 }
 
 *,
@@ -430,10 +452,15 @@ main.container {
 }
 
 @media (prefers-color-scheme: dark) {
-  .lead-story img,
-  .article figure img {
+  :root:not([data-tema='lys']) .lead-story img,
+  :root:not([data-tema='lys']) .article figure img {
     filter: brightness(0.78);
   }
+}
+
+:root[data-tema='mork'] .lead-story img,
+:root[data-tema='mork'] .article figure img {
+  filter: brightness(0.78);
 }
 
 /* ——— Bant başlıkları (gün, bölüm) ——— */
@@ -1970,4 +1997,53 @@ main.container {
   color: var(--water);
   text-decoration: underline;
   text-underline-offset: 0.18em;
+}
+
+/* Tema-bryter i menyen: viser alltid temaet man bytter TIL. */
+.legend-nav .tema-bryter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  margin: 0;
+  padding: 0 calc(var(--u) * 1.5);
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tema-bryter svg {
+  flex: none;
+}
+
+.tema-bryter .til-mork {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.tema-bryter .til-lys {
+  display: none;
+  align-items: center;
+  gap: 0.4em;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema='lys']) .tema-bryter .til-mork {
+    display: none;
+  }
+
+  :root:not([data-tema='lys']) .tema-bryter .til-lys {
+    display: inline-flex;
+  }
+}
+
+:root[data-tema='mork'] .tema-bryter .til-mork {
+  display: none;
+}
+
+:root[data-tema='mork'] .tema-bryter .til-lys {
+  display: inline-flex;
 }
