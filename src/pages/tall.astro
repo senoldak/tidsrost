@@ -1,0 +1,101 @@
+---
+// "Tall og data": veri sayfalarının vitrini. Her kartta son değer (src/data/*.json) ve tek cümle; rakamlar veriden.
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import KiNotat from '../components/KiNotat.astro';
+import Base from '../layouts/Base.astro';
+import Symbol from '../components/Symbol.astro';
+import Brodsmuler from '../components/Brodsmuler.astro';
+import { tallTekst } from '../lib/graf.mjs';
+import { RENTE, VARSELARKIV, datoTekst, osloIdag, prosent } from '../lib/data';
+import { kvartalTekst, maanedTekst } from '../lib/datasider';
+import { dagerFraArkiv, dekning, erKomplett, periodeTall } from '../lib/varselstat.mjs';
+import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs } from '../lib/seo';
+import pris from '../data/prisstigning.json';
+import bolig from '../data/boligpriser.json';
+import arbeid from '../data/arbeidsledighet.json';
+
+const pageUrl = `${SITE_URL}/tall/`;
+const tittel = 'Tall og data';
+const description = 'Oppdaterte tall fra Statistisk sentralbyrå, Norges Bank og Meteorologisk institutt: prisstigning, boligpriser, arbeidsledighet, styringsrenten og farevarsler.';
+
+const landet = (bolig.regioner as { kode: string; endringAar: number | null }[]).find((r) => r.kode === 'TOTAL');
+const dk = dekning(VARSELARKIV);
+const til = dk.egneTil && dk.egneTil < osloIdag() ? dk.egneTil : osloIdag();
+const fra = new Date(Date.parse(`${til}T00:00:00Z`) - 29 * 86_400_000).toISOString().slice(0, 10);
+const varsler30 = erKomplett(dk, fra, til) ? periodeTall(dagerFraArkiv(VARSELARKIV), fra, til).total.reduce((a, b) => a + b, 0) : null;
+
+const kort = [
+  { url: '/prisstigning/', navn: 'Prisstigningen nå', verdi: `${tallTekst(pris.tolvMnd)} %`, tekst: `Endring i konsumprisene siste tolv måneder, ${maanedTekst(pris.sisteMaaned)}.`, kilde: 'SSB', sym: 'data' },
+  {
+    url: '/boligpriser/',
+    navn: 'Boligprisene nå',
+    verdi: typeof landet?.endringAar === 'number' ? `${tallTekst(landet.endringAar)} %` : '–',
+    tekst: `Endring i prisene på brukte boliger siste år, ${kvartalTekst(bolig.sisteKvartal)}.`,
+    kilde: 'SSB',
+    sym: 'data',
+  },
+  { url: '/arbeidsledighet/', navn: 'Arbeidsledigheten nå', verdi: `${tallTekst(arbeid.prosent)} %`, tekst: `Arbeidsledige i prosent av arbeidsstyrken, ${maanedTekst(arbeid.sisteMaaned)}.`, kilde: 'SSB', sym: 'data' },
+  { url: '/styringsrenten/', navn: 'Styringsrenten nå', verdi: prosent(RENTE.rente), tekst: RENTE.gjeldendeFra ? `Gjeldende fra ${datoTekst(RENTE.gjeldendeFra)}.` : 'Norges Banks styringsrente.', kilde: 'Norges Bank', sym: 'data' },
+  {
+    url: '/farevarsler/',
+    navn: 'Farevarsler i Norge',
+    verdi: varsler30 === null ? '–' : String(varsler30),
+    tekst: 'Farevarsler på land de siste 30 dagene, fylke for fylke, og hvordan årene står seg.',
+    kilde: 'Meteorologisk institutt',
+    sym: 'varsel',
+  },
+];
+
+const sti = [
+  { name: 'Forsiden', url: `${SITE_URL}/` },
+  { name: tittel, url: pageUrl },
+];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${pageUrl}#page`,
+      url: pageUrl,
+      name: tittel,
+      description,
+      inLanguage: 'nb',
+      isPartOf: { '@id': WEBSITE_ID },
+      publisher: { '@id': ORG_ID },
+      hasPart: kort.map((k) => ({ '@type': 'WebPage', name: k.navn, url: `${SITE_URL}${k.url}` })),
+    },
+    breadcrumbs(sti),
+  ],
+};
+---
+
+<Base title={tittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="data" />{tittel}</h1>
+    <p class="page-intro">
+      Tall fra offentlige kilder, hentet automatisk og forklart kort. Hver side viser hvor tallene kommer fra og når de
+      sist ble oppdatert.
+    </p>
+  </header>
+
+  <ul class="tall-kort">
+    {
+      kort.map((k) => (
+        <li>
+          <a href={k.url}>
+            <span class="tall-kort-navn">
+              <Symbol kind={k.sym} class={k.sym === 'varsel' ? 'sym-varsel-gult' : undefined} />
+              {k.navn}
+            </span>
+            <span class="tall-kort-verdi">{k.verdi}</span>
+            <span class="tall-kort-tekst">{k.tekst}</span>
+            <span class="tall-kort-kilde">Kilde: {k.kilde}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
+</Base>

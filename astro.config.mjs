@@ -72,6 +72,23 @@ for (const f of await readdir(haberDizini, { recursive: true })) {
   }
 }
 
+// Veri sayfalarının lastmod'u: ilgili JSON'un alındığı zaman (scripts/data/hent-data.mjs). /tall/ en yenisini alır.
+const veriTarihleri = new Map();
+for (const [yol, fil, alan] of [
+  ['/styringsrenten/', 'styringsrente.json'],
+  ['/prisstigning/', 'prisstigning.json'],
+  ['/boligpriser/', 'boligpriser.json'],
+  ['/arbeidsledighet/', 'arbeidsledighet.json'],
+  ['/farevarsler/', 'varselarkiv.json', 'lopende'],
+]) {
+  try {
+    const j = JSON.parse(await readFile(fileURLToPath(new URL(`./src/data/${fil}`, import.meta.url)), 'utf8'));
+    const t = new Date((alan ? j[alan]?.hentet : null) ?? j.hentet);
+    if (!Number.isNaN(t.getTime())) veriTarihleri.set(yol, t);
+  } catch {}
+}
+if (veriTarihleri.size) veriTarihleri.set('/tall/', new Date(Math.max(...[...veriTarihleri.values()].map(Number))));
+
 const siteHaritasi = sitemap({
   filter: (sayfa) => {
     const yol = new URL(sayfa).pathname;
@@ -89,7 +106,7 @@ const siteHaritasi = sitemap({
   serialize: (oge) => {
     const yol = new URL(oge.url).pathname;
     const arkiv = yol.match(/^\/arkiv\/(\d{4}-\d{2}-\d{2})\/$/)?.[1];
-    const tarih = arkiv ? arkivDager.get(arkiv)?.sist : haberTarihleri.get(yol);
+    const tarih = arkiv ? arkivDager.get(arkiv)?.sist : (haberTarihleri.get(yol) ?? veriTarihleri.get(yol));
     return tarih ? { ...oge, lastmod: tarih.toISOString() } : oge;
   },
 });
