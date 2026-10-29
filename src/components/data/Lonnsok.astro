@@ -1,0 +1,129 @@
+---
+// Yrkessøk: yrker fra /lonn/sok.json (hentes første gang feltet får fokus). Treff vises som liste;
+// yrker med egen side er lenker. Resultatene lages med textContent (ingen innerHTML). CSP-vennlig: pakket script, ingen stil-attributt.
+---
+
+<div class="lonnsok" data-kilde="/lonn/sok.json">
+  <label for="lonnsok-felt" class="lonnsok-label">Søk etter yrke</label>
+  <input id="lonnsok-felt" class="lonnsok-felt" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="For eksempel leger eller elektrikere" />
+  <p class="lonnsok-status data-merknad" role="status" aria-live="polite"></p>
+  <ul class="lonnsok-liste"></ul>
+</div>
+
+<script>
+  type Post = { n: string; a: number | null; h: number | null; s?: string };
+  const rot = document.querySelector<HTMLElement>('.lonnsok');
+  if (rot) {
+    const felt = rot.querySelector<HTMLInputElement>('.lonnsok-felt')!;
+    const liste = rot.querySelector<HTMLUListElement>('.lonnsok-liste')!;
+    const status = rot.querySelector<HTMLElement>('.lonnsok-status')!;
+    let poster: Post[] | null = null;
+    let laster: Promise<void> | null = null;
+
+    const normaliser = (t: string) => t.trim().toLocaleLowerCase('nb');
+
+    async function last() {
+      if (poster) return;
+      laster ??= fetch(rot!.dataset.kilde!)
+        .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+        .then((j: Post[]) => {
+          poster = j;
+        })
+        .catch(() => {
+          laster = null;
+          status.textContent = 'Kunne ikke laste yrkeslisten. Prøv igjen senere.';
+        });
+      await laster;
+    }
+
+    function vis() {
+      liste.replaceChildren();
+      const q = normaliser(felt.value);
+      if (!q || !poster) {
+        if (!q) status.textContent = '';
+        return;
+      }
+      const treff = poster
+        .map((p) => {
+          const n = normaliser(p.n);
+          return { p, rang: n === q ? 0 : n.startsWith(q) ? 1 : n.includes(q) ? 2 : 3 };
+        })
+        .filter((x) => x.rang < 3)
+        .sort((x, y) => x.rang - y.rang || (y.p.h ?? -1) - (x.p.h ?? -1) || x.p.n.localeCompare(y.p.n, 'nb'))
+        .slice(0, 12);
+      if (!treff.length) {
+        status.textContent = 'Ingen treff. Prøv et annet ord, for eksempel entall eller flertall.';
+        return;
+      }
+      status.textContent = treff.length === 12 ? 'Viser de første treffene.' : `${treff.length} treff`;
+      for (const { p } of treff) {
+        const li = document.createElement('li');
+        const navn = document.createElement(p.s ? 'a' : 'span');
+        navn.textContent = p.n;
+        navn.className = 'lonnsok-navn';
+        if (p.s) (navn as HTMLAnchorElement).href = `/lonn/${p.s}/`;
+        const info = document.createElement('span');
+        info.className = 'lonnsok-info';
+        info.textContent = p.a === null ? "median ikke oppgitt" : `median ${p.a.toLocaleString("nb-NO")} kroner per måned`;
+        li.append(navn, info);
+        liste.append(li);
+      }
+    }
+
+    felt.addEventListener('focus', () => void last());
+    felt.addEventListener('input', async () => {
+      await last();
+      vis();
+    });
+    rot.closest('form')?.addEventListener('submit', (e) => e.preventDefault());
+  }
+</script>
+
+<style is:global>
+  .lonnsok {
+    max-width: 640px;
+    font-family: var(--frame);
+  }
+  .lonnsok-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .lonnsok-felt {
+    width: 100%;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid var(--ink);
+    border-radius: 3px;
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+    font-size: 1rem;
+  }
+  .lonnsok-status {
+    min-height: 1.5em;
+    margin-top: 8px;
+  }
+  .lonnsok-liste {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .lonnsok-liste li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .lonnsok-navn {
+    font: 650 1.25rem/1.25 var(--read);
+    overflow-wrap: anywhere;
+  }
+  .lonnsok-info {
+    font: 500 0.875rem var(--frame);
+    color: var(--muted);
+  }
+</style>

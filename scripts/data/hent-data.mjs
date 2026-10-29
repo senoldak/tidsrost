@@ -17,6 +17,7 @@ import { NVE_KILDE, fareKommuner, nveFareUrl, nveSnoskredUrl, snoskred } from '.
 import { SSB_KILDE, ssbUrl } from './ssb.mjs';
 import { arbeidsledighet, boligpriser, kpiHistorisk, prisstigning } from './ssb-sider.mjs';
 import { komprimer, navnData } from './ssb-navn.mjs';
+import { komprimer as komprimerLonn, lonnData } from './ssb-lonn.mjs';
 import { birlestirMaaned, dagsTall, hendelser, nesteArkivmaaned, oppdaterLopende } from './varselarkiv.mjs';
 
 // Standartlar: acil durdurma açıksa veri sayfaları da güncellenmez.
@@ -137,6 +138,19 @@ const JOBBER = [
       const f = JSON.parse(await hent(ssbUrl('10467', { Fornavn: '*', ContentsCode: 'Personer', Tid: '*' }), 'application/json'));
       const e = JSON.parse(await hent(ssbUrl('12891', { Etternavn: '*', ContentsCode: 'Personer', Tid: 'top(1)' }), 'application/json'));
       return { kilde: SSB_KILDE, tabell: '10501, 10467, 12891', ...komprimer(navnData(p, f, e)) };
+    },
+  },
+  {
+    // Lønn etter yrke (SSB 11418): son yıl tam kırılım (median, snitt, heltidsekv, kvartiller; sektör ve cinsiyet) + median serisi
+    // (yalnız alle sektorer / begge kjønn, tüm yıllar). Yılda bir değişir, günde en çok bir kez denenir. Dosya küçültülür (komprimer).
+    fil: 'lonn.json',
+    kompakt: true,
+    aralikSaat: 24,
+    async lag() {
+      const basis = { Yrke: '*', AvtaltVanlig: '0', ContentsCode: 'Manedslonn' };
+      const siste = JSON.parse(await hent(ssbUrl('11418', { ...basis, MaaleMetode: ['01', '02', '11', '051', '061'], Sektor: '*', Kjonn: '*', Tid: 'top(1)' }), 'application/json'));
+      const serie = JSON.parse(await hent(ssbUrl('11418', { ...basis, MaaleMetode: '01', Sektor: 'ALLE', Kjonn: '0', Tid: '*' }), 'application/json'));
+      return { kilde: SSB_KILDE, tabell: '11418', ...komprimerLonn(lonnData(siste, serie)) };
     },
   },
   {

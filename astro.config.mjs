@@ -104,6 +104,7 @@ for (const [yol, fil, alan] of [
   ['/arbeidsledighet/', 'arbeidsledighet.json'],
   ['/prisomregner/', 'kpi-historisk.json'],
   ['/navn/', 'navn.json'],
+  ['/lonn/', 'lonn.json'],
   ['/farevarsler/', 'varselarkiv.json', 'lopende'],
   ['/snoskredvarsel/', 'snoskred.json'],
   ['/flomvarsel/', 'flom.json'],

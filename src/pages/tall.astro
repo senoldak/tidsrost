@@ -17,6 +17,7 @@ import kpiHist from '../data/kpi-historisk.json';
 import snoskredData from '../data/snoskred.json';
 import flomData from '../data/flom.json';
 import navnData from '../data/navn.json';
+import lonnData from '../data/lonn.json';
 import { dagNivaaer } from '../../scripts/data/nve.mjs';
 import { omregn } from '../lib/prisomregner.mjs';
 import { arbeidsdagerTotalt } from '../lib/helligdager.mjs';
@@ -43,6 +44,7 @@ const snoAntall = snoDag ? dagNivaaer(snoskredData, snoDag).length : null;
 const flomFylker = new Set([...Object.keys(flomData.flom), ...Object.keys(flomData.jordskred)]).size;
 
 const vanligsteEtternavn = navnData.etternavn[0];
+const alleYrker = lonnData.yrker.find((y) => y.kode === '0-9');
 
 const rodeAar = Number(new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Oslo' }).slice(0, 4));
 
@@ -70,6 +72,14 @@ const kort = [
     navn: 'Navnestatistikk',
     verdi: vanligsteEtternavn?.navn ?? '–',
     tekst: vanligsteEtternavn ? `Det vanligste etternavnet i Norge, med ${vanligsteEtternavn.antall.toLocaleString('nb-NO')} personer. Søk i fornavn og etternavn, og se hva barna fikk i ${navnData.sisteAar}.` : 'Søk i fornavn og etternavn.',
+    kilde: 'SSB',
+    sym: 'data',
+  },
+  {
+    url: '/lonn/',
+    navn: 'Lønn etter yrke',
+    verdi: alleYrker?.median ? `${alleYrker.median.toLocaleString('nb-NO')} kr` : '–',
+    tekst: `Median månedslønn for alle yrker, november ${lonnData.sisteAar}. Søk etter yrke og se tall for kvinner og menn, sektor og utvikling.`,
     kilde: 'SSB',
     sym: 'data',
   },

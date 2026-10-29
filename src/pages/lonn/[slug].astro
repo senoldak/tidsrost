@@ -1,0 +1,276 @@
+---
+// /lonn/<yrke>/: ett yrke med eget tallgrunnlag (terskel: scripts/data/ssb-lonn.mjs lonnSider). Alt kommer fra
+// src/data/lonn.json: median og gjennomsnitt per måned (og omregnet til årslønn × 12), kvartiler, kvinner og menn, sektor,
+// utvikling mot alle yrker (Linjegraf) og setninger regnet ut av tallene (src/lib/lonn-tekst.mjs). Ingen vurderinger.
+import { jsonLdMetni } from '../../lib/json-ld.mjs';
+import KiNotat from '../../components/KiNotat.astro';
+import Base from '../../layouts/Base.astro';
+import Symbol from '../../components/Symbol.astro';
+import Brodsmuler from '../../components/Brodsmuler.astro';
+import Linjegraf from '../../components/data/Linjegraf.astro';
+import Stolpegraf from '../../components/data/Stolpegraf.astro';
+import DataKilde from '../../components/data/DataKilde.astro';
+import { GAMMEL_MAANED_MS, dataGammel, datasideLd } from '../../lib/datasider';
+import { SITE_URL, breadcrumbs } from '../../lib/seo';
+import { aarslonn, lavNavn, lignende, lonnBeskrivelse, lonnSetninger, lonnTittel, medianRang } from '../../lib/lonn-tekst.mjs';
+import { ALLE, SERIE_FRA, gruppeAv, lonnSider } from '../../../scripts/data/ssb-lonn.mjs';
+import data from '../../data/lonn.json';
+
+export function getStaticPaths() {
+  return lonnSider(data).map((s) => ({ params: { slug: s.slug } }));
+}
+
+type Rec = Record<string, number | null>;
+type Y = {
+  kode: string;
+  navn: string;
+  median: number;
+  snitt: number | null;
+  heltidsekv: number | null;
+  kvinner: number | null;
+  menn: number | null;
+  nedre: number | null;
+  ovre: number | null;
+  sektor: { stat: number | null; kommune: number | null; privat: number | null };
+  serie: Rec;
+};
+const sider = lonnSider(data);
+const side = sider.find((s) => s.slug === Astro.params.slug)!;
+const y = data.yrker.find((x) => x.kode === side.kode)! as unknown as Y;
+const alle = data.yrker.find((x) => x.kode === ALLE)! as unknown as Y & { serie: Rec };
+const gruppe = data.yrker.find((x) => x.kode === gruppeAv(y.kode))!;
+const nb = (v: number) => v.toLocaleString('nb-NO');
+const vis = (v: number | null) => (typeof v === 'number' ? nb(v) : '–');
+const n = lavNavn(y.navn);
+const pageUrl = `${SITE_URL}/lonn/${side.slug}/`;
+const tittel = `Lønn for ${n}`;
+const seoTittel = lonnTittel(y.navn);
+const description = lonnBeskrivelse(y, data.sisteAar, String(SERIE_FRA));
+if (!description) throw new Error(`/lonn/${side.slug}/: beskrivelse utenfor 120–160 tegn`);
+if (`${seoTittel} | tidsrøst`.length > 60) throw new Error(`/lonn/${side.slug}/: tittel over 60 tegn`);
+
+const rang = medianRang(data, sider, y.kode);
+const setninger = lonnSetninger(data, y, rang, sider.length);
+const serieAar = Object.keys(y.serie).sort().filter((a) => typeof y.serie[a] === 'number');
+const hullISerie = Object.keys(y.serie).length !== serieAar.length;
+const sektorer = [
+  ['Privat sektor og offentlig eide foretak', y.sektor.privat],
+  ['Kommuneforvaltningen', y.sektor.kommune],
+  ['Statsforvaltningen', y.sektor.stat],
+] as const;
+const harSektor = sektorer.some(([, v]) => typeof v === 'number');
+const skjultSektor = sektorer.some(([, v]) => typeof v !== 'number');
+const lik = lignende(data, sider, y.kode, 6);
+
+const { sti: sti3, jsonLd } = datasideLd({
+  url: pageUrl,
+  tittel,
+  description,
+  datasettNavn: `Månedslønn for ${n} i Norge`,
+  datasettBeskrivelse: `Median og gjennomsnittlig månedslønn, kvartiler, tall for kvinner og menn og etter sektor, og antall heltidsekvivalenter for ${n}, fra SSB tabell 11418. Serien for median går fra ${serieAar[0] ?? data.sisteAar} til ${data.sisteAar}.`,
+  kildeData: 'https://www.ssb.no/statbank/table/11418',
+  lisensUrl: data.kilde.lisensUrl,
+  periode: `${serieAar[0] ?? data.sisteAar}/${data.sisteAar}`,
+  oppdatert: data.oppdatert ?? data.hentet,
+});
+// Brødsmulen har ett ledd mer enn de andre datasidene (Lønn etter yrke).
+const sti = [sti3[0], sti3[1], { name: 'Lønn etter yrke', url: `${SITE_URL}/lonn/` }, { name: y.navn, url: pageUrl }];
+(jsonLd['@graph'] as unknown[])[2] = breadcrumbs(sti);
+---
+
+<Base title={seoTittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="data" />{tittel}</h1>
+    <p class="page-intro">
+      Median månedslønn for {n} var {nb(y.median)} kroner i november {data.sisteAar}, ifølge SSB. Omregnet til årslønn (× 12) blir det {nb(aarslonn(y.median) as number)} kroner. Yrket hører til gruppen {lavNavn(gruppe.navn)}.
+    </p>
+  </header>
+
+  <section class="day" aria-labelledby="tall">
+    <h2 class="band" id="tall">Lønnen i tall</h2>
+    <dl class="data-fakta">
+      <div>
+        <dt>Median per måned</dt>
+        <dd>{nb(y.median)} kr</dd>
+      </div>
+      <div>
+        <dt>Median omregnet til årslønn (× 12)</dt>
+        <dd>{nb(aarslonn(y.median) as number)} kr</dd>
+      </div>
+      {
+        y.snitt !== null && (
+          <div>
+            <dt>Gjennomsnitt per måned</dt>
+            <dd>{nb(y.snitt)} kr</dd>
+          </div>
+        )
+      }
+      {
+        y.nedre !== null && y.ovre !== null && (
+          <div>
+            <dt>Nedre og øvre kvartil per måned</dt>
+            <dd>
+              {nb(y.nedre)} og {nb(y.ovre)} kr
+            </dd>
+          </div>
+        )
+      }
+      {
+        y.heltidsekv !== null && (
+          <div>
+            <dt>Heltidsekvivalenter</dt>
+            <dd>{nb(y.heltidsekv)}</dd>
+          </div>
+        )
+      }
+    </dl>
+    <div class="prose lonn-setninger">
+      {setninger.map((s) => <p>{s}</p>)}
+    </div>
+  </section>
+
+  {
+    y.kvinner !== null && y.menn !== null && (
+      <section class="day" aria-labelledby="kjonn">
+        <h2 class="band" id="kjonn">Kvinner og menn</h2>
+        <p class="data-merknad">Median månedslønn i kroner. Medianen for alle yrker er uthevet.</p>
+        <Stolpegraf
+          rader={[
+            { navn: 'Menn', verdi: y.menn },
+            { navn: 'Kvinner', verdi: y.kvinner },
+            { navn: 'Alle yrker', verdi: alle.median, fremhev: true },
+          ]}
+          enhet={`Median månedslønn for ${n}, kvinner og menn, november ${data.sisteAar}`}
+          beskrivelse={`Median månedslønn for menn og kvinner i yrket ${n} sammenlignet med alle yrker i ${data.sisteAar}`}
+          desimaler={0}
+        />
+      </section>
+    )
+  }
+
+  {
+    harSektor && (
+      <section class="day" aria-labelledby="sektor">
+        <h2 class="band" id="sektor">Etter sektor</h2>
+        <div class="prose data-tabell lonn-enkel">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Sektor</th>
+                <th scope="col">Median per måned</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sektorer.map(([navn, v]) => (
+                <tr>
+                  <td>{navn}</td>
+                  <td>{vis(v)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {skjultSektor && <p class="data-merknad">Streken betyr at SSB skjuler tallet av hensyn til konfidensialitet.</p>}
+      </section>
+    )
+  }
+
+  {
+    serieAar.length >= 3 && (
+      <section class="day" aria-labelledby="utvikling">
+        <h2 class="band" id="utvikling">Utviklingen siden {serieAar[0]}</h2>
+        <Linjegraf
+          serier={[
+            { navn: y.navn, punkter: serieAar.map((a) => ({ etikett: a, verdi: y.serie[a] as number })) },
+            { navn: 'Alle yrker', punkter: serieAar.filter((a) => typeof alle.serie[a] === 'number').map((a) => ({ etikett: a, verdi: alle.serie[a] as number })) },
+          ]}
+          enhet={`Median månedslønn i kroner, ${y.navn} og alle yrker`}
+          beskrivelse={`Median månedslønn for ${n} og for alle yrker, ${serieAar[0]} til ${serieAar.at(-1)}`}
+          desimaler={0}
+        />
+        {hullISerie && <p class="data-merknad">SSB oppgir ikke tall for alle år. Linjen går da rett mellom årene som har tall.</p>}
+        <div class="prose data-tabell lonn-enkel">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">År</th>
+                <th scope="col">{y.navn}</th>
+                <th scope="col">Alle yrker</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[...Object.keys(y.serie)].sort().reverse().map((a) => (
+                <tr>
+                  <td>{a}</td>
+                  <td>{vis(y.serie[a] ?? null)}</td>
+                  <td>{vis(alle.serie[a] ?? null)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="day" aria-labelledby="slik">
+    <h2 class="band" id="slik">Om tallene</h2>
+    <div class="prose">
+      <p>
+        Månedslønn omfatter avtalt månedslønn, uregelmessige tillegg og bonuser, før skatt. Overtidsgodtgjørelse er ikke med. Deltidsansattes lønn er regnet om til heltid, og referansemåneden er november.
+      </p>
+      <p>
+        Årslønnen på siden er median månedslønn multiplisert med 12. Det er en enkel omregning og ikke SSBs egen årslønnsstatistikk. Beløpene er i løpende kroner uten justering for prisvekst.
+      </p>
+      <p>Yrket følger SSBs yrkeskoder, som bestemmes av arbeidsoppgavene i stillingen.</p>
+    </div>
+  </section>
+
+  <DataKilde
+    kilde={{ navn: data.kilde.navn, url: 'https://www.ssb.no/arbeid-og-lonn/lonn-og-arbeidskraftkostnader/statistikk/lonn', data: data.kilde.data, lisens: data.kilde.lisens, lisensUrl: data.kilde.lisensUrl }}
+    hentet={data.hentet}
+    oppdatert={data.oppdatert}
+    gammel={dataGammel(data.hentet, data.oppdatert, GAMMEL_MAANED_MS * 14)}
+    merknad="Tallene er fra SSB tabell 11418."
+  />
+
+  {
+    lik.length > 0 && (
+      <section class="day" aria-labelledby="flere">
+        <h2 class="band" id="flere">Flere yrker i gruppen {lavNavn(gruppe.navn)}</h2>
+        <ul class="lonn-naboer">
+          {lik.map((s) => <li><a href={`/lonn/${s.slug}/`}>{s.navn}</a></li>)}
+        </ul>
+      </section>
+    )
+  }
+
+  <p class="tema-alle"><a href="/lonn/">Lønn etter yrke: søk og lister</a> · <a href="/tall/">Flere tall og data</a></p>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
+</Base>
+
+<style>
+  /* Lange yrkesnavn («førskole-/barnehagelærere») er ett ord uten bruddpunkt; på telefon må de kunne brytes. */
+  .page-title {
+    overflow-wrap: anywhere;
+    hyphens: auto;
+    font-size: clamp(1.75rem, 7vw, 3.5rem);
+  }
+  .lonn-setninger {
+    margin-top: calc(var(--u) * 3);
+  }
+  .lonn-enkel {
+    max-width: 480px;
+  }
+  .lonn-naboer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font: 600 1.0625rem var(--read);
+  }
+</style>

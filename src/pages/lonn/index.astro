@@ -1,0 +1,164 @@
+---
+// /lonn/: lønn etter yrke (SSB 11418; src/data/lonn.json). Søk, hovedgrupper (Stolpegraf), de største yrkene og en
+// alfabetisk liste over yrker med egen side (terskel i scripts/data/ssb-lonn.mjs lonnSider). Alle tall fra dataene.
+import { jsonLdMetni } from '../../lib/json-ld.mjs';
+import KiNotat from '../../components/KiNotat.astro';
+import Base from '../../layouts/Base.astro';
+import Symbol from '../../components/Symbol.astro';
+import Brodsmuler from '../../components/Brodsmuler.astro';
+import Lonnsok from '../../components/data/Lonnsok.astro';
+import Stolpegraf from '../../components/data/Stolpegraf.astro';
+import DataKilde from '../../components/data/DataKilde.astro';
+import { GAMMEL_MAANED_MS, dataGammel, datasideLd } from '../../lib/datasider';
+import { SITE_URL } from '../../lib/seo';
+import { ALLE, HOVEDGRUPPER, SERIE_FRA, lonnSider } from '../../../scripts/data/ssb-lonn.mjs';
+import { aarslonn } from '../../lib/lonn-tekst.mjs';
+import data from '../../data/lonn.json';
+
+type Y = { kode: string; navn: string; median: number | null; heltidsekv: number | null };
+const pageUrl = `${SITE_URL}/lonn/`;
+const tittel = 'Lønn etter yrke';
+const seoTittel = 'Lønn etter yrke: hva tjener de ulike yrkene?';
+const nb = (v: number) => v.toLocaleString('nb-NO');
+const sider = lonnSider(data);
+const slugFor = new Map(sider.map((s) => [s.kode, s.slug]));
+const yrker = data.yrker as Y[];
+const alle = yrker.find((y) => y.kode === ALLE)!;
+const description = `Median månedslønn for ${nb(yrker.filter((y) => /^\d{4}$/.test(y.kode) && y.median !== null).length)} yrker fra SSB. Søk etter yrke og se tall for kvinner og menn, sektor og utvikling fra ${SERIE_FRA} til ${data.sisteAar}.`;
+
+const grupper = [...HOVEDGRUPPER.map((k) => yrker.find((y) => y.kode === k)!), alle].map((y) => ({ navn: y.navn, verdi: y.median, fremhev: y.kode === ALLE }));
+const storst = sider
+  .map((s) => ({ ...s, y: yrker.find((y) => y.kode === s.kode)! }))
+  .sort((a, b) => (b.y.heltidsekv ?? 0) - (a.y.heltidsekv ?? 0))
+  .slice(0, 20);
+const bokstaver = [...new Set(sider.map((s) => s.navn[0].toLocaleUpperCase('nb')))];
+
+const { sti, jsonLd } = datasideLd({
+  url: pageUrl,
+  tittel,
+  description,
+  datasettNavn: 'Månedslønn etter yrke i Norge',
+  datasettBeskrivelse: `Median og gjennomsnittlig månedslønn, nedre og øvre kvartil og antall heltidsekvivalenter etter yrke, for kvinner og menn og etter sektor, fra SSB tabell 11418. Serien for median går fra ${SERIE_FRA} til ${data.sisteAar}.`,
+  kildeData: 'https://www.ssb.no/statbank/table/11418',
+  lisensUrl: data.kilde.lisensUrl,
+  periode: `${SERIE_FRA}/${data.sisteAar}`,
+  oppdatert: data.oppdatert ?? data.hentet,
+});
+---
+
+<Base title={seoTittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="data" />{tittel}</h1>
+    <p class="page-intro">
+      Statistisk sentralbyrå (SSB) oppgir månedslønn for lønnstakere i hundrevis av yrker. Her kan yrkene søkes opp, og de største har egne sider med tall for kvinner og menn, sektor og utvikling over tid. Tallene gjelder november {data.sisteAar}.
+    </p>
+  </header>
+
+  <section class="day" aria-labelledby="sok">
+    <h2 class="band" id="sok">Søk etter yrke</h2>
+    <Lonnsok />
+    <noscript><p class="data-merknad">Søket krever JavaScript. Listene under fungerer uten.</p></noscript>
+  </section>
+
+  <section class="day" aria-labelledby="grupper">
+    <h2 class="band" id="grupper">Median månedslønn etter hovedgruppe</h2>
+    <p class="data-merknad">Kroner per måned. Medianen for alle yrker er uthevet.</p>
+    <Stolpegraf rader={grupper} enhet={`Median månedslønn i kroner, november ${data.sisteAar}`} beskrivelse={`Median månedslønn etter yrkesgruppe i ${data.sisteAar}, med medianen for alle yrker`} desimaler={0} />
+  </section>
+
+  <section class="day" aria-labelledby="storst">
+    <h2 class="band" id="storst">De største yrkene</h2>
+    <p class="data-merknad">Yrkene med flest heltidsekvivalenter blant dem som har egen side. Årslønnen er median månedslønn omregnet (× 12).</p>
+    <div class="prose data-tabell">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Yrke</th>
+            <th scope="col">Heltidsekvivalenter</th>
+            <th scope="col">Median per måned</th>
+            <th scope="col">Omregnet til årslønn (× 12)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            storst.map((s) => (
+              <tr>
+                <td><a href={`/lonn/${s.slug}/`}>{s.navn}</a></td>
+                <td>{s.y.heltidsekv === null ? '–' : nb(s.y.heltidsekv)}</td>
+                <td>{s.y.median === null ? '–' : nb(s.y.median)}</td>
+                <td>{aarslonn(s.y.median) === null ? '–' : nb(aarslonn(s.y.median) as number)}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="day" aria-labelledby="alle">
+    <h2 class="band" id="alle">Yrker med egen side</h2>
+    <details class="data-detaljer">
+      <summary>Vis alle yrkene, ordnet alfabetisk</summary>
+      {
+        bokstaver.map((b) => (
+          <>
+            <h3 class="varsel-gruppe-tittel">{b}</h3>
+            <ul class="lonn-alle">
+              {sider
+                .filter((s) => s.navn[0].toLocaleUpperCase('nb') === b)
+                .map((s) => (
+                  <li>
+                    <a href={`/lonn/${s.slug}/`}>{s.navn}</a>
+                  </li>
+                ))}
+            </ul>
+          </>
+        ))
+      }
+    </details>
+  </section>
+
+  <section class="day" aria-labelledby="slik">
+    <h2 class="band" id="slik">Slik er tallene laget</h2>
+    <div class="prose">
+      <p>
+        Månedslønn i SSBs statistikk omfatter avtalt månedslønn, uregelmessige tillegg og bonuser. Overtidsgodtgjørelse er ikke med. Tallene er kontante godtgjørelser før skatt, og referansemåneden er november. Deltidsansattes lønn er regnet om til hva den ville vært i en heltidsstilling, og antall heltidsekvivalenter bygger på den omregningen.
+      </p>
+      <p>
+        Medianen er lønnen i midten når alle sorteres fra lavest til høyest. Gjennomsnittet er summen delt på antallet. Nedre og øvre kvartil er grensene for den laveste og den høyeste fjerdedelen.
+      </p>
+      <p>
+        Årslønnen på sidene er median månedslønn multiplisert med 12. Det er en enkel omregning og ikke SSBs egen årslønnsstatistikk. Selvstendig næringsdrivende er ikke med i tallene.
+      </p>
+      <p>
+        Yrket bestemmes av arbeidsoppgavene i stillingen. Utdanning, type ansettelse, lønn og bransje avgjør ikke yrkeskoden. Der SSB skjuler et tall av hensyn til konfidensialitet, står det en strek. Beløpene er i løpende kroner uten justering for prisvekst, og serien for median starter i {SERIE_FRA}.
+      </p>
+      <p>Sidene viser de {sider.length} yrkene med flest heltidsekvivalenter. Andre yrker finnes i søket, med median og gjennomsnitt der SSB oppgir dem.</p>
+    </div>
+  </section>
+
+  <DataKilde
+    kilde={{ navn: data.kilde.navn, url: 'https://www.ssb.no/arbeid-og-lonn/lonn-og-arbeidskraftkostnader/statistikk/lonn', data: data.kilde.data, lisens: data.kilde.lisens, lisensUrl: data.kilde.lisensUrl }}
+    hentet={data.hentet}
+    oppdatert={data.oppdatert}
+    gammel={dataGammel(data.hentet, data.oppdatert, GAMMEL_MAANED_MS * 14)}
+    merknad="Tallene er fra SSB tabell 11418."
+  />
+
+  <p class="tema-alle"><a href="/tall/">Flere tall og data</a></p>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
+</Base>
+
+<style>
+  .lonn-alle {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: var(--frame);
+  }
+</style>
