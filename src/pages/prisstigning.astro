@@ -20,13 +20,14 @@ import data from '../data/prisstigning.json';
 const d = data as typeof data & { grupper: { kode: string; navn: string; tolvMnd: number | null; vekt: number | null }[] };
 const pageUrl = `${SITE_URL}/prisstigning/`;
 const tittel = 'Prisstigningen nå';
+const seoTittel = 'Prisstigning og KPI nå: inflasjonen i Norge';
 const maaned = maanedTekst(d.sisteMaaned);
 const pst = (v: number | null) => (typeof v === 'number' ? `${tallTekst(v)} %` : '–');
 const retning = d.tolvMnd >= 0 ? 'høyere' : 'lavere';
 const hovedgrupper = d.grupper.filter((g) => g.kode.length === 2);
 const mat = d.grupper.find((g) => g.kode === '01.1');
 const forrige = finnMaaned(d.serie, forskyvMaaned(d.sisteMaaned, -1));
-const description = `Prisene var ${tallTekst(Math.abs(d.tolvMnd))} prosent ${retning} i ${maaned} enn ett år før, viser konsumprisindeksen fra SSB. Se utviklingen og hvilke varer og tjenester som har steget mest.`;
+const description = `Prisene var ${tallTekst(Math.abs(d.tolvMnd))} prosent ${retning} i ${maaned} enn ett år før, viser KPI fra SSB. Se utviklingen og hva som har steget mest.`;
 const { sti, jsonLd } = datasideLd({
   url: pageUrl,
   tittel,
@@ -41,7 +42,7 @@ const { sti, jsonLd } = datasideLd({
 const saker = await relaterteSaker(/pris|kpi|konsumpris|inflasjon/i);
 ---
 
-<Base title={tittel} description={description}>
+<Base title={seoTittel} description={description}>
   <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
   <Brodsmuler items={sti} />
   <header class="page-head">

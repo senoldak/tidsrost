@@ -19,6 +19,7 @@ import data from '../data/boligpriser.json';
 const d = data as typeof data & { regioner: { kode: string; navn: string; indeks: number | null; endringAar: number | null }[] };
 const pageUrl = `${SITE_URL}/boligpriser/`;
 const tittel = 'Boligprisene nå';
+const seoTittel = 'Boligpriser nå: prisutvikling i Norge per region';
 const kvartal = kvartalTekst(d.sisteKvartal);
 const landet = d.regioner.find((r) => r.kode === 'TOTAL');
 const regioner = d.regioner.filter((r) => r.kode !== 'TOTAL');
@@ -46,7 +47,7 @@ const { sti, jsonLd } = datasideLd({
 const saker = await relaterteSaker(/bolig|husleie|eiendom/i);
 ---
 
-<Base title={tittel} description={description}>
+<Base title={seoTittel} description={description}>
   <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
   <Brodsmuler items={sti} />
   <header class="page-head">

@@ -20,13 +20,14 @@ import data from '../data/arbeidsledighet.json';
 const d = data as typeof data & { grupper: { kode: string; navn: string; prosent: number | null }[] };
 const pageUrl = `${SITE_URL}/arbeidsledighet/`;
 const tittel = 'Arbeidsledigheten nå';
+const seoTittel = 'Arbeidsledighet i Norge nå: siste tall fra SSB';
 const maaned = maanedTekst(d.sisteMaaned);
 const pst = (v: number | null | undefined) => (typeof v === 'number' ? `${tallTekst(v)} %` : '–');
 const forrige = finnMaaned(d.serie, forskyvMaaned(d.sisteMaaned, -1));
 const ifjor = finnMaaned(d.serie, forskyvMaaned(d.sisteMaaned, -12));
 const endring = (a: number, b: number) => (a > b ? 'opp fra' : a < b ? 'ned fra' : 'det samme som');
 const unge = d.grupper.find((g) => g.kode === '15-24');
-const description = `Arbeidsledigheten var ${tallTekst(d.prosent)} prosent i ${maaned}, viser SSBs arbeidskraftundersøkelse. Se utviklingen de siste to årene og forskjeller mellom kjønn og aldersgrupper.`;
+const description = `Arbeidsledigheten var ${tallTekst(d.prosent)} prosent i ${maaned}, viser SSBs arbeidskraftundersøkelse. Se utviklingen og forskjeller mellom kjønn og alder.`;
 const { sti, jsonLd } = datasideLd({
   url: pageUrl,
   tittel,
@@ -41,7 +42,7 @@ const { sti, jsonLd } = datasideLd({
 const saker = await relaterteSaker(/arbeidsledig|ledighet|sysselsett|arbeidsstyrke/i);
 ---
 
-<Base title={tittel} description={description}>
+<Base title={seoTittel} description={description}>
   <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
   <Brodsmuler items={sti} />
   <header class="page-head">

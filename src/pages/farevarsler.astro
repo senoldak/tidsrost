@@ -73,6 +73,7 @@ const sammenligning = hittilKomplett ? sammenlign(dager, til30, iAar - 1, iAar) 
 const hull = dk.arkivTil && dk.egneFra && dk.egneFra > dk.arkivTil ? { fra: minusDager(dk.arkivTil, -1), til: minusDager(dk.egneFra, 1) } : null;
 
 const tittel = 'Farevarsler i Norge';
+const seoTittel = 'Farevarsler i Norge: kart og statistikk per fylke';
 const description = siste30
   ? `${antallTekst(sum(siste30.total))} på land fra Meteorologisk institutt ${periodeTekst}, fylke for fylke. Se gjeldende varsler og hvordan året står seg mot tidligere år.`
   : 'Gjeldende farevarsler fra Meteorologisk institutt, og hvor ofte det varsles farlig vær i Norge, fylke for fylke og år for år.';
@@ -123,7 +124,7 @@ const grupper = [
 ].filter((g) => g.liste.length > 0);
 ---
 
-<Base title={tittel} description={description}>
+<Base title={seoTittel} description={description}>
   <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
   <Brodsmuler items={sti} />
   <header class="page-head">

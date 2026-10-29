@@ -18,6 +18,7 @@ import { relaterteSaker } from '../../lib/relaterte';
 import Brodsmuler from '../../components/Brodsmuler.astro';
 import KiNotat from '../../components/KiNotat.astro';
 import DelSaken from '../../components/DelSaken.astro';
+import { datasiderFor } from '../../lib/datalenker.mjs';
 import ForfatterKort, { forfatterBeskrivelse } from '../../components/ForfatterKort.astro';
 import { aktiveTemaer, temaerPerSak, temaUrl, type Tema } from '../../lib/temaer';
 
@@ -40,6 +41,8 @@ interface Props {
 }
 
 const { haber, related, temaer } = Astro.props;
+// İlgili veri sayfaları (iç bağlantı): haber KPI, faiz, konut, işsizlik ya da farevarsel anıyorsa (src/lib/datalenker.mjs).
+const datasider = datasiderFor(`${haber.data.title} ${haber.data.description ?? ''} ${haber.body ?? ''}`);
 const { title, description, date, category, cover: kapak, coverAlt, coverKreditt, author, produksjon, rettelse, oppdatert } = haber.data;
 const { Content } = await render(haber);
 // OG/JSON-LD görseli her haberde üretilir; büyük WebP kapak yalnızca yeni haberlerde (bkz. gorselVar).
@@ -239,6 +242,17 @@ const jsonLd = {
     <KiNotat tittel={title} url={pageUrl} author={author} sjanger={haber.data.sjanger} produksjon={produksjon} />
 
     {forfatterUrl && <ForfatterKort name={synligForfatter} heading="h3" />}
+
+    {
+      datasider.length > 0 && (
+        <aside class="tall-lenke" aria-label="Tallene bak saken">
+          <span class="tall-lenke-tittel">Tallene bak saken</span>
+          {datasider.map((d) => (
+            <a href={d.url}>{d.navn}</a>
+          ))}
+        </aside>
+      )
+    }
 
     <DelSaken url={pageUrl} title={title} />
   </article>

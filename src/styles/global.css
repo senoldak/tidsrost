@@ -1944,3 +1944,30 @@ main.container {
   text-transform: uppercase;
   color: var(--muted);
 }
+
+/* Sak → dataside: "Tallene bak saken" */
+.tall-lenke {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--u) calc(var(--u) * 2);
+  max-width: 70ch;
+  margin: calc(var(--u) * 3) 0;
+  padding: calc(var(--u) * 1.5) calc(var(--u) * 2);
+  border-left: 3px solid var(--water);
+  background: var(--surface);
+  font: 600 0.9375rem/1.4 var(--frame);
+}
+
+.tall-lenke-tittel {
+  font: 700 0.75rem var(--frame);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.tall-lenke a {
+  color: var(--water);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}

@@ -16,6 +16,7 @@ import arbeid from '../data/arbeidsledighet.json';
 
 const pageUrl = `${SITE_URL}/tall/`;
 const tittel = 'Tall og data';
+const seoTittel = 'Tall og data om Norge: priser, boliger og jobb';
 const description = 'Oppdaterte tall fra Statistisk sentralbyrå, Norges Bank og Meteorologisk institutt: prisstigning, boligpriser, arbeidsledighet, styringsrenten og farevarsler.';
 
 const landet = (bolig.regioner as { kode: string; endringAar: number | null }[]).find((r) => r.kode === 'TOTAL');
@@ -71,7 +72,7 @@ const jsonLd = {
 };
 ---
 
-<Base title={tittel} description={description}>
+<Base title={seoTittel} description={description}>
   <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
   <Brodsmuler items={sti} />
   <header class="page-head">
