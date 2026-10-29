@@ -137,7 +137,11 @@ const siteHaritasi = sitemap({
   serialize: (oge) => {
     const yol = new URL(oge.url).pathname;
     const arkiv = yol.match(/^\/arkiv\/(\d{4}-\d{2}-\d{2})\/$/)?.[1];
-    const tarih = arkiv ? arkivDager.get(arkiv)?.sist : (haberTarihleri.get(yol) ?? veriTarihleri.get(yol));
+    // /navn/ola/, /lonn/<yrke>/, /kommune/<slug>/: alt sayfa merkez sayfanın veri tarihini alır.
+    const merkez = yol.match(/^\/(navn|lonn|kommune)\/[^/]+\/$/)?.[1];
+    const tarih = arkiv
+      ? arkivDager.get(arkiv)?.sist
+      : (haberTarihleri.get(yol) ?? veriTarihleri.get(yol) ?? (merkez ? veriTarihleri.get(`/${merkez}/`) : undefined));
     return tarih ? { ...oge, lastmod: tarih.toISOString() } : oge;
   },
 });
