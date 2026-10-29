@@ -14,6 +14,7 @@ import { tallTekst } from '../lib/graf.mjs';
 import { tidTekst } from '../lib/data';
 import { GAMMEL_MAANED_MS, dataGammel, datasideLd, maanedKort, maanedTekst, relaterteSaker } from '../lib/datasider';
 import { SITE_URL } from '../lib/seo';
+import { finnMaaned, forskyvMaaned } from '../lib/periode.mjs';
 import data from '../data/prisstigning.json';
 
 const d = data as typeof data & { grupper: { kode: string; navn: string; tolvMnd: number | null; vekt: number | null }[] };
@@ -24,7 +25,7 @@ const pst = (v: number | null) => (typeof v === 'number' ? `${tallTekst(v)} %` :
 const retning = d.tolvMnd >= 0 ? 'høyere' : 'lavere';
 const hovedgrupper = d.grupper.filter((g) => g.kode.length === 2);
 const mat = d.grupper.find((g) => g.kode === '01.1');
-const forrige = d.serie.at(-2);
+const forrige = finnMaaned(d.serie, forskyvMaaned(d.sisteMaaned, -1));
 const description = `Prisene var ${tallTekst(Math.abs(d.tolvMnd))} prosent ${retning} i ${maaned} enn ett år før, viser konsumprisindeksen fra SSB. Se utviklingen og hvilke varer og tjenester som har steget mest.`;
 const { sti, jsonLd } = datasideLd({
   url: pageUrl,

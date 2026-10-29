@@ -70,3 +70,13 @@ test('periodeTall: nivåfordeling per fylke', () => {
   assert.deepEqual(p.fylkerNiva['18'], [1, 1, 0]);
   assert.deepEqual(p.fylkerNiva['46'], [0, 0, 1]);
 });
+
+test('erKomplett: tom eller baklengs periode er aldri komplett (nyttårsnatten)', () => {
+  const dk = { arkivFra: '2019-01-01', arkivTil: '2026-04-30', egneFra: '2026-10-02', egneTil: '2026-12-31' };
+  assert.equal(erKomplett(dk, '2027-01-01', '2026-12-31'), false);
+});
+
+test('dekning: egneTil er Oslo-dato, ikke UTC', () => {
+  const dk = dekning({ maaneder: {}, lopende: { fra: '2026-12-01', hentet: '2026-12-31T23:30:00Z', dager: {} } });
+  assert.equal(dk.egneTil, '2027-01-01');
+});

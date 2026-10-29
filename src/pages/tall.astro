@@ -21,8 +21,10 @@ const description = 'Oppdaterte tall fra Statistisk sentralbyrå, Norges Bank og
 const landet = (bolig.regioner as { kode: string; endringAar: number | null }[]).find((r) => r.kode === 'TOTAL');
 const dk = dekning(VARSELARKIV);
 const til = dk.egneTil && dk.egneTil < osloIdag() ? dk.egneTil : osloIdag();
-const fra = new Date(Date.parse(`${til}T00:00:00Z`) - 29 * 86_400_000).toISOString().slice(0, 10);
-const varsler30 = erKomplett(dk, fra, til) ? periodeTall(dagerFraArkiv(VARSELARKIV), fra, til).total.reduce((a, b) => a + b, 0) : null;
+const fraIdeal = new Date(Date.parse(`${til}T00:00:00Z`) - 29 * 86_400_000).toISOString().slice(0, 10);
+const fra = dk.egneFra && dk.egneFra > fraIdeal && (!dk.arkivTil || dk.arkivTil < fraIdeal) ? dk.egneFra : fraIdeal;
+const dagerTall = Math.round((Date.parse(`${til}T00:00:00Z`) - Date.parse(`${fra}T00:00:00Z`)) / 86_400_000) + 1;
+const varsler30 = dagerTall >= 7 && erKomplett(dk, fra, til) ? periodeTall(dagerFraArkiv(VARSELARKIV), fra, til).total.reduce((a, b) => a + b, 0) : null;
 
 const kort = [
   { url: '/prisstigning/', navn: 'Prisstigningen nå', verdi: `${tallTekst(pris.tolvMnd)} %`, tekst: `Endring i konsumprisene siste tolv måneder, ${maanedTekst(pris.sisteMaaned)}.`, kilde: 'SSB', sym: 'data' },
@@ -40,7 +42,7 @@ const kort = [
     url: '/farevarsler/',
     navn: 'Farevarsler i Norge',
     verdi: varsler30 === null ? '–' : String(varsler30),
-    tekst: 'Farevarsler på land de siste 30 dagene, fylke for fylke, og hvordan årene står seg.',
+    tekst: `Farevarsler på land de siste ${dagerTall} dagene, fylke for fylke, og hvordan årene står seg.`,
     kilde: 'Meteorologisk institutt',
     sym: 'varsel',
   },

@@ -14,6 +14,7 @@ import { tallTekst } from '../lib/graf.mjs';
 import { tidTekst } from '../lib/data';
 import { GAMMEL_MAANED_MS, dataGammel, datasideLd, maanedKort, maanedTekst, relaterteSaker } from '../lib/datasider';
 import { SITE_URL } from '../lib/seo';
+import { finnMaaned, forskyvMaaned } from '../lib/periode.mjs';
 import data from '../data/arbeidsledighet.json';
 
 const d = data as typeof data & { grupper: { kode: string; navn: string; prosent: number | null }[] };
@@ -21,8 +22,8 @@ const pageUrl = `${SITE_URL}/arbeidsledighet/`;
 const tittel = 'Arbeidsledigheten nå';
 const maaned = maanedTekst(d.sisteMaaned);
 const pst = (v: number | null | undefined) => (typeof v === 'number' ? `${tallTekst(v)} %` : '–');
-const forrige = d.serie.at(-2);
-const ifjor = d.serie.at(-13);
+const forrige = finnMaaned(d.serie, forskyvMaaned(d.sisteMaaned, -1));
+const ifjor = finnMaaned(d.serie, forskyvMaaned(d.sisteMaaned, -12));
 const endring = (a: number, b: number) => (a > b ? 'opp fra' : a < b ? 'ned fra' : 'det samme som');
 const unge = d.grupper.find((g) => g.kode === '15-24');
 const description = `Arbeidsledigheten var ${tallTekst(d.prosent)} prosent i ${maaned}, viser SSBs arbeidskraftundersøkelse. Se utviklingen de siste to årene og forskjeller mellom kjønn og aldersgrupper.`;
@@ -98,7 +99,7 @@ const saker = await relaterteSaker(/arbeidsledig|ledighet|sysselsett|arbeidsstyr
         arbeidsstyrken.
       </p>
       <p>
-        NAV teller bare dem som er registrert som arbeidssøkere hos NAV, og deres tall er derfor lavere. Tallene her er
+        NAV teller bare dem som er registrert som arbeidssøkere hos NAV, og deres tall er vanligvis lavere. Tallene her er
         sesongjustert, slik at faste svingninger gjennom året, som sommerjobber, ikke påvirker dem.
       </p>
     </div>

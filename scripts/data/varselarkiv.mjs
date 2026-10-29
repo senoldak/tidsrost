@@ -6,8 +6,9 @@
 // - Bir "Alert" yeni bir olaydır. Bir "Update", aynı türden (event), aynı alandaki (karada kesişen fylke, denizde
 //   aynı bölge adı) ve zaman aralığı çakışan en son olaya bağlanır; olayın seviyesi ulaştığı en yüksek seviyedir,
 //   fylkeleri birleşir.
-// - Bağlanacak olay bulamayan güncelleme yeni olay sayılır; yalnız ayın ilk üç gününde gönderilmişse önceki ayın
-//   bir olayına ait sayılıp atlanır (arşiv aylara bölünmüş; olay ay dönümünde başlamış olabilir).
+// - Bağlanacak olay bulamayan güncelleme yeni olay sayılır; yalnız olayın başlangıcı pencerenin başından önceyse ya da
+//   pencerenin ilk üç günündeyse önceki pencerenin (ayın) bir olayına ait sayılıp atlanır: arşiv aylara bölünmüş ve
+//   uyarılar çoğunlukla başlangıçtan bir iki gün önce gönderiliyor (gözden geçirme, 29 Ekim).
 // - Olay, başlangıç gününde (Oslo saati) sayılır. Karada her fylkede bir kez, ülke toplamında bir kez.
 import { fylkerFraKoder } from '../../src/lib/fylker.mjs';
 
@@ -25,12 +26,8 @@ function sendt(id) {
   return (s.length >= 14 && s.startsWith('20') ? s : `20${s}`).slice(0, 14);
 }
 
-// Bağlanamayan güncellemenin atlandığı eşik: pencere başlangıcı + 3 gün. Pencere bir ay ('YYYY-MM', arşiv) ya da
-// bir an (ISO, all.json'un son 30 günü) olabilir.
-function terskelFor(vindu) {
-  const start = /^\d{4}-\d{2}$/.test(vindu) ? Date.parse(`${vindu}-01T00:00:00Z`) : Date.parse(vindu);
-  return new Date(start + 3 * 86_400_000).toISOString().replace(/\D/g, '').slice(0, 14);
-}
+// Pencere bir ay ('YYYY-MM', arşiv) ya da bir an (ISO, all.json'un son 30 günü) olabilir.
+const vinduStart = (vindu) => (/^\d{4}-\d{2}$/.test(vindu) ? Date.parse(`${vindu}-01T00:00:00Z`) : Date.parse(vindu));
 
 const overlapp = (a, b) => a[0] < b[1] && b[0] < a[1];
 
@@ -41,12 +38,14 @@ const overlapp = (a, b) => a[0] < b[1] && b[0] < a[1];
  * @returns {{ start: string, niva: 'gult'|'oransje'|'rodt', domene: 'land'|'hav', fylker: string[], event: string }[]}
  */
 export function hendelser(features, vindu) {
-  const terskel = terskelFor(vindu);
+  // 200 yanıtı ama features yok: "sıfır uyarı" diye kaydedilmez, hata olarak çağırana döner (ay eskisi gibi kalır).
+  if (!Array.isArray(features)) throw new Error('Uventet svar fra MetAlerts (mangler features)');
+  const vStart0 = vinduStart(vindu);
+  const ubundetGrense = vStart0 + 3 * 86_400_000;
   // Kaynakta arada bozuk tarih var (29 Ekim'de Nisan 2026 arşivinde 0300 yılı): pencerenin iki ay öncesi ve
   // sonrası dışındaki başlangıçlar sayılmaz.
-  const vStart = /^\d{4}-\d{2}$/.test(vindu) ? Date.parse(`${vindu}-01T00:00:00Z`) : Date.parse(vindu);
-  const makul = (t) => t > vStart - 62 * 86_400_000 && t < vStart + 93 * 86_400_000;
-  const kayitlar = (features ?? [])
+  const makul = (t) => t > vStart0 - 62 * 86_400_000 && t < vStart0 + 93 * 86_400_000;
+  const kayitlar = features
     .map((f) => {
       const p = f?.properties ?? {};
       const farge = String(p.awareness_level ?? '').split(';')[1]?.trim();
@@ -81,7 +80,7 @@ export function hendelser(features, vindu) {
         h.tid = [Math.min(h.tid[0], k.tid[0]), Math.max(h.tid[1], k.tid[1])];
         continue;
       }
-      if (k.sendt && k.sendt < terskel) continue;
+      if (k.tid[0] < ubundetGrense) continue;
     }
     ut.push({ niva: k.niva, event: k.event, domene: k.domene, fylker: [...k.fylker], area: k.area, tid: [...k.tid] });
   }
@@ -133,17 +132,18 @@ export function nesteArkivmaaned(arkiv, naa = new Date()) {
 }
 
 /**
- * all.json (son 30 günde gönderilen bütün uyarılar) her turda okunur. Pencerenin günleri (pencere başlangıcından
- * itibaren, Oslo günü) yeniden hesaplanıp değiştirilir; daha eski kendi günlerimiz korunur. Böylece arşivin
- * gecikmesini kendi kaydımız kapatır.
+ * all.json (son 30 günde gönderilen bütün uyarılar) her turda okunur. Uyarılar çoğunlukla başlangıçtan bir iki gün önce
+ * gönderildiği için pencerenin ilk üç gününün uyarıları all.json'da eksik olabilir: bu günler önceki turlardan (pencere
+ * daha gerideyken hesaplanmış hâliyle) korunur, yeniden hesaplanan yalnız pencere başı + 3 gün ve sonrası. İlk turda
+ * kaplama bu yüzden pencere başı + 3 günden başlar (gözden geçirme, 29 Ekim).
  */
 export function oppdaterLopende(arkiv, features, naa = new Date()) {
-  const vinduStart = new Date(naa.getTime() - 30 * DOGN).toISOString();
-  const fraDag = osloDag(vinduStart);
+  const vStart = naa.getTime() - 30 * DOGN;
+  const nyFra = osloDag(new Date(vStart + 3 * DOGN).toISOString());
   const gamle = arkiv?.lopende?.dager ?? {};
-  const nye = dagsTall(hendelser(features, vinduStart));
-  const dager = { ...Object.fromEntries(Object.entries(gamle).filter(([d]) => d < fraDag)), ...nye };
-  const tidligste = arkiv?.lopende?.fra && arkiv.lopende.fra < fraDag ? arkiv.lopende.fra : fraDag;
+  const nye = Object.fromEntries(Object.entries(dagsTall(hendelser(features, new Date(vStart).toISOString()))).filter(([d]) => d >= nyFra));
+  const dager = { ...Object.fromEntries(Object.entries(gamle).filter(([d]) => d < nyFra)), ...nye };
+  const tidligste = arkiv?.lopende?.fra && arkiv.lopende.fra < nyFra ? arkiv.lopende.fra : nyFra;
   return {
     ...(arkiv ?? {}),
     lopende: { hentet: naa.toISOString(), fra: tidligste, dager: Object.fromEntries(Object.keys(dager).sort().map((k) => [k, dager[k]])) },

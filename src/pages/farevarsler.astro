@@ -44,8 +44,12 @@ const arkivGammel = erGammel(VARSELARKIV.lopende?.hentet ?? VARSELARKIV.hentet, 
 const minusDager = (d: string, n: number) => new Date(Date.parse(`${d}T00:00:00Z`) - n * 86_400_000).toISOString().slice(0, 10);
 const idag = osloIdag();
 const til30 = dk.egneTil && dk.egneTil < idag ? dk.egneTil : idag;
-const fra30 = minusDager(til30, 29);
-const har30 = erKomplett(dk, fra30, til30);
+// Normalde son 30 gün; kendi kaydımız daha yeni başladıysa kaplanan günler (en az 7), sayfa gün sayısını yazar.
+const fra30Ideal = minusDager(til30, 29);
+const fra30 = dk.egneFra && dk.egneFra > fra30Ideal && (!dk.arkivTil || dk.arkivTil < fra30Ideal) ? dk.egneFra : fra30Ideal;
+const antallDager = Math.round((Date.parse(`${til30}T00:00:00Z`) - Date.parse(`${fra30}T00:00:00Z`)) / 86_400_000) + 1;
+const periodeTekst = `de siste ${antallDager} dagene`;
+const har30 = antallDager >= 7 && erKomplett(dk, fra30, til30);
 const siste30 = har30 ? periodeTall(dager, fra30, til30) : null;
 const sum = (t: number[]) => t[0] + t[1] + t[2];
 const antallTekst = (n: number) => `${n} ${n === 1 ? 'varsel' : 'varsler'}`;
@@ -63,14 +67,14 @@ const aar: { aar: number; total: number }[] = [];
 for (let y = 2019; y < iAar; y++) if (erKomplett(dk, `${y}-01-01`, `${y}-12-31`)) aar.push({ aar: y, total: helAar(dager, y) });
 const sisteHeleAar = aar.at(-1);
 const flestAar = [...aar].sort((a, b) => b.total - a.total)[0];
-const hittilKomplett = erKomplett(dk, `${iAar}-01-01`, til30);
+const hittilKomplett = til30 >= `${iAar}-01-01` && erKomplett(dk, `${iAar}-01-01`, til30);
 const hittil = hittilKomplett ? hittilIAar(dager, til30) : null;
 const sammenligning = hittilKomplett ? sammenlign(dager, til30, iAar - 1, iAar) : [];
 const hull = dk.arkivTil && dk.egneFra && dk.egneFra > dk.arkivTil ? { fra: minusDager(dk.arkivTil, -1), til: minusDager(dk.egneFra, 1) } : null;
 
 const tittel = 'Farevarsler i Norge';
 const description = siste30
-  ? `${antallTekst(sum(siste30.total))} på land fra Meteorologisk institutt de siste 30 dagene, fylke for fylke. Se gjeldende varsler og hvordan året står seg mot tidligere år.`
+  ? `${antallTekst(sum(siste30.total))} på land fra Meteorologisk institutt ${periodeTekst}, fylke for fylke. Se gjeldende varsler og hvordan året står seg mot tidligere år.`
   : 'Gjeldende farevarsler fra Meteorologisk institutt, og hvor ofte det varsles farlig vær i Norge, fylke for fylke og år for år.';
 const harMetTema = aktiveTemaer(await getNews()).some((t) => t.tema.slug === 'meteorologisk-institutt');
 const sti = [
@@ -133,7 +137,7 @@ const grupper = [
   {
     siste30 && (
       <section class="day" aria-labelledby="siste30">
-        <h2 class="band" id="siste30">De siste 30 dagene</h2>
+        <h2 class="band" id="siste30">{periodeTekst.charAt(0).toUpperCase() + periodeTekst.slice(1)}</h2>
         <div class="varselkart">
           <FylkeKart
             verdier={siste30.fylker}
@@ -146,7 +150,7 @@ const grupper = [
               <span class="mark mark-varsel"><Symbol kind="varsel" class="sym-varsel-oransje" />{siste30.total[1]} oransje</span>
               <span class="mark mark-varsel"><Symbol kind="varsel" class="sym-varsel-rodt" />{siste30.total[2]} {siste30.total[2] === 1 ? 'rødt' : 'røde'}</span>
             </p>
-            {oppsummering(siste30, 'de siste 30 dagene').map((s) => <p class="varsel-setning">{s}</p>)}
+            {oppsummering(siste30, periodeTekst).map((s) => <p class="varsel-setning">{s}</p>)}
             <p class="varsel-setning">
               Til havs og langs kysten kom det {antallTekst(sum(siste30.hav))} i samme periode.
             </p>

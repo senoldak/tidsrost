@@ -26,3 +26,28 @@ test('tallTekst: norsk desimalkomma', () => {
   assert.equal(tallTekst(-0.25, 2), '−0,25');
   assert.equal(tallTekst(158.3), '158,3');
 });
+
+test('kartTrinn og kartSkala: forklaringen følger fargetrinnene', async () => {
+  const { kartTrinn, kartSkala } = await import('./graf.mjs');
+  assert.equal(kartTrinn(3, 10), 2);
+  assert.equal(kartTrinn(0, 10), 0);
+  assert.equal(kartTrinn(10, 10), 4);
+  assert.deepEqual(kartSkala(10), [
+    { trinn: 0, tekst: '0' },
+    { trinn: 1, tekst: '1–2' },
+    { trinn: 2, tekst: '3–5' },
+    { trinn: 3, tekst: '6–7' },
+    { trinn: 4, tekst: '8–10' },
+  ]);
+  assert.deepEqual(kartSkala(1), [
+    { trinn: 0, tekst: '0' },
+    { trinn: 4, tekst: '1' },
+  ]);
+  assert.deepEqual(kartSkala(0), [{ trinn: 0, tekst: '0' }]);
+  for (let maks = 1; maks <= 40; maks++) {
+    for (const s of kartSkala(maks).filter((x) => x.trinn > 0)) {
+      const [lo, hi = lo] = s.tekst.split('–').map(Number);
+      for (let v = lo; v <= hi; v++) assert.equal(kartTrinn(v, maks), s.trinn, `maks ${maks} v ${v}`);
+    }
+  }
+});

@@ -3,6 +3,8 @@
 // boşluk olabilir) sayfa o dönemi göstermez: erKomplett. Rakam uydurulmaz.
 import { fylkeNavn } from './fylker.mjs';
 
+const OSLO = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Oslo', year: 'numeric', month: '2-digit', day: '2-digit' });
+const osloDag = (iso) => OSLO.format(new Date(iso));
 const topla = (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]];
 const sonGun = (ym) => {
   const [y, m] = ym.split('-').map(Number);
@@ -33,7 +35,7 @@ export function dekning(arkiv) {
     arkivFra: aylar.length ? `${aylar[0]}-01` : null,
     arkivTil: aylar.length ? sonGun(aylar.at(-1)) : null,
     egneFra: l?.fra ?? null,
-    egneTil: l?.hentet ? l.hentet.slice(0, 10) : null,
+    egneTil: l?.hentet ? osloDag(l.hentet) : null,
   };
 }
 
@@ -41,6 +43,7 @@ const ertesi = (d) => new Date(Date.parse(`${d}T00:00:00Z`) + 86_400_000).toISOS
 
 /** [fra, til] günleri arşiv ve kendi kaydımızla boşluksuz kaplanıyor mu? */
 export function erKomplett(dk, fra, til) {
+  if (!fra || !til || fra > til) return false;
   const araliklar = [
     [dk.arkivFra, dk.arkivTil],
     [dk.egneFra, dk.egneTil],

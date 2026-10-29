@@ -91,7 +91,7 @@ test('oppdaterLopende: dagene i 30-dagersvinduet byttes, eldre egne dager behold
   assert.equal(ny.lopende.dager['2026-10-05'], undefined);
   assert.deepEqual(ny.lopende.dager['2026-10-11'].landTotal, [0, 1, 0]);
   assert.equal(ny.lopende.hentet, naa.toISOString());
-  assert.equal(oppdaterLopende({}, [], naa).lopende.fra, '2026-09-29');
+  assert.equal(oppdaterLopende({}, [], naa).lopende.fra, '2026-10-02');
 });
 
 test('hendelser: gamle meldinger uten status og med 15-sifret id telles', () => {
@@ -119,4 +119,28 @@ test('hendelser: meldinger med åpenbart feil dato (utenfor vinduet ± to måned
     when: { interval: ['0300-04-05T06:00:00+00:00', '0300-04-05T18:00:00+00:00'] },
   };
   assert.equal(hendelser([feil], '2026-04').length, 0);
+});
+
+test('hendelser: ubundet oppdatering for et varsel som begynte før vinduet (eller de tre første dagene) telles ikke', () => {
+  const opp = (sendt, start) => ({
+    properties: { id: `2.49.0.1.578.0.${sendt}.001`, type: 'Update', status: 'Actual', awareness_level: '2; yellow; Moderate', event: 'wind', county: ['46'], area: 'Vestland', geographicDomain: 'land' },
+    when: { interval: [start, '2026-02-28T00:00:00+00:00'] },
+  });
+  assert.equal(hendelser([opp('20260210100000', '2026-01-25T06:00:00+00:00')], '2026-02').length, 0);
+  assert.equal(hendelser([opp('20260205100000', '2026-02-01T06:00:00+00:00')], '2026-02').length, 0);
+  assert.equal(hendelser([opp('20260210100000', '2026-02-12T06:00:00+00:00')], '2026-02').length, 1);
+});
+
+test('hendelser: svar uten features er en feil, ikke null varsler', () => {
+  assert.throws(() => hendelser(undefined, '2024-10'));
+  assert.throws(() => hendelser({}, '2024-10'));
+});
+
+test('oppdaterLopende: dagene i vinduets tre første døgn beholdes fra før (der varslene kom før vinduet); første gang starter dekningen tre døgn inn', async () => {
+  const { oppdaterLopende } = await import('./varselarkiv.mjs');
+  const naa = new Date('2026-10-29T12:00:00Z'); // vindu fra 2026-09-29, nye tall fra 2026-10-02
+  const gammel = { lopende: { fra: '2026-09-15', dager: { '2026-09-30': { beholdt: true } } } };
+  const ny = oppdaterLopende(gammel, [], naa);
+  assert.deepEqual(ny.lopende.dager['2026-09-30'], { beholdt: true });
+  assert.equal(oppdaterLopende({}, [], naa).lopende.fra, '2026-10-02');
 });

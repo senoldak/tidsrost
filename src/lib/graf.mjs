@@ -44,3 +44,19 @@ export function tallTekst(v, desimaler = 1) {
   const s = Math.abs(v).toLocaleString('nb-NO', { minimumFractionDigits: desimaler, maximumFractionDigits: desimaler }).replace(/ /g, ' ');
   return v < 0 ? `−${s}` : s;
 }
+
+/** Fylke haritasının renk basamağı (0 = hiç, 1–4): değer / en büyük değer, dörde bölünmüş. */
+export const kartTrinn = (v, maks) => (v <= 0 || maks <= 0 ? 0 : Math.min(4, Math.ceil((v / maks) * 4)));
+
+/** Haritanın açıklaması: her basamağın kapsadığı tam sayı aralığı, kartTrinn'in tersinden; boş basamak atlanır. */
+export function kartSkala(maks) {
+  const ut = [{ trinn: 0, tekst: '0' }];
+  if (maks <= 0) return ut;
+  for (let t = 1; t <= 4; t++) {
+    const lo = Math.floor(((t - 1) * maks) / 4) + 1;
+    const hi = Math.floor((t * maks) / 4);
+    if (lo > hi) continue;
+    ut.push({ trinn: t, tekst: lo === hi ? String(lo) : `${lo}–${hi}` });
+  }
+  return ut;
+}

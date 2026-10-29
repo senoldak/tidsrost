@@ -30,8 +30,8 @@ const pst = (v: number | null | undefined) => (typeof v === 'number' ? `${tallTe
 const retning = (v: number) => (v >= 0 ? 'høyere' : 'lavere');
 const description =
   typeof aar === 'number'
-    ? `Brukte boliger var ${tallTekst(Math.abs(aar))} prosent ${retning(aar)} i pris i ${kvartal} enn ett år før, viser SSB. Se utviklingen i hele landet og i elleve regioner.`
-    : `Prisutviklingen for brukte boliger i hele landet og i elleve regioner, fra SSB.`;
+    ? `Brukte boliger var ${tallTekst(Math.abs(aar))} prosent ${retning(aar)} i pris i ${kvartal} enn ett år før, viser SSB. Se utviklingen i hele landet og region for region.`
+    : `Prisutviklingen for brukte boliger i hele landet og region for region, fra SSB.`;
 const { sti, jsonLd } = datasideLd({
   url: pageUrl,
   tittel,
