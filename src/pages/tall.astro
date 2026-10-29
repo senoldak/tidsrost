@@ -15,6 +15,7 @@ import bolig from '../data/boligpriser.json';
 import arbeid from '../data/arbeidsledighet.json';
 import kpiHist from '../data/kpi-historisk.json';
 import snoskredData from '../data/snoskred.json';
+import flomData from '../data/flom.json';
 import { dagNivaaer } from '../../scripts/data/nve.mjs';
 import { omregn } from '../lib/prisomregner.mjs';
 import { arbeidsdagerTotalt } from '../lib/helligdager.mjs';
@@ -37,6 +38,8 @@ const kpiEks = omregn(kpiHist, 100, kpiEksFra, kpiHist.sisteAar);
 
 const snoDag = snoskredData.regioner[0]?.dager[0]?.dato;
 const snoAntall = snoDag ? dagNivaaer(snoskredData, snoDag).length : null;
+
+const flomFylker = new Set([...Object.keys(flomData.flom), ...Object.keys(flomData.jordskred)]).size;
 
 const rodeAar = Number(new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Oslo' }).slice(0, 4));
 
@@ -72,6 +75,14 @@ const kort = [
     navn: 'Snøskredvarsel',
     verdi: snoAntall === null ? '–' : String(snoAntall),
     tekst: `Varslingsregioner med snøskredvarsel fra NVE, ${snoDag ? datoTekst(snoDag) : 'siste varsel'}. Faregrad per region.`,
+    kilde: 'NVE',
+    sym: 'varsel',
+  },
+  {
+    url: '/flomvarsel/',
+    navn: 'Flom og jordskred',
+    verdi: String(flomFylker),
+    tekst: `Fylker med varsel om flom eller jordskred fra NVE, ${datoTekst(flomData.dato)}. Kart og kommuner per fylke.`,
     kilde: 'NVE',
     sym: 'varsel',
   },

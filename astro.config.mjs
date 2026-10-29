@@ -82,6 +82,7 @@ for (const [yol, fil, alan] of [
   ['/prisomregner/', 'kpi-historisk.json'],
   ['/farevarsler/', 'varselarkiv.json', 'lopende'],
   ['/snoskredvarsel/', 'snoskred.json'],
+  ['/flomvarsel/', 'flom.json'],
 ]) {
   try {
     const j = JSON.parse(await readFile(fileURLToPath(new URL(`./src/data/${fil}`, import.meta.url)), 'utf8'));

@@ -1,0 +1,136 @@
+---
+// "Flomvarsel og jordskredvarsel": NVE/Varsom CountySummary (src/data/flom.json), dagens aktsomhetsnivå gult eller høyere per fylke.
+// Hiç uyarı yoksa sayfa boş harita değil açık bir cümle gösterir. NVE'nin metni değiştirilmeden, kaynak belirtilerek verilir.
+// Statik sayfa: "i dag" yerine tarih yazılır (sayfa veri değişene kadar yeniden derlenmez). Sabit metinde rakam yok.
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import KiNotat from '../components/KiNotat.astro';
+import Base from '../layouts/Base.astro';
+import Symbol from '../components/Symbol.astro';
+import Brodsmuler from '../components/Brodsmuler.astro';
+import FylkeKart from '../components/data/FylkeKart.astro';
+import DataKilde from '../components/data/DataKilde.astro';
+import { datasideLd } from '../lib/datasider';
+import { GAMMEL_VARSEL_MS, erGammel } from '../lib/data';
+import { FYLKER } from '../lib/fylker.mjs';
+import { SITE_URL } from '../lib/seo';
+import data from '../data/flom.json';
+
+type Fare = { nivaa: number; kommuner: string[]; tekst: string | null };
+
+const pageUrl = `${SITE_URL}/flomvarsel/`;
+const tittel = 'Flomvarsel og jordskredvarsel';
+const seoTittel = 'Flomvarsel og jordskredvarsel i dag';
+const NAVN: Record<number, string> = { 2: 'Gult', 3: 'Oransje', 4: 'Rødt' };
+const SYM: Record<number, string> = { 2: 'sym-varsel-gult', 3: 'sym-varsel-oransje', 4: 'sym-varsel-rodt' };
+const dagTekst = new Date(`${data.dato}T12:00:00Z`).toLocaleDateString('nb-NO', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Oslo' });
+const fylkeNavn: Record<string, string> = Object.fromEntries(FYLKER.map((f) => [f.kode, f.navn]));
+
+const grupper = [
+  { id: 'flom', navn: 'Flom', fare: data.flom as Record<string, Fare> },
+  { id: 'jordskred', navn: 'Jordskred', fare: data.jordskred as Record<string, Fare> },
+].map((g) => ({
+  ...g,
+  verdier: Object.fromEntries(Object.entries(g.fare).map(([k, v]) => [k, v.nivaa])) as Record<string, number>,
+  rader: Object.entries(g.fare)
+    .map(([kode, v]) => ({ kode, navn: fylkeNavn[kode] ?? kode, ...v }))
+    .sort((a, b) => b.nivaa - a.nivaa || a.navn.localeCompare(b.navn, 'nb')),
+}));
+const fylkerMedVarsel = new Set(grupper.flatMap((g) => Object.keys(g.fare))).size;
+const gammel = erGammel(data.hentet, GAMMEL_VARSEL_MS);
+
+const description =
+  fylkerMedVarsel > 0
+    ? `NVE har varslet flom eller jordskred på gult nivå eller høyere i ${fylkerMedVarsel} ${fylkerMedVarsel === 1 ? 'fylke' : 'fylker'} ${dagTekst}. Kart, kommuner og NVEs varseltekst per fylke, fra Varsom.`
+    : `NVE har ikke varslet flom eller jordskred på gult nivå eller høyere i noe fylke ${dagTekst}. Kart og kommuner per fylke vises når det kommer varsel.`;
+
+const { sti, jsonLd } = datasideLd({
+  url: pageUrl,
+  tittel,
+  description,
+  datasettNavn: 'Flom- og jordskredvarsel fra NVE (Varsom), varselnivå per fylke og kommune',
+  datasettBeskrivelse: 'Aktsomhetsnivå for flom og jordskred (gult, oransje, rødt) per fylke og kommune for dagen, fra NVEs Varsom-API.',
+  kildeData: data.kilde.data,
+  lisensUrl: data.kilde.lisensUrl,
+  periode: data.dato,
+  oppdatert: data.hentet,
+  utgiver: { navn: 'Norges vassdrags- og energidirektorat', wikidata: 'https://www.wikidata.org/wiki/Q3357659' },
+});
+---
+
+<Base title={seoTittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="varsel" class="sym-varsel-gult" />{tittel}</h1>
+    <p class="page-intro">
+      NVE varsler flom og jordskred gjennom Varsom, fylke for fylke. Aktsomhetsnivået er grønt, gult, oransje eller rødt.
+      Her står fylkene og kommunene som har gult nivå eller høyere for {dagTekst}.
+    </p>
+  </header>
+
+  {
+    gammel && (
+      <p class="data-varsel" role="status">
+        Vi har ikke klart å hente nye varsler siden {new Date(data.hentet).toLocaleDateString('nb-NO', { day: 'numeric', month: 'long', timeZone: 'Europe/Oslo' })}. Varslene kan ha endret seg. Følg de siste
+        varslene på <a href={data.kilde.url}>Varsom</a>.
+      </p>
+    )
+  }
+
+  {
+    grupper.map((g) => (
+      <section class="day" aria-labelledby={`h-${g.id}`}>
+        <h2 class="band" id={`h-${g.id}`}>{g.navn}</h2>
+        {g.rader.length === 0 ? (
+          <p class="varsel-setning">
+            NVE har ikke varslet {g.id === 'flom' ? 'flom' : 'jordskred'} på gult nivå eller høyere i noe fylke {dagTekst}.
+          </p>
+        ) : (
+          <>
+            <FylkeKart verdier={g.verdier} etikett={`Høyeste aktsomhetsnivå for ${g.id} per fylke, ${dagTekst}. Nivå 2 er gult, 3 oransje og 4 rødt.`} />
+            {g.rader.map((r) => (
+              <article class="varsel-rad">
+                <h3>
+                  <span class="mark mark-varsel">
+                    <Symbol kind="varsel" class={SYM[r.nivaa]} />
+                    {NAVN[r.nivaa]} nivå
+                  </span>
+                  <span class="varsel-hendelse">{r.navn}</span>
+                </h3>
+                <p class="varsel-tid">Kommuner: {r.kommuner.join(', ')}</p>
+                {r.tekst && (
+                  <p class="varsel-tekst">
+                    <strong>NVE skriver:</strong> {r.tekst}
+                  </p>
+                )}
+              </article>
+            ))}
+          </>
+        )}
+      </section>
+    ))
+  }
+
+  <section class="day" aria-labelledby="om-varslene">
+    <h2 class="band" id="om-varslene">Om varslene</h2>
+    <div class="prose">
+      <p>
+        Fylket får det høyeste nivået som gjelder for en av kommunene i fylket. Teksten under hvert fylke er NVEs egen,
+        gjengitt uendret.
+      </p>
+      <p>
+        Snøskred har eget varsel på <a href="/snoskredvarsel/">snøskredsiden</a>. Farevarsler for vær står på
+        <a href="/farevarsler/">siden om farevarsler fra Meteorologisk institutt</a>.
+      </p>
+    </div>
+  </section>
+
+  <DataKilde
+    kilde={{ navn: data.kilde.navn, url: data.kilde.url, data: data.kilde.data, lisens: data.kilde.lisens, lisensUrl: data.kilde.lisensUrl }}
+    hentet={data.hentet}
+    gammel={false}
+    merknad="Varslene kan endres raskt. Følg alltid de siste varslene fra NVE."
+  />
+  <p class="tema-alle"><a href="/tall/">Flere tall og data</a></p>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
+</Base>
