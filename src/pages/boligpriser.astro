@@ -1,0 +1,165 @@
+---
+// "Boligprisene nå": SSB'nin brukte boliger fiyat endeksi, tablo 07221 (src/data/boligpriser.json).
+// SSB'nin 11 bölgesi fylkeye oturmadığı için harita yok, sıralı çubuk (tasarım §8). Tavsiye ve tahmin yok.
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import KiNotat from '../components/KiNotat.astro';
+import Base from '../layouts/Base.astro';
+import Symbol from '../components/Symbol.astro';
+import Brodsmuler from '../components/Brodsmuler.astro';
+import StoryRow from '../components/StoryRow.astro';
+import Linjegraf from '../components/data/Linjegraf.astro';
+import Stolpegraf from '../components/data/Stolpegraf.astro';
+import DataKilde from '../components/data/DataKilde.astro';
+import { tallTekst } from '../lib/graf.mjs';
+import { tidTekst } from '../lib/data';
+import { GAMMEL_KVARTAL_MS, dataGammel, datasideLd, kvartalKort, kvartalTekst, relaterteSaker } from '../lib/datasider';
+import { SITE_URL } from '../lib/seo';
+import data from '../data/boligpriser.json';
+
+const d = data as typeof data & { regioner: { kode: string; navn: string; indeks: number | null; endringAar: number | null }[] };
+const pageUrl = `${SITE_URL}/boligpriser/`;
+const tittel = 'Boligprisene nå';
+const kvartal = kvartalTekst(d.sisteKvartal);
+const landet = d.regioner.find((r) => r.kode === 'TOTAL');
+const regioner = d.regioner.filter((r) => r.kode !== 'TOTAL');
+const medTall = regioner.filter((r) => typeof r.endringAar === 'number') as { navn: string; endringAar: number }[];
+const sterkest = [...medTall].sort((a, b) => b.endringAar - a.endringAar)[0];
+const svakest = [...medTall].sort((a, b) => a.endringAar - b.endringAar)[0];
+const aar = landet?.endringAar;
+const pst = (v: number | null | undefined) => (typeof v === 'number' ? `${tallTekst(v)} %` : '–');
+const retning = (v: number) => (v >= 0 ? 'høyere' : 'lavere');
+const description =
+  typeof aar === 'number'
+    ? `Brukte boliger var ${tallTekst(Math.abs(aar))} prosent ${retning(aar)} i pris i ${kvartal} enn ett år før, viser SSB. Se utviklingen i hele landet og i elleve regioner.`
+    : `Prisutviklingen for brukte boliger i hele landet og i elleve regioner, fra SSB.`;
+const { sti, jsonLd } = datasideLd({
+  url: pageUrl,
+  tittel,
+  description,
+  datasettNavn: 'Prisindeks for brukte boliger, hele landet og regioner',
+  datasettBeskrivelse: 'Prisindeks for brukte boliger (2015 = 100) og endring fra samme kvartal året før, fra SSB tabell 07221.',
+  kildeData: 'https://www.ssb.no/statbank/table/07221',
+  lisensUrl: d.kilde.lisensUrl,
+  periode: `${d.serie[0].kvartal}/${d.sisteKvartal}`,
+  oppdatert: d.oppdatert ?? d.hentet,
+});
+const saker = await relaterteSaker(/bolig|husleie|eiendom/i);
+---
+
+<Base title={tittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="data" />{tittel}</h1>
+    <p class="page-intro">
+      Statistisk sentralbyrå regner ut hvordan prisene på brukte boliger endrer seg, kvartal for kvartal. Her ser du hvor
+      mye prisene har endret seg det siste året, i hele landet og der du bor.
+    </p>
+  </header>
+
+  <section class="data-tall" aria-labelledby="siste">
+    <h2 class="band" id="siste">Endring siste år, hele landet</h2>
+    <p class="data-verdi">{pst(aar)}</p>
+    {
+      typeof aar === 'number' && (
+        <p class="varsel-setning">
+          Brukte boliger var {tallTekst(Math.abs(aar))} prosent {retning(aar)} i pris i {kvartal} enn i samme kvartal året
+          før.
+          {sterkest && svakest && sterkest.navn !== svakest.navn && (
+            <>
+              {' '}Prisene {sterkest.endringAar >= 0 ? 'steg mest' : 'falt minst'} i {sterkest.navn} ({pst(sterkest.endringAar)})
+              {svakest.endringAar >= 0 ? ` og minst i ${svakest.navn}` : ` og falt mest i ${svakest.navn}`} ({pst(svakest.endringAar)}).
+            </>
+          )}
+        </p>
+      )
+    }
+    <dl class="data-fakta">
+      <div>
+        <dt>Gjelder</dt>
+        <dd>{kvartal}</dd>
+      </div>
+      <div>
+        <dt>Publisert av SSB</dt>
+        <dd>{d.oppdatert ? tidTekst(d.oppdatert) : '–'}</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="day" aria-labelledby="regioner">
+    <h2 class="band" id="regioner">Region for region</h2>
+    <Stolpegraf
+      rader={d.regioner.map((r) => ({ navn: r.navn, verdi: r.endringAar, fremhev: r.kode === 'TOTAL' }))}
+      enhet={`Endring fra samme kvartal året før, prosent, ${kvartal}`}
+      beskrivelse={`Endring i prisene på brukte boliger siste år per region, ${kvartal}`}
+    />
+  </section>
+
+  <section class="day" aria-labelledby="utvikling">
+    <h2 class="band" id="utvikling">De siste tre årene</h2>
+    <Linjegraf
+      serier={[{ navn: 'Hele landet', punkter: d.serie.map((p) => ({ etikett: kvartalKort(p.kvartal), verdi: p.indeks })) }]}
+      enhet="Prisindeks for brukte boliger, hele landet (2015 = 100)"
+      beskrivelse={`Prisindeks for brukte boliger i hele landet de siste tre årene`}
+    />
+    <details class="data-detaljer">
+      <summary>Tabell</summary>
+      <div class="prose data-tabell">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Region</th>
+              <th scope="col">Indeks</th>
+              <th scope="col">Endring siste år</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              d.regioner.map((r) => (
+                <tr>
+                  <td>{r.navn}</td>
+                  <td>{typeof r.indeks === 'number' ? tallTekst(r.indeks) : '–'}</td>
+                  <td>{pst(r.endringAar)}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+
+  <section class="day" aria-labelledby="hva-maler">
+    <h2 class="band" id="hva-maler">Hva måler boligprisindeksen?</h2>
+    <div class="prose">
+      <p>
+        Indeksen bygger på boliger som er solgt i perioden, og tar hensyn til at boligene er ulike i størrelse, type og
+        beliggenhet. Den viser derfor hvordan prisen på en sammenlignbar bolig endrer seg, ikke hva en gjennomsnittsbolig
+        koster.
+      </p>
+      <p>
+        Indeksen er satt til hundre i 2015. Endringen siste år sammenligner kvartalet med samme kvartal året før, slik at
+        sesongsvingninger ikke påvirker tallet.
+      </p>
+    </div>
+  </section>
+
+  <DataKilde
+    kilde={{ navn: d.kilde.navn, url: 'https://www.ssb.no/priser-og-prisindekser/boligpriser-og-boligprisindekser/statistikk/prisindeks-for-brukte-boliger', data: d.kilde.data, lisens: d.kilde.lisens, lisensUrl: d.kilde.lisensUrl }}
+    hentet={d.hentet}
+    oppdatert={d.oppdatert}
+    gammel={dataGammel(d.hentet, d.oppdatert, GAMMEL_KVARTAL_MS)}
+    merknad="Tallene er fra SSB tabell 07221 og gjelder alle boligtyper."
+  />
+
+  {
+    saker.length > 0 && (
+      <section class="related" aria-labelledby="saker">
+        <h2 class="band" id="saker">Saker om tall fra SSB</h2>
+        {saker.map((h) => <StoryRow haber={h} dato />)}
+      </section>
+    )
+  }
+  <p class="tema-alle"><a href="/tall/">Flere tall og data</a></p>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
+</Base>
