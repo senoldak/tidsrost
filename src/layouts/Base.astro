@@ -135,7 +135,7 @@ const [nameHead, nameTail] = SITE.name.split('ø');
           <a href="/" aria-current={current === '/' ? 'page' : undefined}>Forsiden</a>
           {
             harAnalyse && (
-              <a href={`/${ANALYSE.slug}/`} class={harForklart ? undefined : 'nav-forklart'} aria-current={current.startsWith(`/${ANALYSE.slug}`) ? 'page' : undefined}>
+              <a href={`/${ANALYSE.slug}/`} aria-current={current.startsWith(`/${ANALYSE.slug}`) ? 'page' : undefined}>
                 <Symbol kind="forklart" />
                 {ANALYSE.name}
               </a>
@@ -143,12 +143,21 @@ const [nameHead, nameTail] = SITE.name.split('ø');
           }
           {
             harForklart && (
-              <a href={`/${FORKLART.slug}/`} class="nav-forklart" aria-current={current.startsWith(`/${FORKLART.slug}`) ? 'page' : undefined}>
+              <a href={`/${FORKLART.slug}/`} aria-current={current.startsWith(`/${FORKLART.slug}`) ? 'page' : undefined}>
                 <Symbol kind="forklart" />
                 {FORKLART.name}
               </a>
             )
           }
+          {/* Veri sayfaları: /tall/ vitrini ve altı sayfa; redaksiyon grubunun sonunda, ayraç bundan sonra. */}
+          <a
+            href="/tall/"
+            class="nav-forklart"
+            aria-current={['/tall', '/prisstigning', '/boligpriser', '/arbeidsledighet', '/styringsrenten', '/farevarsler'].some((y) => current.startsWith(y)) ? 'page' : undefined}
+          >
+            <Symbol kind="data" />
+            Tall
+          </a>
           {
             categories.map((c) => (
               <a href={`/kategori/${c.slug}/`} aria-current={current.startsWith(`/kategori/${c.slug}`) ? 'page' : undefined}>
