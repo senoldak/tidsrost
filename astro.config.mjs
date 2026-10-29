@@ -105,6 +105,7 @@ for (const [yol, fil, alan] of [
   ['/prisomregner/', 'kpi-historisk.json'],
   ['/navn/', 'navn.json'],
   ['/lonn/', 'lonn.json'],
+  ['/kommune/', 'kommuner.json'],
   ['/farevarsler/', 'varselarkiv.json', 'lopende'],
   ['/snoskredvarsel/', 'snoskred.json'],
   ['/flomvarsel/', 'flom.json'],
@@ -125,6 +126,8 @@ const siteHaritasi = sitemap({
     // Ukesider er summen av dagssidene (noindex).
     if (yol.startsWith('/arkiv/uke/')) return false;
     if (yol.startsWith('/404') || kisaHaberler.has(yol)) return false;
+    // Utrulling: KOMMUNE_SIDER_INDEKS=0 holder /kommune/<kommune>/ utenfor kartet (sidene får googlebot noindex); /kommune/ selv står.
+    if (process.env.KOMMUNE_SIDER_INDEKS === '0' && /^\/kommune\/[^/]+\/$/.test(yol)) return false;
     const arkiv = yol.match(/^\/arkiv\/(\d{4}-\d{2}-\d{2})\/$/)?.[1];
     if (arkiv && (arkivDager.get(arkiv)?.antall ?? 0) < ARKIV_TERSKEL) return false;
     // Kategorinin 2. ve sonraki sayfaları (/kategori/<slug>/2/) yalnız haber varsa üretilir; haritaya girer.

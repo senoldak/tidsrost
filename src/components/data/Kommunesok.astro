@@ -1,0 +1,133 @@
+---
+// Kommunesøk: kommuner fra /kommune/sok.json (hentes første gang feltet får fokus). Hver kommune har egen side.
+// Søket treffer også uten æ, ø og å (for eksempel «alesund» for Ålesund). Resultatene lages med textContent (ingen innerHTML). CSP-vennlig: pakket script, ingen stil-attributt.
+---
+
+<div class="kommunesok" data-kilde="/kommune/sok.json">
+  <label for="kommunesok-felt" class="kommunesok-label">Søk etter kommune</label>
+  <input id="kommunesok-felt" class="kommunesok-felt" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="For eksempel Bergen eller Kautokeino" />
+  <p class="kommunesok-status data-merknad" role="status" aria-live="polite"></p>
+  <ul class="kommunesok-liste"></ul>
+</div>
+
+<script>
+  import { lagSlug } from '../../lib/slug.mjs';
+  type Post = { n: string; f: string; p: number | null; s: string };
+  const rot = document.querySelector<HTMLElement>('.kommunesok');
+  if (rot) {
+    const felt = rot.querySelector<HTMLInputElement>('.kommunesok-felt')!;
+    const liste = rot.querySelector<HTMLUListElement>('.kommunesok-liste')!;
+    const status = rot.querySelector<HTMLElement>('.kommunesok-status')!;
+    let poster: Post[] | null = null;
+    let laster: Promise<void> | null = null;
+
+    const normaliser = (t: string) => t.trim().toLocaleLowerCase('nb');
+
+    async function last() {
+      if (poster) return;
+      laster ??= fetch(rot!.dataset.kilde!)
+        .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+        .then((j: Post[]) => {
+          poster = j;
+        })
+        .catch(() => {
+          laster = null;
+          status.textContent = 'Kunne ikke laste kommunelisten. Prøv igjen senere.';
+        });
+      await laster;
+    }
+
+    function vis() {
+      liste.replaceChildren();
+      const q = normaliser(felt.value);
+      if (!q || !poster) {
+        if (!q) status.textContent = '';
+        return;
+      }
+      const qs = lagSlug(q);
+      const treff = poster
+        .map((p) => {
+          const n = normaliser(p.n);
+          const ns = lagSlug(p.n);
+          const rang = n === q ? 0 : n.startsWith(q) ? 1 : n.includes(q) ? 2 : qs && ns.includes(qs) ? 3 : 4;
+          return { p, rang };
+        })
+        .filter((x) => x.rang < 4)
+        .sort((x, y) => x.rang - y.rang || (y.p.p ?? -1) - (x.p.p ?? -1) || x.p.n.localeCompare(y.p.n, 'nb'))
+        .slice(0, 12);
+      if (!treff.length) {
+        status.textContent = 'Ingen treff. Prøv en annen stavemåte, for eksempel bare første del av navnet.';
+        return;
+      }
+      status.textContent = treff.length === 12 ? 'Viser de første treffene.' : `${treff.length} treff`;
+      for (const { p } of treff) {
+        const li = document.createElement('li');
+        const navn = document.createElement('a');
+        navn.textContent = p.n;
+        navn.className = 'kommunesok-navn';
+        navn.href = `/kommune/${p.s}/`;
+        const info = document.createElement('span');
+        info.className = 'kommunesok-info';
+        info.textContent = p.p === null ? p.f : `${p.f}, ${p.p.toLocaleString('nb-NO')} innbyggere`;
+        li.append(navn, info);
+        liste.append(li);
+      }
+    }
+
+    felt.addEventListener('focus', () => void last());
+    felt.addEventListener('input', async () => {
+      await last();
+      vis();
+    });
+    rot.closest('form')?.addEventListener('submit', (e) => e.preventDefault());
+  }
+</script>
+
+<style is:global>
+  .kommunesok {
+    max-width: 640px;
+    font-family: var(--frame);
+  }
+  .kommunesok-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .kommunesok-felt {
+    width: 100%;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid var(--ink);
+    border-radius: 3px;
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+    font-size: 1rem;
+  }
+  .kommunesok-status {
+    min-height: 1.5em;
+    margin-top: 8px;
+  }
+  .kommunesok-liste {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .kommunesok-liste li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .kommunesok-navn {
+    font: 650 1.25rem/1.25 var(--read);
+    overflow-wrap: anywhere;
+  }
+  .kommunesok-info {
+    font: 500 0.875rem var(--frame);
+    color: var(--muted);
+  }
+</style>

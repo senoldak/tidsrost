@@ -18,6 +18,7 @@ import snoskredData from '../data/snoskred.json';
 import flomData from '../data/flom.json';
 import navnData from '../data/navn.json';
 import lonnData from '../data/lonn.json';
+import kommuneData from '../data/kommuner.json';
 import { dagNivaaer } from '../../scripts/data/nve.mjs';
 import { omregn } from '../lib/prisomregner.mjs';
 import { arbeidsdagerTotalt } from '../lib/helligdager.mjs';
@@ -80,6 +81,14 @@ const kort = [
     navn: 'Lønn etter yrke',
     verdi: alleYrker?.median ? `${alleYrker.median.toLocaleString('nb-NO')} kr` : '–',
     tekst: `Median månedslønn for alle yrker, november ${lonnData.sisteAar}. Søk etter yrke og se tall for kvinner og menn, sektor og utvikling.`,
+    kilde: 'SSB',
+    sym: 'data',
+  },
+  {
+    url: '/kommune/',
+    navn: 'Kommunene i tall',
+    verdi: `${kommuneData.kommuner.length.toLocaleString('nb-NO')} kommuner`,
+    tekst: `Folketall, alder, flytting, areal og inntekt for hver kommune, ${kommuneData.sisteAar}. Søk etter kommune og se tall og sammenligning med fylket og landet.`,
     kilde: 'SSB',
     sym: 'data',
   },

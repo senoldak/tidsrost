@@ -1,0 +1,218 @@
+---
+// /kommune/: oversikt over alle kommuner (SSB 07459, 06913, 11342, 06944; src/data/kommuner.json). Søk, folketall etter fylke
+// (Stolpegraf), de største kommunene, størst vekst og nedgang siden første år i serien, og alle kommuner ordnet etter fylke.
+// Hver kommune har egen side (scripts/data/ssb-kommune.mjs kommuneSider). Alle tall kommer fra dataene.
+import { jsonLdMetni } from '../../lib/json-ld.mjs';
+import KiNotat from '../../components/KiNotat.astro';
+import Base from '../../layouts/Base.astro';
+import Symbol from '../../components/Symbol.astro';
+import Brodsmuler from '../../components/Brodsmuler.astro';
+import Kommunesok from '../../components/data/Kommunesok.astro';
+import Stolpegraf from '../../components/data/Stolpegraf.astro';
+import DataKilde from '../../components/data/DataKilde.astro';
+import { GAMMEL_MAANED_MS, dataGammel, datasideLd } from '../../lib/datasider';
+import { SITE_URL } from '../../lib/seo';
+import { kommuneSider } from '../../../scripts/data/ssb-kommune.mjs';
+import { utvikling } from '../../lib/kommune-tekst.mjs';
+import data from '../../data/kommuner.json';
+
+// Vekst og nedgang rangeres bare blant kommuner over denne grensen: i de minste kommunene gir få personer store utslag.
+const MIN_INNBYGGERE = 1000;
+const ANTALL = 10;
+
+type K = { kode: string; navn: string; fylke: string; folkemengde: number | null; serie10: Record<string, number> };
+const pageUrl = `${SITE_URL}/kommune/`;
+const tittel = 'Kommunene i tall';
+const seoTittel = 'Kommunene i Norge: folketall og nøkkeltall';
+const nb = (v: number) => v.toLocaleString('nb-NO');
+const prosent = (p: number) => `${p > 0 ? '+' : p < 0 ? '−' : ''}${Math.abs(p).toLocaleString('nb-NO', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} %`;
+const kommuner = data.kommuner as K[];
+const fylker = data.fylker as Record<string, { navn: string; folkemengde: number | null }>;
+const sider = kommuneSider(data);
+const slugFor = new Map(sider.map((s) => [s.kode, s.slug]));
+const antall = kommuner.length;
+const hela = utvikling(data.land.serie10);
+const fra = hela?.fra ?? data.sisteAar;
+
+const storst = [...kommuner].sort((a, b) => (b.folkemengde ?? 0) - (a.folkemengde ?? 0)).slice(0, ANTALL);
+const medVekst = kommuner
+  .filter((k) => (k.folkemengde ?? 0) >= MIN_INNBYGGERE)
+  .map((k) => ({ k, u: hela ? utvikling(k.serie10, hela.fra, hela.til) : null }))
+  .filter((x): x is { k: K; u: NonNullable<typeof x.u> } => x.u !== null && x.u.pst !== null);
+const vekst = [...medVekst].sort((a, b) => (b.u.pst as number) - (a.u.pst as number)).slice(0, ANTALL);
+const nedgang = [...medVekst].sort((a, b) => (a.u.pst as number) - (b.u.pst as number)).slice(0, ANTALL);
+
+const fylkeListe = Object.entries(fylker)
+  .map(([kode, f]) => ({ kode, navn: f.navn, folkemengde: f.folkemengde, kommuner: sider.filter((s) => s.fylke === kode) }))
+  .sort((a, b) => a.navn.localeCompare(b.navn, 'nb'));
+const fylkeGraf = fylkeListe.map((f) => ({ navn: f.navn, verdi: f.folkemengde }));
+
+const description = `Folketall, alder, flytting, areal og inntekt for ${nb(antall)} kommuner fra SSB. Søk etter kommune, se de største og de som vokser mest, og finn kommunene i hvert fylke.`;
+if (description.length < 120 || description.length > 160) throw new Error(`/kommune/: beskrivelse ${description.length} tegn (120–160)`);
+if (`${seoTittel} | tidsrøst`.length > 60) throw new Error('/kommune/: tittel over 60 tegn');
+
+const { sti, jsonLd } = datasideLd({
+  url: pageUrl,
+  tittel,
+  description,
+  datasettNavn: 'Folketall og nøkkeltall for kommunene i Norge',
+  datasettBeskrivelse: `Folketall fra ${fra} til ${data.sisteAar}, aldersfordeling, fødsler, dødsfall og flytting, areal og median husholdningsinntekt etter skatt for ${antall} kommuner, fra SSB tabell 07459, 06913, 11342 og 06944.`,
+  kildeData: 'https://www.ssb.no/statbank/table/06913',
+  lisensUrl: data.kilde.lisensUrl,
+  periode: `${fra}/${data.sisteAar}`,
+  oppdatert: data.oppdatert ?? data.hentet,
+});
+---
+
+<Base title={seoTittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="data" />{tittel}</h1>
+    <p class="page-intro">
+      Statistisk sentralbyrå (SSB) fører tall for folketall, alder, flytting og inntekt i alle landets kommuner. Her har hver av de {nb(antall)} kommunene en egen side, og kommunene er ordnet etter fylke. Folketallet gjelder 1. januar {data.sisteAar}.
+    </p>
+  </header>
+
+  <section class="day" aria-labelledby="sok">
+    <h2 class="band" id="sok">Søk etter kommune</h2>
+    <Kommunesok />
+    <noscript><p class="data-merknad">Søket krever JavaScript. Listene under fungerer uten.</p></noscript>
+  </section>
+
+  <section class="day" aria-labelledby="fylker">
+    <h2 class="band" id="fylker">Folketall etter fylke</h2>
+    <p class="data-merknad">Antall innbyggere 1. januar {data.sisteAar}.</p>
+    <Stolpegraf rader={fylkeGraf} enhet={`Innbyggere etter fylke, 1. januar ${data.sisteAar}`} beskrivelse={`Folketall i hvert fylke 1. januar ${data.sisteAar}`} desimaler={0} />
+  </section>
+
+  <section class="day" aria-labelledby="storst">
+    <h2 class="band" id="storst">De {ANTALL} største kommunene</h2>
+    <div class="prose data-tabell">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Kommune</th>
+            <th scope="col">Fylke</th>
+            <th scope="col">Innbyggere</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            storst.map((k) => (
+              <tr>
+                <td><a href={`/kommune/${slugFor.get(k.kode)}/`}>{k.navn}</a></td>
+                <td>{fylker[k.fylke].navn}</td>
+                <td>{k.folkemengde === null ? '–' : nb(k.folkemengde)}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  {
+    [
+      ['vekst', `Størst vekst siden ${fra}`, 'Prosentvis endring i folketallet. Bare kommuner med minst', vekst],
+      ['nedgang', `Størst nedgang siden ${fra}`, 'Prosentvis endring i folketallet. Bare kommuner med minst', nedgang],
+    ].map(([id, overskrift, forklaring, liste]) => (
+      <section class="day" aria-labelledby={id as string}>
+        <h2 class="band" id={id as string}>{overskrift as string}</h2>
+        <p class="data-merknad">{forklaring as string} {nb(MIN_INNBYGGERE)} innbyggere er med.</p>
+        <div class="prose data-tabell">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Kommune</th>
+                <th scope="col">Fylke</th>
+                <th scope="col">Innbyggere</th>
+                <th scope="col">Endring</th>
+              </tr>
+            </thead>
+            <tbody>
+              {(liste as typeof vekst).map(({ k, u }) => (
+                <tr>
+                  <td><a href={`/kommune/${slugFor.get(k.kode)}/`}>{k.navn}</a></td>
+                  <td>{fylker[k.fylke].navn}</td>
+                  <td>{k.folkemengde === null ? '–' : nb(k.folkemengde)}</td>
+                  <td>{prosent(u.pst as number)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="day" aria-labelledby="alle">
+    <h2 class="band" id="alle">Alle kommunene, ordnet etter fylke</h2>
+    <p class="kommune-fylkenav">
+      {fylkeListe.map((f) => <a href={`#fylke-${f.kode}`}>{f.navn}</a>)}
+    </p>
+    {
+      fylkeListe.map((f) => (
+        <>
+          <h3 class="varsel-gruppe-tittel" id={`fylke-${f.kode}`}>{f.navn}</h3>
+          <ul class="kommune-alle">
+            {f.kommuner.map((s) => (
+              <li>
+                <a href={`/kommune/${s.slug}/`}>{s.navn}</a>
+              </li>
+            ))}
+          </ul>
+        </>
+      ))
+    }
+  </section>
+
+  <section class="day" aria-labelledby="slik">
+    <h2 class="band" id="slik">Slik er tallene laget</h2>
+    <div class="prose">
+      <p>
+        Folketallet er antall bosatte personer 1. januar. Fødsler, dødsfall og flytting gjelder hele kalenderåret før. Aldersgruppene er regnet ut fra SSBs tall for hvert alderstrinn. Arealet omfatter også ferskvann, og innbyggere per kvadratkilometer er regnet mot landarealet.
+      </p>
+      <p>
+        Inntekten er median husholdningsinntekt etter skatt for alle husholdninger. Halvparten av husholdningene har mer, og halvparten har mindre. Inntektstallene kommer ett til to år senere enn folketallet.
+      </p>
+      <p>
+        Kommuner er slått sammen og delt flere ganger. For tidsserien bruker SSB kommunene slik de er inndelt nå, og legger sammen tallene for de tidligere kommunene. Tall for kommuner som har skiftet grenser, er derfor ikke helt sammenlignbare bakover i tid.
+      </p>
+      <p>Vekst og nedgang er endringen i folketallet fra {fra} til {data.sisteAar}, regnet i prosent av folketallet i {fra}.</p>
+    </div>
+  </section>
+
+  <DataKilde
+    kilde={{ navn: data.kilde.navn, url: 'https://www.ssb.no/befolkning/folketall/statistikk/befolkning', data: data.kilde.data, lisens: data.kilde.lisens, lisensUrl: data.kilde.lisensUrl }}
+    hentet={data.hentet}
+    oppdatert={data.oppdatert}
+    gammel={dataGammel(data.hentet, data.oppdatert, GAMMEL_MAANED_MS * 14)}
+    merknad="Tallene er fra SSB tabell 07459, 06913, 11342 og 06944."
+  />
+
+  <p class="tema-alle"><a href="/tall/">Flere tall og data</a></p>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
+</Base>
+
+<style>
+  .kommune-fylkenav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin: 0 0 calc(var(--u) * 2);
+    font: 600 0.9375rem var(--frame);
+  }
+  .kommune-alle {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: var(--frame);
+  }
+  .kommune-alle a {
+    overflow-wrap: anywhere;
+  }
+</style>

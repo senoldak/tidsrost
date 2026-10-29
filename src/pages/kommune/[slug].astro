@@ -1,0 +1,355 @@
+---
+// /kommune/<kommune>/: én kommune (alle gjeldende kommuner har side, scripts/data/ssb-kommune.mjs kommuneSider). Alt kommer fra
+// src/data/kommuner.json: folketall, ti års utvikling (Linjegraf), aldersfordeling mot landet (Stolpegraf), fødsler og flytting,
+// areal, inntekt, plass blant kommunene og setninger regnet ut av tallene (src/lib/kommune-tekst.mjs). Ingen vurderinger.
+// KOMMUNE_SIDER_INDEKS=0: sidene står ikke i områdekartet og får googlebot noindex (default: indeksert).
+import { jsonLdMetni } from '../../lib/json-ld.mjs';
+import KiNotat from '../../components/KiNotat.astro';
+import Base from '../../layouts/Base.astro';
+import Symbol from '../../components/Symbol.astro';
+import Brodsmuler from '../../components/Brodsmuler.astro';
+import Linjegraf from '../../components/data/Linjegraf.astro';
+import Stolpegraf from '../../components/data/Stolpegraf.astro';
+import DataKilde from '../../components/data/DataKilde.astro';
+import { GAMMEL_MAANED_MS, dataGammel, datasideLd } from '../../lib/datasider';
+import { SITE_URL, breadcrumbs } from '../../lib/seo';
+import { ALDER, kommuneBeskrivelse, kommuneRang, kommuneSetninger, kommuneTittel, medSuffiks, naboer, perTusen, rangRader, utvikling } from '../../lib/kommune-tekst.mjs';
+import { kommuneSider } from '../../../scripts/data/ssb-kommune.mjs';
+import data from '../../data/kommuner.json';
+
+export function getStaticPaths() {
+  return kommuneSider(data).map((s) => ({ params: { slug: s.slug } }));
+}
+
+type Rec = Record<string, number>;
+type Endring = { aar: string | null; fodte: number | null; dode: number | null; fodselsoverskudd: number | null; innflytting: number | null; utflytting: number | null; netto: number | null; tilvekst: number | null };
+type Post = { navn: string; folkemengde: number | null; serie10: Rec; andel: { barn: number; voksne: number; eldre: number } | null; endring: Endring; areal: number | null; landareal: number | null; tetthet: number | null; inntektMedian: number | null };
+type K = Post & { kode: string; fylke: string };
+
+const sider = kommuneSider(data);
+const side = sider.find((s) => s.slug === Astro.params.slug)!;
+const k = data.kommuner.find((x) => x.kode === side.kode)! as unknown as K;
+const fylke = (data.fylker as unknown as Record<string, Post>)[k.fylke];
+const land = data.land as unknown as Post;
+const rang = kommuneRang(data as never).get(k.kode)!;
+const nb = (v: number) => v.toLocaleString('nb-NO');
+const vis = (v: number | null) => (typeof v === 'number' ? nb(v) : '–');
+const dec = (v: number | null, d = 1) => (typeof v === 'number' ? v.toLocaleString('nb-NO', { minimumFractionDigits: d, maximumFractionDigits: d }) : '–');
+const fortegn = (v: number | null) => (typeof v === 'number' ? `${v > 0 ? '+' : v < 0 ? '−' : ''}${nb(Math.abs(v))}` : '–');
+
+const u = utvikling(k.serie10);
+const fra = u?.fra ?? data.sisteAar;
+const pageUrl = `${SITE_URL}/kommune/${side.slug}/`;
+const tittel = medSuffiks(k.navn);
+const seoTittel = kommuneTittel(k.navn);
+const description = kommuneBeskrivelse(k, data.sisteAar, rang.land, fra);
+if (!description) throw new Error(`/kommune/${side.slug}/: beskrivelse utenfor 120–160 tegn`);
+if (`${seoTittel} | tidsrøst`.length > 60) throw new Error(`/kommune/${side.slug}/: tittel over 60 tegn`);
+
+const setninger = kommuneSetninger(k, fylke, land, rang.fylke, rang.land, data.sisteAar, data.inntektAar ?? data.sisteAar);
+const rader = rangRader(k, rang.land, fra);
+const serieAar = Object.keys(k.serie10).sort();
+const lik = naboer(data as never, sider, k.kode, 3);
+const e = k.endring;
+const folkStart = e.aar ? k.serie10[e.aar] : undefined;
+const landStart = e.aar ? land.serie10[e.aar] : undefined;
+const bevegelse: [string, number | null, boolean][] = [
+  ['Levendefødte', e.fodte, false],
+  ['Døde', e.dode, false],
+  ['Fødselsoverskudd', e.fodselsoverskudd, true],
+  ['Innflyttinger', e.innflytting, false],
+  ['Utflyttinger', e.utflytting, false],
+  ['Nettoinnflytting', e.netto, true],
+  ['Folketilvekst', e.tilvekst, true],
+];
+const landE = land.endring as unknown as Record<string, number | null>;
+const landFelt = ['fodte', 'dode', 'fodselsoverskudd', 'innflytting', 'utflytting', 'netto', 'tilvekst'];
+const aldersrader = k.andel
+  ? [
+      { navn: `0 til ${ALDER.barnTil} år, kommunen`, verdi: k.andel.barn },
+      { navn: `0 til ${ALDER.barnTil} år, hele landet`, verdi: land.andel?.barn ?? null, fremhev: true },
+      { navn: `${ALDER.voksneFra} til ${ALDER.voksneTil} år, kommunen`, verdi: k.andel.voksne },
+      { navn: `${ALDER.voksneFra} til ${ALDER.voksneTil} år, hele landet`, verdi: land.andel?.voksne ?? null, fremhev: true },
+      { navn: `${ALDER.eldreFra} år og eldre, kommunen`, verdi: k.andel.eldre },
+      { navn: `${ALDER.eldreFra} år og eldre, hele landet`, verdi: land.andel?.eldre ?? null, fremhev: true },
+    ]
+  : null;
+
+const { sti: sti3, jsonLd } = datasideLd({
+  url: pageUrl,
+  tittel,
+  description,
+  datasettNavn: `Folketall og nøkkeltall for ${tittel}`,
+  datasettBeskrivelse: `Folketall fra ${fra} til ${data.sisteAar}, aldersfordeling, fødsler, dødsfall og flytting, areal og median husholdningsinntekt etter skatt for ${tittel}, fra SSB tabell 07459, 06913, 11342 og 06944.`,
+  kildeData: 'https://www.ssb.no/statbank/table/06913',
+  lisensUrl: data.kilde.lisensUrl,
+  periode: `${fra}/${data.sisteAar}`,
+  oppdatert: data.oppdatert ?? data.hentet,
+});
+// Brødsmulen har ett ledd mer enn de andre datasidene (Kommunene i tall).
+const sti = [sti3[0], sti3[1], { name: 'Kommunene i tall', url: `${SITE_URL}/kommune/` }, { name: k.navn, url: pageUrl }];
+(jsonLd['@graph'] as unknown[])[2] = breadcrumbs(sti);
+// Utrulling: KOMMUNE_SIDER_INDEKS=0 holder alle kommunesidene utenfor Google (og utenfor områdekartet, astro.config.mjs).
+const googleNoindex = process.env.KOMMUNE_SIDER_INDEKS === '0';
+---
+
+<Base title={seoTittel} description={description} googleNoindex={googleNoindex}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="data" />{tittel}</h1>
+    <p class="page-intro">
+      {k.navn} hører til <a href={`/kommune/#fylke-${k.fylke}`}>{fylke.navn}</a>. Folketallet var {vis(k.folkemengde)} 1. januar {data.sisteAar}, ifølge SSB.
+    </p>
+  </header>
+
+  <section class="day" aria-labelledby="tall">
+    <h2 class="band" id="tall">Kommunen i tall</h2>
+    <dl class="data-fakta">
+      <div>
+        <dt>Innbyggere 1. januar {data.sisteAar}</dt>
+        <dd>{vis(k.folkemengde)}</dd>
+      </div>
+      {
+        u && (
+          <div>
+            <dt>Endring i folketallet {u.fra} til {u.til}</dt>
+            <dd>
+              {fortegn(u.abs)} personer{u.pst !== null && <> ({dec(Math.abs(u.pst))} %)</>}
+            </dd>
+          </div>
+        )
+      }
+      {
+        k.andel && (
+          <div>
+            <dt>Andel {ALDER.eldreFra} år og eldre</dt>
+            <dd>{dec(k.andel.eldre)} %</dd>
+          </div>
+        )
+      }
+      {
+        typeof e.netto === 'number' && (
+          <div>
+            <dt>Nettoinnflytting {e.aar}</dt>
+            <dd>{fortegn(e.netto)} personer</dd>
+          </div>
+        )
+      }
+      {
+        k.areal !== null && (
+          <div>
+            <dt>Areal</dt>
+            <dd>{nb(k.areal)} km²</dd>
+          </div>
+        )
+      }
+      {
+        k.tetthet !== null && (
+          <div>
+            <dt>Innbyggere per km² landareal</dt>
+            <dd>{dec(k.tetthet, k.tetthet < 10 ? 1 : 0)}</dd>
+          </div>
+        )
+      }
+      {
+        k.inntektMedian !== null && (
+          <div>
+            <dt>Median husholdningsinntekt etter skatt, {data.inntektAar}</dt>
+            <dd>{nb(k.inntektMedian)} kr</dd>
+          </div>
+        )
+      }
+    </dl>
+    <div class="prose kommune-setninger">
+      {setninger.map((s) => <p>{s}</p>)}
+    </div>
+  </section>
+
+  {
+    serieAar.length >= 3 && (
+      <section class="day" aria-labelledby="utvikling">
+        <h2 class="band" id="utvikling">Folketallet siden {serieAar[0]}</h2>
+        <Linjegraf
+          serier={[{ navn: k.navn, punkter: serieAar.map((a) => ({ etikett: a, verdi: k.serie10[a] })) }]}
+          enhet={`Innbyggere 1. januar, ${k.navn}`}
+          beskrivelse={`Folketall i ${k.navn}, ${serieAar[0]} til ${serieAar.at(-1)}`}
+          desimaler={0}
+        />
+        <div class="prose data-tabell kommune-enkel">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">1. januar</th>
+                <th scope="col">Innbyggere</th>
+                <th scope="col">Endring fra året før</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[...serieAar].reverse().map((a) => {
+                const f = k.serie10[String(Number(a) - 1)];
+                return (
+                  <tr>
+                    <td>{a}</td>
+                    <td>{nb(k.serie10[a])}</td>
+                    <td>{typeof f === 'number' ? fortegn(k.serie10[a] - f) : '–'}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    aldersrader && (
+      <section class="day" aria-labelledby="alder">
+        <h2 class="band" id="alder">Alder</h2>
+        <p class="data-merknad">Andel av innbyggerne i prosent. Tallene for hele landet er uthevet.</p>
+        <Stolpegraf rader={aldersrader} enhet={`Andel av befolkningen etter alder, ${data.sisteAar}`} beskrivelse={`Aldersfordelingen i ${k.navn} sammenlignet med hele landet i ${data.sisteAar}`} desimaler={1} sorter={false} />
+      </section>
+    )
+  }
+
+  {
+    e.aar && bevegelse.some(([, v]) => typeof v === 'number') && (
+      <section class="day" aria-labelledby="flytting">
+        <h2 class="band" id="flytting">Fødsler, dødsfall og flytting {e.aar}</h2>
+        <div class="prose data-tabell">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">{e.aar}</th>
+                <th scope="col">Personer</th>
+                <th scope="col">Per 1 000 innbyggere</th>
+                <th scope="col">Hele landet per 1 000</th>
+              </tr>
+            </thead>
+            <tbody>
+              {bevegelse.map(([navn, v], i) => {
+                const pk = perTusen(v, folkStart);
+                const pl = perTusen(landE[landFelt[i]], landStart);
+                return (
+                  <tr>
+                    <td>{navn}</td>
+                    <td>{fortegn(v)}</td>
+                    <td>{pk === null ? '–' : dec(pk)}</td>
+                    <td>{pl === null ? '–' : dec(pl)}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+        <p class="data-merknad">Streken betyr at SSB ikke oppgir tallet. Per 1 000 er regnet mot folketallet 1. januar {e.aar}.</p>
+      </section>
+    )
+  }
+
+  {
+    rader.length > 0 && (
+      <section class="day" aria-labelledby="plass">
+        <h2 class="band" id="plass">Plass blant kommunene</h2>
+        <p class="data-merknad">Plass 1 har den høyeste verdien. Hver rad rangerer de kommunene som har tall.</p>
+        <div class="prose data-tabell">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Mål</th>
+                <th scope="col">{k.navn}</th>
+                <th scope="col">Plass</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rader.map((r) => (
+                <tr>
+                  <td>{r.navn}</td>
+                  <td>{r.verdi}</td>
+                  <td>
+                    {r.plass} av {r.av}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="day" aria-labelledby="slik">
+    <h2 class="band" id="slik">Om tallene</h2>
+    <div class="prose">
+      <p>
+        Folketallet er antall bosatte personer 1. januar. Fødsler, dødsfall og flytting gjelder hele kalenderåret før. Arealet omfatter også ferskvann, og innbyggere per kvadratkilometer er regnet mot landarealet.
+      </p>
+      <p>
+        Inntekten er median husholdningsinntekt etter skatt for alle husholdninger. Halvparten av husholdningene har mer, og halvparten har mindre. Der kommuner er slått sammen, bruker SSB summen av de tidligere kommunene i tidsserien.
+      </p>
+    </div>
+  </section>
+
+  <DataKilde
+    kilde={{ navn: data.kilde.navn, url: 'https://www.ssb.no/befolkning/folketall/statistikk/befolkning', data: data.kilde.data, lisens: data.kilde.lisens, lisensUrl: data.kilde.lisensUrl }}
+    hentet={data.hentet}
+    oppdatert={data.oppdatert}
+    gammel={dataGammel(data.hentet, data.oppdatert, GAMMEL_MAANED_MS * 14)}
+    merknad="Tallene er fra SSB tabell 07459, 06913, 11342 og 06944."
+  />
+
+  {
+    lik.length > 0 && (
+      <section class="day" aria-labelledby="flere">
+        <h2 class="band" id="flere">Flere kommuner i {fylke.navn}</h2>
+        <p class="data-merknad">Kommunene rett over og under {k.navn} i folketall.</p>
+        <ul class="kommune-naboer">
+          {lik.map((s) => (
+            <li>
+              <a href={`/kommune/${s.slug}/`}>{s.navn}</a>
+              <span class="kommune-nabotall">{vis(s.folkemengde)} innbyggere</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  <p class="tema-alle">
+    <a href={`/kommune/#fylke-${k.fylke}`}>Alle kommuner i {fylke.navn}</a> · <a href="/kommune/">Kommunene i tall</a> · <a href="/farevarsler/">Farevarsler</a> · <a href="/boligpriser/">Boligpriser</a> · <a href="/tall/">Flere tall og data</a>
+  </p>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
+</Base>
+
+<style>
+  /* Lange doble navn («Storfjord - Omasvuotna - Omasvuono») og ord uten bruddpunkt må kunne brytes på telefon. */
+  .page-title {
+    overflow-wrap: anywhere;
+    hyphens: auto;
+    font-size: clamp(1.75rem, 7vw, 3.5rem);
+  }
+  .kommune-setninger {
+    margin-top: calc(var(--u) * 3);
+  }
+  .kommune-enkel {
+    max-width: 480px;
+  }
+  .kommune-naboer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font: 600 1.0625rem var(--read);
+  }
+  .kommune-naboer a {
+    overflow-wrap: anywhere;
+  }
+  .kommune-nabotall {
+    display: block;
+    font: 500 0.8125rem var(--frame);
+    color: var(--muted);
+  }
+</style>

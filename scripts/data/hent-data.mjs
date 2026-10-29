@@ -18,6 +18,7 @@ import { SSB_KILDE, ssbUrl } from './ssb.mjs';
 import { arbeidsledighet, boligpriser, kpiHistorisk, prisstigning } from './ssb-sider.mjs';
 import { komprimer, navnData } from './ssb-navn.mjs';
 import { komprimer as komprimerLonn, lonnData } from './ssb-lonn.mjs';
+import { kommuneData } from './ssb-kommune.mjs';
 import { birlestirMaaned, dagsTall, hendelser, nesteArkivmaaned, oppdaterLopende } from './varselarkiv.mjs';
 
 // Standartlar: acil durdurma açıksa veri sayfaları da güncellenmez.
@@ -151,6 +152,23 @@ const JOBBER = [
       const siste = JSON.parse(await hent(ssbUrl('11418', { ...basis, MaaleMetode: ['01', '02', '11', '051', '061'], Sektor: '*', Kjonn: '*', Tid: 'top(1)' }), 'application/json'));
       const serie = JSON.parse(await hent(ssbUrl('11418', { ...basis, MaaleMetode: '01', Sektor: 'ALLE', Kjonn: '0', Tid: '*' }), 'application/json'));
       return { kilde: SSB_KILDE, tabell: '11418', ...komprimerLonn(lonnData(siste, serie)) };
+    },
+  },
+  {
+    // Kommunene i tall (/kommune/): 07459 (alder, son yıl), 06913 (folketall + endringer, son 11 yıl), 11342 (areal), 06944 (inntekt, son yıl).
+    // Birleşen kommunelerin eski yılları yalnız codelist agg_KommSummerHist ile gelir (06913 ikinci istek, yalnız folketall).
+    // Yılda bir değişir, günde en çok bir kez denenir.
+    fil: 'kommuner.json',
+    kompakt: true,
+    aralikSaat: 24,
+    async lag() {
+      const json = async (url) => JSON.parse(await hent(url, 'application/json'));
+      const alder = await json(ssbUrl('07459', { Region: '*', Kjonn: '*', Alder: '*', ContentsCode: '*', Tid: 'top(1)' }));
+      const bef = await json(ssbUrl('06913', { Region: '*', ContentsCode: '*', Tid: 'top(11)' }));
+      const areal = await json(ssbUrl('11342', { Region: '*', ContentsCode: '*', Tid: 'top(1)' }));
+      const inntekt = await json(ssbUrl('06944', { Region: '*', HusholdType: '0000', ContentsCode: 'InntSkatt', Tid: 'top(1)' }));
+      const hist = await json(ssbUrl('06913', { Region: '*', ContentsCode: 'Folkemengde', Tid: 'top(11)' }) + '&codelist[Region]=agg_KommSummerHist');
+      return { kilde: SSB_KILDE, tabell: '07459, 06913, 11342, 06944', ...kommuneData(alder, bef, areal, inntekt, hist) };
     },
   },
   {
