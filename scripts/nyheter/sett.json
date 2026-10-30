@@ -6351,7 +6351,55 @@
     "medier:a0e1dcdd87df889b": "2026-10-30T13:01:43.266Z",
     "medier:8cecbfd9c7cfc87b": "2026-10-30T13:01:43.266Z",
     "medier:ab02c1fdc7234eb8": "2026-10-30T13:01:43.266Z",
-    "medier:1208bb7e4fe289cc": "2026-10-30T13:01:43.266Z"
+    "medier:1208bb7e4fe289cc": "2026-10-30T13:01:43.266Z",
+    "medier:72e0a9967b6751fd": "2026-10-30T15:01:56.860Z",
+    "regjeringen:3183627": "2026-10-30T15:01:56.860Z",
+    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/kulturraadet-med-retningslinjer-for-ki-paa-litteraturordningane": "2026-10-30T15:01:56.860Z",
+    "forbrukerradet:https://www.forbrukerradet.no/?p=56540": "2026-10-30T15:01:56.860Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2310": "2026-10-30T15:01:56.860Z",
+    "medier:b8cf3e18ac98b247": "2026-10-30T15:01:56.860Z",
+    "medier:269d3e6d5480e213": "2026-10-30T15:01:56.860Z",
+    "medier:01dd50f15a4db9f0": "2026-10-30T15:01:56.860Z",
+    "medier:627882b131cecdc8": "2026-10-30T15:01:56.860Z",
+    "medier:6ef583b00677871e": "2026-10-30T15:01:56.860Z",
+    "medier:9555f443f7726357": "2026-10-30T15:01:56.860Z",
+    "medier:92b2514480bcc3c6": "2026-10-30T15:01:56.860Z",
+    "medier:e7e2dc89cabccb30": "2026-10-30T15:01:56.860Z",
+    "medier:f07e746d10497687": "2026-10-30T15:01:56.860Z",
+    "medier:c02ee26b4b27b4ca": "2026-10-30T15:01:56.860Z",
+    "medier:4de6edbb30b9a151": "2026-10-30T15:01:56.860Z",
+    "medier:fdb19c2573e51085": "2026-10-30T15:01:56.860Z",
+    "medier:8f64ca138f1424cd": "2026-10-30T15:01:56.860Z",
+    "medier:3c3d31440d61a569": "2026-10-30T15:01:56.860Z",
+    "medier:deebb813110f4156": "2026-10-30T15:01:56.860Z",
+    "medier:1fd65efd02db7a33": "2026-10-30T15:01:56.860Z",
+    "medier:abd5278d6be5448b": "2026-10-30T15:01:56.860Z",
+    "medier:13d620a34116a140": "2026-10-30T15:01:56.860Z",
+    "medier:d6257ab89bd5c00f": "2026-10-30T15:01:56.860Z",
+    "medier:1d32c44a32b9de08": "2026-10-30T15:01:56.860Z",
+    "medier:b64ada06e88d5c7b": "2026-10-30T15:01:56.860Z",
+    "medier:989199659ce4fca8": "2026-10-30T15:01:56.860Z",
+    "medier:13260fac088a3086": "2026-10-30T15:01:56.860Z",
+    "medier:89cebcbb6addb4d1": "2026-10-30T15:01:56.860Z",
+    "medier:2897edeab820b716": "2026-10-30T15:01:56.860Z",
+    "medier:dd78cec0f366c0ab": "2026-10-30T15:01:56.860Z",
+    "medier:496d5e6756ca7e6d": "2026-10-30T15:01:56.860Z",
+    "medier:6d8b403411871558": "2026-10-30T15:01:56.860Z",
+    "norgesbank:valutauke:2026-10-30": "2026-10-30T15:01:56.860Z",
+    "medier:6e12a72282330ad8": "2026-10-30T15:01:56.860Z",
+    "medier:1d2348cc00055b4f": "2026-10-30T15:01:56.860Z",
+    "medier:635d2b0cbaeba5bf": "2026-10-30T15:01:56.860Z",
+    "medier:dcfabda8b3ab0a13": "2026-10-30T15:01:56.860Z",
+    "medier:0f57df7ddf4e3c0a": "2026-10-30T15:01:56.860Z",
+    "medier:1200d6224fc30a92": "2026-10-30T15:01:56.860Z",
+    "medier:ad2ce42014a46b41": "2026-10-30T15:01:56.860Z",
+    "medier:ef69c3d6656c6860": "2026-10-30T15:01:56.860Z",
+    "medier:471e591564bfefdf": "2026-10-30T15:01:56.860Z",
+    "medier:2142a16ef4adf3a8": "2026-10-30T15:01:56.860Z",
+    "medier:6fc30c4d29436bf8": "2026-10-30T15:01:56.860Z",
+    "medier:e9cb4bcdd6a9bbea": "2026-10-30T15:01:56.860Z",
+    "medier:4ef7b778b6deb24d": "2026-10-30T15:01:56.860Z",
+    "medier:e1cec27e403564f2": "2026-10-30T15:01:56.860Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -6404,91 +6452,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:8c61e3210943ccb6": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T15:02:14.251Z"
-    },
-    "medier:a6ba412eca50dcc0": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T15:02:14.251Z"
-    },
-    "medier:cf9265c3a5566e4f": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T15:02:14.251Z"
-    },
-    "medier:6530889a72a0c16f": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T15:02:14.251Z"
-    },
-    "medier:182edb71e83133ee": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T15:02:14.251Z"
-    },
-    "medier:4c9d1bff3827b47a": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T15:02:14.251Z"
-    },
-    "medier:320d49673a2c7f74": {
-      "p": 48,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T15:02:14.251Z"
-    },
-    "medier:adb1d1c418700388": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T15:02:14.251Z"
-    },
-    "medier:6f1ea1f7434b2f66": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T15:02:14.251Z"
-    },
-    "medier:ee6181979b88a5a3": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T15:02:14.251Z"
-    },
-    "regjeringen:3184399": {
-      "p": 73,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T15:02:14.251Z"
-    },
-    "regjeringen:3183603": {
-      "p": 62,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T15:02:14.251Z"
-    },
-    "regjeringen:3183922": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T15:02:14.251Z"
-    },
-    "mattilsynet:https://www.mattilsynet.no/tilbakekallinger/arla-protein-pudding-chocolate-og-salted-caramel-tilbakekalles-pa-grunn-av-fare-for-glassbiter-i-produktene": {
-      "p": 74,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T15:02:14.251Z"
-    },
-    "mattilsynet:https://www.mattilsynet.no/fisk-og-akvakultur/fiskesykdommer/francisella-sp/pavist-francisellose-i-nytt-oppdrettsanlegg-i-froya-kommune-i-trondelag-fylke": {
-      "p": 52,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T15:02:14.251Z"
-    },
-    "mattilsynet:https://www.mattilsynet.no/tilbakekallinger/brodr-ringsdad-kaller-tilbake-blodklubb-pa-grunn-av-utilstrekkelig-varmebehandling": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T15:02:14.251Z"
-    },
-    "helsedirektoratet:https://www.helsedirektoratet.no/nyheter/lovende-resultater-fra-14-samhandlingsforsok-i-helsetjenesten": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T15:02:14.251Z"
-    },
     "medier:bc05b360bc14f418": {
       "p": 82,
       "v": "b34cb0de5bde",
@@ -8248,6 +8211,111 @@
       "p": 45,
       "v": "b34cb0de5bde",
       "t": "2026-10-30T13:07:57.809Z"
+    },
+    "medier:b8cf3e18ac98b247": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "medier:01dd50f15a4db9f0": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "medier:6e12a72282330ad8": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "medier:6ef583b00677871e": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "medier:a5fb9699735ffd2f": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "medier:0f57df7ddf4e3c0a": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "medier:8cc51c56c54aa6b3": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "medier:92b2514480bcc3c6": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "medier:f07e746d10497687": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "medier:fdb19c2573e51085": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "medier:b64ada06e88d5c7b": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "medier:3c3d31440d61a569": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "medier:1fd65efd02db7a33": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "medier:4ef7b778b6deb24d": {
+      "p": 74,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "medier:afcfcdd8a62a059b": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "medier:d6257ab89bd5c00f": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "regjeringen:3183627": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/kulturraadet-med-retningslinjer-for-ki-paa-litteraturordningane": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "forbrukerradet:https://www.forbrukerradet.no/?p=56540": {
+      "p": 62,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2310": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2301": {
+      "p": 71,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T15:05:35.959Z"
     }
   }
 }
