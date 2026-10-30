@@ -3,11 +3,11 @@
 // Søket treffer også uten æ, ø og å (for eksempel «alesund» for Ålesund). Resultatene lages med textContent (ingen innerHTML). CSP-vennlig: pakket script, ingen stil-attributt.
 ---
 
-<div class="kommunesok" data-kilde="/kommune/sok.json">
-  <label for="kommunesok-felt" class="kommunesok-label">Søk etter kommune</label>
-  <input id="kommunesok-felt" class="kommunesok-felt" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="For eksempel Bergen eller Kautokeino" />
-  <p class="kommunesok-status data-merknad" role="status" aria-live="polite"></p>
-  <ul class="kommunesok-liste"></ul>
+<div class="datasok kommunesok" data-kilde="/kommune/sok.json">
+  <label for="kommunesok-felt" class="datasok-label kommunesok-label">Søk etter kommune</label>
+  <input id="kommunesok-felt" class="datasok-felt kommunesok-felt" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="For eksempel Bergen eller Kautokeino" />
+  <p class="datasok-status kommunesok-status data-merknad" role="status" aria-live="polite"></p>
+  <ul class="datasok-liste kommunesok-liste"></ul>
 </div>
 
 <script>
@@ -64,10 +64,10 @@
         const li = document.createElement('li');
         const navn = document.createElement('a');
         navn.textContent = p.n;
-        navn.className = 'kommunesok-navn';
+        navn.className = 'datasok-navn';
         navn.href = `/kommune/${p.s}/`;
         const info = document.createElement('span');
-        info.className = 'kommunesok-info';
+        info.className = 'datasok-info';
         info.textContent = p.p === null ? p.f : `${p.f}, ${p.p.toLocaleString('nb-NO')} innbyggere`;
         li.append(navn, info);
         liste.append(li);
@@ -82,52 +82,3 @@
     rot.closest('form')?.addEventListener('submit', (e) => e.preventDefault());
   }
 </script>
-
-<style is:global>
-  .kommunesok {
-    max-width: 640px;
-    font-family: var(--frame);
-  }
-  .kommunesok-label {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 0.85rem;
-    color: var(--muted);
-  }
-  .kommunesok-felt {
-    width: 100%;
-    min-width: 0;
-    padding: 10px 12px;
-    border: 1px solid var(--ink);
-    border-radius: 3px;
-    background: var(--paper);
-    color: var(--ink);
-    font: inherit;
-    font-size: 1rem;
-  }
-  .kommunesok-status {
-    min-height: 1.5em;
-    margin-top: 8px;
-  }
-  .kommunesok-liste {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .kommunesok-liste li {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 2px 14px;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--rule);
-  }
-  .kommunesok-navn {
-    font: 650 1.25rem/1.25 var(--read);
-    overflow-wrap: anywhere;
-  }
-  .kommunesok-info {
-    font: 500 0.875rem var(--frame);
-    color: var(--muted);
-  }
-</style>

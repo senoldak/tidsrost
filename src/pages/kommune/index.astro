@@ -93,7 +93,7 @@ const { sti, jsonLd } = datasideLd({
         <thead>
           <tr>
             <th scope="col">Kommune</th>
-            <th scope="col">Fylke</th>
+            <th scope="col" class="tekst">Fylke</th>
             <th scope="col">Innbyggere</th>
           </tr>
         </thead>
@@ -102,7 +102,7 @@ const { sti, jsonLd } = datasideLd({
             storst.map((k) => (
               <tr>
                 <td><a href={`/kommune/${slugFor.get(k.kode)}/`}>{k.navn}</a></td>
-                <td>{fylker[k.fylke].navn}</td>
+                <td class="tekst">{fylker[k.fylke].navn}</td>
                 <td>{k.folkemengde === null ? '–' : nb(k.folkemengde)}</td>
               </tr>
             ))
@@ -125,7 +125,7 @@ const { sti, jsonLd } = datasideLd({
             <thead>
               <tr>
                 <th scope="col">Kommune</th>
-                <th scope="col">Fylke</th>
+                <th scope="col" class="tekst">Fylke</th>
                 <th scope="col">Innbyggere</th>
                 <th scope="col">Endring</th>
               </tr>
@@ -134,7 +134,7 @@ const { sti, jsonLd } = datasideLd({
               {(liste as typeof vekst).map(({ k, u }) => (
                 <tr>
                   <td><a href={`/kommune/${slugFor.get(k.kode)}/`}>{k.navn}</a></td>
-                  <td>{fylker[k.fylke].navn}</td>
+                  <td class="tekst">{fylker[k.fylke].navn}</td>
                   <td>{k.folkemengde === null ? '–' : nb(k.folkemengde)}</td>
                   <td>{prosent(u.pst as number)}</td>
                 </tr>

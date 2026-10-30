@@ -105,7 +105,7 @@ const googleNoindex = process.env.KOMMUNE_SIDER_INDEKS === '0';
 
   <section class="day" aria-labelledby="tall">
     <h2 class="band" id="tall">Kommunen i tall</h2>
-    <dl class="data-fakta">
+    <dl class="data-fakta nokkeltall">
       <div>
         <dt>Innbyggere 1. januar {data.sisteAar}</dt>
         <dd>{vis(k.folkemengde)}</dd>
@@ -115,7 +115,7 @@ const googleNoindex = process.env.KOMMUNE_SIDER_INDEKS === '0';
           <div>
             <dt>Endring i folketallet {u.fra} til {u.til}</dt>
             <dd>
-              {fortegn(u.abs)} personer{u.pst !== null && <> ({dec(Math.abs(u.pst))} %)</>}
+              {fortegn(u.abs)} <small>personer{u.pst !== null && <> ({dec(Math.abs(u.pst))} %)</>}</small>
             </dd>
           </div>
         )
@@ -132,7 +132,9 @@ const googleNoindex = process.env.KOMMUNE_SIDER_INDEKS === '0';
         typeof e.netto === 'number' && (
           <div>
             <dt>Nettoinnflytting {e.aar}</dt>
-            <dd>{fortegn(e.netto)} personer</dd>
+            <dd>
+              {fortegn(e.netto)} <small>personer</small>
+            </dd>
           </div>
         )
       }

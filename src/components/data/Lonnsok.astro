@@ -3,11 +3,11 @@
 // yrker med egen side er lenker. Resultatene lages med textContent (ingen innerHTML). CSP-vennlig: pakket script, ingen stil-attributt.
 ---
 
-<div class="lonnsok" data-kilde="/lonn/sok.json">
-  <label for="lonnsok-felt" class="lonnsok-label">Søk etter yrke</label>
-  <input id="lonnsok-felt" class="lonnsok-felt" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="For eksempel leger eller elektrikere" />
-  <p class="lonnsok-status data-merknad" role="status" aria-live="polite"></p>
-  <ul class="lonnsok-liste"></ul>
+<div class="datasok lonnsok" data-kilde="/lonn/sok.json">
+  <label for="lonnsok-felt" class="datasok-label lonnsok-label">Søk etter yrke</label>
+  <input id="lonnsok-felt" class="datasok-felt lonnsok-felt" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="For eksempel leger eller elektrikere" />
+  <p class="datasok-status lonnsok-status data-merknad" role="status" aria-live="polite"></p>
+  <ul class="datasok-liste lonnsok-liste"></ul>
 </div>
 
 <script>
@@ -60,10 +60,10 @@
         const li = document.createElement('li');
         const navn = document.createElement(p.s ? 'a' : 'span');
         navn.textContent = p.n;
-        navn.className = 'lonnsok-navn';
+        navn.className = 'datasok-navn';
         if (p.s) (navn as HTMLAnchorElement).href = `/lonn/${p.s}/`;
         const info = document.createElement('span');
-        info.className = 'lonnsok-info';
+        info.className = 'datasok-info';
         info.textContent = p.a === null ? "median ikke oppgitt" : `median ${p.a.toLocaleString("nb-NO")} kroner per måned`;
         li.append(navn, info);
         liste.append(li);
@@ -78,52 +78,3 @@
     rot.closest('form')?.addEventListener('submit', (e) => e.preventDefault());
   }
 </script>
-
-<style is:global>
-  .lonnsok {
-    max-width: 640px;
-    font-family: var(--frame);
-  }
-  .lonnsok-label {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 0.85rem;
-    color: var(--muted);
-  }
-  .lonnsok-felt {
-    width: 100%;
-    min-width: 0;
-    padding: 10px 12px;
-    border: 1px solid var(--ink);
-    border-radius: 3px;
-    background: var(--paper);
-    color: var(--ink);
-    font: inherit;
-    font-size: 1rem;
-  }
-  .lonnsok-status {
-    min-height: 1.5em;
-    margin-top: 8px;
-  }
-  .lonnsok-liste {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .lonnsok-liste li {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 2px 14px;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--rule);
-  }
-  .lonnsok-navn {
-    font: 650 1.25rem/1.25 var(--read);
-    overflow-wrap: anywhere;
-  }
-  .lonnsok-info {
-    font: 500 0.875rem var(--frame);
-    color: var(--muted);
-  }
-</style>

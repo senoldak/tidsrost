@@ -1357,8 +1357,67 @@ main.container {
   margin: 4px 0 0;
 }
 
+.data-fakta.nokkeltall {
+  gap: calc(var(--u) * 3) calc(var(--u) * 6);
+  padding-top: calc(var(--u) * 2);
+  padding-bottom: calc(var(--u) * 3);
+  border-bottom: 1px solid var(--rule);
+}
+
+.data-fakta.nokkeltall dd {
+  margin-top: 6px;
+  font: 650 clamp(1.5rem, 2.4vw, 1.875rem) / 1.05 var(--read);
+  letter-spacing: -0.01em;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.data-fakta.nokkeltall dd small {
+  font: 500 0.875rem/1.4 var(--frame);
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.data-tabell {
+  overflow-x: auto;
+}
+
 .data-tabell table {
-  margin-top: var(--u);
+  display: table;
+  width: 100%;
+  max-width: 100%;
+  margin: var(--u) 0 0;
+}
+
+.data-tabell caption {
+  padding: var(--u) 0 calc(var(--u) * 1.5);
+  font: 700 0.75rem/1 var(--frame);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--ink);
+}
+
+.data-tabell th:not(:first-child),
+.data-tabell td:not(:first-child) {
+  text-align: right;
+}
+
+.data-tabell th:last-child,
+.data-tabell td:last-child {
+  padding-right: 0;
+}
+
+.data-tabell th.tekst,
+.data-tabell td.tekst {
+  text-align: left;
+}
+
+.data-tabell th.rang,
+.data-tabell td.rang {
+  width: 2.5rem;
+  padding-right: 0.8em;
+  text-align: right;
+  color: var(--muted);
 }
 
 .data-merknad {
@@ -1832,52 +1891,149 @@ main.container {
   color: var(--water);
 }
 
-/* Tall og data: kort */
-.tall-kort {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: calc(var(--u) * 2);
-  margin: 0 0 calc(var(--u) * 5);
+/* Tall og data: gruppert gazetteer (verdi-kolonne + tekst, som nyhetsraden) */
+.tall-grupper {
+  margin: 0 0 calc(var(--u) * 4);
+}
+
+.tall-gruppe {
+  break-inside: avoid;
+  margin-bottom: calc(var(--u) * 5);
+}
+
+.tall-liste {
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.tall-kort a {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  height: 100%;
-  padding: calc(var(--u) * 2);
-  border: 1px solid var(--ink);
-  color: inherit;
+.tall-rad {
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  gap: calc(var(--u) * 3);
+  padding: calc(var(--u) * 2) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.tall-verdi {
+  margin: 0;
+  padding-top: 0.1em;
+  font: 650 clamp(1.5rem, 2.4vw, 1.875rem) / 1.05 var(--read);
+  letter-spacing: -0.01em;
+  font-variant-numeric: lining-nums tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+.tall-rad h3 {
+  margin: 0 0 4px;
+  font: 600 clamp(1.1875rem, 1.7vw, 1.4375rem) / 1.25 var(--read);
+}
+
+.tall-rad h3 a:hover {
   text-decoration: none;
 }
 
-.tall-kort a:hover .tall-kort-navn {
-  color: var(--water);
+.tall-tekst {
+  max-width: 62ch;
+  margin: 0 0 var(--u);
+  color: var(--ink-2);
 }
 
-.tall-kort-navn {
+.tall-kilde {
   display: inline-flex;
   align-items: center;
-  gap: 0.5em;
-  font: 650 1.1875rem/1.25 var(--read);
+  gap: 0.45em;
+  font: 500 0.8125rem/1.4 var(--frame);
+  letter-spacing: 0.01em;
+  color: var(--muted);
 }
 
-.tall-kort-verdi {
-  font: 650 2.5rem/1 var(--read);
-  font-variant-numeric: lining-nums tabular-nums;
+@media (min-width: 1100px) {
+  .tall-grupper {
+    columns: 2;
+    column-gap: calc(var(--u) * 6);
+  }
 }
 
-.tall-kort-tekst {
-  font: 500 0.9375rem/1.45 var(--frame);
+@media (max-width: 640px) {
+  .tall-rad {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+  }
+
+  .tall-verdi {
+    padding-top: 0;
+  }
 }
 
-.tall-kort-kilde {
-  margin-top: auto;
-  font: 600 0.75rem var(--frame);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+/* Datasider: felles søkefelt (navn, lønn, kommune) */
+.datasok {
+  max-width: 640px;
+  font-family: var(--frame);
+}
+
+.datasok-label {
+  display: block;
+  margin-bottom: var(--u);
+  font: 500 0.8125rem/1.4 var(--frame);
+  letter-spacing: 0.01em;
+  color: var(--muted);
+}
+
+.datasok-felt {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 0 calc(var(--u) * 2);
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 500 1.0625rem var(--frame);
+  caret-color: var(--water);
+}
+
+.datasok-felt::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.datasok-felt::-webkit-search-decoration,
+.datasok-felt::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.datasok-felt:focus-visible {
+  outline-offset: 2px;
+}
+
+.datasok-status {
+  min-height: 1.5em;
+  margin-top: var(--u);
+}
+
+.datasok-liste {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.datasok-liste li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px calc(var(--u) * 2);
+  padding: calc(var(--u) * 1.5) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.datasok-navn {
+  font: 600 1.1875rem/1.28 var(--read);
+  overflow-wrap: anywhere;
+}
+
+.datasok-info {
+  font: 500 0.8125rem/1.4 var(--frame);
   color: var(--muted);
 }
 

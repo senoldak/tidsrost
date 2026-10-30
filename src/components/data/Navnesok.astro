@@ -3,11 +3,11 @@
 // navn med egen side er lenker. Resultatene lages med textContent (ingen innerHTML). CSP-vennlig: pakket script, ingen stil-attributt.
 ---
 
-<div class="navnesok" data-kilde="/navn/sok.json">
-  <label for="navnesok-felt" class="navnesok-label">Søk etter et fornavn eller etternavn</label>
-  <input id="navnesok-felt" class="navnesok-felt" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="For eksempel Ola eller Hansen" />
-  <p class="navnesok-status data-merknad" role="status" aria-live="polite"></p>
-  <ul class="navnesok-liste"></ul>
+<div class="datasok navnesok" data-kilde="/navn/sok.json">
+  <label for="navnesok-felt" class="datasok-label navnesok-label">Søk etter et fornavn eller etternavn</label>
+  <input id="navnesok-felt" class="datasok-felt navnesok-felt" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="For eksempel Ola eller Hansen" />
+  <p class="datasok-status navnesok-status data-merknad" role="status" aria-live="polite"></p>
+  <ul class="datasok-liste navnesok-liste"></ul>
 </div>
 
 <script>
@@ -61,10 +61,10 @@
         const li = document.createElement('li');
         const navn = document.createElement(p.s ? 'a' : 'span');
         navn.textContent = p.n;
-        navn.className = 'navnesok-navn';
+        navn.className = 'datasok-navn';
         if (p.s) (navn as HTMLAnchorElement).href = `/navn/${p.s}/`;
         const info = document.createElement('span');
-        info.className = 'navnesok-info';
+        info.className = 'datasok-info';
         info.textContent = `${TYPE[p.k]} · ${p.a === null ? 'antall ikke oppgitt' : `${p.a.toLocaleString('nb-NO')} personer`}`;
         li.append(navn, info);
         liste.append(li);
@@ -79,52 +79,3 @@
     rot.closest('form')?.addEventListener('submit', (e) => e.preventDefault());
   }
 </script>
-
-<style is:global>
-  .navnesok {
-    max-width: 640px;
-    font-family: var(--frame);
-  }
-  .navnesok-label {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 0.85rem;
-    color: var(--muted);
-  }
-  .navnesok-felt {
-    width: 100%;
-    min-width: 0;
-    padding: 10px 12px;
-    border: 1px solid var(--ink);
-    border-radius: 3px;
-    background: var(--paper);
-    color: var(--ink);
-    font: inherit;
-    font-size: 1rem;
-  }
-  .navnesok-status {
-    min-height: 1.5em;
-    margin-top: 8px;
-  }
-  .navnesok-liste {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .navnesok-liste li {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 2px 14px;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--rule);
-  }
-  .navnesok-navn {
-    font: 650 1.25rem/1.25 var(--read);
-    overflow-wrap: anywhere;
-  }
-  .navnesok-info {
-    font: 500 0.875rem var(--frame);
-    color: var(--muted);
-  }
-</style>

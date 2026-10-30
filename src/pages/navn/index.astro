@@ -81,8 +81,8 @@ const { sti, jsonLd } = datasideLd({
               <caption>{t === 'jente' ? 'Jentenavn' : 'Guttenavn'}</caption>
               <thead>
                 <tr>
-                  <th scope="col">Nr.</th>
-                  <th scope="col">Navn</th>
+                  <th scope="col" class="rang">Nr.</th>
+                  <th scope="col" class="tekst">Navn</th>
                   <th scope="col">Personer</th>
                 </tr>
               </thead>
@@ -91,8 +91,8 @@ const { sti, jsonLd } = datasideLd({
                   const slug = slugFor.get(`${n.kjonn}${n.navn}`);
                   return (
                     <tr>
-                      <td>{i + 1}</td>
-                      <td>{slug ? <a href={`/navn/${slug}/`}>{n.navn}</a> : n.navn}</td>
+                      <td class="rang">{i + 1}</td>
+                      <td class="tekst">{slug ? <a href={`/navn/${slug}/`}>{n.navn}</a> : n.navn}</td>
                       <td>{nb(n.antall as number)}</td>
                     </tr>
                   );
@@ -116,8 +116,8 @@ const { sti, jsonLd } = datasideLd({
               <caption>{t === 'jente' ? 'Jentenavn' : 'Guttenavn'}</caption>
               <thead>
                 <tr>
-                  <th scope="col">Nr.</th>
-                  <th scope="col">Navn</th>
+                  <th scope="col" class="rang">Nr.</th>
+                  <th scope="col" class="tekst">Navn</th>
                   <th scope="col">Barn</th>
                 </tr>
               </thead>
@@ -126,8 +126,8 @@ const { sti, jsonLd } = datasideLd({
                   const slug = slugFor.get(`${n.kjonn}${n.navn}`);
                   return (
                     <tr>
-                      <td>{i + 1}</td>
-                      <td>{slug ? <a href={`/navn/${slug}/`}>{n.navn}</a> : n.navn}</td>
+                      <td class="rang">{i + 1}</td>
+                      <td class="tekst">{slug ? <a href={`/navn/${slug}/`}>{n.navn}</a> : n.navn}</td>
                       <td>{nb((n.fodte as Record<string, number>)[sisteFodt])}</td>
                     </tr>
                   );
@@ -147,8 +147,8 @@ const { sti, jsonLd } = datasideLd({
       <table>
         <thead>
           <tr>
-            <th scope="col">Nr.</th>
-            <th scope="col">Etternavn</th>
+            <th scope="col" class="rang">Nr.</th>
+            <th scope="col" class="tekst">Etternavn</th>
             <th scope="col">Personer</th>
           </tr>
         </thead>
@@ -156,8 +156,8 @@ const { sti, jsonLd } = datasideLd({
           {
             etternavn.map((n, i) => (
               <tr>
-                <td>{i + 1}</td>
-                <td>{n.navn}</td>
+                <td class="rang">{i + 1}</td>
+                <td class="tekst">{n.navn}</td>
                 <td>{nb(n.antall)}</td>
               </tr>
             ))
@@ -221,7 +221,7 @@ const { sti, jsonLd } = datasideLd({
   .navn-par {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0 calc(var(--u) * 5);
+    gap: calc(var(--u) * 3) calc(var(--u) * 6);
   }
   @media (min-width: 720px) {
     .navn-par {

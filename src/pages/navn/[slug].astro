@@ -70,7 +70,7 @@ const sti = [sti3[0], sti3[1], { name: 'Navnestatistikk', url: `${SITE_URL}/navn
 
   <section class="day" aria-labelledby="tall">
     <h2 class="band" id="tall">{n.navn} i tall</h2>
-    <dl class="data-fakta">
+    <dl class="data-fakta nokkeltall">
       <div>
         <dt>Personer med navnet</dt>
         <dd>{nb(n.antall)}</dd>
@@ -96,7 +96,7 @@ const sti = [sti3[0], sti3[1], { name: 'Navnestatistikk', url: `${SITE_URL}/navn
           <div>
             <dt>Toppår</dt>
             <dd>
-              {topp.aar} ({nb(topp.antall)} barn)
+              {topp.aar} <small>{nb(topp.antall)} barn</small>
             </dd>
           </div>
         )

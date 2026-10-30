@@ -1,5 +1,6 @@
 ---
-// "Tall og data": veri sayfalarının vitrini. Her kartta son değer (src/data/*.json) ve tek cümle; rakamlar veriden.
+// "Tall og data": veri sayfalarının vitrini. Beş grup, her satırda son değer (src/data/*.json) ve tek cümle; rakamlar veriden.
+// Düzen haber satırıyla aynı: değer sütunu + metin gövdesi (DESIGN.md: kart yok, rütbe tek adım yazı boyuyla).
 import { jsonLdMetni } from '../lib/json-ld.mjs';
 import KiNotat from '../components/KiNotat.astro';
 import Base from '../layouts/Base.astro';
@@ -49,24 +50,32 @@ const alleYrker = lonnData.yrker.find((y) => y.kode === '0-9');
 
 const rodeAar = Number(new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Oslo' }).slice(0, 4));
 
+const grupper = [
+  { id: 'priser', navn: 'Priser og penger' },
+  { id: 'arbeid', navn: 'Arbeid og lønn' },
+  { id: 'folk', navn: 'Folk og steder' },
+  { id: 'vaer', navn: 'Vær og varsler' },
+  { id: 'kalender', navn: 'Kalender' },
+];
+
 const kort = [
-  { url: '/prisstigning/', navn: 'Prisstigningen nå', verdi: `${tallTekst(pris.tolvMnd)} %`, tekst: `Endring i konsumprisene siste tolv måneder, ${maanedTekst(pris.sisteMaaned)}.`, kilde: 'SSB', sym: 'data' },
+  { url: '/prisstigning/', navn: 'Prisstigningen nå', verdi: `${tallTekst(pris.tolvMnd)} %`, tekst: `Endring i konsumprisene siste tolv måneder, ${maanedTekst(pris.sisteMaaned)}.`, kilde: 'SSB', gruppe: 'priser' },
   {
     url: '/boligpriser/',
     navn: 'Boligprisene nå',
     verdi: typeof landet?.endringAar === 'number' ? `${tallTekst(landet.endringAar)} %` : '–',
     tekst: `Endring i prisene på brukte boliger siste år, ${kvartalTekst(bolig.sisteKvartal)}.`,
     kilde: 'SSB',
-    sym: 'data',
+    gruppe: 'priser',
   },
-  { url: '/arbeidsledighet/', navn: 'Arbeidsledigheten nå', verdi: `${tallTekst(arbeid.prosent)} %`, tekst: `Arbeidsledige i prosent av arbeidsstyrken, ${maanedTekst(arbeid.sisteMaaned)}.`, kilde: 'SSB', sym: 'data' },
+  { url: '/arbeidsledighet/', navn: 'Arbeidsledigheten nå', verdi: `${tallTekst(arbeid.prosent)} %`, tekst: `Arbeidsledige i prosent av arbeidsstyrken, ${maanedTekst(arbeid.sisteMaaned)}.`, kilde: 'SSB', gruppe: 'arbeid' },
   {
     url: '/prisomregner/',
     navn: 'Hva er pengene verdt?',
     verdi: typeof kpiEks === 'number' ? `${Math.round(kpiEks).toLocaleString('nb-NO')} kr` : '–',
     tekst: `Hundre kroner fra ${kpiEksFra} regnet om til prisnivået i ${kpiHist.sisteAar}. Regn om beløp mellom alle år siden ${Object.keys(kpiHist.aar)[0]}.`,
     kilde: 'SSB',
-    sym: 'data',
+    gruppe: 'priser',
   },
   {
     url: '/navn/',
@@ -74,7 +83,7 @@ const kort = [
     verdi: vanligsteEtternavn?.navn ?? '–',
     tekst: vanligsteEtternavn ? `Det vanligste etternavnet i Norge, med ${vanligsteEtternavn.antall.toLocaleString('nb-NO')} personer. Søk i fornavn og etternavn, og se hva barna fikk i ${navnData.sisteAar}.` : 'Søk i fornavn og etternavn.',
     kilde: 'SSB',
-    sym: 'data',
+    gruppe: 'folk',
   },
   {
     url: '/lonn/',
@@ -82,15 +91,15 @@ const kort = [
     verdi: alleYrker?.median ? `${alleYrker.median.toLocaleString('nb-NO')} kr` : '–',
     tekst: `Median månedslønn for alle yrker, november ${lonnData.sisteAar}. Søk etter yrke og se tall for kvinner og menn, sektor og utvikling.`,
     kilde: 'SSB',
-    sym: 'data',
+    gruppe: 'arbeid',
   },
   {
     url: '/kommune/',
     navn: 'Kommunene i tall',
-    verdi: `${kommuneData.kommuner.length.toLocaleString('nb-NO')} kommuner`,
-    tekst: `Folketall, alder, flytting, areal og inntekt for hver kommune, ${kommuneData.sisteAar}. Søk etter kommune og se tall og sammenligning med fylket og landet.`,
+    verdi: kommuneData.kommuner.length.toLocaleString('nb-NO'),
+    tekst: `Kommuner i Norge ${kommuneData.sisteAar}, hver med folketall, alder, flytting, areal og inntekt. Søk etter kommune og se sammenligning med fylket og landet.`,
     kilde: 'SSB',
-    sym: 'data',
+    gruppe: 'folk',
   },
   {
     url: '/rode-dager/',
@@ -98,7 +107,7 @@ const kort = [
     verdi: String(arbeidsdagerTotalt(rodeAar)),
     tekst: `Arbeidsdager i ${rodeAar}. Datoer for helligdagene, inneklemte dager og arbeidsdager per måned.`,
     kilde: 'Lovdata',
-    sym: 'data',
+    gruppe: 'kalender',
   },
   {
     url: '/snoskredvarsel/',
@@ -106,7 +115,7 @@ const kort = [
     verdi: snoAntall === null ? '–' : String(snoAntall),
     tekst: `Varslingsregioner med snøskredvarsel fra NVE, ${snoDag ? datoTekst(snoDag) : 'siste varsel'}. Faregrad per region.`,
     kilde: 'NVE',
-    sym: 'varsel',
+    gruppe: 'vaer',
   },
   {
     url: '/flomvarsel/',
@@ -114,16 +123,16 @@ const kort = [
     verdi: String(flomFylker),
     tekst: `Fylker med varsel om flom eller jordskred fra NVE, ${datoTekst(flomData.dato)}. Kart og kommuner per fylke.`,
     kilde: 'NVE',
-    sym: 'varsel',
+    gruppe: 'vaer',
   },
-  { url: '/styringsrenten/', navn: 'Styringsrenten nå', verdi: prosent(RENTE.rente), tekst: RENTE.gjeldendeFra ? `Gjeldende fra ${datoTekst(RENTE.gjeldendeFra)}.` : 'Norges Banks styringsrente.', kilde: 'Norges Bank', sym: 'data' },
+  { url: '/styringsrenten/', navn: 'Styringsrenten nå', verdi: prosent(RENTE.rente), tekst: RENTE.gjeldendeFra ? `Gjeldende fra ${datoTekst(RENTE.gjeldendeFra)}.` : 'Norges Banks styringsrente.', kilde: 'Norges Bank', gruppe: 'priser' },
   {
     url: '/farevarsler/',
     navn: 'Farevarsler i Norge',
     verdi: varsler30 === null ? '–' : String(varsler30),
     tekst: `Farevarsler på land de siste ${dagerTall} dagene, fylke for fylke, og hvordan årene står seg.`,
     kilde: 'Meteorologisk institutt',
-    sym: 'varsel',
+    gruppe: 'vaer',
   },
 ];
 
@@ -161,22 +170,38 @@ const jsonLd = {
     </p>
   </header>
 
-  <ul class="tall-kort">
+  <div class="tall-grupper">
     {
-      kort.map((k) => (
-        <li>
-          <a href={k.url}>
-            <span class="tall-kort-navn">
-              <Symbol kind={k.sym} class={k.sym === 'varsel' ? 'sym-varsel-gult' : undefined} />
-              {k.navn}
-            </span>
-            <span class="tall-kort-verdi">{k.verdi}</span>
-            <span class="tall-kort-tekst">{k.tekst}</span>
-            <span class="tall-kort-kilde">Kilde: {k.kilde}</span>
-          </a>
-        </li>
-      ))
+      grupper.map((g) => {
+        const rader = kort.filter((k) => k.gruppe === g.id);
+        return (
+          rader.length > 0 && (
+            <section class="tall-gruppe" aria-labelledby={`gruppe-${g.id}`}>
+              <h2 class="band" id={`gruppe-${g.id}`}>
+                {g.navn}
+              </h2>
+              <ul class="tall-liste">
+                {rader.map((k) => (
+                  <li class="tall-rad">
+                    <p class="tall-verdi">{k.verdi}</p>
+                    <div>
+                      <h3>
+                        <a href={k.url}>{k.navn}</a>
+                      </h3>
+                      <p class="tall-tekst">{k.tekst}</p>
+                      <span class="tall-kilde">
+                        <Symbol kind="kilde" />
+                        Kilde: {k.kilde}
+                      </span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )
+        );
+      })
     }
-  </ul>
+  </div>
   <KiNotat tittel={tittel} url={pageUrl} bot />
 </Base>
