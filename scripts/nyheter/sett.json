@@ -6256,7 +6256,57 @@
     "medier:12a96b050744c9ce": "2026-10-30T09:01:57.440Z",
     "medier:cf0387dcc1a58313": "2026-10-30T09:01:57.440Z",
     "medier:cb5df6f77c407a46": "2026-10-30T09:01:57.440Z",
-    "medier:90ed332208cabb0b": "2026-10-30T09:01:57.440Z"
+    "medier:90ed332208cabb0b": "2026-10-30T09:01:57.440Z",
+    "medier:878abe3eae2f770c": "2026-10-30T11:01:52.014Z",
+    "medier:4db8b0b058aefacc": "2026-10-30T11:01:52.014Z",
+    "medier:1a532e7f6fc3b6e5": "2026-10-30T11:01:52.014Z",
+    "medier:0dea254003cff76c": "2026-10-30T11:01:52.014Z",
+    "regjeringen:3186944": "2026-10-30T11:01:52.014Z",
+    "dsb:https://www.dsb.no/aktuelt/egenberedskapsuka-gjor-dsbs-fire-ovelser/": "2026-10-30T11:01:52.014Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2303": "2026-10-30T11:01:52.014Z",
+    "medier:b8c0edd716f915b2": "2026-10-30T11:01:52.014Z",
+    "medier:d872a5a5a648061b": "2026-10-30T11:01:52.014Z",
+    "regjeringen:3187282": "2026-10-30T11:01:52.014Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2285": "2026-10-30T11:01:52.014Z",
+    "medier:67a75c100feec05d": "2026-10-30T11:01:52.014Z",
+    "medier:5e99c3abd4f83a55": "2026-10-30T11:01:52.014Z",
+    "medier:ad4806f9c7d349cd": "2026-10-30T11:01:52.014Z",
+    "medier:5257492cc54af99b": "2026-10-30T11:01:52.014Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2287": "2026-10-30T11:01:52.014Z",
+    "medier:fd8f41a3cab1249f": "2026-10-30T11:01:52.014Z",
+    "medier:c1c804ea256af59c": "2026-10-30T11:01:52.014Z",
+    "medier:2bb70a1b62171ebe": "2026-10-30T11:01:52.014Z",
+    "medier:816d4e6eafee5824": "2026-10-30T11:01:52.014Z",
+    "medier:0020da72a1e3e095": "2026-10-30T11:01:52.014Z",
+    "medier:029a7aa6aecd22b3": "2026-10-30T11:01:52.014Z",
+    "medier:7a84406a169ea54b": "2026-10-30T11:01:52.014Z",
+    "medier:3f529f0c23368f06": "2026-10-30T11:01:52.014Z",
+    "medier:e2d0ffc2e87735fd": "2026-10-30T11:01:52.014Z",
+    "medier:89a11ebffe57df0e": "2026-10-30T11:01:52.014Z",
+    "medier:746adb09e2d3c33d": "2026-10-30T11:01:52.014Z",
+    "medier:f24e4d30ec4c1f1f": "2026-10-30T11:01:52.014Z",
+    "medier:fd6208c25edba620": "2026-10-30T11:01:52.014Z",
+    "medier:6b05c616c1107e7a": "2026-10-30T11:01:52.014Z",
+    "medier:447ea6f63d6dc7d4": "2026-10-30T11:01:52.014Z",
+    "medier:e413df1e8db60a89": "2026-10-30T11:01:52.014Z",
+    "medier:a77c244fed14f2d2": "2026-10-30T11:01:52.014Z",
+    "medier:295f21ee82f5f6a9": "2026-10-30T11:01:52.014Z",
+    "medier:9182fc5cc7f562e3": "2026-10-30T11:01:52.014Z",
+    "medier:de335802538e02e3": "2026-10-30T11:01:52.014Z",
+    "met:rain:longyearbyen:2026-10-31": "2026-10-30T11:01:52.014Z",
+    "medier:8893568b24e2282e": "2026-10-30T11:01:52.014Z",
+    "medier:62e5b162d7a6b8eb": "2026-10-30T11:01:52.014Z",
+    "medier:30d2f05883b050a1": "2026-10-30T11:01:52.014Z",
+    "medier:f34543f4a9d3fe5f": "2026-10-30T11:01:52.014Z",
+    "medier:31bf5486a48146ae": "2026-10-30T11:01:52.014Z",
+    "medier:1541c0d8cbcc98df": "2026-10-30T11:01:52.014Z",
+    "medier:03df8c0d0bf106dc": "2026-10-30T11:01:52.014Z",
+    "medier:1471c7ec0d028776": "2026-10-30T11:01:52.014Z",
+    "medier:37949cd112ba1c81": "2026-10-30T11:01:52.014Z",
+    "medier:4f26006f0beca348": "2026-10-30T11:01:52.014Z",
+    "medier:38e8506c69879da1": "2026-10-30T11:01:52.014Z",
+    "medier:3ed581ef917111aa": "2026-10-30T11:01:52.014Z",
+    "medier:fffa74440bf5d0cf": "2026-10-30T11:01:52.014Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -6309,131 +6359,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "unnews:https://news.un.org/en/story/2026/10/1168677": {
-      "p": 92,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/10/1168676": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "medier:015b36e750bd1b1c": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "medier:79395d37ec2473e0": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "medier:7d1c99049ac7fa5c": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "medier:a5d3dc4a3f378343": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "medier:d504cf40251f4511": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "medier:2a3f517aff29f842": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "medier:52e1a5214c69dd09": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "medier:557e9f5c1f75fe15": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "medier:7563fd27ade09cc8": {
-      "p": 92,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "medier:3ba10ca8f14af657": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "medier:cdde7d8c17580416": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "medier:28991653713f4e39": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "medier:88eccb9b5febad1d": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "medier:92eec7643d9b3e85": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "medier:cd07801da916fb57": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "medier:ff5137313fc56237": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "regjeringen:3183596": {
-      "p": 62,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "regjeringen:3183597": {
-      "p": 88,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/janicke-kernland-er-ny-seksjonsleiar-for-kulturarv-og-museum": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/10/pa-vei-mot-baerekraftig-veilys/": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "havforskning:https://www.hi.no/hi/nyheter/2026/oktober/sjekk-kven-som-er-spekkhoggar-sjefen": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2244": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
-    "kystverket:https://www.kystverket.no/nyheter/markedsdialog-om-innseilingen-til-borg-havn/": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-27T11:02:14.276Z"
-    },
     "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2260": {
       "p": 65,
       "v": "b34cb0de5bde",
@@ -8143,6 +8068,116 @@
       "p": 38,
       "v": "b34cb0de5bde",
       "t": "2026-10-30T09:05:21.462Z"
+    },
+    "medier:014cd63676ba033b": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "medier:b8c0edd716f915b2": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "medier:67a75c100feec05d": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "medier:fd8f41a3cab1249f": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "medier:295f21ee82f5f6a9": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "medier:2bb70a1b62171ebe": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "medier:38e8506c69879da1": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "medier:0020da72a1e3e095": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "medier:31bf5486a48146ae": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "medier:7a84406a169ea54b": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "medier:1471c7ec0d028776": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "medier:30d2f05883b050a1": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "medier:8893568b24e2282e": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "medier:e2d0ffc2e87735fd": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "medier:f24e4d30ec4c1f1f": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "medier:6b05c616c1107e7a": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "regjeringen:3186944": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "regjeringen:3187282": {
+      "p": 58,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "dsb:https://www.dsb.no/aktuelt/egenberedskapsuka-gjor-dsbs-fire-ovelser/": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2303": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2285": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2287": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-30T11:07:16.224Z"
     }
   }
 }
