@@ -61,6 +61,14 @@ const grupper = [
 const kort = [
   { url: '/prisstigning/', navn: 'Prisstigningen nå', verdi: `${tallTekst(pris.tolvMnd)} %`, tekst: `Endring i konsumprisene siste tolv måneder, ${maanedTekst(pris.sisteMaaned)}.`, kilde: 'SSB', gruppe: 'priser' },
   {
+    url: '/grafer/',
+    navn: 'Grafer og statistikk',
+    verdi: '62',
+    tekst: '62 interaktive grafikkomponenter for norsk økonomi, styringsrente, kraft, Oljefondet og SSB-statistikk.',
+    kilde: 'SSB / Norges Bank',
+    gruppe: 'priser',
+  },
+  {
     url: '/boligpriser/',
     navn: 'Boligprisene nå',
     verdi: typeof landet?.endringAar === 'number' ? `${tallTekst(landet.endringAar)} %` : '–',

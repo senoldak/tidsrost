@@ -124,3 +124,13 @@ test('TİDSROST_GRAFİKLER: gul farge strengt forbudt og N50 ekvidistanse attrib
     }
   }
 });
+
+test('TİDSROST_GRAFİKLER: norsk bokmål rute /grafer/ og omdirigeringer', async () => {
+  const fs = await import('node:fs');
+  const graferAstroFinnes = fs.existsSync(new URL('../pages/grafer.astro', import.meta.url));
+  assert.ok(graferAstroFinnes, 'src/pages/grafer.astro må eksistere på norsk bokmål');
+
+  const redirectsInnhold = fs.readFileSync(new URL('../../public/_redirects', import.meta.url), 'utf8');
+  assert.ok(redirectsInnhold.includes('/grafikler /grafer/ 301'), 'omdirigering fra /grafikler til /grafer/ må være på plass');
+  assert.ok(redirectsInnhold.includes('/grafikler/ /grafer/ 301'), 'omdirigering fra /grafikler/ til /grafer/ må være på plass');
+});

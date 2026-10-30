@@ -77,6 +77,10 @@
 /ki/ /bruk-av-ki/ 301
 /ki /bruk-av-ki/ 301
 
+# Grafer katalog (norsk Bokmål sti /grafer/)
+/grafikler /grafer/ 301
+/grafikler/ /grafer/ 301
+
 # Kısa haberler dilim derlemelerine, sarı/turuncu farevarsel haberleri günün Farevarsler sayfasına birleştirildi
 # (scripts/birlestir-kisa.mjs, 2026-10-26). Eski adres derlemedeki kendi bölümüne gider.
 /artikkel/stadig-flere-foreldre-sporer-ungdommen-sin/ /artikkel/nyheter-11-oktober-2026-kveld/#stadig-flere-foreldre-sporer-ungdommen-sin 301
