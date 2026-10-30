@@ -1,0 +1,718 @@
+---
+import type { TidsrostGrafikTanimi } from '../../lib/tidsrost-charts-data';
+
+interface Props {
+  grafik: TidsrostGrafikTanimi;
+  genislik?: number;
+  yukseklik?: number;
+}
+
+const { grafik, genislik = 400, yukseklik = 220 } = Astro.props;
+
+// SVG Boyutları ve Boşlukları
+const W = genislik;
+const H = yukseklik;
+const P = { ust: 18, alt: 32, sol: 44, sag: 20 };
+const cizimW = W - P.sol - P.sag;
+const cizimH = H - P.ust - P.alt;
+
+const sayiBicim = (n: number) => n.toLocaleString('nb-NO');
+---
+
+<div class="tidsrost-svg-kapsayici" data-grafik-id={grafik.id}>
+  {
+    grafik.tur === 'alan' && grafik.seri && (() => {
+      const seri = grafik.seri;
+      const degerler = seri.map((d) => d.deger);
+      const min = Math.min(...degerler);
+      const max = Math.max(...degerler);
+      const span = max - min || 1;
+      const x = (i: number) => P.sol + (i / Math.max(seri.length - 1, 1)) * cizimW;
+      const y = (d: number) => P.ust + (1 - (d - min) / span) * cizimH;
+
+      let yol = '';
+      seri.forEach((pt, i) => {
+        yol += `${i === 0 ? 'M' : 'L'} ${x(i).toFixed(1)} ${y(pt.deger).toFixed(1)} `;
+      });
+
+      const alanYol = `${yol} L ${x(seri.length - 1).toFixed(1)} ${(H - P.alt).toFixed(1)} L ${x(0).toFixed(1)} ${(H - P.alt).toFixed(1)} Z`;
+
+      return (
+        <svg viewBox={`0 0 ${W} ${H}`} class="tidsrost-svg" role="img" aria-label={grafik.baslik}>
+          <line x1={P.sol} x2={W - P.sag} y1={P.ust} y2={P.ust} class="izgara" />
+          <line x1={P.sol} x2={W - P.sag} y1={P.ust + cizimH / 2} y2={P.ust + cizimH / 2} class="izgara" />
+          <line x1={P.sol} x2={W - P.sag} y1={H - P.alt} y2={H - P.alt} class="taban" />
+
+          <text x={P.sol - 6} y={P.ust + 4} text-anchor="end" class="eksen">{sayiBicim(max)}</text>
+          <text x={P.sol - 6} y={H - P.alt} text-anchor="end" class="eksen">{sayiBicim(min)}</text>
+
+          <path d={alanYol} class="alan-dolgu" />
+          <path d={yol} class="alan-cizgi" />
+
+          {seri.map((pt, i) => (
+            <g class="nokta-grubu">
+              <circle
+                cx={x(i)}
+                cy={y(pt.deger)}
+                r={i === seri.length - 1 ? 4.5 : 3.5}
+                class={i === seri.length - 1 ? 'nokta-son' : 'nokta'}
+              />
+              <text x={x(i)} y={H - P.alt + 18} text-anchor="middle" class="eksen">{pt.etiket}</text>
+            </g>
+          ))}
+        </svg>
+      );
+    })()
+  }
+
+  {
+    grafik.tur === 'sutun' && grafik.seri && (() => {
+      const seri = grafik.seri;
+      const degerler = seri.map((d) => d.deger);
+      const min = Math.min(0, ...degerler);
+      const max = Math.max(...degerler);
+      const span = max - min || 1;
+      const barGenislik = Math.max(12, Math.min(32, cizimW / seri.length - 10));
+      const x = (i: number) => P.sol + (i + 0.5) * (cizimW / seri.length);
+      const ySifir = P.ust + (1 - (0 - min) / span) * cizimH;
+      const y = (d: number) => P.ust + (1 - (d - min) / span) * cizimH;
+
+      return (
+        <svg viewBox={`0 0 ${W} ${H}`} class="tidsrost-svg" role="img" aria-label={grafik.baslik}>
+          <line x1={P.sol} x2={W - P.sag} y1={P.ust} y2={P.ust} class="izgara" />
+          <line x1={P.sol} x2={W - P.sag} y1={ySifir} y2={ySifir} class="taban" />
+
+          <text x={P.sol - 6} y={P.ust + 4} text-anchor="end" class="eksen">{sayiBicim(max)}</text>
+          <text x={P.sol - 6} y={ySifir + 4} text-anchor="end" class="eksen">{sayiBicim(min)}</text>
+
+          {seri.map((pt, i) => {
+            const h = Math.abs(ySifir - y(pt.deger));
+            const rectY = pt.deger >= 0 ? y(pt.deger) : ySifir;
+            return (
+              <g class="sutun-grubu">
+                <rect
+                  x={x(i) - barGenislik / 2}
+                  y={rectY}
+                  width={barGenislik}
+                  height={Math.max(2, h)}
+                  rx="2"
+                  class={i === seri.length - 1 ? 'sutun-bar sutun-son' : 'sutun-bar'}
+                />
+                <text x={x(i)} y={H - P.alt + 18} text-anchor="middle" class="eksen">{pt.etiket}</text>
+              </g>
+            );
+          })}
+        </svg>
+      );
+    })()
+  }
+
+  {
+    grafik.tur === 'yigilmis-sutun' && grafik.gruplar && (() => {
+      const gruplar = grafik.gruplar;
+      const maxTop = Math.max(...gruplar.map((g) => g.varlik + g.yukumluluk));
+      const barGenislik = Math.max(14, Math.min(36, cizimW / gruplar.length - 14));
+      const x = (i: number) => P.sol + (i + 0.5) * (cizimW / gruplar.length);
+      const yTop = (d: number) => P.ust + (1 - d / (maxTop || 1)) * cizimH;
+
+      return (
+        <svg viewBox={`0 0 ${W} ${H}`} class="tidsrost-svg" role="img" aria-label={grafik.baslik}>
+          <line x1={P.sol} x2={W - P.sag} y1={P.ust} y2={P.ust} class="izgara" />
+          <line x1={P.sol} x2={W - P.sag} y1={H - P.alt} y2={H - P.alt} class="taban" />
+
+          {gruplar.map((gr, i) => {
+            const altY = yTop(gr.varlik);
+            const ustY = yTop(gr.varlik + gr.yukumluluk);
+            const varlikH = H - P.alt - altY;
+            const yukumH = altY - ustY;
+
+            return (
+              <g class="yigilmis-grubu">
+                <rect
+                  x={x(i) - barGenislik / 2}
+                  y={altY}
+                  width={barGenislik}
+                  height={Math.max(2, varlikH)}
+                  class="yigilmis-varlik"
+                />
+                <rect
+                  x={x(i) - barGenislik / 2}
+                  y={ustY}
+                  width={barGenislik}
+                  height={Math.max(2, yukumH)}
+                  rx="2"
+                  class="yigilmis-yukumluluk"
+                />
+                <text x={x(i)} y={H - P.alt + 18} text-anchor="middle" class="eksen">{gr.etiket}</text>
+              </g>
+            );
+          })}
+        </svg>
+      );
+    })()
+  }
+
+  {
+    grafik.tur === 'ayrisan-cubuk' && grafik.seri && (() => {
+      const seri = grafik.seri;
+      const degerler = seri.map((d) => d.deger);
+      const maxAbs = Math.max(...degerler.map(Math.abs)) || 1;
+      const barYukseklik = Math.max(10, Math.min(22, cizimH / seri.length - 8));
+      const yMerkez = (i: number) => P.ust + (i + 0.5) * (cizimH / seri.length);
+      const xSifir = P.sol + cizimW / 2;
+
+      return (
+        <svg viewBox={`0 0 ${W} ${H}`} class="tidsrost-svg" role="img" aria-label={grafik.baslik}>
+          <line x1={xSifir} x2={xSifir} y1={P.ust} y2={H - P.alt} class="sifir-cizgisi" />
+
+          {seri.map((pt, i) => {
+            const w = (Math.abs(pt.deger) / maxAbs) * (cizimW / 2 - 20);
+            const rectX = pt.deger >= 0 ? xSifir : xSifir - w;
+            return (
+              <g class="ayrisan-satir">
+                <text x={P.sol - 6} y={yMerkez(i) + 4} text-anchor="end" class="eksen">{pt.etiket}</text>
+                <rect
+                  x={rectX}
+                  y={yMerkez(i) - barYukseklik / 2}
+                  width={Math.max(2, w)}
+                  height={barYukseklik}
+                  rx="2"
+                  class={pt.deger >= 0 ? 'ayrisan-pozitif' : 'ayrisan-negatif'}
+                />
+                <text
+                  x={pt.deger >= 0 ? rectX + w + 5 : rectX - 5}
+                  y={yMerkez(i) + 4}
+                  text-anchor={pt.deger >= 0 ? 'start' : 'end'}
+                  class="ayrisan-deger"
+                >
+                  {pt.deger > 0 ? `+${pt.deger}` : pt.deger}%
+                </text>
+              </g>
+            );
+          })}
+        </svg>
+      );
+    })()
+  }
+
+  {
+    grafik.tur === 'aralik-bant' && grafik.araliklar && (() => {
+      const araliklar = grafik.araliklar;
+      const minGlobal = Math.min(...araliklar.map((a) => a.min));
+      const maxGlobal = Math.max(...araliklar.map((a) => a.max));
+      const span = maxGlobal - minGlobal || 1;
+      const x = (v: number) => P.sol + ((v - minGlobal) / span) * cizimW;
+      const yMerkez = (i: number) => P.ust + (i + 0.5) * (cizimH / araliklar.length);
+
+      return (
+        <svg viewBox={`0 0 ${W} ${H}`} class="tidsrost-svg" role="img" aria-label={grafik.baslik}>
+          {araliklar.map((ar, i) => {
+            const x1 = x(ar.min);
+            const x2 = x(ar.max);
+            const xm = x(ar.mevcut);
+            const ym = yMerkez(i);
+            return (
+              <g class="aralik-satir">
+                <text x={P.sol - 6} y={ym + 4} text-anchor="end" class="eksen">{ar.etiket}</text>
+                <line x1={x1} x2={x2} y1={ym} y2={ym} class="aralik-bant-cizgi" />
+                <circle cx={x1} cy={ym} r="3" class="aralik-uc" />
+                <circle cx={x2} cy={ym} r="3" class="aralik-uc" />
+                <circle cx={xm} cy={ym} r="5" class="aralik-hedef-nokta" />
+              </g>
+            );
+          })}
+        </svg>
+      );
+    })()
+  }
+
+  {
+    grafik.tur === 'halka-pay' && grafik.dilimler && (() => {
+      const dilimler = grafik.dilimler;
+      const cx = P.sol + 85;
+      const cy = H / 2;
+      const rDis = 64;
+      const rIc = 40;
+
+      let acumulador = 0;
+      const yaylar = dilimler.map((d) => {
+        const startAngle = (acumulador / 100) * Math.PI * 2 - Math.PI / 2;
+        acumulador += d.oran;
+        const endAngle = (acumulador / 100) * Math.PI * 2 - Math.PI / 2;
+
+        const x1 = cx + rDis * Math.cos(startAngle);
+        const y1 = cy + rDis * Math.sin(startAngle);
+        const x2 = cx + rDis * Math.cos(endAngle);
+        const y2 = cy + rDis * Math.sin(endAngle);
+
+        const x3 = cx + rIc * Math.cos(endAngle);
+        const y3 = cy + rIc * Math.sin(endAngle);
+        const x4 = cx + rIc * Math.cos(startAngle);
+        const y4 = cy + rIc * Math.sin(startAngle);
+
+        const largeArc = d.oran > 50 ? 1 : 0;
+        const yol = `M ${x1} ${y1} A ${rDis} ${rDis} 0 ${largeArc} 1 ${x2} ${y2} L ${x3} ${y3} A ${rIc} ${rIc} 0 ${largeArc} 0 ${x4} ${y4} Z`;
+
+        return { yol, dilim: d };
+      });
+
+      return (
+        <div class="halka-kapsayici">
+          <svg viewBox={`0 0 ${cx * 2} ${H}`} class="halka-svg" role="img" aria-label={grafik.baslik}>
+            {yaylar.map(({ yol, dilim }) => (
+              <path d={yol} class={`dilim-parca dilim-${dilim.renk}`} />
+            ))}
+            <text x={cx} y={cy + 4} text-anchor="middle" class="halka-merkez-yazi">100%</text>
+          </svg>
+
+          <div class="halka-lejant">
+            {dilimler.map((d) => (
+              <div class="lejant-satir">
+                <span class={`kare-ornek dilim-${d.renk}`} />
+                <span class="lejant-ad">{d.ad}</span>
+                <span class="lejant-oran">%{d.oran}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    })()
+  }
+
+  {
+    grafik.tur === 'radyal-hedef' && (() => {
+      const oran = Math.min(100, Math.max(0, grafik.oran ?? 78));
+      const cx = W / 2;
+      const cy = H / 2 - 6;
+      const r = 58;
+      const cevre = 2 * Math.PI * r;
+      const offset = cevre * (1 - oran / 100);
+
+      return (
+        <svg viewBox={`0 0 ${W} ${H}`} class="tidsrost-svg" role="img" aria-label={grafik.baslik}>
+          <circle cx={cx} cy={cy} r={r} class="radyal-taban" />
+          <circle
+            cx={cx}
+            cy={cy}
+            r={r}
+            class="radyal-dolu"
+            stroke-dasharray={cevre}
+            stroke-dashoffset={offset}
+            transform={`rotate(-90 ${cx} ${cy})`}
+          />
+          <text x={cx} y={cy + 8} text-anchor="middle" class="radyal-rakam">%{oran}</text>
+          <text x={cx} y={H - P.alt + 18} text-anchor="middle" class="eksen">Mål: {grafik.hedef ?? 100}%</text>
+        </svg>
+      );
+    })()
+  }
+
+  {
+    grafik.tur === 'coklu-karma' && grafik.seriler && (() => {
+      const seriler = grafik.seriler;
+      const maxCubuk = Math.max(...seriler.map((s) => s.cubuk)) || 1;
+      const maxCizgi = Math.max(...seriler.map((s) => s.cizgi)) || 1;
+      const barGenislik = Math.max(12, Math.min(28, cizimW / seriler.length - 12));
+      const x = (i: number) => P.sol + (i + 0.5) * (cizimW / seriler.length);
+      const yCubuk = (d: number) => P.ust + (1 - d / maxCubuk) * cizimH;
+      const yCizgi = (d: number) => P.ust + (1 - d / maxCizgi) * cizimH;
+
+      let cizgiYol = '';
+      seriler.forEach((s, i) => {
+        cizgiYol += `${i === 0 ? 'M' : 'L'} ${x(i).toFixed(1)} ${yCizgi(s.cizgi).toFixed(1)} `;
+      });
+
+      return (
+        <svg viewBox={`0 0 ${W} ${H}`} class="tidsrost-svg" role="img" aria-label={grafik.baslik}>
+          <line x1={P.sol} x2={W - P.sag} y1={P.ust} y2={P.ust} class="izgara" />
+          <line x1={P.sol} x2={W - P.sag} y1={H - P.alt} y2={H - P.alt} class="taban" />
+
+          {seriler.map((s, i) => (
+            <rect
+              x={x(i) - barGenislik / 2}
+              y={yCubuk(s.cubuk)}
+              width={barGenislik}
+              height={H - P.alt - yCubuk(s.cubuk)}
+              rx="2"
+              class="karma-bar"
+            />
+          ))}
+
+          <path d={cizgiYol} class="karma-cizgi" />
+
+          {seriler.map((s, i) => (
+            <g>
+              <circle cx={x(i)} cy={yCizgi(s.cizgi)} r="3.5" class="karma-nokta" />
+              <text x={x(i)} y={H - P.alt + 18} text-anchor="middle" class="eksen">{s.etiket}</text>
+            </g>
+          ))}
+        </svg>
+      );
+    })()
+  }
+
+  {
+    grafik.tur === 'nokta-dagilim' && grafik.noktalar && (() => {
+      const noktalar = grafik.noktalar;
+      const xVal = (p: { x: number }) => p.x;
+      const yVal = (p: { y: number }) => p.y;
+      const minX = Math.min(...noktalar.map(xVal));
+      const maxX = Math.max(...noktalar.map(xVal)) || 1;
+      const minY = Math.min(...noktalar.map(yVal));
+      const maxY = Math.max(...noktalar.map(yVal)) || 1;
+
+      const mapX = (v: number) => P.sol + ((v - minX) / (maxX - minX || 1)) * cizimW;
+      const mapY = (v: number) => P.ust + (1 - (v - minY) / (maxY - minY || 1)) * cizimH;
+
+      return (
+        <svg viewBox={`0 0 ${W} ${H}`} class="tidsrost-svg" role="img" aria-label={grafik.baslik}>
+          <line x1={P.sol} x2={W - P.sag} y1={P.ust} y2={P.ust} class="izgara" />
+          <line x1={P.sol} x2={W - P.sag} y1={H - P.alt} y2={H - P.alt} class="taban" />
+
+          {noktalar.map((pt, i) => (
+            <circle
+              cx={mapX(pt.x)}
+              cy={mapY(pt.y)}
+              r={i % 4 === 0 ? 5 : 3.5}
+              class={i % 4 === 0 ? 'scatter-nokta-vurgu' : 'scatter-nokta'}
+            />
+          ))}
+        </svg>
+      );
+    })()
+  }
+
+  {
+    grafik.tur === 'siralama-cubuk' && grafik.ogeler && (() => {
+      const ogeler = grafik.ogeler;
+      const maxDeger = Math.max(...ogeler.map((o) => o.deger)) || 1;
+      const barH = Math.max(10, Math.min(18, cizimH / ogeler.length - 8));
+      const yMerkez = (i: number) => P.ust + (i + 0.5) * (cizimH / ogeler.length);
+
+      return (
+        <svg viewBox={`0 0 ${W} ${H}`} class="tidsrost-svg" role="img" aria-label={grafik.baslik}>
+          {ogeler.map((og, i) => {
+            const w = (og.deger / maxDeger) * (cizimW - 45);
+            return (
+              <g class="siralama-satir">
+                <text x={P.sol - 6} y={yMerkez(i) + 4} text-anchor="end" class="eksen">{og.etiket}</text>
+                <rect
+                  x={P.sol}
+                  y={yMerkez(i) - barH / 2}
+                  width={Math.max(2, w)}
+                  height={barH}
+                  rx="2"
+                  class="siralama-bar"
+                />
+                <text x={P.sol + w + 6} y={yMerkez(i) + 4} text-anchor="start" class="siralama-deger">
+                  {og.deger}
+                </text>
+              </g>
+            );
+          })}
+        </svg>
+      );
+    })()
+  }
+
+  {
+    grafik.tur === 'akis-selale' && grafik.adimlari && (() => {
+      const adimlari = grafik.adimlari;
+      const maxVal = Math.max(...adimlari.map((a) => Math.abs(a.deger))) || 1;
+      const barW = Math.max(14, Math.min(32, cizimW / adimlari.length - 12));
+      const x = (i: number) => P.sol + (i + 0.5) * (cizimW / adimlari.length);
+      const yTop = (d: number) => P.ust + (1 - d / maxVal) * cizimH;
+
+      return (
+        <svg viewBox={`0 0 ${W} ${H}`} class="tidsrost-svg" role="img" aria-label={grafik.baslik}>
+          <line x1={P.sol} x2={W - P.sag} y1={H - P.alt} y2={H - P.alt} class="taban" />
+
+          {adimlari.map((ad, i) => {
+            const y = yTop(ad.deger);
+            const h = Math.abs(H - P.alt - y);
+            return (
+              <g class="selale-adimi">
+                <rect
+                  x={x(i) - barW / 2}
+                  y={y}
+                  width={barW}
+                  height={Math.max(2, h)}
+                  rx="2"
+                  class={`selale-${ad.tur}`}
+                />
+                <text x={x(i)} y={H - P.alt + 18} text-anchor="middle" class="eksen">{ad.ad}</text>
+              </g>
+            );
+          })}
+        </svg>
+      );
+    })()
+  }
+</div>
+
+<style>
+  .tidsrost-svg-kapsayici {
+    width: 100%;
+    position: relative;
+    --vann: #1f5f99;
+    --vann-lys: #e1eef8;
+    --blekk: #16191c;
+    --signalrod: #c8281e;
+    --kontur: #a0643c;
+    --cizgi: #dcded8;
+    --papir: #fdfdfb;
+    --gri: #8a9099;
+    font-family: 'Archivo', -apple-system, sans-serif;
+  }
+
+  .tidsrost-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
+  }
+
+  /* Kılavuz Çizgileri */
+  .izgara {
+    stroke: var(--cizgi, #dcded8);
+    stroke-width: 1;
+    stroke-dasharray: 2 3;
+  }
+
+  .taban {
+    stroke: var(--blekk, #16191c);
+    stroke-width: 1.2;
+  }
+
+  .sifir-cizgisi {
+    stroke: var(--blekk, #16191c);
+    stroke-width: 1;
+    stroke-dasharray: 2 2;
+  }
+
+  .eksen {
+    font-size: 10px;
+    font-weight: 500;
+    fill: var(--gri, #8a9099);
+    user-select: none;
+  }
+
+  /* Alan Grafiği: Su mavisi (#1f5f99) */
+  .alan-dolgu {
+    fill: rgba(31, 95, 153, 0.12);
+  }
+
+  .alan-cizgi {
+    fill: none;
+    stroke: var(--vann, #1f5f99);
+    stroke-width: 2.2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+
+  .nokta {
+    fill: #ffffff;
+    stroke: var(--vann, #1f5f99);
+    stroke-width: 2px;
+  }
+
+  .nokta-son {
+    fill: var(--signalrod, #c8281e);
+    stroke: #ffffff;
+    stroke-width: 2px;
+  }
+
+  /* Sütun Grafiği: Su mavisi */
+  .sutun-bar {
+    fill: var(--vann, #1f5f99);
+    opacity: 0.85;
+  }
+
+  .sutun-son {
+    fill: var(--vann, #1f5f99);
+    opacity: 1;
+  }
+
+  /* Yığılmış Sütun */
+  .yigilmis-varlik {
+    fill: var(--vann, #1f5f99);
+  }
+
+  .yigilmis-yukumluluk {
+    fill: var(--blekk, #16191c);
+  }
+
+  /* Ayrışan Çubuk */
+  .ayrisan-pozitif {
+    fill: var(--vann, #1f5f99);
+  }
+
+  .ayrisan-negatif {
+    fill: var(--signalrod, #c8281e);
+  }
+
+  .ayrisan-deger {
+    font-size: 10px;
+    font-weight: 600;
+    fill: var(--blekk, #16191c);
+  }
+
+  /* Aralık Bant */
+  .aralik-bant-cizgi {
+    stroke: var(--cizgi, #dcded8);
+    stroke-width: 3px;
+    stroke-linecap: round;
+  }
+
+  .aralik-uc {
+    fill: var(--cizgi, #dcded8);
+  }
+
+  .aralik-hedef-nokta {
+    fill: var(--vann, #1f5f99);
+    stroke: #ffffff;
+    stroke-width: 1.5px;
+  }
+
+  /* Halka Grafik */
+  .halka-kapsayici {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .halka-svg {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+  }
+
+  .halka-merkez-yazi {
+    font-size: 14px;
+    font-weight: 700;
+    fill: var(--blekk, #16191c);
+  }
+
+  .dilim-parca {
+    transition: opacity 0.2s;
+  }
+
+  .dilim-parca.dilim-vann { fill: #1f5f99; }
+  .dilim-parca.dilim-blekk { fill: #16191c; }
+  .dilim-parca.dilim-signalrod { fill: #c8281e; }
+  .dilim-parca.dilim-kontur { fill: #a0643c; }
+  .dilim-parca.dilim-gra { fill: #8a9099; }
+
+  .halka-lejant {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    flex-grow: 1;
+    font-size: 11px;
+  }
+
+  .lejant-satir {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .kare-ornek {
+    width: 8px;
+    height: 8px;
+    border-radius: 1px;
+    flex-shrink: 0;
+  }
+
+  .kare-ornek.dilim-vann { background: #1f5f99; }
+  .kare-ornek.dilim-blekk { background: #16191c; }
+  .kare-ornek.dilim-signalrod { background: #c8281e; }
+  .kare-ornek.dilim-kontur { background: #a0643c; }
+  .kare-ornek.dilim-gra { background: #8a9099; }
+
+  .lejant-ad {
+    color: var(--gri, #8a9099);
+    flex-grow: 1;
+  }
+
+  .lejant-oran {
+    color: var(--blekk, #16191c);
+    font-weight: 600;
+  }
+
+  /* Radyal Hedef */
+  .radyal-taban {
+    fill: none;
+    stroke: var(--cizgi, #dcded8);
+    stroke-width: 12;
+    stroke-linecap: butt;
+  }
+
+  .radyal-dolu {
+    fill: none;
+    stroke: var(--vann, #1f5f99);
+    stroke-width: 12;
+    stroke-linecap: butt;
+  }
+
+  .radyal-rakam {
+    font-size: 26px;
+    font-weight: 700;
+    fill: var(--blekk, #16191c);
+  }
+
+  /* Çoklu Karma */
+  .karma-bar {
+    fill: var(--cizgi, #dcded8);
+  }
+
+  .karma-cizgi {
+    fill: none;
+    stroke: var(--vann, #1f5f99);
+    stroke-width: 2.2px;
+  }
+
+  .karma-nokta {
+    fill: var(--vann, #1f5f99);
+    stroke: #ffffff;
+    stroke-width: 1.5px;
+  }
+
+  /* Nokta Dağılım */
+  .scatter-nokta {
+    fill: var(--blekk, #16191c);
+    opacity: 0.65;
+  }
+
+  .scatter-nokta-vurgu {
+    fill: var(--vann, #1f5f99);
+    stroke: var(--blekk, #16191c);
+    stroke-width: 1.5px;
+  }
+
+  /* Sıralama Çubuğu */
+  .siralama-bar {
+    fill: var(--blekk, #16191c);
+  }
+
+  .siralama-deger {
+    font-size: 11px;
+    font-weight: 600;
+    fill: var(--vann, #1f5f99);
+  }
+
+  /* Akış Şelalesi */
+  .selale-artis {
+    fill: var(--vann, #1f5f99);
+  }
+
+  .selale-azalis {
+    fill: var(--signalrod, #c8281e);
+  }
+
+  .selale-net {
+    fill: var(--blekk, #16191c);
+  }
+</style>

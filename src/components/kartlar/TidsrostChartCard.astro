@@ -1,0 +1,289 @@
+---
+import type { TidsrostGrafikTanimi } from '../../lib/tidsrost-charts-data';
+import TidsrostChartRenderer from './TidsrostChartRenderer.astro';
+
+interface Props {
+  grafik: TidsrostGrafikTanimi;
+  kucuk?: boolean;
+}
+
+const { grafik, kucuk = false } = Astro.props;
+
+const artisMi = grafik.degisim >= 0;
+const degisimOk = artisMi ? '▲' : '▼';
+const degisimMetni = `${degisimOk} ${Math.abs(grafik.degisim).toFixed(1)}%`;
+const zamanSerisiMi = ['alan', 'sutun', 'coklu-karma', 'ayrisan-cubuk'].includes(grafik.tur);
+
+const hoydeKurveTekst = grafik.hoydeKurve ? `${grafik.hoydeKurve} m.o.h.` : 'N50 Ekvidistanse';
+const kartbladTekst = grafik.kartbladRef ?? 'Kartblad 1914 IV';
+---
+
+<article class="tidsrost-kart" data-kart-id={grafik.id}>
+  <header class="kart-ust">
+    <div class="kategori-satiri">
+      <div class="n50-etiket">
+        <span class="kontur-linje" aria-hidden="true"></span>
+        <span class="kart-kategori">{grafik.kategori}</span>
+      </div>
+      <span class="kart-hoyde">{hoydeKurveTekst}</span>
+    </div>
+
+    <div class="baslik-blok">
+      <h3 class="kart-baslik">{grafik.baslik}</h3>
+      <p class="kart-aciklama">{grafik.aciklama}</p>
+    </div>
+
+    <div class="metrik-blok">
+      <div class="metrik-deger">{grafik.metrik}</div>
+      <div class={`degisim-rozet ${artisMi ? 'okning' : 'nedgang'}`}>
+        <span class="degisim-oran">{degisimMetni}</span>
+        <span class="degisim-etiket">{grafik.degisimEtiket}</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Tidsintervall -->
+  {
+    zamanSerisiMi ? (
+      <div class="zaman-filtresi" role="tablist" aria-label="Tidsintervall">
+        <button type="button" class="filtre-sekme aktiv" role="tab" aria-selected="true" data-vade="1M">1M</button>
+        <button type="button" class="filtre-sekme" role="tab" aria-selected="false" data-vade="3M">3M</button>
+        <button type="button" class="filtre-sekme" role="tab" aria-selected="false" data-vade="1A">1Å</button>
+        <button type="button" class="filtre-sekme" role="tab" aria-selected="false" data-vade="ALLE">ALLE</button>
+      </div>
+    ) : (
+      <div class="aralik-ayrac" />
+    )
+  }
+
+  <!-- SVG Grafikk -->
+  <div class="grafik-govde">
+    <TidsrostChartRenderer grafik={grafik} />
+  </div>
+
+  <!-- Bunntekst / Kilde -->
+  <footer class="kart-alt">
+    <div class="kilde-blok">
+      <span class="kilde-etikett">Kilde:</span>
+      <span class="kilde-navn">{grafik.kaynak}</span>
+    </div>
+    <div class="kartblad-blok">
+      <span class="kartblad-ref">{kartbladTekst}</span>
+      <time datetime={grafik.tarih} class="kart-dato">{grafik.tarih}</time>
+    </div>
+  </footer>
+</article>
+
+<style>
+  .tidsrost-kart {
+    background: #fdfdfb;
+    border: 1px solid #dcded8;
+    border-radius: 4px;
+    padding: 1.25rem 1.25rem 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    box-shadow: 0 1px 3px rgba(22, 25, 28, 0.04);
+    position: relative;
+    border-top: 3px solid #1f5f99;
+    font-family: 'Archivo', -apple-system, sans-serif;
+  }
+
+  .tidsrost-kart:hover {
+    border-color: #1f5f99;
+    box-shadow: 0 4px 14px rgba(31, 95, 153, 0.08);
+  }
+
+  .kart-ust {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .kategori-satiri {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .n50-etiket {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .kontur-linje {
+    width: 10px;
+    height: 2px;
+    background: #a0643c;
+    display: inline-block;
+  }
+
+  .kart-kategori {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1f5f99;
+    text-transform: uppercase;
+  }
+
+  .kart-hoyde {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: #a0643c;
+    letter-spacing: 0.02em;
+  }
+
+  .baslik-blok {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .kart-baslik {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #16191c;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    margin: 0;
+  }
+
+  .kart-aciklama {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 0.84375rem;
+    line-height: 1.45;
+    color: #444a52;
+    margin: 0.125rem 0 0 0;
+  }
+
+  .metrik-blok {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding-top: 0.35rem;
+    border-top: 1px dashed #dcded8;
+  }
+
+  .metrik-deger {
+    font-size: 1.625rem;
+    font-weight: 800;
+    color: #16191c;
+    letter-spacing: -0.025em;
+    line-height: 1;
+  }
+
+  .degisim-rozet {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+  }
+
+  .degisim-rozet.okning {
+    color: #1f5f99;
+    background: #e8f2fa;
+  }
+
+  .degisim-rozet.nedgang {
+    color: #c8281e;
+    background: #fae9e8;
+  }
+
+  .degisim-oran {
+    font-weight: 700;
+  }
+
+  .degisim-etiket {
+    color: #656d77;
+    font-size: 0.6875rem;
+    font-weight: 500;
+  }
+
+  .zaman-filtresi {
+    display: flex;
+    gap: 0.25rem;
+    background: #f1f3ee;
+    padding: 2px;
+    border-radius: 3px;
+    margin: 0.5rem 0 0.75rem 0;
+    width: fit-content;
+  }
+
+  .filtre-sekme {
+    background: transparent;
+    border: none;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: #555c66;
+    padding: 0.2rem 0.55rem;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-family: inherit;
+  }
+
+  .filtre-sekme:hover {
+    color: #16191c;
+  }
+
+  .filtre-sekme.aktiv {
+    background: #ffffff;
+    color: #1f5f99;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .aralik-ayrac {
+    height: 0.75rem;
+  }
+
+  .grafik-govde {
+    min-height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.25rem 0;
+  }
+
+  .kart-alt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.6875rem;
+    color: #767d87;
+    padding-top: 0.625rem;
+    border-top: 1px solid #dcded8;
+    margin-top: 0.5rem;
+  }
+
+  .kilde-blok {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  .kilde-etikett {
+    font-weight: 600;
+    color: #16191c;
+  }
+
+  .kartblad-blok {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .kartblad-ref {
+    color: #a0643c;
+    font-weight: 500;
+  }
+
+  .kart-dato {
+    color: #767d87;
+  }
+</style>
