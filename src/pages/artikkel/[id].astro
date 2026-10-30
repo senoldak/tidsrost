@@ -48,6 +48,9 @@ const { Content } = await render(haber);
 // OG/JSON-LD görseli her haberde üretilir; büyük WebP kapak yalnızca yeni haberlerde (bkz. gorselVar).
 const cover = kapak;
 const yeniKapak = cover && gorselVar(date);
+// Botun yazılı kapağı (coverKreditt «Illustrasjon: tidsrøst») sayfada gösterilmez: başlık üçüncü kez okunuyordu (30.10.2026).
+// Paylaşım görseli (og:image) kapağı kullanmaya devam eder.
+const visKapak = cover && coverKreditt !== `Illustrasjon: ${SITE.name}`;
 const source = kilde(haber);
 const sourceUrl = kildeUrl(haber);
 const warn = varsel(title);
@@ -203,7 +206,7 @@ const jsonLd = {
     <SentezBlok whyMatters={haber.data.why_matters} keyPoints={haber.data.key_points} />
 
     {
-      cover && (
+      visKapak && (
         <figure>
           {yeniKapak ? (
             <Image src={cover} alt={coverAlt ?? title} width={1200} loading="eager" fetchpriority="high" decoding="async" />

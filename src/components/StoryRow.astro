@@ -9,9 +9,11 @@ interface Props {
   showCategory?: boolean;
   // Saat yerine kısa tarih (ör. "14. okt."): gün bantları olmayan listelerde (Forklart, yazar sayfası).
   dato?: boolean;
+  // Spot (description) satırı; ön sayfada yalnız günün ilk üç satırında (30.10.2026).
+  desc?: boolean;
 }
 
-const { haber, showCategory = true, dato = false } = Astro.props;
+const { haber, showCategory = true, dato = false, desc = true } = Astro.props;
 const { title, description, date } = haber.data;
 ---
 
@@ -19,7 +21,7 @@ const { title, description, date } = haber.data;
   <time class="row-time" datetime={date.toISOString()}>{dato ? formatKortDato(date) : formatTime(date)}</time>
   <div class="row-body">
     <h3><a href={newsUrl(haber)}>{title}</a></h3>
-    <p class="row-desc">{description}</p>
+    {desc && <p class="row-desc">{description}</p>}
     <StoryMeta haber={haber} showCategory={showCategory} />
   </div>
 </article>

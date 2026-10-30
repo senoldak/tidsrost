@@ -1,10 +1,10 @@
 ---
-// Haberin işaret satırı: farevarsel, Siste nytt, tür (Forklart / Analyse), kategori, saat, kaynak ve üretim işareti.
+// Haberin işaret satırı: farevarsel, Siste nytt, tür (Forklart / Analyse), kategori, yazar, saat, kaynak.
+// Üretim işareti ve lesetid listelerden çıkarıldı (30.10.2026): üretim notu haber sayfasında durur.
 import Symbol from './Symbol.astro';
-import { SITE, categoryName, formatDay, formatTime, produksjonMerke, varsel } from '../lib/site';
+import { SITE, categoryName, formatDay, formatTime, varsel } from '../lib/site';
 import { ANALYSE, erAnalyse, erForklart, FORKLART, forfatterSlug, kilde, type Haber } from '../lib/news';
 import { synligForfatter } from '../lib/forfatter.mjs';
-import { lesetid } from '../lib/ordtelling.mjs';
 
 interface Props {
   haber: Haber;
@@ -13,14 +13,11 @@ interface Props {
 }
 
 const { haber, showCategory = true, time = false } = Astro.props;
-const { title, date, category, breaking, produksjon, author } = haber.data;
+const { title, date, category, breaking, author } = haber.data;
 const warn = varsel(title);
 const source = kilde(haber);
-const made = produksjonMerke(produksjon);
 const forfatter = synligForfatter({ sjanger: haber.data.sjanger, author }, SITE.name, SITE.redaktor);
 const harForfatter = forfatter !== SITE.name;
-// Lesetid bare for lengre saker (2 min eller mer), som Forklart-artikler.
-const minutter = lesetid(haber.body);
 ---
 
 <p class="meta">
@@ -36,6 +33,4 @@ const minutter = lesetid(haber.body);
     )
   }
   {source && <span class="mark"><Symbol kind="kilde" />{source}</span>}
-  {made && <span class="mark"><Symbol kind={made.kind} />{made.label}</span>}
-  {minutter >= 2 && <span class="mark">{minutter} min lesetid</span>}
 </p>

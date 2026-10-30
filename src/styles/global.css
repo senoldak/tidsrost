@@ -231,6 +231,9 @@ p {
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+  /* Arazi sağda kalır; kelime işareti temiz kâğıt üstünde (30.10.2026). */
+  -webkit-mask-image: linear-gradient(to right, transparent 0, transparent 20%, #000 48%);
+  mask-image: linear-gradient(to right, transparent 0, transparent 20%, #000 48%);
 }
 
 /* Paftanın kenar karelajı: alt çizgide 80px'de bir işaret. */
@@ -251,9 +254,9 @@ p {
   justify-content: space-between;
   align-items: flex-end;
   gap: calc(var(--u) * 3);
-  min-height: clamp(128px, 15vw, 184px);
+  min-height: clamp(112px, 12vw, 168px);
   padding-top: calc(var(--u) * 3);
-  padding-bottom: calc(var(--u) * 3);
+  padding-bottom: calc(var(--u) * 2.5);
 }
 
 /* Harita etiketleri gibi: yazının etrafında kâğıt renginde hale. */
@@ -269,7 +272,7 @@ p {
 }
 
 .logo {
-  font: 800 clamp(3rem, 8.4vw, 6rem) / 0.9 var(--frame);
+  font: 800 clamp(2.75rem, 5.6vw, 4.25rem) / 0.9 var(--frame);
   font-stretch: 112%;
   letter-spacing: -0.04em;
   color: var(--ink);
@@ -294,8 +297,9 @@ p {
 }
 
 .edition b {
-  display: block;
-  font: 600 1.375rem/1.25 var(--read);
+  display: inline;
+  margin-left: 0.5em;
+  font: 650 1rem/1 var(--read);
   letter-spacing: 0;
   text-transform: none;
   color: var(--ink);
@@ -415,6 +419,69 @@ main.container {
 .lead-story figure {
   margin: calc(var(--u) * 3) 0 0;
   max-width: 34rem;
+}
+
+/* Manşetin altında iki ikincil haber (30.10.2026). */
+.lead-to {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: calc(var(--u) * 3) calc(var(--u) * 5);
+  margin-top: calc(var(--u) * 3);
+  padding-top: calc(var(--u) * 3);
+  border-top: 1px solid var(--ink);
+}
+
+.lead-to h3 {
+  margin: 0 0 6px;
+  font: 600 clamp(1.25rem, 1.8vw, 1.4375rem) / 1.22 var(--read);
+}
+
+.lead-to .row-desc {
+  margin: 0 0 var(--u);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+/* Forklart: orman tonunda tek şerit, yazar bir kez bant altında. */
+.forklart-band {
+  padding: calc(var(--u) * 3) calc(var(--u) * 4) calc(var(--u) * 4);
+  background: var(--surface);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.band-under {
+  margin: 0 0 calc(var(--u) * 2.5);
+  font: 500 0.8125rem/1.4 var(--frame);
+  color: var(--muted);
+}
+
+.forklart-rad {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: calc(var(--u) * 3) calc(var(--u) * 5);
+}
+
+.forklart-rad time {
+  display: block;
+  margin-bottom: var(--u);
+  font: 600 0.75rem/1 var(--frame);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.forklart-rad h3 {
+  margin: 0 0 6px;
+  font: 600 1.3125rem/1.28 var(--read);
+}
+
+.forklart-rad p {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--ink-2);
 }
 
 .lead-story img {
@@ -761,27 +828,24 @@ main.container {
 }
 
 /* ——— Sentez / Redaksjonell oppsummering (Kort oppsummert) ——— */
+/* Kutusuz: ince mürekkep çizgisi, bant etiketi, çizgili liste (30.10.2026). */
 .sentez-kutu {
   margin: 0 0 calc(var(--u) * 4);
-  padding: calc(var(--u) * 2.5) calc(var(--u) * 3);
-  background: var(--surface);
-  border: 1px solid var(--rule);
-  border-left: 3px solid var(--contour);
+  padding: calc(var(--u) * 1.5) 0 0;
+  border-top: 1px solid var(--ink);
 }
 
 .sentez-kutu-header {
   display: flex;
   align-items: center;
-  margin-bottom: calc(var(--u) * 1.5);
-  padding-bottom: var(--u);
-  border-bottom: 1px solid var(--rule);
+  margin-bottom: var(--u);
 }
 
 .sentez-kutu-tittel {
-  font: 700 0.8125rem/1.2 var(--frame);
-  letter-spacing: 0.08em;
+  font: 700 0.6875rem/1.2 var(--frame);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--contour);
+  color: var(--muted);
 }
 
 .sentez-seksjon {
@@ -806,21 +870,15 @@ main.container {
 
 .sentez-liste {
   margin: 0;
-  padding-left: calc(var(--u) * 2.5);
+  padding: 0;
+  list-style: none;
   color: var(--ink-2);
-  font: 500 1rem/1.55 var(--read);
+  font: 400 1rem/1.5 var(--read);
 }
 
 .sentez-liste li {
-  margin-bottom: calc(var(--u) * 0.75);
-}
-
-.sentez-liste li:last-child {
-  margin-bottom: 0;
-}
-
-.sentez-liste li::marker {
-  color: var(--contour);
+  padding: calc(var(--u) * 0.75) 0;
+  border-top: 1px solid var(--rule);
 }
 
 .sentez-ki-lenke {
@@ -1144,19 +1202,14 @@ main.container {
     font-size: 1rem;
   }
 
-  .mast-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--u);
-  }
-
-
-  .edition {
-    text-align: left;
+  /* Telefonda başlık tek satır: kelime işareti + tarih. */
+  .edition-ark {
+    display: none;
   }
 
   .edition b {
-    font-size: 1.0625rem;
+    margin-left: 0;
+    font-size: 0.9375rem;
   }
 
   .row {
@@ -2141,45 +2194,6 @@ main.container {
   }
 }
 
-/* Masthode: dato og følg-ikoner til høyre */
-.mast-hoyre {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: var(--u);
-}
-
-.mast-folg {
-  display: flex;
-  gap: 2px;
-  margin-right: -0.6em;
-  padding: 0.25em 0.35em;
-}
-
-.mast-folg a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  color: var(--ink);
-}
-
-.mast-folg a:hover {
-  color: var(--water);
-  background: var(--surface);
-}
-
-@media (max-width: 640px) {
-  .mast-hoyre {
-    align-items: flex-start;
-  }
-
-  .mast-folg {
-    margin: 0 0 0 -0.35em;
-  }
-}
 
 /* Del saken: knapper med ikon */
 .del-saken {
@@ -2210,7 +2224,7 @@ main.container {
   min-height: 40px;
   padding: 0 calc(var(--u) * 1.75);
   border: 1px solid var(--rule);
-  border-radius: 999px;
+  border-radius: 0;
   background: var(--paper);
   color: var(--ink);
   font: 600 0.875rem var(--frame);
@@ -2299,4 +2313,29 @@ main.container {
   color: var(--water);
   text-decoration: underline;
   text-underline-offset: 0.18em;
+}
+
+/* Forside-moduler på smale skjermer (30.10.2026) */
+@media (max-width: 860px) {
+  .forklart-rad {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .lead-to {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lead-to .row-desc {
+    display: none;
+  }
+
+  .forklart-band {
+    padding: calc(var(--u) * 2) calc(var(--u) * 2) calc(var(--u) * 3);
+  }
+
+  .forklart-rad p {
+    display: none;
+  }
 }

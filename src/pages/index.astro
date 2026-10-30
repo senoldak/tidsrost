@@ -1,11 +1,10 @@
 ---
-import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import StoryRow from '../components/StoryRow.astro';
 import Symbol from '../components/Symbol.astro';
 import StoryMeta from '../components/StoryMeta.astro';
 import { FORKLART, erForklart, getActiveCategories, getNews, groupByDay, newsUrl } from '../lib/news';
-import { SITE, formatTime, gorselVar } from '../lib/site';
+import { SITE, formatKortDato, formatTime } from '../lib/site';
 import { RENTE, aktiveVarsler, datoTekst, prosent } from '../lib/data';
 import { aktiveTemaer } from '../lib/temaer';
 
@@ -18,10 +17,12 @@ const breaking = news
   .slice(0, 3);
 const hero = news.find((h) => h.data.featured) ?? news[0];
 const rest = news.filter((h) => h !== hero);
-const side = rest.slice(0, 4);
-const forklartSaker = news.filter(erForklart).slice(0, 4);
+// Manşetin altında iki ikincil haber, yanda Siste (beş). Spot yalnız manşet, ikincil ve günün ilk üç satırında.
+const to = rest.slice(0, 2);
+const side = rest.slice(2, 7);
+const forklartSaker = news.filter(erForklart).slice(0, 3);
 const forklartSet = new Set(forklartSaker);
-const days = groupByDay(rest.slice(4, 28).filter((h) => !forklartSet.has(h)).slice(0, 20));
+const days = groupByDay(rest.slice(7, 31).filter((h) => !forklartSet.has(h)).slice(0, 20));
 const sections = (await getActiveCategories())
   .map((c) => ({ ...c, items: news.filter((h) => h.data.category === c.slug).slice(0, 5) }))
   .filter((s) => s.items.length > 0);
@@ -60,19 +61,19 @@ const sterke = varsler.filter((v) => v.niva !== 'gult').length;
           </h2>
           <p class="standfirst">{hero.data.description}</p>
           <StoryMeta haber={hero} time="full" />
-          {hero.data.cover && gorselVar(hero.data.date) && (
-            <figure>
-              <a href={newsUrl(hero)} tabindex="-1" aria-hidden="true">
-                <Image
-                  src={hero.data.cover}
-                  alt={hero.data.coverAlt ?? ''}
-                  width={1200}
-                  loading="eager"
-                  fetchpriority="high"
-                  decoding="async"
-                />
-              </a>
-            </figure>
+          {/* Kapak ön sayfada gösterilmez: kapaklar başlığı yazıyla taşıyan sosyal görseller, aynı başlık iki kez okunuyordu (30.10.2026). */}
+          {to.length > 0 && (
+            <div class="lead-to">
+              {to.map((h) => (
+                <article>
+                  <h3>
+                    <a href={newsUrl(h)}>{h.data.title}</a>
+                  </h3>
+                  <p class="row-desc">{h.data.description}</p>
+                  <StoryMeta haber={h} time="short" />
+                </article>
+              ))}
+            </div>
           )}
         </article>
 
@@ -97,25 +98,34 @@ const sterke = varsler.filter((v) => v.niva !== 'gult').length;
 
   {
     forklartSaker.length > 0 && (
-      <section class="day" aria-labelledby="forklart-forside">
+      <section class="day forklart-band" aria-labelledby="forklart-forside">
         <h2 class="band" id="forklart-forside">
           <Symbol kind="forklart" />
-          Forklart – dybde og datajournalistikk
-          <a href={`/${FORKLART.slug}/`}>Alle forklarende saker</a>
+          {FORKLART.name}
+          <a href={`/${FORKLART.slug}/`}>Alle</a>
         </h2>
-        {forklartSaker.map((h) => (
-          <StoryRow haber={h} dato />
-        ))}
+        <p class="band-under">Av {SITE.redaktor} · hvert tall fra offisiell kilde</p>
+        <div class="forklart-rad">
+          {forklartSaker.map((h) => (
+            <article>
+              <time datetime={h.data.date.toISOString()}>{formatKortDato(h.data.date)}</time>
+              <h3>
+                <a href={newsUrl(h)}>{h.data.title}</a>
+              </h3>
+              <p>{h.data.description}</p>
+            </article>
+          ))}
+        </div>
       </section>
     )
   }
 
   {
-    days.map((d) => (
+    days.map((d, di) => (
       <section class="day">
         <h2 class="band">{d.label}</h2>
-        {d.items.map((h) => (
-          <StoryRow haber={h} />
+        {d.items.map((h, i) => (
+          <StoryRow haber={h} desc={di === 0 && i < 3} />
         ))}
       </section>
     ))

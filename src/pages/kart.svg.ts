@@ -5,7 +5,7 @@ import type { APIRoute } from 'astro';
 const W = 1440;
 const H = 200;
 const STEP = 10;
-const LEVELS = 13;
+const LEVELS = 7; // 30.10.2026: 13'ten 7'ye; az ve belirgin çizgi, her üçüncüsü indeks (tell).
 
 function rng(seed: number) {
   return () => {
@@ -95,13 +95,13 @@ export const GET: APIRoute = () => {
   const min = Math.min(...flat), max = Math.max(...flat);
   const lines = Array.from({ length: LEVELS }, (_, k) => {
     const level = min + ((k + 1) / (LEVELS + 1)) * (max - min);
-    const cls = k === 0 ? 'sjo' : k % 5 === 4 ? 'tell' : 'kote';
+    const cls = k === 0 ? 'sjo' : k % 3 === 2 ? 'tell' : 'kote';
     return `<path class="${cls}" d="${contour(field, level)}"/>`;
   }).join('');
 
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice"><style>
 path{fill:none;stroke-linejoin:round;stroke-linecap:round}
-.kote{stroke:#b07a55;stroke-width:.8;opacity:.6}.tell{stroke:#a0643c;stroke-width:1.5;opacity:.75}.sjo{stroke:#3a78b5;stroke-width:1.3}
+.kote{stroke:#b07a55;stroke-width:.8;opacity:.5}.tell{stroke:#a0643c;stroke-width:1.6;opacity:.85}.sjo{stroke:#3a78b5;stroke-width:1.3}
 </style>${lines}</svg>`;
 
   return new Response(svg, { headers: { 'Content-Type': 'image/svg+xml' } });
