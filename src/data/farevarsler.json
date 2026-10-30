@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-10-30T11:08:54.647Z",
+  "hentet": "2026-10-30T13:10:07.403Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-10-30T11:07:49+00:00",
+  "sistEndretHosMet": "2026-10-30T13:07:46+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.20261030071156.016",
@@ -101,6 +101,19 @@
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
+      "id": "2.49.0.1.578.0.20261030115109.014",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "Støtt - Andenes",
+      "domene": "hav",
+      "start": "2026-10-31T01:00:00+00:00",
+      "slutt": "2026-10-31T13:00:00+00:00",
+      "beskrivelse": "Natt til lørdag økning til sørvestlig sterk kuling, lørdag ettermiddag minkende.",
+      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
+    },
+    {
       "id": "2.49.0.1.578.0.261030100000.4035_1_0",
       "niva": "gult",
       "hendelse": "Kuling",
@@ -112,6 +125,19 @@
       "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.20261030120631.054",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "Sandnessjøen - Støtt",
+      "domene": "hav",
+      "start": "2026-10-31T03:00:00+00:00",
+      "slutt": "2026-10-31T12:00:00+00:00",
+      "beskrivelse": "Natt til lørdag sørvestlig stiv kuling, lørdag ettermiddag minkende.",
+      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
+      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
       "id": "2.49.0.1.578.0.261030100000.0858_1_0",
@@ -190,6 +216,19 @@
       "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.20261030120748.090",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "Andenes - Torsvåg",
+      "domene": "hav",
+      "start": "2026-10-31T06:00:00+00:00",
+      "slutt": "2026-10-31T13:00:00+00:00",
+      "beskrivelse": "Lørdag morgen økning til sørvestlig sterk kuling, lørdag ettermiddag minkende til vestlig stiv kuling.",
+      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
       "id": "2.49.0.1.578.0.261030100000.4044_1_0",
