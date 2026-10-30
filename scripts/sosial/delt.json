@@ -1,14 +1,4 @@
 {
-  "kabinansatte-i-sas-link-streiker-fra-onsdag-etter-nei-til-meklingsforslag": {
-    "tarih": "2026-10-23T12:09:23.910Z",
-    "deneme": {
-      "ig_post": 3
-    },
-    "son_hata": "Graph 403: Application request limit reached",
-    "ig_story": "18120254365988089",
-    "fb_post": "1343803192154866_122109560817509504",
-    "fb_story": "1092723320235673"
-  },
   "melania-trump-har-sikret-midlertidig-vapenhvile-i-ukrainske-olesjky": {
     "tarih": "2026-10-23T14:15:41.290Z",
     "deneme": {
@@ -212,8 +202,8 @@
   },
   "_sinir": {
     "ig_post": {
-      "sayi": 9,
-      "kadar": "2026-10-30T11:14:06.788Z"
+      "sayi": 10,
+      "kadar": "2026-10-31T01:11:46.820Z"
     }
   },
   "benjamin-netanyahu-advarer-om-nytt-holocaust-for-valget-i-israel": {
@@ -450,7 +440,9 @@
     "tarih": "2026-10-29T13:15:34.617Z",
     "ig_story": "17955119967268220",
     "fb_post": "1343803192154866_122112313089509504",
-    "fb_story": "1136918268921968"
+    "fb_story": "1136918268921968",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "amazon-og-alphabet-faller-pa-borsen-etter-kvartalstall": {
     "tarih": "2026-10-29T23:06:22.386Z",
@@ -493,5 +485,17 @@
     "ig_story": "18136588474662108",
     "fb_post": "1343803192154866_122112652797509504",
     "fb_story": "1157421090081730"
+  },
+  "fortius-offshore-wind-as-og-fram-wind-solutions-as-far-milliardstotte-til-havvin": {
+    "tarih": "2026-10-30T13:12:02.159Z",
+    "ig_story": "17897503806676494",
+    "fb_post": "1343803192154866_122112699627509504",
+    "fb_story": "1730586898650770"
+  },
+  "donald-trump-kutter-fysiske-moter-og-velger-digitale-samlinger": {
+    "tarih": "2026-10-30T13:12:38.363Z",
+    "ig_story": "18170352730471877",
+    "fb_post": "1343803192154866_122112699969509504",
+    "fb_story": "2527562504400665"
   }
 }
