@@ -1,14 +1,4 @@
 {
-  "lavtrykket-boelo-treffer-sor-norge-med-farevarsler": {
-    "tarih": "2026-10-23T10:06:13.131Z",
-    "deneme": {
-      "ig_post": 3
-    },
-    "son_hata": "Graph 403: Application request limit reached",
-    "ig_story": "18199676050378743",
-    "fb_post": "1343803192154866_122109504195509504",
-    "fb_story": "2544417822713557"
-  },
   "kabinansatte-i-sas-link-streiker-fra-onsdag-etter-nei-til-meklingsforslag": {
     "tarih": "2026-10-23T12:09:23.910Z",
     "deneme": {
@@ -491,5 +481,17 @@
     "ig_story": "17939500419122015",
     "fb_post": "1343803192154866_122112590907509504",
     "fb_story": "1762770161447343"
+  },
+  "demokratene-kan-sikre-flertall-i-kongressen-for-mellomvalget": {
+    "tarih": "2026-10-30T11:10:30.109Z",
+    "ig_story": "18105487529372873",
+    "fb_post": "1343803192154866_122112652503509504",
+    "fb_story": "30079695914953038"
+  },
+  "evakuering-i-gang-i-den-okkuperte-byen-olesjky": {
+    "tarih": "2026-10-30T11:11:05.770Z",
+    "ig_story": "18136588474662108",
+    "fb_post": "1343803192154866_122112652797509504",
+    "fb_story": "1157421090081730"
   }
 }
