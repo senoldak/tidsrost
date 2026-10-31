@@ -58,13 +58,29 @@ test('kildeSpor: fjerner duplikater og krypterer; tom liste gir ikke felt', () =
   assert.deepEqual(dekrypter(spor), [{ navn: 'X', url: 'https://x.example/1' }]);
 });
 
-test('skrivSak skriver kildeSpor i frontmatter, uten kildelinje', async () => {
+test('skrivSak skriver kildeSpor og åpne kilder i frontmatter, uten kildelinje i brødteksten', async () => {
   const rot = await mkdtemp(path.join(tmpdir(), 'tidsrost-'));
   const spor = kildeSpor([{ navn: 'Avis A', url: 'https://avis-a.example/sak' }]);
-  const slug = await skrivSak(rot, { title: 'Testsak', description: 'Ingress.', body: 'Tekst.', date: '2026-10-15T10:00:00+02:00', category: 'innenriks', produksjon: 'ki-medier', kilder: [], kildeSpor: spor, bilde: { svg: () => null } });
+  const kilder = [
+    { navn: 'Avis A', url: 'http://avis-a.example/sak?utm_source=x' },
+    { navn: 'Avis A', url: 'https://avis-a.example/sak' },
+    { navn: 'Avis B', url: 'https://avis-b.example/sak' },
+  ];
+  const slug = await skrivSak(rot, { title: 'Testsak', description: 'Ingress.', body: 'Tekst.', date: '2026-10-15T10:00:00+02:00', category: 'innenriks', produksjon: 'ki-medier', kilder, kildeSpor: spor, bilde: { svg: () => null } });
   const md = await readFile(path.join(rot, 'src/content/haberler', slug, 'index.md'), 'utf8');
   assert.ok(md.includes(`kildeSpor: "${spor}"`));
-  assert.ok(!md.includes('example'));
+  assert.ok(md.includes('kilder:\n  - navn: "Avis A"\n    url: "https://avis-a.example/sak"\n  - navn: "Avis B"\n    url: "https://avis-b.example/sak"\n'), md);
+  assert.ok(!md.split('---')[2].includes('example'));
+  assert.ok(!md.includes('*Kilde'));
+});
+
+test('skrivSak: resmî kilde går til frontmatter kilder (med lisens), ingen *Kilde-linje', async () => {
+  const rot = await mkdtemp(path.join(tmpdir(), 'tidsrost-'));
+  const slug = await skrivSak(rot, { title: 'Offisiell sak', description: 'Ingress.', body: 'Tekst.', date: '2026-10-15T10:00:00+02:00', category: 'innenriks', produksjon: 'ki-automatisk', kilde: { navn: 'Stortinget', url: 'https://www.stortinget.no/sak/1', lisens: 'NLOD' }, bilde: { svg: () => null } });
+  const md = await readFile(path.join(rot, 'src/content/haberler', slug, 'index.md'), 'utf8');
+  assert.ok(md.includes('kilder:\n  - navn: "Stortinget"\n    url: "https://www.stortinget.no/sak/1"\n    lisens: "NLOD"\n'), md);
+  assert.ok(!md.includes('*Kilde'));
+  assert.ok(md.trimEnd().endsWith('Tekst.'));
 });
 
 test('medier: id-er er hmac, feilende feed logges uten navn og adresse', async () => {

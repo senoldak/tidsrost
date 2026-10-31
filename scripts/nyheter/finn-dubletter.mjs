@@ -31,7 +31,7 @@ for (const slug of await readdir(BASE)) {
     }
   };
   if (felt('draft') === 'true' || ikkeNyhet(felt('sjanger'))) continue;
-  const kilder = (body.match(/^\*Kilder?:.*$/m)?.[0].match(/\]\(/g) ?? []).length;
+  const kilder = (body.match(/^\*Kilder?:.*$/m)?.[0].match(/\]\(/g) ?? []).length || (felt('produksjon') === 'ki-medier' ? 0 : (fm.match(/^  - navn:/gm) ?? []).length);
   saker.push({
     ...nokkel({ slug, tittel: felt('title'), ingress: felt('description'), produksjon: felt('produksjon') || 'manuell' }),
     tid: Date.parse(felt('date')),

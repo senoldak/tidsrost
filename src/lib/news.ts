@@ -46,14 +46,19 @@ export function newsUrl(haber: Haber) {
   return `/artikkel/${haber.id}/`;
 }
 
+// Resmî kaynaklı haberde frontmatter `kilder` ilk kaynak; ki-medier'in medya kaynakları burada dönmez (sayfa yeniden tasarımına kadar eski görünüm).
+function resmiKilde(haber: Haber) {
+  return haber.data.produksjon === 'ki-medier' ? undefined : haber.data.kilder?.[0];
+}
+
 // Haberin sonundaki "*Kilde: [Ad](link)*" satırından kaynağın adını okur; listelerde gösterilir.
 export function kilde(haber: Haber) {
-  return haber.body?.match(/\*Kilde:\s*\[([^\]]+)\]/)?.[1];
+  return resmiKilde(haber)?.navn ?? haber.body?.match(/\*Kilde:\s*\[([^\]]+)\]/)?.[1];
 }
 
 // Aynı satırın bağlantısı (yalnız https). Bot bu satırı yalnız offentlig kilde için yazar; medya haberinde satır yoktur.
 export function kildeUrl(haber: Haber) {
-  return haber.body?.match(/\*Kilde:\s*\[[^\]]+\]\((https:\/\/[^\s)]+)\)/)?.[1];
+  return resmiKilde(haber)?.url ?? haber.body?.match(/\*Kilde:\s*\[[^\]]+\]\((https:\/\/[^\s)]+)\)/)?.[1];
 }
 
 // Haberleri gün bantlarına ayırır: I dag, I går, Tidligere (anasayfa ve kategori sayfaları).

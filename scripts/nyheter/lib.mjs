@@ -2,6 +2,7 @@
 import { mkdir, readFile, writeFile, access } from 'node:fs/promises';
 import path from 'node:path';
 import { geminiCagir } from './istemci.mjs';
+import { normaliserKilder } from '../../src/lib/kilder.mjs';
 import { sakKapagi, kapakCiz, tilPng } from './bilde.mjs';
 
 export const USER_AGENT = 'tidsrost-nyhetsbot/1.0 (+https://github.com/senoldak/tidsrost)';
@@ -201,14 +202,23 @@ export function avsnitt(tekst = '') {
   return ut.join('\n\n');
 }
 
+// frontmatter `kilder` öğesi (YAML, repodaki biçim).
+export const kildeYaml = (k) => `  - navn: ${yamlStr(k.navn)}\n    url: ${yamlStr(k.url)}${k.lisens ? `\n    lisens: ${yamlStr(k.lisens)}` : ''}`;
+
 // Haberi src/content/haberler/<slug>/index.md olarak yazar, slug'ı döner.
 export async function skrivSak(rot, sak) {
   if (!KATEGORIER.includes(sak.category)) sak.category = 'innenriks';
-  const kilder = (sak.kilder ?? [sak.kilde]).map((k) => {
-    const url = normaliserUrl(k.url);
-    if (!url) throw new Error(`Ugyldig kilde-URL: ${k.url}`);
-    return { ...k, url };
-  });
+  // Resmî kaynak (sak.kilde): geçersiz adres hata verir. Medya kaynakları (sak.kilder): temizlenir, geçersizler atılır.
+  const kilder = Array.isArray(sak.kilder)
+    ? normaliserKilder(sak.kilder.map((k) => ({ ...k, navn: mdMetin(k.navn) }))).flatMap((k) => {
+        const url = normaliserUrl(k.url);
+        return url ? [{ ...k, url }] : [];
+      })
+    : normaliserKilder([sak.kilde].map((k) => {
+        const url = normaliserUrl(k.url);
+        if (!url) throw new Error(`Ugyldig kilde-URL: ${k.url}`);
+        return { ...k, navn: mdMetin(k.navn), url };
+      }));
   sak = {
     ...sak,
     title: typografi(trygg(sak.title), { tittel: true }),
@@ -243,12 +253,10 @@ export async function skrivSak(rot, sak) {
     `produksjon: ${sak.produksjon}`,
     // Resmi olmayan kaynakların şifreli kaydı (bkz. hemmelig.mjs); sitede gösterilmez.
     sak.kildeSpor ? `kildeSpor: ${yamlStr(sak.kildeSpor)}` : null,
+    // Kaynaklar adıyla ve bağlantıyla gösterilir (VVP 4.4); şifreli akış listesi gizli kalır.
+    kilder.length ? `kilder:\n${kilder.map(kildeYaml).join('\n')}` : null,
     Number.isInteger(sak.nyhetsverdi) ? `nyhetsverdi: ${sak.nyhetsverdi}` : null,
   ].filter(Boolean);
-  // Üretim şekli notu sayfada ayrıca gösterilir; burada sadece kaynak (VVP 3.1).
-  const lenke = (k) => `[${mdMetin(k.navn)}](${k.url})${k.lisens ? ` (${mdMetin(k.lisens)})` : ''}`;
-  // Haber sitelerine dayanan haberde kaynak satırı yazılmaz (kilder: []; sahibin kuralı).
-  const kilde = kilder.length ? `*${kilder.length > 1 ? 'Kilder' : 'Kilde'}: ${kilder.map(lenke).join(', ')}*` : '';
   await mkdir(path.join(base, slug), { recursive: true });
   const bilde = await lagBilde(sak);
   if (bilde) {
@@ -256,7 +264,7 @@ export async function skrivSak(rot, sak) {
     fm.push('cover: ./cover.png', `coverAlt: ${yamlStr(bilde.alt)}`, `coverKreditt: ${yamlStr(bilde.kreditt)}`);
   }
   fm.push('---');
-  const innhold = `${fm.join('\n')}\n\n${sak.body.trim()}\n${kilde ? `\n${kilde}\n` : ''}`;
+  const innhold = `${fm.join('\n')}\n\n${sak.body.trim()}\n`;
   await writeFile(path.join(base, slug, 'index.md'), innhold, 'utf8');
   return slug;
 }

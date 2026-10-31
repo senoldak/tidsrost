@@ -27,9 +27,13 @@ test('RSS-lenke med &quot; og parenteser kan ikke bryte ut av Kilde-linjen', asy
     produksjon: 'automatisk', kilde: { navn: 'Dep [x](https://ond.example)', url: item.link },
   });
   const md = await readFile(path.join(rot, 'src/content/haberler', slug, 'index.md'), 'utf8');
-  const kilde = md.split('\n').find((l) => l.startsWith('*Kilde'));
-  assert.equal((kilde.match(/\]\(/g) ?? []).length, 1, kilde);
-  assert.match(kilde, /\]\(https:\/\/a\.no\/[^\s()"<>]*\)\*$/);
+  // Kaynak artık gövdede satır değil, frontmatter `kilder` içinde.
+  assert.ok(!md.split('\n').some((l) => l.startsWith('*Kilde')));
+  const url = md.match(/^    url: (".*")$/m);
+  assert.ok(url, md);
+  assert.match(JSON.parse(url[1]), /^https:\/\/a\.no\/[^\s()"<>]*$/);
+  assert.equal((md.match(/^  - navn:/gm) ?? []).length, 1);
+  assert.doesNotMatch(md.match(/^  - navn: .*$/m)[0], /[[\]<>]/);
   await assert.rejects(skrivSak(rot, { title: 'T', description: 'D', body: 'B', date: '2026-10-18', category: 'innenriks', kilde: { navn: 'X', url: 'http://a.no' } }));
 });
 

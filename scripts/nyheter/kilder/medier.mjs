@@ -294,8 +294,10 @@ function lagKandidat(valgt, alle) {
       if (!ai) return null;
       if (!ai.egnet) return { hopp: 'ikke egnet (varsomhet eller ikke nyhet)' };
       const { egnet, ...sak } = ai;
-      // Kaynak satırı yok; hangi sitelerden yazıldığı yalnızca şifreli kildeSpor'da kalır (sitede gösterilmez).
-      const felles = { ...sak, date: osloIso(), kilder: [], kildeSpor: kildeSpor(valgt.map((k) => ({ navn: k.medie, url: k.url }))) };
+      // Kaynaklar adıyla ve bağlantıyla frontmatter `kilder` alanına yazılır (VVP 4.4); haber metninde medya adı geçmez.
+      // Şifreli kildeSpor da yazılmaya devam eder.
+      const kaynaklar = valgt.map((k) => ({ navn: k.medie, url: k.url }));
+      const felles = { ...sak, date: osloIso(), kilder: kaynaklar, kildeSpor: kildeSpor(kaynaklar) };
       if (kontroll === 'ingen') return { ...felles, produksjon: 'ki-medier' };
       if (kontroll === 'manuell') return { ...felles, draft: true, produksjon: 'ki-assistert' };
       const kildeTekst = valgt.map((k) => `Medie: ${k.medie}\nTittel: ${k.tittel}\nIngress: ${k.ingress}\n\n${k.tekst}`).join('\n\n---\n\n');
