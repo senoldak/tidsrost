@@ -1,30 +1,4 @@
 {
-  "minst-306-drept-i-droneangrep-i-sudan-i-oktober": {
-    "tarih": "2026-10-24T06:05:27.799Z",
-    "deneme": {
-      "ig_post": 3
-    },
-    "son_hata": "Graph 403: Application request limit reached",
-    "ig_story": "17976761799132458",
-    "fb_post": "1343803192154866_122109945279509504",
-    "fb_story": "1436481308459703"
-  },
-  "digitalisering-i-offentlig-sektor-91-prosent-fullforer-skattemeldingen-digitalt": {
-    "tarih": "2026-10-24T06:06:13.194Z",
-    "deneme": {
-      "ig_post": 3
-    },
-    "son_hata": "Graph 403: Application request limit reached",
-    "ig_story": "18396271300166872",
-    "fb_post": "1343803192154866_122109945717509504",
-    "fb_story": "1645558587306894",
-    "ig_reels": "18360361054220563",
-    "fb_reels": "1610780100522374",
-    "reels": {
-      "gun": "2026-10-24",
-      "dilim": "kveld"
-    }
-  },
   "kobenhavns-universitet-rammet-av-dataangrep": {
     "tarih": "2026-10-24T10:05:22.278Z",
     "son_hata": "Graph 403: Application request limit reached",
@@ -105,8 +79,8 @@
   },
   "_sinir": {
     "ig_post": {
-      "sayi": 10,
-      "kadar": "2026-10-31T01:11:46.820Z"
+      "sayi": 11,
+      "kadar": "2026-10-31T19:09:20.931Z"
     }
   },
   "benjamin-netanyahu-advarer-om-nytt-holocaust-for-valget-i-israel": {
@@ -381,7 +355,9 @@
     "tarih": "2026-10-30T07:12:41.588Z",
     "ig_story": "17939500419122015",
     "fb_post": "1343803192154866_122112590907509504",
-    "fb_story": "1762770161447343"
+    "fb_story": "1762770161447343",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "demokratene-kan-sikre-flertall-i-kongressen-for-mellomvalget": {
     "tarih": "2026-10-30T11:10:30.109Z",
@@ -436,5 +412,17 @@
     "ig_story": "18110677586181687",
     "fb_post": "1343803192154866_122112774957509504",
     "fb_story": "1687212706129137"
+  },
+  "48-nasjonalparker-i-norge-96-5-prosent-drev-friluftsliv-i-2024": {
+    "tarih": "2026-10-31T07:09:36.241Z",
+    "ig_story": "17884530969528649",
+    "fb_post": "1343803192154866_122112987585509504",
+    "fb_story": "4547154958885509"
+  },
+  "kpi-bidrag": {
+    "tarih": "2026-10-31T07:10:15.338Z",
+    "ig_story": "17994381966099972",
+    "fb_post": "1343803192154866_122112987897509504",
+    "fb_story": "1438401271014151"
   }
 }
