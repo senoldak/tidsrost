@@ -8,6 +8,9 @@ import { fileURLToPath } from 'node:url';
 import { apenForSok } from './src/lib/sok-synlighet.mjs';
 import { osloDag } from './src/lib/apenhet.mjs';
 import { ARKIV_TERSKEL } from './src/lib/arkiv.mjs';
+import ordbok from './src/data/ordbok.json' with { type: 'json' };
+import { satteri } from '@astrojs/markdown-satteri';
+import { satteriOrd } from './src/lib/rehype-ord.mjs';
 
 // Astro kapakların orijinal PNG'sini de dist/_astro'ya yazar, oysa sayfalar yalnızca türetilmiş dosyaları kullanır.
 // Derleme sonunda hiçbir çıktı dosyasında adı geçmeyen görselleri sileriz. Kaynaktaki kapaklar (src/content) silinmez.
@@ -157,4 +160,7 @@ export default defineConfig({
   // CSP satır içi script'e de izin vermez: Astro küçük script'leri (ör. DelSaken'deki "Kopier lenke") satır içine
   // gömmesin, her zaman ayrı dosya (/_astro/*.js) olsun.
   vite: { build: { assetsInlineLimit: 0 } },
+  // Ordforklaringer (Bokmålsordboka): første forekomst av høyst tre ord i hver sak blir en knapp (src/lib/rehype-ord.mjs).
+  // Astro 7 bruker Sätteri; markdown.rehypePlugins krever @astrojs/markdown-remark, så pluginen settes inn som hast-plugin.
+  markdown: { processor: satteri({ hastPlugins: [satteriOrd(ordbok)] }) },
 });

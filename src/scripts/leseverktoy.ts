@@ -215,3 +215,85 @@ if (tekstEl) {
     });
   }
 }
+
+// ——— Ordforklaringer: <button class="ord" data-lemma data-def> i teksten åpner én felles ballong ———
+// Definisjonen settes med textContent (aldri som HTML). Lukkes med Esc, klikk utenfor, et annet ord, rulling,
+// endret vindusstørrelse og nytt klikk på samme ord. Ballongen står rett under ordet og holdes innenfor skjermen.
+{
+  let ballong: HTMLDivElement | null = null;
+  let aktiv: HTMLButtonElement | null = null;
+  const MARG = 12;
+
+  const lag = (): HTMLDivElement => {
+    if (ballong) return ballong;
+    const b = document.createElement('div');
+    b.className = 'ord-ballong';
+    b.id = 'ord-ballong';
+    b.setAttribute('role', 'tooltip');
+    b.hidden = true;
+    document.body.append(b);
+    ballong = b;
+    return b;
+  };
+
+  const plasser = () => {
+    if (!ballong || !aktiv) return;
+    const bredde = document.documentElement.clientWidth;
+    ballong.style.maxWidth = `${Math.min(288, bredde - 2 * MARG - 6)}px`;
+    const rekker = aktiv.getClientRects();
+    const r = rekker[rekker.length - 1] ?? aktiv.getBoundingClientRect();
+    const venstre = Math.max(MARG, Math.min(r.left, bredde - ballong.offsetWidth - MARG - 6));
+    ballong.style.left = `${Math.round(venstre + scrollX)}px`;
+    ballong.style.top = `${Math.round(r.bottom + scrollY + 8)}px`;
+  };
+
+  const lukk = (fokus = false) => {
+    if (!aktiv) return;
+    const knapp = aktiv;
+    knapp.setAttribute('aria-expanded', 'false');
+    knapp.removeAttribute('aria-describedby');
+    if (ballong) ballong.hidden = true;
+    aktiv = null;
+    if (fokus) knapp.focus();
+  };
+
+  const apne = (knapp: HTMLButtonElement) => {
+    const def = knapp.dataset.def;
+    if (!def) return;
+    lukk();
+    const b = lag();
+    b.replaceChildren();
+    const ord = document.createElement('b');
+    ord.textContent = knapp.dataset.lemma ?? knapp.textContent ?? '';
+    const tekst = document.createElement('p');
+    tekst.className = 'def';
+    tekst.textContent = def;
+    const kilde = document.createElement('small');
+    kilde.append('Bokmålsordboka, Universitetet i Bergen og Språkrådet, CC BY 4.0 · ');
+    const lenke = document.createElement('a');
+    lenke.href = 'https://ordbokene.no';
+    lenke.rel = 'noopener';
+    lenke.textContent = 'ordbokene.no';
+    kilde.append(lenke);
+    b.append(ord, tekst, kilde);
+    b.hidden = false;
+    aktiv = knapp;
+    knapp.setAttribute('aria-expanded', 'true');
+    knapp.setAttribute('aria-describedby', b.id);
+    plasser();
+  };
+
+  document.addEventListener('click', (e) => {
+    const t = e.target as Element | null;
+    const knapp = t?.closest?.('button.ord') as HTMLButtonElement | null;
+    if (knapp) {
+      if (knapp === aktiv) lukk();
+      else apne(knapp);
+    } else if (aktiv && !t?.closest?.('.ord-ballong')) lukk();
+  });
+  addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') lukk(true);
+  });
+  addEventListener('scroll', () => lukk(), { passive: true });
+  addEventListener('resize', () => lukk());
+}
