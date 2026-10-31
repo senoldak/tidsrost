@@ -6776,7 +6776,20 @@
     "medier:4634ff222cef63ca": "2026-10-31T09:02:03.503Z",
     "medier:821ed112d51e6198": "2026-10-31T09:02:03.503Z",
     "medier:8bb453ceee93653c": "2026-10-31T09:02:03.503Z",
-    "medier:e587c4dc7e94686b": "2026-10-31T09:02:03.503Z"
+    "medier:e587c4dc7e94686b": "2026-10-31T09:02:03.503Z",
+    "medier:fb13222f93a112ce": "2026-10-31T11:02:02.042Z",
+    "medier:74821f883e06431b": "2026-10-31T11:02:02.042Z",
+    "medier:cb2cf136e96631fe": "2026-10-31T11:02:02.042Z",
+    "medier:2945db097d60f163": "2026-10-31T11:02:02.042Z",
+    "medier:a70e6c941a98fe0c": "2026-10-31T11:02:02.042Z",
+    "medier:20af12a6702a4d22": "2026-10-31T11:02:02.042Z",
+    "medier:799a957020fead08": "2026-10-31T11:02:02.042Z",
+    "medier:30947d4a1b36f121": "2026-10-31T11:02:02.042Z",
+    "met:icing:lid:2026-11-01": "2026-10-31T11:02:02.042Z",
+    "met:icing:yp:2026-11-01": "2026-10-31T11:02:02.042Z",
+    "medier:edf7bc6b5cc8f127": "2026-10-31T11:02:02.042Z",
+    "medier:55a5549a25fbdbc6": "2026-10-31T11:02:02.042Z",
+    "medier:bda5e254a18e03ef": "2026-10-31T11:02:02.042Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -6829,71 +6842,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:e7985929b3255088": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-28T11:06:38.737Z"
-    },
-    "medier:30f7e70217ef0d93": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-28T11:06:38.737Z"
-    },
-    "medier:9349edaaf29a6a98": {
-      "p": 42,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-28T11:06:38.737Z"
-    },
-    "medier:11857770ec3685e9": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-28T11:06:38.737Z"
-    },
-    "medier:a45c7d3fa150e727": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-28T11:06:38.737Z"
-    },
-    "medier:5cd00c89447e55df": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-28T11:06:38.737Z"
-    },
-    "medier:5e32e131f8cddebf": {
-      "p": 76,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-28T11:06:38.737Z"
-    },
-    "medier:3bf5820f103831e5": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-28T11:06:38.737Z"
-    },
-    "medier:5384b6385e6feb19": {
-      "p": 84,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-28T11:06:38.737Z"
-    },
-    "medier:63eb404d6e6ca729": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-28T11:06:38.737Z"
-    },
-    "medier:d391c2ef3bf0f468": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-28T11:06:38.737Z"
-    },
-    "datatilsynet:https://www.datatilsynet.no/aktuelt/aktuelle-nyheter-2026/gode-rutiner-hindrer-at-ki-blir-en-usynlig-trussel/": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-28T11:06:38.737Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2274": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-28T11:06:38.737Z"
-    },
     "medier:ea9442e48f6d0a22": {
       "p": 92,
       "v": "b34cb0de5bde",
@@ -8848,6 +8796,16 @@
       "p": 80,
       "v": "b34cb0de5bde",
       "t": "2026-10-31T09:07:07.745Z"
+    },
+    "medier:edf7bc6b5cc8f127": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-31T11:07:31.748Z"
+    },
+    "medier:1e13674af80afbda": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-10-31T11:07:31.748Z"
     }
   }
 }
