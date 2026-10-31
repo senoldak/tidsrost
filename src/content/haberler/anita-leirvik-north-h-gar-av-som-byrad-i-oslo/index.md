@@ -18,6 +18,11 @@ kilder:
   - navn: "Dagsavisen"
     url: "https://www.dagsavisen.no/nyheter/oslo-byrad-gar-pa-dagen-viser-til-grove-pastander/10609790"
 nyhetsverdi: 82
+sted:
+  navn: "Oslo"
+  lat: 59.91
+  lon: 10.75
+  fylke: "Oslo"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Anita Leirvik North (H) går av som byråd i Oslo»"
 coverKreditt: "Illustrasjon: tidsrøst"

@@ -14,6 +14,11 @@ kilder:
   - navn: "NRK"
     url: "https://www.nrk.no/stor-oslo/nye-oslo-sykehus-blir-stadig-dyrere---kan-koste-nesten-70-milliarder-1.17653404"
 nyhetsverdi: 85
+sted:
+  navn: "Oslo"
+  lat: 59.91
+  lon: 10.75
+  fylke: "Oslo"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Nye Oslo-sykehus kan koste nesten 70 milliarder kroner»"
 coverKreditt: "Illustrasjon: tidsrøst"

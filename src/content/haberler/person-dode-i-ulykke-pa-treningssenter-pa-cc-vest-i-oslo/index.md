@@ -15,6 +15,11 @@ kilder:
   - navn: "Drammens Tidende"
     url: "https://www.dt.no/person-dode-pa-treningssenter-tragisk-hendelse/s/80-55-32205"
 nyhetsverdi: 72
+sted:
+  navn: "Oslo"
+  lat: 59.91
+  lon: 10.75
+  fylke: "Oslo"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Person døde i ulykke på treningssenter på CC Vest i Oslo»"
 coverKreditt: "Illustrasjon: tidsrøst"

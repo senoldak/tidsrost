@@ -14,6 +14,11 @@ kilder:
   - navn: "Utrop"
     url: "https://www.utrop.no/nyheter/kultur/392817/"
 nyhetsverdi: 80
+sted:
+  navn: "Oslo"
+  lat: 59.91
+  lon: 10.75
+  fylke: "Oslo"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «MATATA bringer personlige historier til scenen ved Nordic Black Theatre»"
 coverKreditt: "Illustrasjon: tidsrøst"

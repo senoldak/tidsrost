@@ -23,6 +23,11 @@ kilder:
     url: "https://www.bt.no/innenriks/i/mKpzvl/ny-flaattart-oppdaget-i-norge-stor-og-med-stripete-bein"
   - navn: "Dagsavisen"
     url: "https://www.dagsavisen.no/nyheter/ny-flattart-oppdaget-i-norge-stor-og-med-stripete-bein/10586100"
+sted:
+  navn: "Oslo"
+  lat: 59.91
+  lon: 10.75
+  fylke: "Oslo"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Ny flåttart oppdaget i Norge»"
 coverKreditt: "Illustrasjon: tidsrøst"

@@ -13,6 +13,11 @@ kilder:
   - navn: "Drammens Tidende"
     url: "https://www.dt.no/skudd-avfyrt-kontroll-pa-to-personer/s/30-57-24920"
 nyhetsverdi: 72
+sted:
+  navn: "Drammen"
+  lat: 59.74
+  lon: 10.2
+  fylke: "Buskerud"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «To personer pågrepet etter skyting i Drammen»"
 coverKreditt: "Illustrasjon: tidsrøst"

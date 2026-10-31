@@ -13,6 +13,11 @@ kilder:
   - navn: "Statnett"
     url: "https://www.statnett.no/om-statnett/nyheter-og-pressemeldinger/nyhetsarkiv-2026/Statnett-planlegger-en-ny-stromforbindelse-fra-Gran-pa-Hadeland-til-Ulven-i-Oslo/"
 nyhetsverdi: 70
+sted:
+  navn: "Oslo"
+  lat: 59.91
+  lon: 10.75
+  fylke: "Oslo"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Statnett planlegger ny kraftledning fra Gran til Oslo»"
 coverKreditt: "Illustrasjon: tidsrøst"

@@ -22,6 +22,11 @@ kilder:
   - navn: "Dagsavisen"
     url: "https://www.dagsavisen.no/nyheter/kirkenes-ma-stoppe-alt-privat-vannforbruk/10602549"
 nyhetsverdi: 82
+sted:
+  navn: "Kirkenes"
+  lat: 69.73
+  lon: 30.05
+  fylke: "Finnmark"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Kirkenes må stanse alt privat vannforbruk»"
 coverKreditt: "Illustrasjon: tidsrøst"

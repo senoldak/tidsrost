@@ -16,6 +16,11 @@ kilder:
   - navn: "Aftenposten"
     url: "https://www.aftenposten.no/verden/i/oKml90/nyhetsstudio-zelenskyj-moeter-usa-i-oslo?pinnedEntry=124888"
 nyhetsverdi: 85
+sted:
+  navn: "Oslo"
+  lat: 59.91
+  lon: 10.75
+  fylke: "Oslo"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «USAs spesialutsending reiser til Russland etter Ukraina-samtaler i Oslo»"
 coverKreditt: "Illustrasjon: tidsrøst"

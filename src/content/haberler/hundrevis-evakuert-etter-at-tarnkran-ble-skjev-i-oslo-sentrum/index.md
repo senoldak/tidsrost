@@ -20,6 +20,11 @@ kilder:
   - navn: "Fædrelandsvennen"
     url: "https://www.fvn.no/norgeogverden/n/oKoJ7j/taarnkran-i-fare-for-aa-kollapse-i-oslo-sentrum"
 nyhetsverdi: 78
+sted:
+  navn: "Oslo"
+  lat: 59.91
+  lon: 10.75
+  fylke: "Oslo"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Hundrevis evakuert etter at tårnkran ble skjev i Oslo sentrum»"
 coverKreditt: "Illustrasjon: tidsrøst"

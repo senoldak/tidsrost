@@ -24,6 +24,11 @@ kilder:
   - navn: "Stavanger Aftenblad"
     url: "https://www.aftenbladet.no/lokalt/i/64OObL/sparebank-1-legger-ned-kundesenter-i-stavanger"
 nyhetsverdi: 74
+sted:
+  navn: "Stavanger"
+  lat: 58.97
+  lon: 5.73
+  fylke: "Rogaland"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «SpareBank 1 Kundesenter i Stavanger legges ned og 113 mister jobben»"
 coverKreditt: "Illustrasjon: tidsrøst"

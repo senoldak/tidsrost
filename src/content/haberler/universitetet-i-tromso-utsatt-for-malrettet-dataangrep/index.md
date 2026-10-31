@@ -24,6 +24,11 @@ kilder:
   - navn: "Nordlys"
     url: "https://www.nordlys.no/uit-utsatt-for-malrettet-dataangrep/s/80-34-34357"
 nyhetsverdi: 75
+sted:
+  navn: "Tromsø"
+  lat: 69.65
+  lon: 18.96
+  fylke: "Troms"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Universitetet i Tromsø utsatt for målrettet dataangrep»"
 coverKreditt: "Illustrasjon: tidsrøst"

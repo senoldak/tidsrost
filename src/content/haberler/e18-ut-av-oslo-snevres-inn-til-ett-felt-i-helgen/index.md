@@ -18,6 +18,11 @@ kilder:
   - navn: "Nettavisen"
     url: "https://www.nettavisen.no/nyheter/e18-ut-av-oslo-snevres-inn-venter-store-forsinkelser/s/80-95-198629"
 nyhetsverdi: 72
+sted:
+  navn: "Oslo"
+  lat: 59.91
+  lon: 10.75
+  fylke: "Oslo"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «E18 ut av Oslo snevres inn til ett felt i helgen»"
 coverKreditt: "Illustrasjon: tidsrøst"
