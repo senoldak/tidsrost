@@ -19,6 +19,7 @@ import Verktoylinje from '../../components/artikkel/Verktoylinje.astro';
 import FlereSaker from '../../components/artikkel/FlereSaker.astro';
 import Brodtekst from '../../components/artikkel/Brodtekst.astro';
 import Datakort from '../../components/artikkel/Datakort.astro';
+import Stedkart from '../../components/artikkel/Stedkart.astro';
 import Endringer from '../../components/artikkel/Endringer.astro';
 import Tidligere from '../../components/artikkel/Tidligere.astro';
 import { tidligereSaker } from '../../lib/tidligere';
@@ -68,8 +69,12 @@ interface Props {
 const { haber, related, temaer, tidligere } = Astro.props;
 // Canlı rakam kartı: başlık ya da özet KPI, faiz, konut veya işsizlikten söz ediyorsa son değer (src/lib/datalenker.mjs).
 // Gövdede geçen tesadüfi anışlar kart çıkarmaz; toplu haber listelerinde (nyheter-*, Kort fortalt) kart yoktur.
-// Metin içinde en çok bir modül: yer haritası (Task 6) varsa kart çıkmaz; harita gelince `stedkart` true olur.
-const stedkart = false;
+// Metin içinde en çok bir modül: yer haritası varsa (bot/göç yalnız yer haberin özüyse sted.webp yazar) kart çıkmaz.
+// Haritasız ama yerli haberde yalnız künyede küçük «◉ yer» işareti vardır.
+const stedBilder = import.meta.glob<{ default: ImageMetadata }>('/src/content/haberler/*/sted.webp', { eager: true });
+const stedBilde = stedBilder[`/src/content/haberler/${haber.id}/sted.webp`]?.default;
+const sted = haber.data.sted;
+const stedkart = !!(sted && stedBilde);
 const datakort = stedkart || erSammendrag(haber) || /^nyheter-/.test(haber.id) ? null : datakortFor(`${haber.data.title} ${haber.data.description ?? ''}`);
 const { title, description, date, category, cover: kapak, coverAlt, coverKreditt, author, produksjon, rettelse, oppdatert } = haber.data;
 const { Content } = await render(haber);
@@ -211,6 +216,7 @@ const jsonLd = {
           <span><time datetime={iso}>{formatDay(date)} kl. {formatTime(date)}</time></span>
           {endret && <span>Oppdatert <time datetime={modifiedIso}>{formatDay(endret)} kl. {formatTime(endret)}</time></span>}
           {lesetid > 0 && <span>{lesetid} min lesing</span>}
+          {sted && !stedkart && <span class="na-stedmerke">◉ {sted.navn}</span>}
         </div>
         <Kildelinje kilder={kilder} produksjon={produksjon} />
       </div>
@@ -240,6 +246,7 @@ const jsonLd = {
       <div class="prose">
         <Brodtekst>
           <Content />
+          {stedkart && sted && stedBilde && <Stedkart slot="modul" bilde={stedBilde} navn={sted.navn} fylke={sted.fylke} />}
           {datakort && <Datakort slot="modul" kort={datakort} />}
         </Brodtekst>
       </div>

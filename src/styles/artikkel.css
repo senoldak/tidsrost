@@ -1275,6 +1275,99 @@ html[data-skala='3'] .na-ramme {
   box-shadow: 3px 3px 0 var(--ink);
 }
 
+/* ——— Stedkart («Hvor saken skjer») og stedsmerke i kunyen ——— */
+.na-stedkart {
+  margin: 1.8rem 0;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+}
+.na-stedkart img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2.1 / 1;
+}
+.na-stedkart figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.4rem 1rem;
+  padding: 0.6rem 0.8rem;
+  border-top: 1px solid var(--ink);
+  font: 400 0.9rem/1.4 var(--frame);
+  color: var(--muted);
+}
+.na-stedkart figcaption b {
+  color: var(--ink);
+}
+.na-stedkart figcaption a {
+  color: var(--water);
+  font-weight: 600;
+}
+.na-meta .na-stedmerke {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ——— Ordforklaringer: ord i teksten med prikket understrek og en liten ballong ——— */
+.prose button.ord {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  letter-spacing: inherit;
+  text-align: inherit;
+  border-bottom: 2px dotted var(--water);
+  cursor: help;
+  -webkit-tap-highlight-color: transparent;
+}
+.prose button.ord[aria-expanded='true'] {
+  background: color-mix(in srgb, var(--water) 16%, transparent);
+}
+.prose button.ord:focus-visible {
+  outline: 2px solid var(--water);
+  outline-offset: 2px;
+}
+.ord-ballong {
+  position: absolute;
+  z-index: 40;
+  box-sizing: border-box;
+  max-width: 18rem;
+  padding: 0.8rem 0.9rem;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
+  font: 400 0.92rem/1.45 var(--frame);
+}
+.ord-ballong[hidden] {
+  display: none;
+}
+.ord-ballong .def {
+  margin: 0;
+}
+.ord-ballong small {
+  display: block;
+  margin-top: 0.55rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+.ord-ballong small a {
+  color: var(--water);
+  text-decoration: underline;
+}
+:root.kontrast .prose button.ord {
+  border-bottom-color: #ffd60a;
+}
+:root.kontrast .ord-ballong {
+  border-color: #fff;
+  box-shadow: none;
+}
+
 /* ——— Utskrift: tittel, ingress, tekst, kilder med adresse, bunnlinje ——— */
 @media print {
   .na-brod,
@@ -1286,8 +1379,13 @@ html[data-skala='3'] .na-ramme {
   .avslutt-lesemodus,
   .na-emner,
   .na-tekst .forfatter-kort,
-  .na-tekst .na-tall {
+  .na-tekst .na-tall,
+  .ord-ballong {
     display: none !important;
+  }
+  .prose button.ord {
+    border-bottom: 0;
+    cursor: auto;
   }
   .na-ramme {
     display: block;

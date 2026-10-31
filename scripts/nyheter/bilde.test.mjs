@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import sharp from 'sharp';
-import { yazi, sigdir, sakKapagi, kapakCiz, KATEGORI_SEMBOL } from './bilde.mjs';
+import { createHash } from 'node:crypto';
+import { yazi, sigdir, sakKapagi, kapakCiz, KATEGORI_SEMBOL, varselkart, stedkart } from './bilde.mjs';
 import { lagBilde } from './lib.mjs';
 
 test('yazi: Source Serif 4 ile metin buffer üretir', async () => {
@@ -193,3 +194,29 @@ test('lagBilde: sak.bilde özel tanımlandığında özel grafiği üretir', asy
   assert.equal(meta.format, 'png');
 });
 
+
+test('varselkart: SVG-en er uendret etter at altlaget ble delt med stedkart', async () => {
+  const svg = await varselkart({
+    omrade: [[[18, 69.2], [20, 69.2], [20, 70], [18, 70], [18, 69.2]]],
+    niva: 'gul',
+    tittel: 'Gult farevarsel',
+    undertittel: 'Vind · Troms',
+    kilde: 'Meteorologisk institutt',
+  });
+  assert.equal(createHash('sha256').update(svg).digest('hex'), 'e2c575c8a87cb4780cfbfb995949544308a5d0462be5dddc6c4be135d55159b2');
+});
+
+test('stedkart: WebP 1200×571 (2,1:1), høyst 80 KB, også for Svalbard og lange navn', async () => {
+  for (const sted of [
+    { navn: 'Tromsø', lat: 69.65, lon: 18.96, fylke: 'Troms' },
+    { navn: 'Longyearbyen', lat: 78.22, lon: 15.65 },
+    { navn: 'Mo i Rana', lat: 66.31, lon: 14.14, fylke: 'Nordland' },
+  ]) {
+    const buf = await stedkart(sted);
+    const meta = await sharp(buf).metadata();
+    assert.equal(meta.format, 'webp');
+    assert.deepEqual([meta.width, meta.height], [1200, 571]);
+    assert.ok(buf.length <= 80 * 1024, `${sted.navn}: ${buf.length} byte`);
+  }
+  await assert.rejects(() => stedkart({ navn: 'X', lat: NaN, lon: 1 }));
+});

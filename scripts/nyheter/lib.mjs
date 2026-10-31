@@ -3,7 +3,8 @@ import { mkdir, readFile, writeFile, access } from 'node:fs/promises';
 import path from 'node:path';
 import { geminiCagir } from './istemci.mjs';
 import { normaliserKilder } from '../../src/lib/kilder.mjs';
-import { sakKapagi, kapakCiz, tilPng } from './bilde.mjs';
+import { sakKapagi, kapakCiz, tilPng, stedkart, STEDER } from './bilde.mjs';
+import { finnSted, kanHaSted, visKart } from '../../src/lib/sted.mjs';
 
 export const USER_AGENT = 'tidsrost-nyhetsbot/1.0 (+https://github.com/senoldak/tidsrost)';
 
@@ -205,6 +206,29 @@ export function avsnitt(tekst = '') {
 // frontmatter `kilder` öğesi (YAML, repodaki biçim).
 export const kildeYaml = (k) => `  - navn: ${yamlStr(k.navn)}\n    url: ${yamlStr(k.url)}${k.lisens ? `\n    lisens: ${yamlStr(k.lisens)}` : ''}`;
 
+// frontmatter `sted` bloğu (Hvor saken skjer): navn, lat, lon og fylke når det finnes.
+export const stedYaml = (s) =>
+  `sted:
+  navn: ${yamlStr(s.navn)}
+  lat: ${s.lat}
+  lon: ${s.lon}${s.fylke ? `
+  fylke: ${yamlStr(s.fylke)}` : ''}`;
+
+// Stedet i tittel/ingress og, når stedet er poenget (visKart), kartet som WebP. Ingen ekstra KI-kall.
+// Saker med eget kart (farevarsel: sak.bilde) og samlesaker får ikke sted her.
+export async function lagSted(sak) {
+  if (sak.bilde || !kanHaSted(sak)) return {};
+  const sted = finnSted(sak.title, sak.description, STEDER);
+  if (!sted) return {};
+  if (!visKart({ ...sak, sted })) return { sted };
+  try {
+    return { sted, kart: await stedkart(sted) };
+  } catch (e) {
+    console.warn(`  stedkart üretilemedi: ${e.message}`);
+    return { sted };
+  }
+}
+
 // Haberi src/content/haberler/<slug>/index.md olarak yazar, slug'ı döner.
 export async function skrivSak(rot, sak) {
   if (!KATEGORIER.includes(sak.category)) sak.category = 'innenriks';
@@ -258,6 +282,9 @@ export async function skrivSak(rot, sak) {
     Number.isInteger(sak.nyhetsverdi) ? `nyhetsverdi: ${sak.nyhetsverdi}` : null,
   ].filter(Boolean);
   await mkdir(path.join(base, slug), { recursive: true });
+  const { sted, kart } = await lagSted(sak);
+  if (sted) fm.push(stedYaml(sted));
+  if (kart) await writeFile(path.join(base, slug, 'sted.webp'), kart);
   const bilde = await lagBilde(sak);
   if (bilde) {
     await writeFile(path.join(base, slug, 'cover.png'), bilde.png);

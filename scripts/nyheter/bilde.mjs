@@ -104,7 +104,7 @@ function proj([lon, lat]) {
   ];
 }
 
-const STEDER = [
+export const STEDER = [
   { navn: 'Oslo', lon: 10.75, lat: 59.91, stor: true },
   { navn: 'Bergen', lon: 5.32, lat: 60.39, stor: true },
   { navn: 'Trondheim', lon: 10.39, lat: 63.43, stor: true },
@@ -209,6 +209,116 @@ export function ringerFra(geometri) {
   return [];
 }
 
+// ── Felles kartlag (varselkart og stedkart tegner samme altlag) ────────
+
+// Havflate, rutenett, havnavn, land og innsjøer. w = utsnittets bredde i km (styrer rutenetttetthet).
+function grunnlag(kart, tilSkjerm, w, { y0 = 0, y1 = H } = {}) {
+  // 1. Havflate
+  const havBakgrunn = `<rect width="${B}" height="${H}" fill="${FARGE.hav}"/>`;
+
+  // 2. Enlem / Boylam şebekesi (Graticule)
+  const latStep = w < 850 ? 2 : 4;
+  const lonStep = w < 850 ? 3 : 5;
+  const ruteLinjer = [];
+  for (let lat = 52; lat <= 82; lat += latStep) {
+    const pts = [];
+    for (let lon = -30; lon <= 45; lon += 0.8) pts.push([lon, lat]);
+    ruteLinjer.push(`<path d="${stiEnkel(pts, tilSkjerm)}" fill="none" stroke="${FARGE.rutenett}" stroke-width="0.7" stroke-dasharray="3 4"/>`);
+  }
+  for (let lon = -25; lon <= 40; lon += lonStep) {
+    const pts = [];
+    for (let lat = 50; lat <= 82; lat += 0.6) pts.push([lon, lat]);
+    ruteLinjer.push(`<path d="${stiEnkel(pts, tilSkjerm)}" fill="none" stroke="${FARGE.rutenett}" stroke-width="0.7" stroke-dasharray="3 4"/>`);
+  }
+  const rutenettSvg = `<g opacity="0.85">${ruteLinjer.join('')}</g>`;
+
+  // 3. Havnavn
+  const havnavnSvg = HAV.map((h) => {
+    const [sx, sy] = tilSkjerm(proj([h.lon, h.lat]));
+    if (sx < 60 || sx > B - 60 || sy < y0 + 60 || sy > y1 - 60) return '';
+    return `<text x="${sx.toFixed(0)}" y="${sy.toFixed(0)}" text-anchor="middle" font-family="${FONT_SERIF}" font-size="16" font-style="italic" letter-spacing="0.28em" fill="${FARGE.aksent}" fill-opacity="0.45">${esc(h.navn)}</text>`;
+  }).filter(Boolean).join('');
+
+  // 4. Landmasser (Norge i papirhvitt, naboland i varm pergament)
+  const landSvg = kart.land
+    .map((l) => {
+      const isNor = l.kode === 'NOR';
+      return `<path d="${sti(l.ringer, tilSkjerm)}" fill="${isNor ? FARGE.landNorge : FARGE.landNabo}" stroke="${isNor ? FARGE.kyst : FARGE.grense}" stroke-width="${isNor ? '1.1' : '0.8'}" stroke-linejoin="round"/>`;
+    })
+    .join('');
+
+  // 5. Innsjøer
+  const innsjoSvg = (kart.innsjoer ?? [])
+    .map((ring) => `<path d="${sti([ring], tilSkjerm)}" fill="${FARGE.innsjo}" stroke="${FARGE.kyst}" stroke-width="0.7"/>`)
+    .join('');
+
+  return { havBakgrunn, rutenettSvg, havnavnSvg, landSvg, innsjoSvg };
+}
+
+// Stedsnavn (byer som faller i utsnittet, med kartografisk glorie). hopp(sx, sy) → true: stedet utelates.
+function stederLag(tilSkjerm, { y0 = 0, y1 = H, hopp = () => false, utenom } = {}) {
+  return STEDER.map((s) => {
+    if (utenom && s.navn === utenom) return '';
+    const [sx, sy] = tilSkjerm(proj([s.lon, s.lat]));
+    if (sx < 30 || sx > B - 30 || sy < y0 + 30 || sy > y1 - 30) return '';
+    if (hopp(sx, sy)) return '';
+
+    const fontSize = s.stor ? 12 : 10.5;
+    const circleR = s.stor ? 3.2 : 2.4;
+    return `<g>
+<circle cx="${sx.toFixed(1)}" cy="${sy.toFixed(1)}" r="${circleR}" fill="${FARGE.tekst}" stroke="${FARGE.bg}" stroke-width="1.2"/>
+<text x="${(sx + 5).toFixed(1)}" y="${(sy + 4).toFixed(1)}" font-family="${FONT_SANS}" font-size="${fontSize}" font-weight="${s.stor ? '700' : '600'}" letter-spacing="0.05em" fill="${FARGE.tekst}" stroke="${FARGE.bg}" stroke-width="3" stroke-linejoin="round" paint-order="stroke fill">${esc(s.navn.toUpperCase())}</text>
+</g>`;
+  }).filter(Boolean).join('');
+}
+
+// Oversiktskart (Nordisk oversikt i øverste høyre hjørne). merke(tilOversikt) tegner varselet/stedet.
+function oversiktskart(kart, { cx, cy, w, h }, iy, merke) {
+  const ih = 210;
+  const iw = 168;
+  const ix = B - iw - 24;
+
+  const nMinX = -1050;
+  const nMaxX = 850;
+  const nMinY = -1950;
+  const nMaxY = 1100;
+  const ow = nMaxX - nMinX;
+  const oh = nMaxY - nMinY;
+  const os = Math.min(iw / ow, ih / oh);
+  const tilOversikt = ([x, y]) => [
+    ix + iw / 2 + (x - (nMinX + nMaxX) / 2) * os,
+    iy + ih / 2 + (y - (nMinY + nMaxY) / 2) * os,
+  ];
+
+  const overLand = kart.land
+    .map((l) => `<path d="${sti(l.ringer, tilOversikt)}" fill="${l.kode === 'NOR' ? '#fdfdfb' : '#eae5dc'}" stroke="${FARGE.grense}" stroke-width="0.5"/>`)
+    .join('');
+  const overVarsel = merke(tilOversikt);
+  const [rx, ry] = tilOversikt([cx - w / 2, cy - h / 2]);
+  const rw = (w * os).toFixed(1);
+  const rh = (h * os).toFixed(1);
+
+  return `<g>
+<rect x="${ix}" y="${iy}" width="${iw}" height="${ih}" fill="#f4f7f9" stroke="${FARGE.ramme}" stroke-width="1.5"/>
+<g clip-path="url(#oversikt-klipp)">
+  <clipPath id="oversikt-klipp"><rect x="${ix}" y="${iy}" width="${iw}" height="${ih}"/></clipPath>
+  ${overLand}
+  ${overVarsel}
+  <rect x="${rx.toFixed(1)}" y="${ry.toFixed(1)}" width="${rw}" height="${rh}" fill="none" stroke="${FARGE.tekst}" stroke-width="1.4"/>
+</g>
+<rect x="${ix}" y="${iy}" width="${iw}" height="18" fill="${FARGE.bg}" stroke="${FARGE.delestrek}" stroke-width="0.8"/>
+<text x="${ix + 8}" y="${iy + 13}" font-family="${FONT_SANS}" font-size="9" font-weight="700" letter-spacing="0.12em" fill="${FARGE.dempet}">NOREG / NORDEN</text>
+</g>`;
+}
+
+// Kartografisk ytterramme (Neatline) mellom y0 og y1.
+function neatline(y0, y1) {
+  return `<g>
+<rect x="10" y="${y0 + 10}" width="${B - 20}" height="${y1 - y0 - 20}" fill="none" stroke="${FARGE.ramme}" stroke-width="1.5"/>
+<rect x="14" y="${y0 + 14}" width="${B - 28}" height="${y1 - y0 - 28}" fill="none" stroke="${FARGE.delestrek}" stroke-width="0.8"/>
+</g>`;
+}
+
 // ── Varselkart (Kartverket N50 pafta estetiğinde tehlike haritası) ─────
 // omrade: [lon, lat] halkaları; niva: 'gul' | 'oransje' | 'rod'; tittel: "Gult farevarsel"; undertittel: "Snø · Sør-Norge"
 // klippTilLand: kara uyarılarında alan Norveç kıyı çizgisine kırpılır.
@@ -253,44 +363,7 @@ export async function varselkart({ omrade, niva, tittel, undertittel, kilde, kli
   const skala = B / w;
   const tilSkjerm = ([x, y]) => [(x - (cx - w / 2)) * skala, (y - (cy - h / 2)) * skala];
 
-  // 1. Havflate
-  const havBakgrunn = `<rect width="${B}" height="${H}" fill="${FARGE.hav}"/>`;
-
-  // 2. Enlem / Boylam şebekesi (Graticule)
-  const latStep = w < 850 ? 2 : 4;
-  const lonStep = w < 850 ? 3 : 5;
-  const ruteLinjer = [];
-  for (let lat = 52; lat <= 82; lat += latStep) {
-    const pts = [];
-    for (let lon = -30; lon <= 45; lon += 0.8) pts.push([lon, lat]);
-    ruteLinjer.push(`<path d="${stiEnkel(pts, tilSkjerm)}" fill="none" stroke="${FARGE.rutenett}" stroke-width="0.7" stroke-dasharray="3 4"/>`);
-  }
-  for (let lon = -25; lon <= 40; lon += lonStep) {
-    const pts = [];
-    for (let lat = 50; lat <= 82; lat += 0.6) pts.push([lon, lat]);
-    ruteLinjer.push(`<path d="${stiEnkel(pts, tilSkjerm)}" fill="none" stroke="${FARGE.rutenett}" stroke-width="0.7" stroke-dasharray="3 4"/>`);
-  }
-  const rutenettSvg = `<g opacity="0.85">${ruteLinjer.join('')}</g>`;
-
-  // 3. Havnavn
-  const havnavnSvg = HAV.map((h) => {
-    const [sx, sy] = tilSkjerm(proj([h.lon, h.lat]));
-    if (sx < 60 || sx > B - 60 || sy < 60 || sy > H - 60) return '';
-    return `<text x="${sx.toFixed(0)}" y="${sy.toFixed(0)}" text-anchor="middle" font-family="${FONT_SERIF}" font-size="16" font-style="italic" letter-spacing="0.28em" fill="${FARGE.aksent}" fill-opacity="0.45">${esc(h.navn)}</text>`;
-  }).filter(Boolean).join('');
-
-  // 4. Landmasser (Norge i papirhvitt, naboland i varm pergament)
-  const landSvg = kart.land
-    .map((l) => {
-      const isNor = l.kode === 'NOR';
-      return `<path d="${sti(l.ringer, tilSkjerm)}" fill="${isNor ? FARGE.landNorge : FARGE.landNabo}" stroke="${isNor ? FARGE.kyst : FARGE.grense}" stroke-width="${isNor ? '1.1' : '0.8'}" stroke-linejoin="round"/>`;
-    })
-    .join('');
-
-  // 5. Innsjøer
-  const innsjoSvg = (kart.innsjoer ?? [])
-    .map((ring) => `<path d="${sti([ring], tilSkjerm)}" fill="${FARGE.innsjo}" stroke="${FARGE.kyst}" stroke-width="0.7"/>`)
-    .join('');
+  const { havBakgrunn, rutenettSvg, havnavnSvg, landSvg, innsjoSvg } = grunnlag(kart, tilSkjerm, w);
 
   // 6. Varselområde med kartografisk skravering
   const norgeRinger = kart.land.find((l) => l.kode === 'NOR')?.ringer ?? [];
@@ -317,57 +390,16 @@ export async function varselkart({ omrade, niva, tittel, undertittel, kilde, kli
   const cartY = nedeTilVenstreOptatt ? 26 : H - 180;
 
   // 8. Stedsnavn (byer som faller i utsnittet med kartografisk glorie)
-  const stederSvg = STEDER.map((s) => {
-    const [sx, sy] = tilSkjerm(proj([s.lon, s.lat]));
-    if (sx < 30 || sx > B - 30 || sy < 30 || sy > H - 30) return '';
-    if (sx >= cartX - 10 && sx <= cartX + cartW + 10 && sy >= cartY - 10 && sy <= cartY + cartH + 10) return '';
-    if (sx >= B - 210 && sy <= 245) return '';
-
-    const fontSize = s.stor ? 12 : 10.5;
-    const circleR = s.stor ? 3.2 : 2.4;
-    return `<g>
-<circle cx="${sx.toFixed(1)}" cy="${sy.toFixed(1)}" r="${circleR}" fill="${FARGE.tekst}" stroke="${FARGE.bg}" stroke-width="1.2"/>
-<text x="${(sx + 5).toFixed(1)}" y="${(sy + 4).toFixed(1)}" font-family="${FONT_SANS}" font-size="${fontSize}" font-weight="${s.stor ? '700' : '600'}" letter-spacing="0.05em" fill="${FARGE.tekst}" stroke="${FARGE.bg}" stroke-width="3" stroke-linejoin="round" paint-order="stroke fill">${esc(s.navn.toUpperCase())}</text>
-</g>`;
-  }).filter(Boolean).join('');
+  const stederSvg = stederLag(tilSkjerm, {
+    y0: 0,
+    y1: H,
+    hopp: (sx, sy) =>
+      (sx >= cartX - 10 && sx <= cartX + cartW + 10 && sy >= cartY - 10 && sy <= cartY + cartH + 10) || (sx >= B - 210 && sy <= 245),
+  });
 
   // 9. Oversiktskart (Nordisk oversikt i øverste høyre hjørne)
-  const ih = 210;
-  const iw = 168;
-  const ix = B - iw - 24;
-  const iy = 24;
-
-  const nMinX = -1050;
-  const nMaxX = 850;
-  const nMinY = -1950;
-  const nMaxY = 1100;
-  const ow = nMaxX - nMinX;
-  const oh = nMaxY - nMinY;
-  const os = Math.min(iw / ow, ih / oh);
-  const tilOversikt = ([x, y]) => [
-    ix + iw / 2 + (x - (nMinX + nMaxX) / 2) * os,
-    iy + ih / 2 + (y - (nMinY + nMaxY) / 2) * os,
-  ];
-
-  const overLand = kart.land
-    .map((l) => `<path d="${sti(l.ringer, tilOversikt)}" fill="${l.kode === 'NOR' ? '#fdfdfb' : '#eae5dc'}" stroke="${FARGE.grense}" stroke-width="0.5"/>`)
-    .join('');
-  const overVarsel = `<path d="${sti(omrade, tilOversikt)}" fill="${farge.badge}" stroke="${farge.strek}" stroke-width="1.2"/>`;
-  const [rx, ry] = tilOversikt([cx - w / 2, cy - h / 2]);
-  const rw = (w * os).toFixed(1);
-  const rh = (h * os).toFixed(1);
-
-  const oversiktskartSvg = `<g>
-<rect x="${ix}" y="${iy}" width="${iw}" height="${ih}" fill="#f4f7f9" stroke="${FARGE.ramme}" stroke-width="1.5"/>
-<g clip-path="url(#oversikt-klipp)">
-  <clipPath id="oversikt-klipp"><rect x="${ix}" y="${iy}" width="${iw}" height="${ih}"/></clipPath>
-  ${overLand}
-  ${overVarsel}
-  <rect x="${rx.toFixed(1)}" y="${ry.toFixed(1)}" width="${rw}" height="${rh}" fill="none" stroke="${FARGE.tekst}" stroke-width="1.4"/>
-</g>
-<rect x="${ix}" y="${iy}" width="${iw}" height="18" fill="${FARGE.bg}" stroke="${FARGE.delestrek}" stroke-width="0.8"/>
-<text x="${ix + 8}" y="${iy + 13}" font-family="${FONT_SANS}" font-size="9" font-weight="700" letter-spacing="0.12em" fill="${FARGE.dempet}">NOREG / NORDEN</text>
-</g>`;
+  const oversiktskartSvg = oversiktskart(kart, { cx, cy, w, h }, 24, (tilOversikt) =>
+    `<path d="${sti(omrade, tilOversikt)}" fill="${farge.badge}" stroke="${farge.strek}" stroke-width="1.2"/>`);
 
   // 10. Kartusj / Tittelblokk (N50 kartpafta lejantı)
   const erNve = String(kilde).includes('NVE');
@@ -388,12 +420,102 @@ ${underLinjer.map((l, i) => `<text x="${cartX + 24}" y="${cartY + 96 + i * 22}" 
 </g>`;
 
   // 11. Kartografisk ytterramme (Neatline)
-  const neatlineSvg = `<g>
-<rect x="10" y="10" width="${B - 20}" height="${H - 20}" fill="none" stroke="${FARGE.ramme}" stroke-width="1.5"/>
-<rect x="14" y="14" width="${B - 28}" height="${H - 28}" fill="none" stroke="${FARGE.delestrek}" stroke-width="0.8"/>
-</g>`;
+  const neatlineSvg = neatline(0, H);
 
   return svg(`<defs>${hatchDef}</defs>${havBakgrunn}${rutenettSvg}${havnavnSvg}${landSvg}${innsjoSvg}${varselSvg}${stederSvg}${oversiktskartSvg}${kartusjSvg}${neatlineSvg}`);
+}
+
+// ── Stedkart (Hvor saken skjer): samme altlag som varselkart, vannblått merke, 1200×571 (2,1:1) ──
+// Tegnes på 1200×675-lerretet med stedet i midten og beskjæres til et bånd rundt det (STED_TOPP..+STED_H).
+const STED_H = 571;
+const STED_TOPP = Math.round((H - STED_H) / 2); // 52: stedet havner midt i båndet
+const STED_BLAA = { fyll: FARGE.aksent, strek: '#0d3557' };
+
+export function stedkartSvg({ navn, lat, lon, fylke }) {
+  const kart = nordkart;
+  if (!kart) throw new Error('stedkartSvg: kartet er ikke lest');
+  const [px, py] = proj([lon, lat]);
+  // Utsnitt: 580 km bredt, samme høyde/bredde-forhold som lerretet; stedet i sentrum.
+  const w = 580;
+  const h = (w * H) / B;
+  const skala = B / w;
+  const tilSkjerm = ([x, y]) => [(x - (px - w / 2)) * skala, (y - (py - h / 2)) * skala];
+  const [mx, my] = [B / 2, H / 2];
+  const y0 = STED_TOPP;
+  const y1 = STED_TOPP + STED_H;
+
+  const { havBakgrunn, rutenettSvg, havnavnSvg, landSvg, innsjoSvg } = grunnlag(kart, tilSkjerm, w, { y0, y1 });
+
+  // Området rundt stedet: skravert sirkel (14 km), prikk og navn i vannblått.
+  const hatchDef = `<pattern id="varsel-hatch" width="10" height="10" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="10" stroke="${STED_BLAA.fyll}" stroke-width="2" opacity="0.32" /></pattern>`;
+  const r = 14 * skala;
+  const omradeSvg = `<g>
+  <circle cx="${mx}" cy="${my}" r="${r.toFixed(1)}" fill="${STED_BLAA.fyll}" fill-opacity="0.36"/>
+  <circle cx="${mx}" cy="${my}" r="${r.toFixed(1)}" fill="url(#varsel-hatch)"/>
+  <circle cx="${mx}" cy="${my}" r="${r.toFixed(1)}" fill="none" stroke="${STED_BLAA.strek}" stroke-width="2.6"/>
+</g>`;
+
+  // Kartusj nede til venstre; innfelt oppe til høyre.
+  const cartW = 380;
+  const cartH = 154;
+  const cartX = 26;
+  const cartY = y1 - 26 - cartH;
+  const iy = y0 + 24;
+  const stederSvg = stederLag(tilSkjerm, {
+    y0,
+    y1,
+    utenom: navn,
+    hopp: (sx, sy) =>
+      (sx >= cartX - 10 && sx <= cartX + cartW + 10 && sy >= cartY - 10 && sy <= cartY + cartH + 10) || (sx >= B - 210 && sy <= iy + 221),
+  });
+  const merkeSvg = `<g>
+<circle cx="${mx}" cy="${my}" r="6.5" fill="${STED_BLAA.fyll}" stroke="#ffffff" stroke-width="2.4"/>
+<circle cx="${mx}" cy="${my}" r="6.5" fill="none" stroke="${STED_BLAA.strek}" stroke-width="1"/>
+<text x="${mx + 12}" y="${my + 5}" font-family="${FONT_SANS}" font-size="14" font-weight="800" letter-spacing="0.06em" fill="${FARGE.tekst}" stroke="${FARGE.bg}" stroke-width="3.5" stroke-linejoin="round" paint-order="stroke fill">${esc(navn.toUpperCase())}</text>
+</g>`;
+
+  const oversiktSvg = oversiktskart(kart, { cx: px, cy: py, w, h }, iy, (tilOversikt) => {
+    const [ox, oy] = tilOversikt([px, py]);
+    return `<circle cx="${ox.toFixed(1)}" cy="${oy.toFixed(1)}" r="3.4" fill="${STED_BLAA.fyll}" stroke="${STED_BLAA.strek}" stroke-width="1.2"/>`;
+  });
+
+  const kartusjSvg = `<g>
+<rect x="${cartX}" y="${cartY}" width="${cartW}" height="${cartH}" fill="${FARGE.bg}" stroke="${FARGE.ramme}" stroke-width="1.5"/>
+<rect x="${cartX + 3}" y="${cartY + 3}" width="${cartW - 6}" height="${cartH - 6}" fill="none" stroke="${FARGE.delestrek}" stroke-width="1"/>
+<rect x="${cartX}" y="${cartY}" width="9" height="${cartH}" fill="${STED_BLAA.fyll}"/>
+<text x="${cartX + 24}" y="${cartY + 28}" font-family="${FONT_SANS}" font-size="12" font-weight="700" letter-spacing="0.14em" fill="${FARGE.dempet}">HVOR SAKEN SKJER</text>
+<line x1="${cartX + 24}" y1="${cartY + 36}" x2="${cartX + cartW - 20}" y2="${cartY + 36}" stroke="${FARGE.delestrek}" stroke-width="1"/>
+<rect x="${cartX + 24}" y="${cartY + 53}" width="20" height="20" fill="${STED_BLAA.fyll}" stroke="${STED_BLAA.strek}" stroke-width="1.2"/>
+<text x="${cartX + 54}" y="${cartY + 73}" font-family="${FONT_SERIF}" font-size="30" font-weight="700" fill="${FARGE.tekst}">${esc(brytLinjer(navn, 22, 1)[0])}</text>
+${fylke && fylke !== navn ? `<text x="${cartX + 24}" y="${cartY + 102}" font-family="${FONT_SANS}" font-size="19" font-weight="600" fill="${FARGE.tekst2}">${esc(brytLinjer(fylke, 28, 1)[0])}</text>` : ''}
+<line x1="${cartX + 24}" y1="${cartY + cartH - 26}" x2="${cartX + cartW - 20}" y2="${cartY + cartH - 26}" stroke="${FARGE.delestrek}" stroke-width="0.8"/>
+<text x="${cartX + 24}" y="${cartY + cartH - 10}" font-family="${FONT_SANS}" font-size="11.5" font-weight="500" fill="${FARGE.dempet}">tidsrøst · Kartgrunnlag: Natural Earth</text>
+</g>`;
+
+  return svg(`<defs>${hatchDef}</defs>${havBakgrunn}${rutenettSvg}${havnavnSvg}${landSvg}${innsjoSvg}${omradeSvg}${stederSvg}${merkeSvg}${oversiktSvg}${kartusjSvg}${neatline(y0, y1)}`);
+}
+
+// WebP-buffer (1200×571, ≤ 80 KB); sharp mangler → null (saken skrives da uten kart).
+export async function stedkart({ navn, lat, lon, fylke }) {
+  if (![lat, lon].every(Number.isFinite) || !navn) throw new Error('stedkart: navn, lat og lon kreves');
+  await lesNordkart();
+  const svgTekst = stedkartSvg({ navn, lat, lon, fylke });
+  let sharp;
+  try {
+    ({ default: sharp } = await import('sharp'));
+  } catch {
+    console.warn('  sharp bulunamadı, stedkart atlanıyor');
+    return null;
+  }
+  let ut;
+  for (const kvalitet of [82, 72, 62, 52, 42]) {
+    ut = await sharp(Buffer.from(svgTekst))
+      .extract({ left: 0, top: STED_TOPP, width: B, height: STED_H })
+      .webp({ quality: kvalitet, effort: 6, smartSubsample: true })
+      .toBuffer();
+    if (ut.length <= 80 * 1024) break;
+  }
+  return ut;
 }
 
 // Kartverket'ten kommune sınırları (CC BY 4.0, "© Kartverket"); NVE uyarıları kommune listesiyle gelir.

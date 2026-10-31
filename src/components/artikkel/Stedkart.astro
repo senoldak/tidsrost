@@ -1,0 +1,20 @@
+---
+// «Hvor saken skjer»: kartet boten tegner (sted.webp, 2,1:1) med stedsnavn og fylke under. Bare saker der stedet er
+// poenget får kart (src/lib/sted.mjs visKart); alle andre får bare «◉ sted» i kunyen. Lenken «Flere saker fra <fylke>»
+// finnes bare når det finnes en egen side for fylket (fylkeUrl). I dag finnes ingen, så lenken utelates.
+interface Props {
+  bilde: ImageMetadata;
+  navn: string;
+  fylke?: string;
+  fylkeUrl?: string;
+}
+const { bilde, navn, fylke, fylkeUrl } = Astro.props;
+---
+
+<figure class="na-stedkart">
+  <img src={bilde.src} width={bilde.width} height={bilde.height} loading="lazy" decoding="async" alt={`Kart over ${navn}`} />
+  <figcaption>
+    <span><b>{navn}</b>{fylke && fylke !== navn ? ` · ${fylke}` : ''}</span>
+    {fylke && fylkeUrl && <a href={fylkeUrl}>Flere saker fra {fylke} →</a>}
+  </figcaption>
+</figure>
