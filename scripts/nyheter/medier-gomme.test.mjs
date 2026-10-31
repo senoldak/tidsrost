@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { coz, kodla } from './gomme.mjs';
-import { gommeOnEleme, gommeOlcumu, gommeMetni } from './kilder/medier.mjs';
+import { gommeOnEleme, gommeOlcumu, gommeMetni, relevanteMedlemmer, antallMedier, MIN_MEDIER } from './kilder/medier.mjs';
 
 // Başlığın ilk harfi konu: A/a yakın, B/b yakın, C ve D yalnız.
 const KONU = { A: [1, 0, 0, 0], a: [1, 0.1, 0, 0], B: [0, 1, 0, 0], b: [0, 1, 0.1, 0], C: [0, 0, 1, 0], D: [0, 0, 0, 1] };
@@ -62,4 +62,15 @@ test('gommeOlcumu: metin verilirse yerel gölge çiftleri metinleriyle döner, m
   assert.equal(ciftler.find((c) => c.tur === 'kjent').b, 'b eski\nx');
   for (const c of ciftler) assert.doesNotMatch(`${c.a}${c.b}`, /Gizlimedya/);
   assert.deepEqual(gommeOlcumu({ grupper: [[0, 1]], kjente: new Set() }, r, () => {}), []);
+});
+
+test('urelatert medlem i gruppen teller ikke som uavhengig kilde (MIN_MEDIER)', () => {
+  const g = [
+    { medie: 'A', tittel: 'Ørjan Nyland hylles etter comebacket for RB Leipzig', ingress: 'Målvakten holdt nullen.' },
+    { medie: 'B', tittel: 'Erling Braut Haaland slår tilbake etter kritikk', ingress: 'Stjernen svarer kritikerne.' },
+  ];
+  assert.equal(antallMedier(g), 2);
+  assert.ok(antallMedier(relevanteMedlemmer(g)) < MIN_MEDIER);
+  const med = [...g, { medie: 'C', tittel: 'Nyland får strålende skussmål etter comebacket for RB Leipzig', ingress: '' }];
+  assert.deepEqual(relevanteMedlemmer(med).map((x) => x.medie), ['A', 'C']);
 });

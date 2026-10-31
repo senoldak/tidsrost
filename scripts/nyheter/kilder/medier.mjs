@@ -17,6 +17,7 @@ import { fileURLToPath } from 'node:url';
 import { hentTekst, lesRss, htmlTilTekst, gemini, osloIso, KATEGORIER } from '../lib.mjs';
 import { redigerSak, forLiteKilde, LENGDE_REGEL, TITTEL_REGEL } from '../redaktor.mjs';
 import { uavhengigeKilder } from '../uavhengighet.mjs';
+import { relevanteSaker } from '../../../src/lib/kilde-relevans.mjs';
 import { benzerlik, komsusuzlar, olcumSatiri } from '../gomme.mjs';
 import { gommeAyari } from '../vektorler.mjs';
 import { yerelOlcum } from '../yerel-model.mjs';
@@ -96,6 +97,11 @@ ${publisert.length ? publisert.map((t) => `- ${t.tittel ?? t}`).join('\n') : '(i
 
 // Bir grubun bağımsız kaynak sayısı: farklı siteler, ama aynı ajans metnini (NTB) basanlar tek kaynak.
 export const antallMedier = (medlemmer) => uavhengigeKilder(medlemmer);
+
+// Gruppering er en Gemini-vurdering og kan blande urelaterte overskrifter. Bare saker som deterministisk handler om
+// samme hendelse som hovedsaken (minst to felles viktige ord i overskrift + ingress) får telle som kilde og oppgis
+// i `kilder`; resten forlates og kan gruppere seg på nytt senere. Aldri krediter et medie som ikke har dekket saken.
+export const relevanteMedlemmer = (medlemmer) => relevanteSaker(medlemmer).behold.map((i) => medlemmer[i]);
 
 const SKJEMA = {
   type: 'object',
@@ -253,7 +259,7 @@ export default {
     const kandidater = [];
     for (const idx of g.grupper) {
       if (idx.some((i) => g.kjente.has(i))) continue;
-      const medlemmer = idx.map((i) => saker[i]);
+      const medlemmer = relevanteMedlemmer(idx.map((i) => saker[i]));
       if (antallMedier(medlemmer) < MIN_MEDIER) continue;
       // Her siteden bir sak, en fazla 6 (ajans kopyaları elendikten sonra yine en az iki bağımsız kalsın).
       const valgt = [];
