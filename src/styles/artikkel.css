@@ -401,7 +401,8 @@ html[data-skala='3'] .na-ramme {
   margin: 1.8rem 0;
   padding: 0.9rem 1rem;
   background: var(--paper);
-  border-left: 4px solid var(--water);
+  border-top: 3px solid var(--water);
+  border-bottom: 1px solid var(--rule);
 }
 .na-tall .na-etikett {
   display: block;
