@@ -1,0 +1,139 @@
+---
+// «Slik ble saken laget»: lukket <details>-kort med faktalinje og små portretter; åpent viser det trinnene
+// (src/lib/redaksjon.mjs), én rad per automatisk trinn, og til slutt utgiverens rad.
+// Agentnavnene er navn på automatiske trinn, ikke på personer. Saker uten trinn (manuell/ukjent) får ikke kortet.
+// Sahibin egen tekst (erEgenTekst) får egen variant: Şenol skriver, KI oversetter og språkvasker.
+import { AGENTER, erEgenTekst, faktalinje, stegFor } from '../../lib/redaksjon.mjs';
+import { portrett } from '../../lib/portrett.mjs';
+import { konturSvg } from '../../lib/kontur.mjs';
+import { formatKortDato, formatTime } from '../../lib/site';
+import { EPOST, REDAKTOR } from '../../lib/kinote.mjs';
+
+// «Gå inn i redaksjonen» vises først når redaksjonssiden finnes (eget prosjekt).
+const REDAKSJON_SIDE = false;
+
+interface Props {
+  sak: { produksjon?: string; kilder?: { navn: string; url: string }[]; nyhetsverdi?: number; author?: string; sjanger?: string };
+  tittel: string;
+  url: string;
+  publisert: Date;
+  endret?: Date;
+}
+const { sak, tittel, url, publisert, endret } = Astro.props;
+
+const steg = stegFor(sak) ?? [];
+const fakta = faktalinje(sak);
+const egen = erEgenTekst(sak);
+const kilder = sak.kilder ?? [];
+const TALL: Record<number, string> = { 2: 'to', 3: 'tre', 4: 'fire', 5: 'fem', 6: 'seks', 7: 'sju', 8: 'åtte', 9: 'ni', 10: 'ti' };
+const tallOrd = (n: number) => TALL[n] ?? String(n);
+const antallKI = steg.filter((s) => AGENTER[s.id as keyof typeof AGENTER]?.ki).length;
+
+const dato = (d: Date) => `${formatKortDato(d)} kl. ${formatTime(d)}`;
+const korte = egen
+  ? 'Skrevet av Şenol Dak. KI oversatte teksten til bokmål og vasket språket.'
+  : `Skrevet automatisk av ${tallOrd(antallKI)} KI-agenter.`;
+const forklaring = egen
+  ? 'Saken er Şenol Daks egen. KI har oversatt og vasket språket, uten å endre innholdet. KI er ikke brukt til innhold, vinkling eller tall.'
+  : sak.produksjon === 'ki-medier'
+    ? 'Saken er skrevet automatisk ut fra sakene i kildelisten. Ingen journalist har lest den før publisering.'
+    : sak.produksjon === 'ki-kontrollert'
+      ? 'Saken er skrevet automatisk ut fra en offentlig melding. Ingen journalist har lest den før publisering.'
+      : 'Saken er skrevet automatisk ut fra offentlige tall. Ingen journalist har lest den før publisering.';
+const merknad = egen ? 'Oskar og Liv er navn på automatiske trinn, ikke på personer.' : `Alle ${tallOrd(antallKI)} under er KI-agenter i tidsrøsts redaksjon.`;
+const ansvar = egen
+  ? ', journalist, utgiver og redaktør, leste den norske teksten og godkjente den før publisering.'
+  : ', journalist, utgiver og redaktør, bestemmer reglene for hva som kan publiseres automatisk.';
+const meld = `mailto:${EPOST}?subject=${encodeURIComponent(`Feil i saken: ${tittel}`)}&body=${encodeURIComponent(url)}`;
+
+// Faktalinjen: tall i fet skrift, «Ikke lest av et menneske» i rødt.
+function del(tekst: string): { klasse: string; deler: string[]; fet?: number } {
+  if (tekst === 'Ikke lest av et menneske') return { klasse: 'nei', deler: [tekst] };
+  const m = tekst.match(/^(\d+) (.+)$/);
+  if (m) return { klasse: '', deler: [m[1], ` ${m[2]}`], fet: 0 };
+  const n = tekst.match(/^(Nyhetsverdi )(\d+)(\/100)$/);
+  if (n) return { klasse: '', deler: [n[1], n[2], n[3]], fet: 1 };
+  const e = tekst.match(/^(Skrevet av )(.+)$/);
+  if (e) return { klasse: '', deler: [e[1], e[2]], fet: 1 };
+  return { klasse: '', deler: [tekst] };
+}
+const faktaDeler = fakta.map(del);
+---
+
+{
+  steg.length > 0 && (
+    <details class="na-laget" id="laget">
+      <summary>
+        <Fragment set:html={konturSvg(publisert.getDate())} />
+        <span class="sum-tekst">
+          <span class="h2">Slik ble saken laget</span>
+          <span class="kort">{korte}</span>
+          <span class="fakta-linje">
+            {faktaDeler.map((f) => (
+              <span class={f.klasse || undefined}>
+                {f.deler.map((d, i) => (f.fet === i ? <b>{d}</b> : d))}
+              </span>
+            ))}
+          </span>
+        </span>
+        <span class="stabel" aria-hidden="true">
+          {steg.map((s) => {
+            const a = AGENTER[s.id as keyof typeof AGENTER];
+            return <span class="mini" set:html={portrett(a.u, a.ki)} />;
+          })}
+        </span>
+        <span class="vis">
+          <span class="lukket">Vis hvordan</span>
+          <span class="apen">Skjul</span>
+          <svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" /></svg>
+        </span>
+      </summary>
+      <div class="innhold">
+        <p class="fakta-apen">
+          <span>Publisert {dato(publisert)}</span>
+          <span>{endret ? `Oppdatert ${dato(endret)}` : 'Ingen endringer'}</span>
+          {kilder.length > 0 && <a href="#kilder">{kilder.length === 1 ? 'Se kilden' : `Se de ${kilder.length} kildene`}</a>}
+        </p>
+        <p>{forklaring}</p>
+        <p class="lag">
+          <span class="na-ki">KI</span>
+          {merknad}
+        </p>
+        <ol class="na-steg">
+          {steg.map((s) => {
+            const a = AGENTER[s.id as keyof typeof AGENTER];
+            return (
+              <li>
+                <span class:list={['ava', !a.ki && 'menneske']} set:html={portrett(a.u, a.ki)} />
+                <span class="tx">
+                  <span class="hvem">
+                    <b>{a.navn}</b>
+                    <span class="rolle">{a.rolle}</span>
+                    {egen && a.ki && <span class="na-ki">KI</span>}
+                  </span>
+                  <span class="gjorde">{s.tekst}</span>
+                </span>
+              </li>
+            );
+          })}
+        </ol>
+        <div class="ansvar">
+          <span class="ava menneske" set:html={portrett(AGENTER.senol.u, false)} />
+          <p>
+            <b>{REDAKTOR}</b>{ansvar}{' '}
+            <a href={meld}>Meld fra om feil →</a>
+          </p>
+        </div>
+        {REDAKSJON_SIDE && (
+          <a class="na-inn" href="/redaksjonen/">
+            <span class="t">
+              <b>Gå inn i redaksjonen</b>
+              <span>Se Sigrid, Vidar og resten av laget i arbeid.</span>
+            </span>
+            <span class="pil" aria-hidden="true">→</span>
+          </a>
+        )}
+      </div>
+    </details>
+  )
+}

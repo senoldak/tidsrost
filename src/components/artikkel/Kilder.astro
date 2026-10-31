@@ -1,0 +1,37 @@
+---
+// «Kilder · n saker»: rammede knapper med kildenavn og pil. Eldre ki-medier-saker uten lagrede kilder får en
+// forklarende setning i stedet for listen. Andre typer uten kilder viser ingen seksjon.
+import { kildelinje } from '../../lib/kilder.mjs';
+
+interface Props {
+  kilder: { navn: string; url: string; lisens?: string }[];
+  produksjon: string;
+}
+const { kilder, produksjon } = Astro.props;
+const ikkeLagret = kilder.length === 0 && produksjon === 'ki-medier' ? kildelinje([], produksjon) : null;
+const telling = produksjon === 'ki-medier' ? (kilder.length === 1 ? '1 sak' : `${kilder.length} saker`) : kilder.length === 1 ? '1 kilde' : `${kilder.length} kilder`;
+---
+
+{
+  (kilder.length > 0 || ikkeLagret) && (
+    <section class="na-seksjon" id="kilder" aria-labelledby="kilder-t">
+      <h2 id="kilder-t">
+        Kilder{kilder.length > 0 && <span>{telling}</span>}
+      </h2>
+      {kilder.length > 0 ? (
+        <ul class="na-kilder">
+          {kilder.map((k) => (
+            <li>
+              <a href={k.url} rel="noopener">
+                {k.navn} <span class="pil" aria-hidden="true">↗</span>
+                {k.lisens && <small>{k.lisens}</small>}
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="na-ingen-kilder">{ikkeLagret}</p>
+      )}
+    </section>
+  )
+}

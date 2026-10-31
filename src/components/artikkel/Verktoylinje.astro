@@ -1,0 +1,99 @@
+---
+// Verktøylinjen under byline: våre kontoer til venstre, Aa (tekststørrelse, lesemodus, høy kontrast, utskrift),
+// Lytt og Del til høyre. Atferden ligger i ett pakket skript (src/scripts/leseverktoy.ts); uten JavaScript
+// virker Del-lenkene, kontoene og <details>-menyene, mens Lytt, Aa-knappene og Kopier lenke er skjult eller uvirksomme.
+// Del-lenkene er vanlige lenker (CSP tillater ingen eksterne skript).
+import { SITE } from '../../lib/site';
+import SosialIkon from '../SosialIkon.astro';
+
+interface Props {
+  url: string;
+  title: string;
+}
+const { url, title } = Astro.props;
+const u = encodeURIComponent(url);
+const t = encodeURIComponent(title);
+const lenker = [
+  { ad: 'facebook', navn: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${u}` },
+  { ad: 'whatsapp', navn: 'WhatsApp', href: `https://wa.me/?text=${t}%20${u}` },
+  { ad: 'linkedin', navn: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${u}` },
+  { ad: 'telegram', navn: 'Telegram', href: `https://t.me/share/url?url=${u}&text=${t}` },
+  { ad: 'x', navn: 'X', href: `https://x.com/intent/post?url=${u}&text=${t}` },
+  { ad: 'bluesky', navn: 'Bluesky', href: `https://bsky.app/intent/compose?text=${encodeURIComponent(`${title} ${url}`)}` },
+  { ad: 'epost', navn: 'E-post', href: `mailto:?subject=${t}&body=${encodeURIComponent(`${title}\n\n${url}`)}` },
+] as const;
+
+const konti = [
+  SITE.social.facebook && { ad: 'facebook', navn: 'Facebook', href: SITE.social.facebook },
+  SITE.social.instagram && { ad: 'instagram', navn: 'Instagram', href: SITE.social.instagram },
+  SITE.social.telegram && { ad: 'telegram', navn: 'Telegram', href: SITE.social.telegram },
+  SITE.social.linkedin && { ad: 'linkedin', navn: 'LinkedIn', href: SITE.social.linkedin },
+].filter(Boolean) as { ad: 'facebook' | 'instagram' | 'telegram' | 'linkedin'; navn: string; href: string }[];
+---
+
+<div class="na-verktoy">
+  <div class="folg">
+    <span class="na-etikett">Følg oss</span>
+    {
+      konti.map((k) => (
+        <a class="ikon" href={k.href} target="_blank" rel="noopener noreferrer" aria-label={`${SITE.name} på ${k.navn} (åpnes i ny fane)`} title={k.navn}>
+          <SosialIkon ad={k.ad} />
+        </a>
+      ))
+    }
+    <a class="ikon" href="/rss.xml" aria-label={`${SITE.name} på RSS`} title="RSS"><SosialIkon ad="rss" /></a>
+  </div>
+  <div class="hoyre">
+    <details class="les">
+      <summary aria-label="Tekststørrelse og lesemodus"><span class="aa">A<small>a</small></span></summary>
+      <div class="del-meny les-panel">
+        <p class="na-etikett">Tekststørrelse</p>
+        <div class="skala" role="group" aria-label="Tekststørrelse">
+          <button type="button" data-skala="0" aria-label="Mindre tekst" aria-pressed="false">A−</button>
+          <button type="button" data-skala="1" aria-label="Vanlig tekst" aria-pressed="true">A</button>
+          <button type="button" data-skala="2" aria-label="Større tekst" aria-pressed="false">A+</button>
+          <button type="button" data-skala="3" aria-label="Størst tekst" aria-pressed="false">A++</button>
+        </div>
+        <button type="button" class="lesemodus-knapp">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 5h7a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4zM20 5h-7a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg>
+          <span>Lesemodus</span>
+        </button>
+        <button type="button" class="lesemodus-knapp kontrast-knapp" aria-pressed="false">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"></circle><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"></path></svg>
+          <span>Høy kontrast</span>
+        </button>
+        <button type="button" class="lesemodus-knapp skriv-ut">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M7 9V4h10v5M7 17H5a1 1 0 0 1-1-1v-5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a1 1 0 0 1-1 1h-2M7 14h10v6H7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg>
+          <span>Skriv ut</span>
+        </button>
+      </div>
+    </details>
+    <button type="button" class="lytt" aria-pressed="false" aria-label="Lytt til saken" hidden>
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"></path><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg>
+      <span class="tekst">Lytt</span>
+    </button>
+    <details class="del">
+      <summary aria-label="Del saken"><SosialIkon ad="del" /><span class="tekst">Del</span></summary>
+      <div class="del-meny">
+        {
+          lenker.map((l) => (
+            <a href={l.href} target={l.ad === 'epost' ? undefined : '_blank'} rel="noopener noreferrer" aria-label={`Del på ${l.navn}${l.ad === 'epost' ? '' : ' (åpnes i ny fane)'}`}>
+              <SosialIkon ad={l.ad} />
+              <span>{l.navn}</span>
+            </a>
+          ))
+        }
+        <button type="button" class="kopier" data-url={url} hidden>
+          <SosialIkon ad="lenke" />
+          <span>Kopier lenke</span>
+        </button>
+      </div>
+    </details>
+  </div>
+</div>
+<span class="na-kopiert" role="status" aria-live="polite"></span>
+<button type="button" class="avslutt-lesemodus">Avslutt lesemodus ✕</button>
+
+<script>
+  import '../../scripts/leseverktoy.ts';
+</script>

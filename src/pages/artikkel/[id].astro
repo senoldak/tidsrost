@@ -10,14 +10,21 @@ import Symbol from '../../components/Symbol.astro';
 import { SITE, categoryName, formatDay, formatTime, varsel, gorselVar } from '../../lib/site';
 import { ANALYSE, FORKLART, erAnalyse, erForklart, forfatterSlug, getNews, kilde, kildeUrl, type Haber } from '../../lib/news';
 import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs, headline } from '../../lib/seo';
-import SentezBlok from '../../components/SentezBlok.astro';
+import '../../styles/artikkel.css';
+import Kildelinje from '../../components/artikkel/Kildelinje.astro';
+import Kilder from '../../components/artikkel/Kilder.astro';
+import KortOppsummert from '../../components/artikkel/KortOppsummert.astro';
+import SlikBleSakenLaget from '../../components/artikkel/SlikBleSakenLaget.astro';
+import Verktoylinje from '../../components/artikkel/Verktoylinje.astro';
+import FlereSaker from '../../components/artikkel/FlereSaker.astro';
+import { normaliserKilder } from '../../lib/kilder.mjs';
+import { erEgenTekst, stegFor } from '../../lib/redaksjon.mjs';
 import { matchEntities } from '../../lib/entities';
-import { indekserbar } from '../../lib/ordtelling.mjs';
+import { indekserbar, ordtelling } from '../../lib/ordtelling.mjs';
 import { skjultForSok } from '../../lib/sok-synlighet.mjs';
-import { relaterteSaker } from '../../lib/relaterte';
+import { kanRelateres, relaterteSaker } from '../../lib/relaterte';
 import Brodsmuler from '../../components/Brodsmuler.astro';
 import KiNotat from '../../components/KiNotat.astro';
-import DelSaken from '../../components/DelSaken.astro';
 import { datasiderFor } from '../../lib/datalenker.mjs';
 import ForfatterKort, { forfatterBeskrivelse } from '../../components/ForfatterKort.astro';
 import { aktiveTemaer, temaerPerSak, temaUrl, type Tema } from '../../lib/temaer';
@@ -28,9 +35,21 @@ export async function getStaticPaths() {
   const relatert = relaterteSaker(news);
   // Haberin girdiği, sayfası olan temalar (src/lib/tema.mjs): kenar sütununda "Emner" olarak bağlanır.
   const temaer = temaerPerSak(aktiveTemaer(news));
+  // «Flere saker»: relaterte først, så de nyeste i samme kategori (tre i alt).
+  const flere = (haber: Haber) => {
+    const valgt = (relatert.get(haber.id) ?? []).slice(0, 3);
+    const brukt = new Set([haber.id, ...valgt.map((h) => h.id)]);
+    for (const h of news) {
+      if (valgt.length >= 3) break;
+      if (brukt.has(h.id) || h.data.category !== haber.data.category || !kanRelateres(h)) continue;
+      valgt.push(h);
+      brukt.add(h.id);
+    }
+    return valgt;
+  };
   return news.map((haber) => ({
     params: { id: haber.id },
-    props: { haber, related: relatert.get(haber.id) ?? [], temaer: temaer.get(haber.id) ?? [] },
+    props: { haber, related: flere(haber), temaer: temaer.get(haber.id) ?? [] },
   }));
 }
 
@@ -59,6 +78,21 @@ const analyse = erAnalyse(haber);
 const synligForfatter = synligForfatterAv({ sjanger: haber.data.sjanger, author }, SITE.name, SITE.redaktor);
 // Kişi adıyla yayımlanan yazıların yazar sayfası vardır (/forfatter/<slug>/).
 const forfatterUrl = synligForfatter !== SITE.name ? `/forfatter/${forfatterSlug(synligForfatter)}/` : undefined;
+
+// Kaynaklar adıyla ve bağlantıyla (src/lib/kilder.mjs); eski haberlerde alan yoktur, boş liste döner.
+const kilder = normaliserKilder(haber.data.kilder);
+const egenTekst = erEgenTekst({ author, sjanger: haber.data.sjanger });
+// «Slik ble saken laget»: her tür kendi trinnlerini alır. Zincir yazısı (ki-redigert) som ikke er sjefens egen
+// og manuell/ukjent saker beholder den gamle KI-noten (KiNotat).
+const slikSak = { produksjon, kilder, nyhetsverdi: haber.data.nyhetsverdi, author, sjanger: haber.data.sjanger };
+const visSlik = (stegFor(slikSak)?.length ?? 0) > 0 && (produksjon !== 'ki-redigert' || egenTekst);
+const KI_BOT = ['ki-medier', 'ki-kontrollert', 'ki-automatisk', 'ki-assistert', 'ki-redigert'];
+const kiBot = !forfatterUrl && KI_BOT.includes(produksjon);
+const forfatterNavn = forfatterUrl ? synligForfatter : kiBot ? `${SITE.name} KI-redaksjon` : SITE.name;
+const merke = kiBot ? 'KI' : !forfatterUrl && produksjon === 'automatisk' ? 'Automatisk' : undefined;
+const ord = ordtelling(haber.body);
+const lesetid = ord > 0 ? Math.max(1, Math.round(ord / 200)) : 0;
+const kategoriNavn = { slug: category, navn: categoryName(category) };
 
 // OG görseli en az 1200 px genişlikte (Google Discover); kaynak daha darsa kendi genişliği kullanılır.
 const ogWidth = cover ? Math.min(1200, cover.width) : 1200;
@@ -125,147 +159,118 @@ const jsonLd = {
     <script type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
   </Fragment>
 
-  <Brodsmuler items={sti} />
-  <article class="article">
-    <h1>{title}</h1>
-    <p class="lead">{description}</p>
+  <div class="na-fremdrift" aria-hidden="true"><span></span></div>
+  <div class="na-brod"><Brodsmuler items={sti} /></div>
 
-    <dl class="margin-info">
-      {
-        warn && (
-          <div>
-            <dt>Varsel</dt>
-            <dd><a class="mark mark-varsel" href="/farevarsler/"><Symbol kind="varsel" class={`sym-varsel-${warn.level}`} />{warn.label}</a></dd>
-          </div>
-        )
-      }
-      {
-        analyse && (
-          <div>
-            <dt>Sjanger</dt>
-            <dd><a class="mark" href={`/${ANALYSE.slug}/`}><Symbol kind="forklart" />{ANALYSE.name}</a></dd>
-          </div>
-        )
-      }
-      {
-        forklart && (
-          <div>
-            <dt>Sjanger</dt>
-            <dd><a class="mark" href={`/${FORKLART.slug}/`}><Symbol kind="forklart" />{FORKLART.name}</a></dd>
-          </div>
-        )
-      }
-      <div>
-        <dt>Tema</dt>
-        <dd><a class="mark" href={`/kategori/${category}/`}><Symbol kind={category} />{categoryName(category)}</a></dd>
+  <div class="na-ramme">
+    <div class="na-hode">
+      <p class="na-kicker">
+        {
+          warn && (
+            <a class="mark mark-varsel" href="/farevarsler/"><Symbol kind="varsel" class={`sym-varsel-${warn.level}`} />{warn.label}</a>
+          )
+        }
+        {forklart && <a href={`/${FORKLART.slug}/`}><Symbol kind="forklart" />{FORKLART.name}</a>}
+        {analyse && <a href={`/${ANALYSE.slug}/`}><Symbol kind="forklart" />{ANALYSE.name}</a>}
+        <a href={`/kategori/${category}/`}><Symbol kind={category} />{section}</a>
+      </p>
+      <h1>{title}</h1>
+      <p class="na-ingress">{description}</p>
+
+      <div class="na-fortsett" hidden>
+        <span>Du har lest deler av denne saken før.</span>
+        <button type="button">Fortsett der du slapp →</button>
       </div>
-      {
-        temaer.length > 0 && (
-          <div>
-            <dt>Emner</dt>
-            <dd class="emner">
-              {temaer.map((t) => (
-                <a class="mark" href={temaUrl(t.slug)}><Symbol kind="tema" />{t.navn}</a>
-              ))}
-            </dd>
-          </div>
-        )
-      }
-      <div>
-        <dt>Publisert</dt>
-        <dd><time datetime={date.toISOString()}>{formatDay(date)} kl. {formatTime(date)}</time></dd>
+
+      <div class="na-meta">
+        <div class="rad">
+          <span>
+            Av {forfatterUrl ? <a href={forfatterUrl} rel="author"><strong>{forfatterNavn}</strong></a> : <strong>{forfatterNavn}</strong>}
+            {merke && <span class="na-ki">{merke}</span>}
+          </span>
+          <span><time datetime={iso}>{formatDay(date)} kl. {formatTime(date)}</time></span>
+          {endret && <span>Oppdatert <time datetime={modifiedIso}>{formatDay(endret)} kl. {formatTime(endret)}</time></span>}
+          {lesetid > 0 && <span>{lesetid} min lesing</span>}
+        </div>
+        <Kildelinje kilder={kilder} produksjon={produksjon} />
       </div>
-      {
-        endret && (
-          <div>
-            <dt>Oppdatert</dt>
-            <dd><time datetime={modifiedIso}>{formatDay(endret)} kl. {formatTime(endret)}</time></dd>
-          </div>
-        )
-      }
-      {
-        source && (
-          <div>
-            <dt>Kilde</dt>
-            <dd>
-              <span class="mark">
-                <Symbol kind="kilde" />
-                {sourceUrl ? <a href={sourceUrl} rel="noopener">{source}</a> : source}
-              </span>
-            </dd>
-          </div>
-        )
-      }
-      <div>
-        <dt>Av</dt>
-        <dd>{forfatterUrl ? <a href={forfatterUrl} rel="author">{synligForfatter}</a> : synligForfatter}</dd>
-      </div>
-    </dl>
 
-    <SentezBlok whyMatters={haber.data.why_matters} keyPoints={haber.data.key_points} />
-
-    {
-      visKapak && (
-        <figure>
-          {yeniKapak ? (
-            <Image src={cover} alt={coverAlt ?? title} width={1200} loading="eager" fetchpriority="high" decoding="async" />
-          ) : (
-            <img src={ogImage} alt={coverAlt ?? title} width={ogWidth} height={ogHeight} loading="eager" decoding="async" />
-          )}
-          {(coverAlt || coverKreditt) && (
-            <figcaption>
-              {coverAlt}
-              {coverKreditt && <span class="kreditt">{coverKreditt}</span>}
-            </figcaption>
-          )}
-        </figure>
-      )
-    }
-
-    <div class="prose">
-      <Content />
+      <Verktoylinje url={pageUrl} title={title} />
     </div>
 
-    {
-      rettelse && (
-        <aside class="rettelse">
-          <Symbol kind="rettelse" />
-          <p>
-            <strong>Rettelse{oppdatert ? ` (${formatDay(oppdatert)})` : ''}:</strong> {rettelse}{' '}
-            <a href="/rettelser/">Alle rettelser</a>
+    <div class="na-tekst">
+      {
+        visKapak && (
+          <figure>
+            {yeniKapak ? (
+              <Image src={cover} alt={coverAlt ?? title} width={1200} loading="eager" fetchpriority="high" decoding="async" />
+            ) : (
+              <img src={ogImage} alt={coverAlt ?? title} width={ogWidth} height={ogHeight} loading="eager" decoding="async" />
+            )}
+            {(coverAlt || coverKreditt) && (
+              <figcaption>
+                {coverAlt}
+                {coverKreditt && <span class="kreditt">{coverKreditt}</span>}
+              </figcaption>
+            )}
+          </figure>
+        )
+      }
+
+      <div class="prose">
+        <Content />
+      </div>
+
+      {
+        rettelse && (
+          <aside class="rettelse">
+            <Symbol kind="rettelse" />
+            <p>
+              <strong>Rettelse{oppdatert ? ` (${formatDay(oppdatert)})` : ''}:</strong> {rettelse}{' '}
+              <a href="/rettelser/">Alle rettelser</a>
+            </p>
+          </aside>
+        )
+      }
+
+      {analyse && <p class="ikke-rad">Analysen er ikke investeringsråd.</p>}
+
+      {
+        datasider.length > 0 && (
+          <aside class="tall-lenke" aria-label="Tallene bak saken">
+            <span class="tall-lenke-tittel">Tallene bak saken</span>
+            {datasider.map((d) => (
+              <a href={d.url}>{d.navn}</a>
+            ))}
+          </aside>
+        )
+      }
+
+      {forfatterUrl && <ForfatterKort name={synligForfatter} heading="h3" />}
+
+      <Kilder kilder={kilder} produksjon={produksjon} />
+
+      {
+        temaer.length > 0 && (
+          <p class="na-emner">
+            <span class="na-etikett">Emner</span>
+            {temaer.map((t) => (
+              <a href={temaUrl(t.slug)}>{t.navn}</a>
+            ))}
           </p>
-        </aside>
-      )
-    }
+        )
+      }
 
-    {analyse && <p class="ikke-rad">Analysen er ikke investeringsråd.</p>}
+      {!visSlik && <KiNotat tittel={title} url={pageUrl} author={author} sjanger={haber.data.sjanger} produksjon={produksjon} />}
+    </div>
 
-    <KiNotat tittel={title} url={pageUrl} author={author} sjanger={haber.data.sjanger} produksjon={produksjon} />
+    <div class="na-rail">
+      <div class="na-rail-inn">
+        <KortOppsummert whyMatters={haber.data.why_matters} keyPoints={haber.data.key_points} />
+        {visSlik && <SlikBleSakenLaget sak={slikSak} tittel={title} url={pageUrl} publisert={date} endret={endret} />}
+      </div>
+    </div>
+  </div>
 
-    {forfatterUrl && <ForfatterKort name={synligForfatter} heading="h3" />}
-
-    {
-      datasider.length > 0 && (
-        <aside class="tall-lenke" aria-label="Tallene bak saken">
-          <span class="tall-lenke-tittel">Tallene bak saken</span>
-          {datasider.map((d) => (
-            <a href={d.url}>{d.navn}</a>
-          ))}
-        </aside>
-      )
-    }
-
-    <DelSaken url={pageUrl} title={title} />
-  </article>
-
-  {
-    related.length > 0 && (
-      <section class="related">
-        <h2 class="band">Relaterte saker</h2>
-        {related.map((h) => (
-          <StoryRow haber={h} showCategory={h.data.category !== category} dato />
-        ))}
-      </section>
-    )
-  }
+  <FlereSaker saker={related} kategori={kategoriNavn} />
 </Base>

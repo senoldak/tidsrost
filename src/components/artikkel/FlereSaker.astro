@@ -1,0 +1,31 @@
+---
+// «Flere saker»: tre kolonner med 4 px blekksvart toppstrek. Sakene velges i getStaticPaths (relaterte først, så nyeste i samme kategori).
+import { formatKortDato } from '../../lib/site';
+import { newsUrl, type Haber } from '../../lib/news';
+
+interface Props {
+  saker: Haber[];
+  kategori: { slug: string; navn: string };
+}
+const { saker, kategori } = Astro.props;
+---
+
+{
+  saker.length > 0 && (
+    <section class="na-flere" aria-labelledby="flere-t">
+      <header>
+        <h2 id="flere-t">Flere saker</h2>
+        <a href={`/kategori/${kategori.slug}/`}>{kategori.navn}: alle</a>
+      </header>
+      <div class="na-grid">
+        {saker.map((h) => (
+          <article>
+            <h3><a href={newsUrl(h)}>{h.data.title}</a></h3>
+            <p>{h.data.description}</p>
+            <div class="m"><time datetime={h.data.date.toISOString()}>{formatKortDato(h.data.date)}</time></div>
+          </article>
+        ))}
+      </div>
+    </section>
+  )
+}

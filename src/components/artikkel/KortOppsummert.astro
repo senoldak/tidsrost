@@ -1,0 +1,37 @@
+---
+// «Kort oppsummert»: grønn flate, vannblå toppstrek, «Hvorfor saken er viktig» og inntil tre nummererte punkter.
+// Hele boksen utelates når saken verken har begrunnelse eller punkter.
+interface Props {
+  whyMatters?: string;
+  keyPoints?: string[];
+}
+const { whyMatters, keyPoints } = Astro.props;
+const hvorfor = (whyMatters || '').trim();
+const punkter = (Array.isArray(keyPoints) ? keyPoints : []).map((p) => (p || '').trim()).filter(Boolean);
+---
+
+{
+  (hvorfor || punkter.length > 0) && (
+    <section class="na-kort" aria-labelledby="kort-t">
+      <div class="topp">
+        <h2 class="na-etikett" id="kort-t">Kort oppsummert</h2>
+      </div>
+      {hvorfor && (
+        <div class="hvorfor">
+          <h3>Hvorfor saken er viktig</h3>
+          <p>{hvorfor}</p>
+        </div>
+      )}
+      {punkter.length > 0 && (
+        <ol class:list={['punkter', punkter.length === 1 && 'n1', punkter.length === 2 && 'n2']}>
+          {punkter.map((p, i) => (
+            <li>
+              <span class="nr" aria-hidden="true">{i + 1}</span>
+              <span>{p}</span>
+            </li>
+          ))}
+        </ol>
+      )}
+    </section>
+  )
+}

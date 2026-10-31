@@ -1,0 +1,36 @@
+---
+// Kildelinjen under byline: «Bygger på saker fra <første kilde> og fem andre medier. Se kildene».
+// Teksten kommer fra kildelinje() (src/lib/kilder.mjs); første kildenavn blir lenke. Uten lagrede kilder står
+// setningen «Kildene ble ikke lagret …» i kildeseksjonen, ikke her.
+import { kildelinje } from '../../lib/kilder.mjs';
+
+interface Props {
+  kilder: { navn: string; url: string }[];
+  produksjon: string;
+}
+const { kilder, produksjon } = Astro.props;
+const linje = kilder.length > 0 ? kildelinje(kilder, produksjon) : null;
+const ilk = kilder[0];
+const i = linje && ilk ? linje.indexOf(ilk.navn) : -1;
+const for_ = i >= 0 && linje ? linje.slice(0, i) : '';
+const etter = i >= 0 && linje && ilk ? linje.slice(i + ilk.navn.length) : '';
+---
+
+{
+  linje && (
+    <div class="rad">
+      <span class="na-kildelinje">
+        {i >= 0 && ilk ? (
+          <>
+            {for_}
+            <a href={ilk.url} rel="noopener">{ilk.navn}</a>
+            {etter}
+          </>
+        ) : (
+          linje
+        )}{' '}
+        <a href="#kilder">Se kildene</a>
+      </span>
+    </div>
+  )
+}
