@@ -18,8 +18,9 @@ interface Props {
   url: string;
   publisert: Date;
   endret?: Date;
+  rettet?: boolean;
 }
-const { sak, tittel, url, publisert, endret } = Astro.props;
+const { sak, tittel, url, publisert, endret, rettet } = Astro.props;
 
 const steg = stegFor(sak) ?? [];
 const fakta = faktalinje(sak);
@@ -91,7 +92,7 @@ const faktaDeler = fakta.map(del);
       <div class="innhold">
         <p class="fakta-apen">
           <span>Publisert {dato(publisert)}</span>
-          <span>{endret ? `Oppdatert ${dato(endret)}` : 'Ingen endringer'}</span>
+          <span>{rettet ? (endret ? `Rettet ${dato(endret)}` : 'Rettet') : endret ? `Oppdatert ${dato(endret)}` : 'Ingen endringer'}</span>
           {kilder.length > 0 && <a href="#kilder">{kilder.length === 1 ? 'Se kilden' : `Se de ${kilder.length} kildene`}</a>}
         </p>
         <p>{forklaring}</p>

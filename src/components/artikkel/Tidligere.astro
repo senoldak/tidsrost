@@ -1,0 +1,34 @@
+---
+// «Tidligere i saken»: lodrett vannblå linje med eldre saker om samme hendelse (tidligereSaker, src/lib/tidligere.ts)
+// og til slutt «Denne saken». Uten eldre saker finnes ingen seksjon.
+import { formatKortDato } from '../../lib/site';
+import { newsUrl, type Haber } from '../../lib/news';
+
+interface Props {
+  saker: Haber[];
+  tittel: string;
+  dato: Date;
+}
+const { saker, tittel, dato } = Astro.props;
+---
+
+{
+  saker.length > 0 && (
+    <section class="na-tidligere" aria-labelledby="tid-t">
+      <h2 id="tid-t">Tidligere i saken</h2>
+      <ol>
+        {saker.map((s) => (
+          <li>
+            <time datetime={s.data.date.toISOString()}>{formatKortDato(s.data.date)}</time>
+            <a href={newsUrl(s)}>{s.data.title}</a>
+          </li>
+        ))}
+        <li class="na" aria-current="page">
+          <time datetime={dato.toISOString()}>{formatKortDato(dato)}</time>
+          <span>{tittel}</span>
+          <em>Denne saken</em>
+        </li>
+      </ol>
+    </section>
+  )
+}

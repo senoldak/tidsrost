@@ -1,0 +1,13 @@
+---
+// Canlig tallkort: siste verdi fra src/data/*.json (datakortFor, src/lib/datalenker.mjs). Uten verdi gir siden ikke kortet.
+interface Props {
+  kort: { navn: string; url: string; verdi: string; tekst: string; kilde: string };
+}
+const { kort } = Astro.props;
+---
+
+<aside class="na-tall" aria-label={`Tall fra ${kort.kilde}`}>
+  <span class="na-etikett">Tall fra {kort.kilde}</span>
+  <div class="rad"><b>{kort.verdi}</b><span>{kort.tekst}</span></div>
+  <a href={kort.url}>Se grafen og historikken →</a>
+</aside>

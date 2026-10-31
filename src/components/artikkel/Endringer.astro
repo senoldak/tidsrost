@@ -1,0 +1,39 @@
+---
+// «Endringer i saken»: rettelse (rød «Rettet» med dato og tekst) og oppdatering (svart «Oppdatert» med dato).
+// Datoen er oppdatert-feltet; en rettelse med dato dekker oppdateringen, så den får ikke en ekstra rad.
+// Uten rettelse og uten oppdatering finnes ingen seksjon.
+import { formatKortDato, formatTime } from '../../lib/site';
+
+interface Props {
+  rettelse?: string;
+  endret?: Date;
+}
+const { rettelse, endret } = Astro.props;
+const dato = (d: Date) => `${formatKortDato(d)} kl. ${formatTime(d)}`;
+const vis = Boolean(rettelse) || Boolean(endret);
+---
+
+{
+  vis && (
+    <section class="na-endringer" id="endringer" aria-labelledby="endr-t">
+      <span class="na-etikett" id="endr-t">Endringer i saken</span>
+      <ol>
+        {rettelse ? (
+          <li>
+            <span class="merke rettet">Rettet</span>
+            {endret ? <time datetime={endret.toISOString()}>{dato(endret)}</time> : <span />}
+            <span>{rettelse}</span>
+          </li>
+        ) : (
+          endret && (
+            <li>
+              <span class="merke">Oppdatert</span>
+              <time datetime={endret.toISOString()}>{dato(endret)}</time>
+            </li>
+          )
+        )}
+      </ol>
+      <a href="/rettelser/">Alle rettelser →</a>
+    </section>
+  )
+}

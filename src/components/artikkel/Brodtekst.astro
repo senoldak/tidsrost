@@ -1,0 +1,14 @@
+---
+// Brødteksten med plass til ett modulkort (datakort, senere stedkart) etter andre avsnitt. Teksten rendres til
+// en streng (Astro.slots) og deles på øverste nivå (src/lib/delhtml.mjs); uten modul står teksten uendret.
+// Færre enn tre avsnitt: modulen kommer etter teksten.
+import { delEtterAvsnitt } from '../../lib/delhtml.mjs';
+
+const html = await Astro.slots.render('default');
+const harModul = Astro.slots.has('modul');
+const [for_, etter] = harModul ? delEtterAvsnitt(html) : [html, ''];
+---
+
+<Fragment set:html={for_} />
+{harModul && <slot name="modul" />}
+{etter && <Fragment set:html={etter} />}
