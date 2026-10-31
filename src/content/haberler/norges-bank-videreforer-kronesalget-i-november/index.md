@@ -11,8 +11,6 @@ key_points:
 produksjon: ki-medier
 kildeSpor: "v1.Xy0R+teSnOZSRTrY.9XHvrDQumAbtsffJkRcPiTHuArYBSyTJQY6LL/WP4goMsguyuCiL8iBUWAS7tO6iP0UTuHybFfGsjgmXRY4/hn/hTn47Xibgfl6XmlJN0hEUeWSuGxSQDy857HWlh6se2sQmnFdn5Qin+s3k/qXiMBL4we64uskbu3mBliUD+GYx1ry4elAh/MlNZWqWjuQBrAkPLD/SC2g4/y7QV4TvV9pSVxugb9Y4IrFt81VEsnK08fS5XPOM9k9U/Q/YkPNay7LwSKgbwst/s8S2+PqTGV+ULw88f5hwaCbu8YBBiFGof0RNkNJSmQIAlsi2q/OOGATPYlsCEAWWZ8rGB/wYt+x7dK3PXm64Y9/tiPLUiWxYN6XuKSAN6i0jpnSAJ9Osn+rcTVONHbM8ZcwphA=="
 kilder:
-  - navn: "Dagbladet"
-    url: "https://borsen.dagbladet.no/nyheter/eu-topp-slar-energialarm-veldig-alvorlig-situasjon/85352598"
   - navn: "E24"
     url: "https://e24.no/norsk-oekonomi/i/eGVrmM/norges-bank-holder-kronesalget-uendret-paa-176-millioner-kroner-daglig-i-november"
 nyhetsverdi: 75

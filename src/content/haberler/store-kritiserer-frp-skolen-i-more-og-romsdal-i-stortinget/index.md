@@ -11,8 +11,6 @@ key_points:
 produksjon: ki-medier
 kildeSpor: "v1.V/Py0wCivmAYeiRg.U0KxWvDVaP6h5JMRZcxR3cea3+c2YnaZIKACxj1+WXuyQ1z7xHne8DgDt8qZupwJwqvTq4VtcoSlC9ceBRHKPQe+xV+4GuRTNxF1KTzUfuYMoK0lHFurwSrZc4ODW7iVba7RvL5Fp/6HAk7pcB5aS7PdRmFuAk3vrI+77MDuMpPsQq9+XVu5EI7uL6HAT2UhbdGClLLwU97L6BNSHt0GPaevz1xopXPEyP3kmBNdflWpP+aKKjmb4dVdqEXtD+XmGL1R4gZDCIptWWnqaCH5D/kjvFY6+sE/9rp4B4I1RqjdiUVy92LjGWg+a1fj698d5mPWzj1U"
 kilder:
-  - navn: "Aftenposten"
-    url: "https://www.aftenposten.no/oslo/i/p1OM9R/kulturetaten-i-oslo-nye-rapporter"
   - navn: "Sunnmørsposten"
     url: "https://www.smp.no/nyheter/n/Kr2Al6/ut-mot-frp-skolen-i-moere-og-romsdal"
 nyhetsverdi: 82

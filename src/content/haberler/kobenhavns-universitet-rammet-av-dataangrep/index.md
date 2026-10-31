@@ -13,8 +13,6 @@ kildeSpor: "v1.vrsuVf/QDXc3+D1z.aCXHLeSfyuzv/QWvzTNyuYpH0R6Hmc2nTGkXYDgrFJKfCunK
 kilder:
   - navn: "Aftenposten"
     url: "https://www.aftenposten.no/verden/i/qy4Ozw/koebenhavns-universitet-utsatt-for-dataangrep-opplysninger-fra-525000-personer-paa-avveie"
-  - navn: "Dagbladet"
-    url: "https://www.dagbladet.no/sport/et-forferdelig-rot/85323080"
   - navn: "Bergens Tidende"
     url: "https://www.bt.no/innenriks/i/2V7mgB/koebenhavns-universitet-utsatt-for-dataangrep"
 nyhetsverdi: 80

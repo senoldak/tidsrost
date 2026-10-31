@@ -13,8 +13,6 @@ kildeSpor: "v1.B7pz4q5PnNXMQvAd.FclHmGu2TpsRr76ZuHOw1YWxqxJqyp9tvNtRxf/jJnQP+bdr
 kilder:
   - navn: "NRK"
     url: "https://www.nrk.no/stor-oslo/nye-oslo-sykehus-blir-stadig-dyrere---kan-koste-nesten-70-milliarder-1.17653404"
-  - navn: "Dagbladet"
-    url: "https://borsen.dagbladet.no/nyheter/spar-borskollaps-95-prosent-sannsynlighet/85361947"
 nyhetsverdi: 85
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Nye Oslo-sykehus kan koste nesten 70 milliarder kroner»"

@@ -13,8 +13,6 @@ kildeSpor: "v1.dkYcNLGjUOfjYANF.S74PzwNOYyBiV3kkPkVFTgcK97e8ApydwP9WqdFQ5N/0I8Nv
 kilder:
   - navn: "NRK"
     url: "https://www.nrk.no/trondelag/abortforskjeller-i-norge_-ma-vente-opptil-fire-uker-lenger-ut-fra-hvor-de-bor-1.18033854"
-  - navn: "Nettavisen"
-    url: "https://www.nettavisen.no/nyheter/russland-varsler-kamp-mot-arrest-av-fem-eiendommer-i-oslo/s/80-95-182112"
 nyhetsverdi: 78
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Abortventetiden varierer kraftig ved norske sykehus»"

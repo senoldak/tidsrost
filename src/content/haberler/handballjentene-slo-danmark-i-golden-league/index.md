@@ -13,8 +13,6 @@ kildeSpor: "v1.XNwUDgFpoGdMLfw2.NsSLUrsZ5dO/tRjqp2jonOMhvP5bnH/xdKq2eDjBVyaupRph
 kilder:
   - navn: "VG"
     url: "https://www.vg.no/sport/i/d7AykJ/henny-reistad-med-maalshow-i-norge-seier-over-danmark-maatte-gi-seg-underveis"
-  - navn: "Nettavisen"
-    url: "https://www.nettavisen.no/sport/stale-solbakken-jeg-angrer-pa-det/v/80-95-187494"
 nyhetsverdi: 72
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Håndballjentene slo Danmark i Golden League»"

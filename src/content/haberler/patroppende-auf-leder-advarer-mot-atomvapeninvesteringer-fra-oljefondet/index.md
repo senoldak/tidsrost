@@ -11,8 +11,6 @@ key_points:
 produksjon: ki-medier
 kildeSpor: "v1.wNu7Z9N7pEIKrnlt.rYni02+BTYHbcRbVYLFZfGfe76ngagGcQ51wql6bD9zp24z0qBgKrYOhoqwzPQ0mhZgI16iDSW9BOza/qfaptBUk4o9glTA0eJL1hzbLGbxeg6iD4q13fo7sY04hMKXlKVyz7siwgO7FQ7Tf79NuEXCFq/CIxWVsXt/vJxTNE+TafYn9IRgp6iX+ZHwiMmWhoQn59a7LOV3wUXSldssNHoBi+7jc4kiXFl+tJHPxmAaVjpw1D5vNxZI3Z6BngEow296NyqbYHfse9P86+YOQOdxfwaVdbZ4WZl8ugMaTYCp3pO0B/10kteJ5ddyHl+W4Zn7FH+onEt9Ao2hgDEsyI0+XoxbnrXr0gpOzOvWhF032l5xozrWva4imu8xhshcdBopzn+38L1qN6A6AsBcNAOKvpC9tpJ/J5P4jvznf2TE+LiqNAbZjaL0bEuNOuVd+3OtP9urMbr9OQqQ74lDyWQslyHqtvZ506+coHXvNPZid4dh+hqvYLmdiSFIeRrQvlQTRcgaHmcnCW5o2pQhtmMwOPAH67lDm4cUXVII4v8SM3OTKFWJ6RyamJ+5f"
 kilder:
-  - navn: "NRK"
-    url: "https://www.nrk.no/vestfoldogtelemark/krf-askjer-angrer-etter-tv-2-dokumentar_-_-har-gjort-ganske-vondt-a-laere-den-leksa-1.18055904"
   - navn: "Dagbladet"
     url: "https://borsen.dagbladet.no/nyheter/frykter-konsekvensene-av-oljefondet-forslag/85294630"
   - navn: "Nettavisen"

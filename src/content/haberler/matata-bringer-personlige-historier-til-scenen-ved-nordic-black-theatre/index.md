@@ -11,8 +11,6 @@ key_points:
 produksjon: ki-medier
 kildeSpor: "v1.4YrjJZs5xl7fvqFM.yFcvNef1Tm3BZeTMzKzO8r6NVQ2aIeTNh7sCdjZ238qsd0fPfh2Yc+AKiLSGujcStdvp674wiBunJiISzspWTQ0tx1MOtTRvNlrykQrfjpmwU02KvhV/NxEkkNFVJc7O8INAzQUYlpRkah+U7ua12STMLJPwAVQGlHvHmDIzHwzLdfBzAY2gTqXQeAKFA5JRIxDvCm5llu+VPaEckCVBNzEuj2aSICwujpNSMOUG7hFfFeIjMB1MgAhr/lV3fH4S2pdtIWsA9n3K7sAaEEItLTIR7A=="
 kilder:
-  - navn: "Morgenbladet"
-    url: "https://www.morgenbladet.no/samfunn/forsiktig-hap-om-et-valgskred-blant-demokratene/10609604"
   - navn: "Utrop"
     url: "https://www.utrop.no/nyheter/kultur/392817/"
 nyhetsverdi: 80

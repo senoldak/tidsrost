@@ -21,8 +21,6 @@ kilder:
     url: "https://www.tv2.no/a/19342736"
   - navn: "Nettavisen"
     url: "https://www.nettavisen.no/nyheter/demonstrasjoner-i-paris-taregass-avfyrt-mot-folkemengde/s/80-95-189108"
-  - navn: "Klassekampen"
-    url: "https://klassekampen.no/artikkel/2026-10-24/debatt-the-revolution-will-be-filma-i-hoydeformat"
 nyhetsverdi: 75
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Demonstrasjoner og tåregass i Paris»"

@@ -15,8 +15,6 @@ kilder:
     url: "https://www.nrk.no/nyheter/vestbredden_-amerikansk-fotograf-blant-skadde-i-bosetterangrep-1.18057261"
   - navn: "Aftenposten"
     url: "https://www.aftenposten.no/verden/i/AbkXjj/amerikansk-fotograf-blant-flere-skadde-i-bosetterangrep-paa-vestbredden"
-  - navn: "Nettavisen"
-    url: "https://www.nettavisen.no/nyheter/banket-opp-la-meg-do/v/80-95-167832"
 oppdatert: 2026-10-20T12:00:00+02:00
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Amerikansk fotograf og palestinere skadet i angrep ved Abu Falah, ifølge vitner»"
