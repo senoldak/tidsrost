@@ -9,6 +9,9 @@ key_points:
   - "Området varmes opp nesten fire ganger raskere enn det globale gjennomsnittet"
   - "Fokus på økonomisk sikkerhet, kritiske råvarer og samarbeid med Canada"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Europakommisjonen"
+    url: "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2204"
 nyhetsverdi: 72
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Europakommisjonen legger fram ny europeisk strategi»"
@@ -24,5 +27,3 @@ Europakommisjonen viser til at regionen byr på kritiske råvarer som er viktige
 Ifølge Europakommisjonen settes disse i sentrum ettersom regionen varmes opp nesten fire ganger raskere enn det globale gjennomsnittet. Kommisjonen påpeker at den raske oppvarmingen får direkte konsekvenser for Europa i form av mer ekstremt og persistent vær, endrede økosystemer, jordbruk og vannsystemer, noe som gjør miljøvern og ren omstilling til viktige pilarer.
 
 Til slutt legger strategien vekt på samarbeidet med sentrale allierte, deriblant Canada og andre likesinnede partnere. Ifølge Europakommisjonen er målet å samarbeide tettere for å sikre en fredelig, stabil, motstandsdyktig og økonomisk sikker region som leverer gode resultater for sine innbyggere.
-
-*Kilde: [Europakommisjonen](https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2204)*

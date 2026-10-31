@@ -4,6 +4,9 @@ description: "Korte nyheter 14. oktober, ettermiddag: Europakommisjonen utbetale
 date: 2026-10-14T16:05:24+02:00
 category: utenriks
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Landbruks- og matdepartementet / regjeringen.no"
+    url: "https://www.regjeringen.no/no/aktuelt/ukraina-lagrar-fro-i-svalbard-globale-frokvelv-for-forste-gong-sidan-krigsutbrotet/id3177597/"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Europakommisjonen utbetaler 2,86 milliarder euro og 5 andre saker · 14. oktober, ettermiddag»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -16,8 +19,6 @@ Sakene under ble først publisert hver for seg og er her samlet på én side. Te
 *Publisert 14. oktober kl. 14.02*
 
 Ifølge en pressemelding fra Landbruks- og matdepartementet ble flere tusen frøprøver av viktige jordbruksvekster nylig lagret i Svalbard globale frøkvelv. Deponeringen fant sted da 21 genbanker fra hele verden deltok.
-
-*Kilde: [Landbruks- og matdepartementet / regjeringen.no](https://www.regjeringen.no/no/aktuelt/ukraina-lagrar-fro-i-svalbard-globale-frokvelv-for-forste-gong-sidan-krigsutbrotet/id3177597/)*
 
 ## Departementet: Krav om elektronisk sporing på alle fiskebåter
 

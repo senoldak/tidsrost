@@ -9,6 +9,9 @@ key_points:
   - "Utestående boliglån uendret på 5,31 prosent"
   - "Innskuddsrenta for husholdninger økte til 3,16 prosent"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Statistisk sentralbyrå (SSB)"
+    url: "https://www.ssb.no/bank-og-finansmarked/finansinstitusjoner-og-andre-finansielle-foretak/statistikk/renter-i-banker-og-kredittforetak/artikler/renteutvikling"
 nyhetsverdi: 72
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Boliglånsrenten for husholdninger sank i september 2026»"
@@ -24,5 +27,3 @@ For innskudd sjenert under ett for både husholdninger og ikke-finansielle foret
 Videre opplyser Statistisk sentralbyrå at pengemarkedsrenta NIBOR klatret med 0,20 prosentpoeng og nådde 4,96 prosent i løpet av september 2026. Utlånsmarginen på utestående boliglån ble samtidig redusert med 0,20 prosentpoeng til 0,35 prosent, mens marginen på nye boliglån falt med 0,22 prosentpoeng til 0,34 prosent. Ifølge avsenderen kan slike marginer svinge fra måned til måned i forbindelse med større rentejusteringer.
 
 Tall fra kvartalets totaltelling viser dessuten at andelen husholdninger med fastrente på nedbetalingslån med pant i bolig var 4,8 prosent ved utgangen av tredje kvartal 2026. Dette representerer en nedgang på 0,3 prosentpoeng fra kvartalet før. For kredittkortlån var det også bevegelser, der den generelle renta økte med 0,4 prosentpoeng i tredje kvartal. Det påpekes at beregningene bygger på oppgaver fra et bredt utvalg aktører i pengemarkedet.
-
-*Kilde: [Statistisk sentralbyrå (SSB)](https://www.ssb.no/bank-og-finansmarked/finansinstitusjoner-og-andre-finansielle-foretak/statistikk/renter-i-banker-og-kredittforetak/artikler/renteutvikling)*

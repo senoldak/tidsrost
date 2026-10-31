@@ -9,6 +9,9 @@ key_points:
   - "600 000 uten strøm etter angrep mot kraftstasjoner"
   - "Advarer om kritisk situasjon for strøm og oppvarming i vinter"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168614"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «FNs nyhetstjeneste melder om rekordhøye sivile tap og intensive energiangrep i Ukraina»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -27,5 +30,3 @@ Bell advarte om at systematiske angrep på strøm- og varmeinfrastruktur idet vi
 Rundt 1,45 millioner returnerte bor nå i frontlinjedistrikter. Under den forrige kalde sesongen klarte bare 32 prosent av husholdningene å varme opp hjemmene sine tilstrekkelig. Omtrent 2,1 millioner eldre mennesker bor alene i leilighetsbygg, noe som gjør dem spesielt utsatt for langvarige strøm- og varmekutt.
 
 Mindre enn sju prosent av organisasjonens krisehjelpsplan for Ukraina i år har blitt finansiert, ifølge Erken, som ba om hastestøtte. Videre begynte den åttende lokale våpenhvilen framforhandlet av Det internasjonale atomenergibyrået mellom Ukraina og Russland torsdag, for å tillate reparasjoner av en skadet reservetransformator ved Zaporizjzja atomkraftverk. Byråets sjef, Rafael Mariano Grossi, ønsket samarbeidet velkommen, men advarte om at dieseldrivstoffet ved anlegget holdt på å ta slutt uten leveranser siden mars, og ba om maksimal militær tilbakeholdenhet.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168614)*

@@ -10,6 +10,13 @@ key_points:
   - "Flere partier ønsker en midlertidig stans i utbyggingen av datasentre"
 produksjon: ki-medier
 kildeSpor: "v1.U16qxWweGjKReSe9.qYxkqiVU8UI3m8lWGXSDELvOYB07D/uv//vRMGUhxWqXDXNty2/VIY89iZwUN4HzbhX8GAA2vi1BkCovCdrgjoEwWZFq2qTKgdlUqP17aBYy8moPWP3Xia+CTb7agvqlRpI0vJ6oY+DqiqqvyfDJnqWRkQNmvqT9+cdX3i2A+z+vRFLQXtiJBG/pHf5gGiGDxJeR0mqcWM9eVIJqL/4F2vRBsfvEqXEP008KdVMRlcROV50zkAtCPbxcL+yLdDg8SFaEMlq8w8DZ35nfUFdlTyja1G8K3T0ftgyxacF4U1p4G/96m/brPBgnbMtQVYg7hQIAW/wy8Ycpn0tSXnKFNCLlo4AJLM0i2vcS5asvLPAyatPWUKgrF4F9lv7hPNBmk+G6vEibha0IHc9vl/nSS1prEYdnRm/XQxgZPRNZJx2miP/ptcM+OBHAW6Fl+JAMx5FosC33Ok171F5yp2PIW48RfjEhw2stKaykTgf8hH8ylPpUCTbOJyJhjIG9wOqEtMCUcRUD"
+kilder:
+  - navn: "E24"
+    url: "https://e24.no/energi-og-klima/i/4OPEPR/sveits-utflytter-ut-mot-norske-politikere-motarbeider-fremgang"
+  - navn: "Dagsavisen"
+    url: "https://www.dagsavisen.no/nyheter/det-kan-vaere-datasenter-i-100-kommuner-om-noen-ar/10606857"
+  - navn: "Digi.no"
+    url: "https://www.digi.no/debatt/norge-trenger-teknologirad-ogsa-om-datasentre/7179935"
 nyhetsverdi: 70
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Datasenterutbygging i Norge skaper debatt om strøm og samfunnsnytte»"

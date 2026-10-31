@@ -10,6 +10,13 @@ key_points:
   - "Joe Gomez ble avgjørende"
 produksjon: ki-medier
 kildeSpor: "v1.+Jq4xQZuev8u+Flt.suKgilRFkpmZl9fbBP9FOmhQ45gtk+Mkgida561Vkl5DbeeAagCzpPgswkA0ut17tRNhadhcJTdH9MR8FgFW3gfFlomVMnVuzy1X5EsvrQe91QIHlRuCVjmVlSD2iGhQBaPXMaR7B2KWI7HeB51T7pJqh37Qy/zC5JoQw6D97iZ0NSIqnEDWqH+gmqXqp9nMSM4lfp/ck08eXStuvEJ5Rz2tl5eqe2lS0IMxHuHByXuO5p3fhEYx2zj82p2Wjym3yaLgmwYJs/FJTZ9yxt5wWof6o0VsajHQJyC5dFhS+Mxhxm+c1JlS9qczoe6np52sxsp9Etxcot7v/MvsR/l8tXaJhC0iIJnCHzZibUDTZB3/hM1rYPu/nzhrAEZDKMhymw8Vqe5mAosUmG0bfoiUK+It6DvLB8HUDV26sDGkdwaG3+z91qaaCRBNHVKANp1e2SYgMoeOEYcg+2Ju2Z633jIYi+z8Bxcl5Et5ZtKXpn81ivsplqZXG/jc75n4eL/hyzABsVKX3Yil4QaAXavNKw=="
+kilder:
+  - navn: "VG"
+    url: "https://www.vg.no/sport/i/64EnQr/liverpool-sendte-chelsea-ut-etter-18-straffespark"
+  - navn: "Dagbladet"
+    url: "https://www.dagbladet.no/sport/liverpool-best-etter-straffedrama-mot-chelsea-til-kvartfinale-i-ligacupen/85351934"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/sport/ligacup-exit-chelsea-for-etter-straffedrama-mot-liverpool/s/80-95-200831"
 nyhetsverdi: 70
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Liverpool slo Chelsea ut av ligacupen etter straffedrama»"

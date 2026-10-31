@@ -9,6 +9,9 @@ key_points:
   - "21 varehus rammet av angrep i løpet av året"
   - "WHO ber om 42 millioner dollar for 2026"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168603"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Kritiske helselagre ødelagt i angrep»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -29,5 +32,3 @@ Det forstyrrer støtten helsefasiliteter trenger for å behandle pasienter, fork
 Å beskytte helsetjenester betyr å beskytte menneskene som leverer dem, samt de medisinske forsyningene, utstyret og den humanitære infrastrukturen arbeidet deres avhenger av, la dr. Perehinets til. Byråets støtte inkluderer akuttrespons, assistanse med traumebehandling, levering av medisinsk utstyr, energimotstandskraft og utvikling av kapasitet til å håndtere kjemiske, biologiske, radiologiske og nukleære hendelser.
 
 WHOs anke for 2026 ber om 42 millioner dollar for å støtte 700 000 mennesker. Fortsatt finansiering er viktig for å opprettholde helseoperasjoner i nødsituasjoner.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168603)*

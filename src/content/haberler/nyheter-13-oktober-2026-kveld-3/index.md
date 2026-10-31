@@ -4,6 +4,9 @@ description: "Korte nyheter 13. oktober, kveld: Fn advarer om arbeidsledighet fo
 date: 2026-10-14T00:03:14+02:00
 category: utenriks
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Forbrukerrådet"
+    url: "https://www.forbrukerradet.no/siste-nytt/fant-farlige-evighetskjemikalier-i-blodet-krever-pfas-forbud/"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Fn advarer om arbeidsledighet for 800 millioner unge og 5 andre saker · 13. oktober, kveld»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -20,8 +23,6 @@ Ifølge Forbrukerrådet har en rekke stortingspolitikere og representanter fra r
 Organisasjonen krever et bredt forbud mot PFAS i EU og EØS, og mener at Norge må vurdere nasjonale tiltak dersom EU ikke strekker til. – Vi fant PFAS i blodet til alle som deltok.
 
 Resultatene tilsvarer det man finner i befolkningsundersøkelser og bekrefter hvor utbredte disse stoffene er. Det er umulig for folk å unngå disse helseskadelige stoffene og helt avgjørende at det reguleres strengere, sier direktør Mette Fossum.
-
-*Kilde: [Forbrukerrådet](https://www.forbrukerradet.no/siste-nytt/fant-farlige-evighetskjemikalier-i-blodet-krever-pfas-forbud/)*
 
 ## Klima- og miljødepartementet: Ny tiltaksplan skal bedre forholdene for villreinen i Setesdal
 

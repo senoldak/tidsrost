@@ -10,6 +10,19 @@ key_points:
   - "VM-tromma ble solgt for 1,3 millioner kroner"
 produksjon: ki-medier
 kildeSpor: "v1.2g2lK2xrx+eFN435.AUHz5+fwVgCkCGVX91Q3cA1x4i266L3MbObxgmNU6CgKFyJ3jsRSpb4T2vGW/u1rL50lByIttyPDH6dmqZnSNChEyFLY3R/yuN+g8/2SNe/SJaND0sJaEXIZJaOAIg/5aW0aVbbZqeQGV6mXOdo2JjxwMSAbcjwnlJAO4MonsvUGyHGRMrmf77CcpcVA7WX+hsPTR/UyCP+hhikcSsQzYW8GD14AomMrjnLE7rdtmqFn7RcX+e2PeNjYTw8heudHLpUXjTO/Qz7iYFR8n8lXlNfFoo1c3oFMNDmO1dfP+K+4wsLkRjY6qyOAIk//qcf0gXIS3aD/6/jVF6OY5fIofFtp38/PA/iw2uLSmjhtOirXu/sOu5EnFq1lTASlafZ6pc0ttlp5mp5X4qjWnL+4MVRXdDIjVBFtdjTSmRnqtVQVIF+/LFMHC5MBewoHZMZlMJlsOtQ6x3RYkAasLBG/QUVJ/z+v14TAwxUYJxi/JW0vjlqY/grUXYGtJREDEFxtuNJuEjF8+A3HUc6CSANbjJ/g+2D2h/CkL2y8rlGAuGtRjEoo71gPXOTlSMOaQLVthTm4qetBfw999RmNsMGyJiTt5/mg625iVAM926PoND0ZPK6fzICW9E00ITgYi53Ioh+rlj+E/cOkxqOhioZMeUQjMtEUvdxgp8CgfsRgHZgWlWlDIM4GD7u4rbXX8/zgeVYbEGbQysJrD2kGyrih9+gRVRTyvf6W5UmfZWCKH8kPfFoPpEe034/fIQzfIBuDwamtJwcz5/b4+qslaiQWGBF0Ym/XvDxzJ7MAd2vlki0kBTz42hAGTaTn1YySgvsU1Zb7ulF7C/TlpUtWJii4v6FOFplDFnDR4FTLzOdWp2KF0HH3tUNQF7C7Q0l08J0l/pTdVYVTGoMjcq/9Ynf62NFC49AqY7eZtxgd13YGOaUaPVHhpfeapwpM/Bkxrew2XaZB0Cpy8X0DSbYfbIIds/5hdwjhx92aoLBGOOPw+0vHgwgPmLih1QfYuDlfpKZV4lu8ZM334d8WNF5g/xANMbhxWsNg1vwD9s2AjTNrbk2kRNEbsZF/DZ6RQ2xrOYfutw5lmfyPyMRMoPD3kCAQh+ZH8qcDOLKnWW/x1/eOI5zvhJdh"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/tvaksjonen/over-250-millioner-kroner-kom-inn-til-tv-aksjonen-2026-1.18047087"
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/GrJxBx/tv-aksjonen-fikk-inn-251-millioner-kroner-til-flyktninghjelp"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/norge/i/771pq3/tv-aksjonen-fikk-inn-251-millioner-kroner"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/sport/tv-aksjonen-full-budkrig-pa-vm-tromma-solgt-for-1-3-millioner/s/80-95-170244"
+  - navn: "Bergens Tidende"
+    url: "https://www.bt.no/politikk/i/vldrk5/tv-aksjonen-kom-ikke-i-maal-med-boessebaerermaalet-haaper-aa-slaa-fjoraaret-likevel"
+  - navn: "Stavanger Aftenblad"
+    url: "https://www.aftenbladet.no/sport/i/rM4rdK/tv-aksjonen-full-budkrig-paa-vm-tromma-solgt-for-1-3-millioner"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «TV-aksjonen samlet inn 251 millioner kroner til Flyktninghjelpen»"
 coverKreditt: "Illustrasjon: tidsrøst"

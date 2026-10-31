@@ -10,6 +10,13 @@ key_points:
   - "Avgangen kommer etter et mistillitsforslag fra MDG."
 produksjon: ki-medier
 kildeSpor: "v1.B2sQhK6bhq250A+h.tsi/LOCaUcxTTn8B2zo0SWZfGY7WshJo6bisOSCquzQ/sLjUNU15dmjZy3TBWLzRaKQqirqa9u44HOpCfiQZjK73QgTqUP3SwW8YrV0YayPqJuwcEFSGmRYf1BiB0yS5i0YBE+Eor07rqgWDxJEE9tEm1NoJkLkLxh0akr+mhBzdUDe0DSt8ccdLhr02UBgENRmH4QE1Obdtim2WMAZdyWSWyypUxA+seUbzjDxf4FLeN9LsRz+nWpwqrTvaEShPmQ+dE3m0+eYUUEJEyp8cNG8DIFd/OE7BkMajFwMlu1f0vgslkhNqPp9mZfBuFTqibKAZZ6mEjf/i02znVhM1Ow2zCB7vPcrL+sWrWHTKc5kjxvMrL+Vw7U4ZKQEpwflw/Bis9YMXSQG/HPz2TWJHxQSO/vUqVIIeb5MZuNhlm2cEIbQgfYAQsKJJQQ5Y2WaigIABCWf4VmNoMPNPzdVaZaBvpF7TjrQkZdrXwh5K5bWPOZj/+MdY7aVqhzixyHaJaeIaFbEA3G8H6bkOO1zf5Jn/m96a"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/stor-oslo/anita-leirvik-north-trekker-seg-som-byrad-1.18062032"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/oslo/i/oKqrVj/anita-leirvik-north-gaar-av-som-byutviklingsbyraad-etter-roeabad-braaket"
+  - navn: "Dagsavisen"
+    url: "https://www.dagsavisen.no/nyheter/oslo-byrad-gar-pa-dagen-viser-til-grove-pastander/10609790"
 nyhetsverdi: 82
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Anita Leirvik North (H) går av som byråd i Oslo»"

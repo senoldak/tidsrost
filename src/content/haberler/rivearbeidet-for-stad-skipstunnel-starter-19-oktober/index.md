@@ -9,6 +9,9 @@ key_points:
   - "Arbeidet starter 19. oktober"
   - "Ferdigstillelse mot jul"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Kystverket"
+    url: "https://www.kystverket.no/nyheter/stad-skipstunnel-rivearbeidet-startar-19.-oktober"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Rivearbeidet for Stad skipstunnel starter 19. oktober»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -23,5 +26,3 @@ Kystverket opplyser at rivingene kan føre til litt støy og økt anleggstrafikk
 Kystverket har stilt krav om at entreprenøren skal legge til rette for gjenbruk av materialer og bygningsdeler der det lar seg gjøre. Personer som ønsker å overta bygningsdeler fra de aktuelle bygningene, kan kontakte entreprenøren AF Decom på e-post innen 1. november. Hvert ønske vil bli vurdert individuelt med tanke på hva som er praktisk mulig og kostnadsnyttig, men det gjøres oppmerksom på at enkelte bygninger kan være revet før fristen går ut.
 
 Kystverket uttrykker forståelse for at særlig rivingene i Kjøde vil innebære store endringer i nærmiljøet, og at det kan kjennes vemodig å se kjente bygg forsvinne. Etatens mål er å gjennomføre hele prosessen på en trygg og hensynsfull måte, og å holde naboene godt orienterte underveis i anleggsperioden fram mot jul. For spørsmål kan man kontakte Kystverket ved prosjektleder Jarle Strand eller byggeleder Odd Jostein Haugen, eller AF Decom ved Kenneth Eikrem.
-
-*Kilde: [Kystverket](https://www.kystverket.no/nyheter/stad-skipstunnel-rivearbeidet-startar-19.-oktober)*

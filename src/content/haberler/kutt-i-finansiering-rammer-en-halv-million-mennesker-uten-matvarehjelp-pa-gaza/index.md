@@ -9,6 +9,9 @@ key_points:
   - "WFP kutter mathjelpen med en tredjedel"
   - "450 millioner dollar trengs for å opprettholde operasjoner"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168622"
 nyhetsverdi: 72
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Kutt i finansiering rammer en halv million mennesker uten matvarehjelp på Gaza»"
@@ -26,5 +29,3 @@ Foreløpig kan organisasjonen fortsette å støtte bakerier som dekker en tredje
 Selv om dette er en nedgang fra 77 prosent ved utgangen av 2025, er forbedringen beskjeden og sårbar, ifølge WFP. Rundt 200 000 mennesker befinner seg fortsatt i nødstilstand, og umiddelbar matvarehjelp er nødvendig for å forhindre sultdød. Samtidig spiser bare ett av fem barn et tilstrekkelig variert kosthold.
 
 WFP understreker at ekstra ressurser er akutt nødvendige etter hvert som vinteren nærmer seg, for å opprettholde nødhjelpen og forhindre underernæring blant små barn samt gravide og ammende kvinner. Finansieringen for organisasjonens operasjoner i Palestina i 2026 utgjør mindre enn halvparten av det som ble mottatt i tidligere år, og WFP har et akutt behov for 450 millioner dollar for å opprettholde de kritiske operasjonene fram til mars. Finansieringsmangelen har også påvirket operasjonene på Vestbredden, der antallet personer som mottar assistanse, ble halvert fra 400 000 til 200 000 i september, melder FNs nyhetstjeneste.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168622)*

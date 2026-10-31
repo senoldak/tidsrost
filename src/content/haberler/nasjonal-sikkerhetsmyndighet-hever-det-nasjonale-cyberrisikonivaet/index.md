@@ -9,6 +9,9 @@ key_points:
   - "Bortfall av strøm, mobil og internett er mulige konsekvenser"
   - "DSB og NSM ber befolkningen styrke egenberedskapen"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Direktoratet for samfunnssikkerhet og beredskap (DSB)"
+    url: "https://www.dsb.no/aktuelt/ber-befolkningen-vare-forberedt-pa-cyberangrep/"
 nyhetsverdi: 82
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Nasjonal Sikkerhetsmyndighet hever det nasjonale cyberrisikonivået»"
@@ -26,5 +29,3 @@ Tematikken knyttet til bortfall av mobil og internett står sentralt i den påg�
 Økt egenberedskap hos hver enkelt styrker samfunnets samlede motstandskraft. Norge fremheves som en av de mest digitaliserte nasjonale i verden, og befolkningen er vant til at alt fungerer knirkefritt.
 
 Likevel understrekes det at alle bør være innstilt på at lengre avbrudd på nett kan forekomme som en konsekvens av blant annet uvær, uhell eller sabotasje, noe som gjør det avgjørende å ha beredskapen på plass. Direktoratet for samfunnssikkerhet og beredskap lister opp en rekke tiltak for å møte utfordringer knyttet til svikt i mobil- og internettforbindelse, som å undersøke hvordan kommunen informerer, fungere som beredskapsvenn, skaffe seg en DAB-radio, holde batteribanker og annet utstyr oppladet, vurdere ulike leverandører av mobilabonnement, undersøke mulighet for wifi-kommunikasjon og sjekke om kommunen har forsterket mobilnett.
-
-*Kilde: [Direktoratet for samfunnssikkerhet og beredskap (DSB)](https://www.dsb.no/aktuelt/ber-befolkningen-vare-forberedt-pa-cyberangrep/)*

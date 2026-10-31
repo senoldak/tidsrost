@@ -4,6 +4,9 @@ description: "Korte nyheter 12. oktober, ettermiddag: Kongsfjorden på Svalbard 
 date: 2026-10-12T16:16:34+02:00
 category: utenriks
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Havforskningsinstituttet"
+    url: "https://www.hi.no/hi/nyheter/2026/oktober/-ser-meir-og-meir-ut-som-norskekysten"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Kongsfjorden på Svalbard likner mer på fastlandskysten og 6 andre saker · 12. oktober, ettermiddag»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -20,8 +23,6 @@ Ifølge Havforskningsinstituttet viser nye undersøkelser at Kongsfjorden på Sv
 Det har vært en to måneder lang massiv hetebølge, som også nådde under vannoverflaten. Samtidig ser vi kråkeboller som beiter kraftig i den arktiske tareskogen og nyformede ørkenområder, sier havforskeren.
 
 Ifølge Havforskningsinstituttet kan mindre isdekke og bedre lysforhold føre til økt vekst for tareskogen i Arktis, men andre vilkår som kråkeboller på framvekst kan bremse veksten. Havforskerne arbeider nå med å evaluere mulige restaureringstiltak og anbefale tiltak for forvaltningen.
-
-*Kilde: [Havforskningsinstituttet](https://www.hi.no/hi/nyheter/2026/oktober/-ser-meir-og-meir-ut-som-norskekysten)*
 
 ## Europakommisjonen inviterer til regionalt toppmøte i Brussel
 

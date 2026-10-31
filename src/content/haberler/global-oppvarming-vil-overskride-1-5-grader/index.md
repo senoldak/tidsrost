@@ -9,6 +9,9 @@ key_points:
   - "Utslippene må kuttes med 18 prosent innen tiårsskiftet"
   - "Rapporten ble publisert av FNs miljøprogram UNEP"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168634"
 nyhetsverdi: 75
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Global oppvarming vil overskride 1,5 grader»"
@@ -24,5 +27,3 @@ UNEP-direktør Inger Andersen var tydelig på kostnaden ved manglende handling, 
 Hvis dagens politikk fortsetter, advarer rapporten om at oppvarmingen kan nå 2,8 grader i løpet av dette århundret og øke videre deretter. Utfallene er verre enn fjorårets anslag på grunn av reviderte estimater av historiske utslipp. Likevel viser bevis i økende grad hvordan klimapolitikk har redusert utslipp, og rapporten slår fast at det er fullt mulig å nå målet igjen.
 
 For å oppnå dette kreves det en akselerasjon av målene fra den første globale statusgjennomgangen som ble avholdt fra 2021 til 2023. Dette omfatter å tredoble kapasiteten for fornybar energi og doble den årlige takten for energieffektivisering innen 2030, samt å skifte vekk fra fossil energi i energisystemene, redusere utslipp som ikke er CO2, og stanse samt snu avskoging og skogforringelse. Fremgangen er foreløpig utilstrekkelig, men den neste statusgjennomgangen som begynner neste måned, kan bygge videre på dette arbeidet.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168634)*

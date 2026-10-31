@@ -9,6 +9,9 @@ key_points:
   - "Over 4 000 bygninger er i fare for å kollapse i området."
   - "Restriksjoner og mangel på finansiering hindrer innførsel av holdbare materialer."
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168619"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Gaza forbereder seg på ny vinter i telt og skadde bygninger»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -23,5 +26,3 @@ Den pågående regionale konflikten forstyrrer også forsyningskjedene, noe som 
 Kvaliteten på lyet er en annen bekymring, og Baker forklarer at IOM i andre nødsituasjoner kunne levert mer holdbare overgangsboliger som kryssfinér og boenheter. I Gaza faller de fleste slitesterke materialene inn under restriksjoner som daterer seg tilbake til 2008. Baker uttaler at IOM forhandler med israelske myndigheter om innførsel av mer holdbare varer, som takplater og sement til gulv og sterkere vegger for å tåle vinden.
 
 I Khan Younis i det sørlige Gaza forsøker fordrevne familier å redde materialer fra ruinene. Mohammed Barhoum og sønnene hans, som er fordrevne fra Rafah, bruker metallstenger fra vrakgodset for å styrke teltet sitt i et område som flommer over hvert år under kraftig regnvær. Samtidig viser humanitære vurderinger at over 4 000 bygninger er i fare for å kollapse, og at levekårene fortsetter å forverre seg ettersom bare rundt 30 prosent av Gaza nå er tilgjengelig for folk.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168619)*

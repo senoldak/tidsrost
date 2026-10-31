@@ -5,6 +5,19 @@ date: 2026-10-16T14:02:29+02:00
 category: utenriks
 produksjon: ki-medier
 kildeSpor: "v1.rpD+B89GsjjXd62J.KafkH60USfPITtL5iB0CvmI4ix2OKKkU2TkEGttFftmunoQwuLsPHqZo6JSFazv3uT20yo+S58Q2g5s7CDZXaWVgzJics/T3HFRp2ARDUfZ0molg/McSJ2dDVBqsfiwWn0Lew11COfxCeF+m0ot8lHhHp7xJnMuD7B+Y0vNDNnlDq8QadCTqExV2lPBukef75KmthRg9Ad5TFS3iHdAkpuUxpgn1w15mGCKmjvp+NMWUcj8L3im8oXksbLJNqNJtH0bcowfMNvwFRB1yY+lzWnT3P3YJeidqNarnBhjrVnPC9ouC22RhMtL+qMkLZqDLsiRMcHZvaa+Cd/Pafqvpeex122c5k7GyLG6pgm4IvJwUEj2ZeBPn5YyxJURaXvrJqztuaWgkynhbTxjLBUSjDjXWZpuQuWb/OgiVNKQATc4r6Gx78Xo0zTbASGovSKxy9YnFLfArXEpM4160NjTL701q3mlTtAwUgIpLvE5vocx+wO2V4NRQWsNqlnyEIT5J586DYLUPayvpwbrqz0fp+XrJUGjHhQxeCNchjmtNElNPM9LCt3GISj7s3X5sQO5kqFSUXriCPmmRXFK3KDFqVtnPOyrWObTcqydu5b+piKTZs+CXMX2CO8et3C/RlkDWGjEGN16kiKgMsci+UJeT5Oto4ihJ2WuWsveWWAia83Aft3sz1GDtybXlHNZp6brPImSacxFmGEZxvSBtq2aCg6R/GkVRpH3CT8KDsle49RjcHv01WqupnYwBseK5V/g6X9OJ79iTf8bpZranYZoxIadBCvsOfKnkDTzzMGFq2YPIAcVTO+TW/U3oRkmcfW6rany1zGDK8tNPHsNiZ4WDKr3H1sI2A1B3QpbeABISEKyDYSOJhzurrzaZOFoGi0gP1aOCTWgR7VMRuR9EsqJIXOFb2GTX2oR45Z6DBsDnB72lq7TUd/E3SjynvnVZJfbp20GqTXO/dzEhHgRUAZbohmHmDl/s6o1bHRgnHyzuFJ5YjDP2cuyUUTPwhX9cJ9qOftoBoDNTfDYud47sbo0sw0xu0OFo5LZHnQEUVEvmmZrNwUyJZ3WNlHoGu18wznguIkTKbpyJsKC3DQaCoGmQcggvysL3jMcY6dWnm2oAnujZYcPv7T2QcpTNFE/7/ZK+E2oGzxIBfBASU4TkD4nn2nQUo8X8iYSattkYHyLnUNKHEEF7jtHWpKegsAMIByQkk/eZghaIGnWawtrC18C7UmfjqQV5QuYBgrebBh1ndW+2BttoHKZbebNesNoGU/5x+BXUKggn0e9FPs4fmIUNvIhwCR4CC0M1Pc544iDP"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/zelenskyj_-bruker-ikke-starlink-til-a-angripe-russland-1.18056820"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/9kMdQd/ordren-om-aa-begrense-starshield-kom-fra-det-hvite-hus-sier-kilder-til-reuters"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19329495"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/zelenskyj-haper-pa-usa-samtaler/s/80-95-166692"
+  - navn: "E24"
+    url: "https://e24.no/naeringsliv/i/d7G3Jq/villa-solgt-4-1-millioner-over-prisantydning"
+  - navn: "Dagbladet"
+    url: "https://www.elbil24.no/nyheter/lansert-tesla-roadster-flyr-ut-av-butikken/85295659"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Starlink brukes ikke til å angripe Russland, sier Zelenskyj og 2 andre saker · 16. oktober, ettermiddag»"
 coverKreditt: "Illustrasjon: tidsrøst"

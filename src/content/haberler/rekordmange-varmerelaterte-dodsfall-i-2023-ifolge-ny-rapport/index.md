@@ -9,6 +9,9 @@ key_points:
   - "573 milliarder tapte arbeidstimer i 2025 til en kostnad på 1,07 billioner dollar"
   - "323 000 årlige dødsfall forhindret av renere luft i 70 land"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168688"
 nyhetsverdi: 75
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Rekordmange varmerelaterte dødsfall i 2023 ifølge ny rapport»"
@@ -22,5 +25,3 @@ Videre peker rapporten på at utvidet utvinning av fossil energi holder igjen fr
 På den positive siden trekker rapporten frem at renere luft hindrer et anslått antall på 323 000 dødsfall i året i 70 land der luftforurensning fra fossilt brensel har gått ned, hjulpet av en rekordstor global investering på 2,1 billioner dollar i ren energi i fjor. Rapporten viser også at nasjonale lover om klimaendringer og helse har økt kraftig siden år 2000, der velstående nasjoner stod for 55 prosent av slike lover i 2025 sammenlignet med to prosent i utviklingsland. Forfatterne bak rapporten advarer likevel om at det gjøres for lite for å dempe klimaendringene, og viser til at de 100 største olje- og gasselskapene planlegger å produsere 150 prosent mer fossilt brensel innen 2040 enn det som er forenlig med å begrense oppvarmingen til 1,5 grader.
 
 WHO svarer på helserisikoene gjennom overvåking, tidligvarslingssystemer, helsetilpasningsplaner, teknisk veiledning og beredskapsteam. Organisasjonen følger også med på forventede helsepåvirkninger av El Niño og overser arbeidet med alliansen ATACH for å utvikle klimaresistente og bærekraftige helsesystemer.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168688)*

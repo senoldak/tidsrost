@@ -10,6 +10,11 @@ key_points:
   - "Forblir foreløpig utenfor topp 20 på rankingen"
 produksjon: ki-medier
 kildeSpor: "v1.H+t2nYFkQcRLRGcd.pIONVyj/UDnnuc+YbEINOmWJC3S3/MXbQ+U7vLVzDSOx3Ls3bNkd2jeD41fc4q0dj2DdlbZz25721g0jjQwsg/6KzrvRre9cyLqaK49RMxkBNSwu5o8QWOTqZRD3q4NIZK5IPf/Qnqeh+8L2uJ/91lGs2NPIztTGwKeijGoE+LTgjMMfeE1XZDpEnYspLuPsh8Npo/HjxHXaWr2m3Q4BsD2GcDZ7aS3kaEjY2hxNdgZ0Ci7hYT8CeLhAOFwh89N5tuLegcssLMsRavnfyJaB02wSLcBdoBBlnsFQQztpZU7ecf4PpQO8A3s0+ltkqm/d8rzByr0="
+kilder:
+  - navn: "VG"
+    url: "https://www.vg.no/sport/i/d7p2nz/shanghai-masters-casper-ruud-utslaatt-av-rafael-jodar"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/sport/kvartfinaletap-for-casper-ruud-i-shanghai/s/80-95-165753"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Casper Ruud tapte kvartfinalen i Shanghai Masters mot Rafael Jodar»"
 coverKreditt: "Illustrasjon: tidsrøst"

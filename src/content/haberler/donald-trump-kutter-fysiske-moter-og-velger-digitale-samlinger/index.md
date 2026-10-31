@@ -10,6 +10,11 @@ key_points:
   - "Daytona Beach blir siste fysiske møte"
 produksjon: ki-medier
 kildeSpor: "v1.xnVvO5rqk1pjaacQ.cw+OAG8nst/tLPX/zv0JlS8/1eLK2lhsk3+zyLbVD9lbkpg9qzvB5mCFCB0WyG+FWSoR8BpqbGiFdEFL78ulkDs1OKj9nIPSIJDGToHKn84Ih1zjiAqU1IdNKsrucmf7+aagkye1HON2/vLv2+YYguqDLDF62mNIjT8G6x3/rOGw6++1weYu+ROTtYfbcqgRUtRMFhqQUDy5Z4BRAWhDHkTqUk52F7r/cREF1/eBZbFVM23u39monHbH9YvJuUqnBA0D3fpBY0J+Q0cgq2VIUtPEb9mwbYs="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/trump-avlyser-valgmoter-i-delstatene-1.18069214"
+  - navn: "Dagbladet"
+    url: "https://www.dagbladet.no/nyheter/avlyser-valgmoter-motbydelig/85357356"
 nyhetsverdi: 75
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Donald Trump kutter fysiske møter og velger digitale samlinger»"

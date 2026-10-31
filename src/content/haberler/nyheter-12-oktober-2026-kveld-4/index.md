@@ -4,6 +4,9 @@ description: "Korte nyheter 12. oktober, kveld: Advarer om økt hungersnødrisik
 date: 2026-10-12T20:55:21+02:00
 category: utenriks
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Klima- og miljødepartementet / regjeringen.no"
+    url: "https://www.regjeringen.no/no/aktuelt/regjeringa-set-i-gong-arbeidet-med-tiltaksplanane-for-reinheimen-breheimen-solnkletten-og-forollhogna-villreinomrade/id3177094/"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Advarer om økt hungersnødrisiko i Sudan og 4 andre saker · 12. oktober, kveld»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -16,8 +19,6 @@ Sakene under ble først publisert hver for seg og er her samlet på én side. Te
 *Publisert 12. oktober kl. 18.54*
 
 Ifølge Klima- og miljødepartementet skal de nye tiltaksplanene gi en helhetlig og samlet oversikt over hvilke tiltak som er nødvendige for å bedre forholdene for villreinen i de aktuelle områdene. Departementet opplyser at arbeidet nå er startet opp for villreinområdene Reinheimen-Breheimen, Sølnkletten og Forollhogna.
-
-*Kilde: [Klima- og miljødepartementet / regjeringen.no](https://www.regjeringen.no/no/aktuelt/regjeringa-set-i-gong-arbeidet-med-tiltaksplanane-for-reinheimen-breheimen-solnkletten-og-forollhogna-villreinomrade/id3177094/)*
 
 ## Utenriksdepartementet: Felles uttalelse om trusler fra Iran
 

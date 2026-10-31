@@ -9,6 +9,9 @@ key_points:
   - "Kvinner, unge og lavinntektsgrupper er blant de mest sårbare"
   - "Rapporten ber om økt investering i opplæring og digital infrastruktur"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168604"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «FN advarer om at raske samfunnsendringer kan ramme sårbare grupper»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -23,5 +26,3 @@ Blant de mest sårbare er kvinner, unge, eldre, personer med funksjonsnedsettels
 I tillegg må overgangen til fornybar energi inkludere støtte til arbeidere og lokalsamfunn som er avhengige av fossile brennstoffer. Videre ber rapporten om at myndighetene sikrer rimelig tilgang til internett og digital infrastruktur for å minske det digitale skillet. Et annet sentralt forslag er å slutte å stole hovedsakelig på bruttonasjonalproduktet for å måle vekst, og i stedet vurdere fremgang basert på fattigdomsreduksjon, utdanningsmuligheter og likestilling.
 
 Mange utviklingsland står imidlertid overfor store økonomiske begrensninger, og generalsekretæren advarer om at nesten halvparten av verdens fattigste land opplever gjeldsstress. Han oppfordrer derfor til reformer i internasjonale finansinstitusjoner og at ledere innfrir tidligere forpliktelser. Transformasjoner er uunngåelige, men ulikhet og ekskludering er det ikke, påpekte generalsekretæren.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168604)*

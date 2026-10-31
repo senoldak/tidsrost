@@ -5,6 +5,17 @@ date: 2026-10-24T00:04:17+02:00
 category: innenriks
 produksjon: ki-medier
 kildeSpor: "v1.KpnWX20G/EQuhZrq./nec4JW7CkPXm9IFVBU+/LNzFTgCqY6OVdYLFf7a+3GvFhcv4YXOWtun+p1SrSbqm0DJ9let1v7QkQ0S/qNog71txOG/eiDK3gjbqxuq2mKPmzCAEsybc/6iuk/H4cHH5ozEHOs+InFqZJEzo+KiP4gMHq/Am/PynPhGSarOnOR09QG2AAdcEThmcUdvtd7R2T4vjQ5mt6RKPM+nHRh9OfG/J+XN2ahAElLwNnAE9sNkOnCNubiTICEJRWu2d9D00dVDZBkOqy8EtBUlCX9k2wdXPWWzHGVFW70W4ks/DSSzHQMho/8lqAxfbJSdtr6edRkuR977sBPeBqcRp+BnmKPEjC5XeDyUH10DD2JxzuDtcWZ+NLuBA/TxyTr4BW2ahQ0Wei3pTOOM8OBQ1Parg3r4ANJxjqc7mOr3JDnMU6AtMyZZGktrrVg68jNhDMIkxv/sHCLIS3Nd+XejWSOuKvCKE6h0UL9Z+EXuJvZwGuSjESjw6LuOu4IAYwJCET7fT+UXH24zlHA5E7oheoBYszTA3TmjRdf5XsdchU8ROQ3Bk9IsQ6lVTbjQU/Yu51RAxzEBgRKJKo1XZDwvwUrt+BQ2orPuha0rkjuYWGZYXp7TF5y3yqJGaGkRrpcxgX5TmBxHeTFNhTLKNab9iTFNSBEZK2NDWDakdcU9wXVmkvqKFB/blcoa4rL6CLlCue82OkWR8tBi1QVku9H1TCsJEe/zQV9flCdS8RoQeWylXQMBkWi4XzcopiJ3/XEom3iHqF78nvo1gNUOco9ruK/qS61pXcb6hQ7sK5EuOVLIX5SDOsoHx3uf1qn4LZEcHM4ZgU/0VQYHr0qqXW8Jv+OJPrpwb/2d8sm3ebMAcQnuP1zBX2B6tlhl4IYvGp4pydNOYE1Pn6+HGKIDVlnXvnQ3eonGOxeTBpI+cVsqz0HGR4KOs2/G7rrIlO/5Eiy7s8CjIfif02j6o+kFEBrs3Bxh7ELCpmVaEpBwSuEiVHJKIzxCojE4RkoOqKYN9OruuOSLjPdpMq4WzTPHrOTBjIUQrbUBRUzM36jERigiZPDprBawjQ=="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/stor-oslo/stans-i-togtrafikken-gjennom-oslo-1.18063424"
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/w3zAzo/oslo-s-og-nationaltheatret-stengt-for-all-togtrafikk"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/forsinkelser-og-innstillinger-i-togtrafikken-rundt-oslo/s/80-95-187980"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/d7EmWO/hoeyblokk-kollapset-i-nairobi"
+  - navn: "Nationen"
+    url: "https://www.nationen.no/norge-og-russland-enige-om-fiskeriavtale-har-vart-krevende/s/80-148-55636"
 nyhetsverdi: 88
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Full stans i togtrafikken mellom Oslo S og Nationaltheatret og 2 andre saker · 23. oktober, kveld»"

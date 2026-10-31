@@ -4,6 +4,9 @@ description: "Korte nyheter 10. oktober, kveld: Idrettsforbundet og Kirkens SOS 
 date: 2026-10-11T00:02:05+02:00
 category: sport
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Havforskningsinstituttet"
+    url: "https://www.hi.no/hi/nyheter/2026/oktober/gjev-todelt-kvoterad-om-nordsjotorsk-ogsa-i-ar"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Idrettsforbundet og Kirkens SOS setter fokus på psykisk helse og 4 andre saker · 10. oktober, kveld»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -21,8 +24,6 @@ Torsk i Nordsjøen er delt inn i tre underbestander. Ifølge Havforskningsinstit
 
 – To av tre torskebestandar i Nordsjøen er no under kritisk nivå. All fiske vil føre til at det er høgare risiko for at desse held seg der, sier havforsker Bjarte Bogstad.
 
-*Kilde: [Havforskningsinstituttet](https://www.hi.no/hi/nyheter/2026/oktober/gjev-todelt-kvoterad-om-nordsjotorsk-ogsa-i-ar)*
-
 ## Idrettsforbundet og Kirkens SOS setter fokus på psykisk helse
 
 *Publisert 10. oktober kl. 23.47*
@@ -34,7 +35,6 @@ Tre av fire som bruker SOS-chat, er under 30 år.– Idretten er en unik felless
 Tjenesten er åpen fra kl. 09.00 til 22.30 mandag 5. oktober til og med fredag 9. oktober, samt fra kl.
 
 14.30 til 01.30 i helgen 10. til 11. oktober. På telefon er tjenesten tilgjengelig hele døgnet.
-
 
 *Kilde: [Norges idrettsforbund](https://www.idrettsforbundet.no/nyheter/2026/chat-for-livet/)*
 
@@ -57,7 +57,6 @@ For å unngå brudd på regelverket anbefaler Idrettsforbundet lagene å dele or
 Ifølge Kulturdirektoratet foreslår regjeringen seks millioner kroner til innkjøpsordningene som en del av en satsing på leselyst for voksne i statsbudsjettet for 2027. Kulturrådets leder Kristian Seltun uttrykker glede over å bidra til økt lesing, men peker samtidig på at budsjettforslaget ikke gir en reell styrking utover prisjustering for det frie kunstfeltet. Kulturdirektoratet opplyser også at forsoningsarbeidet for det samiske urfolket og de nasjonale minoritetene ikke følges opp i budsjettforslaget.
 
 Seltun påpeker at mangelen på nye midler kan få konsekvenser for publikumstilbudet, kunstnernes arbeidsvilkår og kunstnerisk nyskaping. Totalt foreslår regjeringen å bevilge 1,068 milliard kroner til Norsk kulturfond, noe som utgjør en generell justering på 2,87 prosent fra fjorårets budsjett, ifølge Kulturdirektoratet.
-
 
 *Kilde: [Kulturdirektoratet](https://www.kulturdirektoratet.no/aktuelt/statsbudsjettet-2027-lite-nytt-for-kunstnere-og-kulturaktoerer)*
 

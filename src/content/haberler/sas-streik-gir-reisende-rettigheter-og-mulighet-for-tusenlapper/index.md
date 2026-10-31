@@ -9,6 +9,9 @@ key_points:
   - "Ikke avbestill reisen selv; vent til flyet blir innstilt for å sikre refusjon."
   - "Du kan ha rett på opptil 600 euro i kompensasjon avhengig av reisen."
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Forbrukerrådet"
+    url: "https://www.forbrukerradet.no/siste-nytt/flystreik-kan-gi-deg-rett-pa-tusenlapper/"
 nyhetsverdi: 74
 cover: ./cover.png
 coverAlt: "Illustrasjon: «SAS-streik gir reisende rettigheter og mulighet for tusenlapper»"
@@ -24,5 +27,3 @@ Hvis det tar for lang tid før selskapet ordner opp, kan passasjerene bestille a
 Videre kan en forsinkelse på over tre timer eller en kansellering utløse en standardisert pengesum. Fagsjefen påpeker at man kan ha krav på opptil 600 euro i kompensasjon, avhengig av strekningen og hvor raskt man blir tilbudt alternativ reise.
 
 Siden streik i eget selskap regnes som et forhold selskapet selv må håndtere, fritar ikke dette flyselskapet for erstatningsansvaret overfor de reisende. Forbrukerrådet anbefaler alle å møte opp som normalt med mindre selskapet har gitt beskjed om at avgangen faktisk er innstilt.
-
-*Kilde: [Forbrukerrådet](https://www.forbrukerradet.no/siste-nytt/flystreik-kan-gi-deg-rett-pa-tusenlapper/)*

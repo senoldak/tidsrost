@@ -10,6 +10,17 @@ key_points:
   - "Politisk uenighet om økt innsatsstyrt finansiering til 70 prosent."
 produksjon: ki-medier
 kildeSpor: "v1.goT+CClVAeLDaSK9.aCN/QktxcIFtmQQrH+mmPZEPiFu1TvzFC6ObqXIDvAkJ81LM4qz0foC2RFU5jiIuHj9mc1zexdZccjHP8JKNwzu1VskmT7+4n9tNv8XaHiInMMwHXDrNh6/BfjjwvH+Iz2+zchIW9hCynbF8j8suGSbegQwnXfA5oOMNGu0rTP0PbFlWUCqGcl3fL9iy1/gtAmwMtkQJ0YRLtqs8jGuqHKWM6RKUcAGmLlRRIwdXC/w3eT7fVB4SXog+q9KCVeTZHiwSQ4JwXDUvXi4X/qu7oCM7vmuWCsMfF+lJldm9hDDuAkrPhRrfrqF0GsFdvjYS59cGCs/7ox3kp7FdJj4JPdZUsaN7KQAfMWR6/c95ZS1G7Q5Vv9wRUEwb4aELzC/8nDsNt/SDfBkIQayGOVELWIWB6b2niaDkNoJTEZGZgtgvugpb33qTBfD8prztQYzWsQ3v5dXqekmHlEzD3cytZW+93VW9FcPCZY9GU7Zgb1Fg3Apq0weMo68VHez8QKrhtRNJAqWPGIGzY9Mmm04ICw9Cv28hfkeNyYnOtxjGq3TpSo2aA6wrIVvd+gIy0qq3ob46ZRdEkgbuD79Enogg4vc31IIQ6obXwk5imP3gXF222EzFaZvrJ64hzQU3yI0tpkx6zZRE8NQh8V1A5nAr1EbCniMrF7OmrxFKjDcL1bjT5/60qlZUzFv/IfBGnB1DaSWX+eeT1WEmMyU8pCerb4hDUWqSH5GjGRo93ltAlth0nX3MmaYBuyQnt0TP9dqwMsjfC5/Yq/f+nMLYWUBYp3sTeVFbUtxvVxV3RntArj86XfBFBsF5gnoDz9q3tNosuDCQfsCWOfmOHEPQeNGcT8r3Z6F2LHkUQpT8Jvm/F/vqQR+ajvJNQK4fqpipWr8cOiA7bnB4d8h7Atk8dadT"
+kilder:
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/eGVzXl/sykehusene-kan-tape-24-000-i-doegnet-paa-overtidspasienter-i-psykiatrien"
+  - navn: "Dagsavisen"
+    url: "https://www.dagsavisen.no/nyheter/rodt-om-helsereformen-vil-at-direktorene-skal-miste-makta/10607727"
+  - navn: "NRK"
+    url: "https://www.nrk.no/mr/hogre-vil-auke-andelen-med-innsatsstyrt-finansiering-til-70-prosent_-men-forslaget-moter-motbor-1.18069475"
+  - navn: "Hamar Arbeiderblad"
+    url: "https://www.h-a.no/sykehuset-innlandet-i-rod-sone-slar-full-alarm-om-akuttberedskapen/f/80-139-87644"
+  - navn: "Nationen"
+    url: "https://www.nationen.no/vestre-legger-opp-til-storomlegging-for-sykehusene/s/80-148-60749"
 nyhetsverdi: 85
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Økonomisk press og utskrivningsklare pasienter utfordrer sykehusene»"

@@ -5,6 +5,13 @@ date: 2026-10-21T10:10:28+02:00
 category: innenriks
 produksjon: ki-medier
 kildeSpor: "v1.vvC7KHOgI8/D5FEa.MP+usRiVuxTAgtBSrI+AInEKni1cGDAowiiJaI5OlCtuAUBQu2sb4BvlL847VliE1LGthcHaSKqVe5MplX6ZAK5SAHjmW6bOZS0waehN2/5YD1LMSc1gV130QFX0dt8Z9dTL5GlW10lwEBFbtM0GzxnvcA8tOpWGX1F3yXELr9EBrofKKEcVy+natxoiwK32PN4w8lwxEhUWzzSGTO9X6qQ5yPWXrDUYTZ2EiDkx0E/K5efA3tKOiRu6V7xk3DiCQNSGMti1rieNpgkSYGHCjijr7ZSFVXly17MmlI7o7iYIKAXkoypTQHPUIDWp49j12tfxTzmoWwwmN1zkIWFoVdTvZvjMPKD3BdfTc4Qc/JC/QW6wBPWHf4g9RoI/Rx5qVJhQOXjGFCYztN5UG/SkwDynzem9G3AUpwdxIHruPdDRnyBSouPnr9obUF05/uEw9mM6hMEljRAR4AKPfZISbmgCCPNG/eWUXg9e2e0axPiyKebEfp87PGHwmJoDU6PkdcMslTGfYNOnoWEiO4xqIR4vSN+UFmZxD+YUUZwclB9gY1Ep2R/AtRiL"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/tromsogfinnmark/tromso_-derfor-er-mobilnettet-nede-1.18060211"
+  - navn: "Nordlys"
+    url: "https://www.nordlys.no/veiarbeid-slo-ut-mobilnettet-i-troms/s/80-34-27369"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/fire-skadd-i-trafikkulykke-i-moss/s/80-95-177795"
 nyhetsverdi: 80
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Veiarbeid slo ut mobilnettet øst og sørøst for Tromsø og 1 annen sak · 21. oktober, morgen»"

@@ -4,6 +4,9 @@ description: "Korte nyheter 10. oktober, kveld: Krav til dekk og kjetting for tu
 date: 2026-10-10T23:47:36+02:00
 category: innenriks
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Mattilsynet"
+    url: "https://www.mattilsynet.no/tilbakekallinger/asian-food-import-as-trekker-tilbake-sweet-basil-fra-thailand-etter-pavist-e.coli-i-produktet"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Krav til dekk og kjetting for tunge kjøretøy og 5 andre saker · 10. oktober, kveld»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -18,9 +21,6 @@ Sakene under ble først publisert hver for seg og er her samlet på én side. Te
 Mattilsynet opplyser at Asian Food Import AS trekker tilbake produktet «Sweet basil» importert fra Thailand. Tilbaketrekkingen gjelder 80 grams plastposer med lot-nummer TH 03102026, og skyldes at det er påvist E. coli i produktet. Det er solgt omtrent 40 kilogram av det aktuelle partiet til restauranter og dagligvareforretninger rundt om i landet.
 
 Mattilsynet opplyser at høye verdier av E. coli kan innebære en risiko for at det finnes sykdomsfremkallende bakterier som kan utgjøre en helsefare. Denne faren gjelder særlig dersom matvaren spises uten at den blir varmebehandlet. Forbrukere som har kjøpt produktet, blir rådet til enten å kaste det eller levere det tilbake til butikken der det ble kjøpt.
-
-
-*Kilde: [Mattilsynet](https://www.mattilsynet.no/tilbakekallinger/asian-food-import-as-trekker-tilbake-sweet-basil-fra-thailand-etter-pavist-e.coli-i-produktet)*
 
 ## Mattilsynet innfører restriksjoner for fjørfehold i Trøndelag
 
@@ -53,7 +53,6 @@ For kjøretøy over 3500 kilo gjelder det krav om minst 5 millimeter mønsterdyb
 Sivilombudet opplyser i en melding at sivilombud Hanne Harlem har sendt et brev til Stortinget der hun ber om å få fratre som sivilombud 10. august 2027. Ifølge Sivilombudet ber hun om at Stortinget oppnevner en vikar i perioden frem til dette, da hun trolig vil være sykmeldt. – Det er med tungt hjerte jeg ber om å fratre, men hensynet til min helse lar seg ikke lenger kombinere med vervet som sivilombud.
 
 Det er jeg lei meg for. Samtidig er jeg svært takknemlig for å ha fått lov til å fylle oppgaven som sivilombud gjennom nærmere syv år, skriver Harlem i brevet ifølge Sivilombudet. Sivilombudet opplyser videre at avdelingsleder Birthe Aspehaug Buset vil fungere som sivilombud fra 1. november i første omgang.
-
 
 *Kilde: [Sivilombudet](https://www.sivilombudet.no/aktuelt/ber-om-a-fratre-som-sivilombud/)*
 

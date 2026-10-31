@@ -4,6 +4,9 @@ description: "Korte nyheter 12. oktober, kveld: FN diskuterer situasjonen i Syri
 date: 2026-10-13T00:01:41+02:00
 category: utenriks
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168578"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «FN diskuterer situasjonen i Syria og 3 andre saker · 12. oktober, kveld»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -18,8 +21,6 @@ Sakene under ble først publisert hver for seg og er her samlet på én side. Te
 FN møtes for å drøfte Syrias skjøre overgangsperiode, som står overfor press på flere fronter, ifølge FNs nyhetstjeneste (UN News). Blant sakene som tas opp er økonomiske vansker som fører til uro, israelske inntrengninger i sør og vedvarende spenninger i Sweida. Samtidig melder tjenesten at 5,5 millioner syrere fortsatt er på flukt, og om lag 800 000 av disse oppholder seg i leire.
 
 Blant andre punkter som trekkes fram, er samtaler mellom FN og myndighetene om forberedelser til framtidige valg. OPCW har for første gang verifisert ødeleggelsen av syriske kjemiske våpen i form av 42 flybomber i tråd med forbudet mot slike våpen. Videre opplyses det at IAEA avsluttet sin etterforskning av Syrias etterlevelse av atomforpliktelsene 9. september, og at israelske styrker har holdt utvidet territorium i Sør-Syria siden desember 2024.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168578)*
 
 ## FN advarer om at fredsavtalen er under press
 

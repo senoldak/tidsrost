@@ -10,6 +10,13 @@ key_points:
   - "Uro og konflikter i Midtøsten driver prisene"
 produksjon: ki-medier
 kildeSpor: "v1.5PM8ddYAAPEkJ4O1.mkMF5n++GS3+1h99ua7f1zvhPfp8R/4T2fREDh50DljT8OVkiuXeiTRWrnnVLY04KFXoAzPHcnQ2T6f9/THIDu/Zfljt0BV7NGiQ28jQAnbnstfeWpqLmy5CHKqrUb0ysC8RK8d38akze9ZcVlzm7aNkKMNMmuwWMIQM4+10qqPkiNsQwLMYIHadV/QKTpGQZi6GmleVc34m9anc4WuHxj2Q3DcrDU1S9ce/Vg+hW3NiwmBWaVyMYPIZyBN2mHG9jOwDJoPBvSvPb8BAf6DWqMbQuChK/8HFiYN1cpPK5IBoQB4XLdp51FX7/9s2mxmmdg6bkuTHSBlPy5ojLyjTRuKtcnFqmykw5WOJS85/QXgvFX20/Ln9RBEZ/Di99O7fLmQKjLyaX1aOIYpNZkCYf5p4+r5/o5wyxVhFM5dmVT8klcyJ5rE1/8DSoJw5c+dB"
+kilder:
+  - navn: "Aftenposten"
+    url: "https://e24.no/i/Qgz8eA"
+  - navn: "E24"
+    url: "https://e24.no/boers-og-finans/i/mK2AbO/oljeprisen-hoeyeste-siden-mars-etter-oekt-midtoesten-spenning"
+  - navn: "Nationen"
+    url: "https://www.nationen.no/oljeprisen-pa-hoyeste-niva-pa-fem-maneder/s/80-148-55669"
 nyhetsverdi: 78
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Oljeprisen og gassprisen stiger kraftig til nye topper på grunn av uro i Midtøsten»"

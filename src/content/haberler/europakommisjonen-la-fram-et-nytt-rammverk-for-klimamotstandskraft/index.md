@@ -9,6 +9,9 @@ key_points:
   - "Estimerte økonomiske tap fra klimaskader 2022-2025 var på ca. 200 milliarder euro"
   - "Europa varmes opp dobbelt så raskt som det globale gjennomsnittet"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Europakommisjonen"
+    url: "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2244"
 nyhetsverdi: 85
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Europakommisjonen la fram et nytt rammverk for klimamotstandskraft»"
@@ -26,5 +29,3 @@ Den foreslåtte loven om klimamotstandskraft skal etablere en felles referanseba
 Nasjonale planleggingsforpliktelser forenkles gjennom én enkelt nasjonal strategisk plan, i tillegg til at forbedrede og mer regelmessige risikovurderinger skal sikre konsistens og sammenlignbarhet. For å hjelpe offentlige myndigheter, bedrifter og lokalsamfunn med å håndtere klimarisikoer, inkluderer tiltakene praktiske verktøy på en europeisk nettplattform.
 
 Det gjelder blant annet et interaktivt kart for klimafarer og en veiviser for verktøy tilpasset ulike sektorer og lokasjoner. Europakommisjonen vil umiddelbart starte arbeidet med å implementere rammverket, og vil blant annet følge opp med en europeisk hetebølgeplan, en klimaforsikringsallianse og et europeisk vanninitiativ, før det foreslås en strategisk plan på dette området i 2028.
-
-*Kilde: [Europakommisjonen](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2244)*

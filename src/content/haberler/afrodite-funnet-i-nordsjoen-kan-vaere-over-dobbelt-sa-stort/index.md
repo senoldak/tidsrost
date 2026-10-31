@@ -10,6 +10,17 @@ key_points:
   - "Funnet blir vurdert som drivverdig"
 produksjon: ki-medier
 kildeSpor: "v1.0gipN7nxQYQSzdhK.ur113ivyLUEKYkEJM7HjGyKhd/BkMgEf+nYIpLcpHdjh5R5U9ntU64mF2JURqz7M92RUGL0+gfWIVDGm0HmfudAfwV8vVYI8lppNcjiAQvqp0yRQ8spfRLJFRyeCYMrWWUeDivT8Tjawo81lXuI3RWSHcgsFPsPn7pWR0f+HHWnhSYsYopDi2b81JZQb2UhfhH244A1K3hpgzEkqwcqvSeBDM9NSB7ZakCQrHJNl+cuKlEBudeXEfaACr4PZFpObVMshba2em/e0v/kXWcJrPIQCVV3u0K3MqyWsqDtC5ajlG7nRiOhKAh6tbDxL6/q48PL1SHMQhPxTVedkLXJbfAybHDjvUBmrR1uR24VY7JGRx7LSf4SC+HpAgIGz9xWNTuBW2whaEVhojO1qzA+aMX00Bgfhwl/36NINg9DgSS6Lh0fO1Z1FHppZkxpXQiHcHo6yzECdfUaD5Xo6YriZFUvVhsnq2jp2iHoKlSs0AWv9y4S+e2c6kky5F9hSN7AHyaZW/4co+kAA+xQ5cpDPd2E9XRZ37SFe9Tll86R+DtB55mrH+rm3RbjQ0TRUaj3/Q9H/8VHGTjrFhTtJ27R5CeW6RK8VXWK88ZqhlOekN4x2xFJNnn+e7EyKpQjhiSAQwvvitF5uqWrjdNZ8bvrjLRI9KqaLRgjdRNC2ldWuSWmukOz9EqjSCXB179siO+cvCZOhhd3OkDd/laI85+KPazItzHVHfq/EVTC90eY+DwejcO6ojUymHr+/nfPXllZ5IdTqiHP3k9rJDI09LrMGYVf/5sImnCGvrw4Xg3AQwPOLUzAZHuFFpZjF1uyaLP8rBOxdirWsGnLP8R0LTMGr3UTOEwkqLKUXT/hPJREagGthZJ27vXAnDOLwJ6FDclCiLwnQEL74jevSRU2IaNwB9qHwpABTnMymrb9paeWtvp4RFIiB9KZE1pdB7rtF3QjyXJheA0IIDaJm8rdu"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/equinor_-gassfunn-i-nordsjoen-kan-vaere-dobbelt-sa-stort-1.18067722"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/okonomi/i/0B1vQM/equinor-gassfunn-i-nordsjoeen-kan-vaere-dobbelt-saa-stort-som-antatt"
+  - navn: "Dagbladet"
+    url: "https://borsen.dagbladet.no/nyheter/equinor-gassfunn-i-nordsjoen-kan-vaere-dobbelt-sa-stort-som-antatt/85352471"
+  - navn: "E24"
+    url: "https://e24.no/boers-og-finans/i/L3Vol1/equinor-dobler-anslaget-stort-gassfunn-i-nordsjoeen"
+  - navn: "Stavanger Aftenblad"
+    url: "https://www.aftenbladet.no/okonomi/i/zlq0Ev/equinor-gassfunn-i-nordsjoeen-kan-vaere-dobbelt-saa-stort-som-antatt"
 nyhetsverdi: 75
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Afrodite-funnet i Nordsjøen kan være over dobbelt så stort»"

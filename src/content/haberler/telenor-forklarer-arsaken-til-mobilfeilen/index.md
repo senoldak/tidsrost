@@ -10,6 +10,11 @@ key_points:
   - "Muligheten til å ringe nødnummer ble berørt"
 produksjon: ki-medier
 kildeSpor: "v1.cgjWWF2OVKaAX+o8.Pa9JguJ/11Lqi52wDWzvc2dgpfRgUXEZCewwZnxZZT81zn2y35owTYLBtPZ8U0Rhw7Ec6KoL6q/zBQLWZU+k2lT+XrwaObMG0ko5bK3auhVVoSOT/KzH9V2kaK7KEH0qV6o95L7lKddbyunbMxJWuQd42+whPR1jsEcPGke01BHZX/AE3a+DlCaY8MtImtw5zLY+pVzBuLwENygwRlcPSTTpsVS0q1/kqUtutK6+8qCR3RStuRh1jYYhdDfdkrCumeT1q0kWkhGtUJrNJztvLWkxxDpMCs6SxIUk4SlkoJ1QTEUacgsY2dq6Y/2AB5ITVMpI+YeAVuj7kM5T5tRKYESx7kGyWCZWl5KA1C16"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/telenor_-ma-jobbe-sammen-for-a-hindre-fremtidige-feil-1.18056962"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/okonomi/i/X9JbVb/telenor-forklarer-mobiltroebbelet-i-forrige-uke"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Telenor forklarer årsaken til mobilfeilen»"
 coverKreditt: "Illustrasjon: tidsrøst"

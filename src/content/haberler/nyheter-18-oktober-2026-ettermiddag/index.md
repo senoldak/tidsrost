@@ -5,6 +5,21 @@ date: 2026-10-18T16:03:27+02:00
 category: teknologi
 produksjon: ki-medier
 kildeSpor: "v1.l9e0uMJcV1W/kXmz.wWxkPmdwdwL/mbdeQ8bNJgfISPYPIjdD8kBrwV/oxhb/lobxc3crlTRPGQoRWIuXGfv2rEYWvwcayDl1RG+E9UMATU+JSFgRxTyR3bBtK9V8k+ktdtrHjj7qOrZanV6VgVyIrqmne32wKDlzvKKr74XkrT7CLMrzD/xnw5ZHLolwqy/wnlP4bqA5yG01E7deUenoNRw3rZvnFe4bbOAtV0KHDYgNNlXXafL2OLTh30Gh4QZgWBLBwEpHLwebto6sOFHeW3LK2hlxFgifB4fWppRpaQ9XYizGk806FDLO0uLivZXh/8N29/5TAAxrCQQy5ohi70z2DIxkzQtHUdcM9UVAlGmHiKGGn/uskRxXX4zw3BFvJgHIp1WUuEU+QwAfu9ZpTboHTwIcz+tHn1HLU6SfahM6+da60YUlTz+CpcMN6i4Ahen9MiOa8fyqVi3WM6cti8fKeCd4yvEJryeNgEx538mNl2EWE0ODJlX2JhvegLfBD7ZLIkZp1kmLVxJYisjWOurjSlVoRDqkLxc4TtQgEujT6Sp/OZCnZb7y7K/m/fHA/6+ABZIL96GToty+bCxjvtVAp9KsRnRsthzGWbO6Wx7EJGA5gb+i9MMmCsmm22y+oCnPLenj1KWPoc6aXIZgAITkqrFZqJVkWKf0u4ucBh8/ws6EHjOTIt5ZkzkQbjJUiaAEtO1aypN0aq5TvKhTvxnAoEKjRpTrkYRouUTV6VlPEf06XASVdwGEBL8fCAfMefHoPiCKp8yMO7FeO9imR/QC60Lsr+QMJ67NgNWebtcp77AvixiN9XQd29rELgypoI+RDvPizjB5H4wlNB5Gd4Nk5v5Ly+AHtFoLKgu/PnwSwBP47yYOzM09z24nYq9DrhC7Qpn9Ka6/90rfdwvQWwLTdURrHaj83ytGBMYv0rFPFmrSLM628ned03YIJ7r2MIvGuZUGaPwrWpJ4LgR7iJd1preygRdFhjQKSQLDkIqANblAyENkys7IHwW4Boo4aNBzGr4BtUcJaJaJ96CBI4e+zmyOJLMdrDrFq1//ZYgBzOWcPYmN8cVtXe+26AOtT1v2DWk88ALRHp9ZJLCNizT1LG64AzUTtloLYYPET2C5SfwZDJabpdsBLTJ8v1mibssSsBXqSg5BN0Cst2QKYrU3pqUwW45aeyvLw7r56JANpAkn9QjmyVYB22f4Mo/iEbbT3HYXYapUqxM+MDNP+EhhAwZ8X68D180BnbJOw9GyqrF3suZYzp/uvqBKzzwMlFP8O599sF+LeahnC/Trq9NIDbdekw1Y2CMCsvAmLbe1LU5FHBRlijY9i6V9tIZ1OW7p/oSUG4ef/chiZDAw37hjxeMNBh3l"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nordland/vannskuterulykken_-savnet-mann-i-30-arene-funnet-omkommet-1.18057772"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/norge/i/Wgy0LQ/savnet-etter-vannscooterulykke-funnet-doed"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19334059"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/savnet-mann-funnet-omkommet-i-bodo/s/80-95-169647"
+  - navn: "Nordlys"
+    url: "https://www.nordlys.no/savnet-mann-funnet-omkommet-i-bodo/s/80-34-25992"
+  - navn: "Dagsavisen"
+    url: "https://www.dagsavisen.no/nyheter/ekspert-om-trumps-sanksjonssvik-kan-endre-forholdet-mellom-usa-og-europa/10588280"
+  - navn: "E24"
+    url: "https://e24.no/naeringsliv/i/Ab0483/tiktok-vurderer-nytt-datasenter-i-norge"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Kunstig intelligens og datasentre og 2 andre saker · 18. oktober, ettermiddag»"
 coverKreditt: "Illustrasjon: tidsrøst"

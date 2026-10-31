@@ -9,6 +9,9 @@ key_points:
   - "To alternative systemløsninger vurderes"
   - "Ferdigstillelse anslått i 2036 eller 2037"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Statnett"
+    url: "https://www.statnett.no/om-statnett/nyheter-og-pressemeldinger/nyhetsarkiv-2026/Statnett-planlegger-en-ny-stromforbindelse-fra-Gran-pa-Hadeland-til-Ulven-i-Oslo/"
 nyhetsverdi: 70
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Statnett planlegger ny kraftledning fra Gran til Oslo»"
@@ -24,5 +27,3 @@ Det foreligger to alternative systemløsninger for den nye 420 kV-forbindelsen s
 I tillegg jobbes det med flere traséalternativer som fordeler seg over flere kommuner, og det er lagt inn mulighet for kryssing mellom traséene. Videre må de nåværende stasjonene på Furuset og Røykås byttes ut med splitter nye anlegg som er tilpasset 420 kV, uavhengig av hvilken hovedløsning som til slutt velges. Det er meldt inn en rekke ulike plasseringer og utforminger for disse stasjonene, inkludert både anlegg i dagen og underjordiske løsninger.
 
 Meldingen markerer starten på en prosess som skal lede frem til en formell konsesjonssøknad. Norges vassdrags- og energidirektorat vil sende dokumentene på en alminnelig høring slik at innbyggere, grunneiere, organisasjoner og lokale aktører kan avgi sine synspunkter. Det vil også bli avholdt informasjonsmøter underveis i prosessen før myndighetene til slutt fatter sin beslutning om hva som skal bygges.
-
-*Kilde: [Statnett](https://www.statnett.no/om-statnett/nyheter-og-pressemeldinger/nyhetsarkiv-2026/Statnett-planlegger-en-ny-stromforbindelse-fra-Gran-pa-Hadeland-til-Ulven-i-Oslo/)*

@@ -4,6 +4,9 @@ description: "Korte nyheter 16. oktober, ettermiddag: Europakommisjonen legger f
 date: 2026-10-16T16:04:12+02:00
 category: utenriks
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Europakommisjonen"
+    url: "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2177"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Europakommisjonen legger fram ny strategi mot menneskehandel og 1 annen sak · 16. oktober, ettermiddag»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -24,8 +27,6 @@ Videre fokuserer strategien på risikoer knyttet til migrasjon, bedre beredskap 
 Den nye strategien bygger på eksisterende verktøy som forordningen om digitale tjenester og internettforumet, og legger opp til at medlemslandene skal styrke det grenseoverskridende operative samarbeidet. Som en del av strategien blir det etablert en europeisk næringslivskoalisjon mot menneskehandel. Europakommisjonen vil også støtte medlemsstatene i å styrke samarbeidet mellom arbeidstilsyn.
 
 Det nye sanksjonsregimet mot organisert kriminalitet skal gjøre det mulig å fryse kriminelles eiendeler, begrense deres bevegelser og stanse forretningsmodellene deres. Strategien blir nå diskutert videre.
-
-*Kilde: [Europakommisjonen](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2177)*
 
 ## Kronen styrket seg denne uken
 

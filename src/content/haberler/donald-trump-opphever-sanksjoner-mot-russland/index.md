@@ -10,6 +10,17 @@ key_points:
   - "Møter kraftige reaksjoner internasjonalt"
 produksjon: ki-medier
 kildeSpor: "v1.KzN5SiyfR1vCdWZ+.Z0mEegasUsI42X7+i5JjYN4VObgHrvbRIwzxK3AEk/2+irGeyvMhRvY19uf95wnVZieUiGDVVuJAnArFj3QkgjObZ6PX9wu8Aem8xJqf1N7YCtlAe4bpZ8nBKAyrQdYk3DPo8w9T0vJ9vDYRyj5KRHPa0PaX3f+Isb5hK6Jq9Pi493D0Z77KVsTU+dgC+7SsE4Bm9OCPosioYXHyqvmiD4eSpPp4g9qcLNOnlqLPBuAejf7cS8EEVxO/5WJVLpSDeHlgbjj8xXiEqj+xHxc2THa2qAcqm8Zcus7asLwBX2Uy80rUjS2ZAAI9NLnJKWZ9GlVJ4QWyRHV8QnxVOGsqEpa/JPeAzQfGdxWXVnWn2U8gXD0mDc3jUSJaXApiO5xEJphtAHAUF5hGju1WabDrB8vaxczMdMmgBfA5bTPTfaV86SqbUPVa0AzNTSdU8ke7CEy9Eyjgg0HdJdMROccbJU8zfOI2fqeJI2HKbK8R0lSvtz4wJ7bTLNAJH8AMs79wX9Y2Q90bCHFaAdfHaCaP5HEttwkBQgvjDnRqhuiNRsL4C7AA5ajYzBDaGDDsDKxEZsLy/dOyx9fkLNCzmeATRN+574lW+F19ZP+9QhYIQouW36caDfIRGrzkwSscScfZShYR14QwvRkmMHOGDJ7CFLzNu94LQT9FhWN+lgMNq/RzRsRF09snZVqhPOvnsUcwXUnpjeNjAs+oFHlv1+0IGuQWdlyl"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/trump-fjerner-flere-sanksjoner-mot-russland-1.18057320"
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/AbWabz/trump-opphever-russland-sanksjoner"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/oKPqGj/trump-opphever-russland-sanksjoner"
+  - navn: "Dagbladet"
+    url: "https://www.dagbladet.no/nyheter/letter-sanksjonene/85299996"
+  - navn: "Bergens Tidende"
+    url: "https://www.bt.no/utenriks/i/R5QL65/trump-opphever-russland-sanksjoner"
 oppdatert: 2026-10-20T12:00:00+02:00
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Donald Trump gjør unntak fra flere sanksjoner mot Russland»"

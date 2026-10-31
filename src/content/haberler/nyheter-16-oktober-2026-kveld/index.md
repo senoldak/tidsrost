@@ -5,6 +5,17 @@ date: 2026-10-17T00:02:56+02:00
 category: innenriks
 produksjon: ki-medier
 kildeSpor: "v1.h0E0HJS4hmqVDVGf.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"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/vg_-rodgronne-partier-enige-om-ny-tannhelsereform-1.18057252"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/norge/politikk/i/ylX27R/vg-roedgroenn-enighet-om-tannhelsereform"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/enighet-om-tannhelsereform-historisk/s/80-95-167772"
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/w3XMr4/trafikkulykke-i-oslo-trikk-mot-bil"
+  - navn: "E24"
+    url: "https://e24.no/internasjonal-oekonomi/i/QgqJ9J/trump-er-veldig-redd"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Norge signerer milliardavtale med Sverige om atomavfall og 4 andre saker · 16. oktober, kveld»"
 coverKreditt: "Illustrasjon: tidsrøst"

@@ -5,6 +5,23 @@ date: 2026-10-23T00:02:53+02:00
 category: innenriks
 produksjon: ki-medier
 kildeSpor: "v1.65HPpHWVG9rOV2aI.z6z+8C14ZgOnvPNAHoL9mupKGZh6wtkwQ1awNfRfemYQEcucyvcGZXYEX93UGool0OrcmCSuh3jWdmXrHMroKsVamRIB48TqYP92A6Uno1t2+udCPEbmMpUA5TuHqKkGACTXNmCq4PjwsV7o+b6fxvoN4bRO44y17nOf1cztnSMxC+ami3kymZaQ+66JEqJaZkyOsaszTax12d9xv3TElwYcAFmtUiwZefHXffaAL5eBAOsc9yUWAmVZ8C6dNW30pE++sKWGkg4UKXBYaUe7pErZ9yuwOib7mcscUhXmszAUornNHoSe/3kuOIjEF2XluoxVFKSwoCb8PmwWq4KDOQ/Lk19WqI3DyyACSbCOYI79ApKpMhrA5LxSVR9z4jXp2YE6glfClxiN5QKyCe//t1+LqNi4eqinKnrGszv7BGGMeDDnfnYx9R4sD4u9GEclJXD+VFMlF/avXfb/SpwMkv8Xs5gB2yUcS9MoyFmW+deu/Hdd2eWAqHj8tuxa1zyIel+LCBULRCEi9FAOTATVfuuuAqNq8m2tcGd0mgvBrMd7Ge1l1N8rQrkxrtlaY1ZXF65fAOuO+dBmM4hVBA6Z/bKDPP4oQAoIYa5fiahm7QOus/HUlcHDP+1bsUaPSwtUN0RuvQxvJMZzC6WrLMGarpwoif+U9BwDbxE15XZ3UfEGrde5JNgFoB+A2XNZhYORuPD6Jm5AyAvb7NO/cZ4MSPahyaP2KFottSue2Fj65VqBro3G0dUHo3Ap4ZqmvSETAnDRdpaVyczwAmAaekf6qgLVnJEb+t8VdHUvf8IyST8hkNmV7WV6Y+lLdBL6lcqBEkJqjjfGm/2/o/Q9FgNkN4K9VAtAxzm+rV+IRZIbBEXuz8SJDTDMBe1fAap7bUqkUGXOs9lCQAsiAnzQt2ygRlXagmrkd/YAupENdA8XhVyaoSjx+VJqbYMmDRsy2Ou8T/2G47q57bafUsOnrSZ0+Zb12eklk+Om54u1xTQG4TSXKC5Xxnn7rakX1oyMDCZu1pOfFmBHrb9Zq0p4cqZ0z6H6SWsFM8R9tJNOuPegoleiOTR67lltAedVq+S1UcweYfIxznpAriTRJfiH2eN7ubryV4/PUA0dNZe49R9+Umy10lDHZ7MVDFySuZ4orndSf2fXz3v+Hx9F/rnBbNAgvPFIIrI8GBPdRyFfhKcopX3xh+4LWoKaKwX+lV2Xn3cLcXeG8mAXW/kFK1IkVYtI/RxdDYO4BvvDpChanN4RSucgs4dhciIyyeA9+giFUsklZvk4ajeukiEGalIRiy+7pxO/oB6yItZg8CBGWtVPjKoK76DF5Qu//eAf+y7eCtrwhYCVu6yUaO3vpyCnbFZdMLXk4UAbGSfKxdAQi5hhcywcjcEKR9f1ddKhnsNp10Mqyfkd/GSWRAj9tJYg/g2bzLqGeIcIZnQEIklUo0ZfRNZkLF1UDvemZDP5yJGuZ9Lm2ZNrNOQEvfaW6ddUlamCe+FnoQlipm53FbtKhwlcBTjTSM60mU17PU118VyYb7YSZLbhkAVIjyvbuaF0E0l9cAFeXn7bm3jXahx6F+5Y4Rd4czcYr6U+Z3AVDQknbBnJbFPprlb3rDzOu9sPlo4ypJwldg=="
+kilder:
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/norge/i/mKjevL/vannlekkasje-i-soer-varanger-stengte-skoler-og-roed-beredskap-ved-sykehus"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19349319"
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/macron-varsler-omfattende-demonstrasjonsforbud-1.18061794"
+  - navn: "Dagbladet"
+    url: "https://www.dagbladet.no/nyheter/innforer-midlertidig-forbud/85323693"
+  - navn: "Bergens Tidende"
+    url: "https://www.bt.no/utenriks/i/yljaGr/macron-innfoerer-midlertidig-forbud-mot-demonstrasjoner-uten-fagforeninger"
+  - navn: "Stavanger Aftenblad"
+    url: "https://www.aftenbladet.no/utenriks/i/58q9yb/macron-innfoerer-midlertidig-forbud-mot-demonstrasjoner-uten-fagforeninger"
+  - navn: "VG"
+    url: "https://www.vg.no/sport/i/n9xXdQ/europa-league-real-sociedad-knuste-lillestroem"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/sport/verdensmesteren-mikel-oyarzabal-senket-lillestrom-ma-meie-han-ned/s/80-95-184599"
 nyhetsverdi: 78
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Vannlekkasje i Sør-Varanger gir rød beredskap og stengte skoler og 2 andre saker · 22. oktober, ettermiddag»"

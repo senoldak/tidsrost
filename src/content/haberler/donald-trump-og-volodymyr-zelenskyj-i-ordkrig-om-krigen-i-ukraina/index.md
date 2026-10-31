@@ -10,6 +10,17 @@ key_points:
   - "Trump forhandler om fred mellom Russland og Ukraina"
 produksjon: ki-medier
 kildeSpor: "v1.Pp+YOqOnblKuSDlq.I3t6kJADhIvBCpPuGdBxHJ/UPKbzP3pTmF+2hIpJCSunLwCU4fAxDzS/IInB4s1Q9lmSnBkvP8n0XzgoNiTKa1NAluCREHosB9oDBlaRn6T3Ewp9XXrmUaPH4k0DlWMXpQI//t92VXhhXVNHRh1E/qHss3vRyJg9Paj2FKFNm6J1JjpEcUcOBoTd1sdKtr94/rYESCuY7DEQRqIaNkIvAtv4SIUxjhACGlD7vU+50Rn08uboC6uRQknd+g4m0M4aHUwLtcmNBlaF9tnhoZw8vq2qtPTWWZFcMevuDZ5tSAAbzcvFDVJAmjhp23QxlpcDuTsXDJyWpENPIlEOAWurBaxjsUjbAjslKFeKMu/kfU/unGnzG3v5Hp3/wPBjSCesaQiOi9dWKj9wuTXbOI/6m3KRVBLjYUXa9jMi7Ta8WxYPr1P3HNQ3XPSOaYnuZpMcopV0eQcQKOpYN9y0jFn5HhoGQpyBujrDAuUhbTOKhicDBA4HNcvWiRkcOvi7/xW59V4BBBUnWVS6LWNHkv8Svmk5Pm3pKCFXMPLkuOMH14mlY8RdSIqYKqmyQXGzdmbCWRznft7gUbP2A8GKoYy+zknVxN9zvygbxOVnl+0SkqMeGT0mzRqBMqU/79lhXSbCouWtGWm4EdJnxlOMPQ8PloMCN3kZlPLpDwdTpYxsJdDl3jE1WeEb2sHq5QprpJbB6UqtxkNkYsf4zHAgjXvRNERr4ofNl/qo6CsNCvUxbwEKVvE1wqSK8WD535twGg3BWVC/IBoeVdqIIq1nxMpDiOon+bgn3z0H8bIcppUll72Z0bH2dgUA5VDE+oABUqCTVtO1t1QEz/HoDKtWx+BwvO+d4C4MGWSitjlHJS3H+xu7v1NOKT4y"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/trump_-_-zelenskyj-onsker-ikke-a-avslutte-krigen-1.18058111"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/Og1oO3/trump-zelenskyj-oensker-ikke-aa-avslutte-krigen"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/trump-raser-mot-zelenskyj-onsker-ikke-a-fa-slutt-pa-krigen/s/80-95-170223"
+  - navn: "Stavanger Aftenblad"
+    url: "https://www.aftenbladet.no/okonomi/i/PgLd55/trump-hevder-zelenskyj-ikke-vil-stoppe-krigen"
+  - navn: "Sunnmørsposten"
+    url: "https://www.smp.no/nyheter/n/w3Jrnn/trump-hevder-zelenskyj-ikke-vil-stoppe-krigen"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Donald Trump og Volodymyr Zelenskyj i ordkrig om krigen i Ukraina»"
 coverKreditt: "Illustrasjon: tidsrøst"

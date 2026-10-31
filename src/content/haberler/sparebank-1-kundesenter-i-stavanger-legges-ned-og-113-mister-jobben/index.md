@@ -10,6 +10,19 @@ key_points:
   - "Selskapet drives videre til januar 2027 før det avvikles trinnvis"
 produksjon: ki-medier
 kildeSpor: "v1.HGsKVzoGZkl1Y1Fu.bVbZZcEdpbYyvjEyQ9C0ekP8Mq+B1uXw57p78IvSCj/2tspUPl6phKcoRyyHJVMzsOwpA4CMLAHaRvCLjztMA/uNWFFDaxCzi2GihsRnDLHeVOqucUv4ScztgfaFZDkUAH3uYoW/V7BWQ6diMEK8Cy+563c6iIGV6k4cFv0z9t7niPENR882A20F0Nbpt44Tm2c1szdWMPKGtGGWJ3EgZBABbmC9JM5aDe2I/F6BS9HL5E9TzKMNSBZpzsmocckMkFWCCYQU7yhJ/WpTGrCiSNUxC3CloNjakVLbYikLz8YO1kVve4+srFSvxzBLM6o+UeBj2v3FKcpikFafGzQv+guaPCgAfQ3QJoX0RIdn4wZrHr/7txrnFPAiZnuYLNaiaitV35a0mFTo+54IuniE1tFndUs+2SXCbzqGWREMb1pJM2/DBOD/0V7ApcbMJHjNyFlpXZLhF6bOLXut/OflHqA6GmgRIyAtVnsUefvGzX2O4gzheSaK4ft89jux3ozXFYFtROfCmhPapgbfk2GHAXVYUh5wk3E0v61vCT8wqlCBtovDOSNtLizv6U4O9aqmEL9IIfrcXSK/zP7LcvfarqqsKDy4nBf4cPMCLGpRr5Jw/x252jWH/h2lH3hX60jXymm9R6R/umclJisuZqjM2PNw/vaXKAzp9ZynN1I5v9eyCDGKJY0aTMxsT3mB2mOlrXVgXr97hp6GLMeg++YfDjwrNHYal50+9To5ecD9nIZbpjTi1YWW2wcsLkN0dfpiWQQ3HeHSBdEGUgMjHh11HV5mgR+qVBdwbRDhSHFD3TixDR32MzL+BkqNBHOJUxe20dEP4tU0Fn63A/5U7iV6DuxnQQ3dh73E/45vu4hA5FXys3+DoPv1Maj0W/0XhN0tklO9uEmoP97d/lk1Gaqd/8VPMTFTWNnz1/ntHMOwcrMl4ExSRUI="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/rogaland/sparebank-1-legger-ned-selskap-med-113-ansatte-1.18067120"
+  - navn: "VG"
+    url: "https://www.vg.no/i/OgxxMk/sparebank-1-legger-ned-felles-kundesenter-113-ansatte-beroeres"
+  - navn: "Aftenposten"
+    url: "https://e24.no/i/lKPJvA"
+  - navn: "E24"
+    url: "https://e24.no/naeringsliv/i/lKPJvA/sparebank-1-legger-ned-felles-kundesenter-113-ansatte-beroeres"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/okonomi/sparebank-1-legger-ned-felles-kundesenter/s/80-95-199091"
+  - navn: "Stavanger Aftenblad"
+    url: "https://www.aftenbladet.no/lokalt/i/64OObL/sparebank-1-legger-ned-kundesenter-i-stavanger"
 nyhetsverdi: 74
 cover: ./cover.png
 coverAlt: "Illustrasjon: «SpareBank 1 Kundesenter i Stavanger legges ned og 113 mister jobben»"

@@ -9,6 +9,9 @@ key_points:
   - "Rundt 950 000 fordrevne lever i områder med risiko for flom før vintersesongen"
   - "160 oliveninnhøstingsrelaterte angrep dokumentert med skader og ødeleggelser"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168625"
 nyhetsverdi: 78
 cover: ./cover.png
 coverAlt: "Illustrasjon: «FN advarer om vold og tap av liv i Gaza og på okkupert land»"
@@ -24,5 +27,3 @@ Mangel på drivstoff, motorolje og essensielle forsyninger truer også viderefø
 Rekordmange rivninger førte til at 96 palestinere ble fordrevne, ifølge tallene som gjengis av FNs nyhetstjeneste. FNs uavhengige menneskerettighetseksperter uttrykte bekymring og ba Israel om å garantere beskyttelse og trygg tilgang til landområdene for palestinske bønder under årets oliveninnhøsting. Ekspertene uttaler at innhøstingen har blitt en sesong preget av frykt, tap, vold og ødeleggelse, og minner om at Israel har en internasjonal rettslig forpliktelse til å avslutte okkupasjonen av palestinsk land.
 
 Det internasjonale samfunnet, og særlig stater med makt og innflytelse, oppfordres til å utøve maksimalt press for å beskytte sivile, stanse annekteringspolitikk og sikre ansvarlighet for brudd på internasjonal rett. Situasjonen kan forverres ytterligere som følge av nye israelske ordrer om oppbringing av oliventrær og økte restriksjoner for bøndene, advarer ekspertene ifølge UN News.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168625)*

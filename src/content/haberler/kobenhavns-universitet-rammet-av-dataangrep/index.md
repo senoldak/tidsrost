@@ -10,6 +10,13 @@ key_points:
   - "Alvorlig cybertrussel"
 produksjon: ki-medier
 kildeSpor: "v1.vrsuVf/QDXc3+D1z.aCXHLeSfyuzv/QWvzTNyuYpH0R6Hmc2nTGkXYDgrFJKfCunKTqLzXgQ10pu6HYpc667CwFB2pSZR3yCU793/yEk4i7VIDPCpjKTKHb8oN2xaKsJPmUGTaYX3UIssQwU5cucIaEMRHES0/EtvtsIXLyQwdb0iHQTlqylm0Z/hRLp7nmIuB5pMjkipjUdWdiW340NEJUU0Zae8qwTtaXL2iEp0tcyikp+B+cThtEAbF9flzXgDSrygYLRfLig1lIm4RPKYeBrcQefz+xj2pRBWJJsS4YEQbsKq5DDT3DoQKZ4gqSO6YG7ewftZGYtUIR8AWSYFd8vlbjfmwXW8GwiIrzduHaDb4aNH4/7R5sfRSu34rNgm0/KuPnzz2Pi2S6f/mt7J+WwQGK9P+JOK86I4ASN6FvmmSwbwhfqtKcnWIOVXAYtRf2l5aMosZMhryZixs1HENIhRVeKEijHH/dUw6nmw4gL6Nn2/bMkshPPKjF1sXM3Vr6ET7YPipHTbm/0yCFrFI4vP+dCnJ7mYo+3cSXDt3pRHO0W1Y50oOXHM8Xqn"
+kilder:
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/qy4Ozw/koebenhavns-universitet-utsatt-for-dataangrep-opplysninger-fra-525000-personer-paa-avveie"
+  - navn: "Dagbladet"
+    url: "https://www.dagbladet.no/sport/et-forferdelig-rot/85323080"
+  - navn: "Bergens Tidende"
+    url: "https://www.bt.no/innenriks/i/2V7mgB/koebenhavns-universitet-utsatt-for-dataangrep"
 nyhetsverdi: 80
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Københavns Universitet rammet av dataangrep»"

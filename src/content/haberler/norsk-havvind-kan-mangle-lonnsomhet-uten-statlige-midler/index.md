@@ -10,6 +10,15 @@ key_points:
   - "Norge kan få kraftunderskudd mot 2060"
 produksjon: ki-medier
 kildeSpor: "v1.h36ufbga8ALIsvKa.54XtXWXGbHbvl1uUNPbNyqzhiOepd2sTGn/nhg5yCnxmXXGvJc/cmkQq8UylVCVnhosHbcabKsxBj9koUKUIktbkDG/GmGpxe9/UpeR6poOakfCOgx3Jn043bZRH7h3lIZmPP/43Xa9zCAWwoOa0zx6F3VRqgRHNJRQ3tRJXuZ+7SjiTh5WRbJH9F9TT5wr/ZGo1HglRTdFoTzjaCF1nSfbjId57ydIfenafVsUA+gzHzXCnoXp2m11wXAd0TF+LDDk93PcFUs0LePkTI+mOlN81mvwISUUHnhakwuRJO1yfvcCPV0vDvuUCEDbmk5lySftjquFqy+Ih3hLFKaKGEflm558JH1JuOOHiR256+KYrIdZ1o1wyh3lB+ayUG3OsPOBuN9AYieV6B84TL2JX21JhkbqBRy9HH2HrXgE7gqy+chhLCSETFCSTEgzfAX59ngNFj1Lu5k3zgwMjm+W+GVHPJa7BYTNueho46phMtGz6gE6pZ0C07c0RoBZQISzdTquauuW4IKjcEtFNDkqQvPwc3r/892wKKjSKnmW7OP7LALQtVuODddTA21C3hPTkcEWOXdobCiS+vKB7aQOBpa5umSUtmKn7YwJaTSkLzYSSeI9xHD7xKyDTVCrbUZryr1oNbxRULV9rslIfx3BgrXmvh3QAAXYWfYqW6b5KwjEU9erNtDqu7gpBAgzMndfAyZ5x4gqBmo8iMIFPFbhSoTjm+DFMBdc9/IwARM37"
+kilder:
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/okonomi/i/d7V19w/statnett-norsk-havvind-vil-trolig-aldri-loenne-seg-uten-stoette"
+  - navn: "Bergens Tidende"
+    url: "https://www.bt.no/innenriks/i/mKq9w0/statnett-norsk-havvind-vil-trolig-aldri-loenne-seg-uten-stoette"
+  - navn: "Klassekampen"
+    url: "https://klassekampen.no/artikkel/2026-10-30/tror-norsk-havvind-aldri-vil-ga-i-pluss"
+  - navn: "Nationen"
+    url: "https://www.nationen.no/norsk-havvind-vil-trolig-aldri-lonne-seg-uten-stotte/s/80-148-60542"
 nyhetsverdi: 76
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Norsk havvind kan mangle lønnsomhet uten statlige midler»"

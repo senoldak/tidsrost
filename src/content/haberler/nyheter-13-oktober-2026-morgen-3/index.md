@@ -4,6 +4,9 @@ description: "Korte nyheter 13. oktober, morgen: Mammografiprogrammet markerer 3
 date: 2026-10-13T08:02:07+02:00
 category: innenriks
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Statistisk sentralbyrå (SSB)"
+    url: "https://www.ssb.no/befolkning/flytting/artikler/eldre-bidrar-til-distriktsvekst"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Mammografiprogrammet markerer 30 år med gode resultater og 1 annen sak · 13. oktober, morgen»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -20,8 +23,6 @@ Statistisk sentralbyrå (SSB) har sett nærmere på flyttemønsteret til persone
 Blant dem som faktisk flytter, går turen i større grad til mindre sentrale kommuner. Tallene viser at sentralitetsklasse 1 har flere eldre utflyttere enn innflyttere. Mens sentralitet 2 kommer ut i balanse, har sentralitetsklasse 3, 4, 5 og 6 hatt flere innflyttere enn utflyttere i de undersøkte kohortene fra 1996 til 2010.
 
 SSB påpeker at eldres flyttinger har blitt mindre desentraliserende over tid. Utviklingen mot en større balanse skyldes at en stadig mindre andel av flyttingene skjer fra de mest sentrale kommunene.
-
-*Kilde: [Statistisk sentralbyrå (SSB)](https://www.ssb.no/befolkning/flytting/artikler/eldre-bidrar-til-distriktsvekst)*
 
 ## Mammografiprogrammet markerer 30 år med gode resultater
 

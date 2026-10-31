@@ -4,6 +4,9 @@ description: "Korte nyheter 15. oktober, ettermiddag: Datatilsynet med rapport o
 date: 2026-10-15T16:12:01+02:00
 category: innenriks
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Havforskningsinstituttet"
+    url: "https://www.hi.no/hi/nyheter/2026/oktober/ny-sjomatdata-no-kan-du-sjekke-kva-laksen-din-inneheld"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Datatilsynet med rapport om KI-referent i barnevernet og 7 andre saker · 15. oktober, ettermiddag»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -20,8 +23,6 @@ Ifølge Havforskningsinstituttet har databasen Sjømatdata kommet i en ny drakt 
 – Vi er veldig glade for å ha fått til eit produkt som vi er stolte av, og som vi trur mange kjem til å få både nytte og glede av, seier prosjektleiar Rita Hannisdal.
 
 Havforskningsinstituttet opplyser at databasen lar brukere fordype seg i enkeltarter eller produkter, sammenligne innhold i ulike arter og havområder, samt bruke en ny kartløsning. Havforskningsdirektør Nils Gunnar Kvamstø peker på at tjenesten viser instituttets rolle som premissleverandør for norsk sjømatnæring.
-
-*Kilde: [Havforskningsinstituttet](https://www.hi.no/hi/nyheter/2026/oktober/ny-sjomatdata-no-kan-du-sjekke-kva-laksen-din-inneheld)*
 
 ## Næringsministeren besøkte London for å styrke samarbeidet
 

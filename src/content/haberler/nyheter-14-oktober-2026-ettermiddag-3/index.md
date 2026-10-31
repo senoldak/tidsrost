@@ -4,6 +4,9 @@ description: "Korte nyheter 14. oktober, ettermiddag: Flertall mener offentlig k
 date: 2026-10-14T16:06:54+02:00
 category: okonomi
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168591"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Flertall mener offentlig kunst- og kulturstøtte er viktig og 5 andre saker · 14. oktober, ettermiddag»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -18,8 +21,6 @@ Sakene under ble først publisert hver for seg og er her samlet på én side. Te
 Intensiverte kamphandlinger i Yemen har stanset livreddende assistanse til 800 000 mennesker, ifølge FNs nyhetstjeneste (UN News). Skiftende frontlinjer, blokkerte veier og økt usikkerhet begrenser tilgangen til byen Taiz og andre konfliktsoner strengt, opplyste WFP onsdag. «We are critically concerned about the escalating conflict, but even more so about the growing number of people we can no longer reach because of it,» uttalte El-Khidir Daloum, landdirektør for WFP i Yemen.
 
 WFP opplyser at situasjonen er spesielt alarmerende i Taiz, der mathusholdningen er under hardt press og matlagrene minker raskt. Ifølge UN News er millioner av mennesker rammet av akutt matusikkerhet på nasjonalt nivå, og organisasjonen krever sikker og uhindret humanitær tilgang samt umiddelbar finansiering.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168591)*
 
 ## Dårligere oppvekstvilkår for skreien
 

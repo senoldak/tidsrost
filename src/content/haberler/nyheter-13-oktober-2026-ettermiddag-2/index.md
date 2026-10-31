@@ -4,6 +4,9 @@ description: "Korte nyheter 13. oktober, ettermiddag: Vil gjøre det mer attrakt
 date: 2026-10-13T14:24:18+02:00
 category: innenriks
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Helsedirektoratet"
+    url: "https://www.helsedirektoratet.no/nyheter/vil-gjore-det-mer-attraktivt-a-velge-helsefag"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Vil gjøre det mer attraktivt å velge helsefag og 2 andre saker · 13. oktober, ettermiddag»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -20,8 +23,6 @@ Ifølge Helsedirektoratet viser den årlige rapporten om kapasitet i helsefaglig
 Direktoratet anbefaler også å styrke og standardisere fagskoleutdanningene for helsefagarbeidere, slik at flere oppfatter at det finnes en videre karrierevei. Målet er at helsefagarbeidere skal få mulighet til å gjøre flere oppgaver i helsetjenesten. Helsepersonellplan 2040 peker på at det vil bli stor mangel på helsefagarbeidere hvis det ikke settes inn tiltak.
 
 Videre foreslår Helsedirektoratet å øke utdanningskapasiteten for sykepleiere med 100 studieplasser og for leger med 68 studieplasser. Totalt foreslås det å øke kapasiteten i de 26 helsefaglige utdanningene med 388 studieplasser i 2028. Direktoratet framhever samtidig at det er behov for desentraliserte studier for å beholde fagfolk i distriktene.
-
-*Kilde: [Helsedirektoratet](https://www.helsedirektoratet.no/nyheter/vil-gjore-det-mer-attraktivt-a-velge-helsefag)*
 
 ## Departementet: Ny hovedrapport om klimautslipp fra jordbruket
 

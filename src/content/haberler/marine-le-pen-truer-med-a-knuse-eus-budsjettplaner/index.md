@@ -10,6 +10,13 @@ key_points:
   - "Le Pen vil kutte i EUs midler og støtte til Ukraina ved valgseier"
 produksjon: ki-medier
 kildeSpor: "v1.VvhpBJtKzA8ZhItn.i+e58ufc4OhL4+OYLN7s7I9GIOHd9vZc/daHh5X8dofn106t5BMu4CFBuhWW1V6nB9C3vm1MstazHiwOgC+9rXb6X5OX67UEAqswnFfdKdpP+ZsARqh6+HHgsyTzEZEGEfH0SRwwODyoqCHDmyV0zTiSvis+LOq9R2Qss7yRtN9gozUOYLFPcr3CDVwTEbJvfV57L9dkX6M59Rz3ZYRqFcegtBJk6QvxPU50CDe9VAyNfKOoWi3p7WOrVyYBx4/0V/mFslsswffsnyN57EiRPUVNqelEjVF+4UvEa2rq/VBv58FxG+ZaJpxcFN7FH7H6leioiHuEu2KAFqBqEBDZJvLKHOtmX1bYZ/JY8UGQyuQ9zSIOC9Ei/NPR6pu0AQOK3Ei5B90mqPZhqu+6DyfXiijD4WYIIiNJ1y1wZqLD0oiHs7Z1opLbYFaF831rAHdgviN/ZxDQ2zGj+jOmUXh/Dq9zvM9MofJuGoUN5guKUVfkRV78rPmpA5SUTNDSjefa4Z0="
+kilder:
+  - navn: "Dagbladet"
+    url: "https://www.dagbladet.no/nyheter/truer-med-a-knuse-eu-planer-skandale/85295254"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/eu-lederne-lar-seg-ikke-skremme-av-budsjettsjokk-fra-le-pen/s/80-95-164424"
+  - navn: "Dagsavisen"
+    url: "https://www.dagsavisen.no/nyheter/marine-le-pen-vil-smadre-eu-og-energisamarbeidet/10585850"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Marine Le Pen truer med å knuse EUs budsjettplaner»"
 coverKreditt: "Illustrasjon: tidsrøst"

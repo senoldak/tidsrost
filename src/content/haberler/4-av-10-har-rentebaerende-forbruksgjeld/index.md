@@ -9,6 +9,9 @@ key_points:
   - "278 700 personer har tyngende forbruksgjeld"
   - "Leietakere og enslige menn er mest utsatt"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Statistisk sentralbyrå (SSB)"
+    url: "https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/4-av-10-har-rentebaerende-forbruksgjeld"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «4 av 10 har rentebærende forbruksgjeld»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -23,5 +26,3 @@ Forbruksgjeld, eller usikret gjeld, omfatter typisk kredittkort, nedbetalingslå
 SSB peker på at enkelte befolkningsgrupper oftere har en stor belastning fra forbruksgjeld. Blant menn som bor alene, har 8,3 prosent tyngende forbruksgjeld, noe som er over dobbelt så stor andel som blant kvinner som bor alene. Videre viser tallene at innvandrere har en andel med tyngende forbruksgjeld på 7,8 prosent, mot 4,4 prosent i befolkningen ellers.
 
 Personer som ikke eier egen bolig, er også langt mer utsatt. Ifølge SSB er andelen med tyngende forbruksgjeld på nesten 11 prosent blant dem som ikke eier bolig, noe som er mer enn tre ganger så stor andel som blant boligeiere. Blant dem som både leier bolig og har lav finanskapital, er andelen nesten 18 prosent.
-
-*Kilde: [Statistisk sentralbyrå (SSB)](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/4-av-10-har-rentebaerende-forbruksgjeld)*

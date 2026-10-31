@@ -10,6 +10,19 @@ key_points:
   - "SAS venter begrensede følger for flytrafikken"
 produksjon: ki-medier
 kildeSpor: "v1.3i/EYHcoQoC75kae.X8EfLfTWgts5Rsfydvb7GSIEeKMd+c8OJ3TzWKOmD6509HVC4tFJuRObZk7r6YrRtjKQ629F1SnTHXF7BtGxxG1OX01Lp/hGK8aQ3BnYR33F5YnFaT8PFNp/W/rb1UNBmQxlf1AsNUz61nxJxIy8jAm+qSxYyKuf1SM3kIsBYOZj14OJlRjlxlkPTuOboqJV7wx4QIYSBIjF8q9MxpcWmhXwtuaREG0e1e9ScDUWplQas2KAC+wTmDVAkUq6P4o4m081M+imX3YRb/f+eEdfYzpMgc9hOyp6PkHU0XXGJpD36F4w3enm/KMcoCPcYCsAy7nXWzTcAPImtY1BgF5mMAXSj0H2vJZChRCXAuA28sYg4t5o1qzjxwsotIF5YDIEOP5yVLW4iaY7UW1WBFvFpA5cIvGJBoaBigGRL2Bu0l7SbbYoLU0ZAQcI7PYTDtxj92ux8mn1ZvBKBf+MFy0G5OOBbEKzN+DlK2q6CNXXJd9c1461xFEEBRfq1RNU/51yvyzFmvehnADGY2Mg4OPgOo/m99b05ly1J19iTrY1EM0izEoB4psngvFo3dFDAB1OQsePTSjXScGoGATwwggubek16RDf3w3QULHIY0JYgcCTLqVz9U91C3b9O71IRcX3MXfbE0N8oPUJBMMQ6lWFD3b8U74uS00fQEwjSTE6aRCfIhQzDhcNs9LA/sQsmnFkSN0AAsKCpwAyCWYPY2nMh2TtuZcwQ3MNo2zl+aXDZ48MfTbpzpQAtRbOgvgnndVZZ1dkTHzg7RCwyqeFBsXGsjxBLFFAdakWInSaYT37r/w5cLFnpC3b+FW4o61Q+aM4Zbv2T0rgw+/2QZGn6rkObjS5DV9GZFqoi4T4"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/sas-streik-i-gang-1.18066664"
+  - navn: "VG"
+    url: "https://www.vg.no/i/w3l2eP/i-dag-starter-sas-streik"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/norge/politikk/i/2V6Ajx/kabinansatte-i-sas-ut-i-streik-vi-kontakter-passasjerer-direkte"
+  - navn: "Adresseavisen"
+    url: "https://www.adressa.no/nyheter/innenriks/i/2V6Amy/kabinansatte-i-sas-ut-i-streik-vi-kontakter-passasjerer-direkte"
+  - navn: "Bergensavisen"
+    url: "https://www.ba.no/na-er-det-streik-pa-flesland/s/80-8-86451"
+  - navn: "Nationen"
+    url: "https://www.nationen.no/sas-i-streik/s/80-148-57544"
 nyhetsverdi: 85
 cover: ./cover.png
 coverAlt: "Illustrasjon: «SAS Link-kabinansatte i streik etter at meklingsforslag ble avvist»"

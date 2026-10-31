@@ -9,6 +9,9 @@ key_points:
   - "De siste 11 årene har vært de varmeste på rekord"
   - "Vekstratene for CO2 har tredoblet seg siden 1960-tallet"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168677"
 nyhetsverdi: 92
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Klimagasser og karbondioksid nådde rekordhøye nivåer i 2025»"
@@ -22,5 +25,3 @@ Også nivåene av metan og lystgass nådde nye topper i 2025. – Hver ekstra de
 WMO peker på at de siste 11 årene har vært de varmeste som noen gang er målt, og at denne oppvarmingstrenden vil fortsette. Vekstratene for karbondioksid har tredoblet seg siden 1960-tallet, og byrået understreker at karbondioksid har en svært lang levetid i atmosfæren som vil påvirke klimaet i tiår og århundrer framover.
 
 Organisasjonen trekker også fram bekymringer knyttet til energitransformasjonen, inkludert molekylær hydrogen og svovelheksafluorid, der sistnevnte hadde en rekordhøy økning i fjor. Rapporten legges fram for å gi vitenskapelige data til forhandlere som deltar på FNs årlige klimakonferanse, COP31.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168677)*

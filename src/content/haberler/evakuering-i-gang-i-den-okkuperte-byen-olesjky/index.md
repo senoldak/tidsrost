@@ -10,6 +10,13 @@ key_points:
   - "Bussene kjører til Ukraina og Russland"
 produksjon: ki-medier
 kildeSpor: "v1.yxe0dgLBw0HuKD9I.2iktgDksuP92KkCj1uLfVRjDJnOuUeR8Ss2u2p/4zUeoIeSc+EQHVLv6DeSSaK1Upxkm+CfCzq+K8RLzsJeagFGJwmrKHGFnHRZmjzL1f1r5ofdneEFPJ+U4Pq5rsnPScK4YBT8t7ZdwY4GoW/EopimXk59vih8vKCXI4ycTdNc6YgvTb9phO+AlPQoXT4uW/AaK2sZ/ER4elyh7CBv7a0X3HhDwjife1+DhT3VsmmjC+dc5K6oz3zhnj6e0nAOVT6vRoxzY3Q40fS5iG3lir89UUnpM5z1sFX+N7P9DUP/PmXVLWkTkpD+WmaHFnAWIEXlHuZYzxdO2wonddfeW4WhVt4Jm9a7Z/boZogO//HLx3kTXwWVYKoOsZUapzyI+XqivrXsX/TEtBr6YXjUPUfp9r2ZJQdsNeaikIAB5hFZWZGuXDBKilWxm/bo5s7aVymehguLQ9YahgXpefTROLzl1tvSopDCfvq9v1rbjap2AjBNnSI408w8z113QKN+Om1ayi9WPONMRiCUiRz+ejgzd1iJS1PLxqh1Wl6Fnp6FCAmNq3i48ZBFcyw=="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/evakueringen-fra-den-okkuperte-ukrainske-byen-i-gang-1.18069225"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/KrVg8M/evakueringen-fra-den-okkuperte-ukrainske-byen-olesjky-er-i-gang"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/evakueringen-fra-den-okkuperte-ukrainske-byen-olesjky-er-i-gang/s/80-95-205529"
 nyhetsverdi: 72
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Evakuering i gang i den okkuperte byen Olesjky»"

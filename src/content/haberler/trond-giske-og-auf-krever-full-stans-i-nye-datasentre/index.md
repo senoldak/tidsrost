@@ -10,6 +10,13 @@ key_points:
   - "Statnett anslår at nye datasentre kan beslaglegge 60 prosent av kraftoverskuddet innen 2027."
 produksjon: ki-medier
 kildeSpor: "v1.FMTEZgppN6k8UQ2f.L+REm4ZrtvrGwQYWwW4PkuAtFK9U7pb9d6KLbmp4RYlsiJWqasGJ6r6IIjpnRtaAVmQY/VobcHIkvi3zCjEdGQAqdWJhUU8Cy2z7qZ0K7yLCZWGWnHRHMcSfP4lGi/Zw44YYSyxhVZ8M4TLCQ2VZpVerzEKSikONsIv6bA2sRsT3pk2jVssrevADX42//SJUYflTDFO6X69y85D2Cz2bjSsGUoltDzm1QSCpgdpkJl02DULDCwf9k5yUHiPNvMvXsY7cTARRPPXGpqwTjGKud4iIFaYUXvvfAHkP2tU2RCjXtjRVe5K/QuXFK1QQniRwkYFKAlQEUa3FaH5DLKi5YcPiPJDj5ajaHNhtLhUHkV0xC1qlXanAoDFxdpzJbd3Us7IXHw+g9Z5AXdn2AgydCPztaXGeza9MkMMgvBen1ZM7w/HVsDMw9OIWJ9ztbHDniRWlyrdfAu48gMly5aRaqy3vFq4MUhG6pewR7MYbU42aHNM7FeTKsBNJeCkhZLEmZYyFVpET7w=="
+kilder:
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/okonomi/i/d7V7Ko/giske-og-auf-stoetter-krav-om-datasenter-stopp"
+  - navn: "Digi.no"
+    url: "https://www.digi.no/energi/giske-og-auf-stotter-krav-om-datasenter-stopp/7179395"
+  - navn: "Klassekampen"
+    url: "https://klassekampen.no/artikkel/2026-10-29/stotter-kravene-om-stopp-i-bygging-av-nye-datasenter"
 nyhetsverdi: 72
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Trond Giske og AUF krever full stans i nye datasentre»"

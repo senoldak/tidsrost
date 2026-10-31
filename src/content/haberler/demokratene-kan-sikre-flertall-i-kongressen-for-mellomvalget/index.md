@@ -5,6 +5,11 @@ date: 2026-10-30T12:07:46+01:00
 category: utenriks
 produksjon: ki-medier
 kildeSpor: "v1.jq+eMCgrBqK93yNq.kva8O3IVK420qhuPRVd29tFc45u1qkqJfaoPHePL7Y5X1OE8w7lyU3u41+vqWxA4OFfkNFfyt5nHouGms10fqOr8Rxq1CjsX/Zh6MKWnKjiAaWYiL28wRmgDXokxwOjRk5bNOYHFZe6eEtSq6lBTj18KOa8G3FGvrjnMFDtav8hCN9Ve12muQhN7E3OsC0yuwl8RX0gP6kE/fWIQrBykCjoDAEy0hx1AzZkUTTM7weSeU+agcKePka5cg+SGjVTlo47bREpt0cTu+O7rlx/1oYrdZhLNuJKruzrtNifi27qvXOCZXAcN1q6h1ERHKC4PhZDV+aGjP/B/jZwoew=="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/ytring/trumps-alenegang_-kan-bli-verre-med-demokratisk-kongress-1.18067848"
+  - navn: "DN"
+    url: "https://www.dn.no/politikk/mellomvalget-i-usa/usa/hilmar-mjelde/kampen-om-kongressen/2-1-2064223"
 nyhetsverdi: 78
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Demokratene kan sikre flertall i Kongressen før mellomvalget»"

@@ -10,6 +10,11 @@ key_points:
   - "De fire nye turbinene skal bygges ved METCentre utenfor Karmøy"
 produksjon: ki-medier
 kildeSpor: "v1.xnamMFgyIIUf6Lqp.mhD3dIw89PRUnLKV54fAvaUEBmSWUU5pWjAaGSaAec8NI3U53HaixFBYeRuIhQK0+r+3YyGlgDTpMpac1Tg8KPxBmf7Xbqoj2yFN4xN1LSkUZgKW7CtQNumd1EJ3w151biXQk3XM4T/BafIPNWg1bHsrRnAyX3wC6FCiPyGRaADRyCg021LJDfp2/PzbB8SbqItyo++5XGSTKwTY5HDOI1f6B38aqE0fQim8TMuiREXudP3z1xEwG03RkvAODbzA6An/DoXM0jb/2jc9GFQeb06FSWfPlr+ITynUixq0GQchOF1t8dstUlT2qjDTvMKGVvBuUKfCunBj4RRKl1WgrndR79OvHHE="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/rogaland/to-nye-havvindprosjekt-mottar-milliardstotte-1.18069116"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/okonomi/3-9-milliarder-til-to-flytende-havvindanlegg-utenfor-karmoy/s/80-95-205973"
 nyhetsverdi: 78
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Fortius Offshore Wind AS og Fram Wind Solutions AS får milliardstøtte til havvindprosjekter»"

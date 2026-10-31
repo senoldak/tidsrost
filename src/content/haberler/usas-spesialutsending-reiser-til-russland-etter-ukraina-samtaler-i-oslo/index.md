@@ -10,6 +10,11 @@ key_points:
   - "Lavrov utelukker politiske innrømmelser fra russisk side."
 produksjon: ki-medier
 kildeSpor: "v1.PBkjP5+lXjmcb2ak.FUd+zDflggwaofUKqU/gSnb2j7xpKFmF66D3cniO1CHh+DKKFzeXE8MzCNMKQOvO+F6AFT/EOaaARwxX5keYgElvm10fD9nGSwcr9Xux/xMqZYoeVDn08XqlUn1c+YL6SbIe0dhNAHd32UpUxl76B2A0kfUZmSE9VRHUvWkWrQccKvf4WrAgGP6gIEyLBVjyBkcIsaEb/Ox/HNvtYV7sRB4kjyAkH9htSoULrRswaGrroS1WKRh3xc4RD/aCrn6kqWbkhanlkaFrielDyS2rNP4AImYSmpKPZfytvacPEs8d/VGtR+A5I0cC2Y33um2FkWyQc/4Tejk6yqyAiwxoTPzxsmz430Jq6M7krS236A=="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/-store-bekrefter-at-witkoff-skal-mote-putin-1.18060109"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/oKml90/nyhetsstudio-zelenskyj-moeter-usa-i-oslo?pinnedEntry=124888"
 nyhetsverdi: 85
 cover: ./cover.png
 coverAlt: "Illustrasjon: «USAs spesialutsending reiser til Russland etter Ukraina-samtaler i Oslo»"

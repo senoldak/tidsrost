@@ -10,6 +10,11 @@ key_points:
   - "Foreslått pris økes til 45 øre/kWh"
 produksjon: ki-medier
 kildeSpor: "v1.76bEqyEZXB64dTqq.+km2tavS+nUw7lI1r6B3hHVs+vfBQ4Pgt9rImJxh63JWjSbFfA4Ph9IGAo+YOpyv/aP7F/rTsMB/xn/OZrNyUZT63B/R2emSYaS68jlZjHkaXiVKKfB2Z7bfl6ooOjVTsHGfmKxblmFda8AIN1FfJvgRsOargVWiso9DX4RndBOLLMMtE+IEchpl7wdLKXbo/CppNLzAzUT/E6W/51ms/e1/hnGnbbm3367fdwvKNlGTSpXuqk86imEDD4iZ/1GMMJ9pb2gsgR+2F8LLEa3Y3JIksg97TM8pWAa9G0OAgNfcsUM1UNnr04kWPosI0po9gTfDhAI9F0iXrG1ri6FIoNTZum2pFLvtxb3fFPwQMiMvYxzZaG7/Ob5aX1E6lyAkKbNctH3xjCokveXmaYU+kvYgDB1Cx5gfeXAecU+W35vPIMt1"
+kilder:
+  - navn: "E24"
+    url: "https://e24.no/norsk-oekonomi/i/OgV66q/har-spart-naer-20-mrd-naa-er-norgespris-datoen-klar"
+  - navn: "Bergens Tidende"
+    url: "https://www.bt.no/innenriks/i/w3qRyo/nordmenn-har-spart-nesten-20-milliarder-paa-norgespris-aapner-for-nye-avtaler-fra-5-januar"
 nyhetsverdi: 75
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Norgesprisdatoen for 2027 er klar etter milliardbesparelse»"

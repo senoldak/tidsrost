@@ -10,6 +10,11 @@ key_points:
   - "Lovendring om midlertidig arbeidstillatelse for asylsøkere er ennå ikke satt i kraft."
 produksjon: ki-medier
 kildeSpor: "v1.Nk863Zu/XkLlqAXt.hPrezgRYw+3pht4480hGRFHQIzsoS53J0YINQCVSeG8q7wJ8IX9aKkFkgUIHvM3w+h1E3hZA0rrVwcP/FOukomSAgLdNolbiPVNhIAj0vlf0HJAxHcEVadjx1COAcqmpOvmqbHNduwXW6/MKreDreUAXlTFWGJqBGSFtZ4x2C+etPkQBZ8TskrNAEOJ+3acTZIpKSa9ixm6jqHVLifZmnYg8X5cOtG5fF+BwYDna+G5a7hY/ovjLcIsWi+bO64VDYqhTwMV8IjU5pcpusYaTcj/j7Q=="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/trondelag/67.000-ukrainere-kan-fa-nei-til-opphold-i-norge_-_-mange-er-bekymret-1.18058626"
+  - navn: "Utrop"
+    url: "https://www.utrop.no/nyheter/392516/"
 nyhetsverdi: 82
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Ukrainere i Norge kan bli rammet av strenge inntektskrav for opphold»"

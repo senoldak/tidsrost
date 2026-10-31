@@ -4,6 +4,9 @@ description: "Korte nyheter 14. oktober, morgen: Statens vegvesen advarer mot kr
 date: 2026-10-14T10:01:36+02:00
 category: innenriks
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Helse- og omsorgsdepartementet / regjeringen.no"
+    url: "https://www.regjeringen.no/no/aktuelt/regjeringen-inngar-ny-kostholdsavtale-med-matbransjen/id3177342/"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Statens vegvesen advarer mot kraftig økning i svindelforsøk og 2 andre saker · 14. oktober, morgen»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -16,8 +19,6 @@ Sakene under ble først publisert hver for seg og er her samlet på én side. Te
 *Publisert 14. oktober kl. 08.01*
 
 Ifølge en pressemelding fra Helse- og omsorgsdepartementet består det nye kostholdspartnerskapet av helsemyndighetene, produsenter, dagligvarehandelen, flere næringsorganisasjoner, noen av opplysningskontorene og deler av serveringsbransjen. Formålet med samarbeidet er å legge til rette for at det skal bli enklere for befolkningen å ta sunnere matvalg i hverdagen.
-
-*Kilde: [Helse- og omsorgsdepartementet / regjeringen.no](https://www.regjeringen.no/no/aktuelt/regjeringen-inngar-ny-kostholdsavtale-med-matbransjen/id3177342/)*
 
 ## Statens vegvesen advarer mot kraftig økning i svindelforsøk
 

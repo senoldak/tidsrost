@@ -5,6 +5,27 @@ date: 2026-10-19T20:03:17+02:00
 category: okonomi
 produksjon: ki-medier
 kildeSpor: "v1.L7s2QDygVzMVczqj.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"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/kenyansk-sektleder-kjent-skyldig-i-drap-pa-190-barn-1.18058893"
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/MAvp8m/kenyansk-sektleder-doemt-for-drap-paa-190-barn"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/KrKebE/pastor-doemt-for-drap-paa-190-barn-i-kenya"
+  - navn: "Bergensavisen"
+    url: "https://www.ba.no/skal-ha-kastet-steiner-pa-telt-flaks-at-ingen-ble-skadet/s/80-8-74070"
+  - navn: "Dagbladet"
+    url: "https://www.dagbladet.no/nyheter/frankrike-i-brann-sorgelig-og-feig/85305654"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19339332"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/portforbud-i-flere-franske-byer/s/80-95-172941"
+  - navn: "Bergens Tidende"
+    url: "https://www.bt.no/utenriks/i/PgLwnJ/portforbud-i-flere-franske-byer"
+  - navn: "E24"
+    url: "https://e24.no/internasjonal-oekonomi/i/Vgrg11/sterkeste-krone-paa-mer-enn-tre-aar"
+  - navn: "Dagsavisen"
+    url: "https://www.dagsavisen.no/nyheter/eu-vil-bremse-kina-men-norge-kjoper-stadig-mer/10588876"
 nyhetsverdi: 82
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Norske kronen på sin sterkeste kurs på mer enn tre år og 5 andre saker · 19. oktober, kveld»"

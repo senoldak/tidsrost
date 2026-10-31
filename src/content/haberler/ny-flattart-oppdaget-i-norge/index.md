@@ -10,6 +10,19 @@ key_points:
   - "Forskere bekymret for nye flåttarter og manglende ressurser"
 produksjon: ki-medier
 kildeSpor: "v1.zJYwGkBL/z8f4vi3.TruiFSHy/jNU6GGZOAmrrB4yDI8vEbrlm6tMRpw3DXIkcXtlRfICrTbhTEEksDWkp26DliF9hegM5NwV7My/D70+C4sGu5448FBHocvaUqtCXArx1OdmjRUtFztDbzSJjDESPhb3v5qPXoD+55WXVuyarOdcSpX39dos80tAWy74QyQOH6Ba1/ewPXXC3/NTWLLt4fO2rBwOHi7NqaEbQJF+FEpxrVhsC1auGeJISkJEkYVz0M6CtGnT/jSVRZitdnS5TbqqBVMw8ienGaNCJ1tB3hMzNwXt9ZUTjzQXbVsBfIx+cv51BUM0VsltdvvFsZ+BR7GZEuVA/A++K5+8P2pRei0w3BSQHPdpeNmZaI8Tf2D4d9RzeTpqgcb3LbSCzy9j+cmrKElyH2YWd08WHfu7Ps2zdkfqQRi0Zo0ucrzghV2nWn367OA6mn7CgOcEOzMv1IUi7s/zYM7PhkU/JNk/OpRi6nNCzRRzYs3zgp9vdAhK2tOQPj+EZxxsuwGV1AwE2E1QJ9zh9/SSYY5TYsZP/OfNssT+/KPB+l23zFC78ynz5ILpfXG1Ggak2KNjE3oohdRa0XOdDHrRT99kmu5rSXiDRe9nb0jj4R3qRQQ0mPG7UOWGM+yEbR+kKwdSlhBjUXPd4zikyptOPhqoxUGwckHsWbB9Owo0/UBBAo9YpYcgvYl9BTyLR3979SX4SnE76ERuDsBm0iK/ZEXR6jK74XIj2SDcJZ8KhX7A8OtuN4yaSarH3yjSZeVEdVQgih4j0X9NVtpO3W8HNooDxvAZ6wItKmnskPNmcQy+pNUYHZrX/B4uuLDPctB1S1WMy2NgG/Aq7R2FHevOJdZFj4PexHf2kCIbtZx758R9C9yM8IJcKpMRweweYRygEntxIVnlfpcQenrwtrqx5wRT54tuoLFwHTBNrpwdn5NVTbwEcnEPnQ=="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/sorlandet/ny-flattart-oppdaga-i-noreg-_-stor-og-med-stripete-bein-1.18053686"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/norge/i/mKpzVl/ny-flaattart-oppdaget-i-norge-stor-og-med-stripete-bein"
+  - navn: "Dagbladet"
+    url: "https://dinside.dagbladet.no/nyheter/ny-flattart-oppdaget-i-norge/85295999"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19328125"
+  - navn: "Bergens Tidende"
+    url: "https://www.bt.no/innenriks/i/mKpzvl/ny-flaattart-oppdaget-i-norge-stor-og-med-stripete-bein"
+  - navn: "Dagsavisen"
+    url: "https://www.dagsavisen.no/nyheter/ny-flattart-oppdaget-i-norge-stor-og-med-stripete-bein/10586100"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Ny flåttart oppdaget i Norge»"
 coverKreditt: "Illustrasjon: tidsrøst"

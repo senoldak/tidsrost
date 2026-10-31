@@ -9,6 +9,9 @@ key_points:
   - "3,4 millioner lever under nødforhold"
   - "Sultnivået kan stige til 19 millioner når vinteren starter"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168631"
 nyhetsverdi: 72
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Afghanistan og sultkrisen før vinteren»"
@@ -22,5 +25,3 @@ Ifølge FNs nyhetstjeneste påpeker Cherevko at avlingene kan bedre seg og at ma
 Talspersonen trakk også fram Talibans systematiske utelukkelse av kvinner og jenter fra skoler og samfunnet som en annen dimensjon ved krisen. En rapport fra UNICEF advarer om at Afghanistan kan miste opptil 20 000 kvinnelige lærere og 5 400 kvinnelige helsearbeidere innen 2030 dersom restriksjonene fortsetter.
 
 Humanitær bistand redder liv, men FN understreker at det er behov for bærekraftige og inkluderende investeringer i levebrød, tjenester og økonomiske muligheter for framtiden. Mellom januar og juli nådde FN og humanitære partnere ut med minst én form for assistanse til 8,3 millioner mennesker, ifølge FNs nyhetstjeneste.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168631)*

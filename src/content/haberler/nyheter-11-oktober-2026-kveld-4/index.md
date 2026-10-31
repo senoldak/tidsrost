@@ -4,6 +4,9 @@ description: "Korte nyheter 11. oktober, kveld: Kvinner i Gaza bygger opp livsgr
 date: 2026-10-11T23:22:57+02:00
 category: utenriks
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Statsministerens kontor / regjeringen.no"
+    url: "https://www.regjeringen.no/no/aktuelt/store-moter-polens-statsminister-og-president/id3176925/"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Kvinner i Gaza bygger opp livsgrunnlaget i krisen og 4 andre saker · 11. oktober, kveld»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -17,8 +20,6 @@ Sakene under ble først publisert hver for seg og er her samlet på én side. Te
 
 Statsminister Jonas Gahr Støre skal møte Polens statsminister Donald Tusk og president Karol Nawrocki i Warszawa mandag 12. oktober.
 
-*Kilde: [Statsministerens kontor / regjeringen.no](https://www.regjeringen.no/no/aktuelt/store-moter-polens-statsminister-og-president/id3176925/)*
-
 ## Dødstallene stiger etter skipsforlis utenfor Djibouti
 
 *Publisert 11. oktober kl. 23.21*
@@ -28,7 +29,6 @@ Dødstallene etter et skipsforlis utenfor Djibouti har steget til 139, og 84 per
 FNs migrasjonsorganisasjon (IOM) betegner ulykken som en av de dødeligste som er registrert på den østlige ruten fra Afrikas horn til den arabiske halvøy. IOMs sjef for misjonen i Djibouti, Alexandre Coissac, uttalte at landet står overfor overlappende kriser med migrasjonsbevegelser i begge retninger.
 
 IOM deler ut nødhjelp til overlevende ved sitt mottakssenter i Obock. FNs anseesjef i Djibouti, Jose Barahona, uttrykker sorg over at minst 139 menneskeliv har gått tapt, og understreker viktigheten av å styrke internasjonalt samarbeid og beskytte mennesker på flukt.
-
 
 *Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168573)*
 
@@ -44,7 +44,6 @@ Vi skal diskutere landets finansieringsbehov for det kommende året og hvordan v
 
 I tillegg vil vi åpne to nye kapitler i forhandlingene. Drivkreftene er ekte.
 
-
 *Kilde: [Europakommisjonen](https://ec.europa.eu/commission/presscorner/detail/en/read_26_2131)*
 
 ## Kvinner i Gaza bygger opp livsgrunnlaget i krisen
@@ -55,7 +54,6 @@ Ifølge FNs nyhetstjeneste står produksjonskapasiteten i Gaza overfor store ska
 
 Gjennom et partnerskap mellom FNs utviklingsprogram (UNDP) og det lokale handelskammeret har hun mottatt støtte til å kjøpe dyr og utstyr. Hanaa (49) fra Gaza by mistet mannen sin, en sønn og bedriften sin under krigen, men har startet opp igjen meierivirksomheten sin med støtte fra tilskudd for å produsere ost, melk, labneh og laban. Hanin (36) deltar på yrkesrettet opplæring i snekring for å skape en inntektskilde og potensielt starte egen virksomhet, ifølge FNs nyhetstjeneste.
 
-
 *Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168569)*
 
 ## FN-sjefen fordømmer dødelig angrep mot flyplass i Riyadh
@@ -65,6 +63,5 @@ Gjennom et partnerskap mellom FNs utviklingsprogram (UNDP) og det lokale handels
 Ifølge FNs nyhetstjeneste har FNs generalsekretær António Guterres fordømt et angrep mot Khalid internasjonale flyplass i Riyadh. Myndighetene opplyste at angrepet drepte 12 mennesker og såret mer enn 300, hvorav noen er kritisk skadd. – These attacks must cease immediately, sa Guterres i en uttalelse.
 
 De omkomne kommer fra Saudi-Arabia, Bangladesh, Egypt, Jordan, Syria og Sudan. Konflikten har den siste tiden blusset opp igjen med kamper og angrep. FNs sikkerhetsråd holdt nylig et møte om situasjonen, der det ble advart om økt regional risiko og at over 200 000 mennesker har blitt fordrevet siden august.
-
 
 *Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168572)*

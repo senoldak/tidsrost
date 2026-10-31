@@ -9,6 +9,9 @@ key_points:
   - "Finansieringen til naturmangfold er under halvparten av avtalte 200 milliarder dollar"
   - "Kun 26 prosent av landøkosystemene vil være beskyttet innen 2030 med dagens tempo"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168610"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «FNs generalsekretær ber om raskere tiltak og mer finansiering for å stanse tapet av naturmangfold»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -27,5 +30,3 @@ Finansieringen til naturmangfold er mindre enn halvparten av de 200 milliarder d
 Videre understreket han at vi bruker penger på feil ting. I 2023 fløt 7,3 billioner dollar inn i naturfiendtlige bransjer, og for hver dollar som investeres i å beskytte naturen, brukes 30 dollar på aktiviteter som skader den. Han ba regjeringer om å avslutte disse støtteordningene, og sa at generering av naturbaserte løsninger vil kreve en årlig investering på 571 milliarder dollar innen 2030.
 
 Generalsekretæren oppfordret også privat sektor til å bidra, og pekte på mekanismer for å finansiere beskyttelse, samtidig som han påpekte at utviklingsland sliter med gjeld og begrenset budsjett. Til slutt ba han om bred deltakelse fra unge, sivilsamfunn, kvinner, urfolk og lokalsamfunn.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168610)*

@@ -10,6 +10,11 @@ key_points:
   - "951 millioner kroner brukt på ombygging ved Rikshospitalet er ikke inkludert i de tidligere beregningene."
 produksjon: ki-medier
 kildeSpor: "v1.B7pz4q5PnNXMQvAd.FclHmGu2TpsRr76ZuHOw1YWxqxJqyp9tvNtRxf/jJnQP+bdrr4VfKU1IHGqGuCO/SeuUdMf/so+VJVI9uNI3nrs9gpOiS2TTyupNhZ8YXJhfcbkpppNdyOijzAJ8W0vG5ndYsSgJWTrHOp7owHIvlpv/iwG8xfAQy2gWy9RvMacZly5AC7gJk6Qt5EM0Lvqd2jQFqxHJ6iPEDKJYKGmVQokCD+LvMR98ifMW7aHUYDcNJVKopdXHL0ecLU0tpDcYUsenZRC9Kxo8LHIpo70+jlaF1OpOL3GX0WTJwFZtdufuRANLqp90mvPdoqsNAiFIuQyxpiMzpl3CqOapzaRL9MunaysAH8qnTA=="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/stor-oslo/nye-oslo-sykehus-blir-stadig-dyrere---kan-koste-nesten-70-milliarder-1.17653404"
+  - navn: "Dagbladet"
+    url: "https://borsen.dagbladet.no/nyheter/spar-borskollaps-95-prosent-sannsynlighet/85361947"
 nyhetsverdi: 85
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Nye Oslo-sykehus kan koste nesten 70 milliarder kroner»"

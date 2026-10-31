@@ -9,6 +9,9 @@ key_points:
   - "Angrep mot sivile og kritisk energiinfrastruktur"
   - "Menn fra 29 land rekruttert gjennom menneskehandel"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168670"
 nyhetsverdi: 85
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Krigsforbrytelser og angrep på sivile og energiinfrastruktur slås fast i ny rapport»"
@@ -26,5 +29,3 @@ Panelet har i tillegg undersøkt anklager knyttet til andre brudd på folkerette
 Rapporten viser til at metoder som tvang har blitt brukt, og at mennene raskt ble tvunget til å signere kontrakter på russisk med forsvarsdepartementet etter ankomst. Kommisjonen krever nå at alle de menneskehandlede personene blir dimittert fra styrkene. Den uavhengige kommisjonen ble opprettet av FNs menneskerettighetsråd i mars 2022 for å granske påståtte brudd på menneskerettighetene og internasjonal humanitær rett.
 
 Medlemmene i kommisjonen er ikke ansatt i FN og mottar ikke lønn for arbeidet sitt. Rapporten bygger videre på et omfattende arbeid med å dokumentere hendelser og konsekvenser for sivilbefolkningen siden invasjonen startet, og fortsetter arbeidet med å belyse situasjonen for de rammede gruppene.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168670)*

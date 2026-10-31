@@ -10,6 +10,11 @@ key_points:
   - "Bostyrer gransker markedsføring i sosiale medier"
 produksjon: ki-medier
 kildeSpor: "v1.Et+PPT633mIe5TAJ.lWXXt7BVUBo8BsAc4MRxWCxvxTEUlkIC9Qfa601UKDv2awhBED+uqstagcNh7rXEI6IKR5foQohzQo4e0Rq9tXQ4Pz62ceYUK9TcSUYxFJVD5FeBRElIyTbpqVFy12AWyhcNHL139I6dRJIDzLbs4X8x8v/uajWp32k/LkwPTL50SoieMYh0lJtO+tI+1fb1Xr04L5b3mQhttBX2sCrgb+i8RtOACB8i1ZOP4Jb1nyzNomCkyxxK4hm2jpHR9bWMgNotITNGHrgFD9kI9qKs+Ek2wDY8b6pddkeRzs4QbfrDSXBwcXf6lznEhMrexNQJZhqc7Pg0GuWH0/k="
+kilder:
+  - navn: "VG"
+    url: "https://www.vg.no/rampelys/i/d785Qj/bostyrer-skal-undersoeke-isabel-raads-sosiale-medier"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/kjendis/gransker-isabel-raads-selskap-etter-konkurs/s/80-95-178725"
 nyhetsverdi: 74
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Gransker Isabel Raads selskap etter konkurs»"

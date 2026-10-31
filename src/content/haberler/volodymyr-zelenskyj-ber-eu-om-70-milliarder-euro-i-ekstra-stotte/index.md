@@ -10,6 +10,15 @@ key_points:
   - "EU lover full støtte gjennom vinteren og mot et fremtidig EU-medlemskap"
 produksjon: ki-medier
 kildeSpor: "v1.lDq5W4VPZX+d0gk6.w543GO6eeLQMTyVzwIDKCHzj7SLID5/LWHIUfz/8G7rgwFBH0K6RN3mUbKeMSn6lvzGK9+lql9XixliFZSBCzfRvNcijHi8kYrilEffxhSgrSm+iPXHUaWBgDBtMtfpS4ZBR84W+h8WCBMgVBCRNayN/x2f5mdqFshOhYm9BWNKVg3TTVT2apONa2JAE84IaY4FCI9HZ/lf29EtS/3EllXd9vnA2GOtBxutUiZBxJ9gQpA6VgF+dKWbER4ulS00DWHsdh6qaoW5wLNZ/kfTVOUhBJWR78bXXlOMgQn/rW98a2nbsVAAaaFJS7u2ssagOqwB1MHZi78icksfRe6AipsJqwshuo/xTqa1bhnS+DiEFBvhXqda5XmApiEr4Pvg4znkcodDB/y5+JfK9nNpun4wx8opDFKo0A6DMcOIxZwFcimUKTpp/v6qr70BO+UxIndOV1aYSRwsYkn5VcxkMoxE9OPB/Rxk8/DpZ2w8jHUftbDZj6KBlnba3ifZAxnQAu7depgbLSvZwkpsEP02FGKE3NOEwMx45bAikivg3hhivoNUcjtaFVdWpU93ynCTk6n70wzWiXlIeTDTre9hJaV+HJ6pwRvEk/1efWk+c7YF4bNZNKEFv2add2RW7M1wTBsdZJjmxbjRVNqwmHnol6xpZWRxjoQ=="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/zelenskyj-til-eu_-trenger-70-milliarder-euro-ekstra-neste-ar-1.18056983"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/AbkBG3/zelenskyj-ber-eu-om-70-milliarder-euro"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/zelenskyj-ber-eu-om-70-milliarder-euro/s/80-95-167718"
+  - navn: "Dagsavisen"
+    url: "https://www.dagsavisen.no/nyheter/zelenskyj-trygler-eu-om-energi-for-vinteren/10586811"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Volodymyr Zelenskyj ber EU om 70 milliarder euro i ekstra støtte»"
 coverKreditt: "Illustrasjon: tidsrøst"

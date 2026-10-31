@@ -9,6 +9,9 @@ key_points:
   - "Kun 26 prosent av landjorden vil bli beskyttet innen 2030"
   - "Nesten 90 prosent har satt nasjonale mål"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168607"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Fn advarer om at verden fører en krig mot naturen»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -25,5 +28,3 @@ Til tross for de negative funnene, viser rapporten at det har vært noe fremgang
 I tillegg har urfolk, lokalsamfunn, regionale og kommunale myndigheter, organisasjoner og bedrifter bidratt med rundt 5 000 forpliktelser, selv om rapporten påpeker et alvorlig gap mellom ambisjoner og handling. For å lukke dette gapet kreves det betydelig mer finansiering og ekspertise for utviklingsland.
 
 Regjeringer oppfordres til å fjerne subsidier som skader naturen, styrke sosial beskyttelse og omdirigere midler til naturbeskyttelse. Guterres understreker at biologisk mangfold må bli en del av alle beslutninger på tvers av politikk, regelverk og budsjetter, ettersom naturen ikke vil overleve på gode intensjoner alene.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168607)*

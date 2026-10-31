@@ -9,6 +9,9 @@ key_points:
   - "Havet tar opp omtrent 30 prosent av menneskeskapte CO2-utslipp"
   - "Blå karbon-økosystemer binder rundt 407 millioner tonn CO2 årlig"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168687"
 nyhetsverdi: 76
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Havets evne til å ta opp karbon svekkes av klimaendringer ifølge ny FN-rapport»"
@@ -26,5 +29,3 @@ Den andre er økosystemer for blått karbon, deriblant mangroveskoger, sjøgress
 Traerup kom med en advarsel om at «we shouldn’t treat ocean-based technologies as a shortcut» fordi de må komme i tillegg til og ikke erstatte utslippskutt og vern. Små øystater står for under én prosent av de globale utslippene, men befinner seg likevel på frontlinjen for klimaendringenes konsekvenser. Rapporten krever økt finansiering og overføring av teknologi slik at disse statene kan utvikle egne løsninger.
 
 Seychellene gjennomførte i 2015 en avtale om gjeldsbytte for natur som hjalp landet med å opprette et fond for å finansiere havbevaring og en bærekraftig blå økonomi. I Stillehavet har Fiji, Papua Ny-Guinea, Salomonøyene og Vanuatu fått hjelp til å kartlegge sjøgress og mangrove samt måle karboninnhold, noe som har gitt over hundre personer opplæring og skaffet myndighetene nyttige data til klimaplanene.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168687)*

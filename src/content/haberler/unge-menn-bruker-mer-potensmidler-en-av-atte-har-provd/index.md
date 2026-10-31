@@ -10,6 +10,11 @@ key_points:
   - "Viagra omsatte for nær 183,9 millioner kroner i 2025."
 produksjon: ki-medier
 kildeSpor: "v1.pUyiXjyAIAaCkqpR.RHMCOARbPHCiSOrr30aZ/fE5PvseqUOgsha8F9e/R5BWgElhxXdWXsNGI21hy35Jz8amd/AHU+HVRzu7oPehXAU/LCbdTjB9vPXNJ/43VJ5F5B0BmrLZ/BzKwE2gOqnJdBTASzgsOQtwLNfINOv0rjkgve5/OSRdAbGTUV/qOj7BUjqAH5N6KZgm3ScI3ZQGctuDU6+nJXDzlJK1ViEdQ4E0nVA7cfJM014OZqobGPOwZVvZHPj3ZJ0WNFibgYDhUc40vNlsZ7iDZzVWmMNxJso8dkX4pmkLSqasXY3Vf1AKZS4jxVyw+myKF/ddo05j6nP8zAaUzF2zwRppToiQ5EKd0BEdiQkqKsL8PWpbw+Zg2p+d67D2N7Gz0wUxJ5G+9RxfgJ2/J2lCe4XAwlzdkTm4RJOVkMqk9hM4cNp2abK2"
+kilder:
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/norge/i/GrVLLQ/kraftig-vekst-i-salget-av-potenspiller-blant-unge-menn"
+  - navn: "DN"
+    url: "https://www.dn.no/d2/helse/helse/mannehelse/sex/generasjon-prestasjon-unge-menn-lofter-salget-av-potenspiller-til-rekordnivaer/2-1-2054266"
 nyhetsverdi: 70
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Unge menn bruker mer potensmidler: Én av åtte har prøvd»"

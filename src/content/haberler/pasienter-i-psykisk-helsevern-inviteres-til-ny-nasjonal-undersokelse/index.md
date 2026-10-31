@@ -9,6 +9,9 @@ key_points:
   - "Frivillig og anonym deltakelse"
   - "Svarene skal forbedre tjenestene"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Helsedirektoratet"
+    url: "https://www.helsedirektoratet.no/nyheter/pasienter-skal-si-hva-de-mener-om-psykisk-helsevern"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Pasienter i psykisk helsevern inviteres til ny nasjonal undersøkelse»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -23,5 +26,3 @@ Helsedirektoratet viser til at personer med alvorlige psykiske lidelser har stor
 For å finne ut hvem som skal inviteres, bruker Helsedirektoratet opplysninger fra Norsk pasientregister, som inneholder informasjon om hvem som har hatt døgnopphold. Deltakelsen er frivillig, og direktoratet opplyser at svarene ikke brukes til å vurdere enkeltpersoner eller ha betydning for den enkeltes behandling. Behandlingsstedet vil heller ikke få vite hva som har blitt svart.
 
 Undersøkelsen inngår i tiårsplanen for gjennomføring av nasjonale pasient‑, bruker‑ og pårørendeundersøkelser i den kommunale helse- og omsorgstjenesten og i spesialisthelsetjenesten, forankret i Helse- og omsorgsdepartementet. Psykisk helsevern er et prioritert område i opptrappingsplanen for psykisk helse 2023–2033.
-
-*Kilde: [Helsedirektoratet](https://www.helsedirektoratet.no/nyheter/pasienter-skal-si-hva-de-mener-om-psykisk-helsevern)*

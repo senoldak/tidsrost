@@ -9,6 +9,9 @@ key_points:
   - "Türkiye er vertskap for COP31 fra 9. til 20. november."
   - "Etiopia bidrar med rundt 3 prosent av de globale utslippene."
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168617"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Klimatoppmøtet COP31 møter tillitskrise før åpningen i Antalya»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -27,5 +30,3 @@ Den australske ambassadøren James Larsen tok til orde for mer tilgjengelig klim
 Spørsmålet om hvem som betaler, og hvem som nyter godt av tiltakene, preger også bekymringene til Etiopia, som skal være vertskap for COP32. Landet bidrar med bare rundt tre prosent av de globale klimagassutslippene, minnet ambassadør Tesfaye Yilma Sabo delegatene om, men står likevel overfor noen av de alvorligste konsekvensene av klimaendringer. Han advarte om at forsinket handling har en økende kostnad for utviklingsland, og at tempoet betyr noe ettersom gapet mellom dagens planer og det vitenskapen krever forblir betydelig, der finansiering og tilgang til teknologi i økende grad avgjør hvem som nyter godt av omstillingen og hvem som blir etterlatt.
 
 Verdens ledere ventes å samles til et særskilt toppmøte i Antalya den 11. og 12. november, med forhandlinger som vil teste om klimaforpliktelser kan oversettes til meningsfulle endringer for lokalsamfunnene som er mest utsatt. Suksessen vil imidlertid bli målt langt utenfor forhandlingsrommene, slik Rahman oppsummerte at COP31 ikke må bedømmes etter løfter vi gjentar, men etter menneskene vi beskytter.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168617)*

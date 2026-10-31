@@ -10,6 +10,13 @@ key_points:
   - "Forslaget er en del av arbeidet for å styrke europeisk bilindustri mot konkurranse fra Kina"
 produksjon: ki-medier
 kildeSpor: "v1.mYYbSckRoyKo+yEE.lFwnC475L0195NRV+9QtDoRvLnGozU7aJASToJkQb1pFM9FOhz7PG9Ds7lry1KdorNF49oMV7VP/FbBkiBx3vDkzqRCbG1L188uEL8c7U6sAIpgb2VYFPDTzQfonHNDkE5ySvdx7bKQ7xS3UgSnsHAFreCIhU+Hmw4IBTuogudXD8ts89JXcFBJfyksesYuxClgqZ232pgwGnlHtlrwCqPQhKup8mM/CETR6tnVhVwefjv//Wlg6etltSPMvttU39fxFBN8VHd3x05iEZw1T6jayCSivpC6hO6nG/FH85Fo4SIJRvAKyVqhYweios4/sBmLzRnQcjJyQ9CtrZ3GhbM+/6lIpDbqcgi4vOH8KePOMTV4S2R/hB91jsbojubuIMlIgbz81MunLqJZ7XqiwkXBjScjbfpt8ASo8G49zxwQVFDhleIsyMekCri2midJ/MzdNQZokQOgXo3Q5muOWWSE9xnorP9e7cuMFYRPdnJXzzM4Bc7XmbLbbCoS3xr9uslo9rg11wqCLc6/rM9CZ6POUljyxt8qXhTgiv+sK72VQ1+wQrAgoqnz6vmytSQoc0Own"
+kilder:
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/norge/i/lKapbL/norge-kan-maatte-innfoere-toll-paa-kinesiske-elbiler"
+  - navn: "Dagsavisen"
+    url: "https://www.dagsavisen.no/nyheter/krever-at-norge-legger-toll-pa-kinesiske-elbiler/10588682"
+  - navn: "Nationen"
+    url: "https://www.nationen.no/frankrike-og-tyskland-krever-eus-straffetoll-pa-kinesiske-elbiler-i-bilavtale-med-norge/s/80-148-49936"
 nyhetsverdi: 78
 oppdatert: 2026-10-20T12:00:00+02:00
 cover: ./cover.png

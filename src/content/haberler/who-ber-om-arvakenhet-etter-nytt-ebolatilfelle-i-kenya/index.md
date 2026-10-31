@@ -9,6 +9,9 @@ key_points:
   - "WHO oppfordrer til årvåkenhet, men innfører ikke reiserestriksjoner"
   - "Over 4 000 helsearbeidere er opplært og beredskapen er trappet opp"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168602"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «WHO ber om årvåkenhet etter nytt ebolatilfelle i Kenya»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -31,5 +34,3 @@ Dr. Kimambo uttalte at det fremdeles ikke er behov for å innføre reiserestriks
 I tillegg har over 4 000 helsearbeidere blitt opplært, inkludert for screeninger ved innreiseportene. Å forhindre ebola begynner med å forstå hvordan sykdommen overføres, ifølge henne, noe som skjer gjennom kontakt med kroppsvæsker fra en infisert person.
 
 Hun gjentok rådet om å praktisere regelmessig håndvask, bruke håndsprit og unngå å hilse med håndtrykk. Ettersom ebolasymptomer inkluderer feber, oppkast og diaré, som ligner symptomer på malaria og andre sykdommer, understreket hun behovet for å søke medisinsk hjelp raskt.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168602)*

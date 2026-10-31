@@ -5,6 +5,19 @@ date: 2026-10-16T00:04:31+02:00
 category: utenriks
 produksjon: ki-medier
 kildeSpor: "v1.1/HYng7Km5HYqrrv.Mwx91m+hF3HGtFcoMbNj64+wlq/S1YdJy5Khxfq3mjUcBKDKg/VwA5e+WatP8E69aeP9hgrzdG+Ub4BimqYN2ZfAGKrsvEL+Jc2NmIgn2sig513h/7IcSukzyg7jFBmq0Mda1I0L704+VrDt/lhl0UM8GV6Qkie4I+ygAxZQvIGgBUKUNVMRvypCKu3riWjZjB7t4A+3NFLskhfVr9tB9K5Ssk8AmVezx+cejjn5xp/O5dIU+TfKfteOZb4DoEYTlX0F5AXcehby5UTmpGLrvFsNgE54jSCtg9urdNRvOoR0srSWR41RIpSMNYeZWwns/8rAMKMKgPfcxoeWuQwaapNWQ6euGdZ0Tzk/HEwE8lsznmr9D9JROwBN4vm1+Haomo4zUjp72VxL32XKthQUIr6/4cDlV3suMIPlH1V3yDWa8zxbbPaE+9/NGY8Wk1JafFlrT3SJ/WjnrZusxdFyGJkaVI3FWUFU33Jb+COaoT8CzgbLztv+Rv9YjrACZzyD2bhKnAzep8mpDg/1nykt5TCjrH6t7GT0KbfLykfceyEXRsT6NrpvqXzB65wyGaHdXhAHnK4Gbc9eL0LSomDIjKWzQhuKBj7Y99HFRz4XJVvWMfW2VP+G0duECpUVWKwBrirjm9PD1CDgU7HJmeDCfH8kxFv5wcX81J5+mrKfeKQ96znXYCibzA3DfyJktERvrWAOAB/ClhFqvqw/QOjYOwZotaWJx90ectanlViYUXcItOKLW8sXsRtuJ7WF4d2oHmoW8SHbCRxvSIONtj8NxlddI95y0jfkwAWIXOlJu2r5rW4KrtjjE+CT2ylAK+ucEpkMgGIpd7EdQNSrwuJtvh90b0Dn2p+uXRpndiPgzvYnMMWnXo+WQDe9bUWzoaSiMcoHmjKXMk+L3hozrfa+SvBKjXBLahisoddi5t1uUm5kdH4R3NJB3qi8LSvQquuHAYRFICul/bT9xp43d8QjS9AVlBW0/M9je1SpoQ9jH9C2On9t7Fi3usVzTjhDs7cYFyynO3QWw7oQLOSNqpwKo+/cU/ZW26RyrFmlnqYA4nEmLxpPiPxGcu7LILBLDLiQX8xTRc3ELpdS/Sup1gz3Yjly3Dh6gvO7nWeESILU9okduXdcZVSkvQp87u6ijPU1PWlY9uZ11f9xg0WIRWUwzIT3kyd6P4Hu2Ghyu2jccQgykkHnwHMwslSed2b2t5lX3ph6IrsSJBYYJt6Q75bxk+E/39JHFfBXFPnmHS/uzNwStgx0b9CD5fMLXvfh8pzMw/QniTTtQrBhjnOUb633897dMIjXjep0sK0UCuh4yD5DDDyqVlOuvGekuLQF2G15JLy2tK1Mmt2nE01Mk205mRelMU9F8tr0VAbTmUH/be1iuFayKPloun9dL7QC1Qvl9GfVBLS8ikV/RGJIMHj+3OqqyiwsOVNE2XWhSX07UZBdD877YdTFP34hpXtETCvY1zUq8tR/K9yUJh/qPya4GayBeEA3LhihiYQs6aGoUevJA/gfqw6Cg4KVVv4seJml15PXz/fgX6m6UbtLpebVwo2f6eUeQBb/C//3jOTOp63gfXsxHDc5bX7/LImpt9Gw/ntfmi1hSWRHoBbDnwjRhuMK+3ySD35WPgeDZkZ4mf7jqKw4MkhsjwWvsGzzI/3FAgMhjSdUDP4XqvDbPMFhmVIe7aYBooMXFz7EcgFmW80JGbqDcrskH0tdRRgdhh/qTZStQ/mcst7Lk5veR6qzD4BfEHPjhDM028UwcteWgCcFVw40zFUMz1ODLY2eFKNjc2hJR90lDYBUO2ui9DmWNUEcJkdLRyz7NljgDxNfBC7n9CwRnxJuvi67ees2m7C4enP9h9weks/rCp/tXi5HEgqsRfQvTryqAz3cDtyjcGDdlVW6TzT5R4Q="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/melding-om-skyting-ved-barneskole-i-usa-1.18056359"
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/qybmqO/melding-om-skyting-ved-barneskole-i-oregon-usa"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/77QRew/minst-to-til-sykehus-etter-skyting-paa-barneskole-i-usa-den-antatte-gjerningspersonen-er-drept"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/melding-om-masseskyting-pa-barneskole-i-usa/s/80-95-164577"
+  - navn: "Dagbladet"
+    url: "https://www.dagbladet.no/nyheter/donald-trump-med-iran-bombe-aner-ikke/85290542"
+  - navn: "E24"
+    url: "https://e24.no/naeringsliv/i/Abxyvz/kjennelse-manipulerte-fakturaer-for-arbeid-paa-kongeskipet"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Brann snudde til seier etter dramatikk i Conference League og 3 andre saker · 15. oktober, kveld»"
 coverKreditt: "Illustrasjon: tidsrøst"

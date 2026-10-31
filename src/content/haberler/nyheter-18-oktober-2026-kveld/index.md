@@ -5,6 +5,17 @@ date: 2026-10-19T02:02:08+02:00
 category: utenriks
 produksjon: ki-medier
 kildeSpor: "v1.+EaLwFNgH83hkEyE.J/QQLSyw5nNI1PWwkYfMlDWE0jaVj6jcC7qeU6f3dBAH0vOSwbzUNN3lTYhjhg9NR56LtD+T8DW1SRjffGriJLj67C4l8fVjj6PP2uB8RLST3347DwrnGLowwyAlBBQob47TPnIAZFSSlBeyBXSVy90YVbEop/DQj/LRImwCZwSY0ARrenkYYHHIKIVgCQm57n9BGyq0bLrewAyBW2J6sE7a+9mOUm4fhgQjPZ+DybSf73TlDrOe7s6z8rRp96lDxyIiSEEb9Qt/fwuByRvTr8CNmcyX7htR9cUH0JbxyWhuCPbIM0hVggK/004bWUPM0F6bUkrOFMt86J7EwF1TqvCnE7briP4kvOLR5CGuAteiVd1soPXUmxxLcIqAplTs15VbsfCEDnJvtiUvCQM5Cy/dzPVwGSV9SyDsNKQKJ7vhFlcwKiEexEBGaGgO0BDvY2yDYp84sYnXo2kVbdk0SbDfWd+X1jneyy5mEEs6Lj9hB7e1nbTaBsqOfodcdqQiIiCQ4w3HsLKRrTVcTnhdmwaRVkrMCLSJxeePto7dsBGhF0p4PXyA4siir8y3HijZyoXgCGMHiSu8+oQsiuY0H3kDlqAFCwEvmWkNjRVZXotjAOpuEvNr5q130QqBq43aXVbXufh50ZTYdHAC+Cazk7LTtSxZbBCBA22nh4N/7wrbP74N475PfSbpNPA5HTQPy3zWtgTk3DEkGuWNWdDUm/gAgLVQhVfqcD1TygNXNR4h/QKa2Wjm2HFC3fA3uu2wnFhYS7osNnsFgR6dGLs937vGacqG6/O0s69o8NS2x/GmLUDEJ2GcE4j9APoW8RuICnO3cObFjWplNFe5bnKdsOL6fqajriEiWzaQZbla0Yf96oFD/3askEiuQHJV8J3I9wDKSEivsUNb5QAH2P3z0cK24ckmWlrhFqhSDeNh2n1ctOU3Z8QsVasWiY3I5sa/nwq+T+XUSuid5PWv0XCr+FViybVUO5jwKM9JYid63BDc8hQNY++8VHtWwaj+gT5CdjKFL9QtW0U9QT5HBEG0gx0ynP7uBQH2qy2saxqdESPqConEXbjxSNhe5zBl49WccexSPTVohiorP//R16+JvUDANhOa9B8lUaQ5m9+2Dk4oeKF3feo8NK4FDYNmEox0N599cpvYrJoTPIsCa1NxZSgv+DPuZkCJ8sYG8vwBnICxOD6uXaPFApkWhlhMJBx++lgMe7ahj9B83LYCTXWCM4y/eWKAtOWrwDbpsyPsAH+wGol6uw6ocVpRNpXRklbyaWmDvQSJHd+kqwkBnZfPev+rZPq6kesnw4I1YrisqUcBcDeyMeRMWm3ih0OacKSmzQHR4wzwTu32JRIqCA9nC8NJnFvFSmtExlnheiZsV86nLApKMc1S5c4oxKia6CJfsV1punw0XKpGOlTqDU+Pw6IE0Ljtdns9NaoJ3GlR0vdpAwF7VslZPs21Ug86U0Pq+W01HNasPCQc3ozaI+kf0U078wY2staoWnMFB7BgbaYlMqrNGFDFUziaScq6yAXnvq3dylVCk4VRhWugMKOY0RCYDk7TI8i5hHFTcWXRKgMAg9NFZD3IlD3fVfxGFISYFkIy7wCAW9ltBFFKT3F1PgsuKHmtNlDqdMewXOIBxYfc+wgCkZ1dkBzdO2fXBRf3B0OApeczKgFuGB0ESyvG23S4DFpYx+fgErYW6cC75FxZeXhfL/qJxQgOWovpqaCu8KZU6iYC4h5zHSgUWZfa1aNk7ty85/3IqsV3+z/ex5BSSCMj7s+fSRvMTK+Z34pnVCXr0zchxxD72itqT6pKtfYe4SMH4DVXSaqUPg+ugocAeA=="
+kilder:
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19334246"
+  - navn: "NRK"
+    url: "https://www.nrk.no/sorlandet/brann-pa-fiskebat_-fire-personer-funnet-pa-flate-1.18057957"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/QgWM2W/trump-stoetter-netanyahu-i-det-israelske-valget"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/trump-gir-sin-stotte-til-netanyahu-for-valget-i-israel/s/80-95-169989"
+  - navn: "Stavanger Aftenblad"
+    url: "https://www.aftenbladet.no/utenriks/i/R5njrJ/zelenskyj-det-ser-ut-til-at-usa-vil-presse-ukraina-til-aa-overgi-seg"
 nyhetsverdi: 75
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Austrian Airlines-fly fra Tel Aviv omdirigert til Sofia etter trussel og 3 andre saker · 18. oktober, kveld»"

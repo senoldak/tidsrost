@@ -4,6 +4,9 @@ description: "Korte nyheter 10. oktober, kveld: Mange mener det skjer lovbrudd, 
 date: 2026-10-10T23:48:03+02:00
 category: okonomi
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Statistisk sentralbyrå (SSB)"
+    url: "https://www.ssb.no/priser-og-prisindekser/konsumpriser/statistikk/konsumprisindeksen/artikler/drivstoffprisene-trakk-prisveksten-opp-i-september"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Mange mener det skjer lovbrudd, men få melder fra og 5 andre saker · 10. oktober, kveld»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -19,9 +22,6 @@ Konsumprisindeksen (KPI) steg med 0,5 prosent fra august til september, og var 3
 
 Dette skyldes at de midlertidige kuttene i drivstoffavgiftene opphørte 1. september, samtidig som bensin- og dieselprisene også økte før avgiftene ble lagt til. Lavere prisvekst for elektrisitet inkludert nettleie bidro samtidig til å dempe veksttakten i KPI sammenlignet med i fjor.
 
-
-*Kilde: [Statistisk sentralbyrå (SSB)](https://www.ssb.no/priser-og-prisindekser/konsumpriser/statistikk/konsumprisindeksen/artikler/drivstoffprisene-trakk-prisveksten-opp-i-september)*
-
 ## Økt prisvekst for norske industrinæringer
 
 *Publisert 10. oktober kl. 20.39*
@@ -29,7 +29,6 @@ Dette skyldes at de midlertidige kuttene i drivstoffavgiftene opphørte 1. septe
 Statistisk sentralbyrå (SSB) opplyser at norsk industri opplevde en prisøkning på 9,2 prosent på produserte varer fra september i fjor til september i år. Veksten har ligget på et relativt høyt nivå siden april, etter en oppbremsing i årets tre første måneder. – Norsk industri har samlet sett opplevd økt prisvekst på varene de produserer de to siste månedene, både på det internasjonale markedet og hjemmemarkedet, etter en viss oppbremsing i juni og juli, sier Espen Kristiansen, seksjonssjef i Statistisk sentralbyrå.
 
 SSB melder at et viktig bidrag til prisutviklingen var høyere priser innen petroleums- og kullvareindustrien, som økte med 4,0 prosent fra august til september. Også næringsmiddelindustrien og metallindustrien bidro til den samlede prisoppgangen, med en tolvmånedersvekst på henholdsvis 8,9 prosent og 17 prosent.
-
 
 *Kilde: [Statistisk sentralbyrå (SSB)](https://www.ssb.no/priser-og-prisindekser/produsent-og-engrosprisindekser/statistikk/produsentprisindeksen/artikler/produsentprisindeksen-endring-siste-maned)*
 
@@ -52,7 +51,6 @@ Skadeforsikringsforetakene hadde et betydelig høyere resultat før skatt i før
 Konkurransetilsynet skal undersøke oppkjøpet for å vurdere om det kan svekke konkurransen i markedet for hurtiglading av elbiler. Tilsynet viser til at offentlig tilgjengelig ladeinfrastruktur er viktig for mange bileiere og for overgangen til nullutslippskjøretøy. Eviny Elektrifisering og Mer Norway er blant de største ladeoperatørene i landet, og det finnes få alternative ladeoperatører i flere områder hvor selskapene konkurrerer.
 
 Tilsynet har hentet inn informasjon fra aktører i markedet, og sendte et varsel om nærmere undersøkelser 9. oktober 2026. – Muligheten til å lade på offentlig tilgjengelige hurtigladere og lynladere er nødvendig for mange elbileiere. Dersom konkurransen i markedet svekkes, kan det føre til høyere priser, dårligere kvalitet og lavere utbyggingstakt, sier prosjektleder Ingvild Nordtveit i Konkurransetilsynet.
-
 
 *Kilde: [Konkurransetilsynet](https://konkurransetilsynet.no/ma-se-mer-pa-evinys-oppkjop-av-mer/)*
 
@@ -77,6 +75,5 @@ Samarbeidsklimaet i dagligvarebransjen har blitt bedre de siste årene, ifølge 
 De minste leverandørene rapporterer om flest utfordringer, blant annet når det gjelder mindre skriftlighet og flere ensidige avtaleendringer. – Samarbeidsklimaet utvikler seg i riktig retning, men undersøkelsen viser også at det fortsatt er utfordringer i bransjen. Det er viktig at aktører i markedet tar kontakt med oss dersom de mener regelverket ikke blir fulgt, sier konkurransedirektør Mads Magnussen.
 
 – I vårt arbeid fremover vil vi fokusere særlig på de utfordringene små leverandører har pekt på, sier prosjektleder for arbeidet med loven, Torje H. Andreassen.
-
 
 *Kilde: [Konkurransetilsynet](https://konkurransetilsynet.no/mange-mener-det-skjer-lovbrudd-men-fa-melder-i-fra/)*

@@ -10,6 +10,19 @@ key_points:
   - "NHO Luftfart venter helt ubetydelige trafikkforstyrrelser"
 produksjon: ki-medier
 kildeSpor: "v1.aUjm3qsB1fr+BQCS.LW2xo2httPtbOXFRTGijBgl1AN67Uk7mOJpto/okf5rc4zVbOvfwm9ekcMNevutjezftcBfmQ1Ka3u7sNewOo/HDIanEcrxpEUJ7qj5moY4U5PPGS88ymInz4SLZkdvxhjqlf/G9CbHUPy0QpNy3KXbAftM9vQPx2eRH/9bc+Y6QSp6gJzpR1Caplp87JwsJ0VakJrhUncIZdx1zkbr/ZaPHbGnwJoxiB5x8a+uoUJ5Bcj1rBfldr6Yfaugq6+yBpIxIZ0dKTfhENaPr++AC8BmmX9cIJnRvbEgk9HVsEPyRwDWNgjhoOxXtga7lKJg/c+oLG+x4CJuqUU5S5Crj/caJ1VnHjfbndE8WuU6QlGmAQUufRHsgj3actqjZ3jGJXoMgfpKVyzAA2KrMCqfe+a1cJqUyPC02Eq1O+j9TprLxjuu5quaLsM5JMvy5UorkYISa6VS0mx5xrBXpDWeKh1SzwdHcTWIHA5lp1I5ErQJvUhQiH0GgJYTdbKGBvksC0kQqqSN5LHTSVuRwOgBDQZFsV0K+A0QxT9tgTKV4kme5XUJN5dblPZUkaxIsx+YlQOFKVVSHNm5KG7V845OMJZ7WaJxPY5JjIPKzdccXLE+zBP0xwgshEfhvZgd1lSjDcdQHQy6Ju52/Ban+0g3XytDTztuBoc+Xq8Of0sR9LWQBV5uMGwh0LFNhZA0/rQhVKpUKPhGIoT3Suw0jeIYY8AIadgak6LGX4WnkdbTyj/+7uXvZz4PdgdRHDLIqeAcNqxilI+l88XNZElBSPsbumC9mwr4gdkzg3mkqmBt3W+d9Bkylk5i86/kjE2NfjJXXBVe3mzPjwNKznhestQmv4JDThcuvSRtcwqZEpEyfmXAahNQDlpm8Fyhjo02ADO7dPv7hafrI2ZPTcsE="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/-det-blir-streik-for-kabinansatte-i-sas-1.18062862"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/norge/i/GrRmb4/nrk-det-kan-bli-streik-for-kabinansatte-i-sas"
+  - navn: "E24"
+    url: "https://e24.no/naeringsliv/i/2VJwva/streik-for-kabinansatte-i-sas"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19354018"
+  - navn: "Bergens Tidende"
+    url: "https://www.bt.no/innenriks/i/qyadBo/nrk-kabinansatte-i-sas-gaar-ut-i-streik-sa-nei-til-forslaget-fra-riksmekleren"
+  - navn: "Dagsavisen"
+    url: "https://www.dagsavisen.no/nyheter/kabinansatte-i-sas-gar-ut-i-streik/10597912"
 nyhetsverdi: 78
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Kabinansatte i SAS Link streiker fra onsdag etter nei til meklingsforslag»"

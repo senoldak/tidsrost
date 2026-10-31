@@ -5,6 +5,29 @@ date: 2026-10-19T16:05:16+02:00
 category: teknologi
 produksjon: ki-medier
 kildeSpor: "v1.k5HlaQvz58xHydGm.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"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/ingrid-alexandra-holder-sin-forste-audiens-alene-som-kronprinsesse-1.18058772"
+  - navn: "Dagbladet"
+    url: "https://www.dagbladet.no/kjendis/forste-gang-alene/85307659"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/kjendis/operasjon-dagsverk-i-audiens-hos-kronprinsesse-ingrid-alexandra/s/80-95-172035"
+  - navn: "Dagsavisen"
+    url: "https://www.dagsavisen.no/nyheter/ingrid-alexandra-holder-sin-forste-audiens-alene-som-kronprinsesse/10590155"
+  - navn: "Adresseavisen"
+    url: "https://www.adressa.no/nyheter/innenriks/i/eGvzmM/ingrid-alexandra-tar-imot-operasjon-dagsverk-i-sin-foerste-audiens-alene-som-kronprinsesse"
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/4OQEma/sverige-centerparti-leder-faar-i-oppdrag-aa-danne-ny-regjering"
+  - navn: "DN"
+    url: "https://www.dn.no/bors/oslo-bors/flatt-pa-borsen-aker-faller-markant-etter-nscale-nyheter/2-1-2060413"
+  - navn: "Stavanger Aftenblad"
+    url: "https://www.aftenbladet.no/sport/i/b8wkmd/haaland-kan-miste-cl-kamp-vi-tviler-litt"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/okonomi/i/9kWB3M/musk-alle-barn-i-usa-skal-faa-spacex-aksjer"
+  - navn: "E24"
+    url: "https://e24.no/boers-og-finans/i/6qV9Ar/spacex-solgte-starlink-nett-for-831-millioner-i-norge"
+  - navn: "Digi.no"
+    url: "https://www.digi.no/telekom/starlink-solgte-bredband-for-800-millioner-i-norge/7148007"
 nyhetsverdi: 82
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Elon Musk vil gi bort SpaceX-aksjer til alle barn i USA og 5 andre saker · 19. oktober, ettermiddag»"

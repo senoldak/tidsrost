@@ -5,6 +5,21 @@ date: 2026-10-19T10:02:35+02:00
 category: utenriks
 produksjon: ki-medier
 kildeSpor: "v1.lK2Skzr4ov3YsW5s.0LCL18oVmkcEakgNvloS+AWSvu87QvplOCU35EgTduWPzqEUD/uRnf+sRQI5p/SD8qiOsckt9a9wA5XtbSMMRVTcdu08Y9XQlPYiSWYuFgbfg0WwCIMKsFmJN3eRFQ0OP/4ZAr34l8rNOYGo5INZPIxmxcdaYCmi4wd3qw02EL5cVwy4YawR7rKKec5Rk2m0b0QQ4mBWj2GbLLls2haL+lGHTobNGWSvom3BMcbILOL2RSXZMg98In4nv/Ov5aNcAgQoHhEVrdWHKANwb9PuB8qYwxLFQQSFdD9apOWemNLJszI0iSaC11au4j/Y0YxdB7s3IhbmwuW+VrKrmfp62NDdhkDG5NrEuaBtRWxLP/TtlAjvLrqybSDiOB4FIkr8Wvr1aI/V27BKlKHFd3g3D+UYfcfLOJoyBqs8K8Kt2ToLnVX5Tq4DJ0qEK4HYTzNKY5QmYCUOBMWu9k7oUXj5sdkyxPf46Sx5kfmqaFP/LJ9mMgpzP8gaQNS5SGK403fl65pjshWjLB7py0Pn1/+FqZgdhbP8IG1DZsGTvM43iBTh6ZJ1Kc8yRu9gLpaGbQMyX/OsEVJb0wVihQt3iw/zSMqfa19pcxMFsmkUtHvC7Sh11F8FeSm7JfaDD1lFYduLbrnlXx9w3F8fmmg/h3xCMVRD9Si+vvsD5Xy/aH4UEcT4ijOXCCuwPl7Hb94zsltSExoc6GABlZdoEEuIbuwq7wesZ25Tk91zLq7EObW643m3dEjU5q53yHFtVk71Vet7sZpD/mTmUUF704gBOY1bRi5rTK3A+fdfK0/5MPTzt/mdYwfaMndJjdyTAqXOU9DPsUN4qw9xBTgtICFRAIw7SRCADlr3yRCb6mNUu4pMxA7itZFfudFUPRPt5ulzBQnRCwAl9AET6vRGfthm4DrmcFmPqoKCs9BAlrMmRjVUL/eSgDzFD+Xpc5c56QNDKqzW7vQOl8jD8MWLB7C1i1S9w3KVbx+w72pJPLZxDKlHrORZaUVQHL6np7Q9D4aUopDuQNdB8+K7o4QZyoDRVpoTogUF9CDGvp2wpqijzCsz/a8sqQzDc5DZjFCZD8f2ZN/X1ugJXHvrMWNNymLT92SlhWiOuwxtBv8eYbaFCq7hu/rYsbIWKNy6CWMXr1O4UkXu+1td5Gf2W7Pm67OW8wrLd0Rxx9zbWizHBV1177h3R9mdyVSkAe9PdjzTjKXTSSWkxZPwAchRkYo2MhF27Z0WmNYaelaBBpG1nrNAsXg6EmuAmbOnMBbcwU0CpAwuTLQVdTb4Phf3OwV/swlR07k66nv13bhp7dbCYvIlccVt05qngmVKqNh2DMtvKqlenWcQsgH3sJComSGZUsHxM0kuI2NyK5UPqWqPI9STjjtz5NQ7xhcVmHpGLhH5NxpeU6H8WhHU1B2oJ9zOWahr+/H4GoF58C+MMKQifKM3VmOYseVJyJ9lIFHcBgyRkkTulC98VKbZg9yo0OyE1v30MpxABz7qS8J2rolnLmhOTsZcZRuPqc/A4+pXbRn6h8xZSssaxmbYDkykBGQkt7eSL6lW+3i+wGwH9JbMiPAMw6Z0hyAzTJjbQIconvHDVC/WmSnxvpPIJBx9cEJPzz4jTvVIOSdVT4jGmI9V12s4HqRP3bhxpRlDgGtpovV3BHR/xoz8fpjiYwW/qcPwudzAbyyStaZicv8KJ4+Pf9kOmJnn50HzW/BFMgxi01t3tRVH3PD3xHPuX2Kx8w=="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/kutter-mathjelp-til-en-halv-million-i-gaza-1.18058312"
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/MAvA7R/wfp-mangler-penger-maa-kutte-mathjelp-til-en-halv-million-palestinere-i-gaza"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/PgLgpp/wfp-mangler-penger-maa-kutte-mathjelp-til-en-halv-million-palestinere-i-gaza"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/ma-kutte-mathjelp-til-en-halv-million-palestinere-i-gaza/s/80-95-170763"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19333739"
+  - navn: "E24"
+    url: "https://e24.no/norsk-oekonomi/i/kvbGWL/avinor-varsler-milliardsprekk-i-nord"
+  - navn: "Nationen"
+    url: "https://www.nationen.no/milliardsprekk-pa-nye-flyplasser-i-nord/s/80-148-49786"
 nyhetsverdi: 82
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Milliardsprekk på nye flyplasser i Bodø og Mo i Rana og 2 andre saker · 19. oktober, morgen»"

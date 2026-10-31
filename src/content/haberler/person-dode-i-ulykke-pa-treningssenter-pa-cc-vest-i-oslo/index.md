@@ -5,6 +5,15 @@ date: 2026-10-31T20:09:13+01:00
 category: innenriks
 produksjon: ki-medier
 kildeSpor: "v1.h5a2j/pRv42Ta9Cc.BpkNcok3dlg70tYKehnE3WhVVDSoDP5F9GlRfM6+WoX/IossVQoNGcMIUjS8tj5XOo7GSJHLXIIM8XBgzwM5/GA/frN9WzJ6jJFHR7ffByC9ZtbY+LXRy5xnLiVl1hc3H24FwvLQWi0QFic8iShVLh1s30GcjdAdMooCv5IYxJhdg+bfWD/vlQiYoJ2SZgTJSQGukzQ4wwpoUy6ZHIr+DuI/5+XuKBIwd7PNc6EnP76d8F3fqshbmzQWIBYJRjjBuv444xZz/nnDVWi0PJVJ6NLg6oEehJxtK2GcY7xdw1Vwp6QMUe9Qrlrk9Cwk6Su9ekd1CPhYDO+HX5c7auhr26k/Bwa+6zPE7JM0SYGd/K1xlH6Vju0nveToJGa7AvkbT0SsRFBl9xwnT9UZmrTZH9Gny2WYbYbkarM2AmUKpmKXzfvCyzt7tCc3d+yMUzXOT89hIR0xJff/ZZecuEn+sDm6vs9i08njMroKFVloiWW5OBqJrSsssVnDUOSiMnp8I+j+cDPszkSYFPn3aHv5/EmFIB61qcyHE1JStH4H2eoFlw9iDgtBSgzOFxLkMugseUivwvYrY9IV+3i/0iJ5a3cmyj5dVpsaj/8r0GlQGpiidu62h7JnssH+uiC9cMIRCo6R+DUtAmsjm7Z9uvz4W+WE/W2QITAsl9Mqu3q1b//b7AYaQPdmpJW7trhYYI+FiPTRZWHS8IiA0rGSyYX+q1xtuNqX7Ukka8/slobCvlYfa3U="
+kilder:
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/norge/i/QgLXPA/mann-doede-paa-treningssenter-politiet-undersoeker-treningsapparatet"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/person-dode-pa-treningssenter-tragisk-hendelse/s/80-95-208850"
+  - navn: "Fædrelandsvennen"
+    url: "https://www.fvn.no/norgeogverden/n/aOAey7/mann-doede-paa-treningssenter-politiet-undersoeker-treningsapparatet"
+  - navn: "Drammens Tidende"
+    url: "https://www.dt.no/person-dode-pa-treningssenter-tragisk-hendelse/s/80-55-32205"
 nyhetsverdi: 72
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Person døde i ulykke på treningssenter på CC Vest i Oslo»"

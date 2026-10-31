@@ -10,6 +10,11 @@ key_points:
   - "Kritikere anklager statsministeren for skremselstaktikk og tap av kontroll"
 produksjon: ki-medier
 kildeSpor: "v1.jfYsf+5YhevRUz3b.87P29KURLUKPcwe7FfULxukXiisqsP1vZiA1ApCpcjkbjK4QpKF0VqPoJdwGVgEvX9MfO7q9whKgPT0pZZYnBhveGDG6d26TDT6rhhARm4BmRV54HiSeKhH0BsXolzoeMXvctARhOJGy6/fYHhmr1G6im5Br2frl4muN7BcF1S7j+gTYxFH+kNVxr0pC8k58w8cVR4EXT060TWt/oTD2cDNm3toR06zS+UkxA0oGZaYsseXX7Mjq6MRlQCmrSdSxfOfDXENjVu+NkT06hZadBWJkaEF9YIOyhjrPcvIrtaULaCooJDnr4YN/PLC+0RXYN0UOtfxjAkQeR1wmBVbIXvZiYTYg1H7PLAWZx/Nl0AZ//VJP"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/netanyahu-advarer-mot-nytt-holocaust-om-han-ikke-blir-valgt-1.18064285"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/netanyahu-delte-ki-bilde-av-atombombe-moter-massiv-kritikk/s/80-95-190680"
 nyhetsverdi: 78
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Benjamin Netanyahu advarer om nytt holocaust før valget i Israel»"

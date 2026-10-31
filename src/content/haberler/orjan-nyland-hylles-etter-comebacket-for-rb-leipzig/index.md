@@ -10,6 +10,11 @@ key_points:
   - "Ventet å starte tirsdagens cupkamp mot Rot-Weiss Essen."
 produksjon: ki-medier
 kildeSpor: "v1.9vd7R1CDR7ijD+RC.U6GgZCjCMLx1Z7HEToy2T3AFrKEwkhTrD2agqm2089c5jg6KPV6PXrwwZeo6WIYC/vA9DIZNdhC/1ozvRImxmxb3VBGSsqyc9E2XcKydabnMWnfNERZbNnKm7WskRJijOfdsX+FcyLDxhP+buV5geNDlcKUJUMzUZ6LJSBYe9rTySbyx1z7k3ZaPggVXUJ+nb7kXO8d6Fx0ba03QZgd6lJxWpQcp02QJRn+oF35HE6l4fJTjLCNm15Y9QjKRlvuR9gDVVPTO+kF68vYU24lbIB4BMiHmUa/c6jj8JLIxNG4soHfB8t/XzjyErxXluTJlh39DN493HCZBWIpjGRg2ehNcGGUTDdfnexMWSc372I9ve5AICxg9nzG5OLnUzAytWA2hhW29mvpc"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/sport/erling-braut-haaland-slar-tilbake-etter-kritikk-om-at-han-er-sliten-etter-vm-og-nasjonsligaen-1.18063782"
+  - navn: "VG"
+    url: "https://www.vg.no/sport/i/9ka6yw/oerjan-nyland-faar-straalende-skussmaal-etter-comebacket-for-rb-leipzig"
 nyhetsverdi: 70
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Ørjan Nyland hylles etter comebacket for RB Leipzig»"

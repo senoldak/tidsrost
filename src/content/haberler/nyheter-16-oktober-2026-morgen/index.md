@@ -5,6 +5,19 @@ date: 2026-10-16T10:07:01+02:00
 category: utenriks
 produksjon: ki-medier
 kildeSpor: "v1.9RJTsWe17L7jsI1w.p7s5iNNPmFaePyCwYLe7XOIg4/jw/jHkzTv7jccMOUTL4GlklJavLSRilyeDIZIqkm4oiXD0t77Pg4SAvZ130z4Xpi/biPfDyKORB5XuTzDze0lrMId/dfTpF8szQuVJ1QuGoG8U4vZ51m93EZ1x9NxqhmL30R4f4Lgjg1Vif61wUtsUL+mc1aUa8YajKX2oGQPt0ofRUHzRxgaj8Ln7GdxdL4zplzygA0hD6TXhVXG/+kH4s5nUozF6pEEuiz0Obx5SI2AjftCZNgWb4p4/tiIL/oJGqcsHl+HRFvxOcX6D1f2fdBqxYhWVPIWVJCvj7/y5YMzPK22N2tzEPo9V9E3tq3rpIDIoHWNLNWPSAR2ICg7cMvXSXEGq96MLIVjNNliaa4IDMX6GjZv0VxKQ+7tOMUnwpeYp7ELZMCCvf6m71y42XX9gd9O4lqBl8xrhJpeWvn7qlWBtDaYSRzFyWkELMwmHxnJetn9g8K3hSftjsz9seE9cUz75ja3uK3nUfh5imJNGUlazCQNntIvXv12cv+HO8x/LyZISsnsbHe7KWYyKzvLxI0/Ee47/0hTi6ZJgLL717PzoZRZDCpoAH94p6tgUszIYBKLZXf/bbF5sJYPD3MGzk6x/r3I54IOqkZGF2wqo5eoeXmQdIBNOxRbbeJ8uS8Ao545pwhtQdqffuq/NiHN2QMJxZW0RqDw4w6E6BGtlltG7XPhnxQtnU4MxaFv4eJ+BeNFRPy8dScqsiWHlxoiWN5FeTQR0SuTiGyUEuRRuuExEjs8O4ycGQDK2+EBvVBEVjFPrlXPZBrBCXSdJYmSr6EZ4saNRTy+B1hrKWlF4fSibKfR8QgRVKUZw769EAIe1iiVXnhWI5S+eM993RaB0j5Im3IJXOM2lNoGIo6ZtNSAKVWl3vyccGyBlvsGHKuxtc0JYcUoRsy+EuRI7KQjAPGfFbVfyRbRVLHwvRPYNTzgRFIUvaNfWh2Mym6OATUf2jF/pmQl2l3vbL4EYInaZCachnxOGFHia2t0jkMUcka/qYfLXNSZ1hgDbDdDhQ78Daj3P5Zy5Os5m4MFPU6fifAFZAn7VnZugDWfnO/x1f/ngmaXWtkEWNBLZJcfoMK/Wz/8clevOfYEiUA1tOEHO/iPRqtB9wS758J25Gx9xUzUob6jajHZAPboRow1I11KSRLcCfgiGZYs8KzsUHL7cy77f3be7YgUhdfv1vkEl3uD4KvYY1w9QiJjm7rU4G0grjXP7GsdpedWHNZ/I3hy/jUavJJAZAzRcnxCz+zVw79HUlzPmlDKk5r5CbamVK4z4zxR0jWAY+iOBC6syznnpuYQRr/hSj7QGwLWOm3FRe4S+FwdO5LvIEsOZINI5oAt87Qqayrbtg93gdYVTFbKr6UkW+2vceOaMkZpfSse93qSXHT/qDR2ah5Ez58+0Qq1LCpMEQk6N+joeXWXCDm/2G+Cn6bOnWbgsHV4siPRTU6rY54cye9/uSX/WSthvfqOtAJFJft8LesNxdJGRwfYmKKkJqjz6fU7geV1HSE1zC2CzsPfPJXOeuE+oIv2XDoeJqyW8QTRjgBJtxusJBS0Bh7u70nR3r5G2X4a28Yj3qk+bDe8Zy85Ej0yP5RDhXREuAe2MbuNOS9+E4LDqK+iCypCbQyx2u2k50sQpNByMhh6GMRfQ7yxZR4LP7FCXphrPnq5MZ4uUEAfE4eR+KsA5ehiYG8N5JzSn77SPlyj1qq471mD6fgJjT2eX0pptkQixuRks2CyXbjQ4YkemH5BuyDm2c9DhOWy67vbPPBomNTFZ6B5z5iBCYY0QAw06Ts6e6A9vpye5cSI9eJ8uhyh4n/j8+3AosrvmdaNFTHAXR/+zlv2O1VvE9GOQDQIcbG5qiFgxE76aXTSawA=="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/trump-om-ukrainas-angrep-pa-oljeanlegg_-_-en-skam-1.18056393"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/31zPPA/en-skam-sier-trump-om-ukrainas-nye-angrep-mot-russiske-raffinerier"
+  - navn: "Dagbladet"
+    url: "https://www.dagbladet.no/nyheter/trump-raser-mot-zelenskyj-en-skam/85295654"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/hundretusener-av-ukrainere-har-mistet-strommen-etter-russiske-droneangrep/s/80-95-165024"
+  - navn: "VG"
+    url: "https://www.vg.no/i/BMqdX0/bruton-faller-6-prosent-paa-oslo-boers-etter-melding-om-sammenslaaing"
+  - navn: "E24"
+    url: "https://e24.no/boers-og-finans/i/b8oQB3/bruton-faller-6-prosent-paa-oslo-boers-etter-melding-om-sammenslaaing"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Bruton faller på Oslo Børs etter melding om sammenslåing med International Seaways og 3 andre saker · 16. oktober, morgen»"
 coverKreditt: "Illustrasjon: tidsrøst"

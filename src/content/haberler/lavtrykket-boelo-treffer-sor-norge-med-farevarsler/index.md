@@ -10,6 +10,15 @@ key_points:
   - "Fare for jordskred og store nedbørsmengder"
 produksjon: ki-medier
 kildeSpor: "v1.j47Q0FDkULcT9fFU.NPH9S+BYFYHyvrDxX1T9W7I9Br4EDPutA7AWslLycuVF5kzpwGDgpYf5BhcQT0sWOFl9/+rpRnwq4ZbmuUQg/gT5mzETUYo8oWP3e2XoZsLxSa/3o1jMGEdt+JJ0DVqSKYdYqe+gTjSThw2pz1NKN3iIpv+a671zm5YZX/kqbzhCzEaB41+h4OIxZoDlIVl5UnQwMIrHLu1WrQ3AfK1lOI5jjdK/Scq/6bnkJp1adeQGYgBqGWyouEQQHI5GsG3L3gmpuflJkBhXbL3beRrgBz666+/tcfgPAUKalM4wxPBkFX6XCZJRaVV68oqLu5bicXVO/RJKdXcdHSBR3WHtT+W34oZhEwajYuU91TtUv+rnY3KPcdjiRs3SLpRgmiVtvur6Ryhd5BLK8fFAVZHTvnPDwwtidX4oVchH3SYdRIBnaIh25nufHxzrCFsXXd6yUItCN+vUcVMbB8hhjTAtZfmzeftiUTe8Aow3vFEtjgWdocDc4afVEvBmBkaT3nT/0wA+nxp+e0U3apGRJOkWztCNe1Kta5igXzhLDR5K7v8+x9DwjBIMgq3hz7XkBy9cFebIkFge4Khd5StkvFULGAG46Pq8ovvxdAS9TE7HhhMGbMfbVPuuW198zxslYB/mu/6wKbDdXgiPAZ2q7aFSoUQ7mXbHdwMpGlRZ6qZL2CiYsg=="
+kilder:
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/norge/i/VgvMA1/gult-farevarsel-for-store-deler-av-soer-norge"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/meteorologene-advarer-mange-farevarsler-i-helgen/s/80-95-186183"
+  - navn: "Stavanger Aftenblad"
+    url: "https://www.aftenbladet.no/lokalt/i/PgJBy7/venter-kraftige-vindkast-i-rogaland"
+  - navn: "Bergensavisen"
+    url: "https://www.ba.no/gult-farevarsel-for-kraftige-vindkast/s/80-8-80682"
 nyhetsverdi: 82
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Lavtrykket Boelo treffer Sør-Norge med farevarsler»"

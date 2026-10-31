@@ -5,6 +5,19 @@ date: 2026-10-15T16:19:38+02:00
 category: utenriks
 produksjon: ki-medier
 kildeSpor: "v1.1l+V8NaycZg365uy.nR49/7eYg43tq7/dhYuijQEm7Uo4tIX/asUoZIDjgBPDhwCaThnfhzJtyt31uzcBOivhsrQJGMvZjbcyoTHkN6E3fUpBfOtUTwy45xzCJVwW6FX/tj13wFU0jNwfNdnW+dWAyaKCRnNc07gqM+lk9FwQmNhceFktEiVgTljPLpve5R+n4Yw1k2LxYA5GLz+ULbX1qjIFdbKwtTkZSSeOO7bcRpqlGC3+vkKdNaFFGMKgT8Fn0MduPyR3rnH4CJzNBqPWxU76LJsYjnJSFxmDgo7OckHa8hRYmtaRbXCn0DhuPDsv5L2j45qNEURXgW+QreBPXKrW++/37Bc+GnDlBWQ64gn8tv2oaQ7x6kgQIWQ93SXawkxVpc2UO5VviuDRMWMXmuK0VybsVEu/u6UsgPemCqmyMm6T/EAwmQ/4MuxDUGcw2iAXQcj6SyjOaK0NyWLINikeC21B3bG+3ocRhXBhLuKCOxCE6nyTnCigNh9u6eYXZfXRekVSo6xmWa1/07Ve5JcPoXle2z+PEGVzwJefIu8CpZQBVJat/6AbCT6MBs36xa0R9ZKubcb+rN16tJTFFM3xbEka37DH4hZMydqOl1Pea1O2+bNiQlDdhlAblPPUf2cj+JvIo2dP0Y96M2/dx7tcvazfcJk8MXCmpFp+PL2zhIhFpdC6WdqbD1tZYCWO/8DQauJCNXcVJLBdVnALwtd8Zr1KRffNGm2z7gosRK/BhgvxjKNAceQOY2zbbAD5GQi0DMjmgtIqdRWKs9dzFBY1m2ZuZI8fT2iIB6ihSVJJ91zKX1Udp+mvPD/TOjAqbOVi71jq/UkABChSYeLKcIhEC/BtVbNjfvlWAt834Bk3J/aNFkfEVhDTbvjAQGmlpykPu9/gaShA2MH19z4DAXn+d2xzg1xIq1Ncdn3sFN3nN69T6yJZMPP4aIY5GH5geuSDiMU+sjeJieEyjufffxKYbeMI2ckw4tBgbjJdx+iPa0Zf/Gy7gXSAuhNWjuJepUAxJFnVsDTLj5oP+hWL/Yd/zxRuVBVbxd2+JNxs+U86y4hINpSNZUalXj3YYMQD2dUi3UHxH6KXKQXccO5rNAcAfz+1Cmb/aCQE+XQFADuSj3YerASnSA=="
+kilder:
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/Krqj07/trump-henrettelsen-vil-ikke-bli-direktesendt"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/rMbdww/trump-henrettelsen-av-fort-hood-skytteren-skal-ikke-direktesendes"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/trump-snur-henrettelsen-blir-ikke-direktesendt/s/30-95-24142"
+  - navn: "Bergens Tidende"
+    url: "https://www.bt.no/utenriks/i/VgpG04/trump-henrettelsen-av-fort-hood-skytteren-skal-ikke-direktesendes"
+  - navn: "NRK"
+    url: "https://www.nrk.no/stor-oslo/oslo_-prisvekst-pa-boliger-har-stoppet-opp-1.18055498"
+  - navn: "E24"
+    url: "https://e24.no/naeringsliv/i/w393q1/selger-maa-se-paa-sine-egne-forventninger-til-pris"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Boligmarkedet i flere byer: Lang salgstid og færre budgivere og 6 andre saker · 15. oktober, ettermiddag»"
 coverKreditt: "Illustrasjon: tidsrøst"

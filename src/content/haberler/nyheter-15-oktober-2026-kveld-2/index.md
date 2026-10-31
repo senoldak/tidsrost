@@ -4,6 +4,9 @@ description: "Korte nyheter 15. oktober, kveld: FN advarer om at hjerne- og nerv
 date: 2026-10-16T00:04:03+02:00
 category: teknologi
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168605"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «FN advarer om at hjerne- og nervedata kan bli brukt mot deg i retten og 1 annen sak · 15. oktober, kveld»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -22,8 +25,6 @@ Slik forverring drives frem av sykdomsutbrudd, mangelfullt vann og redusert tilg
 Blant annet er det ventet at 4,04 millioner barn under fem år vil trenge behandling for underernæring. Verdens matvareprogram og FNs mat- og landbruksorganisasjon ba torsdag om hastefinansiering for å trappe opp mathjelpen og landbruksstøtten.
 
 FNs bistandsmisjon i Afghanistan rapporterer samtidig om en fortsatt svekkelse av grunnleggende menneskerettigheter mellom juli og september, der kvinner og jenter rammes hardest av restriksjonene som er innført av Taliban. Rapporten dokumenterer blant annet tilfeller knyttet til påbud om hijab, vilkårlige arrestasjoner, offentlig pisking og innføring av en ny politilov som forbyr alle demonstrasjoner.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168605)*
 
 ## FN advarer om at hjerne- og nervedata kan bli brukt mot deg i retten
 

@@ -10,6 +10,13 @@ key_points:
   - "Nora Mørk og Henny Reistad med til tross for skader"
 produksjon: ki-medier
 kildeSpor: "v1.2O99gtS1/ziTEnZT.SUeUuUDx8I6lcVhaLR8yELnwgZY9EQykvlJLe80QUWrjCW8YciayvSVCWoB5g18KUdzOI/7YDdKy2xRLENzEJrth5cVYf44BEA4diwNu30oED6/VZTHv6s58j4XDsCwI5ZRh717ZKV09+ZYHGGPAqEvF0nkbrZxBz+gy1YAlv3AY9dai+zxx/XCaTkimLI+ofAZzLV+WsbUKx6DIf5pMnM4p21jZnAxxfWO9VQ6gxBHpOY2KdIt9T9bh/O6Iq6kZ4Ps4GXbs3q3lg8+nMCQVA4iVQjVRMVZ4g+UA48boXpVZiJyR9SN7IoPtJGHiNZ0qudAYQxBLTnPAciiKhL6HeyRByC4Uj0oo9mtPRIjsKLDAMoBvbGyBfcaV+PMtMgId5OBRi4Y3MlMyP8m6qs0zQVaOAFFb3mbXbUnkZ8oSjmjnrV1nxDug5/vxNNq0Se9oIra4/rbBZ9QjHiTdnLMXbW39dDI088MQtM4e/3UssZ72NpE1rtFW1wB8jYOEt9TSqFURlb6ddVVTKOU="
+kilder:
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/sport/dette-er-norges-em-lag/v/80-95-205625"
+  - navn: "Stavanger Aftenblad"
+    url: "https://www.aftenbladet.no/sport/i/9k9amq/haandballjentenes-em-tropp-klar-seks-mesterskapsdebutanter"
+  - navn: "Hamar Arbeiderblad"
+    url: "https://www.h-a.no/mia-25-skal-til-em-en-av-fem-mesterskapsdebutanter/s/80-139-90008"
 nyhetsverdi: 75
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Håndballandslagets EM-tropp tatt ut»"

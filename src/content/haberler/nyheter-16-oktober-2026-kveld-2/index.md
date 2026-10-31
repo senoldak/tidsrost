@@ -5,6 +5,25 @@ date: 2026-10-17T00:03:56+02:00
 category: utenriks
 produksjon: ki-medier
 kildeSpor: "v1.cxAECncKuOAqZnt/.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"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/rogaland/xl/19-aring-fra-stavanger-domt-til-20-ar-i-fengsel-for-drapsplanlegging-_-slik-ble-han-styrt-1.18049202"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/norge/i/R5qWgO/doemt-til-20-aar-i-fengsel-for-drapsplaner-i-england"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19322025"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/elon-musk-kontaktet-trump-for-a-bremse-starlink-i-ukraina/s/80-95-167760"
+  - navn: "Dagbladet"
+    url: "https://www.dagbladet.no/nyheter/ba-henne-revurdere-stillingen/85299352"
+  - navn: "DN"
+    url: "https://www.dn.no/bors/tek-fallet-fortsatte-nasdaq-falt-45-prosent-denne-uken/2-1-2060112"
+  - navn: "Stavanger Aftenblad"
+    url: "https://www.aftenbladet.no/okonomi/i/aOLEGE/norske-nikolai-er-verdens-beste-vinkelner"
+  - navn: "Adresseavisen"
+    url: "https://www.adressa.no/nyheter/innenriks/i/n9XMqx/nordmann-er-en-av-tre-i-vm-finale-for-vinkelnere"
+  - navn: "Sunnmørsposten"
+    url: "https://www.smp.no/kultur/n/8GWvoG/nordmann-er-en-av-tre-i-vm-finale-for-vinkelnere"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Donald Trump avviser ansvar for begrensninger i Ukraina og 4 andre saker · 16. oktober, kveld»"
 coverKreditt: "Illustrasjon: tidsrøst"

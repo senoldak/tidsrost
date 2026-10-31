@@ -10,6 +10,19 @@ key_points:
   - "Tåregass og stein kastet i Paris"
 produksjon: ki-medier
 kildeSpor: "v1.0ddJQEU19Nu8rNO8.z43222jcxauSEoDcyOXkvB0l03p5juunI8PCoOgRwuw/7HbCIiNb1LfK6u3K+LTi3sebBvvPnKOImh1eR01vRB2arJyf9mwcZzoGtkQPBptjd0M4/zAras9r1HJ5fpSZHsxaHo748uyH1E9bm8V9dlX5fpEHOYsTUaE7F3qxMG96ONqJIKnSEOxYVApqnY3y7cOEdwu5V+A1/GoFNsxPUyeMJfM+h5tPatbFiyK8Oga63vW9JuhC2hUfkMwbXK8g0KXqBYNjj+LuOqLZ6d4gvZQcZPX85yYKizeUB6VCrqFEYkI0OsydOvmV0+nvsclj+//L7OVvZSQh1/AsBLGRShj+GAJS4sjTJU1d9GDhnLnjNQelGfx5z1xhAGAh3uYOpOiuyluhtJ5ySwuyId1eFAD84VpBz7wBd7D2kg9b10qvZm1NZZYH0nqwnE7A1PUBhot30w5WSJjle6vC2zTmST0+LVJ3LLDS2CoeDWGL7YjkpbyvkDNE+QFc7c2PPyI8JRmNEBMQLw9t52+P1txt/G2z4BwMJNAnJgR/WQgOnFp/LoUM135mh+i4Ti8sSFtLTyucOie3p2GiNyAauT9xWTgJzUJOZKwcWyDoiNae94Hv2RVq0q52UO/aegJVU6FA85xQDSKb2qVhlf07T3uCnTIhLd5KHXG5Mz6Exi8tD9UoLWxGATFXQARg6eEjU1HsR+fbIw1pdJlOVwg2WqTEaibCae4+MWOR+sagRMt/qUjz7rFLHeOvyS7hbaqaA7kOCP8E5bvpFEMxHQy+dEQTCkYmcZpLvDuKaSxrV0zARwbhRvWC647bCrS6bWQKPJWSO+UphBSWMhpsuBhl7AoRmZZ9cDJLGRp4KhK4KMlfns3CAIQXUiIBjeb4wvuEPCuItsXOUxS3iymgCodd6itZBkx+thzbCjB/F1+uyD+p6j9CvXyQWlR6MQ=="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/110.000-protesterte-i-paris-1.18063832"
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/587KPK/paris-politibetjenter-oppfordrer-demonstranter-til-aa-forlate-omraadet"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/R5Ad65/demonstrasjonene-i-frankrike-fortsetter-det-kommer-til-aa-bli-en-lang-dag"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19342736"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/demonstrasjoner-i-paris-taregass-avfyrt-mot-folkemengde/s/80-95-189108"
+  - navn: "Klassekampen"
+    url: "https://klassekampen.no/artikkel/2026-10-24/debatt-the-revolution-will-be-filma-i-hoydeformat"
 nyhetsverdi: 75
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Demonstrasjoner og tåregass i Paris»"

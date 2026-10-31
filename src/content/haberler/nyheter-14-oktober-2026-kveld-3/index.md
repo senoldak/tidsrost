@@ -4,6 +4,9 @@ description: "Korte nyheter 14. oktober, kveld: FN øker vinterforberedelser i G
 date: 2026-10-14T22:05:23+02:00
 category: utenriks
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Utenriksdepartementet / regjeringen.no"
+    url: "https://www.regjeringen.no/no/aktuelt/norge-gir-750-millioner-kroner-til-gjenoppbygging-og-tjenester-til-befolkningen-i-ukraina/id3177355/"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «FN øker vinterforberedelser i Gaza og melder om uro i Den sentralafrikanske republikk og 2 andre saker · 14. oktober, kveld»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -16,8 +19,6 @@ Sakene under ble først publisert hver for seg og er her samlet på én side. Te
 *Publisert 14. oktober kl. 18.02*
 
 Norge gir 750 millioner kroner til gjenoppbygging og tjenester til befolkningen i Ukraina som følge av Russlands ulovlige angrepskrig. Det norske bidraget vil utløse ytterligere tre ganger så mye penger i lån til Ukraina, opplyser departementet.
-
-*Kilde: [Utenriksdepartementet / regjeringen.no](https://www.regjeringen.no/no/aktuelt/norge-gir-750-millioner-kroner-til-gjenoppbygging-og-tjenester-til-befolkningen-i-ukraina/id3177355/)*
 
 ## FNs sikkerhetsråd diskuterer situasjonen i Libya
 

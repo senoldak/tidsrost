@@ -5,6 +5,27 @@ date: 2026-10-17T16:04:34+02:00
 category: innenriks
 produksjon: ki-medier
 kildeSpor: "v1./IViiaQVoAZ89zye.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"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nordland/svomte-200-meter-i-iskaldt-vann-_-berget-seg-inn-pa-ulast-forskningsstasjon-1.18057453"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/mann-savnet-i-bodo-soket-i-sjoen-endret/s/80-95-168462"
+  - navn: "Nordlys"
+    url: "https://www.nordlys.no/nyheter/kvinne-svomte-200-meter-til-land-beboer-i-nabolaget-horte-rop-om-hjelp/s/80-95-168135"
+  - navn: "Dagbladet"
+    url: "https://www.dagbladet.no/nyheter/menn-flest-har-det-bra/85291341"
+  - navn: "Bergens Tidende"
+    url: "https://www.bt.no/politikk/i/X93nMr/stoere-hyller-avtroppende-auf-leder"
+  - navn: "Dagsavisen"
+    url: "https://www.dagsavisen.no/nyheter/store-hyller-avtroppende-auf-leder/10587885"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/8GV06G/protestene-vokser-i-frankrike-tok-seg-inn-i-raadhuset-i-marseille"
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/mKxmGv/smilende-pave-forlot-sykehuset-paa-egne-bein"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19331167"
+  - navn: "Stavanger Aftenblad"
+    url: "https://www.aftenbladet.no/sport/i/8GVAwx/johaug-med-kjempeloep-i-hytteplanmila-satte-personlig-rekord"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Statsministeren hyllet avtroppende AUF-leder på landsmøtet og 6 andre saker · 17. oktober, ettermiddag»"
 coverKreditt: "Illustrasjon: tidsrøst"

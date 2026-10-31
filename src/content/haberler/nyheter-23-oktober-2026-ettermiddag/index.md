@@ -5,6 +5,23 @@ date: 2026-10-23T16:11:44+02:00
 category: okonomi
 produksjon: ki-medier
 kildeSpor: "v1.CXksVMV9KW/aOVUU.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"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/det-kvite-huset_-melania-trump-har-sikra-vapenkvile-i-ukrainsk-by-1.18063108"
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/w32135/melania-trump-sikret-vaapenhvile"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/zl2n39/det-hvite-hus-melania-trump-har-sikret-vaapenhvile-ukrainsk-by"
+  - navn: "Dagbladet"
+    url: "https://www.dagbladet.no/nyheter/melania-trump-har-sikret-vapenhvile/85331027"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19355033"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/melania-trump-har-sikret-vapenhvile-mellom-russland-og-ukraina/s/80-95-187470"
+  - navn: "E24"
+    url: "https://e24.no/boers-og-finans/i/eGxrbO/globalt-boersfall-wall-street-styrer-mot-markant-tek-nedgang"
+  - navn: "DN"
+    url: "https://www.dn.no/dn-ekspress/sor-korea/kina/samsung-electronics/sk-hynix-vraker-borsnotering-ki-uro-senker-asia-borsene/2-1-2063060"
 nyhetsverdi: 82
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Melania Trump har sikret midlertidig våpenhvile i ukrainske Olesjky og 2 andre saker · 23. oktober, ettermiddag»"

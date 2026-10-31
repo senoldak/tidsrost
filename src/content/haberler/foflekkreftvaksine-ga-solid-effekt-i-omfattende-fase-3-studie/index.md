@@ -10,6 +10,11 @@ key_points:
   - "Over 1100 pasienter deltok i utprøvingen"
 produksjon: ki-medier
 kildeSpor: "v1.r6+cBy/9LEVcT7gQ.c02ryW82DIQ4IrJrP2hF7PudtLMoAoHa8ikcD3aJCMRYnFNdEODtx3Lc1eHYdT8dFKa4eIXoHn6hezAstQrKiOqCR51Ig7Lc+gGu+DXYmBWgZ+hvWjwGmsqyfCH3HYAUx84mfXNPJVFcajq183g+RIyZNvMy8A28d9h+HJGk6h0j2k9AR0iSR2fkSnHPfpLU5uH0GWdIpBdGpwgVQOYa9sfPFzpdowY2JXg84aMQK/ezxvC+bsitBqvi447ZCAS2MkuGpOnQq58xfxGhDahd9gwAS5T2uDUTuy0Q7RY4g9wBTYQaDOTUN8cK9iTwVg8VkzZJ2Yu1DkoeDma03H5e14hDLMclHaCGhsCFm4+fhxiu34nGMyk="
+kilder:
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/qyay1g/kreftvaksine-ga-solid-effekt-i-stor-studie"
+  - navn: "Bergens Tidende"
+    url: "https://www.bt.no/utenriks/i/gdld11/kreftvaksine-ga-solid-effekt-i-stor-studie"
 nyhetsverdi: 85
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Føflekkreftvaksine ga solid effekt i omfattende fase 3-studie»"

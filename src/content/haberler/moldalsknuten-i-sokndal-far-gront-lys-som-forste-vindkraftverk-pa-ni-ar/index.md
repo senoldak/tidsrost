@@ -10,6 +10,11 @@ key_points:
   - "Består av mellom sju og åtte nye vindmøller på Moldalsknuten i Sokndal."
 produksjon: ki-medier
 kildeSpor: "v1.aVsMcO/RhGGRRbsw.EPjxQ4v0PbX2+MI8KjIw7rBpTLQSe1nLdNnNm7FtHiAYwKMar8N5cxQlS7VsT9NnLfiyhPW+GBqVlx9V5rbJCVT6fUrYOIPrZb2+Fhdsx0B5buvmr+kMVMqGBF3+XCDcAjm3nuWQ+gyhIOHYlqH4doc6f0MJgK3lpWJHDn8ieDH62aDSQI57xkXrSwODIkTSBI8ftOBb0v5mlc/9mH7y89NhODxuqW/YPa5VSx1FTr46tDcGINz+NDjLmgW8v6/8kOE0wOtaVV6CULIUVZDzzV1xO9RHRbmEUwNHf9NHlcA7YMRxyEW6CRbnKHyXAbo7zgj86396NyfRCrNKVdSbOanMlCIsamJIUZwhU0EAr79SlQ=="
+kilder:
+  - navn: "Dagsavisen"
+    url: "https://www.dagsavisen.no/nyheter/nve-sier-ja-til-forste-nye-vindkraftverk-pa-ni-ar/10594399"
+  - navn: "NRK"
+    url: "https://www.nrk.no/rogaland/nve-gir-gront-lys-for-vindkraftverk-pa-moldalsknuten-i-sokndal-i-dalane-1.18060436"
 nyhetsverdi: 88
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Moldalsknuten i Sokndal får grønt lys som første vindkraftverk på ni år»"

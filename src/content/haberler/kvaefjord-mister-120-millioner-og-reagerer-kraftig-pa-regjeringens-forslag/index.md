@@ -10,6 +10,11 @@ key_points:
   - "Kan føre til kutt på 120 årsverk"
 produksjon: ki-medier
 kildeSpor: "v1.wUgOsJMQiNXNCpcu.I2F5xF1kbGIpOaGThKse6uIl9UjgGEJklWu+Z8DgRpXeQyCglJbxOLHPNXQgmz/gplcOYt17DCb6sewEm0CDJ8+R1DPKRNEtuH2d/s4+yRolxc5OKzZcLAuNQkY37f/Lf/OECSWTg+bxAYyjWGoQz5cT/rX5pbSXngRD4cUbX1nS29YWFXeUDprklaa8e6KB5EceQhMtNeY4+uqG5HRsG0mVbarS6pb0xSvFDNrdbhLN9zUghy1WOeS//qfwdVOJsVoX2Y8a+L+xjmcT"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/tromsogfinnmark/kvaefjord-mister-120-millioner-kroner-_-ordforeren-er-forbannet-1.18054429"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19323571"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Kvæfjord mister 120 millioner og reagerer kraftig på regjeringens forslag»"
 coverKreditt: "Illustrasjon: tidsrøst"

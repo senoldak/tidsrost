@@ -10,6 +10,13 @@ key_points:
   - "Amazon rapporterte inntekter på 201,9 milliarder dollar."
 produksjon: ki-medier
 kildeSpor: "v1.UHQwe2GmDo25w60D.aF3xchEjQ6XDJgxsO6chslkrmfbuJzEJ+9YhROHl0A3yF59oHxv1esMNMnD7yvAAppePXqwpX/m5hHCcemlkTny+3wJLwRVn0mcbLQXogMRb2hNTN0K6gEb7NWfUCNJPcAl9p2zEiRV1OsABYK9ewIu+vtC7RrWDeHC1FOWRImjPyLGeSnXDevN9DXHov1voESBVlPdqgIhUspEg7OaviVnPij7Hnv3hphSJ3Rkk/sSJrNXFtHt0eW9Z6YpMFWBOwlTx6uqsmfVJ057oyyY1iYDF4mICDElKUPZeX1mXECrYOpUmRyxQJxDAmZGm9Cme6pMIl886EO/9xPDhs5gFvLd6sxStlRQoE0Yy3CT2HZ07oR2kz4+Dr8WNyg00xIwQGic39lVzBDxAz53zwGfl1RJ1jYcqCaRQBzFsKVsNSQYb6d52NgGODTYdIqH1XB6kkR4="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/kraftig-nedgang-for-tech-aksjer-i-usa-1.18068425"
+  - navn: "Aftenposten"
+    url: "https://e24.no/i/oKqBPm"
+  - navn: "E24"
+    url: "https://e24.no/internasjonal-oekonomi/i/oKqBPm/amazon-fikk-inntekter-paa-201-9-milliarder-dollar-i-tredje-kvartal"
 nyhetsverdi: 72
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Amazon og Alphabet faller på børsen etter kvartalstall»"

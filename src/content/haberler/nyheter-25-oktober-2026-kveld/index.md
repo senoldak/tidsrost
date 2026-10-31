@@ -5,6 +5,19 @@ date: 2026-10-25T22:02:20+01:00
 category: utenriks
 produksjon: ki-medier
 kildeSpor: "v1.W05Sirs6U+cm25oX.VRqbT8HAKwt8YbPWKmlbJfpdXvhV+XCvAkYWounoCaV0JLoHxiQF+g5E/Lc4ZNvqzxzHA6tQrDZH93se2j+uXieeWKiGjboOYCnGJOegBnRD6BSJQ9V7Obe1TOQVEYkYS/GvW8P94852mx6l9oMlYpAB5Oh1DbGstEbtT3EpHSI23XwW9LMf+GBLx7eUQv4HyXeYgTnt/z+W8ZLaX5fmlGBSy4j2jThnpZUOU86xgazxVDES6C+zz14RPQRXIY3DcfydAEtBt7v3VDbq5lyXc9QEnurhN3Uw2HlteJnT2R0H7DiAzIRPB73ICE0rzqY8InQ8AWQWGJrIU81QMX2ehQDF14U52xZcMmgCuhvRXa8jxVK2x7pXSLxsCfyb2AmVCjVh+aZkcFujCkEbJbWjTkm818IcsJAs425QLtUB3WwfmTPlHButhOthfsPhkLOuh1Xop/7qmX3MxvD1Y5+I2XAYKQlUt3wT9GquLGIpTuXqi0UmMSaFyRMcj0bBTWif/pXSFHLZJWlld6bbgE/61bbUiJYM8c36W64P0m6NbSYPqmaXMFlOskk/+yBHNGD4u2lHrtP0f3PpmVgMEq4xpyLQGe3sbfVCnCiukhqMO0NTSqgvWO3aHE4tXOgqC5gHl7xQgpzQ3xvweagQDMu6xQpvXobS0yCKoKhQfztZEozZ9OnaEcMI4S89qGJp0oIfF5EI2nz/GFi97kBF6L6gnQ2WCf1BdJ+zyXhee9hFDySZjVwIqeLSclYS8QsHZ7ItR8ZPBEM41SCdKSs9DcC/XWNpyR4eqrqAdBKgDyOdz0F0v5V0lDcGV+mQqbwjtdZUgPSWu3ZzI3E5yuFoe8N+zjj2ztAdQS7xi6re9YydrrDM0UFko4QSzHJqHPkPu8QDAxEdGbZ1kQMgK7eyrANnDdgJwSGbDRABQkVWoeKW4p5uPgPygP8MdnpyZCh8CRbFWJwcFoomip0QuEAxRV9d0kxLd4f9AeFrVSlLuWkVa4SEwfm/kEg6m/m/uR2C0J1hZWT9hIzco6z8Tf0kue+5NPA/NpobB/+zXmr8GH/qE7uIyDza1FcIcO4VtvWmeawGgMa/Yuit6GbmzgMXTtzNB2w07ftG14/UtdoAZyrjLGlMPN6q+ypyeUnJRc5vQNRpGv2pF5zHHMywnJI+p6Yg4SOlHvh00L810W5C8zIdtkejrnQyKO6Pn2TQQv30EL0uA+8WloKV/O9AlWdk5fq88jhNozXpRMXriWpjrPiwqligrve35u/FcJJ/Darx7xecdX9byBMF1CGEIRQQPmjIlJWH6mO67Jk01D7sXlcOSzHMiqinPfacKi02IRWBoQx4zKIzHkqkIe8NJvBJuEbvTXAN0CtkGNx8nl8rQniQR/Cv8vo16+AtXX47oWGj1pgv4OpsQa/LbERkuds4Ujg+ltRQrQ6b27gu7ghjZKoef24r6nDl0qdrHsqF+QC8qLxn1ucnEwNv20phNvE+VlNSw41J3vjHKb4QiMLWpmWGgOe7"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/innlandet/e6-stengt-mellom-lillehammer-og-biri-1.18064357"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/okonomi/i/77aW4v/oversvoemmelse-e6-stengt-mellom-lillehammer-og-biri"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/oversvommelse-pa-e6-veien-stengt/s/80-95-190674"
+  - navn: "Hamar Arbeiderblad"
+    url: "https://www.h-a.no/her-flommer-vannet-over-e6/v/80-139-84581"
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/qyojlO/serbia-valget-aleksandar-vucics-regjeringsparti-erkjenner-nederlag"
+  - navn: "Adresseavisen"
+    url: "https://www.adressa.no/nyheter/utenriks/i/Vgn076/serbia-valget-aleksandar-vucics-regjeringsparti-erkjenner-nederlag"
 nyhetsverdi: 78
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Parlamentsvalg i Serbia: Regjeringspartiet erkjenner nederlag og 1 annen sak · 25. oktober, kveld»"

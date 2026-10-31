@@ -10,6 +10,13 @@ key_points:
   - "Produksjonen for første kvartal i 2027 er redusert med over fem prosent"
 produksjon: ki-medier
 kildeSpor: "v1.7b22roHVKUb2q5Bm.+vuH0/VRVoVCkxA2ax0g22o4N2u/A79rlTTYI2o/Iiy+0l620pOFVHSnZBVVrYeDxwU9iAxwAwiil8ASFWxd4psGnu4224pIA+VaK+ZEdMCbIaxnD7ajBRB08U7npowTvzfJJg783v/vRIe/Lm3Hf3nxcOw69S/h1n03bRpBfpYERHpuo+kWU7b57SjkdGhRcp90HU1jAl2pvUZ9xAz7W7Fb2D5NYEmTVJQckzczohaw3qqnoocQIs+HXxpeN0INUw5HevZX4pXzIqVxBmR7O4+XZq72SaTUQTgzKzSLSQQlDIOtZaN5RdwhutCNyUA2nGcut11Na9bYD+T13aXO1/7PyZMnmo1VdvTGrgvf8IVTP/l7FLbNJyCUbQQqu1vNLAZB9QVNwrcklS7OroVP26gmfjO4EzqFv3QvlztT+mdl7vBZkYx5Zchky08uJwWjBFhNHfgKGNFHT8mBokZeZ/NKQBouh0JjM09Kr0FYUYufbgACTv63+IE0XD5XOupaOzpttS9xP4hljMxAew176nDrMT72UYYmGms+DXSSMDESEw=="
+kilder:
+  - navn: "VG"
+    url: "https://www.vg.no/i/9k74L5/norwegian-tjente-2-52-milliarder-kroner-foer-skatt-i-tredje-kvartal"
+  - navn: "E24"
+    url: "https://e24.no/boers-og-finans/i/El1J9P/norwegian-tjente-2-52-milliarder-kroner-foer-skatt-i-tredje-kvartal"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/okonomi/norwegian-tjente-2-5-milliarder-for-skatt-i-tredje-kvartal/s/80-95-198029"
 nyhetsverdi: 78
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Norwegian la fram tall for tredje kvartal»"

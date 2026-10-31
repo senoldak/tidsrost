@@ -10,6 +10,11 @@ key_points:
   - "Reistad måtte sjekkes med ispose på kneet"
 produksjon: ki-medier
 kildeSpor: "v1.XNwUDgFpoGdMLfw2.NsSLUrsZ5dO/tRjqp2jonOMhvP5bnH/xdKq2eDjBVyaupRphyhL50ssbbNmoFfh7Q0CBC600hE4H7QFqahhfkf/ru6D1myT1GoYyrRWy2bIwgfzYn8qIPEORx/L6q45vJcWNiQdFxJSY69uh4nlMiEtxGGL2O5aS6fJsu8JCFV/bUF43X8enw/agNf6iWFoQcykhU7aqyZ2tN30VMxhevAvEVES6np0fRBRnxq1RqaU+xWWUdSOI3+Amol0qnswh4ObTghFzdQexLXNpDApyEs0pU3kfu26F5Vhk0Nj7FWZE6B5grxxk2+Er+eKrrZZ86xOJ4Ne3CAM3YWWl9KPe4w9MjR2U"
+kilder:
+  - navn: "VG"
+    url: "https://www.vg.no/sport/i/d7AykJ/henny-reistad-med-maalshow-i-norge-seier-over-danmark-maatte-gi-seg-underveis"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/sport/stale-solbakken-jeg-angrer-pa-det/v/80-95-187494"
 nyhetsverdi: 72
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Håndballjentene slo Danmark i Golden League»"

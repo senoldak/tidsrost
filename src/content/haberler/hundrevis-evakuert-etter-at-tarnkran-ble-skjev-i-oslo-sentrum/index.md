@@ -10,6 +10,15 @@ key_points:
   - "Ingen personer er meldt skadet i hendelsen"
 produksjon: ki-medier
 kildeSpor: "v1.KVORrUO6sdYEZu72.5l7/UUDarQNtuC4SBmzpZP1gF2dM9ohG2Kbcn2AMa1I0dFe8xz0vto3LoQ9faExl3gnF4zE5c5zDj8x2Mw1MoPJ2Zflaxop3TqnkCk9JuTfgzE0poUoP113ZZkczlXKpmc30rRRl/RxmvZsx0cliGiI7hZEThhet9Z8LKTiNoTMkoFcBianI2EmEdP+JfSqHWE6YbBN7vFrIJpQh3r65N6M4aWQpL/QWBytJQnRXa/3JVLNp0ly9HBOHTy8o8G5nlTrb45Y6GA7DgUBFhv7mGsFLn+wmcQDlNChdT2V92Ukuxgl0O0ohkwQ0R/8SK88YxM8eDmEGUhzol3i90otSiX3wSCc4e3/abxhib9eKbPGNB56RFD10JwBtchImQuqVAAju2Fx7MpTHA0it8jko7PqqjbtqSDwh3px+AzpI6ZdWvNvrMupwVMxcMWPIilF1cnZptUGH3MMPMIFuGmWBcH8ZBVWQtzwF3xOXE0V96euWagqN97b71GAhVc7nyQt8nDI87XSIn5TxhecgrYJbvG4b/xe5My7AflA0iDpTbnOBya/4cJMnXEgr4Hd023hdHwRc8nl630TRYJBItRWTfCvPjcO/LUg1NM4/vJ62VfN6cT6W0vyKE+JLOfwkFSyn0erOjb5gyxJwbk4dbZY6ImiUpGC1TxPzYK2JytfKoRPhLsbp5+pgIx6R1yAOp3QNu5TSRNwnZi9aZNpy99tvhEDJKHAWxPjd/aSmE9UvtVAp1VyGbdtFqGECxUjgSGbYr6e7UTxvs7pqVw=="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/stor-oslo/flere-hundre-evakuert-i-oslo-sentrum--_-frykter-krankollaps-1.18064857"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/oslo/i/p1aJmR/buss-og-trikketrafikk-hardt-rammet-av-ustabil-kran-ved-jernbanetorget-hele-fundamentet-er-loesnet"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/innsatsleder-fremdeles-fare-for-krana-at-den-kan-falle/v/80-95-193248"
+  - navn: "Fædrelandsvennen"
+    url: "https://www.fvn.no/norgeogverden/n/oKoJ7j/taarnkran-i-fare-for-aa-kollapse-i-oslo-sentrum"
 nyhetsverdi: 78
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Hundrevis evakuert etter at tårnkran ble skjev i Oslo sentrum»"

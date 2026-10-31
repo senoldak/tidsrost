@@ -10,6 +10,13 @@ key_points:
   - "Statens vegvesen forventer betydelige forsinkelser og lange køer, spesielt på lørdag."
 produksjon: ki-medier
 kildeSpor: "v1.fLxJv6MmPCcc2C1k.g7RZ2JvmjTAUNfRM855HSXoOeDO2UoQmDPqTAL8tpPN7VE9ZfqRKZYJl4SknLOVHq+QPwsBkanVsj+mmj0NsNN88uGJrkFS2N9NuS+yF0nLpU4AY2du9ZsA1mCX6XnD2by7Me1pqQvZdvI5J76xIvAIleRZ35dx9x0QRMpjsY6kPgoVh3kzdoIktPhtm8UULx40aycwyvPSTRC/OFXH3cGJ9q/sr6W3CBeOMBcNfDnaqBQMYdhN+viV2EpTNCYzf4A10HojIRu/3NbqAKX1kWefnvOw0o0SjKiT9W9rmPec19B/QXQv0B7XasdQOnp7KygLl7KsTay6WHX4debo08FP4GSIOzbFHEsYDdSbHTNDvVPFQTCcslh70T6M7dddOx7jWtcl2PwOaknrAXyZpPfa7UAvBnAe7oDZAbMxoRXwGFdOrZE+L55s8czzdLpiIvYUdZYh2Ovy3L+CkpQxpcybOIgWjndee7uBpNeu0s5+mODqLOuf2lvlhX8Bvq/rTbws95i5uIcQuSCnJCbpbXTyeBl2bd7D6qDnecjxO5nmqhg=="
+kilder:
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/rMxa60/statens-vegvesen-varsler-lange-koeer-ut-av-oslo-la-bilen-staa"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/norge/i/El18P3/statens-vegvesen-varsler-lange-koeer-ut-av-oslo-la-bilen-staa"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/e18-ut-av-oslo-snevres-inn-venter-store-forsinkelser/s/80-95-198629"
 nyhetsverdi: 72
 cover: ./cover.png
 coverAlt: "Illustrasjon: «E18 ut av Oslo snevres inn til ett felt i helgen»"

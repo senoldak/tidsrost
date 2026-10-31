@@ -10,6 +10,19 @@ key_points:
   - "Støre avviser kritikk om sololøp"
 produksjon: ki-medier
 kildeSpor: "v1.yW9tBbrh/r75tozZ.8380foD/Vi5L58+OaPaeNTiI3qtDDWOSAKe7dYbFzN0VCE/YoY+Ck7wAHhoZlauniHW7KuuZNTB9ud7ralfcXhxt4GKieSMKk0FEtL9+RJpmKUO07An6IoWtDih0Y+d5gYGBP0DhTZ5NiHqyOCsbtFxa7kwBT48ep/vd2vFdimus7jFFbRDP52NdbB6B66EuCQkcS3UqZ6rCpNR78E/+hECt9gf/nk5DJL3lVxF1FoqS2nQ1sWQU65pISrW8mfNlaYvHz8FLZMe8qcB3dewzzw2woOkr6SbT6l/4Jcns0v2SUYUNqm585HcAGewQ24Ze4Rey2H9sXpe5zBEG+LhmpMibE6S26TlC63pgouJ42jomdVuh+TTMZ4zewgjB2MAl3aiA3k/33dFGCeBtqJJ64H14TT9f8LrS1iBkzfXQHzrOZKHfX4q7/zq8RL4vDCRwuvshu9s1lpuS9PaDGj4gKx5WdQAs5HOdjLhw6AYWNSbrWFeiqQIOOYO7H3mcOCR4x8AyB43+d61aRNN2dHHPKA/Rz8w92RaQ3ZSc/eRgZKGXEoPaCdygVNpWGOQ5RiCz3nFcwhxebINv1YBx+qf4H0TSlPTPuEHTLIDCoo+3DHv2ZI/aM/Dps2YoSqpgFAieTLas8H+twHPHbHB7xGfMKJxaPw/7Hm59fZlff0C7zPwa3EFpoaROSy1f5p2bKfkPE/qJa4LxkpZQRTxSctHaXlsLGRcZWvgiHqVd3o0mlSd6MbwHDrrYyzg5jENakMrc6UbnPQ6awqrKWfBRxfYPnaQolfrCB/86hj5jq/Rcb5vxFfLuloQu2ZEyyf1oend5NJg2jmnciR13V4G6oOq2MAPhOXabgLzNYxFv7Nt9vAgLiBIv9qhg7fSK0iE0nBCie0+O3iPCda2ouZfdpebFKQ3QWOR7GnJiQXVZxf1bmx0xvZJnsVoSMH6oHVZocEXVRn/hAF9IuGytHZRxT3jsDJke5qqxxs6vxN2OciH1Q6ioXln5bF6Mh8nskJL6bazhDRNFoaqSISeN/XN70H4vidixqRwI"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/lavrov_-ukraina-krigen-vil-fortsette-og-trolig-eskalere-1.18066393"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/n9Eyqn/putin-var-fornoeyd-etter-dagens-telefonsamtale-var-det-en-tabbe-eller-et-lite-steg-mot-fred"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19367122"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/store-svarer-pa-kritikken-det-er-ingen-splittelse/s/80-95-196890"
+  - navn: "Sunnmørsposten"
+    url: "https://www.smp.no/nyheter/n/778x14/stoere-alle-partnere-og-allierte-var-informert-foer-telefonsamtalen-med-putin"
+  - navn: "DN"
+    url: "https://www.dn.no/politikk/russland/finland/russland-enige-om-a-fortsette-telefonkontakt-med-stubb-og-store/2-1-2064950"
 nyhetsverdi: 85
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Jonas Gahr Støre og Alexander Stubb har gjennomført telefonsamtale med Vladimir Putin»"

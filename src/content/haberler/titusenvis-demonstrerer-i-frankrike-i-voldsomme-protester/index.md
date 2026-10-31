@@ -10,6 +10,13 @@ key_points:
   - "Flere tusen arrestert"
 produksjon: ki-medier
 kildeSpor: "v1.ncznJHya0KEek1AN.9pwLhOKM2WWNQR0aBymKeCToUv32czMnXWi70hE+mALgQyuB0y491SzprqFtwVp346JUXwmZgqw9WgeMjCzTmqkSRg6iXfoY5NOuONBS0V2uW0CJdpj2lP3k+otB4M/CAMeDUOcA9sTiGxQMc1RBDvfGfibU9qlDAtieKyVlBoQcHpoo4wmrKQFrM/l+UnkybD7lzL936/IUoKgYgT4oQ9WfrZeTQ5W6ELppQ3mH6CzvU75dt3nmBrlr4U4EelV6okUSj+duJx1bHBfVvtP3/g7aagAMomSYD4ULUykSmoucwxTT72pSQOsdYX8VLdcY/uhkQY/J4AZIYGi2SSUqt5ar/3yYG4iC40J20qzokKk0BzkqE5J7xv3ynbOjN8Nk8gKO3giEdmkQUBNZO5OELIYY4TSNUUaAq6QQNMb5382VWRZ5WW5Bci7KqLKbwyF+XDZ8ZmAHasiiTTUh3sBGVFf9SFJNPfWJYbTb9NZ+bOE="
+kilder:
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/8GV06G/massive-skoleprotester-i-frankrike-demonstrant-skal-ha-faatt-sprengt-bort-haanden"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19332012"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/opptoyer-i-frankrike-turistkontor-satt-i-brann/s/80-95-168720"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Titusenvis demonstrerer i Frankrike i voldsomme protester»"
 coverKreditt: "Illustrasjon: tidsrøst"

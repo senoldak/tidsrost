@@ -10,6 +10,11 @@ key_points:
   - "Ukraina mangler etterretning og materiell til å slå ned trusler."
 produksjon: ki-medier
 kildeSpor: "v1.5CMJYo0MULvDBRTR.FIpWpqLkyjvc++5WMklBY8fBBe+5oHtZL9lEnH7bQZkNzYoeLU0k9++q/hbV6+JUNY5rZlqC6j/pnqL6C3acxk+iXhANtBBfNgdb1207ZkYU89z7eBQtNUHnRHsUGrurJhI9N39J13OxSKXzF5NNiPr6kx/mNXXkb1x/25VT45yap8Mn7YNfGB6tNk/Ix/TTRNXut93bdS4mEb9M9145VU/lSnMchnu/GXPR3KCr7VtcyE49vjHCiXIsGq4AmKnARWGREqkgY5B7GvXt3k/xXcI6PO1pD3MPqlF5"
+kilder:
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19337253"
+  - navn: "E24"
+    url: "https://e24.no/internasjonal-oekonomi/i/w3Jjxn/zelenskyj-ukraina-og-amerikanske-forhandlere-kan-moetes-i-oslo"
 nyhetsverdi: 75
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Norge kan bli møtested for nye samtaler mellom USA og Ukraina»"

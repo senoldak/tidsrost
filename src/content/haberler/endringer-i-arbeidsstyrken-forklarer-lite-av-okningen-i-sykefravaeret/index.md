@@ -9,6 +9,9 @@ key_points:
   - "Endringer i arbeidsstyrken forklarer lite av økningen"
   - "Analysen omfatter seks ulike kjennetegn hos lønnstakere"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Statistisk sentralbyrå (SSB)"
+    url: "https://www.ssb.no/arbeid-og-lonn/arbeidsmiljo-sykefravaer-og-arbeidskonflikter/artikler/endringer-i-arbeidsstyrken-forklarer-lite-av-okningen-i-sykefravaeret"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Endringer i arbeidsstyrken forklarer lite av økningen i sykefraværet»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -23,5 +26,3 @@ Når det gjelder utdanningsnivå, viser tallene at sammensetningseffekter på tv
 For arbeidstid på tvers av heltid og deltid viser analysen at sammensetningseffektene bidrar til å trekke ned sykefraværet, men kun marginalt. Bidragene fra sammensetningseffekter fra 2017 og utover er konsekvent negative, noe som sees i sammenheng med at andelen avtalte dagsverk av lønnstakere med heltidsstillinger øker over tid. For innvandringskategori er summen av sammensetningseffekter for hvert år tilnærmet lik null.
 
 Når det gjelder næringer, var det positive bidrag fra sammensetningseffekter i 2016, 2017 og 2024, mens det var generelt små negative bidrag ellers. For aldersgruppene var bidraget fra sammensetningseffekter i sum negativt i 2016 og positivt i 2020 og perioden 2023–2025. Artikkelen fra SSB er finansiert av Arbeids- og inkluderingsdepartementet.
-
-*Kilde: [Statistisk sentralbyrå (SSB)](https://www.ssb.no/arbeid-og-lonn/arbeidsmiljo-sykefravaer-og-arbeidskonflikter/artikler/endringer-i-arbeidsstyrken-forklarer-lite-av-okningen-i-sykefravaeret)*

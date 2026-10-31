@@ -5,6 +5,13 @@ date: 2026-10-18T08:02:53+02:00
 category: okonomi
 produksjon: ki-medier
 kildeSpor: "v1.Hvf47St3ZIaAVlbb.swVsFVb2HDioYPXglGZf/YKDdeinAJzshqwnYslLmYUMi4/yHlkALfKyD6OYxfJrHp7BeOmirq8g+VQWDCQlTYtxIUEvm5SxXVVe2mIkA0sBZ6lPFiUjKoe6S49HID+YxRxQwjNiOeHCk2alZdAonbQAUSAdv16DTm7UnZniRkV5xy/BBVv9HEgRHxEqRKgLQtvjHkXGUFphvGsOyAe56Ou+kCbM/tOEnXkujdQ/AZ5pJO8nGDNB2StEuDjnMqRuq6p3WDXLWZ28/eWMPiIsFrzir6gnHaEaDnahcJtXRW2G4BNjiJ+N0/FX7ynQz+vWUEyiQ/lwXoaOVew9u3sygqAsfF1MblShf6CVc7MZ7EZtnlH+bSYHOX1DRrCAiA517cfZ3+vinPm+zaX4NyWtx/ns9dBInpNphyl7oMpQBH6Dlih/Max6fRB9g09QnEPUrHAKzzES8SoFL/GdF3Ua+wXBKQCL80RIn65DAIZJzS5u6Cg9DyWCBTb8p4SXkiTvXLSA+VVj/lNarvx6BkzY6F31UjCGErKp05d2xxJypXcL7bQ4qkmD5wn7zTVS9hHcNSwkd560rBcpeBu3yZULTXaCa2O+WrDOMWN8NCjEJY6gBNPdOaFSiFAECZQzhsVA/st4izhnSxQ0JhnM+St1T4F9ZpwtZ0AX93X5Vl/A92Y5D/Js1ggkiQEF0k4fXXYKHficGi4aTlLKt92shvq/yRRt8544E45bLzgDfmB9ifN4CHN9BtCs7VCLxjH9c3RY8m/httoAbhpYnfrknzqEsltl1AZ9+YL1sbfNtqh/qgYvSM+a6TuTqpF3jNspz/LdipIzBk6oRKkvp6y6I70ngb0hhi495vNf+24lPJ8qxbW7QaExIA3byYWM3/Y="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/rubio_-trump-vil-vurdere-konsekvensene-for-verdensokonomien-1.18057732"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/zlwE34/rubio-trump-satte-russland-sanksjoner-paa-pause-for-aa-analysere"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/norge-har-undertegnet-frihandelsavtale-med-vietnam/s/80-95-169419"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Norge og Efta inngår frihandelsavtale med Vietnam og 1 annen sak · 18. oktober, morgen»"
 coverKreditt: "Illustrasjon: tidsrøst"

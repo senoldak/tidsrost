@@ -10,6 +10,17 @@ key_points:
   - "Sykehuset har avlyst operasjoner og skoler er stengt"
 produksjon: ki-medier
 kildeSpor: "v1.a2wcATeq9HQDBS7d.8g7W9USjsLBObAFHeiRijURiYv6We0lEpq0fUJSGd18HSM74PTM4twDLNXxMu82fOUdKm21D42w68TTiqn5dcOpz/een8TGbGprjzNm7c4chx7PZv2gSpPS1t0szLxAVehaAlfx10LWrKF15Z3Pl3ianCp3P5tDxyvu9rpRpJwvwilx0hK1h6WZwT0PhlT/irAkFWXIUwgOgGCLKgkcSFaQOfLmNtuoEIEybnPzdJ2FZD1/oYBr7JbycaavVVqySZZkHJJFU/BhvCPajkL9/R4yqfWORbMHoS1OUJwhNwz8fMZ7tRid1Gf6iToA7rffJtCKseXwhRppt96pKdgDYAFS7oHMMVgwG91XgGQS4UC15l8uEd9gXky9YNAB68k8dJkAq8SNFpaUxesDSDF4IOMc4MOnj6MHyskZlwk+R7duZZQhXNFfiZ+RbT5vT/T6DnwaJSSV3W/ZtUrDhhgIXgEcd2sTnICB9UTxrcjGN5pTdWhn4+QxbP6CNkojyLmWgrAnUhRH6D9Tvf+/AdSn2CoVLzK2Zh9qJNlWoZqxD5psFph4FuyB4/v6BpXfepA7lLj47tjhW1h1T2Xgze1IQr2kYDxqVN4wqejA+4rYkpsbbouGlQCpZPjh+jcB48cgy4IavH2Z5XB29yaAsA8k7rbbuaehmSjsbEv0ZMq8IOubr74JLGibPd0I9Nvm9247mApNBYufnUifb5vtriO7buq/6ctAz5xwFJfq0u1EnnQ4dVVUWhaIbM3SsgYJUL7+dl22wgKv4UoA4RUovL2snK4y6Egmx+V7eLgvHszHqTQOgocW/zFXcCGcltU2Ub/Vh6wncnOFLIDv4oFUwY0ee+OS4OeqSsT8PJLu5tQ=="
+kilder:
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/eGQ774/soer-varanger-kirkenes-maa-stoppe-alt-privat-vannforbruk"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/norge/i/eGQJwM/store-deler-av-kirkenes-er-uten-vann-paa-grunn-av-brudd-paa-hovedvannledningen"
+  - navn: "Dagbladet"
+    url: "https://www.dagbladet.no/nyheter/kirkenes-ma-stoppe-alt-privat-vannforbruk/85343618"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/vann-krise-i-kirkenes-stopp-privat-vannforbruk/s/80-95-195000"
+  - navn: "Dagsavisen"
+    url: "https://www.dagsavisen.no/nyheter/kirkenes-ma-stoppe-alt-privat-vannforbruk/10602549"
 nyhetsverdi: 82
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Kirkenes må stanse alt privat vannforbruk»"

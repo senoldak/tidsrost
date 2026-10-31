@@ -10,6 +10,19 @@ key_points:
   - "Binance lover å dekke alle tap"
 produksjon: ki-medier
 kildeSpor: "v1.leBPpzoISQNPiOnj.9T0AlKbzjvPcDYScnrzSzN6jD6UE+vqTl3cQ/XxiZfMhNDuCYmlYm5KR8Ct9S2Fh0DZRT0hzaqqtqrq+zRXRkSZiQEdpww7LgTyveumV3Q3AIeEudE6M6DmprAYyruuIo7NtD1Z9QATO57xQ2u6+V+o6YKlotq2K36wdUSmYH6y2P1AdDOyhsheJ3VdvMzeAZx03sgxaTQ1NqBf/cqCgqlRa5KnLS2gC+EorIUJSRBmtTu1U+oipjOYtDkAh0Stzk4N4WSN9uHSGS3tmq3U13xGFU4YMW0QThetDtAsDP80Rs5v7Trd6G/DsIHn0zpVizZfJRBbjPQTjFb0epXqYF7Ko/Z+tMUU625JMSw8nBu3HDAaAavm9/UmC244nmI4N+KtNgy4iwXPAeumwJX4VsFqAK8yEepnfO+OSiPNWiKIp65o7nyvOyTf/xe4Zl04Mp+xIgpU35D71ryazwh0wxG0RnGNyV4Ftq0Hb1cd7n8WRARqrXl8ZOJGTzT36i05B2SCoXrg+BXOC/fdcazJh1M+N9Mmgt6YcaiwCriMClpEvK6OXqH/nNTqKgmrEPsYpnnp5zSELyj4FIOdtVqS/lXvZSG6cc9f1r3fqfAe2Ni1/+YTJNaIfxc5QS04DKVG9IAKkXCgeFfUTrFDp1FveWZqzH6j6JZAek8G0ZtYq/2PVX8Zci4TFNd+QKbYRyCwgDNnpZniIa592pdSrYNv+2ONlqQjFIjAzZtArdresfPBMxeh812/YoielBxoQlak8eU3Dgr3BizSsFZOm/wh+xD2GxGW4l9kXpQMdETN6WyNW7fUDkywG5H1LgQ+MAYJCRf+2lXIvOZArPDYsgVv5ahxgND6ko46ZbYIZ3JsmZjea9A6R4Fb4rzTzX2VtoiFMLM51FEj34mA2l6Hzy3CkA3djUwiQx8BhwzjtWvD7vHnXRo4ijZiNStMAoUrqlJ748bAVZm0m+a/RNRchB9cBHYDpgkowrqnIT5PfC6nXvcbMcXwpux/+meHImIsjlGFObTvgJiKIuJqfoxq4WJd/g5R5gpZGD2+ogtN7OF1bIKwpGMdkgodLRB04E/rqAQMDWM03g1CPxwa38Ero+bpIvHa5"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/verdier-for-mer-enn-6-milliarder-dollar-stjalet-fra-verdens-storste-kryptobors-1.18068943"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/okonomi/i/GrVLAQ/verdier-for-mer-enn-6-milliarder-dollar-stjaalet-fra-verdens-stoerste-kryptoboers"
+  - navn: "Dagbladet"
+    url: "https://www.dagbladet.no/nyheter/gigantisk-tyveri-tidenes-storste/85357205"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19375957"
+  - navn: "Bergens Tidende"
+    url: "https://www.bt.no/innenriks/i/rMqR18/kryptoverdier-for-naer-6-milliarder-dollar-kan-vaere-stjaalet-fra-verdens-stoerste-kryptoboers"
+  - navn: "Adresseavisen"
+    url: "https://www.adressa.no/mn24/i/xlqk6V/kryptoverdier-for-naer-6-milliarder-dollar-kan-vaere-stjaalet-fra-verdens-stoerste-kryptoboers"
 nyhetsverdi: 80
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Binance rammet av tidenes største kryptotyveri»"

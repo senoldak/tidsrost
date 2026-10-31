@@ -9,6 +9,9 @@ key_points:
   - "Mener dagens nøkkelhullmerking ikke er god nok."
   - "Trekker fram Nutri-Score som et mulig alternativ."
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Forbrukerrådet"
+    url: "https://www.forbrukerradet.no/siste-nytt/mat-og-handel/forbrukerradet-ber-om-ny-sunnhetsmerking-pa-mat/"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Forbrukerrådet ber om ny sunnhetsmerking på mat»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -23,5 +26,3 @@ Dagens næringsinnhold finnes som regel på baksiden av emballasjen, noe Forbruk
 Merkeordningen Nutri-Score, som allerede brukes i flere europeiske land, trekkes fram som et mulig alternativ til Nøkkelhullet. Forbrukerrådet framhever at Norge har gode forutsetninger for å ta en lederrolle på dette området, blant annet på grunn av lang erfaring med nøkkelhullet, sterke fagmiljøer og et høyt kunnskapsnivå om ernæring.
 
 Målet med en ny nasjonal merkeordning er ifølge Forbrukerrådet å styrke både folkehelsen og forbrukermakten. Organisasjonen viser til at en slik merking kan bidra til at forbrukere raskt kan identifisere sunnere alternativer og velge bort usunne produkter i butikken, samtidig som det kan motivere matprodusenter til å utvikle sunnere varer.
-
-*Kilde: [Forbrukerrådet](https://www.forbrukerradet.no/siste-nytt/mat-og-handel/forbrukerradet-ber-om-ny-sunnhetsmerking-pa-mat/)*

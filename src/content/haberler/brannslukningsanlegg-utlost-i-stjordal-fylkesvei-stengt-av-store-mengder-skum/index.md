@@ -10,6 +10,13 @@ key_points:
   - "Skummet har rent ut i bekken Evja"
 produksjon: ki-medier
 kildeSpor: "v1.mzIqICuOwYQ3hg+t.eVYrxQCYXzHdraL/o2eLNuSKTEKdCLIjj+ZD9jSAhgZUo5wduEmwFS8BpscT3Zc0b+YGoMH9LXQMU1RceqIcnjv1Q/KeRiLvaMc8l/8cDzIu/698747PAgAwHljAkTXjAIpA/Rn3JuUNbHdJfS19VEY7L1rEcHI97ldtaKP/4joc/MJ6BKcD1Rs6AKd7C04tg/mxSJvWBI2umxbe/FnWMLNEQ55t7UTQTt+M1AYtfVFTXd6Mgpcglo/CI3gsVHVtjn7dLxVO/uQVfzE7kksXrOsSdiWxbIZQD3WWGfT89Nwv9lwL+s39wnGblAMBsSIkGkzoClgqc0yYgrE5fE1RTZVCsNtWmsCewQm9O07w4Q1j5QB5ELY9cnY/izn4NH77exrRylyuGNP24qxF8FFNE8p830wIP10MqfLh63vwBeO8/QsmL+ygKUNYY9i0FQ=="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/trondelag/brannvarslingssystem-pa-vianor-stjordal-utlost-_-store-mengder-skum-1.18056610"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19329005"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/stjordal-fylkesvei-dekket-av-store-mengder-brannskum/s/80-95-165765"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Brannslukningsanlegg utløst i Stjørdal: Fylkesvei stengt av store mengder skum»"
 coverKreditt: "Illustrasjon: tidsrøst"

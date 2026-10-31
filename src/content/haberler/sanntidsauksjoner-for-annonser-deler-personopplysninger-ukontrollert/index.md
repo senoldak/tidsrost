@@ -9,6 +9,9 @@ key_points:
   - "Sanntidsauksjoner skaper en ukontrollert budkrig om brukerdata"
   - "Datatilsynet advarer om at systemet kan utgjøre en nasjonal sikkerhetsrisiko"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Datatilsynet"
+    url: "https://www.datatilsynet.no/aktuelt/aktuelle-nyheter-2026/slik-auksjoneres-dataene-dine-bort/"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Sanntidsauksjoner for annonser deler personopplysninger ukontrollert»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -23,5 +26,3 @@ Brukerne vet ikke hvem som mottar informasjonen, og har ingen praktisk mulighet 
 Datatilsynet opplyser at den ukontrollerte datadelingen har mer alvorlige dimensjoner enn persontilpasset reklame fordi statlig etterretning fra fremmede makter henter ut data fra denne typen kommersiell datadeling, noe som potensielt kan utgjøre en nasjonal sikkerhetsrisiko. Datatilsynet viser til at et slikt system er grunnen til at etaten og mange andre lenge har tatt til orde for at atferdsbasert markedsføring bør forbys helt.
 
 Selv om det overordnede ansvaret ligger hos selskapene og systemet er uoversiktlig, opplyser Datatilsynet at det finnes enkle grep for privatpersoner som ønsker å stramme inn på informasjonen som spres. Dette inkluderer å skru av app-sporing, ta en opprydning på telefonen og si nei til unødvendige informasjonskapsler.
-
-*Kilde: [Datatilsynet](https://www.datatilsynet.no/aktuelt/aktuelle-nyheter-2026/slik-auksjoneres-dataene-dine-bort/)*

@@ -10,6 +10,19 @@ key_points:
   - "Aktør med betydelige ressurser"
 produksjon: ki-medier
 kildeSpor: "v1.xeZOKMkECoDWIuK5.xMcbXujm3e74jDo3VL2BkIPXVAu8gsROYHkwgYcADfOflsBkuKWqp2T6N0lBQM95t77O6tqvTdfUVvwzGIENlQddaFjE3YoZQy99W0hXMS+cUos6pVksiCjV7Wj2t6QK5WBYLZ3+7SlWKcpPbN8tF4k2GdCKBpEU4d67HpRwmK9dHYZHRet9nNVy/Qdv/MVL9rC7WH3+96+bxZD4UrnujbxpYc2DNp/CV9Mwl9tnzvpDU2YACcDBN9TxLvZHptQm6PPg2NRHIz9ZOWwk+kaV8p5YqsTLuUKL0cg49fhQKmZlMMAJdzOu1oskfTBtufHJiQ/qyqXYhmiIltn1cDQT9/VqRCHArr7PiPjc2c9Ci/E+5ykrH3Df1p2YGdluUNUUEvkTJKH4jwrrxLMIsCEacVdOVYV0Fu0ig9K7DpLFKT3CnGcT2RCONTiNSEnMlGwT/VWHzoUmR6rr/evbFbfJLZ9dr+VgKh5UlwgkgXqzPcEai/Q9tZFNKdiqxw2mbEZeoYjm7koTPCMSCkuMe6IKlrkTMZQIisZgfm8DP/ZBfctppxRpi39qDj5SSjddKJ4xPpOl9aEFwBfetr5JFPLQtNMj+gC2oie2YnBEjXyEU5u53gX5uBGdSxhV2PKmb0+GVprrhgc5Ss58numRa7kdMrf2J89SPkMSP9TgiiV+m+6Ggf4y46/u04SGejuA0YVcjAzAw5XB9OLReXxebwOw3FvXmFMxnUKcQdb3ZFhVw6vIhdvWflH4vu80Qr8N3U1b/Ax4VDDjsx0zlcYsOQLQC89gr2ICLS9gD226196p03IUXEWKfmO45fmPHs40NCi/jsE4mUnCG/s2nLnzep0NMFsZCfEnRvxcduqcJjd5b5BY7ghCAg5jSo4sHLbRhETt2EjVDc0VquIk0l1bFB6LLQf8oi7QiFCng3E+GvMJFdkQlCtgKPMWnJcY4grhr67qk1igGVxAg+o2qj8="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/tromsogfinnmark/uit_-norges-arktiske-universitet-er-utsatt-for-dataangrep-1.18069623"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/norge/i/ylqWox/paagaaende-dataangrep-ved-universitetet-i-tromsoe-en-aktoer-med-store-ressurser"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/pagaende-dataangrep-mot-uit/s/80-95-206984"
+  - navn: "iTromsø"
+    url: "https://www.itromso.no/nyheter/n/kv57XL/uit-utsatt-for-maalrettet-dataangrep"
+  - navn: "Harstad Tidende"
+    url: "https://www.ht.no/nyheter/n/ylqWLK/uit-utsatt-for-maalrettet-dataangrep"
+  - navn: "Nordlys"
+    url: "https://www.nordlys.no/uit-utsatt-for-malrettet-dataangrep/s/80-34-34357"
 nyhetsverdi: 75
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Universitetet i Tromsø utsatt for målrettet dataangrep»"

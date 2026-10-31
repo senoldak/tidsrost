@@ -10,6 +10,15 @@ key_points:
   - "Spania har erklært tre dagers landesorg etter ulykken"
 produksjon: ki-medier
 kildeSpor: "v1.JvkTDeIyQSDbalt7.7W+pBCQB40GNBf0nDg1jcivlZyhQtUf6vGWGDe8+8QsNwaa1PMf98Q7WcUCZoNKswE74/jNAGUMi68rifI4a6aXA8SHYDl81UJGrjnNULHq7ePwukFtBt1HEApLwxwo6hanNQDIB7pmcNM1kOD4wLpa8cix6BvbkXV5FY/QuAJA5XdJrXO29dVWXNiFwwqaNRmxvYE7dEqBnXFYpxN6gSKtqiPMFhXj+0RBu/cmvMgD+xH25PmQx6D223JRRKDAfQAjZlHscHDgwqcB6qbJBGgpYNsRlb5jGP1O8zZybEOYuGtW4FE9BSIYo+gOVtB3fpRYfTl2OwlX+obXdt0659hOlDPy6kIJtsq4V5zeuVGd9Md9zvSzyUCVY4ysXlA1m5ClAbbcsvxMIdg8ZWmBRyJoRFN5ku0OMtFTJSFHDhaJTZDKh5kDPZzWHqpoalMMYP/SJV9UEPOfvy9fPu+hHKhlsmhDC0D0l7Ou4iOTaLhkikoumyJGHZzo5ef3L4ubyh4UYCLb2kGttq9gJqOI2ALXEDBC0P/Czr6oUjej37DUVpMvU51o0zpS20WtnCjTqhHmHJhRM1wpxOzSPAZAIhnpRhOdefTP0vIykjL596/4mSXv6JIqI0d0+uu+tdu/rMNDby8e0A6LQvfalSHyRuJK8UKW2hzOO5Hr9Z7VpIw7v0mpUdRs5JKTJc7qvQhi7PF4r/IfMmtQrC01BjTIIlA=="
+kilder:
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/verden/i/w3qvLo/spania-i-sorg-etter-togkatastrofe-lydopptak-avsloerer-fatal-kommunikasjonssvikt"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19372543"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/mange-fortsatt-savnet-etter-togulykke-i-spania/s/80-95-202187"
+  - navn: "Stavanger Aftenblad"
+    url: "https://www.aftenbladet.no/okonomi/i/b8V7xg/spania-i-sorg-etter-togkatastrofe-lydopptak-avsloerer-fatal-kommunikasjonssvikt"
 nyhetsverdi: 82
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Minst 69 omkommet etter togulykke i Spania»"

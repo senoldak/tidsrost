@@ -9,6 +9,9 @@ key_points:
   - "Over 80 drept i Abyei"
   - "Sikkerhetsrådet krever etterforskning"
 produksjon: ki-kontrollert
+kilder:
+  - navn: "FNs nyhetstjeneste (UN News)"
+    url: "https://news.un.org/en/story/2026/10/1168661"
 nyhetsverdi: 80
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Minst 306 drept i droneangrep i Sudan i oktober»"
@@ -24,5 +27,3 @@ Blant de dødelige hendelsene er et angrep 19. oktober i Abyei, et omstridt olje
 Sikkerhetsrådet har i en uttalelse fordømt angrepet i Abyei på det sterkeste og advart om at angrep på sivile kan utgjøre krigsforbrytelser. Rådet krever en full, transparent og rask etterforskning, og at de ansvarlige holdes til ansvar for handlingene.
 
 Türk oppfordrer partene i konflikten til å overholde sine forpliktelser i henhold til internasjonal humanitærrett og innstiller på at det gjøres en slutt på våpenoverføringene som driver konflikten. Han ber begge parter om å forplikte seg til en våpenhvile og en fremforhandlet løsning for å oppnå en bærekraftig fred i landet, ifølge FNs nyhetstjeneste.
-
-*Kilde: [FNs nyhetstjeneste (UN News)](https://news.un.org/en/story/2026/10/1168661)*

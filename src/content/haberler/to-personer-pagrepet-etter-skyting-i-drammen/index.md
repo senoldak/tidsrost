@@ -5,6 +5,13 @@ date: 2026-10-28T22:04:58+01:00
 category: innenriks
 produksjon: ki-medier
 kildeSpor: "v1.QfQ958diiXAWdD2E.usA2lBi68AKj3tx0vcJbFzrCVTX9ZbY9LYDxMiJ7ZmX4kpLQ4JWksBRD70V3bNN4kKhOOhALYVs+Jveb0ksPaQj8vpJvEVFz8nDAL75wnLhV5/zW8y+l//DlixVvryFlKyy8AYMSlYiydp3TchO/l5aGOwd262D/9LJ7P2uavKZ/jsvgS1LTbFtJrjcUR1xopA+UXMZQ8O5AUAk0CcmJ4N2YslE398xYbhrnOHUFztXe6roWBqoadjJ3KdUu2QHsLf/hzGrm/C4HByRsCUDlpzs55JeOVsXb6bpq/RY6Qqi13fZZSuOuWxTpi+7O0+/JYXOcIQgaQpm38NqT+AQ3r6oFys7UoYBCpZXhXvwR/GUMDMhd2Oco+W2ke/kfY4gS+YT1UavORT4GW3aYINYDfLz/fJaqhEGQ1SdgPqjm4+RphH7texhkgpTOVvU1m8bx3RsH3Yz3iTgB8G0fDXSVBe5mcxRfXVTOJ6N/DA=="
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/melding-om-mulig-skyting-i-drammen-1.18067450"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/norge/i/kvn4ja/to-paagrepet-etter-skyting-i-drammen-leter-etter-en-siste"
+  - navn: "Drammens Tidende"
+    url: "https://www.dt.no/skudd-avfyrt-kontroll-pa-to-personer/s/30-57-24920"
 nyhetsverdi: 72
 cover: ./cover.png
 coverAlt: "Illustrasjon: «To personer pågrepet etter skyting i Drammen»"

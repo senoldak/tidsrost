@@ -5,6 +5,21 @@ date: 2026-10-20T14:03:10+02:00
 category: utenriks
 produksjon: ki-medier
 kildeSpor: "v1.lCkWhp+ytkTd3kYI.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"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/nyheter/volodymyr-zelenskyj-kjem-til-noreg-tysdag-1.18059279"
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/771xew/zelenskyj-til-norge-i-forbindelse-med-usa-moete"
+  - navn: "Aftenposten"
+    url: "https://www.aftenposten.no/norge/i/Wg26Va/regjeringen-bekrefter-zelenskyj-kommer-til-norge-tirsdag"
+  - navn: "TV 2"
+    url: "https://www.tv2.no/a/19339224"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/rigger-til-zelenskyj-besok/s/80-95-173559"
+  - navn: "Bergens Tidende"
+    url: "https://www.bt.no/politikk/i/Vg2QOJ/regjeringen-bekrefter-zelenskyj-kommer-til-norge-tirsdag"
+  - navn: "Dagbladet"
+    url: "https://borsen.dagbladet.no/nyheter/svaert-velkomment-for-putin/85306718"
 nyhetsverdi: 95
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Volodymyr Zelenskyj besøker Oslo for møter med Støre og Stubb og 2 andre saker · 20. oktober, morgen»"

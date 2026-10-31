@@ -10,6 +10,11 @@ key_points:
   - "Elve hyttebranner kartlagt i området siden 2023"
 produksjon: ki-medier
 kildeSpor: "v1.mM+FWaYymIJZDP/U.wMFIxAkCS10oLmZaMNQIe2fTq/Gp+WYM0q9+msu35mZiFVGilx8sqzNtIzblQ6/OjYKCHUj57gvdWqjxw2a6uUCWDP1UO3JxsqPYk0ExEYhJ7HZs4pgrXEHv0tpgGl98wWzHdF9tz8Rt705f/Jyc/olFQv1HTgpIjzSTP82PZXqfyFt8umn+DJUHOxadLX1q6xhZniXFULPZed9EeThw3+EA+19kPFy5VYjHre7NdatLiki61pUEYZqSbG1PTzgE0rLZQxzbieshdq6J5y0d9Dk8f/zj7YEwWHmtssesiKSm+AdwV3McXG0a5329lCzngDz+"
+kilder:
+  - navn: "VG"
+    url: "https://www.vg.no/nyheter/i/jvboMA/politiet-ber-om-tips-etter-to-branner"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/nyheter/politiet-ber-om-tips-etter-hyttebranner-pa-sunnmore/s/80-95-166545"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Politiet ber om tips etter to nye branner på Emblemsfjellet på Sunnmøre»"
 coverKreditt: "Illustrasjon: tidsrøst"

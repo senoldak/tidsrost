@@ -10,6 +10,11 @@ key_points:
   - "Endte uavgjort borte mot Sparta Praha"
 produksjon: ki-medier
 kildeSpor: "v1.41tcWjNavtyJnw1m.GwvpOwsPULmeuxN7xFT6YoUjTvH0xszSDmv99la2R/8gQfcrsUkO93wj7gRJrHKRd4Mu/TM0xRxW/qLBznyQcu8gzVff24uevpwcuAmIviMixtCWD353Uk1JiMnziZdPQdiAdaeUBvfjsus/cIv5F47Hplz8odaoj+4L/wmEdMhrCvo4C78vnfWeHYDKg5vtkvoiLJdVGxFnMrQiUNY2RHhIbzEn6Y1oHKwPqFiWpox/p3O/5TbgO484P6HFdz57772kOf19nb1nf1bjc5wlNBDFwZfhGiY+klpEJxqClTd/Rn910YUAJfTR76zknPayplau7Mymsij+2nr3AHuCnaVvqz9YlwhI"
+kilder:
+  - navn: "NRK"
+    url: "https://www.nrk.no/sport/lsk-med-europa-bragd-_-reddet-poeng-mot-storlag-1.18056169"
+  - navn: "Nettavisen"
+    url: "https://www.nettavisen.no/sport/lehne-olsen-reddet-lillestrom-eksperten-ser-rodt-av-avgjorelse/s/80-95-164283"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Lehne Olsen sikret historisk poeng i Europaligaen»"
 coverKreditt: "Illustrasjon: tidsrøst"

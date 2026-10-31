@@ -4,6 +4,9 @@ description: "Korte nyheter 9. oktober, kveld: Regjeringen: 3 580 millioner kron
 date: 2026-10-10T01:03:59+02:00
 category: innenriks
 produksjon: ki-kontrollert
+kilder:
+  - navn: "regjeringen.no"
+    url: "https://www.regjeringen.no/no/aktuelt/regjeringen-foreslar-a-utvide-varigheten-for-ordningen-med-midlertidig-kollektiv-beskyttelse/id3176866/"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Regjeringen: 3 580 millioner kroner mer i frie inntekter til Oslo neste år og 2 andre saker · 9. oktober, kveld»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -18,8 +21,6 @@ Sakene under ble først publisert hver for seg og er her samlet på én side. Te
 Ifølge opplysninger fra regjeringen vil ordningen med midlertidig kollektiv beskyttelse for personer som er fordrevne fra Ukraina, bli videreført til mars 2028. Dette betyr at ordningen også vil gjelde for ukrainere som ankommer Norge i tiden fremover, ettersom de fleste ukrainere som oppholder seg i landet har denne type beskyttelse.
 
 Hele pressemeldingen kan leses hos regjeringen.no.
-
-*Kilde: [regjeringen.no](https://www.regjeringen.no/no/aktuelt/regjeringen-foreslar-a-utvide-varigheten-for-ordningen-med-midlertidig-kollektiv-beskyttelse/id3176866/)*
 
 ## Regjeringen: 3 580 millioner kroner mer i frie inntekter til Oslo neste år
 

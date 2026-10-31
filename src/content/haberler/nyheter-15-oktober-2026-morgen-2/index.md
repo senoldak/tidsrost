@@ -4,6 +4,9 @@ description: "Korte nyheter 15. oktober, morgen: SSB har publisert revidert mode
 date: 2026-10-15T08:03:33+02:00
 category: okonomi
 produksjon: ki-kontrollert
+kilder:
+  - navn: "Statistisk sentralbyrå (SSB)"
+    url: "https://www.ssb.no/utenriksokonomi/utenrikshandel/statistikk/utenrikshandel-med-varer/artikler/konflikten-i-midtosten-bidro-til-hoyere-handelsoverskudd-for-norge"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «SSB har publisert revidert modell for beregning av boligformue og 1 annen sak · 15. oktober, morgen»"
 coverKreditt: "Illustrasjon: tidsrøst"
@@ -20,8 +23,6 @@ Norges eksportinntekter endte på 207,7 milliarder kroner i september 2026, noe 
 – Vedvarende uro i Midtøsten og usikkerhet rundt tilgangen på olje og gass på verdensmarkedet har bidratt til å presse energiprisene ytterligere opp, sier Jan Olav Rørhus, seniorrådgiver i Statistisk sentralbyrå.
 
 Importen i september endte på 102,7 milliarder kroner, som er en økning på 6,2 prosent fra september året før. Eksportinntektene fra naturgass beløp seg til 79,4 milliarder kroner, mens Norge eksporterte råolje for 56,3 milliarder kroner i samme periode.
-
-*Kilde: [Statistisk sentralbyrå (SSB)](https://www.ssb.no/utenriksokonomi/utenrikshandel/statistikk/utenrikshandel-med-varer/artikler/konflikten-i-midtosten-bidro-til-hoyere-handelsoverskudd-for-norge)*
 
 ## SSB har publisert revidert modell for beregning av boligformue
 
