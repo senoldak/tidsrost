@@ -5,7 +5,7 @@ import { SITE } from '../lib/site';
 import { SITE_URL, breadcrumbs } from '../lib/seo';
 
 // KI-bruk (Standartlar Faz 1). Utdyper punkt 7 i Juridisk informasjon; de to sidene må ikke motsi hverandre.
-const OPPDATERT = '20. oktober 2026';
+const OPPDATERT = '1. november 2026';
 ---
 
 <Base
@@ -66,6 +66,26 @@ const OPPDATERT = '20. oktober 2026';
         materiale.
       </p>
 
+      <h2 id="hvem">Hvem er hvem i boksen «Slik ble saken laget»</h2>
+      <table>
+        <thead><tr><th scope="col">Navn</th><th scope="col">Gjør</th></tr></thead>
+        <tbody>
+          <tr><th scope="col" colspan="2">Nyhetssaker</th></tr>
+          <tr><th scope="row">Sigrid, speider</th><td>Finner saker i kildene.</td></tr>
+          <tr><th scope="row">Vidar, vekter</th><td>Gir saken en nyhetsverdi fra 0 til 100. Saker under grensen blir ikke skrevet.</td></tr>
+          <tr><th scope="row">Ingrid, skriver</th><td>Skriver saken ut fra kildene.</td></tr>
+          <tr><th scope="row">Leif, vaktsjef</th><td>Leser teksten og retter språket.</td></tr>
+          <tr><th scope="row">Kari, kontrollør</th><td>Sjekker sitater, tall og navn mot kildene, og at teksten ikke ligner for mye på dem.</td></tr>
+          <tr><th scope="row">Tor, tegner</th><td>Lager forsidebildet.</td></tr>
+          <tr><th scope="row">Dina, deler</th><td>Publiserer saken.</td></tr>
+          <tr><th scope="col" colspan="2">Saker under utgiverens navn</th></tr>
+          <tr><th scope="row">Şenol Dak, journalist (ikke KI)</th><td>Skriver saken på tyrkisk og velger tema, data og vinkling.</td></tr>
+          <tr><th scope="row">Oskar, oversetter</th><td>Oversetter teksten til bokmål.</td></tr>
+          <tr><th scope="row">Liv, språkvasker</th><td>Retter språket uten å endre innholdet.</td></tr>
+        </tbody>
+      </table>
+      <p>Navnene i tabellen er navn på automatiske trinn. De er ikke personer.</p>
+
       <h2 id="kontroll">Slik skrives og kontrolleres sakene</h2>
       <ol>
         <li>Kildene gjennomgås jevnlig. Når noe vurderes som viktig, skrives en sak som bare bygger på det som står i kilden.</li>
@@ -85,6 +105,7 @@ const OPPDATERT = '20. oktober 2026';
       <h2 id="mennesker">Menneskelig kontroll</h2>
       <p>
         Nyhetssakene leses ikke av et menneske før publisering: de skrives automatisk og kontrolleres automatisk.
+        Saker under utgiverens navn skriver utgiveren selv, og han leser og godkjenner den norske teksten før publisering.
         Utgiveren bestemmer hvilke temaer som kan publiseres automatisk, og hvilke kriterier kontrollene følger.
         Automatiske kontroller fanger ikke alle feil, så innholdet kan inneholde feil.
       </p>
@@ -98,9 +119,11 @@ const OPPDATERT = '20. oktober 2026';
 
       <h2 id="merking">Slik ser du det</h2>
       <p>
-        Saker som er skrevet med KI, har en merknad om det under saken. I saker som utgis under utgiverens navn, står det
-        i merknaden hvordan KI er brukt. Mer om retningslinjene våre finner du under
-        <a href="/om-oss/#ki">Bruk av KI</a> på Om oss-siden.
+        Under hver sak viser boksen «Slik ble saken laget» hvilke trinn som er gjort av KI, og hva utgiveren har gjort.
+        Mer om retningslinjene våre står under <a href="/om-oss/#ki">Bruk av KI</a> på Om oss-siden.
+      </p>
+      <p>
+        Lytt-knappen leser opp saken med nettleserens egen stemme. Ingen av språkmodellene i tabellen over lager lyden.
       </p>
 
       <h2 id="feil">Meld fra om feil</h2>

@@ -1,5 +1,5 @@
 ---
-// Åpenhet: hvor mye nyhetsroboten har gått gjennom og publisert, og fra hvilke kildetyper. Medienes navn vises ikke.
+// Åpenhet: hvor mye nyhetsroboten har gått gjennom og publisert, og fra hvilke kildetyper. Mediene navngis under hver sak; denne siden viser bare tall per kildetype.
 import Base from '../layouts/Base.astro';
 import Brodsmuler from '../components/Brodsmuler.astro';
 import { getNews } from '../lib/news';
@@ -104,7 +104,7 @@ const G = {
         </tbody>
       </table>
       <p class="merknad">
-        Vi oppgir ikke navnene på mediene roboten leser. Offentlige kilder lenkes i saker som bygger på dem. Mer om arbeidsmetoden står under
+        Mediene roboten leser, står med navn og lenke under hver sak som bygger på dem. Offentlige kilder lenkes på samme måte. Mer om arbeidsmetoden står under
         <a href="/redaksjonelle-prinsipper/">redaksjonelle prinsipper</a>.
       </p>
     </section>

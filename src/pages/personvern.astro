@@ -4,7 +4,7 @@ import { SITE } from '../lib/site';
 
 // Bu sayfadaki bilgiler sitenin gerçek durumuna dayanır: çerez yok, analiz/izleme yok, harici script yok.
 // Siteye analiz, reklam, yorum vb. eklenirse bu sayfa da güncellenmeli.
-const OPPDATERT = '20. oktober 2026';
+const OPPDATERT = '1. november 2026';
 ---
 
 <Base title="Personvern" description={`Hvordan ${SITE.name} behandler personopplysninger.`}>
@@ -40,10 +40,24 @@ const OPPDATERT = '20. oktober 2026';
         </a>.
       </p>
 
+      <h2>Valg i nettleseren</h2>
+      <p>
+        Valg for tekststørrelse, kontrast og lesemodus, og stedet i en sak der leseren sluttet å lese, lagres bare i
+        leserens egen nettleser (localStorage). Opplysningene sendes ikke til {SITE.name}, og det settes ingen
+        informasjonskapsler.
+      </p>
+
+      <h2>Lytt</h2>
+      <p>
+        Lytt-knappen bruker nettleserens egen talefunksjon. Noen nettlesere sender teksten som skal leses opp, til
+        nettleserprodusentens tjener for å lage stemmen. Det avgjør nettleseren, ikke {SITE.name}, og {SITE.name} får ingen
+        opplysninger om opplesingen.
+      </p>
+
       <h2>Deling i sosiale medier</h2>
       <p>
-        Knappene for å dele saker på X, Facebook og WhatsApp er vanlige lenker. Ingen opplysninger sendes til disse
-        tjenestene før du selv klikker på en av dem. Da gjelder tjenestens egne personvernvilkår.
+        Delingsvalgene (Facebook, WhatsApp, LinkedIn, Telegram, X, Bluesky og e-post) er vanlige lenker. Ingen opplysninger sendes til disse
+        tjenestene før leseren selv klikker på en av dem. Da gjelder tjenestens egne personvernvilkår.
       </p>
 
       <h2>Når du kontakter oss</h2>

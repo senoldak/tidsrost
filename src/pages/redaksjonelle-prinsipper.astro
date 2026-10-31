@@ -11,7 +11,7 @@ const RSF_CHARTER_URL = 'https://rsf.org/en/paris-charter-ai-and-journalism';
 const NLOD_URL = 'https://data.norge.no/nlod/no/2.0';
 const CC_BY_URL = 'https://creativecommons.org/licenses/by/4.0/deed.no';
 
-const OPPDATERT = '20. oktober 2026';
+const OPPDATERT = '1. november 2026';
 ---
 
 <Base
@@ -81,7 +81,7 @@ const OPPDATERT = '20. oktober 2026';
           <ul>
             <li><em>Samfunnsrolle (kapittel 1):</em> Vi verner om ytringsfriheten, informasjonsfriheten og det åpne ordskiftet, og formidler vesentlige samfunnsopplysninger hurtig og samvittighetsfullt.</li>
             <li><em>Integritet og åpenhet (kapittel 2):</em> Vi er åpne om hvordan sakene våre blir til, og avviser ethvert forsøk på å svekke den redaksjonelle integriteten.</li>
-            <li><em>Kildearbeid og etterrettelighet (kapittel 3):</em> Vi etterstreber kildekritikk. I saker som bygger på offisielle kilder lenker vi til kilden.</li>
+            <li><em>Kildearbeid og etterrettelighet (kapittel 3):</em> Vi etterstreber kildekritikk. Under hver sak står kildene med navn og lenke, i tråd med punkt 4.4 i Vær Varsom-plakaten.</li>
             <li><em>Saklighet og omtanke (kapittel 4):</em> Tall, navn og sitater kontrolleres automatisk mot kildeteksten før publisering. Vi etterstreber å unngå villedende overskrifter, viser omtanke i omtale av personers privatliv og tragedier, og respekterer imøtegåelse og tilsvarsrett.</li>
           </ul>
         </li>
@@ -106,16 +106,16 @@ const OPPDATERT = '20. oktober 2026';
         </li>
         <li>
           <strong>Forfatter- og redaksjonsekspertise (Author Expertise):</strong> Nyhetssaker står under redaksjonens navn og er skrevet automatisk med KI. Bare Forklart- og Analyse-sakene er
-          utgitt under navnet til utgiver og redaktør {SITE.redaktor}, og merknaden under saken forteller hvordan KI-verktøy er brukt.
+          utgitt under navnet til utgiver og redaktør {SITE.redaktor}. Boksen «Slik ble saken laget» under saken viser hvilke trinn KI har gjort og hva utgiveren har gjort.
           Kontakt: {SITE.epost}.
         </li>
         <li>
           <strong>Merking av innholdstype (Type of Work):</strong> Vi skiller mellom nyhetssaker og forklarende saker («Forklart»).
-          Hver sak har en merknad om hvordan den er laget.
+          Hver sak har boksen «Slik ble saken laget».
         </li>
         <li>
-          <strong>Kildehenvisninger og referanser (Citations & References):</strong> Når en sak bygger på en offisiell kilde, lenker vi til kilden under
-          saken. Vi er i ferd med å innføre dette på alle slike saker. Saker som bygger på andre kilder navngir ikke disse, og er merket «Kilde: saker i flere uavhengige nyhetsmedier».
+          <strong>Kildehenvisninger og referanser (Citations & References):</strong> Under hver sak står kildene med navn og lenke, i linjen under tittelen
+          og i listen Kilder. Selve teksten i nyhetssakene nevner ikke mediene.
         </li>
         <li>
           <strong>Metoder og fremgangsmåte (Methods):</strong> Vi forklarer åpent hvordan sakene lages: de skrives automatisk med KI og
@@ -168,7 +168,7 @@ const OPPDATERT = '20. oktober 2026';
         </li>
         <li>
           <strong>Fjerde hovedregel (Åpenhet overfor leserne):</strong> {SITE.name} informerer tydelig om hvordan kunstig intelligens inngår i
-          arbeidet. Hver nyhetssak har en merknad om at den er skrevet automatisk med KI, og en «Meld fra om feil»-lenke.
+          arbeidet. Hver sak har boksen «Slik ble saken laget» og en «Meld fra om feil»-lenke. Navnene i boksen er navn på automatiske trinn: Sigrid, Vidar, Ingrid, Leif, Kari, Tor og Dina i nyhetssakene, Oskar og Liv i sakene under utgiverens navn. De er ikke personer.
         </li>
         <li>
           <strong>Femte hovedregel (Datasikkerhet):</strong> Kildetekstene sendes til en KI-tjeneste (Google Gemini)
@@ -217,8 +217,8 @@ const OPPDATERT = '20. oktober 2026';
       <h3>Retningslinjer for retting</h3>
       <ul>
         <li>
-          <strong>Ingen stille endringer:</strong> Vi endrer ikke en sak i det stille. En rettelse føres som note
-          under saken og på siden <a href="/rettelser/">Rettelser</a>, med dato. En sak vi tar ned (avpublisering) føres på samme side med begrunnelse.
+          <strong>Ingen stille endringer:</strong> Vi endrer ikke en sak i det stille. En rettelse vises med en rød «Rettet»-merking
+          ved kategorien og i listen «Endringer i saken» under saken, med dato. En sak vi tar ned (avpublisering) føres på siden <a href="/rettelser/">Rettelser</a>, med begrunnelse.
         </li>
         <li>
           <strong>Tydelig rettelsesnotat:</strong> Rettelsen skal redegjøre for hva som opprinnelig sto feil, hva de

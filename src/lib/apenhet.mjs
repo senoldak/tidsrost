@@ -1,6 +1,6 @@
 // Åpenhet-siden: hvor mange saker nyhetsroboten har gått gjennom, hvor mange artikler som ble publisert, og fra
-// hvilke kildetyper. Medienes navn vises ikke (kildene ligger kryptert, se scripts/nyheter/hemmelig.mjs); offentlige
-// kilder telles per etat. Gjennomgåtte saker kommer fra scripts/nyheter/sett.json, publiserte fra innholdssamlingen.
+// hvilke kildetyper. Mediene navngis under hver sak (kildelisten ligger kryptert, se scripts/nyheter/hemmelig.mjs, og
+// publiseres ikke); denne siden viser bare tall. Offentlige kilder telles per etat. Gjennomgåtte saker kommer fra scripts/nyheter/sett.json, publiserte fra innholdssamlingen.
 
 const DAG_MS = 86400000;
 

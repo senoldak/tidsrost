@@ -19,8 +19,7 @@ const VVP = 'https://www.presse.no/vaer-varsom-plakaten';
       {
         SITE.redaktor && (
           <p>
-            Utgiver og redaktør er{' '}
-            <a href="/forfatter/senol-dak/"><strong>{SITE.redaktor}</strong></a>.
+            <a href="/forfatter/senol-dak/"><strong>{SITE.redaktor}</strong></a> er journalist, utgiver og redaktør.
           </p>
         )
       }
@@ -54,7 +53,7 @@ const VVP = 'https://www.presse.no/vaer-varsom-plakaten';
           NVE og departementene. Sakene skrives på tyrkisk av forfatteren, som velger tema, data og vinkling og gjør alle
           beregninger. De oversettes til norsk med KI-verktøy, som også brukes til språkvask, og forfatteren leser og godkjenner
           den norske teksten. KI brukes ikke til innhold, vinkling eller tall. Alle tall hentes fra offisielle kilder og
-          kontrolleres av forfatteren og maskinelt. Under hver sak står det hvordan den er laget.
+          kontrolleres av forfatteren og maskinelt. Boksen «Slik ble saken laget» under hver sak viser stegene. Oskar og Liv er navn på KI-trinnene for oversettelse og språkvask, ikke på personer.
         </li>
         <li>
           <strong>Løpende nyhetssaker fra offisielle kilder:</strong> Nyhetssaker om politiske vedtak, økonomiske nøkkeltall og
@@ -64,7 +63,7 @@ const VVP = 'https://www.presse.no/vaer-varsom-plakaten';
         </li>
         <li>
           <strong>Løpende hendelsesnyheter:</strong> Saker om aktuelle hendelser skrives automatisk på grunnlag av saker i
-          flere uavhengige nyhetsmedier, som ikke navngis. Vi publiserer ikke saker som bygger på ett enkelt mediums eksklusive avsløringer.
+          flere uavhengige nyhetsmedier. Mediene står med navn og lenke i kildelisten under hver sak. Selve teksten nevner dem ikke. Vi publiserer ikke saker som bygger på ett enkelt mediums eksklusive avsløringer.
         </li>
         <li>
           <strong>Datatjenester:</strong> Løpende oversikter over <a href="/styringsrenten/">styringsrenten</a> fra Norges Bank
@@ -136,13 +135,13 @@ const VVP = 'https://www.presse.no/vaer-varsom-plakaten';
 
       <h2>Kilder og åpne data</h2>
       <p>
-        Når en sak bygger på en offisiell kilde, lenker vi til kilden under saken. Vi er i ferd med å innføre dette på alle slike saker. Data fra Norges Bank, SSB, NVE og Stortinget benyttes under Norsk lisens for offentlige data (NLOD),
+        Under hver sak står kildene med navn og lenke. Data fra Norges Bank, SSB, NVE og Stortinget benyttes under Norsk lisens for offentlige data (NLOD),
         og meteorologiske data fra Meteorologisk institutt under CC BY 4.0.
       </p>
 
       <h2 id="rettelser">Rettelser og klager</h2>
       <p>
-        Feil skal rettes så raskt som mulig. Rettelser føres som note under saken og på siden <a href="/rettelser/">Rettelser</a>. Har du funnet en feil, eller mener
+        Feil skal rettes så raskt som mulig. Rettelser vises med en «Rettet»-merking og i listen «Endringer i saken» under saken, og på siden <a href="/rettelser/">Rettelser</a>. Har du funnet en feil, eller mener
         du at vi har brutt god presseskikk?
         {SITE.epost ? <>Skriv til oss på <a href={`mailto:${SITE.epost}`}>{SITE.epost}</a>.</> : 'Ta kontakt med redaksjonen.'}
         {' '}Les mer om vår fremgangsmåte og klagebehandling under <a href="/redaksjonelle-prinsipper/#rettelser">redaksjonelle prinsipper for rettelser</a>.
