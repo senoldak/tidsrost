@@ -1,9 +1,4 @@
 {
-  "oransje-farevarsel-for-jordskred-i-akershus-buskerud-oslo-telemark-og-vestfold": {
-    "tarih": "2026-10-24T16:13:36.042Z",
-    "son_hata": "Graph 403: Application request limit reached",
-    "limit": 3
-  },
   "demonstrasjoner-og-taregass-i-paris": {
     "tarih": "2026-10-25T11:05:03.835Z",
     "son_hata": "Graph 403: Application request limit reached",
@@ -68,8 +63,8 @@
   },
   "_sinir": {
     "ig_post": {
-      "sayi": 11,
-      "kadar": "2026-10-31T19:09:20.931Z"
+      "sayi": 12,
+      "kadar": "2026-11-01T07:11:02.545Z"
     }
   },
   "benjamin-netanyahu-advarer-om-nytt-holocaust-for-valget-i-israel": {
@@ -412,7 +407,9 @@
     "reels": {
       "gun": "2026-10-31",
       "dilim": "kveld"
-    }
+    },
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "kpi-bidrag": {
     "tarih": "2026-10-31T07:10:15.338Z",
@@ -437,5 +434,11 @@
     "ig_story": "18019019687949130",
     "fb_post": "1343803192154866_122113021437509504",
     "fb_story": "2959745551052997"
+  },
+  "person-dode-i-ulykke-pa-treningssenter-pa-cc-vest-i-oslo": {
+    "tarih": "2026-10-31T19:11:17.699Z",
+    "ig_story": "18108330587291631",
+    "fb_post": "1343803192154866_122113197015509504",
+    "fb_story": "916428801423166"
   }
 }
