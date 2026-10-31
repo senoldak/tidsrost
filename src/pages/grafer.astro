@@ -2,13 +2,15 @@
 import Base from '../layouts/Base.astro';
 import Brodsmuler from '../components/Brodsmuler.astro';
 import TidsrostChartCard from '../components/kartlar/TidsrostChartCard.astro';
+import Linjegraf from '../components/data/Linjegraf.astro';
+import Stolpegraf from '../components/data/Stolpegraf.astro';
 import { TİDSROST_GRAFİKLER } from '../lib/tidsrost-charts-data';
 import { SITE } from '../lib/site';
 import { SITE_URL } from '../lib/seo';
 
-const baslik = 'Norsk Fakta- og Statistikkatalog — 62 Interaktive Grafer';
+const baslik = 'Norsk Fakta- og Statistikkatalog — 62 Interaktive Grafer & Kjernekomponenter';
 const description =
-  '62 interaktive grafikkomponenter for norsk økonomi, styringsrente, boligpriser, kraftpriser, arbeidsmarked og Oljefondet fra SSB og Norges Bank.';
+  '62 interaktive grafikkomponenter og redaksjonelle SVG-motorer for norsk økonomi, styringsrente, boligpriser, kraftpriser og lønn fra SSB og Norges Bank.';
 
 const kategorier = [
   'ALLE',
@@ -22,6 +24,7 @@ const kategorier = [
 
 const crumbs = [
   { name: 'Forsiden', url: `${SITE_URL}/` },
+  { name: 'Tall & Data', url: `${SITE_URL}/tall/` },
   { name: 'Grafer', url: `${SITE_URL}/grafer/` },
 ];
 
@@ -31,6 +34,44 @@ const normaliser = (str: string) =>
     .replace(/æ/g, 'ae')
     .replace(/ø/g, 'o')
     .replace(/å/g, 'a');
+
+// Kjernekomponent-eksempel 1: Linjegraf (Tidsserie)
+const linjeEksempel = [
+  {
+    navn: 'Styringsrente (Norges Bank)',
+    punkter: [
+      { etikett: '2020', verdi: 0.0 },
+      { etikett: '2021', verdi: 0.5 },
+      { etikett: '2022', verdi: 2.75 },
+      { etikett: '2023', verdi: 4.5 },
+      { etikett: '2024', verdi: 4.5 },
+      { etikett: '2025', verdi: 4.25 },
+      { etikett: '2026', verdi: 4.0 },
+    ],
+  },
+  {
+    navn: 'Konsumprisindeks KPI (SSB)',
+    punkter: [
+      { etikett: '2020', verdi: 1.3 },
+      { etikett: '2021', verdi: 3.5 },
+      { etikett: '2022', verdi: 5.8 },
+      { etikett: '2023', verdi: 5.5 },
+      { etikett: '2024', verdi: 3.4 },
+      { etikett: '2025', verdi: 3.1 },
+      { etikett: '2026', verdi: 2.8 },
+    ],
+  },
+];
+
+// Kjernekomponent-eksempel 2: Stolpegraf (Struktur og fordeling)
+const stolpeEksempel = [
+  { navn: 'Finans og forsikring', verdi: 76500, fremhev: true },
+  { navn: 'Informasjon og kommunikasjon', verdi: 69800 },
+  { navn: 'Offentlig administrasjon', verdi: 56400 },
+  { navn: 'Undervisning og forskning', verdi: 52100 },
+  { navn: 'Helse- og sosialtjenester', verdi: 49300 },
+  { navn: 'Overnatting og servering', verdi: 36200 },
+];
 ---
 
 <Base title={baslik} description={description}>
@@ -40,70 +81,188 @@ const normaliser = (str: string) =>
     <header class="sayfa-baslik-alani">
       <div class="ust-etiket">
         <span class="kontur-linje" aria-hidden="true"></span>
-        <span>N50 EKVIDISTANSE · ÅPNE DATA & STATISTIKK</span>
+        <span>N50 EKVIDISTANSE · ÅPNE DATA &amp; STATISTIKK</span>
       </div>
       <h1>Norsk Fakta- og Statistikkatalog</h1>
       <p class="sayfa-ozet">
-        62 interaktive datakomponenter basert på etterrettelige tall fra Statistisk sentralbyrå (SSB), Norges Bank, NVE og Statens pensjonsfond utland.
+        Tidsrosts helhetlige datavisualiseringssystem: Redaksjonelle SVG-motorer for artikler, tidsserier for kommuner og lønn, samt 62 interaktive indikatorkort basert på tall fra Statistisk sentralbyrå (SSB) og Norges Bank.
       </p>
     </header>
 
-    <!-- Filterpanel -->
-    <div class="filtre-paneli">
-      <div class="kategori-butonlari" role="tablist" aria-label="Kategorifilter">
+    <!-- Hurtignavigasjon -->
+    <nav class="hurtig-nav" aria-label="Seksjonsvelger">
+      <span class="hurtig-etikett">Seksjoner:</span>
+      <a href="#kjernekomponenter" class="hurtig-lenke">1. Kjernekomponenter (Linjegraf &amp; Stolpegraf)</a>
+      <a href="#redaksjonell-matrise" class="hurtig-lenke">2. Redaksjonell veiledningsmatrise</a>
+      <a href="#kart-katalog" class="hurtig-lenke">3. 62 Interaktive Indikatorkort</a>
+    </nav>
+
+    <!-- SEKSJON 1: KJERNEKOMPONENTER -->
+    <section id="kjernekomponenter" class="kjerne-seksjon">
+      <div class="seksjon-tittel-blokk">
+        <span class="seksjon-nummer">01</span>
+        <div>
+          <h2 class="seksjon-overskrift">Tidsrosts Kjernekomponenter for Statistikk</h2>
+          <p class="seksjon-undertekst">Kompileringstids-SVG-motorer som brukes i kommune-, lønns- og temaprofilene uten klient-JavaScript.</p>
+        </div>
+      </div>
+
+      <!-- Eksempel 1: Linjegraf -->
+      <article class="kjerne-kort">
+        <div class="kjerne-kort-topp">
+          <div>
+            <span class="kort-type-tag">TIDSSERIE &middot; LINJEGRAF.ASTRO</span>
+            <h3 class="kort-tittel">Linjegraf for Historiske Tidsserier</h3>
+            <p class="kort-beskrivelse">
+              Viser historisk utvikling over år, renteendringer og inflasjonsbane. Tegnes direkte i SVG ved bygging og overholder strenge CSP-sikkerhetskrav uten eksterne biblioteker.
+            </p>
+          </div>
+          <div class="kode-tag"><code>&lt;Linjegraf /&gt;</code></div>
+        </div>
+        <div class="kjerne-forhandsvisning">
+          <Linjegraf
+            serier={linjeEksempel}
+            enhet="Prosent (%)"
+            beskrivelse="Styringsrenten og konsumprisindeksen (KPI) i Norge, 2020 til 2026"
+            desimaler={1}
+          />
+        </div>
+      </article>
+
+      <!-- Eksempel 2: Stolpegraf -->
+      <article class="kjerne-kort">
+        <div class="kjerne-kort-topp">
+          <div>
+            <span class="kort-type-tag">FORDELING &middot; STOLPEGRAF.ASTRO</span>
+            <h3 class="kort-tittel">Horisontal Stolpegraf for Sammenligning</h3>
+            <p class="kort-beskrivelse">
+              Brukes til å sammenligne lønn, aldersfordeling og kommunestatistikk. Sorteres automatisk synkende med responsiv SVG-geometri og tydelig fremheving av nøkkelkategorier.
+            </p>
+          </div>
+          <div class="kode-tag"><code>&lt;Stolpegraf /&gt;</code></div>
+        </div>
+        <div class="kjerne-forhandsvisning">
+          <Stolpegraf
+            rader={stolpeEksempel}
+            enhet="Median månedslønn i kroner (NOK)"
+            beskrivelse="Median månedslønn etter sektor i Norge"
+            desimaler={0}
+          />
+        </div>
+      </article>
+    </section>
+
+    <!-- SEKSJON 2: REDAKSJONELL VEILEDNINGSMATRISE -->
+    <section id="redaksjonell-matrise" class="matrise-seksjon">
+      <div class="seksjon-tittel-blokk">
+        <span class="seksjon-nummer">02</span>
+        <div>
+          <h2 class="seksjon-overskrift">Redaksjonell Veiledningsmatrise</h2>
+          <p class="seksjon-undertekst">Retningslinjer for hvilken grafkomponent som skal anvendes i de ulike publiseringssammenhengene.</p>
+        </div>
+      </div>
+
+      <div class="tabell-omslag">
+        <table class="matrise-tabell">
+          <thead>
+            <tr>
+              <th>Grafstil</th>
+              <th>Komponentkode</th>
+              <th>Bruksområde i Tidsrost</th>
+              <th>Dataformat &amp; Kjennetegn</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Tidsserie Linjegraf</strong></td>
+              <td><code>&lt;Linjegraf /&gt;</code></td>
+              <td>Kommunesider, historisk folketall, inflasjon og renter</td>
+              <td>Faste tidspunkter over år, nullinjefokus, ren SVG uten JS</td>
+            </tr>
+            <tr>
+              <td><strong>Horisontal Stolpegraf</strong></td>
+              <td><code>&lt;Stolpegraf /&gt;</code></td>
+              <td>Lønnsstatistikk, aldersfordeling, fylkessammenligning</td>
+              <td>Kategoriske rader sortert etter verdi, fremhevingslinje</td>
+            </tr>
+            <tr>
+              <td><strong>Indikatorkort (62 stk)</strong></td>
+              <td><code>&lt;TidsrostChartCard /&gt;</code></td>
+              <td>Tall-senteret (/tall/), temaforsider, hurtigoversikter</td>
+              <td>Donut, foss (waterfall), areal, radial, måler med N50-ekvidistanse</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SEKSJON 3: 62 INTERAKTIVE KART -->
+    <section id="kart-katalog" class="kart-seksjon">
+      <div class="seksjon-tittel-blokk">
+        <span class="seksjon-nummer">03</span>
+        <div>
+          <h2 class="seksjon-overskrift">62 Interaktive Indikatorkort</h2>
+          <p class="seksjon-undertekst">Kompakte nøkkelindikatorer for norsk makroøkonomi, energi, bolig og Oljefondet.</p>
+        </div>
+      </div>
+
+      <!-- Filterpanel -->
+      <div class="filtre-paneli">
+        <div class="kategori-butonlari" role="tablist" aria-label="Kategorifilter">
+          {
+            kategorier.map((kat, i) => (
+              <button
+                type="button"
+                class={`kategori-sekme ${i === 0 ? 'aktiv' : ''}`}
+                role="tab"
+                aria-selected={i === 0 ? 'true' : 'false'}
+                data-kategori={kat}
+              >
+                {kat}
+              </button>
+            ))
+          }
+        </div>
+
+        <div class="arama-kutusu-sarmal">
+          <label for="grafik-arama" class="sr-only">Søk i grafer</label>
+          <input
+            type="search"
+            id="grafik-arama"
+            placeholder="Søk blant 62 grafer, indikatorer eller kilder..."
+            class="arama-girdisi"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+
+      <!-- Teller -->
+      <div class="sonuc-bilgisi">
+        <span>Totalt <strong>{TİDSROST_GRAFİKLER.length}</strong> statistiske indikatorer</span>
+        <span id="gorunen-sayac" class="gorunen-adet">62 vises</span>
+      </div>
+
+      <!-- 62 Kart i Rutenett -->
+      <div class="grafikler-izgara" id="grafikler-izgara">
         {
-          kategorier.map((kat, i) => (
-            <button
-              type="button"
-              class={`kategori-sekme ${i === 0 ? 'aktiv' : ''}`}
-              role="tab"
-              aria-selected={i === 0 ? 'true' : 'false'}
-              data-kategori={kat}
-            >
-              {kat}
-            </button>
-          ))
+          TİDSROST_GRAFİKLER.map((grafik) => {
+            const soketekst = normaliser(
+              `${grafik.baslik} ${grafik.aciklama} ${grafik.metrik} ${grafik.kategori} ${grafik.kaynak} ${grafik.id}`
+            );
+            return (
+              <div
+                class="grafik-karti-sarmal"
+                data-kategori={grafik.kategori}
+                data-tur={grafik.tur}
+                data-sok={soketekst}
+              >
+                <TidsrostChartCard grafik={grafik} />
+              </div>
+            );
+          })
         }
       </div>
-
-      <div class="arama-kutusu-sarmal">
-        <label for="grafik-arama" class="sr-only">Søk i grafer</label>
-        <input
-          type="search"
-          id="grafik-arama"
-          placeholder="Søk blant 62 grafer, indikatorer eller kilder..."
-          class="arama-girdisi"
-          autocomplete="off"
-        />
-      </div>
-    </div>
-
-    <!-- Teller -->
-    <div class="sonuc-bilgisi">
-      <span>Totalt <strong>{TİDSROST_GRAFİKLER.length}</strong> statistiske indikatorer</span>
-      <span id="gorunen-sayac" class="gorunen-adet">62 vises</span>
-    </div>
-
-    <!-- 62 Kart i Rutenett -->
-    <div class="grafikler-izgara" id="grafikler-izgara">
-      {
-        TİDSROST_GRAFİKLER.map((grafik) => {
-          const soketekst = normaliser(
-            `${grafik.baslik} ${grafik.aciklama} ${grafik.metrik} ${grafik.kategori} ${grafik.kaynak} ${grafik.id}`
-          );
-          return (
-            <div
-              class="grafik-karti-sarmal"
-              data-kategori={grafik.kategori}
-              data-tur={grafik.tur}
-              data-sok={soketekst}
-            >
-              <TidsrostChartCard grafik={grafik} />
-            </div>
-          );
-        })
-      }
-    </div>
+    </section>
   </div>
 </Base>
 
@@ -126,14 +285,13 @@ const normaliser = (str: string) =>
   function filtrer() {
     let antall = 0;
     kartlar.forEach((kart) => {
-      const kat = kart.dataset.kategori ?? '';
-      const sok = kart.dataset.sok ?? '';
+      const kat = kart.getAttribute('data-kategori') || '';
+      const dataSok = kart.getAttribute('data-sok') || '';
 
-      const kategoriMatch =
-        aktivKategori === 'ALLE' || kat.toUpperCase() === aktivKategori.toUpperCase();
-      const sokMatch = !soketekst || sok.includes(soketekst);
+      const katStemmer = aktivKategori === 'ALLE' || kat === aktivKategori;
+      const sokStemmer = !soketekst || dataSok.includes(soketekst);
 
-      if (kategoriMatch && sokMatch) {
+      if (katStemmer && sokStemmer) {
         kart.style.display = '';
         antall++;
       } else {
@@ -146,198 +304,323 @@ const normaliser = (str: string) =>
     }
   }
 
+  aramaInput?.addEventListener('input', (e) => {
+    soketekst = normaliser((e.target as HTMLInputElement).value.trim());
+    filtrer();
+  });
+
   kategoriButonlari.forEach((btn) => {
     btn.addEventListener('click', () => {
       kategoriButonlari.forEach((b) => {
-        b.classList.remove('aktiv');
+        b.classList.remove('aktif');
         b.setAttribute('aria-selected', 'false');
       });
-      btn.classList.add('aktiv');
+      btn.classList.add('aktif');
       btn.setAttribute('aria-selected', 'true');
-      aktivKategori = btn.dataset.kategori ?? 'ALLE';
+      aktivKategori = btn.getAttribute('data-kategori') || 'ALLE';
       filtrer();
     });
   });
-
-  if (aramaInput) {
-    aramaInput.addEventListener('input', (e) => {
-      soketekst = normaliser((e.target as HTMLInputElement).value.trim());
-      filtrer();
-    });
-  }
 </script>
 
 <style>
   .katalog-kapsayici {
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: clamp(1rem, 3vw, 2.5rem) clamp(1rem, 4vw, 2.5rem);
-    font-family: 'Archivo', -apple-system, sans-serif;
+    padding: 24px 16px 64px;
   }
 
   .sayfa-baslik-alani {
-    margin-bottom: 2.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 2px solid #dcded8;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--farge-kant, #1b2820);
   }
 
   .ust-etiket {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.6875rem;
+    gap: 8px;
+    font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #a0643c;
-    background: #f7f3ee;
-    padding: 0.25rem 0.625rem;
-    border-radius: 3px;
-    margin-bottom: 0.875rem;
+    color: var(--farge-fjell, #16382b);
+    margin-bottom: 8px;
   }
 
   .kontur-linje {
-    width: 12px;
-    height: 2px;
-    background: #a0643c;
     display: inline-block;
-  }
-
-  .sayfa-baslik-alani h1 {
-    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-    font-weight: 800;
-    color: #16191c;
-    letter-spacing: -0.02em;
-    line-height: 1.15;
-    margin: 0 0 0.75rem 0;
+    width: 24px;
+    height: 2px;
+    background: currentColor;
   }
 
   .sayfa-ozet {
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 1.0625rem;
-    line-height: 1.5;
-    color: #444a52;
-    max-width: 75ch;
+    font-size: 1.05rem;
+    color: var(--farge-tekst-dempet, #3d4a40);
+    max-width: 820px;
+    line-height: 1.6;
+    margin: 8px 0 0 0;
+  }
+
+  /* Hurtignavigasjon */
+  .hurtig-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+    padding: 12px 16px;
+    background: var(--farge-flate-lys, #f0ede6);
+    border: 1px solid var(--farge-kant, #1b2820);
+    margin-bottom: 36px;
+    font-size: 0.85rem;
+  }
+
+  .hurtig-etikett {
+    font-weight: 700;
+    color: var(--farge-tekst, #111a14);
+  }
+
+  .hurtig-lenke {
+    color: var(--farge-fjell, #16382b);
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+  /* Seksjonsoverskrifter */
+  .seksjon-tittel-blokk {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--farge-kant, #1b2820);
+  }
+
+  .seksjon-nummer {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--farge-fjell, #16382b);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .seksjon-overskrift {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--farge-tekst, #111a14);
+    margin: 0 0 4px 0;
+  }
+
+  .seksjon-undertekst {
+    font-size: 0.9rem;
+    color: var(--farge-tekst-dempet, #3d4a40);
     margin: 0;
+  }
+
+  /* Kjernekomponenter */
+  .kjerne-seksjon {
+    margin-bottom: 48px;
+  }
+
+  .kjerne-kort {
+    background: #ffffff;
+    border: 1px solid var(--farge-kant, #1b2820);
+    padding: 24px;
+    margin-bottom: 28px;
+  }
+
+  .kjerne-kort-topp {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--farge-kant, #1b2820);
+  }
+
+  .kort-type-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--farge-fjell, #16382b);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .kort-tittel {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--farge-tekst, #111a14);
+    margin: 0 0 6px 0;
+  }
+
+  .kort-beskrivelse {
+    font-size: 0.9rem;
+    color: var(--farge-tekst-dempet, #3d4a40);
+    line-height: 1.5;
+    margin: 0;
+    max-width: 760px;
+  }
+
+  .kode-tag code {
+    background: var(--farge-flate-lys, #f0ede6);
+    border: 1px solid var(--farge-kant, #1b2820);
+    padding: 6px 10px;
+    font-size: 0.82rem;
+    font-family: var(--font-mono, monospace);
+    color: var(--farge-tekst, #111a14);
+    white-space: nowrap;
+  }
+
+  .kjerne-forhandsvisning {
+    background: var(--farge-papir, #f6f4ef);
+    padding: 16px;
+    border: 1px solid var(--farge-kant, #1b2820);
+  }
+
+  /* Matrise Tabell */
+  .matrise-seksjon {
+    margin-bottom: 48px;
+  }
+
+  .tabell-omslag {
+    overflow-x: auto;
+    border: 1px solid var(--farge-kant, #1b2820);
+    background: #ffffff;
+  }
+
+  .matrise-tabell {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    text-align: left;
+  }
+
+  .matrise-tabell th {
+    background: var(--farge-flate-lys, #f0ede6);
+    padding: 10px 14px;
+    font-weight: 700;
+    color: var(--farge-tekst, #111a14);
+    border-bottom: 1px solid var(--farge-kant, #1b2820);
+  }
+
+  .matrise-tabell td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--farge-kant, #1b2820);
+    color: var(--farge-tekst-dempet, #3d4a40);
+  }
+
+  .matrise-tabell tr:last-child td {
+    border-bottom: none;
+  }
+
+  .matrise-tabell code {
+    background: var(--farge-flate-lys, #f0ede6);
+    padding: 2px 6px;
+    font-size: 0.82rem;
+    font-family: var(--font-mono, monospace);
+  }
+
+  /* Kart Seksjon */
+  .kart-seksjon {
+    margin-bottom: 48px;
   }
 
   .filtre-paneli {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-    margin-bottom: 2rem;
-    background: #f6f7f3;
-    padding: 1.25rem;
-    border-radius: 4px;
-    border: 1px solid #dcded8;
-  }
-
-  @media (min-width: 768px) {
-    .filtre-paneli {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
+    gap: 16px;
+    margin-bottom: 24px;
   }
 
   .kategori-butonlari {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 8px;
   }
 
   .kategori-sekme {
-    background: #ffffff;
-    border: 1px solid #dcded8;
-    color: #444a52;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    padding: 0.375rem 0.75rem;
-    border-radius: 3px;
+    all: unset;
     cursor: pointer;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 6px 12px;
+    background: var(--farge-flate-lys, #f0ede6);
+    border: 1px solid var(--farge-kant, #1b2820);
+    color: var(--farge-tekst, #111a14);
     transition: all 0.15s ease;
-    font-family: inherit;
   }
 
   .kategori-sekme:hover {
-    border-color: #1f5f99;
-    color: #1f5f99;
+    background: var(--farge-papir, #f6f4ef);
+    border-color: var(--farge-fjell, #16382b);
   }
 
   .kategori-sekme.aktiv {
-    background: #1f5f99;
-    border-color: #1f5f99;
+    background: var(--farge-fjell, #16382b);
     color: #ffffff;
+    border-color: var(--farge-fjell, #16382b);
   }
 
   .arama-kutusu-sarmal {
-    min-width: 280px;
+    position: relative;
+    max-width: 600px;
   }
 
   .arama-girdisi {
     width: 100%;
-    padding: 0.45rem 0.75rem;
-    font-size: 0.875rem;
-    font-family: inherit;
-    border: 1px solid #dcded8;
-    border-radius: 3px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
     background: #ffffff;
-    color: #16191c;
+    border: 1px solid var(--farge-kant, #1b2820);
+    border-radius: 0;
+    color: var(--farge-tekst, #111a14);
+    box-sizing: border-box;
   }
 
   .arama-girdisi:focus {
     outline: none;
-    border-color: #1f5f99;
-    box-shadow: 0 0 0 2px rgba(31, 95, 153, 0.15);
+    border-color: var(--farge-fjell, #16382b);
   }
 
   .sonuc-bilgisi {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.8125rem;
-    color: #656d77;
-    margin-bottom: 1.5rem;
-    padding: 0 0.25rem;
+    font-size: 0.85rem;
+    color: var(--farge-tekst-dempet, #3d4a40);
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--farge-kant, #1b2820);
   }
 
   .gorunen-adet {
     font-weight: 600;
-    color: #1f5f99;
   }
 
   .grafikler-izgara {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.75rem;
-  }
-
-  @media (min-width: 640px) {
-    .grafikler-izgara {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (min-width: 1100px) {
-    .grafikler-izgara {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
   }
 
   .grafik-karti-sarmal {
     display: flex;
   }
 
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+  .grafik-karti-sarmal > :global(article) {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .grafikler-izgara {
+      grid-template-columns: 1fr;
+    }
+
+    .kjerne-kort-topp {
+      flex-direction: column;
+    }
   }
 </style>
