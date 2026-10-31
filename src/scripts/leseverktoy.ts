@@ -297,3 +297,32 @@ if (tekstEl) {
   addEventListener('scroll', () => lukk(), { passive: true });
   addEventListener('resize', () => lukk());
 }
+
+// ——— «Var saken nyttig?» (anonym telling; ett svar per sak og nettleser) ———
+const nyttig = document.querySelector<HTMLElement>('.na-nyttig[data-slug]');
+if (nyttig) {
+  const slug = nyttig.dataset.slug as string;
+  const nokkel = `nyttig:${slug}`;
+  const knapper = nyttig.querySelectorAll<HTMLButtonElement>('button[data-svar]');
+  const takk = nyttig.querySelector<HTMLElement>('.takk');
+  const ferdig = () => {
+    knapper.forEach((b) => {
+      b.disabled = true;
+      b.hidden = true;
+    });
+    nyttig.querySelector<HTMLElement>('.spm')?.setAttribute('hidden', '');
+    if (takk) takk.hidden = false;
+  };
+  nyttig.hidden = false;
+  if (hent(nokkel)) ferdig();
+  else
+    knapper.forEach((b) =>
+      b.addEventListener('click', () => {
+        const svar = b.dataset.svar;
+        knapper.forEach((k) => (k.disabled = true));
+        lagre(nokkel, '1');
+        fetch('/api/nyttig', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ slug, svar }), keepalive: true }).catch(() => {});
+        ferdig();
+      }),
+    );
+}

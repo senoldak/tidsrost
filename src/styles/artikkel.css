@@ -1126,6 +1126,51 @@ html[data-skala='3'] .na-ramme {
   }
 }
 
+/* ——— Var saken nyttig? (skjult uten JS) ——— */
+.na-nyttig {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  max-width: 720px;
+  margin: 3rem auto 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  font: 700 1rem var(--frame);
+  color: var(--ink);
+}
+.na-nyttig[hidden],
+.na-nyttig [hidden] {
+  display: none;
+}
+.na-nyttig button {
+  min-width: 4.5rem;
+  height: 2.6rem;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  font: 700 0.95rem var(--frame);
+  cursor: pointer;
+}
+.na-nyttig button:hover:not(:disabled) {
+  background: var(--ink);
+  color: var(--paper);
+}
+.na-nyttig button:focus-visible {
+  outline: 3px solid var(--water);
+  outline-offset: 2px;
+}
+.na-nyttig .takk {
+  font-weight: 400;
+  color: var(--water);
+}
+@media (min-width: 1100px) {
+  .na-nyttig {
+    max-width: 1120px;
+  }
+}
+
 /* ——— Flere saker ——— */
 .na-flere {
   max-width: calc(720px + 300px + 3.5rem);

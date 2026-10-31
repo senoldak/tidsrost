@@ -16,6 +16,7 @@ import Kilder from '../../components/artikkel/Kilder.astro';
 import KortOppsummert from '../../components/artikkel/KortOppsummert.astro';
 import SlikBleSakenLaget from '../../components/artikkel/SlikBleSakenLaget.astro';
 import Verktoylinje from '../../components/artikkel/Verktoylinje.astro';
+import Nyttig from '../../components/artikkel/Nyttig.astro';
 import FlereSaker from '../../components/artikkel/FlereSaker.astro';
 import Brodtekst from '../../components/artikkel/Brodtekst.astro';
 import Datakort from '../../components/artikkel/Datakort.astro';
@@ -282,6 +283,8 @@ const jsonLd = {
       </div>
     </div>
   </div>
+
+  <Nyttig slug={haber.id} />
 
   <FlereSaker saker={related} kategori={kategoriNavn} />
 </Base>

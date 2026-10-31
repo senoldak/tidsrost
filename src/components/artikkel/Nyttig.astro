@@ -1,0 +1,15 @@
+---
+// «Var saken nyttig?»: to knapper som sender anonymt svar til /api/nyttig (kun daglig telling per sak).
+// Skjult uten JS; vises av src/scripts/leseverktoy.ts.
+interface Props {
+  slug: string;
+}
+const { slug } = Astro.props;
+---
+
+<div class="na-nyttig" data-slug={slug} hidden>
+  <span class="spm" id="nyttig-spm">Var saken nyttig?</span>
+  <button type="button" data-svar="ja" aria-describedby="nyttig-spm">Ja</button>
+  <button type="button" data-svar="nei" aria-describedby="nyttig-spm">Nei</button>
+  <span class="takk" role="status" hidden>Takk! Svaret hjelper oss å lage bedre saker.</span>
+</div>
