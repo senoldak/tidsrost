@@ -1,5 +1,5 @@
 ---
-import { jsonLdMetni } from '../../lib/json-ld.mjs';
+import { haberAlanlari, jsonLdMetni } from '../../lib/json-ld.mjs';
 import { synligForfatter as synligForfatterAv } from '../../lib/forfatter.mjs';
 import { LISENS_JSONLD_URL } from '../../lib/lisens.mjs';
 import { Image, getImage } from 'astro:assets';
@@ -17,15 +17,20 @@ import KortOppsummert from '../../components/artikkel/KortOppsummert.astro';
 import SlikBleSakenLaget from '../../components/artikkel/SlikBleSakenLaget.astro';
 import Verktoylinje from '../../components/artikkel/Verktoylinje.astro';
 import FlereSaker from '../../components/artikkel/FlereSaker.astro';
+import Brodtekst from '../../components/artikkel/Brodtekst.astro';
+import Datakort from '../../components/artikkel/Datakort.astro';
+import Endringer from '../../components/artikkel/Endringer.astro';
+import Tidligere from '../../components/artikkel/Tidligere.astro';
+import { tidligereSaker } from '../../lib/tidligere';
 import { normaliserKilder } from '../../lib/kilder.mjs';
 import { erEgenTekst, stegFor } from '../../lib/redaksjon.mjs';
 import { matchEntities } from '../../lib/entities';
 import { indekserbar, ordtelling } from '../../lib/ordtelling.mjs';
 import { skjultForSok } from '../../lib/sok-synlighet.mjs';
-import { kanRelateres, relaterteSaker } from '../../lib/relaterte';
+import { erSammendrag, kanRelateres, relaterteSaker } from '../../lib/relaterte';
 import Brodsmuler from '../../components/Brodsmuler.astro';
 import KiNotat from '../../components/KiNotat.astro';
-import { datasiderFor } from '../../lib/datalenker.mjs';
+import { datakortFor } from '../../lib/datalenker.mjs';
 import ForfatterKort, { forfatterBeskrivelse } from '../../components/ForfatterKort.astro';
 import { aktiveTemaer, temaerPerSak, temaUrl, type Tema } from '../../lib/temaer';
 
@@ -49,7 +54,7 @@ export async function getStaticPaths() {
   };
   return news.map((haber) => ({
     params: { id: haber.id },
-    props: { haber, related: flere(haber), temaer: temaer.get(haber.id) ?? [] },
+    props: { haber, related: flere(haber), temaer: temaer.get(haber.id) ?? [], tidligere: tidligereSaker(haber, news) },
   }));
 }
 
@@ -57,11 +62,15 @@ interface Props {
   haber: Haber;
   related: Haber[];
   temaer: Tema[];
+  tidligere: Haber[];
 }
 
-const { haber, related, temaer } = Astro.props;
-// İlgili veri sayfaları (iç bağlantı): haber KPI, faiz, konut, işsizlik ya da farevarsel anıyorsa (src/lib/datalenker.mjs).
-const datasider = datasiderFor(`${haber.data.title} ${haber.data.description ?? ''} ${haber.body ?? ''}`);
+const { haber, related, temaer, tidligere } = Astro.props;
+// Canlı rakam kartı: başlık ya da özet KPI, faiz, konut veya işsizlikten söz ediyorsa son değer (src/lib/datalenker.mjs).
+// Gövdede geçen tesadüfi anışlar kart çıkarmaz; toplu haber listelerinde (nyheter-*, Kort fortalt) kart yoktur.
+// Metin içinde en çok bir modül: yer haritası (Task 6) varsa kart çıkmaz; harita gelince `stedkart` true olur.
+const stedkart = false;
+const datakort = stedkart || erSammendrag(haber) || /^nyheter-/.test(haber.id) ? null : datakortFor(`${haber.data.title} ${haber.data.description ?? ''}`);
 const { title, description, date, category, cover: kapak, coverAlt, coverKreditt, author, produksjon, rettelse, oppdatert } = haber.data;
 const { Content } = await render(haber);
 // OG/JSON-LD görseli her haberde üretilir; büyük WebP kapak yalnızca yeni haberlerde (bkz. gorselVar).
@@ -116,6 +125,16 @@ const sti = [
   { name: section, url: categoryUrl },
   { name: headline(title), url: pageUrl },
 ];
+const alanlar = haberAlanlari({
+  produksjon,
+  kilder,
+  sted: haber.data.sted,
+  rettelse,
+  oppdatert: endret,
+  date,
+  forfatter: forfatterUrl ? synligForfatter : undefined,
+  forfatterBeskrivelse: forfatterUrl ? forfatterBeskrivelse(synligForfatter) : undefined,
+});
 const entities = matchEntities(`${title} ${description} ${source ?? ''} ${haber.body ?? ''}`);
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -128,9 +147,8 @@ const jsonLd = {
       image: [{ '@type': 'ImageObject', url: new URL(ogImage, Astro.site).href, width: ogWidth, height: ogHeight }],
       datePublished: iso,
       dateModified: modifiedIso,
-      author: forfatterUrl
-        ? [{ '@type': 'Person', name: synligForfatter, jobTitle: 'Journalist', description: forfatterBeskrivelse(synligForfatter), url: `${SITE_URL}${forfatterUrl}` }]
-        : { '@id': ORG_ID },
+      // author: botta {@id: ORG_ID} yedeği korunur; haberAlanlari bot/sahibin/kişi yazarını kendisi verir.
+      author: { '@id': ORG_ID },
       // Yayıncının tam tanımı (publishingPrinciples dahil) Base.astro'daki Organization düğümünde (src/lib/seo.ts);
       // burada aynı @id ile çelişen ikinci bir tanım yazılmaz, sadece ona bağlanılır.
       publisher: { '@id': ORG_ID },
@@ -142,6 +160,7 @@ const jsonLd = {
       license: LISENS_JSONLD_URL,
       isPartOf: { '@id': WEBSITE_ID },
       ...(entities.length > 0 ? { about: entities } : {}),
+      ...alanlar,
     },
     breadcrumbs(sti),
   ],
@@ -173,6 +192,7 @@ const jsonLd = {
         {forklart && <a href={`/${FORKLART.slug}/`}><Symbol kind="forklart" />{FORKLART.name}</a>}
         {analyse && <a href={`/${ANALYSE.slug}/`}><Symbol kind="forklart" />{ANALYSE.name}</a>}
         <a href={`/kategori/${category}/`}><Symbol kind={category} />{section}</a>
+        {rettelse && <a class="na-rettet" href="#endringer">Rettet</a>}
       </p>
       <h1>{title}</h1>
       <p class="na-ingress">{description}</p>
@@ -218,35 +238,19 @@ const jsonLd = {
       }
 
       <div class="prose">
-        <Content />
+        <Brodtekst>
+          <Content />
+          {datakort && <Datakort slot="modul" kort={datakort} />}
+        </Brodtekst>
       </div>
 
-      {
-        rettelse && (
-          <aside class="rettelse">
-            <Symbol kind="rettelse" />
-            <p>
-              <strong>Rettelse{oppdatert ? ` (${formatDay(oppdatert)})` : ''}:</strong> {rettelse}{' '}
-              <a href="/rettelser/">Alle rettelser</a>
-            </p>
-          </aside>
-        )
-      }
+      <Endringer rettelse={rettelse} endret={endret} />
 
       {analyse && <p class="ikke-rad">Analysen er ikke investeringsråd.</p>}
 
-      {
-        datasider.length > 0 && (
-          <aside class="tall-lenke" aria-label="Tallene bak saken">
-            <span class="tall-lenke-tittel">Tallene bak saken</span>
-            {datasider.map((d) => (
-              <a href={d.url}>{d.navn}</a>
-            ))}
-          </aside>
-        )
-      }
-
       {forfatterUrl && <ForfatterKort name={synligForfatter} heading="h3" />}
+
+      <Tidligere saker={tidligere} tittel={title} dato={date} />
 
       <Kilder kilder={kilder} produksjon={produksjon} />
 
@@ -267,7 +271,7 @@ const jsonLd = {
     <div class="na-rail">
       <div class="na-rail-inn">
         <KortOppsummert whyMatters={haber.data.why_matters} keyPoints={haber.data.key_points} />
-        {visSlik && <SlikBleSakenLaget sak={slikSak} tittel={title} url={pageUrl} publisert={date} endret={endret} />}
+        {visSlik && <SlikBleSakenLaget sak={slikSak} tittel={title} url={pageUrl} publisert={date} endret={endret} rettet={Boolean(rettelse)} />}
       </div>
     </div>
   </div>

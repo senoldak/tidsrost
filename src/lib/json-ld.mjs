@@ -36,7 +36,8 @@ export function eierKisi(beskrivelse) {
     url: EIER_URL,
     jobTitle: 'Journalist',
     ...(beskrivelse ? { description: beskrivelse } : {}),
-    sameAs: Object.values(YAYINLAR),
+    // sameAs betyr «samme enhet»; yayın ana sayfaları kişiyle aynı şey değil, bu yüzden worksFor. Kişisel profil adresi yok.
+    worksFor: Object.entries(YAYINLAR).map(([name, url]) => ({ '@type': 'NewsMediaOrganization', name, url })),
   };
 }
 

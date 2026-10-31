@@ -51,12 +51,14 @@ test('haberAlanlari: bot yazar Organization KI-redaksjon', () => {
     assert.deepEqual(a, { '@type': 'Organization', name: 'tidsrøst KI-redaksjon', url: KI_REDAKSJON_URL });
   }
 });
-test('haberAlanlari: sahibin yazisi Person + sameAs kunyeden', () => {
+test('haberAlanlari: sahibin yazisi Person + worksFor kunyeden, sameAs yok', () => {
   const a = haberAlanlari({ produksjon: 'manuell', date: D, forfatter: 'Şenol Dak' }).author;
   assert.equal(a['@type'], 'Person');
   assert.equal(a.url, EIER_URL);
   assert.equal(a.jobTitle, 'Journalist');
-  assert.ok(a.sameAs.includes('https://tidsrost.com/') && a.sameAs.includes('https://kifobu.com/'));
+  assert.equal(a.sameAs, undefined);
+  assert.ok(a.worksFor.every((o) => o['@type'] === 'NewsMediaOrganization' && o.name && o.url));
+  assert.ok(a.worksFor.some((o) => o.url === 'https://tidsrost.com/') && a.worksFor.some((o) => o.url === 'https://kifobu.com/'));
 });
 test('haberAlanlari: veri yoksa alan yok', () => {
   assert.deepEqual(Object.keys(haberAlanlari({ produksjon: 'manuell', date: D })), ['dateModified']);
