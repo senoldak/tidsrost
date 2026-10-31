@@ -14,8 +14,6 @@ kilder:
     url: "https://www.aftenbladet.no/okonomi/i/1oaoGG/gabon-fem-sakna-etter-at-borerigg-gjekk-ned"
   - navn: "DN"
     url: "https://www.dn.no/rigg/borr-rigg-sank-fem-personer-savnet/2-1-2063666"
-  - navn: "VG"
-    url: "https://www.vg.no/i/BMa6dv/varsler-dagboeter-paa-16-000-kroner-mot-norse"
 nyhetsverdi: 86
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Borr Drilling-rigg sank i Gabon: Fem savnet etter ulykke lørdag kveld og 1 annen sak · 25. oktober, ettermiddag»"

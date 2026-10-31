@@ -14,8 +14,6 @@ kilder:
     url: "https://www.tv2.no/a/19329495"
   - navn: "Nettavisen"
     url: "https://www.nettavisen.no/nyheter/zelenskyj-haper-pa-usa-samtaler/s/80-95-166692"
-  - navn: "E24"
-    url: "https://e24.no/naeringsliv/i/d7G3Jq/villa-solgt-4-1-millioner-over-prisantydning"
   - navn: "Dagbladet"
     url: "https://www.elbil24.no/nyheter/lansert-tesla-roadster-flyr-ut-av-butikken/85295659"
 cover: ./cover.png

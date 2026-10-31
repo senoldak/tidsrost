@@ -14,8 +14,6 @@ kilder:
     url: "https://www.nettavisen.no/nyheter/enighet-om-tannhelsereform-historisk/s/80-95-167772"
   - navn: "VG"
     url: "https://www.vg.no/nyheter/i/w3XMr4/trafikkulykke-i-oslo-trikk-mot-bil"
-  - navn: "E24"
-    url: "https://e24.no/internasjonal-oekonomi/i/QgqJ9J/trump-er-veldig-redd"
 cover: ./cover.png
 coverAlt: "Illustrasjon: «Norge signerer milliardavtale med Sverige om atomavfall og 4 andre saker · 16. oktober, kveld»"
 coverKreditt: "Illustrasjon: tidsrøst"
