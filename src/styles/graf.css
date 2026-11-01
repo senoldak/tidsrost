@@ -148,6 +148,25 @@
 .g-d1 { fill: color-mix(in srgb, var(--red) 33%, var(--paper)); }
 .g-d2 { fill: color-mix(in srgb, var(--red) 66%, var(--paper)); }
 .g-d3 { fill: var(--red); }
+.g-flyt {
+  opacity: 0.45;
+}
+.g-flyt.g-pa {
+  opacity: 0.8;
+  stroke: none;
+}
+.g-node-v,
+.g-node-h {
+  fill: var(--ink);
+}
+.g-boks {
+  stroke: var(--paper);
+  stroke-width: 2;
+}
+.g-svg .g-boks-t {
+  fill: var(--paper);
+  font-weight: 600;
+}
 .g-trapp {
   stroke: var(--muted);
   stroke-width: 1;
