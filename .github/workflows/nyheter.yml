@@ -48,23 +48,6 @@ jobs:
             standartlar
           persist-credentials: false
 
-      # Yerel model gölgesi (28 Ekim, yerel-model.mjs): llama.cpp + EmbeddingGemma 2 + Gemma 4 E4B bu makinede açılır; "aynı
-      # olay" ölçümü bunlara da sorulur, yalnız loga yazılır. vars.YEREL_GOLGE=1 açar. Modeller (~4,7 GB) önbellekte durur;
-      # bir şey düşerse bot sunucuya ulaşamaz ve gölgeyi atlar. Sürüm/model değişirse anahtar da değişmeli (yerel-model-baslat.sh).
-      - name: Yerel modelleri önbellekten getir
-        if: ${{ vars.YEREL_GOLGE == '1' }}
-        continue-on-error: true
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
-        with:
-          path: ~/yerel-model
-          key: yerel-model-b11936-eg2q8-g4e4b-q4kxl-gr97r2
-
-      - name: Yerel model sunucuları
-        if: ${{ vars.YEREL_GOLGE == '1' }}
-        continue-on-error: true
-        timeout-minutes: 12
-        run: bash scripts/nyheter/yerel-model-baslat.sh
-
       - name: Hent nyheter
         id: hent
         env:
@@ -87,9 +70,6 @@ jobs:
           GOMME_ANAHTARI: ${{ secrets.KILDE_NOKKEL }}
           # Gölge denetim (20 Ekim): turda en çok bu kadar denetim kararı Gemma'ya da sorulur, yalnız loga yazılır (golge.mjs).
           GEMINI_GOLGE: ${{ vars.GEMINI_GOLGE }}
-          # Yerel model gölgesi (28 Ekim): 1 ise ölçülen çiftler yerel modellere de sorulur (yerel-model.mjs).
-          YEREL_GOLGE: ${{ vars.YEREL_GOLGE }}
-          YEREL_KALITE_DOSYASI: ${{ runner.temp }}/kalite.jsonl
           MAKS_PER_KJORING: ${{ vars.MAKS_PER_KJORING }}
           # Ortak yayın kapısının ikinci okuması (motor/ortak/kapi.mjs): vars.KAPI_MOD = kapali | golge | acik (boşsa kapalı).
           KAPI_MOD: ${{ vars.KAPI_MOD }}
@@ -185,19 +165,6 @@ jobs:
         run: gh workflow run yayinla.yml --ref "${{ github.ref_name }}"
 
       # Telegram-utsending håndteres av Cloudflare-worker mecmua-saat (repo senoldak/mecmua, mappe saat/): saker spres utover vakten hvert 10. minutt.
-
-      # Yerel kalite gölgesi (28 Ekim, yerel-kalite.py): bu turda yayına giden haberlerin rakam ve alıntıları LangExtract
-      # ve yerel Gemma ile kaynakta aranır; yalnız loga yazılır. Yayından sonra çalışır, yayını geciktirmez.
-      - name: Yerel kalite gölgesi
-        if: ${{ !cancelled() && vars.YEREL_GOLGE == '1' }}
-        continue-on-error: true
-        timeout-minutes: 15
-        run: |
-          [ -s "$RUNNER_TEMP/kalite.jsonl" ] || { echo "Bu turda yayına giden haber yok."; exit 0; }
-          curl -fs http://127.0.0.1:8092/health >/dev/null || { echo "Yerel model sunucusu yok."; exit 0; }
-          python3 -m venv "$RUNNER_TEMP/kalite-venv"
-          "$RUNNER_TEMP/kalite-venv/bin/pip" install --quiet --disable-pip-version-check 'langextract[openai]==1.7.1'
-          "$RUNNER_TEMP/kalite-venv/bin/python" scripts/nyheter/yerel-kalite.py "$RUNNER_TEMP/kalite.jsonl"
 
       # Katman 0 (Gemini kota planı): bu işin Gemini kullanımını model ve amaç başına mecmua-saat'e bildirir. İşi düşürmez.
       - name: Gemini kullanımını saate bildir
