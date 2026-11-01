@@ -1,6 +1,6 @@
 ---
 title: "Abortventetiden varierer kraftig ved norske sykehus"
-description: "Det er store forskjeller i når norske sykehus tilbyr abort til kvinner. Ved ett sykehus må pasienter vente til svangerskapsuke ni."
+description: "Det er store forskjeller i når norske sykehus tilbyr abort til kvinner. Ved ett sykehus vil de helst ikke se pasientene før i svangerskapsuke ni."
 date: 2026-10-22T12:02:48+02:00
 category: innenriks
 why_matters: "Saken viser at kvinners helsetilbud varierer stort avhengig av hvor i landet de bor, noe fagfolk mener gir unødvendig påkjennelse."

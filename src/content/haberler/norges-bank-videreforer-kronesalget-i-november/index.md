@@ -3,7 +3,7 @@ title: "Norges Bank viderefører kronesalget i november"
 description: "Sentralbanken opprettholder daglig salg av kroner på 176 millioner gjennom november, samme nivå som i september og oktober."
 date: 2026-10-30T18:09:55+01:00
 category: okonomi
-why_matters: "Norges Banks beslutning om valutatransaksjoner påvirker kronekursen, som for tiden er på sitt sterkeste nivå mot euroen på fire år."
+why_matters: "Valutatransaksjonene gjelder statens oljepenger og er ikke ment å påvirke kronekursen. Kronen er nå på sitt sterkeste mot euroen på nesten fire år."
 key_points:
   - "Norges Bank skal selge kroner for netto 176 millioner kroner daglig i november."
   - "Dette er samme nivå som i september og oktober."
@@ -23,7 +23,7 @@ Norges Bank har offentliggjort at de vil selge kroner for netto 176 millioner kr
 
 Dette nivået ble også holdt gjennom oktober. Kunngjøringen om valutatransaksjonene førte ikke til store utslag i markedet. Den norske kronen har likevel hatt en tydelig styrkende trend i den senere tid.
 
-Fredag ble euroen handlet til 10,30 kroner, noe som markerer det sterkeste nivået for den norske kronen mot euroen på nesten fire år. Ifølge sentralbanken er de høye prisene på olje og gass en sentral årsak til at kronen har styrket seg. Det er verdt å merke seg at Norges Bank tidligere i år opererte med kjøp av kroner, før de altså snudde til salg i september.
+Fredag ble euroen handlet til 10,30 kroner, noe som markerer det sterkeste nivået for den norske kronen mot euroen på nesten fire år. Flere eksperter mener at de høye prisene på olje og gass er den viktigste årsaken til at kronen har styrket seg. Det er verdt å merke seg at Norges Bank tidligere i år opererte med kjøp av kroner, før de altså snudde til salg i september.
 
 Selv om kronekursen har beveget seg markant, var det ingen store bevegelser i valutamarkedet i umiddelbar nærhet til at sentralbanken slapp nyheten om november-transaksjonene. Denne utviklingen i kronekursen skjer i en periode hvor olje- og gasspriser fortsatt er høye, noe som ifølge vurderinger er en viktig forklaring på styrkelsen av kronen.
 

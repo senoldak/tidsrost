@@ -3,9 +3,9 @@ import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 import { CATEGORIES } from './lib/site';
 
-// Düzeltme notları 1 Kasım 2026'dan önce gösterilmez (yapım aşaması; sahibinin kararı, 22 Ekim 2026).
+// Düzeltme notları 1 Aralık 2026'dan önce gösterilmez (yapım aşaması, sitelerin resmî açılışı 1 Aralık; sahibinin kararı, 22 Ekim ve 1 Kasım 2026).
 // Zincir de bu tarihten önce not yazmaz (mecmua yazi-isleri/guncelleme/icerik.mjs DUZELTME_ACILIS).
-const DUZELTME_ACILIS = Date.parse('2026-11-01T00:00:00+03:00');
+const DUZELTME_ACILIS = Date.parse('2026-12-01T00:00:00+03:00');
 const duzeltmeKapisi = (v: string | undefined) => (Date.now() < DUZELTME_ACILIS ? undefined : v);
 const slugs = CATEGORIES.map((c) => c.slug) as [string, ...string[]];
 
