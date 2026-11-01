@@ -12,6 +12,7 @@ import { ARKIV_TERSKEL } from './src/lib/arkiv.mjs';
 import ordbok from './src/data/ordbok.json' with { type: 'json' };
 import { satteri } from '@astrojs/markdown-satteri';
 import { satteriOrd } from './src/lib/rehype-ord.mjs';
+import { satteriGraf } from './src/lib/graf/forklart.mjs';
 
 // Astro kapakların orijinal PNG'sini de dist/_astro'ya yazar, oysa sayfalar yalnızca türetilmiş dosyaları kullanır.
 // Derleme sonunda hiçbir çıktı dosyasında adı geçmeyen görselleri sileriz. Kaynaktaki kapaklar (src/content) silinmez.
@@ -165,5 +166,6 @@ export default defineConfig({
   vite: { build: { assetsInlineLimit: 0 } },
   // Ordforklaringer (Bokmålsordboka): første forekomst av høyst tre ord i hver sak blir en knapp (src/lib/rehype-ord.mjs).
   // Astro 7 bruker Sätteri; markdown.rehypePlugins krever @astrojs/markdown-remark, så pluginen settes inn som hast-plugin.
-  markdown: { processor: satteri({ hastPlugins: [satteriOrd(ordbok)] }) },
+  // Forklart-grafer: ./graf-N.svg med graf-N.json ved siden av blir et interaktivt kort (src/lib/graf/forklart.mjs).
+  markdown: { processor: satteri({ hastPlugins: [satteriOrd(ordbok), satteriGraf()] }) },
 });

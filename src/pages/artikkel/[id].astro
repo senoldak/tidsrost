@@ -11,6 +11,7 @@ import { SITE, categoryName, formatDay, formatTime, varsel, gorselVar } from '..
 import { ANALYSE, FORKLART, erAnalyse, erForklart, forfatterSlug, getNews, kilde, kildeUrl, type Haber } from '../../lib/news';
 import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs, headline } from '../../lib/seo';
 import '../../styles/artikkel.css';
+import '../../styles/graf.css';
 import Kildelinje from '../../components/artikkel/Kildelinje.astro';
 import Kilder from '../../components/artikkel/Kilder.astro';
 import KortOppsummert from '../../components/artikkel/KortOppsummert.astro';
@@ -289,3 +290,8 @@ const jsonLd = {
 
   <FlereSaker saker={related} kategori={kategoriNavn} />
 </Base>
+
+<script>
+  // Forklart-grafer (src/lib/graf/forklart.mjs): verdier ved trykk og hover.
+  import '../../scripts/graf.mjs';
+</script>
