@@ -14,7 +14,7 @@
  * @typedef {{ svg: string, bredde: number, hoyde: number, modus: 'serie'|'element', punkter: TipsPunkt[], ramme?: { topp: number, bunn: number }, nokkel?: { navn: string, klasse: string }[], tabell: { kolonner: string[], rader: string[][] }, beskrivelse: string }} Tegning
  */
 
-export const BILINEN_FORMER = ['linje', 'soyle', 'flate', 'avvik', 'rangering', 'smultring', 'maler', 'rutenett', 'prikksoyle', 'helning', 'manual', 'baand', 'spenn', 'stablet', 'gruppert', 'stabletflate', 'fremdrift', 'fossefall'];
+export const BILINEN_FORMER = ['linje', 'soyle', 'flate', 'avvik', 'rangering', 'smultring', 'maler', 'rutenett', 'prikksoyle', 'helning', 'manual', 'baand', 'spenn', 'stablet', 'gruppert', 'stabletflate', 'fremdrift', 'fossefall', 'varmekart', 'stripe'];
 
 /** @param {GrafData} d @returns {string[]} hata listesi; boşsa geçerli */
 export function validerGraf(d) {

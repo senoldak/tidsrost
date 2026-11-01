@@ -134,6 +134,20 @@
 .g-nokkel .g-n-rod::before { height: 10px; background: var(--red); }
 .g-nokkel .g-n-su2::before { height: 10px; background: var(--g-su2); }
 .g-nokkel .g-n-bar::before { height: 10px; background: var(--g-bar); }
+/* Isı ve şerit kademeleri: su rengi koyulaşır; ıraksak şeritte kırmızı üstü, su altı. */
+.g-v0 { fill: var(--rule); opacity: 0.5; }
+.g-v1 { fill: color-mix(in srgb, var(--water) 14%, var(--paper)); }
+.g-v2 { fill: color-mix(in srgb, var(--water) 32%, var(--paper)); }
+.g-v3 { fill: color-mix(in srgb, var(--water) 52%, var(--paper)); }
+.g-v4 { fill: color-mix(in srgb, var(--water) 74%, var(--paper)); }
+.g-v5 { fill: var(--water); }
+.g-d-3 { fill: var(--water); }
+.g-d-2 { fill: color-mix(in srgb, var(--water) 66%, var(--paper)); }
+.g-d-1 { fill: color-mix(in srgb, var(--water) 33%, var(--paper)); }
+.g-d0 { fill: color-mix(in srgb, var(--muted) 12%, var(--paper)); }
+.g-d1 { fill: color-mix(in srgb, var(--red) 33%, var(--paper)); }
+.g-d2 { fill: color-mix(in srgb, var(--red) 66%, var(--paper)); }
+.g-d3 { fill: var(--red); }
 .g-trapp {
   stroke: var(--muted);
   stroke-width: 1;

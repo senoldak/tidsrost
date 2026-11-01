@@ -18,9 +18,11 @@ import * as gruppert from './former/gruppert.mjs';
 import * as stabletflate from './former/stabletflate.mjs';
 import * as fremdrift from './former/fremdrift.mjs';
 import * as fossefall from './former/fossefall.mjs';
+import * as varmekart from './former/varmekart.mjs';
+import * as stripe from './former/stripe.mjs';
 
 /** @type {Record<string, { tegn: (d: import('./sema.mjs').GrafData, o?: { id?: string, bred?: boolean }) => import('./sema.mjs').Tegning }>} */
-export const FORMER = { linje, flate, soyle, avvik, rangering, smultring, maler, rutenett, prikksoyle, helning, manual, baand, spenn, stablet, gruppert, stabletflate, fremdrift, fossefall };
+export const FORMER = { linje, flate, soyle, avvik, rangering, smultring, maler, rutenett, prikksoyle, helning, manual, baand, spenn, stablet, gruppert, stabletflate, fremdrift, fossefall, varmekart, stripe };
 
 /** @param {import('./sema.mjs').GrafData} d @param {{ id?: string, bred?: boolean }} [o] */
 export function tegnGraf(d, o = {}) {
