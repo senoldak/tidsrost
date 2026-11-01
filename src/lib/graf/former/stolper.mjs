@@ -14,7 +14,7 @@ export function stolper(d, o, valg) {
   const des = d.desimaler ?? 1;
   const enh = kortEnhet(d.enhet);
   const s = d.serier[0];
-  const rader = valg.sorter ? [...s.punkter].sort((a, b) => (tom(b.y) ? -Infinity : b.y) - (tom(a.y) ? -Infinity : a.y)) : [...s.punkter];
+  const rader = valg.sorter ? [...s.punkter].sort((a, b) => (tom(a.y) || tom(b.y) ? Number(tom(a.y)) - Number(tom(b.y)) : b.y - a.y)) : [...s.punkter];
   const M = o.bred ? 300 : 225;
   const maksNavn = o.bred ? 46 : 34;
   const verdier = rader.map((q) => q.y).filter((v) => !tom(v));

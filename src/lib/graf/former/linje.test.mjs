@@ -42,3 +42,7 @@ test('linje: 4–5 aralığında eksen 4,25 yazar, 4,3 yazmaz', () => {
   assert.ok(s.includes('>4,25<'));
   assert.ok(!s.includes('>4,3<'));
 });
+test('linje: sağ kenara yakın son değer etiketi sola döner', () => {
+  const s = tegn({ ...veri3, enhet: 'kroner', desimaler: 1, serier: [{ navn: 'a', punkter: [{ x: 'a', y: 1 }, { x: 'b', y: 12345.6 }] }] }).svg;
+  assert.match(s, /text-anchor="end" class="g-siste"|class="g-siste" text-anchor="end"/);
+});

@@ -13,3 +13,4 @@ test('helning: en çok artan su, en çok düşen kırmızı', () => {
 test('helning: yalnız vurgulular etiketli', () => { const s = tegn(veri([['Aaa', 1, 2], ['Bbb', 2, 1], ['Ccc', 1, 1.1]])).svg; assert.ok(s.includes('>Aaa<') && s.includes('>Bbb<') && !s.includes('>Ccc<')); });
 test('helning: aynı değerde bölme hatası yok', () => assert.ok(!tegn(veri([['A', 0, 0], ['B', 0, 0]])).svg.includes('NaN')));
 test('helning: ipucu değişimi verir', () => assert.match(tegn(veri([['A', 100, 110]])).punkter[0].tekst, /100,0 → 110,0/));
+test('helning: hiç tam satır yoksa NaN yok', () => assert.ok(!tegn(veri([['A', null, 1]])).svg.includes('NaN')));

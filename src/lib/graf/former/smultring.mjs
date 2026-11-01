@@ -40,7 +40,7 @@ export function tegn(d, o = {}) {
   return {
     svg: `<svg viewBox="0 0 ${bredde} ${H}" class="g-svg" role="img" aria-label="${esc(beskrivelse)}">${deler.join('')}</svg>`,
     bredde, hoyde: H, modus: 'element', punkter: punkter.filter((_, i) => dilimler[i].y > 0),
-    tabell: { kolonner: ['', d.serier[0].navn, 'Andel'], rader: d.serier[0].punkter.map((p) => [String(p.x), tom(p.y) ? '–' : tall(p.y, des), tom(p.y) ? '–' : pst(p.y)]) },
+    tabell: { kolonner: ['', d.serier[0].navn, 'Andel'], rader: d.serier[0].punkter.map((p) => [String(p.x), tom(p.y) ? '–' : tall(p.y, des), tom(p.y) || p.y < 0 ? '–' : pst(p.y)]) },
     beskrivelse,
   };
 }

@@ -1,5 +1,5 @@
 // Nokta sütunu: her x için üst üste noktalar; bir nokta = valg.prikk birim (varsayılan 0,5). Negatif değer nokta çizmez.
-import { esc, etikettIndekser, kortEnhet, r2, tall, tekst, tom } from '../felles.mjs';
+import { esc, etikettIndekser, kortNavn, kortEnhet, r2, tall, tekst, tom } from '../felles.mjs';
 
 /** @param {import('../sema.mjs').GrafData} d @param {{ bred?: boolean }} [o] @returns {import('../sema.mjs').Tegning} */
 export function tegn(d, o = {}) {
@@ -23,7 +23,7 @@ export function tegn(d, o = {}) {
     deler.push('</g>');
     return { x: cx, y: H - A - antall[i] * steg, tekst: `${q.x}\n${tom(q.y) ? '–' : `${tall(q.y, des)}${enh}`}` };
   });
-  for (const i of etikettIndekser(p.length, o.bred ? 8 : 4)) deler.push(tekst(i * bw + bw / 2, H - 6, String(p[i].x), 'text-anchor="middle"'));
+  for (const i of etikettIndekser(p.length, o.bred ? 8 : 4)) deler.push(tekst(i * bw + bw / 2, H - 6, kortNavn(String(p[i].x), 12), 'text-anchor="middle"'));
   const beskrivelse = `${d.tittel}. ${d.under ? `${d.under}. ` : ''}Én prikk er ${tall(enhetPrikk, enhetPrikk % 1 ? 1 : 0)}${enh}.`;
   return {
     svg: `<svg viewBox="0 0 ${bredde} ${H}" class="g-svg" role="img" aria-label="${esc(beskrivelse)}">${deler.join('')}</svg>`,

@@ -14,3 +14,4 @@ test('smultring: 0 dilim çizilmez, tabloda kalır', () => {
   assert.equal(t.tabell.rader.length, 2);
 });
 test('smultring: orta metin data-midt', () => assert.match(tegn(veri([['a', 1]])).svg, /data-midt/));
+test('smultring: negatif değerin payı tabloda "–"', () => assert.equal(tegn(veri([['a', 3], ['b', -1]])).tabell.rader[1][2], '–'));

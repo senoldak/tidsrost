@@ -1,5 +1,5 @@
 // Dikey sütun: tek seri, vurgulu sütun(lar) (valg.fremhev; yoksa son sütun) ve isteğe bağlı ortalama çizgisi.
-import { esc, etikettIndekser, fineTikker, kortEnhet, r2, skala, tall, tekst, tom, tikkDesimaler } from '../felles.mjs';
+import { esc, etikettIndekser, kortNavn, fineTikker, kortEnhet, r2, skala, tall, tekst, tom, tikkDesimaler } from '../felles.mjs';
 
 const H = 220, V = 36, U = 14, A = 26;
 
@@ -23,7 +23,7 @@ export function tegn(d, o = {}) {
     deler.push(`<line x1="${V}" x2="${bredde}" y1="${r2(y(t))}" y2="${r2(y(t))}"/>`);
     deler.push(tekst(V - 6, y(t) + 4, tall(t, tikkDesimaler(tikker)), 'text-anchor="end"'));
   }
-  for (const i of etikettIndekser(p.length, o.bred ? 8 : 4)) deler.push(tekst(V + i * bw + bw / 2, H - 7, String(p[i].x), 'text-anchor="middle"'));
+  for (const i of etikettIndekser(p.length, o.bred ? 8 : 4)) deler.push(tekst(V + i * bw + bw / 2, H - 7, kortNavn(String(p[i].x), 12), 'text-anchor="middle"'));
   deler.push('</g>');
 
   const punkter = p.map((q, i) => {

@@ -14,3 +14,8 @@ test('soyle: hepsi negatif → çubuklar sıfır çizgisinin altında', () => {
   for (const r of rects(t.svg)) assert.ok(r.y >= sifir - 0.01, `${r.y} < ${sifir}`);
 });
 test('soyle: element modu, ipucu sayısı', () => { const t = tegn(veri([1, null, 3])); assert.equal(t.modus, 'element'); assert.equal(t.punkter.length, 3); assert.equal(t.punkter[1].tekst, 'm1\n–'); });
+test('soyle: uzun x etiketi kısalır, ipucunda tam', () => {
+  const t = tegn({ ...veri([1]), serier: [{ navn: 's', punkter: [{ x: 'Forsikring og finansielle tjenester', y: 1 }] }] });
+  assert.match(t.svg, />Forsikring …</);
+  assert.match(t.punkter[0].tekst, /Forsikring og finansielle tjenester/);
+});

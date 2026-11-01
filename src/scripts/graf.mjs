@@ -92,7 +92,8 @@ function kur(kart) {
     if (fram || bak) { vis(i + (fram ? 1 : -1)); e.preventDefault(); }
     if (e.key === 'Escape') skjul();
   });
-  kart.addEventListener('focusin', (e) => { if (e.target === kart) vis(i); });
+  // Yalnız klavye odağında: başlığa dokunmak ipucu açmasın.
+  kart.addEventListener('focusin', (e) => { if (e.target === kart && kart.matches(':focus-visible')) vis(i); });
   kart.addEventListener('focusout', (e) => { if (!kart.contains(e.relatedTarget)) skjul(); });
 }
 

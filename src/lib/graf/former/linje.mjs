@@ -1,5 +1,5 @@
 // Çizgi: tek ya da çok seri (en çok 3), basamak (valg.trapp), log eksen (valg.logAkse), hedef çizgisi ve vurgulu dönem.
-import { esc, etikettIndekser, fineTikker, kortEnhet, r2, skala, sti, tall, tekst, trappSti, tikkDesimaler } from '../felles.mjs';
+import { esc, etikettIndekser, kortNavn, fineTikker, kortEnhet, r2, skala, sti, tall, tekst, trappSti, tikkDesimaler } from '../felles.mjs';
 
 const B = 400, B_BRED = 900, H = 220, V = 40, S = 46, U = 14, A = 26;
 
@@ -39,7 +39,7 @@ export function tegn(d, o = {}) {
   }
   for (const i of etikettIndekser(lengde)) {
     const anker = lengde === 1 ? 'middle' : i === 0 ? 'start' : i === lengde - 1 ? 'end' : 'middle';
-    deler.push(tekst(x(i), H - 7, etiketter[i], `text-anchor="${anker}"`));
+    deler.push(tekst(x(i), H - 7, kortNavn(etiketter[i], 12), `text-anchor="${anker}"`));
   }
   deler.push('</g>');
 
@@ -75,7 +75,9 @@ export function tegn(d, o = {}) {
     const siste = [...s.punkter].map((q, i) => ({ q, i })).reverse().find(({ q }) => q.y !== null && q.y !== undefined);
     if (siste) {
       deler.push(`<circle cx="${x(siste.i)}" cy="${y(siste.q.y)}" r="3.5"/>`);
-      deler.push(tekst(x(siste.i) + 7, y(siste.q.y) + 4, tall(siste.q.y, des), 'class="g-siste"'));
+      const sisteTekst = tall(siste.q.y, des);
+      const forLang = x(siste.i) + 7 + sisteTekst.length * 7 > bredde;
+      deler.push(tekst(forLang ? x(siste.i) - 7 : x(siste.i) + 7, y(siste.q.y) + (forLang ? -8 : 4), sisteTekst, forLang ? 'text-anchor="end" class="g-siste"' : 'class="g-siste"'));
     }
     deler.push('</g>');
   });

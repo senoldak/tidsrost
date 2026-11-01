@@ -21,3 +21,7 @@ test('rangering: negatif çubuk sıfırın solunda', () => {
   assert.ok(s.includes('class="g-null"'));
 });
 test('element öğeleri data-i taşır', () => assert.equal((tegn(rangVeri([['A', 1], ['B', 2]])).svg.match(/data-i=/g) || []).length, 2));
+test('rangering: iki null satır sona, sıra kararlı', () => {
+  const t = tegn(rangVeri([['A', null], ['B', 2], ['C', null]]));
+  assert.deepEqual(t.tabell.rader.map((r) => r[0]), ['B', 'A', 'C']);
+});
