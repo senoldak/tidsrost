@@ -125,12 +125,13 @@ test('TİDSROST_GRAFİKLER: gul farge strengt forbudt og N50 ekvidistanse attrib
   }
 });
 
-test('TİDSROST_GRAFİKLER: norsk bokmål rute /grafer/ og omdirigeringer', async () => {
+// /grafer/ er stengt til tallene er koblet til offisielle data (1. november 2026).
+test('/grafer/ er stengt og sendes videre til /tall/', async () => {
   const fs = await import('node:fs');
-  const graferAstroFinnes = fs.existsSync(new URL('../pages/grafer.astro', import.meta.url));
-  assert.ok(graferAstroFinnes, 'src/pages/grafer.astro må eksistere på norsk bokmål');
+  assert.ok(!fs.existsSync(new URL('../pages/grafer.astro', import.meta.url)), 'src/pages/grafer.astro skal ikke bygges');
 
   const redirectsInnhold = fs.readFileSync(new URL('../../public/_redirects', import.meta.url), 'utf8');
-  assert.ok(redirectsInnhold.includes('/grafikler /grafer/ 301'), 'omdirigering fra /grafikler til /grafer/ må være på plass');
-  assert.ok(redirectsInnhold.includes('/grafikler/ /grafer/ 301'), 'omdirigering fra /grafikler/ til /grafer/ må være på plass');
+  for (const linje of ['/grafer/ /tall/ 301', '/grafikler/ /tall/ 301']) {
+    assert.ok(redirectsInnhold.includes(linje), `mangler omdirigering: ${linje}`);
+  }
 });
