@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { AGENTER, stegFor, faktalinje } from './redaksjon.mjs';
+import { AGENTER, stegFor, faktalinje, ikkeLestAvMenneske } from './redaksjon.mjs';
 
 const seks = ['a', 'b', 'c', 'd', 'e', 'f'].map((x) => ({ navn: `Avis ${x}`, url: `https://${x}.example/` }));
 
@@ -68,18 +68,26 @@ test('stegFor: alle trinn-id-er finnes i registeret', () => {
 });
 
 test('faktalinje: ki-medier, entall og manglende deler', () => {
-  assert.deepEqual(faktalinje({ produksjon: 'ki-medier', kilder: seks, nyhetsverdi: 75 }), ['6 kilder', 'Nyhetsverdi 75/100', 'Ikke lest av et menneske']);
+  assert.deepEqual(faktalinje({ produksjon: 'ki-medier', kilder: seks, nyhetsverdi: 75 }), ['6 kilder', 'Nyhetsverdi 75/100']);
   assert.deepEqual(faktalinje({ produksjon: 'ki-medier', kilder: seks.slice(0, 1), nyhetsverdi: 80 })[0], '1 kilde');
-  assert.deepEqual(faktalinje({ produksjon: 'ki-medier', kilder: seks }), ['6 kilder', 'Ikke lest av et menneske']);
-  assert.deepEqual(faktalinje({ produksjon: 'ki-medier', nyhetsverdi: 72 }), ['Nyhetsverdi 72/100', 'Ikke lest av et menneske']);
-  assert.deepEqual(faktalinje({ produksjon: 'ki-medier' }), ['Ikke lest av et menneske']);
+  assert.deepEqual(faktalinje({ produksjon: 'ki-medier', kilder: seks }), ['6 kilder']);
+  assert.deepEqual(faktalinje({ produksjon: 'ki-medier', nyhetsverdi: 72 }), ['Nyhetsverdi 72/100']);
+  assert.deepEqual(faktalinje({ produksjon: 'ki-medier' }), []);
   for (const d of faktalinje({ produksjon: 'ki-medier', kilder: [] })) assert.doesNotMatch(d, /undefined|NaN|\b0 kilder/);
 });
 
 test('faktalinje: ki-kontrollert, automatisk, egen tekst, manuell', () => {
-  assert.deepEqual(faktalinje({ produksjon: 'ki-kontrollert', kilder: seks.slice(0, 1) }), ['1 kilde', 'Ikke lest av et menneske']);
-  assert.deepEqual(faktalinje({ produksjon: 'automatisk', kilder: [{ navn: 'SSB', url: 'https://ssb.example/' }] }), ['Automatisk fra SSB', 'Ikke lest av et menneske']);
+  assert.deepEqual(faktalinje({ produksjon: 'ki-kontrollert', kilder: seks.slice(0, 1) }), ['1 kilde']);
+  assert.deepEqual(faktalinje({ produksjon: 'automatisk', kilder: [{ navn: 'SSB', url: 'https://ssb.example/' }] }), ['Automatisk fra SSB']);
   assert.deepEqual(faktalinje({ author: 'Şenol Dak', sjanger: 'forklart', produksjon: 'ki-redigert' }), ['Skrevet av Şenol Dak', 'Oversatt og språkvasket med KI']);
   assert.deepEqual(faktalinje({ produksjon: 'manuell' }), []);
   assert.deepEqual(faktalinje({}), []);
+});
+
+test('ikkeLestAvMenneske: bare automatiske saker', () => {
+  assert.equal(ikkeLestAvMenneske({ produksjon: 'ki-medier' }), true);
+  assert.equal(ikkeLestAvMenneske({ produksjon: 'automatisk' }), true);
+  assert.equal(ikkeLestAvMenneske({ produksjon: 'manuell' }), false);
+  assert.equal(ikkeLestAvMenneske({}), false);
+  assert.equal(ikkeLestAvMenneske({ author: 'Şenol Dak', sjanger: 'forklart', produksjon: 'ki-redigert' }), false);
 });

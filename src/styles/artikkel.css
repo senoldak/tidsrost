@@ -954,7 +954,8 @@ html[data-skala='3'] .na-ramme {
   color: var(--ink);
   font-weight: 700;
 }
-.fakta-linje .nei {
+.fakta-linje .nei,
+.fakta-apen .nei {
   color: var(--red);
   font-weight: 700;
 }

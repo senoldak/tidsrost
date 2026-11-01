@@ -97,20 +97,25 @@ export function stegFor(sak) {
 }
 
 // Kort faktalinje for det lukkede kortet. Deler uten data utelates.
+// «Ikke lest av et menneske» står i det åpne kortet (ikkeLestAvMenneske), ikke her.
 export function faktalinje(sak) {
   if (erEgenTekst(sak)) return ['Skrevet av Şenol Dak', 'Oversatt og språkvasket med KI'];
   const kilder = kilderAv(sak);
   const p = sak?.produksjon;
-  const ikkeLest = 'Ikke lest av et menneske';
   if (p === 'ki-medier' || p === 'ki-kontrollert') {
     const ut = [];
     if (kilder.length) ut.push(`${kilder.length} ${kilder.length === 1 ? 'kilde' : 'kilder'}`);
     if (harVerdi(sak)) ut.push(`Nyhetsverdi ${sak.nyhetsverdi}/100`);
-    ut.push(ikkeLest);
     return ut;
   }
   if (p === 'automatisk' || p === 'ki-automatisk') {
-    return [kilder.length ? `Automatisk fra ${kilder[0].navn}` : 'Automatisk fra en offentlig kilde', ikkeLest];
+    return [kilder.length ? `Automatisk fra ${kilder[0].navn}` : 'Automatisk fra en offentlig kilde'];
   }
   return [];
+}
+
+// Saker som publiseres uten at et menneske har lest dem.
+export function ikkeLestAvMenneske(sak) {
+  if (erEgenTekst(sak)) return false;
+  return ['ki-medier', 'ki-kontrollert', 'automatisk', 'ki-automatisk'].includes(sak?.produksjon);
 }
