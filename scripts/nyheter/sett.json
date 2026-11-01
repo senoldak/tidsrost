@@ -6963,7 +6963,37 @@
     "medier:b146c3d2c499d0e9": "2026-11-01T11:01:12.300Z",
     "medier:ed39075755974ff7": "2026-11-01T11:01:12.300Z",
     "medier:630f874e47de98b8": "2026-11-01T11:01:12.300Z",
-    "medier:67fafcfdb96503f1": "2026-11-01T11:01:12.300Z"
+    "medier:67fafcfdb96503f1": "2026-11-01T11:01:12.300Z",
+    "medier:4a28aad9f2db6692": "2026-11-01T13:01:04.641Z",
+    "medier:b51fe338359cca75": "2026-11-01T13:01:04.641Z",
+    "medier:6707983ed954bd12": "2026-11-01T13:01:04.641Z",
+    "medier:52ead17274e43a84": "2026-11-01T13:01:04.641Z",
+    "medier:4199537dee1590f3": "2026-11-01T13:01:04.641Z",
+    "medier:a2307ae6e93a06ad": "2026-11-01T13:01:04.641Z",
+    "medier:fc168e4495615ebd": "2026-11-01T13:01:04.641Z",
+    "medier:2aafb374036270e6": "2026-11-01T13:01:04.641Z",
+    "medier:dc67d416d14332d5": "2026-11-01T13:01:04.641Z",
+    "medier:aa997b6f3a896200": "2026-11-01T13:01:04.641Z",
+    "medier:6f0c7f8f684ab265": "2026-11-01T13:01:04.641Z",
+    "medier:acf1f2d74e9e3db4": "2026-11-01T13:01:04.641Z",
+    "medier:85ceccde59956476": "2026-11-01T13:01:04.641Z",
+    "medier:18d5182b1448e564": "2026-11-01T13:01:04.641Z",
+    "medier:a3396eafbad08d57": "2026-11-01T13:01:04.641Z",
+    "medier:82559ca2c517e3c1": "2026-11-01T13:01:04.641Z",
+    "medier:b7b0f582897b44a9": "2026-11-01T13:01:04.641Z",
+    "medier:8a39fff17b1d9265": "2026-11-01T13:01:04.641Z",
+    "medier:d6670eb3a284c159": "2026-11-01T13:01:04.641Z",
+    "medier:3c343edb4e932c62": "2026-11-01T13:01:04.641Z",
+    "medier:adf856d9963caa47": "2026-11-01T13:01:04.641Z",
+    "medier:e5cf7c5d9329f36c": "2026-11-01T13:01:04.641Z",
+    "medier:cda14b3f991a1ac7": "2026-11-01T13:01:04.641Z",
+    "medier:c3a0fe3991fe2cda": "2026-11-01T13:01:04.641Z",
+    "medier:1a99fc7da3254e5d": "2026-11-01T13:01:04.641Z",
+    "medier:245abde093292fc3": "2026-11-01T13:01:04.641Z",
+    "medier:f6c270354ae54d1c": "2026-11-01T13:01:04.641Z",
+    "medier:f17bef1d67c43a54": "2026-11-01T13:01:04.641Z",
+    "medier:75c280f33f8dea3f": "2026-11-01T13:01:04.641Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2301": "2026-11-01T13:01:04.641Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -7016,121 +7046,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:874a57bace8f4fb9": {
-      "p": 42,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:1f6532a482fecc23": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:905a7724cd8d40e6": {
-      "p": 71,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:e3e6e350dc02ed3e": {
-      "p": 48,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:a67b89c18179c188": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:719977a34388386a": {
-      "p": 52,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:ee2a1ab573bad7b6": {
-      "p": 74,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:0bf9e0d24037a059": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:c6acf7bac4020680": {
-      "p": 32,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:845ff76789d687b5": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:2af722857ae2fb98": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:7a8812152f3f8109": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:0bf8acb603b56e06": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:345bca61442db02b": {
-      "p": 62,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:997fc8ebfedbc5c4": {
-      "p": 76,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:695aa0b81abe9540": {
-      "p": 69,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:695ffeaf07258dbb": {
-      "p": 64,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:054da60a247f5915": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:498e4b2539b4ad27": {
-      "p": 42,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "medier:2d12c9ee99cde875": {
-      "p": 73,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "regjeringen:3186516": {
-      "p": 58,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "dsb:https://www.dsb.no/aktuelt/kronikk-er-du-forberedt-pa-a-miste-nettet/": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
-    "statnett:https://www.statnett.no/om-statnett/nyheter-og-pressemeldinger/nyhetsarkiv-2026/ny-transformatorstasjon-i-kanstadbotn-styrker-stromnettet-i-nordland/": {
-      "p": 46,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T11:08:10.725Z"
-    },
     "medier:4d6b4ce6be2bffab": {
       "p": 85,
       "v": "b34cb0de5bde",
@@ -8750,6 +8665,56 @@
       "p": 25,
       "v": "b34cb0de5bde",
       "t": "2026-11-01T11:02:53.514Z"
+    },
+    "medier:4a28aad9f2db6692": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T13:02:38.681Z"
+    },
+    "medier:245abde093292fc3": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T13:02:38.681Z"
+    },
+    "medier:c3a0fe3991fe2cda": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T13:02:38.681Z"
+    },
+    "medier:a2307ae6e93a06ad": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T13:02:38.681Z"
+    },
+    "medier:2aafb374036270e6": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T13:02:38.681Z"
+    },
+    "medier:6f0c7f8f684ab265": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T13:02:38.681Z"
+    },
+    "medier:18d5182b1448e564": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T13:02:38.681Z"
+    },
+    "medier:b7b0f582897b44a9": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T13:02:38.681Z"
+    },
+    "medier:3c343edb4e932c62": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T13:02:38.681Z"
+    },
+    "medier:e5cf7c5d9329f36c": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T13:02:38.681Z"
     }
   }
 }
