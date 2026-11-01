@@ -17,15 +17,18 @@ export function stolper(d, o, valg) {
   const rader = valg.sorter ? [...s.punkter].sort((a, b) => (tom(a.y) || tom(b.y) ? Number(tom(a.y)) - Number(tom(b.y)) : b.y - a.y)) : [...s.punkter];
   const M = o.bred ? 300 : 225;
   const maksNavn = o.bred ? 46 : 34;
-  const verdier = rader.map((q) => q.y).filter((v) => !tom(v));
+  // Referans çizgisi (merknad mal): bütün satırlar boyunca dikey kesik çizgi, etiketi üstte.
+  const mal = (d.merknader ?? []).find((m) => m.type === 'mal');
+  const REF = mal ? 22 : 0;
+  const verdier = [...rader.map((q) => q.y).filter((v) => !tom(v)), ...(mal ? [mal.y] : [])];
   const lo = Math.min(0, ...verdier), hi = Math.max(0, ...verdier);
   const x = skala(lo, hi === lo ? lo + 1 : hi, M, bredde - 44);
-  const H = rader.length * RAD + 4;
+  const H = REF + rader.length * RAD + 4;
   const tegnTall = (v) => `${valg.fortegn && v > 0 ? '+' : ''}${tall(v, des)}`;
 
   const deler = [];
   const punkter = rader.map((q, i) => {
-    const yy = i * RAD + 2;
+    const yy = REF + i * RAD + 2;
     deler.push(`<g data-i="${i}">`);
     deler.push(tekst(M - 8, yy + 16, kortNavn(String(q.x), maksNavn), 'text-anchor="end" class="g-t-blekk"'));
     if (tom(q.y)) {
@@ -40,7 +43,11 @@ export function stolper(d, o, valg) {
     deler.push('</g>');
     return { x: (x0 + Math.max(x(0), x(q.y))) / 2, y: yy + 4, tekst: `${q.x}\n${tegnTall(q.y)}${enh}` };
   });
-  if (lo < 0) deler.push(`<line class="g-null" x1="${r2(x(0))}" x2="${r2(x(0))}" y1="0" y2="${H}"/>`);
+  if (lo < 0) deler.push(`<line class="g-null" x1="${r2(x(0))}" x2="${r2(x(0))}" y1="${REF}" y2="${H}"/>`);
+  if (mal) {
+    deler.push(`<line class="g-mal" x1="${r2(x(mal.y))}" x2="${r2(x(mal.y))}" y1="${REF - 4}" y2="${H}"/>`);
+    deler.push(tekst(x(mal.y), 14, mal.tekst, `class="g-mal-t" text-anchor="${x(mal.y) > bredde - 80 ? 'end' : 'middle'}"`));
+  }
 
   const beskrivelse = `${d.tittel}. ${d.under ? `${d.under}. ` : ''}${rader.filter((q) => !tom(q.y)).slice(0, 3).map((q) => `${q.x} ${tegnTall(q.y)}${enh}`).join(', ')}.`;
   return {

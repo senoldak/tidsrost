@@ -25,3 +25,8 @@ test('rangering: iki null satır sona, sıra kararlı', () => {
   const t = tegn(rangVeri([['A', null], ['B', 2], ['C', null]]));
   assert.deepEqual(t.tabell.rader.map((r) => r[0]), ['B', 'A', 'C']);
 });
+test('rangering: mal merknad → dikey referans çizgisi ve etiketi', () => {
+  const s = tegn({ ...rangVeri([['A', 4], ['B', 2]]), merknader: [{ type: 'mal', y: 3, tekst: 'Hele landet 3,0' }] }).svg;
+  assert.match(s, /<line class="g-mal" x1="([\d.]+)" x2="\1"/);
+  assert.match(s, /Hele landet 3,0/);
+});
