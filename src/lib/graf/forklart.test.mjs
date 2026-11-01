@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { grafForAvsnitt } from './forklart.mjs';
+import { grafForAvsnitt, satteriGraf } from './forklart.mjs';
 
 const mappe = mkdtempSync(join(tmpdir(), 'forklart-'));
 writeFileSync(join(mappe, 'graf-1.json'), JSON.stringify({ form: 'soyle', tittel: 'Drepte', kilde: { navn: 'SSB' }, enhet: 'personer', desimaler: 0, serier: [{ navn: 'Drepte', punkter: [{ x: '2024', y: 87 }, { x: '2025', y: 106 }] }] }));
@@ -41,4 +41,18 @@ test('grafForAvsnitt: yazının italik açıklaması olduğu gibi kalır; kartı
 test('grafForAvsnitt: açıklamada metin dışı öğe varsa dokunulmaz', () => {
   const avsnitt = { type: 'element', tagName: 'p', children: [{ type: 'element', tagName: 'img', properties: { src: './graf-1.svg' }, children: [] }, { type: 'element', tagName: 'em', children: [{ type: 'element', tagName: 'a', properties: { href: 'x' }, children: [{ type: 'text', value: 'SSB' }] }] }] };
   assert.equal(grafForAvsnitt(avsnitt, mappe), null);
+});
+
+test('satteriGraf: GRAF_KART=0 iken eklenti kapalı (yazı işlerinin onay denetimi)', () => {
+  const fileURL = new URL('file:///C:/site/src/content/haberler/x/index.md');
+  const once = process.env.GRAF_KART;
+  try {
+    process.env.GRAF_KART = '0';
+    assert.equal(satteriGraf()({ fileURL }), null);
+    delete process.env.GRAF_KART;
+    assert.equal(satteriGraf()({ fileURL })?.name, 'tidsrost-forklart-graf');
+  } finally {
+    if (once === undefined) delete process.env.GRAF_KART;
+    else process.env.GRAF_KART = once;
+  }
 });

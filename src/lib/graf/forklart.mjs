@@ -42,9 +42,11 @@ export function grafForAvsnitt(p, mappe) {
   }
 }
 
-// Sätteri hast-plugin: yalnız src/content/haberler/ altındaki yazılar.
+// Sätteri hast-plugin: yalnız src/content/haberler/ altındaki yazılar. GRAF_KART=0 iken kapalı: yazı işlerinin onay
+// denetimi (mecmua, onay/site-denetimi.mjs) gövdeyi resim başvurusuyla görür; kart verisini kendisi denetler.
 export function satteriGraf() {
   return (fabrikk) => {
+    if (process.env.GRAF_KART === '0') return null;
     const sti = fabrikk?.fileURL ? fileURLToPath(fabrikk.fileURL) : '';
     if (!sti.split('\\').join('/').includes('src/content/haberler/')) return null;
     const mappe = dirname(sti);
