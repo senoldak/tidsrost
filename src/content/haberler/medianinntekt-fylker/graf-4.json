@@ -1,0 +1,62 @@
+{
+ "tittel": "Oslo ligger over landet i alle husholdningstyper, men under for alle husholdninger samlet",
+ "under": "Median inntekt etter skatt i Oslo og forskjell mot landsmedianen, kroner",
+ "enhet": "Median inntekt etter skatt i Oslo og forskjell mot landsmedianen, kroner",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "minitabell",
+ "serier": [
+  {
+   "navn": "Oslo",
+   "punkter": [
+    {
+     "x": "Alle",
+     "y": 635200
+    },
+    {
+     "x": "Alene",
+     "y": 431600
+    },
+    {
+     "x": "Par uten barn",
+     "y": 960300
+    },
+    {
+     "x": "Par med barn",
+     "y": 1238300
+    },
+    {
+     "x": "Forsørger",
+     "y": 590300
+    }
+   ]
+  },
+  {
+   "navn": "Mot landet",
+   "punkter": [
+    {
+     "x": "Alle",
+     "y": -40900
+    },
+    {
+     "x": "Alene",
+     "y": 34100
+    },
+    {
+     "x": "Par uten barn",
+     "y": 100300
+    },
+    {
+     "x": "Par med barn",
+     "y": 96600
+    },
+    {
+     "x": "Forsørger",
+     "y": 22100
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "tittel": "Lønnsindeksen steg mest i jordbruk, skogbruk og fiske",
+ "under": "Endring i indeks for gjennomsnittlig avtalt månedslønn over ti år, andre kvartal, prosent",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Indeksvekst",
+   "punkter": [
+    {
+     "x": "Jordbruk, skogbruk og fiske",
+     "y": 56.2
+    },
+    {
+     "x": "Bergverksdrift og utvinning",
+     "y": 35.6
+    },
+    {
+     "x": "Industri",
+     "y": 43.1
+    },
+    {
+     "x": "Elektrisitet, vann og renovasjon",
+     "y": 46.3
+    },
+    {
+     "x": "Bygge- og anleggsvirksomhet",
+     "y": 44.3
+    },
+    {
+     "x": "Varehandel, reparasjon av motorvogner",
+     "y": 45.2
+    },
+    {
+     "x": "Transport og lagring",
+     "y": 38.3
+    },
+    {
+     "x": "Overnattings- og serveringsvirksomhet",
+     "y": 46
+    },
+    {
+     "x": "Informasjon og kommunikasjon",
+     "y": 48.5
+    },
+    {
+     "x": "Finansiering og forsikring",
+     "y": 51.3
+    },
+    {
+     "x": "Teknisk tjenesteyting, eiendomsdrift",
+     "y": 44.6
+    },
+    {
+     "x": "Forretningsmessig tjenesteyting",
+     "y": 46.8
+    },
+    {
+     "x": "Undervisning",
+     "y": 39.7
+    },
+    {
+     "x": "Helse- og sosialtjenester",
+     "y": 42.7
+    },
+    {
+     "x": "Personlig tjenesteyting",
+     "y": 44.6
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": true,
+  "fremhev": [
+   "Jordbruk, skogbruk og fiske"
+  ]
+ },
+ "merknader": [
+  {
+   "type": "mal",
+   "y": 44.4,
+   "tekst": "Alle næringer: 44,4 %"
+  }
+ ]
+}

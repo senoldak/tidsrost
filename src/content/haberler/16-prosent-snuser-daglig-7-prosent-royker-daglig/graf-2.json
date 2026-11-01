@@ -1,0 +1,46 @@
+{
+ "tittel": "Daglig snusbruk er størst blant 25–34-åringer",
+ "under": "Andel som snuser daglig etter alder, begge kjønn, 2025",
+ "enhet": "prosent",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "SSB",
+  "tabell": "07692"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Snuser daglig",
+   "punkter": [
+    {
+     "x": "16–24 år",
+     "y": 23
+    },
+    {
+     "x": "25–34 år",
+     "y": 29
+    },
+    {
+     "x": "35–44 år",
+     "y": 20
+    },
+    {
+     "x": "45–54 år",
+     "y": 16
+    },
+    {
+     "x": "55–64 år",
+     "y": 9
+    },
+    {
+     "x": "65–79 år",
+     "y": 2
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": false,
+  "fremhev": []
+ }
+}

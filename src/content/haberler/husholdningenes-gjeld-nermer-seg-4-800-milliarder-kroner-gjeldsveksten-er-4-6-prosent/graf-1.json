@@ -1,0 +1,85 @@
+{
+ "tittel": "Gjelden har mer enn doblet seg",
+ "under": "Husholdningenes innenlandske lånegjeld ved utgangen av september hvert år, milliarder kroner",
+ "enhet": "milliarder kroner",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "linje",
+ "serier": [
+  {
+   "navn": "Husholdninger",
+   "punkter": [
+    {
+     "x": "2010",
+     "y": 2058
+    },
+    {
+     "x": "2011",
+     "y": 2203
+    },
+    {
+     "x": "2012",
+     "y": 2319
+    },
+    {
+     "x": "2013",
+     "y": 2484
+    },
+    {
+     "x": "2014",
+     "y": 2657
+    },
+    {
+     "x": "2015",
+     "y": 2831
+    },
+    {
+     "x": "2016",
+     "y": 3004
+    },
+    {
+     "x": "2017",
+     "y": 3200
+    },
+    {
+     "x": "2018",
+     "y": 3399
+    },
+    {
+     "x": "2019",
+     "y": 3575
+    },
+    {
+     "x": "2020",
+     "y": 3742
+    },
+    {
+     "x": "2021",
+     "y": 3935
+    },
+    {
+     "x": "2022",
+     "y": 4104
+    },
+    {
+     "x": "2023",
+     "y": 4256
+    },
+    {
+     "x": "2024",
+     "y": 4395
+    },
+    {
+     "x": "2025",
+     "y": 4580
+    },
+    {
+     "x": "2026",
+     "y": 4790
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "tittel": "Bussen fikk flest nye passasjerer",
+ "under": "Passasjerer i 2025 og endring fra året før, millioner personer",
+ "enhet": "millioner personer",
+ "desimaler": 2,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "minitabell",
+ "serier": [
+  {
+   "navn": "Passasjerer",
+   "punkter": [
+    {
+     "x": "Buss",
+     "y": 459.107
+    },
+    {
+     "x": "T-bane og trikk",
+     "y": 188.531
+    },
+    {
+     "x": "Tog",
+     "y": 84.144
+    },
+    {
+     "x": "Båt",
+     "y": 11.126
+    }
+   ]
+  },
+  {
+   "navn": "Endring",
+   "punkter": [
+    {
+     "x": "Buss",
+     "y": 17.092
+    },
+    {
+     "x": "T-bane og trikk",
+     "y": -6.183
+    },
+    {
+     "x": "Tog",
+     "y": 2.211
+    },
+    {
+     "x": "Båt",
+     "y": 0.564
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "Buss"
+  ]
+ }
+}

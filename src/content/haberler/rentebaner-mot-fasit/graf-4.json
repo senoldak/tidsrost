@@ -1,0 +1,123 @@
+{
+ "tittel": "To år fram er avviket større enn ett år fram i tolv rapporter",
+ "under": "Faktisk rente minus bane, prosentpoeng, to og ett år etter rapporten",
+ "enhet": "Faktisk rente minus bane, prosentpoeng, to og ett år etter rapporten",
+ "desimaler": 2,
+ "kilde": {
+  "navn": "Norges Bank"
+ },
+ "form": "minitabell",
+ "serier": [
+  {
+   "navn": "To år etter",
+   "punkter": [
+    {
+     "x": "mar. 2021",
+     "y": 1.91
+    },
+    {
+     "x": "jun. 2021",
+     "y": 1.98
+    },
+    {
+     "x": "sep. 2021",
+     "y": 2.43
+    },
+    {
+     "x": "des. 2021",
+     "y": 2.68
+    },
+    {
+     "x": "mar. 2022",
+     "y": 2.02
+    },
+    {
+     "x": "jun. 2022",
+     "y": 1.42
+    },
+    {
+     "x": "sep. 2022",
+     "y": 1.51
+    },
+    {
+     "x": "des. 2022",
+     "y": 1.72
+    },
+    {
+     "x": "mar. 2023",
+     "y": 1.13
+    },
+    {
+     "x": "jun. 2023",
+     "y": 0.74
+    },
+    {
+     "x": "sep. 2023",
+     "y": 0.26
+    },
+    {
+     "x": "des. 2023",
+     "y": 0.4
+    }
+   ]
+  },
+  {
+   "navn": "Ett år etter",
+   "punkter": [
+    {
+     "x": "mar. 2021",
+     "y": 0.21
+    },
+    {
+     "x": "jun. 2021",
+     "y": 0.01
+    },
+    {
+     "x": "sep. 2021",
+     "y": 0.55
+    },
+    {
+     "x": "des. 2021",
+     "y": 1.34
+    },
+    {
+     "x": "mar. 2022",
+     "y": 1.18
+    },
+    {
+     "x": "jun. 2022",
+     "y": 0.33
+    },
+    {
+     "x": "sep. 2022",
+     "y": 0.78
+    },
+    {
+     "x": "des. 2022",
+     "y": 1.22
+    },
+    {
+     "x": "mar. 2023",
+     "y": 0.91
+    },
+    {
+     "x": "jun. 2023",
+     "y": 0.32
+    },
+    {
+     "x": "sep. 2023",
+     "y": 0.09
+    },
+    {
+     "x": "des. 2023",
+     "y": 0.21
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "des. 2021"
+  ]
+ }
+}

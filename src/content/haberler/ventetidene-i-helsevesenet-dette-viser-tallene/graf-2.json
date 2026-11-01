@@ -1,0 +1,45 @@
+{
+ "tittel": "Ti dager kortere ventetid enn i fjor",
+ "under": "Gjennomsnittlig ventetid i spesialisthelsetjenesten, alle tjenesteområder, dager",
+ "enhet": "Gjennomsnittlig ventetid i spesialisthelsetjenesten, alle tjenesteområder, dager",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Folkehelseinstituttet (FHI)"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "Nå",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Første tertial 2026",
+     "y": 62
+    }
+   ]
+  },
+  {
+   "navn": "Sammenligning",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "første tertial 2026",
+     "y": 62
+    },
+    {
+     "x": "første tertial 2025",
+     "y": 72
+    },
+    {
+     "x": "i 2025 som helhet",
+     "y": 66
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "første tertial 2026"
+  ]
+ }
+}

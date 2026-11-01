@@ -1,0 +1,64 @@
+{
+ "tittel": "Gigabitdekningen har flatet ut",
+ "under": "Andel husstander med tilbud om fast bredbånd med minst hundre megabit (grunnleggende) og minst én gigabit per sekund, prosent, og målet om gigabit til alle",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Nasjonal kommunikasjonsmyndighet (Nkom), Regjeringen (Nasjonal digitaliseringsstrategi)"
+ },
+ "form": "linje",
+ "serier": [
+  {
+   "navn": "Grunnleggende",
+   "punkter": [
+    {
+     "x": "2022",
+     "y": 94.4
+    },
+    {
+     "x": "2023",
+     "y": 98.2
+    },
+    {
+     "x": "2024",
+     "y": 99.1
+    },
+    {
+     "x": "2025",
+     "y": 99.3
+    }
+   ]
+  },
+  {
+   "navn": "Gigabit",
+   "punkter": [
+    {
+     "x": "2022",
+     "y": 93.4
+    },
+    {
+     "x": "2023",
+     "y": 95.1
+    },
+    {
+     "x": "2024",
+     "y": 96.2
+    },
+    {
+     "x": "2025",
+     "y": 96.3
+    }
+   ]
+  },
+  {
+   "navn": "Mål",
+   "punkter": [
+    {
+     "x": "Mål",
+     "y": 100
+    }
+   ],
+   "stil": "esik"
+  }
+ ]
+}

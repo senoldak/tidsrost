@@ -1,0 +1,45 @@
+{
+ "tittel": "Skatt og avgifter utgjorde en større andel av BNP i Norge enn i OECD-snittet",
+ "under": "Skatt og avgifter til offentlig forvaltning, prosent av BNP",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "OECD"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "Norge",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Skatt som andel av BNP i 2024",
+     "y": 40.2
+    }
+   ]
+  },
+  {
+   "navn": "Sammenligning",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "Danmark",
+     "y": 45.2
+    },
+    {
+     "x": "OECD-snitt",
+     "y": 34.1
+    },
+    {
+     "x": "USA",
+     "y": 25.6
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "Danmark"
+  ]
+ }
+}

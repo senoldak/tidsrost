@@ -1,0 +1,45 @@
+{
+ "tittel": "Flere kommuner med negativt fond",
+ "under": "Kommuner med negativ fri egenkapital i drift, antall",
+ "enhet": "Kommuner med negativ fri egenkapital i drift, antall",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "I fjor",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Kommuner i 2025",
+     "y": 41
+    }
+   ]
+  },
+  {
+   "navn": "Sammenligning",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "i 2025",
+     "y": 41
+    },
+    {
+     "x": "i 2024",
+     "y": 38
+    },
+    {
+     "x": "i 2022",
+     "y": 9
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "i 2025"
+  ]
+ }
+}

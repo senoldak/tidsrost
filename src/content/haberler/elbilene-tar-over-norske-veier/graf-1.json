@@ -1,0 +1,45 @@
+{
+ "tittel": "Nesten alle nye personbiler er elbiler",
+ "under": "Andel elektrisk eller nullutslipp av førstegangsregistrerte nye personbiler",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "I år",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Januar–september 2026",
+     "y": 97.89999999999999
+    }
+   ]
+  },
+  {
+   "navn": "Tidligere år",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "i 2025",
+     "y": 95.89999999999999
+    },
+    {
+     "x": "i 2020",
+     "y": 54.300000000000004
+    },
+    {
+     "x": "i 2015",
+     "y": 17.1
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "i 2025"
+  ]
+ }
+}

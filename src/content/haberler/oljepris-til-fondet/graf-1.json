@@ -1,0 +1,41 @@
+{
+ "tittel": "Finansdepartementets anslag for kontantstrøm og overføring fra fondet",
+ "under": "Statens kontantstrøm og overføring fra fondet, anslag, milliarder kroner",
+ "enhet": "milliarder kroner",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Finansdepartementet"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "Forskjell",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Forskjell i 2027",
+     "y": 6.7
+    }
+   ]
+  },
+  {
+   "navn": "Anslag",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "Kontantstrøm",
+     "y": 568.4
+    },
+    {
+     "x": "Overføring fra fondet",
+     "y": 561.7
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "Kontantstrøm"
+  ]
+ }
+}

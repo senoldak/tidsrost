@@ -1,0 +1,45 @@
+{
+ "tittel": "Flere overnattinger enn før pandemien",
+ "under": "Overnattinger ved norske overnattingsbedrifter, antall",
+ "enhet": "Overnattinger ved norske overnattingsbedrifter, antall",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "I fjor",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Overnattinger i 2025",
+     "y": 40590017
+    }
+   ]
+  },
+  {
+   "navn": "Sammenligning",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "i 2025",
+     "y": 40590017
+    },
+    {
+     "x": "i 2019",
+     "y": 35179554
+    },
+    {
+     "x": "i 2020",
+     "y": 23720833
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "i 2025"
+  ]
+ }
+}

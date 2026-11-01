@@ -1,0 +1,58 @@
+{
+ "tittel": "Alderspensjon er nesten halvparten av folketrygden",
+ "under": "Folketrygdens utgifter i 2027, regjeringens forslag, milliarder kroner",
+ "enhet": "milliarder kroner",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Finansdepartementet"
+ },
+ "form": "bidrag",
+ "serier": [
+  {
+   "navn": "Folketrygden",
+   "punkter": [
+    {
+     "x": "Alderspensjon",
+     "y": 378.2
+    },
+    {
+     "x": "Uføretrygd",
+     "y": 150.3
+    },
+    {
+     "x": "Sykepenger",
+     "y": 80.6
+    },
+    {
+     "x": "Arbeidsavklaring (AAP)",
+     "y": 59.8
+    },
+    {
+     "x": "Helsetjenester",
+     "y": 48.8
+    },
+    {
+     "x": "Foreldrepenger",
+     "y": 36.1
+    },
+    {
+     "x": "Øvrige sosiale formål",
+     "y": 21.4
+    },
+    {
+     "x": "Arbeidsliv",
+     "y": 18.9
+    }
+   ]
+  },
+  {
+   "navn": "Sum",
+   "punkter": [
+    {
+     "x": "Folketrygden i alt",
+     "y": 794.1
+    }
+   ]
+  }
+ ]
+}

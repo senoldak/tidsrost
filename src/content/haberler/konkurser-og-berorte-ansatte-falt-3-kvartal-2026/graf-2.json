@@ -1,0 +1,65 @@
+{
+ "tittel": "Konkursene rammet færre ansatte to år på rad",
+ "under": "Ansatte i foretak som gikk konkurs i tredje kvartal hvert år, antall",
+ "enhet": "Ansatte i foretak som gikk konkurs i tredje kvartal hvert år, antall",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "linje",
+ "serier": [
+  {
+   "navn": "Berørte ansatte",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 2175
+    },
+    {
+     "x": "2016",
+     "y": 2784
+    },
+    {
+     "x": "2017",
+     "y": 3811
+    },
+    {
+     "x": "2018",
+     "y": 3031
+    },
+    {
+     "x": "2019",
+     "y": 3608
+    },
+    {
+     "x": "2020",
+     "y": 3771
+    },
+    {
+     "x": "2021",
+     "y": 2135
+    },
+    {
+     "x": "2022",
+     "y": 2755
+    },
+    {
+     "x": "2023",
+     "y": 3506
+    },
+    {
+     "x": "2024",
+     "y": 3684
+    },
+    {
+     "x": "2025",
+     "y": 3245
+    },
+    {
+     "x": "2026",
+     "y": 2593
+    }
+   ]
+  }
+ ]
+}

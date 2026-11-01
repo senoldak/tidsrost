@@ -1,0 +1,85 @@
+{
+ "tittel": "Gjeldsveksten har tatt seg opp igjen",
+ "under": "Tolvmånedersvekst i husholdningenes innenlandske lånegjeld, september hvert år, prosent",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "linje",
+ "serier": [
+  {
+   "navn": "Husholdninger",
+   "punkter": [
+    {
+     "x": "2010",
+     "y": 6.2
+    },
+    {
+     "x": "2011",
+     "y": 7.2
+    },
+    {
+     "x": "2012",
+     "y": 7.1
+    },
+    {
+     "x": "2013",
+     "y": 7.2
+    },
+    {
+     "x": "2014",
+     "y": 6.5
+    },
+    {
+     "x": "2015",
+     "y": 6.4
+    },
+    {
+     "x": "2016",
+     "y": 6.1
+    },
+    {
+     "x": "2017",
+     "y": 6.5
+    },
+    {
+     "x": "2018",
+     "y": 5.8
+    },
+    {
+     "x": "2019",
+     "y": 5.3
+    },
+    {
+     "x": "2020",
+     "y": 4.6
+    },
+    {
+     "x": "2021",
+     "y": 5.2
+    },
+    {
+     "x": "2022",
+     "y": 4.4
+    },
+    {
+     "x": "2023",
+     "y": 3.7
+    },
+    {
+     "x": "2024",
+     "y": 3.5
+    },
+    {
+     "x": "2025",
+     "y": 4.3
+    },
+    {
+     "x": "2026",
+     "y": 4.6
+    }
+   ]
+  }
+ ]
+}

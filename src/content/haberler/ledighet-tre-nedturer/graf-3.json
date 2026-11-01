@@ -1,0 +1,53 @@
+{
+ "tittel": "Oppgangen fra bunnåret var relativt minst under pandemien, men toppen lå høyere enn i finanskrisen",
+ "under": "Toppårets nivå i prosent av arbeidsstyrken og relativ økning fra bunnåret",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå"
+ },
+ "form": "minitabell",
+ "serier": [
+  {
+   "navn": "Toppår",
+   "punkter": [
+    {
+     "x": "Bankkrisen",
+     "y": 6
+    },
+    {
+     "x": "Finanskrisen",
+     "y": 3.8
+    },
+    {
+     "x": "Pandemien",
+     "y": 4.6
+    }
+   ],
+   "prosent": true
+  },
+  {
+   "navn": "Økning",
+   "punkter": [
+    {
+     "x": "Bankkrisen",
+     "y": 200
+    },
+    {
+     "x": "Finanskrisen",
+     "y": 52
+    },
+    {
+     "x": "Pandemien",
+     "y": 24.3
+    }
+   ],
+   "prosent": true
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "Pandemien"
+  ]
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "tittel": "Nesten halvert på to og et halvt år",
+ "under": "Innbyggere på fastlegeliste uten fast lege",
+ "enhet": "Innbyggere på fastlegeliste uten fast lege",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Helsedirektoratet"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "Nå",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "I mai 2026",
+     "y": 109724
+    }
+   ]
+  },
+  {
+   "navn": "Sammenligning",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "Mai 2026",
+     "y": 109724
+    },
+    {
+     "x": "Desember 2024",
+     "y": 163034
+    },
+    {
+     "x": "Desember 2023",
+     "y": 214106
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "Mai 2026"
+  ]
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "tittel": "Bare Norge, Tyskland og Storbritannia endte høyere enn de startet",
+ "under": "Skatt og avgifter til offentlig forvaltning, prosent av BNP",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "OECD"
+ },
+ "form": "manual",
+ "valg": {
+  "gruppenavn": [
+   "2015",
+   "2024"
+  ],
+  "sorter": false
+ },
+ "serier": [
+  {
+   "navn": "Bare Norge, Tyskland og Storbritannia endte høyere enn de startet",
+   "punkter": [
+    {
+     "x": "Norge",
+     "y": 38.3,
+     "y2": 40.2
+    },
+    {
+     "x": "Danmark",
+     "y": 46.5,
+     "y2": 45.2
+    },
+    {
+     "x": "Sverige",
+     "y": 42.9,
+     "y2": 41.4
+    },
+    {
+     "x": "Finland",
+     "y": 43.8,
+     "y2": 42.2
+    },
+    {
+     "x": "Frankrike",
+     "y": 45.4,
+     "y2": 43.5
+    },
+    {
+     "x": "Tyskland",
+     "y": 37.3,
+     "y2": 38
+    },
+    {
+     "x": "Storbritannia",
+     "y": 31.9,
+     "y2": 34.4
+    },
+    {
+     "x": "USA",
+     "y": 26.1,
+     "y2": 25.6
+    }
+   ]
+  }
+ ]
+}

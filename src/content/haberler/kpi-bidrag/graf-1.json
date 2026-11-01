@@ -1,0 +1,42 @@
+{
+ "tittel": "Tolvmånedersendringen svingte fra kvartal til kvartal gjennom året",
+ "under": "Endring i tolvmånedersendringen mellom kvartalene, prosentpoeng",
+ "enhet": "Endring i tolvmånedersendringen mellom kvartalene, prosentpoeng",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå"
+ },
+ "form": "bidrag",
+ "serier": [
+  {
+   "navn": "Kvartal",
+   "punkter": [
+    {
+     "x": "sep.–des.",
+     "y": -0.4
+    },
+    {
+     "x": "des.–mar.",
+     "y": 0.4
+    },
+    {
+     "x": "mar.–jun.",
+     "y": -0.9
+    },
+    {
+     "x": "jun.–sep.",
+     "y": 0.7
+    }
+   ]
+  },
+  {
+   "navn": "Hele året",
+   "punkter": [
+    {
+     "x": "Hele året",
+     "y": -0.2
+    }
+   ]
+  }
+ ]
+}

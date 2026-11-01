@@ -1,0 +1,65 @@
+{
+ "tittel": "Konkursene i tredje kvartal har falt tre år på rad",
+ "under": "Åpnede konkurser i tredje kvartal hvert år, antall",
+ "enhet": "Åpnede konkurser i tredje kvartal hvert år, antall",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "linje",
+ "serier": [
+  {
+   "navn": "Konkurser",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 879
+    },
+    {
+     "x": "2016",
+     "y": 998
+    },
+    {
+     "x": "2017",
+     "y": 953
+    },
+    {
+     "x": "2018",
+     "y": 1076
+    },
+    {
+     "x": "2019",
+     "y": 1116
+    },
+    {
+     "x": "2020",
+     "y": 800
+    },
+    {
+     "x": "2021",
+     "y": 660
+    },
+    {
+     "x": "2022",
+     "y": 835
+    },
+    {
+     "x": "2023",
+     "y": 946
+    },
+    {
+     "x": "2024",
+     "y": 939
+    },
+    {
+     "x": "2025",
+     "y": 911
+    },
+    {
+     "x": "2026",
+     "y": 783
+    }
+   ]
+  }
+ ]
+}

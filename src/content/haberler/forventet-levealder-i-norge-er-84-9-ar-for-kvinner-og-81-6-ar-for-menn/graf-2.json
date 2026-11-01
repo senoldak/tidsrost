@@ -1,0 +1,36 @@
+{
+ "tittel": "En nyfødt kan forvente å bli over åtti",
+ "under": "Forventet levealder ved fødselen, år",
+ "enhet": "Forventet levealder ved fødselen, år",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "Begge",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Begge kjønn i 2025",
+     "y": 83.23
+    }
+   ]
+  },
+  {
+   "navn": "Nøkkeltall",
+   "rol": "kunye",
+   "punkter": [
+    {
+     "x": "Kvinner",
+     "y": 84.85
+    },
+    {
+     "x": "Menn",
+     "y": 81.61
+    }
+   ]
+  }
+ ]
+}

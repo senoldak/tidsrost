@@ -1,0 +1,45 @@
+{
+ "tittel": "Flere nye foretak i første halvår",
+ "under": "Nye foretak registrert fra januar til juni, antall",
+ "enhet": "Nye foretak registrert fra januar til juni, antall",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "I år",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Januar–juni 2026",
+     "y": 35144
+    }
+   ]
+  },
+  {
+   "navn": "Sammenligning",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "i 2026",
+     "y": 35144
+    },
+    {
+     "x": "i 2025",
+     "y": 30637
+    },
+    {
+     "x": "i 2024",
+     "y": 30588
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "i 2026"
+  ]
+ }
+}

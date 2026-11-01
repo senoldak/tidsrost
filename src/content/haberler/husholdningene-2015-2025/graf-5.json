@@ -1,0 +1,45 @@
+{
+ "tittel": "Færre boliger fikk igangsettingstillatelse i 2025 enn i 2015",
+ "under": "Igangsettingstillatelser for boliger i hele landet, antall boliger",
+ "enhet": "Igangsettingstillatelser for boliger i hele landet, antall boliger",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "Hovedtall",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Boliger med igangsettingstillatelse i 2025",
+     "y": 20184
+    }
+   ]
+  },
+  {
+   "navn": "Sammenligning",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 31301
+    },
+    {
+     "x": "2016",
+     "y": 36203
+    },
+    {
+     "x": "2025",
+     "y": 20184
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "2025"
+  ]
+ }
+}

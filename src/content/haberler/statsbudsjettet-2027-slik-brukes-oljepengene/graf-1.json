@@ -1,0 +1,45 @@
+{
+ "tittel": "Over hver fjerde krone kommer fra fondet",
+ "under": "Bruk av fondsmidler i prosent av statsbudsjettets utgifter",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Finansdepartementet"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "Forslag",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Forslaget i 2027",
+     "y": 26.6
+    }
+   ]
+  },
+  {
+   "navn": "Sammenligning",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "i 2027",
+     "y": 26.6
+    },
+    {
+     "x": "i 2026",
+     "y": 26.5
+    },
+    {
+     "x": "i 2025",
+     "y": 24.5
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "i 2027"
+  ]
+ }
+}

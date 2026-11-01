@@ -1,0 +1,45 @@
+{
+ "tittel": "Spriket er størst for veksten og minst for prisene",
+ "under": "Prosentpoeng mellom høyeste og laveste anslag i 2027",
+ "enhet": "Prosentpoeng mellom høyeste og laveste anslag i 2027",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Norges Bank, Statistisk sentralbyrå, Finansdepartementet"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "Hovedtall",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Fastlands-BNP",
+     "y": 1.1
+    }
+   ]
+  },
+  {
+   "navn": "Til sammenlikning",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "KPI",
+     "y": 0.2
+    },
+    {
+     "x": "KPI-JAE",
+     "y": 0.3
+    },
+    {
+     "x": "Årslønn",
+     "y": 0.3
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "KPI"
+  ]
+ }
+}

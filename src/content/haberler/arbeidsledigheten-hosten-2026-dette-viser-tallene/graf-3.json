@@ -1,0 +1,67 @@
+{
+ "tittel": "Flere ledige ingeniører og IT-folk",
+ "under": "Helt ledige hos Nav i utvalgte yrkesgrupper, september 2026, og endring fra året før",
+ "enhet": "Helt ledige hos Nav i utvalgte yrkesgrupper, september 2026, og endring fra året før",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Nav"
+ },
+ "form": "minitabell",
+ "serier": [
+  {
+   "navn": "Ledige",
+   "punkter": [
+    {
+     "x": "Ingeniør og IKT",
+     "y": 4539
+    },
+    {
+     "x": "Industri",
+     "y": 5275
+    },
+    {
+     "x": "Barn og ungdom",
+     "y": 2532
+    },
+    {
+     "x": "Serviceyrker",
+     "y": 5675
+    },
+    {
+     "x": "Bygg og anlegg",
+     "y": 5442
+    }
+   ]
+  },
+  {
+   "navn": "Endring",
+   "punkter": [
+    {
+     "x": "Ingeniør og IKT",
+     "y": 538
+    },
+    {
+     "x": "Industri",
+     "y": 73
+    },
+    {
+     "x": "Barn og ungdom",
+     "y": -186
+    },
+    {
+     "x": "Serviceyrker",
+     "y": -324
+    },
+    {
+     "x": "Bygg og anlegg",
+     "y": -737
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "Ingeniør og IKT"
+  ]
+ }
+}

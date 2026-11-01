@@ -1,0 +1,45 @@
+{
+ "tittel": "Flere kollektivreiser enn før pandemien",
+ "under": "Passasjerer i kollektivtransporten i Norge, millioner personer",
+ "enhet": "millioner personer",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "Passasjerer",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Passasjerer i 2025",
+     "y": 742.908
+    }
+   ]
+  },
+  {
+   "navn": "Sammenligning",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "i 2025",
+     "y": 742.908
+    },
+    {
+     "x": "i 2019",
+     "y": 718.193
+    },
+    {
+     "x": "i 2020",
+     "y": 450.516
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "i 2025"
+  ]
+ }
+}

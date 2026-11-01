@@ -1,0 +1,75 @@
+{
+ "tittel": "BI og USN hadde størst vekst blant de største",
+ "under": "De seks største lærestedene: studenter i 2025 og endring fra året før",
+ "enhet": "De seks største lærestedene: studenter i 2025 og endring fra året før",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "minitabell",
+ "serier": [
+  {
+   "navn": "Studenter",
+   "punkter": [
+    {
+     "x": "NTNU",
+     "y": 42873
+    },
+    {
+     "x": "UiO",
+     "y": 26927
+    },
+    {
+     "x": "OsloMet",
+     "y": 23635
+    },
+    {
+     "x": "BI",
+     "y": 22291
+    },
+    {
+     "x": "UiB",
+     "y": 19783
+    },
+    {
+     "x": "USN",
+     "y": 18380
+    }
+   ]
+  },
+  {
+   "navn": "Endring",
+   "punkter": [
+    {
+     "x": "NTNU",
+     "y": 265
+    },
+    {
+     "x": "UiO",
+     "y": 850
+    },
+    {
+     "x": "OsloMet",
+     "y": 937
+    },
+    {
+     "x": "BI",
+     "y": 1130
+    },
+    {
+     "x": "UiB",
+     "y": 176
+    },
+    {
+     "x": "USN",
+     "y": 1086
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "BI"
+  ]
+ }
+}

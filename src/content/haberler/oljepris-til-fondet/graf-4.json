@@ -1,0 +1,59 @@
+{
+ "tittel": "Inntektene faller mer enn utgiftene i anslaget",
+ "under": "Finansdepartementets anslag for året 2027, milliarder kroner",
+ "enhet": "milliarder kroner",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Finansdepartementet"
+ },
+ "form": "minitabell",
+ "serier": [
+  {
+   "navn": "Anslag",
+   "punkter": [
+    {
+     "x": "Inntekter",
+     "y": 603.4
+    },
+    {
+     "x": "Utgifter",
+     "y": 35
+    },
+    {
+     "x": "Netto kontantstrøm",
+     "y": 568.4
+    },
+    {
+     "x": "Overføring fra fondet",
+     "y": 561.7
+    }
+   ]
+  },
+  {
+   "navn": "Endring",
+   "punkter": [
+    {
+     "x": "Inntekter",
+     "y": -102.7
+    },
+    {
+     "x": "Utgifter",
+     "y": -0.5
+    },
+    {
+     "x": "Netto kontantstrøm",
+     "y": -102.2
+    },
+    {
+     "x": "Overføring fra fondet",
+     "y": 106.9
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "Netto kontantstrøm"
+  ]
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "tittel": "Banen og markedets forventning lå begge under det faktiske gjennomsnittet i seks rapporter",
+ "under": "Kvartalsgjennomsnitt ett år etter rapporten, prosent",
+ "enhet": "prosent",
+ "desimaler": 2,
+ "kilde": {
+  "navn": "Norges Bank"
+ },
+ "form": "manual",
+ "valg": {
+  "gruppenavn": [
+   "Bane",
+   "Faktisk"
+  ],
+  "sorter": false,
+  "malnavn": "Markedets forventning"
+ },
+ "serier": [
+  {
+   "navn": "Banen og markedets forventning lå begge under det faktiske gjennomsnittet i seks rapporter",
+   "punkter": [
+    {
+     "x": "des. 2021",
+     "y": 1.11,
+     "y2": 2.45,
+     "mal": 1.05
+    },
+    {
+     "x": "mar. 2022",
+     "y": 1.59,
+     "y2": 2.77,
+     "mal": 1.8
+    },
+    {
+     "x": "sep. 2022",
+     "y": 3.11,
+     "y2": 3.89,
+     "mal": 3.52
+    },
+    {
+     "x": "des. 2022",
+     "y": 3.08,
+     "y2": 4.3,
+     "mal": 2.86
+    },
+    {
+     "x": "mar. 2023",
+     "y": 3.59,
+     "y2": 4.5,
+     "mal": 2.91
+    },
+    {
+     "x": "jun. 2023",
+     "y": 4.18,
+     "y2": 4.5,
+     "mal": 3.98
+    }
+   ]
+  }
+ ]
+}

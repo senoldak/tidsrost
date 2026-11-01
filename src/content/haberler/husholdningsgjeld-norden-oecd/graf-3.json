@@ -1,0 +1,45 @@
+{
+ "tittel": "Gjelden er lavere enn i 2020, men høyere enn i 2015 og i 2007",
+ "under": "SSBs beregning: lån i prosent av disponibel inntekt",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "Nå",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "2025",
+     "y": 221.3
+    }
+   ]
+  },
+  {
+   "navn": "Før",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "2020",
+     "y": 234.90000000000003
+    },
+    {
+     "x": "2015",
+     "y": 212.1
+    },
+    {
+     "x": "2007",
+     "y": 198.2
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "2020"
+  ]
+ }
+}

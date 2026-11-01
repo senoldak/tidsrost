@@ -1,0 +1,45 @@
+{
+ "tittel": "Flere nyfødte for tredje år på rad",
+ "under": "Levendefødte i Norge, antall",
+ "enhet": "Levendefødte i Norge, antall",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "Fødte",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Levendefødte i 2025",
+     "y": 55401
+    }
+   ]
+  },
+  {
+   "navn": "Sammenligning",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "i 2025",
+     "y": 55401
+    },
+    {
+     "x": "i 2023",
+     "y": 51980
+    },
+    {
+     "x": "i 2009",
+     "y": 61807
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "i 2025"
+  ]
+ }
+}

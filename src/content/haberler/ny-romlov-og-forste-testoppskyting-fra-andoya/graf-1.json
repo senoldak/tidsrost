@@ -1,0 +1,41 @@
+{
+ "tittel": "Mer i kontrakter og tilskudd",
+ "under": "ESA-kontrakter og innovasjonstilskudd til norske aktører, millioner kroner",
+ "enhet": "millioner kroner",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Direktoratet for romvirksomhet"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "I fjor",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Tildelt i 2025",
+     "y": 854
+    }
+   ]
+  },
+  {
+   "navn": "Sammenligning",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "i 2025",
+     "y": 854
+    },
+    {
+     "x": "i 2024",
+     "y": 667
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "i 2025"
+  ]
+ }
+}

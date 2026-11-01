@@ -1,0 +1,51 @@
+{
+ "tittel": "Årslønnen ligger over KPI i alle tre institusjoners anslag",
+ "under": "Årslønn minus prisvekst, prosentpoeng, anslag i 2027",
+ "enhet": "Årslønn minus prisvekst, prosentpoeng, anslag i 2027",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Finansdepartementet, Statistisk sentralbyrå, Norges Bank"
+ },
+ "form": "minitabell",
+ "serier": [
+  {
+   "navn": "KPI",
+   "punkter": [
+    {
+     "x": "Finansdepartementet",
+     "y": 1.3
+    },
+    {
+     "x": "SSB",
+     "y": 1.2
+    },
+    {
+     "x": "Norges Bank",
+     "y": 1.4
+    }
+   ]
+  },
+  {
+   "navn": "KPI-JAE",
+   "punkter": [
+    {
+     "x": "Finansdepartementet",
+     "y": 1.2
+    },
+    {
+     "x": "SSB",
+     "y": 1.2
+    },
+    {
+     "x": "Norges Bank",
+     "y": 1.3
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "Norges Bank"
+  ]
+ }
+}

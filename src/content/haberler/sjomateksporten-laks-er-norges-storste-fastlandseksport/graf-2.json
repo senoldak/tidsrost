@@ -1,0 +1,75 @@
+{
+ "tittel": "Kina og USA økte mest",
+ "under": "Eksport av fisk, krepsdyr og bløtdyr til de seks største markedene i 2025 og endring fra året før, millioner kroner",
+ "enhet": "millioner kroner",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "minitabell",
+ "serier": [
+  {
+   "navn": "Eksport",
+   "punkter": [
+    {
+     "x": "Polen",
+     "y": 19019
+    },
+    {
+     "x": "USA",
+     "y": 15210
+    },
+    {
+     "x": "Kina",
+     "y": 12319
+    },
+    {
+     "x": "Nederland",
+     "y": 10631
+    },
+    {
+     "x": "Frankrike",
+     "y": 10560
+    },
+    {
+     "x": "Danmark",
+     "y": 10207
+    }
+   ]
+  },
+  {
+   "navn": "Endring",
+   "punkter": [
+    {
+     "x": "Polen",
+     "y": 986
+    },
+    {
+     "x": "USA",
+     "y": 2486
+    },
+    {
+     "x": "Kina",
+     "y": 2985
+    },
+    {
+     "x": "Nederland",
+     "y": -292
+    },
+    {
+     "x": "Frankrike",
+     "y": -13
+    },
+    {
+     "x": "Danmark",
+     "y": -2779
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "Kina"
+  ]
+ }
+}

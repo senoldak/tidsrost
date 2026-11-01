@@ -1,0 +1,67 @@
+{
+ "tittel": "Befolkningen og antallet sysselsatte økte begge siden 2015, med et brudd i serien i 2021",
+ "under": "Personer fra femten til syttifire år, årsgjennomsnitt, tusen personer",
+ "enhet": "tusen personer",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå"
+ },
+ "form": "minitabell",
+ "serier": [
+  {
+   "navn": "I 2025",
+   "punkter": [
+    {
+     "x": "Befolkning",
+     "y": 4170
+    },
+    {
+     "x": "Arbeidsstyrken",
+     "y": 3039
+    },
+    {
+     "x": "Sysselsatte",
+     "y": 2903
+    },
+    {
+     "x": "Arbeidsledige",
+     "y": 136
+    },
+    {
+     "x": "Utenfor arbeidsstyrken",
+     "y": 1131
+    }
+   ]
+  },
+  {
+   "navn": "Siden 2015",
+   "punkter": [
+    {
+     "x": "Befolkning",
+     "y": 274
+    },
+    {
+     "x": "Arbeidsstyrken",
+     "y": 275
+    },
+    {
+     "x": "Sysselsatte",
+     "y": 264
+    },
+    {
+     "x": "Arbeidsledige",
+     "y": 11
+    },
+    {
+     "x": "Utenfor arbeidsstyrken",
+     "y": -1
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "Sysselsatte"
+  ]
+ }
+}

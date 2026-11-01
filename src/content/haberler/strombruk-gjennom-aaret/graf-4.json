@@ -1,0 +1,41 @@
+{
+ "tittel": "Forholdet mellom januar og juli har ligget nær det samme",
+ "under": "Bruttoforbruk, januar delt på juli",
+ "enhet": "Bruttoforbruk, januar delt på juli",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "Hovedtall",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Januar mot juli",
+     "y": 1.6
+    }
+   ]
+  },
+  {
+   "navn": "Tidligere år",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 1.5
+    },
+    {
+     "x": "2020",
+     "y": 1.5
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "2015"
+  ]
+ }
+}

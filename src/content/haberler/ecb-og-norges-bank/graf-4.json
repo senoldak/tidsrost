@@ -1,0 +1,51 @@
+{
+ "tittel": "Oppgangen var like stor i alle tre rentene, nedgangen har vært ulik",
+ "under": "Fra bunn til topp, og fra topp til oktober 2026, prosentpoeng",
+ "enhet": "Fra bunn til topp, og fra topp til oktober 2026, prosentpoeng",
+ "desimaler": 2,
+ "kilde": {
+  "navn": "Norges Bank, Den europeiske sentralbanken"
+ },
+ "form": "minitabell",
+ "serier": [
+  {
+   "navn": "Opp",
+   "punkter": [
+    {
+     "x": "Norges Bank",
+     "y": 4.5
+    },
+    {
+     "x": "ECB innskudd",
+     "y": 4.5
+    },
+    {
+     "x": "ECB refinansiering",
+     "y": 4.5
+    }
+   ]
+  },
+  {
+   "navn": "Ned",
+   "punkter": [
+    {
+     "x": "Norges Bank",
+     "y": 0
+    },
+    {
+     "x": "ECB innskudd",
+     "y": -1.5
+    },
+    {
+     "x": "ECB refinansiering",
+     "y": -1.85
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "Norges Bank"
+  ]
+ }
+}

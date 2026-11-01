@@ -1,0 +1,82 @@
+{
+ "tittel": "Åtte land lå over Norge i skatt som andel av BNP",
+ "under": "Skatt og avgifter til offentlig forvaltning, prosent av BNP",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "OECD"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Skatt som andel av BNP",
+   "punkter": [
+    {
+     "x": "Danmark",
+     "y": 45.2
+    },
+    {
+     "x": "Frankrike",
+     "y": 43.5
+    },
+    {
+     "x": "Østerrike",
+     "y": 43.4
+    },
+    {
+     "x": "Italia",
+     "y": 42.8
+    },
+    {
+     "x": "Belgia",
+     "y": 42.6
+    },
+    {
+     "x": "Finland",
+     "y": 42.2
+    },
+    {
+     "x": "Luxembourg",
+     "y": 41.5
+    },
+    {
+     "x": "Sverige",
+     "y": 41.4
+    },
+    {
+     "x": "Norge",
+     "y": 40.2
+    },
+    {
+     "x": "Hellas",
+     "y": 39.8
+    },
+    {
+     "x": "Nederland",
+     "y": 38.5
+    },
+    {
+     "x": "Tyskland",
+     "y": 38
+    },
+    {
+     "x": "USA",
+     "y": 25.6
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": true,
+  "fremhev": [
+   "Norge"
+  ]
+ },
+ "merknader": [
+  {
+   "type": "mal",
+   "y": 34.1,
+   "tekst": "OECD-snitt: 34,1 %"
+  }
+ ]
+}

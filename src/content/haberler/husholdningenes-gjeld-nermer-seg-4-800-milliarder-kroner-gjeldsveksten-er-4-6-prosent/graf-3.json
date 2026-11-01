@@ -1,0 +1,64 @@
+{
+ "tittel": "Foretakenes gjeldsvekst økte mest",
+ "under": "Tolvmånedersvekst i innenlandsk lånegjeld i september i 2025 og i 2026, prosent",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "helning",
+ "serier": [
+  {
+   "navn": "Publikum i alt",
+   "punkter": [
+    {
+     "x": "2025",
+     "y": 4
+    },
+    {
+     "x": "2026",
+     "y": 4.5
+    }
+   ]
+  },
+  {
+   "navn": "Husholdninger",
+   "punkter": [
+    {
+     "x": "2025",
+     "y": 4.3
+    },
+    {
+     "x": "2026",
+     "y": 4.6
+    }
+   ]
+  },
+  {
+   "navn": "Foretak",
+   "punkter": [
+    {
+     "x": "2025",
+     "y": 2
+    },
+    {
+     "x": "2026",
+     "y": 4.8
+    }
+   ]
+  },
+  {
+   "navn": "Kommunene",
+   "punkter": [
+    {
+     "x": "2025",
+     "y": 8.3
+    },
+    {
+     "x": "2026",
+     "y": 3
+    }
+   ]
+  }
+ ]
+}

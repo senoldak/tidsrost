@@ -1,0 +1,53 @@
+{
+ "tittel": "Bildet er det samme når vi måler per sysselsatt i stedet for per time",
+ "under": "Fastlands-Norge, endring i bruttoprodukt i faste priser per enhet arbeidsinnsats over ti år, prosent",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå"
+ },
+ "form": "minitabell",
+ "serier": [
+  {
+   "navn": "Per time",
+   "punkter": [
+    {
+     "x": "1995–2005",
+     "y": 28.1
+    },
+    {
+     "x": "2005–2015",
+     "y": 12.1
+    },
+    {
+     "x": "2015–2025",
+     "y": 11
+    }
+   ],
+   "prosent": true
+  },
+  {
+   "navn": "Per sysselsatt",
+   "punkter": [
+    {
+     "x": "1995–2005",
+     "y": 23.5
+    },
+    {
+     "x": "2005–2015",
+     "y": 11.5
+    },
+    {
+     "x": "2015–2025",
+     "y": 8.9
+    }
+   ],
+   "prosent": true
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "1995–2005"
+  ]
+ }
+}

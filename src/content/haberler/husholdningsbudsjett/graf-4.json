@@ -1,0 +1,32 @@
+{
+ "tittel": "Uten husleien man ikke betaler, er merutgiften mindre",
+ "under": "Merutgift per husholdning ved samme forbruk, kroner",
+ "enhet": "Merutgift per husholdning ved samme forbruk, kroner",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "Uten beregnet husleie",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Uten beregnet husleie",
+     "y": 52718
+    }
+   ]
+  },
+  {
+   "navn": "Hele budsjettet",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "Hele budsjettet",
+     "y": 66449
+    }
+   ]
+  }
+ ]
+}

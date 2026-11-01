@@ -1,0 +1,49 @@
+{
+ "tittel": "Kortere ventetid i alle fire områder",
+ "under": "Gjennomsnittlig ventetid i første tertial, dager, og langsiktig mål",
+ "enhet": "Gjennomsnittlig ventetid i første tertial, dager, og langsiktig mål",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Folkehelseinstituttet (FHI), Helse- og omsorgsdepartementet"
+ },
+ "form": "manual",
+ "valg": {
+  "gruppenavn": [
+   "2025",
+   "2026"
+  ],
+  "sorter": false,
+  "malnavn": "Langsiktig mål"
+ },
+ "serier": [
+  {
+   "navn": "Kortere ventetid i alle fire områder",
+   "punkter": [
+    {
+     "x": "Somatikk",
+     "y": 75,
+     "y2": 64,
+     "mal": 50
+    },
+    {
+     "x": "Psykisk helsevern, voksne",
+     "y": 51,
+     "y2": 43,
+     "mal": 40
+    },
+    {
+     "x": "Psykisk helsevern, barn og unge",
+     "y": 46,
+     "y2": 41,
+     "mal": 35
+    },
+    {
+     "x": "Rusbehandling (TSB)",
+     "y": 28,
+     "y2": 27,
+     "mal": 30
+    }
+   ]
+  }
+ ]
+}

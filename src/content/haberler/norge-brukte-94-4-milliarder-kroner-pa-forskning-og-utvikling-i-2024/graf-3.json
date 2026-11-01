@@ -1,0 +1,51 @@
+{
+ "tittel": "Færre FoU-årsverk i alle sektorer",
+ "under": "FoU-årsverk i 2024 og endring fra året før",
+ "enhet": "FoU-årsverk i 2024 og endring fra året før",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "minitabell",
+ "serier": [
+  {
+   "navn": "Årsverk",
+   "punkter": [
+    {
+     "x": "Næringslivet",
+     "y": 25583
+    },
+    {
+     "x": "Universiteter og høgskoler",
+     "y": 16798
+    },
+    {
+     "x": "Instituttsektoren",
+     "y": 9986
+    }
+   ]
+  },
+  {
+   "navn": "Endring",
+   "punkter": [
+    {
+     "x": "Næringslivet",
+     "y": -1085
+    },
+    {
+     "x": "Universiteter og høgskoler",
+     "y": -611
+    },
+    {
+     "x": "Instituttsektoren",
+     "y": -533
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "Næringslivet"
+  ]
+ }
+}

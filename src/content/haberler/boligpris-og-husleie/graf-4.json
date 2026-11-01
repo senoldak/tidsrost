@@ -1,0 +1,41 @@
+{
+ "tittel": "Siden 2010 har boligprisene mer enn doblet seg",
+ "under": "Samlet prisvekst, 2010–2026, prosent",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "Boligpriser",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Boligpriser",
+     "y": 105.6
+    }
+   ]
+  },
+  {
+   "navn": "Til sammenligning",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "Husleie",
+     "y": 51
+    },
+    {
+     "x": "Konsumpriser",
+     "y": 55.7
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "Husleie"
+  ]
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "tittel": "Like mange nye boliger som i fjor",
+ "under": "Boliger med igangsettingstillatelse fra januar til september, antall",
+ "enhet": "Boliger med igangsettingstillatelse fra januar til september, antall",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "I år",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Januar–september 2026",
+     "y": 15209
+    }
+   ]
+  },
+  {
+   "navn": "Sammenligning",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "i 2026",
+     "y": 15209
+    },
+    {
+     "x": "i 2025",
+     "y": 15233
+    },
+    {
+     "x": "i 2022",
+     "y": 21979
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "i 2026"
+  ]
+ }
+}

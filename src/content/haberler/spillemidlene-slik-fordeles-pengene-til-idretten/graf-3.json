@@ -1,0 +1,59 @@
+{
+ "tittel": "Mindre til anlegg, mer til sentralleddet",
+ "under": "Utvalgte poster i hovedfordelingen i 2026 og endring fra året før, millioner kroner",
+ "enhet": "millioner kroner",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Kultur- og likestillingsdepartementet"
+ },
+ "form": "minitabell",
+ "serier": [
+  {
+   "navn": "Beløp",
+   "punkter": [
+    {
+     "x": "Anlegg",
+     "y": 2094.982
+    },
+    {
+     "x": "Sentralledd",
+     "y": 965
+    },
+    {
+     "x": "Lokale lag",
+     "y": 535
+    },
+    {
+     "x": "Nasjonalanlegg",
+     "y": 141.003
+    }
+   ]
+  },
+  {
+   "navn": "Endring",
+   "punkter": [
+    {
+     "x": "Anlegg",
+     "y": -160.67
+    },
+    {
+     "x": "Sentralledd",
+     "y": 35
+    },
+    {
+     "x": "Lokale lag",
+     "y": -18
+    },
+    {
+     "x": "Nasjonalanlegg",
+     "y": 6.387
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "Anlegg"
+  ]
+ }
+}

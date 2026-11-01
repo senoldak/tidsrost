@@ -1,0 +1,45 @@
+{
+ "tittel": "Selvforsyningen og målet om femti prosent",
+ "under": "Selvforsyningsgrad for jordbruksvarer korrigert for importert fôr, prosent",
+ "enhet": "prosent",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Landbruks- og matdepartementet"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "Siste",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Foreløpig tall i 2024",
+     "y": 34
+    }
+   ]
+  },
+  {
+   "navn": "Sammenligning",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "Målet",
+     "y": 50
+    },
+    {
+     "x": "i 2023",
+     "y": 41
+    },
+    {
+     "x": "i 2024",
+     "y": 34
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "i 2024"
+  ]
+ }
+}

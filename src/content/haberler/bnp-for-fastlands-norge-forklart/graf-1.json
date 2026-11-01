@@ -1,0 +1,54 @@
+{
+ "tittel": "Andelen olje og utenriks sjøfart av BNP har svingt kraftig",
+ "under": "Løpende priser, prosent av BNP i markedsverdi, utvalgte år",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "SSB"
+ },
+ "form": "soyle",
+ "serier": [
+  {
+   "navn": "Olje og utenriks sjøfart",
+   "punkter": [
+    {
+     "x": "1970",
+     "y": 7.5
+    },
+    {
+     "x": "1980",
+     "y": 16.9
+    },
+    {
+     "x": "1990",
+     "y": 14.7
+    },
+    {
+     "x": "2000",
+     "y": 24.4
+    },
+    {
+     "x": "2008",
+     "y": 25.6
+    },
+    {
+     "x": "2016",
+     "y": 13.4
+    },
+    {
+     "x": "2022",
+     "y": 34.9
+    },
+    {
+     "x": "2025",
+     "y": 20.2
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "2022"
+  ]
+ }
+}

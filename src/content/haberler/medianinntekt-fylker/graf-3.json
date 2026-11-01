@@ -1,0 +1,41 @@
+{
+ "tittel": "Halvparten av husholdningene i Oslo består av én person",
+ "under": "Andel aleneboende av alle husholdninger, studenthusholdninger ikke regnet",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "nokkeltall",
+ "serier": [
+  {
+   "navn": "Oslo",
+   "rol": "ana",
+   "punkter": [
+    {
+     "x": "Aleneboende i Oslo",
+     "y": 50.9
+    }
+   ]
+  },
+  {
+   "navn": "Sammenligning",
+   "rol": "sammenligning",
+   "punkter": [
+    {
+     "x": "Hele landet",
+     "y": 42.199999999999996
+    },
+    {
+     "x": "Akershus",
+     "y": 37.9
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "Hele landet"
+  ]
+ }
+}
