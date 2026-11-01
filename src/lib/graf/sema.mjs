@@ -24,6 +24,7 @@ export function validerGraf(d) {
   if (!d.tittel) h.push('tittel eksik');
   if (!d.kilde?.navn) h.push('kilde.navn eksik');
   if (typeof d.enhet !== 'string') h.push('enhet eksik');
+  if (d.valg && 'prikk' in d.valg && !(d.valg.prikk > 0)) h.push('valg.prikk pozitif olmalı');
   if (d.form === 'maler' && !(d.valg?.maks > 0)) h.push('maler: valg.maks eksik');
   if (!Array.isArray(d.serier) || !d.serier.length) h.push('serier boş');
   else
