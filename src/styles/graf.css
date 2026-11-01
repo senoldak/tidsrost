@@ -80,6 +80,14 @@
   fill: var(--ink);
   font-weight: 700;
 }
+.g-stopp-topp {
+  stop-color: var(--water);
+  stop-opacity: 0.28;
+}
+.g-stopp-bunn {
+  stop-color: var(--water);
+  stop-opacity: 0;
+}
 .g-mal {
   stroke: var(--red);
   stroke-width: 1.5;

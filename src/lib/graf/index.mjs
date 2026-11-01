@@ -1,12 +1,13 @@
 // Grafik seti: biçim kaydı ve tek giriş noktası.
 import { validerGraf } from './sema.mjs';
 import * as avvik from './former/avvik.mjs';
+import * as flate from './former/flate.mjs';
 import * as linje from './former/linje.mjs';
 import * as rangering from './former/rangering.mjs';
 import * as soyle from './former/soyle.mjs';
 
 /** @type {Record<string, { tegn: (d: import('./sema.mjs').GrafData, o?: { id?: string, bred?: boolean }) => import('./sema.mjs').Tegning }>} */
-export const FORMER = { linje, soyle, avvik, rangering };
+export const FORMER = { linje, flate, soyle, avvik, rangering };
 
 /** @param {import('./sema.mjs').GrafData} d @param {{ id?: string, bred?: boolean }} [o] */
 export function tegnGraf(d, o = {}) {

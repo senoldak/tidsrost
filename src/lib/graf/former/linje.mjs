@@ -1,9 +1,9 @@
 // Çizgi: tek ya da çok seri (en çok 3), basamak (valg.trapp), log eksen (valg.logAkse), hedef çizgisi ve vurgulu dönem.
-import { esc, etikettIndekser, fineTikker, kortEnhet, skala, sti, tall, tekst, trappSti } from '../felles.mjs';
+import { esc, etikettIndekser, fineTikker, kortEnhet, r2, skala, sti, tall, tekst, trappSti } from '../felles.mjs';
 
 const B = 400, B_BRED = 900, H = 220, V = 40, S = 46, U = 14, A = 26;
 
-/** @param {import('../sema.mjs').GrafData} d @param {{ bred?: boolean }} [o] @returns {import('../sema.mjs').Tegning} */
+/** @param {import('../sema.mjs').GrafData} d @param {{ bred?: boolean, id?: string, flate?: boolean }} [o] @returns {import('../sema.mjs').Tegning} */
 export function tegn(d, o = {}) {
   const bredde = o.bred ? B_BRED : B;
   const des = d.desimaler ?? 1;
@@ -56,6 +56,18 @@ export function tegn(d, o = {}) {
     deler.push(tekst(V + 4, y(m.y) - 5, m.tekst, 'class="g-mal-t"'));
   }
 
+  if (o.flate) {
+    const id = `${o.id ?? 'g'}-f`;
+    const bunn = y(log ? tikker[0] : Math.max(tikker[0], Math.min(0, tikker.at(-1))));
+    deler.push(`<defs><linearGradient id="${id}" x1="0" x2="0" y1="0" y2="1"><stop offset="0" class="g-stopp-topp"/><stop offset="1" class="g-stopp-bunn"/></linearGradient></defs>`);
+    let bit = [];
+    const lukk = () => {
+      if (bit.length) deler.push(`<path class="g-alan" fill="url(#${id})" d="M${bit.map((q) => `${r2(q.x)} ${r2(q.y)}`).join('L')}L${r2(bit.at(-1).x)} ${r2(bunn)}L${r2(bit[0].x)} ${r2(bunn)}Z"/>`);
+      bit = [];
+    };
+    serier[0].punkter.forEach((q, i) => (q.y === null || q.y === undefined ? lukk() : bit.push({ x: x(i), y: y(q.y) })));
+    lukk();
+  }
   serier.forEach((s, si) => {
     const p = s.punkter.map((q, i) => ({ x: x(i), y: q.y === null || q.y === undefined ? null : y(q.y) }));
     deler.push(`<g class="g-serie g-s${si}"><path d="${d.valg?.trapp ? trappSti(p) : sti(p)}"/>`);
