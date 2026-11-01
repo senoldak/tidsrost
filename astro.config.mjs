@@ -6,6 +6,7 @@ import { koyuMediaSil } from './scripts/svg-lys.mjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { apenForSok } from './src/lib/sok-synlighet.mjs';
+import { googleTestIder } from './src/lib/google-test.mjs';
 import { osloDag } from './src/lib/apenhet.mjs';
 import { ARKIV_TERSKEL } from './src/lib/arkiv.mjs';
 import ordbok from './src/data/ordbok.json' with { type: 'json' };
@@ -68,6 +69,8 @@ const kullanilmayanGorseller = () => ({
 // Site haritası için haber tarihleri: frontmatter'dan okunur (lastmod). Taslaklar ve
 // içeriksiz kategoriler site haritasına girmez. Arama motorlarına kapalı haberler (kısa, medya yeniden yazımı,
 // farevarsel; bkz. src/lib/sok-synlighet.mjs) de girmez; ölçü haber sayfasının robots etiketiyle aynı yardımcıdan gelir.
+// Google denemesi (1.11.2026): kaynaklı ve kendi katkılı ki-medier haberleri açılır (src/lib/google-test.mjs).
+const googleApne = googleTestIder();
 const haberDizini = fileURLToPath(new URL('./src/content/haberler/', import.meta.url));
 const haberTarihleri = new Map();
 const doluKategoriler = new Set();
@@ -88,7 +91,7 @@ for (const f of await readdir(haberDizini, { recursive: true })) {
   const oppdatert = new Date(alan('oppdatert') ?? '');
   const sist = !Number.isNaN(oppdatert.getTime()) && oppdatert > tarih ? oppdatert : tarih;
   if (!Number.isNaN(tarih.getTime())) haberTarihleri.set(`/artikkel/${id}/`, sist);
-  if (!apenForSok({ body: metin, produksjon: alan('produksjon'), id, title: alan('title') })) kisaHaberler.add(`/artikkel/${id}/`);
+  if (!apenForSok({ body: metin, produksjon: alan('produksjon'), id, title: alan('title'), apnet: googleApne.has(id) })) kisaHaberler.add(`/artikkel/${id}/`);
   const kategori = alan('category');
   if (kategori) doluKategoriler.add(kategori);
   if (!Number.isNaN(tarih.getTime())) {

@@ -29,6 +29,7 @@ import { erEgenTekst, stegFor } from '../../lib/redaksjon.mjs';
 import { matchEntities } from '../../lib/entities';
 import { indekserbar, ordtelling } from '../../lib/ordtelling.mjs';
 import { skjultForSok } from '../../lib/sok-synlighet.mjs';
+import { googleTestIder } from '../../lib/google-test.mjs';
 import { erSammendrag, kanRelateres, relaterteSaker } from '../../lib/relaterte';
 import Brodsmuler from '../../components/Brodsmuler.astro';
 import KiNotat from '../../components/KiNotat.astro';
@@ -123,7 +124,7 @@ const modifiedIso = (endret ?? date).toISOString();
 // Çok kısa haberler bütün arama motorlarına kapalı (noindex, follow). Medya yeniden yazımları ve farevarsel
 // derlemeleri yalnız Google'a kapalı (googlebot); ikisi de site haritalarında yok (src/lib/sok-synlighet.mjs).
 const noindex = !indekserbar(haber.body);
-const googleNoindex = skjultForSok({ produksjon: haber.data.produksjon, id: haber.id, title });
+const googleNoindex = skjultForSok({ produksjon: haber.data.produksjon, id: haber.id, title, apnet: googleTestIder().has(haber.id) });
 const section = categoryName(category);
 const categoryUrl = `${SITE_URL}/kategori/${category}/`;
 const sti = [
