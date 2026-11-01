@@ -22,3 +22,7 @@ test('tikkDesimaler: adımdan ondalık', () => {
   assert.equal(tikkDesimaler([0.01, 0.02]), 2);
 });
 test('fineTikker: sonlu olmayan girdi hata atar, yığın taşmaz', () => assert.throws(() => fineTikker(Infinity, -Infinity), /sonlu/));
+test('kortEnhet: milliarder/millioner kroner', () => {
+  assert.equal(kortEnhet('Milliarder kroner'), ' mrd. kr');
+  assert.equal(kortEnhet('Millioner kroner'), ' mill. kr');
+});

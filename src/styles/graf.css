@@ -134,6 +134,11 @@
 .g-nokkel .g-n-rod::before { height: 10px; background: var(--red); }
 .g-nokkel .g-n-su2::before { height: 10px; background: var(--g-su2); }
 .g-nokkel .g-n-bar::before { height: 10px; background: var(--g-bar); }
+.g-trapp {
+  stroke: var(--muted);
+  stroke-width: 1;
+  stroke-dasharray: 2 2;
+}
 .g-baand {
   fill: var(--g-su2);
   opacity: 0.55;
