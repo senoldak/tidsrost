@@ -121,9 +121,21 @@
 [data-i] {
   cursor: pointer;
 }
-.g-pa {
+.g-luft {
+  fill: transparent;
+}
+rect.g-pa,
+path.g-pa,
+circle.g-pa,
+.g-pa > rect:not(.g-luft),
+.g-pa > path,
+.g-pa > circle {
   stroke: var(--ink);
   stroke-width: 1.5;
+}
+.g-svg line.g-null {
+  stroke: var(--muted);
+  stroke-width: 1;
 }
 .g-tips {
   position: absolute;

@@ -80,3 +80,9 @@ export function etikettIndekser(lengde, antall = 4) {
 export function tekst(x, y, innhold, attr = '') {
   return `<text x="${n(x)}" y="${n(y)}"${attr ? ` ${attr}` : ''}>${esc(innhold)}</text>`;
 }
+
+/** Öznitelik için iki ondalığa yuvarlar. */
+export const r2 = (v) => Math.round(v * 100) / 100;
+
+/** Değer null/undefined mı? */
+export const tom = (v) => v === null || v === undefined;
