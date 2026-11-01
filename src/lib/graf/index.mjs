@@ -2,7 +2,9 @@
 import { validerGraf } from './sema.mjs';
 import * as avvik from './former/avvik.mjs';
 import * as flate from './former/flate.mjs';
+import * as helning from './former/helning.mjs';
 import * as linje from './former/linje.mjs';
+import * as manual from './former/manual.mjs';
 import * as maler from './former/maler.mjs';
 import * as prikksoyle from './former/prikksoyle.mjs';
 import * as rangering from './former/rangering.mjs';
@@ -11,7 +13,7 @@ import * as smultring from './former/smultring.mjs';
 import * as soyle from './former/soyle.mjs';
 
 /** @type {Record<string, { tegn: (d: import('./sema.mjs').GrafData, o?: { id?: string, bred?: boolean }) => import('./sema.mjs').Tegning }>} */
-export const FORMER = { linje, flate, soyle, avvik, rangering, smultring, maler, rutenett, prikksoyle };
+export const FORMER = { linje, flate, soyle, avvik, rangering, smultring, maler, rutenett, prikksoyle, helning, manual };
 
 /** @param {import('./sema.mjs').GrafData} d @param {{ id?: string, bred?: boolean }} [o] */
 export function tegnGraf(d, o = {}) {

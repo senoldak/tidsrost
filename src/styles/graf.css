@@ -142,6 +142,22 @@
   font-size: 30px;
   font-weight: 800;
 }
+.g-helning line {
+  stroke: var(--g-bar);
+  stroke-width: 1.5;
+}
+.g-helning circle {
+  fill: var(--g-bar);
+}
+.g-su-vurgu line { stroke: var(--water); stroke-width: 2.5; }
+.g-su-vurgu circle, .g-svg .g-su-vurgu text { fill: var(--water); }
+.g-rod-vurgu line { stroke: var(--red); stroke-width: 2.5; }
+.g-rod-vurgu circle, .g-svg .g-rod-vurgu text { fill: var(--red); }
+.g-svg .g-su-vurgu text, .g-svg .g-rod-vurgu text { font-weight: 700; }
+.g-manual {
+  stroke: var(--g-bar);
+  stroke-width: 4;
+}
 .g-luft {
   fill: transparent;
 }

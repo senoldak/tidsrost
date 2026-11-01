@@ -25,6 +25,10 @@ export function validerGraf(d) {
   if (!d.kilde?.navn) h.push('kilde.navn eksik');
   if (typeof d.enhet !== 'string') h.push('enhet eksik');
   if (d.valg && 'prikk' in d.valg && !(d.valg.prikk > 0)) h.push('valg.prikk pozitif olmalı');
+  if (d.form === 'manual') {
+    if (!(Array.isArray(d.valg?.gruppenavn) && d.valg.gruppenavn.length === 2)) h.push('manual: valg.gruppenavn [a, b] eksik');
+    for (const s of d.serier ?? []) for (const p of s.punkter ?? []) if (p.y !== null && !Number.isFinite(p.y2)) h.push(`manual: "${p.x}" y2 eksik`);
+  }
   if (d.form === 'maler' && !(d.valg?.maks > 0)) h.push('maler: valg.maks eksik');
   if (!Array.isArray(d.serier) || !d.serier.length) h.push('serier boş');
   else
