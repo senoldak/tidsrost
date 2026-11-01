@@ -1,0 +1,44 @@
+{
+ "tittel": "Nær halvparten går til forbrenning",
+ "under": "Husholdningsavfall etter behandling i 2025, tonn",
+ "enhet": "Husholdningsavfall etter behandling i 2025, tonn",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "fossefall",
+ "serier": [
+  {
+   "navn": "Behandling",
+   "punkter": [
+    {
+     "x": "Materialgjenvinning",
+     "y": 643336
+    },
+    {
+     "x": "Biogass",
+     "y": 199412
+    },
+    {
+     "x": "Kompostering",
+     "y": 198971
+    },
+    {
+     "x": "Forbrenning",
+     "y": 999518
+    },
+    {
+     "x": "Deponi",
+     "y": 69401
+    },
+    {
+     "x": "Annet",
+     "y": 20568
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sum": true
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "tittel": "Flere bibliotekbesøk enn før pandemien",
+ "under": "Fysiske besøk i folkebibliotekene hvert år, antall",
+ "enhet": "Fysiske besøk i folkebibliotekene hvert år, antall",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "linje",
+ "serier": [
+  {
+   "navn": "Besøk",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 22404180
+    },
+    {
+     "x": "2016",
+     "y": 23947593
+    },
+    {
+     "x": "2017",
+     "y": 24325416
+    },
+    {
+     "x": "2018",
+     "y": 24861513
+    },
+    {
+     "x": "2019",
+     "y": 25809382
+    },
+    {
+     "x": "2020",
+     "y": 15878143
+    },
+    {
+     "x": "2021",
+     "y": 17498563
+    },
+    {
+     "x": "2022",
+     "y": 22634629
+    },
+    {
+     "x": "2023",
+     "y": 25966903
+    },
+    {
+     "x": "2024",
+     "y": 26805345
+    },
+    {
+     "x": "2025",
+     "y": 27766380
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "tittel": "Kvinner har høyere fravær enn menn",
+ "under": "Sykefravær i 2. kvartal i 2019 og i 2026, sesongjustert, prosent",
+ "enhet": "prosent",
+ "desimaler": 2,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "helning",
+ "serier": [
+  {
+   "navn": "Kvinner",
+   "punkter": [
+    {
+     "x": "2019",
+     "y": 7.26
+    },
+    {
+     "x": "2026",
+     "y": 8.53
+    }
+   ]
+  },
+  {
+   "navn": "Alle",
+   "punkter": [
+    {
+     "x": "2019",
+     "y": 5.65
+    },
+    {
+     "x": "2026",
+     "y": 6.68
+    }
+   ]
+  },
+  {
+   "navn": "Menn",
+   "punkter": [
+    {
+     "x": "2019",
+     "y": 4.3
+    },
+    {
+     "x": "2026",
+     "y": 5.11
+    }
+   ]
+  }
+ ]
+}

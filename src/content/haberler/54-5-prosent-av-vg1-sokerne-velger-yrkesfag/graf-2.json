@@ -1,0 +1,90 @@
+{
+ "tittel": "Oslo økte mest fra i fjor",
+ "under": "Andel av søkerne til Vg1 med yrkesfag som førsteønske i 2025 og i 2026, prosent",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Kunnskapsdepartementet"
+ },
+ "form": "helning",
+ "serier": [
+  {
+   "navn": "Hele landet",
+   "punkter": [
+    {
+     "x": "2025",
+     "y": 53.9
+    },
+    {
+     "x": "2026",
+     "y": 54.5
+    }
+   ]
+  },
+  {
+   "navn": "Oslo",
+   "punkter": [
+    {
+     "x": "2025",
+     "y": 26.4
+    },
+    {
+     "x": "2026",
+     "y": 29.1
+    }
+   ]
+  },
+  {
+   "navn": "Akershus",
+   "punkter": [
+    {
+     "x": "2025",
+     "y": 41.2
+    },
+    {
+     "x": "2026",
+     "y": 43.3
+    }
+   ]
+  },
+  {
+   "navn": "Finnmark",
+   "punkter": [
+    {
+     "x": "2025",
+     "y": 70.7
+    },
+    {
+     "x": "2026",
+     "y": 72.8
+    }
+   ]
+  },
+  {
+   "navn": "Nordland",
+   "punkter": [
+    {
+     "x": "2025",
+     "y": 64
+    },
+    {
+     "x": "2026",
+     "y": 62.3
+    }
+   ]
+  },
+  {
+   "navn": "Telemark",
+   "punkter": [
+    {
+     "x": "2025",
+     "y": 62.4
+    },
+    {
+     "x": "2026",
+     "y": 61.4
+    }
+   ]
+  }
+ ]
+}

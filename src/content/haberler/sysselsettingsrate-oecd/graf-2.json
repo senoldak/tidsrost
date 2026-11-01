@@ -1,0 +1,110 @@
+{
+ "tittel": "Norge er nummer ni av trettiåtte OECD-land på sysselsettingsraten i 2025",
+ "under": "Sysselsatte i prosent av befolkningen mellom femten og sekstifire år, i 2025, de tjue høyeste landene; stiplet linje er OECD samlet",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "OECD"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Sysselsettingsrate",
+   "punkter": [
+    {
+     "x": "Island",
+     "y": 84.458
+    },
+    {
+     "x": "Nederland",
+     "y": 82.304
+    },
+    {
+     "x": "Japan",
+     "y": 80.038
+    },
+    {
+     "x": "Sveits",
+     "y": 79.926
+    },
+    {
+     "x": "New Zealand",
+     "y": 77.231
+    },
+    {
+     "x": "Australia",
+     "y": 77.206
+    },
+    {
+     "x": "Tyskland",
+     "y": 77.173
+    },
+    {
+     "x": "Danmark",
+     "y": 77.016
+    },
+    {
+     "x": "Norge",
+     "y": 76.615
+    },
+    {
+     "x": "Sverige",
+     "y": 76.423
+    },
+    {
+     "x": "Tsjekkia",
+     "y": 75.724
+    },
+    {
+     "x": "Storbritannia",
+     "y": 75.499
+    },
+    {
+     "x": "Estland",
+     "y": 75.361
+    },
+    {
+     "x": "Irland",
+     "y": 75.252
+    },
+    {
+     "x": "Ungarn",
+     "y": 75.088
+    },
+    {
+     "x": "Portugal",
+     "y": 75.055
+    },
+    {
+     "x": "Østerrike",
+     "y": 74.346
+    },
+    {
+     "x": "Canada",
+     "y": 74.221
+    },
+    {
+     "x": "Litauen",
+     "y": 74.056
+    },
+    {
+     "x": "Slovenia",
+     "y": 72.88
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": true,
+  "fremhev": [
+   "Norge"
+  ]
+ },
+ "merknader": [
+  {
+   "type": "mal",
+   "y": 70.388,
+   "tekst": "OECD samlet: 70,4 %"
+  }
+ ]
+}

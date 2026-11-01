@@ -1,0 +1,55 @@
+{
+ "tittel": "Innlandet står for fire av ti kubikkmeter",
+ "under": "Tømmer hogd for salg i 2025 etter fylke, de åtte største, kubikkmeter",
+ "enhet": "Tømmer hogd for salg i 2025 etter fylke, de åtte største, kubikkmeter",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Hogst",
+   "punkter": [
+    {
+     "x": "Østfold",
+     "y": 681175
+    },
+    {
+     "x": "Akershus",
+     "y": 1164470
+    },
+    {
+     "x": "Buskerud",
+     "y": 1335193
+    },
+    {
+     "x": "Innlandet",
+     "y": 5000646
+    },
+    {
+     "x": "Telemark",
+     "y": 796163
+    },
+    {
+     "x": "Agder",
+     "y": 1071889
+    },
+    {
+     "x": "Vestland",
+     "y": 589624
+    },
+    {
+     "x": "Trøndelag",
+     "y": 1139265
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": true,
+  "fremhev": [
+   "Innlandet"
+  ]
+ }
+}

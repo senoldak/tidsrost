@@ -1,0 +1,61 @@
+{
+ "tittel": "Lite endring i lønnsgapet de siste årene",
+ "under": "Kvinners gjennomsnittlige månedslønn i prosent av menns, alle sektorer",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "linje",
+ "serier": [
+  {
+   "navn": "Kvinners andel",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 85.3
+    },
+    {
+     "x": "2016",
+     "y": 86.4
+    },
+    {
+     "x": "2017",
+     "y": 87.1
+    },
+    {
+     "x": "2018",
+     "y": 87.5
+    },
+    {
+     "x": "2019",
+     "y": 87.8
+    },
+    {
+     "x": "2020",
+     "y": 87.5
+    },
+    {
+     "x": "2021",
+     "y": 87.9
+    },
+    {
+     "x": "2022",
+     "y": 87.6
+    },
+    {
+     "x": "2023",
+     "y": 88.4
+    },
+    {
+     "x": "2024",
+     "y": 88.2
+    },
+    {
+     "x": "2025",
+     "y": 87.9
+    }
+   ]
+  }
+ ]
+}

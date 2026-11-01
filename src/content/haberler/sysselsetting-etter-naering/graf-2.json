@@ -1,0 +1,41 @@
+{
+ "tittel": "Fem næringer står for mer enn halvparten av alle sysselsatte",
+ "under": "Sysselsatte personer etter næring, andel av alle, prosent",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå"
+ },
+ "form": "smultring",
+ "serier": [
+  {
+   "navn": "Andel av sysselsatte",
+   "punkter": [
+    {
+     "x": "Helse og omsorg",
+     "y": 20.946
+    },
+    {
+     "x": "Varehandel",
+     "y": 12.348
+    },
+    {
+     "x": "Bygg og anlegg",
+     "y": 8.260000000000002
+    },
+    {
+     "x": "Undervisning",
+     "y": 7.941
+    },
+    {
+     "x": "Industri",
+     "y": 7.789
+    },
+    {
+     "x": "Alle andre næringer",
+     "y": 42.716
+    }
+   ]
+  }
+ ]
+}

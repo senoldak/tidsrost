@@ -1,0 +1,63 @@
+{
+ "tittel": "Miljø og energi er største sektor",
+ "under": "Norsk bistand etter sektor i 2025, milliarder kroner",
+ "enhet": "milliarder kroner",
+ "desimaler": 2,
+ "kilde": {
+  "navn": "Utenriksdepartementet"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Bistand",
+   "punkter": [
+    {
+     "x": "Miljø og energi",
+     "y": 14.597
+    },
+    {
+     "x": "Multilateral kjernestøtte",
+     "y": 11.741
+    },
+    {
+     "x": "Nødhjelp",
+     "y": 7.896
+    },
+    {
+     "x": "Kostnader i Norge mv.",
+     "y": 5.938
+    },
+    {
+     "x": "Styresett og sivilt samfunn",
+     "y": 5.459
+    },
+    {
+     "x": "Multisektor og annet",
+     "y": 4.347
+    },
+    {
+     "x": "Helse og sosiale tjenester",
+     "y": 2.96
+    },
+    {
+     "x": "Økonomisk utvikling",
+     "y": 2.093
+    },
+    {
+     "x": "Utdanning",
+     "y": 1.952
+    },
+    {
+     "x": "Produksjon og handel",
+     "y": 1.922
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": true,
+  "fremhev": [
+   "Miljø og energi"
+  ]
+ }
+}

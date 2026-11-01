@@ -1,0 +1,35 @@
+{
+ "tittel": "Over halvparten er enkeltpersonforetak",
+ "under": "Nye foretak etter organisasjonsform i 2025, antall",
+ "enhet": "Nye foretak etter organisasjonsform i 2025, antall",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Nye foretak",
+   "punkter": [
+    {
+     "x": "Enkeltpersonforetak",
+     "y": 33130
+    },
+    {
+     "x": "Aksjeselskap",
+     "y": 28433
+    },
+    {
+     "x": "Øvrige former",
+     "y": 845
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": false,
+  "fremhev": [
+   "Enkeltpersonforetak"
+  ]
+ }
+}

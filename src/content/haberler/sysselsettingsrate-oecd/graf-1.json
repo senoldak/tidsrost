@@ -1,0 +1,68 @@
+{
+ "tittel": "Siden 2005 har Nederland og Japan passert Norge på sysselsettingsraten",
+ "under": "Sysselsatte i prosent av befolkningen mellom femten og sekstifire år, i 2005 og i 2025",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "OECD"
+ },
+ "form": "manual",
+ "valg": {
+  "gruppenavn": [
+   "Året 2005",
+   "Året 2025"
+  ]
+ },
+ "serier": [
+  {
+   "navn": "Siden 2005 har Nederland og Japan passert Norge på sysselsettingsraten",
+   "punkter": [
+    {
+     "x": "Island",
+     "y": 82.8,
+     "y2": 84.458
+    },
+    {
+     "x": "Nederland",
+     "y": 70.752,
+     "y2": 82.304
+    },
+    {
+     "x": "Japan",
+     "y": 69.283,
+     "y2": 80.038
+    },
+    {
+     "x": "Sveits",
+     "y": 77.196,
+     "y2": 79.926
+    },
+    {
+     "x": "Danmark",
+     "y": 76.055,
+     "y2": 77.016
+    },
+    {
+     "x": "Norge",
+     "y": 74.833,
+     "y2": 76.615
+    },
+    {
+     "x": "Sverige",
+     "y": 74.013,
+     "y2": 76.423
+    },
+    {
+     "x": "Finland",
+     "y": 68.516,
+     "y2": 72.076
+    },
+    {
+     "x": "OECD samlet",
+     "y": 65.217,
+     "y2": 70.388
+    }
+   ]
+  }
+ ]
+}

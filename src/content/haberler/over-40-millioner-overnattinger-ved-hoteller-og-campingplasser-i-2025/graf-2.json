@@ -1,0 +1,29 @@
+{
+ "tittel": "Sju av ti overnattinger er på hotell",
+ "under": "Overnattinger etter type overnattingsbedrift i 2025, andel",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "smultring",
+ "serier": [
+  {
+   "navn": "Andel",
+   "punkter": [
+    {
+     "x": "Hoteller",
+     "y": 69.39999999999999
+    },
+    {
+     "x": "Campingplasser",
+     "y": 20.7
+    },
+    {
+     "x": "Hyttegrender og vandrerhjem",
+     "y": 9.9
+    }
+   ]
+  }
+ ]
+}

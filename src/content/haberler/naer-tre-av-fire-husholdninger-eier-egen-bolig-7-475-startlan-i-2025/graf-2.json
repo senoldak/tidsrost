@@ -1,0 +1,90 @@
+{
+ "tittel": "Flest leier i Oslo",
+ "under": "Andel husholdninger som leier boligen, etter fylke, i 2025",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Leiere",
+   "punkter": [
+    {
+     "x": "Rogaland",
+     "y": 24.4
+    },
+    {
+     "x": "Møre og Romsdal",
+     "y": 25.1
+    },
+    {
+     "x": "Nordland",
+     "y": 26.3
+    },
+    {
+     "x": "Østfold",
+     "y": 26.1
+    },
+    {
+     "x": "Akershus",
+     "y": 24.1
+    },
+    {
+     "x": "Buskerud",
+     "y": 27.1
+    },
+    {
+     "x": "Innlandet",
+     "y": 26.7
+    },
+    {
+     "x": "Vestfold",
+     "y": 25.8
+    },
+    {
+     "x": "Telemark",
+     "y": 24.5
+    },
+    {
+     "x": "Agder",
+     "y": 25.4
+    },
+    {
+     "x": "Vestland",
+     "y": 27.5
+    },
+    {
+     "x": "Trøndelag",
+     "y": 29
+    },
+    {
+     "x": "Troms",
+     "y": 30.3
+    },
+    {
+     "x": "Finnmark",
+     "y": 31.4
+    },
+    {
+     "x": "Oslo",
+     "y": 33.8
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": true,
+  "fremhev": [
+   "Oslo"
+  ]
+ },
+ "merknader": [
+  {
+   "type": "mal",
+   "y": 27.3,
+   "tekst": "Hele landet: 27,3 %"
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "tittel": "Flere store bruk, færre mellomstore",
+ "under": "Jordbruksbedrifter etter jordbruksareal i drift, i 2005 og i 2025, antall",
+ "enhet": "Jordbruksbedrifter etter jordbruksareal i drift, i 2005 og i 2025, antall",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "helning",
+ "serier": [
+  {
+   "navn": "Under femti dekar",
+   "punkter": [
+    {
+     "x": "2005",
+     "y": 6411
+    },
+    {
+     "x": "2025",
+     "y": 5871
+    }
+   ]
+  },
+  {
+   "navn": "Femti til hundre dekar",
+   "punkter": [
+    {
+     "x": "2005",
+     "y": 10141
+    },
+    {
+     "x": "2025",
+     "y": 5802
+    }
+   ]
+  },
+  {
+   "navn": "Hundre til to hundre dekar",
+   "punkter": [
+    {
+     "x": "2005",
+     "y": 16764
+    },
+    {
+     "x": "2025",
+     "y": 8496
+    }
+   ]
+  },
+  {
+   "navn": "To til tre hundre dekar",
+   "punkter": [
+    {
+     "x": "2005",
+     "y": 10186
+    },
+    {
+     "x": "2025",
+     "y": 5305
+    }
+   ]
+  },
+  {
+   "navn": "Tre til fem hundre dekar",
+   "punkter": [
+    {
+     "x": "2005",
+     "y": 6817
+    },
+    {
+     "x": "2025",
+     "y": 5486
+    }
+   ]
+  },
+  {
+   "navn": "Fem hundre dekar og mer",
+   "punkter": [
+    {
+     "x": "2005",
+     "y": 2684
+    },
+    {
+     "x": "2025",
+     "y": 5479
+    }
+   ]
+  }
+ ]
+}

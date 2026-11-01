@@ -1,0 +1,67 @@
+{
+ "tittel": "Folketrygden er langt større enn andre utgifter",
+ "under": "Utvalgte utgiftsområder i 2027, regjeringens forslag, milliarder kroner",
+ "enhet": "milliarder kroner",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Finansdepartementet"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Utgifter",
+   "punkter": [
+    {
+     "x": "Folketrygden",
+     "y": 794.1
+    },
+    {
+     "x": "Kommuner og fylkeskommuner",
+     "y": 277.6
+    },
+    {
+     "x": "Regionale helseforetak",
+     "y": 250.4
+    },
+    {
+     "x": "Forsvar",
+     "y": 191.7
+    },
+    {
+     "x": "Samferdsel",
+     "y": 99.9
+    },
+    {
+     "x": "Høyere utdanning og forskning",
+     "y": 68.6
+    },
+    {
+     "x": "Bistand",
+     "y": 53.4
+    },
+    {
+     "x": "Politi og påtalemyndighet",
+     "y": 33.6
+    },
+    {
+     "x": "Jordbruksavtalen",
+     "y": 33.4
+    },
+    {
+     "x": "Barnetrygd og kontantstøtte",
+     "y": 30.8
+    },
+    {
+     "x": "Renter på statsgjeld",
+     "y": 24.4
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": true,
+  "fremhev": [
+   "Folketrygden"
+  ]
+ }
+}

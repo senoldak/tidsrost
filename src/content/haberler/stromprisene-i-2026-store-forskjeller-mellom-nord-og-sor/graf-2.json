@@ -1,0 +1,43 @@
+{
+ "tittel": "Nord-Norge hadde Europas laveste kraftpris",
+ "under": "Gjennomsnittlig spotpris per prisområde i andre kvartal 2026, øre per kWh",
+ "enhet": "Gjennomsnittlig spotpris per prisområde i andre kvartal 2026, øre per kWh",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Norges vassdrags- og energidirektorat (NVE)"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Spotpris",
+   "punkter": [
+    {
+     "x": "Sørøst-Norge (NO1)",
+     "y": 100
+    },
+    {
+     "x": "Sørvest-Norge (NO2)",
+     "y": 106
+    },
+    {
+     "x": "Midt-Norge (NO3)",
+     "y": 81
+    },
+    {
+     "x": "Nord-Norge (NO4)",
+     "y": 27
+    },
+    {
+     "x": "Vest-Norge (NO5)",
+     "y": 100
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": true,
+  "fremhev": [
+   "Nord-Norge (NO4)"
+  ]
+ }
+}

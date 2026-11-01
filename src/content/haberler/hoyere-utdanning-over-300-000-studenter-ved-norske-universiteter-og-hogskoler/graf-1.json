@@ -1,0 +1,69 @@
+{
+ "tittel": "Studenttallet har økt med over en femdel siden 2013",
+ "under": "Registrerte studenter ved universiteter og høgskoler i Norge hver høst, antall",
+ "enhet": "Registrerte studenter ved universiteter og høgskoler i Norge hver høst, antall",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "linje",
+ "serier": [
+  {
+   "navn": "Studenter",
+   "punkter": [
+    {
+     "x": "2013",
+     "y": 253317
+    },
+    {
+     "x": "2014",
+     "y": 255588
+    },
+    {
+     "x": "2015",
+     "y": 266428
+    },
+    {
+     "x": "2016",
+     "y": 273227
+    },
+    {
+     "x": "2017",
+     "y": 277637
+    },
+    {
+     "x": "2018",
+     "y": 278334
+    },
+    {
+     "x": "2019",
+     "y": 281702
+    },
+    {
+     "x": "2020",
+     "y": 292834
+    },
+    {
+     "x": "2021",
+     "y": 304885
+    },
+    {
+     "x": "2022",
+     "y": 297775
+    },
+    {
+     "x": "2023",
+     "y": 299062
+    },
+    {
+     "x": "2024",
+     "y": 301879
+    },
+    {
+     "x": "2025",
+     "y": 311148
+    }
+   ]
+  }
+ ]
+}

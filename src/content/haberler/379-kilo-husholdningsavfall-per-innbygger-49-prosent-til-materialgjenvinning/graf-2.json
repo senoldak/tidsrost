@@ -1,0 +1,67 @@
+{
+ "tittel": "Restavfall er den største gruppen",
+ "under": "Husholdningsavfall etter materiale i 2025, tonn",
+ "enhet": "Husholdningsavfall etter materiale i 2025, tonn",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Avfall",
+   "punkter": [
+    {
+     "x": "Restavfall",
+     "y": 810406
+    },
+    {
+     "x": "Treavfall",
+     "y": 249160
+    },
+    {
+     "x": "Matavfall",
+     "y": 241484
+    },
+    {
+     "x": "Papp",
+     "y": 182964
+    },
+    {
+     "x": "Hageavfall",
+     "y": 169494
+    },
+    {
+     "x": "Metall",
+     "y": 92145
+    },
+    {
+     "x": "Farlig avfall",
+     "y": 82166
+    },
+    {
+     "x": "Glass",
+     "y": 80642
+    },
+    {
+     "x": "Byggavfall",
+     "y": 59001
+    },
+    {
+     "x": "Plast",
+     "y": 57230
+    },
+    {
+     "x": "EE-avfall",
+     "y": 49972
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": true,
+  "fremhev": [
+   "Restavfall"
+  ]
+ }
+}

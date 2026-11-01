@@ -1,0 +1,51 @@
+{
+ "tittel": "De yngste skiller seg ut",
+ "under": "Andel som selv har fullført skattemeldingen på nett eller i app, etter alder, i 2026, prosent",
+ "enhet": "prosent",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Skattemeldingen",
+   "punkter": [
+    {
+     "x": "Seksten til tjuefire år",
+     "y": 78
+    },
+    {
+     "x": "Tjuefem til trettifire år",
+     "y": 94
+    },
+    {
+     "x": "Trettifem til førtifire år",
+     "y": 93
+    },
+    {
+     "x": "Førtifem til femtifire år",
+     "y": 93
+    },
+    {
+     "x": "Femtifem til sekstifire år",
+     "y": 93
+    },
+    {
+     "x": "Sekstifem til syttifire år",
+     "y": 93
+    },
+    {
+     "x": "Syttifem til syttini år",
+     "y": 96
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": false,
+  "fremhev": [
+   "Seksten til tjuefire år"
+  ]
+ }
+}

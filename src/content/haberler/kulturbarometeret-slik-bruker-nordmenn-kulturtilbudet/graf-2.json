@@ -1,0 +1,77 @@
+{
+ "tittel": "Kinoandelen har falt mest blant unge voksne",
+ "under": "Andel som har vært på kino siste tolv måneder, i 2016 og i 2025, prosent",
+ "enhet": "prosent",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "helning",
+ "serier": [
+  {
+   "navn": "Ni til femten år",
+   "punkter": [
+    {
+     "x": "2016",
+     "y": 91
+    },
+    {
+     "x": "2025",
+     "y": 92
+    }
+   ]
+  },
+  {
+   "navn": "Seksten til tjuefire år",
+   "punkter": [
+    {
+     "x": "2016",
+     "y": 90
+    },
+    {
+     "x": "2025",
+     "y": 82
+    }
+   ]
+  },
+  {
+   "navn": "Tjuefem til førtifire år",
+   "punkter": [
+    {
+     "x": "2016",
+     "y": 81
+    },
+    {
+     "x": "2025",
+     "y": 66
+    }
+   ]
+  },
+  {
+   "navn": "Førtifem til sekstiseks år",
+   "punkter": [
+    {
+     "x": "2016",
+     "y": 63
+    },
+    {
+     "x": "2025",
+     "y": 53
+    }
+   ]
+  },
+  {
+   "navn": "Sekstisju til syttini år",
+   "punkter": [
+    {
+     "x": "2016",
+     "y": 40
+    },
+    {
+     "x": "2025",
+     "y": 47
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "tittel": "Alle tre anslår høyere vekst i 2027 enn i 2026",
+ "under": "BNP for Fastlands-Norge, prosentvis endring i volum",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Finansdepartementet, Statistisk sentralbyrå, Norges Bank"
+ },
+ "form": "manual",
+ "valg": {
+  "gruppenavn": [
+   "2026",
+   "2027"
+  ]
+ },
+ "serier": [
+  {
+   "navn": "Alle tre anslår høyere vekst i 2027 enn i 2026",
+   "punkter": [
+    {
+     "x": "Finansdepartementet",
+     "y": 1.1,
+     "y2": 1.7
+    },
+    {
+     "x": "SSB",
+     "y": 1.4,
+     "y2": 2.1
+    },
+    {
+     "x": "Norges Bank",
+     "y": 0.9,
+     "y2": 1
+    }
+   ]
+  }
+ ]
+}

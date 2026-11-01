@@ -1,0 +1,52 @@
+{
+ "tittel": "Helse og omsorg alene står for over en tredjedel av veksten i antall sysselsatte",
+ "under": "Endring i antall sysselsatte personer etter næring, tusen personer",
+ "enhet": "tusen personer",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå"
+ },
+ "form": "fossefall",
+ "serier": [
+  {
+   "navn": "Næringer",
+   "punkter": [
+    {
+     "x": "Helse og omsorg",
+     "y": 518.7
+    },
+    {
+     "x": "Faglig tjenesteyting",
+     "y": 139
+    },
+    {
+     "x": "Forretningsmessig tjenesteyting",
+     "y": 118
+    },
+    {
+     "x": "Varehandel",
+     "y": 137.7
+    },
+    {
+     "x": "Bygg og anlegg",
+     "y": 135.6
+    },
+    {
+     "x": "Industri",
+     "y": -122.7
+    },
+    {
+     "x": "Jordbruk og skogbruk",
+     "y": -141
+    },
+    {
+     "x": "Alle andre næringer",
+     "y": 605.6
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sum": true
+ }
+}

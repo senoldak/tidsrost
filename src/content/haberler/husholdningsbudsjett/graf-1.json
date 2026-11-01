@@ -1,0 +1,40 @@
+{
+ "tittel": "Boligen og maten står for den største delen av merutgiften",
+ "under": "Merutgift per husholdning ved samme forbruk, kroner",
+ "enhet": "Merutgift per husholdning ved samme forbruk, kroner",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå"
+ },
+ "form": "fossefall",
+ "serier": [
+  {
+   "navn": "Grupper",
+   "punkter": [
+    {
+     "x": "Bolig, elektrisitet og brensel",
+     "y": 16553
+    },
+    {
+     "x": "Mat og alkoholfrie drikkevarer",
+     "y": 14531
+    },
+    {
+     "x": "Transport",
+     "y": 8811
+    },
+    {
+     "x": "Fritid, sport og kultur",
+     "y": 8836
+    },
+    {
+     "x": "Ni andre grupper",
+     "y": 17717
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sum": true
+ }
+}

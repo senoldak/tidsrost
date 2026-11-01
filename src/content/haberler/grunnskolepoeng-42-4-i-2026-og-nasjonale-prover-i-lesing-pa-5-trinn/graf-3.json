@@ -1,0 +1,51 @@
+{
+ "tittel": "Opp i lesing og regning, ned i engelsk",
+ "under": "Andel elever på de to laveste mestringsnivåene, åttende trinn, i 2022 og i 2025, prosent",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Utdanningsdirektoratet (Udir)"
+ },
+ "form": "helning",
+ "serier": [
+  {
+   "navn": "Lesing",
+   "punkter": [
+    {
+     "x": "2022",
+     "y": 29.6
+    },
+    {
+     "x": "2025",
+     "y": 34.6
+    }
+   ]
+  },
+  {
+   "navn": "Regning",
+   "punkter": [
+    {
+     "x": "2022",
+     "y": 28.8
+    },
+    {
+     "x": "2025",
+     "y": 34.1
+    }
+   ]
+  },
+  {
+   "navn": "Engelsk",
+   "punkter": [
+    {
+     "x": "2022",
+     "y": 29
+    },
+    {
+     "x": "2025",
+     "y": 24.9
+    }
+   ]
+  }
+ ]
+}

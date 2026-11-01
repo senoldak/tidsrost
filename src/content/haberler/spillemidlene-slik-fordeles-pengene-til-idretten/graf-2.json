@@ -1,0 +1,41 @@
+{
+ "tittel": "Første nedgang siden 2021",
+ "under": "Spillemidler til idrettsformål i hovedfordelingen hvert år, løpende kroner, milliarder kroner",
+ "enhet": "milliarder kroner",
+ "desimaler": 2,
+ "kilde": {
+  "navn": "Kultur- og likestillingsdepartementet"
+ },
+ "form": "linje",
+ "serier": [
+  {
+   "navn": "Hovedfordelingen",
+   "punkter": [
+    {
+     "x": "2021",
+     "y": 3.230588
+    },
+    {
+     "x": "2022",
+     "y": 3.292723
+    },
+    {
+     "x": "2023",
+     "y": 3.434796
+    },
+    {
+     "x": "2024",
+     "y": 3.722963
+    },
+    {
+     "x": "2025",
+     "y": 4.254076
+    },
+    {
+     "x": "2026",
+     "y": 4.115669
+    }
+   ]
+  }
+ ]
+}

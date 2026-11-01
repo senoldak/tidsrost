@@ -1,0 +1,55 @@
+{
+ "tittel": "Fisk er den største varen etter olje og gass",
+ "under": "Utvalgte varegrupper i norsk vareeksport i 2025, milliarder kroner",
+ "enhet": "milliarder kroner",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Eksport",
+   "punkter": [
+    {
+     "x": "Raffinerte oljeprodukter",
+     "y": 51.782932
+    },
+    {
+     "x": "Elektrisk strøm",
+     "y": 26.612894
+    },
+    {
+     "x": "Nikkel",
+     "y": 16.021891
+    },
+    {
+     "x": "Aluminium",
+     "y": 52.922253
+    },
+    {
+     "x": "Elektriske kraftmaskiner",
+     "y": 28.576065
+    },
+    {
+     "x": "Måle- og kontrollinstrumenter",
+     "y": 20.931926
+    },
+    {
+     "x": "Fisk, fersk, kjølt eller fryst",
+     "y": 156.655132
+    },
+    {
+     "x": "Fisk, tørket, saltet eller røkt",
+     "y": 11.356243
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": true,
+  "fremhev": [
+   "Fisk, fersk, kjølt eller fryst"
+  ]
+ }
+}

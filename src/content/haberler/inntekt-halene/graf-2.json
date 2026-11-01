@@ -1,0 +1,54 @@
+{
+ "tittel": "Toppdesilens andel hoppet i 2005 og falt tilbake i 2006",
+ "under": "Øverste tiendedels andel av samlet inntekt etter skatt, prosent",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "soyle",
+ "serier": [
+  {
+   "navn": "Øverste tiendedel",
+   "punkter": [
+    {
+     "x": "2004",
+     "y": 25.1
+    },
+    {
+     "x": "2005",
+     "y": 29.4
+    },
+    {
+     "x": "2006",
+     "y": 20.6
+    },
+    {
+     "x": "2007",
+     "y": 21.4
+    },
+    {
+     "x": "2008",
+     "y": 20.8
+    },
+    {
+     "x": "2009",
+     "y": 20.2
+    },
+    {
+     "x": "2010",
+     "y": 20.6
+    },
+    {
+     "x": "2011",
+     "y": 20.6
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "2005"
+  ]
+ }
+}

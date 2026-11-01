@@ -1,0 +1,38 @@
+{
+ "tittel": "De to første årene etter toppen falt ledigheten mest etter pandemien",
+ "under": "Arbeidsledige i prosent av arbeidsstyrken, årsgjennomsnitt",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå"
+ },
+ "form": "manual",
+ "valg": {
+  "gruppenavn": [
+   "Toppår",
+   "To år etter"
+  ]
+ },
+ "serier": [
+  {
+   "navn": "De to første årene etter toppen falt ledigheten mest etter pandemien",
+   "punkter": [
+    {
+     "x": "Bankkrisen",
+     "y": 6,
+     "y2": 4.9
+    },
+    {
+     "x": "Finanskrisen",
+     "y": 3.8,
+     "y2": 3.3
+    },
+    {
+     "x": "Pandemien",
+     "y": 4.6,
+     "y2": 3.2
+    }
+   ]
+  }
+ ]
+}

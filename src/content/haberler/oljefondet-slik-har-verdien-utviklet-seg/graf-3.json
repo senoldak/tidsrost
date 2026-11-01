@@ -1,0 +1,46 @@
+{
+ "tittel": "Aksjene trakk avkastningen opp",
+ "under": "Avkastning i første halvår 2026 etter aktivaklasse, prosent",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Norges Bank Investment Management (NBIM)"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Avkastning",
+   "punkter": [
+    {
+     "x": "Aksjer",
+     "y": 13
+    },
+    {
+     "x": "Unotert eiendom",
+     "y": 3
+    },
+    {
+     "x": "Renteinvesteringer",
+     "y": 0.9
+    },
+    {
+     "x": "Unotert fornybar infrastruktur",
+     "y": -0.2
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": true,
+  "fremhev": [
+   "Aksjer"
+  ]
+ },
+ "merknader": [
+  {
+   "type": "mal",
+   "y": 9.4,
+   "tekst": "Fondet samlet: 9,4 %"
+  }
+ ]
+}

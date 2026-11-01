@@ -1,0 +1,90 @@
+{
+ "tittel": "Færre på fottur, flere badet ute",
+ "under": "Andel av befolkningen over seksten år som har gjort aktiviteten siste tolv måneder, i 2021 og i 2024, prosent",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "helning",
+ "serier": [
+  {
+   "navn": "Gåtur nær boligen",
+   "punkter": [
+    {
+     "x": "2021",
+     "y": 92.5
+    },
+    {
+     "x": "2024",
+     "y": 90.6
+    }
+   ]
+  },
+  {
+   "navn": "Fottur i fjell eller skog",
+   "punkter": [
+    {
+     "x": "2021",
+     "y": 82
+    },
+    {
+     "x": "2024",
+     "y": 74.8
+    }
+   ]
+  },
+  {
+   "navn": "Bading utendørs",
+   "punkter": [
+    {
+     "x": "2021",
+     "y": 61.8
+    },
+    {
+     "x": "2024",
+     "y": 68.7
+    }
+   ]
+  },
+  {
+   "navn": "Bær- eller sopptur",
+   "punkter": [
+    {
+     "x": "2021",
+     "y": 41.6
+    },
+    {
+     "x": "2024",
+     "y": 46.8
+    }
+   ]
+  },
+  {
+   "navn": "Fiske",
+   "punkter": [
+    {
+     "x": "2021",
+     "y": 40.8
+    },
+    {
+     "x": "2024",
+     "y": 38.2
+    }
+   ]
+  },
+  {
+   "navn": "Skitur",
+   "punkter": [
+    {
+     "x": "2021",
+     "y": 38.6
+    },
+    {
+     "x": "2024",
+     "y": 33.6
+    }
+   ]
+  }
+ ]
+}

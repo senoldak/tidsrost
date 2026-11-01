@@ -1,0 +1,93 @@
+{
+ "tittel": "Hyttesalget toppet seg i 2021",
+ "under": "Omsatte fritidseiendommer med bygning i fritt salg hvert år, antall",
+ "enhet": "Omsatte fritidseiendommer med bygning i fritt salg hvert år, antall",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "linje",
+ "serier": [
+  {
+   "navn": "Omsetninger",
+   "punkter": [
+    {
+     "x": "2007",
+     "y": 13422
+    },
+    {
+     "x": "2008",
+     "y": 11748
+    },
+    {
+     "x": "2009",
+     "y": 11452
+    },
+    {
+     "x": "2010",
+     "y": 11927
+    },
+    {
+     "x": "2011",
+     "y": 11839
+    },
+    {
+     "x": "2012",
+     "y": 12062
+    },
+    {
+     "x": "2013",
+     "y": 11527
+    },
+    {
+     "x": "2014",
+     "y": 11819
+    },
+    {
+     "x": "2015",
+     "y": 12027
+    },
+    {
+     "x": "2016",
+     "y": 13157
+    },
+    {
+     "x": "2017",
+     "y": 12266
+    },
+    {
+     "x": "2018",
+     "y": 11924
+    },
+    {
+     "x": "2019",
+     "y": 12182
+    },
+    {
+     "x": "2020",
+     "y": 15801
+    },
+    {
+     "x": "2021",
+     "y": 16707
+    },
+    {
+     "x": "2022",
+     "y": 11569
+    },
+    {
+     "x": "2023",
+     "y": 9568
+    },
+    {
+     "x": "2024",
+     "y": 10139
+    },
+    {
+     "x": "2025",
+     "y": 11358
+    }
+   ]
+  }
+ ]
+}
