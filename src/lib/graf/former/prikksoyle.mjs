@@ -10,6 +10,7 @@ export function tegn(d, o = {}) {
   const s = d.serier[0];
   const p = s.punkter;
   const antall = p.map((q) => (tom(q.y) || q.y <= 0 ? 0 : Math.round(q.y / enhetPrikk)));
+  const maksAntall = Math.max(...antall);
   const bw = bredde / p.length;
   const r = Math.max(2, Math.min(6, bw / 2 - 1.5));
   const steg = r * 2 + 2;
@@ -20,6 +21,7 @@ export function tegn(d, o = {}) {
     const cx = i * bw + bw / 2;
     deler.push(`<g data-i="${i}"><rect x="${r2(i * bw)}" y="0" width="${r2(bw)}" height="${H - A}" class="g-luft"/>`);
     for (let j = 0; j < antall[i]; j++) deler.push(`<circle cx="${r2(cx)}" cy="${r2(H - A - r - j * steg)}" r="${r2(r)}" class="g-f-su"/>`);
+    if (d.valg?.bakgrunn) for (let j = antall[i]; j < maksAntall; j++) deler.push(`<circle cx="${r2(cx)}" cy="${r2(H - A - r - j * steg)}" r="${r2(r)}" class="g-prikk-bak"/>`);
     deler.push('</g>');
     return { x: cx, y: H - A - antall[i] * steg, tekst: `${q.x}\n${tom(q.y) ? '–' : `${tall(q.y, des)}${enh}`}` };
   });

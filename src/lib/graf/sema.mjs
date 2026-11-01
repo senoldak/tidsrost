@@ -8,7 +8,7 @@
  *   form: string, tittel: string, under?: string, tall?: { verdi: string, etikett?: string },
  *   kilde: { navn: string, url?: string, tabell?: string }, enhet: string, desimaler?: number,
  *   serier: Serie[], merknader?: Merknad[],
- *   valg?: { trapp?: boolean, logAkse?: boolean, sorter?: boolean, maks?: number, fremhev?: (string|number)[], prikk?: number, gruppenavn?: [string, string] }
+ *   valg?: { trapp?: boolean, logAkse?: boolean, sorter?: boolean, maks?: number, fremhev?: (string|number)[], prikk?: number, gruppenavn?: [string, string], spor?: boolean, pinne?: boolean, prognoseFra?: string|number, bakgrunn?: boolean, prosent?: boolean, kolonner?: number, trend?: boolean, koble?: boolean, sum?: boolean, enhet2?: string }
  * }} GrafData
  * @typedef {{ x: number, y: number, tekst: string, midt?: string }} TipsPunkt
  * @typedef {{ svg: string, bredde: number, hoyde: number, modus: 'serie'|'element', punkter: TipsPunkt[], ramme?: { topp: number, bunn: number }, nokkel?: { navn: string, klasse: string }[], tabell: { kolonner: string[], rader: string[][] }, beskrivelse: string }} Tegning

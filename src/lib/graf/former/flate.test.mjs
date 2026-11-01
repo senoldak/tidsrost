@@ -10,3 +10,8 @@ test('flate: gradyan kimliği grafik başına', () => {
 });
 test('flate: null alanı ikiye böler', () => assert.equal((tegn(veri([1, 2, null, 3, 4]), { id: 'g' }).svg.match(/class="g-alan"/g) || []).length, 2));
 test('flate: serie modu ve çizgi', () => { const t = tegn(veri([1, 2]), { id: 'g' }); assert.equal(t.modus, 'serie'); assert.match(t.svg, /g-s0/); });
+test('flate: iki seride iki alan ve iki gradyan', () => {
+  const s = tegn({ ...veri([1, 2, 3]), serier: [veri([1, 2, 3]).serier[0], { navn: 'B', punkter: [{ x: 'k0', y: 0.5 }, { x: 'k1', y: 1 }, { x: 'k2', y: 1.5 }] }] }, { id: 'g' }).svg;
+  assert.equal((s.match(/class="g-alan/g) || []).length, 2);
+  assert.match(s, /id="g-f2"/);
+});

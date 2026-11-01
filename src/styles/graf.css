@@ -88,6 +88,37 @@
   stop-color: var(--water);
   stop-opacity: 0;
 }
+.g-stopp-topp2 {
+  stop-color: var(--contour);
+  stop-opacity: 0.24;
+}
+.g-stopp-bunn2 {
+  stop-color: var(--contour);
+  stop-opacity: 0;
+}
+.g-prognose {
+  fill: none;
+  stroke: var(--water);
+  stroke-width: 2.5;
+  stroke-dasharray: 5 4;
+}
+.g-spor {
+  fill: var(--g-bar);
+  opacity: 0.45;
+}
+.g-pinne line {
+  stroke: var(--g-bar);
+  stroke-width: 3;
+}
+.g-pinne circle {
+  fill: var(--muted);
+}
+.g-pinne-ut line { stroke: var(--g-su2); }
+.g-pinne-ut circle { fill: var(--water); }
+.g-prikk-bak {
+  fill: var(--g-bar);
+  opacity: 0.5;
+}
 .g-mal {
   stroke: var(--red);
   stroke-width: 1.5;

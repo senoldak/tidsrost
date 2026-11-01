@@ -35,6 +35,12 @@ export function tegn(d, o = {}) {
     }
     const top = Math.min(y(q.y), y(0));
     const klasse = fremhev.includes(String(q.x)) ? 'g-f-su' : 'g-f-bar';
+    if (d.valg?.spor) deler.push(`<rect x="${r2(x0)}" y="${U}" width="${r2(w)}" height="${H - A - U}" class="g-spor"/>`);
+    if (d.valg?.pinne) {
+      // Lolipop: ince çubuk + uçta daire; tıklama alanı tam sütun.
+      deler.push(`<g data-i="${i}" class="${klasse === 'g-f-su' ? 'g-pinne g-pinne-ut' : 'g-pinne'}"><rect x="${r2(x0)}" y="${U}" width="${r2(w)}" height="${H - A - U}" class="g-luft"/><line x1="${r2(x0 + w / 2)}" x2="${r2(x0 + w / 2)}" y1="${r2(y(0))}" y2="${r2(y(q.y))}"/><circle cx="${r2(x0 + w / 2)}" cy="${r2(y(q.y))}" r="${r2(Math.min(6, Math.max(3, w / 3)))}"/></g>`);
+      return { x: x0 + w / 2, y: y(q.y) - 6, tekst: `${q.x}\n${tall(q.y, des)}${enh}` };
+    }
     deler.push(`<rect data-i="${i}" x="${r2(x0)}" y="${r2(top)}" width="${r2(w)}" height="${r2(Math.max(0.5, Math.abs(y(q.y) - y(0))))}" class="${klasse}"/>`);
     return { x: x0 + w / 2, y: top, tekst: `${q.x}\n${tall(q.y, des)}${enh}` };
   });

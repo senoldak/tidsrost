@@ -10,3 +10,7 @@ test('prikksoyle: prikk sayısı = round(y / prikk)', () => { const s = tegn(ver
 test('prikksoyle: valg.prikk', () => assert.equal(prikker(tegn(veri([3], { prikk: 1 })).svg, 0), 3));
 test('prikksoyle: negatif → 0 nokta, değer ipucunda', () => { const t = tegn(veri([-0.5, 2])); assert.equal(prikker(t.svg, 0), 0); assert.match(t.punkter[0].tekst, /−0,5/); });
 test('prikksoyle: valg.prikk pozitif olmalı', () => assert.match(validerGraf(veri([1], { prikk: 0 })).join(), /prikk/));
+test('prikksoyle: bakgrunn soluk noktalar = sütun × maks − dolu', () => {
+  const s = tegn(veri([1, 0.5], { bakgrunn: true })).svg;
+  assert.equal((s.match(/class="g-prikk-bak"/g) || []).length, 2 * 2 - 3);
+});

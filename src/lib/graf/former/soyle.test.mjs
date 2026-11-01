@@ -19,3 +19,5 @@ test('soyle: uzun x etiketi kısalır, ipucunda tam', () => {
   assert.match(t.svg, />Forsikring …</);
   assert.match(t.punkter[0].tekst, /Forsikring og finansielle tjenester/);
 });
+test('soyle: valg.spor her sütuna iz', () => assert.equal((tegn(veri([1, 2, 3], undefined, { spor: true })).svg.match(/class="g-spor"/g) || []).length, 3));
+test('soyle: valg.pinne ince çubuk + daire', () => { const s = tegn(veri([1, 2, 3], undefined, { pinne: true })).svg; assert.equal((s.match(/<circle/g) || []).length, 3); });

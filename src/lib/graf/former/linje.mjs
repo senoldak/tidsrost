@@ -58,20 +58,29 @@ export function tegn(d, o = {}) {
   }
 
   if (o.flate) {
-    const id = `${o.id ?? 'g'}-f`;
+    // İlk iki seri dolgulu (ikincisi kontur renginde); dolgular çizgilerin altında.
     const bunn = y(log ? tikker[0] : Math.max(tikker[0], Math.min(0, tikker.at(-1))));
-    deler.push(`<defs><linearGradient id="${id}" x1="0" x2="0" y1="0" y2="1"><stop offset="0" class="g-stopp-topp"/><stop offset="1" class="g-stopp-bunn"/></linearGradient></defs>`);
-    let bit = [];
-    const lukk = () => {
-      if (bit.length) deler.push(`<path class="g-alan" fill="url(#${id})" d="M${bit.map((q) => `${r2(q.x)} ${r2(q.y)}`).join('L')}L${r2(bit.at(-1).x)} ${r2(bunn)}L${r2(bit[0].x)} ${r2(bunn)}Z"/>`);
-      bit = [];
-    };
-    serier[0].punkter.forEach((q, i) => (q.y === null || q.y === undefined ? lukk() : bit.push({ x: x(i), y: y(q.y) })));
-    lukk();
+    serier.slice(0, 2).forEach((s, si) => {
+      const id = `${o.id ?? 'g'}-f${si ? '2' : ''}`;
+      deler.push(`<defs><linearGradient id="${id}" x1="0" x2="0" y1="0" y2="1"><stop offset="0" class="g-stopp-topp${si ? '2' : ''}"/><stop offset="1" class="g-stopp-bunn${si ? '2' : ''}"/></linearGradient></defs>`);
+      let bit = [];
+      const lukk = () => {
+        if (bit.length) deler.push(`<path class="g-alan${si ? ' g-alan2' : ''}" fill="url(#${id})" d="M${bit.map((q) => `${r2(q.x)} ${r2(q.y)}`).join('L')}L${r2(bit.at(-1).x)} ${r2(bunn)}L${r2(bit[0].x)} ${r2(bunn)}Z"/>`);
+        bit = [];
+      };
+      s.punkter.forEach((q, i) => (q.y === null || q.y === undefined ? lukk() : bit.push({ x: x(i), y: y(q.y) })));
+      lukk();
+    });
   }
+  // Prognoz: valg.prognoseFra etiketinden sonrası kesik çizgi.
+  const prognoseI = d.valg?.prognoseFra === undefined ? -1 : etiketter.indexOf(String(d.valg.prognoseFra));
   serier.forEach((s, si) => {
     const p = s.punkter.map((q, i) => ({ x: x(i), y: q.y === null || q.y === undefined ? null : y(q.y) }));
-    deler.push(`<g class="g-serie g-s${si}"><path d="${d.valg?.trapp ? trappSti(p) : sti(p)}"/>`);
+    const yol = (q) => (d.valg?.trapp ? trappSti(q) : sti(q));
+    if (prognoseI >= 0) {
+      deler.push(`<g class="g-serie g-s${si}"><path d="${yol(p.map((q, i) => (i <= prognoseI ? q : { ...q, y: null })))}"/>`);
+      deler.push(`<path class="g-prognose" d="${yol(p.map((q, i) => (i >= prognoseI ? q : { ...q, y: null })))}"/>`);
+    } else deler.push(`<g class="g-serie g-s${si}"><path d="${yol(p)}"/>`);
     const siste = [...s.punkter].map((q, i) => ({ q, i })).reverse().find(({ q }) => q.y !== null && q.y !== undefined);
     if (siste) {
       deler.push(`<circle cx="${x(siste.i)}" cy="${y(siste.q.y)}" r="3.5"/>`);
@@ -87,7 +96,8 @@ export function tegn(d, o = {}) {
     const verdi = serier.map((s) => s.punkter[i]?.y).map((v) => (v === null || v === undefined ? null : v));
     if (verdi.every((v) => v === null)) continue;
     const linjer = serier.length === 1 ? [`${tall(verdi[0], des)}${enh}`] : serier.map((s, si) => `${s.navn}: ${verdi[si] === null ? '–' : `${tall(verdi[si], des)}${enh}`}`);
-    punkter.push({ x: x(i), y: Math.min(...verdi.filter((v) => v !== null).map(y)), tekst: [etiketter[i], ...linjer].join('\n') });
+    const etikett = prognoseI >= 0 && i > prognoseI ? `${etiketter[i]} (prognose)` : etiketter[i];
+    punkter.push({ x: x(i), y: Math.min(...verdi.filter((v) => v !== null).map(y)), tekst: [etikett, ...linjer].join('\n') });
   }
 
   const sisteVerdi = serier[0].punkter.findLast((p) => p.y !== null && p.y !== undefined);
