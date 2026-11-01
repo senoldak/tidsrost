@@ -6937,7 +6937,22 @@
     "medier:9347e42c08a6695a": "2026-11-01T07:01:08.103Z",
     "medier:c09e15015ab0295a": "2026-11-01T07:01:08.103Z",
     "medier:6427b8539473ea09": "2026-11-01T07:01:08.103Z",
-    "medier:10252b2049ed4e04": "2026-11-01T07:01:08.103Z"
+    "medier:10252b2049ed4e04": "2026-11-01T07:01:08.103Z",
+    "medier:e09f986662ce9a8b": "2026-11-01T09:01:09.176Z",
+    "medier:694be0a3ba3076a3": "2026-11-01T09:01:09.176Z",
+    "medier:9ccf4dc333ed3bec": "2026-11-01T09:01:09.176Z",
+    "medier:444880b005be16ac": "2026-11-01T09:01:09.176Z",
+    "medier:043249391518814e": "2026-11-01T09:01:09.176Z",
+    "medier:541f2adde197515d": "2026-11-01T09:01:09.176Z",
+    "medier:a4c7d0db39516e64": "2026-11-01T09:01:09.176Z",
+    "medier:39dc853938bbc07b": "2026-11-01T09:01:09.176Z",
+    "medier:1da471b1bdb4b173": "2026-11-01T09:01:09.176Z",
+    "medier:181424feed49b7a1": "2026-11-01T09:01:09.176Z",
+    "medier:8f81fd2cd4b4f327": "2026-11-01T09:01:09.176Z",
+    "medier:ec69d4f111b5b8e6": "2026-11-01T09:01:09.176Z",
+    "medier:f2f9b3e2692782d5": "2026-11-01T09:01:09.176Z",
+    "medier:cca346adcd225e60": "2026-11-01T09:01:09.176Z",
+    "medier:acaab1bb8eb2f294": "2026-11-01T09:01:09.176Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -6990,96 +7005,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:b493570d5f6f934d": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
-    "medier:2784f542ce31d338": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
-    "medier:cfbe5b361734ff62": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
-    "medier:692a936467983b8e": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
-    "medier:be732aa72e5699af": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
-    "medier:99ffa0e0a6e09ebc": {
-      "p": 74,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
-    "medier:4f85e7fadb8e4a98": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
-    "medier:8f285f9949b92626": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
-    "medier:bab629cfab81d6cd": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
-    "regjeringen:3184606": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
-    "ssb:a81f7d43-c566-410d-baec-b82ca899abb2": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
-    "ssb:57006092-a1b7-4fe9-85f7-dd251f978945": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
-    "fhi:https://www.fhi.no/nyheter/2026/tall-pa-selvmord-i-norge-i-2025/": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
-    "fhi:https://www.fhi.no/nyheter/2026/fhi-inviterer-100-000-til-a-delta-i-arets-nasjonale-folkehelseundersokelse/": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/10/1168697": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/10/1168679": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
-    "helsedirektoratet:https://www.helsedirektoratet.no/nyheter/nedgang-i-antall-overdosedodsfall-i-2025": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
-    "helsedirektoratet:https://www.helsedirektoratet.no/nyheter/spor-barselkvinner-om-psykisk-helse": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T07:05:32.411Z"
-    },
     "medier:e70e646ec080e425": {
       "p": 65,
       "v": "b34cb0de5bde",
@@ -8834,6 +8759,31 @@
       "p": 82,
       "v": "b34cb0de5bde",
       "t": "2026-11-01T07:03:21.657Z"
+    },
+    "medier:694be0a3ba3076a3": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T09:03:28.368Z"
+    },
+    "medier:f2f9b3e2692782d5": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T09:03:28.368Z"
+    },
+    "medier:39dc853938bbc07b": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T09:03:28.368Z"
+    },
+    "medier:541f2adde197515d": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T09:03:28.368Z"
+    },
+    "medier:8f81fd2cd4b4f327": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T09:03:28.368Z"
     }
   }
 }
