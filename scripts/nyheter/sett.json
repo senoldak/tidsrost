@@ -7003,7 +7003,22 @@
     "medier:069ed8749b381c03": "2026-11-01T15:01:05.746Z",
     "medier:5a22b9608bc76c5d": "2026-11-01T15:01:05.746Z",
     "medier:e11027d9cae459c4": "2026-11-01T15:01:05.746Z",
-    "medier:60d077692774609a": "2026-11-01T15:01:05.746Z"
+    "medier:60d077692774609a": "2026-11-01T15:01:05.746Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168715": "2026-11-01T17:01:03.302Z",
+    "medier:94ef14c2d7e4514b": "2026-11-01T17:01:03.302Z",
+    "medier:094c439fc8b3eb81": "2026-11-01T17:01:03.302Z",
+    "medier:3c73fb02b95979f5": "2026-11-01T17:01:03.302Z",
+    "medier:e3a713763a973b4c": "2026-11-01T17:01:03.302Z",
+    "medier:eaf823cc3463a9cf": "2026-11-01T17:01:03.302Z",
+    "medier:63038d79bb099d7e": "2026-11-01T17:01:03.302Z",
+    "medier:53fe851c1d6ba855": "2026-11-01T17:01:03.302Z",
+    "medier:85df5eba6565517d": "2026-11-01T17:01:03.302Z",
+    "medier:b2abd7e18bb13ddd": "2026-11-01T17:01:03.302Z",
+    "medier:d2f10124f26b5c8c": "2026-11-01T17:01:03.302Z",
+    "medier:dcdb9d446c2e7e09": "2026-11-01T17:01:03.302Z",
+    "medier:ebae890ee573ecdf": "2026-11-01T17:01:03.302Z",
+    "medier:1618e61a9a1fa9e6": "2026-11-01T17:01:03.302Z",
+    "regjeringen:3190640": "2026-11-01T17:01:03.302Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -7056,76 +7071,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "nkom:348b802c-5a49-42b2-bf62-af2b3c383143": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T15:09:18.602Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/10/1168698": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T15:09:18.602Z"
-    },
-    "medier:1f61cd85b7e36d6a": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T17:03:36.901Z"
-    },
-    "medier:c2e99173ef6f008c": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T17:03:36.901Z"
-    },
-    "medier:551e54403af627da": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T17:03:36.901Z"
-    },
-    "medier:ad7c28cc9ab99f2d": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T17:03:36.901Z"
-    },
-    "medier:1d90a2d1823b1bfe": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T17:03:36.901Z"
-    },
-    "medier:cec60a1c269cce93": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T17:03:36.901Z"
-    },
-    "medier:472c2ef5c8b9552b": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T17:03:36.901Z"
-    },
-    "regjeringen:3186522": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T17:03:36.901Z"
-    },
-    "dsb:https://www.dsb.no/aktuelt/ber-befolkningen-vare-forberedt-pa-cyberangrep/": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T17:03:36.901Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/10/1168702": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T17:03:36.901Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/10/1168700": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T17:03:36.901Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2294": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T17:03:36.901Z"
-    },
     "medier:b502fadb5531f62f": {
       "p": 65,
       "v": "b34cb0de5bde",
@@ -8685,6 +8630,36 @@
       "p": 25,
       "v": "b34cb0de5bde",
       "t": "2026-11-01T15:02:48.433Z"
+    },
+    "medier:94ef14c2d7e4514b": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T17:04:17.799Z"
+    },
+    "medier:3c73fb02b95979f5": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T17:04:17.799Z"
+    },
+    "medier:eaf823cc3463a9cf": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T17:04:17.799Z"
+    },
+    "medier:53fe851c1d6ba855": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T17:04:17.799Z"
+    },
+    "regjeringen:3190640": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T17:04:17.799Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168715": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T17:04:17.799Z"
     }
   }
 }
