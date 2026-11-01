@@ -30,11 +30,15 @@ export function validerGraf(d) {
     for (const s of d.serier ?? []) for (const p of s.punkter ?? []) if (p.y !== null && !Number.isFinite(p.y2)) h.push(`manual: "${p.x}" y2 eksik`);
   }
   if (d.form === 'maler' && !(d.valg?.maks > 0)) h.push('maler: valg.maks eksik');
+  if ((d.form === 'maler' || d.form === 'rutenett') && !Number.isFinite(d.serier?.[0]?.punkter?.[0]?.y)) h.push(`${d.form}: ilk verdi eksik`);
   if (!Array.isArray(d.serier) || !d.serier.length) h.push('serier boş');
   else
     for (const s of d.serier) {
       if (!Array.isArray(s.punkter) || !s.punkter.length) h.push(`serier: "${s.navn}" boş`);
-      else for (const p of s.punkter) if (p.y !== null && !Number.isFinite(p.y)) h.push(`serier: "${s.navn}" ${p.x} geçersiz y`);
+      else {
+        for (const p of s.punkter) if (p.y !== null && !Number.isFinite(p.y)) h.push(`serier: "${s.navn}" ${p.x} geçersiz y`);
+        if (!s.punkter.some((p) => Number.isFinite(p.y))) h.push(`serier: "${s.navn}" hiç verdi yok`);
+      }
     }
   return h;
 }

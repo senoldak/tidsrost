@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { fineTikker, skala, tall, kortNavn, esc, sti, trappSti, kortEnhet } from './felles.mjs';
+import { fineTikker, skala, tall, kortNavn, esc, sti, trappSti, kortEnhet, tikkDesimaler } from './felles.mjs';
 
 test('fineTikker: düz seri NaN üretmez', () => { const t = fineTikker(5, 5); assert.ok(t.length >= 2 && t.every(Number.isFinite)); });
 test('fineTikker: 0–5,2 → 0..6', () => assert.deepEqual(fineTikker(0, 5.2), [0, 2, 4, 6]));
@@ -15,3 +15,10 @@ test('kortEnhet', () => {
   assert.equal(kortEnhet('Kroner per måned'), ' kr');
   assert.equal(kortEnhet('Indeks (2015 = 100)'), '');
 });
+test('tikkDesimaler: adımdan ondalık', () => {
+  assert.equal(tikkDesimaler([4, 4.25, 4.5]), 2);
+  assert.equal(tikkDesimaler([0, 2, 4]), 0);
+  assert.equal(tikkDesimaler([0, 0.5, 1]), 1);
+  assert.equal(tikkDesimaler([0.01, 0.02]), 2);
+});
+test('fineTikker: sonlu olmayan girdi hata atar, yığın taşmaz', () => assert.throws(() => fineTikker(Infinity, -Infinity), /sonlu/));

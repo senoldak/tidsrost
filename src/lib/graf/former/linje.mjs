@@ -1,5 +1,5 @@
 // Çizgi: tek ya da çok seri (en çok 3), basamak (valg.trapp), log eksen (valg.logAkse), hedef çizgisi ve vurgulu dönem.
-import { esc, etikettIndekser, fineTikker, kortEnhet, r2, skala, sti, tall, tekst, trappSti } from '../felles.mjs';
+import { esc, etikettIndekser, fineTikker, kortEnhet, r2, skala, sti, tall, tekst, trappSti, tikkDesimaler } from '../felles.mjs';
 
 const B = 400, B_BRED = 900, H = 220, V = 40, S = 46, U = 14, A = 26;
 
@@ -35,7 +35,7 @@ export function tegn(d, o = {}) {
   deler.push('<g class="g-akse">');
   for (const t of tikker) {
     deler.push(`<line x1="${V}" x2="${bredde - S + 6}" y1="${y(t)}" y2="${y(t)}"${t === 0 ? ' class="g-null"' : ''}/>`);
-    deler.push(tekst(V - 6, y(t) + 4, log ? t.toLocaleString('nb-NO') : tall(t, Number.isInteger(t) ? 0 : 1), 'text-anchor="end"'));
+    deler.push(tekst(V - 6, y(t) + 4, log ? t.toLocaleString('nb-NO') : tall(t, tikkDesimaler(tikker)), 'text-anchor="end"'));
   }
   for (const i of etikettIndekser(lengde)) {
     const anker = lengde === 1 ? 'middle' : i === 0 ? 'start' : i === lengde - 1 ? 'end' : 'middle';

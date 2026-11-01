@@ -4,6 +4,7 @@ const yuvarla = (n) => Math.round(n * 1e10) / 1e10;
 
 /** [min, max] aralığını kapsayan, 1/2/2,5/5 × 10ⁿ adımlı yaklaşık n+1 eksen değeri. Düz seride değerin etrafında açılır. */
 export function fineTikker(min, max, n = 4) {
+  if (!Number.isFinite(min) || !Number.isFinite(max)) throw new Error(`fineTikker: sonlu olmayan aralık (${min}, ${max})`);
   if (!(max > min)) {
     const a = Math.abs(min) || 1;
     return fineTikker(min - a / 2, max + a / 2, n);
@@ -16,6 +17,14 @@ export function fineTikker(min, max, n = 4) {
   const ut = [];
   for (let v = bas; v <= son + adim / 2; v += adim) ut.push(yuvarla(v));
   return ut;
+}
+
+/** Eksen etiketleri için ondalık sayısı: adımı tam gösterecek kadar (en çok 2). */
+export function tikkDesimaler(tikker) {
+  const steg = tikker.length > 1 ? Math.abs(tikker[1] - tikker[0]) : Math.abs(tikker[0]);
+  if (!steg) return 0;
+  for (let d = 0; d <= 2; d++) if (Math.abs(Math.round(steg * 10 ** d) - steg * 10 ** d) < 1e-9) return d;
+  return 2;
 }
 
 /** Doğrusal ölçek: [d0, d1] → [r0, r1]. Düz aralıkta ortaya düşer. */

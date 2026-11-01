@@ -37,3 +37,8 @@ test('linje: çoklu seride nokkel, tek seride yok', () => {
   assert.equal(tegn(veri3).nokkel, undefined);
   assert.deepEqual(tegn({ ...veri3, serier: [veri3.serier[0], { navn: 'B', punkter: [{ x: 'jan', y: 1 }] }] }).nokkel, [{ navn: 'KPI', klasse: 'g-s0' }, { navn: 'B', klasse: 'g-s1' }]);
 });
+test('linje: 4–5 aralığında eksen 4,25 yazar, 4,3 yazmaz', () => {
+  const s = tegn({ ...veri3, serier: [{ navn: 'R', punkter: [{ x: 'a', y: 4 }, { x: 'b', y: 5 }] }] }).svg;
+  assert.ok(s.includes('>4,25<'));
+  assert.ok(!s.includes('>4,3<'));
+});
