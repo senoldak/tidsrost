@@ -1,55 +1,19 @@
 ---
-// Grafik setinin tek kartı: başlık, derlemede çizilen SVG (src/lib/graf), kaynak satırı, "Vis tallene" tablosu ve
-// etkileşim için JSON. Betik (src/scripts/graf.mjs) yalnız ipucu ekler; JS kapalıyken grafik ve tablo tam görünür.
-import '../../styles/graf.css';
-import { nyId, tegnGraf } from '../../lib/graf/index.mjs';
-import type { GrafData } from '../../lib/graf/sema.mjs';
-
+// Grafik setinin tek kartı. HTML src/lib/graf/html.mjs'te (Forklart eklentisiyle ortak); betik (src/scripts/graf.mjs)
+// yalnız ipucu ekler, JS kapalıyken grafik ve tablo tam görünür.
 // visTittel=false: sayfanın kendi bölüm başlığı varken başlık yalnız ekran okuyucuya gider.
 // tabell=false: sayfa aynı sayıları zaten tabloyla veriyorsa "Vis tallene" çıkmaz.
+import '../../styles/graf.css';
+import { nyId } from '../../lib/graf/index.mjs';
+import { grafHtml } from '../../lib/graf/html.mjs';
+import type { GrafData } from '../../lib/graf/sema.mjs';
+
 type Props = GrafData & { bred?: boolean; nivaa?: 2 | 3; visTittel?: boolean; tabell?: boolean };
 const { bred = false, nivaa = 3, visTittel = true, tabell = true, ...data } = Astro.props as Props;
-const t = tegnGraf(data as GrafData, { id: nyId(), bred });
-const Overskrift = `h${nivaa}`;
-const json = JSON.stringify({ modus: t.modus, punkter: t.punkter, bredde: t.bredde, ramme: t.ramme ?? null }).replace(/</g, '\\u003c');
+const html = grafHtml(data as GrafData, { id: nyId(), bred, nivaa, visTittel, tabell });
 ---
 
-<figure class:list={['g-kort', { 'g-bred': bred }]} data-graf tabindex="0">
-  <figcaption>
-    <Overskrift class:list={['g-tittel', { 'sr-only': !visTittel }]}>{data.tittel}</Overskrift>
-    {data.under && <p class="g-under">{data.under}</p>}
-    {
-      data.tall && (
-        <p class="g-tall">
-          {data.tall.verdi}
-          {data.tall.etikett && <small>{data.tall.etikett}</small>}
-        </p>
-      )
-    }
-  </figcaption>
-  <div class="g-flate">
-    <Fragment set:html={t.svg} />
-    <div class="g-tips" hidden></div>
-  </div>
-  {t.nokkel && <p class="g-nokkel">{t.nokkel.map((n) => <span class={n.klasse}>{n.navn}</span>)}</p>}
-  <p class="g-kilde">
-    Kilde: {data.kilde.url ? <a href={data.kilde.url}>{data.kilde.navn}</a> : data.kilde.navn}{data.kilde.tabell && `, tabell ${data.kilde.tabell}`}
-  </p>
-  {tabell && (<details class="g-tabell">
-    <summary>Vis tallene</summary>
-    <div class="g-tabell-rull">
-      <table>
-        <thead>
-          <tr>{t.tabell.kolonner.map((k) => <th scope="col">{k}</th>)}</tr>
-        </thead>
-        <tbody>
-          {t.tabell.rader.map((r) => <tr>{r.map((c, i) => (i === 0 ? <th scope="row">{c}</th> : <td>{c}</td>))}</tr>)}
-        </tbody>
-      </table>
-    </div>
-  </details>)}
-  <script type="application/json" data-graf-punkter set:html={json} />
-</figure>
+<Fragment set:html={html} />
 
 <script>
   import '../../scripts/graf.mjs';
