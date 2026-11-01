@@ -119,6 +119,21 @@
   fill: var(--g-bar);
   opacity: 0.5;
 }
+.g-lag-kant {
+  stroke: var(--paper);
+  stroke-width: 1;
+}
+.g-lag {
+  opacity: 0.85;
+  stroke: var(--paper);
+  stroke-width: 1;
+}
+.g-nokkel .g-n-su::before { height: 10px; background: var(--water); }
+.g-nokkel .g-n-kontur::before { height: 10px; background: var(--contour); }
+.g-nokkel .g-n-gul::before { height: 10px; background: var(--warn); }
+.g-nokkel .g-n-rod::before { height: 10px; background: var(--red); }
+.g-nokkel .g-n-su2::before { height: 10px; background: var(--g-su2); }
+.g-nokkel .g-n-bar::before { height: 10px; background: var(--g-bar); }
 .g-baand {
   fill: var(--g-su2);
   opacity: 0.55;
