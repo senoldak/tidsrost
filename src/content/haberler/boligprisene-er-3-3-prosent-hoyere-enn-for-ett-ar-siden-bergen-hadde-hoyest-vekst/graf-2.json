@@ -1,0 +1,105 @@
+{
+ "tittel": "Prisfall bare i 2008 og i 2023",
+ "under": "Prisindeks for brukte boliger i hele landet, tredje kvartal hvert år, indeks der gjennomsnittet i 2015 er hundre",
+ "enhet": "Prisindeks for brukte boliger i hele landet, tredje kvartal hvert år, indeks der gjennomsnittet i 2015 er hundre",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "linje",
+ "serier": [
+  {
+   "navn": "Hele landet",
+   "punkter": [
+    {
+     "x": "2005",
+     "y": 55.4
+    },
+    {
+     "x": "2006",
+     "y": 63.8
+    },
+    {
+     "x": "2007",
+     "y": 71.1
+    },
+    {
+     "x": "2008",
+     "y": 69.6
+    },
+    {
+     "x": "2009",
+     "y": 72.2
+    },
+    {
+     "x": "2010",
+     "y": 77
+    },
+    {
+     "x": "2011",
+     "y": 83.4
+    },
+    {
+     "x": "2012",
+     "y": 89.3
+    },
+    {
+     "x": "2013",
+     "y": 92.1
+    },
+    {
+     "x": "2014",
+     "y": 95.3
+    },
+    {
+     "x": "2015",
+     "y": 101.1
+    },
+    {
+     "x": "2016",
+     "y": 109.1
+    },
+    {
+     "x": "2017",
+     "y": 111.8
+    },
+    {
+     "x": "2018",
+     "y": 115.1
+    },
+    {
+     "x": "2019",
+     "y": 117.8
+    },
+    {
+     "x": "2020",
+     "y": 123.6
+    },
+    {
+     "x": "2021",
+     "y": 136.5
+    },
+    {
+     "x": "2022",
+     "y": 143.1
+    },
+    {
+     "x": "2023",
+     "y": 141.3
+    },
+    {
+     "x": "2024",
+     "y": 145.9
+    },
+    {
+     "x": "2025",
+     "y": 153.2
+    },
+    {
+     "x": "2026",
+     "y": 158.3
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+{
+ "tittel": "Høyest fravær i helse- og sosialtjenester",
+ "under": "Sykefravær etter næring i 2. kvartal 2026, sesongjustert, prosent",
+ "enhet": "prosent",
+ "desimaler": 2,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Sykefravær",
+   "punkter": [
+    {
+     "x": "Jordbruk, skogbruk og fiske",
+     "y": 5.13
+    },
+    {
+     "x": "Bergverk og utvinning",
+     "y": 4.75
+    },
+    {
+     "x": "Industri",
+     "y": 5.94
+    },
+    {
+     "x": "Kraft, vann og renovasjon",
+     "y": 5.41
+    },
+    {
+     "x": "Bygg og anlegg",
+     "y": 6.41
+    },
+    {
+     "x": "Varehandel",
+     "y": 6.27
+    },
+    {
+     "x": "Transport og lagring",
+     "y": 7.39
+    },
+    {
+     "x": "Overnatting og servering",
+     "y": 6.44
+    },
+    {
+     "x": "Informasjon og kommunikasjon",
+     "y": 4.15
+    },
+    {
+     "x": "Finans og forsikring",
+     "y": 4.59
+    },
+    {
+     "x": "Eiendom, faglig og teknisk",
+     "y": 4.71
+    },
+    {
+     "x": "Forretningsmessig tjenesteyting",
+     "y": 7.06
+    },
+    {
+     "x": "Offentlig administrasjon",
+     "y": 5.68
+    },
+    {
+     "x": "Undervisning",
+     "y": 6.66
+    },
+    {
+     "x": "Helse og sosial",
+     "y": 9.61
+    },
+    {
+     "x": "Personlig tjenesteyting",
+     "y": 6.1
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": true,
+  "fremhev": [
+   "Helse og sosial"
+  ]
+ },
+ "merknader": [
+  {
+   "type": "mal",
+   "y": 6.68,
+   "tekst": "Alle næringer: 6,68 %"
+  }
+ ]
+}

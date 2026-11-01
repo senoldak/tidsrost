@@ -1,0 +1,63 @@
+{
+ "tittel": "Storbritannia og Tyskland kjøper mest",
+ "under": "De ti største mottakerlandene for norsk vareeksport i 2025, milliarder kroner",
+ "enhet": "milliarder kroner",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Eksport",
+   "punkter": [
+    {
+     "x": "Storbritannia",
+     "y": 316.579
+    },
+    {
+     "x": "Tyskland",
+     "y": 310.141
+    },
+    {
+     "x": "Nederland",
+     "y": 173.056
+    },
+    {
+     "x": "Sverige",
+     "y": 114.952
+    },
+    {
+     "x": "Polen",
+     "y": 104.572
+    },
+    {
+     "x": "Frankrike",
+     "y": 102.439
+    },
+    {
+     "x": "Danmark",
+     "y": 100.677
+    },
+    {
+     "x": "Belgia",
+     "y": 90.115
+    },
+    {
+     "x": "USA",
+     "y": 68.279
+    },
+    {
+     "x": "Finland",
+     "y": 58.281
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": true,
+  "fremhev": [
+   "Storbritannia"
+  ]
+ }
+}

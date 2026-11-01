@@ -1,0 +1,116 @@
+{
+ "tittel": "Norge ligger over OECD-snittet i reell lønn, men under Danmark, Tyskland og USA",
+ "under": "Gjennomsnittlig årslønn i faste priser, amerikanske dollar justert for prisnivået (PPP)",
+ "enhet": "Gjennomsnittlig årslønn i faste priser, amerikanske dollar justert for prisnivået (PPP)",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "OECD"
+ },
+ "form": "helning",
+ "serier": [
+  {
+   "navn": "Norge",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 67127.451
+    },
+    {
+     "x": "2025",
+     "y": 73461.545
+    }
+   ]
+  },
+  {
+   "navn": "Danmark",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 73025.931
+    },
+    {
+     "x": "2025",
+     "y": 78090.445
+    }
+   ]
+  },
+  {
+   "navn": "Tyskland",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 71243.967
+    },
+    {
+     "x": "2025",
+     "y": 76284.517
+    }
+   ]
+  },
+  {
+   "navn": "USA",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 76999.191
+    },
+    {
+     "x": "2025",
+     "y": 86977.138
+    }
+   ]
+  },
+  {
+   "navn": "Storbritannia",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 64198.579
+    },
+    {
+     "x": "2025",
+     "y": 66299.139
+    }
+   ]
+  },
+  {
+   "navn": "Finland",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 60739.539
+    },
+    {
+     "x": "2025",
+     "y": 63053.422
+    }
+   ]
+  },
+  {
+   "navn": "Sverige",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 59542.107
+    },
+    {
+     "x": "2025",
+     "y": 61443.422
+    }
+   ]
+  },
+  {
+   "navn": "OECD-snitt",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 59421.9066189107
+    },
+    {
+     "x": "2025",
+     "y": 64802.6344757932
+    }
+   ]
+  }
+ ]
+}

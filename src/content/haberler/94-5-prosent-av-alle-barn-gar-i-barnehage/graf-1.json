@@ -1,0 +1,84 @@
+{
+ "tittel": "Maksprisen er mer enn halvert siden 2022",
+ "under": "Nasjonal makspris for heltidsplass i barnehage, kroner per måned",
+ "enhet": "Nasjonal makspris for heltidsplass i barnehage, kroner per måned",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Kunnskapsdepartementet, Utdanningsdirektoratet"
+ },
+ "form": "linje",
+ "serier": [
+  {
+   "navn": "Makspris",
+   "punkter": [
+    {
+     "x": "januar 2013",
+     "y": 2330
+    },
+    {
+     "x": "januar 2014",
+     "y": 2405
+    },
+    {
+     "x": "januar 2015",
+     "y": 2580
+    },
+    {
+     "x": "januar 2016",
+     "y": 2655
+    },
+    {
+     "x": "januar 2017",
+     "y": 2730
+    },
+    {
+     "x": "januar 2018",
+     "y": 2910
+    },
+    {
+     "x": "januar 2019",
+     "y": 2990
+    },
+    {
+     "x": "august 2019",
+     "y": 3040
+    },
+    {
+     "x": "januar 2020",
+     "y": 3135
+    },
+    {
+     "x": "januar 2021",
+     "y": 3230
+    },
+    {
+     "x": "januar 2022",
+     "y": 3315
+    },
+    {
+     "x": "august 2022",
+     "y": 3050
+    },
+    {
+     "x": "januar 2023",
+     "y": 3000
+    },
+    {
+     "x": "januar 2024",
+     "y": 3000
+    },
+    {
+     "x": "august 2024",
+     "y": 2000
+    },
+    {
+     "x": "august 2025",
+     "y": 1200
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "trapp": true
+ }
+}

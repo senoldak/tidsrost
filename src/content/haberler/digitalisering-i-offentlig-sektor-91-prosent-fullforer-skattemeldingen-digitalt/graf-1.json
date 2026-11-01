@@ -1,0 +1,90 @@
+{
+ "tittel": "Litt færre brukte de offentlige nettjenestene",
+ "under": "Andel av befolkningen som har brukt offentlige nettjenester til formålet siste tolv måneder, i 2025 og i 2026, prosent",
+ "enhet": "prosent",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "helning",
+ "serier": [
+  {
+   "navn": "Skattemeldingen",
+   "punkter": [
+    {
+     "x": "2025",
+     "y": 92
+    },
+    {
+     "x": "2026",
+     "y": 91
+    }
+   ]
+  },
+  {
+   "navn": "Post via brukerkonto",
+   "punkter": [
+    {
+     "x": "2025",
+     "y": 91
+    },
+    {
+     "x": "2026",
+     "y": 90
+    }
+   ]
+  },
+  {
+   "navn": "Egen informasjon",
+   "punkter": [
+    {
+     "x": "2025",
+     "y": 85
+    },
+    {
+     "x": "2026",
+     "y": 80
+    }
+   ]
+  },
+  {
+   "navn": "Informasjon fra nettsider",
+   "punkter": [
+    {
+     "x": "2025",
+     "y": 74
+    },
+    {
+     "x": "2026",
+     "y": 68
+    }
+   ]
+  },
+  {
+   "navn": "Timebestilling",
+   "punkter": [
+    {
+     "x": "2025",
+     "y": 39
+    },
+    {
+     "x": "2026",
+     "y": 32
+    }
+   ]
+  },
+  {
+   "navn": "Søkt om ytelser",
+   "punkter": [
+    {
+     "x": "2025",
+     "y": 35
+    },
+    {
+     "x": "2026",
+     "y": 32
+    }
+   ]
+  }
+ ]
+}

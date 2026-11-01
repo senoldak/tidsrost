@@ -1,0 +1,53 @@
+{
+ "tittel": "Bare Nord-Norge har mer vann enn normalt",
+ "under": "Fyllingsgrad i vannmagasinene ved inngangen til oktober, prosent: median for årene 2006–2025 og nivået i 2026",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Norges vassdrags- og energidirektorat (NVE)"
+ },
+ "form": "manual",
+ "valg": {
+  "gruppenavn": [
+   "Median",
+   "2026"
+  ]
+ },
+ "serier": [
+  {
+   "navn": "Bare Nord-Norge har mer vann enn normalt",
+   "punkter": [
+    {
+     "x": "Sørøst-Norge (NO1)",
+     "y": 89.2,
+     "y2": 75.1
+    },
+    {
+     "x": "Sørvest-Norge (NO2)",
+     "y": 82.4,
+     "y2": 51.2
+    },
+    {
+     "x": "Midt-Norge (NO3)",
+     "y": 83.3,
+     "y2": 71.9
+    },
+    {
+     "x": "Nord-Norge (NO4)",
+     "y": 82.3,
+     "y2": 89.4
+    },
+    {
+     "x": "Vest-Norge (NO5)",
+     "y": 85.5,
+     "y2": 70.9
+    },
+    {
+     "x": "Hele landet",
+     "y": 81.7,
+     "y2": 67.9
+    }
+   ]
+  }
+ ]
+}

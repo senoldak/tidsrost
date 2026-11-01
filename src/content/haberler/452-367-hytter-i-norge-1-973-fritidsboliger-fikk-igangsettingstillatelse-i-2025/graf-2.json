@@ -1,0 +1,63 @@
+{
+ "tittel": "Flest hytter i Ringsaker",
+ "under": "Kommunene med flest hytter, sommerhus og lignende fritidsbygg i 2026, antall",
+ "enhet": "Kommunene med flest hytter, sommerhus og lignende fritidsbygg i 2026, antall",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Hytter",
+   "punkter": [
+    {
+     "x": "Ringsaker",
+     "y": 7251
+    },
+    {
+     "x": "Trysil",
+     "y": 7063
+    },
+    {
+     "x": "Hol",
+     "y": 6060
+    },
+    {
+     "x": "Vinje",
+     "y": 5904
+    },
+    {
+     "x": "Sigdal",
+     "y": 5227
+    },
+    {
+     "x": "Larvik",
+     "y": 4908
+    },
+    {
+     "x": "Nord-Aurdal",
+     "y": 4865
+    },
+    {
+     "x": "Orkland",
+     "y": 4594
+    },
+    {
+     "x": "Ringebu",
+     "y": 4549
+    },
+    {
+     "x": "Fredrikstad",
+     "y": 4484
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": false,
+  "fremhev": [
+   "Ringsaker"
+  ]
+ }
+}

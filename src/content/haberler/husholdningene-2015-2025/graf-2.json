@@ -1,0 +1,62 @@
+{
+ "tittel": "Husholdningenes realinntekt falt i 2016 og i 2023, og var uendret i 2022",
+ "under": "Prosentvis endring i disponibel realinntekt fra året før",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå"
+ },
+ "form": "soyle",
+ "serier": [
+  {
+   "navn": "Realinntekt",
+   "punkter": [
+    {
+     "x": "2016",
+     "y": -0.5
+    },
+    {
+     "x": "2017",
+     "y": 2.8
+    },
+    {
+     "x": "2018",
+     "y": 1.8
+    },
+    {
+     "x": "2019",
+     "y": 3.4
+    },
+    {
+     "x": "2020",
+     "y": 1.5
+    },
+    {
+     "x": "2021",
+     "y": 5.7
+    },
+    {
+     "x": "2022",
+     "y": 0
+    },
+    {
+     "x": "2023",
+     "y": -0.9
+    },
+    {
+     "x": "2024",
+     "y": 3
+    },
+    {
+     "x": "2025",
+     "y": 3.3
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "2025"
+  ]
+ }
+}

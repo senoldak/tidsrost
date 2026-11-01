@@ -1,0 +1,110 @@
+{
+ "tittel": "Reell lønn har vokst langt mindre enn lønnen i kroner",
+ "under": "Gjennomsnittlig årslønn i kroner; reell lønn er regnet om til prisnivået i det siste året",
+ "enhet": "Gjennomsnittlig årslønn i kroner; reell lønn er regnet om til prisnivået i det siste året",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "linje",
+ "serier": [
+  {
+   "navn": "Nominell lønn",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 519800
+    },
+    {
+     "x": "2016",
+     "y": 528900
+    },
+    {
+     "x": "2017",
+     "y": 541000
+    },
+    {
+     "x": "2018",
+     "y": 556300
+    },
+    {
+     "x": "2019",
+     "y": 575700
+    },
+    {
+     "x": "2020",
+     "y": 593500
+    },
+    {
+     "x": "2021",
+     "y": 614300
+    },
+    {
+     "x": "2022",
+     "y": 640700
+    },
+    {
+     "x": "2023",
+     "y": 674000
+    },
+    {
+     "x": "2024",
+     "y": 711700
+    },
+    {
+     "x": "2025",
+     "y": 746700
+    }
+   ]
+  },
+  {
+   "navn": "Reell lønn",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 715978
+    },
+    {
+     "x": "2016",
+     "y": 703324
+    },
+    {
+     "x": "2017",
+     "y": 706266
+    },
+    {
+     "x": "2018",
+     "y": 706861
+    },
+    {
+     "x": "2019",
+     "y": 716045
+    },
+    {
+     "x": "2020",
+     "y": 728221
+    },
+    {
+     "x": "2021",
+     "y": 728707
+    },
+    {
+     "x": "2022",
+     "y": 718274
+    },
+    {
+     "x": "2023",
+     "y": 716259
+    },
+    {
+     "x": "2024",
+     "y": 732956
+    },
+    {
+     "x": "2025",
+     "y": 746700
+    }
+   ]
+  }
+ ]
+}

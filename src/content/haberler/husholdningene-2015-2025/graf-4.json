@@ -1,0 +1,29 @@
+{
+ "tittel": "Nær sju av ti i alderen femten til syttifire år var i arbeid i 2025",
+ "under": "Andel av befolkningen fra femten til syttifire år, etter tilknytning til arbeidsmarkedet",
+ "enhet": "prosent",
+ "desimaler": 2,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå"
+ },
+ "form": "rutenett",
+ "serier": [
+  {
+   "navn": "Tilknytning",
+   "punkter": [
+    {
+     "x": "Sysselsatte",
+     "y": 69.6
+    },
+    {
+     "x": "Utenfor arbeidsstyrken",
+     "y": 27.1
+    },
+    {
+     "x": "Arbeidsledige",
+     "y": 3.26
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "tittel": "Høyest andel i Oslo",
+ "under": "Andel av befolkningen seksten år og over med universitets- og høgskoleutdanning, etter fylke, i 2025",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Høyere utdanning",
+   "punkter": [
+    {
+     "x": "Rogaland",
+     "y": 36.8
+    },
+    {
+     "x": "Møre og Romsdal",
+     "y": 32.5
+    },
+    {
+     "x": "Nordland",
+     "y": 30.9
+    },
+    {
+     "x": "Østfold",
+     "y": 30.5
+    },
+    {
+     "x": "Akershus",
+     "y": 41.7
+    },
+    {
+     "x": "Buskerud",
+     "y": 33.6
+    },
+    {
+     "x": "Innlandet",
+     "y": 30.2
+    },
+    {
+     "x": "Vestfold",
+     "y": 34.9
+    },
+    {
+     "x": "Telemark",
+     "y": 31
+    },
+    {
+     "x": "Agder",
+     "y": 34
+    },
+    {
+     "x": "Vestland",
+     "y": 37.8
+    },
+    {
+     "x": "Trøndelag",
+     "y": 37.5
+    },
+    {
+     "x": "Troms",
+     "y": 37.2
+    },
+    {
+     "x": "Finnmark",
+     "y": 31.6
+    },
+    {
+     "x": "Oslo",
+     "y": 56.4
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": true,
+  "fremhev": [
+   "Oslo"
+  ]
+ },
+ "merknader": [
+  {
+   "type": "mal",
+   "y": 38.3,
+   "tekst": "Hele landet: 38,3 %"
+  }
+ ]
+}

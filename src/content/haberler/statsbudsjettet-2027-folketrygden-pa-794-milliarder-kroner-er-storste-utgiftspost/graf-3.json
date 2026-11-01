@@ -1,0 +1,55 @@
+{
+ "tittel": "Tre inntekter står for det meste",
+ "under": "De største inntektene utenom petroleum i 2027, regjeringens forslag, milliarder kroner",
+ "enhet": "milliarder kroner",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Finansdepartementet"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Inntekter",
+   "punkter": [
+    {
+     "x": "Arbeidsgiver- og trygdeavgift",
+     "y": 510.3
+    },
+    {
+     "x": "Skatt på formue og inntekt",
+     "y": 493.2
+    },
+    {
+     "x": "Merverdiavgift",
+     "y": 444.6
+    },
+    {
+     "x": "Renter og aksjeutbytte",
+     "y": 91.9
+    },
+    {
+     "x": "Andre inntekter",
+     "y": 67
+    },
+    {
+     "x": "Andre avgifter",
+     "y": 58.4
+    },
+    {
+     "x": "Tobakk og alkohol",
+     "y": 24.8
+    },
+    {
+     "x": "Motorvogner",
+     "y": 19.6
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": false,
+  "fremhev": [
+   "Arbeidsgiver- og trygdeavgift"
+  ]
+ }
+}

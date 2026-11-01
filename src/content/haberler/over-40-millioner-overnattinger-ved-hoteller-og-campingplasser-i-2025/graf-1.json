@@ -1,0 +1,102 @@
+{
+ "tittel": "Utenlandske gjester sto for det meste av økningen",
+ "under": "Overnattinger ved hoteller, campingplasser, hyttegrender og vandrerhjem etter gjestenes bosted, antall",
+ "enhet": "Overnattinger ved hoteller, campingplasser, hyttegrender og vandrerhjem etter gjestenes bosted, antall",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "linje",
+ "serier": [
+  {
+   "navn": "Norske gjester",
+   "punkter": [
+    {
+     "x": "2016",
+     "y": 23387248
+    },
+    {
+     "x": "2017",
+     "y": 23348140
+    },
+    {
+     "x": "2018",
+     "y": 23697720
+    },
+    {
+     "x": "2019",
+     "y": 24478073
+    },
+    {
+     "x": "2020",
+     "y": 20402530
+    },
+    {
+     "x": "2021",
+     "y": 23782515
+    },
+    {
+     "x": "2022",
+     "y": 26313965
+    },
+    {
+     "x": "2023",
+     "y": 25907064
+    },
+    {
+     "x": "2024",
+     "y": 26162501
+    },
+    {
+     "x": "2025",
+     "y": 26424175
+    }
+   ]
+  },
+  {
+   "navn": "Utenlandske gjester",
+   "punkter": [
+    {
+     "x": "2016",
+     "y": 9726884
+    },
+    {
+     "x": "2017",
+     "y": 9948627
+    },
+    {
+     "x": "2018",
+     "y": 10138129
+    },
+    {
+     "x": "2019",
+     "y": 10701481
+    },
+    {
+     "x": "2020",
+     "y": 3318303
+    },
+    {
+     "x": "2021",
+     "y": 3309531
+    },
+    {
+     "x": "2022",
+     "y": 9813229
+    },
+    {
+     "x": "2023",
+     "y": 11137428
+    },
+    {
+     "x": "2024",
+     "y": 12425429
+    },
+    {
+     "x": "2025",
+     "y": 14165842
+    }
+   ]
+  }
+ ]
+}

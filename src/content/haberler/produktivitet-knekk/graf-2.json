@@ -1,0 +1,65 @@
+{
+ "tittel": "Hver arbeidstime skaper nesten tre ganger så mye verdi som i starten av serien",
+ "under": "Fastlands-Norge, bruttoprodukt per utførte timeverk, kroner per time i faste priser, hvert femte år",
+ "enhet": "Fastlands-Norge, bruttoprodukt per utførte timeverk, kroner per time i faste priser, hvert femte år",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå"
+ },
+ "form": "linje",
+ "serier": [
+  {
+   "navn": "Kroner per time",
+   "punkter": [
+    {
+     "x": "1970",
+     "y": 307.4
+    },
+    {
+     "x": "1975",
+     "y": 375.9
+    },
+    {
+     "x": "1980",
+     "y": 419.6
+    },
+    {
+     "x": "1985",
+     "y": 468.9
+    },
+    {
+     "x": "1990",
+     "y": 501.1
+    },
+    {
+     "x": "1995",
+     "y": 557.2
+    },
+    {
+     "x": "2000",
+     "y": 616.8
+    },
+    {
+     "x": "2005",
+     "y": 714
+    },
+    {
+     "x": "2010",
+     "y": 748.9
+    },
+    {
+     "x": "2015",
+     "y": 800.4
+    },
+    {
+     "x": "2020",
+     "y": 829.1
+    },
+    {
+     "x": "2025",
+     "y": 888.1
+    }
+   ]
+  }
+ ]
+}

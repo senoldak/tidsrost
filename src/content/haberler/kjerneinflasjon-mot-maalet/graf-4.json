@@ -1,0 +1,46 @@
+{
+ "tittel": "Norges Banks anslag for KPI-JAE faller fra 3,0 prosent til 2,1 prosent",
+ "under": "KPI-JAE, anslag i Pengepolitisk rapport fra september 2026, prosent",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Norges Bank, Finansdepartementet"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Anslag",
+   "punkter": [
+    {
+     "x": "2026",
+     "y": 3
+    },
+    {
+     "x": "2027",
+     "y": 2.7
+    },
+    {
+     "x": "2028",
+     "y": 2.4
+    },
+    {
+     "x": "2029",
+     "y": 2.1
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": false,
+  "fremhev": [
+   "2027"
+  ]
+ },
+ "merknader": [
+  {
+   "type": "mal",
+   "y": 2,
+   "tekst": "Mål: 2,0 %"
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "tittel": "Husholdningenes forbruk faller brattest fra januar til juli",
+ "under": "Gigawattimer per måned, hele landet",
+ "enhet": "Gigawattimer per måned, hele landet",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå"
+ },
+ "form": "helning",
+ "serier": [
+  {
+   "navn": "Husholdninger",
+   "punkter": [
+    {
+     "x": "Januar",
+     "y": 5215.771
+    },
+    {
+     "x": "Juli",
+     "y": 1847.863
+    }
+   ]
+  },
+  {
+   "navn": "Tjenester",
+   "punkter": [
+    {
+     "x": "Januar",
+     "y": 2829.194
+    },
+    {
+     "x": "Juli",
+     "y": 1742.549
+    }
+   ]
+  },
+  {
+   "navn": "Industri",
+   "punkter": [
+    {
+     "x": "Januar",
+     "y": 5497.94
+    },
+    {
+     "x": "Juli",
+     "y": 4772.229
+    }
+   ]
+  },
+  {
+   "navn": "Primærnæringer",
+   "punkter": [
+    {
+     "x": "Januar",
+     "y": 260.805
+    },
+    {
+     "x": "Juli",
+     "y": 169.023
+    }
+   ]
+  }
+ ]
+}

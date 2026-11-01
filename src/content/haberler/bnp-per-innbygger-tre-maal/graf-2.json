@@ -1,0 +1,78 @@
+{
+ "tittel": "Justert for prisnivå rykker Norge opp til andreplass",
+ "under": "BNP per innbygger i 2025, dollar og PPP-justerte internasjonale dollar",
+ "enhet": "BNP per innbygger i 2025, dollar og PPP-justerte internasjonale dollar",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Verdensbanken"
+ },
+ "form": "manual",
+ "valg": {
+  "gruppenavn": [
+   "Dollar",
+   "PPP-justert"
+  ]
+ },
+ "serier": [
+  {
+   "navn": "Justert for prisnivå rykker Norge opp til andreplass",
+   "punkter": [
+    {
+     "x": "Luxembourg",
+     "y": 147252.18,
+     "y2": 156542.08
+    },
+    {
+     "x": "Sveits",
+     "y": 114769.01,
+     "y2": 102513.35
+    },
+    {
+     "x": "Island",
+     "y": 98323.48,
+     "y2": 83431.21
+    },
+    {
+     "x": "Norge",
+     "y": 94594.19,
+     "y2": 104043.67
+    },
+    {
+     "x": "USA",
+     "y": 90026.52,
+     "y2": 90026.52
+    },
+    {
+     "x": "Danmark",
+     "y": 76970.15,
+     "y2": 83218.07
+    },
+    {
+     "x": "Nederland",
+     "y": 73683.92,
+     "y2": 87320.15
+    },
+    {
+     "x": "Sverige",
+     "y": 63133.21,
+     "y2": 72528.89
+    },
+    {
+     "x": "Tyskland",
+     "y": 60496.44,
+     "y2": 75406.69
+    },
+    {
+     "x": "Storbritannia",
+     "y": 57601.96,
+     "y2": 64606.5
+    },
+    {
+     "x": "Finland",
+     "y": 56148.58,
+     "y2": 65884.49
+    }
+   ]
+  }
+ ]
+}

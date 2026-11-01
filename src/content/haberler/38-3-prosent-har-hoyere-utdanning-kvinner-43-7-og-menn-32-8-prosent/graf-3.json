@@ -1,0 +1,77 @@
+{
+ "tittel": "Størst forskjell blant de yngre",
+ "under": "Andel med universitets- og høgskoleutdanning etter alder i 2025, kvinner og menn, prosent",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "helning",
+ "serier": [
+  {
+   "navn": "Tjuefem til tjueni år",
+   "punkter": [
+    {
+     "x": "Kvinner",
+     "y": 64.9
+    },
+    {
+     "x": "Menn",
+     "y": 41.3
+    }
+   ]
+  },
+  {
+   "navn": "Tretti til trettifire år",
+   "punkter": [
+    {
+     "x": "Kvinner",
+     "y": 64.1
+    },
+    {
+     "x": "Menn",
+     "y": 42.9
+    }
+   ]
+  },
+  {
+   "navn": "Førti til førtini år",
+   "punkter": [
+    {
+     "x": "Kvinner",
+     "y": 58.7
+    },
+    {
+     "x": "Menn",
+     "y": 40.6
+    }
+   ]
+  },
+  {
+   "navn": "Femti til femtini år",
+   "punkter": [
+    {
+     "x": "Kvinner",
+     "y": 48.1
+    },
+    {
+     "x": "Menn",
+     "y": 35.5
+    }
+   ]
+  },
+  {
+   "navn": "Sekstisju år og eldre",
+   "punkter": [
+    {
+     "x": "Kvinner",
+     "y": 26.4
+    },
+    {
+     "x": "Menn",
+     "y": 29.6
+    }
+   ]
+  }
+ ]
+}

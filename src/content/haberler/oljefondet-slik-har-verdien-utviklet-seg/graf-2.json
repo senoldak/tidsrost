@@ -1,0 +1,33 @@
+{
+ "tittel": "Nesten tre fjerdedeler er aksjer",
+ "under": "Fondets fordeling på aktivaklasser per 30. juni 2026, prosent",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Norges Bank Investment Management (NBIM)"
+ },
+ "form": "rutenett",
+ "serier": [
+  {
+   "navn": "Andel",
+   "punkter": [
+    {
+     "x": "Aksjer",
+     "y": 72.1
+    },
+    {
+     "x": "Rentepapirer",
+     "y": 25.8
+    },
+    {
+     "x": "Unotert eiendom",
+     "y": 1.6
+    },
+    {
+     "x": "Unotert fornybar infrastruktur",
+     "y": 0.5
+    }
+   ]
+  }
+ ]
+}

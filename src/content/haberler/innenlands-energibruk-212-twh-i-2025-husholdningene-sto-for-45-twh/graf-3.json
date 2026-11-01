@@ -1,0 +1,51 @@
+{
+ "tittel": "Mindre diesel og bensin, mer strøm på veien",
+ "under": "Energibruk i veitransport i 2015 og i 2025, gigawattimer",
+ "enhet": "Energibruk i veitransport i 2015 og i 2025, gigawattimer",
+ "desimaler": 0,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "helning",
+ "serier": [
+  {
+   "navn": "Diesel",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 28867
+    },
+    {
+     "x": "2025",
+     "y": 20742
+    }
+   ]
+  },
+  {
+   "navn": "Bensin",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 9771
+    },
+    {
+     "x": "2025",
+     "y": 5133
+    }
+   ]
+  },
+  {
+   "navn": "Elektrisitet",
+   "punkter": [
+    {
+     "x": "2015",
+     "y": 162
+    },
+    {
+     "x": "2025",
+     "y": 3309
+    }
+   ]
+  }
+ ]
+}

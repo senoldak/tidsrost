@@ -1,0 +1,51 @@
+{
+ "tittel": "De eldre blir flere enn de unge",
+ "under": "Andel av befolkningen i 2026 og i 2050, SSBs hovedalternativ",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "helning",
+ "serier": [
+  {
+   "navn": "Barn og unge",
+   "punkter": [
+    {
+     "x": "2026",
+     "y": 22
+    },
+    {
+     "x": "2050",
+     "y": 20
+    }
+   ]
+  },
+  {
+   "navn": "Eldre",
+   "punkter": [
+    {
+     "x": "2026",
+     "y": 17.1
+    },
+    {
+     "x": "2050",
+     "y": 22.900000000000002
+    }
+   ]
+  },
+  {
+   "navn": "De eldste",
+   "punkter": [
+    {
+     "x": "2026",
+     "y": 5.1
+    },
+    {
+     "x": "2050",
+     "y": 9.5
+    }
+   ]
+  }
+ ]
+}

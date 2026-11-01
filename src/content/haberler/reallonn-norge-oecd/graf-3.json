@@ -1,0 +1,62 @@
+{
+ "tittel": "Reallønnen falt i tre av de ti årene",
+ "under": "Endring i reallønn fra året før, prosent",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Statistisk sentralbyrå (SSB)"
+ },
+ "form": "soyle",
+ "serier": [
+  {
+   "navn": "Reell lønnsendring",
+   "punkter": [
+    {
+     "x": "2016",
+     "y": -1.8
+    },
+    {
+     "x": "2017",
+     "y": 0.4
+    },
+    {
+     "x": "2018",
+     "y": 0.1
+    },
+    {
+     "x": "2019",
+     "y": 1.2
+    },
+    {
+     "x": "2020",
+     "y": 1.8
+    },
+    {
+     "x": "2021",
+     "y": 0
+    },
+    {
+     "x": "2022",
+     "y": -1.4
+    },
+    {
+     "x": "2023",
+     "y": -0.3
+    },
+    {
+     "x": "2024",
+     "y": 2.4
+    },
+    {
+     "x": "2025",
+     "y": 1.8
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "fremhev": [
+   "2022"
+  ]
+ }
+}

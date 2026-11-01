@@ -1,0 +1,90 @@
+{
+ "tittel": "Nordland har lavest gigabitdekning",
+ "under": "Andel husstander med tilbud om gigabitbredbånd etter fylke i 2025, prosent",
+ "enhet": "prosent",
+ "desimaler": 1,
+ "kilde": {
+  "navn": "Nasjonal kommunikasjonsmyndighet (Nkom)"
+ },
+ "form": "rangering",
+ "serier": [
+  {
+   "navn": "Dekning",
+   "punkter": [
+    {
+     "x": "Oslo",
+     "y": 99.2
+    },
+    {
+     "x": "Rogaland",
+     "y": 97.9
+    },
+    {
+     "x": "Vestland",
+     "y": 97.9
+    },
+    {
+     "x": "Møre og Romsdal",
+     "y": 97.7
+    },
+    {
+     "x": "Agder",
+     "y": 97.3
+    },
+    {
+     "x": "Akershus",
+     "y": 96.7
+    },
+    {
+     "x": "Telemark",
+     "y": 96
+    },
+    {
+     "x": "Troms",
+     "y": 95.6
+    },
+    {
+     "x": "Trøndelag",
+     "y": 95.3
+    },
+    {
+     "x": "Vestfold",
+     "y": 95.1
+    },
+    {
+     "x": "Finnmark",
+     "y": 94.7
+    },
+    {
+     "x": "Østfold",
+     "y": 93.9
+    },
+    {
+     "x": "Innlandet",
+     "y": 93.8
+    },
+    {
+     "x": "Buskerud",
+     "y": 92.5
+    },
+    {
+     "x": "Nordland",
+     "y": 90.9
+    }
+   ]
+  }
+ ],
+ "valg": {
+  "sorter": true,
+  "fremhev": [
+   "Nordland"
+  ]
+ },
+ "merknader": [
+  {
+   "type": "mal",
+   "y": 96.3,
+   "tekst": "Hele landet: 96,3 %"
+  }
+ ]
+}

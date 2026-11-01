@@ -1,0 +1,38 @@
+{
+ "tittel": "Begge har kommet langt opp fra bunnen, men Norges Bank står høyest",
+ "under": "Rentenivå, prosent",
+ "enhet": "prosent",
+ "desimaler": 2,
+ "kilde": {
+  "navn": "Norges Bank, Den europeiske sentralbanken"
+ },
+ "form": "manual",
+ "valg": {
+  "gruppenavn": [
+   "Desember 2021",
+   "Oktober 2026"
+  ]
+ },
+ "serier": [
+  {
+   "navn": "Begge har kommet langt opp fra bunnen, men Norges Bank står høyest",
+   "punkter": [
+    {
+     "x": "Norges Bank",
+     "y": 0.5,
+     "y2": 4.5
+    },
+    {
+     "x": "ECB innskudd",
+     "y": -0.5,
+     "y2": 2.5
+    },
+    {
+     "x": "ECB refinansiering",
+     "y": 0,
+     "y2": 2.65
+    }
+   ]
+  }
+ ]
+}
