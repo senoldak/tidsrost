@@ -80,9 +80,11 @@ export function tegn(d, o = {}) {
     if (prognoseI >= 0) {
       deler.push(`<g class="g-serie g-s${si}"><path d="${yol(p.map((q, i) => (i <= prognoseI ? q : { ...q, y: null })))}"/>`);
       deler.push(`<path class="g-prognose" d="${yol(p.map((q, i) => (i >= prognoseI ? q : { ...q, y: null })))}"/>`);
-    } else deler.push(`<g class="g-serie g-s${si}"><path d="${yol(p)}"/>`);
+    } else deler.push(`<g class="g-serie ${s.stil === 'esik' ? 'g-esik' : `g-s${si}`}"><path d="${yol(p)}"/>`);
     const siste = [...s.punkter].map((q, i) => ({ q, i })).reverse().find(({ q }) => q.y !== null && q.y !== undefined);
-    if (siste) {
+    // Eşik serisi (hedef, sınır): kesik çizgi, sonunda yalnız adı.
+    if (siste && s.stil === 'esik') deler.push(tekst(x(siste.i) - 2, y(siste.q.y) - 6, s.navn, 'text-anchor="end" class="g-esik-t"'));
+    else if (siste) {
       deler.push(`<circle cx="${x(siste.i)}" cy="${y(siste.q.y)}" r="3.5"/>`);
       const sisteTekst = tall(siste.q.y, des);
       const forLang = x(siste.i) + 7 + sisteTekst.length * 7 > bredde;

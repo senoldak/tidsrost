@@ -9,8 +9,11 @@ export function tegn(d) {
   const des = d.desimaler ?? 1;
   const enh = kortEnhet(d.enhet);
   const [gA, gB] = d.valg.gruppenavn;
-  const rader = d.serier[0].punkter.filter((p) => !tom(p.y)).sort((a, b) => b.y2 - a.y2);
-  const alle = rader.flatMap((p) => [p.y, p.y2]);
+  const rader = d.serier[0].punkter.filter((p) => !tom(p.y));
+  if (d.valg?.sorter !== false) rader.sort((a, b) => b.y2 - a.y2);
+  const harMal = rader.some((p) => Number.isFinite(p.mal));
+  const malnavn = d.valg?.malnavn ?? 'Mål';
+  const alle = rader.flatMap((p) => [p.y, p.y2, ...(Number.isFinite(p.mal) ? [p.mal] : [])]);
   const lo = Math.min(...alle), hi = Math.max(...alle);
   const x = skala(lo - (hi - lo) * 0.05, hi, M, bredde - 12);
   const H = rader.length * RAD + 28;
@@ -23,14 +26,16 @@ export function tegn(d) {
     deler.push(`<g data-i="${i}"><rect x="0" y="${yy - RAD / 2}" width="${bredde}" height="${RAD}" class="g-luft"/>`);
     deler.push(tekst(M - 10, yy + 4, kortNavn(String(p.x), 22), 'text-anchor="end" class="g-t-blekk"'));
     deler.push(`<line x1="${r2(x(p.y))}" x2="${r2(x(p.y2))}" y1="${yy}" y2="${yy}" class="g-manual"/>`);
+    if (Number.isFinite(p.mal)) deler.push(`<line class="g-mal-tikk" x1="${r2(x(p.mal))}" x2="${r2(x(p.mal))}" y1="${yy - 11}" y2="${yy + 11}"/>`);
     deler.push(`<circle cx="${r2(x(p.y))}" cy="${yy}" r="6" class="g-f-kontur"/><circle cx="${r2(x(p.y2))}" cy="${yy}" r="6" class="g-f-su"/></g>`);
-    return { x: (x(p.y) + x(p.y2)) / 2, y: yy - 8, tekst: `${p.x}\n${gA}: ${tall(p.y, des)}${enh}\n${gB}: ${tall(p.y2, des)}${enh}\nForskjell ${tall(Math.abs(p.y2 - p.y), des)}${enh}` };
+    const malLinje = Number.isFinite(p.mal) ? `\n${malnavn}: ${tall(p.mal, des)}${enh}` : '';
+    return { x: (x(p.y) + x(p.y2)) / 2, y: yy - 8, tekst: `${p.x}\n${gA}: ${tall(p.y, des)}${enh}\n${gB}: ${tall(p.y2, des)}${enh}${malLinje}\nForskjell ${tall(Math.abs(p.y2 - p.y), des)}${enh}` };
   });
   const beskrivelse = `${d.tittel}. ${d.under ? `${d.under}. ` : ''}${gA} og ${gB} i ${rader.length} grupper.`;
   return {
     svg: `<svg viewBox="0 0 ${bredde} ${H}" class="g-svg" role="img" aria-label="${esc(beskrivelse)}">${deler.join('')}</svg>`,
     bredde, hoyde: H, modus: 'element', punkter,
-    tabell: { kolonner: ['', gA, gB], rader: rader.map((p) => [String(p.x), tall(p.y, des), tall(p.y2, des)]) },
+    tabell: { kolonner: ['', gA, gB, ...(harMal ? [malnavn] : [])], rader: rader.map((p) => [String(p.x), tall(p.y, des), tall(p.y2, des), ...(harMal ? [Number.isFinite(p.mal) ? tall(p.mal, des) : '–'] : [])]) },
     beskrivelse,
   };
 }

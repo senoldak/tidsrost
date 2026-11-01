@@ -26,9 +26,12 @@ import * as kombi from './former/kombi.mjs';
 import * as spredning from './former/spredning.mjs';
 import * as radial from './former/radial.mjs';
 import * as smaa from './former/smaa.mjs';
+import * as nokkeltall from './former/nokkeltall.mjs';
+import * as minitabell from './former/minitabell.mjs';
+import * as bidrag from './former/bidrag.mjs';
 
 /** @type {Record<string, { tegn: (d: import('./sema.mjs').GrafData, o?: { id?: string, bred?: boolean }) => import('./sema.mjs').Tegning }>} */
-export const FORMER = { linje, flate, soyle, avvik, rangering, smultring, maler, rutenett, prikksoyle, helning, manual, baand, spenn, stablet, gruppert, stabletflate, fremdrift, fossefall, varmekart, stripe, flyt, tre, kombi, spredning, radial, smaa };
+export const FORMER = { linje, flate, soyle, avvik, rangering, smultring, maler, rutenett, prikksoyle, helning, manual, baand, spenn, stablet, gruppert, stabletflate, fremdrift, fossefall, varmekart, stripe, flyt, tre, kombi, spredning, radial, smaa, nokkeltall, minitabell, bidrag };
 
 /** @param {import('./sema.mjs').GrafData} d @param {{ id?: string, bred?: boolean }} [o] */
 export function tegnGraf(d, o = {}) {

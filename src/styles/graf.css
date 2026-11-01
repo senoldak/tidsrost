@@ -201,6 +201,52 @@
   stroke: var(--water);
   stroke-width: 2;
 }
+.g-esik path {
+  fill: none;
+  stroke: var(--red);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 4;
+}
+.g-svg .g-esik-t {
+  fill: var(--red);
+  font-weight: 700;
+}
+.g-mal-tikk {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 2;
+}
+.g-svg .g-overtekst {
+  fill: var(--muted);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+.g-svg .g-stortall {
+  fill: var(--ink);
+  font-size: 56px;
+  font-weight: 800;
+}
+.g-svg .g-kunye-tall {
+  font-size: 18px;
+}
+.g-svg .g-total-tall {
+  font-size: 16px;
+}
+.g-svg .g-t-su {
+  fill: var(--water);
+}
+.g-f-blekk {
+  fill: var(--ink);
+}
+.g-akse-linje {
+  stroke: var(--rule);
+  stroke-width: 1;
+}
+.g-akse-sterk {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
 .g-trapp {
   stroke: var(--muted);
   stroke-width: 1;
