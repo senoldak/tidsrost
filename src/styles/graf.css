@@ -129,6 +129,19 @@
 [data-i] {
   cursor: pointer;
 }
+.g-skive {
+  stroke: var(--paper);
+  stroke-width: 2;
+}
+.g-mal-hel {
+  stroke: var(--red);
+  stroke-width: 3;
+}
+.g-svg .g-midt {
+  fill: var(--ink);
+  font-size: 30px;
+  font-weight: 800;
+}
 .g-luft {
   fill: transparent;
 }
