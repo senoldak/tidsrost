@@ -26,3 +26,9 @@ test('stripe: ortalamaya eşit g-d0, uçlar g-d3 / g-d-3', () => {
   assert.equal(sinif(s, 0), 'g-d-3');
 });
 test('stripe: 160 yıl, öğe başına ipucu', () => { const t = stripe(st(Array.from({ length: 160 }, (_, i) => Math.sin(i)))); assert.equal(t.punkter.length, 160); assert.ok(!t.svg.includes('NaN')); });
+test('stripe: aşırı uç değer öteki yılları griye gömmez', () => {
+  const s = stripe(st([1, 2, 3, 4, 50, 2, 3])).svg;
+  assert.equal(sinif(s, 4), 'g-d3');
+  assert.equal(sinif(s, 0), 'g-d-3');
+  assert.notEqual(sinif(s, 3), 'g-d0');
+});

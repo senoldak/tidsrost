@@ -10,8 +10,13 @@ export function tegn(d, o = {}) {
   const p = d.serier[0].punkter;
   const verdier = p.map((q) => q.y).filter((v) => !tom(v));
   const snitt = verdier.reduce((a, b) => a + b, 0) / verdier.length;
-  const maksAvvik = Math.max(...verdier.map((v) => Math.abs(v - snitt))) || 1;
-  const kademe = (v) => Math.max(-3, Math.min(3, Math.round(((v - snitt) / maksAvvik) * 3)));
+  // Kademe sıraya göre (yüzdelik): tek bir aşırı yıl öteki yılları griye gömmesin.
+  const sirali = [...verdier].sort((a, b) => a - b);
+  const sira = (v) => {
+    const lo = sirali.indexOf(v), hi = sirali.lastIndexOf(v);
+    return sirali.length > 1 ? (lo + hi) / 2 / (sirali.length - 1) : 0.5;
+  };
+  const kademe = (v) => Math.max(-3, Math.min(3, Math.round(sira(v) * 6 - 3)));
   const sw = bredde / p.length;
   const deler = [];
   const punkter = p.map((q, i) => {
@@ -20,7 +25,7 @@ export function tegn(d, o = {}) {
     return { x: i * sw + sw / 2, y: 0, tekst: `${q.x}\n${tom(q.y) ? '–' : `${tall(q.y, des)}${enh}`}` };
   });
   [0, Math.floor((p.length - 1) / 2), p.length - 1].forEach((i, j) => deler.push(tekst(i * sw + sw / 2, H - 6, String(p[i].x), `text-anchor="${j === 0 ? 'start' : j === 2 ? 'end' : 'middle'}"`)));
-  const beskrivelse = `${d.tittel}. ${d.under ? `${d.under}. ` : ''}Snitt ${tall(snitt, des)}${enh}; rødt over, blått under.`;
+  const beskrivelse = `${d.tittel}. ${d.under ? `${d.under}. ` : ''}Snitt ${tall(snitt, des)}${enh}. Mørk rød er de høyeste verdiene, mørk blå de laveste.`;
   return {
     svg: svgKabuk(bredde, H, beskrivelse, deler.join('')),
     bredde, hoyde: H, modus: 'element', punkter,
