@@ -6993,7 +6993,17 @@
     "medier:f6c270354ae54d1c": "2026-11-01T13:01:04.641Z",
     "medier:f17bef1d67c43a54": "2026-11-01T13:01:04.641Z",
     "medier:75c280f33f8dea3f": "2026-11-01T13:01:04.641Z",
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2301": "2026-11-01T13:01:04.641Z"
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2301": "2026-11-01T13:01:04.641Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168718": "2026-11-01T15:01:05.746Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2317": "2026-11-01T15:01:05.746Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168717": "2026-11-01T15:01:05.746Z",
+    "medier:1ac271542ac72ea8": "2026-11-01T15:01:05.746Z",
+    "medier:16f001f9c92f7818": "2026-11-01T15:01:05.746Z",
+    "medier:9be0fb08429e1c25": "2026-11-01T15:01:05.746Z",
+    "medier:069ed8749b381c03": "2026-11-01T15:01:05.746Z",
+    "medier:5a22b9608bc76c5d": "2026-11-01T15:01:05.746Z",
+    "medier:e11027d9cae459c4": "2026-11-01T15:01:05.746Z",
+    "medier:60d077692774609a": "2026-11-01T15:01:05.746Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -7046,76 +7056,6 @@
     "miljodirektoratet": "2026-10-11T21:21:02.290Z"
   },
   "puan": {
-    "medier:4d6b4ce6be2bffab": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T13:08:20.878Z"
-    },
-    "medier:f92709f76912f5f2": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T13:08:20.878Z"
-    },
-    "medier:51cf472355ed1f20": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T13:08:20.878Z"
-    },
-    "medier:47aa1dd1af3a6ee1": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T13:08:20.878Z"
-    },
-    "medier:deea893aa681132a": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T13:08:20.878Z"
-    },
-    "medier:fb11f09df426a2a3": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T13:08:20.878Z"
-    },
-    "medier:164c018d60286374": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T13:08:20.878Z"
-    },
-    "medier:38d4115af57d350e": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T13:08:20.878Z"
-    },
-    "medier:0e62a72c90875a90": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T13:08:20.878Z"
-    },
-    "medier:6cc86f76ba843b7f": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T13:08:20.878Z"
-    },
-    "medier:2d259cd635bb28e4": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T13:08:20.878Z"
-    },
-    "regjeringen:3186921": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T13:08:20.878Z"
-    },
-    "mattilsynet:https://www.mattilsynet.no/fisk-og-akvakultur/fiskesykdommer/infeksios-lakseanemi-ila/forskrift-om-restriksjonssone-for-ila-i-kvitsoy-og-randaberg-kommuner-oppheves-29.oktober-2026": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T13:08:20.878Z"
-    },
-    "sivilombudet:https://www.sivilombudet.no/?p=63801": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-29T13:08:20.878Z"
-    },
     "nkom:348b802c-5a49-42b2-bf62-af2b3c383143": {
       "p": 65,
       "v": "b34cb0de5bde",
@@ -8715,6 +8655,36 @@
       "p": 30,
       "v": "b34cb0de5bde",
       "t": "2026-11-01T13:02:38.681Z"
+    },
+    "medier:b2abd7e18bb13ddd": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T15:02:48.433Z"
+    },
+    "medier:5a22b9608bc76c5d": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T15:02:48.433Z"
+    },
+    "medier:1ac271542ac72ea8": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T15:02:48.433Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168718": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T15:02:48.433Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168717": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T15:02:48.433Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2317": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-01T15:02:48.433Z"
     }
   }
 }
