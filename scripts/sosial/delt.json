@@ -63,8 +63,8 @@
   },
   "_sinir": {
     "ig_post": {
-      "sayi": 12,
-      "kadar": "2026-11-01T07:11:02.545Z"
+      "sayi": 13,
+      "kadar": "2026-11-01T21:06:11.126Z"
     }
   },
   "benjamin-netanyahu-advarer-om-nytt-holocaust-for-valget-i-israel": {
@@ -427,7 +427,9 @@
     "tarih": "2026-10-31T09:13:46.068Z",
     "ig_story": "18113740634229333",
     "fb_post": "1343803192154866_122113020567509504",
-    "fb_story": "1703330484487508"
+    "fb_story": "1703330484487508",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "matata-bringer-personlige-historier-til-scenen-ved-nordic-black-theatre": {
     "tarih": "2026-10-31T09:14:24.715Z",
@@ -458,5 +460,11 @@
     "ig_story": "18028446827908610",
     "fb_post": "1343803192154866_122113372041509504",
     "fb_story": "1468473459673049"
+  },
+  "fem-katter-funnet-partert-i-baerum-og-oslo-styrker-mistanke-om-menneskelig-handl": {
+    "tarih": "2026-11-01T09:06:26.220Z",
+    "ig_story": "18169418647497140",
+    "fb_post": "1343803192154866_122113400793509504",
+    "fb_story": "1831481657894836"
   }
 }
