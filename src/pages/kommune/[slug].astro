@@ -1,15 +1,15 @@
 ---
 // /kommune/<kommune>/: én kommune (alle gjeldende kommuner har side, scripts/data/ssb-kommune.mjs kommuneSider). Alt kommer fra
-// src/data/kommuner.json: folketall, ti års utvikling (Linjegraf), aldersfordeling mot landet (Stolpegraf), fødsler og flytting,
+// src/data/kommuner.json: folketall, ti års utvikling (linje), aldersfordeling mot landet (rangering), fødsler og flytting,
 // areal, inntekt, plass blant kommunene og setninger regnet ut av tallene (src/lib/kommune-tekst.mjs). Ingen vurderinger.
 // KOMMUNE_SIDER_INDEKS=0: sidene står ikke i områdekartet og får googlebot noindex (default: indeksert).
+import Graf from '../../components/graf/Graf.astro';
+import { fraLinjer, fraStolper } from '../../lib/graf/fra.mjs';
 import { jsonLdMetni } from '../../lib/json-ld.mjs';
 import KiNotat from '../../components/KiNotat.astro';
 import Base from '../../layouts/Base.astro';
 import Symbol from '../../components/Symbol.astro';
 import Brodsmuler from '../../components/Brodsmuler.astro';
-import Linjegraf from '../../components/data/Linjegraf.astro';
-import Stolpegraf from '../../components/data/Stolpegraf.astro';
 import DataKilde from '../../components/data/DataKilde.astro';
 import { GAMMEL_MAANED_MS, dataGammel, datasideLd } from '../../lib/datasider';
 import { SITE_URL, breadcrumbs } from '../../lib/seo';
@@ -172,11 +172,16 @@ const googleNoindex = process.env.KOMMUNE_SIDER_INDEKS === '0';
     serieAar.length >= 3 && (
       <section class="day" aria-labelledby="utvikling">
         <h2 class="band" id="utvikling">Folketallet siden {serieAar[0]}</h2>
-        <Linjegraf
-          serier={[{ navn: k.navn, punkter: serieAar.map((a) => ({ etikett: a, verdi: k.serie10[a] })) }]}
-          enhet={`Innbyggere 1. januar, ${k.navn}`}
-          beskrivelse={`Folketall i ${k.navn}, ${serieAar[0]} til ${serieAar.at(-1)}`}
+        <Graf
+          form="linje"
+          visTittel={false}
+          tabell={false}
           desimaler={0}
+          tittel={`Folketall i ${k.navn}, ${serieAar[0]} til ${serieAar.at(-1)}`}
+          under={`Innbyggere 1. januar, ${k.navn}`}
+          enhet="innbyggere"
+          kilde={{ navn: 'SSB', url: 'https://www.ssb.no/', tabell: '07459' }}
+          serier={fraLinjer([{ navn: k.navn, punkter: serieAar.map((a) => ({ etikett: a, verdi: k.serie10[a] })) }])}
         />
         <div class="prose data-tabell kommune-enkel">
           <table>
@@ -210,7 +215,16 @@ const googleNoindex = process.env.KOMMUNE_SIDER_INDEKS === '0';
       <section class="day" aria-labelledby="alder">
         <h2 class="band" id="alder">Alder</h2>
         <p class="data-merknad">Andel av innbyggerne i prosent. Tallene for hele landet er uthevet.</p>
-        <Stolpegraf rader={aldersrader} enhet={`Andel av befolkningen etter alder, ${data.sisteAar}`} beskrivelse={`Aldersfordelingen i ${k.navn} sammenlignet med hele landet i ${data.sisteAar}`} desimaler={1} sorter={false} />
+        <Graf
+          form="rangering"
+          visTittel={false}
+          desimaler={1}
+          tittel={`Aldersfordelingen i ${k.navn} sammenlignet med hele landet i ${data.sisteAar}`}
+          under={`Andel av befolkningen etter alder, ${data.sisteAar}`}
+          enhet="prosent"
+          kilde={{ navn: 'SSB', url: 'https://www.ssb.no/', tabell: '07459' }}
+          {...fraStolper('Andel', aldersrader, { sorter: false })}
+        />
       </section>
     )
   }

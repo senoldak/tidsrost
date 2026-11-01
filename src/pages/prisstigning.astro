@@ -1,14 +1,14 @@
 ---
 // "Prisstigningen nå": SSB'nin KPI tablosu 14700 (src/data/prisstigning.json, scripts/data/ssb-sider.mjs).
 // Bütün rakamlar veriden; sabit metinlerde rakam yok. Tavsiye ve tahmin yok.
+import Graf from '../components/graf/Graf.astro';
+import { fraLinjer, fraStolper } from '../lib/graf/fra.mjs';
 import { jsonLdMetni } from '../lib/json-ld.mjs';
 import KiNotat from '../components/KiNotat.astro';
 import Base from '../layouts/Base.astro';
 import Symbol from '../components/Symbol.astro';
 import Brodsmuler from '../components/Brodsmuler.astro';
 import StoryRow from '../components/StoryRow.astro';
-import Linjegraf from '../components/data/Linjegraf.astro';
-import Stolpegraf from '../components/data/Stolpegraf.astro';
 import DataKilde from '../components/data/DataKilde.astro';
 import { tallTekst } from '../lib/graf.mjs';
 import { tidTekst } from '../lib/data';
@@ -75,22 +75,28 @@ const saker = await relaterteSaker(/pris|kpi|konsumpris|inflasjon/i);
 
   <section class="day" aria-labelledby="utvikling">
     <h2 class="band" id="utvikling">De siste to årene</h2>
-    <Linjegraf
-      serier={[{ navn: 'KPI', punkter: d.serie.map((p) => ({ etikett: maanedKort(p.maaned), verdi: p.tolvMnd })) }]}
-      enhet="Tolvmånedersendring i KPI, prosent"
-      beskrivelse={`Prisstigningen målt med KPI de siste to årene, nå ${pst(d.tolvMnd)}`}
+    <Graf
+      form="linje"
+      visTittel={false}
+      tittel={`Prisstigningen målt med KPI de siste to årene, nå ${pst(d.tolvMnd)}`}
+      under="Tolvmånedersendring i KPI, prosent"
+      enhet="prosent"
+      kilde={{ navn: 'SSB', url: 'https://www.ssb.no/', tabell: d.tabell }}
+      serier={fraLinjer([{ navn: 'KPI', punkter: d.serie.map((p) => ({ etikett: maanedKort(p.maaned), verdi: p.tolvMnd })) }])}
     />
   </section>
 
   <section class="day" aria-labelledby="grupper">
     <h2 class="band" id="grupper">Hva har steget mest?</h2>
-    <Stolpegraf
-      rader={[
-        ...hovedgrupper.map((g) => ({ navn: g.navn, verdi: g.tolvMnd })),
-        ...(mat ? [{ navn: `${mat.navn} (alene)`, verdi: mat.tolvMnd, fremhev: true }] : []),
-      ]}
-      enhet={`Tolvmånedersendring, prosent, ${maaned}`}
-      beskrivelse={`Prisendring siste tolv måneder per vare- og tjenestegruppe, ${maaned}`}
+    <Graf
+      form="rangering"
+      visTittel={false}
+      tabell={false}
+      tittel={`Prisendring siste tolv måneder per vare- og tjenestegruppe, ${maaned}`}
+      under={`Tolvmånedersendring, prosent, ${maaned}`}
+      enhet="prosent"
+      kilde={{ navn: 'SSB', url: 'https://www.ssb.no/', tabell: d.tabell }}
+      {...fraStolper('Endring', [...hovedgrupper.map((g) => ({ navn: g.navn, verdi: g.tolvMnd })), ...(mat ? [{ navn: `${mat.navn} (alene)`, verdi: mat.tolvMnd, fremhev: true }] : [])])}
     />
     <details class="data-detaljer">
       <summary>Tabell med vekter</summary>

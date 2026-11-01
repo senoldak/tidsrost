@@ -1,14 +1,15 @@
 ---
 // /kommune/: oversikt over alle kommuner (SSB 07459, 06913, 11342, 06944; src/data/kommuner.json). Søk, folketall etter fylke
-// (Stolpegraf), de største kommunene, størst vekst og nedgang siden første år i serien, og alle kommuner ordnet etter fylke.
+// (rangering), de største kommunene, størst vekst og nedgang siden første år i serien, og alle kommuner ordnet etter fylke.
 // Hver kommune har egen side (scripts/data/ssb-kommune.mjs kommuneSider). Alle tall kommer fra dataene.
+import Graf from '../../components/graf/Graf.astro';
+import { fraLinjer, fraStolper } from '../../lib/graf/fra.mjs';
 import { jsonLdMetni } from '../../lib/json-ld.mjs';
 import KiNotat from '../../components/KiNotat.astro';
 import Base from '../../layouts/Base.astro';
 import Symbol from '../../components/Symbol.astro';
 import Brodsmuler from '../../components/Brodsmuler.astro';
 import Kommunesok from '../../components/data/Kommunesok.astro';
-import Stolpegraf from '../../components/data/Stolpegraf.astro';
 import DataKilde from '../../components/data/DataKilde.astro';
 import { GAMMEL_MAANED_MS, dataGammel, datasideLd } from '../../lib/datasider';
 import { SITE_URL } from '../../lib/seo';
@@ -83,7 +84,16 @@ const { sti, jsonLd } = datasideLd({
   <section class="day" aria-labelledby="fylker">
     <h2 class="band" id="fylker">Folketall etter fylke</h2>
     <p class="data-merknad">Antall innbyggere 1. januar {data.sisteAar}.</p>
-    <Stolpegraf rader={fylkeGraf} enhet={`Innbyggere etter fylke, 1. januar ${data.sisteAar}`} beskrivelse={`Folketall i hvert fylke 1. januar ${data.sisteAar}`} desimaler={0} />
+    <Graf
+      form="rangering"
+      visTittel={false}
+      desimaler={0}
+      tittel={`Folketall i hvert fylke 1. januar ${data.sisteAar}`}
+      under={`Innbyggere etter fylke, 1. januar ${data.sisteAar}`}
+      enhet="innbyggere"
+      kilde={{ navn: 'SSB', url: 'https://www.ssb.no/', tabell: '07459' }}
+      {...fraStolper('Innbyggere', fylkeGraf)}
+    />
   </section>
 
   <section class="day" aria-labelledby="storst">

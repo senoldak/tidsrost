@@ -11,7 +11,7 @@
  *   valg?: { trapp?: boolean, logAkse?: boolean, sorter?: boolean, maks?: number, fremhev?: (string|number)[], prikk?: number, gruppenavn?: [string, string] }
  * }} GrafData
  * @typedef {{ x: number, y: number, tekst: string, midt?: string }} TipsPunkt
- * @typedef {{ svg: string, bredde: number, hoyde: number, modus: 'serie'|'element', punkter: TipsPunkt[], ramme?: { topp: number, bunn: number }, tabell: { kolonner: string[], rader: string[][] }, beskrivelse: string }} Tegning
+ * @typedef {{ svg: string, bredde: number, hoyde: number, modus: 'serie'|'element', punkter: TipsPunkt[], ramme?: { topp: number, bunn: number }, nokkel?: { navn: string, klasse: string }[], tabell: { kolonner: string[], rader: string[][] }, beskrivelse: string }} Tegning
  */
 
 export const BILINEN_FORMER = ['linje', 'soyle', 'flate', 'avvik', 'rangering', 'smultring', 'maler', 'rutenett', 'prikksoyle', 'helning', 'manual'];

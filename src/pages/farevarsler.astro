@@ -3,13 +3,14 @@
 // (kendi kaydımız, src/data/varselarkiv.json), ortada şu an geçerli uyarılar (src/data/farevarsler.json), altta tam
 // takvim yıllarının karşılaştırması (MET arşivi, 2019'dan beri). Veri tam kaplamadığı dönem gösterilmez (erKomplett).
 // Taslak A (tasarım 2026-10-29). Bütün rakamlar veriden; sabit metinlerde rakam yok.
+import Graf from '../components/graf/Graf.astro';
+import { fraLinjer, fraStolper } from '../lib/graf/fra.mjs';
 import { jsonLdMetni } from '../lib/json-ld.mjs';
 import KiNotat from '../components/KiNotat.astro';
 import Base from '../layouts/Base.astro';
 import Symbol from '../components/Symbol.astro';
 import Brodsmuler from '../components/Brodsmuler.astro';
 import FylkeKart from '../components/data/FylkeKart.astro';
-import Stolpegraf from '../components/data/Stolpegraf.astro';
 import DataKilde from '../components/data/DataKilde.astro';
 import {
   GAMMEL_ARKIV_MS,
@@ -249,12 +250,15 @@ const grupper = [
             Hittil i år er det sendt ut {antallTekst(sum(hittil.total))} på land. På samme tid i fjor var tallet {sammenligning[0].total}.
           </p>
         )}
-        <Stolpegraf
-          rader={aar.map((a) => ({ navn: String(a.aar), verdi: a.total, fremhev: a.aar === sisteHeleAar?.aar }))}
-          enhet="Farevarsler på land per år (gult, oransje og rødt)"
-          beskrivelse="Antall farevarsler på land per kalenderår"
+        <Graf
+          form="soyle"
+          visTittel={false}
           desimaler={0}
-          sorter={false}
+          tittel="Antall farevarsler på land per kalenderår"
+          under="Farevarsler på land per år (gult, oransje og rødt)"
+          enhet="farevarsler"
+          kilde={{ navn: 'MET Norway', url: kilde.url }}
+          {...fraStolper('Farevarsler', aar.map((a) => ({ navn: String(a.aar), verdi: a.total, fremhev: a.aar === sisteHeleAar?.aar })), { sorter: false })}
         />
         {hull && (
           <p class="data-merknad">

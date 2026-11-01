@@ -1,14 +1,14 @@
 ---
 // "Arbeidsledigheten nå": SSB'nin işgücü anketi (AKU), tablo 13760, sezondan arındırılmış (src/data/arbeidsledighet.json).
 // Bütün rakamlar veriden; sabit metinlerde rakam yok.
+import Graf from '../components/graf/Graf.astro';
+import { fraLinjer, fraStolper } from '../lib/graf/fra.mjs';
 import { jsonLdMetni } from '../lib/json-ld.mjs';
 import KiNotat from '../components/KiNotat.astro';
 import Base from '../layouts/Base.astro';
 import Symbol from '../components/Symbol.astro';
 import Brodsmuler from '../components/Brodsmuler.astro';
 import StoryRow from '../components/StoryRow.astro';
-import Linjegraf from '../components/data/Linjegraf.astro';
-import Stolpegraf from '../components/data/Stolpegraf.astro';
 import DataKilde from '../components/data/DataKilde.astro';
 import { tallTekst } from '../lib/graf.mjs';
 import { tidTekst } from '../lib/data';
@@ -75,19 +75,27 @@ const saker = await relaterteSaker(/arbeidsledig|ledighet|sysselsett|arbeidsstyr
 
   <section class="day" aria-labelledby="utvikling">
     <h2 class="band" id="utvikling">De siste to årene</h2>
-    <Linjegraf
-      serier={[{ navn: 'Arbeidsledighet', punkter: d.serie.map((p) => ({ etikett: maanedKort(p.maaned), verdi: p.prosent })) }]}
-      enhet="Prosent av arbeidsstyrken, 15–74 år, sesongjustert"
-      beskrivelse={`Arbeidsledigheten de siste to årene, nå ${pst(d.prosent)}`}
+    <Graf
+      form="linje"
+      visTittel={false}
+      tittel={`Arbeidsledigheten de siste to årene, nå ${pst(d.prosent)}`}
+      under="Prosent av arbeidsstyrken, 15–74 år, sesongjustert"
+      enhet="prosent"
+      kilde={{ navn: 'SSB', url: 'https://www.ssb.no/', tabell: d.tabell }}
+      serier={fraLinjer([{ navn: 'Arbeidsledighet', punkter: d.serie.map((p) => ({ etikett: maanedKort(p.maaned), verdi: p.prosent })) }])}
     />
   </section>
 
   <section class="day" aria-labelledby="grupper">
     <h2 class="band" id="grupper">Kjønn og alder</h2>
-    <Stolpegraf
-      rader={[{ navn: 'Alle, 15–74 år', verdi: d.prosent, fremhev: true }, ...d.grupper.map((g) => ({ navn: g.navn, verdi: g.prosent }))]}
-      enhet={`Prosent av arbeidsstyrken i gruppen, sesongjustert, ${maaned}`}
-      beskrivelse={`Arbeidsledighet etter kjønn og alder, ${maaned}`}
+    <Graf
+      form="rangering"
+      visTittel={false}
+      tittel={`Arbeidsledighet etter kjønn og alder, ${maaned}`}
+      under={`Prosent av arbeidsstyrken i gruppen, sesongjustert, ${maaned}`}
+      enhet="prosent"
+      kilde={{ navn: 'SSB', url: 'https://www.ssb.no/', tabell: d.tabell }}
+      {...fraStolper('Arbeidsledighet', [{ navn: 'Alle, 15–74 år', verdi: d.prosent, fremhev: true }, ...d.grupper.map((g) => ({ navn: g.navn, verdi: g.prosent }))])}
     />
   </section>
 

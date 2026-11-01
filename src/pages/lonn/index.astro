@@ -1,13 +1,14 @@
 ---
-// /lonn/: lønn etter yrke (SSB 11418; src/data/lonn.json). Søk, hovedgrupper (Stolpegraf), de største yrkene og en
+// /lonn/: lønn etter yrke (SSB 11418; src/data/lonn.json). Søk, hovedgrupper (rangering), de største yrkene og en
 // alfabetisk liste over yrker med egen side (terskel i scripts/data/ssb-lonn.mjs lonnSider). Alle tall fra dataene.
+import Graf from '../../components/graf/Graf.astro';
+import { fraLinjer, fraStolper } from '../../lib/graf/fra.mjs';
 import { jsonLdMetni } from '../../lib/json-ld.mjs';
 import KiNotat from '../../components/KiNotat.astro';
 import Base from '../../layouts/Base.astro';
 import Symbol from '../../components/Symbol.astro';
 import Brodsmuler from '../../components/Brodsmuler.astro';
 import Lonnsok from '../../components/data/Lonnsok.astro';
-import Stolpegraf from '../../components/data/Stolpegraf.astro';
 import DataKilde from '../../components/data/DataKilde.astro';
 import { GAMMEL_MAANED_MS, dataGammel, datasideLd } from '../../lib/datasider';
 import { SITE_URL } from '../../lib/seo';
@@ -65,7 +66,16 @@ const { sti, jsonLd } = datasideLd({
   <section class="day" aria-labelledby="grupper">
     <h2 class="band" id="grupper">Median månedslønn etter hovedgruppe</h2>
     <p class="data-merknad">Kroner per måned. Medianen for alle yrker er uthevet.</p>
-    <Stolpegraf rader={grupper} enhet={`Median månedslønn i kroner, november ${data.sisteAar}`} beskrivelse={`Median månedslønn etter yrkesgruppe i ${data.sisteAar}, med medianen for alle yrker`} desimaler={0} />
+    <Graf
+      form="rangering"
+      visTittel={false}
+      desimaler={0}
+      tittel={`Median månedslønn etter yrkesgruppe i ${data.sisteAar}, med medianen for alle yrker`}
+      under={`Median månedslønn i kroner, november ${data.sisteAar}`}
+      enhet="kroner"
+      kilde={{ navn: 'SSB', url: 'https://www.ssb.no/', tabell: data.tabell }}
+      {...fraStolper('Median månedslønn', grupper)}
+    />
   </section>
 
   <section class="day" aria-labelledby="storst">

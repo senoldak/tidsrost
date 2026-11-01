@@ -1,13 +1,14 @@
 ---
 // /navn/<navn>/: ett fornavn med eget tallgrunnlag (terskel: scripts/data/ssb-navn.mjs navnSider). Alt kommer fra
 // src/data/navn.json: antall personer, plass blant navn av samme kjønn, utvikling siden 2013-tallene, fødte per år
-// (Linjegraf), tiårssnitt og setninger regnet ut av tallene (src/lib/navn-tekst.mjs). Ingen vurderinger av navn.
+// (linje), tiårssnitt og setninger regnet ut av tallene (src/lib/navn-tekst.mjs). Ingen vurderinger av navn.
+import Graf from '../../components/graf/Graf.astro';
+import { fraLinjer, fraStolper } from '../../lib/graf/fra.mjs';
 import { jsonLdMetni } from '../../lib/json-ld.mjs';
 import KiNotat from '../../components/KiNotat.astro';
 import Base from '../../layouts/Base.astro';
 import Symbol from '../../components/Symbol.astro';
 import Brodsmuler from '../../components/Brodsmuler.astro';
-import Linjegraf from '../../components/data/Linjegraf.astro';
 import DataKilde from '../../components/data/DataKilde.astro';
 import { GAMMEL_MAANED_MS, dataGammel, datasideLd } from '../../lib/datasider';
 import { SITE_URL, breadcrumbs } from '../../lib/seo';
@@ -111,11 +112,15 @@ const sti = [sti3[0], sti3[1], { name: 'Navnestatistikk', url: `${SITE_URL}/navn
     fodtAar.length >= 3 && (
       <section class="day" aria-labelledby="fodte">
         <h2 class="band" id="fodte">Barn som fikk navnet, år for år</h2>
-        <Linjegraf
-          serier={[{ navn: n.navn, punkter: fodtAar.map((a) => ({ etikett: a, verdi: n.fodte[a] })) }]}
-          enhet={`Barn som fikk navnet ${n.navn} per år`}
-          beskrivelse={`Antall barn som fikk fornavnet ${n.navn} hvert år fra ${fodtAar[0]} til ${fodtAar.at(-1)}`}
+        <Graf
+          form="linje"
+          visTittel={false}
           desimaler={0}
+          tittel={`Antall barn som fikk fornavnet ${n.navn} hvert år fra ${fodtAar[0]} til ${fodtAar.at(-1)}`}
+          under={`Barn som fikk navnet ${n.navn} per år`}
+          enhet="barn"
+          kilde={{ navn: 'SSB', url: 'https://www.ssb.no/', tabell: '10501' }}
+          serier={fraLinjer([{ navn: n.navn, punkter: fodtAar.map((a) => ({ etikett: a, verdi: n.fodte[a] })) }])}
         />
         {hull && <p class="data-merknad">SSB oppgir ikke tall for alle år. Linjen går da rett mellom årene som har tall.</p>}
       </section>
@@ -153,11 +158,16 @@ const sti = [sti3[0], sti3[1], { name: 'Navnestatistikk', url: `${SITE_URL}/navn
     serieAar.length >= 3 && (
       <section class="day" aria-labelledby="personer">
         <h2 class="band" id="personer">Personer med navnet, år for år</h2>
-        <Linjegraf
-          serier={[{ navn: n.navn, punkter: serieAar.map((a) => ({ etikett: a, verdi: n.serie[a] })) }]}
-          enhet={`Personer med navnet ${n.navn} ved årets slutt`}
-          beskrivelse={`Antall personer med fornavnet ${n.navn} ved utgangen av hvert år fra ${serieAar[0]} til ${serieAar.at(-1)}`}
+        <Graf
+          form="linje"
+          visTittel={false}
+          tabell={false}
           desimaler={0}
+          tittel={`Antall personer med fornavnet ${n.navn} ved utgangen av hvert år fra ${serieAar[0]} til ${serieAar.at(-1)}`}
+          under={`Personer med navnet ${n.navn} ved årets slutt`}
+          enhet="personer"
+          kilde={{ navn: 'SSB', url: 'https://www.ssb.no/', tabell: '10501' }}
+          serier={fraLinjer([{ navn: n.navn, punkter: serieAar.map((a) => ({ etikett: a, verdi: n.serie[a] })) }])}
         />
         <div class="prose data-tabell navn-enkel">
           <table>

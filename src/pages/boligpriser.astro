@@ -1,14 +1,14 @@
 ---
 // "Boligprisene nå": SSB'nin brukte boliger fiyat endeksi, tablo 07221 (src/data/boligpriser.json).
 // SSB'nin 11 bölgesi fylkeye oturmadığı için harita yok, sıralı çubuk (tasarım §8). Tavsiye ve tahmin yok.
+import Graf from '../components/graf/Graf.astro';
+import { fraLinjer, fraStolper } from '../lib/graf/fra.mjs';
 import { jsonLdMetni } from '../lib/json-ld.mjs';
 import KiNotat from '../components/KiNotat.astro';
 import Base from '../layouts/Base.astro';
 import Symbol from '../components/Symbol.astro';
 import Brodsmuler from '../components/Brodsmuler.astro';
 import StoryRow from '../components/StoryRow.astro';
-import Linjegraf from '../components/data/Linjegraf.astro';
-import Stolpegraf from '../components/data/Stolpegraf.astro';
 import DataKilde from '../components/data/DataKilde.astro';
 import { tallTekst } from '../lib/graf.mjs';
 import { tidTekst } from '../lib/data';
@@ -89,19 +89,28 @@ const saker = await relaterteSaker(/bolig|husleie|eiendom/i);
 
   <section class="day" aria-labelledby="regioner">
     <h2 class="band" id="regioner">Region for region</h2>
-    <Stolpegraf
-      rader={d.regioner.map((r) => ({ navn: r.navn, verdi: r.endringAar, fremhev: r.kode === 'TOTAL' }))}
-      enhet={`Endring fra samme kvartal året før, prosent, ${kvartal}`}
-      beskrivelse={`Endring i prisene på brukte boliger siste år per region, ${kvartal}`}
+    <Graf
+      form="rangering"
+      visTittel={false}
+      tittel={`Endring i prisene på brukte boliger siste år per region, ${kvartal}`}
+      under={`Endring fra samme kvartal året før, prosent, ${kvartal}`}
+      enhet="prosent"
+      kilde={{ navn: 'SSB', url: 'https://www.ssb.no/', tabell: d.tabell }}
+      {...fraStolper('Endring', d.regioner.map((r) => ({ navn: r.navn, verdi: r.endringAar, fremhev: r.kode === 'TOTAL' })))}
     />
   </section>
 
   <section class="day" aria-labelledby="utvikling">
     <h2 class="band" id="utvikling">De siste tre årene</h2>
-    <Linjegraf
-      serier={[{ navn: 'Hele landet', punkter: d.serie.map((p) => ({ etikett: kvartalKort(p.kvartal), verdi: p.indeks })) }]}
-      enhet="Prisindeks for brukte boliger, hele landet (2015 = 100)"
-      beskrivelse={`Prisindeks for brukte boliger i hele landet de siste tre årene`}
+    <Graf
+      form="flate"
+      visTittel={false}
+      tabell={false}
+      tittel="Prisindeks for brukte boliger i hele landet de siste tre årene"
+      under="Prisindeks for brukte boliger, hele landet (2015 = 100)"
+      enhet="indeks"
+      kilde={{ navn: 'SSB', url: 'https://www.ssb.no/', tabell: d.tabell }}
+      serier={fraLinjer([{ navn: 'Hele landet', punkter: d.serie.map((p) => ({ etikett: kvartalKort(p.kvartal), verdi: p.indeks })) }])}
     />
     <details class="data-detaljer">
       <summary>Tabell</summary>

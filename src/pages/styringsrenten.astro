@@ -1,13 +1,14 @@
 ---
 // "Styringsrenten nå": Norges Bank'ın açık verisinden (SDMX API) güncel politika faizi ve son değişiklikler.
 // Veri scripts/data/hent-data.mjs ile Nyhetsbot çalışmalarında alınır (src/data/styringsrente.json).
+import Graf from '../components/graf/Graf.astro';
+import { fraLinjer, fraStolper } from '../lib/graf/fra.mjs';
 import { jsonLdMetni } from '../lib/json-ld.mjs';
 import KiNotat from '../components/KiNotat.astro';
 import Base from '../layouts/Base.astro';
 import Symbol from '../components/Symbol.astro';
 import Brodsmuler from '../components/Brodsmuler.astro';
 import StoryRow from '../components/StoryRow.astro';
-import Linjegraf from '../components/data/Linjegraf.astro';
 import { SITE } from '../lib/site';
 import { getNews } from '../lib/news';
 import { GAMMEL_RENTE_MS, RENTE, datoTekst, erGammel, prosent, tidTekst } from '../lib/data';
@@ -35,7 +36,7 @@ if (trinn.length) {
   for (let d = start; d <= slutt; d = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 1))) {
     const dag = d.toISOString().slice(0, 10);
     const gjeldende = [...trinn].reverse().find((t) => t.fra <= dag) ?? trinn[0];
-    maaneder.push({ etikett: String(d.getUTCFullYear()), verdi: gjeldende.rente });
+    maaneder.push({ etikett: d.toLocaleDateString('nb-NO', { month: 'short', year: 'numeric', timeZone: 'UTC' }), verdi: gjeldende.rente });
   }
 }
 
@@ -130,12 +131,16 @@ const jsonLd = {
     maaneder.length > 1 && (
       <section class="day" aria-labelledby="historikk">
         <h2 class="band" id="historikk">Styringsrenten de siste ti årene</h2>
-        <Linjegraf
-          serier={[{ navn: 'Styringsrenten', punkter: maaneder }]}
-          enhet="Prosent, nivå ved inngangen til hver måned"
-          trinn
+        <Graf
+          form="linje"
+          visTittel={false}
           desimaler={2}
-          beskrivelse={`Styringsrenten fra ${maaneder[0].etikett} til i dag, nå ${prosent(r.rente)}`}
+          valg={{ trapp: true }}
+          tittel={`Styringsrenten fra ${maaneder[0].etikett} til i dag, nå ${prosent(r.rente)}`}
+          under="Prosent, nivå ved inngangen til hver måned"
+          enhet="prosent"
+          kilde={{ navn: 'Norges Bank', url: r.kilde.url }}
+          serier={fraLinjer([{ navn: 'Styringsrenten', punkter: maaneder }])}
         />
       </section>
     )

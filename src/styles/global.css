@@ -1691,65 +1691,10 @@ main.container {
   gap: 6px;
 }
 
-/* ——— Datasider: grafer, stolper og fylkeskart (src/components/data) ——— */
-.graf,
-.stolper,
+/* ——— Datasider: fylkeskart (src/components/data); grafene ligger i src/styles/graf.css ——— */
 .fylkekart {
   margin: calc(var(--u) * 2) 0 calc(var(--u) * 4);
 }
-
-.graf {
-  max-width: 560px;
-}
-
-.graf-svg {
-  display: block;
-  width: 100%;
-  height: auto;
-  overflow: visible;
-}
-
-.graf-tikk line {
-  stroke: var(--rule);
-  stroke-width: 1;
-}
-
-.graf-tikk line.graf-null {
-  stroke: var(--ink-2);
-}
-
-.graf-tikk text,
-.graf-x {
-  fill: var(--muted);
-  font: 500 14px var(--frame);
-  font-variant-numeric: tabular-nums;
-}
-
-.graf-serie path {
-  fill: none;
-  stroke: var(--water);
-  stroke-width: 2.5;
-  stroke-linejoin: round;
-}
-
-.graf-serie circle {
-  fill: var(--water);
-}
-
-.graf-serie.graf-s1 path {
-  stroke: var(--contour);
-}
-
-.graf-serie.graf-s1 circle {
-  fill: var(--contour);
-}
-
-.graf-siste {
-  fill: var(--ink);
-  font: 700 14px var(--frame);
-  font-variant-numeric: tabular-nums;
-}
-
 .graf-tekst {
   display: flex;
   flex-wrap: wrap;
@@ -1757,70 +1702,6 @@ main.container {
   margin-top: var(--u);
   font: 500 0.8125rem/1.45 var(--frame);
   color: var(--muted);
-}
-
-.graf-nokkel::before {
-  content: '';
-  display: inline-block;
-  width: 14px;
-  height: 3px;
-  margin-right: 6px;
-  vertical-align: middle;
-  background: var(--water);
-}
-
-.graf-nokkel.graf-s1::before {
-  background: var(--contour);
-}
-
-.stolper {
-  max-width: 640px;
-}
-
-.stolper-liste {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.stolpe {
-  display: grid;
-  grid-template-columns: minmax(7rem, 38%) 1fr 3.5rem;
-  align-items: center;
-  gap: calc(var(--u) * 1.5);
-  padding: 6px 0;
-  border-bottom: 1px solid var(--rule);
-  font: 500 0.9375rem/1.3 var(--frame);
-}
-
-.stolpe-svg {
-  display: block;
-  width: 100%;
-  height: 14px;
-}
-
-.stolpe-svg rect {
-  fill: var(--water);
-}
-
-.stolpe-null {
-  stroke: var(--ink-2);
-  stroke-width: 1;
-  vector-effect: non-scaling-stroke;
-}
-
-.stolpe-verdi {
-  text-align: right;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-}
-
-.stolpe-fremhev .stolpe-navn {
-  font-weight: 700;
-}
-
-.stolpe-fremhev .stolpe-svg rect {
-  fill: var(--ink);
 }
 
 .fylkekart-rutenett {

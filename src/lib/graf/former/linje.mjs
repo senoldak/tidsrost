@@ -8,8 +8,9 @@ export function tegn(d, o = {}) {
   const bredde = o.bred ? B_BRED : B;
   const des = d.desimaler ?? 1;
   const enh = kortEnhet(d.enhet);
-  const serier = d.serier.slice(0, 3);
-  const etiketter = serier[0].punkter.map((p) => String(p.x));
+  const etiketter = d.serier[0].punkter.map((p) => String(p.x));
+  // Öteki seriler ilk serinin x etiketlerine göre hizalanır; eksik etiket boşluk olur.
+  const serier = d.serier.slice(0, 3).map((s, si) => (si === 0 ? s : { ...s, punkter: etiketter.map((e) => s.punkter.find((p) => String(p.x) === e) ?? { x: e, y: null }) }));
   const lengde = etiketter.length;
   const log = !!d.valg?.logAkse;
   const verdier = serier.flatMap((s) => s.punkter.map((p) => p.y)).filter((v) => v !== null && v !== undefined);
@@ -92,6 +93,7 @@ export function tegn(d, o = {}) {
   return {
     svg: `<svg viewBox="0 0 ${bredde} ${H}" class="g-svg" role="img" aria-label="${esc(beskrivelse)}">${deler.join('')}</svg>`,
     bredde, hoyde: H, modus: 'serie', punkter, ramme: { topp: U, bunn: H - A },
+    nokkel: serier.length > 1 ? serier.map((s, si) => ({ navn: s.navn, klasse: `g-s${si}` })) : undefined,
     tabell: { kolonner: ['', ...serier.map((s) => s.navn)], rader: etiketter.map((e, i) => [e, ...serier.map((s) => (s.punkter[i]?.y === null || s.punkter[i]?.y === undefined ? '–' : tall(s.punkter[i].y, des)))]) },
     beskrivelse,
   };

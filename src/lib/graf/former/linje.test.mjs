@@ -28,3 +28,12 @@ test('linje: style="" ve kaçışsız < yok', () => {
   assert.ok(!s.includes('<x>'));
 });
 test('linje: ramme topp/bunn verir', () => { const t = tegn(veri3); assert.ok(t.ramme.bunn > t.ramme.topp); });
+test('linje: ikinci seri x etiketine göre hizalanır', () => {
+  const t = tegn({ ...veri3, serier: [veri3.serier[0], { navn: 'B', punkter: [{ x: 'feb', y: 5 }, { x: 'mar', y: 6 }] }] });
+  assert.equal(t.punkter[0].tekst, 'jan\nKPI: 2,1 %\nB: –');
+  assert.equal(t.tabell.rader[1][2], '5,0');
+});
+test('linje: çoklu seride nokkel, tek seride yok', () => {
+  assert.equal(tegn(veri3).nokkel, undefined);
+  assert.deepEqual(tegn({ ...veri3, serier: [veri3.serier[0], { navn: 'B', punkter: [{ x: 'jan', y: 1 }] }] }).nokkel, [{ navn: 'KPI', klasse: 'g-s0' }, { navn: 'B', klasse: 'g-s1' }]);
+});

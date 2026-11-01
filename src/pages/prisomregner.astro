@@ -2,12 +2,13 @@
 // Priskalkulator: SSB'nin tarihsel KPI'si (14711 yıllık, 14710 aylık; src/data/kpi-historisk.json).
 // Hesap src/lib/prisomregner.mjs'te (derleme ve istemci aynı kod). Sabit metinde rakam yok; JS'siz tablo veriden.
 // İstemci betiği Astro'nun paketlediği harici dosyadır; veri sayfaya gömülü application/json bloğundan okunur.
+import Graf from '../components/graf/Graf.astro';
+import { fraLinjer, fraStolper } from '../lib/graf/fra.mjs';
 import { jsonLdMetni } from '../lib/json-ld.mjs';
 import KiNotat from '../components/KiNotat.astro';
 import Base from '../layouts/Base.astro';
 import Symbol from '../components/Symbol.astro';
 import Brodsmuler from '../components/Brodsmuler.astro';
-import Linjegraf from '../components/data/Linjegraf.astro';
 import DataKilde from '../components/data/DataKilde.astro';
 import { GAMMEL_MAANED_MS, dataGammel, datasideLd, maanedTekst } from '../lib/datasider';
 import { SITE_URL } from '../lib/seo';
@@ -129,11 +130,15 @@ const kpiData = { aar: data.aar, mnd: data.mnd, sisteAar, sisteMnd };
 
   <section class="day" aria-labelledby="indeks">
     <h2 class="band" id="indeks">Prisnivået siden {forsteAar}</h2>
-    <Linjegraf
-      serier={[{ navn: 'KPI', punkter: aarListe.map((a) => ({ etikett: a, verdi: aar[a] })) }]}
-      enhet={`Konsumprisindeks, ${sisteAar} = 100`}
-      beskrivelse={`Konsumprisindeksen for hvert år fra ${forsteAar} til ${sisteAar}, med ${sisteAar} satt til 100`}
+    <Graf
+      form="linje"
+      visTittel={false}
       desimaler={0}
+      tittel={`Konsumprisindeksen for hvert år fra ${forsteAar} til ${sisteAar}, med ${sisteAar} satt til 100`}
+      under={`Konsumprisindeks, ${sisteAar} = 100`}
+      enhet="indeks"
+      kilde={{ navn: 'SSB', url: 'https://www.ssb.no/', tabell: '14711' }}
+      serier={fraLinjer([{ navn: 'KPI', punkter: aarListe.map((a) => ({ etikett: a, verdi: aar[a] })) }])}
     />
   </section>
 

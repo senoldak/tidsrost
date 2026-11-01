@@ -1,14 +1,14 @@
 ---
 // /lonn/<yrke>/: ett yrke med eget tallgrunnlag (terskel: scripts/data/ssb-lonn.mjs lonnSider). Alt kommer fra
 // src/data/lonn.json: median og gjennomsnitt per måned (og omregnet til årslønn × 12), kvartiler, kvinner og menn, sektor,
-// utvikling mot alle yrker (Linjegraf) og setninger regnet ut av tallene (src/lib/lonn-tekst.mjs). Ingen vurderinger.
+// utvikling mot alle yrker (linje) og setninger regnet ut av tallene (src/lib/lonn-tekst.mjs). Ingen vurderinger.
+import Graf from '../../components/graf/Graf.astro';
+import { fraLinjer, fraStolper } from '../../lib/graf/fra.mjs';
 import { jsonLdMetni } from '../../lib/json-ld.mjs';
 import KiNotat from '../../components/KiNotat.astro';
 import Base from '../../layouts/Base.astro';
 import Symbol from '../../components/Symbol.astro';
 import Brodsmuler from '../../components/Brodsmuler.astro';
-import Linjegraf from '../../components/data/Linjegraf.astro';
-import Stolpegraf from '../../components/data/Stolpegraf.astro';
 import DataKilde from '../../components/data/DataKilde.astro';
 import { GAMMEL_MAANED_MS, dataGammel, datasideLd } from '../../lib/datasider';
 import { SITE_URL, breadcrumbs } from '../../lib/seo';
@@ -136,15 +136,15 @@ const sti = [sti3[0], sti3[1], { name: 'Lønn etter yrke', url: `${SITE_URL}/lon
       <section class="day" aria-labelledby="kjonn">
         <h2 class="band" id="kjonn">Kvinner og menn</h2>
         <p class="data-merknad">Median månedslønn i kroner. Medianen for alle yrker er uthevet.</p>
-        <Stolpegraf
-          rader={[
-            { navn: 'Menn', verdi: y.menn },
-            { navn: 'Kvinner', verdi: y.kvinner },
-            { navn: 'Alle yrker', verdi: alle.median, fremhev: true },
-          ]}
-          enhet={`Median månedslønn for ${n}, kvinner og menn, november ${data.sisteAar}`}
-          beskrivelse={`Median månedslønn for menn og kvinner i yrket ${n} sammenlignet med alle yrker i ${data.sisteAar}`}
+        <Graf
+          form="rangering"
+          visTittel={false}
           desimaler={0}
+          tittel={`Median månedslønn for menn og kvinner i yrket ${n} sammenlignet med alle yrker i ${data.sisteAar}`}
+          under={`Median månedslønn for ${n}, kvinner og menn, november ${data.sisteAar}`}
+          enhet="kroner"
+          kilde={{ navn: 'SSB', url: 'https://www.ssb.no/', tabell: data.tabell }}
+          {...fraStolper('Median månedslønn', [{ navn: 'Menn', verdi: y.menn }, { navn: 'Kvinner', verdi: y.kvinner }, { navn: 'Alle yrker', verdi: alle.median, fremhev: true }])}
         />
       </section>
     )
@@ -181,14 +181,16 @@ const sti = [sti3[0], sti3[1], { name: 'Lønn etter yrke', url: `${SITE_URL}/lon
     serieAar.length >= 3 && (
       <section class="day" aria-labelledby="utvikling">
         <h2 class="band" id="utvikling">Utviklingen siden {serieAar[0]}</h2>
-        <Linjegraf
-          serier={[
-            { navn: y.navn, punkter: serieAar.map((a) => ({ etikett: a, verdi: y.serie[a] as number })) },
-            { navn: 'Alle yrker', punkter: serieAar.filter((a) => typeof alle.serie[a] === 'number').map((a) => ({ etikett: a, verdi: alle.serie[a] as number })) },
-          ]}
-          enhet={`Median månedslønn i kroner, ${y.navn} og alle yrker`}
-          beskrivelse={`Median månedslønn for ${n} og for alle yrker, ${serieAar[0]} til ${serieAar.at(-1)}`}
+        <Graf
+          form="linje"
+          visTittel={false}
+          tabell={false}
           desimaler={0}
+          tittel={`Median månedslønn for ${n} og for alle yrker, ${serieAar[0]} til ${serieAar.at(-1)}`}
+          under={`Median månedslønn i kroner, ${y.navn} og alle yrker`}
+          enhet="kroner"
+          kilde={{ navn: 'SSB', url: 'https://www.ssb.no/', tabell: data.tabell }}
+          serier={fraLinjer([{ navn: y.navn, punkter: serieAar.map((a) => ({ etikett: a, verdi: y.serie[a] as number })) }, { navn: 'Alle yrker', punkter: serieAar.filter((a) => typeof alle.serie[a] === 'number').map((a) => ({ etikett: a, verdi: alle.serie[a] as number })) }])}
         />
         {hullISerie && <p class="data-merknad">SSB oppgir ikke tall for alle år. Linjen går da rett mellom årene som har tall.</p>}
         <div class="prose data-tabell lonn-enkel">

@@ -192,6 +192,25 @@ circle.g-pa,
 .g-tips[hidden] {
   display: none;
 }
+.g-nokkel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin: 8px 0 0;
+  font: 500 0.82rem var(--frame);
+  color: var(--ink);
+}
+.g-nokkel span::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 3px;
+  margin-right: 6px;
+  vertical-align: middle;
+  background: var(--water);
+}
+.g-nokkel .g-s1::before { background: var(--contour); }
+.g-nokkel .g-s2::before { background: var(--red); }
 .g-kilde {
   font: 400 0.78rem var(--frame);
   color: var(--muted);

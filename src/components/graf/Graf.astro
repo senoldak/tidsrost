@@ -5,8 +5,10 @@ import '../../styles/graf.css';
 import { nyId, tegnGraf } from '../../lib/graf/index.mjs';
 import type { GrafData } from '../../lib/graf/sema.mjs';
 
-type Props = GrafData & { bred?: boolean; nivaa?: 2 | 3 };
-const { bred = false, nivaa = 3, ...data } = Astro.props as Props;
+// visTittel=false: sayfanın kendi bölüm başlığı varken başlık yalnız ekran okuyucuya gider.
+// tabell=false: sayfa aynı sayıları zaten tabloyla veriyorsa "Vis tallene" çıkmaz.
+type Props = GrafData & { bred?: boolean; nivaa?: 2 | 3; visTittel?: boolean; tabell?: boolean };
+const { bred = false, nivaa = 3, visTittel = true, tabell = true, ...data } = Astro.props as Props;
 const t = tegnGraf(data as GrafData, { id: nyId(), bred });
 const Overskrift = `h${nivaa}`;
 const json = JSON.stringify({ modus: t.modus, punkter: t.punkter, bredde: t.bredde, ramme: t.ramme ?? null }).replace(/</g, '\\u003c');
@@ -14,7 +16,7 @@ const json = JSON.stringify({ modus: t.modus, punkter: t.punkter, bredde: t.bred
 
 <figure class:list={['g-kort', { 'g-bred': bred }]} data-graf tabindex="0">
   <figcaption>
-    <Overskrift class="g-tittel">{data.tittel}</Overskrift>
+    <Overskrift class:list={['g-tittel', { 'sr-only': !visTittel }]}>{data.tittel}</Overskrift>
     {data.under && <p class="g-under">{data.under}</p>}
     {
       data.tall && (
@@ -29,11 +31,11 @@ const json = JSON.stringify({ modus: t.modus, punkter: t.punkter, bredde: t.bred
     <Fragment set:html={t.svg} />
     <div class="g-tips" hidden></div>
   </div>
+  {t.nokkel && <p class="g-nokkel">{t.nokkel.map((n) => <span class={n.klasse}>{n.navn}</span>)}</p>}
   <p class="g-kilde">
-    Kilde: {data.kilde.url ? <a href={data.kilde.url}>{data.kilde.navn}</a> : data.kilde.navn}
-    {data.kilde.tabell && <>, tabell {data.kilde.tabell}</>}
+    Kilde: {data.kilde.url ? <a href={data.kilde.url}>{data.kilde.navn}</a> : data.kilde.navn}{data.kilde.tabell && `, tabell ${data.kilde.tabell}`}
   </p>
-  <details class="g-tabell">
+  {tabell && (<details class="g-tabell">
     <summary>Vis tallene</summary>
     <div class="g-tabell-rull">
       <table>
@@ -45,7 +47,7 @@ const json = JSON.stringify({ modus: t.modus, punkter: t.punkter, bredde: t.bred
         </tbody>
       </table>
     </div>
-  </details>
+  </details>)}
   <script type="application/json" data-graf-punkter set:html={json} />
 </figure>
 
