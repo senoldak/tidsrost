@@ -167,6 +167,40 @@
   fill: var(--paper);
   font-weight: 600;
 }
+.g-svg .g-akse-h-t {
+  fill: var(--contour);
+}
+.g-koble {
+  fill: none;
+  stroke: var(--g-bar);
+  stroke-width: 1.5;
+}
+.g-trend {
+  stroke: var(--red);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 3;
+}
+.g-prikk {
+  opacity: 0.8;
+}
+.g-radial-spor {
+  fill: none;
+  stroke: var(--rule);
+  stroke-dasharray: 2 3;
+}
+.g-svg .g-midt-liten {
+  fill: var(--ink);
+  font-size: 18px;
+  font-weight: 800;
+}
+.g-smaa-bunn {
+  stroke: var(--rule);
+}
+.g-smaa-linje {
+  fill: none;
+  stroke: var(--water);
+  stroke-width: 2;
+}
 .g-trapp {
   stroke: var(--muted);
   stroke-width: 1;

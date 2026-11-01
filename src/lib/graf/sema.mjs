@@ -14,7 +14,7 @@
  * @typedef {{ svg: string, bredde: number, hoyde: number, modus: 'serie'|'element', punkter: TipsPunkt[], ramme?: { topp: number, bunn: number }, nokkel?: { navn: string, klasse: string }[], tabell: { kolonner: string[], rader: string[][] }, beskrivelse: string }} Tegning
  */
 
-export const BILINEN_FORMER = ['linje', 'soyle', 'flate', 'avvik', 'rangering', 'smultring', 'maler', 'rutenett', 'prikksoyle', 'helning', 'manual', 'baand', 'spenn', 'stablet', 'gruppert', 'stabletflate', 'fremdrift', 'fossefall', 'varmekart', 'stripe', 'flyt', 'tre'];
+export const BILINEN_FORMER = ['linje', 'soyle', 'flate', 'avvik', 'rangering', 'smultring', 'maler', 'rutenett', 'prikksoyle', 'helning', 'manual', 'baand', 'spenn', 'stablet', 'gruppert', 'stabletflate', 'fremdrift', 'fossefall', 'varmekart', 'stripe', 'flyt', 'tre', 'kombi', 'spredning', 'radial', 'smaa'];
 
 /** @param {GrafData} d @returns {string[]} hata listesi; boşsa geçerli */
 export function validerGraf(d) {
@@ -31,6 +31,8 @@ export function validerGraf(d) {
   }
   if (['stablet', 'gruppert', 'stabletflate', 'smaa'].includes(d.form) && !(d.serier?.length >= 2)) h.push(`${d.form}: minst 2 serier`);
   if (d.form === 'stablet' || d.form === 'stabletflate') for (const s of d.serier ?? []) for (const p of s.punkter ?? []) if (p.y < 0) h.push(`${d.form}: negatif verdi "${s.navn}" ${p.x}`);
+  if (d.form === 'kombi' && d.serier?.length !== 2) h.push('kombi: tam 2 serier (søyle + linje)');
+  if (d.form === 'spredning') for (const p of d.serier?.[0]?.punkter ?? []) if (!Number.isFinite(p.x)) h.push(`spredning: x sayısal olmalı (${p.x})`);
   if (d.form === 'flyt') for (const p of d.serier?.[0]?.punkter ?? []) if (!p.til) h.push(`flyt: "${p.x}" til eksik`);
   if (d.form === 'fremdrift') for (const p of d.serier?.[0]?.punkter ?? []) if (!(Number.isFinite(p.y2) && p.y2 !== 0)) h.push(`fremdrift: "${p.x}" y2 (mål) eksik eller 0`);
   if (d.form === 'baand' || d.form === 'spenn') for (const p of d.serier?.[0]?.punkter ?? []) if (Number.isFinite(p.y) && !Number.isFinite(p.y2)) h.push(`${d.form}: "${p.x}" y2 eksik`);
