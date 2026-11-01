@@ -119,6 +119,18 @@
   fill: var(--g-bar);
   opacity: 0.5;
 }
+.g-baand {
+  fill: var(--g-su2);
+  opacity: 0.55;
+}
+.g-nokkel .g-n-baand::before {
+  height: 10px;
+  background: var(--g-su2);
+}
+.g-spenn {
+  stroke: var(--muted);
+  stroke-width: 1.5;
+}
 .g-mal {
   stroke: var(--red);
   stroke-width: 1.5;

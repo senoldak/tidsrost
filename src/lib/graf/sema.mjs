@@ -1,7 +1,7 @@
 // Grafik verisinin tek sözleşmesi: Graf.astro prop'ları ve Forklart'taki graf-N.json aynı şemayı kullanır.
 
 /**
- * @typedef {{ x: string|number, y: number|null, y2?: number }} Punkt
+ * @typedef {{ x: string|number, y: number|null, y2?: number, til?: string, start?: number, slutt?: number }} Punkt
  * @typedef {{ navn: string, punkter: Punkt[] }} Serie
  * @typedef {{ type: 'mal', y: number, tekst: string } | { type: 'snitt', tekst?: string } | { type: 'periode', fra: string|number, til: string|number, tekst?: string }} Merknad
  * @typedef {{
@@ -14,7 +14,7 @@
  * @typedef {{ svg: string, bredde: number, hoyde: number, modus: 'serie'|'element', punkter: TipsPunkt[], ramme?: { topp: number, bunn: number }, nokkel?: { navn: string, klasse: string }[], tabell: { kolonner: string[], rader: string[][] }, beskrivelse: string }} Tegning
  */
 
-export const BILINEN_FORMER = ['linje', 'soyle', 'flate', 'avvik', 'rangering', 'smultring', 'maler', 'rutenett', 'prikksoyle', 'helning', 'manual'];
+export const BILINEN_FORMER = ['linje', 'soyle', 'flate', 'avvik', 'rangering', 'smultring', 'maler', 'rutenett', 'prikksoyle', 'helning', 'manual', 'baand', 'spenn'];
 
 /** @param {GrafData} d @returns {string[]} hata listesi; boşsa geçerli */
 export function validerGraf(d) {
@@ -29,6 +29,7 @@ export function validerGraf(d) {
     if (!(Array.isArray(d.valg?.gruppenavn) && d.valg.gruppenavn.length === 2)) h.push('manual: valg.gruppenavn [a, b] eksik');
     for (const s of d.serier ?? []) for (const p of s.punkter ?? []) if (p.y !== null && !Number.isFinite(p.y2)) h.push(`manual: "${p.x}" y2 eksik`);
   }
+  if (d.form === 'baand' || d.form === 'spenn') for (const p of d.serier?.[0]?.punkter ?? []) if (Number.isFinite(p.y) && !Number.isFinite(p.y2)) h.push(`${d.form}: "${p.x}" y2 eksik`);
   if (d.form === 'maler' && !(d.valg?.maks > 0)) h.push('maler: valg.maks eksik');
   if ((d.form === 'maler' || d.form === 'rutenett') && !Number.isFinite(d.serier?.[0]?.punkter?.[0]?.y)) h.push(`${d.form}: ilk verdi eksik`);
   if (!Array.isArray(d.serier) || !d.serier.length) h.push('serier boş');

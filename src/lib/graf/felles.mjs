@@ -95,3 +95,20 @@ export const r2 = (v) => Math.round(v * 100) / 100;
 
 /** Değer null/undefined mı? */
 export const tom = (v) => v === null || v === undefined;
+
+/** Sol y ekseni: yatay ızgara çizgileri ve değer etiketleri (g-akse). */
+export function yAkse(tikker, y, V, sag) {
+  const des = tikkDesimaler(tikker);
+  return `<g class="g-akse">${tikker.map((t) => `<line x1="${V}" x2="${sag}" y1="${r2(y(t))}" y2="${r2(y(t))}"${t === 0 ? ' class="g-null"' : ''}/>${tekst(V - 6, y(t) + 4, tall(t, des), 'text-anchor="end"')}`).join('')}</g>`;
+}
+
+/** Alt x etiketleri: en çok `antall` tane, kısaltılmış. */
+export function xEtiketter(etiketter, xAv, H, antall = 4) {
+  const n = etiketter.length;
+  return etikettIndekser(n, antall).map((i) => tekst(xAv(i), H - 7, kortNavn(String(etiketter[i]), 12), `text-anchor="${n === 1 ? 'middle' : i === 0 ? 'start' : i === n - 1 ? 'end' : 'middle'}"`)).join('');
+}
+
+/** SVG kabuğu. */
+export function svgKabuk(bredde, H, beskrivelse, innhold) {
+  return `<svg viewBox="0 0 ${bredde} ${H}" class="g-svg" role="img" aria-label="${esc(beskrivelse)}">${innhold}</svg>`;
+}
