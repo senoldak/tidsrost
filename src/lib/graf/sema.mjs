@@ -33,8 +33,9 @@ export function validerGraf(d) {
   if (d.form === 'stablet' || d.form === 'stabletflate') for (const s of d.serier ?? []) for (const p of s.punkter ?? []) if (p.y < 0) h.push(`${d.form}: negatif verdi "${s.navn}" ${p.x}`);
   if (d.form === 'kombi' && d.serier?.length !== 2) h.push('kombi: tam 2 serier (søyle + linje)');
   if (d.form === 'spredning') for (const p of d.serier?.[0]?.punkter ?? []) if (!Number.isFinite(p.x)) h.push(`spredning: x sayısal olmalı (${p.x})`);
+  if (d.form === 'fossefall' && !Number.isFinite(d.serier?.[0]?.punkter?.[0]?.y)) h.push('fossefall: første verdi (start) eksik');
   if (d.form === 'flyt') for (const p of d.serier?.[0]?.punkter ?? []) if (!p.til) h.push(`flyt: "${p.x}" til eksik`);
-  if (d.form === 'fremdrift') for (const p of d.serier?.[0]?.punkter ?? []) if (!(Number.isFinite(p.y2) && p.y2 !== 0)) h.push(`fremdrift: "${p.x}" y2 (mål) eksik eller 0`);
+  if (d.form === 'fremdrift') for (const p of d.serier?.[0]?.punkter ?? []) if (!(Number.isFinite(p.y2) && p.y2 > 0)) h.push(`fremdrift: "${p.x}" y2 (mål) må være over 0`);
   if (d.form === 'baand' || d.form === 'spenn') for (const p of d.serier?.[0]?.punkter ?? []) if (Number.isFinite(p.y) && !Number.isFinite(p.y2)) h.push(`${d.form}: "${p.x}" y2 eksik`);
   if (d.form === 'maler' && !(d.valg?.maks > 0)) h.push('maler: valg.maks eksik');
   if ((d.form === 'maler' || d.form === 'rutenett') && !Number.isFinite(d.serier?.[0]?.punkter?.[0]?.y)) h.push(`${d.form}: ilk verdi eksik`);
