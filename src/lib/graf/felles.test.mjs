@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { fineTikker, skala, tall, kortNavn, esc, sti, trappSti } from './felles.mjs';
+import { fineTikker, skala, tall, kortNavn, esc, sti, trappSti, kortEnhet } from './felles.mjs';
 
 test('fineTikker: düz seri NaN üretmez', () => { const t = fineTikker(5, 5); assert.ok(t.length >= 2 && t.every(Number.isFinite)); });
 test('fineTikker: 0–5,2 → 0..6', () => assert.deepEqual(fineTikker(0, 5.2), [0, 2, 4, 6]));
@@ -10,3 +10,8 @@ test('sti: null keser', () => assert.equal(sti([{ x: 0, y: 1 }, { x: 1, y: null 
 test('trappSti: H/V', () => assert.equal(trappSti([{ x: 0, y: 1 }, { x: 2, y: 3 }]), 'M0 1H2V3'));
 test('kortNavn', () => { assert.equal(kortNavn('Møre og Romsdal og Vestland uten Bergen', 20), 'Møre og Romsdal og …'); assert.equal(kortNavn('Oslo', 20), 'Oslo'); });
 test('esc', () => assert.equal(esc('<a & "b">'), '&lt;a &amp; &quot;b&quot;&gt;'));
+test('kortEnhet', () => {
+  assert.equal(kortEnhet('Tolvmånedersendring i KPI, prosent'), ' %');
+  assert.equal(kortEnhet('Kroner per måned'), ' kr');
+  assert.equal(kortEnhet('Indeks (2015 = 100)'), '');
+});

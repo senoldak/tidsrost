@@ -1,0 +1,187 @@
+/* Grafik seti (src/components/graf/Graf.astro). Renkler sınıfla; satır içi stil yok (CSP). */
+.g-kort {
+  --g-bar: color-mix(in srgb, var(--muted) 30%, var(--paper));
+  --g-su2: color-mix(in srgb, var(--water) 42%, var(--paper));
+  margin: 0 0 calc(var(--u) * 4);
+  padding-top: 12px;
+  border-top: 3px solid var(--water);
+  max-width: 640px;
+  outline: none;
+}
+.g-kort.g-bred {
+  max-width: none;
+}
+.g-kort:focus-visible {
+  box-shadow: 0 0 0 2px var(--water);
+}
+.g-kort figcaption {
+  margin-bottom: 10px;
+}
+.g-tittel {
+  font: 700 1.12rem/1.2 var(--frame);
+  margin: 0;
+  color: var(--ink);
+}
+.g-under {
+  font: 400 0.9rem/1.35 var(--frame);
+  color: var(--muted);
+  margin: 3px 0 0;
+}
+.g-tall {
+  font: 800 2rem/1 var(--frame);
+  font-stretch: 90%;
+  margin: 8px 0 0;
+  color: var(--ink);
+}
+.g-tall small {
+  font: 600 0.85rem var(--frame);
+  color: var(--muted);
+  margin-left: 0.4rem;
+}
+.g-flate {
+  position: relative;
+}
+.g-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  touch-action: pan-y;
+}
+.g-svg text {
+  font-family: var(--frame);
+  font-size: 12px;
+  fill: var(--muted);
+}
+.g-akse line {
+  stroke: var(--rule);
+  stroke-width: 1;
+}
+.g-akse line.g-null {
+  stroke: var(--muted);
+}
+.g-serie path {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.g-serie circle {
+  stroke: var(--paper);
+  stroke-width: 1.5;
+}
+.g-s0 path { stroke: var(--water); }
+.g-s0 circle { fill: var(--water); }
+.g-s1 path { stroke: var(--contour); }
+.g-s1 circle { fill: var(--contour); }
+.g-s2 path { stroke: var(--red); }
+.g-s2 circle { fill: var(--red); }
+.g-svg .g-siste {
+  fill: var(--ink);
+  font-weight: 700;
+}
+.g-mal {
+  stroke: var(--red);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 3;
+}
+.g-svg .g-mal-t {
+  fill: var(--red);
+  font-weight: 700;
+}
+.g-periode {
+  fill: var(--water);
+  opacity: 0.12;
+}
+.g-svg .g-periode-t {
+  fill: var(--water);
+  font-weight: 700;
+}
+.g-folg {
+  stroke: var(--ink);
+  stroke-width: 1;
+  opacity: 0.35;
+  pointer-events: none;
+}
+.g-ring {
+  fill: var(--paper);
+  stroke: var(--water);
+  stroke-width: 2.5;
+  pointer-events: none;
+}
+/* Ayrık öğeler (çubuk, dilim, kare) */
+.g-f-su { fill: var(--water); }
+.g-f-su2 { fill: var(--g-su2); }
+.g-f-bar { fill: var(--g-bar); }
+.g-f-rod { fill: var(--red); }
+.g-f-kontur { fill: var(--contour); }
+.g-f-gul { fill: var(--warn); }
+.g-svg .g-t-blekk { fill: var(--ink); }
+.g-svg .g-t-sterk { fill: var(--ink); font-weight: 700; }
+[data-i] {
+  cursor: pointer;
+}
+.g-pa {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.g-tips {
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+  background: var(--ink);
+  color: var(--paper);
+  font: 500 0.82rem/1.35 var(--frame);
+  padding: 6px 9px;
+  white-space: pre-line;
+  max-width: 260px;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.g-tips::first-line {
+  font-weight: 400;
+}
+.g-tips[hidden] {
+  display: none;
+}
+.g-kilde {
+  font: 400 0.78rem var(--frame);
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+.g-kilde a {
+  color: inherit;
+}
+.g-tabell {
+  margin-top: 6px;
+  font: 400 0.82rem var(--frame);
+}
+.g-tabell summary {
+  cursor: pointer;
+  color: var(--water);
+  font-weight: 600;
+}
+.g-tabell-rull {
+  overflow-x: auto;
+  max-height: 320px;
+  margin-top: 6px;
+}
+.g-tabell table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.g-tabell th,
+.g-tabell td {
+  text-align: right;
+  padding: 3px 8px 3px 0;
+  border-bottom: 1px solid var(--rule);
+  font-variant-numeric: tabular-nums;
+}
+.g-tabell th[scope='row'],
+.g-tabell thead th:first-child {
+  text-align: left;
+  font-weight: 400;
+}
+.g-tabell thead th {
+  font-weight: 700;
+  color: var(--muted);
+}

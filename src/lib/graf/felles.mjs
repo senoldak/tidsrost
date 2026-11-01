@@ -61,3 +61,22 @@ export function trappSti(punkter) {
   if (!g.length) return '';
   return g.reduce((d, p, i) => (i ? `${d}H${n(p.x)}V${n(p.y)}` : `M${n(p.x)} ${n(p.y)}`), '');
 }
+
+/** İpucu için kısa birim: prosent → " %", kroner → " kr", öteki → "". */
+export function kortEnhet(enhet) {
+  if (/prosent|%/i.test(enhet)) return ' %';
+  if (/kroner|\bkr\b/i.test(enhet)) return ' kr';
+  return '';
+}
+
+/** Eksende en çok `antall` etiket: baş, son ve aradakiler eşit aralıkla. */
+export function etikettIndekser(lengde, antall = 4) {
+  const k = Math.min(antall, lengde);
+  if (k <= 1) return [0];
+  return [...new Set(Array.from({ length: k }, (_, i) => Math.round((i / (k - 1)) * (lengde - 1))))];
+}
+
+/** SVG metni (kaçışlı). */
+export function tekst(x, y, innhold, attr = '') {
+  return `<text x="${n(x)}" y="${n(y)}"${attr ? ` ${attr}` : ''}>${esc(innhold)}</text>`;
+}
