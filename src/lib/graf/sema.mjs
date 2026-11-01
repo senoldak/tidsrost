@@ -1,0 +1,34 @@
+// Grafik verisinin tek sözleşmesi: Graf.astro prop'ları ve Forklart'taki graf-N.json aynı şemayı kullanır.
+
+/**
+ * @typedef {{ x: string|number, y: number|null, y2?: number }} Punkt
+ * @typedef {{ navn: string, punkter: Punkt[] }} Serie
+ * @typedef {{ type: 'mal', y: number, tekst: string } | { type: 'snitt', tekst?: string } | { type: 'periode', fra: string|number, til: string|number, tekst?: string }} Merknad
+ * @typedef {{
+ *   form: string, tittel: string, under?: string, tall?: { verdi: string, etikett?: string },
+ *   kilde: { navn: string, url?: string, tabell?: string }, enhet: string, desimaler?: number,
+ *   serier: Serie[], merknader?: Merknad[],
+ *   valg?: { trapp?: boolean, logAkse?: boolean, sorter?: boolean, maks?: number, fremhev?: (string|number)[], prikk?: number, gruppenavn?: [string, string] }
+ * }} GrafData
+ * @typedef {{ x: number, y: number, tekst: string, midt?: string }} TipsPunkt
+ * @typedef {{ svg: string, bredde: number, hoyde: number, modus: 'serie'|'element', punkter: TipsPunkt[], tabell: { kolonner: string[], rader: string[][] }, beskrivelse: string }} Tegning
+ */
+
+export const BILINEN_FORMER = ['linje', 'soyle', 'flate', 'avvik', 'rangering', 'smultring', 'maler', 'rutenett', 'prikksoyle', 'helning', 'manual'];
+
+/** @param {GrafData} d @returns {string[]} hata listesi; boşsa geçerli */
+export function validerGraf(d) {
+  const h = [];
+  if (!d || typeof d !== 'object') return ['veri yok'];
+  if (!BILINEN_FORMER.includes(d.form)) h.push(`bilinmeyen form: ${d.form}`);
+  if (!d.tittel) h.push('tittel eksik');
+  if (!d.kilde?.navn) h.push('kilde.navn eksik');
+  if (typeof d.enhet !== 'string') h.push('enhet eksik');
+  if (!Array.isArray(d.serier) || !d.serier.length) h.push('serier boş');
+  else
+    for (const s of d.serier) {
+      if (!Array.isArray(s.punkter) || !s.punkter.length) h.push(`serier: "${s.navn}" boş`);
+      else for (const p of s.punkter) if (p.y !== null && !Number.isFinite(p.y)) h.push(`serier: "${s.navn}" ${p.x} geçersiz y`);
+    }
+  return h;
+}
