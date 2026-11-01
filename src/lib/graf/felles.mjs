@@ -73,6 +73,7 @@ export function trappSti(punkter) {
 
 /** İpucu için kısa birim: prosent → " %", kroner → " kr", öteki → "". */
 export function kortEnhet(enhet) {
+  if (/prosentpoeng/i.test(enhet)) return ' prosentpoeng';
   if (/prosent|%/i.test(enhet)) return ' %';
   if (/milliard/i.test(enhet) && /kroner|\bkr\b/i.test(enhet)) return ' mrd. kr';
   if (/million/i.test(enhet) && /kroner|\bkr\b/i.test(enhet)) return ' mill. kr';

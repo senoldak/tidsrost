@@ -12,11 +12,17 @@ const GRAF = /^\.\/(graf-\d+)\.svg$/;
 
 /**
  * Paragraf bir graf-N.svg resminden (ve isteğe bağlı altındaki italik açıklamadan) ibaretse ve JSON'u varsa kart HTML'i;
- * yoksa null. Açıklamanın metni (alt başlık ve "Kilde: …") çeviricide JSON'un under/kilde alanlarına birebir taşınır.
+ * yoksa null. Açıklama kartın altında aynen yazılır; kartın kendi alt başlığı ve kaynak satırı o zaman çıkmaz.
  */
 export function grafForAvsnitt(p, mappe) {
   const barn = (p.children ?? []).filter((c) => !(c.type === 'text' && !c.value.trim()));
-  if (barn.length === 2 && barn[1].type === 'element' && barn[1].tagName === 'em') barn.pop();
+  // Yazının italik açıklaması (alt başlık, dönem, notlar, "Kilde: …, tabell …") kartın altında aynen kalır; yalnız düz metinse.
+  let bildetekst;
+  if (barn.length === 2 && barn[1].type === 'element' && barn[1].tagName === 'em') {
+    const em = barn.pop();
+    if (!em.children?.every((c) => c.type === 'text')) return null;
+    bildetekst = em.children.map((c) => c.value).join('').trim();
+  }
   if (barn.length !== 1 || barn[0].type !== 'element' || barn[0].tagName !== 'img') return null;
   const m = String(barn[0].properties?.src ?? '').match(GRAF);
   if (!m) return null;
@@ -29,7 +35,7 @@ export function grafForAvsnitt(p, mappe) {
       console.warn(`[forklart-graf] ${fil}: ${feil.join('; ')} (bildet beholdes)`);
       return null;
     }
-    return grafHtml(data, { id: nyId(), bred: !!data.bred });
+    return grafHtml(data, { id: nyId(), bred: !!data.bred, bildetekst });
   } catch (e) {
     console.warn(`[forklart-graf] ${fil}: ${e.message} (bildet beholdes)`);
     return null;

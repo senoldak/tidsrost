@@ -341,6 +341,11 @@ circle.g-pa,
 }
 .g-nokkel .g-s1::before { background: var(--contour); }
 .g-nokkel .g-s2::before { background: var(--red); }
+.g-bildetekst {
+  font: 400 0.86rem/1.45 var(--read);
+  color: var(--muted);
+  margin: 8px 0 0;
+}
 .g-kilde {
   font: 400 0.78rem var(--frame);
   color: var(--muted);

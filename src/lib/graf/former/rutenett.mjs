@@ -7,7 +7,8 @@ const NOKKEL = ['g-n-su', 'g-n-kontur', 'g-n-gul', 'g-n-rod', 'g-n-su2', 'g-n-ba
 
 function fordel(verdier) {
   const sum = verdier.reduce((a, v) => a + v, 0);
-  const total = Math.min(100, Math.round(sum));
+  // Motor gibi: toplam 99–101 arasındaysa (yuvarlama) 100 karenin hepsi dağıtılır.
+  const total = sum >= 99 && sum <= 101 ? 100 : Math.min(100, Math.round(sum));
   const rå = verdier.map((v) => (sum ? (v / sum) * total : 0));
   const hel = rå.map(Math.floor);
   let rest = total - hel.reduce((a, v) => a + v, 0);

@@ -32,3 +32,13 @@ test('grafForAvsnitt: resim + düz metin değişmez', () => {
   const avsnitt = { type: 'element', tagName: 'p', children: [{ type: 'element', tagName: 'img', properties: { src: './graf-1.svg' }, children: [] }, { type: 'text', value: ' mer tekst' }] };
   assert.equal(grafForAvsnitt(avsnitt, mappe), null);
 });
+test('grafForAvsnitt: yazının italik açıklaması olduğu gibi kalır; kartın alt başlığı ve kaynak satırı çıkmaz', () => {
+  const avsnitt = { type: 'element', tagName: 'p', children: [{ type: 'element', tagName: 'img', properties: { src: './graf-1.svg' }, children: [] }, { type: 'text', value: '\n' }, { type: 'element', tagName: 'em', children: [{ type: 'text', value: 'Drepte per år, 2001–2025. Kilde: SSB, tabell 06752.' }] }] };
+  const h = grafForAvsnitt(avsnitt, mappe);
+  assert.match(h, /<p class="g-bildetekst"><em>Drepte per år, 2001–2025\. Kilde: SSB, tabell 06752\.<\/em><\/p><\/figure>$/);
+  assert.doesNotMatch(h, /class="g-kilde"|class="g-under"/);
+});
+test('grafForAvsnitt: açıklamada metin dışı öğe varsa dokunulmaz', () => {
+  const avsnitt = { type: 'element', tagName: 'p', children: [{ type: 'element', tagName: 'img', properties: { src: './graf-1.svg' }, children: [] }, { type: 'element', tagName: 'em', children: [{ type: 'element', tagName: 'a', properties: { href: 'x' }, children: [{ type: 'text', value: 'SSB' }] }] }] };
+  assert.equal(grafForAvsnitt(avsnitt, mappe), null);
+});

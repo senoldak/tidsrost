@@ -26,3 +26,4 @@ test('kortEnhet: milliarder/millioner kroner', () => {
   assert.equal(kortEnhet('Milliarder kroner'), ' mrd. kr');
   assert.equal(kortEnhet('Millioner kroner'), ' mill. kr');
 });
+test('kortEnhet: prosentpoeng % değildir', () => assert.equal(kortEnhet('Bidrag til tolvmånedersveksten, prosentpoeng'), ' prosentpoeng'));

@@ -17,3 +17,7 @@ test('rutenett: çok kategori, sınıf başına kare, toplam 100', () => {
   assert.match(t.punkter[0].tekst, /^A\n55,4 %/);
   assert.equal(t.nokkel.length, 3);
 });
+test('rutenett: toplam 99,4 → motordaki gibi 100 kare dolu', () => {
+  const t = tegn({ form: 'rutenett', tittel: 't', kilde: { navn: 'SSB' }, enhet: 'Prosent', serier: [{ navn: 'Andel', punkter: [{ x: 'A', y: 60.2 }, { x: 'B', y: 39.2 }] }] });
+  assert.equal((t.svg.match(/class="g-f-bar"/g) || []).length, 0);
+});

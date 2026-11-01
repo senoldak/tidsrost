@@ -52,6 +52,10 @@ jobs:
           path: node_modules/.astro
           key: astro-gorsel-${{ hashFiles('package-lock.json') }}-${{ github.run_id }}
           restore-keys: astro-gorsel-${{ hashFiles('package-lock.json') }}-
+      # Önbellekte Astro'nun içerik deposu da var: markdown değişmeden yanındaki dosyalar (Forklart graf-N.json) değişirse
+      # eski HTML kalırdı. Görsel türevleri korunur, içerik deposu her derlemede baştan kurulur.
+      - name: Astro içerik deposunu sil
+        run: rm -f node_modules/.astro/data-store.json
 
       # Facebook/Instagram post ve story görselleri (Fjord): son haberler için public/sosial/ altına (scripts/sosial).
       # Hata yayını durdurmaz; görseli olmayan haber paylaşılmaz. Çıktı paylasilacak=N: henüz paylaşılmamış haber sayısı.
