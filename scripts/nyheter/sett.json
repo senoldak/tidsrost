@@ -7124,7 +7124,34 @@
     "medier:51f5b2654bf8a16e": "2026-11-02T07:01:18.169Z",
     "medier:c6ff47bdc32b753f": "2026-11-02T07:01:18.169Z",
     "medier:659fc51f9b81ff02": "2026-11-02T07:01:18.169Z",
-    "ssb:26bb5e64-3127-4404-92b2-29bf91dfa849": "2026-11-02T07:01:18.169Z"
+    "ssb:26bb5e64-3127-4404-92b2-29bf91dfa849": "2026-11-02T07:01:18.169Z",
+    "medier:704a986e43c64d76": "2026-11-02T09:01:12.195Z",
+    "medier:76aad720eebc2c01": "2026-11-02T09:01:12.195Z",
+    "medier:73f0dea9e11e07cc": "2026-11-02T09:01:12.195Z",
+    "medier:7b69f917226577ee": "2026-11-02T09:01:12.195Z",
+    "regjeringen:3190343": "2026-11-02T09:01:12.195Z",
+    "mattilsynet:https://www.mattilsynet.no/fisk-og-akvakultur/fiskesykdommer/infeksios-lakseanemi-ila/forskrift-om-restriksjonssone-for-ila-i-bjornafjorden-austevoll-og-tysnes-kommuner-vestland-ble-opphevet-1.november-2026": "2026-11-02T09:01:12.195Z",
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/ulykkestall/": "2026-11-02T09:01:12.195Z",
+    "sivilombudet:https://www.sivilombudet.no/?p=63854": "2026-11-02T09:01:12.195Z",
+    "mattilsynet:https://www.mattilsynet.no/fisk-og-akvakultur/fiskesykdommer/infeksios-lakseanemi-ila/forskrift-om-restriksjonssone-for-ila-i-sveio-bomlo-og-stord-kommuner-vestland-ble-opphevet-2.november-2026": "2026-11-02T09:01:12.195Z",
+    "medier:bbe048dcf000948a": "2026-11-02T09:01:12.195Z",
+    "medier:ccd32cf550df2968": "2026-11-02T09:01:12.195Z",
+    "medier:d4a2d0c01f1863d8": "2026-11-02T09:01:12.195Z",
+    "medier:78d1f5b12dd76aac": "2026-11-02T09:01:12.195Z",
+    "medier:f7694ca9afba8367": "2026-11-02T09:01:12.195Z",
+    "medier:b722ff35ae000831": "2026-11-02T09:01:12.195Z",
+    "medier:8f03dfbf6019fb4f": "2026-11-02T09:01:12.195Z",
+    "medier:8cb54fa36fa49f9c": "2026-11-02T09:01:12.195Z",
+    "medier:f97e8325517b2662": "2026-11-02T09:01:12.195Z",
+    "medier:4b070a5eb33a48bb": "2026-11-02T09:01:12.195Z",
+    "medier:d8c57bf7d792cf86": "2026-11-02T09:01:12.195Z",
+    "medier:fbe1de4fbbc9cc35": "2026-11-02T09:01:12.195Z",
+    "medier:e579a7075599fec3": "2026-11-02T09:01:12.195Z",
+    "medier:156ae0b062cea1bc": "2026-11-02T09:01:12.195Z",
+    "medier:90352db7e8ed7bef": "2026-11-02T09:01:12.195Z",
+    "medier:1a359047af553a87": "2026-11-02T09:01:12.195Z",
+    "medier:623220235f036c88": "2026-11-02T09:01:12.195Z",
+    "regjeringen:3190660": "2026-11-02T09:01:12.195Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -7182,106 +7209,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:f897cba13bb4e2e4": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "medier:fa32b60993734de3": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "medier:08bdd088aaf39c43": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "medier:7d1c1b29252f7f4e": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "medier:991d03fa695d91d9": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "medier:2053e6c21e1e5ce6": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "medier:1837968a4155d7fc": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "medier:69120d393fa62dca": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "medier:57161c3f52b2ddd8": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "medier:b68d32c916f5575e": {
-      "p": 76,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "medier:581d5744f58b4fde": {
-      "p": 88,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "medier:2cde1189ddd4f55c": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "medier:6f3305e9710f8208": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "medier:fa8b218aa931df5a": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "medier:1c9af9090ac1c872": {
-      "p": 62,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "medier:f7675a482a2f9a89": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "ssb:7be7510e-ef04-4dbf-866c-b9a1bdf2e562": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "ssb:10d29b86-d017-4a3d-a4d0-1d312c8cb2f1": {
-      "p": 48,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "ssb:e96c7a77-1b4c-4c24-97b2-778c71d1954a": {
-      "p": 42,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
-    "ssb:5092ed2c-9836-4c2a-8958-fb7ccfc3a779": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T07:06:45.147Z"
-    },
     "medier:0dea254003cff76c": {
       "p": 72,
       "v": "b34cb0de5bde",
@@ -8831,6 +8758,81 @@
       "p": 50,
       "v": "b34cb0de5bde",
       "t": "2026-11-02T07:02:33.185Z"
+    },
+    "medier:704a986e43c64d76": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T09:03:23.245Z"
+    },
+    "medier:156ae0b062cea1bc": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T09:03:23.245Z"
+    },
+    "medier:b543c7be860f659b": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T09:03:23.245Z"
+    },
+    "medier:bbe048dcf000948a": {
+      "p": 52,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T09:03:23.245Z"
+    },
+    "medier:78d1f5b12dd76aac": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T09:03:23.245Z"
+    },
+    "medier:93395752fa711ee8": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T09:03:23.245Z"
+    },
+    "medier:8f03dfbf6019fb4f": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T09:03:23.245Z"
+    },
+    "medier:f97e8325517b2662": {
+      "p": 62,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T09:03:23.245Z"
+    },
+    "medier:d8c57bf7d792cf86": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T09:03:23.245Z"
+    },
+    "regjeringen:3190343": {
+      "p": 58,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T09:03:23.245Z"
+    },
+    "regjeringen:3190660": {
+      "p": 74,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T09:03:23.245Z"
+    },
+    "mattilsynet:https://www.mattilsynet.no/fisk-og-akvakultur/fiskesykdommer/infeksios-lakseanemi-ila/forskrift-om-restriksjonssone-for-ila-i-bjornafjorden-austevoll-og-tysnes-kommuner-vestland-ble-opphevet-1.november-2026": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T09:03:23.245Z"
+    },
+    "mattilsynet:https://www.mattilsynet.no/fisk-og-akvakultur/fiskesykdommer/infeksios-lakseanemi-ila/forskrift-om-restriksjonssone-for-ila-i-sveio-bomlo-og-stord-kommuner-vestland-ble-opphevet-2.november-2026": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T09:03:23.245Z"
+    },
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/ulykkestall/": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T09:03:23.245Z"
+    },
+    "sivilombudet:https://www.sivilombudet.no/?p=63854": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T09:03:23.245Z"
     }
   }
 }
