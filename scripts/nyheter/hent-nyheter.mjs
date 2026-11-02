@@ -12,10 +12,13 @@ import { acilDurdurma } from './kapi.mjs';
 import { uyarlayiciKur, yerelTur, durumuTemizle } from './uyarlayici.mjs';
 import { turSec } from './motor-modu.mjs';
 import { fjernAdresser } from './hemmelig.mjs';
+import { tellende, skrivDagstall } from './dagstall.mjs';
 
 const HER = path.dirname(fileURLToPath(import.meta.url));
 const ROT = path.resolve(HER, '../..');
 const TILSTAND_FIL = path.join(HER, 'sett.json');
+// Redaksjonen-sayfasının gerçek günlük sayıları (yalnız sayı ve kod; dagstall.mjs).
+const DAGSTALL_FIL = path.join(ROT, 'src/data/redaksjonen/dagstall.json');
 
 // Akış gövdesi uyarlayici.mjs'te (adaylar + isle); burası yerel çalıştırıcıdır: durum dosyası, bütçe ve Actions çıktıları.
 // Dosya içe aktarılınca hiçbir şey çalışmaz; yalnız doğrudan çalıştırılınca tur başlar.
@@ -33,6 +36,7 @@ export async function main({ argv = process.argv, ortam = process.env } = {}) {
 
   const tilstand = await lesJsonFil(TILSTAND_FIL, { sett: {}, feil: {}, kilder: {} });
   const u = uyarlayiciKur({ tilstand, simdi: new Date(), ayar: { rot: ROT, maks: MAKS, sureMs: SURE_MS, baslangic: BASLANGIC, torr: TORR } });
+  const telling = tellende(u);
   // MOTOR_TUR=1: tur ortak motorla (MOTOR_DIZIN), aksi hâlde yerel tur. Motor modunda hata yerel tura düşmez; hatada da durum
   // ve yazılan haberler aşağıda yazılır (yerel durum kaybolmasın), GITHUB_OUTPUT antall verilir ve süreç hata koduyla çıkar.
   let turHatasi = null;
@@ -40,7 +44,7 @@ export async function main({ argv = process.argv, ortam = process.env } = {}) {
   try {
     const r = await turSec({
       env: ortam,
-      uyarlayici: u,
+      uyarlayici: telling.uyarlayici,
       durum: tilstand,
       simdi: u.simdi,
       rot: ROT,
@@ -54,6 +58,13 @@ export async function main({ argv = process.argv, ortam = process.env } = {}) {
     console.error(`Tur hatayla bitti: ${fjernAdresser(e?.message ?? e)}`);
   }
   const { antall, kortLagt, stoppListe, utkastListe, rettetListe, ventListe, standartElendi, feilListe } = u.ozet;
+  if (!TORR) {
+    try {
+      await skrivDagstall(DAGSTALL_FIL, telling.tall(u.ozet));
+    } catch (e) {
+      console.error(`Dagstall ble ikke skrevet: ${fjernAdresser(e?.message ?? e)}`);
+    }
+  }
 
   durumuTemizle(tilstand);
   // Gemini Faz 2: yayımlanan haberlerin vektör dosyası (GOMME_VEKTOR=1) ve gömme önbelleği; hata turu düşürmez.
