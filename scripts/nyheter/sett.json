@@ -7244,7 +7244,39 @@
     "medier:8dc29a74abc5f549": "2026-11-02T13:01:03.192Z",
     "medier:0d3a48eb13c08a9c": "2026-11-02T13:01:03.192Z",
     "medier:ac954e5eba49adf6": "2026-11-02T13:01:03.192Z",
-    "medier:aaa217acdf20bcbf": "2026-11-02T13:01:03.192Z"
+    "medier:aaa217acdf20bcbf": "2026-11-02T13:01:03.192Z",
+    "medier:9548d5e89f7a3bfd": "2026-11-02T15:01:11.247Z",
+    "medier:40255a069bcaaa47": "2026-11-02T15:01:11.247Z",
+    "medier:b73435445349cdaa": "2026-11-02T15:01:11.247Z",
+    "regjeringen:3190853": "2026-11-02T15:01:11.247Z",
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/na-far-tungbilsjaforene-nye-hvileplasser-ved-e18-i-telemark/": "2026-11-02T15:01:11.247Z",
+    "havforskning:https://www.hi.no/hi/nyheter/2026/november/dobler-kvoteradet-for-kongekrabbe-i-2027": "2026-11-02T15:01:11.247Z",
+    "regjeringen:3190730": "2026-11-02T15:01:11.247Z",
+    "regjeringen:3190735": "2026-11-02T15:01:11.247Z",
+    "medier:a3d548750cbb33fe": "2026-11-02T15:01:11.247Z",
+    "medier:2765a2de758d2f30": "2026-11-02T15:01:11.247Z",
+    "medier:e03c74cad56885dc": "2026-11-02T15:01:11.247Z",
+    "medier:b5fc236acc7ff593": "2026-11-02T15:01:11.247Z",
+    "medier:31055a3f4de450d6": "2026-11-02T15:01:11.247Z",
+    "medier:e9735e4190039c19": "2026-11-02T15:01:11.247Z",
+    "medier:7ff3732776c3d413": "2026-11-02T15:01:11.247Z",
+    "medier:ee048ee20232709a": "2026-11-02T15:01:11.247Z",
+    "medier:92b5d8580ee5f586": "2026-11-02T15:01:11.247Z",
+    "medier:967eb72826aa8ab5": "2026-11-02T15:01:11.247Z",
+    "medier:cb44ab8698cad4d0": "2026-11-02T15:01:11.247Z",
+    "medier:5137b0d7e5ed70e3": "2026-11-02T15:01:11.247Z",
+    "medier:5acc814d5a75100b": "2026-11-02T15:01:11.247Z",
+    "medier:290a669a23d27686": "2026-11-02T15:01:11.247Z",
+    "medier:d948bf5813901936": "2026-11-02T15:01:11.247Z",
+    "medier:97d8538064635c30": "2026-11-02T15:01:11.247Z",
+    "medier:c0c07400a6419158": "2026-11-02T15:01:11.247Z",
+    "medier:76dbc1913571e24e": "2026-11-02T15:01:11.247Z",
+    "medier:beadd2db4b0e268f": "2026-11-02T15:01:11.247Z",
+    "medier:d9f40336a3952cc2": "2026-11-02T15:01:11.247Z",
+    "medier:9db5e20eb900bcbf": "2026-11-02T15:01:11.247Z",
+    "medier:80227d7c1acd3e94": "2026-11-02T15:01:11.247Z",
+    "medier:9eb8fda5414afb68": "2026-11-02T15:01:11.247Z",
+    "medier:4493bf7bd0317b11": "2026-11-02T15:01:11.247Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -7302,201 +7334,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:23168b279094c31c": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "medier:357f71dacadf2c03": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "medier:96cef8d1ecbbb7b3": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "medier:153d6a2cdd446c08": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "medier:32eaff0dd4aacd78": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "medier:a255efb8039ede6f": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "medier:2897edeab820b716": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "medier:3191add316fecc5e": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "medier:0ba51858c5e5f0bc": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "medier:4fb04bda1ebba7e7": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "medier:9182a3e0dd5bbb02": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "medier:f588aebe11ae912e": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "medier:72e0a9967b6751fd": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "regjeringen:3190305": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "regjeringen:3190217": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "regjeringen:3190197": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "nkom:65380282-9c91-4f75-8a29-5efdefbf01b9": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/10/1168706": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T13:07:57.809Z"
-    },
-    "medier:b8cf3e18ac98b247": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "medier:01dd50f15a4db9f0": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "medier:6e12a72282330ad8": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "medier:6ef583b00677871e": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "medier:a5fb9699735ffd2f": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "medier:0f57df7ddf4e3c0a": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "medier:8cc51c56c54aa6b3": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "medier:92b2514480bcc3c6": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "medier:f07e746d10497687": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "medier:fdb19c2573e51085": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "medier:b64ada06e88d5c7b": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "medier:3c3d31440d61a569": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "medier:1fd65efd02db7a33": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "medier:4ef7b778b6deb24d": {
-      "p": 74,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "medier:afcfcdd8a62a059b": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "medier:d6257ab89bd5c00f": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "regjeringen:3183627": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/kulturraadet-med-retningslinjer-for-ki-paa-litteraturordningane": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "forbrukerradet:https://www.forbrukerradet.no/?p=56540": {
-      "p": 62,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2310": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2301": {
-      "p": 71,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T15:05:35.959Z"
-    },
     "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2313": {
       "p": 20,
       "v": "b34cb0de5bde",
@@ -8926,6 +8763,66 @@
       "p": 10,
       "v": "b34cb0de5bde",
       "t": "2026-11-02T13:04:03.171Z"
+    },
+    "medier:e7cc4f8965cc0bd7": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T15:03:39.459Z"
+    },
+    "medier:d948bf5813901936": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T15:03:39.459Z"
+    },
+    "medier:a3d548750cbb33fe": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T15:03:39.459Z"
+    },
+    "medier:583851a28eba0d3c": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T15:03:39.459Z"
+    },
+    "medier:e03c74cad56885dc": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T15:03:39.459Z"
+    },
+    "medier:92b5d8580ee5f586": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T15:03:39.459Z"
+    },
+    "medier:5137b0d7e5ed70e3": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T15:03:39.459Z"
+    },
+    "regjeringen:3190853": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T15:03:39.459Z"
+    },
+    "regjeringen:3190730": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T15:03:39.459Z"
+    },
+    "regjeringen:3190735": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T15:03:39.459Z"
+    },
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/na-far-tungbilsjaforene-nye-hvileplasser-ved-e18-i-telemark/": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T15:03:39.459Z"
+    },
+    "havforskning:https://www.hi.no/hi/nyheter/2026/november/dobler-kvoteradet-for-kongekrabbe-i-2027": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T15:03:39.459Z"
     }
   }
 }
