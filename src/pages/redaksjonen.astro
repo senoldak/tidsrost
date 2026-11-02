@@ -1,0 +1,143 @@
+---
+// Redaksjonen: piksel yayın odası. Sayılar ve başlıklar gerçek kayıtlardan (src/lib/redaksjonen.mjs): botun günlük sayıları
+// (src/data/redaksjonen/dagstall.json) ve yayımlanmış yazılar (zincir yazılarının kjede kaydı). Sahne betiği
+// src/scripts/redaksjonen.mjs; veri ona #redaksjonen-data JSON'uyla geçer (CSP: satır içi betik yok).
+import Base from '../layouts/Base.astro';
+import { getNews } from '../lib/news';
+import { redaksjonsData } from '../lib/redaksjonen.mjs';
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import { SITE_URL, breadcrumbs } from '../lib/seo';
+import '../styles/redaksjonen.css';
+
+// Dosya ilk bot turundan önce yoktur: glob boş döner, sayfa sayısız açılır.
+const dagstallFiler = import.meta.glob('../data/redaksjonen/dagstall.json', { eager: true, import: 'default' });
+const dagstall = Object.values(dagstallFiler)[0] as { dager?: Record<string, object> } | undefined;
+
+const saker = (await getNews()).map((h) => ({ ...h.data, slug: h.id }));
+const R = redaksjonsData({ saker, dagstall, naa: new Date() });
+
+const tall = (n: number) => new Intl.NumberFormat('nb-NO').format(n);
+const datoTekst = (d: string) => new Intl.DateTimeFormat('nb-NO', { day: 'numeric', month: 'long', timeZone: 'UTC' }).format(new Date(`${d}T12:00:00Z`));
+const KAOS = [['serverbrann', 'Serverbrann'], ['strombrudd', 'Strømbrudd'], ['ekstra', 'Ekstra!'], ['kaffekrise', 'Kaffekrise'], ['kaptein', 'Kaptein Ø']];
+const TEMA = [['ingen', 'Vanlig'], ['halloween', 'Halloween'], ['jul', 'Jul'], ['syttende', '17. mai'], ['republikk', '29. oktober'], ['id', 'Ramazan Bayramı']];
+---
+
+<Base
+  title="Redaksjonen"
+  description="Slik jobber tidsrøst: én journalist og tre lag med KI-agenter. Dagens tall fra nyhetsboten og hvordan de lange sakene blir kontrollert."
+>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={jsonLdMetni(breadcrumbs([{ name: 'Forsiden', url: `${SITE_URL}/` }, { name: 'Redaksjonen', url: `${SITE_URL}/redaksjonen/` }]))}
+    />
+  </Fragment>
+
+  <div class="rd">
+    <div class="rd-hode">
+      <h1>Redaksjonen</h1>
+      <p>
+        Én journalist og tre lag med KI-agenter: nyhetsdesken som lager de raske sakene, skrivebordet som lager de lange, og
+        forfatterrommet der Şenols egne tekster blir oversatt og språkvasket. Trykk på en figur for å se hva den gjør.
+        Tallene og titlene er ekte; figurene er en tegning av arbeidet.
+      </p>
+    </div>
+
+    {
+      R.sisteSaker.length > 0 && (
+        <nav class="serit" aria-label="Siste saker">
+          <div>
+            <span class="ek">SISTE</span>
+            <div class="vindu">
+              <div class="rull">
+                {R.sisteSaker.map((s) => <a href={s.url}>{s.tittel}</a>)}
+                {R.sisteSaker.map((s) => <a href={s.url} aria-hidden="true" tabindex="-1">{s.tittel}</a>)}
+              </div>
+            </div>
+          </div>
+        </nav>
+      )
+    }
+
+    <div class="scene">
+      <svg id="rom" viewBox="0 0 1820 1200" shape-rendering="crispEdges" role="img" aria-label="Tegning av redaksjonen sett ovenfra"></svg>
+    </div>
+    <div class="knapper">
+      <span>Kaos:</span>
+      {KAOS.map(([k, n]) => <button type="button" data-kaos={k}>{n}</button>)}
+      <span>Tema:</span>
+      {TEMA.map(([k, n]) => <button type="button" data-tema={k}>{n}</button>)}
+    </div>
+
+    <section class="kort" aria-live="polite">
+      <div id="kort">
+        <h2>Velg en figur</h2>
+        <p>Hver figur gjør én del av jobben, fra en sak blir funnet til den er publisert.</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="tavle">
+        <h2>Dagens tall</h2>
+        {
+          R.dag ? (
+            <>
+              <p class="dato">{R.dag.iDag ? `I dag, ${datoTekst(R.dag.dato)}` : `Siste registrerte dag: ${datoTekst(R.dag.dato)}`}</p>
+              <dl>
+                <dt>Kildesaker funnet</dt>
+                <dd>{tall(R.dag.funnet)}</dd>
+                <dt>Vurdert</dt>
+                <dd>{tall(R.dag.vurdert)}</dd>
+                <dt>Publisert</dt>
+                <dd>{tall(R.dag.publisert)}</dd>
+              </dl>
+            </>
+          ) : (
+            <p class="dato">Tallene samles fra 2. november 2026.</p>
+          )
+        }
+        {
+          R.uke && R.avvisninger.length > 0 && (
+            <>
+              <h3>Papirkurven, siste {R.uke.dager === 1 ? 'dag' : `${R.uke.dager} dager`}</h3>
+              <ul>
+                {R.avvisninger.map((a) => (
+                  <li>
+                    <span>{a.tekst}</span>
+                    <b>{tall(a.antall)}</b>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )
+        }
+        <p class="liten">Tallene kommer fra nyhetsbotens egen logg og oppdateres når siden bygges på nytt. En sak kan bygge på flere kildesaker.</p>
+      </div>
+
+      <div class="tavle">
+        <h2>Siste lange sak</h2>
+        {
+          R.sisteKjede ? (
+            <>
+              <p><a href={R.sisteKjede.url}>{R.sisteKjede.tittel}</a></p>
+              <ul>
+                <li><span>Påstander sjekket mot kilden</span><b>{tall(R.sisteKjede.kontrollert)}</b></li>
+                <li><span>Tall hentet på nytt før publisering</span><b>{tall(R.sisteKjede.hentet)}</b></li>
+                <li><span>Sendt tilbake for omskriving</span><b>{tall(R.sisteKjede.tilbake)}</b></li>
+                {R.sisteKjede.runder.map((r) => <li><span>– til {r.navn}</span><b>{tall(r.antall)}</b></li>)}
+              </ul>
+              <p class="liten">Godkjent av Şenol Dak før publisering.</p>
+            </>
+          ) : (
+            <p>Ingen lange saker ennå.</p>
+          )
+        }
+      </div>
+    </section>
+  </div>
+
+  <script type="application/json" id="redaksjonen-data" set:html={JSON.stringify(R).replace(/</g, '\\u003c')} />
+  <script>
+    import '../scripts/redaksjonen.mjs';
+  </script>
+</Base>

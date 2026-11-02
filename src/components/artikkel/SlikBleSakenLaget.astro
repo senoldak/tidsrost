@@ -9,8 +9,8 @@ import { konturSvg } from '../../lib/kontur.mjs';
 import { formatKortDato, formatTime } from '../../lib/site';
 import { EPOST, REDAKTOR } from '../../lib/kinote.mjs';
 
-// «Gå inn i redaksjonen» vises først når redaksjonssiden finnes (eget prosjekt).
-const REDAKSJON_SIDE = false;
+// «Gå inn i redaksjonen»: lenke til /redaksjonen/ (piksel yayın odası, 2. november 2026).
+const REDAKSJON_SIDE = true;
 
 interface Props {
   sak: { produksjon?: string; kilder?: { navn: string; url: string }[]; nyhetsverdi?: number; author?: string; sjanger?: string };
