@@ -36,7 +36,7 @@ const korte = egen
   ? 'Skrevet av Şenol Dak. KI oversatte teksten til bokmål og vasket språket.'
   : `Skrevet automatisk av ${tallOrd(antallKI)} KI-agenter.`;
 const forklaring = egen
-  ? 'Saken er Şenol Daks egen. KI har oversatt og vasket språket, uten å endre innholdet. KI er ikke brukt til innhold, vinkling eller tall.'
+  ? 'Şenol Dak har skrevet saken selv. KI har oversatt og vasket språket uten å endre innholdet. KI er ikke brukt til innhold, vinkling eller tall.'
   : sak.produksjon === 'ki-medier'
     ? 'Saken er skrevet automatisk ut fra sakene i kildelisten. Ingen journalist har lest den før publisering.'
     : sak.produksjon === 'ki-kontrollert'
