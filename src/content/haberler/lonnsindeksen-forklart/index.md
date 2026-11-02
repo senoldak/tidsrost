@@ -5,6 +5,7 @@ author: "Şenol Dak"
 cover: ./cover.png
 coverAlt: "Lønnsindeksen forklart: den måler endring, ikke lønnsnivå"
 produksjon: ki-redigert
+kjede: {"runder":{"redaksiyon":2,"yazim":1},"kontrollert":117,"hentet":79}
 title: "Lønnsindeksen forklart: den måler endring, ikke lønnsnivå"
 description: "Indeksen for avtalt månedslønn sto i 109,9 i 2. kvartal 2026. Bak tallet lå en gjennomsnittlig avtalt månedslønn på 58 970 kroner, mens snittet med tillegg og bonus var 63 700 kroner."
 category: okonomi

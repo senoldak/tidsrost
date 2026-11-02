@@ -5,6 +5,7 @@ author: "Şenol Dak"
 cover: ./cover.png
 coverAlt: "BNP for Fastlands-Norge forklart: uten olje og utenriks sjøfart"
 produksjon: ki-redigert
+kjede: {"runder":{"redaksiyon":1,"yazim":1},"kontrollert":136,"hentet":114}
 title: "BNP for Fastlands-Norge forklart: uten olje og utenriks sjøfart"
 description: "Olje og utenriks sjøfart sto for 20,2 prosent av BNP i løpende priser i 2025, ned fra 34,9 prosent i 2022. I faste priser var andelen 24,3 prosent i 2025."
 category: okonomi
