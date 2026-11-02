@@ -1,0 +1,185 @@
+---
+// "Barn og idrett": SSB'nin çocukların boş zamanı anketi (14412, 14416, 14430), src/data/idrett-barn.json.
+// Tek seferlik anket; eskilik yalnız alınma zamanına bakar. Bütün rakamlar veriden; sabit metinlerde rakam yok.
+import Graf from '../components/graf/Graf.astro';
+import { fraStolper } from '../lib/graf/fra.mjs';
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import KiNotat from '../components/KiNotat.astro';
+import Base from '../layouts/Base.astro';
+import Symbol from '../components/Symbol.astro';
+import Brodsmuler from '../components/Brodsmuler.astro';
+import StoryRow from '../components/StoryRow.astro';
+import DataKilde from '../components/data/DataKilde.astro';
+import { tallTekst } from '../lib/graf.mjs';
+import { GAMMEL_MAANED_MS, dataGammel, datasideLd } from '../lib/datasider';
+import { getNews } from '../lib/news';
+import { SITE_URL } from '../lib/seo';
+import d from '../data/idrett-barn.json';
+
+const pageUrl = `${SITE_URL}/idrett/`;
+const tittel = 'Barn og idrett';
+const seoTittel = 'Barn og idrett: hvor mange driver med organisert idrett?';
+const KVARTIL: Record<string, string> = { '01': 'Laveste', '02': 'Nest laveste', '03': 'Nest høyeste', '04': 'Høyeste' };
+const HINDER: Record<string, string> = {
+  '01': 'Utgifter',
+  '02': 'Opptatt med annet',
+  '03': 'Skolearbeid',
+  '04': 'Foreldre har ikke tid',
+  '05': 'Ikke interessert',
+  '06': 'Kjenner ingen å trene med',
+  '07': 'Lang reisevei',
+};
+const kilde = { navn: 'SSB', url: 'https://www.ssb.no/fritidbarn' };
+const fotball = d.idretter.find((r) => r.kode === '01');
+const lav = d.inntekt.find((r) => r.kode === '01')!;
+const hoy = d.inntekt.find((r) => r.kode === '04')!;
+const utgifter = d.hindre.find((r) => r.kode === '01');
+const description = `${tallTekst(d.ialt.alle)} prosent av barna mellom 6 og 15 år drev med organisert idrett i ${d.aar}, viser SSB. Se de største idrettene, forskjeller mellom gutter og jenter og hvor mye familiens inntekt betyr.`;
+const { sti, jsonLd } = datasideLd({
+  url: pageUrl,
+  tittel,
+  description,
+  datasettNavn: 'Organiserte treningsaktiviteter blant barn og unge',
+  datasettBeskrivelse: 'Andel barn 6–15 år som driver med organisert idrett, etter idrett, kjønn og foreldrenes inntekt, og hindre for trening, fra SSB tabell 14412, 14416 og 14430.',
+  kildeData: 'https://www.ssb.no/statbank/table/14412',
+  lisensUrl: d.kilde.lisensUrl,
+  periode: d.aar,
+  oppdatert: d.oppdatert ?? d.hentet,
+});
+const saker = (await getNews()).filter((h) => h.data.category === 'sport').slice(0, 4);
+---
+
+<Base title={seoTittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="data" />{tittel}</h1>
+    <p class="page-intro">
+      Statistisk sentralbyrå spurte foreldre til barn mellom 6 og 15 år om hva barna driver med på fritiden. Svarene viser
+      hvor mange som er med i et idrettslag og hvilke idretter som er størst. De viser også at barn i familier med høy
+      inntekt oftere er med.
+    </p>
+  </header>
+
+  <section class="data-tall" aria-labelledby="siste">
+    <h2 class="band" id="siste">Barn 6–15 år i organisert idrett</h2>
+    <p class="data-verdi">{tallTekst(d.ialt.alle)} %</p>
+    <p class="varsel-setning">
+      {tallTekst(d.ialt.alle)} prosent av barna mellom 6 og 15 år drev med organisert idrett i {d.aar}. Blant guttene var
+      andelen {tallTekst(d.ialt.gutter)} prosent, blant jentene {tallTekst(d.ialt.jenter)} prosent.
+      {fotball && d.idretter[0]?.kode === '01' && <> Fotball var klart størst med {tallTekst(fotball.alle)} prosent.</>}
+    </p>
+    <dl class="data-fakta">
+      <div>
+        <dt>Gjelder</dt>
+        <dd>{d.aar}</dd>
+      </div>
+      {
+        typeof d.svar === 'number' && (
+          <div>
+            <dt>Antall svar</dt>
+            <dd>{d.svar.toLocaleString('nb-NO')}</dd>
+          </div>
+        )
+      }
+    </dl>
+  </section>
+
+  <section class="day" aria-labelledby="idretter">
+    <h2 class="band" id="idretter">De største idrettene</h2>
+    <Graf
+      form="rangering"
+      visTittel={false}
+      tittel="De vanligste idrettene blant barn og unge"
+      under={`Andel av barn 6–15 år som driver med idretten i et idrettslag, ${d.aar}`}
+      enhet="prosent"
+      kilde={{ ...kilde, tabell: '14412' }}
+      {...fraStolper('Andel', d.idretter.slice(0, 12).map((r) => ({ navn: r.navn, verdi: r.alle })))}
+    />
+  </section>
+
+  <section class="day" aria-labelledby="kjonn">
+    <h2 class="band" id="kjonn">Gutter og jenter</h2>
+    <Graf
+      form="manual"
+      visTittel={false}
+      tittel="Gutter og jenter i de største idrettene"
+      under={`Andel av barn 6–15 år, ${d.aar}`}
+      enhet="prosent"
+      kilde={{ ...kilde, tabell: '14412' }}
+      valg={{ gruppenavn: ['Jenter', 'Gutter'] }}
+      serier={[{ navn: 'Jenter og gutter', punkter: d.idretter.slice(0, 8).filter((r) => r.jenter !== null && r.gutter !== null).map((r) => ({ x: r.navn, y: r.jenter, y2: r.gutter! })) }]}
+    />
+  </section>
+
+  <section class="day" aria-labelledby="inntekt">
+    <h2 class="band" id="inntekt">Foreldrenes inntekt</h2>
+    <p class="varsel-setning">
+      I familiene med lavest inntekt drev {tallTekst(lav.andel)} prosent av barna med organisert idrett. I familiene med
+      høyest inntekt var andelen {tallTekst(hoy.andel)} prosent.
+    </p>
+    <Graf
+      form="soyle"
+      visTittel={false}
+      tittel="Organisert idrett etter foreldrenes inntekt"
+      under={`Andel av barn 6–15 år som driver med organisert idrett, etter foreldrenes samlede inntekt. Familiene er delt i fire like store grupper fra laveste til høyeste inntekt, ${d.aar}`}
+      enhet="prosent"
+      kilde={{ ...kilde, tabell: '14416' }}
+      {...fraStolper('Andel', d.inntekt.map((r) => ({ navn: KVARTIL[r.kode], verdi: r.andel })))}
+    />
+  </section>
+
+  <section class="day" aria-labelledby="hindre">
+    <h2 class="band" id="hindre">Hva hindrer trening</h2>
+    {
+      utgifter && (
+        <p class="varsel-setning">
+          {tallTekst(utgifter.enig)} prosent av foreldrene var helt eller delvis enige i at utgifter til utstyr, reise og
+          kontingent hindrer barnet i å trene.
+        </p>
+      )
+    }
+    <Graf
+      form="rangering"
+      visTittel={false}
+      tittel="Hva foreldrene mener hindrer trening"
+      under={`Andel foreldre til barn 6–15 år som er helt eller delvis enige i at dette hindrer barnet i å trene, ${d.aar}. Utgifter gjelder utstyr, reise og kontingent`}
+      enhet="prosent"
+      kilde={{ ...kilde, tabell: '14430' }}
+      {...fraStolper('Helt eller delvis enig', d.hindre.map((r) => ({ navn: HINDER[r.kode] ?? r.navn, verdi: r.enig })))}
+    />
+  </section>
+
+  <section class="day" aria-labelledby="om">
+    <h2 class="band" id="om">Om tallene</h2>
+    <div class="prose">
+      <p>
+        Tallene kommer fra SSBs undersøkelse om barns fritid. Det er foreldrene som har svart på vegne av barna.
+        Organisert idrett betyr trening i et idrettslag eller en klubb.
+      </p>
+      <p>
+        Spørsmålene om hva som hindrer trening ble bare stilt til halvparten av foreldrene. Andelen «helt eller delvis
+        enig» er de to svaralternativene lagt sammen.
+      </p>
+    </div>
+  </section>
+
+  <DataKilde
+    kilde={{ navn: d.kilde.navn, url: 'https://www.ssb.no/fritidbarn', data: d.kilde.data, lisens: d.kilde.lisens, lisensUrl: d.kilde.lisensUrl }}
+    hentet={d.hentet}
+    oppdatert={d.oppdatert}
+    gammel={dataGammel(d.hentet, null, GAMMEL_MAANED_MS)}
+    merknad="Tallene er fra SSB tabell 14412, 14416 og 14430."
+  />
+
+  {
+    saker.length > 0 && (
+      <section class="related" aria-labelledby="saker">
+        <h2 class="band" id="saker">Siste fra sporten</h2>
+        {saker.map((h) => <StoryRow haber={h} dato />)}
+      </section>
+    )
+  }
+  <p class="tema-alle"><a href="/tall/">Flere tall og data</a></p>
+  <KiNotat tittel={tittel} url={pageUrl} bot />
+</Base>

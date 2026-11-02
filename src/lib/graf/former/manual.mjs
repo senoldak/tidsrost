@@ -8,6 +8,8 @@ export function tegn(d) {
   const bredde = 400, M = 150;
   const des = d.desimaler ?? 1;
   const enh = kortEnhet(d.enhet);
+  // İki yüzdenin farkı yüzde değil, yüzde puanıdır.
+  const fEnh = enh === ' %' ? ' prosentpoeng' : enh;
   const [gA, gB] = d.valg.gruppenavn;
   const rader = d.serier[0].punkter.filter((p) => !tom(p.y));
   if (d.valg?.sorter !== false) rader.sort((a, b) => b.y2 - a.y2);
@@ -29,7 +31,7 @@ export function tegn(d) {
     if (Number.isFinite(p.mal)) deler.push(`<line class="g-mal-tikk" x1="${r2(x(p.mal))}" x2="${r2(x(p.mal))}" y1="${yy - 11}" y2="${yy + 11}"/>`);
     deler.push(`<circle cx="${r2(x(p.y))}" cy="${yy}" r="6" class="g-f-kontur"/><circle cx="${r2(x(p.y2))}" cy="${yy}" r="6" class="g-f-su"/></g>`);
     const malLinje = Number.isFinite(p.mal) ? `\n${malnavn}: ${tall(p.mal, des)}${enh}` : '';
-    return { x: (x(p.y) + x(p.y2)) / 2, y: yy - 8, tekst: `${p.x}\n${gA}: ${tall(p.y, des)}${enh}\n${gB}: ${tall(p.y2, des)}${enh}${malLinje}\nForskjell ${tall(Math.abs(p.y2 - p.y), des)}${enh}` };
+    return { x: (x(p.y) + x(p.y2)) / 2, y: yy - 8, tekst: `${p.x}\n${gA}: ${tall(p.y, des)}${enh}\n${gB}: ${tall(p.y2, des)}${enh}${malLinje}\nForskjell ${tall(Math.abs(p.y2 - p.y), des)}${fEnh}` };
   });
   const beskrivelse = `${d.tittel}. ${d.under ? `${d.under}. ` : ''}${gA} og ${gB} i ${rader.length} grupper.`;
   return {

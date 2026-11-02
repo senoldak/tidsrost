@@ -119,3 +119,45 @@ export function kpiHistorisk(aarJson, mndJson) {
   }
   return { oppdatert: a.oppdatert ?? m.oppdatert, aar, mnd, sisteAar, sisteMnd };
 }
+
+/**
+ * Barns fritid (tek seferlik anket, 2024): 14412 idretler × cinsiyet (6–15 yaş), 14416 ebeveyn geliri çeyrekleri,
+ * 14430 antrenman engelleri (ebeveynler; "helt" + "delvis enig" toplanır). İstek: hepsi '*', Tid top(1).
+ * İdret adları SSB etiketleridir; kısa Bokmål adları sayfada verilir.
+ */
+export function barnIdrett(aktivJson, inntektJson, hindreJson) {
+  const a = tabell(aktivJson);
+  const i = tabell(inntektJson);
+  const h = tabell(hindreJson);
+  const aar = a.perioder.at(-1);
+  if (!aar) throw new Error('SSB 14412: mangler periode');
+  const andel = (idrett, kjonn = '0') => a.finn({ OrganisertTrening: idrett, Alder: '06-15', Kjonn: kjonn, ContentsCode: 'PersonerProsent', Tid: aar });
+  const pst = (v, hva) => {
+    if (!innen(v, 0, 100)) throw new Error(`SSB barns fritid: urimelig andel ${v} (${hva})`);
+    return v;
+  };
+  const ialt = { alle: pst(andel('00'), 'i alt'), gutter: pst(andel('00', '10'), 'gutter'), jenter: pst(andel('00', '11'), 'jenter') };
+  const idretter = Object.keys(a.etiketter.OrganisertTrening ?? {})
+    .filter((k) => k !== '00' && k !== 'N')
+    .map((kode) => ({ kode, navn: a.etiketter.OrganisertTrening[kode], alle: andel(kode), gutter: andel(kode, '10'), jenter: andel(kode, '11') }))
+    .filter((r) => tall(r.alle))
+    .sort((x, y) => y.alle - x.alle);
+  if (idretter.length < 5) throw new Error('SSB 14412: for få idretter');
+  for (const r of idretter) pst(r.alle, r.navn);
+  // Cevap sayısı tabloda yüzde satırında duruyor; hangi ContentsCode'da doluysa o alınır.
+  const svar = a.rader.find((r) => r.OrganisertTrening === 'N' && r.Alder === '06-15' && r.Kjonn === '0' && r.Tid === aar && tall(r.verdi))?.verdi ?? null;
+  const inntekt = ['01', '02', '03', '04'].map((kode) => ({
+    kode,
+    andel: pst(i.finn({ OrganisertTrening: '00', ForeldrSamlaInnt: kode, ContentsCode: 'PersonerProsent', Tid: aar }), `inntekt ${kode}`),
+  }));
+  const hindre = Object.keys(h.etiketter.TreningHindre ?? {})
+    .map((kode) => {
+      const v = (grad) => h.finn({ TreningHindre: kode, EinigUeinig: grad, Kjonn: '0', Alder: '06-15', ContentsCode: 'PersonerProsent', Tid: aar });
+      const helt = v('10');
+      const delvis = v('20');
+      return { kode, navn: h.etiketter.TreningHindre[kode], enig: tall(helt) && tall(delvis) ? pst(en(helt + delvis), `hinder ${kode}`) : null };
+    })
+    .filter((r) => r.enig !== null)
+    .sort((x, y) => y.enig - x.enig);
+  return { oppdatert: a.oppdatert, aar, svar, ialt, idretter, inntekt, hindre };
+}

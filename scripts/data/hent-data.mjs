@@ -1,6 +1,6 @@
 // Sürekli güncel veri sayfalarının verisini resmi, anahtarsız açık API'lerden çeker ve src/data/*.json'a yazar.
 //   - Styringsrenten: Norges Bank SDMX API (data.norges-bank.no), lisans NLOD.
-//   - Prisstigning, boligpriser, arbeidsledighet: SSB PxWebApi v2 (tablo 14700, 07221, 13760), lisans NLOD.
+//   - Prisstigning, boligpriser, arbeidsledighet, barn og idrett: SSB PxWebApi v2 (tablo 14700, 07221, 13760, 14412/14416/14430), lisans NLOD.
 //   - Snøskredvarsel (snoskred.json) og flom-/jordskredvarsel (flom.json): NVE Varsom API (api01.nve.no), lisens NLOD.
 //   - Farevarsler ve arşivi (varselarkiv.json, 2019'dan beri): MET Norway MetAlerts 2.0 (api.met.no), lisans CC BY 4.0. MET'in kullanım şartı gereği istekte
 //     siteyi ve iletişim adresini tanıtan bir User-Agent gönderilir; Nyhetsbot ile ~2 saatte bir, tek istek.
@@ -15,7 +15,7 @@ import { acilDurdurma } from '../nyheter/kapi.mjs';
 import { RENTE_KILDE, VARSEL_KILDE, farevarsler, hasterPublisering, lesSdmxCsv, sammeInnhold, styringsrente } from './data.mjs';
 import { NVE_KILDE, fareKommuner, nveFareUrl, nveSnoskredUrl, snoskred } from './nve.mjs';
 import { SSB_KILDE, ssbUrl } from './ssb.mjs';
-import { arbeidsledighet, boligpriser, kpiHistorisk, prisstigning } from './ssb-sider.mjs';
+import { arbeidsledighet, barnIdrett, boligpriser, kpiHistorisk, prisstigning } from './ssb-sider.mjs';
 import { komprimer, navnData } from './ssb-navn.mjs';
 import { komprimer as komprimerLonn, lonnData } from './ssb-lonn.mjs';
 import { kommuneData } from './ssb-kommune.mjs';
@@ -139,6 +139,19 @@ const JOBBER = [
       const f = JSON.parse(await hent(ssbUrl('10467', { Fornavn: '*', ContentsCode: 'Personer', Tid: '*' }), 'application/json'));
       const e = JSON.parse(await hent(ssbUrl('12891', { Etternavn: '*', ContentsCode: 'Personer', Tid: 'top(1)' }), 'application/json'));
       return { kilde: SSB_KILDE, tabell: '10501, 10467, 12891', ...komprimer(navnData(p, f, e)) };
+    },
+  },
+  {
+    // Barn og idrett (/idrett/): SSB-undersøkelsen om barns fritid (14412, 14416, 14430). Tek seferlik anket; yeni tur
+    // gelirse top(1) onu alır. Günde en çok bir kez denenir.
+    fil: 'idrett-barn.json',
+    aralikSaat: 24,
+    async lag() {
+      const json = async (t, valg) => JSON.parse(await hent(ssbUrl(t, { ...valg, ContentsCode: 'PersonerProsent', Tid: 'top(1)' }), 'application/json'));
+      const aktiv = await json('14412', { OrganisertTrening: '*', Alder: '06-15', Kjonn: '*' });
+      const inntekt = await json('14416', { OrganisertTrening: '00', ForeldrSamlaInnt: '*' });
+      const hindre = await json('14430', { TreningHindre: '*', EinigUeinig: ['10', '20'], Kjonn: '0', Alder: '06-15' });
+      return { kilde: SSB_KILDE, tabell: '14412, 14416, 14430', ...barnIdrett(aktiv, inntekt, hindre) };
     },
   },
   {

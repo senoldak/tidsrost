@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { arbeidsledighet, boligpriser, kpiHistorisk, prisstigning } from './ssb-sider.mjs';
+import { arbeidsledighet, barnIdrett, boligpriser, kpiHistorisk, prisstigning } from './ssb-sider.mjs';
 
 // Küçük JSON-stat2 kurucusu: dims = [[ad, [[kod, etiket], ...]], ...]; deger(satır) → sayı ya da null.
 function lag(dims, deger) {
@@ -138,4 +138,41 @@ test('kpiHistorisk: null-hücre atlanır, siste år/måned er siste fylte period
 test('kpiHistorisk: ingen verdier → feil', () => {
   const tom = lag([['ContentsCode', [['KpiAar', 'x']]], ['Tid', [['2025', '2025']]]], () => null);
   assert.throws(() => kpiHistorisk(tom, tom));
+});
+
+const IDRETT = [['00', 'Driv med organisert idrett, i alt'], ['01', 'Fotball'], ['02', 'Handball'], ['03', 'Svømming'], ['04', 'Turn'], ['05', 'Dans'], ['17', 'Orientering'], ['N', 'Antal personar som svarte']];
+const KJONN = [['0', 'Begge kjønn'], ['10', 'Gutar'], ['11', 'Jenter']];
+const ALDER = [['06-15', '6-15 år'], ['06-11', '6-11 år']];
+const CC = [['PersonerProsent', 'Andel'], ['PersonerTusen', 'Tusen']];
+const AAR = [['2024', '2024']];
+const ANDEL = { '00': 72.2, '01': 39.3, '02': 15, '03': 7.6, '04': 7.7, '05': 5.2, '17': null };
+
+function barnTabeller(ialt = 72.2) {
+  const aktiv = lag([['OrganisertTrening', IDRETT], ['Alder', ALDER], ['Kjonn', KJONN], ['ContentsCode', CC], ['Tid', AAR]], (r) => {
+    if (r.OrganisertTrening === 'N') return r.ContentsCode === 'PersonerProsent' ? 3263 : null;
+    const v = r.OrganisertTrening === '00' ? ialt : ANDEL[r.OrganisertTrening];
+    return v === null ? null : v + (r.Kjonn === '10' ? 1 : r.Kjonn === '11' ? -1 : 0);
+  });
+  const inntekt = lag([['OrganisertTrening', IDRETT.slice(0, 2)], ['ForeldrSamlaInnt', [['00', 'Alle'], ['01', 'Lågaste'], ['02', 'Andre'], ['03', 'Tredje'], ['04', 'Høgaste']]], ['ContentsCode', CC], ['Tid', AAR]], (r) =>
+    ({ '00': 72.2, '01': 58.8, '02': 69.3, '03': 77.8, '04': 82.6 })[r.ForeldrSamlaInnt],
+  );
+  const hindre = lag([['TreningHindre', [['01', 'Kostnadar'], ['05', 'Ikkje interessert']]], ['EinigUeinig', [['10', 'Heilt einig'], ['20', 'Delvis einig'], ['30', 'Delvis ueinig']]], ['Kjonn', KJONN], ['Alder', ALDER], ['ContentsCode', CC], ['Tid', AAR]], (r) =>
+    r.TreningHindre === '01' ? { 10: 15.7, 20: 29.6, 30: 10 }[r.EinigUeinig] : { 10: 10.6, 20: 14.9, 30: 20 }[r.EinigUeinig],
+  );
+  return [aktiv, inntekt, hindre];
+}
+
+test('barnIdrett: i alt, idretter sortert, inntekt og hindre (helt + delvis)', () => {
+  const d = barnIdrett(...barnTabeller());
+  assert.equal(d.aar, '2024');
+  assert.equal(d.svar, 3263);
+  assert.deepEqual(d.ialt, { alle: 72.2, gutter: 73.2, jenter: 71.2 });
+  assert.deepEqual(d.idretter.map((r) => r.kode), ['01', '02', '04', '03', '05']);
+  assert.deepEqual(d.idretter[0], { kode: '01', navn: 'Fotball', alle: 39.3, gutter: 40.3, jenter: 38.3 });
+  assert.deepEqual(d.inntekt, [{ kode: '01', andel: 58.8 }, { kode: '02', andel: 69.3 }, { kode: '03', andel: 77.8 }, { kode: '04', andel: 82.6 }]);
+  assert.deepEqual(d.hindre, [{ kode: '01', navn: 'Kostnadar', enig: 45.3 }, { kode: '05', navn: 'Ikkje interessert', enig: 25.5 }]);
+});
+
+test('barnIdrett: urimelig andel → feil', () => {
+  assert.throws(() => barnIdrett(...barnTabeller(140)), /urimelig andel/);
 });

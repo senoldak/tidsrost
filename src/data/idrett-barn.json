@@ -1,0 +1,195 @@
+{
+  "hentet": "2026-11-02T02:04:56.074Z",
+  "kilde": {
+    "navn": "Statistisk sentralbyrå (SSB)",
+    "url": "https://www.ssb.no/",
+    "data": "https://data.ssb.no/api/pxwebapi/v2/",
+    "lisens": "NLOD",
+    "lisensUrl": "https://data.norge.no/nlod/no/2.0"
+  },
+  "tabell": "14412, 14416, 14430",
+  "oppdatert": "2025-01-17T07:00:00Z",
+  "aar": "2024",
+  "svar": 3263,
+  "ialt": {
+    "alle": 72.2,
+    "gutter": 75.4,
+    "jenter": 68.7
+  },
+  "idretter": [
+    {
+      "kode": "01",
+      "navn": "Fotball",
+      "alle": 39.3,
+      "gutter": 51,
+      "jenter": 27
+    },
+    {
+      "kode": "02",
+      "navn": "Handball",
+      "alle": 15,
+      "gutter": 9.2,
+      "jenter": 21.2
+    },
+    {
+      "kode": "04",
+      "navn": "Turn",
+      "alle": 7.7,
+      "gutter": 2.6,
+      "jenter": 13.1
+    },
+    {
+      "kode": "03",
+      "navn": "Svømming",
+      "alle": 7.6,
+      "gutter": 8.1,
+      "jenter": 7.1
+    },
+    {
+      "kode": "05",
+      "navn": "Dans",
+      "alle": 5.2,
+      "gutter": 0.6,
+      "jenter": 10.1
+    },
+    {
+      "kode": "06",
+      "navn": "Kampsport",
+      "alle": 5,
+      "gutter": 6.8,
+      "jenter": 3
+    },
+    {
+      "kode": "07",
+      "navn": "Langrenn eller skiskyting",
+      "alle": 4.2,
+      "gutter": 4.1,
+      "jenter": 4.2
+    },
+    {
+      "kode": "08",
+      "navn": "Ishockey/Bandy/Innebandy",
+      "alle": 3.1,
+      "gutter": 4.8,
+      "jenter": 1.2
+    },
+    {
+      "kode": "09",
+      "navn": "Sykling",
+      "alle": 2.9,
+      "gutter": 3.7,
+      "jenter": 2
+    },
+    {
+      "kode": "10",
+      "navn": "Friidrett",
+      "alle": 2.8,
+      "gutter": 2.9,
+      "jenter": 2.7
+    },
+    {
+      "kode": "11",
+      "navn": "Allidrett",
+      "alle": 2.3,
+      "gutter": 2.5,
+      "jenter": 2.2
+    },
+    {
+      "kode": "12",
+      "navn": "Tennis, squash eller badminton",
+      "alle": 1.9,
+      "gutter": 2.2,
+      "jenter": 1.6
+    },
+    {
+      "kode": "14",
+      "navn": "Klatring",
+      "alle": 1.8,
+      "gutter": 1.9,
+      "jenter": 1.8
+    },
+    {
+      "kode": "13",
+      "navn": "Sportsridning",
+      "alle": 1.7,
+      "gutter": 0.2,
+      "jenter": 3.3
+    },
+    {
+      "kode": "15",
+      "navn": "Basketball",
+      "alle": 1.7,
+      "gutter": 2.8,
+      "jenter": 0.6
+    },
+    {
+      "kode": "16",
+      "navn": "Volleyball",
+      "alle": 1.5,
+      "gutter": 1.2,
+      "jenter": 1.9
+    },
+    {
+      "kode": "17",
+      "navn": "Orientering",
+      "alle": 0.8,
+      "gutter": 0.6,
+      "jenter": 1.2
+    }
+  ],
+  "inntekt": [
+    {
+      "kode": "01",
+      "andel": 58.8
+    },
+    {
+      "kode": "02",
+      "andel": 69.3
+    },
+    {
+      "kode": "03",
+      "andel": 77.8
+    },
+    {
+      "kode": "04",
+      "andel": 82.6
+    }
+  ],
+  "hindre": [
+    {
+      "kode": "02",
+      "navn": "Oppteke med andre ting på fritida",
+      "enig": 46.7
+    },
+    {
+      "kode": "01",
+      "navn": "Kostnadar til utstyr, reise og kontingent",
+      "enig": 45.3
+    },
+    {
+      "kode": "05",
+      "navn": "Ikkje interessert",
+      "enig": 25.5
+    },
+    {
+      "kode": "03",
+      "navn": "Skolearbeid",
+      "enig": 24.9
+    },
+    {
+      "kode": "04",
+      "navn": "Føresett har ikkje tid til å følge opp",
+      "enig": 20.1
+    },
+    {
+      "kode": "07",
+      "navn": "Lang reiseveg",
+      "enig": 17.9
+    },
+    {
+      "kode": "06",
+      "navn": "Kjenner ingen å drive idrett sammen med",
+      "enig": 15.5
+    }
+  ]
+}

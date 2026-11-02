@@ -14,3 +14,4 @@ test('manual: iki nokta ve fark ipucunda', () => {
 });
 test('manual: y2 büyükten küçüğe sıralı', () => assert.match(tegn(veri([['A', 1, 2], ['B', 1, 5]])).punkter[0].tekst, /^B/));
 test('manual: aynı değerli satırda NaN yok', () => assert.ok(!tegn(veri([['A', 3, 3]])).svg.includes('NaN')));
+test('manual: prosent farkı prosentpoeng', () => assert.match(tegn({ ...veri([['Fotball', 27, 51]]), enhet: 'prosent' }).punkter[0].tekst, /Forskjell 24 prosentpoeng$/));

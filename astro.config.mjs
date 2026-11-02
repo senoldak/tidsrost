@@ -129,6 +129,7 @@ for (const [yol, fil, alan] of [
   ['/navn/', 'navn.json'],
   ['/lonn/', 'lonn.json'],
   ['/kommune/', 'kommuner.json'],
+  ['/idrett/', 'idrett-barn.json'],
   ['/farevarsler/', 'varselarkiv.json', 'lopende'],
   ['/snoskredvarsel/', 'snoskred.json'],
   ['/flomvarsel/', 'flom.json'],

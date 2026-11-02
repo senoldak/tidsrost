@@ -20,6 +20,7 @@ import flomData from '../data/flom.json';
 import navnData from '../data/navn.json';
 import lonnData from '../data/lonn.json';
 import kommuneData from '../data/kommuner.json';
+import idrettBarn from '../data/idrett-barn.json';
 import { dagNivaaer } from '../../scripts/data/nve.mjs';
 import { omregn } from '../lib/prisomregner.mjs';
 import { arbeidsdagerTotalt } from '../lib/helligdager.mjs';
@@ -98,6 +99,14 @@ const kort = [
     navn: 'Kommunene i tall',
     verdi: kommuneData.kommuner.length.toLocaleString('nb-NO'),
     tekst: `Kommuner i Norge ${kommuneData.sisteAar}, hver med folketall, alder, flytting, areal og inntekt. Søk etter kommune og se sammenligning med fylket og landet.`,
+    kilde: 'SSB',
+    gruppe: 'folk',
+  },
+  {
+    url: '/idrett/',
+    navn: 'Barn og idrett',
+    verdi: `${tallTekst(idrettBarn.ialt.alle)} %`,
+    tekst: `Barn 6–15 år som drev med organisert idrett i ${idrettBarn.aar}. De største idrettene og forskjeller etter kjønn og foreldrenes inntekt.`,
     kilde: 'SSB',
     gruppe: 'folk',
   },
