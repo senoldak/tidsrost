@@ -7216,7 +7216,35 @@
     "medier:044cb4b37dc55a61": "2026-11-02T11:01:14.482Z",
     "regjeringen:3190681": "2026-11-02T11:01:14.482Z",
     "medier:6b82ab7de0581d8f": "2026-11-02T11:01:14.482Z",
-    "medier:4e9e57805e83da96": "2026-11-02T11:01:14.482Z"
+    "medier:4e9e57805e83da96": "2026-11-02T11:01:14.482Z",
+    "medier:acae42551d977332": "2026-11-02T13:01:03.192Z",
+    "medier:94bb1220b34704d1": "2026-11-02T13:01:03.192Z",
+    "medier:a69a3c2fa8c785ea": "2026-11-02T13:01:03.192Z",
+    "medier:d4e5411f2c3d3c3b": "2026-11-02T13:01:03.192Z",
+    "medier:428d44de4b482a83": "2026-11-02T13:01:03.192Z",
+    "medier:5557082397b15770": "2026-11-02T13:01:03.192Z",
+    "regjeringen:3190698": "2026-11-02T13:01:03.192Z",
+    "mattilsynet:https://www.mattilsynet.no/fisk-og-akvakultur/oppdrettsanlegg/mattilsynets-rapport-etter-revisjon-hos-ellingsen-seafood-as": "2026-11-02T13:01:03.192Z",
+    "sykling:https://sykling.no/?p=28357": "2026-11-02T13:01:03.192Z",
+    "skiforbundet:https://www.skiforbundet.no/oppland/nyhetsarkiv/2026/11/digitalt-kurs-i-nif-fellesemner/": "2026-11-02T13:01:03.192Z",
+    "medier:992203f1851f573f": "2026-11-02T13:01:03.192Z",
+    "medier:ef02191243e3db0a": "2026-11-02T13:01:03.192Z",
+    "medier:e79499b464ce8f79": "2026-11-02T13:01:03.192Z",
+    "regjeringen:3190693": "2026-11-02T13:01:03.192Z",
+    "medier:dd3b2f4669828d1f": "2026-11-02T13:01:03.192Z",
+    "medier:6f2c9a446faed396": "2026-11-02T13:01:03.192Z",
+    "medier:3ce8a24dd5ace040": "2026-11-02T13:01:03.192Z",
+    "medier:b161e46ea31203f4": "2026-11-02T13:01:03.192Z",
+    "medier:741586869310e10b": "2026-11-02T13:01:03.192Z",
+    "medier:f7a6b6d27e530271": "2026-11-02T13:01:03.192Z",
+    "medier:2128ba2a4366988b": "2026-11-02T13:01:03.192Z",
+    "medier:ca11731e0667f311": "2026-11-02T13:01:03.192Z",
+    "medier:61c057f45e85d8c0": "2026-11-02T13:01:03.192Z",
+    "medier:984573f6c051fd7e": "2026-11-02T13:01:03.192Z",
+    "medier:8dc29a74abc5f549": "2026-11-02T13:01:03.192Z",
+    "medier:0d3a48eb13c08a9c": "2026-11-02T13:01:03.192Z",
+    "medier:ac954e5eba49adf6": "2026-11-02T13:01:03.192Z",
+    "medier:aaa217acdf20bcbf": "2026-11-02T13:01:03.192Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -7274,116 +7302,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:014cd63676ba033b": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "medier:b8c0edd716f915b2": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "medier:67a75c100feec05d": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "medier:fd8f41a3cab1249f": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "medier:295f21ee82f5f6a9": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "medier:2bb70a1b62171ebe": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "medier:38e8506c69879da1": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "medier:0020da72a1e3e095": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "medier:31bf5486a48146ae": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "medier:7a84406a169ea54b": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "medier:1471c7ec0d028776": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "medier:30d2f05883b050a1": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "medier:8893568b24e2282e": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "medier:e2d0ffc2e87735fd": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "medier:f24e4d30ec4c1f1f": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "medier:6b05c616c1107e7a": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "regjeringen:3186944": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "regjeringen:3187282": {
-      "p": 58,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "dsb:https://www.dsb.no/aktuelt/egenberedskapsuka-gjor-dsbs-fire-ovelser/": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2303": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2285": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2287": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-30T11:07:16.224Z"
-    },
     "medier:23168b279094c31c": {
       "p": 75,
       "v": "b34cb0de5bde",
@@ -8938,6 +8856,76 @@
       "p": 25,
       "v": "b34cb0de5bde",
       "t": "2026-11-02T11:03:31.262Z"
+    },
+    "medier:9441c4fdafbe2937": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T13:04:03.171Z"
+    },
+    "medier:992203f1851f573f": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T13:04:03.171Z"
+    },
+    "medier:dd3b2f4669828d1f": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T13:04:03.171Z"
+    },
+    "medier:f7a6b6d27e530271": {
+      "p": 88,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T13:04:03.171Z"
+    },
+    "medier:80227d7c1acd3e94": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T13:04:03.171Z"
+    },
+    "medier:8dc29a74abc5f549": {
+      "p": 76,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T13:04:03.171Z"
+    },
+    "medier:b73435445349cdaa": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T13:04:03.171Z"
+    },
+    "medier:ca11731e0667f311": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T13:04:03.171Z"
+    },
+    "medier:643140f4a21f6576": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T13:04:03.171Z"
+    },
+    "regjeringen:3190698": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T13:04:03.171Z"
+    },
+    "regjeringen:3190693": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T13:04:03.171Z"
+    },
+    "mattilsynet:https://www.mattilsynet.no/fisk-og-akvakultur/oppdrettsanlegg/mattilsynets-rapport-etter-revisjon-hos-ellingsen-seafood-as": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T13:04:03.171Z"
+    },
+    "sykling:https://sykling.no/?p=28357": {
+      "p": 10,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T13:04:03.171Z"
+    },
+    "skiforbundet:https://www.skiforbundet.no/oppland/nyhetsarkiv/2026/11/digitalt-kurs-i-nif-fellesemner/": {
+      "p": 10,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-02T13:04:03.171Z"
     }
   }
 }
