@@ -11,6 +11,9 @@ export default {
     if (lengde > 1024) return new Response(null, { status: 400 });
     const v = validerSvar(await request.text(), request.headers.get('content-type'));
     if (!v.ok) return new Response(null, { status: 400 });
+    // Kun publiserte saker telles: tilfeldige slugger skal ikke kunne fylle D1 og kontoens skrivekvote.
+    const side = await env.ASSETS.fetch(new Request(new URL(`/artikkel/${v.slug}/`, url)));
+    if (side.status !== 200) return new Response(null, { status: 404 });
     await env.DB.prepare(
       'INSERT INTO svar (dag, slug, svar, antall) VALUES (?1, ?2, ?3, 1) ON CONFLICT(dag, slug, svar) DO UPDATE SET antall = antall + 1',
     )
