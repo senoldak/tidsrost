@@ -78,6 +78,8 @@ const doluKategoriler = new Set();
 const kisaHaberler = new Set();
 // Arkivdag (Oslo) → antall artikler; dagssider under ARKIV_TERSKEL er noindex og står ikke i kartet.
 const arkivDager = new Map();
+// Forklart og Analyse (signerte saker) får eget kart, se `chunks` nedenfor.
+const forklartSaker = new Set();
 for (const f of await readdir(haberDizini, { recursive: true })) {
   if (!f.endsWith('.md')) continue;
   const metin = await readFile(path.join(haberDizini, f), 'utf8');
@@ -93,6 +95,7 @@ for (const f of await readdir(haberDizini, { recursive: true })) {
   const sist = !Number.isNaN(oppdatert.getTime()) && oppdatert > tarih ? oppdatert : tarih;
   if (!Number.isNaN(tarih.getTime())) haberTarihleri.set(`/artikkel/${id}/`, sist);
   if (!apenForSok({ body: metin, produksjon: alan('produksjon'), id, title: alan('title'), apnet: googleApne.has(id) })) kisaHaberler.add(`/artikkel/${id}/`);
+  if (['forklart', 'analyse'].includes(alan('sjanger') ?? '')) forklartSaker.add(`/artikkel/${id}/`);
   const kategori = alan('category');
   if (kategori) doluKategoriler.add(kategori);
   if (!Number.isNaN(tarih.getTime())) {
@@ -124,6 +127,8 @@ for (const [yol, fil, alan] of [
   } catch {}
 }
 if (veriTarihleri.size) veriTarihleri.set('/tall/', new Date(Math.max(...[...veriTarihleri.values()].map(Number))));
+// Datasider (eget kart): sidene over, /tall/ og undersidene til navn, lønn, kommune og røde dager.
+const veriSayfasi = (yol) => veriTarihleri.has(yol) || /^\/(navn|lonn|kommune|rode-dager)\//.test(yol);
 
 const siteHaritasi = sitemap({
   filter: (sayfa) => {
@@ -150,6 +155,17 @@ const siteHaritasi = sitemap({
       ? arkivDager.get(arkiv)?.sist
       : (haberTarihleri.get(yol) ?? veriTarihleri.get(yol) ?? (merkez ? veriTarihleri.get(`/${merkez}/`) : undefined));
     return tarih ? { ...oge, lastmod: tarih.toISOString() } : oge;
+  },
+  // Site haritası türe göre bölünür (sitemap-<tür>-0.xml; geri kalan sitemap-pages-0.xml). Search Console'da her
+  // harita ayrı gönderilir; "Sayfa dizine ekleme" raporu böylece her türün dizin oranını ayrı gösterir.
+  chunks: {
+    forklart: (oge) => (forklartSaker.has(new URL(oge.url).pathname) ? oge : undefined),
+    // Eklenti parçaları birbirinden ayırmaz; Forklart saker burada tekrar sayılmasın.
+    nyheter: (oge) => {
+      const yol = new URL(oge.url).pathname;
+      return yol.startsWith('/artikkel/') && !forklartSaker.has(yol) ? oge : undefined;
+    },
+    data: (oge) => (veriSayfasi(new URL(oge.url).pathname) ? oge : undefined),
   },
 });
 
