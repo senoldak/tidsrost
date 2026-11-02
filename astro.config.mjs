@@ -13,6 +13,19 @@ import ordbok from './src/data/ordbok.json' with { type: 'json' };
 import { satteri } from '@astrojs/markdown-satteri';
 import { satteriOrd } from './src/lib/rehype-ord.mjs';
 import { satteriGraf } from './src/lib/graf/forklart.mjs';
+import { grafEtkilesimDenetle } from './src/lib/graf/etkilesim-denetim.mjs';
+
+// Grafiği olan her sayfa etkileşim betiğini yüklemeli; eksikse grafik sessizce statik kalır, o yüzden derleme durur.
+const grafEtkilesim = () => ({
+  name: 'graf-etkilesim',
+  hooks: {
+    'astro:build:done': async ({ dir, logger }) => {
+      const { sayfa, grafik, hatalar } = await grafEtkilesimDenetle(fileURLToPath(dir));
+      if (hatalar.length) throw new Error(`Grafer uten interaktivitet (${hatalar.length}):\n${hatalar.slice(0, 20).join('\n')}`);
+      logger.info(`${grafik} grafer på ${sayfa} sider: alle interaktive.`);
+    },
+  },
+});
 
 // Astro kapakların orijinal PNG'sini de dist/_astro'ya yazar, oysa sayfalar yalnızca türetilmiş dosyaları kullanır.
 // Derleme sonunda hiçbir çıktı dosyasında adı geçmeyen görselleri sileriz. Kaynaktaki kapaklar (src/content) silinmez.
@@ -174,7 +187,7 @@ export default defineConfig({
   // Astro 7 varsayılanı "jsx": satır sonundaki boşluğu etiket kenarında siler (ör. "</a>" + yeni satır + "kelime" bitişik çıkar). true: tek boşluğa indirir.
   compressHTML: true,
   site: 'https://tidsrost.com',
-  integrations: [siteHaritasi, kullanilmayanGorseller(), svgLys()],
+  integrations: [siteHaritasi, kullanilmayanGorseller(), svgLys(), grafEtkilesim()],
   // CSP (public/_headers) satır içi stile izin vermez; tüm CSS ayrı dosya olarak yüklenir.
   build: { inlineStylesheets: 'never' },
   // CSP satır içi script'e de izin vermez: Astro küçük script'leri (ör. DelSaken'deki "Kopier lenke") satır içine
