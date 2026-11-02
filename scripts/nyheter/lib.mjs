@@ -124,13 +124,23 @@ const yamlStr = (s) => JSON.stringify(String(s));
 
 // Dışarıdan gelen ya da yapay zekânın ürettiği metni güvenli Markdown'a çevirir:
 // ham HTML, resimler ve https dışındaki linkler (javascript: vb.) kaldırılır (XSS'e karşı).
-export function trygg(tekst = '') {
-  return String(tekst)
+const tryggAdim = (s) =>
+  s
     .replace(/<!--[\s\S]*?(?:-->|$)/g, '')
     .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, '')
     .replace(/<\/?[a-z][^>]*>/gi, '')
     .replace(/!\[([^\]]*)\]\((?:[^()]|\([^()]*\))*\)/g, '$1')
     .replace(/\[([^\]]*)\]\(\s*((?:[^()\s]|\([^()\s]*\))*)[^)]*\)/g, (m, txt, url) => (/^https:\/\/[^\s"'<>]+$/i.test(url) ? `[${txt}](${url})` : txt));
+
+// Tek geçiş yetmez: "<<b>meta …>" içindeki <b> silinince dıştaki etiket yeniden oluşur. Metin değişmeyene kadar
+// tekrarlanır; sonra kalan her etiket başına ("<!x", "<?x" gibi) boşluk eklenir: "< x" etiket sayılmaz, düz metin kalır.
+export function trygg(tekst = '') {
+  let ut = String(tekst);
+  for (let onceki; onceki !== ut; ) {
+    onceki = ut;
+    ut = tryggAdim(ut);
+  }
+  return ut.replace(/<(?=[a-z/!?])/gi, '< ');
 }
 
 // Dış kaynaktan gelen adresi güvenli https adresine çevirir; geçersizse null.

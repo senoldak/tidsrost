@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtemp, readFile, mkdir, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
-import { normaliserUrl, mdKacir, skrivSak, lesRss } from './lib.mjs';
+import { normaliserUrl, mdKacir, skrivSak, lesRss, trygg } from './lib.mjs';
 import { kortMelding, linje } from './kortfortalt.mjs';
 import { sjekkMedier, vurderOgVask } from './redaktor.mjs';
 
@@ -56,4 +56,18 @@ test('mdKacir: Markdown og HTML i tredjepartstittel nøytraliseres', () => {
   const s = mdKacir('Slik [lenke](https://ond.example) <img src=x> `kode`\nny linje');
   assert.doesNotMatch(s, /\n/);
   assert.doesNotMatch(s, /(^|[^\\])[[\]()<>`]/);
+});
+
+test('trygg: iç içe etiket silinince yeniden oluşan etiket kalmaz', () => {
+  for (const girdi of [
+    "<<b>meta http-equiv=refresh content='0;url=https://haber.example/'>Tekst",
+    "<<b>a href='https://haber.example/'>x<</b>/a>",
+    '<<b>script>alert(1)<</b>/script>',
+    '<!DOCTYPE x> <?php ?>',
+  ]) {
+    assert.doesNotMatch(trygg(girdi), /<[a-z/!?]/i, girdi);
+  }
+  assert.equal(trygg('3 < 5'), '3 < 5');
+  assert.equal(trygg('[lenke](https://ssb.no/a)'), '[lenke](https://ssb.no/a)');
+  assert.equal(trygg('[a [b](javascript:x)](javascript:y)'), 'a b');
 });
