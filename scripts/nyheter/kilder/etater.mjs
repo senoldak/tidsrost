@@ -276,6 +276,82 @@ export const idrettsforbundet = lagKilde({
   les: (html) => ({ ingress: mellom(html, 'class="ingress', '</div>'), body: mellom(html, 'class="body-text', '<footer') }),
 });
 
+// ── Særforbund (2026-11-02, canlı sitelerde doğrulandı) ─────────────────
+// Spor kategorisi tek resmî kaynağa (NIF) dayanıyordu. Federasyon duyuruları (kadro, sonuç, takvim) tek kaynakla
+// yayımlanabilir. Fotoğrafları kullanılmaz (kapak kaynak kartı); NIF-CMS alt bilgisi ticari kullanımı yasaklıyor, siteler
+// kâr amacı gütmüyor ve metin yeniden yazılıyor. fotball.no robots.txt genel botlara Disallow: / diyor, bu yüzden yok.
+// NIF-CMS federasyonlarında (friidrett, hockey, skøyter, Olympiatoppen) RSS kapalı; liste sayfası okunarak sonra eklenebilir.
+
+// RSS bağlantılarındaki utm_* izleme parametreleri atılır; kaynak adresi temiz kalır.
+export function utenUtm(url) {
+  const u = new URL(url);
+  for (const k of [...u.searchParams.keys()]) if (k.startsWith('utm_')) u.searchParams.delete(k);
+  return u.href;
+}
+const rssUtenUtm = async (url) => lesRss(await hentTekst(url)).map((i) => ({ ...i, link: utenUtm(i.link) }));
+
+export const handball = lagKilde({
+  navn: 'handball',
+  avsender: 'Norges Håndballforbund',
+  kortnavn: 'Håndballforbundet',
+  sjanger: 'nyhetssaken',
+  kategorihint: 'sport.',
+  underlinje: 'Nyhet fra handball.no',
+  liste: () => rssUtenUtm('https://www.handball.no/nyheter/rss'),
+  les: (html) => ({ ingress: mellom(html, 'class="leadtext', '</p>'), body: mellom(html, 'class="article-body editorial-content', '<footer') }),
+});
+
+export const skiskyting = lagKilde({
+  navn: 'skiskyting',
+  avsender: 'Norges Skiskytterforbund',
+  kortnavn: 'Skiskytterforbundet',
+  feed: 'https://skiskyting.no/feed/',
+  sjanger: 'nyhetssaken',
+  kategorihint: 'sport.',
+  underlinje: 'Nyhet fra skiskyting.no',
+  les: (html) => ({ ingress: '', body: mellom(html, 'role="main"', '</main>') }),
+});
+
+export const sykling = lagKilde({
+  navn: 'sykling',
+  avsender: 'Norges Cykleforbund',
+  kortnavn: 'Cykleforbundet',
+  feed: 'https://www.sykling.no/feed',
+  sjanger: 'nyhetssaken',
+  kategorihint: 'sport; innenriks for trafikksikkerhet og sykkelveier.',
+  underlinje: 'Nyhet fra sykling.no',
+  les: (html) => ({ ingress: '', body: mellom(html, 'class="editor_text"', '<!--//') }),
+});
+
+export const svomming = lagKilde({
+  navn: 'svomming',
+  avsender: 'Norges Svømmeforbund',
+  kortnavn: 'Svømmeforbundet',
+  sjanger: 'nyhetssaken',
+  kategorihint: 'sport; innenriks for svømmeopplæring og drukningsforebygging.',
+  underlinje: 'Nyhet fra svomming.no',
+  liste: () => rssUtenUtm('https://www.svomming.no/nyheter/rss'),
+  les: (html) => ({ ingress: '', body: mellom(html, 'class="main content entry-content', '</article') }),
+});
+
+// Skiforbundet: liste sayfası istemcide çiziliyor; sitenin kendi haber listesi API'si okunur (bölge haberleri dahil).
+export const skiforbundet = lagKilde({
+  navn: 'skiforbundet',
+  avsender: 'Norges Skiforbund',
+  kortnavn: 'Skiforbundet',
+  sjanger: 'nyhetssaken',
+  kategorihint: 'sport.',
+  underlinje: 'Nyhet fra skiforbundet.no',
+  async liste() {
+    const { items = [] } = JSON.parse(await hentTekst('https://www.skiforbundet.no/api/NewsListApi/getnews?blockId=5799&page=1'));
+    return items.map((i) => {
+      const link = new URL(i.url, 'https://www.skiforbundet.no').href;
+      return { guid: link, link, title: i.heading ?? '', description: i.mainIntro ?? '', pubDate: i.published ?? '' };
+    });
+  },
+  les: (html) => ({ ingress: mellom(html, 'class="leadtext', '</p>'), body: mellom(html, 'class="bodytext', '<footer') }),
+});
+
 // Norfund: kalkınma yatırımları; akış çoğunlukla İngilizce. İlk girdi sitenin kendisi.
 export const norfund = lagKilde({
   navn: 'norfund',
