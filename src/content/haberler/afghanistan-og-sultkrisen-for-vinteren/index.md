@@ -18,7 +18,7 @@ coverAlt: "Illustrasjon: «Afghanistan og sultkrisen før vinteren»"
 coverKreditt: "Illustrasjon: tidsrøst"
 ---
 
-Ifølge FNs nyhetstjeneste står millioner av mennesker i Afghanistan overfor en alvorlig sultkrise der maten er tilgjengelig i markeder, men forblir utilgjengelig for befolkningen. Olga Cherevko, talsperson for FNs aidkoordineringskontor, uttalte tirsdag fra Kabul at situasjonen krever umiddelbar handling før vinteren setter inn. Nesten 16 millioner afghanere står overfor krisehøy sult, og rundt 3,4 millioner av dem lever under nødforhold.
+Ifølge FNs nyhetstjeneste står millioner av mennesker i Afghanistan overfor en alvorlig sultkrise der maten er tilgjengelig i markeder, men forblir utilgjengelig for befolkningen. Olga Cherevko, talsperson for FNs nødhjelpskontor (OCHA), uttalte tirsdag fra Kabul at situasjonen krever umiddelbar handling før vinteren setter inn. Nesten 16 millioner afghanere står overfor krisehøy sult, og rundt 3,4 millioner av dem lever under nødforhold.
 
 Ifølge FNs nyhetstjeneste påpeker Cherevko at avlingene kan bedre seg og at maten finnes i markedene, men familier opplever likevel å gå sultne fordi de ikke har råd til å kjøpe maten eller tjene til livets opphold. Sultnivået forventes å stige til omkring 19 millioner mennesker når vinteren starter måneden etter, ifølge funn fra det globale mattrygghetsovervåkningsorganet IPC. Rekordhøye nivåer av akutt feilernæring for perioden august til oktober har bidratt til at situasjonen forverrer seg for millioner av afghanere.
 
