@@ -1,0 +1,74 @@
+# Haftalık site denetimi (2 Kasım 2026): canlı sitenin haritasından seçilen sayfalarda kırık bağlantı (lychee) ve
+# birkaç örnek sayfada erişilebilirlik (axe-core). Site derlenmez, repoya hiçbir şey yazılmaz; rapor iş özetine ve
+# "site-denetimi" iş eserine gider, pazartesi masaüstü rutini (site-denetimi) okur. Yeni sayfalar her hafta, eskiler
+# dört haftada bir denetlenir (scripts/site-denetim.mjs; kaynağı mecmua/site-ortak/denetim).
+name: Site denetimi
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 4 * * 1' # pazartesi 04:00 UTC
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-denetimi
+  cancel-in-progress: true
+
+jobs:
+  denetle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: scripts
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+
+      - name: Sayfaları seç
+        run: node scripts/site-denetim.mjs sayfalar "$RUNNER_TEMP/sayfalar.txt" --axe "$RUNNER_TEMP/axe-sayfalar.txt"
+
+      # Sosyal ağlar otomatik isteği reddediyor (999/403); onlar denetlenmez. 403 ve 429 kırık sayılmaz.
+      - name: Kırık bağlantılar (lychee 0.24.2)
+        continue-on-error: true
+        run: |
+          d="$RUNNER_TEMP/lychee" && mkdir -p "$d"
+          curl -fsSL --retry 3 -o "$d/l.tgz" https://github.com/lycheeverse/lychee/releases/download/lychee-v0.24.2/lychee-x86_64-unknown-linux-gnu.tar.gz
+          tar -xzf "$d/l.tgz" -C "$d"
+          L="$(find "$d" -type f -name lychee | head -1)"
+          mapfile -t sayfalar < "$RUNNER_TEMP/sayfalar.txt"
+          "$L" --no-progress --format json --output "$RUNNER_TEMP/lychee.json" \
+            --max-concurrency 8 --timeout 20 --max-retries 2 --accept '100..=103,200..=299,403,429' \
+            --exclude-all-private --exclude 'linkedin\.com' --exclude 'facebook\.com' --exclude 'instagram\.com' \
+            --exclude '(^|\.)x\.com' --exclude 'twitter\.com' --exclude 'bsky\.app' \
+            "${sayfalar[@]}" || true
+
+      - name: Erişilebilirlik (axe-core 4.14.0)
+        continue-on-error: true
+        env:
+          AXE_MODULLER: ${{ runner.temp }}/axe
+        run: |
+          npm i --prefix "$AXE_MODULLER" --no-save --no-audit --no-fund --silent playwright@1.64.1 @axe-core/playwright@4.14.0
+          "$AXE_MODULLER/node_modules/.bin/playwright" install --with-deps chromium >/dev/null
+          node scripts/site-denetim.mjs axe "$RUNNER_TEMP/axe-sayfalar.txt" "$RUNNER_TEMP/axe.json"
+
+      - name: Rapor
+        if: always()
+        run: node scripts/site-denetim.mjs rapor "$RUNNER_TEMP/lychee.json" "$RUNNER_TEMP/axe.json" "$RUNNER_TEMP/rapor.md" | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: site-denetimi
+          path: |
+            ${{ runner.temp }}/rapor.md
+            ${{ runner.temp }}/lychee.json
+            ${{ runner.temp }}/axe.json
+            ${{ runner.temp }}/sayfalar.txt
+          retention-days: 21
+          if-no-files-found: ignore
