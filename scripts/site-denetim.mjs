@@ -125,10 +125,11 @@ async function axeCalistir(sayfalar, moduller) {
   const { chromium } = await yukle('playwright');
   const { default: AxeBuilder } = await yukle('@axe-core/playwright');
   const tarayici = await chromium.launch();
+  const baglam = await tarayici.newContext(); // @axe-core/playwright yalnız newContext() ile açılmış sayfada çalışır
   const out = [];
   try {
     for (const url of sayfalar) {
-      const sayfa = await tarayici.newPage();
+      const sayfa = await baglam.newPage();
       try {
         await sayfa.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
         const r = await new AxeBuilder({ page: sayfa }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze();
