@@ -88,6 +88,9 @@ test('özel haber kalıbı yazıda ya da kaynak metinde kırmızı', () => {
   assert.ok(kurallar(standartDenetle({ dil: 'tr', metin: 'Edindiğimiz bilgiye göre şirket satılıyor.' })).includes('ozel-haber'));
   const k = standartDenetle({ dil: 'en', metin: 'The company is in talks to sell its unit.', kaynakMetni: 'The company is in talks, people familiar with the matter said.' });
   assert.ok(kurallar(k).includes('ozel-haber'));
+  // 'has learned' yalnız haber kalıbında ('has learned that', 'has learned.'); 'a model that has learned to' sıradan fiil.
+  assert.ok(kurallar(standartDenetle({ dil: 'en', metin: 'The outlet has learned that the firm will close.' })).includes('ozel-haber'));
+  assert.ok(!kurallar(standartDenetle({ dil: 'en', metin: 'A model that has learned to reproduce popular beliefs will fail.' })).includes('ozel-haber'));
 });
 
 test('kaynağa çok yakın yeniden yazım kırmızı', () => {
