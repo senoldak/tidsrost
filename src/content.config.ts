@@ -45,6 +45,16 @@ const haberler = defineCollection({
       sted: z.object({ navn: z.string(), lat: z.number(), lon: z.number(), fylke: z.string().optional() }).optional(),
       // Botun seçimde verdiği haber değeri (1–100, bkz. scripts/nyheter/viktighet.mjs); sitede gösterilmez, Reels seçiminde kullanılır.
       nyhetsverdi: z.number().int().min(1).max(100).optional(),
+      // Yazı işleri zincirinin kaydı (yalnız ki-redigert; yerleştirme yazar, mecmua onay/yerlestir.mjs): aşama başına
+      // geri gönderme sayısı, kaynakla karşılaştırılan iddia sayısı, yayından önce kaynaktan yeniden çekilen rakam sayısı.
+      // Redaksjonen sayfası ve "Slik ble saken laget" bunlardan okur.
+      kjede: z
+        .object({
+          runder: z.record(z.string().regex(/^[a-z-]+$/), z.number().int().min(0)),
+          kontrollert: z.number().int().min(0),
+          hentet: z.number().int().min(0),
+        })
+        .optional(),
     }),
 });
 
