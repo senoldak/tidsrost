@@ -64,9 +64,9 @@ const TEMA = [['ingen', 'Vanlig'], ['halloween', 'Halloween'], ['jul', 'Jul'], [
     </div>
     <div class="knapper">
       <span>Kaos:</span>
-      {KAOS.map(([k, n]) => <button type="button" data-kaos={k}>{n}</button>)}
+      {KAOS.map(([k, n]) => <button type="button" data-rd-kaos={k}>{n}</button>)}
       <span>Tema:</span>
-      {TEMA.map(([k, n]) => <button type="button" data-tema={k}>{n}</button>)}
+      {TEMA.map(([k, n]) => <button type="button" data-rd-tema={k}>{n}</button>)}
     </div>
 
     <section class="kort" aria-live="polite">

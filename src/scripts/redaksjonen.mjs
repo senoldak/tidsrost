@@ -607,7 +607,7 @@ async function kaffekrise() {
   fri(...folk, by.drift1);
 }
 const KAOS = { serverbrann, strombrudd, ekstra, kaffekrise };
-async function kaos(navn) { if (kaosPaagar) return; kaosPaagar = true; try { await KAOS[navn](); } finally { kaosPaagar = false; } }
+async function kaos(navn) { if (kaosPaagar || !Object.hasOwn(KAOS, navn)) return; kaosPaagar = true; try { await KAOS[navn](); } finally { kaosPaagar = false; } }
 
 // ---------- Mevsim ve bayram süsleri ----------
 let flaggermus = null, sno = null;
@@ -670,6 +670,7 @@ const TEMAER = {
 };
 let aktivtTema = 'ingen';
 function settTema(navn) {
+  if (!Object.hasOwn(TEMAER, navn)) return;
   pynt.innerHTML = ''; if (flaggermus) flaggermus(); if (sno) sno(); flaggermus = sno = null;
   aktivtTema = navn; TEMAER[navn].tegn?.();
   if (TEMAER[navn].prat.length) setTimeout(() => rop(4, TEMAER[navn].prat), 600);
@@ -691,8 +692,9 @@ setInterval(() => { const p = TEMAER[aktivtTema].prat; if (p.length && !rolig) s
 settTema(temaForDato());
 
 // Düğmeler (yalnız örnekte)
-document.querySelectorAll('[data-kaos]').forEach((b) => b.addEventListener('click', () => kaos(b.dataset.kaos)));
-document.querySelectorAll('[data-tema]').forEach((b) => b.addEventListener('click', () => settTema(b.dataset.tema)));
+// Sitenin tema düğmesi ve <html> de data-tema taşır: düğmeler yalnız sahnenin şeridinden ve kendi öznitelikleriyle.
+document.querySelectorAll('.rd .knapper [data-rd-kaos]').forEach((b) => b.addEventListener('click', () => kaos(b.dataset.rdKaos)));
+document.querySelectorAll('.rd .knapper [data-rd-tema]').forEach((b) => b.addEventListener('click', () => settTema(b.dataset.rdTema)));
 if (!rolig) (async () => { while (true) { await vent(30000 + Math.random() * 25000); await kaos(tilfeldig(Object.keys(KAOS))); } })();
 
 // ---------- Kaptein Ø: Şenol'un kahraman hali (özgün kahraman: fiyort mavisi pelerin, sarı daire içinde ø) ----------
