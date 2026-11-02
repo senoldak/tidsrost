@@ -1,62 +1,8 @@
 {
-  "frivillig-innsats-142-000-arsverk-og-over-72-000-enheter-i-frivillighetsregisteret": {
-    "tarih": "2026-10-26T18:21:37.982Z",
-    "ig_reels": "17947517895349286",
-    "fb_reels": "2218322012390786",
-    "reels": {
-      "gun": "2026-10-26",
-      "dilim": "kveld"
-    },
-    "ig_story": "18078930266555159",
-    "fb_post": "1343803192154866_122111147013509504",
-    "fb_story": "2388452921967220",
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
   "_sinir": {
     "ig_post": {
-      "sayi": 14,
-      "kadar": "2026-11-02T19:06:17.786Z"
-    }
-  },
-  "benjamin-netanyahu-advarer-om-nytt-holocaust-for-valget-i-israel": {
-    "tarih": "2026-10-26T18:57:40.438Z",
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1,
-    "ig_story": "18598981612066362",
-    "fb_post": "1343803192154866_122111146107509504",
-    "fb_story": "1419005236527070"
-  },
-  "nyheter-25-oktober-2026-kveld": {
-    "tarih": "2026-10-26T18:58:28.481Z",
-    "ig_story": "18141862972720821",
-    "fb_post": "1343803192154866_122111146461509504",
-    "fb_story": "1912074943494846"
-  },
-  "hundrevis-evakuert-etter-at-tarnkran-ble-skjev-i-oslo-sentrum": {
-    "tarih": "2026-10-26T18:59:42.443Z",
-    "ig_story": "18129182510482251",
-    "fb_post": "1343803192154866_122111147571509504",
-    "fb_story": "1138602148503673",
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 2
-  },
-  "statnett-planlegger-ny-kraftledning-fra-gran-til-oslo": {
-    "tarih": "2026-10-26T19:06:21.271Z",
-    "ig_story": "18288112867290694",
-    "fb_post": "1343803192154866_122111151255509504",
-    "fb_story": "3317514745102184"
-  },
-  "krigsforbrytelser-og-angrep-pa-sivile-og-energiinfrastruktur-slas-fast-i-ny-rapp": {
-    "tarih": "2026-10-26T21:06:17.644Z",
-    "ig_story": "18495212383107149",
-    "fb_post": "1343803192154866_122111187657509504",
-    "fb_story": "1096808169919908",
-    "ig_reels": "18127310072489192",
-    "fb_reels": "2192772174604970",
-    "reels": {
-      "gun": "2026-10-27",
-      "dilim": "morgen"
+      "sayi": 15,
+      "kadar": "2026-11-03T09:07:22.613Z"
     }
   },
   "forventet-levealder-i-norge-er-84-9-ar-for-kvinner-og-81-6-ar-for-menn": {
@@ -461,7 +407,9 @@
     "reels": {
       "gun": "2026-11-02",
       "dilim": "kveld"
-    }
+    },
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "ny-romlov-og-forste-testoppskyting-fra-andoya": {
     "tarih": "2026-11-02T07:07:04.339Z",
@@ -492,5 +440,11 @@
     "ig_story": "18220595278343490",
     "fb_post": "1343803192154866_122113824819509504",
     "fb_story": "1112400005011867"
+  },
+  "menn-rammes-oftere-av-hpv-relatert-kreft-i-munnsvelg": {
+    "tarih": "2026-11-02T21:07:37.873Z",
+    "ig_story": "18135599575755263",
+    "fb_post": "1343803192154866_122113932075509504",
+    "fb_story": "948244988119762"
   }
 }
