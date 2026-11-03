@@ -7579,7 +7579,51 @@
     "regjeringen:3191043": "2026-11-03T15:00:55.370Z",
     "medier:ff816c5312f80c68": "2026-11-03T15:00:55.370Z",
     "medier:a2917c763eb9fd25": "2026-11-03T15:00:55.370Z",
-    "medier:67981ddfa76bdb74": "2026-11-03T15:00:55.370Z"
+    "medier:67981ddfa76bdb74": "2026-11-03T15:00:55.370Z",
+    "medier:be2cdfa8ec887fbc": "2026-11-03T17:01:14.150Z",
+    "medier:e2ac3d32565704aa": "2026-11-03T17:01:14.150Z",
+    "medier:68a37d420d7617ee": "2026-11-03T17:01:14.150Z",
+    "medier:9d9f14e687614a30": "2026-11-03T17:01:14.150Z",
+    "medier:c6e76c2f291dec73": "2026-11-03T17:01:14.150Z",
+    "nkom:cd9a9953-fb50-437c-8537-3acfe30fff61": "2026-11-03T17:01:14.150Z",
+    "mattilsynet:https://www.mattilsynet.no/dyr/dyresykdommer/fugleinfluensa/fugleinfluensa-pavist-i-kommersielt-fjorfehold-i-klepp-kommune-i-rogaland": "2026-11-03T17:01:14.150Z",
+    "skiforbundet:https://www.skiforbundet.no/om/nyheter/2026/11/vm-mote-med-HM-Kong-Haakon/": "2026-11-03T17:01:14.150Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2328": "2026-11-03T17:01:14.150Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168726": "2026-11-03T17:01:14.150Z",
+    "medier:6bb17708252bdfb4": "2026-11-03T17:01:14.150Z",
+    "medier:3b8f1ed7a786f99f": "2026-11-03T17:01:14.150Z",
+    "medier:d86185456760f225": "2026-11-03T17:01:14.150Z",
+    "medier:4c7ff72849823ec0": "2026-11-03T17:01:14.150Z",
+    "medier:d7bf26c0eee8ae5a": "2026-11-03T17:01:14.150Z",
+    "medier:160e1c335d397c94": "2026-11-03T17:01:14.150Z",
+    "medier:6097f1647c2b8593": "2026-11-03T17:01:14.150Z",
+    "medier:63f872e12da05607": "2026-11-03T17:01:14.150Z",
+    "medier:416899f833766e6e": "2026-11-03T17:01:14.150Z",
+    "medier:33cd35aacdd5639b": "2026-11-03T17:01:14.150Z",
+    "medier:7ef56eeaf17bf176": "2026-11-03T17:01:14.150Z",
+    "medier:b6b3a3059e877cb2": "2026-11-03T17:01:14.150Z",
+    "medier:46c9bc6e576cf57c": "2026-11-03T17:01:14.150Z",
+    "medier:37440953342daa11": "2026-11-03T17:01:14.150Z",
+    "medier:ab60cab221a9556a": "2026-11-03T17:01:14.150Z",
+    "medier:227a55fd9adb2dce": "2026-11-03T17:01:14.150Z",
+    "medier:50bfc22b31544984": "2026-11-03T17:01:14.150Z",
+    "medier:fe2a2d6014ee96ec": "2026-11-03T17:01:14.150Z",
+    "medier:31776a3dd580eb8c": "2026-11-03T17:01:14.150Z",
+    "medier:552442a27daaee4e": "2026-11-03T17:01:14.150Z",
+    "medier:feb4a5513df667a0": "2026-11-03T17:01:14.150Z",
+    "medier:7407dfc6a66dc04a": "2026-11-03T17:01:14.150Z",
+    "medier:d9a6015ec29ef5db": "2026-11-03T17:01:14.150Z",
+    "medier:6fab1f8fdf8ce530": "2026-11-03T17:01:14.150Z",
+    "medier:f92dac4873e9d64f": "2026-11-03T17:01:14.150Z",
+    "medier:1cb3ee98b80ede94": "2026-11-03T17:01:14.150Z",
+    "medier:09dc0128ce27b1ab": "2026-11-03T17:01:14.150Z",
+    "medier:e3c45947157b3114": "2026-11-03T17:01:14.150Z",
+    "medier:c9dd2f6d6d9b495b": "2026-11-03T17:01:14.150Z",
+    "medier:115ca1b2b0653106": "2026-11-03T17:01:14.150Z",
+    "medier:f2dde998139c6dc3": "2026-11-03T17:01:14.150Z",
+    "medier:7386c34a0209d65a": "2026-11-03T17:01:14.150Z",
+    "medier:58301fbe90eebb36": "2026-11-03T17:01:14.150Z",
+    "medier:e935221d8ee01a65": "2026-11-03T17:01:14.150Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -7637,36 +7681,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:d307630a7db50995": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-31T17:08:31.372Z"
-    },
-    "medier:d0f241a4907ffed7": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-31T17:08:31.372Z"
-    },
-    "medier:e86055e9f6d24667": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-31T17:08:31.372Z"
-    },
-    "medier:10d887385b1fac8d": {
-      "p": 88,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-31T17:08:31.372Z"
-    },
-    "medier:2c066ee194ce6474": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-31T17:08:31.372Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/10/1168711": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-31T17:08:31.372Z"
-    },
     "medier:1cbe646e6f0923e6": {
       "p": 45,
       "v": "b34cb0de5bde",
@@ -8941,6 +8955,96 @@
       "p": 75,
       "v": "b34cb0de5bde",
       "t": "2026-11-03T15:03:33.667Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168726": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
+    },
+    "medier:68a37d420d7617ee": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
+    },
+    "medier:29ae3343425df877": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
+    },
+    "medier:6bb17708252bdfb4": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
+    },
+    "medier:d86185456760f225": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
+    },
+    "medier:7407dfc6a66dc04a": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
+    },
+    "medier:552442a27daaee4e": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
+    },
+    "medier:d7bf26c0eee8ae5a": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
+    },
+    "medier:58301fbe90eebb36": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
+    },
+    "medier:416899f833766e6e": {
+      "p": 42,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
+    },
+    "medier:7ef56eeaf17bf176": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
+    },
+    "medier:46c9bc6e576cf57c": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
+    },
+    "medier:ab60cab221a9556a": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
+    },
+    "medier:fe2a2d6014ee96ec": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
+    },
+    "nkom:cd9a9953-fb50-437c-8537-3acfe30fff61": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
+    },
+    "mattilsynet:https://www.mattilsynet.no/dyr/dyresykdommer/fugleinfluensa/fugleinfluensa-pavist-i-kommersielt-fjorfehold-i-klepp-kommune-i-rogaland": {
+      "p": 62,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
+    },
+    "skiforbundet:https://www.skiforbundet.no/om/nyheter/2026/11/vm-mote-med-HM-Kong-Haakon/": {
+      "p": 10,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2328": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T17:03:31.558Z"
     }
   }
 }
