@@ -5,14 +5,6 @@
       "kadar": "2026-11-03T23:06:26.520Z"
     }
   },
-  "kirkenes-ma-stanse-alt-privat-vannforbruk": {
-    "tarih": "2026-10-27T11:07:34.827Z",
-    "ig_story": "17911476849588554",
-    "fb_post": "1343803192154866_122111414691509504",
-    "fb_story": "1702956008138581",
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
   "klimagasser-og-karbondioksid-nadde-rekordhoye-nivaer-i-2025": {
     "tarih": "2026-10-27T15:18:16.933Z",
     "ig_story": "17977380726141499",
@@ -440,5 +432,17 @@
     "ig_story": "17919000924527022",
     "fb_post": "1343803192154866_122114094903509504",
     "fb_story": "29556403380612281"
+  },
+  "forsvaret-styrker-overvakingen-i-grenseomradet-i-kirkenes-med-nye-sensorer-og-so": {
+    "tarih": "2026-11-03T13:08:00.229Z",
+    "ig_story": "18246960604311791",
+    "fb_post": "1343803192154866_122114127399509504",
+    "fb_story": "2592263204583645"
+  },
+  "elisabeth-thand-ringqvist-nedstemt-som-statsminister-i-sverige": {
+    "tarih": "2026-11-03T13:08:40.369Z",
+    "ig_story": "17875873485638993",
+    "fb_post": "1343803192154866_122114127861509504",
+    "fb_story": "1686500556154364"
   }
 }
