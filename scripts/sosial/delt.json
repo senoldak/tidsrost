@@ -1,8 +1,8 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 15,
-      "kadar": "2026-11-03T09:07:22.613Z"
+      "sayi": 16,
+      "kadar": "2026-11-03T23:06:26.520Z"
     }
   },
   "kirkenes-ma-stanse-alt-privat-vannforbruk": {
@@ -413,7 +413,9 @@
     "tarih": "2026-11-02T13:09:14.133Z",
     "ig_story": "17924587311444026",
     "fb_post": "1343803192154866_122113797345509504",
-    "fb_story": "2592574867892363"
+    "fb_story": "2592574867892363",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "christian-hoel-ferdig-som-sjef-for-rema-1000-norge": {
     "tarih": "2026-11-02T15:08:06.764Z",
@@ -432,5 +434,11 @@
     "ig_story": "17962495773219159",
     "fb_post": "1343803192154866_122114042289509504",
     "fb_story": "1074500788925077"
+  },
+  "flere-fly-rammet-av-bombetrusler-i-europeisk-luftrom": {
+    "tarih": "2026-11-03T11:06:41.612Z",
+    "ig_story": "17919000924527022",
+    "fb_post": "1343803192154866_122114094903509504",
+    "fb_story": "29556403380612281"
   }
 }
