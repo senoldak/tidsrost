@@ -7453,7 +7453,29 @@
     "medier:ef77a4d5eac5954d": "2026-11-03T07:01:06.737Z",
     "helsedirektoratet:https://www.helsedirektoratet.no/nyheter/unge-lovbrytere-har-langt-hoyere-risiko-for-tidlig-dod": "2026-11-03T07:01:06.737Z",
     "medier:6e4d25a44062f1a7": "2026-11-03T07:01:06.737Z",
-    "medier:039637bbe431538b": "2026-11-03T07:01:06.737Z"
+    "medier:039637bbe431538b": "2026-11-03T07:01:06.737Z",
+    "medier:9441c4fdafbe2937": "2026-11-03T09:01:02.494Z",
+    "havforskning:https://www.hi.no/hi/nettrapporter/rapport-fra-havforskningen-2026-59": "2026-11-03T09:01:02.494Z",
+    "medier:5993a85f175f7fae": "2026-11-03T09:01:02.494Z",
+    "medier:3d1c35b574241d75": "2026-11-03T09:01:02.494Z",
+    "medier:accb0133b25002d1": "2026-11-03T09:01:02.494Z",
+    "medier:c83c19f0cffc5a23": "2026-11-03T09:01:02.494Z",
+    "medier:a6dd43cedca5a178": "2026-11-03T09:01:02.494Z",
+    "medier:10a445a8a695c550": "2026-11-03T09:01:02.494Z",
+    "medier:9a3abfd20291f122": "2026-11-03T09:01:02.494Z",
+    "medier:5f68a141a46c102f": "2026-11-03T09:01:02.494Z",
+    "medier:bc4d734a981b7266": "2026-11-03T09:01:02.494Z",
+    "medier:83204330765bbd02": "2026-11-03T09:01:02.494Z",
+    "medier:66d9daba28c3a6e1": "2026-11-03T09:01:02.494Z",
+    "medier:7b2d78174c2374ba": "2026-11-03T09:01:02.494Z",
+    "medier:13a06016e4cdbb63": "2026-11-03T09:01:02.494Z",
+    "medier:49a2f140907b4171": "2026-11-03T09:01:02.494Z",
+    "medier:9160f3f85eba0f57": "2026-11-03T09:01:02.494Z",
+    "medier:a5942e19e542227f": "2026-11-03T09:01:02.494Z",
+    "medier:22d8a70cdfe0365c": "2026-11-03T09:01:02.494Z",
+    "medier:29baec2ccedaf9ba": "2026-11-03T09:01:02.494Z",
+    "medier:47263c1df5ef6dac": "2026-11-03T09:01:02.494Z",
+    "medier:6249359200345935": "2026-11-03T09:01:02.494Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -7511,31 +7533,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "unnews:https://news.un.org/en/story/2026/10/1168714": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-31T07:05:49.785Z"
-    },
-    "medier:fb6aa18763944522": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-31T07:05:49.785Z"
-    },
-    "medier:6882f13ff6630fdc": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-31T07:05:49.785Z"
-    },
-    "medier:05789b99677023d1": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-31T07:05:49.785Z"
-    },
-    "regjeringen:3190559": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-10-31T07:05:49.785Z"
-    },
     "medier:54c8b318a22ecccf": {
       "p": 75,
       "v": "b34cb0de5bde",
@@ -8910,6 +8907,41 @@
       "p": 78,
       "v": "b34cb0de5bde",
       "t": "2026-11-03T07:02:19.766Z"
+    },
+    "medier:bc4d734a981b7266": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T09:03:21.577Z"
+    },
+    "medier:5993a85f175f7fae": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T09:03:21.577Z"
+    },
+    "medier:29baec2ccedaf9ba": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T09:03:21.577Z"
+    },
+    "medier:a6dd43cedca5a178": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T09:03:21.577Z"
+    },
+    "medier:66d9daba28c3a6e1": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T09:03:21.577Z"
+    },
+    "medier:9a3abfd20291f122": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T09:03:21.577Z"
+    },
+    "havforskning:https://www.hi.no/hi/nettrapporter/rapport-fra-havforskningen-2026-59": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-03T09:03:21.577Z"
     }
   }
 }
