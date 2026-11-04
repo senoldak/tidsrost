@@ -8013,7 +8013,25 @@
     "medier:b2e97abe3b6bcf3f": "2026-11-04T09:01:01.717Z",
     "medier:f44eeec00a0cfe84": "2026-11-04T09:01:01.717Z",
     "medier:5d2b9c071814a44a": "2026-11-04T09:01:01.717Z",
-    "medier:d2bce797dbbb1d6b": "2026-11-04T09:01:01.717Z"
+    "medier:d2bce797dbbb1d6b": "2026-11-04T09:01:01.717Z",
+    "regjeringen:3191138": "2026-11-04T11:01:21.587Z",
+    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/gi-innspel-om-levande-tradisjonar-i-noreg": "2026-11-04T11:01:21.587Z",
+    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/tematilsyn-om-kontrollfunksjonen-og-internrevisjonfunksjonen/": "2026-11-04T11:01:21.587Z",
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/ein-million-har-lasta-ned-vegvesen-trafikk/": "2026-11-04T11:01:21.587Z",
+    "handball:https://www.handball.no/nyheter/2026/11/handballhallen_ble_et_fristed_fra_alt_det_andre/": "2026-11-04T11:01:21.587Z",
+    "medier:7264144ea033d5d8": "2026-11-04T11:01:21.587Z",
+    "medier:dcc5ca2ec4fd8a90": "2026-11-04T11:01:21.587Z",
+    "medier:4bf3674c3bfa907d": "2026-11-04T11:01:21.587Z",
+    "medier:167d092532693270": "2026-11-04T11:01:21.587Z",
+    "medier:88af9e2fecbafaba": "2026-11-04T11:01:21.587Z",
+    "medier:9daf33da1018ad18": "2026-11-04T11:01:21.587Z",
+    "regjeringen:3191140": "2026-11-04T11:01:21.587Z",
+    "medier:d58cd4177e49e164": "2026-11-04T11:01:21.587Z",
+    "medier:b756e25373ed629b": "2026-11-04T11:01:21.587Z",
+    "medier:887bafe04fdf3828": "2026-11-04T11:01:21.587Z",
+    "medier:5984de6cf41ce3a3": "2026-11-04T11:01:21.587Z",
+    "medier:be2cea7cba29c9ea": "2026-11-04T11:01:21.587Z",
+    "medier:a983116052333553": "2026-11-04T11:01:21.587Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -8071,26 +8089,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:b146c3d2c499d0e9": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-01T11:02:53.514Z"
-    },
-    "medier:45274265e3824738": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-01T11:02:53.514Z"
-    },
-    "medier:630f874e47de98b8": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-01T11:02:53.514Z"
-    },
-    "medier:40abe04e62dc585f": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-01T11:02:53.514Z"
-    },
     "medier:4a28aad9f2db6692": {
       "p": 55,
       "v": "b34cb0de5bde",
@@ -9610,6 +9608,76 @@
       "p": 60,
       "v": "b34cb0de5bde",
       "t": "2026-11-04T09:03:41.837Z"
+    },
+    "medier:95a4b274eadab3cd": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T11:03:53.941Z"
+    },
+    "medier:7264144ea033d5d8": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T11:03:53.941Z"
+    },
+    "medier:4bf3674c3bfa907d": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T11:03:53.941Z"
+    },
+    "medier:a42218396b3fc36e": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T11:03:53.941Z"
+    },
+    "medier:be2cea7cba29c9ea": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T11:03:53.941Z"
+    },
+    "medier:d58cd4177e49e164": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T11:03:53.941Z"
+    },
+    "medier:88af9e2fecbafaba": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T11:03:53.941Z"
+    },
+    "medier:013a4b0024d6932d": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T11:03:53.941Z"
+    },
+    "regjeringen:3191138": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T11:03:53.941Z"
+    },
+    "regjeringen:3191140": {
+      "p": 88,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T11:03:53.941Z"
+    },
+    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/gi-innspel-om-levande-tradisjonar-i-noreg": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T11:03:53.941Z"
+    },
+    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/tematilsyn-om-kontrollfunksjonen-og-internrevisjonfunksjonen/": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T11:03:53.941Z"
+    },
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/ein-million-har-lasta-ned-vegvesen-trafikk/": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T11:03:53.941Z"
+    },
+    "handball:https://www.handball.no/nyheter/2026/11/handballhallen_ble_et_fristed_fra_alt_det_andre/": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T11:03:53.941Z"
     }
   }
 }
