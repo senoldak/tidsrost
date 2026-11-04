@@ -1,8 +1,8 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 16,
-      "kadar": "2026-11-03T23:06:26.520Z"
+      "sayi": 17,
+      "kadar": "2026-11-04T19:04:47.742Z"
     }
   },
   "dodt-lop-mellom-blokkene-etter-historisk-jevn-valgdeltakelse-i-israel": {
@@ -413,7 +413,9 @@
     "tarih": "2026-11-03T11:06:41.612Z",
     "ig_story": "17919000924527022",
     "fb_post": "1343803192154866_122114094903509504",
-    "fb_story": "29556403380612281"
+    "fb_story": "29556403380612281",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "forsvaret-styrker-overvakingen-i-grenseomradet-i-kirkenes-med-nye-sensorer-og-so": {
     "tarih": "2026-11-03T13:08:00.229Z",
@@ -480,5 +482,29 @@
     "ig_story": "18080606198653993",
     "fb_post": "1343803192154866_122114247021509504",
     "fb_story": "2222434508342833"
+  },
+  "jon-ossoff-sikrer-gjenvalg-til-senatet-i-georgia": {
+    "tarih": "2026-11-04T07:05:02.947Z",
+    "ig_story": "18065411405717098",
+    "fb_post": "1343803192154866_122114364957509504",
+    "fb_story": "1119898464170797"
+  },
+  "62-400-nye-foretak-registrert-i-2025": {
+    "tarih": "2026-11-04T07:05:37.966Z",
+    "ig_story": "18069875720789641",
+    "fb_post": "1343803192154866_122114365239509504",
+    "fb_story": "1919144715720665"
+  },
+  "ledighet-tre-nedturer": {
+    "tarih": "2026-11-04T07:06:10.225Z",
+    "ig_story": "17914738614508644",
+    "fb_post": "1343803192154866_122114365443509504",
+    "fb_story": "4683277291944784"
+  },
+  "norge-har-kuttet-14-prosent-i-klimagasser-siden-1990": {
+    "tarih": "2026-11-04T07:06:41.241Z",
+    "ig_story": "17975381265006930",
+    "fb_post": "1343803192154866_122114365971509504",
+    "fb_story": "1096868649652044"
   }
 }
