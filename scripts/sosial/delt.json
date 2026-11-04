@@ -1,8 +1,8 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 17,
-      "kadar": "2026-11-04T19:04:47.742Z"
+      "sayi": 18,
+      "kadar": "2026-11-05T07:18:16.758Z"
     }
   },
   "to-personer-pagrepet-etter-skyting-i-drammen": {
@@ -411,7 +411,9 @@
     "tarih": "2026-11-03T21:08:26.499Z",
     "ig_story": "18104714297034796",
     "fb_post": "1343803192154866_122114246373509504",
-    "fb_story": "1151920877181596"
+    "fb_story": "1151920877181596",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "luftfartstilsynet-granskes-av-stortinget-etter-at-eus-flysikkerhetsbyra-fant-avv": {
     "tarih": "2026-11-03T21:09:01.394Z",
@@ -502,5 +504,11 @@
     "ig_story": "18440980315199979",
     "fb_post": "1343803192154866_122114513835509504",
     "fb_story": "1126709130107117"
+  },
+  "norske-kjoleanlegg-utsatt-for-dataangrep-etter-a-ha-vaert-apne-pa-nettet": {
+    "tarih": "2026-11-04T19:18:32.644Z",
+    "ig_story": "18102779816180827",
+    "fb_post": "1343803192154866_122114544471509504",
+    "fb_story": "1655217999319951"
   }
 }
