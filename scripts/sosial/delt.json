@@ -5,44 +5,6 @@
       "kadar": "2026-11-04T19:04:47.742Z"
     }
   },
-  "dodt-lop-mellom-blokkene-etter-historisk-jevn-valgdeltakelse-i-israel": {
-    "tarih": "2026-10-28T07:39:25.006Z",
-    "ig_story": "18156707689517557",
-    "fb_post": "1343803192154866_122111763453509504",
-    "fb_story": "1630601701806027",
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
-  "naer-tre-av-fire-husholdninger-eier-egen-bolig-7-475-startlan-i-2025": {
-    "tarih": "2026-10-28T07:40:03.707Z",
-    "ig_story": "18451375618120198",
-    "fb_post": "1343803192154866_122111764659509504",
-    "fb_story": "1465723565525015",
-    "ig_reels": "18090564707309539",
-    "fb_reels": "1718461023331633",
-    "reels": {
-      "gun": "2026-10-28",
-      "dilim": "kveld"
-    }
-  },
-  "sas-link-kabinansatte-i-streik-etter-at-meklingsforslag-ble-avvist": {
-    "tarih": "2026-10-28T07:40:37.871Z",
-    "ig_story": "18076148366743881",
-    "fb_post": "1343803192154866_122111765565509504",
-    "fb_story": "1831837914821318",
-    "ig_reels": "17983390145907767",
-    "fb_reels": "2358435584561363",
-    "reels": {
-      "gun": "2026-10-29",
-      "dilim": "morgen"
-    }
-  },
-  "norwegian-la-fram-tall-for-tredje-kvartal": {
-    "tarih": "2026-10-28T07:41:15.600Z",
-    "ig_story": "18117739897815850",
-    "fb_post": "1343803192154866_122111766669509504",
-    "fb_story": "2905070449864281"
-  },
   "e18-ut-av-oslo-snevres-inn-til-ett-felt-i-helgen": {
     "tarih": "2026-10-28T11:10:44.757Z",
     "ig_story": "17879329542562347",
@@ -506,5 +468,17 @@
     "ig_story": "17975381265006930",
     "fb_post": "1343803192154866_122114365971509504",
     "fb_story": "1096868649652044"
+  },
+  "demokratene-sikret-flertall-i-kongressen-etter-brakvalg-i-usa": {
+    "tarih": "2026-11-04T09:08:00.167Z",
+    "ig_story": "17892894360456645",
+    "fb_post": "1343803192154866_122114393367509504",
+    "fb_story": "1125622410208612"
+  },
+  "innvandrere-mellom-20-og-39-ar-faerre-star-utenfor-arbeid-og-utdanning": {
+    "tarih": "2026-11-04T09:08:38.642Z",
+    "ig_story": "17873266908647317",
+    "fb_post": "1343803192154866_122114393643509504",
+    "fb_story": "2185255982023757"
   }
 }
