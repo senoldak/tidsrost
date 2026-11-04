@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-04T19:16:43.762Z",
+  "hentet": "2026-11-04T21:04:31.358Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-04T19:15:29+00:00",
+  "sistEndretHosMet": "2026-11-04T21:04:25+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.20261104081649.033",
@@ -59,32 +59,6 @@
       "beskrivelse": "Sørvestlig til vestlig stiv kuling 15 m/s, onsdag kveld dreiende nordvestlig. Torsdag morgen minkende.",
       "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker. Sjøen bygger seg opp: Det er farlig å være ute i småbåt.",
       "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261104031829.025",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Frøya - Halten",
-      "domene": "hav",
-      "start": "2026-11-04T01:00:00+00:00",
-      "slutt": "2026-11-04T20:00:00+00:00",
-      "beskrivelse": "Natt til onsdag økning til vestlig stiv kuling 15 m/s, minkende onsdag kveld.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261104031432.035",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Ona - Frøya",
-      "domene": "hav",
-      "start": "2026-11-04T03:00:00+00:00",
-      "slutt": "2026-11-04T20:00:00+00:00",
-      "beskrivelse": "I dag, onsdag, sørvestleg periodevis stiv kuling 15 m/s, minkende i kveld",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {

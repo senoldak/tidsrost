@@ -8240,7 +8240,23 @@
     "medier:c93d0c8891f62733": "2026-11-04T19:00:55.556Z",
     "medier:f8ac7f5e5c3f2145": "2026-11-04T19:00:55.556Z",
     "medier:63e437bddc60ea06": "2026-11-04T19:00:55.556Z",
-    "medier:c64de135e35c00ef": "2026-11-04T19:00:55.556Z"
+    "medier:c64de135e35c00ef": "2026-11-04T19:00:55.556Z",
+    "medier:1af06ea748bdb42d": "2026-11-04T21:00:57.756Z",
+    "skiforbundet:https://www.skiforbundet.no/randonee/aktuelle-saker/2026/11/siste-nytt-fra-randonee/": "2026-11-04T21:00:57.756Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168738": "2026-11-04T21:00:57.756Z",
+    "medier:168141e6cc891325": "2026-11-04T21:00:57.756Z",
+    "medier:b5b488032dd3c002": "2026-11-04T21:00:57.756Z",
+    "medier:3097a08f8f3faec8": "2026-11-04T21:00:57.756Z",
+    "medier:8e6ccc939978f9a4": "2026-11-04T21:00:57.756Z",
+    "medier:6e013fbd2224d6f3": "2026-11-04T21:00:57.756Z",
+    "medier:256effd13e46f0f3": "2026-11-04T21:00:57.756Z",
+    "medier:10175491f32b50cf": "2026-11-04T21:00:57.756Z",
+    "medier:505af1ff497cb10d": "2026-11-04T21:00:57.756Z",
+    "medier:cac8e1aecccb44d5": "2026-11-04T21:00:57.756Z",
+    "medier:ade060105e6029d3": "2026-11-04T21:00:57.756Z",
+    "medier:31ea024ba2d55b0f": "2026-11-04T21:00:57.756Z",
+    "medier:e88f1cacc4eb4183": "2026-11-04T21:00:57.756Z",
+    "medier:b2bcc7eaa8d8d648": "2026-11-04T21:00:57.756Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -8298,46 +8314,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:2e6bd0798741dab5": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-01T21:03:15.661Z"
-    },
-    "medier:e3a9ebfa3d71b909": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-01T21:03:15.661Z"
-    },
-    "medier:916ace084223101a": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-01T21:03:15.661Z"
-    },
-    "medier:a33f94798016f06e": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-01T21:03:15.661Z"
-    },
-    "medier:92380fbc30acc32f": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-01T21:03:15.661Z"
-    },
-    "medier:3586b713f8f24aea": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-01T21:03:15.661Z"
-    },
-    "medier:deb5844857586a66": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-01T21:03:15.661Z"
-    },
-    "medier:47e78608ca202f33": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-01T21:03:15.661Z"
-    },
     "medier:c19c429708006f20": {
       "p": 35,
       "v": "b34cb0de5bde",
@@ -10107,6 +10083,51 @@
       "p": 52,
       "v": "b34cb0de5bde",
       "t": "2026-11-04T19:03:21.100Z"
+    },
+    "medier:133481d041c4dfe5": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T21:02:06.269Z"
+    },
+    "medier:168141e6cc891325": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T21:02:06.269Z"
+    },
+    "medier:cac8e1aecccb44d5": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T21:02:06.269Z"
+    },
+    "medier:3097a08f8f3faec8": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T21:02:06.269Z"
+    },
+    "medier:6e013fbd2224d6f3": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T21:02:06.269Z"
+    },
+    "medier:10175491f32b50cf": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T21:02:06.269Z"
+    },
+    "skiforbundet:https://www.skiforbundet.no/randonee/aktuelle-saker/2026/11/siste-nytt-fra-randonee/": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T21:02:06.269Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168740": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T21:02:06.269Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168738": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-04T21:02:06.269Z"
     }
   }
 }
