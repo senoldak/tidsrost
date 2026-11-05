@@ -1,47 +1,9 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 18,
-      "kadar": "2026-11-05T07:18:16.758Z"
+      "sayi": 19,
+      "kadar": "2026-11-05T21:09:10.232Z"
     }
-  },
-  "konkurser-og-berorte-ansatte-falt-3-kvartal-2026": {
-    "tarih": "2026-10-29T07:15:38.995Z",
-    "ig_story": "18413185834091711",
-    "fb_post": "1343803192154866_122112208029509504",
-    "fb_story": "2036796667278781",
-    "ig_reels": "18080711387390205",
-    "fb_reels": "1869274871109793",
-    "reels": {
-      "gun": "2026-10-29",
-      "dilim": "kveld"
-    },
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
-  "produktivitet-knekk": {
-    "tarih": "2026-10-29T07:16:12.505Z",
-    "ig_story": "18097820990395713",
-    "fb_post": "1343803192154866_122112208335509504",
-    "fb_story": "1664645098612484",
-    "ig_reels": "18128602576883394",
-    "fb_reels": "1439603174309814",
-    "reels": {
-      "gun": "2026-10-30",
-      "dilim": "morgen"
-    }
-  },
-  "ukrainere-i-norge-kan-bli-rammet-av-strenge-inntektskrav-for-opphold": {
-    "tarih": "2026-10-29T07:16:45.784Z",
-    "ig_story": "17895273849681696",
-    "fb_post": "1343803192154866_122112208671509504",
-    "fb_story": "1802956694271934"
-  },
-  "trond-giske-og-auf-krever-full-stans-i-nye-datasentre": {
-    "tarih": "2026-10-29T07:17:19.412Z",
-    "ig_story": "18131874739760578",
-    "fb_post": "1343803192154866_122112209031509504",
-    "fb_story": "3112955608909458"
   },
   "boliglansrenten-for-husholdninger-sank-i-september-2026": {
     "tarih": "2026-10-29T11:13:14.528Z",
@@ -461,7 +423,9 @@
     "tarih": "2026-11-04T13:14:09.886Z",
     "ig_story": "17989310049092937",
     "fb_post": "1343803192154866_122114450847509504",
-    "fb_story": "1899049057733067"
+    "fb_story": "1899049057733067",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "regjeringen-varsler-nye-tiltak-for-datasentre-og-kraftbruk": {
     "tarih": "2026-11-04T13:14:49.303Z",
