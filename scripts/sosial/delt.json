@@ -5,20 +5,6 @@
       "kadar": "2026-11-05T21:09:10.232Z"
     }
   },
-  "minst-69-omkommet-etter-togulykke-i-spania": {
-    "tarih": "2026-10-29T13:14:54.283Z",
-    "ig_story": "18126454117931639",
-    "fb_post": "1343803192154866_122112312651509504",
-    "fb_story": "1827072208317197"
-  },
-  "norgesprisdatoen-for-2027-er-klar-etter-milliardbesparelse": {
-    "tarih": "2026-10-29T13:15:34.617Z",
-    "ig_story": "17955119967268220",
-    "fb_post": "1343803192154866_122112313089509504",
-    "fb_story": "1136918268921968",
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
   "amazon-og-alphabet-faller-pa-borsen-etter-kvartalstall": {
     "tarih": "2026-10-29T23:06:22.386Z",
     "ig_story": "18101563979440133",
@@ -504,5 +490,11 @@
     "ig_story": "18224100916341314",
     "fb_post": "1343803192154866_122114789355509504",
     "fb_story": "3326202017768234"
+  },
+  "to-personer-pakjort-i-as": {
+    "tarih": "2026-11-05T15:19:06.406Z",
+    "ig_story": "18133504183690408",
+    "fb_post": "1343803192154866_122114820153509504",
+    "fb_story": "1402352891665980"
   }
 }
