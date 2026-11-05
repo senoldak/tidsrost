@@ -1,8 +1,8 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 19,
-      "kadar": "2026-11-05T21:09:10.232Z"
+      "sayi": 20,
+      "kadar": "2026-11-06T11:05:56.272Z"
     }
   },
   "amazon-og-alphabet-faller-pa-borsen-etter-kvartalstall": {
@@ -453,7 +453,9 @@
     "tarih": "2026-11-05T07:07:33.757Z",
     "ig_story": "18116769398023668",
     "fb_post": "1343803192154866_122114701443509504",
-    "fb_story": "1605923724050723"
+    "fb_story": "1605923724050723",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "sveriges-sentralbank-hever-styringsrenten-til-2-prosent": {
     "tarih": "2026-11-05T07:08:11.389Z",
@@ -544,5 +546,17 @@
     "ig_story": "18375970972211140",
     "fb_post": "1343803192154866_122114878149509504",
     "fb_story": "2521442714932957"
+  },
+  "erna-solberg-om-motene-med-donald-trump-vi-var-naive": {
+    "tarih": "2026-11-05T23:06:11.684Z",
+    "ig_story": "18199947292388247",
+    "fb_post": "1343803192154866_122114926701509504",
+    "fb_story": "1552014226960243"
+  },
+  "nithya-raman-blir-ny-ordforer-i-los-angeles": {
+    "tarih": "2026-11-05T23:06:56.144Z",
+    "ig_story": "17935085766411789",
+    "fb_post": "1343803192154866_122114927037509504",
+    "fb_story": "1664280925091644"
   }
 }
