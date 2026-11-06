@@ -1,8 +1,8 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 20,
-      "kadar": "2026-11-06T11:05:56.272Z"
+      "sayi": 21,
+      "kadar": "2026-11-06T23:07:22.932Z"
     }
   },
   "demokratene-kan-sikre-flertall-i-kongressen-for-mellomvalget": {
@@ -453,7 +453,9 @@
     "tarih": "2026-11-05T13:11:59.202Z",
     "ig_story": "18084055382722447",
     "fb_post": "1343803192154866_122114789115509504",
-    "fb_story": "1619603969029484"
+    "fb_story": "1619603969029484",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "ukraina-mottar-4-36-milliarder-euro-i-ny-stotte-fra-eu": {
     "tarih": "2026-11-05T13:12:35.383Z",
@@ -538,5 +540,23 @@
     "ig_story": "18179685886443997",
     "fb_post": "1343803192154866_122115023625509504",
     "fb_story": "2882613992115868"
+  },
+  "rekordvarm-oktober-malt-pa-verdensbasis": {
+    "tarih": "2026-11-06T11:07:38.191Z",
+    "ig_story": "17890121001620790",
+    "fb_post": "1343803192154866_122115098421509504",
+    "fb_story": "2006500630014509"
+  },
+  "to-personer-omkom-i-skolebussulykke-i-frankrike": {
+    "tarih": "2026-11-06T11:08:19.100Z",
+    "ig_story": "18009252467792162",
+    "fb_post": "1343803192154866_122115098853509504",
+    "fb_story": "1036521889452598"
+  },
+  "tiktoks-anbefalingsalgoritmer-bryter-ifolge-europakommisjonen-digital-services-a": {
+    "tarih": "2026-11-06T11:08:54.714Z",
+    "ig_story": "18092384522226601",
+    "fb_post": "1343803192154866_122115099123509504",
+    "fb_story": "1811344999985780"
   }
 }
