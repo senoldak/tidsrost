@@ -8847,7 +8847,44 @@
     "medier:4e27eff079e4b7f4": "2026-11-06T09:01:00.750Z",
     "medier:b9687546a981ddb8": "2026-11-06T09:01:00.750Z",
     "medier:012c1d4b3e7fe2d3": "2026-11-06T09:01:00.750Z",
-    "medier:60ee686160cbbf18": "2026-11-06T09:01:00.750Z"
+    "medier:60ee686160cbbf18": "2026-11-06T09:01:00.750Z",
+    "medier:6b0d8b4a27df8448": "2026-11-06T11:00:56.095Z",
+    "medier:94c42920a5ac9595": "2026-11-06T11:00:56.095Z",
+    "medier:5523e48b1297d5c1": "2026-11-06T11:00:56.095Z",
+    "medier:c6da683a5450370b": "2026-11-06T11:00:56.095Z",
+    "medier:76d90c0ab10d139a": "2026-11-06T11:00:56.095Z",
+    "medier:7f096d1af7f87f09": "2026-11-06T11:00:56.095Z",
+    "medier:e3d0a13257d27c9c": "2026-11-06T11:00:56.095Z",
+    "medier:54b8b71ee7be8045": "2026-11-06T11:00:56.095Z",
+    "medier:0c4a91c3dbb565d3": "2026-11-06T11:00:56.095Z",
+    "regjeringen:3191915": "2026-11-06T11:00:56.095Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2365": "2026-11-06T11:00:56.095Z",
+    "medier:01bf4994e84d42ef": "2026-11-06T11:00:56.095Z",
+    "medier:1ccefa599102e528": "2026-11-06T11:00:56.095Z",
+    "medier:41a0a71e8ed44723": "2026-11-06T11:00:56.095Z",
+    "medier:363658c0bf771cbe": "2026-11-06T11:00:56.095Z",
+    "medier:a01db2ad84fc0404": "2026-11-06T11:00:56.095Z",
+    "medier:210ce990cb81fe52": "2026-11-06T11:00:56.095Z",
+    "regjeringen:3191939": "2026-11-06T11:00:56.095Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2363": "2026-11-06T11:00:56.095Z",
+    "medier:13223630485c2955": "2026-11-06T11:00:56.095Z",
+    "medier:4f4ec2d4aaf5a0bc": "2026-11-06T11:00:56.095Z",
+    "medier:70179fd017278568": "2026-11-06T11:00:56.095Z",
+    "medier:8b3bff3f3b15f5e1": "2026-11-06T11:00:56.095Z",
+    "medier:d180b5f26fd91f93": "2026-11-06T11:00:56.095Z",
+    "regjeringen:3191920": "2026-11-06T11:00:56.095Z",
+    "medier:c27d1e931dc06d40": "2026-11-06T11:00:56.095Z",
+    "medier:a20c2a416c166c70": "2026-11-06T11:00:56.095Z",
+    "met:ice:lavlandet-og-dalstrok-pa-ostlandet:2026-11-06": "2026-11-06T11:00:56.095Z",
+    "nve:landslide:148528": "2026-11-06T11:00:56.095Z",
+    "regjeringen:3191231": "2026-11-06T11:00:56.095Z",
+    "medier:eec10256685a8545": "2026-11-06T11:00:56.095Z",
+    "medier:787c2d195884955b": "2026-11-06T11:00:56.095Z",
+    "medier:e8695d7452afef56": "2026-11-06T11:00:56.095Z",
+    "medier:d23b3efc21877622": "2026-11-06T11:00:56.095Z",
+    "medier:1fec70cddc788211": "2026-11-06T11:00:56.095Z",
+    "medier:5defe948ec0ea7d1": "2026-11-06T11:00:56.095Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2361": "2026-11-06T11:00:56.095Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -8905,46 +8942,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:f9abe0d7062caafa": {
-      "p": 42,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-03T11:03:53.702Z"
-    },
-    "medier:9a18c31126d349da": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-03T11:03:53.702Z"
-    },
-    "medier:d9a891db7cd62171": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-03T11:03:53.702Z"
-    },
-    "medier:a40bf5081fb5f1a5": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-03T11:03:53.702Z"
-    },
-    "medier:cb988f62c1fe8c18": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-03T11:03:53.702Z"
-    },
-    "sykling:https://sykling.no/?p=28366": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-03T11:03:53.702Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2300": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-03T11:03:53.702Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2308": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-03T11:03:53.702Z"
-    },
     "medier:3331e3308e987e60": {
       "p": 75,
       "v": "b34cb0de5bde",
@@ -10959,6 +10956,66 @@
       "p": 45,
       "v": "b34cb0de5bde",
       "t": "2026-11-06T09:03:32.127Z"
+    },
+    "medier:01bf4994e84d42ef": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-06T11:03:15.147Z"
+    },
+    "medier:13223630485c2955": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-06T11:03:15.147Z"
+    },
+    "medier:eec10256685a8545": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-06T11:03:15.147Z"
+    },
+    "medier:1fec70cddc788211": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-06T11:03:15.147Z"
+    },
+    "medier:c27d1e931dc06d40": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-06T11:03:15.147Z"
+    },
+    "regjeringen:3191915": {
+      "p": 42,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-06T11:03:15.147Z"
+    },
+    "regjeringen:3191939": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-06T11:03:15.147Z"
+    },
+    "regjeringen:3191231": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-06T11:03:15.147Z"
+    },
+    "regjeringen:3191920": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-06T11:03:15.147Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2365": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-06T11:03:15.147Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2363": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-06T11:03:15.147Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2361": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-06T11:03:15.147Z"
     }
   }
 }
