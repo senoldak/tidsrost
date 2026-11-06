@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-06T15:11:44.881Z",
+  "hentet": "2026-11-06T17:05:36.514Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-06T15:10:00+00:00",
+  "sistEndretHosMet": "2026-11-06T17:05:21+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.261106100000.0834_1_0",
@@ -88,14 +88,14 @@
       "web": null
     },
     {
-      "id": "2.49.0.1.578.0.20261106101318.038",
+      "id": "2.49.0.1.578.0.20261106162909.100",
       "niva": "gult",
       "hendelse": "Kuling",
       "omrade": "Skomvær - Loppa",
       "domene": "hav",
       "start": "2026-11-06T10:00:00+00:00",
-      "slutt": "2026-11-07T10:00:00+00:00",
-      "beskrivelse": "Fra fredag formiddag sørvest periodevis stiv kuling 15 m/s.",
+      "slutt": "2026-11-07T12:00:00+00:00",
+      "beskrivelse": "Fra fredag formiddag sørvest periodevis stiv kuling 15 m/s, natt til lørdag dreiende vest.",
       "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker. Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
       "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
@@ -140,16 +140,16 @@
       "web": null
     },
     {
-      "id": "2.49.0.1.578.0.20261106101416.073",
+      "id": "2.49.0.1.578.0.20261106162335.055",
       "niva": "gult",
       "hendelse": "Kuling",
       "omrade": "Loppa - Fruholmen",
       "domene": "hav",
       "start": "2026-11-06T12:00:00+00:00",
-      "slutt": "2026-11-07T12:00:00+00:00",
-      "beskrivelse": "Fra fredag ettermiddag periodevis sørvest til vestlig stiv kuling 15 m/s. Vinden øker først i vest.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
+      "slutt": "2026-11-07T18:00:00+00:00",
+      "beskrivelse": "Fra fredag ettermiddag periodevis sørvest til vestlig stiv kuling 15 m/s. Vinden øker først i vest. Lørdag morgen forbigående vestlig sterk kuling 20.",
+      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt.",
+      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
@@ -268,6 +268,19 @@
       "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.20261106161055.013",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "Slettnes fyr - Vardø",
+      "domene": "hav",
+      "start": "2026-11-07T12:00:00+00:00",
+      "slutt": "2026-11-07T18:00:00+00:00",
+      "beskrivelse": "Fra lørdag ettermiddag vestlig stiv kuling 15 m/s, vesentlig i vestlige del av strekningen.",
+      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
+      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
       "id": "2.49.0.1.578.0.261106100000.7082_1_0",
