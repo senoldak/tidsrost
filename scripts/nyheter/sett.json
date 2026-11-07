@@ -9155,7 +9155,21 @@
     "medier:f04eacb0b5516bbf": "2026-11-07T07:00:53.727Z",
     "medier:3de6b04b84b0c740": "2026-11-07T07:00:53.727Z",
     "medier:31dd31c0092d0560": "2026-11-07T07:00:53.727Z",
-    "medier:ee30a562e1847c17": "2026-11-07T07:00:53.727Z"
+    "medier:ee30a562e1847c17": "2026-11-07T07:00:53.727Z",
+    "medier:f7d7bfc35873a3e4": "2026-11-07T09:00:58.912Z",
+    "medier:1dab17350f2cbc24": "2026-11-07T09:00:58.912Z",
+    "medier:4e1b0f3a16d87c98": "2026-11-07T09:00:58.912Z",
+    "medier:9a9bb74d16d7adf6": "2026-11-07T09:00:58.912Z",
+    "medier:86b14b8749ddf8dd": "2026-11-07T09:00:58.912Z",
+    "medier:b5119908437baa49": "2026-11-07T09:00:58.912Z",
+    "medier:5bd990583239f025": "2026-11-07T09:00:58.912Z",
+    "medier:2f0e773a155dd440": "2026-11-07T09:00:58.912Z",
+    "medier:701a6ca6b11554bb": "2026-11-07T09:00:58.912Z",
+    "medier:09a61c261cff76c6": "2026-11-07T09:00:58.912Z",
+    "medier:183312923c2f7de2": "2026-11-07T09:00:58.912Z",
+    "medier:5ce653c2bff44eea": "2026-11-07T09:00:58.912Z",
+    "medier:2cf860a34d463066": "2026-11-07T09:00:58.912Z",
+    "medier:719a28b047442b26": "2026-11-07T09:00:58.912Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -9213,111 +9227,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:520381e3f3a581ad": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "medier:dbd019813b373383": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "medier:80d6426a928d2e43": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "medier:45b0070dab447a56": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "medier:3963c0332d93c226": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "medier:3fee67a8e790e850": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "medier:a099a40101ec2dc4": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "medier:51754068c8a453c1": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "medier:e7728edc0702cb49": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "medier:87cb63980369f28c": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "medier:a107f262ea57ab84": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "medier:da35c9a25ab61096": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "medier:d608775c1fb290f8": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "medier:a2232fa4699ee0a5": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "medier:f7c1b336b8883db2": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "medier:4d4ba878d49dde0c": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "regjeringen:3191102": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/endringer-i-hoyrisikoland-listefort-av-fatf3/": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "havforskning:https://www.hi.no/hi/nyheter/2026/november/hi-kritiske-til-wisting-forslag": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "kystverket:https://www.kystverket.no/nyheter/kystverket-inngar-kunnskapssamarbeid-med-sintef-ocean/": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
-    "miljodirektoratet:https://www.miljodirektoratet.no/aktuelt/nyheter/2026/november-2026/nyhetsmelding---bildekk-er-storste-kjelde-til-mikroplast-i-osloluft/": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T09:03:41.837Z"
-    },
     "medier:95a4b274eadab3cd": {
       "p": 78,
       "v": "b34cb0de5bde",
@@ -11247,6 +11156,21 @@
       "p": 40,
       "v": "b34cb0de5bde",
       "t": "2026-11-07T07:02:13.628Z"
+    },
+    "medier:1dab17350f2cbc24": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-07T09:03:20.242Z"
+    },
+    "medier:86b14b8749ddf8dd": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-07T09:03:20.242Z"
+    },
+    "medier:a56d9a58eb66ef1f": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-07T09:03:20.242Z"
     }
   }
 }
