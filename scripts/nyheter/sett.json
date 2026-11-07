@@ -9190,7 +9190,18 @@
     "medier:320f1dccbf2037cd": "2026-11-07T11:00:54.476Z",
     "medier:a69c2f452adb6ef4": "2026-11-07T11:00:54.476Z",
     "medier:a9e54fc7e00c22d8": "2026-11-07T11:00:54.476Z",
-    "met:rain:deler-av-troms-og-nordlige-nordland:2026-11-08": "2026-11-07T11:00:54.476Z"
+    "met:rain:deler-av-troms-og-nordlige-nordland:2026-11-08": "2026-11-07T11:00:54.476Z",
+    "medier:b91ea89959d1f80c": "2026-11-07T13:00:57.981Z",
+    "medier:09303b803e7936b0": "2026-11-07T13:00:57.981Z",
+    "medier:89e07fb9d685675b": "2026-11-07T13:00:57.981Z",
+    "medier:b9f7b05a58dadb01": "2026-11-07T13:00:57.981Z",
+    "medier:96744d84e77e2be5": "2026-11-07T13:00:57.981Z",
+    "medier:ffa9c967abc8c38c": "2026-11-07T13:00:57.981Z",
+    "medier:432fd86f073e4a6f": "2026-11-07T13:00:57.981Z",
+    "medier:944866abb264ba00": "2026-11-07T13:00:57.981Z",
+    "medier:79982c467e55d180": "2026-11-07T13:00:57.981Z",
+    "medier:5ac74b83ded690a0": "2026-11-07T13:00:57.981Z",
+    "met:wind:deler-av-finnmark-og-nord-troms:2026-11-09": "2026-11-07T13:00:57.981Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -9248,161 +9259,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:95a4b274eadab3cd": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T11:03:53.941Z"
-    },
-    "medier:7264144ea033d5d8": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T11:03:53.941Z"
-    },
-    "medier:4bf3674c3bfa907d": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T11:03:53.941Z"
-    },
-    "medier:a42218396b3fc36e": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T11:03:53.941Z"
-    },
-    "medier:be2cea7cba29c9ea": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T11:03:53.941Z"
-    },
-    "medier:d58cd4177e49e164": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T11:03:53.941Z"
-    },
-    "medier:88af9e2fecbafaba": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T11:03:53.941Z"
-    },
-    "medier:013a4b0024d6932d": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T11:03:53.941Z"
-    },
-    "regjeringen:3191138": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T11:03:53.941Z"
-    },
-    "regjeringen:3191140": {
-      "p": 88,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T11:03:53.941Z"
-    },
-    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/gi-innspel-om-levande-tradisjonar-i-noreg": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T11:03:53.941Z"
-    },
-    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/tematilsyn-om-kontrollfunksjonen-og-internrevisjonfunksjonen/": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T11:03:53.941Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/ein-million-har-lasta-ned-vegvesen-trafikk/": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T11:03:53.941Z"
-    },
-    "handball:https://www.handball.no/nyheter/2026/11/handballhallen_ble_et_fristed_fra_alt_det_andre/": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T11:03:53.941Z"
-    },
-    "medier:5de32c342e27b63a": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T13:03:45.956Z"
-    },
-    "medier:beeca526acf81d09": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T13:03:45.956Z"
-    },
-    "medier:7bf96522dbd39533": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T13:03:45.956Z"
-    },
-    "medier:67eb78fd561624c8": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T13:03:45.956Z"
-    },
-    "medier:b60dda943b33dae8": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T13:03:45.956Z"
-    },
-    "medier:a6524312822c3f29": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T13:03:45.956Z"
-    },
-    "medier:0974eeb09096af7d": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T13:03:45.956Z"
-    },
-    "medier:9859c791e0fbb7c5": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T13:03:45.956Z"
-    },
-    "regjeringen:3191220": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T13:03:45.956Z"
-    },
-    "regjeringen:3191050": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T13:03:45.956Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/arbeid-pa-e39-ognasundet-bru/": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T13:03:45.956Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/10/arbeid-pa-e39-i-vestnes/": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T13:03:45.956Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168725": {
-      "p": 74,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T13:03:45.956Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2281": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T13:03:45.956Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2321": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T13:03:45.956Z"
-    },
-    "miljodirektoratet:https://www.miljodirektoratet.no/aktuelt/nyheter/2026/november-2026/utslipp-av-klimagasser-ble-redusert-i-2025/": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T13:03:45.956Z"
-    },
-    "miljodirektoratet:https://www.miljodirektoratet.no/aktuelt/nyheter/2026/november-2026/bildekk-er-storste-kjelde-til-mikroplast-i-osloluft/": {
-      "p": 62,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-04T13:03:45.956Z"
-    },
     "unnews:https://news.un.org/en/story/2026/11/1168732": {
       "p": 55,
       "v": "b34cb0de5bde",
@@ -11217,6 +11073,36 @@
       "p": 40,
       "v": "b34cb0de5bde",
       "t": "2026-11-07T11:02:59.655Z"
+    },
+    "medier:432fd86f073e4a6f": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-07T13:03:23.959Z"
+    },
+    "medier:f8cda62f6622b626": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-07T13:03:23.959Z"
+    },
+    "medier:b91ea89959d1f80c": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-07T13:03:23.959Z"
+    },
+    "medier:89e07fb9d685675b": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-07T13:03:23.959Z"
+    },
+    "medier:ce6249f5e897d715": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-07T13:03:23.959Z"
+    },
+    "medier:96744d84e77e2be5": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-07T13:03:23.959Z"
     }
   }
 }
