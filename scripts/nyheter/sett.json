@@ -9201,7 +9201,23 @@
     "medier:944866abb264ba00": "2026-11-07T13:00:57.981Z",
     "medier:79982c467e55d180": "2026-11-07T13:00:57.981Z",
     "medier:5ac74b83ded690a0": "2026-11-07T13:00:57.981Z",
-    "met:wind:deler-av-finnmark-og-nord-troms:2026-11-09": "2026-11-07T13:00:57.981Z"
+    "met:wind:deler-av-finnmark-og-nord-troms:2026-11-09": "2026-11-07T13:00:57.981Z",
+    "medier:f8cda62f6622b626": "2026-11-07T15:00:56.438Z",
+    "medier:ce6249f5e897d715": "2026-11-07T15:00:56.438Z",
+    "handball:https://www.handball.no/nyheter/2026/11/da-june-kom-til-fredrikstad-ble-det-poeng-og-mye-humor/": "2026-11-07T15:00:56.438Z",
+    "medier:23aa88d12a4ab7e3": "2026-11-07T15:00:56.438Z",
+    "medier:1eae780f4e74ccdc": "2026-11-07T15:00:56.438Z",
+    "medier:5cb65d3a443b7e69": "2026-11-07T15:00:56.438Z",
+    "medier:701c1bb4ddff58ea": "2026-11-07T15:00:56.438Z",
+    "medier:da993aa9776a061b": "2026-11-07T15:00:56.438Z",
+    "medier:b9b443664c7cfc99": "2026-11-07T15:00:56.438Z",
+    "medier:20d3ee9514b1660f": "2026-11-07T15:00:56.438Z",
+    "medier:0b9c590dd24b01a9": "2026-11-07T15:00:56.438Z",
+    "medier:08973e86713280be": "2026-11-07T15:00:56.438Z",
+    "medier:5ed911ab6a47f06e": "2026-11-07T15:00:56.438Z",
+    "medier:dae5d40d50e4cafb": "2026-11-07T15:00:56.438Z",
+    "medier:4db90a8b942c4cd6": "2026-11-07T15:00:56.438Z",
+    "medier:0b427df8269c77ba": "2026-11-07T15:00:56.438Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -11103,6 +11119,46 @@
       "p": 55,
       "v": "b34cb0de5bde",
       "t": "2026-11-07T13:03:23.959Z"
+    },
+    "medier:2c0fa92560b17da7": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-07T15:02:31.175Z"
+    },
+    "medier:dae5d40d50e4cafb": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-07T15:02:31.175Z"
+    },
+    "medier:23aa88d12a4ab7e3": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-07T15:02:31.175Z"
+    },
+    "medier:20d3ee9514b1660f": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-07T15:02:31.175Z"
+    },
+    "medier:cb38f158b7450084": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-07T15:02:31.175Z"
+    },
+    "medier:08973e86713280be": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-07T15:02:31.175Z"
+    },
+    "medier:99a304ff1d654c8c": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-07T15:02:31.175Z"
+    },
+    "handball:https://www.handball.no/nyheter/2026/11/da-june-kom-til-fredrikstad-ble-det-poeng-og-mye-humor/": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-07T15:02:31.175Z"
     }
   }
 }
