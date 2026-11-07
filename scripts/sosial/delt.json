@@ -5,52 +5,6 @@
       "kadar": "2026-11-07T19:06:40.486Z"
     }
   },
-  "48-nasjonalparker-i-norge-96-5-prosent-drev-friluftsliv-i-2024": {
-    "tarih": "2026-10-31T07:09:36.241Z",
-    "ig_story": "17884530969528649",
-    "fb_post": "1343803192154866_122112987585509504",
-    "fb_story": "4547154958885509",
-    "ig_reels": "17938994427125353",
-    "fb_reels": "1671460644326783",
-    "reels": {
-      "gun": "2026-10-31",
-      "dilim": "kveld"
-    },
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
-  "kpi-bidrag": {
-    "tarih": "2026-10-31T07:10:15.338Z",
-    "ig_story": "17994381966099972",
-    "fb_post": "1343803192154866_122112987897509504",
-    "fb_story": "1438401271014151",
-    "ig_reels": "18145518442585308",
-    "fb_reels": "1628224555435999",
-    "reels": {
-      "gun": "2026-11-01",
-      "dilim": "morgen"
-    }
-  },
-  "nye-oslo-sykehus-kan-koste-nesten-70-milliarder-kroner": {
-    "tarih": "2026-10-31T09:13:46.068Z",
-    "ig_story": "18113740634229333",
-    "fb_post": "1343803192154866_122113020567509504",
-    "fb_story": "1703330484487508",
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
-  "matata-bringer-personlige-historier-til-scenen-ved-nordic-black-theatre": {
-    "tarih": "2026-10-31T09:14:24.715Z",
-    "ig_story": "18126755318489785",
-    "fb_post": "1343803192154866_122113021041509504",
-    "fb_story": "1658118175917488"
-  },
-  "tsjekkisk-turist-funnet-dod-i-nordland-etter-batforlis": {
-    "tarih": "2026-10-31T09:15:00.356Z",
-    "ig_story": "18019019687949130",
-    "fb_post": "1343803192154866_122113021437509504",
-    "fb_story": "2959745551052997"
-  },
   "person-dode-i-ulykke-pa-treningssenter-pa-cc-vest-i-oslo": {
     "tarih": "2026-10-31T19:11:17.699Z",
     "ig_story": "18108330587291631",
@@ -554,5 +508,11 @@
     "ig_story": "18656406040031757",
     "fb_post": "1343803192154866_122115335805509504",
     "fb_story": "1432881485141764"
+  },
+  "troms-og-nordlige-nordland-rammes-av-flom-og-skredfare-med-store-regnmengder": {
+    "tarih": "2026-11-07T13:06:09.745Z",
+    "ig_story": "18101498192559193",
+    "fb_post": "1343803192154866_122115480369509504",
+    "fb_story": "5536929983198283"
   }
 }
