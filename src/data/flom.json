@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-07T21:03:31.730Z",
+  "hentet": "2026-11-07T23:03:06.938Z",
   "kilde": {
     "navn": "Norges vassdrags- og energidirektorat (NVE), Varsom",
     "url": "https://www.varsom.no/",
@@ -7,7 +7,83 @@
     "lisens": "NLOD",
     "lisensUrl": "https://data.norge.no/nlod/no/2.0"
   },
-  "dato": "2026-11-07",
-  "flom": {},
-  "jordskred": {}
+  "dato": "2026-11-08",
+  "flom": {
+    "18": {
+      "nivaa": 2,
+      "kommuner": [
+        "Andøy",
+        "Evenes",
+        "Hamarøy",
+        "Lødingen",
+        "Narvik",
+        "Sortland"
+      ],
+      "tekst": "Vannføringen vil øke i bekker og elver i lavlandet i løpet av lørdag. Vi forventer størst vannføring søndag og tidlig mandag. Dette skyldes mye nedbør gjennom helgen. Vannføringen vil avhenge av temperaturen, siden noe av nedbøren kommer som sludd og snø i fjellet."
+    },
+    "55": {
+      "nivaa": 2,
+      "kommuner": [
+        "Balsfjord",
+        "Bardu",
+        "Dyrøy",
+        "Gratangen",
+        "Harstad",
+        "Ibestad",
+        "Karlsøy",
+        "Kvæfjord",
+        "Kvænangen",
+        "Kåfjord",
+        "Lavangen",
+        "Lyngen",
+        "Målselv",
+        "Nordreisa",
+        "Salangen",
+        "Senja",
+        "Skjervøy",
+        "Storfjord",
+        "Sørreisa",
+        "Tjeldsund",
+        "Tromsø"
+      ],
+      "tekst": "Vannføringen vil øke i bekker og elver i lavlandet i løpet av lørdag. Vi forventer størst vannføring søndag og tidlig mandag. Dette skyldes mye nedbør gjennom helgen. Vannføringen vil avhenge av temperaturen, siden noe av nedbøren kommer som sludd og snø i fjellet."
+    }
+  },
+  "jordskred": {
+    "18": {
+      "nivaa": 2,
+      "kommuner": [
+        "Andøy",
+        "Evenes",
+        "Hamarøy",
+        "Narvik",
+        "Sortland",
+        "Sørfold"
+      ],
+      "tekst": "Det ventes mye nedbør over større områder gjennom helga, lokalt opp til 40-50 mm på 24 t og 70-90 mm på 48 t. Stigende temperaturer kan føre til snøsmelting på søndag. Grunnvannstanden og vannmetningsgraden i bakken er allerede svært høy. Bratte skråninger, samt bekker og elveløp med stor vannføring er spesielt utsatt. Se varsel om regn for deler av Troms og Vesterålen."
+    },
+    "55": {
+      "nivaa": 2,
+      "kommuner": [
+        "Balsfjord",
+        "Bardu",
+        "Dyrøy",
+        "Gratangen",
+        "Harstad",
+        "Ibestad",
+        "Karlsøy",
+        "Kvæfjord",
+        "Lavangen",
+        "Lyngen",
+        "Målselv",
+        "Salangen",
+        "Senja",
+        "Storfjord",
+        "Sørreisa",
+        "Tjeldsund",
+        "Tromsø"
+      ],
+      "tekst": "Det ventes mye nedbør over større områder gjennom helga, lokalt opp til 40-50 mm på 24 t og 70-90 mm på 48 t. Stigende temperaturer kan føre til snøsmelting på søndag. Grunnvannstanden og vannmetningsgraden i bakken er allerede svært høy. Bratte skråninger, samt bekker og elveløp med stor vannføring er spesielt utsatt. Se varsel om regn for deler av Troms og Vesterålen."
+    }
+  }
 }
