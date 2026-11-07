@@ -1,8 +1,8 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 21,
-      "kadar": "2026-11-06T23:07:22.932Z"
+      "sayi": 22,
+      "kadar": "2026-11-07T19:06:40.486Z"
     }
   },
   "48-nasjonalparker-i-norge-96-5-prosent-drev-friluftsliv-i-2024": {
@@ -503,7 +503,9 @@
     "tarih": "2026-11-06T11:07:38.191Z",
     "ig_story": "17890121001620790",
     "fb_post": "1343803192154866_122115098421509504",
-    "fb_story": "2006500630014509"
+    "fb_story": "2006500630014509",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "to-personer-omkom-i-skolebussulykke-i-frankrike": {
     "tarih": "2026-11-06T11:08:19.100Z",
@@ -546,5 +548,11 @@
     "ig_story": "18483151912112981",
     "fb_post": "1343803192154866_122115209715509504",
     "fb_story": "1883128632852853"
+  },
+  "statsbudsjettet-2027-folketrygden-pa-794-milliarder-kroner-er-storste-utgiftspost": {
+    "tarih": "2026-11-07T07:06:55.599Z",
+    "ig_story": "18656406040031757",
+    "fb_post": "1343803192154866_122115335805509504",
+    "fb_story": "1432881485141764"
   }
 }
