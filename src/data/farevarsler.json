@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-08T01:02:11.454Z",
+  "hentet": "2026-11-08T07:02:05.014Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,21 +7,8 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-08T01:00:17+00:00",
+  "sistEndretHosMet": "2026-11-08T07:01:36+00:00",
   "varsler": [
-    {
-      "id": "2.49.0.1.578.0.20261107075616.075",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Torsvåg - Fruholmen",
-      "domene": "hav",
-      "start": "2026-11-06T12:00:00+00:00",
-      "slutt": "2026-11-08T05:00:00+00:00",
-      "beskrivelse": "Fra lørdag morgen forbigående vestlig sterk kuling 20 m/s, etterhvert stiv kuling 15",
-      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
     {
       "id": "2.49.0.1.578.0.20261106084108.024",
       "niva": "gult",
@@ -62,19 +49,6 @@
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
-      "id": "2.49.0.1.578.0.261107220000.0841_1_0",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "B4",
-      "domene": "hav",
-      "start": "2026-11-07T22:00:00+00:00",
-      "slutt": "2026-11-08T03:00:00+00:00",
-      "beskrivelse": "Nordvest sterk kuling 20 m/s.",
-      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
       "id": "2.49.0.1.578.0.261107220000.0847_1_0",
       "niva": "gult",
       "hendelse": "Storm",
@@ -84,45 +58,6 @@
       "slutt": "2026-11-09T10:00:00+00:00",
       "beskrivelse": "Nordvest sterk kuling 20 m/s fra 07 november 22:00 UTC til 08 november 01:00 UTC og nordlig liten storm 22 m/s fra 09 november 03:00 UTC til 10:00 UTC.",
       "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.261107220000.0848_1_0",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "C5",
-      "domene": "hav",
-      "start": "2026-11-07T22:00:00+00:00",
-      "slutt": "2026-11-08T03:00:00+00:00",
-      "beskrivelse": "Nordvest sterk kuling 20 m/s.",
-      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.261107220000.7083_1_0",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Nordbanken",
-      "domene": "hav",
-      "start": "2026-11-07T22:00:00+00:00",
-      "slutt": "2026-11-08T07:00:00+00:00",
-      "beskrivelse": "Vestlig sterk kuling 20 m/s.",
-      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.261107220000.7082_1_0",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Nordkappbanken",
-      "domene": "hav",
-      "start": "2026-11-07T22:00:00+00:00",
-      "slutt": "2026-11-08T06:00:00+00:00",
-      "beskrivelse": "Vestlig periodevis sterk kuling 20 m/s",
-      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
     },
