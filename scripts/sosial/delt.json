@@ -1,15 +1,9 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 22,
-      "kadar": "2026-11-07T19:06:40.486Z"
+      "sayi": 23,
+      "kadar": "2026-11-08T19:03:47.595Z"
     }
-  },
-  "person-dode-i-ulykke-pa-treningssenter-pa-cc-vest-i-oslo": {
-    "tarih": "2026-10-31T19:11:17.699Z",
-    "ig_story": "18108330587291631",
-    "fb_post": "1343803192154866_122113197015509504",
-    "fb_story": "916428801423166"
   },
   "rundt-1-2-millioner-kunder-i-lanekassen-over-47-milliarder-kroner-utbetalt": {
     "tarih": "2026-11-01T07:05:56.024Z",
@@ -525,7 +519,9 @@
     "reels": {
       "gun": "2026-11-08",
       "dilim": "morgen"
-    }
+    },
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "sor-varanger-innbyggere-ma-koke-vannet-i-minst-en-maned": {
     "tarih": "2026-11-07T17:05:46.525Z",
@@ -550,5 +546,17 @@
     "ig_story": "18083696120714795",
     "fb_post": "1343803192154866_122115559575509504",
     "fb_story": "2200947887496084"
+  },
+  "kommunenes-netto-driftsresultat-var-2-3-prosent-i-2025": {
+    "tarih": "2026-11-08T07:04:02.727Z",
+    "ig_story": "17904090378379000",
+    "fb_post": "1343803192154866_122115680289509504",
+    "fb_story": "29231470383136379"
+  },
+  "medianinntekt-fylker": {
+    "tarih": "2026-11-08T07:04:40.004Z",
+    "ig_story": "18131851900833254",
+    "fb_post": "1343803192154866_122115680625509504",
+    "fb_story": "963087963220682"
   }
 }
