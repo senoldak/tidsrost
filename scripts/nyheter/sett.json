@@ -9418,7 +9418,25 @@
     "medier:31b8638ba84b2891": "2026-11-08T15:00:53.037Z",
     "medier:6f0470d1d50c0f56": "2026-11-08T15:00:53.037Z",
     "medier:a40af2cab7a5ce8c": "2026-11-08T15:00:53.037Z",
-    "medier:cf6f9115242a891a": "2026-11-08T15:00:53.037Z"
+    "medier:cf6f9115242a891a": "2026-11-08T15:00:53.037Z",
+    "medier:d0bef1cbd3702526": "2026-11-08T17:00:53.397Z",
+    "handball:https://www.handball.no/nyheter/2026/11/tertnes-vant-thrillerkvalifiseringskamp-i-polen/": "2026-11-08T17:00:53.397Z",
+    "medier:5cb1227b52a653a6": "2026-11-08T17:00:53.397Z",
+    "medier:b59fd771e0814654": "2026-11-08T17:00:53.397Z",
+    "medier:b71daa069f28dbe5": "2026-11-08T17:00:53.397Z",
+    "medier:b6981c0c797ea54c": "2026-11-08T17:00:53.397Z",
+    "medier:598def5b9a7b519e": "2026-11-08T17:00:53.397Z",
+    "medier:e809795727f2a5d4": "2026-11-08T17:00:53.397Z",
+    "medier:5ab2cae80431e420": "2026-11-08T17:00:53.397Z",
+    "medier:e5b2fdd9fa1857d5": "2026-11-08T17:00:53.397Z",
+    "medier:624f1d24752c959b": "2026-11-08T17:00:53.397Z",
+    "medier:d783459fa0c22188": "2026-11-08T17:00:53.397Z",
+    "medier:c31d361b2eb07771": "2026-11-08T17:00:53.397Z",
+    "medier:41b7c269e5e7ec06": "2026-11-08T17:00:53.397Z",
+    "medier:97a4cfa538c6d0ad": "2026-11-08T17:00:53.397Z",
+    "medier:e7f16fad56d8cacc": "2026-11-08T17:00:53.397Z",
+    "medier:3988e18a332c2946": "2026-11-08T17:00:53.397Z",
+    "medier:90a197f2a8fe792a": "2026-11-08T17:00:53.397Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -9476,76 +9494,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:c32aab5214b2fc47": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T17:03:12.347Z"
-    },
-    "medier:ea46c9a74ff24ca7": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T17:03:12.347Z"
-    },
-    "medier:6a9eadd8236159cd": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T17:03:12.347Z"
-    },
-    "medier:bca944c33d7d3935": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T17:03:12.347Z"
-    },
-    "medier:b9a1162891693b51": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T17:03:12.347Z"
-    },
-    "medier:1bfb0bebbe98cdae": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T17:03:12.347Z"
-    },
-    "medier:f44437e5ae392a34": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T17:03:12.347Z"
-    },
-    "medier:7df3c557f11f7f21": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T17:03:12.347Z"
-    },
-    "medier:63996c10398c09a3": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T17:03:12.347Z"
-    },
-    "medier:8ec9372a8cebf98c": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T17:03:12.347Z"
-    },
-    "medier:316eacab947534f8": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T17:03:12.347Z"
-    },
-    "medier:22d5c9d1a62cdf81": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T17:03:12.347Z"
-    },
-    "medier:6ecaf9f43517aeda": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T17:03:12.347Z"
-    },
-    "skiforbundet:https://www.skiforbundet.no/om/nyheter/2026/11/tiltak-ved-mistanke-om-hjernerystelse/": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T17:03:12.347Z"
-    },
     "medier:359260d01159f2e1": {
       "p": 65,
       "v": "b34cb0de5bde",
@@ -10805,6 +10753,41 @@
       "p": 60,
       "v": "b34cb0de5bde",
       "t": "2026-11-08T15:03:18.966Z"
+    },
+    "medier:b45bcdc92df0984f": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-08T17:03:12.895Z"
+    },
+    "medier:e7f16fad56d8cacc": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-08T17:03:12.895Z"
+    },
+    "medier:5cb1227b52a653a6": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-08T17:03:12.895Z"
+    },
+    "medier:b71daa069f28dbe5": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-08T17:03:12.895Z"
+    },
+    "medier:624f1d24752c959b": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-08T17:03:12.895Z"
+    },
+    "medier:e809795727f2a5d4": {
+      "p": 52,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-08T17:03:12.895Z"
+    },
+    "handball:https://www.handball.no/nyheter/2026/11/tertnes-vant-thrillerkvalifiseringskamp-i-polen/": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-08T17:03:12.895Z"
     }
   }
 }
