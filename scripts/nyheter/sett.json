@@ -9346,7 +9346,8 @@
     "medier:e18f2b963b75acbb": "2026-11-08T07:00:53.504Z",
     "medier:59c535e9aae8843b": "2026-11-08T07:00:53.504Z",
     "medier:a1ba8ee2e2068c80": "2026-11-08T07:00:53.504Z",
-    "medier:d5fb115235bf14ea": "2026-11-08T07:00:53.504Z"
+    "medier:d5fb115235bf14ea": "2026-11-08T07:00:53.504Z",
+    "medier:41c0a2387ede944c": "2026-11-08T09:00:59.797Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -9404,146 +9405,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "unnews:https://news.un.org/en/story/2026/11/1168735": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T07:02:06.218Z"
-    },
-    "medier:b0f17d6f9bef99d5": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T07:02:06.218Z"
-    },
-    "medier:6acf714a67fd09cd": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T07:02:06.218Z"
-    },
-    "medier:7b3a5ec67922448f": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T07:02:06.218Z"
-    },
-    "medier:6b9ac6f9a16bc3c3": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T07:02:06.218Z"
-    },
-    "medier:dee88362c4f77457": {
-      "p": 90,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T07:02:06.218Z"
-    },
-    "medier:5e9121ae90f35421": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T07:02:06.218Z"
-    },
-    "medier:2f92b6c34043c41d": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T07:02:06.218Z"
-    },
-    "medier:71a19979deebd26c": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T07:02:06.218Z"
-    },
-    "ssb:9fe3572f-00c7-4e61-b6d2-ce44f2ea71c2": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T07:02:06.218Z"
-    },
-    "ssb:2433dda9-80a0-4b22-9aa4-e98ec8f5edd1": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T07:02:06.218Z"
-    },
-    "ssb:2ed5289b-3d51-4e45-97aa-bf5003356211": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T07:02:06.218Z"
-    },
-    "sivilombudet:https://www.sivilombudet.no/?p=63853": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T07:02:06.218Z"
-    },
-    "medier:cf467057b8f321bc": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T09:03:36.160Z"
-    },
-    "medier:e1fb2ec35e6b8107": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T09:03:36.160Z"
-    },
-    "medier:c8cc1e38c449b61d": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T09:03:36.160Z"
-    },
-    "medier:92e58fb57c4cbd8b": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T09:03:36.160Z"
-    },
-    "medier:59a6276f99f23bf3": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T09:03:36.160Z"
-    },
-    "medier:b62c66f7fa5bdb9e": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T09:03:36.160Z"
-    },
-    "medier:9bbce3f88a43656c": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T09:03:36.160Z"
-    },
-    "regjeringen:3191490": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T09:03:36.160Z"
-    },
-    "norgesbank-presse:de113ce9-d74c-449c-aac2-0be5eeb3ad3d": {
-      "p": 95,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T09:03:36.160Z"
-    },
-    "skatteetaten:/presse/nyhetsrommet/skatteetaten-har-valgt-kontorlokaler-i-oslo--/": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T09:03:36.160Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/arbeid-pa-tau-den-neste-manaden/": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T09:03:36.160Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/disse-konkurrerer-om-a-drifte-riksveger-i-nord-troms-og-vest-finnmark/": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T09:03:36.160Z"
-    },
-    "havforskning:https://www.hi.no/hi/nyheter/2026/november/sognefjorden-hi-meiner-utvida-vern-vil-gagne-okosystemet": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T09:03:36.160Z"
-    },
-    "idrettsforbundet:https://www.idrettsforbundet.no/nyheter/2026/foreldrevettpatruljen-rykker-ut--med-humor-og-glimt-i-oyet/": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T09:03:36.160Z"
-    },
-    "sykling:https://sykling.no/?p=28371": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-05T09:03:36.160Z"
-    },
     "medier:954063d59ec1ebeb": {
       "p": 75,
       "v": "b34cb0de5bde",
