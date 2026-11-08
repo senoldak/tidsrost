@@ -280,3 +280,46 @@ test('anahtar yoksa null', async () => {
     process.env.GEMINI_API_KEY = k;
   }
 });
+
+test('res.json() bozuk HTML/JSON döndüğünde 502 sayılır ve sıradaki modele geçer', async () => {
+  const htmlHata = () => new Response('<html>502 Bad Gateway</html>', { status: 200, headers: { 'Content-Type': 'text/html' } });
+  const a = await ile([htmlHata, 200], async () => assert.deepEqual(await yaz(), { ok: true }));
+  assert.deepEqual(a.modeller(), [L35, L31]);
+  assert.equal(ayrintiKayitlari().find((s) => s.model === L35).h503, 1);
+});
+
+test('yerel ağ/DNS hatası AG_HATASI olarak loglanır ve 503 sayılmaz', async () => {
+  const satirlar = [];
+  const gercek = console.warn;
+  console.warn = (s) => satirlar.push(s);
+  const agHatasi = () => {
+    throw new TypeError('fetch failed');
+  };
+  try {
+    const a = await ile([agHatasi, 200], async () => assert.deepEqual(await yaz(), { ok: true }));
+    assert.deepEqual(a.modeller(), [L35, L31]);
+    const kayit = ayrintiKayitlari().find((s) => s.model === L35);
+    assert.equal(kayit?.h503 ?? 0, 0);
+    assert.ok(satirlar.some((s) => s.includes(`AG_HATASI`)));
+  } finally {
+    console.warn = gercek;
+  }
+});
+
+test('Gemma şemasız bozuk JSON: zincirde sonraki model varsa sıradakine temizce geçer', async () => {
+  gunlukDolu.add(L35);
+  gunlukDolu.add(L31);
+  const gercek = process.env.GEMINI_MODEL;
+  process.env.GEMINI_MODEL = GEMMA;
+  try {
+    const a = await ile([() => tamam('bu bir json degil'), 200], async () => {
+      assert.deepEqual(await yaz({ sema: { type: 'OBJECT' } }), { ok: true });
+    });
+    assert.deepEqual(a.modeller(), [GEMMA, F36]);
+  } finally {
+    if (gercek) process.env.GEMINI_MODEL = gercek;
+    else delete process.env.GEMINI_MODEL;
+  }
+});
+
+

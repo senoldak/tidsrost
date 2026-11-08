@@ -2,30 +2,14 @@
 // fremdriftslinje og «Fortsett der du slapp». Ett pakket skript (CSP: ingen innebygde skript).
 // All lagring går gjennom try/catch: i privat modus eller med blokkert lagring virker verktøyene videre, bare uten å huske.
 import { fortsettFra, fremdrift, lagringsnokkel, skalaFra, velgStemme } from '../lib/lesing.mjs';
+import { safeStorage } from '../lib/safe-storage.ts';
 
 const rot = document.documentElement;
 
-const hent = (nokkel: string): string | null => {
-  try {
-    return localStorage.getItem(nokkel);
-  } catch {
-    return null;
-  }
-};
-const lagre = (nokkel: string, verdi: string) => {
-  try {
-    localStorage.setItem(nokkel, verdi);
-  } catch {
-    /* lagring er blokkert */
-  }
-};
-const fjern = (nokkel: string) => {
-  try {
-    localStorage.removeItem(nokkel);
-  } catch {
-    /* lagring er blokkert */
-  }
-};
+const hent = (nokkel: string): string | null => safeStorage.getItem(nokkel);
+const lagre = (nokkel: string, verdi: string) => safeStorage.setItem(nokkel, verdi);
+const fjern = (nokkel: string) => safeStorage.removeItem(nokkel);
+
 
 // ——— Tekststørrelse ———
 function settSkala(s: string, husk: boolean) {

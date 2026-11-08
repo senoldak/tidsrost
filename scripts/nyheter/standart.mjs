@@ -13,7 +13,8 @@
 //   Sarı kurallar: olum-kaza, turkiye-resmi, savas-konu, secim, grup-konu.
 //   Belirsizlikte kapalı kalır: yanlış alarm kabul edilir, kaçan kırmızı edilmez.
 // yayinDurduMu({ url, anahtar, site }) -> { durdu, neden }: mecmua-saat'in acil durdurma bayrağı. Saate
-//   ulaşılamazsa durdu: false döner (saat zaten botu başlatan yerdir; elle başlatılan tur sürer), neden loga yazılır.
+//   ulaşılamazsa (ağ/HTTP hatası) fail-closed olarak durdu: true döner. Dev/test ortamında
+//   process.env.YAYIN_DURDURMA_POLITIKASI === 'esnek' ile fail-open (durdu: false) desteklenir.
 import { readFileSync } from 'node:fs';
 
 const DILLER = ['tr', 'nb', 'en'];
@@ -245,17 +246,20 @@ export function standartBirlestir(...sonuclar) {
 export const standartOzeti = (s) =>
   s.karar === 'temiz' ? 'standart: temiz' : `standart: ${s.karar} — ${[...s.kirmizi, ...s.sari].map((b) => `${b.kural} «${b.ham}»`).join('; ').slice(0, 300)}`;
 
-export async function yayinDurduMu({ url, anahtar, site, fetchFn = fetch } = {}) {
+export async function yayinDurduMu({ url, anahtar, site, fetchFn = fetch, ortam, env } = {}) {
   if (!url || !anahtar) return { durdu: false, neden: 'motor ayarı yok' };
+  const pEnv = typeof process !== 'undefined' ? process.env : undefined;
+  const esnek = (ortam?.YAYIN_DURDURMA_POLITIKASI ?? env?.YAYIN_DURDURMA_POLITIKASI ?? pEnv?.YAYIN_DURDURMA_POLITIKASI) === 'esnek';
   try {
     const res = await fetchFn(`${String(url).replace(/\/$/, '')}/motor/${site}/durum`, {
       headers: { Authorization: `Bearer ${anahtar}` },
       signal: AbortSignal.timeout(10_000),
     });
-    if (!res.ok) return { durdu: false, neden: `saat ${res.status} döndü` };
+    if (!res.ok) return { durdu: !esnek, neden: `saat ${res.status} döndü` };
     const j = await res.json();
-    return { durdu: j?.durdu === true, neden: j?.durdu ? `acil durdurma (${j?.zaman ?? '?'})` : 'açık' };
+    if (typeof j?.durdu !== 'boolean') return { durdu: !esnek, neden: 'saat geçersiz yanıt döndü' };
+    return { durdu: j.durdu, neden: j.durdu ? `acil durdurma (${j.zaman ?? '?'})` : 'açık' };
   } catch (e) {
-    return { durdu: false, neden: `saate ulaşılamadı: ${String(e?.message ?? e).slice(0, 100)}` };
+    return { durdu: !esnek, neden: `saate ulaşılamadı: ${String(e?.message ?? e).slice(0, 100)}` };
   }
 }

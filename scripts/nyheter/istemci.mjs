@@ -117,9 +117,13 @@ export async function geminiCagir(
           });
         } catch (e) {
           if (_model) return null; // gölge çağrısı: tek deneme, sayaçlara girmez
-          hataEkle(model, amac, 503);
-          soguma.set(model, saat() + SOGUMA_MS);
-          console.warn(`  Gemini zincir: ${model} ${e.name === 'TimeoutError' ? 'zaman aşımı' : 'ağ hatası'} → ${sonraki}`);
+          if (e.name === 'TimeoutError') {
+            hataEkle(model, amac, 503);
+            soguma.set(model, saat() + SOGUMA_MS);
+            console.warn(`  Gemini zincir: ${model} zaman aşımı → ${sonraki}`);
+          } else {
+            console.warn(`  Gemini zincir: ${model} AG_HATASI (${e.message || 'bağlantı hatası'}) → ${sonraki}`);
+          }
           break;
         }
         // Model düşünme ayarını desteklemiyorsa düşünmesiz yeniden denenir (deneme sayılmaz).
@@ -133,6 +137,9 @@ export async function geminiCagir(
           if (res.status === 429 && /PerDay/i.test(await res.clone().text())) {
             gunlukDolu.add(model);
             console.warn(`  Gemini zincir: ${model} günlük kota doldu → ${sonraki}`);
+            if (!_model && zincir.every((m) => gunlukDolu.has(m))) {
+              throw hataYap('Gemini: bütün modellerin günlük kotası dolu', 'kota');
+            }
             break;
           }
           if (res.status === 429 && !dakikaTekrari) {
@@ -154,15 +161,31 @@ export async function geminiCagir(
           // Anahtar/model hatası: haberin suçu değil, haber atlanmamalı.
           throw hataYap(`Gemini ${res.status}: ${msg}`, [400, 401, 403, 404].includes(res.status) ? ayarAlani : null);
         }
+        let data;
+        try {
+          data = await res.json();
+        } catch {
+          if (_model) return null;
+          hataEkle(model, amac, 502);
+          soguma.set(model, saat() + SOGUMA_MS);
+          console.warn(`  Gemini zincir: ${model} 502 (bozuk JSON) → ${sonraki}`);
+          break;
+        }
         geminiKesik = false;
-        const data = await res.json();
         kullanimEkle(data.usageMetadata, { model, amac });
         // Düşünme parçaları (thought: true, Gemma 4) cevaba girmez: içlerindeki süslü parantez JSON ayıklamayı bozar.
         const metin = data.candidates?.[0]?.content?.parts?.filter((p) => !p.thought).map((p) => p.text ?? '').join('') ?? '';
         let sonuc;
         if (semasiz) {
           sonuc = jsonAyikla(metin);
-          if (sonuc === null) throw hataYap(`Gemini bozuk yanıt (${model}): JSON yok`, 'bozuk');
+          if (sonuc === null) {
+            if (_model) return null;
+            if (k + 1 < adaylar.length) {
+              console.warn(`  Gemini zincir: ${model} bozuk JSON → ${sonraki}`);
+              break;
+            }
+            throw hataYap(`Gemini bozuk yanıt (${model}): JSON yok`, 'bozuk');
+          }
         } else {
           try {
             sonuc = JSON.parse(metin);
@@ -182,6 +205,9 @@ export async function geminiCagir(
         }
         return sonuc;
       }
+    }
+    if (!_model && zincir.every((m) => gunlukDolu.has(m))) {
+      throw hataYap('Gemini: bütün modellerin günlük kotası dolu', 'kota');
     }
     if (tur < turlar) await uyu(TUR_BEKLEMELERI_SN[tur - 1] * 1000 * carpan);
   }

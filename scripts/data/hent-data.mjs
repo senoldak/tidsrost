@@ -19,7 +19,7 @@ import { arbeidsledighet, barnIdrett, boligpriser, kpiHistorisk, prisstigning } 
 import { komprimer, navnData } from './ssb-navn.mjs';
 import { komprimer as komprimerLonn, lonnData } from './ssb-lonn.mjs';
 import { kommuneData } from './ssb-kommune.mjs';
-import { birlestirMaaned, dagsTall, hendelser, nesteArkivmaaned, oppdaterLopende } from './varselarkiv.mjs';
+import { birlestirMaaned, dagsTall, erVarselarkivEndret, hendelser, nesteArkivmaaned, oppdaterLopende } from './varselarkiv.mjs';
 
 // Standartlar: acil durdurma açıksa veri sayfaları da güncellenmez.
 if (await acilDurdurma()) process.exit(0);
@@ -215,8 +215,21 @@ for (const jobb of JOBBER) {
       console.log(`${jobb.fil}: atlandı (aralık)`);
       continue;
     }
-    const ny = { hentet: new Date().toISOString(), ...(await jobb.lag(gammel)) };
-    const ulik = !sammeInnhold(gammel, ny);
+    const lagret = await jobb.lag(gammel);
+    let ny;
+    let ulik;
+    if (jobb.fil === 'varselarkiv.json') {
+      const ulikVarsel = erVarselarkivEndret(gammel, lagret);
+      if (!ulikVarsel) {
+        console.log(`${jobb.fil}: uendret innhold (hoppet over skriving)`);
+        continue;
+      }
+      ny = { hentet: new Date().toISOString(), ...lagret };
+      ulik = true;
+    } else {
+      ny = { hentet: new Date().toISOString(), ...lagret };
+      ulik = !sammeInnhold(gammel, ny);
+    }
     await writeFile(fil, (jobb.kompakt ? JSON.stringify(ny) : JSON.stringify(ny, null, 2)) + '\n', 'utf8');
     const haster = hasterPublisering(jobb.fil, gammel, ny);
     if (haster) endret = true;

@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { FYLKER, fylkerFraKoder } from '../../src/lib/fylker.mjs';
-import { birlestirMaaned, dagsTall, hendelser } from './varselarkiv.mjs';
+import { birlestirMaaned, dagsTall, erVarselarkivEndret, hendelser, oppdaterLopende } from './varselarkiv.mjs';
 
 const fikstur = JSON.parse(readFileSync(new URL('./fikstur/varselarkiv-2024-10.json', import.meta.url), 'utf8'));
 
@@ -137,10 +137,68 @@ test('hendelser: svar uten features er en feil, ikke null varsler', () => {
 });
 
 test('oppdaterLopende: dagene i vinduets tre første døgn beholdes fra før (der varslene kom før vinduet); første gang starter dekningen tre døgn inn', async () => {
-  const { oppdaterLopende } = await import('./varselarkiv.mjs');
   const naa = new Date('2026-10-29T12:00:00Z'); // vindu fra 2026-09-29, nye tall fra 2026-10-02
   const gammel = { lopende: { fra: '2026-09-15', dager: { '2026-09-30': { beholdt: true } } } };
   const ny = oppdaterLopende(gammel, [], naa);
   assert.deepEqual(ny.lopende.dager['2026-09-30'], { beholdt: true });
   assert.equal(oppdaterLopende({}, [], naa).lopende.fra, '2026-10-02');
 });
+
+test('oppdaterLopende: uendrede dager og fra oppdaterer ikke lopende.hentet', () => {
+  const t0 = '2026-10-29T10:00:00.000Z';
+  const naa1 = new Date('2026-10-29T12:00:00Z');
+  const naa2 = new Date('2026-10-29T13:00:00Z');
+  const arkiv = { lopende: { hentet: t0, fra: '2026-10-02', dager: {} } };
+  const ny1 = oppdaterLopende(arkiv, [], naa1);
+  assert.equal(ny1.lopende.hentet, t0);
+  const ny2 = oppdaterLopende(ny1, [], naa2);
+  assert.equal(ny2.lopende.hentet, t0);
+});
+
+test('erVarselarkivEndret: ignorerer hentet og arkivForsok når dager er uendret', () => {
+  const base = {
+    fra: '2019-01',
+    hentet: '2026-11-01T10:00:00Z',
+    arkivForsok: '2026-11-01T10:00:00Z',
+    maaneder: { '2024-10': { hentet: '2026-11-01T10:00:00Z', dager: { '2024-10-01': { landTotal: [1, 0, 0] } } } },
+    lopende: { hentet: '2026-11-01T10:00:00Z', fra: '2026-10-02', dager: { '2026-10-05': { landTotal: [0, 1, 0] } } },
+  };
+  const ny = {
+    ...base,
+    hentet: '2026-11-01T11:00:00Z',
+    arkivForsok: '2026-11-01T11:00:00Z',
+    lopende: { ...base.lopende, hentet: '2026-11-01T11:00:00Z' },
+  };
+  assert.equal(erVarselarkivEndret(base, ny), false);
+  assert.equal(erVarselarkivEndret(null, ny), true);
+
+  // Lopende dager değişince true
+  const nyLopende = { ...base, lopende: { ...base.lopende, dager: { '2026-10-06': { landTotal: [1, 0, 0] } } } };
+  assert.equal(erVarselarkivEndret(base, nyLopende), true);
+
+  // Lopende fra değişince true
+  const nyFra = { ...base, lopende: { ...base.lopende, fra: '2026-10-03' } };
+  assert.equal(erVarselarkivEndret(base, nyFra), true);
+
+  // Arşiv ayı değişince true
+  const nyMaaned = { ...base, maaneder: { ...base.maaneder, '2024-11': { dager: {} } } };
+  assert.equal(erVarselarkivEndret(base, nyMaaned), true);
+
+  // Anahtar sırası farkı yapısal değişiklik sayılmaz
+  const omvendtLopende = {
+    ...base,
+    lopende: {
+      ...base.lopende,
+      dager: { '2026-10-06': { landTotal: [1, 0, 0] }, '2026-10-05': { landTotal: [0, 1, 0] } },
+    },
+  };
+  const sortertLopende = {
+    ...base,
+    lopende: {
+      ...base.lopende,
+      dager: { '2026-10-05': { landTotal: [0, 1, 0] }, '2026-10-06': { landTotal: [1, 0, 0] } },
+    },
+  };
+  assert.equal(erVarselarkivEndret(omvendtLopende, sortertLopende), false);
+});
+

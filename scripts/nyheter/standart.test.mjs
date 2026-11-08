@@ -119,13 +119,23 @@ test('bilinmeyen dil hata verir', () => {
   assert.throws(() => standartDenetle({ dil: 'de', metin: 'x' }));
 });
 
-test('yayinDurduMu: bayrak, kapalı, ulaşılamaz', async () => {
+test('yayinDurduMu: bayrak, kapalı, ulaşılamaz (fail-closed ve esnek)', async () => {
   const yanit = (j, ok = true) => async () => ({ ok, status: ok ? 200 : 500, json: async () => j });
-  assert.equal((await yayinDurduMu({ url: 'https://s', anahtar: 'a', site: 'x', fetchFn: yanit({ durdu: true }) })).durdu, true);
+  assert.equal((await yayinDurduMu({ url: 'https://s', anahtar: 'a', site: 'x', fetchFn: yanit({ durdu: true, zaman: '2026-10-16' }) })).durdu, true);
   assert.equal((await yayinDurduMu({ url: 'https://s', anahtar: 'a', site: 'x', fetchFn: yanit({ durdu: false }) })).durdu, false);
-  assert.equal((await yayinDurduMu({ url: 'https://s', anahtar: 'a', site: 'x', fetchFn: yanit({}, false) })).durdu, false);
-  assert.equal((await yayinDurduMu({ url: 'https://s', anahtar: 'a', site: 'x', fetchFn: async () => { throw new Error('ağ'); } })).durdu, false);
+  // Fail-closed varsayılan: ağ ve HTTP hatalarında durdu: true
+  assert.equal((await yayinDurduMu({ url: 'https://s', anahtar: 'a', site: 'x', fetchFn: yanit({}, false) })).durdu, true);
+  assert.equal((await yayinDurduMu({ url: 'https://s', anahtar: 'a', site: 'x', fetchFn: async () => { throw new Error('ağ'); } })).durdu, true);
+  // Geçersiz/boş gövde 200 yanıtında da fail-closed
+  assert.equal((await yayinDurduMu({ url: 'https://s', anahtar: 'a', site: 'x', fetchFn: yanit({}) })).durdu, true);
+  assert.equal((await yayinDurduMu({ url: 'https://s', anahtar: 'a', site: 'x', fetchFn: yanit({ durdu: 'evet' }) })).durdu, true);
   assert.equal((await yayinDurduMu({})).durdu, false);
+
+  // YAYIN_DURDURMA_POLITIKASI === 'esnek' ile fail-open (eski davranış)
+  const esnekEnv = { YAYIN_DURDURMA_POLITIKASI: 'esnek' };
+  assert.equal((await yayinDurduMu({ url: 'https://s', anahtar: 'a', site: 'x', fetchFn: yanit({}, false), ortam: esnekEnv })).durdu, false);
+  assert.equal((await yayinDurduMu({ url: 'https://s', anahtar: 'a', site: 'x', fetchFn: async () => { throw new Error('ağ'); }, ortam: esnekEnv })).durdu, false);
+  assert.equal((await yayinDurduMu({ url: 'https://s', anahtar: 'a', site: 'x', fetchFn: yanit({}), env: esnekEnv })).durdu, false);
 });
 
 test('kurum ve açık olumsuz yargı aynı cümlede kırmızı; olgu cümlesi temiz', () => {

@@ -143,9 +143,49 @@ export function oppdaterLopende(arkiv, features, naa = new Date()) {
   const gamle = arkiv?.lopende?.dager ?? {};
   const nye = Object.fromEntries(Object.entries(dagsTall(hendelser(features, new Date(vStart).toISOString()))).filter(([d]) => d >= nyFra));
   const dager = { ...Object.fromEntries(Object.entries(gamle).filter(([d]) => d < nyFra)), ...nye };
+  const sorterteDager = Object.fromEntries(Object.keys(dager).sort().map((k) => [k, dager[k]]));
   const tidligste = arkiv?.lopende?.fra && arkiv.lopende.fra < nyFra ? arkiv.lopende.fra : nyFra;
+  const sorterteGamleDager = Object.fromEntries(Object.keys(gamle).sort().map((k) => [k, gamle[k]]));
+  const endret =
+    !arkiv?.lopende ||
+    tidligste !== arkiv.lopende.fra ||
+    JSON.stringify(sorterteDager) !== JSON.stringify(sorterteGamleDager);
   return {
     ...(arkiv ?? {}),
-    lopende: { hentet: naa.toISOString(), fra: tidligste, dager: Object.fromEntries(Object.keys(dager).sort().map((k) => [k, dager[k]])) },
+    lopende: {
+      hentet: endret ? naa.toISOString() : (arkiv?.lopende?.hentet ?? naa.toISOString()),
+      fra: tidligste,
+      dager: sorterteDager,
+    },
   };
 }
+
+/**
+ * varselarkiv verisinde uyarılarda yapısal değişiklik var mı?
+ * Yalnız dager (lopende ve maaneder) veya fra değiştiyse true döner;
+ * hentet ve arkivForsok zaman damgaları tek başına yapısal değişiklik sayılmaz.
+ */
+export function erVarselarkivEndret(gammel, ny) {
+  if (!gammel || !ny) return true;
+  if ((gammel.fra ?? null) !== (ny.fra ?? null)) return true;
+  if ((gammel.lopende?.fra ?? null) !== (ny.lopende?.fra ?? null)) return true;
+
+  const gLopendeDager = Object.fromEntries(Object.keys(gammel.lopende?.dager ?? {}).sort().map((k) => [k, gammel.lopende.dager[k]]));
+  const nLopendeDager = Object.fromEntries(Object.keys(ny.lopende?.dager ?? {}).sort().map((k) => [k, ny.lopende.dager[k]]));
+  if (JSON.stringify(gLopendeDager) !== JSON.stringify(nLopendeDager)) return true;
+
+  const gMnd = gammel.maaneder ?? {};
+  const nMnd = ny.maaneder ?? {};
+  const gKeys = Object.keys(gMnd).sort();
+  const nKeys = Object.keys(nMnd).sort();
+  if (gKeys.length !== nKeys.length || gKeys.some((k, i) => k !== nKeys[i])) return true;
+
+  for (const m of nKeys) {
+    const gMDager = Object.fromEntries(Object.keys(gMnd[m]?.dager ?? {}).sort().map((k) => [k, gMnd[m].dager[k]]));
+    const nMDager = Object.fromEntries(Object.keys(nMnd[m]?.dager ?? {}).sort().map((k) => [k, nMnd[m].dager[k]]));
+    if (JSON.stringify(gMDager) !== JSON.stringify(nMDager)) return true;
+  }
+
+  return false;
+}
+
