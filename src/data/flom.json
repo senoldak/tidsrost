@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-08T09:04:16.987Z",
+  "hentet": "2026-11-08T11:04:26.092Z",
   "kilde": {
     "navn": "Norges vassdrags- og energidirektorat (NVE), Varsom",
     "url": "https://www.varsom.no/",
@@ -19,7 +19,7 @@
         "Narvik",
         "Sortland"
       ],
-      "tekst": "Vannføringen vil øke i bekker og elver i lavlandet i løpet av lørdag. Vi forventer størst vannføring søndag og tidlig mandag. Dette skyldes mye nedbør gjennom helgen. Vannføringen vil avhenge av temperaturen, siden noe av nedbøren kommer som sludd og snø i fjellet."
+      "tekst": "Det har kommet en del regn innenfor varslingsområdet i løpet av helgen. Vannføringen øker i bekker og elver i lavlandet søndag. Vi venter at vannføringen mange steder vil forsette å øke frem til mandag formiddag."
     },
     "55": {
       "nivaa": 2,
@@ -46,7 +46,7 @@
         "Tjeldsund",
         "Tromsø"
       ],
-      "tekst": "Vannføringen vil øke i bekker og elver i lavlandet i løpet av lørdag. Vi forventer størst vannføring søndag og tidlig mandag. Dette skyldes mye nedbør gjennom helgen. Vannføringen vil avhenge av temperaturen, siden noe av nedbøren kommer som sludd og snø i fjellet."
+      "tekst": "Det har kommet en del regn innenfor varslingsområdet i løpet av helgen. Vannføringen øker i bekker og elver i lavlandet søndag. Vi venter at vannføringen mange steder vil forsette å øke frem til mandag formiddag."
     }
   },
   "jordskred": {
