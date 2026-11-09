@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-09T11:04:07.052Z",
+  "hentet": "2026-11-09T13:10:07.680Z",
   "kilde": {
     "navn": "Statistisk sentralbyrå (SSB)",
     "url": "https://www.ssb.no/",
@@ -12,30 +12,6 @@
   "sisteMaaned": "2026-09",
   "tolvMnd": 3.4,
   "grupper": [
-    {
-      "kode": "10",
-      "navn": "Utdanning",
-      "tolvMnd": 4.3,
-      "vekt": 6.1
-    },
-    {
-      "kode": "11",
-      "navn": "Serverings- og overnattingstjenester",
-      "tolvMnd": 6,
-      "vekt": 59.4
-    },
-    {
-      "kode": "12",
-      "navn": "Forsikring og finansielle tjenester",
-      "tolvMnd": 7.9,
-      "vekt": 27.2
-    },
-    {
-      "kode": "13",
-      "navn": "Andre varer og tjenester",
-      "tolvMnd": 3.9,
-      "vekt": 48.3
-    },
     {
       "kode": "01",
       "navn": "Matvarer og alkoholfrie drikkevarer",
@@ -95,6 +71,30 @@
       "navn": "Fritid, sport og kultur",
       "tolvMnd": 4,
       "vekt": 84.5
+    },
+    {
+      "kode": "10",
+      "navn": "Utdanning",
+      "tolvMnd": 4.3,
+      "vekt": 6.1
+    },
+    {
+      "kode": "11",
+      "navn": "Serverings- og overnattingstjenester",
+      "tolvMnd": 6,
+      "vekt": 59.4
+    },
+    {
+      "kode": "12",
+      "navn": "Forsikring og finansielle tjenester",
+      "tolvMnd": 7.9,
+      "vekt": 27.2
+    },
+    {
+      "kode": "13",
+      "navn": "Andre varer og tjenester",
+      "tolvMnd": 3.9,
+      "vekt": 48.3
     }
   ],
   "serie": [
