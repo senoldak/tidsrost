@@ -1,41 +1,9 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 24,
-      "kadar": "2026-11-09T07:05:39.424Z"
+      "sayi": 25,
+      "kadar": "2026-11-09T19:09:08.338Z"
     }
-  },
-  "boligpris-og-husleie": {
-    "tarih": "2026-11-02T07:06:33.181Z",
-    "ig_story": "17916177294539998",
-    "fb_post": "1343803192154866_122113697529509504",
-    "fb_story": "1661506018926338",
-    "ig_reels": "18121480624964941",
-    "fb_reels": "1925319285117293",
-    "reels": {
-      "gun": "2026-11-02",
-      "dilim": "kveld"
-    },
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
-  "ny-romlov-og-forste-testoppskyting-fra-andoya": {
-    "tarih": "2026-11-02T07:07:04.339Z",
-    "ig_story": "18129684394868074",
-    "fb_post": "1343803192154866_122113698069509504",
-    "fb_story": "1403100411812562",
-    "ig_reels": "17954350890317745",
-    "fb_reels": "28755018297533964",
-    "reels": {
-      "gun": "2026-11-03",
-      "dilim": "morgen"
-    }
-  },
-  "sv-krever-skatteokning-pa-25-milliarder-kroner-for-de-rikeste-for-budsjettforhan": {
-    "tarih": "2026-11-02T07:07:36.420Z",
-    "ig_story": "18110408927616948",
-    "fb_post": "1343803192154866_122113698513509504",
-    "fb_story": "1855477612291648"
   },
   "kort-fortalt-2-november-2026": {
     "tarih": "2026-11-02T11:06:58.879Z",
@@ -527,7 +495,9 @@
     "tarih": "2026-11-08T19:05:54.526Z",
     "ig_story": "18170467978476815",
     "fb_post": "1343803192154866_122115833139509504",
-    "fb_story": "1577838131050751"
+    "fb_story": "1577838131050751",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "auf-vil-splitte-opp-dagligvaregigantene-for-a-fa-lavere-matpriser": {
     "tarih": "2026-11-08T19:06:31.291Z",
@@ -540,5 +510,17 @@
     "ig_story": "17915831565550693",
     "fb_post": "1343803192154866_122115856797509504",
     "fb_story": "1822325702437031"
+  },
+  "boligprisene-er-3-3-prosent-hoyere-enn-for-ett-ar-siden-bergen-hadde-hoyest-vekst": {
+    "tarih": "2026-11-09T07:09:23.481Z",
+    "ig_story": "18131492803694822",
+    "fb_post": "1343803192154866_122115975891509504",
+    "fb_story": "1618899255847775"
+  },
+  "14-omkomne-etter-boligbrann-i-taiyuan-i-kina": {
+    "tarih": "2026-11-09T07:10:03.353Z",
+    "ig_story": "18001111713046365",
+    "fb_post": "1343803192154866_122115976221509504",
+    "fb_story": "1183724617328697"
   }
 }
