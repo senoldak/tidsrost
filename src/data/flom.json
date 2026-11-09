@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-09T21:04:47.496Z",
+  "hentet": "2026-11-09T23:03:27.549Z",
   "kilde": {
     "navn": "Norges vassdrags- og energidirektorat (NVE), Varsom",
     "url": "https://www.varsom.no/",
@@ -7,83 +7,7 @@
     "lisens": "NLOD",
     "lisensUrl": "https://data.norge.no/nlod/no/2.0"
   },
-  "dato": "2026-11-09",
-  "flom": {
-    "18": {
-      "nivaa": 2,
-      "kommuner": [
-        "Andøy",
-        "Evenes",
-        "Hamarøy",
-        "Lødingen",
-        "Narvik",
-        "Sortland"
-      ],
-      "tekst": "Det har kommet en del regn innenfor varslingsområdet i løpet av helgen. Vannføringen øker i bekker og elver i lavlandet søndag. Vi venter at vannføringen mange steder vil forsette å øke frem til mandag formiddag."
-    },
-    "55": {
-      "nivaa": 2,
-      "kommuner": [
-        "Balsfjord",
-        "Bardu",
-        "Dyrøy",
-        "Gratangen",
-        "Harstad",
-        "Ibestad",
-        "Karlsøy",
-        "Kvæfjord",
-        "Kvænangen",
-        "Kåfjord",
-        "Lavangen",
-        "Lyngen",
-        "Målselv",
-        "Nordreisa",
-        "Salangen",
-        "Senja",
-        "Skjervøy",
-        "Storfjord",
-        "Sørreisa",
-        "Tjeldsund",
-        "Tromsø"
-      ],
-      "tekst": "Det har kommet en del regn innenfor varslingsområdet i løpet av helgen. Vannføringen øker i bekker og elver i lavlandet søndag. Vi venter at vannføringen mange steder vil forsette å øke frem til mandag formiddag."
-    }
-  },
-  "jordskred": {
-    "18": {
-      "nivaa": 2,
-      "kommuner": [
-        "Andøy",
-        "Evenes",
-        "Hamarøy",
-        "Narvik",
-        "Sortland",
-        "Sørfold"
-      ],
-      "tekst": "Det har regnet mye det siste døgnet og vannmetningsgraden i bakken er svært høy. Nedbørsmengder avtar i løpet av formiddagen, men varme temperaturer kan fremdeles føre til snøsmelting. Jordskredfaren er moderat. Bratte skråninger, samt bekker og elveløp med stor vannføring er spesielt utsatt. Se varsel om regn for deler av Troms og Vesterålen."
-    },
-    "55": {
-      "nivaa": 2,
-      "kommuner": [
-        "Balsfjord",
-        "Bardu",
-        "Dyrøy",
-        "Gratangen",
-        "Harstad",
-        "Ibestad",
-        "Karlsøy",
-        "Kvæfjord",
-        "Lavangen",
-        "Lyngen",
-        "Målselv",
-        "Salangen",
-        "Senja",
-        "Storfjord",
-        "Sørreisa",
-        "Tjeldsund",
-        "Tromsø"
-      ],
-      "tekst": "Det har regnet mye det siste døgnet og vannmetningsgraden i bakken er svært høy. Nedbørsmengder avtar i løpet av formiddagen, men varme temperaturer kan fremdeles føre til snøsmelting. Jordskredfaren er moderat. Bratte skråninger, samt bekker og elveløp med stor vannføring er spesielt utsatt. Se varsel om regn for deler av Troms og Vesterålen."
-    }
-  }
+  "dato": "2026-11-10",
+  "flom": {},
+  "jordskred": {}
 }
