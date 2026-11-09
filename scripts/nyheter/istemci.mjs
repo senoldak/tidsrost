@@ -25,6 +25,7 @@ let saat = Date.now;
 let sonCagri = 0;
 let geminiKesik = false;
 const soguma = new Map(); // model → soğumanın bittiği an
+const tpmGecmisi = new Map(); // model → [{ zaman, token }]
 
 const uyu = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -34,6 +35,14 @@ export function istemciSifirla({ saat: s = Date.now } = {}) {
   sonCagri = 0;
   geminiKesik = false;
   soguma.clear();
+  tpmGecmisi.clear();
+}
+
+/** Modelin son 1 dakikalık penceredeki token kullanımını döndürür. */
+export function tpmKullanimi(model) {
+  const simdi = saat();
+  const liste = (tpmGecmisi.get(model) || []).filter((r) => simdi - r.zaman < 60_000);
+  return liste.reduce((t, r) => t + r.token, 0);
 }
 
 const kapasitede = (m) => kapasiteSec().includes(TAKMA_ADLAR[m] ?? m);
@@ -98,6 +107,32 @@ export async function geminiCagir(
         const metinIstem = semasiz && sema
           ? `${istem}\n\nYalnız geçerli JSON döndür, başka metin yazma. Biçim (JSON Schema): ${JSON.stringify(sema)}`
           : istem;
+        const tpmLimit = MODELLER[model]?.tpm;
+        if (tpmLimit) {
+          const simdi = saat();
+          const pencere = 60_000;
+          const gecmis = (tpmGecmisi.get(model) || []).filter((r) => simdi - r.zaman < pencere);
+          tpmGecmisi.set(model, gecmis);
+          const harcanan = gecmis.reduce((t, r) => t + r.token, 0);
+          const tahminiGiris = Math.ceil(((sistem?.length ?? 0) + (metinIstem?.length ?? 0)) / 3.5);
+          const tahminiCikis = maksCikis ? Math.min(maksCikis, 2000) : 500;
+          const tahmini = tahminiGiris + tahminiCikis;
+
+          if (gecmis.length > 0 && (harcanan + tahmini > tpmLimit || harcanan >= tpmLimit * 0.9)) {
+            let kalan = harcanan;
+            let hedefZaman = simdi;
+            for (const r of gecmis) {
+              if (kalan + tahmini <= tpmLimit && kalan < tpmLimit * 0.9) break;
+              kalan -= r.token;
+              hedefZaman = r.zaman + pencere;
+            }
+            const tpmBekle = Math.max(0, hedefZaman - saat());
+            if (tpmBekle > 0) {
+              console.warn(`  Gemini TPM (${model}): 1 dk pencerede ${harcanan} token (limit ${tpmLimit}); ${Math.ceil(tpmBekle / 1000)} sn bekleniyor`);
+              await uyu(tpmBekle * carpan);
+            }
+          }
+        }
         let res;
         try {
           res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
@@ -173,6 +208,15 @@ export async function geminiCagir(
         }
         geminiKesik = false;
         kullanimEkle(data.usageMetadata, { model, amac });
+        if (MODELLER[model]?.tpm) {
+          const u = data.usageMetadata;
+          const tokenSayisi = (u?.promptTokenCount ?? 0) + (u?.candidatesTokenCount ?? 0) + (u?.thoughtsTokenCount ?? 0) || (u?.totalTokenCount ?? 0);
+          if (tokenSayisi > 0) {
+            const liste = (tpmGecmisi.get(model) || []).filter((r) => saat() - r.zaman < 60_000);
+            liste.push({ zaman: saat(), token: tokenSayisi });
+            tpmGecmisi.set(model, liste);
+          }
+        }
         // Düşünme parçaları (thought: true, Gemma 4) cevaba girmez: içlerindeki süslü parantez JSON ayıklamayı bozar.
         const metin = data.candidates?.[0]?.content?.parts?.filter((p) => !p.thought).map((p) => p.text ?? '').join('') ?? '';
         let sonuc;

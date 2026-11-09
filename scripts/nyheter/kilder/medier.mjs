@@ -162,11 +162,11 @@ export async function gommeOnEleme(saker, publisert, ayar) {
   if (!v) return null;
   const vs = v.slice(0, saker.length);
   const vp = v.slice(saker.length);
-  if (ayar.kip !== 'acik') return { secilen: saker.map((_, i) => i), publisert, vs, vp };
+  if (ayar.kip !== 'acik') return { secilen: saker.map((_, i) => i), publisert, vs, vp, saker };
   const yalniz = komsusuzlar(vs, vp, ayar.alt);
   const secilen = saker.map((_, i) => i).filter((i) => !yalniz.has(i));
   const yakin = (j) => vp[j] && secilen.some((i) => vs[i] && benzerlik(vs[i], vp[j]) >= ayar.alt);
-  return { secilen, publisert: publisert.filter((_, j) => !vp[j] || yakin(j)), vs, vp };
+  return { secilen, publisert: publisert.filter((_, j) => !vp[j] || yakin(j)), vs, vp, saker };
 }
 
 /** Ölçüm (golge): grup içi ve kjente "aynı", farklı gruplardan en çok 20 rastgele çift "farklı". g indeksleri saker'e göre. */
@@ -175,14 +175,16 @@ export function gommeOlcumu(g, r, log = console.log) {
     if (!x || !y) return;
     log(olcumSatiri({ tur, karar, b: benzerlik(x, y), id }));
   };
-  for (const grp of g.grupper) for (const i of grp.slice(1)) yaz(r.vs[grp[0]], r.vs[i], 'grup', 'ayni', String(grp[0]));
+  const saker = r.saker ?? [];
+  const idOf = (i) => saker[i]?.id ?? String(i);
+  for (const grp of g.grupper) for (const i of grp.slice(1)) yaz(r.vs[grp[0]], r.vs[i], 'grup', 'ayni', idOf(grp[0]));
   for (const i of g.kjente) {
     if (!r.vs[i]) continue;
     let enYakin = -1;
     r.vp.forEach((p, j) => {
       if (p && (enYakin < 0 || benzerlik(r.vs[i], p) > benzerlik(r.vs[i], r.vp[enYakin]))) enYakin = j;
     });
-    yaz(r.vs[i], r.vp[enYakin], 'kjent', 'ayni', String(i));
+    yaz(r.vs[i], r.vp[enYakin], 'kjent', 'ayni', idOf(i));
   }
   const grubu = new Map();
   g.grupper.forEach((grp, k) => grp.forEach((i) => grubu.set(i, k)));
@@ -194,7 +196,7 @@ export function gommeOlcumu(g, r, log = console.log) {
     const m = Math.floor(Math.random() * (k + 1));
     [farkli[k], farkli[m]] = [farkli[m], farkli[k]];
   }
-  for (const [i, j] of farkli.slice(0, 20)) yaz(r.vs[i], r.vs[j], 'aday', 'farkli', String(i));
+  for (const [i, j] of farkli.slice(0, 20)) yaz(r.vs[i], r.vs[j], 'aday', 'farkli', idOf(i));
 }
 
 export default {

@@ -59,13 +59,22 @@ test('vektorle: 150 metin 50’lik üç çağrı, 256 boyut; ikinci turda önbel
   assert.deepEqual([...v2[7]], [...v[7]]);
 });
 
-test('vektorle: 429, 503, ağ hatası ve eksik gövde null döner', async () => {
-  for (const c of [429, 503, new TypeError('ağ'), {}]) {
+test('vektorle: 429, 503, ağ hatası, eksik gövde ve yanlış boyut null döner', async () => {
+  for (const c of [429, 503, new TypeError('ağ'), {}, { embeddings: [{ values: [1, 2, 3] }] }]) {
     g.gommeSifirla();
     const a = ag(() => c);
     assert.equal(await g.vektorle(['x'], { onbellek: g.onbellekYukle(null), amac: 't', fetchFn: a.fetchFn }), null);
   }
   assert.equal(modelHarcamasi(g.GOMME_MODELI), 2); // 429 ve 503 sayılır, ağ hatası Google'a ulaşmadı
+});
+
+test('gommeDogrula: dizi, uzunluk ve 256 boyut doğrulaması', () => {
+  assert.equal(g.gommeDogrula(null), false);
+  assert.equal(g.gommeDogrula([]), true);
+  assert.equal(g.gommeDogrula([{ values: birim(0, 256) }], 1), true);
+  assert.equal(g.gommeDogrula([{ values: birim(0, 256) }], 2), false); // parça sayısı uyumsuz
+  assert.equal(g.gommeDogrula([{ values: [1, 2, 3] }], 1), false); // boyut 256 değil
+  assert.equal(g.gommeDogrula([{ values: null }], 1), false);
 });
 
 test('vektorle: günlük 900 sınırı; kalanlar null, tek çağrı', async () => {

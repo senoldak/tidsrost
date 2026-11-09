@@ -23,7 +23,11 @@ export function ekCiftler(gruplar, yazilmis, vek, esik, mevcut, ayrikMi, azami =
   const var_ = new Set(mevcut.map((c) => anahtar(c.idA, c.idB)));
   const adaylar = [];
   const ekle = (c) => {
-    if (var_.has(anahtar(c.idA, c.idB)) || ayrikMi(c.idA, c.idB)) return;
+    if (var_.has(anahtar(c.idA, c.idB))) return;
+    const ayrik = c.tur === 'yazili'
+      ? c.g.uyeler.some((u) => ayrikMi(u.id, c.h.id))
+      : gruplar[c.gi].uyeler.some((u1) => gruplar[c.gj].uyeler.some((u2) => ayrikMi(u1.id, u2.id)));
+    if (ayrik) return;
     const [x, y] = [vek.get(c.a), vek.get(c.b)];
     if (!x || !y) return;
     const skor = benzerlik(x, y);

@@ -133,6 +133,13 @@ export function onbellekKaydet(onbellek, dosya, simdi = new Date()) {
 
 const kalanHak = () => GUNLUK_AZAMI - modelHarcamasi(GOMME_MODELI) - saatKullanimi(GOMME_MODELI);
 
+/** Gelen gömme yanıtını doğrular: dizi olmalı, parça sayısına ve BOYUT'a (256) uymalı. */
+export function gommeDogrula(vler, parcaUzunlugu) {
+  if (!Array.isArray(vler)) return false;
+  if (parcaUzunlugu !== undefined && vler.length !== parcaUzunlugu) return false;
+  return !vler.some((e) => !Array.isArray(e?.values) || e.values.length !== BOYUT);
+}
+
 /**
  * Metinleri aynı sırada Int8Array vektörlere çevirir. Önbellekte olan gönderilmez; günlük hak bitince kalanlar null.
  * Toplu çağrı düşerse (HTTP hatası, ağ, eksik gövde) ya da anahtar yoksa null (hepsi).
@@ -188,7 +195,7 @@ export async function vektorle(metinler, { onbellek, amac = 'gomme', fetchFn = f
       j = null;
     }
     const vler = j?.embeddings;
-    if (!Array.isArray(vler) || vler.length !== parca.length || vler.some((e) => !Array.isArray(e?.values))) return dus('eksik yanıt');
+    if (!gommeDogrula(vler, parca.length)) return dus('eksik yanıt');
     gommeEkle(parca.length, amac);
     turdaGonderilen += parca.length;
     parca.forEach((m, n) => yeni.set(m, kodla(vler[n].values)));

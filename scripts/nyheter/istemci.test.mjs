@@ -7,7 +7,7 @@ process.env.GEMINI_API_KEY = 'test';
 process.env.GEMINI_ARALIK_MS = '0';
 process.env.GEMINI_BEKLE_CARPAN = '0';
 for (const k of ['GEMINI_MODEL', 'GEMINI_YEDEK_MODEL', 'GEMINI_DENETIM_YEDEK_MODEL', 'GEMINI_ZINCIR', 'GEMINI_GOLGE']) delete process.env[k];
-const { geminiCagir, istemciSifirla } = await import('./istemci.mjs');
+const { geminiCagir, istemciSifirla, tpmKullanimi } = await import('./istemci.mjs');
 const { gunlukDolu, ayrintiSifirla, ayrintiKayitlari } = await import('./kullanim.mjs');
 const { golgeKur } = await import('./golge.mjs');
 
@@ -320,6 +320,62 @@ test('Gemma şemasız bozuk JSON: zincirde sonraki model varsa sıradakine temiz
     if (gercek) process.env.GEMINI_MODEL = gercek;
     else delete process.env.GEMINI_MODEL;
   }
+});
+
+test('TPM sınırlı model (Gemma): token kullanımı 1 dakikalık pencerede izlenir', async () => {
+  let t = 1_000_000;
+  istemciSifirla({ saat: () => t });
+  const cevap = () =>
+    new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: '{"ok":true}' }] } }], usageMetadata: { promptTokenCount: 5000, candidatesTokenCount: 3000 } }));
+  await ile([cevap], async () => {
+    assert.deepEqual(await geminiCagir({ istem: 'x', _model: GEMMA }), { ok: true });
+  });
+  assert.equal(tpmKullanimi(GEMMA), 8000);
+});
+
+test('TPM sınırlı model: pencere dolunca pace uyarısı verir, 1 dakika sonra pencere boşalır', async () => {
+  let t = 1_000_000;
+  istemciSifirla({ saat: () => t });
+  const uyari = [];
+  const gercekWarn = console.warn;
+  console.warn = (msg) => uyari.push(msg);
+
+  const cevap1 = () =>
+    new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: '{"ok":true}' }] } }], usageMetadata: { promptTokenCount: 10000, candidatesTokenCount: 5000 } }));
+  const cevap2 = () =>
+    new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: '{"ok":true}' }] } }], usageMetadata: { promptTokenCount: 200, candidatesTokenCount: 100 } }));
+
+  try {
+    await ile([cevap1], async () => {
+      await geminiCagir({ istem: 'x', _model: GEMMA });
+    });
+    assert.equal(tpmKullanimi(GEMMA), 15000); // 16k'nın %90'ı = 14400, limit yaklaşımı
+
+    // İkinci çağrı: eşiği aşınca pace uyarısı tetiklenir
+    await ile([cevap2], async () => {
+      await geminiCagir({ istem: 'x', _model: GEMMA });
+    });
+    assert.ok(uyari.some((u) => u.includes('Gemini TPM (gemma-4-26b-a4b-it)')));
+
+    // 61 saniye sonra pencere temizlenmeli
+    t += 61_000;
+    assert.equal(tpmKullanimi(GEMMA), 0);
+  } finally {
+    console.warn = gercekWarn;
+  }
+});
+
+test('istemciSifirla: tpm geçmişi sıfırlanır', async () => {
+  let t = 1_000_000;
+  istemciSifirla({ saat: () => t });
+  const cevap = () =>
+    new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: '{"ok":true}' }] } }], usageMetadata: { totalTokenCount: 5000 } }));
+  await ile([cevap], async () => {
+    await geminiCagir({ istem: 'x', _model: GEMMA });
+  });
+  assert.equal(tpmKullanimi(GEMMA), 5000);
+  istemciSifirla({ saat: () => t });
+  assert.equal(tpmKullanimi(GEMMA), 0);
 });
 
 

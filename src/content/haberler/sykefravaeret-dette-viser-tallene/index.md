@@ -32,7 +32,7 @@ Blant næringene i SSBs oversikt var sykefraværet høyest i helse- og sosialtje
 ![Stolpediagram over Høyest fravær i helse- og sosialtjenester: Sykefravær: Jordbruk, skogbruk og fiske: 5,13 %, Bergverk og utvinning: 4,75 %, Industri: 5,94 %, Kraft, vann og renovasjon: 5,41 %, Bygg og anlegg: 6,41 %, Varehandel: 6,27 %, Transport og lagring: 7,39 %, Overnatting og servering: 6,44 %, Informasjon og kommunikasjon: 4,15 %, Finans og forsikring: 4,59 %, Eiendom, faglig og teknisk: 4,71 %, Forretningsmessig tjenesteyting: 7,06 %, Offentlig administrasjon: 5,68 %, Undervisning: 6,66 %, Helse og sosial: 9,61 %, Personlig tjenesteyting: 6,10 %, Alle næringer: 6,68 %.](./graf-3.svg)
 *Egenmeldt og legemeldt sykefravær etter næring (SN2007), 2. kvartal 2026, sesongjustert. Den stiplede linjen viser alle næringer. Kilde: SSB, tabell 13935.*
 
-Fra 2. kvartal 2025 til 2. kvartal 2026 økte sykefraværsprosenten med 2,0 prosent for alle næringer samlet. Økningen var 3,3 prosent i industrien, 3,1 prosent i undervisning, 2,2 prosent både i helse- og sosialtjenester og i transport og lagring, 1,5 prosent i informasjon og kommunikasjon og 0,9 prosent i forretningsmessig tjenesteyting.
+Fra 2. kvartal 2025 (6,55 prosent) til 2. kvartal 2026 (6,68 prosent) økte sykefraværet med 0,13 prosentpoeng for alle næringer samlet. Målt som relativ endring tilsvarer dette en stigning på 2,0 prosent. Økningen var 3,3 prosent i industrien, 3,1 prosent i undervisning, 2,2 prosent både i helse- og sosialtjenester og i transport og lagring, 1,5 prosent i informasjon og kommunikasjon og 0,9 prosent i forretningsmessig tjenesteyting.
 
 ## Sykefraværet over tid
 
@@ -43,17 +43,17 @@ Målt i 2. kvartal hvert år lå det sesongjusterte sykefraværet på 7,74 prose
 
 ## Graderte sykmeldinger
 
-Ved gradert sykmelding er den sykmeldte delvis i arbeid. Ifølge Nav var 31 prosent av de legemeldte sykefraværene i 2. kvartal 2026 gradert, opp fra knapt 29 prosent ett år tidligere.
+Ved gradert sykmelding er den sykmeldte delvis i arbeid fremfor å være 100 prosent sykmeldt. Graderingen (for eksempel 20, 50 eller 80 prosent) tilpasses den enkeltes arbeidsevne, slik at arbeidstakeren kan opprettholde kontakten med arbeidsplassen og utføre deler av oppgavene sine under sykdom. Ifølge Nav var 31 prosent av de legemeldte sykefraværene i 2. kvartal 2026 gradert, opp fra knapt 29 prosent ett år tidligere – den høyeste andelen som noen gang er registrert.
 
 ## Sykepenger og forslag i statsbudsjettet for 2027
 
-Sykepengeordningen i folketrygden gir arbeidstakere full lønnskompensasjon opp til 6 G ved sykdom. I regjeringens budsjettforslag for 2027 er utgiftene til sykepenger anslått til om lag 72 milliarder kroner.
+Sykepengeordningen i folketrygden gir arbeidstakere full lønnskompensasjon opp til 6 G ved sykdom. Arbeidsgiveren dekker sykepengene i de første 16 kalenderdagene (arbeidsgiverperioden), før folketrygden (Nav) overtar ansvaret fra den 17. dagen. I regjeringens budsjettforslag for 2027 er utgiftene til sykepenger anslått til om lag 72 milliarder kroner.
 
 Ifølge regjeringens pressemelding foreslås det 78 millioner kroner i økte bevilgninger i 2027: 20 millioner kroner til samarbeid mellom Nav og helsetjenesten, 30 millioner kroner til beslutningsstøtte for fastleger og andre sykmeldere og 27,8 millioner kroner til informasjonsutveksling og en ny digital sykmeldingsløsning.
 
 ## Hva tallene ikke viser
 
-Sykefraværsprosenten måler hvor stor andel av de avtalte dagsverkene som går tapt på grunn av sykdom. Den viser ikke hvor mange personer som er sykmeldt. Av fraværet på 6,68 prosent i 2. kvartal 2026 var 5,67 prosentpoeng legemeldt og 1,02 prosentpoeng egenmeldt.
+Sykefraværsprosenten måler hvor stor andel av de avtalte dagsverkene som går tapt på grunn av sykdom. Den viser ikke hvor mange personer som er sykmeldt. Av fraværet på 6,68 prosent i 2. kvartal 2026 var 5,67 prosentpoeng legemeldt og 1,02 prosentpoeng egenmeldt. (Summen av delseriene gir 5,67 + 1,02 = 6,69 prosentpoeng; avviket mot det samlede tallet på 6,68 prosent skyldes uavhengig avrunding i SSBs sesongjusterte serier.)
 
 Tallene i artikkelen er sesongjustert, slik at kvartaler kan sammenlignes uten de vanlige sesongsvingningene. SSB publiserer også en serie som i tillegg er justert for influensa.
 

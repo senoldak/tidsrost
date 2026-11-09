@@ -66,8 +66,9 @@ export async function vektorDosyasiGuncelle({ dosya, haberler, azami = 25, onbel
 
 // Bir süreçte gömme önbelleği tek nesnedir: eşleme ve tur sonu aynı dosyayı okuyup yazar.
 const onbellekler = new Map();
+const yolAnahtari = (d) => path.resolve(d).replace(/^[a-zA-Z]:/, (m) => m.toLowerCase());
 export function ortakOnbellek(dosya) {
-  const k = path.resolve(dosya); // çağıranlar yolu farklı kurabilir (göreli kök, mutlak klasör)
+  const k = yolAnahtari(dosya); // çağıranlar yolu farklı kurabilir (göreli kök, mutlak klasör)
   if (!onbellekler.has(k)) onbellekler.set(k, onbellekYukle(k));
   return onbellekler.get(k);
 }
@@ -133,7 +134,7 @@ export async function gommeTurSonu({ kok, icerik, onbellekDosyasi, env = process
     sonuc = null;
   }
   try {
-    const k = path.resolve(onbellekDosyasi);
+    const k = yolAnahtari(onbellekDosyasi);
     if (onbellekler.has(k)) onbellekKaydet(onbellekler.get(k), k, simdi);
   } catch (e) {
     console.warn(`  gömme: önbellek yazılamadı (${e.message})`);

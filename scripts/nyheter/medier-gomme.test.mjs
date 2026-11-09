@@ -1,7 +1,7 @@
 // medier: gömme ölçümü ve ön eleme (Gemini Faz 2, 27 Ekim 2026).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { coz, kodla } from './gomme.mjs';
+import { coz, kodla, metinAnahtari } from './gomme.mjs';
 import { gommeOnEleme, gommeOlcumu, gommeMetni, relevanteMedlemmer, antallMedier, MIN_MEDIER } from './kilder/medier.mjs';
 
 // Başlığın ilk harfi konu: A/a yakın, B/b yakın, C ve D yalnız.
@@ -47,6 +47,7 @@ test('gommeOlcumu: grup içi aynı, kjente aynı, metin ve medya adı yok', asyn
   gommeOlcumu({ grupper: [[0, 1]], kjente: new Set([2]) }, r, (s) => satirlar.push(s));
   const j = satirlar.map((s) => JSON.parse(s.slice(12)));
   assert.deepEqual(j.filter((x) => x.karar === 'ayni').map((x) => x.tur).sort(), ['grup', 'kjent']);
+  assert.equal(j.find((x) => x.tur === 'grup').id, metinAnahtari(saker[0].id).slice(0, 8));
   assert.ok(j.some((x) => x.karar === 'farkli'));
   for (const s of satirlar) assert.doesNotMatch(s, /Gizlimedya|bir|eski/);
 });

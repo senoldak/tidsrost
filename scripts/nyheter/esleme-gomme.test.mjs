@@ -38,6 +38,29 @@ test('ekCiftler: ad örtüşmesi olmayan yakın çiftler, mevcut ve ayrık olanl
   assert.equal(ekCiftler(gruplar, yazilmis, vek, 0.7, ciftler, () => false, 0).length, 0);
 });
 
+test('ekCiftler: grubun ilk üyesi dışındaki bir üyesi ayrık ise aday eklenmez', async () => {
+  // g0 = [A1, a2]; g1 = [B1, b2]; A1 ve B1 yakın yapalım
+  const g0 = { uyeler: [uye('A1', 'A1 başlık'), uye('a2', 'a2 başlık')] };
+  const g1 = { uyeler: [uye('B1', 'B1 başlık'), uye('b2', 'b2 başlık')] };
+  const yaz = [{ id: 'haber:a', metin: 'a yazılmış', adlar: new Set() }];
+  const metinler = ['A1 başlık', 'a2 başlık', 'B1 başlık', 'b2 başlık', 'a yazılmış'];
+  // A1 ile haber:a yakın (skor 1)
+  const vek = new Map([
+    ['A1 başlık', v(1, 0, 0)],
+    ['a2 başlık', v(1, 0, 0)],
+    ['B1 başlık', v(1, 0, 0)],
+    ['b2 başlık', v(1, 0, 0)],
+    ['a yazılmış', v(1, 0, 0)],
+  ]);
+  // yazılı aday: g0 başı A1 ile haber:a. Ancak a2 ile haber:a ayrık olsun:
+  const ek1 = ekCiftler([g0], yaz, vek, 0.7, [], (x, y) => (x === 'a2' && y === 'haber:a') || (x === 'haber:a' && y === 'a2'));
+  assert.equal(ek1.length, 0);
+
+  // grup aday: g0 ile g1. İlk üyeler (A1, B1) değil, b2 ile a2 ayrık olsun:
+  const ek2 = ekCiftler([g0, g1], [], vek, 0.7, [], (x, y) => (x === 'a2' && y === 'b2') || (x === 'b2' && y === 'a2'));
+  assert.equal(ek2.length, 0);
+});
+
 test('kapalı: bugünkü yol, gömme çağrılmaz', async () => {
   const { gruplar, yazilmis, ciftler } = kur();
   let vekCagri = 0;

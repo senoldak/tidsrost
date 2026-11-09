@@ -50,6 +50,20 @@ test('prisstigning: siste måned, grupper og serie', () => {
   assert.deepEqual(p.serie.at(-1), { maaned: '2026-09', tolvMnd: 3.4 });
 });
 
+test('prisstigning: grupper sorteres numerisk slik at 10-13 ikke kommer før 01-09', () => {
+  const tid = maaneder(2);
+  const js = lag(
+    [
+      ['VareTjenesteGrp', [['00', 'I alt'], ['10', 'Utdanning'], ['01', 'Mat'], ['12', 'Diverse'], ['09', 'Fritid']]],
+      ['ContentsCode', [['Tolvmanedersendring', 'x'], ['KpiVektMnd', 'v']]],
+      ['Tid', tid],
+    ],
+    (r) => (r.ContentsCode === 'KpiVektMnd' ? 100 : 2.5),
+  );
+  const p = prisstigning(js);
+  assert.deepEqual(p.grupper.map((g) => g.kode), ['01', '09', '10', '12']);
+});
+
 test('prisstigning: hovedtall mangler eller er urimelig → feil', () => {
   const dims = [
     ['VareTjenesteGrp', [['00', 'I alt']]],

@@ -33,7 +33,9 @@ export function prisstigning(json) {
   if (!siste) throw new Error('SSB 14700: mangler tolvmånedersendring for KPI i alt');
   const tolvMnd = v('00', siste);
   if (!innen(tolvMnd, -30, 30)) throw new Error(`SSB 14700: urimelig tolvmånedersendring ${tolvMnd}`);
-  const koder = Object.keys(t.etiketter.VareTjenesteGrp ?? {}).filter((k) => k !== '00');
+  const koder = Object.keys(t.etiketter.VareTjenesteGrp ?? {})
+    .filter((k) => k !== '00')
+    .sort((a, b) => Number(a) - Number(b));
   const grupper = koder.map((kode) => {
     const g = v(kode, siste);
     if (g !== null && !innen(g, -60, 60)) throw new Error(`SSB 14700: urimelig verdi ${g} for gruppe ${kode}`);
