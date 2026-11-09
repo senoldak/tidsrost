@@ -1,0 +1,585 @@
+---
+// Grensehandelkalkulator: Hva sparer du egentlig på å handle i Sverige?
+// Trekker fra drivstoff, bompenger og valutakursdifferanse.
+import Base from '../layouts/Base.astro';
+import Symbol from '../components/Symbol.astro';
+import Brodsmuler from '../components/Brodsmuler.astro';
+import KiNotat from '../components/KiNotat.astro';
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import { datasideLd } from '../lib/datasider';
+import { SITE_URL } from '../lib/seo';
+import { STEDER_PRESETS, STANDARD_KURS, beregnGrensehandel } from '../lib/grensehandel.mjs';
+
+const pageUrl = `${SITE_URL}/grensehandel/`;
+const tittel = 'Grensehandelkalkulator';
+const seoTittel = 'Grensehandelkalkulator: Lønner harryturen seg?';
+const description = 'Regn ut om handleturen til Sverige faktisk lønner seg når drivstoff, bompenger, valutakurs og tollkvoter er regnet med.';
+
+const { sti, jsonLd } = datasideLd({
+  url: pageUrl,
+  tittel,
+  description,
+  datasettNavn: 'Grensehandel og prisforskjeller Norge–Sverige',
+  datasettBeskrivelse: 'Modell for beregning av netto besparelse ved grensehandel basert på SSB statistikk og Tolletatens kvoteregler.',
+  kildeData: 'https://www.ssb.no/grensehandel',
+  lisensUrl: 'https://data.norge.no/nlod/no/2.0',
+  periode: '2026',
+  oppdatert: new Date().toISOString().slice(0, 10),
+});
+---
+
+<Base title={seoTittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="data" />{tittel}</h1>
+    <p class="page-intro">
+      Lønner harryturen til Svinesund, Charlottenberg eller Töcksfors seg? Fyll inn handlekurven din i svenske kroner (SEK),
+      hvor langt du kjører, og se hva du sitter igjen med når bensin, bompenger og valutakursen er trukket fra.
+    </p>
+  </header>
+
+  <section class="day" aria-labelledby="kalkulator-seksjon">
+    <h2 class="band" id="kalkulator-seksjon">Beregn gevinsten av grensehandelen</h2>
+
+    <div class="grense-layout">
+      <!-- Skjema -->
+      <form class="grense-skjema" id="grense-skjema" novalidate>
+        <fieldset class="grense-gruppe">
+          <legend>1. Handlekurv i Sverige (SEK)</legend>
+          
+          <div class="felt-rad">
+            <div class="felt">
+              <label for="f-dagligvarer">Dagligvarer / mat (SEK)</label>
+              <input type="number" id="f-dagligvarer" min="0" step="50" value="1000" />
+              <small>Ca. 30 % dyrere i Norge</small>
+            </div>
+            <div class="felt">
+              <label for="f-kjott">Kjøtt og kylling (SEK)</label>
+              <input type="number" id="f-kjott" min="0" step="50" value="800" />
+              <small>Ca. 45 % dyrere i Norge</small>
+            </div>
+          </div>
+
+          <div class="felt-rad">
+            <div class="felt">
+              <label for="f-godteri">Godteri og brus (SEK)</label>
+              <input type="number" id="f-godteri" min="0" step="50" value="400" />
+              <small>Ca. 50 % dyrere i Norge</small>
+            </div>
+            <div class="felt">
+              <label for="f-snus">Snus og tobakk (SEK)</label>
+              <input type="number" id="f-snus" min="0" step="50" value="800" />
+              <small>Høy norsk tobakksavgift</small>
+            </div>
+          </div>
+
+          <div class="felt-rad">
+            <div class="felt">
+              <label for="f-alkohol">Alkohol / øl / vin (SEK)</label>
+              <input type="number" id="f-alkohol" min="0" step="50" value="0" />
+              <small>Systembolaget vs. Vinmonopolet</small>
+            </div>
+            <div class="felt">
+              <label for="f-kurs">Valutakurs (NOK per 100 SEK)</label>
+              <input type="number" id="f-kurs" min="70" max="130" step="0.5" value={STANDARD_KURS} />
+              <small>100 SEK koster i dag ca. 98 NOK</small>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="grense-gruppe">
+          <legend>2. Kjøring og reiseutgifter</legend>
+          
+          <div class="felt full">
+            <label for="f-preset">Velg rute eller skriv inn avstand</label>
+            <select id="f-preset">
+              {STEDER_PRESETS.map((p, i) => (
+                <option value={i} selected={i === 0}>{p.navn} ({p.avstandKm} km én vei)</option>
+              ))}
+              <option value="custom">Egendefinert avstand</option>
+            </select>
+          </div>
+
+          <div class="felt-rad">
+            <div class="felt">
+              <label for="f-avstand">Avstand én vei (km)</label>
+              <input type="number" id="f-avstand" min="5" max="1000" step="5" value="120" />
+            </div>
+            <div class="felt">
+              <label for="f-bompenger">Bompenger tur-retur (NOK)</label>
+              <input type="number" id="f-bompenger" min="0" max="500" step="5" value="60" />
+            </div>
+          </div>
+
+          <div class="felt-rad">
+            <div class="felt">
+              <label for="f-drivstoff">Drivstofftype</label>
+              <select id="f-drivstoff">
+                <option value="bensin" selected>Bensinbil (ca. 0,65 l/mil)</option>
+                <option value="diesel">Dieselbil (ca. 0,60 l/mil)</option>
+                <option value="elbil">Elbil (ca. 2,0 kWh/mil)</option>
+              </select>
+            </div>
+            <div class="felt">
+              <label for="f-opphold">Oppholdstid i utlandet</label>
+              <select id="f-opphold">
+                <option value="4" selected>Under 24 timer (kvote: 3 000 kr)</option>
+                <option value="25">Over 24 timer (kvote: 6 000 kr)</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+      <!-- Resultatpanel -->
+      <aside class="grense-resultat" id="grense-resultat">
+        <div class="resultat-boks" id="boks-status">
+          <span class="status-merke" id="res-etikett">Netto besparelse</span>
+          <div class="hovedtall" id="res-netto">0 kr</div>
+          <p class="status-tekst" id="res-status-tekst">
+            Beregner reell gevinst når reiseutgiftene er trukket fra.
+          </p>
+        </div>
+
+        <div class="regnestykke">
+          <div class="linje">
+            <span>Betalt i Sverige:</span>
+            <strong id="res-sek-nok">3 000 SEK (2 940 kr)</strong>
+          </div>
+          <div class="linje">
+            <span>Tilsvarer i Norge:</span>
+            <strong id="res-norge-nok">4 200 kr</strong>
+          </div>
+          <div class="linje pluss">
+            <span>Brutto prisgevinst:</span>
+            <strong id="res-brutto">+1 260 kr</strong>
+          </div>
+          <div class="linje minus">
+            <span>Reisekostnad (tur-retur):</span>
+            <strong id="res-reise">&minus;388 kr</strong>
+          </div>
+          <div class="linje total">
+            <span>Netto fortjeneste:</span>
+            <strong id="res-bunnlinje">+872 kr</strong>
+          </div>
+        </div>
+
+        <div class="nullpunkt-kile" id="res-nullpunkt-sone">
+          <span>Inntjeningsterskel:</span>
+          <p>Du må handle for minst <strong id="res-nullpunkt">1 150 SEK</strong> før du har tjent inn reisen.</p>
+        </div>
+
+        <div class="kvote-advarsel" id="res-kvote-advarsel" style="display: none;">
+          <strong>Tolletatens verdigrense overskredet:</strong>
+          <p id="res-kvote-tekst">
+            Handlekurven overstiger den tollfrie grensen. Du må fortolle overskytende varer.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="day" aria-labelledby="fakta">
+    <h2 class="band" id="fakta">Hva gjelder for svenskehandel?</h2>
+    
+    <div class="prose fakta-rutenett">
+      <article class="fakta-kort">
+        <h3>Tolletatens verdigrenser</h3>
+        <p>
+          Er du ute av Norge i <strong>under 24 timer</strong>, kan du ta med deg varer for inntil <strong>3 000 NOK</strong> toll- og avgiftsfritt.
+          Er du ute i <strong>over 24 timer</strong>, øker grensen til <strong>6 000 NOK</strong> per person.
+        </p>
+      </article>
+
+      <article class="fakta-kort">
+        <h3>Kjøttkvoten på 10 kg</h3>
+        <p>
+          Uavhengig av verdi kan hver person ta med seg maksimalt <strong>10 kg kjøtt, ost og melkeprodukter</strong> til sammen.
+          Kjøttdeig og kyllingfilet må veies nøye dersom du handler inn store kvanta.
+        </p>
+      </article>
+
+      <article class="fakta-kort">
+        <h3>Valutakursens betydning</h3>
+        <p>
+          Når den svenske kronen styrker seg mot den norske (nærmer seg 1:1), krymper gevinsten raskt.
+          Historisk har den største fordelen ligget på tobakk, brus og godteri på grunn av særnorske særavgifter.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <KiNotat />
+</Base>
+
+<script>
+  import { beregnGrensehandel, STEDER_PRESETS } from '../lib/grensehandel.mjs';
+
+  function init() {
+    const $ = (id: string) => document.getElementById(id) as HTMLInputElement | HTMLSelectElement | null;
+
+    const fDaglig = $('f-dagligvarer') as HTMLInputElement;
+    const fKjott = $('f-kjott') as HTMLInputElement;
+    const fGodteri = $('f-godteri') as HTMLInputElement;
+    const fSnus = $('f-snus') as HTMLInputElement;
+    const fAlkohol = $('f-alkohol') as HTMLInputElement;
+    const fKurs = $('f-kurs') as HTMLInputElement;
+
+    const fPreset = $('f-preset') as HTMLSelectElement;
+    const fAvstand = $('f-avstand') as HTMLInputElement;
+    const fBompenger = $('f-bompenger') as HTMLInputElement;
+    const fDrivstoff = $('f-drivstoff') as HTMLSelectElement;
+    const fOpphold = $('f-opphold') as HTMLSelectElement;
+
+    const resNetto = document.getElementById('res-netto');
+    const resStatusTekst = document.getElementById('res-status-tekst');
+    const resEtikett = document.getElementById('res-etikett');
+    const boksStatus = document.getElementById('boks-status');
+
+    const resSekNok = document.getElementById('res-sek-nok');
+    const resNorgeNok = document.getElementById('res-norge-nok');
+    const resBrutto = document.getElementById('res-brutto');
+    const resReise = document.getElementById('res-reise');
+    const resBunnlinje = document.getElementById('res-bunnlinje');
+    const resNullpunkt = document.getElementById('res-nullpunkt');
+
+    const kvoteBoks = document.getElementById('res-kvote-advarsel');
+    const kvoteTekst = document.getElementById('res-kvote-tekst');
+
+    if (!fDaglig || !fPreset) return;
+
+    const kr = (n: number) => Math.round(n).toLocaleString('nb-NO') + ' kr';
+
+    function oppdater() {
+      const dagligvarerSek = parseFloat(fDaglig.value) || 0;
+      const kjottSek = parseFloat(fKjott.value) || 0;
+      const godteriSek = parseFloat(fGodteri.value) || 0;
+      const snusSek = parseFloat(fSnus.value) || 0;
+      const alkoholSek = parseFloat(fAlkohol.value) || 0;
+      const kurs = parseFloat(fKurs.value) || 98;
+
+      const avstand = parseFloat(fAvstand.value) || 0;
+      const bom = parseFloat(fBompenger.value) || 0;
+      const drivstoff = fDrivstoff.value;
+      const oppholdstimer = parseFloat(fOpphold.value) || 4;
+
+      let forbruk = 0.65;
+      let pris = 21;
+      if (drivstoff === 'diesel') {
+        forbruk = 0.60;
+        pris = 20;
+      } else if (drivstoff === 'elbil') {
+        forbruk = 2.0;
+        pris = 2.50;
+      }
+
+      const res = beregnGrensehandel({
+        varekurv: { dagligvarerSek, kjottSek, godteriSek, snusSek, alkoholSek },
+        kursNokPer100Sek: kurs,
+        avstandEnVeiKm: avstand,
+        drivstoff,
+        drivstoffPris: pris,
+        forbrukPerMil: forbruk,
+        bompengerTurRetur: bom,
+        oppholdstimer
+      });
+
+      if (resNetto) {
+        resNetto.textContent = (res.nettoSparingNok >= 0 ? '+' : '') + kr(res.nettoSparingNok);
+        resNetto.className = res.lonnsom ? 'hovedtall pluss' : 'hovedtall minus';
+      }
+
+      if (boksStatus) {
+        boksStatus.className = res.lonnsom ? 'resultat-boks pluss-boks' : 'resultat-boks minus-boks';
+      }
+
+      if (resEtikett) {
+        resEtikett.textContent = res.lonnsom ? 'Netto overskudd' : 'Netto tap på turen';
+      }
+
+      if (resStatusTekst) {
+        resStatusTekst.textContent = res.lonnsom
+          ? `Turen er lønnsom! Du sparer ${kr(res.nettoSparingNok)} etter at alle reiseutgifter er dekket.`
+          : `Turen lønner seg ikke med denne handlekurven. Reiseutgiftene overstiger varebesparelsen med ${kr(Math.abs(res.nettoSparingNok))}.`;
+      }
+
+      if (resSekNok) resSekNok.textContent = `${res.totaltSek.toLocaleString('nb-NO')} SEK (${kr(res.varekostnadNok)})`;
+      if (resNorgeNok) resNorgeNok.textContent = kr(res.estimertNorgeNok);
+      if (resBrutto) resBrutto.textContent = `+${kr(res.bruttoSparingNok)}`;
+      if (resReise) resReise.textContent = `−${kr(res.reisekostnadNok)}`;
+      if (resBunnlinje) {
+        resBunnlinje.textContent = (res.nettoSparingNok >= 0 ? '+' : '') + kr(res.nettoSparingNok);
+      }
+      if (resNullpunkt) {
+        resNullpunkt.textContent = `${res.nullpunktSek.toLocaleString('nb-NO')} SEK (${kr(res.nullpunktSek * res.kursFaktor)})`;
+      }
+
+      if (kvoteBoks && kvoteTekst) {
+        if (res.kvoteStatus.verdigrenseOverskredet) {
+          kvoteBoks.style.display = 'block';
+          kvoteTekst.textContent = `Varer for ${kr(res.varekostnadNok)} overskrider den tollfrie verdigrensen på ${kr(res.kvoteStatus.verdigrenseNok)} ved under ${oppholdstimer} timers opphold. Overskytende beløp må fortolles.`;
+        } else {
+          kvoteBoks.style.display = 'none';
+        }
+      }
+    }
+
+    fPreset.addEventListener('change', () => {
+      const idx = fPreset.value;
+      if (idx === 'custom') return;
+      const valgt = STEDER_PRESETS[parseInt(idx, 10)];
+      if (valgt) {
+        fAvstand.value = String(valgt.avstandKm);
+        fBompenger.value = String(valgt.bompenger);
+        oppdater();
+      }
+    });
+
+    [fDaglig, fKjott, fGodteri, fSnus, fAlkohol, fKurs, fAvstand, fBompenger, fDrivstoff, fOpphold].forEach((el) => {
+      el.addEventListener('input', oppdater);
+      el.addEventListener('change', oppdater);
+    });
+
+    oppdater();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+</script>
+
+<style>
+  .grense-layout {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 32px;
+    margin-top: 24px;
+    align-items: start;
+  }
+
+  .grense-skjema {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .grense-gruppe {
+    border: 1px solid var(--border, #dcd9cf);
+    border-radius: 4px;
+    padding: 16px 20px;
+    background: var(--paper-2, #f5f3ec);
+  }
+
+  .grense-gruppe legend {
+    font-family: var(--frame);
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0 8px;
+    color: var(--ink);
+  }
+
+  .felt-rad {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 12px;
+  }
+
+  .felt {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .felt.full {
+    margin-top: 8px;
+  }
+
+  .felt label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--ink);
+  }
+
+  .felt input,
+  .felt select {
+    padding: 8px 10px;
+    border: 1px solid var(--ink);
+    border-radius: 3px;
+    background: var(--paper, #fff);
+    color: var(--ink);
+    font: inherit;
+    font-size: 0.95rem;
+  }
+
+  .felt small {
+    font-size: 0.72rem;
+    color: var(--muted, #666);
+    margin-top: 3px;
+  }
+
+  .grense-resultat {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .resultat-boks {
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid var(--border, #dcd9cf);
+    background: var(--paper, #fff);
+    text-align: center;
+  }
+
+  .resultat-boks.pluss-boks {
+    border-left: 5px solid #10b981;
+    background: #f0fdf4;
+  }
+
+  .resultat-boks.minus-boks {
+    border-left: 5px solid #ef4444;
+    background: #fef2f2;
+  }
+
+  .status-merke {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted, #666);
+  }
+
+  .hovedtall {
+    font-family: var(--read, sans-serif);
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin: 8px 0;
+  }
+
+  .hovedtall.pluss {
+    color: #047857;
+  }
+
+  .hovedtall.minus {
+    color: #b91c1c;
+  }
+
+  .status-tekst {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  .regnestykke {
+    background: var(--paper, #fff);
+    border: 1px solid var(--border, #dcd9cf);
+    border-radius: 4px;
+    padding: 16px;
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .linje {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .linje.pluss strong {
+    color: #047857;
+  }
+
+  .linje.minus strong {
+    color: #b91c1c;
+  }
+
+  .linje.total {
+    border-top: 1px solid var(--border, #dcd9cf);
+    padding-top: 8px;
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+
+  .nullpunkt-kile {
+    background: var(--paper-2, #f5f3ec);
+    border: 1px solid var(--border, #dcd9cf);
+    border-radius: 4px;
+    padding: 12px 14px;
+    font-size: 0.8rem;
+  }
+
+  .nullpunkt-kile span {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: var(--muted, #666);
+  }
+
+  .nullpunkt-kile p {
+    margin: 4px 0 0;
+  }
+
+  .kvote-advarsel {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-left: 4px solid #f59e0b;
+    border-radius: 4px;
+    padding: 12px 14px;
+    font-size: 0.8rem;
+    color: #92400e;
+  }
+
+  .kvote-advarsel strong {
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .kvote-advarsel p {
+    margin: 0;
+  }
+
+  .fakta-rutenett {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .fakta-kort {
+    background: var(--paper, #fff);
+    border: 1px solid var(--border, #dcd9cf);
+    border-radius: 4px;
+    padding: 16px;
+  }
+
+  .fakta-kort h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .fakta-kort p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--muted, #555);
+  }
+
+  @media (max-width: 800px) {
+    .grense-layout {
+      grid-template-columns: 1fr;
+    }
+    .felt-rad {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
