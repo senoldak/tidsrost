@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-09T15:04:48.570Z",
+  "hentet": "2026-11-09T17:06:15.034Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-09T15:03:02+00:00",
+  "sistEndretHosMet": "2026-11-09T17:04:49+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.261109100000.51875_7_0",
@@ -34,19 +34,6 @@
       "konsekvenser": "Stor fare for at småbåter kan synke: Det ventes sterk isvekst på fronten/styrhuset til båten. Det er stor fare for at båten mister stabilitet, velter og synker. Sterk isvekst kan gjøre det vanskelig å få fjernet isen raskt nok før uhellet er ute. Kraftig isvekst på overflater: Det er stor risiko for en betydelig mengde is på overflater på båter som ferdes i området. Isen vil føre til glatte dekk, gelender og stiger, og operasjoner utendørs blir utfordrende. Redningsutstyr kan bli påvirket: Nedising av redningsteknisk utstyr kan forekomme, og isingen kan ødelegge samband- og kommunikasjonsutstyr.",
       "rad": "Kraftig isvekst på overflater: Fjern is raskt fra båten.",
       "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.20261109083127.002",
-      "niva": "gult",
-      "hendelse": "Storm",
-      "omrade": "Hekkingen - Torsvåg",
-      "domene": "hav",
-      "start": "2026-11-08T15:00:00+00:00",
-      "slutt": "2026-11-09T17:00:00+00:00",
-      "beskrivelse": "Mandag sørvest liten storm 22 m/s, forbigående full storm 25. Fra mandag ettermiddag dreining til nordvestlig stiv kuling 15 og minkende.",
-      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
       "id": "2.49.0.1.578.0.20261109115222.073",
@@ -114,19 +101,6 @@
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/vind-over-land"
     },
     {
-      "id": "2.49.0.1.578.0.261109100000.7081_1_0",
-      "niva": "gult",
-      "hendelse": "Storm",
-      "omrade": "Hjelmsøybanken",
-      "domene": "hav",
-      "start": "2026-11-09T10:00:00+00:00",
-      "slutt": "2026-11-09T16:00:00+00:00",
-      "beskrivelse": "Nordvest liten storm 22 m/s.",
-      "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
       "id": "2.49.0.1.578.0.261109100000.7024_1_0",
       "niva": "gult",
       "hendelse": "Storm",
@@ -162,19 +136,6 @@
       "slutt": "2026-11-09T23:00:00+00:00",
       "beskrivelse": "Skiftende full storm 25 m/s.",
       "konsekvenser": "Meget høye bølger: Rullingen blir tung og støtende. Synsvidden nedsettes.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.261109100000.7082_1_0",
-      "niva": "gult",
-      "hendelse": "Storm",
-      "omrade": "Nordkappbanken",
-      "domene": "hav",
-      "start": "2026-11-09T13:00:00+00:00",
-      "slutt": "2026-11-09T17:00:00+00:00",
-      "beskrivelse": "Nordvest liten storm 22 m/s.",
-      "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
     },
