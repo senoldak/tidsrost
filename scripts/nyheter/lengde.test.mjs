@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { ordtelling, indekserbar, MIN_ORD_INDEKS } from '../../src/lib/ordtelling.mjs';
-import { sjekkLengde, forLiteKilde, utenAvsenderprefiks, MIN_ORD_UTKAST, LENGDE_REGEL, TITTEL_REGEL } from './redaktor.mjs';
+import { sjekkLengde, forLiteKilde, utenAvsenderprefiks, MIN_ORD_UTKAST, LENGDE_REGEL, TITTEL_REGEL, MELLOMOVERSRIKT_REGEL } from './redaktor.mjs';
 
 const ord = (n) => Array.from({ length: n }, (_, i) => `ord${i}`).join(' ');
 
@@ -43,4 +43,11 @@ test('skriveregler i promptene: lengde og tittel uten avsenderprefiks', () => {
   assert.match(LENGDE_REGEL, /250–400 ord/);
   assert.match(LENGDE_REGEL, /egen kunnskap/);
   assert.match(TITTEL_REGEL, /Departementet: …/);
+});
+
+test('mellomoverskrifter: standardiserte overskrifter (Hva er nytt / Hva betyr dette / Hva skjer videre)', () => {
+  assert.match(MELLOMOVERSRIKT_REGEL, /Hva er nytt/);
+  assert.match(MELLOMOVERSRIKT_REGEL, /Hva betyr dette i Norge/);
+  assert.match(MELLOMOVERSRIKT_REGEL, /Hva skjer videre/);
+  assert.match(LENGDE_REGEL, /Hva betyr dette i Norge/);
 });

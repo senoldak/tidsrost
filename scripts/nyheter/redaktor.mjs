@@ -23,7 +23,10 @@ export const MIN_ORD_UTKAST = 200;
 export const MIN_KILDE_ORD = 150;
 export const forLiteKilde = (kildeTekst) => ordtelling(kildeTekst) < MIN_KILDE_ORD;
 
+export const MELLOMOVERSRIKT_REGEL = `- Mellomoverskrifter: Bruk standardiserte mellomoverskrifter (## Hva er nytt / ## Hva betyr dette i Norge / ## Hva skjer videre) for å dele opp brødteksten logisk der saken gir grunnlag for det. Hovedhendelsen presenteres under ingress og eventuelt «## Hva er nytt», bakgrunn og nasjonal virkning under «## Hva betyr dette i Norge», og videre prosess, tidsfrister eller oppfølging under «## Hva skjer videre».`;
+
 export const LENGDE_REGEL = `- Lengde: 250–400 ord i brødteksten, fordelt på 4–6 korte avsnitt. Bygg saken slik: først hva som har skjedd (hvem, hva, når, hvor), deretter bakgrunn og sammenheng, til slutt hva det betyr og hva som skjer videre.
+- Struktur og mellomoverskrifter: Bruk gjerne standardiserte mellomoverskrifter (## Hva er nytt / ## Hva betyr dette i Norge / ## Hva skjer videre) der saken egner seg, slik at leseren raskt kan navigere mellom selve nyheten, den norske sammenhengen og veien videre.
 - Bakgrunn og betydning skal også komme fra materialet: forklar med opplysninger som står der (tidligere vedtak, tall, begrunnelser, frister, hvem som berøres). Aldri legg til fakta, tall, navn eller vurderinger fra egen kunnskap, og aldri spekuler. Har materialet for lite stoff, skriv heller en kortere sak enn å fylle ut.`;
 
 export const TITTEL_REGEL = `- Tittelen skal begynne med det leserne søker etter: selve saken (hvem eller hva det gjelder), f.eks. navnet på institusjonen, personen, stedet eller ordningen. Start aldri tittelen med avsenderen og kolon, som «Departementet: …», «Utenriksdepartementet: …» eller «Statsministerens kontor: …», og bruk heller ikke kolon tidlig i tittelen («Oslo: …», «Støre: …»). Skriv f.eks. «Norge gir 150 millioner til glemte kriser», ikke «Utenriksdepartementet: Norge gir 150 millioner til glemte kriser». Hvem som sier det, kommer fram i ingressen og brødteksten.
