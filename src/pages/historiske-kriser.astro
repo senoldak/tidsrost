@@ -1,0 +1,431 @@
+---
+// Historiske Kriser og Makroøkonomisk Resonans:
+// Norges moderne økonomiske historie sammenlignet med internasjonale kriser og stabiliseringserfaringer.
+import Base from '../layouts/Base.astro';
+import Symbol from '../components/Symbol.astro';
+import Brodsmuler from '../components/Brodsmuler.astro';
+import { jsonLdMetni } from '../lib/json-ld.mjs';
+import { datasideLd } from '../lib/datasider';
+import { SITE_URL } from '../lib/seo';
+import { KRISER } from '../lib/kriser';
+
+const pageUrl = `${SITE_URL}/historiske-kriser/`;
+const tittel = 'Tarihsel Kriz Hafızası';
+const seoTittel = 'Historiske kriser og makroøkonomisk resonans – Tidsrøst';
+const description = 'Hva historiske stabiliseringskriser – fra Volcker-sjokket og bankkrisen i 1988 til valutakrisen i 1992 – lærer oss om dagens inflasjon og rentebane.';
+
+const { sti, jsonLd } = datasideLd({
+  url: pageUrl,
+  tittel: 'Historiske kriser og makroøkonomisk resonans',
+  description,
+  datasettNavn: 'Makroøkonomiske kriser og stabiliseringsprogrammer',
+  datasettBeskrivelse: 'Sammenlignende analyse av topprenter, inflasjonsutvikling og politiske lærdommer fra historiske kriser.',
+  kildeData: 'https://www.norges-bank.no/',
+  lisensUrl: 'https://data.norge.no/nlod/no/2.0',
+  periode: '1979–2026',
+  oppdatert: new Date().toISOString().slice(0, 10),
+});
+---
+
+<Base title={seoTittel} description={description}>
+  <script slot="head" type="application/ld+json" set:html={jsonLdMetni(jsonLd)} />
+  <Brodsmuler items={sti} />
+
+  <header class="page-head">
+    <h1 class="page-title"><Symbol kind="analyse" />Historiske kriser og makroresonans</h1>
+    <p class="page-intro">
+      Dagens utfordringer med seiglivet inflasjon, svak kronekurs og en styringsrente på 4,50 % er ikke unike.
+      Ved å sammenligne dagens situasjon med tidligere sjokk – fra Volckers renteoffensiv og den norske bankkrisen
+      til 1992-valutaens fall – trer de strukturelle mekanismene i pengepolitikken klarere fram.
+    </p>
+  </header>
+
+  <div class="kriser-layout">
+    <section class="oversikt-kort">
+      <h2>Nøkkeltall på tvers av kriseepoker</h2>
+      <div class="tabell-scroll">
+        <table class="matrise-tabell">
+          <thead>
+            <tr>
+              <th>Krise / Epoke</th>
+              <th>Periode</th>
+              <th>Topprente</th>
+              <th>Topp inflasjon</th>
+              <th>Ledighet</th>
+              <th>Hovedlærdom</th>
+            </tr>
+          </thead>
+          <tbody>
+            {KRISER.map((k) => (
+              <tr>
+                <td class="krise-navn">
+                  <a href={`#${k.id}`}><strong>{k.tittel}</strong></a>
+                  <span class="krise-region">{k.region}</span>
+                </td>
+                <td class="krise-tall">{k.periode}</td>
+                <td class="krise-tall">{k.toppRente}</td>
+                <td class="krise-tall">{k.toppInflasjon}</td>
+                <td class="krise-tall">{k.ledighet}</td>
+                <td class="krise-tekst">{k.laerdommer}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="dybde-seksjon">
+      <div class="seksjon-intro">
+        <h2>Dybdeanalyse av de 6 kriseepokene</h2>
+        <p>Hvordan krisene utartet seg, hvilke politiske grep som ble tatt, og hva dette betyr for norsk økonomi i dag.</p>
+      </div>
+
+      <div class="kriser-grid">
+        {KRISER.map((k) => (
+          <article id={k.id} class="krise-kort">
+            <header class="kort-hode">
+              <span class={`krise-merke merke-${k.kategori}`}>{k.kategori}</span>
+              <h3>{k.tittel}</h3>
+              <p class="kort-meta">{k.periode} · {k.region}</p>
+            </header>
+
+            <div class="kort-fakta-rader">
+              <div class="fakta-boks">
+                <span class="fakta-label">Topprente</span>
+                <span class="fakta-verdi">{k.toppRente}</span>
+              </div>
+              <div class="fakta-boks">
+                <span class="fakta-label">Topp inflasjon</span>
+                <span class="fakta-verdi">{k.toppInflasjon}</span>
+              </div>
+              <div class="fakta-boks">
+                <span class="fakta-label">Arbeidsledighet</span>
+                <span class="fakta-verdi">{k.ledighet}</span>
+              </div>
+            </div>
+
+            <div class="kort-innhold">
+              <h4>Utløsende årsak</h4>
+              <p>{k.kjerneAarsak}</p>
+
+              <h4>Politiske tiltak og håndtering</h4>
+              <ul>
+                {k.politiskeTiltak.map((tiltak) => (
+                  <li>{tiltak}</li>
+                ))}
+              </ul>
+
+              <div class="parallell-boks">
+                <h4>Parallell til dagens situasjon i Norge</h4>
+                <p>{k.dagensParallell}</p>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="laerdommer-oppsummering">
+      <h2>Fire overordnede lærdommer for norsk pengepolitikk</h2>
+      <div class="prinsipp-grid">
+        <div class="prinsipp-kort">
+          <h3>1. Forventninger er selvforsterkende</h3>
+          <p>
+            Både Volcker-sjokket og de latinamerikanske programmene beviste at dersom lønnstakere og bedrifter
+            forventer 4–5 % prisvekst, blir prisveksten 4–5 %. Renten må heves nok til at realrenten oppleves
+            innstrammende, ellers fortsetter spiralen.
+          </p>
+        </div>
+        <div class="prinsipp-kort">
+          <h3>2. Flytende kurs er en ventil, ikke et mål</h3>
+          <p>
+            1992-krisen viste at å bruke rentevåpenet til å tvangsforsvare et bestemt kronekursnivå fører til
+            uholdbare samfunnsøkonomiske tap. Norges Banks mandat er lav og stabil inflasjon over tid, ikke
+            å holde kronen sterk mot euro.
+          </p>
+        </div>
+        <div class="prinsipp-kort">
+          <h3>3. Bankenes soliditet avgjør smertegrensen</h3>
+          <p>
+            I 1988 knakk norske banker fordi de manglet kapital og overvåking. I 2008 og i dag gjør strenge
+            egenkapitalkrav og utlånsforskriften at banksystemet tåler selv markante rentehopp uten systemisk
+            kredittstopp.
+          </p>
+        </div>
+        <div class="prinsipp-kort">
+          <h3>4. Flytende boliglån gir lynrask transmisjon</h3>
+          <p>
+            Norske husholdningers uvanlig høye andel lån med flytende rente (over 90 %) betyr at Norges Banks
+            rentehevinger treffer husholdningenes disponible inntekt mye raskere og mer direkte enn i USA eller
+            eurosonen, der fastrente dominerer.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <nav class="relaterte-lenker" aria-label="Relaterte verisider">
+      <a href="/styringsrenten/">Styringsrenten i Norge →</a>
+      <a href="/prisstigning/">Prisstigning og KPI →</a>
+      <a href="/arbeidsledighet/">Arbeidsledighetstall →</a>
+      <a href="/tall/">Alle økonomiske nøkkeltall →</a>
+    </nav>
+  </div>
+</Base>
+
+<style>
+  .kriser-layout {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-xl, 2.5rem);
+    margin-top: var(--sp-m, 1rem);
+  }
+
+  .oversikt-kort {
+    background: var(--bg-card, #ffffff);
+    border: 1px solid var(--border, #e5e2db);
+    border-radius: 4px;
+    padding: var(--sp-l, 1.5rem);
+  }
+
+  .oversikt-kort h2 {
+    margin-top: 0;
+    margin-bottom: var(--sp-m, 1rem);
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .tabell-scroll {
+    overflow-x: auto;
+  }
+
+  .matrise-tabell {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .matrise-tabell th,
+  .matrise-tabell td {
+    padding: 0.75rem 0.85rem;
+    border-bottom: 1px solid var(--border-subtle, #f0eee9);
+    vertical-align: top;
+  }
+
+  .matrise-tabell th {
+    background: var(--bg-subtle, #fbfaf8);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted, #666);
+  }
+
+  .krise-navn a {
+    color: var(--text, #1a1a1a);
+    text-decoration: none;
+  }
+
+  .krise-navn a:hover {
+    text-decoration: underline;
+  }
+
+  .krise-region {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text-muted, #666);
+    margin-top: 0.15rem;
+  }
+
+  .krise-tall {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.85rem;
+  }
+
+  .krise-tekst {
+    font-size: 0.85rem;
+    color: var(--text-muted, #444);
+    min-width: 220px;
+    line-height: 1.4;
+  }
+
+  .seksjon-intro {
+    margin-bottom: var(--sp-l, 1.5rem);
+  }
+
+  .seksjon-intro h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+  }
+
+  .seksjon-intro p {
+    margin: 0;
+    color: var(--text-muted, #666);
+    font-size: 0.95rem;
+  }
+
+  .kriser-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: var(--sp-l, 1.5rem);
+  }
+
+  .krise-kort {
+    background: var(--bg-card, #ffffff);
+    border: 1px solid var(--border, #e5e2db);
+    border-radius: 4px;
+    padding: var(--sp-l, 1.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .kort-hode {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .krise-merke {
+    align-self: flex-start;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 2px;
+  }
+
+  .merke-inflasjon { background: #fbeee8; color: #a83d1c; }
+  .merke-bankkrise { background: #f9f0da; color: #855b00; }
+  .merke-valuta { background: #eaf1f7; color: #1e5a8a; }
+  .merke-likviditet { background: #ebf5ee; color: #1e6b36; }
+
+  .kort-hode h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.3;
+  }
+
+  .kort-meta {
+    margin: 0;
+    font-size: 0.82rem;
+    color: var(--text-muted, #666);
+  }
+
+  .kort-fakta-rader {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--border-subtle, #f0eee9);
+    border-bottom: 1px solid var(--border-subtle, #f0eee9);
+  }
+
+  .fakta-boks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .fakta-label {
+    font-size: 0.72rem;
+    color: var(--text-muted, #777);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .fakta-verdi {
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .kort-innhold h4 {
+    margin: 0.8rem 0 0.3rem;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-muted, #555);
+  }
+
+  .kort-innhold p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .kort-innhold ul {
+    margin: 0.3rem 0;
+    padding-left: 1.2rem;
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  .parallell-boks {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    background: var(--bg-subtle, #fbfaf8);
+    border-left: 3px solid #204c75;
+  }
+
+  .parallell-boks h4 {
+    margin: 0 0 0.25rem;
+    color: #204c75;
+  }
+
+  .parallell-boks p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text, #222);
+  }
+
+  .laerdommer-oppsummering {
+    background: var(--bg-card, #ffffff);
+    border: 1px solid var(--border, #e5e2db);
+    border-radius: 4px;
+    padding: var(--sp-l, 1.5rem);
+  }
+
+  .laerdommer-oppsummering h2 {
+    margin-top: 0;
+    margin-bottom: var(--sp-m, 1rem);
+    font-size: 1.25rem;
+  }
+
+  .prinsipp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .prinsipp-kort h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1rem;
+    color: var(--text, #111);
+  }
+
+  .prinsipp-kort p {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--text-muted, #444);
+    line-height: 1.45;
+  }
+
+  .relaterte-lenker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: var(--sp-m, 1rem);
+    border-top: 1px solid var(--border, #e5e2db);
+  }
+
+  .relaterte-lenker a {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--link, #204c75);
+    text-decoration: underline;
+  }
+</style>
