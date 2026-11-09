@@ -5,14 +5,6 @@
       "kadar": "2026-11-09T19:09:08.338Z"
     }
   },
-  "helsereformutvalget-foreslar-storendring-i-helse-norge": {
-    "tarih": "2026-11-02T13:09:14.133Z",
-    "ig_story": "17924587311444026",
-    "fb_post": "1343803192154866_122113797345509504",
-    "fb_story": "2592574867892363",
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
   "christian-hoel-ferdig-som-sjef-for-rema-1000-norge": {
     "tarih": "2026-11-02T15:08:06.764Z",
     "ig_story": "18220595278343490",
@@ -540,5 +532,23 @@
     "ig_story": "18362583199220236",
     "fb_post": "1343803192154866_122116097829509504",
     "fb_story": "1722202522850081"
+  },
+  "hoye-strompriser-i-sor-norge-gir-arets-dyreste-dogn": {
+    "tarih": "2026-11-09T13:11:48.528Z",
+    "ig_story": "18034241564884831",
+    "fb_post": "1343803192154866_122116128045509504",
+    "fb_story": "1468116315511263"
+  },
+  "fylkesvei-854-stengt-etter-kvikkleireskred-i-malselv": {
+    "tarih": "2026-11-09T13:12:38.233Z",
+    "ig_story": "17894287737448125",
+    "fb_post": "1343803192154866_122116128411509504",
+    "fb_story": "1665435201658390"
+  },
+  "full-storm-og-innstilte-ferger-i-nord": {
+    "tarih": "2026-11-09T13:13:17.023Z",
+    "ig_story": "17911566042666232",
+    "fb_post": "1343803192154866_122116128831509504",
+    "fb_story": "1399370218938917"
   }
 }
