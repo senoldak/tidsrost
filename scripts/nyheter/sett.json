@@ -10087,7 +10087,38 @@
     "medier:ca88ec564f79fbf2": "2026-11-10T13:00:57.087Z",
     "medier:897b479ec49460fb": "2026-11-10T13:00:57.087Z",
     "medier:c91cc6fbf2583c12": "2026-11-10T13:00:57.087Z",
-    "medier:cbdbed44d4f547e3": "2026-11-10T13:00:57.087Z"
+    "medier:cbdbed44d4f547e3": "2026-11-10T13:00:57.087Z",
+    "medier:e42fc83f16700be9": "2026-11-10T15:00:58.346Z",
+    "medier:97354965023c3c89": "2026-11-10T15:00:58.346Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168774": "2026-11-10T15:00:58.346Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168772": "2026-11-10T15:00:58.346Z",
+    "medier:9eacd4eedb8be13e": "2026-11-10T15:00:58.346Z",
+    "medier:e5fb6a76a990164c": "2026-11-10T15:00:58.346Z",
+    "medier:87a9258d55261756": "2026-11-10T15:00:58.346Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168771": "2026-11-10T15:00:58.346Z",
+    "medier:60088e3bb9d7d564": "2026-11-10T15:00:58.346Z",
+    "medier:0ea2d47420826ad1": "2026-11-10T15:00:58.346Z",
+    "medier:265e884e48e980cb": "2026-11-10T15:00:58.346Z",
+    "medier:c51a9edca9ad920d": "2026-11-10T15:00:58.346Z",
+    "medier:961f432708c48bc3": "2026-11-10T15:00:58.346Z",
+    "medier:4062f8aacef6d814": "2026-11-10T15:00:58.346Z",
+    "medier:da318844ea71001e": "2026-11-10T15:00:58.346Z",
+    "medier:462b8c16979458b1": "2026-11-10T15:00:58.346Z",
+    "medier:9c7f920eaad43142": "2026-11-10T15:00:58.346Z",
+    "medier:4524c504733d4dc5": "2026-11-10T15:00:58.346Z",
+    "medier:eb7a02bf862987ac": "2026-11-10T15:00:58.346Z",
+    "medier:bdf21f05be94723f": "2026-11-10T15:00:58.346Z",
+    "medier:7e906cd11a671227": "2026-11-10T15:00:58.346Z",
+    "medier:d5543e3b046e70a6": "2026-11-10T15:00:58.346Z",
+    "medier:cb5a608bfd5fd7a0": "2026-11-10T15:00:58.346Z",
+    "medier:1faaf5e18987d919": "2026-11-10T15:00:58.346Z",
+    "medier:03c9899007bce3e7": "2026-11-10T15:00:58.346Z",
+    "regjeringen:3192180": "2026-11-10T15:00:58.346Z",
+    "medier:793b83fd7464d851": "2026-11-10T15:00:58.346Z",
+    "medier:c8728ced692f1637": "2026-11-10T15:00:58.346Z",
+    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/svindelstatistikk-forste-halvar/": "2026-11-10T15:00:58.346Z",
+    "medier:4da890834d33e508": "2026-11-10T15:00:58.346Z",
+    "medier:ff9ad5453fa98741": "2026-11-10T15:00:58.346Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -10104,11 +10135,6 @@
       "antall": 1,
       "melding": "Unexpected end of JSON input",
       "tid": "2026-10-22T20:01:21.218Z"
-    },
-    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/svindelstatistikk-forste-halvar/": {
-      "antall": 2,
-      "melding": "404 Not Found: https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/svindelstatistikk-forste-halvar/",
-      "tid": "2026-11-10T13:00:57.087Z"
     }
   },
   "kilder": {
@@ -10150,46 +10176,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:2c0fa92560b17da7": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-07T15:02:31.175Z"
-    },
-    "medier:dae5d40d50e4cafb": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-07T15:02:31.175Z"
-    },
-    "medier:23aa88d12a4ab7e3": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-07T15:02:31.175Z"
-    },
-    "medier:20d3ee9514b1660f": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-07T15:02:31.175Z"
-    },
-    "medier:cb38f158b7450084": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-07T15:02:31.175Z"
-    },
-    "medier:08973e86713280be": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-07T15:02:31.175Z"
-    },
-    "medier:99a304ff1d654c8c": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-07T15:02:31.175Z"
-    },
-    "handball:https://www.handball.no/nyheter/2026/11/da-june-kom-til-fredrikstad-ble-det-poeng-og-mye-humor/": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-07T15:02:31.175Z"
-    },
     "medier:47e6965c4e516dba": {
       "p": 75,
       "v": "b34cb0de5bde",
@@ -11529,6 +11515,81 @@
       "p": 45,
       "v": "b34cb0de5bde",
       "t": "2026-11-10T13:03:15.320Z"
+    },
+    "medier:a1f852b38989e732": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-10T15:03:20.169Z"
+    },
+    "medier:9eacd4eedb8be13e": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-10T15:03:20.169Z"
+    },
+    "medier:60088e3bb9d7d564": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-10T15:03:20.169Z"
+    },
+    "medier:265e884e48e980cb": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-10T15:03:20.169Z"
+    },
+    "medier:da318844ea71001e": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-10T15:03:20.169Z"
+    },
+    "medier:793b83fd7464d851": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-10T15:03:20.169Z"
+    },
+    "medier:0d8edc3a73fac704": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-10T15:03:20.169Z"
+    },
+    "medier:eb7a02bf862987ac": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-10T15:03:20.169Z"
+    },
+    "medier:4da890834d33e508": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-10T15:03:20.169Z"
+    },
+    "medier:d5543e3b046e70a6": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-10T15:03:20.169Z"
+    },
+    "medier:1faaf5e18987d919": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-10T15:03:20.169Z"
+    },
+    "regjeringen:3192180": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-10T15:03:20.169Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168774": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-10T15:03:20.169Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168772": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-10T15:03:20.169Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168771": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-10T15:03:20.169Z"
     }
   }
 }
