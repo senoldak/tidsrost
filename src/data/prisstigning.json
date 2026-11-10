@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-10T01:03:01.638Z",
+  "hentet": "2026-11-10T07:06:34.203Z",
   "kilde": {
     "navn": "Statistisk sentralbyrå (SSB)",
     "url": "https://www.ssb.no/",
@@ -8,68 +8,68 @@
     "lisensUrl": "https://data.norge.no/nlod/no/2.0"
   },
   "tabell": "14700",
-  "oppdatert": "2026-10-09T06:00:00Z",
-  "sisteMaaned": "2026-09",
-  "tolvMnd": 3.4,
+  "oppdatert": "2026-11-10T07:00:00Z",
+  "sisteMaaned": "2026-10",
+  "tolvMnd": 3.6,
   "grupper": [
     {
       "kode": "01",
       "navn": "Matvarer og alkoholfrie drikkevarer",
-      "tolvMnd": 2.4,
+      "tolvMnd": 1.4,
       "vekt": 104.7
     },
     {
       "kode": "01.1",
       "navn": "Matvarer",
-      "tolvMnd": 2.2,
+      "tolvMnd": 1.6,
       "vekt": 90.6
     },
     {
       "kode": "02",
       "navn": "Alkoholholdige drikkevarer og tobakk",
-      "tolvMnd": 2.6,
+      "tolvMnd": 2.5,
       "vekt": 34.1
     },
     {
       "kode": "03",
       "navn": "Klær og skotøy",
-      "tolvMnd": 2.2,
+      "tolvMnd": 0.4,
       "vekt": 42.8
     },
     {
       "kode": "04",
       "navn": "Bolig, elektrisitet og brensel",
-      "tolvMnd": 3.5,
+      "tolvMnd": 5.1,
       "vekt": 312.3
     },
     {
       "kode": "05",
       "navn": "Møbler, husholdningsartikler og vedlikehold av innbo",
-      "tolvMnd": -1.1,
+      "tolvMnd": -1.4,
       "vekt": 58.5
     },
     {
       "kode": "06",
       "navn": "Helse",
-      "tolvMnd": 4.9,
+      "tolvMnd": 4.8,
       "vekt": 31.6
     },
     {
       "kode": "07",
       "navn": "Transport",
-      "tolvMnd": 4.8,
+      "tolvMnd": 5.4,
       "vekt": 138.1
     },
     {
       "kode": "08",
       "navn": "Informasjon og kommunikasjon",
-      "tolvMnd": 1.7,
+      "tolvMnd": -0.6,
       "vekt": 52.5
     },
     {
       "kode": "09",
       "navn": "Fritid, sport og kultur",
-      "tolvMnd": 4,
+      "tolvMnd": 3.5,
       "vekt": 84.5
     },
     {
@@ -81,13 +81,13 @@
     {
       "kode": "11",
       "navn": "Serverings- og overnattingstjenester",
-      "tolvMnd": 6,
+      "tolvMnd": 6.1,
       "vekt": 59.4
     },
     {
       "kode": "12",
       "navn": "Forsikring og finansielle tjenester",
-      "tolvMnd": 7.9,
+      "tolvMnd": 6.4,
       "vekt": 27.2
     },
     {
@@ -98,10 +98,6 @@
     }
   ],
   "serie": [
-    {
-      "maaned": "2024-10",
-      "tolvMnd": 2.6
-    },
     {
       "maaned": "2024-11",
       "tolvMnd": 2.4
@@ -193,6 +189,10 @@
     {
       "maaned": "2026-09",
       "tolvMnd": 3.4
+    },
+    {
+      "maaned": "2026-10",
+      "tolvMnd": 3.6
     }
   ]
 }
