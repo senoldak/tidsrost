@@ -1,8 +1,8 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 27,
-      "kadar": "2026-11-10T21:07:48.329Z"
+      "sayi": 28,
+      "kadar": "2026-11-11T09:08:27.201Z"
     }
   },
   "utdanningssektoren-rammet-av-hundrevis-av-angrep-siden-invasjonen": {
@@ -527,7 +527,9 @@
     "reels": {
       "gun": "2026-11-10",
       "dilim": "kveld"
-    }
+    },
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "reallonn-norge-oecd": {
     "tarih": "2026-11-10T07:08:56.954Z",
@@ -570,5 +572,11 @@
     "ig_story": "18012322622776325",
     "fb_post": "1343803192154866_122116525665509504",
     "fb_story": "1442837434045851"
+  },
+  "land-pa-cop31-legger-planer-for-utfasing-av-fossil-energi": {
+    "tarih": "2026-11-10T21:08:42.517Z",
+    "ig_story": "17871326721658293",
+    "fb_post": "1343803192154866_122116547787509504",
+    "fb_story": "2365107584247999"
   }
 }
