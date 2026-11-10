@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-10T17:15:39.359Z",
+  "hentet": "2026-11-10T19:15:35.775Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-10T17:14:25+00:00",
+  "sistEndretHosMet": "2026-11-10T19:14:33+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.261110100000.52077_7_0",
@@ -47,19 +47,6 @@
       "konsekvenser": "Lokalt vanskelige kjøreforhold: Noen reiser vil kunne få lengre reisetid. Mulighet for stengte veier på fjellet: Snøfokk i fjellet gir redusert sikt og mulighet for kolonnekjøring eller stengte veier.",
       "rad": "Lokalt vanskelige kjøreforhold: Beregn ekstra tid til transport og kjøring. Bruk riktige dekk og kjør etter forholdene. Sjekk veimeldinger på vegvesen.no/trafikk. Forsinkelser ved reise: Følg råd og sjekk status fra transportaktører.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/sno"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261110081754.007",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Ona - Frøya",
-      "domene": "hav",
-      "start": "2026-11-10T12:00:00+00:00",
-      "slutt": "2026-11-10T19:00:00+00:00",
-      "beskrivelse": "Fra i ettermiddag, tirsdag, nordaust stiv kuling 15 m/s. Minkende i kveld.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
       "id": "2.49.0.1.578.0.20261110082033.037",
