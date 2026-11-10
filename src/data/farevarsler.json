@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-10T11:08:08.776Z",
+  "hentet": "2026-11-10T13:18:23.808Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-10T11:06:08+00:00",
+  "sistEndretHosMet": "2026-11-10T13:17:01+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.261110100000.52077_7_0",
@@ -23,16 +23,16 @@
       "web": null
     },
     {
-      "id": "2.49.0.1.578.0.20261109115222.073",
+      "id": "2.49.0.1.578.0.20261110113405.088",
       "niva": "gult",
-      "hendelse": "Storm",
+      "hendelse": "Kuling",
       "omrade": "Torsvåg - Fruholmen",
       "domene": "hav",
       "start": "2026-11-08T18:00:00+00:00",
-      "slutt": "2026-11-10T17:00:00+00:00",
-      "beskrivelse": "Mandag nordvestlig liten storm 22 m/s, lokalt full storm 25. Fra mandag kveld periodevis nordvestlig stiv kuling 15. Tirsdag ettermiddag minkende.",
-      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Meget høye bølger: Rullingen blir tung og støtende. Synsvidden nedsettes.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
+      "slutt": "2026-11-10T21:00:00+00:00",
+      "beskrivelse": "Tirsdag forsastt periodevis nordvestlig stiv kuling 15. Tirsdag kveld minkende.",
+      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk. Meget høye bølger: Rullingen blir tung og støtende. Synsvidden nedsettes.",
+      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
