@@ -491,7 +491,13 @@
     "fb_post": "1343803192154866_122115975891509504",
     "fb_story": "1618899255847775",
     "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
+    "limit": 1,
+    "ig_reels": "18196621561397695",
+    "fb_reels": "1856048979075619",
+    "reels": {
+      "gun": "2026-11-10",
+      "dilim": "morgen"
+    }
   },
   "14-omkomne-etter-boligbrann-i-taiyuan-i-kina": {
     "tarih": "2026-11-09T07:10:03.353Z",
