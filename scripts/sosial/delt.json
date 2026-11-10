@@ -1,8 +1,8 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 26,
-      "kadar": "2026-11-10T09:06:37.181Z"
+      "sayi": 27,
+      "kadar": "2026-11-10T21:07:48.329Z"
     }
   },
   "flere-fly-rammet-av-bombetrusler-i-europeisk-luftrom": {
@@ -527,7 +527,9 @@
     "tarih": "2026-11-09T13:11:48.528Z",
     "ig_story": "18034241564884831",
     "fb_post": "1343803192154866_122116128045509504",
-    "fb_story": "1468116315511263"
+    "fb_story": "1468116315511263",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "fylkesvei-854-stengt-etter-kvikkleireskred-i-malselv": {
     "tarih": "2026-11-09T13:12:38.233Z",
@@ -588,5 +590,11 @@
     "ig_story": "17933480736166452",
     "fb_post": "1343803192154866_122116343259509504",
     "fb_story": "2185580405366895"
+  },
+  "svindel-for-438-millioner-kroner-i-forste-halvar-2026": {
+    "tarih": "2026-11-10T09:08:03.431Z",
+    "ig_story": "17918058231556369",
+    "fb_post": "1343803192154866_122116381263509504",
+    "fb_story": "948803258200755"
   }
 }
