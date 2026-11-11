@@ -5,26 +5,6 @@
       "kadar": "2026-11-11T21:09:12.963Z"
     }
   },
-  "smartlegen-far-ansvaret-for-a-drive-ellingsrudhjemmet-og-langerudhjemmet": {
-    "tarih": "2026-11-04T13:14:09.886Z",
-    "ig_story": "17989310049092937",
-    "fb_post": "1343803192154866_122114450847509504",
-    "fb_story": "1899049057733067",
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
-  "regjeringen-varsler-nye-tiltak-for-datasentre-og-kraftbruk": {
-    "tarih": "2026-11-04T13:14:49.303Z",
-    "ig_story": "18138050977639090",
-    "fb_post": "1343803192154866_122114451141509504",
-    "fb_story": "1777639320213458"
-  },
-  "boligprisene-falt-1-prosent-i-oktober": {
-    "tarih": "2026-11-04T15:20:44.878Z",
-    "ig_story": "18120359177056786",
-    "fb_post": "1343803192154866_122114479551509504",
-    "fb_story": "1010369431318228"
-  },
   "damp-og-vannlekkasje-pa-gronland-i-oslo": {
     "tarih": "2026-11-04T17:18:01.258Z",
     "ig_story": "17867585667676544",
@@ -566,5 +546,11 @@
     "ig_story": "18140685199728132",
     "fb_post": "1343803192154866_122116748517509504",
     "fb_story": "1457760983129162"
+  },
+  "stavanger-universitetssjukehus-foreslar-a-redusere-bemanningen-med-250-arsverk": {
+    "tarih": "2026-11-11T17:08:26.701Z",
+    "ig_story": "18133639627885839",
+    "fb_post": "1343803192154866_122116803669509504",
+    "fb_story": "1440863677667560"
   }
 }
