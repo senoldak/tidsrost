@@ -1,15 +1,9 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 28,
-      "kadar": "2026-11-11T09:08:27.201Z"
+      "sayi": 29,
+      "kadar": "2026-11-11T21:09:12.963Z"
     }
-  },
-  "demokratene-sikret-flertall-i-kongressen-etter-brakvalg-i-usa": {
-    "tarih": "2026-11-04T09:08:00.167Z",
-    "ig_story": "17892894360456645",
-    "fb_post": "1343803192154866_122114393367509504",
-    "fb_story": "1125622410208612"
   },
   "innvandrere-mellom-20-og-39-ar-faerre-star-utenfor-arbeid-og-utdanning": {
     "tarih": "2026-11-04T09:08:38.642Z",
@@ -540,5 +534,25 @@
     "ig_story": "18023341409728003",
     "fb_post": "1343803192154866_122116658847509504",
     "fb_story": "1695315865285371"
+  },
+  "norges-bank-risikobildet-for-det-finansielle-systemet-preges-av-okt-usikkerhet": {
+    "tarih": "2026-11-11T09:08:20.667Z",
+    "ig_story": "18100575854105223",
+    "fb_post": "1343803192154866_122116680597509504",
+    "fb_story": "2360342981406401"
+  },
+  "droner-over-baltikum-forte-til-varsler-og-kampfly-i-luften": {
+    "tarih": "2026-11-11T09:09:01.272Z",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1,
+    "ig_story": "17998440930044052",
+    "fb_post": "1343803192154866_122116680843509504",
+    "fb_story": "2021791945177397"
+  },
+  "fremskrittspartiet-krever-reforhandling-av-parisavtalen": {
+    "tarih": "2026-11-11T09:09:47.902Z",
+    "ig_story": "17874019899641600",
+    "fb_post": "1343803192154866_122116681053509504",
+    "fb_story": "4175283589437327"
   }
 }
