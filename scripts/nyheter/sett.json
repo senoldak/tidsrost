@@ -10707,7 +10707,55 @@
     "medier:cccd0b5e44a1ac83": "2026-11-11T09:00:56.679Z",
     "medier:aed9b4f832702dd8": "2026-11-11T09:00:56.679Z",
     "medier:4688f22895d3b9be": "2026-11-11T09:00:56.679Z",
-    "medier:01a78af641786834": "2026-11-11T09:00:56.679Z"
+    "medier:01a78af641786834": "2026-11-11T09:00:56.679Z",
+    "medier:bc7a76f2344dad30": "2026-11-11T11:00:58.564Z",
+    "regjeringen:3192255": "2026-11-11T11:00:58.564Z",
+    "skiforbundet:https://www.skiforbundet.no/om/nyheter/2026/11/slik-ser-du-ski-pa-tv-i-vinter/": "2026-11-11T11:00:58.564Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2407": "2026-11-11T11:00:58.564Z",
+    "arbeidstilsynet:https://www.arbeidstilsynet.no/nyheter/sjekk-tilgangene-i-altinn-for-17.-november": "2026-11-11T11:00:58.564Z",
+    "medier:36331b454250e377": "2026-11-11T11:00:58.564Z",
+    "medier:0eb4096a1706cbe0": "2026-11-11T11:00:58.564Z",
+    "regjeringen:3192315": "2026-11-11T11:00:58.564Z",
+    "medier:5ab814af2c6a5c6e": "2026-11-11T11:00:58.564Z",
+    "medier:bbbf33d19d65ac12": "2026-11-11T11:00:58.564Z",
+    "regjeringen:3192314": "2026-11-11T11:00:58.564Z",
+    "medier:0215b1f0362a4833": "2026-11-11T11:00:58.564Z",
+    "medier:c2f3bea339f8b4d2": "2026-11-11T11:00:58.564Z",
+    "medier:56a19faef5cb4d04": "2026-11-11T11:00:58.564Z",
+    "medier:3185f9524efc28f9": "2026-11-11T11:00:58.564Z",
+    "medier:0899a7a0f9ccb1c9": "2026-11-11T11:00:58.564Z",
+    "medier:c14f5cfd2e4b8623": "2026-11-11T11:00:58.564Z",
+    "medier:453f2fd068058b2a": "2026-11-11T11:00:58.564Z",
+    "medier:2528682536c10e16": "2026-11-11T11:00:58.564Z",
+    "medier:9e8284acc19b606e": "2026-11-11T11:00:58.564Z",
+    "medier:a5fa6a2627dc43a2": "2026-11-11T11:00:58.564Z",
+    "medier:2513a4efccdc1370": "2026-11-11T11:00:58.564Z",
+    "medier:3b28310d4ddbc054": "2026-11-11T11:00:58.564Z",
+    "medier:8034e902b4ccc8a3": "2026-11-11T11:00:58.564Z",
+    "medier:ecde71a4cd227b1b": "2026-11-11T11:00:58.564Z",
+    "medier:78889bc3da1e1fbc": "2026-11-11T11:00:58.564Z",
+    "medier:a6ec5b7e24501597": "2026-11-11T11:00:58.564Z",
+    "medier:6443572a7c73669a": "2026-11-11T11:00:58.564Z",
+    "medier:65c81fb870c535da": "2026-11-11T11:00:58.564Z",
+    "medier:e272a415f34cdce6": "2026-11-11T11:00:58.564Z",
+    "medier:7f6b1c217a2d2bf7": "2026-11-11T11:00:58.564Z",
+    "medier:94ee06843c7670ee": "2026-11-11T11:00:58.564Z",
+    "medier:84a83854ccf34b75": "2026-11-11T11:00:58.564Z",
+    "medier:4d402c98172cb5ed": "2026-11-11T11:00:58.564Z",
+    "medier:55c8201afd800e66": "2026-11-11T11:00:58.564Z",
+    "medier:c3e33e59858fd3f0": "2026-11-11T11:00:58.564Z",
+    "met:icing:bns:2026-11-11": "2026-11-11T11:00:58.564Z",
+    "regjeringen:3192316": "2026-11-11T11:00:58.564Z",
+    "medier:fc1574a615be4f0e": "2026-11-11T11:00:58.564Z",
+    "medier:3aafd8f01a224eb8": "2026-11-11T11:00:58.564Z",
+    "medier:4078222bf866e021": "2026-11-11T11:00:58.564Z",
+    "medier:4fb66c9a2d8bb6d2": "2026-11-11T11:00:58.564Z",
+    "medier:8855ef5248414e86": "2026-11-11T11:00:58.564Z",
+    "medier:2ab61ffbf0637aaa": "2026-11-11T11:00:58.564Z",
+    "medier:8345c01ef116e052": "2026-11-11T11:00:58.564Z",
+    "medier:5328a97f3cbfda36": "2026-11-11T11:00:58.564Z",
+    "medier:9ef46cd962454069": "2026-11-11T11:00:58.564Z",
+    "medier:02c4e46bb39df930": "2026-11-11T11:00:58.564Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -10765,36 +10813,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:d935c6a6d952b0ae": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-08T11:02:20.463Z"
-    },
-    "medier:76359314dfe3b245": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-08T11:02:20.463Z"
-    },
-    "medier:157d6606f0dd7a17": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-08T11:02:20.463Z"
-    },
-    "medier:3de14175183453d6": {
-      "p": 48,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-08T11:02:20.463Z"
-    },
-    "medier:2d06f928718aa402": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-08T11:02:20.463Z"
-    },
-    "skiskyting:https://skiskyting.no/?p=53178": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-08T11:02:20.463Z"
-    },
     "medier:85e4804dc687397f": {
       "p": 15,
       "v": "b34cb0de5bde",
@@ -12364,6 +12382,111 @@
       "p": 20,
       "v": "b34cb0de5bde",
       "t": "2026-11-11T09:03:16.965Z"
+    },
+    "medier:36331b454250e377": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "medier:5ab814af2c6a5c6e": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "medier:0215b1f0362a4833": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "medier:3185f9524efc28f9": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "medier:fc1574a615be4f0e": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "medier:a5fa6a2627dc43a2": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "medier:3b28310d4ddbc054": {
+      "p": 42,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "medier:642b519cdd329c61": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "medier:ecde71a4cd227b1b": {
+      "p": 48,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "medier:65c81fb870c535da": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "medier:7f6b1c217a2d2bf7": {
+      "p": 62,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "medier:fa41bab149e4ff39": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "medier:55c8201afd800e66": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "medier:5328a97f3cbfda36": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "regjeringen:3192255": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "regjeringen:3192316": {
+      "p": 76,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "regjeringen:3192315": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "regjeringen:3192314": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "skiforbundet:https://www.skiforbundet.no/om/nyheter/2026/11/slik-ser-du-ski-pa-tv-i-vinter/": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2407": {
+      "p": 58,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
+    },
+    "arbeidstilsynet:https://www.arbeidstilsynet.no/nyheter/sjekk-tilgangene-i-altinn-for-17.-november": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T11:03:26.926Z"
     }
   }
 }
