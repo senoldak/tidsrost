@@ -10664,7 +10664,50 @@
     "medier:2b19b4112ca641d9": "2026-11-11T07:00:54.453Z",
     "medier:a0da8f647ec7c986": "2026-11-11T07:00:54.453Z",
     "medier:9c56d177219ecb2b": "2026-11-11T07:00:54.453Z",
-    "medier:58ba07fce24b394f": "2026-11-11T07:00:54.453Z"
+    "medier:58ba07fce24b394f": "2026-11-11T07:00:54.453Z",
+    "medier:a20910c688e3118d": "2026-11-11T09:00:56.679Z",
+    "regjeringen:3192045": "2026-11-11T09:00:56.679Z",
+    "nkom:05381431-73c1-415b-a151-03f49e44e2aa": "2026-11-11T09:00:56.679Z",
+    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/motsyklisk-kapitalbuffer-for-banker-fjerde-kvartal-2026/": "2026-11-11T09:00:56.679Z",
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/veiarbeidskjoretoy-varsler-bilister-i-sanntid--gir-bedre-trafikksikkerhet/": "2026-11-11T09:00:56.679Z",
+    "havforskning:https://www.hi.no/hi/nyheter/2026/november/sa-mykje-e-vitamin-treng-oppdrettslaksen-for-a-vere-frisk": "2026-11-11T09:00:56.679Z",
+    "sivilombudet:https://www.sivilombudet.no/?p=63947": "2026-11-11T09:00:56.679Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2385": "2026-11-11T09:00:56.679Z",
+    "medier:684c31ce030b1ea7": "2026-11-11T09:00:56.679Z",
+    "medier:883c82048ee44836": "2026-11-11T09:00:56.679Z",
+    "medier:0dcbef31c2b9d498": "2026-11-11T09:00:56.679Z",
+    "medier:1e9a8350bb3a6063": "2026-11-11T09:00:56.679Z",
+    "medier:be4d1d1246a238a2": "2026-11-11T09:00:56.679Z",
+    "medier:6e6286d55dff9db2": "2026-11-11T09:00:56.679Z",
+    "medier:5d2c4ef7417e67f5": "2026-11-11T09:00:56.679Z",
+    "medier:7e61f0feafdb20a8": "2026-11-11T09:00:56.679Z",
+    "medier:80c6d215735aae20": "2026-11-11T09:00:56.679Z",
+    "medier:052c284471042098": "2026-11-11T09:00:56.679Z",
+    "medier:1b03d43d5a876b17": "2026-11-11T09:00:56.679Z",
+    "medier:5c965cd484d1eb6d": "2026-11-11T09:00:56.679Z",
+    "medier:e39b1b172a712bc5": "2026-11-11T09:00:56.679Z",
+    "medier:b3fa569036c12744": "2026-11-11T09:00:56.679Z",
+    "medier:0e6ee0e3f275e038": "2026-11-11T09:00:56.679Z",
+    "medier:e1f720ba843e7c94": "2026-11-11T09:00:56.679Z",
+    "medier:3620ecbb3098a9a4": "2026-11-11T09:00:56.679Z",
+    "medier:431f4603ab98b450": "2026-11-11T09:00:56.679Z",
+    "medier:dd09ac292c7bfcd9": "2026-11-11T09:00:56.679Z",
+    "medier:4d09d03e509e589c": "2026-11-11T09:00:56.679Z",
+    "medier:b77e6b027ec5d8c8": "2026-11-11T09:00:56.679Z",
+    "medier:95ce5a4d7e41ec18": "2026-11-11T09:00:56.679Z",
+    "met:snow:akershus-oslo-ostfold-vestfold-nedre-buskerud-og-sorlige-innlandet:2026-11-12": "2026-11-11T09:00:56.679Z",
+    "norgesbank-presse:d08b2abe-576f-4ad3-854b-6bd3d24936d4": "2026-11-11T09:00:56.679Z",
+    "medier:b2ee9c598c9ae8fc": "2026-11-11T09:00:56.679Z",
+    "medier:0772927b3297dd0f": "2026-11-11T09:00:56.679Z",
+    "medier:d2085575e41a7817": "2026-11-11T09:00:56.679Z",
+    "medier:00bb65ec1371ed58": "2026-11-11T09:00:56.679Z",
+    "medier:3d4736e7dca22399": "2026-11-11T09:00:56.679Z",
+    "medier:d51c5ef8618d8f42": "2026-11-11T09:00:56.679Z",
+    "medier:01937a31bc1de13f": "2026-11-11T09:00:56.679Z",
+    "medier:cccd0b5e44a1ac83": "2026-11-11T09:00:56.679Z",
+    "medier:aed9b4f832702dd8": "2026-11-11T09:00:56.679Z",
+    "medier:4688f22895d3b9be": "2026-11-11T09:00:56.679Z",
+    "medier:01a78af641786834": "2026-11-11T09:00:56.679Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -12226,6 +12269,101 @@
       "p": 25,
       "v": "b34cb0de5bde",
       "t": "2026-11-11T07:02:10.023Z"
+    },
+    "medier:684c31ce030b1ea7": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "medier:be4d1d1246a238a2": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "medier:7e61f0feafdb20a8": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "medier:5c965cd484d1eb6d": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "medier:b3fa569036c12744": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "medier:00bb65ec1371ed58": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "medier:3620ecbb3098a9a4": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "medier:da7522f03176020c": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "medier:01937a31bc1de13f": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "medier:dd09ac292c7bfcd9": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "medier:b77e6b027ec5d8c8": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "regjeringen:3192045": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "nkom:05381431-73c1-415b-a151-03f49e44e2aa": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "norgesbank-presse:d08b2abe-576f-4ad3-854b-6bd3d24936d4": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/motsyklisk-kapitalbuffer-for-banker-fjerde-kvartal-2026/": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/veiarbeidskjoretoy-varsler-bilister-i-sanntid--gir-bedre-trafikksikkerhet/": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "havforskning:https://www.hi.no/hi/nyheter/2026/november/sa-mykje-e-vitamin-treng-oppdrettslaksen-for-a-vere-frisk": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "sivilombudet:https://www.sivilombudet.no/?p=63947": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2385": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T09:03:16.965Z"
     }
   }
 }
