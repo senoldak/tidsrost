@@ -10835,7 +10835,33 @@
     "medier:1cfe8b9c472d1164": "2026-11-11T15:00:55.604Z",
     "medier:6fac0745a6fb6db7": "2026-11-11T15:00:55.604Z",
     "medier:80d9831e923149f4": "2026-11-11T15:00:55.604Z",
-    "medier:fff2be27101a262a": "2026-11-11T15:00:55.604Z"
+    "medier:fff2be27101a262a": "2026-11-11T15:00:55.604Z",
+    "medier:7b331ae36be1ed40": "2026-11-11T17:01:03.571Z",
+    "medier:fceee7cd101d4b01": "2026-11-11T17:01:03.571Z",
+    "medier:eff0bcf3b29fc16a": "2026-11-11T17:01:03.571Z",
+    "medier:9ae5d2e994d243c1": "2026-11-11T17:01:03.571Z",
+    "medier:46971834e8e0fba8": "2026-11-11T17:01:03.571Z",
+    "medier:c9282f23872bbd7b": "2026-11-11T17:01:03.571Z",
+    "medier:b67138574548946e": "2026-11-11T17:01:03.571Z",
+    "medier:6b62288e0f35134f": "2026-11-11T17:01:03.571Z",
+    "regjeringen:3192412": "2026-11-11T17:01:03.571Z",
+    "handball:https://www.handball.no/nyheter/2026/11/andersson-det-finnes-utrolig-mye-positivt-a-bygge-videre-pa/": "2026-11-11T17:01:03.571Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168784": "2026-11-11T17:01:03.571Z",
+    "medier:cdb4bd08ada3d31e": "2026-11-11T17:01:03.571Z",
+    "medier:1acfe659670ab252": "2026-11-11T17:01:03.571Z",
+    "medier:29e9db8c60bab75f": "2026-11-11T17:01:03.571Z",
+    "medier:986eda72107effad": "2026-11-11T17:01:03.571Z",
+    "medier:f6530908c8fc7dc3": "2026-11-11T17:01:03.571Z",
+    "medier:24430ba2deed5a4c": "2026-11-11T17:01:03.571Z",
+    "medier:904f69485faec4e8": "2026-11-11T17:01:03.571Z",
+    "medier:aebc371923b90093": "2026-11-11T17:01:03.571Z",
+    "medier:d7fb5a94e5d934a0": "2026-11-11T17:01:03.571Z",
+    "medier:2949135c9800e76b": "2026-11-11T17:01:03.571Z",
+    "medier:5343f601a2b67ac0": "2026-11-11T17:01:03.571Z",
+    "medier:173219c251a35247": "2026-11-11T17:01:03.571Z",
+    "medier:cd5cff3dc1f88be8": "2026-11-11T17:01:03.571Z",
+    "medier:dad63b2ff4bc425e": "2026-11-11T17:01:03.571Z",
+    "regjeringen:3192419": "2026-11-11T17:01:03.571Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -10893,41 +10919,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:b45bcdc92df0984f": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-08T17:03:12.895Z"
-    },
-    "medier:e7f16fad56d8cacc": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-08T17:03:12.895Z"
-    },
-    "medier:5cb1227b52a653a6": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-08T17:03:12.895Z"
-    },
-    "medier:b71daa069f28dbe5": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-08T17:03:12.895Z"
-    },
-    "medier:624f1d24752c959b": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-08T17:03:12.895Z"
-    },
-    "medier:e809795727f2a5d4": {
-      "p": 52,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-08T17:03:12.895Z"
-    },
-    "handball:https://www.handball.no/nyheter/2026/11/tertnes-vant-thrillerkvalifiseringskamp-i-polen/": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-08T17:03:12.895Z"
-    },
     "medier:5eae38ace5a93fba": {
       "p": 40,
       "v": "b34cb0de5bde",
@@ -12602,6 +12593,61 @@
       "p": 25,
       "v": "b34cb0de5bde",
       "t": "2026-11-11T15:03:13.806Z"
+    },
+    "medier:aebc371923b90093": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T17:03:17.044Z"
+    },
+    "medier:1ab2af2a5e0c4347": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T17:03:17.044Z"
+    },
+    "medier:cdb4bd08ada3d31e": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T17:03:17.044Z"
+    },
+    "medier:29e9db8c60bab75f": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T17:03:17.044Z"
+    },
+    "medier:173219c251a35247": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T17:03:17.044Z"
+    },
+    "medier:24430ba2deed5a4c": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T17:03:17.044Z"
+    },
+    "regjeringen:3192412": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T17:03:17.044Z"
+    },
+    "regjeringen:3192419": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T17:03:17.044Z"
+    },
+    "handball:https://www.handball.no/nyheter/2026/11/andersson-det-finnes-utrolig-mye-positivt-a-bygge-videre-pa/": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T17:03:17.044Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168784": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T17:03:17.044Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168783": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-11T17:03:17.044Z"
     }
   }
 }
