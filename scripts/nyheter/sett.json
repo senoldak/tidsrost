@@ -11088,7 +11088,48 @@
     "ssb:14a6ff03-83b9-400b-849e-999a14188ae3": "2026-11-12T11:01:01.448Z",
     "medier:8a72da07972a39d5": "2026-11-12T11:01:01.448Z",
     "medier:b51f8194c8918137": "2026-11-12T11:01:01.448Z",
-    "medier:eda4ceebe35fd7ec": "2026-11-12T11:01:01.448Z"
+    "medier:eda4ceebe35fd7ec": "2026-11-12T11:01:01.448Z",
+    "medier:ff32714da693e8d9": "2026-11-12T13:00:59.594Z",
+    "medier:58ea322ce273ba99": "2026-11-12T13:00:59.594Z",
+    "medier:bd7d7bf4051962dd": "2026-11-12T13:00:59.594Z",
+    "medier:a3233a640f1ee52b": "2026-11-12T13:00:59.594Z",
+    "regjeringen:3192548": "2026-11-12T13:00:59.594Z",
+    "datatilsynet:https://www.datatilsynet.no/aktuelt/aktuelle-nyheter-2026/overtredelsesgebyr-til-social-garden/": "2026-11-12T13:00:59.594Z",
+    "skiforbundet:https://www.skiforbundet.no/om/nyheter/2026/11/webinar-om-stromstotte/": "2026-11-12T13:00:59.594Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2421": "2026-11-12T13:00:59.594Z",
+    "regjeringen:3192555": "2026-11-12T13:00:59.594Z",
+    "medier:85c691aa4348ed63": "2026-11-12T13:00:59.594Z",
+    "medier:7b03f392babac3c2": "2026-11-12T13:00:59.594Z",
+    "medier:963a5ee69900abdd": "2026-11-12T13:00:59.594Z",
+    "medier:8f623881e6d504a7": "2026-11-12T13:00:59.594Z",
+    "medier:5c995a0d2709a93c": "2026-11-12T13:00:59.594Z",
+    "medier:91b17316dce37562": "2026-11-12T13:00:59.594Z",
+    "medier:763a8295cf1849f5": "2026-11-12T13:00:59.594Z",
+    "medier:fb49e5e5baa6e23b": "2026-11-12T13:00:59.594Z",
+    "medier:a2d265f75f13e65d": "2026-11-12T13:00:59.594Z",
+    "medier:67d0b6902b6107d3": "2026-11-12T13:00:59.594Z",
+    "medier:3820fb6e3ec09ef9": "2026-11-12T13:00:59.594Z",
+    "medier:47dd4090cb6292f1": "2026-11-12T13:00:59.594Z",
+    "medier:4833b26e8f01e577": "2026-11-12T13:00:59.594Z",
+    "medier:7391554d63c035b8": "2026-11-12T13:00:59.594Z",
+    "medier:a54ab12df7dc5a68": "2026-11-12T13:00:59.594Z",
+    "medier:a926af7a92929057": "2026-11-12T13:00:59.594Z",
+    "medier:e22687af7b47bd2a": "2026-11-12T13:00:59.594Z",
+    "medier:3dd6ccc176ec28dd": "2026-11-12T13:00:59.594Z",
+    "medier:a7d3ef4b27051660": "2026-11-12T13:00:59.594Z",
+    "medier:57cc4d4e87d9ffed": "2026-11-12T13:00:59.594Z",
+    "medier:79f5e88670464801": "2026-11-12T13:00:59.594Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168789": "2026-11-12T13:00:59.594Z",
+    "medier:d35672ec85631b00": "2026-11-12T13:00:59.594Z",
+    "medier:949e69cb9255cddc": "2026-11-12T13:00:59.594Z",
+    "medier:2cc785d768ffbf0c": "2026-11-12T13:00:59.594Z",
+    "medier:642725429881044f": "2026-11-12T13:00:59.594Z",
+    "medier:cf3e3e2e9335755f": "2026-11-12T13:00:59.594Z",
+    "met:blowingSnow:deler-av-fjellet-i-sor-norge:2026-11-14": "2026-11-12T13:00:59.594Z",
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/ringerike-og-buskerud-snofall-gir-store-trafikale-utfordringer/": "2026-11-12T13:00:59.594Z",
+    "medier:c95ce54b1a80d1bd": "2026-11-12T13:00:59.594Z",
+    "medier:1aeee8e4738fdbdc": "2026-11-12T13:00:59.594Z",
+    "medier:b467a5adcc65a491": "2026-11-12T13:00:59.594Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -11146,106 +11187,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:baf07ed28c7f2ecb": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "medier:b380c7f9a293e33d": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "medier:bd9897f6ddee761d": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "medier:1faeb89bdf7be2e9": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "medier:81d715d042cdbcbc": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "medier:1d248ec9d7955fb5": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "medier:264e922f137ea402": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "medier:986318cf347ebe88": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "medier:f2c9066e8ac5c35c": {
-      "p": 73,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "medier:0a06cbbd7424506b": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "medier:0f17ba82b0b0569e": {
-      "p": 74,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "medier:3f079e1599f038f9": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "medier:324bf7e2150e1253": {
-      "p": 76,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "medier:df412d10a1e4c212": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "mattilsynet:https://www.mattilsynet.no/fisk-og-akvakultur/oppdrettsanlegg/nye-krav-til-rapportering-av-tap-i-oppdrett-fra-januar-2027": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/omfattande-tiltak-skal-sikre-e136-gjennom-sjogata-i-alesund/": {
-      "p": 52,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "skiskyting:https://skiskyting.no/?p=53192": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168760": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2343": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
-    "arbeidstilsynet:https://www.arbeidstilsynet.no/nyheter/hoyere-minstelonn-fra-6.-november": {
-      "p": 58,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-09T13:03:16.913Z"
-    },
     "medier:79e744c50b985e33": {
       "p": 82,
       "v": "b34cb0de5bde",
@@ -12985,6 +12926,86 @@
       "p": 40,
       "v": "b34cb0de5bde",
       "t": "2026-11-12T11:03:39.185Z"
+    },
+    "medier:a926af7a92929057": {
+      "p": 92,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-12T13:03:12.757Z"
+    },
+    "medier:85c691aa4348ed63": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-12T13:03:12.757Z"
+    },
+    "medier:c95ce54b1a80d1bd": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-12T13:03:12.757Z"
+    },
+    "medier:8f623881e6d504a7": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-12T13:03:12.757Z"
+    },
+    "medier:91b17316dce37562": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-12T13:03:12.757Z"
+    },
+    "medier:a2d265f75f13e65d": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-12T13:03:12.757Z"
+    },
+    "medier:3820fb6e3ec09ef9": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-12T13:03:12.757Z"
+    },
+    "medier:4833b26e8f01e577": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-12T13:03:12.757Z"
+    },
+    "medier:7391554d63c035b8": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-12T13:03:12.757Z"
+    },
+    "regjeringen:3192548": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-12T13:03:12.757Z"
+    },
+    "regjeringen:3192555": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-12T13:03:12.757Z"
+    },
+    "datatilsynet:https://www.datatilsynet.no/aktuelt/aktuelle-nyheter-2026/overtredelsesgebyr-til-social-garden/": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-12T13:03:12.757Z"
+    },
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/ringerike-og-buskerud-snofall-gir-store-trafikale-utfordringer/": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-12T13:03:12.757Z"
+    },
+    "skiforbundet:https://www.skiforbundet.no/om/nyheter/2026/11/webinar-om-stromstotte/": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-12T13:03:12.757Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168789": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-12T13:03:12.757Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2421": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-12T13:03:12.757Z"
     }
   }
 }
