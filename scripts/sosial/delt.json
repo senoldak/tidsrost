@@ -1,33 +1,9 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 30,
-      "kadar": "2026-11-12T19:06:55.514Z"
+      "sayi": 31,
+      "kadar": "2026-11-13T09:06:39.938Z"
     }
-  },
-  "abdul-el-sayed-valgt-inn-i-senatet-i-michigan": {
-    "tarih": "2026-11-05T19:09:14.364Z",
-    "ig_story": "18122205619980509",
-    "fb_post": "1343803192154866_122114877273509504",
-    "fb_story": "1800537797855147"
-  },
-  "e6-ulykker-ved-moss-og-rennebu-er-ferdig-handtert": {
-    "tarih": "2026-11-05T19:09:53.943Z",
-    "ig_story": "18105388883575613",
-    "fb_post": "1343803192154866_122114877567509504",
-    "fb_story": "1114990078090076"
-  },
-  "gjerpen-handball-slar-seg-konkurs": {
-    "tarih": "2026-11-05T19:10:27.306Z",
-    "ig_story": "17910819618581235",
-    "fb_post": "1343803192154866_122114877795509504",
-    "fb_story": "1428433758892349"
-  },
-  "melania-trump-onsker-varig-fred-i-ukraina-etter-olesjky-avtale": {
-    "tarih": "2026-11-05T19:11:01.915Z",
-    "ig_story": "18375970972211140",
-    "fb_post": "1343803192154866_122114878149509504",
-    "fb_story": "2521442714932957"
   },
   "erna-solberg-om-motene-med-donald-trump-vi-var-naive": {
     "tarih": "2026-11-05T23:06:11.684Z",
@@ -477,7 +453,9 @@
     "reels": {
       "gun": "2026-11-12",
       "dilim": "kveld"
-    }
+    },
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "husholdningsbudsjett": {
     "tarih": "2026-11-12T07:07:47.587Z",
@@ -514,5 +492,11 @@
     "ig_story": "17899757430681521",
     "fb_post": "1343803192154866_122117089359509504",
     "fb_story": "1099248126435198"
+  },
+  "kort-fortalt-12-november-2026": {
+    "tarih": "2026-11-12T21:06:55.226Z",
+    "ig_story": "18120600338092007",
+    "fb_post": "1343803192154866_122117123943509504",
+    "fb_story": "2229111174312493"
   }
 }
