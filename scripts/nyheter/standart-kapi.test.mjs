@@ -106,8 +106,8 @@ test('acil durdurma açıksa tur biter (true) ve neden loglanır; kapalıyken s�
 });
 
 // ── vaktsjef onayı: iki turda onay yoksa yayımlanmaz (bekle) ─────────────────────────────
-const avsnitt = 'Regjeringen la fram forslaget onsdag og la vekt på at ordningen skal gjelde alle kommuner i landet fra neste år. ';
-const body = avsnitt.repeat(20).trim();
+// Hver setning er ulik: språkporten stopper tekster med gjentatte setninger.
+const body = Array.from({ length: 20 }, (_, i) => `Regjeringen la fram forslaget onsdag og la vekt på at ordningen skal gjelde ${['alle kommuner', 'større byer', 'små bygder', 'kystkommunene', 'fjellområdene'][i % 5]} ${['nord', 'sør', 'øst', 'vest'][i % 4]} i landet fra neste år, slik forslag nummer ${['ett', 'to', 'tre', 'fire', 'fem', 'seks', 'sju', 'åtte', 'ni', 'ti', 'elleve', 'tolv', 'tretten', 'fjorten', 'femten', 'seksten', 'sytten', 'atten', 'nitten', 'tjue'][i]} viser.`).join(' ');
 const kilde = `${body}\n\nKilde.`;
 const utkast = { title: 'Regjeringen foreslår ny ordning for kommunene', description: 'Forslaget gjelder alle kommuner.', body };
 

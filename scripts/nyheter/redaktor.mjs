@@ -4,9 +4,13 @@
 //   1. Kesin (yapay zekâsız) kontroller: alıntılar, rakamlar, özel isimler kaynakta var mı?
 //   2. Kontrol masası (vaktsjef): olgu, atfetme, başlık, hassas konular.
 //   3. Sorun varsa yazara düzelttirme (en fazla 2 tur).
-//   4. Norveççe redaksiyon (språkvask): dilbilgisi, bokmål, yazım kuralları, çeviri kokan ifadeler.
-//      Onay turu (2) ile redaksiyon (4) tek çağrıda yapılır (vurderOgVask); onay gelmezse ayrı språkvask çağrısı kalır.
+//   4. Norveççe redaksiyon (språkvask): onay turundan ayrı Gemini çağrısı. Kod, yazım/dil sorunlarını ve sözlükte
+//      olmayan kelimeleri listeleyip verir. Sonuç kesin kontrollerden ya da uzunluk sınırından (%90-115) geçmezse bir
+//      kez, bozulan kontrol söylenerek yeniden denenir; yine geçmezse redaksiyondan önceki hâl korunur ve merknader'e
+//      "Språkvask forkastet" düşülür (sessizce atılmaz).
 //   5. Son kesin kontrol: redaksiyon olguları bozmadı mı?
+//   6. Dil kapısı (sprakPort): rettNb + sprakProblemerNb; kesin sorun kalırsa bir redaksiyon turu daha, yine kalırsa
+//      stopp ("språk: ...") ve haber yayınlanmaz.
 // Son kontrolde uydurma alıntı ya da kaynakta olmayan rakam kalırsa haber yayınlanmaz (stopp).
 // Uzunluk da kesin kontroldür: MIN_ORD_UTKAST altındaki taslak düzeltme turlarında uzatılır, olmazsa yayınlanmaz.
 import { gemini } from './lib.mjs';
@@ -14,6 +18,8 @@ import { RELATIV_TID, MEDIER, lokalRett, ilgiliKisim } from './tekstverktoy.mjs'
 import { ordtelling } from '../../src/lib/ordtelling.mjs';
 import { olcekKontrol } from './olcek.mjs';
 import { naerhet, kildefriOmskriving } from './faktaark.mjs';
+import { readFileSync, readdirSync } from 'node:fs';
+import { rettNb, sprakProblemerNb, kesinProblemer as kesinNb, problemListe, korpusOrd, ukjenteOrdNb } from './dil-nb.mjs';
 
 // ── Ortak yazım kuralları (bütün kaynakların istemlerinde) ─────────────
 
@@ -291,7 +297,7 @@ Nøkkelpunkter: ${sak.key_points.join(" | ")}` : ""}`,
   return svar ? { ...sak, ...svar } : sak;
 }
 
-// Redaksiyon kuralları (språkvask ve vurderOgVask ortak kullanır).
+// Redaksiyon kuralları (språkvask kullanır).
 const SPRAKVASK_REGLER = `Rett:
 - Grammatikk, rettskriving, tegnsetting og ordstilling på norsk bokmål (Språkrådets normer).
 - Oversettelsespreg og anglisismer: unaturlige konstruksjoner, direkte oversatte uttrykk, feil preposisjoner.
@@ -313,65 +319,161 @@ Ikke endre:
 
 // ── 4. Norveççe redaksiyon ─────────────────────────────────────────────
 
-export async function språkvask(sak) {
+// Yayımlanmış haberlerden (src/content/haberler/*/index.md gövdeleri) bilinen kelimeler; çalıştırma başına bir kez.
+const HABERLER_KLASORU = new URL('../../src/content/haberler/', import.meta.url);
+let korpusBuffer = null;
+export function haberKorpus() {
+  if (korpusBuffer) return korpusBuffer;
+  const tekster = [];
+  try {
+    for (const d of readdirSync(HABERLER_KLASORU, { withFileTypes: true })) {
+      if (!d.isDirectory()) continue;
+      try {
+        tekster.push(readFileSync(new URL(`${d.name}/index.md`, HABERLER_KLASORU), 'utf8').replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, ''));
+      } catch { /* klasörde index.md yok */ }
+    }
+  } catch { /* içerik klasörü yok */ }
+  korpusBuffer = korpusOrd(tekster);
+  return korpusBuffer;
+}
+
+const bodyOrd = (s) => ordtelling(s.body ?? '');
+const LENGDE_MIN = 0.9;
+const LENGDE_MAKS = 1.15;
+// Redaksiyon gövde uzunluğunu %90–115 aralığında tutmalı.
+export function sjekkVaskLengde(foer, etter) {
+  const a = bodyOrd(foer);
+  const b = bodyOrd(etter);
+  if (!a) return [];
+  return b < a * LENGDE_MIN || b > a * LENGDE_MAKS
+    ? [`Lengden endret seg for mye: brødteksten har ${b} ord, men var ${a} (skal ligge mellom ${Math.ceil(a * LENGDE_MIN)} og ${Math.floor(a * LENGDE_MAKS)} ord)`]
+    : [];
+}
+
+const sprakTekst = (sak) => [sak.body, sak.title, sak.description].filter(Boolean).join('\n');
+// Felt for felt: en ingress som gjentar første setning i brødteksten er ikke en gjentatt setning.
+const sprakProblemerSak = (sak) => [
+  ...sprakProblemerNb(sak.body ?? '', { brodtekst: true }),
+  ...sprakProblemerNb(sak.title ?? ''),
+  ...sprakProblemerNb(sak.description ?? ''),
+];
+
+// Kodens problemliste til redaksjonen: sikre språkfeil (dil-nb) + ord som ikke finnes i ordboka.
+async function problemerForVask(sak, kilde, opts = {}) {
+  const linjer = [];
+  const p = sprakProblemerSak(sak);
+  if (p.length) linjer.push(problemListe(p));
+  const ukjente = await ukjenteOrdNb(sprakTekst(sak), { korpus: opts.korpus ?? haberKorpus(), kilde, hent: opts.hent ?? globalThis.fetch, maksOppslag: 30 });
+  if (ukjente.length) linjer.push(`Disse ordene finnes ikke i ordboka. Rett dem bare hvis de faktisk er feilstavet: ${ukjente.join(', ')}`);
+  return linjer.join('\n');
+}
+
+/**
+ * Språkvask: eget KI-kall. problemer = ferdig formatert tekst (kodens problemliste), tom streng hvis ingen.
+ * tidligereFeil = hvilke kontroller forrige forsøk brøt (andre forsøk). Returnerer ny sak, eller null uten svar.
+ */
+export async function språkvask(sak, kilde, problemer = '', tidligereFeil = []) {
   const svar = await gemini({
     schema: TEKST_SKJEMA,
+    tenkning: 'medium',
+    sicaklik: 0.2,
     prompt: `Du er språkvasker (korrekturleser) i en norsk nettavis. Gjør en språkvask av saken under. Du skal BARE rette språket, aldri innholdet.
 
 ${SPRAKVASK_REGLER}
 
+I tillegg:
+- Behold lengden: brødteksten skal ha mellom 90 og 115 prosent av dagens antall ord. Ikke kort ned, ikke bygg ut.
+- Behold alle fakta, navn, tall og sitater uendret.
+- Engelske sitater eller engelske setninger oversettes til indirekte tale på norsk bokmål, uten anførselstegn.
+${problemer ? `\nKODEKONTROLLEN FANT DETTE (rett alt som er en reell feil):\n${problemer}\n` : ''}${tidligereFeil.length ? `\nFORRIGE FORSØK BLE FORKASTET FORDI:\n${tidligereFeil.map((f) => `- ${f}`).join('\n')}\nRett dette: ikke endre tall, navn eller sitater, og hold lengden.\n` : ''}
 Er teksten allerede korrekt, returner den uendret.
 
-Tittel: ${sak.title}
-Ingress: ${sak.description}
+KILDE (bare for å sjekke fakta; ikke hent formuleringer derfra):
+${ilgiliKisim(kilde, helTekst(sak), 14000)}
 
-${sak.body}
-${sak.why_matters ? `
-Hvorfor viktig: ${sak.why_matters}` : ""}${Array.isArray(sak.key_points) && sak.key_points.length ? `
-Nøkkelpunkter: ${sak.key_points.join(" | ")}` : ""}`,
+SAKEN:
+${sakBlokk(sak)}`,
   });
-  return svar ? { ...sak, ...svar } : sak;
+  return svar?.title && svar?.description && svar?.body ? { ...sak, ...svar } : null;
 }
 
-// ── 4b. Birleşik: son onay + redaksiyon tek çağrıda (Katman 2.4) ───────
-
-const VURDER_VASK_SKJEMA = {
-  type: 'object',
-  properties: {
-    ...VURDERING_SKJEMA.properties,
-    redigert: { ...TEKST_SKJEMA, description: 'Språkvasket versjon av utkastet (bare hvis godkjent=true; ellers utelat)' },
-  },
-  required: VURDERING_SKJEMA.required,
-};
-
 /**
- * Vaktsjefens kontroll og språkvasken i ett KI-kall. Kesin kontroller her de eskisi gibi çalışır.
- * Döner: { godkjent, problemer, vasket }. vasket yalnızca godkjent=true ve sonuç kesin kontrollerden
- * geçiyorsa (olgular bozulmamış, uzunluk kuralı tutuyor) dolu olur; yoksa undefined (çağıran onaylı
- * ham metni korur).
+ * Vaktsjefens kontroll (olgu, tilskriving, tittel, følsomme tema). Ingen omskriving her; språkvasken er et eget kall.
+ * Döner: { godkjent, problemer }.
  */
 export async function vurderOgVask(sak, kilde, { pressemelding = true, medier = false } = {}) {
   const problemer = kesinProblemer(sak, kilde, medier);
-  const svar = await gemini({
-    schema: VURDER_VASK_SKJEMA,
-    prompt: `${vurderPrompt(sak, kilde, { pressemelding, medier })}
-
-OPPGAVE 2 (bare hvis du godkjenner utkastet): Gjør en språkvask av utkastet og returner den i feltet «redigert». Du skal BARE rette språket, aldri innholdet. Hvis du ikke godkjenner, utelat «redigert» og beskriv problemene i «problemer».
-
-${SPRAKVASK_REGLER}
-
-Er teksten allerede korrekt, returner den uendret i «redigert».`,
-  });
+  const svar = await gemini({ schema: VURDERING_SKJEMA, prompt: vurderPrompt(sak, kilde, { pressemelding, medier }) });
   if (!svar) return { godkjent: false, problemer: [...problemer, 'KI-kontroll kunne ikke kjøres'] };
   problemer.push(...svar.problemer);
-  const godkjent = svar.godkjent && problemer.length === 0;
-  let vasket;
-  if (godkjent && svar.redigert?.title && svar.redigert?.description && svar.redigert?.body) {
-    const kandidat = { ...sak, ...svar.redigert };
-    // Onaylı metin bütün kesin kontrollerden geçmişti; redaksiyon da hepsinden (ad, medya, başlık dahil) geçmeli.
-    if (kesinProblemer(kandidat, kilde, medier).length === 0) vasket = kandidat;
+  return { godkjent: svar.godkjent && problemer.length === 0, problemer };
+}
+
+// Vasket kandidat må ikke bryte noen kontroll som utkastet ikke allerede brøt, og må holde lengden.
+const nyeFeilEtterVask = (foer, kandidat, kilde, medier) => {
+  const gamle = new Set(kesinProblemer(foer, kilde, medier));
+  return [...kesinProblemer(kandidat, kilde, medier).filter((f) => !gamle.has(f)), ...sjekkVaskLengde(foer, kandidat)];
+};
+
+/**
+ * Språkvask med kontroll: ett forsøk, ved brutte kontroller ett til med feilene oppgitt, deretter faller vi tilbake
+ * til utkastet (loggført). Döner { sak, merknad? }.
+ */
+export async function vaskMedKontroll(utkast, kilde, opts = {}, problemer = null) {
+  const liste = problemer ?? (await problemerForVask(utkast, kilde, opts));
+  let feil = [];
+  for (let forsok = 0; forsok < 2; forsok++) {
+    const kandidat = await språkvask(utkast, kilde, liste, feil);
+    if (!kandidat) { feil = ['KI-svar manglet']; continue; }
+    feil = nyeFeilEtterVask(utkast, kandidat, kilde, opts.medier);
+    if (!feil.length) return { sak: kandidat };
   }
-  return { godkjent, problemer, vasket };
+  const merknad = `Språkvask forkastet: ${feil.join(' / ')}`;
+  console.warn(`  ${merknad}`);
+  return { sak: utkast, merknad };
+}
+
+// ── 6. Dil kapısı ──────────────────────────────────────────────────────
+
+const rettAlle = (s) => ({
+  ...s,
+  title: rettNb(s.title ?? ''),
+  description: rettNb(s.description ?? ''),
+  body: rettNb(s.body ?? ''),
+  ...(typeof s.why_matters === 'string' && { why_matters: rettNb(s.why_matters) }),
+  ...(Array.isArray(s.key_points) && { key_points: s.key_points.map((k) => rettNb(String(k))) }),
+});
+
+/**
+ * Yayından önceki kod kapısı. rettNb uygulanır; kesin dil hatası (yazım, çift kelime, çevrilmemiş İngilizce, tekrar
+ * eden cümle) kalırsa yalnız onlarla bir redaksiyon turu daha; yine kalırsa feil dolu döner (haber yayınlanmaz).
+ * Döner { sak, feil: string[], merknader: string[] }.
+ */
+export async function sprakPort(sak, kilde, opts = {}) {
+  const merknader = [];
+  const kontroll = (s) => kesinNb(sprakProblemerSak(s));
+  const sjekk = (s) => sluttProblemer(s, kilde, opts.medier).length;
+  const rett1 = (s) => {
+    const r = rettAlle(s);
+    return sjekk(r) <= sjekk(s) ? r : s; // rettNb skal aldri gjøre de faktiske kontrollene verre
+  };
+  let ut = rett1(sak);
+  let kesin = kontroll(ut);
+  if (kesin.length) {
+    const kandidat = await språkvask(ut, kilde, problemListe(kesin));
+    if (kandidat && nyeFeilEtterVask(ut, kandidat, kilde, opts.medier).length === 0) {
+      ut = rett1(kandidat);
+      kesin = kontroll(ut);
+    } else {
+      merknader.push('Språkvask i språkporten forkastet: ny tekst brøt kontroller eller KI-svar manglet');
+    }
+  }
+  if (kesin.length) {
+    const feil = kesin.map((k) => k.mesaj);
+    console.warn(`  Språkporten stoppet saken: ${feil.join(' / ')}`);
+    return { sak: ut, feil: feil.map((f) => `språk: ${f}`), merknader };
+  }
+  return { sak: ut, feil: [], merknader };
 }
 
 // ── Tüm süreç ──────────────────────────────────────────────────────────
@@ -395,14 +497,11 @@ export async function redigerSak(sak, kilde, opts = {}) {
     console.log(r ? `  faktaark: oran ${r.oranFoer.toFixed(2)} → ${r.oranEtter.toFixed(2)}` : '  faktaark: ny tekst ikke brukt');
     if (r) utkast = r.sak;
   }
-  // Katman 2.4: onay turu aynı çağrıda redaksiyonu da yapar; onaylanırsa ayrı språkvask çağrısı gerekmez.
-  let ferdigVasket;
+  // Onay turu yalnız karar verir; redaksiyon ayrı çağrıdır (vaskMedKontroll).
   let onaylandi = false;
   for (let runde = 0; runde < ONAY_RUNDER; runde++) {
     const vurdering = await vurderOgVask(utkast, kilde, opts);
     if (vurdering.godkjent) {
-      // Redaksiyon kesin kontrolden geçmediyse onaylı ham metin korunur (ayrı çağrı yapılmaz).
-      ferdigVasket = vurdering.vasket ?? utkast;
       onaylandi = true;
       break;
     }
@@ -415,16 +514,10 @@ export async function redigerSak(sak, kilde, opts = {}) {
   // Onay gelmediyse yayınlanmaz: sonraki tur yeniden dener.
   if (!onaylandi) return { sak: utkast, merknader, stopp: [], bekle: true };
 
-  const foer = utkast;
-  const vasket = ferdigVasket;
-  // Redaksiyon olguları değiştirdiyse redaksiyondan önceki hâli kullan.
-  const nyeFeil = [...sjekkSitater(helTekst(vasket), kilde), ...sjekkTall(helTekst(vasket), kilde)];
-  const foerFeil = [...sjekkSitater(helTekst(foer), kilde), ...sjekkTall(helTekst(foer), kilde)];
-  if (nyeFeil.length > foerFeil.length) {
-    merknader.push('Språkvasken endret fakta og ble forkastet');
-  } else {
-    utkast = vasket;
-  }
+  // Redaksiyon: ayrı çağrı; kontrolden geçmezse bir kez daha denenir, yine geçmezse önceki hâl (loglanır).
+  const vask = await vaskMedKontroll(utkast, kilde, opts);
+  if (vask.merknad) merknader.push(vask.merknad);
+  utkast = vask.sak;
 
   // Son kesin kontrol: uydurma alıntı, kaynakta olmayan rakam, Nynorsk metin ya da "i går" gibi
   // göreli zaman kalmışsa bir kez daha düzelttir; yine kalırsa yayınlama.
@@ -447,7 +540,7 @@ export async function redigerSak(sak, kilde, opts = {}) {
       'All tekst utenom direkte sitater skal være på bokmål, også om kilden er på nynorsk.',
       'Tall som ikke står i kilden skal fjernes.',
     ]);
-    if (sluttsjekk(sisteForsok).length < stopp.length) utkast = await språkvask(sisteForsok);
+    if (sluttsjekk(sisteForsok).length < stopp.length) utkast = (await språkvask(sisteForsok, kilde)) ?? sisteForsok;
     if (sluttsjekk(utkast).length > sluttsjekk(sisteForsok).length) utkast = sisteForsok;
     stopp = sluttsjekk(utkast);
   }
@@ -462,6 +555,16 @@ export async function redigerSak(sak, kilde, opts = {}) {
     const nyTittel = { ...utkast, title: utenAvsenderprefiks(ny.title ?? utkast.title) };
     if (sluttsjekk(nyTittel).length === 0 && sjekkTittel(nyTittel.title).length < tittelFeil.length) utkast = nyTittel;
     else merknader.push(...tittelFeil);
+  }
+  // Dil kapısı: yalnız başka sorun yoksa (zaten durmuş haber için ek KI çağrısı harcanmaz).
+  if (!stopp.length) {
+    const port = await sprakPort(utkast, kilde, opts);
+    utkast = port.sak;
+    merknader.push(...port.merknader);
+    if (port.feil.length) {
+      merknader.push(...port.feil);
+      return { sak: utkast, merknader, stopp: port.feil, bekle: false };
+    }
   }
   return { sak: utkast, merknader, stopp, bekle: false };
 }
