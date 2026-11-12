@@ -1,21 +1,9 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 29,
-      "kadar": "2026-11-11T21:09:12.963Z"
+      "sayi": 30,
+      "kadar": "2026-11-12T19:06:55.514Z"
     }
-  },
-  "vannlekkasje-i-oslo-skapte-kaos-og-rammet-1500-boliger-med-varmetap": {
-    "tarih": "2026-11-04T21:06:13.696Z",
-    "ig_story": "18452843497122941",
-    "fb_post": "1343803192154866_122114568921509504",
-    "fb_story": "1113016504831806"
-  },
-  "oslo-reduserer-antall-elsparkesykler-og-setter-16-arsgrense": {
-    "tarih": "2026-11-04T23:05:33.831Z",
-    "ig_story": "18030573182916398",
-    "fb_post": "1343803192154866_122114591481509504",
-    "fb_story": "1159209323281746"
   },
   "norske-filmer-hadde-31-3-prosent-av-kinobesoket-i-2025": {
     "tarih": "2026-11-05T07:07:33.757Z",
@@ -495,7 +483,9 @@
     "tarih": "2026-11-11T09:08:20.667Z",
     "ig_story": "18100575854105223",
     "fb_post": "1343803192154866_122116680597509504",
-    "fb_story": "2360342981406401"
+    "fb_story": "2360342981406401",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "droner-over-baltikum-forte-til-varsler-og-kampfly-i-luften": {
     "tarih": "2026-11-11T09:09:01.272Z",
@@ -558,5 +548,23 @@
     "ig_story": "18122421916962532",
     "fb_post": "1343803192154866_122116853661509504",
     "fb_story": "1813508683033109"
+  },
+  "grunnbelopet-er-136-549-kroner-slik-reguleres-folketrygden-og-pensjonene-i-2026": {
+    "tarih": "2026-11-12T07:07:10.743Z",
+    "ig_story": "18136998133676142",
+    "fb_post": "1343803192154866_122116956105509504",
+    "fb_story": "979275081456905"
+  },
+  "husholdningsbudsjett": {
+    "tarih": "2026-11-12T07:07:47.587Z",
+    "ig_story": "17994938310107539",
+    "fb_post": "1343803192154866_122116956399509504",
+    "fb_story": "1107596861901058"
+  },
+  "snofall-skaper-glatte-veier-i-sor-norge": {
+    "tarih": "2026-11-12T07:08:22.296Z",
+    "ig_story": "17897194755681487",
+    "fb_post": "1343803192154866_122116956615509504",
+    "fb_story": "1747979803994311"
   }
 }
