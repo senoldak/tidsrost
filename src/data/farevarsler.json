@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-12T23:05:41.231Z",
+  "hentet": "2026-11-13T01:03:20.241Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-12T23:04:45+00:00",
+  "sistEndretHosMet": "2026-11-13T01:01:40+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.20261112111104.091",
@@ -95,19 +95,6 @@
       "domene": "hav",
       "start": "2026-11-12T22:00:00+00:00",
       "slutt": "2026-11-13T12:00:00+00:00",
-      "beskrivelse": "Nordvest sterk kuling 20 m/s.",
-      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.261112220000.7010_1_0",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Fladen",
-      "domene": "hav",
-      "start": "2026-11-12T22:00:00+00:00",
-      "slutt": "2026-11-13T01:00:00+00:00",
       "beskrivelse": "Nordvest sterk kuling 20 m/s.",
       "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
