@@ -11449,7 +11449,41 @@
     "medier:5b75c5841a222f7c": "2026-11-13T13:00:54.308Z",
     "medier:5357c01026ec5fc7": "2026-11-13T13:00:54.308Z",
     "medier:f7c7ab23db8ff75b": "2026-11-13T13:00:54.308Z",
-    "medier:e28c6634c99c28ee": "2026-11-13T13:00:54.308Z"
+    "medier:e28c6634c99c28ee": "2026-11-13T13:00:54.308Z",
+    "medier:81aab0e131d7a78d": "2026-11-13T15:01:00.019Z",
+    "medier:845568b41403c9ed": "2026-11-13T15:01:00.019Z",
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/arbeid-i-rv.-tunsbergtunnelen-i-voss-herad": "2026-11-13T15:01:00.019Z",
+    "medier:a7ca1b9931672181": "2026-11-13T15:01:00.019Z",
+    "medier:add9b2b4430bb719": "2026-11-13T15:01:00.019Z",
+    "medier:591a47fe86392966": "2026-11-13T15:01:00.019Z",
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/nye-fotobokser-pa-e8-tas-i-bruk/": "2026-11-13T15:01:00.019Z",
+    "medier:1faf380a87dbbccd": "2026-11-13T15:01:00.019Z",
+    "medier:016658d432491102": "2026-11-13T15:01:00.019Z",
+    "medier:abf7a218a9d17411": "2026-11-13T15:01:00.019Z",
+    "medier:ed477b6d7008552f": "2026-11-13T15:01:00.019Z",
+    "medier:dcbacb533dcafbad": "2026-11-13T15:01:00.019Z",
+    "medier:1e0043cbcfcf5716": "2026-11-13T15:01:00.019Z",
+    "medier:b01066f76756c657": "2026-11-13T15:01:00.019Z",
+    "medier:ee8086c9f4a0b52c": "2026-11-13T15:01:00.019Z",
+    "medier:bf915f93d2f759a1": "2026-11-13T15:01:00.019Z",
+    "medier:6153d75faeca5982": "2026-11-13T15:01:00.019Z",
+    "medier:91fb4e2fd3bd914a": "2026-11-13T15:01:00.019Z",
+    "medier:6cc6c6e99e2f9d44": "2026-11-13T15:01:00.019Z",
+    "medier:14b3eb12db0e18e5": "2026-11-13T15:01:00.019Z",
+    "medier:49e311530da67603": "2026-11-13T15:01:00.019Z",
+    "medier:55a07575297519bb": "2026-11-13T15:01:00.019Z",
+    "medier:e56c13ffa7e12d4e": "2026-11-13T15:01:00.019Z",
+    "medier:eb195a45112d0ff4": "2026-11-13T15:01:00.019Z",
+    "medier:38fab144494bea88": "2026-11-13T15:01:00.019Z",
+    "norgesbank:valutauke:2026-11-13": "2026-11-13T15:01:00.019Z",
+    "medier:bbd4e90b9e466bd1": "2026-11-13T15:01:00.019Z",
+    "medier:838d6309661dd19e": "2026-11-13T15:01:00.019Z",
+    "medier:780ef40dc64b62ef": "2026-11-13T15:01:00.019Z",
+    "medier:d511771198a539e7": "2026-11-13T15:01:00.019Z",
+    "medier:7f9164f54f7df5b5": "2026-11-13T15:01:00.019Z",
+    "medier:4b4f47508f6f7d86": "2026-11-13T15:01:00.019Z",
+    "medier:3fa3be43e249f59a": "2026-11-13T15:01:00.019Z",
+    "medier:f5b3d3b2f505917e": "2026-11-13T15:01:00.019Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -11512,81 +11546,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:a1f852b38989e732": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-10T15:03:20.169Z"
-    },
-    "medier:9eacd4eedb8be13e": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-10T15:03:20.169Z"
-    },
-    "medier:60088e3bb9d7d564": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-10T15:03:20.169Z"
-    },
-    "medier:265e884e48e980cb": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-10T15:03:20.169Z"
-    },
-    "medier:da318844ea71001e": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-10T15:03:20.169Z"
-    },
-    "medier:793b83fd7464d851": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-10T15:03:20.169Z"
-    },
-    "medier:0d8edc3a73fac704": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-10T15:03:20.169Z"
-    },
-    "medier:eb7a02bf862987ac": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-10T15:03:20.169Z"
-    },
-    "medier:4da890834d33e508": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-10T15:03:20.169Z"
-    },
-    "medier:d5543e3b046e70a6": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-10T15:03:20.169Z"
-    },
-    "medier:1faaf5e18987d919": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-10T15:03:20.169Z"
-    },
-    "regjeringen:3192180": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-10T15:03:20.169Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168774": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-10T15:03:20.169Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168772": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-10T15:03:20.169Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168771": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-10T15:03:20.169Z"
-    },
     "medier:6a31219a20f68697": {
       "p": 85,
       "v": "b34cb0de5bde",
@@ -13191,6 +13150,91 @@
       "p": 35,
       "v": "b34cb0de5bde",
       "t": "2026-11-13T13:03:16.563Z"
+    },
+    "medier:81aab0e131d7a78d": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-13T15:05:43.975Z"
+    },
+    "medier:a7ca1b9931672181": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-13T15:05:43.975Z"
+    },
+    "medier:bbd4e90b9e466bd1": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-13T15:05:43.975Z"
+    },
+    "medier:3fa3be43e249f59a": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-13T15:05:43.975Z"
+    },
+    "medier:d4c2c341ae66af87": {
+      "p": 88,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-13T15:05:43.975Z"
+    },
+    "medier:1faf380a87dbbccd": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-13T15:05:43.975Z"
+    },
+    "medier:abf7a218a9d17411": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-13T15:05:43.975Z"
+    },
+    "medier:dcbacb533dcafbad": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-13T15:05:43.975Z"
+    },
+    "medier:7f9164f54f7df5b5": {
+      "p": 74,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-13T15:05:43.975Z"
+    },
+    "medier:b01066f76756c657": {
+      "p": 62,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-13T15:05:43.975Z"
+    },
+    "medier:6153d75faeca5982": {
+      "p": 48,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-13T15:05:43.975Z"
+    },
+    "medier:6cc6c6e99e2f9d44": {
+      "p": 52,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-13T15:05:43.975Z"
+    },
+    "medier:49e311530da67603": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-13T15:05:43.975Z"
+    },
+    "medier:eb195a45112d0ff4": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-13T15:05:43.975Z"
+    },
+    "medier:780ef40dc64b62ef": {
+      "p": 76,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-13T15:05:43.975Z"
+    },
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/arbeid-i-rv.-tunsbergtunnelen-i-voss-herad": {
+      "p": 32,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-13T15:05:43.975Z"
+    },
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/nye-fotobokser-pa-e8-tas-i-bruk/": {
+      "p": 58,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-13T15:05:43.975Z"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-13T13:09:38.746Z",
+  "hentet": "2026-11-13T15:12:12.378Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-13T13:09:30+00:00",
+  "sistEndretHosMet": "2026-11-13T15:11:06+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.261113100000.0845_7_0",
@@ -21,32 +21,6 @@
       "konsekvenser": "Stor fare for at småbåter kan synke: Det ventes sterk isvekst på fronten/styrhuset til båten. Det er stor fare for at båten mister stabilitet, velter og synker. Sterk isvekst kan gjøre det vanskelig å få fjernet isen raskt nok før uhellet er ute. Kraftig isvekst på overflater: Det er stor risiko for en betydelig mengde is på overflater på båter som ferdes i området. Isen vil føre til glatte dekk, gelender og stiger, og operasjoner utendørs blir utfordrende. Redningsutstyr kan bli påvirket: Nedising av redningsteknisk utstyr kan forekomme, og isingen kan ødelegge samband- og kommunikasjonsutstyr.",
       "rad": "Kraftig isvekst på overflater: Fjern is raskt fra båten.",
       "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.20261112111104.091",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Åna-Sira - Karmøy",
-      "domene": "hav",
-      "start": "2026-11-11T20:00:00+00:00",
-      "slutt": "2026-11-13T14:00:00+00:00",
-      "beskrivelse": "Nord og nordvest stiv kuling 15 m/s. Fra torsdag kveld periodevis sterk kuling 20. Minkende fredag ettermiddag.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker. Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261112145013.058",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Lindesnes - Åna-Sira",
-      "domene": "hav",
-      "start": "2026-11-12T10:00:00+00:00",
-      "slutt": "2026-11-13T15:00:00+00:00",
-      "beskrivelse": "Fra torsdag ettermiddag nordvest periodevis stiv kuling 15 m/s, minkende fredag ettermiddag.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
       "id": "2.49.0.1.578.0.20261113075709.088",
