@@ -1,21 +1,9 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 32,
-      "kadar": "2026-11-13T21:09:09.536Z"
+      "sayi": 33,
+      "kadar": "2026-11-14T11:04:11.297Z"
     }
-  },
-  "susie-wiles-slutter-som-stabssjef-for-donald-trump": {
-    "tarih": "2026-11-06T19:07:14.187Z",
-    "ig_story": "18135072644508448",
-    "fb_post": "1343803192154866_122115209475509504",
-    "fb_story": "968537622568087"
-  },
-  "to-personer-kritisk-skadet-etter-frontkollisjon-pa-e6-i-eidsvoll": {
-    "tarih": "2026-11-06T19:07:48.054Z",
-    "ig_story": "18483151912112981",
-    "fb_post": "1343803192154866_122115209715509504",
-    "fb_story": "1883128632852853"
   },
   "statsbudsjettet-2027-folketrygden-pa-794-milliarder-kroner-er-storste-utgiftspost": {
     "tarih": "2026-11-07T07:06:55.599Z",
@@ -437,7 +425,9 @@
     "tarih": "2026-11-13T07:11:50.734Z",
     "ig_story": "18150575944574003",
     "fb_post": "1343803192154866_122117242845509504",
-    "fb_story": "1133161396301039"
+    "fb_story": "1133161396301039",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "oslo-s-rammet-av-jordfeil-og-togavsporing": {
     "tarih": "2026-11-13T07:12:24.003Z",
