@@ -1,8 +1,8 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 31,
-      "kadar": "2026-11-13T09:06:39.938Z"
+      "sayi": 32,
+      "kadar": "2026-11-13T21:09:09.536Z"
     }
   },
   "rekordvarm-oktober-malt-pa-verdensbasis": {
@@ -443,7 +443,9 @@
     "tarih": "2026-11-12T11:15:49.122Z",
     "ig_story": "18155400040550277",
     "fb_post": "1343803192154866_122117012445509504",
-    "fb_story": "956702457298520"
+    "fb_story": "956702457298520",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "nesten-90-000-ledige-stillinger-registrert-i-tredje-kvartal": {
     "tarih": "2026-11-12T11:16:31.580Z",
