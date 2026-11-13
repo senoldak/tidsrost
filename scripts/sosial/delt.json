@@ -5,14 +5,6 @@
       "kadar": "2026-11-13T21:09:09.536Z"
     }
   },
-  "rekordvarm-oktober-malt-pa-verdensbasis": {
-    "tarih": "2026-11-06T11:07:38.191Z",
-    "ig_story": "17890121001620790",
-    "fb_post": "1343803192154866_122115098421509504",
-    "fb_story": "2006500630014509",
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
   "to-personer-omkom-i-skolebussulykke-i-frankrike": {
     "tarih": "2026-11-06T11:08:19.100Z",
     "ig_story": "18009252467792162",
@@ -482,5 +474,11 @@
     "ig_story": "18029334935933584",
     "fb_post": "1343803192154866_122117243127509504",
     "fb_story": "1460646679564776"
+  },
+  "fire-dode-etter-droneangrep-mot-oljeraffineri-i-volgograd": {
+    "tarih": "2026-11-13T11:08:11.999Z",
+    "ig_story": "18660974929012709",
+    "fb_post": "1343803192154866_122117294793509504",
+    "fb_story": "2488656401623632"
   }
 }
