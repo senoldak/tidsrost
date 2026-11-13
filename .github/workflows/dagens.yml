@@ -1,0 +1,81 @@
+# Dagens oppsummering: ett avsnitt om dagens saker (Gemini + kodekontroll, ellers reserve; scripts/nyheter/dagens-oppsummering.mjs).
+# Skriver src/data/dagens/<dato>.json og forsiden public/dagens/<dato>.png, publiserer dagssiden i arkivet
+# (/arkiv/<dato>/) og varsler mecmua-saat-køen, som sender den til @tidsrost (Telegram) og LinkedIn-siden.
+# Tidsplan i mecmua-saat (Oslo 20:45; private mecmua, saat/src/ayarlar.js).
+name: Dagens oppsummering
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: dagens
+  cancel-in-progress: false
+
+jobs:
+  oppsummering:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - name: Installer avhengigheter
+        run: npm ci --no-audit --no-fund
+
+      - name: Skriv avsnittet
+        id: dagens
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_KULLANIM_DOSYASI: ${{ runner.temp }}/gemini-kullanim.json
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          GEMINI_ZINCIR: ${{ vars.GEMINI_ZINCIR }}
+          MOTOR_URL: ${{ vars.MOTOR_URL }}
+          MOTOR_ANAHTARI: ${{ secrets.MOTOR_ANAHTARI }}
+        run: node scripts/nyheter/dagens-oppsummering.mjs
+
+      - name: Commit
+        if: steps.dagens.outputs.yazildi == '1'
+        run: |
+          git config user.name "tidsrost-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/dagens public/dagens
+          git commit -m "Dagens oppsummering"
+          for i in 1 2 3 4 5; do
+            git pull --rebase -X theirs && git push && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 5))
+          done
+          exit 1
+
+      - name: Publiser nettstedet
+        if: steps.dagens.outputs.yazildi == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run yayinla.yml --ref "${{ github.ref_name }}"
+
+      # Køen venter selv til dagssiden har dagens metaetikett (inntil 90 min); tidlig varsel er ufarlig.
+      - name: Varsle køen
+        if: steps.dagens.outputs.bildir == '1'
+        env:
+          MOTOR_URL: ${{ vars.MOTOR_URL }}
+          MOTOR_ANAHTARI: ${{ secrets.MOTOR_ANAHTARI }}
+        run: node scripts/nyheter/dagens-oppsummering.mjs --bildir
+
+      - name: Rapporter Gemini-bruk
+        if: always()
+        continue-on-error: true
+        env:
+          GEMINI_KULLANIM_DOSYASI: ${{ runner.temp }}/gemini-kullanim.json
+          MOTOR_URL: ${{ vars.MOTOR_URL }}
+          MOTOR_ANAHTARI: ${{ secrets.MOTOR_ANAHTARI }}
+        run: node scripts/nyheter/gemini-rapor.mjs tidsrost

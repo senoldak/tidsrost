@@ -8,25 +8,45 @@ import { SITE } from '../../lib/site';
 import { SITE_URL } from '../../lib/seo';
 import { ARKIV_TERSKEL, dagTittel, delPaDager, manedTittel } from '../../lib/arkiv.mjs';
 
+type Oppsummering = { dato: string; paragraf: string; yazan: 'gemini' | 'yedek' };
+
 export async function getStaticPaths() {
   const dager = delPaDager(await getNews());
+  // Dagens oppsummering (scripts/nyheter/dagens-oppsummering.mjs): avsnitt, forside og metaetiketter for mecmua-saat.
+  const oppsummeringer = new Map(
+    Object.values(import.meta.glob<Oppsummering>('/src/data/dagens/*.json', { eager: true, import: 'default' })).map((o) => [o.dato, o]),
+  );
   return dager.map((d, i) => ({
     params: { dag: d.dag },
     // Listen er nyeste først: forrige dag er neste element.
-    props: { d, forrige: dager[i + 1]?.dag, neste: dager[i - 1]?.dag },
+    props: { d, forrige: dager[i + 1]?.dag, neste: dager[i - 1]?.dag, oppsummering: oppsummeringer.get(d.dag) },
   }));
 }
 
-const { d, forrige, neste } = Astro.props;
+const { d, forrige, neste, oppsummering } = Astro.props as {
+  d: ReturnType<typeof delPaDager>[number];
+  forrige?: string;
+  neste?: string;
+  oppsummering?: Oppsummering;
+};
 const tittel = dagTittel(d.dag);
 const mnd = d.dag.slice(0, 7);
 ---
 
 <Base
   title={`Nyheter ${tittel}`}
-  description={`${d.artikler.length} artikler fra ${SITE.name} ${tittel}.`}
+  description={oppsummering?.paragraf ?? `${d.artikler.length} artikler fra ${SITE.name} ${tittel}.`}
   noindex={d.artikler.length < ARKIV_TERSKEL}
+  {...oppsummering && { image: `/dagens/${d.dag}.png`, imageWidth: 1200, imageHeight: 675, imageAlt: `Dagens oppsummering ${tittel}` }}
 >
+  {
+    oppsummering && (
+      <Fragment slot="head">
+        <meta name="gunun-ozeti" content={oppsummering.dato} />
+        <meta name="gunun-ozeti-paragraf" content={oppsummering.paragraf} />
+      </Fragment>
+    )
+  }
   <Brodsmuler
     items={[
       { name: 'Forsiden', url: `${SITE_URL}/` },
@@ -41,6 +61,17 @@ const mnd = d.dag.slice(0, 7);
       <a href={`/arkiv/#mnd-${mnd}`}>{manedTittel(mnd)} i kalenderen</a>
     </p>
   </header>
+  {
+    oppsummering && (
+      <section class="oppsummering" aria-labelledby="oppsummering-tittel">
+        <h2 id="oppsummering-tittel">Dagens oppsummering</h2>
+        <p>{oppsummering.paragraf}</p>
+        {oppsummering.yazan === 'gemini' && (
+          <p class="meta">Avsnittet er skrevet med kunstig intelligens på grunnlag av dagens saker og kontrollert maskinelt mot dem.</p>
+        )}
+      </section>
+    )
+  }
   <section class="day">
     {d.artikler.map((h) => <StoryRow haber={h} />)}
   </section>
@@ -51,6 +82,26 @@ const mnd = d.dag.slice(0, 7);
 </Base>
 
 <style>
+  .oppsummering {
+    margin: calc(var(--u) * 3) 0;
+    padding-bottom: calc(var(--u) * 3);
+    border-bottom: 1px solid var(--rule);
+    max-width: 42rem;
+  }
+  .oppsummering h2 {
+    font-family: var(--frame);
+    font-size: 1.125rem;
+    margin: 0 0 calc(var(--u) * 1);
+  }
+  .oppsummering p {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.55;
+  }
+  .oppsummering .meta {
+    margin-top: calc(var(--u) * 1.5);
+    font-size: 0.875rem;
+  }
   .dagnav {
     display: flex;
     justify-content: space-between;

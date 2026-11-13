@@ -151,6 +151,8 @@ const siteHaritasi = sitemap({
     if (yol.startsWith('/sok') || yol.endsWith('.json')) return false;
     // Ukesider er summen av dagssidene (noindex).
     if (yol.startsWith('/arkiv/uke/')) return false;
+    // Nyhetsoversikter (/oversikt/<dato>/<periode>/) er lister over saker med egne sider (noindex).
+    if (yol.startsWith('/oversikt/')) return false;
     if (yol.startsWith('/404') || kisaHaberler.has(yol)) return false;
     // Utrulling: KOMMUNE_SIDER_INDEKS=0 holder /kommune/<kommune>/ utenfor kartet (sidene får googlebot noindex); /kommune/ selv står.
     if (process.env.KOMMUNE_SIDER_INDEKS === '0' && /^\/kommune\/[^/]+\/$/.test(yol)) return false;

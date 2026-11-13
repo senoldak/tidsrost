@@ -1,0 +1,85 @@
+# Nyhetsoversikt (morgen/ettermiddag/kveld): saker siden forrige oversikt i én liste, uten KI (scripts/nyheter/oversikt.mjs).
+# Skriver src/data/oversikt/<dato>-<periode>.json og forsiden public/oversikt/<dato>-<periode>.png, publiserer siden
+# (/oversikt/<dato>/<periode>/) og varsler mecmua-saat-køen, som deler den på LinkedIn-siden.
+# Tidsplan i mecmua-saat (Oslo 10:45, 14:45, 18:45; private mecmua, saat/src/ayarlar.js).
+name: Nyhetsoversikt
+
+on:
+  workflow_dispatch:
+    inputs:
+      periode:
+        description: 'Periode (tom = etter klokka)'
+        required: false
+        default: ''
+        type: choice
+        options: ['', morgen, ettermiddag, kveld]
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: oversikt
+  cancel-in-progress: false
+
+jobs:
+  oversikt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      # Forsiden tegnes med sharp.
+      - name: Installer avhengigheter
+        run: npm ci --no-audit --no-fund
+
+      - name: Skriv oversikten
+        id: oversikt
+        env:
+          PERIODE: ${{ inputs.periode }}
+          MOTOR_URL: ${{ vars.MOTOR_URL }}
+          MOTOR_ANAHTARI: ${{ secrets.MOTOR_ANAHTARI }}
+        run: |
+          case "$PERIODE" in morgen|ettermiddag|kveld|"") ;; *) PERIODE="" ;; esac
+          node scripts/nyheter/oversikt.mjs $PERIODE
+
+      - name: Commit
+        if: steps.oversikt.outputs.yazildi == '1'
+        run: |
+          git config user.name "tidsrost-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/oversikt public/oversikt
+          git commit -m "Nyhetsoversikt"
+          for i in 1 2 3 4 5; do
+            git pull --rebase -X theirs && git push && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 5))
+          done
+          exit 1
+
+      - name: Publiser nettstedet
+        if: steps.oversikt.outputs.yazildi == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run yayinla.yml --ref "${{ github.ref_name }}"
+
+      # Køen henter siden når den er publisert (sidefeil teller som forsøk, fem forsøk à 10 min); derfor ventes det her til siden svarer.
+      - name: Varsle køen
+        if: steps.oversikt.outputs.yazildi == '1'
+        env:
+          MOTOR_URL: ${{ vars.MOTOR_URL }}
+          MOTOR_ANAHTARI: ${{ secrets.MOTOR_ANAHTARI }}
+        run: |
+          URL=$(node -e "import('./scripts/nyheter/oversikt.mjs').then(async m=>{const k=await m.sisteOversikt();console.log(m.oversiktUrl(k.dato,k.donem))})")
+          for i in $(seq 1 30); do
+            [ "$(curl -s -o /dev/null -w '%{http_code}' "$URL")" = "200" ] && break
+            sleep 30
+          done
+          node scripts/nyheter/oversikt.mjs --bildir

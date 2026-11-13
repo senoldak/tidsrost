@@ -1,0 +1,70 @@
+---
+// Nyhetsoversikt (morgen/ettermiddag/kveld): scripts/nyheter/oversikt.mjs skriver src/data/oversikt/<dato>-<donem>.json.
+// Liste over saker siden forrige oversikt; ingen ny tekst. noindex (sakene har egne sider). mecmua-saat leser
+// lenkene i <article> når oversikten deles på LinkedIn.
+import Base from '../../../layouts/Base.astro';
+import { dagTittel } from '../../../lib/arkiv.mjs';
+
+type Oversikt = { dato: string; donem: string; tittel: string; opprettet: string; saker: { slug: string; tittel: string; ingress: string }[] };
+
+export function getStaticPaths() {
+  const filer = import.meta.glob<Oversikt>('/src/data/oversikt/*.json', { eager: true, import: 'default' });
+  return Object.values(filer).map((o) => ({ params: { dato: o.dato, donem: o.donem }, props: { o } }));
+}
+
+const { o } = Astro.props as { o: Oversikt };
+const tittel = `${o.tittel} ${dagTittel(o.dato)}`;
+const beskrivelse = `${o.saker.length} saker fra tidsrøst: ${o.saker.slice(0, 3).map((s) => s.tittel).join(' · ')}`;
+---
+
+<Base
+  title={tittel}
+  description={beskrivelse}
+  image={`/oversikt/${o.dato}-${o.donem}.png`}
+  imageWidth={1200}
+  imageHeight={675}
+  imageAlt={`${o.tittel}: ${o.saker.length} saker`}
+  noindex
+>
+  <article class="oversikt">
+    <header class="page-head">
+      <h1 class="page-title">{o.tittel}</h1>
+      <p class="meta">
+        {dagTittel(o.dato)} · <a href={`/arkiv/${o.dato}/`}>Alle saker denne dagen</a>
+      </p>
+    </header>
+    <ol class="oversikt-liste">
+      {
+        o.saker.map((s) => (
+          <li>
+            <a href={`/artikkel/${s.slug}/`}>{s.tittel}</a>
+            {s.ingress && <p>{s.ingress}</p>}
+          </li>
+        ))
+      }
+    </ol>
+  </article>
+</Base>
+
+<style>
+  .oversikt-liste {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .oversikt-liste li {
+    border-top: 1px solid var(--rule, #d9dee4);
+    padding: calc(var(--u) * 2) 0;
+  }
+  .oversikt-liste li:last-child {
+    border-bottom: 1px solid var(--rule, #d9dee4);
+  }
+  .oversikt-liste a {
+    font-family: var(--frame);
+    font-weight: 700;
+    font-size: 1.15em;
+  }
+  .oversikt-liste p {
+    margin: calc(var(--u) * 0.75) 0 0;
+  }
+</style>
