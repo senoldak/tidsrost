@@ -1,0 +1,53 @@
+{
+  "dato": "2026-11-14",
+  "donem": "morgen",
+  "tittel": "Morgenoversikt",
+  "opprettet": "2026-11-14T09:50:57.915Z",
+  "saker": [
+    {
+      "slug": "fire-dode-etter-droneangrep-mot-oljeraffineri-i-volgograd",
+      "tittel": "Fire døde etter droneangrep mot oljeraffineri i Volgograd",
+      "ingress": "Et ukrainsk droneangrep har rammet et industriområde i Volgograd, mens Russland har gjennomført omfattende angrep mot ukrainsk infrastruktur og byer."
+    },
+    {
+      "slug": "kort-fortalt-13-november-2026",
+      "tittel": "Kort fortalt 13. november 2026",
+      "ingress": "Korte meldinger fra departementer, etater og Stortinget 13. november 2026, med lenke til hele saken hos avsenderen."
+    },
+    {
+      "slug": "microsoft-problemer-rammer-stortinget-og-departementer-verden-over",
+      "tittel": "Microsoft-problemer rammer Stortinget og departementer verden over",
+      "ingress": "Store globale tekniske problemer hos Microsoft skaper utfordringer for e-post og andre tjenester. Både Stortinget og flere departementer er rammet."
+    },
+    {
+      "slug": "kronen-svekket-seg-denne-uken-2",
+      "tittel": "Kronen svekket seg denne uken",
+      "ingress": "En euro kostet 10,57 kroner, 4 øre mer enn en uke tidligere. En dollar kostet 9,56 kroner, 14 øre mer enn en uke tidligere."
+    },
+    {
+      "slug": "vinterforsyninger-til-gaza-etter-dodelig-uvaer",
+      "tittel": "Vinterforsyninger til Gaza etter dødelig uvær",
+      "ingress": "FN og partnere ber om rask innførsel av livreddende vinterforsyninger til Gaza etter at kraftig regnvær nylig har ført til dødsfall og oversvømmelser."
+    },
+    {
+      "slug": "nasser-hospital-rammet-av-luftangrep-der-seks-ble-drept",
+      "tittel": "Nasser hospital rammet av luftangrep der seks ble drept",
+      "ingress": "Et luftangrep mot Nasser hospital onsdag kveld krevde seks menneskeliv og skadet 27 andre, ifølge FNs nyhetstjeneste."
+    },
+    {
+      "slug": "kjerneinflasjon-mot-maalet",
+      "tittel": "Kjerneinflasjonen har ligget over 2 prosent hver måned siden februar 2022",
+      "ingress": "Tolvmånedersendringen i KPI-JAE var 3,0 prosent i september 2026. Målet for KPI er 2 prosent, og Norges Banks anslag for hele året 2026 er 3,0 prosent."
+    },
+    {
+      "slug": "lonnsindeksen-forklart",
+      "tittel": "Lønnsindeksen forklart: den måler endring, ikke lønnsnivå",
+      "ingress": "Indeksen for avtalt månedslønn sto i 109,9 i 2. kvartal 2026. Bak tallet lå en gjennomsnittlig avtalt månedslønn på 58 970 kroner, mens snittet med tillegg og bonus var 63 700 kroner."
+    },
+    {
+      "slug": "flystansen-i-usa-opphevet",
+      "tittel": "Flystansen i USA opphevet",
+      "ingress": "Det amerikanske luftfartstilsynet FAA opphevet natt til lørdag den landsomfattende flystansen i USA. Over 14 000 flyavganger ble rammet av situasjonen."
+    }
+  ]
+}
