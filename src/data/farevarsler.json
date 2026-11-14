@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-14T07:06:02.545Z",
+  "hentet": "2026-11-14T09:04:24.293Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-14T07:05:28+00:00",
+  "sistEndretHosMet": "2026-11-14T09:04:01+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.20261113075709.088",
@@ -23,19 +23,6 @@
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/polare-lavtrykk"
     },
     {
-      "id": "2.49.0.1.578.0.261113220000.0839_1_0",
-      "niva": "gult",
-      "hendelse": "Storm",
-      "omrade": "B2",
-      "domene": "hav",
-      "start": "2026-11-13T22:00:00+00:00",
-      "slutt": "2026-11-14T09:00:00+00:00",
-      "beskrivelse": "Nordlig liten storm 22 m/s.",
-      "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
       "id": "2.49.0.1.578.0.261113220000.0840_1_0",
       "niva": "gult",
       "hendelse": "Storm",
@@ -44,19 +31,6 @@
       "start": "2026-11-13T22:00:00+00:00",
       "slutt": "2026-11-14T12:00:00+00:00",
       "beskrivelse": "Østlig liten storm 22 m/s fra 13 november 22:00 UTC til 14 november 00:00 UTC, sørøst sterk kuling 20 m/s fra 14 november 00:00 UTC til 12:00 UTC.",
-      "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.261113220000.0845_1_0",
-      "niva": "gult",
-      "hendelse": "Storm",
-      "omrade": "C2",
-      "domene": "hav",
-      "start": "2026-11-13T22:00:00+00:00",
-      "slutt": "2026-11-14T08:00:00+00:00",
-      "beskrivelse": "Nordlig periodevis liten storm 22 m/s",
       "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
@@ -101,14 +75,14 @@
       "web": null
     },
     {
-      "id": "2.49.0.1.578.0.20261113120349.084",
+      "id": "2.49.0.1.578.0.20261114084121.055",
       "niva": "gult",
       "hendelse": "Storm",
       "omrade": "Måløy - Svinøy",
       "domene": "hav",
       "start": "2026-11-14T00:00:00+00:00",
-      "slutt": "2026-11-14T12:00:00+00:00",
-      "beskrivelse": "Fra natt til lørdag sørlig stiv kuling 15 m/s, fra lørdag morgen sørvest sterk kuling 20, fra lørdag ettermiddag sørvest full storm 25.",
+      "slutt": "2026-11-15T11:00:00+00:00",
+      "beskrivelse": "I dag, lørdag, sørvest liten storm 22 m/s, i ettermiddag sterk storm 30, i kveld minking til sterk kuling 20, fra natt til søndag stiv kuling 15.",
       "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Meget høye bølger: Rullingen blir tung og støtende. Synsvidden nedsettes.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"

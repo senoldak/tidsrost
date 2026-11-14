@@ -11590,7 +11590,23 @@
     "medier:5a22c069387745ac": "2026-11-14T07:00:53.049Z",
     "medier:ee515d7bb26ff997": "2026-11-14T07:00:53.049Z",
     "medier:910da5710953dba3": "2026-11-14T07:00:53.049Z",
-    "medier:c77597a4c19db430": "2026-11-14T07:00:53.049Z"
+    "medier:c77597a4c19db430": "2026-11-14T07:00:53.049Z",
+    "medier:63f6ddb451ce5f05": "2026-11-14T09:01:07.885Z",
+    "regjeringen:3192976": "2026-11-14T09:01:07.885Z",
+    "skiforbundet:https://www.skiforbundet.no/om/nyheter/2026/11/klart-for-beitostolen/": "2026-11-14T09:01:07.885Z",
+    "medier:16e90cf272ca33f9": "2026-11-14T09:01:07.885Z",
+    "medier:54aa6ae37e725ab7": "2026-11-14T09:01:07.885Z",
+    "medier:a99de7b5716a19e1": "2026-11-14T09:01:07.885Z",
+    "medier:39c54f3856a672b2": "2026-11-14T09:01:07.885Z",
+    "medier:3abcfbb0862a7fac": "2026-11-14T09:01:07.885Z",
+    "medier:02884b172a7cf4b4": "2026-11-14T09:01:07.885Z",
+    "medier:2a409830474b136d": "2026-11-14T09:01:07.885Z",
+    "medier:8b6c2b5cc322c563": "2026-11-14T09:01:07.885Z",
+    "medier:fd490ef4ff14ab3f": "2026-11-14T09:01:07.885Z",
+    "medier:47ebf1991cced791": "2026-11-14T09:01:07.885Z",
+    "medier:b122778d2e19fc29": "2026-11-14T09:01:07.885Z",
+    "medier:558d4c43ce7a32f6": "2026-11-14T09:01:07.885Z",
+    "medier:ca534df771688dd9": "2026-11-14T09:01:07.885Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -11653,101 +11669,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:684c31ce030b1ea7": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "medier:be4d1d1246a238a2": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "medier:7e61f0feafdb20a8": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "medier:5c965cd484d1eb6d": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "medier:b3fa569036c12744": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "medier:00bb65ec1371ed58": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "medier:3620ecbb3098a9a4": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "medier:da7522f03176020c": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "medier:01937a31bc1de13f": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "medier:dd09ac292c7bfcd9": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "medier:b77e6b027ec5d8c8": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "regjeringen:3192045": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "nkom:05381431-73c1-415b-a151-03f49e44e2aa": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "norgesbank-presse:d08b2abe-576f-4ad3-854b-6bd3d24936d4": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/motsyklisk-kapitalbuffer-for-banker-fjerde-kvartal-2026/": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/veiarbeidskjoretoy-varsler-bilister-i-sanntid--gir-bedre-trafikksikkerhet/": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "havforskning:https://www.hi.no/hi/nyheter/2026/november/sa-mykje-e-vitamin-treng-oppdrettslaksen-for-a-vere-frisk": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "sivilombudet:https://www.sivilombudet.no/?p=63947": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2385": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T09:03:16.965Z"
-    },
     "medier:36331b454250e377": {
       "p": 45,
       "v": "b34cb0de5bde",
@@ -13302,6 +13223,26 @@
       "p": 45,
       "v": "b34cb0de5bde",
       "t": "2026-11-14T07:02:06.985Z"
+    },
+    "medier:16e90cf272ca33f9": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-14T09:03:36.280Z"
+    },
+    "medier:39c54f3856a672b2": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-14T09:03:36.280Z"
+    },
+    "regjeringen:3192976": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-14T09:03:36.280Z"
+    },
+    "skiforbundet:https://www.skiforbundet.no/om/nyheter/2026/11/klart-for-beitostolen/": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-14T09:03:36.280Z"
     }
   }
 }
