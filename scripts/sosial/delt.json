@@ -427,7 +427,13 @@
     "fb_post": "1343803192154866_122117242845509504",
     "fb_story": "1133161396301039",
     "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
+    "limit": 1,
+    "ig_reels": "18150191632602184",
+    "fb_reels": "1144375404755910",
+    "reels": {
+      "gun": "2026-11-14",
+      "dilim": "morgen"
+    }
   },
   "oslo-s-rammet-av-jordfeil-og-togavsporing": {
     "tarih": "2026-11-13T07:12:24.003Z",
