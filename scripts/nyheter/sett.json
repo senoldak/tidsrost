@@ -11666,7 +11666,26 @@
     "medier:2e7683f7a613ffb6": "2026-11-14T15:00:52.643Z",
     "medier:2898400acf50dcc6": "2026-11-14T15:00:52.643Z",
     "medier:31c377fd550dd79f": "2026-11-14T15:00:52.643Z",
-    "medier:e4e4648263c4e01d": "2026-11-14T15:00:52.643Z"
+    "medier:e4e4648263c4e01d": "2026-11-14T15:00:52.643Z",
+    "medier:ba08d620effe7e38": "2026-11-14T17:00:57.750Z",
+    "medier:327f7804043b9397": "2026-11-14T17:00:57.750Z",
+    "regjeringen:3192992": "2026-11-14T17:00:57.750Z",
+    "handball:https://www.handball.no/nyheter/2026/11/jevnspilt-pa-hjemmebane-for-storhamar/": "2026-11-14T17:00:57.750Z",
+    "medier:4b43c323c89f7554": "2026-11-14T17:00:57.750Z",
+    "medier:2ea13cea3ba7fab9": "2026-11-14T17:00:57.750Z",
+    "medier:73ce469e423b683b": "2026-11-14T17:00:57.750Z",
+    "medier:b8ac448c3d1ae685": "2026-11-14T17:00:57.750Z",
+    "medier:360506080beb41b4": "2026-11-14T17:00:57.750Z",
+    "medier:cffc025f893b896e": "2026-11-14T17:00:57.750Z",
+    "medier:cafb943537c52d3f": "2026-11-14T17:00:57.750Z",
+    "medier:b183d41b08e4ce36": "2026-11-14T17:00:57.750Z",
+    "medier:8043c7d87541315b": "2026-11-14T17:00:57.750Z",
+    "medier:11965ea38dbc001d": "2026-11-14T17:00:57.750Z",
+    "medier:23d6f6031aef3c80": "2026-11-14T17:00:57.750Z",
+    "medier:bb099cf858127174": "2026-11-14T17:00:57.750Z",
+    "medier:b07b29da232cbc05": "2026-11-14T17:00:57.750Z",
+    "medier:8f5de31a3790b73b": "2026-11-14T17:00:57.750Z",
+    "medier:39da71b402ad3e44": "2026-11-14T17:00:57.750Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -11729,61 +11748,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:aebc371923b90093": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T17:03:17.044Z"
-    },
-    "medier:1ab2af2a5e0c4347": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T17:03:17.044Z"
-    },
-    "medier:cdb4bd08ada3d31e": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T17:03:17.044Z"
-    },
-    "medier:29e9db8c60bab75f": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T17:03:17.044Z"
-    },
-    "medier:173219c251a35247": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T17:03:17.044Z"
-    },
-    "medier:24430ba2deed5a4c": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T17:03:17.044Z"
-    },
-    "regjeringen:3192412": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T17:03:17.044Z"
-    },
-    "regjeringen:3192419": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T17:03:17.044Z"
-    },
-    "handball:https://www.handball.no/nyheter/2026/11/andersson-det-finnes-utrolig-mye-positivt-a-bygge-videre-pa/": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T17:03:17.044Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168784": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T17:03:17.044Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168783": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-11T17:03:17.044Z"
-    },
     "medier:de51e8f965ba3b78": {
       "p": 75,
       "v": "b34cb0de5bde",
@@ -13233,6 +13197,46 @@
       "p": 15,
       "v": "b34cb0de5bde",
       "t": "2026-11-14T15:02:30.779Z"
+    },
+    "medier:457a28d321dec735": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-14T17:02:38.771Z"
+    },
+    "medier:4b43c323c89f7554": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-14T17:02:38.771Z"
+    },
+    "medier:8f5de31a3790b73b": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-14T17:02:38.771Z"
+    },
+    "medier:9e97c2eb43ea5529": {
+      "p": 88,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-14T17:02:38.771Z"
+    },
+    "medier:b74385e746b57026": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-14T17:02:38.771Z"
+    },
+    "medier:bb099cf858127174": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-14T17:02:38.771Z"
+    },
+    "regjeringen:3192992": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-14T17:02:38.771Z"
+    },
+    "handball:https://www.handball.no/nyheter/2026/11/jevnspilt-pa-hjemmebane-for-storhamar/": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-14T17:02:38.771Z"
     }
   }
 }
