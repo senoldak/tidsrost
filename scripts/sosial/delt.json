@@ -5,38 +5,6 @@
       "kadar": "2026-11-14T23:10:02.538Z"
     }
   },
-  "troms-og-nordlige-nordland-rammes-av-flom-og-skredfare-med-store-regnmengder": {
-    "tarih": "2026-11-07T13:06:09.745Z",
-    "ig_story": "18101498192559193",
-    "fb_post": "1343803192154866_122115480369509504",
-    "fb_story": "5536929983198283",
-    "ig_reels": "17898786399456225",
-    "fb_reels": "2979326485756804",
-    "reels": {
-      "gun": "2026-11-08",
-      "dilim": "morgen"
-    },
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
-  "sor-varanger-innbyggere-ma-koke-vannet-i-minst-en-maned": {
-    "tarih": "2026-11-07T17:05:46.525Z",
-    "ig_story": "18153539329526035",
-    "fb_post": "1343803192154866_122115534021509504",
-    "fb_story": "938463349226997"
-  },
-  "fem-personer-drept-i-skyteepisode-i-krakow": {
-    "tarih": "2026-11-07T17:06:24.253Z",
-    "ig_story": "17938745766409523",
-    "fb_post": "1343803192154866_122115534387509504",
-    "fb_story": "2361654754586059"
-  },
-  "martin-odegaard-avgjorde-for-arsenal-mot-hull": {
-    "tarih": "2026-11-07T19:05:34.980Z",
-    "ig_story": "17874524436637208",
-    "fb_post": "1343803192154866_122115559173509504",
-    "fb_story": "1560782222767814"
-  },
   "casper-ruud-utslatt-i-semifinalen-i-paris-masters": {
     "tarih": "2026-11-07T19:06:09.040Z",
     "ig_story": "18083696120714795",
@@ -490,5 +458,11 @@
     "ig_story": "18096630377182373",
     "fb_post": "1343803192154866_122117595645509504",
     "fb_story": "1793889295059641"
+  },
+  "nusa-og-haaland-senket-wales-pa-ullevaal": {
+    "tarih": "2026-11-14T19:06:03.453Z",
+    "ig_story": "18477251983191662",
+    "fb_post": "1343803192154866_122117725635509504",
+    "fb_story": "1164454429255120"
   }
 }
