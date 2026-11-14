@@ -1,8 +1,8 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 33,
-      "kadar": "2026-11-14T11:04:11.297Z"
+      "sayi": 34,
+      "kadar": "2026-11-14T23:10:02.538Z"
     }
   },
   "troms-og-nordlige-nordland-rammes-av-flom-og-skredfare-med-store-regnmengder": {
@@ -445,7 +445,9 @@
     "tarih": "2026-11-13T13:11:27.212Z",
     "ig_story": "18190179403433860",
     "fb_post": "1343803192154866_122117318703509504",
-    "fb_story": "2144199746202259"
+    "fb_story": "2144199746202259",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "vinterforsyninger-til-gaza-etter-dodelig-uvaer": {
     "tarih": "2026-11-13T17:09:07.789Z",
@@ -476,5 +478,11 @@
     "ig_story": "18120027235796532",
     "fb_post": "1343803192154866_122117574507509504",
     "fb_story": "1285377623762716"
+  },
+  "fugleinfluensa-pavist-i-kommersielt-fjorfehold-i-vestby-kommune": {
+    "tarih": "2026-11-14T11:10:17.811Z",
+    "ig_story": "18096630377182373",
+    "fb_post": "1343803192154866_122117595645509504",
+    "fb_story": "1793889295059641"
   }
 }
