@@ -26,6 +26,7 @@ const beskrivelse = `${o.saker.length} saker fra tidsrøst: ${o.saker.slice(0, 3
   imageAlt={`${o.tittel}: ${o.saker.length} saker`}
   noindex
 >
+  <meta slot="head" name="linkedin-gorsel" content={`https://tidsrost.com/oversikt/${o.dato}-${o.donem}-dikey.png`} />
   <article class="oversikt">
     <header class="page-head">
       <h1 class="page-title">{o.tittel}</h1>

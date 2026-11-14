@@ -95,11 +95,13 @@ export async function oversiktYaz({ simdi = new Date(), donem = donemSec(simdi),
   };
   await mkdir(path.dirname(dosya), { recursive: true });
   await writeFile(dosya, `${JSON.stringify(kayit, null, 2)}\n`, 'utf8');
+  // İki kapak: yatay (site, og:image) ve dikey -dikey.png (LinkedIn, linkedin-gorsel).
   if (kapakFn) {
-    const { png } = await kapakFn({ tittel: kayit.tittel, basliklar: saker.map((s) => s.tittel) });
-    const kapak = path.join(kok, 'public/oversikt', `${dato}-${donem}.png`);
-    await mkdir(path.dirname(kapak), { recursive: true });
-    await writeFile(kapak, png);
+    await mkdir(path.join(kok, 'public/oversikt'), { recursive: true });
+    for (const [bicim, ek] of [['kapak', ''], ['dikey', '-dikey']]) {
+      const { png } = await kapakFn({ tittel: kayit.tittel, basliklar: saker.map((s) => s.tittel), bicim });
+      await writeFile(path.join(kok, 'public/oversikt', `${dato}-${donem}${ek}.png`), png);
+    }
   }
   log(`Skrevet: ${path.relative(kok, dosya)} (${saker.length} saker)`);
   return kayit;

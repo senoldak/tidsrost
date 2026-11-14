@@ -48,6 +48,8 @@ test('oversiktYaz: son oversikt\'ten sonraki saklar, eskiden yeniye; taslak ve i
   assert.equal(k.tittel, 'Morgenoversikt');
   assert.deepEqual(kapak.basliklar, [SAKER.trafikk.title, SAKER.oslos.title]);
   assert.ok(await varMi(path.join(kok, 'public/oversikt/2026-11-13-morgen.png')));
+  assert.ok(await varMi(path.join(kok, 'public/oversikt/2026-11-13-morgen-dikey.png')));
+  assert.equal(kapak.bicim, 'dikey');
   const ikinci = await oversiktYaz({ simdi: new Date('2026-11-13T17:45:00Z'), kok, log: sessiz });
   assert.deepEqual(ikinci.saker.map((s) => s.slug), ['drone', 'kronen']);
   assert.equal((await sisteOversikt(kok)).donem, 'kveld');
@@ -79,6 +81,7 @@ test('oppsummeringYaz: geçerli paragraf gemini; istem bokmål; kapakta paragraf
   const kayit = JSON.parse(await readFile(path.join(kok, 'src/data/dagens/2026-11-13.json'), 'utf8'));
   assert.equal(kayit.paragraf, GECERLI);
   assert.ok(await varMi(path.join(kok, 'public/dagens/2026-11-13.png')));
+  assert.ok(await varMi(path.join(kok, 'public/dagens/2026-11-13-dikey.png')));
 });
 
 test('oppsummeringYaz: uydurma ad → yedek; Gemini hatası → yedek; ikinci çalışma null', async () => {

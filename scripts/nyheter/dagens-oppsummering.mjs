@@ -56,11 +56,14 @@ export async function oppsummeringYaz({ simdi = new Date(), kok = KOK, geminiFn,
   const kayit = { dato, paragraf: sonuc.paragraf, kimlikler: sonuc.kimlikler, yazan: sonuc.yazan, opprettet: simdi.toISOString() };
   await mkdir(path.dirname(dosya), { recursive: true });
   await writeFile(dosya, `${JSON.stringify(kayit, null, 2)}\n`, 'utf8');
+  // İki kapak: yatay (site, Telegram) ve dikey -dikey.png (LinkedIn, linkedin-gorsel).
   if (kapakFn) {
-    const { png } = await kapakFn({ tittel: 'Dagens oppsummering', basliklar: kapakSirasi(haberler, sonuc.kimlikler).map((h) => h.baslik), tohum: dato });
-    const kapak = path.join(kok, 'public/dagens', `${dato}.png`);
-    await mkdir(path.dirname(kapak), { recursive: true });
-    await writeFile(kapak, png);
+    await mkdir(path.join(kok, 'public/dagens'), { recursive: true });
+    const basliklar = kapakSirasi(haberler, sonuc.kimlikler).map((h) => h.baslik);
+    for (const [bicim, ek] of [['kapak', ''], ['dikey', '-dikey']]) {
+      const { png } = await kapakFn({ tittel: 'Dagens oppsummering', basliklar, tohum: dato, bicim });
+      await writeFile(path.join(kok, 'public/dagens', `${dato}${ek}.png`), png);
+    }
   }
   log(`Skrevet: ${path.relative(kok, dosya)} (${haberler.length} saker, ${sonuc.yazan})`);
   return { dato, yazan: sonuc.yazan };
