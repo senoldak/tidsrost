@@ -11804,7 +11804,20 @@
     "met:icing:b2:2026-11-16": "2026-11-15T11:00:59.484Z",
     "met:icing:c2:2026-11-16": "2026-11-15T11:00:59.484Z",
     "medier:a67616ae7badee3f": "2026-11-15T11:00:59.484Z",
-    "medier:81b4c2aac446a85a": "2026-11-15T11:00:59.484Z"
+    "medier:81b4c2aac446a85a": "2026-11-15T11:00:59.484Z",
+    "medier:fbb1e94d0f351847": "2026-11-15T13:00:55.608Z",
+    "medier:28a4ca23a83fca8c": "2026-11-15T13:00:55.608Z",
+    "medier:7014da26473f081c": "2026-11-15T13:00:55.608Z",
+    "medier:57a1f3e0373b9583": "2026-11-15T13:00:55.608Z",
+    "medier:eb7cf837f354cf32": "2026-11-15T13:00:55.608Z",
+    "medier:40e62abecfcf22d3": "2026-11-15T13:00:55.608Z",
+    "medier:eb1d668df8bcb821": "2026-11-15T13:00:55.608Z",
+    "medier:bbe87231fe4df38f": "2026-11-15T13:00:55.608Z",
+    "medier:a84450648bef4776": "2026-11-15T13:00:55.608Z",
+    "medier:185afe349c3f0d89": "2026-11-15T13:00:55.608Z",
+    "medier:a08c158ba77cefa9": "2026-11-15T13:00:55.608Z",
+    "medier:f91fe135735d1890": "2026-11-15T13:00:55.608Z",
+    "medier:091e385fb70f7531": "2026-11-15T13:00:55.608Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -11867,211 +11880,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:53eda7aeac46cefc": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "medier:bd7d7bf4051962dd": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "medier:eef145eb533aa26c": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "medier:8fbe31e840d64864": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "medier:22a8284a011e3ddf": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "medier:646c387938cc8490": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "medier:8a72da07972a39d5": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "medier:4abc0cea32ce2936": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "medier:19f9d76c53f284cf": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "medier:d35672ec85631b00": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "medier:a3233a640f1ee52b": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "medier:58ea322ce273ba99": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "medier:5ba0be978f58fbff": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "medier:764cba64fdae77cb": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "regjeringen:3192507": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "regjeringen:3192554": {
-      "p": 90,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "regjeringen:3192484": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "regjeringen:3192543": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "regjeringen:3192514": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "regjeringen:3192512": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "regjeringen:3192508": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "konkurransetilsynet:https://konkurransetilsynet.no/?p=56085": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "idrettsforbundet:https://www.idrettsforbundet.no/nyheter/2026/la-vaffelpressa-ga/": {
-      "p": 10,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "handball:https://www.handball.no/nyheter/2026/11/tilby-handballskole-til-ditt-lokalmiljo-i-vinterferien/": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2418": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T11:03:39.185Z"
-    },
-    "medier:a926af7a92929057": {
-      "p": 92,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T13:03:12.757Z"
-    },
-    "medier:85c691aa4348ed63": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T13:03:12.757Z"
-    },
-    "medier:c95ce54b1a80d1bd": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T13:03:12.757Z"
-    },
-    "medier:8f623881e6d504a7": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T13:03:12.757Z"
-    },
-    "medier:91b17316dce37562": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T13:03:12.757Z"
-    },
-    "medier:a2d265f75f13e65d": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T13:03:12.757Z"
-    },
-    "medier:3820fb6e3ec09ef9": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T13:03:12.757Z"
-    },
-    "medier:4833b26e8f01e577": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T13:03:12.757Z"
-    },
-    "medier:7391554d63c035b8": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T13:03:12.757Z"
-    },
-    "regjeringen:3192548": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T13:03:12.757Z"
-    },
-    "regjeringen:3192555": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T13:03:12.757Z"
-    },
-    "datatilsynet:https://www.datatilsynet.no/aktuelt/aktuelle-nyheter-2026/overtredelsesgebyr-til-social-garden/": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T13:03:12.757Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/ringerike-og-buskerud-snofall-gir-store-trafikale-utfordringer/": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T13:03:12.757Z"
-    },
-    "skiforbundet:https://www.skiforbundet.no/om/nyheter/2026/11/webinar-om-stromstotte/": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T13:03:12.757Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168789": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T13:03:12.757Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2421": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T13:03:12.757Z"
-    },
     "medier:8f6b79186488c243": {
       "p": 65,
       "v": "b34cb0de5bde",
@@ -13216,6 +13024,31 @@
       "p": 75,
       "v": "b34cb0de5bde",
       "t": "2026-11-15T11:02:42.364Z"
+    },
+    "medier:fbb1e94d0f351847": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-15T13:02:39.895Z"
+    },
+    "medier:57a1f3e0373b9583": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-15T13:02:39.895Z"
+    },
+    "medier:40e62abecfcf22d3": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-15T13:02:39.895Z"
+    },
+    "medier:a84450648bef4776": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-15T13:02:39.895Z"
+    },
+    "medier:28f8c7456f148618": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-15T13:02:39.895Z"
     }
   }
 }
