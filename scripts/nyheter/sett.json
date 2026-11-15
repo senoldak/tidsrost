@@ -11848,7 +11848,37 @@
     "medier:2c994b28140c9fd1": "2026-11-15T17:00:50.607Z",
     "medier:474001347b971c40": "2026-11-15T17:00:50.607Z",
     "medier:1d990f560d584bfe": "2026-11-15T17:00:50.607Z",
-    "medier:c867399a567a39ca": "2026-11-15T17:00:50.607Z"
+    "medier:c867399a567a39ca": "2026-11-15T17:00:50.607Z",
+    "medier:536b9ee227eb6410": "2026-11-15T19:00:53.985Z",
+    "medier:1eb3ed9988edb31d": "2026-11-15T19:00:53.985Z",
+    "medier:fa36c3b17980f330": "2026-11-15T19:00:53.985Z",
+    "medier:e972ed3b48acbdc5": "2026-11-15T19:00:53.985Z",
+    "medier:b04e57603dd772b5": "2026-11-15T19:00:53.985Z",
+    "medier:c83a64b7c7e63a26": "2026-11-15T19:00:53.985Z",
+    "medier:f1b8477d6f56678d": "2026-11-15T19:00:53.985Z",
+    "medier:b6d6ffce661d1166": "2026-11-15T19:00:53.985Z",
+    "medier:8dc48bce80a3973b": "2026-11-15T19:00:53.985Z",
+    "medier:034998703768b984": "2026-11-15T19:00:53.985Z",
+    "medier:ea96fa1514557682": "2026-11-15T19:00:53.985Z",
+    "medier:6272b10e25fbdd30": "2026-11-15T19:00:53.985Z",
+    "medier:9995098531fd9552": "2026-11-15T19:00:53.985Z",
+    "medier:1575839dec87ba64": "2026-11-15T19:00:53.985Z",
+    "mattilsynet:https://www.mattilsynet.no/dyr/dyresykdommer/fugleinfluensa/fugleinfluensa-pavist-i-fem-nye-kommersielle-fjorfehold": "2026-11-15T19:00:53.985Z",
+    "handball:https://www.handball.no/nyheter/2026/11/larvik-kvalifiserte-seg-til-european-league/": "2026-11-15T19:00:53.985Z",
+    "medier:87096d9033e2aa17": "2026-11-15T19:00:53.985Z",
+    "medier:dc5196cf76fefb5e": "2026-11-15T19:00:53.985Z",
+    "medier:90f7dfe1cc546aca": "2026-11-15T19:00:53.985Z",
+    "handball:https://www.handball.no/nyheter/2026/11/toff-bortekamp-for-molde/": "2026-11-15T19:00:53.985Z",
+    "medier:f5e2a1c36dd77cc5": "2026-11-15T19:00:53.985Z",
+    "medier:bff587f56b9c5104": "2026-11-15T19:00:53.985Z",
+    "handball:https://www.handball.no/nyheter/2026/11/tertnes-videre-til-ehf-european-league/": "2026-11-15T19:00:53.985Z",
+    "medier:321bad1d7b3f33c7": "2026-11-15T19:00:53.985Z",
+    "medier:7309804fe116af0f": "2026-11-15T19:00:53.985Z",
+    "medier:6383097ffc5bb7d2": "2026-11-15T19:00:53.985Z",
+    "medier:1722da1459e3c524": "2026-11-15T19:00:53.985Z",
+    "medier:4a20c72dbd9c91de": "2026-11-15T19:00:53.985Z",
+    "medier:f177fcd9b43daf2b": "2026-11-15T19:00:53.985Z",
+    "medier:4471629f0d81cc8b": "2026-11-15T19:00:53.985Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -11911,36 +11941,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:50d7bb5ce5a62eec": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T19:03:04.809Z"
-    },
-    "medier:e1ba17dc80ce70f2": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T19:03:04.809Z"
-    },
-    "medier:588a955f9a59ef83": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T19:03:04.809Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168793": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T19:03:04.809Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168794": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T19:03:04.809Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168792": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T19:03:04.809Z"
-    },
     "medier:7539b27a700027c5": {
       "p": 85,
       "v": "b34cb0de5bde",
@@ -13045,6 +13045,41 @@
       "p": 50,
       "v": "b34cb0de5bde",
       "t": "2026-11-15T17:02:59.294Z"
+    },
+    "medier:87096d9033e2aa17": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-15T19:02:38.844Z"
+    },
+    "medier:f5e2a1c36dd77cc5": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-15T19:02:38.844Z"
+    },
+    "medier:321bad1d7b3f33c7": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-15T19:02:38.844Z"
+    },
+    "mattilsynet:https://www.mattilsynet.no/dyr/dyresykdommer/fugleinfluensa/fugleinfluensa-pavist-i-fem-nye-kommersielle-fjorfehold": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-15T19:02:38.844Z"
+    },
+    "handball:https://www.handball.no/nyheter/2026/11/larvik-kvalifiserte-seg-til-european-league/": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-15T19:02:38.844Z"
+    },
+    "handball:https://www.handball.no/nyheter/2026/11/toff-bortekamp-for-molde/": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-15T19:02:38.844Z"
+    },
+    "handball:https://www.handball.no/nyheter/2026/11/tertnes-videre-til-ehf-european-league/": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-15T19:02:38.844Z"
     }
   }
 }
