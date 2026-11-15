@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-15T01:02:38.091Z",
+  "hentet": "2026-11-15T07:06:29.347Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-15T01:01:08+00:00",
+  "sistEndretHosMet": "2026-11-15T07:05:40+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.20261114084121.055",
@@ -153,19 +153,6 @@
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
-      "id": "2.49.0.1.578.0.20261113121615.060",
-      "niva": "gult",
-      "hendelse": "Kraftig snøfokk",
-      "omrade": "Deler av fjellet i Salten og Helgeland",
-      "domene": "land",
-      "start": "2026-11-14T18:00:00+00:00",
-      "slutt": "2026-11-15T05:00:00+00:00",
-      "beskrivelse": "Det ventes lokal snøfokk i fjellet over 400 m på grunn av kraftig vind. Også åpne områder i lavlandet kan være utsatt. Faren øker lørdag kveld og er over søndag morgen",
-      "konsekvenser": "Lokalt vanskelig kjøreforhold: Snøfokk gir stedvis redusert sikt og snø som pakker seg i veibanen. Veier kan bli stengt og kolonnekjøring kan bli innført på kort varsel. Kle deg etter forholdene: Snø og vind kan gjøre det vanskelig å bevege seg utendørs.",
-      "rad": "Lokalt vanskelig kjøreforhold: Bruk riktige dekk og kjør etter forholdene. Beregn ekstra tid til transport og kjøring. Følg råd og sjekk status fra transportaktører. Sjekk veimeldinger på vegvesen.no/trafikk. Kle deg etter forholdene: Unngå unødvendig ferdsel på utsatte steder, og kle deg etter forholdene.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/snofokk"
-    },
-    {
       "id": "2.49.0.1.578.0.20261114183905.014",
       "niva": "gult",
       "hendelse": "Kuling",
@@ -205,19 +192,6 @@
       "web": null
     },
     {
-      "id": "2.49.0.1.578.0.261114220000.0852_1_0",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "D2",
-      "domene": "hav",
-      "start": "2026-11-14T22:00:00+00:00",
-      "slutt": "2026-11-15T07:00:00+00:00",
-      "beskrivelse": "Nordøst sterk kuling 20 m/s.",
-      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
       "id": "2.49.0.1.578.0.261114220000.0853_1_0",
       "niva": "gult",
       "hendelse": "Storm",
@@ -239,19 +213,6 @@
       "start": "2026-11-14T22:00:00+00:00",
       "slutt": "2026-11-15T19:00:00+00:00",
       "beskrivelse": "Nordøst sterk kuling 20 m/s.",
-      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.261114220000.4045_1_0",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Dype E4",
-      "domene": "hav",
-      "start": "2026-11-14T22:00:00+00:00",
-      "slutt": "2026-11-15T04:00:00+00:00",
-      "beskrivelse": "Østlig sterk kuling 20 m/s.",
       "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
@@ -369,19 +330,6 @@
       "start": "2026-11-14T22:00:00+00:00",
       "slutt": "2026-11-15T20:00:00+00:00",
       "beskrivelse": "Vestlig full storm 25 m/s fra 14 november 22:00 UTC til 15 november 06:00 UTC, vestlig sterk kuling 20 m/s fra 15 november 06:00 UTC til 20:00 UTC.",
-      "konsekvenser": "Meget høye bølger: Rullingen blir tung og støtende. Synsvidden nedsettes.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.261114220000.7076_1_0",
-      "niva": "gult",
-      "hendelse": "Storm",
-      "omrade": "Trænabanken",
-      "domene": "hav",
-      "start": "2026-11-14T22:00:00+00:00",
-      "slutt": "2026-11-15T07:00:00+00:00",
-      "beskrivelse": "Sørvest full storm 25 m/s.",
       "konsekvenser": "Meget høye bølger: Rullingen blir tung og støtende. Synsvidden nedsettes.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
