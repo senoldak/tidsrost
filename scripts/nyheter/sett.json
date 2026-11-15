@@ -11783,7 +11783,17 @@
     "medier:2a7f19a6c5e57793": "2026-11-15T07:00:54.273Z",
     "medier:6647b9aa1669edc3": "2026-11-15T07:00:54.273Z",
     "medier:4cf07a86a386f678": "2026-11-15T07:00:54.273Z",
-    "medier:59b6fe49050f7e8f": "2026-11-15T07:00:54.273Z"
+    "medier:59b6fe49050f7e8f": "2026-11-15T07:00:54.273Z",
+    "medier:f463417439ac6f1e": "2026-11-15T09:00:54.907Z",
+    "medier:ccd8256548b22ea6": "2026-11-15T09:00:54.907Z",
+    "medier:fbc40aa20fa6eb46": "2026-11-15T09:00:54.907Z",
+    "medier:d914763b1d4fb8fe": "2026-11-15T09:00:54.907Z",
+    "medier:840d2ef7cb367fcf": "2026-11-15T09:00:54.907Z",
+    "medier:a7121ac8ab6274b4": "2026-11-15T09:00:54.907Z",
+    "medier:e7243f1382bc949a": "2026-11-15T09:00:54.907Z",
+    "medier:fbcd1c19008190ab": "2026-11-15T09:00:54.907Z",
+    "medier:9117ab1ea60430cb": "2026-11-15T09:00:54.907Z",
+    "medier:af71b27e062f7501": "2026-11-15T09:00:54.907Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -11846,116 +11856,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:dd44ccd317e6600e": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "medier:3a08083dacd16709": {
-      "p": 92,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "medier:ab863a218547c747": {
-      "p": 94,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "medier:307899c8f857bdad": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "medier:98b6dffbebd5f092": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "medier:1907084f29127335": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "medier:e29d991937fb9b96": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "medier:ba31073f690c8e78": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "medier:a1722320223c0d36": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "medier:ff32714da693e8d9": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "medier:d884b93c1b14fc1d": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "medier:dc175e1631993442": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "medier:0019ed75243566aa": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "medier:ca016017c0d6848a": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "medier:5489a5c654ef3fef": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "regjeringen:3192445": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "nkom:735c03b5-2432-4b01-883f-451d8c6f666f": {
-      "p": 58,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "skatteetaten:/presse/nyhetsrommet/skatteetaten-varsler-kontroller-av-serveringssteder-i-julebordsesongen/": {
-      "p": 48,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/e6-sor-for-fauske-stenges-i-perioder-til-uka/": {
-      "p": 42,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "sykling:https://sykling.no/?p=28389": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "skiforbundet:https://www.skiforbundet.no/kombinert/nyhetsarkiv/2026/11/unge-kombinertrekrutter/": {
-      "p": 10,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
-    "statnett:https://www.statnett.no/om-statnett/nyheter-og-pressemeldinger/nyhetsarkiv-2026/anmoder-rme-om-a-lukke-avvik-i-omrade-midt/": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-12T09:03:24.657Z"
-    },
     "medier:53eda7aeac46cefc": {
       "p": 45,
       "v": "b34cb0de5bde",
@@ -13265,6 +13165,31 @@
       "p": 88,
       "v": "b34cb0de5bde",
       "t": "2026-11-15T07:02:28.953Z"
+    },
+    "medier:ccd8256548b22ea6": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-15T09:02:29.173Z"
+    },
+    "medier:840d2ef7cb367fcf": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-15T09:02:29.173Z"
+    },
+    "medier:9117ab1ea60430cb": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-15T09:02:29.173Z"
+    },
+    "medier:7538fcda7da7ad6d": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-15T09:02:29.173Z"
+    },
+    "medier:e7243f1382bc949a": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-15T09:02:29.173Z"
     }
   }
 }
