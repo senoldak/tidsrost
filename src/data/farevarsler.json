@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-15T19:04:17.162Z",
+  "hentet": "2026-11-15T21:02:45.328Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-15T19:02:24+00:00",
+  "sistEndretHosMet": "2026-11-15T21:01:57+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.261115100000.0845_7_0",
@@ -101,19 +101,6 @@
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
-      "id": "2.49.0.1.578.0.20261114191621.015",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Slettnes fyr - Grense Jakobselv",
-      "domene": "hav",
-      "start": "2026-11-15T08:00:00+00:00",
-      "slutt": "2026-11-15T20:00:00+00:00",
-      "beskrivelse": "Søndag formiddag økning til vestlig periodevis stiv kuling 15 m/s, om ettermiddagen dreiende sørvest.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
       "id": "2.49.0.1.578.0.261115100000.0842_1_0",
       "niva": "gult",
       "hendelse": "Kuling",
@@ -166,19 +153,6 @@
       "web": null
     },
     {
-      "id": "2.49.0.1.578.0.261115100000.7005_1_0",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Frøyabanken",
-      "domene": "hav",
-      "start": "2026-11-15T10:00:00+00:00",
-      "slutt": "2026-11-15T20:00:00+00:00",
-      "beskrivelse": "Sørvest sterk kuling 20 m/s.",
-      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
       "id": "2.49.0.1.578.0.261115100000.7004_1_0",
       "niva": "gult",
       "hendelse": "Storm",
@@ -200,32 +174,6 @@
       "start": "2026-11-15T10:00:00+00:00",
       "slutt": "2026-11-16T13:00:00+00:00",
       "beskrivelse": "Sørvest sterk kuling 20 m/s fra 15 november 10:00 UTC til 22:00 UTC og nordvest sterk kuling 20 m/s fra 16 november 09:00 UTC til 13:00 UTC.",
-      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.261115100000.7063_1_0",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Sklinnabanken",
-      "domene": "hav",
-      "start": "2026-11-15T10:00:00+00:00",
-      "slutt": "2026-11-15T20:00:00+00:00",
-      "beskrivelse": "Sørvest sterk kuling 20 m/s.",
-      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.261115100000.7076_1_0",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Trænabanken",
-      "domene": "hav",
-      "start": "2026-11-15T10:00:00+00:00",
-      "slutt": "2026-11-15T21:00:00+00:00",
-      "beskrivelse": "Sørvest sterk kuling 20 m/s.",
       "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
