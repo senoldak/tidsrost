@@ -1,34 +1,8 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 34,
-      "kadar": "2026-11-14T23:10:02.538Z"
-    }
-  },
-  "kommunenes-netto-driftsresultat-var-2-3-prosent-i-2025": {
-    "tarih": "2026-11-08T07:04:02.727Z",
-    "ig_story": "17904090378379000",
-    "fb_post": "1343803192154866_122115680289509504",
-    "fb_story": "29231470383136379",
-    "ig_reels": "18098321105126906",
-    "fb_reels": "2123822218498841",
-    "reels": {
-      "gun": "2026-11-08",
-      "dilim": "kveld"
-    },
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
-  "medianinntekt-fylker": {
-    "tarih": "2026-11-08T07:04:40.004Z",
-    "ig_story": "18131851900833254",
-    "fb_post": "1343803192154866_122115680625509504",
-    "fb_story": "963087963220682",
-    "ig_reels": "18111471617275356",
-    "fb_reels": "2178971989497945",
-    "reels": {
-      "gun": "2026-11-09",
-      "dilim": "morgen"
+      "sayi": 35,
+      "kadar": "2026-11-15T19:08:32.641Z"
     }
   },
   "rosstat-lekkasje-450-000-russiske-soldater-drept-i-ukraina": {
@@ -451,7 +425,9 @@
     "tarih": "2026-11-14T09:06:17.349Z",
     "ig_story": "18120027235796532",
     "fb_post": "1343803192154866_122117574507509504",
-    "fb_story": "1285377623762716"
+    "fb_story": "1285377623762716",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "fugleinfluensa-pavist-i-kommersielt-fjorfehold-i-vestby-kommune": {
     "tarih": "2026-11-14T11:10:17.811Z",
@@ -470,5 +446,17 @@
     "ig_story": "18497844460128502",
     "fb_post": "1343803192154866_122117744295509504",
     "fb_story": "1555391749756208"
+  },
+  "379-kilo-husholdningsavfall-per-innbygger-49-prosent-til-materialgjenvinning": {
+    "tarih": "2026-11-15T07:08:47.965Z",
+    "ig_story": "17968734657209618",
+    "fb_post": "1343803192154866_122117860125509504",
+    "fb_story": "3660332527479144"
+  },
+  "prinsesse-kate-reiser-pa-sitt-storste-utenlandsoppdrag-etter-kreftsykdommen": {
+    "tarih": "2026-11-15T07:09:22.898Z",
+    "ig_story": "18424959103156688",
+    "fb_post": "1343803192154866_122117860389509504",
+    "fb_story": "1488730039824655"
   }
 }
