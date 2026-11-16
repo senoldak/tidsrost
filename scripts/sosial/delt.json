@@ -5,26 +5,6 @@
       "kadar": "2026-11-16T21:06:35.753Z"
     }
   },
-  "hoye-strompriser-i-sor-norge-gir-arets-dyreste-dogn": {
-    "tarih": "2026-11-09T13:11:48.528Z",
-    "ig_story": "18034241564884831",
-    "fb_post": "1343803192154866_122116128045509504",
-    "fb_story": "1468116315511263",
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
-  "fylkesvei-854-stengt-etter-kvikkleireskred-i-malselv": {
-    "tarih": "2026-11-09T13:12:38.233Z",
-    "ig_story": "17894287737448125",
-    "fb_post": "1343803192154866_122116128411509504",
-    "fb_story": "1665435201658390"
-  },
-  "full-storm-og-innstilte-ferger-i-nord": {
-    "tarih": "2026-11-09T13:13:17.023Z",
-    "ig_story": "17911566042666232",
-    "fb_post": "1343803192154866_122116128831509504",
-    "fb_story": "1399370218938917"
-  },
   "nvidia-aksjen-stuper-pa-wall-street-etter-at-toppsjefen-har-erkjent-utroskap-med": {
     "tarih": "2026-11-09T15:06:36.907Z",
     "ig_story": "18388497781238770",
@@ -440,5 +420,17 @@
     "ig_story": "18147268024594237",
     "fb_post": "1343803192154866_122118122133509504",
     "fb_story": "1795925038288692"
+  },
+  "kort-fortalt-16-november-2026": {
+    "tarih": "2026-11-16T13:13:58.777Z",
+    "ig_story": "18022492292948640",
+    "fb_post": "1343803192154866_122118229437509504",
+    "fb_story": "997721773390083"
+  },
+  "norge-og-37-andre-land-advarer-mot-atomfare-i-ukraina": {
+    "tarih": "2026-11-16T13:14:33.676Z",
+    "ig_story": "18148595689582731",
+    "fb_post": "1343803192154866_122118229671509504",
+    "fb_story": "1605691731329320"
   }
 }
