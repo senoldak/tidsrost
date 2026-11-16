@@ -1,0 +1,23 @@
+{
+  "dato": "2026-11-16",
+  "donem": "kveld",
+  "tittel": "Kveldsoversikt",
+  "opprettet": "2026-11-16T17:50:54.541Z",
+  "saker": [
+    {
+      "slug": "norge-og-37-andre-land-advarer-mot-atomfare-i-ukraina",
+      "tittel": "Norge og 37 andre land advarer mot atomfare i Ukraina",
+      "ingress": "Norge og 37 andre land uttrykker dyp bekymring for atomsikkerheten i Ukraina som følge av vedvarende angrep mot landets energiinfrastruktur."
+    },
+    {
+      "slug": "dnb-og-sbanken-rammet-av-omfattende-tekniske-problemer-i-nettbank-og-mobilbank",
+      "tittel": "DNB og Sbanken rammet av omfattende tekniske problemer i nettbank og mobilbank",
+      "ingress": "Store tekniske feil rammet DNB og Sbanken mandag ettermiddag. Problemene førte også til midlertidige forstyrrelser hos betalingstjenesten Vipps."
+    },
+    {
+      "slug": "ukraina-har-angrepet-broen-til-krym-med-droner",
+      "tittel": "Ukraina har angrepet broen til Krym med droner",
+      "ingress": "Ukraina sendte over 1300 droner mot Russland natt til mandag, i et angrep som blant annet rammet broen som knytter Krym-halvøya til det russiske fastlandet."
+    }
+  ]
+}
