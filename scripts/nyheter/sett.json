@@ -11935,7 +11935,35 @@
     "medier:b1cd488fce6a9bbc": "2026-11-16T07:00:58.693Z",
     "medier:68c103259fd75b59": "2026-11-16T07:00:58.693Z",
     "regjeringen:3192307": "2026-11-16T07:00:58.693Z",
-    "ssb:c2a164c3-58ba-409b-985a-160798671bd4": "2026-11-16T07:00:58.693Z"
+    "ssb:c2a164c3-58ba-409b-985a-160798671bd4": "2026-11-16T07:00:58.693Z",
+    "medier:4181d064b0588798": "2026-11-16T09:01:00.754Z",
+    "medier:857aa565b79a84d5": "2026-11-16T09:01:00.754Z",
+    "medier:2349f822a95c22ee": "2026-11-16T09:01:00.754Z",
+    "medier:40404a7afe7ceb23": "2026-11-16T09:01:00.754Z",
+    "medier:5e8d77603ab902a4": "2026-11-16T09:01:00.754Z",
+    "medier:a7485253737777d8": "2026-11-16T09:01:00.754Z",
+    "medier:26f768fa237f8ae3": "2026-11-16T09:01:00.754Z",
+    "medier:9f5b586b31a8b18a": "2026-11-16T09:01:00.754Z",
+    "medier:df92ce942929fe38": "2026-11-16T09:01:00.754Z",
+    "regjeringen:3193011": "2026-11-16T09:01:00.754Z",
+    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/egenmelding-fra-regnskapsforetak-krt-1004--rapportering/": "2026-11-16T09:01:00.754Z",
+    "havforskning:https://www.hi.no/hi/nyheter/2026/november/hi-savner-havkompetanse-i-klima-rapport": "2026-11-16T09:01:00.754Z",
+    "sykling:https://sykling.no/?p=28401": "2026-11-16T09:01:00.754Z",
+    "havforskning:https://www.hi.no/hi/nyheter/2026/november/plast-i-havet-pavirker-klodens-eldste-livsformer": "2026-11-16T09:01:00.754Z",
+    "medier:35437ca1b7d644c7": "2026-11-16T09:01:00.754Z",
+    "medier:f547ba045480f52a": "2026-11-16T09:01:00.754Z",
+    "medier:1c0626ea8357ebff": "2026-11-16T09:01:00.754Z",
+    "medier:76fa4e62703d40fc": "2026-11-16T09:01:00.754Z",
+    "medier:5f605d29b01f7674": "2026-11-16T09:01:00.754Z",
+    "medier:ab5ffcdd4bc5e338": "2026-11-16T09:01:00.754Z",
+    "medier:ac0c0f6f99243cb0": "2026-11-16T09:01:00.754Z",
+    "medier:8494917a545a1b7d": "2026-11-16T09:01:00.754Z",
+    "medier:d76bcaee1af009f0": "2026-11-16T09:01:00.754Z",
+    "medier:905d59c1271b5fba": "2026-11-16T09:01:00.754Z",
+    "medier:17a09b49f8324e0e": "2026-11-16T09:01:00.754Z",
+    "medier:7bac75396a5fb924": "2026-11-16T09:01:00.754Z",
+    "medier:2729623f12d1c0d4": "2026-11-16T09:01:00.754Z",
+    "medier:8f6b7a28c5a29c58": "2026-11-16T09:01:00.754Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -11998,86 +12026,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:373d441b19d3c7b0": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T09:03:33.749Z"
-    },
-    "medier:aa99319d1fbfe8e7": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T09:03:33.749Z"
-    },
-    "medier:57fa99df5a615f53": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T09:03:33.749Z"
-    },
-    "medier:ab2b9ede7549f12f": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T09:03:33.749Z"
-    },
-    "medier:16025d2e61579edc": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T09:03:33.749Z"
-    },
-    "medier:b01b89fc595399a5": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T09:03:33.749Z"
-    },
-    "medier:047cfb1942bdaaa2": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T09:03:33.749Z"
-    },
-    "medier:816522690c7dbb9e": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T09:03:33.749Z"
-    },
-    "medier:395acf555957b847": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T09:03:33.749Z"
-    },
-    "medier:30efd12796c094ca": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T09:03:33.749Z"
-    },
-    "medier:07eb52e8eb37daa9": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T09:03:33.749Z"
-    },
-    "medier:ebd3b0e216b040a8": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T09:03:33.749Z"
-    },
-    "regjeringen:3192815": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T09:03:33.749Z"
-    },
-    "handball:https://www.handball.no/nyheter/2026/11/bergen-og-elverum-motes-til-nm-finale/": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T09:03:33.749Z"
-    },
-    "norfund:https://www.norfund.no/?p=28896": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T09:03:33.749Z"
-    },
-    "miljodirektoratet:https://www.miljodirektoratet.no/aktuelt/nyheter/2026/november-2026/opnar-for-direktekjop-av-internasjonale-klimakvotar/": {
-      "p": 62,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T09:03:33.749Z"
-    },
     "medier:5b71b2bbca3ca139": {
       "p": 75,
       "v": "b34cb0de5bde",
@@ -13142,6 +13090,56 @@
       "p": 20,
       "v": "b34cb0de5bde",
       "t": "2026-11-16T07:03:12.956Z"
+    },
+    "medier:905d59c1271b5fba": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T09:03:07.198Z"
+    },
+    "medier:35437ca1b7d644c7": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T09:03:07.198Z"
+    },
+    "medier:76fa4e62703d40fc": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T09:03:07.198Z"
+    },
+    "medier:7bac75396a5fb924": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T09:03:07.198Z"
+    },
+    "medier:ab5ffcdd4bc5e338": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T09:03:07.198Z"
+    },
+    "regjeringen:3193011": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T09:03:07.198Z"
+    },
+    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/egenmelding-fra-regnskapsforetak-krt-1004--rapportering/": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T09:03:07.198Z"
+    },
+    "havforskning:https://www.hi.no/hi/nyheter/2026/november/hi-savner-havkompetanse-i-klima-rapport": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T09:03:07.198Z"
+    },
+    "havforskning:https://www.hi.no/hi/nyheter/2026/november/plast-i-havet-pavirker-klodens-eldste-livsformer": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T09:03:07.198Z"
+    },
+    "sykling:https://sykling.no/?p=28401": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T09:03:07.198Z"
     }
   }
 }
