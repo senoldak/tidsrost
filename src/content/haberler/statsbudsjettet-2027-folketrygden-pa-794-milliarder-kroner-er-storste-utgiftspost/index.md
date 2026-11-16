@@ -8,11 +8,11 @@ coverAlt: "Illustrasjon: «Statsbudsjettet 2027: Folketrygden på 794 milliarder
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Statsbudsjettet bestemmer hvor mye staten henter inn i skatter og avgifter, og hvordan pengene fordeles mellom pensjoner, helse, kommuner og andre formål."
+why_matters: "Statsbudsjettet viser hvordan staten finansierer velferdsstaten – og hvor mye av utgiftene som er bundet opp i pensjoner og trygd før politikerne kan prioritere."
 key_points:
-  - "I regjeringens forslag anslås statens inntekter til 1 725,1 milliarder kroner og utgiftene til 2 286,8 milliarder kroner i 2027, utenom petroleumsvirksomheten og lånetransaksjoner."
-  - "Folketrygden er største utgiftspost i forslaget med 794,1 milliarder kroner, hvorav alderspensjon utgjør 378,2 milliarder kroner."
-  - "Arbeidsgiveravgift og trygdeavgift (510,3 mrd.), skatt på formue og inntekt (493,2 mrd.) og merverdiavgift (444,6 mrd.) er de tre største inntektspostene."
+  - "Utenom petroleum og lånetransaksjoner anslås statens inntekter til 1 725,1 milliarder kroner og utgiftene til 2 286,8 milliarder kroner i 2027."
+  - "Folketrygden alene tar 794,1 milliarder kroner (34,7 prosent av utgiftene), der alderspensjon utgjør 378,2 milliarder."
+  - "Tre skatter og avgifter står for 83,9 prosent av inntektene utenom petroleum: arbeidsgiver- og trygdeavgift (510,3 mrd.), skatt på formue og inntekt (493,2 mrd.) og moms (444,6 mrd.)."
 ---
 
 Regjeringen la 7. oktober 2026 fram forslaget til statsbudsjett for 2027. Utenom petroleumsvirksomheten og lånetransaksjoner anslår Finansdepartementet statens inntekter til 1 725,1 milliarder kroner og utgiftene til 2 286,8 milliarder kroner. Folketrygden er den største utgiftsposten, med 794,1 milliarder kroner. Det er 34,7 prosent av utgiftene utenom petroleum.
@@ -37,7 +37,7 @@ Folketrygden betaler blant annet alderspensjon, uføretrygd, sykepenger, arbeids
 
 Skatter og avgifter fra Fastlands-Norge gir 1 560,4 milliarder kroner. Tre inntekter er størst: arbeidsgiveravgift og trygdeavgift (510,3 milliarder), skatt på formue og inntekt (493,2 milliarder) og merverdiavgift (444,6 milliarder). Til sammen er det 83,9 prosent av inntektene utenom petroleum.
 
-![Stolpediagram over Tre inntekter står for det meste: Inntekter: Arbeidsgiver- og trygdeavgift: 510,3 milliarder kroner, Skatt på formue og inntekt: 493,2 milliarder kroner, Merverdiavgift: 444,6 milliarder kroner, Renter og aksjeutbytte: 91,9 milliarder kroner, Andre inntekter: 67,0 milliarder kroner, Andre avgifter: 58,4 milliarder kroner, Tobakk og alkohol: 24,8 milliarder kroner, Motorvogner: 19,6 milliarder kroner.](./graf-3.svg)
+![Tabell over Tre inntekter står for det meste: Inntekter: Arbeidsgiver- og trygdeavgift: 510,3 milliarder kroner, Skatt på formue og inntekt: 493,2 milliarder kroner, Merverdiavgift: 444,6 milliarder kroner, Renter og aksjeutbytte: 91,9 milliarder kroner, Andre inntekter: 67,0 milliarder kroner, Andre avgifter: 58,4 milliarder kroner, Tobakk og alkohol: 24,8 milliarder kroner, Motorvogner: 19,6 milliarder kroner.](./graf-3.svg)
 *De største inntektene utenom petroleum i forslaget til statsbudsjett for 2027, milliarder kroner. Kilde: Finansdepartementet.*
 
 ## Forskjellen dekkes av oljefondet

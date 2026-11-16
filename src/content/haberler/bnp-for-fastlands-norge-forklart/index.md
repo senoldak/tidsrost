@@ -9,7 +9,7 @@ kjede: {"runder":{"redaksiyon":1,"yazim":1},"kontrollert":136,"hentet":114}
 title: "BNP for Fastlands-Norge forklart: uten olje og utenriks sjøfart"
 description: "Olje og utenriks sjøfart sto for 20,2 prosent av BNP i løpende priser i 2025, ned fra 34,9 prosent i 2022. I faste priser var andelen 24,3 prosent i 2025."
 category: okonomi
-why_matters: "Ifølge SSB har Norge to BNP-mål fordi olje- og gassvirksomheten betyr mye for norsk økonomi og for tolkningen av BNP-tallene. Olje og utenriks sjøfart kan trekke samlet BNP i en annen retning enn resten av økonomien, slik det skjedde i 1989."
+why_matters: "Norge opererer med to BNP-mål fordi olje- og gasspriser kan sende samlet BNP i én retning mens resten av økonomien går en annen vei – slik det skjedde i 1989."
 key_points:
   - "Fastlands-Norge sto for 79,8 prosent av BNP i løpende priser i 2025, olje og utenriks sjøfart for 20,2 prosent."
   - "Andelen til olje og utenriks sjøfart av BNP i løpende priser var 7,5 prosent i 1970, 11,2 prosent i 2020 og 34,9 prosent i 2022."
@@ -67,7 +67,7 @@ Fra 2005 til 2007 gikk det motsatt vei, og olje og utenriks sjøfart krympet. Vo
 
 De samme årene vokste BNP for Fastlands-Norge med 5,0 prosent i 2005, 5,5 prosent i 2006 og 6,4 prosent i 2007. Samlet BNP vokste med 3,0 prosent i 2005, 2,8 prosent i 2006 og 3,4 prosent i 2007. Forskjellen mellom målene var 3,0 prosentpoeng i 2007.
 
-![Linjediagram over Fastlands-Norge vokste raskere enn samlet BNP i de fleste årene: Fastlands-Norge: 2,3 % i 2014, 1,7 % i 2015, 1,0 % i 2016, 2,4 % i 2017, 2,1 % i 2018, 2,7 % i 2019, −2,7 % i 2020, 4,7 % i 2021, 5,2 % i 2022, 0,9 % i 2023, 0,6 % i 2024, 1,7 % i 2025; Samlet BNP: 2,1 % i 2014, 2,0 % i 2015, 1,3 % i 2016, 2,7 % i 2017, 1,1 % i 2018, 1,5 % i 2019, −1,4 % i 2020, 4,1 % i 2021, 4,1 % i 2022, 0,4 % i 2023, 1,4 % i 2024, 1,1 % i 2025.](./graf-2.svg)
+![Små linjediagrammer over Fastlands-Norge vokste raskere enn samlet BNP i de fleste årene: Fastlands-Norge: 3 % i 2014, 7 % i 2015, 0 % i 2016, 4 % i 2017, 1 % i 2018, 7 % i 2019, 7 % i 2020, 7 % i 2021, 2 % i 2022, 9 % i 2023, 6 % i 2024, 7 % i 2025; Samlet BNP: 1 % i 2014, 0 % i 2015, 3 % i 2016, 7 % i 2017, 1 % i 2018, 5 % i 2019, 4 % i 2020, 1 % i 2021, 1 % i 2022, 4 % i 2023, 4 % i 2024, 1 % i 2025.](./graf-2.svg)
 *Årlig volumendring, prosent. Kilde: SSB.*
 
 Volumendringen i olje og utenriks sjøfart var minus 4,5 prosent i 2018 og minus 4,2 prosent i 2019. Samlet BNP vokste med 1,1 prosent i 2018 og med 1,5 prosent i 2019, mens Fastlands-Norge vokste med 2,1 prosent i 2018 og med 2,7 prosent i 2019. Begge målene falt i 2020: volumendringen var minus 1,4 prosent i samlet BNP og minus 2,7 prosent i Fastlands-Norge, mens olje og utenriks sjøfart vokste med 6,7 prosent.

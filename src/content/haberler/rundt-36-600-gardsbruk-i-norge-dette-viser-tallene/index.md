@@ -8,11 +8,11 @@ coverAlt: "Illustrasjon: «Rundt 36 600 gårdsbruk og mål om 50 prosent selvfor
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Tallene viser hvor mange gårdsbruk og hvor mye jordbruksareal Norge har, hvor stor del av kostholdet som dekkes av norsk jordbruk, og hvordan matkornlageret bygges opp."
+why_matters: "Norsk matproduksjon samles på stadig færre og større gårdsbruk, samtidig som selvforsyningsgraden svinger langt under det politiske målet på 50 prosent."
 key_points:
-  - "I 2025 var det om lag 36 600 jordbruksbedrifter i Norge, og jordbruksarealet i drift var rundt 9,84 millioner dekar."
-  - "Selvforsyningsgraden korrigert for importert fôr var 41 prosent i 2023 og 34 prosent (foreløpig) i 2024, mens målet er 50 prosent."
-  - "Staten bygger opp et beredskapslager av mathvete som innen 2029 skal være på 82 500 tonn, tilsvarende om lag tre måneders normalt forbruk."
+  - "I 2025 fantes det rundt 36 600 jordbruksbedrifter i Norge som til sammen drev nær 9,84 millioner dekar."
+  - "Selvforsyningsgraden korrigert for importert fôr var 41 prosent i 2023 og falt til foreløpig 34 prosent i 2024 – langt unna målet på 50 prosent."
+  - "Innen 2029 skal staten ha bygget opp et beredskapslager på 82 500 tonn mathvete, nok til rundt tre måneders normalt forbruk."
 ---
 
 I 2025 var det 36 439 jordbruksbedrifter i Norge, viser foreløpige tall fra Statistisk sentralbyrå (SSB). De drev til sammen 9 839 227 dekar jordbruksareal. Landbruks- og matdepartementet oppgir om lag 36 600 jordbruksbedrifter i landbruksproposisjonen. I 1999 var det 70 740 bruk, og i 1969 154 977. Antallet bruk har gått ned med 13,3 prosent siden 2015, mens gjennomsnittsbruket har vokst fra 235 til 270 dekar.
@@ -21,14 +21,14 @@ I 2025 var det 36 439 jordbruksbedrifter i Norge, viser foreløpige tall fra Sta
 
 Antallet jordbruksbedrifter har gått ned i hvert tiår siden 1969: fra 154 977 i 1969 til 125 302 i 1979, 99 382 i 1989 og 70 740 i 1999. Siden 1999 er antallet nesten halvert.
 
-![Linjediagram over Antallet gårdsbruk er nesten halvert siden 1999: Gårdsbruk: 70 740 i 1999, 68 539 i 2000, 65 607 i 2001, 61 890 i 2002, 58 231 i 2003, 55 507 i 2004, 53 003 i 2005, 51 218 i 2006, 49 935 i 2007, 48 825 i 2008, 47 688 i 2009, 46 624 i 2010, 45 612 i 2011, 44 794 i 2012, 43 726 i 2013, 43 022 i 2014, 42 018 i 2015, 41 121 i 2016, 40 338 i 2017, 39 678 i 2018, 39 090 i 2019, 38 713 i 2020, 38 079 i 2021, 37 921 i 2022, 37 155 i 2023, 36 721 i 2024, 36 439 i 2025.](./graf-1.svg)
+![Linjediagram med perioder over Antallet gårdsbruk er nesten halvert siden 1999: Gårdsbruk: 70 740 i 1999, 68 539 i 2000, 65 607 i 2001, 61 890 i 2002, 58 231 i 2003, 55 507 i 2004, 53 003 i 2005, 51 218 i 2006, 49 935 i 2007, 48 825 i 2008, 47 688 i 2009, 46 624 i 2010, 45 612 i 2011, 44 794 i 2012, 43 726 i 2013, 43 022 i 2014, 42 018 i 2015, 41 121 i 2016, 40 338 i 2017, 39 678 i 2018, 39 090 i 2019, 38 713 i 2020, 38 079 i 2021, 37 921 i 2022, 37 155 i 2023, 36 721 i 2024, 36 439 i 2025.](./graf-1.svg)
 *Jordbruksbedrifter i Norge, 1999–2025. Tallet for 2025 er foreløpig. Kilde: SSB, tabell 03313.*
 
 ## Færre mellomstore, flere store bruk
 
 Nedgangen har vært størst blant de mellomstore brukene. I 2005 hadde 16 764 bruk mellom 100 og 200 dekar jordbruksareal, i 2025 8 496. Samtidig ble antallet bruk med 500 dekar eller mer doblet, fra 2 684 til 5 479.
 
-![Helningsdiagram over Flere store bruk, færre mellomstore: i 2005: Under femti dekar: 6 411, Femti til hundre dekar: 10 141, Hundre til to hundre dekar: 16 764, To til tre hundre dekar: 10 186, Tre til fem hundre dekar: 6 817, Fem hundre dekar og mer: 2 684; i 2025: Under femti dekar: 5 871, Femti til hundre dekar: 5 802, Hundre til to hundre dekar: 8 496, To til tre hundre dekar: 5 305, Tre til fem hundre dekar: 5 486, Fem hundre dekar og mer: 5 479.](./graf-2.svg)
+![Prikkdiagram over Flere store bruk, færre mellomstore: i 2005: Under femti dekar: 6 411, Femti til hundre dekar: 10 141, Hundre til to hundre dekar: 16 764, To til tre hundre dekar: 10 186, Tre til fem hundre dekar: 6 817, Fem hundre dekar og mer: 2 684; i 2025: Under femti dekar: 5 871, Femti til hundre dekar: 5 802, Hundre til to hundre dekar: 8 496, To til tre hundre dekar: 5 305, Tre til fem hundre dekar: 5 486, Fem hundre dekar og mer: 5 479.](./graf-2.svg)
 *Jordbruksbedrifter etter jordbruksareal i drift, 2005 og 2025. Kilde: SSB, tabell 03313.*
 
 Ifølge landbruksproposisjonen Prop. 98 S (2025–2026) fra Landbruks- og matdepartementet hadde den landbruksbaserte delen av næringsmiddelindustrien om lag 39 000 sysselsatte, og verdiskapingen var 53 milliarder kroner i 2024.

@@ -8,12 +8,12 @@ produksjon: ki-redigert
 title: "Husholdningene bruker nesten tre ganger så mye strøm i januar som i juli"
 description: "Bruttoforbruket av strøm var 1,6 ganger høyere i januar enn i juli i 2025, mens industrien svingte lite. Eksporten var større enn importen i hver av årets tolv måneder."
 category: okonomi
-why_matters: "Strømforbruket følger årstidene, og det er boligene og tjenestenæringene som svinger mest. Industriens forbruk svinger mindre enn boligenes."
+why_matters: "Strømforbruket følger årstidene, men det er boligene og tjenestenæringene som driver svingningene – industrien går jevnt året rundt."
 key_points:
-  - "Husholdningene brukte 5 216 GWh i januar og 1 848 GWh i juli, 2,8 ganger så mye om vinteren."
-  - "Industrien og annen sekundærnæring brukte 1,2 ganger så mye i januar som i juli, og er den gruppen som svinger minst."
-  - "Januar, februar og desember sto for 29,9 prosent av årets bruttoforbruk, selv om de tre månedene bare er en fjerdedel av året."
-  - "I 2025 var eksporten større enn importen hver måned, men i februar, mars og april 2026 var importen større."
+  - "Husholdningene brukte 5 216 GWh i januar mot 1 848 GWh i juli – 2,8 ganger så mye om vinteren."
+  - "Industrien og annen sekundærnæring brukte bare 1,2 ganger så mye i januar som i juli."
+  - "Januar, februar og desember sto for 29,9 prosent av årets bruttoforbruk, selv om tre måneder bare er en fjerdedel av året."
+  - "I 2025 eksporterte Norge mer enn vi importerte hver eneste måned, men i februar, mars og april 2026 snudde det til importoverskudd."
 ---
 
 Hvor mye mer strøm brukte Norge i januar enn i juli? Svaret er 1,6 ganger så mye i 2025. Bruttoforbruket av elektrisk kraft var 14 753 GWh i januar og 9 222 GWh i juli, ifølge Statistisk sentralbyrå (SSB). Bruttoforbruket er nettoforbruket pluss forbruk til pumpekraft og nettap, slik SSB deler det i tabellen.
@@ -43,7 +43,7 @@ Juli var måneden med lavest bruttoforbruk, 9 222 GWh. Husholdningene brukte 1 8
 
 Forskjellen mellom husholdningenes største og minste måned var 3 368 GWh. For industrien var den tilsvarende forskjellen 809 GWh, mellom 5 498 GWh i januar og 4 689 GWh i juni. Forholdet mellom januar og juli gir en enkel måte å sammenligne gruppene på. Husholdningene har 2,8, hytter og fritidshus 2,5, tertiærnæringene 1,6 og primærnæringene 1,5. Sekundærnæringene har 1,2. Hytter og fritidshus er en del av husholdningstallet. De brukte 327 GWh i januar og 131 GWh i juli, og svinger litt mindre enn boligene.
 
-![Stolpediagram over Husholdningene svinger mest mellom januar og juli: Forholdstall: Husholdninger: 2,82, Hytter og fritidshus: 2,48, Tjenester: 1,62, Primærnæringer: 1,54, Industri: 1,15.](./graf-2.svg)
+![Søylediagram over Husholdningene svinger mest mellom januar og juli: Forholdstall: Husholdninger: 2,82, Hytter og fritidshus: 2,48, Tjenester: 1,62, Primærnæringer: 1,54, Industri: 1,15.](./graf-2.svg)
 *Januar delt på juli, hele landet. Kilde: Statistisk sentralbyrå.*
 
 Eksporten fulgte ikke forbruket ned. I juli var eksporten 3 095 GWh, mot 2 301 GWh i juni. Importen var 853 GWh i juli, og netto eksport steg til 2 242 GWh, fra 1 222 GWh i juni. Månedstallene sier hvor mye som gikk over grensen, ikke hvorfor det varierte.
@@ -56,7 +56,7 @@ Vindkraften svinger mer enn vannkraften. Den produserte 1 415 GWh i januar og 45
 
 Setter vi januar mot juli, svinger husholdningenes forbruk 2,8 ganger, mens samlet produksjon svinger 1,5 ganger.
 
-![Helningsdiagram over Husholdningenes forbruk faller brattest fra januar til juli: Januar: Husholdninger: 5 216, Tjenester: 2 829, Industri: 5 498, Primærnæringer: 261; Juli: Husholdninger: 1 848, Tjenester: 1 743, Industri: 4 772, Primærnæringer: 169.](./graf-3.svg)
+![Prikkdiagram over Husholdningenes forbruk faller brattest fra januar til juli: Januar: Husholdninger: 5 216, Tjenester: 2 829, Industri: 5 498, Primærnæringer: 261; Juli: Husholdninger: 1 848, Tjenester: 1 743, Industri: 4 772, Primærnæringer: 169.](./graf-3.svg)
 *Gigawattimer per måned, hele landet. Kilde: Statistisk sentralbyrå.*
 
 ## Høsten: forbruket tar seg opp igjen

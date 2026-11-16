@@ -6,14 +6,14 @@ cover: ./cover.png
 coverAlt: "Norge hadde høyest husholdningsgjeld blant de tjuefire OECD-landene som har tall i 2022"
 produksjon: ki-redigert
 title: "Norge hadde høyest husholdningsgjeld blant de tjuefire OECD-landene som har tall i 2022"
-description: "Norge kom øverst blant de tjuefire OECD-landene som har tall, men Danmarks serie har et uforklart sprang i perioden 2021–2022 som påvirker rekkefølgen. SSBs egne tall viser utviklingen siden, og at renteutgiftene tok en større del av inntekten."
+description: "Norge toppet listen over husholdningsgjeld blant 24 OECD-land i 2022, men et uforklart sprang i den danske serien påvirker rekkefølgen. SSBs egne tall viser at renteutgiftene siden har tatt en langt større del av inntekten."
 category: okonomi
-why_matters: "Gjeld målt mot inntekt viser hvor stor gjelden er i forhold til det husholdningene tjener. Tallene viser at Norge ligger høyest i sammenligningen, og at renteutgiftene utgjorde en større del av inntekten i 2024 enn i 2021."
+why_matters: "Gjeld målt mot inntekt viser hvor sårbar økonomien i husholdningene er, og tallene avslører både at Norge ligger helt i toppen og at renteutgiftene tok en dobbelt så stor del av inntekten i 2024 som i 2021."
 key_points:
   - "Husholdningsgjelden tilsvarte 227,5 prosent av brutto disponibel inntekt i Norge i 2022, mot 215,9 prosent i Nederland og 197,8 prosent i Danmark."
-  - "I perioden 2021–2022 endret Norges verdi seg lite, mens Danmarks verdi falt med 39,9 prosentpoeng, et sprang som dokumentasjonen ikke forklarer."
+  - "Mellom 2021 og 2022 falt Danmarks tall med 39,9 prosentpoeng uten forklaring i dokumentasjonen, mens Norges verdi knapt rørte seg."
   - "SSBs egen beregning gir 221,3 prosent i 2025, ned fra 234,9 prosent i 2020."
-  - "Renteutgiftene tok 12,5 prosent av disponibel inntekt i 2024, mot 5,2 prosent i 2021."
+  - "Renteutgiftene slukte 12,5 prosent av disponibel inntekt i 2024, mot 5,2 prosent i 2021."
 ---
 
 Øverst på listen over husholdningsgjeld blant tjuefire OECD-land i 2022 står Norge. Samlet gjeld tilsvarte 227,5 prosent av husholdningenes brutto disponibel inntekt, altså mer enn to års inntekt. Nederland fulgte med 215,9 prosent og Danmark med 197,8 prosent. Laveste verdi i sammenligningen var 24,6 prosent, i Mexico.
@@ -41,7 +41,7 @@ Lenger tilbake var rekkefølgen en annen. I 2007 hadde Danmark 269,0 prosent, Ne
 
 Over perioden 2015–2022 økte Norges verdi med 23,8 prosentpoeng. Danmarks verdi falt fra 257,3 prosent til 197,8 prosent og Nederlands fra 254,3 prosent til 215,9 prosent. Sverige økte med 14,7 prosentpoeng og Finland med 28,4 prosentpoeng.
 
-![Helningsdiagram over Siden 2015 økte Norge og falt Danmark og Nederland, men den danske serien har et uforklart sprang: Året 2015: Norge: 203,7 %, Danmark: 257,3 %, Nederland: 254,3 %, Sverige: 170,8 %, Finland: 115,8 %, Australia: 186,0 %, Canada: 170,1 %, Storbritannia: 140,9 %; Året 2022: Norge: 227,5 %, Danmark: 197,8 %, Nederland: 215,9 %, Sverige: 185,5 %, Finland: 144,2 %, Australia: 192,5 %, Canada: 180,9 %, Storbritannia: 135,7 %.](./graf-2.svg)
+![Prikkdiagram over Siden 2015 økte Norge og falt Danmark og Nederland, men den danske serien har et uforklart sprang: Året 2015: Norge: 203,7 %, Danmark: 257,3 %, Nederland: 254,3 %, Sverige: 170,8 %, Finland: 115,8 %, Australia: 186,0 %, Canada: 170,1 %, Storbritannia: 140,9 %; Året 2022: Norge: 227,5 %, Danmark: 197,8 %, Nederland: 215,9 %, Sverige: 185,5 %, Finland: 144,2 %, Australia: 192,5 %, Canada: 180,9 %, Storbritannia: 135,7 %.](./graf-2.svg)
 *Gjeld i prosent av brutto disponibel inntekt, i 2015 og i 2022. Kilde: OECD.*
 
 Irland lå på tredjeplass i 2007 med 213,4 prosent, men var nede på 97,1 prosent i 2022. Spania gikk fra 141,1 prosent i 2007 til 89,4 prosent i 2022, og Storbritannia fra 165,1 prosent til 135,7 prosent. Rangeringen har altså endret seg mye over femten år, også blant landene utenfor Norden.
@@ -69,7 +69,7 @@ I perioden 2021–2025 økte husholdningenes lån med 17 prosent, mens disponibe
 
 Gjeldens størrelse er én ting, kostnaden ved å ha den en annen. SSB publiserer husholdningenes renteutgifter i nasjonalregnskapet, og delt på disponibel inntekt gir de en rentebelastning. Den var 5,2 prosent i 2021, 6,9 prosent i 2022 og 11,0 prosent i 2023. I 2024 var den 12,5 prosent, 2,4 ganger så stor som i 2021, og i 2025 var den 11,9 prosent. Det høyeste nivået blant årene vi har sett på, var 13,9 prosent i 2008.
 
-![Søylediagram over Renteutgiftene tok over dobbelt så stor del av inntekten i 2024 som i 2021: Renteutgifter: 10,7 % i 2007, 13,9 % i 2008, 7,6 % i 2015, 5,2 % i 2021, 6,9 % i 2022, 11,0 % i 2023, 12,5 % i 2024, 11,9 % i 2025.](./graf-4.svg)
+![Stolpediagram over Renteutgiftene tok over dobbelt så stor del av inntekten i 2024 som i 2021: Renteutgifter: 10,7 % i 2007, 13,9 % i 2008, 7,6 % i 2015, 5,2 % i 2021, 6,9 % i 2022, 11,0 % i 2023, 12,5 % i 2024, 11,9 % i 2025.](./graf-4.svg)
 *Husholdningenes renteutgifter i prosent av disponibel inntekt. Kilde: Statistisk sentralbyrå.*
 
 I samme periode steg Norges Banks styringsrente fra 0,5 prosent på siste handelsdag i 2021 til 2,75 prosent på siste handelsdag i 2022 og 4,5 prosent på siste handelsdag i 2023, en økning på 4,0 prosentpoeng. Renten var 4,5 prosent også på siste handelsdag i 2024 og 4,0 prosent på siste handelsdag i 2025. Vi viser her bare at utviklingen skjedde i samme periode.

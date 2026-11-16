@@ -9,11 +9,11 @@ coverAlt: "Illustrasjon: «Ventetiden i sykehusene var 62 dager i 1. tertial 202
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Om lag 2,9 millioner pasienter fikk helsehjelp i spesialisthelsetjenesten i 2025. FHI publiserer ventetidene for sykehusene hvert tertial og for hele året."
+why_matters: "Rundt 2,9 millioner pasienter fikk helsehjelp i spesialisthelsetjenesten i 2025. Ventetidstallene viser om sykehusene klarer å ta unna køene – og hvor langt det er igjen til regjeringens mål."
 key_points:
-  - "Gjennomsnittlig ventetid for alle tjenesteområder falt fra 74 dager i 2024 til 66 dager i 2025, og videre til 62 dager i 1. tertial 2026."
-  - "I somatikken ble ventetiden elleve dager kortere på ett år, fra 75 dager i 1. tertial 2025 til 64 dager i 1. tertial 2026."
-  - "Andelen fristbrudd blant ventende pasienter var 4,6 prosent i desember 2025, mot 7,7 prosent i desember 2024."
+  - "Gjennomsnittlig ventetid falt fra 74 dager i 2024 til 66 dager i 2025, og videre ned til 62 dager i 1. tertial 2026."
+  - "I somatikken ble ventetiden kuttet med elleve dager på ett år, fra 75 dager i 1. tertial 2025 til 64 dager i 1. tertial 2026."
+  - "Andelen fristbrudd blant ventende pasienter sank fra 7,7 prosent i desember 2024 til 4,6 prosent i desember 2025."
 ---
 
 Pasienter som ble henvist til spesialisthelsetjenesten i årets fire første måneder (1. tertial 2026), ventet i gjennomsnitt 62 dager før helsehjelpen startet, viser statistikk fra Norsk pasientregister som Folkehelseinstituttet (FHI) la fram 23. juni 2026. Det er ti dager kortere enn i samme periode i 2025. Regjeringen har som mål at pasienter på sikt normalt skal ha fått eller være i gang med behandling innen 60 dager.

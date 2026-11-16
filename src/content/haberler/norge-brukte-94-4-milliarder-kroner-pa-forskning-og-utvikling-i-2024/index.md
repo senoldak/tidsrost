@@ -1,6 +1,6 @@
 ---
-title: "Norge brukte 94,4 milliarder kroner på forskning og utvikling i 2024 – næringslivet står for nær halvparten"
-description: "Samlede utgifter til forskning og utviklingsarbeid (FoU) i Norge var 94,4 milliarder kroner i 2024. Næringslivet utførte nær halvparten."
+title: "Norge brukte 94,4 milliarder kroner på forskning og utvikling i 2024 – næringslivet tar nesten halvparten"
+description: "Norske FoU-utgifter endte på 94,4 milliarder kroner i 2024. Justert for prisvekst falt innsatsen med 4,8 prosent fra året før, og næringslivet utførte nær halvparten."
 date: 2026-10-22T08:00:00+02:00
 oppdatert: 2026-10-22T20:45:00+02:00
 category: teknologi
@@ -9,11 +9,11 @@ coverAlt: "Illustrasjon: «Norge brukte 94,4 milliarder kroner på forskning og 
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "FoU-statistikken viser hvor mye som brukes på forskning og utviklingsarbeid i Norge, og hvordan utgiftene fordeler seg mellom næringsliv, universiteter og høgskoler og institutter."
+why_matters: "FoU-statistikken viser ikke bare hvor mange milliarder som går til forskning, men også hvordan innsatsen fordeler seg mellom næringsliv, universiteter og institutter – og om veksten er reell."
 key_points:
-  - "De samlede FoU-utgiftene i Norge var 94,4 milliarder kroner i 2024, opp fra 76,8 milliarder kroner i 2019, målt i løpende priser."
-  - "Næringslivet utførte FoU for 46,6 milliarder kroner (49,4 prosent), universiteter og høgskoler for 30,1 milliarder (31,9 prosent) og instituttsektoren for 17,7 milliarder (18,7 prosent)."
-  - "Ifølge regjeringen.no ble det i juni 2025 besluttet å opprette seks nasjonale forskningssentre for kunstig intelligens gjennom Norges forskningsråd."
+  - "Samlede FoU-utgifter var 94,4 milliarder kroner i 2024, opp fra 76,8 milliarder kroner i 2019 i løpende priser."
+  - "Næringslivet sto for 46,6 milliarder kroner (49,4 prosent), universiteter og høgskoler for 30,1 milliarder (31,9 prosent) og instituttsektoren for 17,7 milliarder (18,7 prosent)."
+  - "I juni 2025 ble det besluttet å opprette seks nasjonale forskningssentre for kunstig intelligens gjennom Norges forskningsråd."
 ---
 
 I 2024 ble det utført forskning og utviklingsarbeid (FoU) i Norge for 94,4 milliarder kroner, viser FoU-statistikken fra Statistisk sentralbyrå (SSB). Målt i løpende priser er det omtrent det samme som i 2023, da utgiftene var 94,5 milliarder kroner, og 22,9 prosent mer enn i 2019. Justert for prisvekst er bildet et annet: I faste priser var FoU-utgiftene 4,8 prosent lavere i 2024 enn året før, og bare 1,0 prosent høyere enn i 2019. SSBs siste publiserte tall gjelder 2024.
@@ -31,7 +31,7 @@ Målt i faste priser nådde FoU-utgiftene toppen i 2022 med 74,6 milliarder kron
 
 Det norske forskningssystemet er delt inn i tre utførende sektorer. Næringslivet er den største og sto i 2024 for 46,6 milliarder kroner, 49,4 prosent av de samlede FoU-utgiftene. Universitets- og høgskolesektoren (inkludert helseforetakene) sto for 30,1 milliarder kroner (31,9 prosent), mens instituttsektoren utførte forskning for 17,7 milliarder kroner (18,7 prosent).
 
-![Andelsdiagram over Næringslivet utfører nær halvparten: Andel: Næringslivet: 49,4 %, Universiteter og høgskoler: 31,9 %, Instituttsektoren: 18,7 %.](./graf-2.svg)
+![Søylediagram over Næringslivet utfører nær halvparten: Andel: Næringslivet: 49,4 %, Universiteter og høgskoler: 31,9 %, Instituttsektoren: 18,7 %.](./graf-2.svg)
 *FoU-utgifter etter utførende sektor i 2024, løpende priser. Universiteter og høgskoler inkluderer helseforetakene. Kilde: SSB, tabell 11010.*
 
 | Utførende sektor | FoU-utgifter 2021 (mrd. kr) | FoU-utgifter 2024 (mrd. kr) | FoU-årsverk 2024 |

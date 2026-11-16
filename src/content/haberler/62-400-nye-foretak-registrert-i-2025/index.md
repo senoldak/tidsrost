@@ -8,7 +8,7 @@ coverAlt: "Illustrasjon: «62 400 nye foretak registrert i 2025 – og 14,7 pros
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Antall nye foretak er en av indikatorene i SSBs statistikk over næringslivet."
+why_matters: "Etter tre år med nedgang fra pandemitoppen i 2021 tar etableringslysten seg kraftig opp igjen i 2026, særlig innen informasjon og kommunikasjon."
 key_points:
   - "SSB registrerte 62 408 nye foretak i 2025, 1,3 prosent flere enn i 2024, når offentlig forvaltning og primærnæringene holdes utenfor."
   - "I første halvår 2026 ble det registrert 35 144 nye foretak, 14,7 prosent flere enn i første halvår 2025."
@@ -26,7 +26,7 @@ I første halvår 2026 ble det registrert 35 144 nye foretak: 18 092 i første k
 
 Antallet nye foretak har ligget over 60 000 hvert år siden 2014. Det høyeste tallet i perioden fra 2008 kom i 2021, med 76 233 nye foretak. Deretter gikk antallet ned tre år på rad, til 61 582 i 2024, før det steg litt igjen i 2025.
 
-![Linjediagram over Flest nye foretak i 2021: Nye foretak: 46 400 i 2008, 42 176 i 2009, 45 710 i 2010, 47 914 i 2011, 55 696 i 2012, 58 862 i 2013, 61 937 i 2014, 62 837 i 2015, 62 855 i 2016, 64 082 i 2017, 62 852 i 2018, 67 114 i 2019, 70 298 i 2020, 76 233 i 2021, 71 003 i 2022, 68 490 i 2023, 61 582 i 2024, 62 408 i 2025.](./graf-2.svg)
+![Linjediagram med perioder over Flest nye foretak i: Nye foretak: 46 400 i 2008, 42 176 i 2009, 45 710 i 2010, 47 914 i 2011, 55 696 i 2012, 58 862 i 2013, 61 937 i 2014, 62 837 i 2015, 62 855 i 2016, 64 082 i 2017, 62 852 i 2018, 67 114 i 2019, 70 298 i 2020, 76 233 i 2021, 71 003 i 2022, 68 490 i 2023, 61 582 i 2024, 62 408 i 2025.](./graf-2.svg)
 *Nye foretak per år, 2008–2025, summert fra kvartalstall. Kilde: SSB, tabell 08076.*
 
 ## Andre kvartal 2026
@@ -37,7 +37,7 @@ I andre kvartal alene var økningen 20,8 prosent, fra 14 112 nye foretak i andre
 
 De fleste nye foretak er enten enkeltpersonforetak (ENK) eller aksjeselskap (AS). I 2025 ble det registrert 33 130 nye enkeltpersonforetak og 28 433 nye aksjeselskaper. Til sammen utgjorde de 98,7 prosent av de nye foretakene. De øvrige organisasjonsformene sto for 845.
 
-![Stolpediagram over Over halvparten er enkeltpersonforetak: Nye foretak: Enkeltpersonforetak: 33 130, Aksjeselskap: 28 433, Øvrige former: 845.](./graf-3.svg)
+![Søylediagram over Over halvparten er enkeltpersonforetak: Nye foretak: Enkeltpersonforetak: 33 130, Aksjeselskap: 28 433, Øvrige former: 845.](./graf-3.svg)
 *Nye foretak etter organisasjonsform, 2025. Kilde: SSB, tabell 08076.*
 
 Antallet nye aksjeselskaper økte med 5,9 prosent fra 2024, mens antallet nye enkeltpersonforetak gikk ned med 2,1 prosent.

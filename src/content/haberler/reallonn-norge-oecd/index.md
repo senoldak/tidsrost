@@ -6,14 +6,14 @@ cover: ./cover.png
 coverAlt: "Reallønnen steg 4,3 prosent på ti år, mens lønnen i kroner steg 43,7 prosent"
 produksjon: ki-redigert
 title: "Reallønnen steg 4,3 prosent på ti år, mens lønnen i kroner steg 43,7 prosent"
-description: "OECDs tall gir Norge en reell lønnsvekst på 9,4 prosent i perioden 2015–2025, SSBs tall gir 4,3 prosent. Analysen viser hvorfor, og hvor Norge ligger i forhold til naboene."
+description: "OECDs tall gir Norge en reell lønnsvekst på 9,4 prosent i 2015–2025, mens SSBs tall viser 4,3 prosent. Her er grunnen til spriket – og hvor Norge ligger mot naboene."
 category: okonomi
-why_matters: "Lønnen i kroner sier lite om hva den rekker til. Reallønnen viser om inntekten har holdt tritt med prisene, og det har variert mye fra år til år."
+why_matters: "Lønnen i kroner sier lite om kjøpekraft. Reallønnen viser om inntekten faktisk har holdt tritt med prisene, og den har svingt kraftig fra år til år."
 key_points:
-  - "Gjennomsnittlig årslønn var 519 800 kroner i 2015. I 2025 var den 746 700 kroner, mens prisene steg 37,7 prosent i perioden."
-  - "I 2023 var reallønnen tilbake på nivået i 2015, og nesten hele tiårets vekst kom i de to siste årene."
-  - "I OECDs tall vokste norsk reallønn 9,4 prosent i perioden 2015–2025, omtrent som OECD samlet."
-  - "SSBs og OECDs tall gir samme reelle vekst siden 2021, men ulik vekst for årene før."
+  - "Gjennomsnittlig årslønn steg fra 519 800 kroner i 2015 til 746 700 kroner i 2025, men prisene økte 37,7 prosent i samme periode."
+  - "I 2023 var reallønnen tilbake på 2015-nivået; nesten hele tiårets vekst kom i de to siste årene."
+  - "OECDs statistikk gir Norge 9,4 prosent reell lønnsvekst i 2015–2025, omtrent på linje med OECD-snittet."
+  - "Fra 2021 er SSB og OECD enige om veksttakten, men de skiller lag for årene før."
 ---
 
 4,3 prosent. Så mye høyere var reallønnen til en gjennomsnittlig lønnstaker i Norge i 2025 enn i 2015, når lønnen regnes om til samme prisnivå. I kroner ser tiåret helt annerledes ut. Årslønnen var 519 800 kroner i 2015. I 2025 var den 746 700 kroner, en økning på 43,7 prosent. Prisene steg 37,7 prosent i samme periode, og det er forskjellen mellom de to tallene som avgjør hva lønnen faktisk rekker til.
@@ -32,20 +32,20 @@ SSB beregner konsumprisindeksen (KPI), som følger prisene på varer og tjeneste
 
 Regnestykket vårt er enkelt. Vi tar lønnen i hvert år og regner den om til prisnivået i 2025, med forholdet mellom KPI i 2025 og KPI i det aktuelle året. I 2015 var lønnen 519 800 kroner, og den tilsvarer da 715 978 kroner i prisnivået i 2025. I 2025 var lønnen 746 700 kroner. Forskjellen er 30 722 kroner, eller 4,3 prosent. Det er tiårets reallønnsvekst, og den tilsvarer om lag 0,4 prosent i året.
 
-![Linjediagram over Reell lønn har vokst langt mindre enn lønnen i kroner: Nominell lønn: 519 800 i 2015, 528 900 i 2016, 541 000 i 2017, 556 300 i 2018, 575 700 i 2019, 593 500 i 2020, 614 300 i 2021, 640 700 i 2022, 674 000 i 2023, 711 700 i 2024, 746 700 i 2025; Reell lønn: 715 978 i 2015, 703 324 i 2016, 706 266 i 2017, 706 861 i 2018, 716 045 i 2019, 728 221 i 2020, 728 707 i 2021, 718 274 i 2022, 716 259 i 2023, 732 956 i 2024, 746 700 i 2025.](./graf-2.svg)
+![Små linjediagrammer over Reell lønn har vokst langt mindre enn lønnen i kroner: Nominell lønn: 519 800 i 2015, 528 900 i 2016, 541 000 i 2017, 556 300 i 2018, 575 700 i 2019, 593 500 i 2020, 614 300 i 2021, 640 700 i 2022, 674 000 i 2023, 711 700 i 2024, 746 700 i 2025; Reell lønn: 715 978 i 2015, 703 324 i 2016, 706 266 i 2017, 706 861 i 2018, 716 045 i 2019, 728 221 i 2020, 728 707 i 2021, 718 274 i 2022, 716 259 i 2023, 732 956 i 2024, 746 700 i 2025.](./graf-2.svg)
 *Gjennomsnittlig årslønn i kroner; reell lønn er regnet om til prisnivået i det siste året. Kilde: Statistisk sentralbyrå (SSB).*
 
 ## Reallønnen år for år
 
-Utviklingen kom ikke jevnt. Den reelle lønnen var 715 978 kroner i 2015. I 2019 var den 716 045 kroner, nesten uendret på fire år. I 2021 hadde den steget til 728 707 kroner. I 2023 hadde den falt tilbake til 716 259 kroner, og i 2025 var den 746 700 kroner.
+Utviklingen kom ikke jevnt. I 2015 var den reelle lønnen 715 978 kroner, og fire år senere sto den omtrent stille på 716 045 kroner. Deretter løftet den seg til 728 707 kroner i 2021, før den falt tilbake til 716 259 kroner i 2023. Først i 2025 nådde den 746 700 kroner.
 
-Reallønnen i 2023 lå dermed bare 0,04 prosent over nivået i 2015. Lønnstakerne hadde i praksis samme reelle lønn som åtte år tidligere, selv om lønnen i kroner var 29,7 prosent høyere. I årene 2023–2025 steg reallønnen 4,2 prosent, nesten like mye som i hele tiåret samlet.
+I 2023 lå reallønnen altså bare 0,04 prosent over nivået fra 2015. Lønnstakerne hadde i praksis samme kjøpekraft som åtte år tidligere, selv om lønnen i kroner var 29,7 prosent høyere. Mellom 2023 og 2025 steg derimot reallønnen med 4,2 prosent – nesten like mye som i hele tiåret samlet.
 
 SSB publiserer også en egen serie for endringen i reallønn fra år til år. Endringen var −1,8 prosent i 2016, −1,4 prosent i 2022 og −0,3 prosent i 2023. I 2021 var endringen null. Størst var økningen i 2024, med 2,4 prosent.
 
 To av de tre årene med fall kom samtidig med sterk lønnsvekst i kroner. Lønnen steg med 4,3 prosent i 2022, men reallønnen endret seg med −1,4 prosent. Lønnen steg med 5,2 prosent i 2023, men reallønnen endret seg med −0,3 prosent. Prisene steg altså raskere enn lønnen begge årene.
 
-![Søylediagram over Reallønnen falt i tre av de ti årene: Reell lønnsendring: −1,8 % i 2016, 0,4 % i 2017, 0,1 % i 2018, 1,2 % i 2019, 1,8 % i 2020, 0,0 % i 2021, −1,4 % i 2022, −0,3 % i 2023, 2,4 % i 2024, 1,8 % i 2025.](./graf-3.svg)
+![Avviksdiagram over Reallønnen falt i tre av de ti årene: Reell lønnsendring: −1,8 % i 2016, 0,4 % i 2017, 0,1 % i 2018, 1,2 % i 2019, 1,8 % i 2020, 0,0 % i 2021, −1,4 % i 2022, −0,3 % i 2023, 2,4 % i 2024, 1,8 % i 2025.](./graf-3.svg)
 *Endring i reallønn fra året før, prosent. Kilde: Statistisk sentralbyrå (SSB).*
 
 ## Norge ved siden av OECD og naboene
@@ -62,7 +62,7 @@ Siden 2021 er bildet et annet. Reallønnen i Sverige falt med 3,9 prosent. I Fin
 
 Danmark har fortsatt høyere lønnsnivå enn Norge i OECDs serie. Avstanden har likevel blitt mindre. Norges lønn lå 5 898 dollar under den danske i 2015. I 2025 lå den 4 629 dollar under.
 
-![Helningsdiagram over Norge ligger over OECD-snittet i reell lønn, men under Danmark, Tyskland og USA: i 2015: Norge: 67 127, Danmark: 73 026, Tyskland: 71 244, USA: 76 999, Storbritannia: 64 199, Finland: 60 740, Sverige: 59 542, OECD-snitt: 59 422; i 2025: Norge: 73 462, Danmark: 78 090, Tyskland: 76 285, USA: 86 977, Storbritannia: 66 299, Finland: 63 053, Sverige: 61 443, OECD-snitt: 64 803.](./graf-1.svg)
+![Prikkdiagram over Norge ligger over OECD-snittet i reell lønn, men under Danmark, Tyskland og USA: i 2015: Norge: 67 127, Danmark: 73 026, Tyskland: 71 244, USA: 76 999, Storbritannia: 64 199, Finland: 60 740, Sverige: 59 542, OECD-snitt: 59 422; i 2025: Norge: 73 462, Danmark: 78 090, Tyskland: 76 285, USA: 86 977, Storbritannia: 66 299, Finland: 63 053, Sverige: 61 443, OECD-snitt: 64 803.](./graf-1.svg)
 *Gjennomsnittlig årslønn i faste priser, amerikanske dollar justert for prisnivået (PPP). Kilde: OECD.*
 
 Når lønnen regnes i hvert lands egen valuta og i løpende priser, er veksten stor overalt. Norge hadde en økning på 42,6 prosent i perioden 2015–2025, Sverige 37,1 prosent, Danmark 29,4 prosent og Finland 25,2 prosent. Tyskland hadde 40,3 prosent, Storbritannia 40,4 prosent og USA 47,3 prosent.

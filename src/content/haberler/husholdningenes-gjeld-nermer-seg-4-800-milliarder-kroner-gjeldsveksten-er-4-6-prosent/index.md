@@ -1,6 +1,6 @@
 ---
 title: "Husholdningenes gjeld nærmer seg 4 800 milliarder kroner – gjeldsveksten er 4,6 prosent"
-description: "Husholdningenes innenlandske lånegjeld var 4 790 milliarder kroner ved utgangen av august 2026, ifølge SSB. Gjelden vokste 4,6 prosent siste tolv måneder."
+description: "Norske husholdninger hadde 4 790 milliarder kroner i innenlandsk lånegjeld ved utgangen av august 2026, viser SSB. Tolvmånedersveksten holder seg på 4,6 prosent."
 date: 2026-11-10T08:00:00+01:00
 category: okonomi
 cover: ./cover.png
@@ -8,11 +8,11 @@ coverAlt: "Illustrasjon: «Husholdningenes gjeld nærmer seg 4 800 milliarder kr
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Kredittindikatoren K2 fra SSB viser hvor mye husholdninger, ikke-finansielle foretak og kommuneforvaltningen har i innenlandsk lånegjeld, og hvor raskt gjelden vokser."
+why_matters: "Kredittindikatoren K2 måler hvor mye gjeld husholdninger, bedrifter og kommuner bygger opp, og hvor raskt gjeldsbyrden vokser i økonomien."
 key_points:
-  - "Husholdninger mv. hadde en innenlandsk lånegjeld på 4 790 milliarder kroner ved utgangen av august 2026."
-  - "Tolvmånedersveksten i husholdningenes gjeld var 4,6 prosent, uendret fra juli og opp fra 4,3 prosent i august 2025."
-  - "Den samlede innenlandske lånegjelden til publikum var 8 048 milliarder kroner, med 4,5 prosent vekst siste tolv måneder."
+  - "Husholdninger mv. sto med 4 790 milliarder kroner i innenlandsk lånegjeld ved utgangen av august 2026."
+  - "Tolvmånedersveksten var 4,6 prosent – uendret fra juli, men opp fra 4,3 prosent i august 2025."
+  - "Samlet innenlandsk lånegjeld for publikum nådde 8 048 milliarder kroner, med en årsvekst på 4,5 prosent."
 ---
 
 Husholdningenes innenlandske lånegjeld var 4 790 milliarder kroner ved utgangen av august 2026. Det viser kredittindikatoren K2 fra Statistisk sentralbyrå (SSB). Gjelden vokste 4,6 prosent siste tolv måneder, like mye som i juli.
@@ -39,7 +39,7 @@ Gjeldsveksten er lavere enn for ti år siden. Fra 2010 til 2017 lå tolvmåneder
 
 Den samlede innenlandske lånegjelden til publikum var 8 048 milliarder kroner i august 2026, og husholdningene sto for 59,5 prosent av den. For ikke-finansielle foretak økte gjeldsveksten fra 2,0 til 4,8 prosent siste år. For kommuneforvaltningen falt den fra 8,3 til 3,0 prosent.
 
-![Helningsdiagram over Foretakenes gjeldsvekst økte mest: i 2025: Publikum i alt: 4,0 %, Husholdninger: 4,3 %, Foretak: 2,0 %, Kommunene: 8,3 %; i 2026: Publikum i alt: 4,5 %, Husholdninger: 4,6 %, Foretak: 4,8 %, Kommunene: 3,0 %.](./graf-3.svg)
+![Prikkdiagram over Foretakenes gjeldsvekst økte mest: i 2025: Publikum i alt: 4,0 %, Husholdninger: 4,3 %, Foretak: 2,0 %, Kommunene: 8,3 %; i 2026: Publikum i alt: 4,5 %, Husholdninger: 4,6 %, Foretak: 4,8 %, Kommunene: 3,0 %.](./graf-3.svg)
 *Tolvmånedersvekst i innenlandsk lånegjeld etter låntakersektor, august 2025 og august 2026. Kilde: SSB, tabell 11599.*
 
 | Sektor | Gjeld, mrd. kroner | Vekst siste 12 mnd. |

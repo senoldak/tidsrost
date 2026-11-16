@@ -6,14 +6,14 @@ cover: ./cover.png
 coverAlt: "Forbruket i 2022, regnet med prisene i 2025, er 66,4 tusen kroner dyrere"
 produksjon: ki-redigert
 title: "Forbruket i 2022, regnet med prisene i 2025, er 66,4 tusen kroner dyrere"
-description: "En gjennomsnittlig husholdning brukte 554,6 tusen kroner i 2022. Med gjennomsnittsprisene i 2025 er de samme varene og tjenestene 621,0 tusen kroner."
+description: "En gjennomsnittlig norsk husholdning brukte 554,6 tusen kroner i 2022. Med 2025-priser koster nøyaktig den samme handlekurven 621,0 tusen kroner."
 category: okonomi
-why_matters: "Prisindeksen sier hvor mye prisene har steget i gjennomsnitt. Her har vi regnet det om til kroner for et faktisk husholdningsbudsjett og sett hvilke poster som står for merutgiften."
+why_matters: "Konsumprisindeksen forteller hvor mye prisene stiger i prosent, men å regne den om til kroner på et faktisk husholdningsbudsjett viser hvor merutgiften faktisk treffer."
 key_points:
-  - "Det samme forbruket som i 2022 er dyrere med 12,0 prosent med prisene i 2025."
-  - "Boligen står for 16,6 tusen kroner av merutgiften og maten for 14,5 tusen kroner."
-  - "Elektrisitet og brensel er den eneste undergruppen der det samme forbruket har blitt billigere: minus 3,5 tusen kroner."
-  - "Beregnet husleie utgjør 19,8 prosent av budsjettet, men er ikke en utgift som betales."
+  - "Det samme forbruket som i 2022 koster 12,0 prosent mer med gjennomsnittsprisene i 2025."
+  - "Bolig står for 16,6 tusen kroner av merutgiften og mat for 14,5 tusen kroner."
+  - "Elektrisitet og brensel er eneste undergruppe som er blitt billigere: minus 3,5 tusen kroner."
+  - "Beregnet husleie utgjør 19,8 prosent av budsjettet, men er ingen faktisk utbetaling."
 ---
 
 Tenk på et vanlig år, for eksempel i 2022: strømregningen, maten, bilen, ferien. Ifølge Forbruksundersøkelsen fra Statistisk sentralbyrå (SSB) brukte en gjennomsnittlig norsk husholdning 554,6 tusen kroner på varer og tjenester i 2022. Hvis den samme husholdningen hadde brukt penger på nøyaktig det samme med gjennomsnittsprisene i 2025, ville regningen blitt 621,0 tusen kroner. Det er 66,4 tusen kroner mer, eller 12,0 prosent.

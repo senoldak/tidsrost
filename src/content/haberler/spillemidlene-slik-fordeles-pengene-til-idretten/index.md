@@ -9,11 +9,11 @@ coverAlt: "Illustrasjon: «4,1 milliarder kroner i spillemidler til idretten i 2
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Spillemidlene finansierer idrettsanlegg i kommunene, og en del av midlene går også direkte til lokale idrettslag."
+why_matters: "Spillemidlene er ryggraden i finansieringen av norske idrettsanlegg, samtidig som en betydelig del går direkte til lokale lag og foreninger."
 key_points:
-  - "Hovedfordelingen for 2026 er på 4 115 669 000 kroner – en økning på 27 prosent målt i løpende kroner siden 2021."
-  - "2 066 482 000 kroner fordeles til idrettsanlegg i kommunene, og ventetiden for utbetaling av tilskudd er på vei ned mot et halvt år, ifølge departementet."
-  - "72,2 prosent av alle barn mellom 6 og 15 år deltar i organisert idrett, og 150 millioner kroner er satt av til ekstrainnsats for deltakelse i idrettslag."
+  - "Hovedfordelingen for 2026 lander på 4 115 669 000 kroner – 27 prosent opp i løpende kroner siden 2021, men 3,3 prosent ned fra toppåret 2025."
+  - "Kommunale idrettsanlegg får 2 066 482 000 kroner, og ventetiden for utbetaling nærmer seg nå et halvt år."
+  - "72,2 prosent av barn mellom 6 og 15 år deltar i organisert idrett; 150 millioner kroner øremerkes ekstra innsats for deltakelse."
 ---
 
 I 2026 får norsk idrett 4 115 669 000 kroner fra overskuddet fra pengespill, ifølge Kultur- og likestillingsdepartementets hovedfordeling, kunngjort 7. mai 2026. Litt over halvparten, 50,9 prosent, går til idrettsanlegg. Beløpet er 138 millioner kroner, eller 3,3 prosent, lavere enn i 2025, da hovedfordelingen var 4 254 millioner kroner. Målt i løpende kroner er det likevel 27 prosent mer enn i 2021, da potten var 3 231 millioner kroner.
@@ -62,7 +62,7 @@ Fra 2025 til 2026 gikk posten for idrettsanlegg ned med 160,7 millioner kroner, 
 
 Fra 2021 til 2025 økte hovedfordelingen hvert år, fra 3 231 til 4 254 millioner kroner. I 2026 ble den lavere for første gang i perioden.
 
-![Linjediagram over Første nedgang siden 2021: Hovedfordelingen: 3,23 milliarder kroner i 2021, 3,29 milliarder kroner i 2022, 3,43 milliarder kroner i 2023, 3,72 milliarder kroner i 2024, 4,25 milliarder kroner i 2025, 4,12 milliarder kroner i 2026.](./graf-2.svg)
+![Søylediagram over Første nedgang siden 2021: Hovedfordelingen: 3,23 milliarder kroner i 2021, 3,29 milliarder kroner i 2022, 3,43 milliarder kroner i 2023, 3,72 milliarder kroner i 2024, 4,25 milliarder kroner i 2025, 4,12 milliarder kroner i 2026.](./graf-2.svg)
 *Spillemidler til idrettsformål i hovedfordelingen, 2021–2026, løpende kroner. Kilde: Kultur- og likestillingsdepartementet.*
 
 Ifølge departementet var ventetiden for utbetaling av anleggstilskudd nesten tre år i 2021. Departementet opplyste 7. mai 2026 at ventetiden nå er «på veg ned mot eit halvt år».

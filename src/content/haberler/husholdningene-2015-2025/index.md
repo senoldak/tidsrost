@@ -6,14 +6,14 @@ cover: ./cover.png
 coverAlt: "Ledighet og sparerate er omtrent som i 2015, men styringsrenten og boligbyggingen er det ikke"
 produksjon: ki-redigert
 title: "Ledighet og sparerate er omtrent som i 2015, men styringsrenten og boligbyggingen er det ikke"
-description: "Vi har målt husholdningenes økonomi med de samme målene i 2015 og i 2025: arbeid, inntekt, sparing, gjeld og boligbygging. Noen tall har knapt flyttet seg, andre ligger langt fra der de var."
+description: "Sammenligner vi husholdningenes økonomi i 2015 og 2025 med de samme målene, har ledighet og sparerate knapt flyttet seg – mens styringsrente og boligbygging står et helt annet sted."
 category: okonomi
-why_matters: "Når to år måles med de samme målene, blir det synlig hva som faktisk har endret seg for husholdningene, og hva som bare virker annerledes. Leseren kan skille mellom størrelser som har flyttet seg og størrelser som står stille."
+why_matters: "Å sette to år side om side med identiske mål skiller det som faktisk har endret seg for norske husholdninger fra det som bare føles nytt."
 key_points:
-  - "Ledigheten var 4,5 prosent i 2015 og like høy i 2025. Spareraten var 5,5 prosent i 2015 og lå på 5,3 prosent i 2025."
-  - "Antallet boliger som fikk igangsettingstillatelse falt med 35,5 prosent, fra 31 301 i 2015 til 20 184 i 2025."
-  - "Gjelden målt mot disponibel inntekt var 7,1 prosentpoeng høyere i 2. kvartal 2025 enn i 2. kvartal 2015. Med 4. kvartal er forskjellen i stedet 2,5 prosentpoeng høyere. Raten er 18,9 prosentpoeng lavere i 2. kvartal 2025 enn i 2. kvartal 2020."
-  - "Styringsrenten var 0,75 prosent den 31. desember 2015 og 4,0 prosent den 31. desember 2025."
+  - "Ledigheten lå på 4,5 prosent både i 2015 og i 2025, og spareraten endret seg bare fra 5,5 til 5,3 prosent."
+  - "Igangsettingstillatelser for boliger falt med 35,5 prosent, fra 31 301 i 2015 til 20 184 i 2025."
+  - "Gjeldsraten mot disponibel inntekt var 7,1 prosentpoeng høyere i 2. kvartal 2025 enn i 2. kvartal 2015 (2,5 prosentpoeng høyere i 4. kvartal), men 18,9 prosentpoeng lavere enn i 2. kvartal 2020."
+  - "Styringsrenten steg fra 0,75 prosent 31. desember 2015 til 4,0 prosent 31. desember 2025."
 ---
 I 2015 var ledigheten 4,5 prosent. I 2025 var den også 4,5 prosent. Men antallet boliger som fikk igangsettingstillatelse falt fra 31 301 i 2015 til 20 184 i 2025, en nedgang på 35,5 prosent.
 
@@ -51,14 +51,14 @@ Både antallet sysselsatte og sysselsettingsandelen er altså høyere i 2025 enn
 
 Det andre målet er husholdningenes disponible realinntekt, altså inntekt etter skatt, justert for prisvekst. Tallene gjelder husholdningssektoren samlet. Realinntekten vokste med 6,1 prosent i 2015. I 2025 var veksten 3,3 prosent. Tallet var altså 2,8 prosentpoeng lavere i 2025.
 
-![Søylediagram over Husholdningenes realinntekt falt i 2016 og i 2023, og var uendret i 2022: Realinntekt: −0,5 % i 2016, 2,8 % i 2017, 1,8 % i 2018, 3,4 % i 2019, 1,5 % i 2020, 5,7 % i 2021, 0,0 % i 2022, −0,9 % i 2023, 3,0 % i 2024, 3,3 % i 2025.](./graf-2.svg)
+![Avviksdiagram over Husholdningenes realinntekt falt i 2016 og i 2023, og var uendret i 2022: Realinntekt: −0,5 % i 2016, 2,8 % i 2017, 1,8 % i 2018, 3,4 % i 2019, 1,5 % i 2020, 5,7 % i 2021, 0,0 % i 2022, −0,9 % i 2023, 3,0 % i 2024, 3,3 % i 2025.](./graf-2.svg)
 *Prosentvis endring i disponibel realinntekt fra året før. Kilde: Statistisk sentralbyrå.*
 
 Mellom de to årene var forløpet ujevnt. Realinntekten endret seg med −0,5 prosent i 2016 og med −0,9 prosent i 2023, og med 0,0 prosent i 2022. Den vokste med 5,7 prosent i 2021, men bare med 1,5 prosent i 2020. I 2024 steg den med 3,0 prosent. I 2025 steg den med 3,3 prosent.
 
 Spareraten viser et annet mønster. Den var 5,5 prosent i 2015 og 5,3 prosent i 2025, bare 0,2 prosentpoeng lavere. I 2020 var den 7,4 prosent, høyere enn i begge sammenligningsårene. Spareraten var altså omtrent like høy i 2025 som i 2015.
 
-![Helningsdiagram over Veksten i gjeld og realinntekt er lavere, mens ledighet og sparerate er omtrent uendret: i 2015: Gjeldsvekst: 6,8 %, Realinntektsvekst: 6,1 %, Sparerate: 5,5 %, Ledighet: 4,5 %; i 2025: Gjeldsvekst: 4,5 %, Realinntektsvekst: 3,3 %, Sparerate: 5,3 %, Ledighet: 4,5 %.](./graf-3.svg)
+![Prikkdiagram over Veksten i gjeld og realinntekt er lavere, mens ledighet og sparerate er omtrent uendret: i 2015: Gjeldsvekst: 6,8 %, Realinntektsvekst: 6,1 %, Sparerate: 5,5 %, Ledighet: 4,5 %; i 2025: Gjeldsvekst: 4,5 %, Realinntektsvekst: 3,3 %, Sparerate: 5,3 %, Ledighet: 4,5 %.](./graf-3.svg)
 *Prosent, andre kvartal for gjeldsveksten og årsgjennomsnitt for de andre. Kilde: Statistisk sentralbyrå.*
 
 ## Gjeld og rente: to mål, hver for seg

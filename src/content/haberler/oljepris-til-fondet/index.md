@@ -8,12 +8,12 @@ produksjon: ki-redigert
 title: "Oljeprisen steg 2,4 ganger i 2020–2022, statens kontantstrøm 10,6 ganger"
 description: "Brent gikk fra 42,3 til 99,8 dollar per fat i 2020–2022, og statens netto kontantstrøm fra petroleum fra 140,8 milliarder kroner til 1 498,1 milliarder kroner. Tall og anslag fra Finansdepartementet 7. oktober 2026 er tatt med."
 category: okonomi
-why_matters: "Overskuddet fra olje og gass overføres til oljefondet, og underskuddet i statsbudsjettet utenom olje dekkes av en overføring fra fondet. Slik beskriver Finansdepartementet leddene mellom kontantstrøm og fond."
+why_matters: "Oljepengene går først inn i oljefondet, før en del hentes tilbake for å dekke underskuddet på statsbudsjettet. Slik henger oljepris, kontantstrøm og fondsuttak sammen."
 key_points:
-  - "Brent kostet 42,3 dollar per fat i 2020. I 2022 var prisen 99,8 dollar, og statens netto kontantstrøm fra petroleum gikk fra 140,8 milliarder kroner til 1 498,1 milliarder kroner."
-  - "I 2025 var kontantstrømmen 664,0 milliarder kroner, og 480,2 milliarder kroner kom tilbake til budsjettet som overføring fra fondet."
+  - "Brent-oljen steg fra 42,3 dollar per fat i 2020 til 99,8 dollar i 2022, mens statens netto kontantstrøm fra petroleum spratt fra 140,8 til 1 498,1 milliarder kroner."
+  - "I 2025 var kontantstrømmen 664,0 milliarder kroner, hvorav 480,2 milliarder gikk tilbake til budsjettet som fondsuttak."
   - "Finansdepartementet anslo 7. oktober 2026 en kontantstrøm på 568,4 milliarder kroner i 2027 og en overføring fra fondet på 561,7 milliarder kroner."
-  - "Finansdepartementet oppgir renteinntekter og utbytte i fondet på 444,4 milliarder kroner i 2025, og det er 2,4 ganger så mye som netto avsetning til fondet på 183,8 milliarder kroner."
+  - "Renteinntekter og utbytte i fondet var 444,4 milliarder kroner i 2025 – 2,4 ganger mer enn netto avsetning til fondet på 183,8 milliarder kroner."
 ---
 
 568 milliarder kroner mot 562 milliarder kroner. Det er to tall i Finansdepartementets budsjett for året 2027. Departementet la fram anslagene 7. oktober 2026. Statens netto kontantstrøm fra olje og gass anslås til 568,4 milliarder kroner i 2027, og overføringen fra Statens pensjonsfond utland til budsjettet til 561,7 milliarder kroner. Forskjellen mellom de to er 6,7 milliarder kroner.
@@ -31,7 +31,7 @@ Brent kostet 98,9 dollar per fat i 2014. Det er Verdensbankens årsgjennomsnitt.
 
 Statens netto kontantstrøm fra petroleumsvirksomheten, regnet i faste kroner med prisnivået i 2027, var 449,1 milliarder kroner i 2014. Den var 314,1 milliarder kroner i 2015, og det er 30,1 prosent lavere enn året før. Den var 177,3 milliarder kroner i 2016, og det er 43,5 prosent lavere enn i 2015. Av disse to årene falt prisen mest i 2015, og kontantstrømmen mest i 2016.
 
-![Linjediagram over Brent var dyrest i 2022 og billigst i 2020: Brent: 98,9 i 2014, 52,4 i 2015, 44,0 i 2016, 54,4 i 2017, 71,1 i 2018, 64,0 i 2019, 42,3 i 2020, 70,4 i 2021, 99,8 i 2022, 82,6 i 2023, 80,7 i 2024, 69,0 i 2025.](./graf-2.svg)
+![Søylediagram over Brent var dyrest i 2022 og billigst i 2020: Brent: 98,9 i 2014, 52,4 i 2015, 44,0 i 2016, 54,4 i 2017, 71,1 i 2018, 64,0 i 2019, 42,3 i 2020, 70,4 i 2021, 99,8 i 2022, 82,6 i 2023, 80,7 i 2024, 69,0 i 2025.](./graf-2.svg)
 *Dollar per fat, årsgjennomsnitt. Kilde: Verdensbanken.*
 
 Kontantstrømmen er statens inntekter fra petroleumsvirksomheten minus utgiftene til den, slik Finansdepartementet viser den i budsjettet. Det er ikke det samme som prisen på olje. Likevel gikk de to i samme retning de neste årene. Prisen var 54,4 dollar i 2017, og det er 23,6 prosent høyere enn året før. Den var 71,1 dollar i 2018, og det er 30,7 prosent høyere enn i 2017. Kontantstrømmen var 233,6 milliarder kroner i 2017, og det er 31,7 prosent høyere enn året før. Den var 340,9 milliarder kroner i 2018, og det er 46,0 prosent høyere enn i 2017.

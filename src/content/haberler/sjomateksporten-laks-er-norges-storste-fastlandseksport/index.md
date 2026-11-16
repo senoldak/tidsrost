@@ -9,11 +9,11 @@ coverAlt: "Illustrasjon: «Fisk sto for 22,6 prosent av norsk fastlandseksport i
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Fisk utgjør 22,6 prosent av fastlandseksporten, ifølge SSB."
+why_matters: "Sjømat står for over en femtedel av all norsk fastlandseksport, og laksen alene drar inn mer enn dobbelt så mye som aluminium."
 key_points:
-  - "Norges eksport av fisk, krepsdyr og bløtdyr var 173,9 milliarder kroner i 2025, hvorav laks sto for 124,3 milliarder (SSB)."
-  - "I perioden januar–august 2026 var eksportverdien 110,4 milliarder kroner, 2,0 prosent høyere enn i samme periode i 2025."
-  - "Fisk, krepsdyr og bløtdyr sto for 22,6 prosent av all norsk fastlandseksport i 2025."
+  - "Eksporten av fisk, krepsdyr og bløtdyr nådde 173,9 milliarder kroner i 2025, der laks alene sto for 124,3 milliarder."
+  - "Fra januar til august 2026 økte eksportverdien med 2,0 prosent til 110,4 milliarder kroner."
+  - "Samlet utgjorde sjømat 22,6 prosent av all norsk fastlandseksport i 2025."
 ---
 
 Norge eksporterte fisk, krepsdyr og bløtdyr for 173,9 milliarder kroner i 2025, viser tall fra Statistisk sentralbyrå (SSB). Det er 6,0 milliarder kroner, eller 3,6 prosent, mer enn i 2024 og det høyeste i SSBs statistikkbank, som går tilbake til 2007. Laks alene sto for 124,3 milliarder kroner. Laksen økte mer i mengde enn i verdi: Volumet steg med 12,8 prosent, verdien med 1,5 prosent.
@@ -44,7 +44,7 @@ Fordelt på varegrupper var fersk, kjølt eller fryst fisk den største enkeltgr
 
 I 2007 var eksportverdien for fisk, krepsdyr og bløtdyr 35,7 milliarder kroner. I 2016 var den 89,2 milliarder kroner, og i 2025 173,9 milliarder kroner. Laksen økte i samme periode fra 17,4 milliarder kroner i 2007 til 61,3 milliarder i 2016 og 124,3 milliarder i 2025.
 
-![Linjediagram over Eksportverdien er nær femdoblet siden 2007: All fisk: 35,7 milliarder kroner i 2007, 37,4 milliarder kroner i 2008, 43,5 milliarder kroner i 2009, 52,5 milliarder kroner i 2010, 52,1 milliarder kroner i 2011, 50,8 milliarder kroner i 2012, 60,2 milliarder kroner i 2013, 67,1 milliarder kroner i 2014, 72,0 milliarder kroner i 2015, 89,2 milliarder kroner i 2016, 92,2 milliarder kroner i 2017, 96,1 milliarder kroner i 2018, 104,1 milliarder kroner i 2019, 102,0 milliarder kroner i 2020, 116,6 milliarder kroner i 2021, 146,4 milliarder kroner i 2022, 165,2 milliarder kroner i 2023, 167,9 milliarder kroner i 2024, 173,9 milliarder kroner i 2025; Laks: 17,4 milliarder kroner i 2007, 17,9 milliarder kroner i 2008, 23,6 milliarder kroner i 2009, 31,3 milliarder kroner i 2010, 29,2 milliarder kroner i 2011, 29,6 milliarder kroner i 2012, 39,7 milliarder kroner i 2013, 43,7 milliarder kroner i 2014, 47,6 milliarder kroner i 2015, 61,3 milliarder kroner i 2016, 64,6 milliarder kroner i 2017, 67,7 milliarder kroner i 2018, 72,5 milliarder kroner i 2019, 70,1 milliarder kroner i 2020, 81,2 milliarder kroner i 2021, 105,6 milliarder kroner i 2022, 122,3 milliarder kroner i 2023, 122,4 milliarder kroner i 2024, 124,3 milliarder kroner i 2025.](./graf-1.svg)
+![Avviksbånd over Eksportverdien er nær femdoblet siden 2007: All fisk: 35,7 milliarder kroner i 2007, 37,4 milliarder kroner i 2008, 43,5 milliarder kroner i 2009, 52,5 milliarder kroner i 2010, 52,1 milliarder kroner i 2011, 50,8 milliarder kroner i 2012, 60,2 milliarder kroner i 2013, 67,1 milliarder kroner i 2014, 72,0 milliarder kroner i 2015, 89,2 milliarder kroner i 2016, 92,2 milliarder kroner i 2017, 96,1 milliarder kroner i 2018, 104,1 milliarder kroner i 2019, 102,0 milliarder kroner i 2020, 116,6 milliarder kroner i 2021, 146,4 milliarder kroner i 2022, 165,2 milliarder kroner i 2023, 167,9 milliarder kroner i 2024, 173,9 milliarder kroner i 2025; Laks: 17,4 milliarder kroner i 2007, 17,9 milliarder kroner i 2008, 23,6 milliarder kroner i 2009, 31,3 milliarder kroner i 2010, 29,2 milliarder kroner i 2011, 29,6 milliarder kroner i 2012, 39,7 milliarder kroner i 2013, 43,7 milliarder kroner i 2014, 47,6 milliarder kroner i 2015, 61,3 milliarder kroner i 2016, 64,6 milliarder kroner i 2017, 67,7 milliarder kroner i 2018, 72,5 milliarder kroner i 2019, 70,1 milliarder kroner i 2020, 81,2 milliarder kroner i 2021, 105,6 milliarder kroner i 2022, 122,3 milliarder kroner i 2023, 122,4 milliarder kroner i 2024, 124,3 milliarder kroner i 2025.](./graf-1.svg)
 *Eksportverdi for fisk, krepsdyr og bløtdyr i alt og for laks, 2007–2025, løpende kroner. Kilde: SSB, tabell 09283.*
 
 Gjennom de åtte første månedene av 2026 var eksportverdien for fisk, krepsdyr og bløtdyr 110,4 milliarder kroner, 2,0 prosent høyere enn i samme periode i 2025. Det tilsvarer 21,1 prosent av fastlandseksporten på 523,8 milliarder kroner i åttemånedersperioden.

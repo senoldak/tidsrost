@@ -8,7 +8,7 @@ produksjon: ki-redigert
 title: "Boligprisene har steget dobbelt så mye som husleien siden 2010"
 description: "Prisindeksen for brukte boliger og husleieindeksen i konsumprisindeksen startet likt, men skilte lag. Siden 2021 har avstanden begynt å krympe."
 category: okonomi
-why_matters: "Boligpriser og husleie måles i hver sin statistikk. Sammenligningen viser hvordan de to prisutviklingene har forholdt seg til hverandre siden 2010."
+why_matters: "Siden 2010 har boligprisene steget dobbelt så mye som husleien, men etter 2021 har leieprisene begynt å ta innpå – her ser vi hvordan de to kurvene faktisk har beveget seg."
 key_points:
   - "Fra 3. kvartal 2010 til 3. kvartal 2026 steg boligprisene 105,6 prosent, mens husleien i konsumprisindeksen steg 51,0 prosent."
   - "I 2023 falt boligprisene med 1,3 prosent mens husleien steg 4,0 prosent, den største forskjellen i motsatt retning i årsrekken vi har regnet på."
@@ -22,7 +22,7 @@ Begge tallene handler om å bo. Likevel har de beveget seg i svært ulik takt, o
 
 Tallene kommer fra to ulike deler av SSBs statistikk. Her ser vi dem ved siden av hverandre, og vi trekker ingen slutning om hva en leser bør gjøre. Det er ikke formålet.
 
-![Linjediagram over Boligprisene steg mer enn husleien i de første elleve årene: Boligpriser: 100,0 i 2010, 108,3 i 2011, 116,0 i 2012, 119,6 i 2013, 123,8 i 2014, 131,3 i 2015, 141,7 i 2016, 145,2 i 2017, 149,5 i 2018, 153,0 i 2019, 160,5 i 2020, 177,3 i 2021, 185,8 i 2022, 183,5 i 2023, 189,5 i 2024, 199,0 i 2025, 205,6 i 2026; Husleie: 100,0 i 2010, 102,2 i 2011, 104,2 i 2012, 108,8 i 2013, 112,0 i 2014, 114,9 i 2015, 116,9 i 2016, 119,1 i 2017, 121,2 i 2018, 123,4 i 2019, 125,0 i 2020, 126,7 i 2021, 129,8 i 2022, 135,0 i 2023, 140,9 i 2024, 145,7 i 2025, 151,0 i 2026.](./graf-1.svg)
+![Små linjediagrammer over Boligprisene steg mer enn husleien i de første elleve årene: Boligpriser: 0 i 2010, 3 i 2011, 0 i 2012, 6 i 2013, 8 i 2014, 3 i 2015, 7 i 2016, 2 i 2017, 5 i 2018, 0 i 2019, 5 i 2020, 3 i 2021, 8 i 2022, 5 i 2023, 5 i 2024, 0 i 2025, 6 i 2026; Husleie: 0 i 2010, 2 i 2011, 2 i 2012, 8 i 2013, 0 i 2014, 9 i 2015, 9 i 2016, 1 i 2017, 2 i 2018, 4 i 2019, 0 i 2020, 7 i 2021, 8 i 2022, 0 i 2023, 9 i 2024, 7 i 2025, 0 i 2026.](./graf-1.svg)
 *Indeks, startåret = 100 for begge serier. Kilde: Statistisk sentralbyrå (SSB).*
 
 ## To indekser som måler ulike ting
@@ -89,7 +89,7 @@ Delingen i 2021 er vår egen avgrensning, og den er ikke selvskreven. Vi har lag
 
 Avstanden mellom seriene har krympet, men den er ikke borte. I 2026 var boligprisindeksen 205,6 og husleieindeksen 151,0 indekspoeng. Når begge indeksene starter på 100 i 2010, var forholdet mellom boligprisindeksen og husleieindeksen 1,36 i 2026. I 2021 var forholdet 1,40. Forholdet har med andre ord falt fra 1,40 til 1,36, mens det store gapet fra de første elleve årene stort sett består.
 
-![Helningsdiagram over Siden 2021 har husleien økt mer enn boligprisene: 2010–2021: Boligpriser: 77,3 %, Husleie: 26,7 %, Konsumpriser: 27,8 %; 2021–2026: Boligpriser: 16,0 %, Husleie: 19,2 %, Konsumpriser: 21,8 %.](./graf-3.svg)
+![Prikkdiagram over Siden 2021 har husleien økt mer enn boligprisene: 2010–2021: Boligpriser: 77, Husleie: 26, Konsumpriser: 27; 2021–2026: Boligpriser: 16, Husleie: 19, Konsumpriser: 21.](./graf-3.svg)
 *Samlet prisvekst i hver periode, prosent. Kilde: Statistisk sentralbyrå (SSB).*
 
 ## En annen måte å lese tallene på

@@ -8,12 +8,12 @@ produksjon: ki-redigert
 title: "Hver femte sysselsatte jobber nå innen helse og omsorg, mot under én av ti i 1970"
 description: "Helse og omsorgs andel av alle sysselsatte økte fra 6,9 prosent til 20,9 prosent på femtifem år, mens industriens andel falt fra 22,0 prosent til 7,8 prosent."
 category: okonomi
-why_matters: "Tallene viser hvor mange som har jobb i hver næring, og hvordan fordelingen har endret seg siden 1970. Analysen viser hvilke næringer som vokste og hvilke som krympet."
+why_matters: "Tallene viser hvordan det norske arbeidslivet har flyttet seg fra fabrikk og gård til helse og tjenester siden 1970 – og hvilke næringer som har stått for jobbveksten."
 key_points:
-  - "I 2025 var andelen av de sysselsatte i helse og omsorg 20,9 prosent, mot 6,9 prosent i 1970."
-  - "Antall sysselsatte økte med 1390,9 tusen personer i 1970–2025, og helse og omsorg sto for 518,7 tusen av dem."
-  - "Industrien hadde 357,4 tusen sysselsatte i 1970. I 2025 var tallet 234,7 tusen."
-  - "Jordbruk og skogbruk gikk fra 11,6 prosent til 1,6 prosent av de sysselsatte."
+  - "Helse og omsorg sto for 20,9 prosent av alle sysselsatte i 2025, opp fra 6,9 prosent i 1970."
+  - "Av den samlede veksten på 1390,9 tusen sysselsatte mellom 1970 og 2025 kom 518,7 tusen i helse og omsorg."
+  - "Industrien krympet fra 357,4 tusen sysselsatte i 1970 til 234,7 tusen i 2025."
+  - "Jordbruk og skogbruk falt fra 11,6 prosent til 1,6 prosent av arbeidsstyrken."
 ---
 
 20,9 prosent. Så stor andel av alle sysselsatte i Norge jobbet innen helse og omsorg i 2025. I 1970 var andelen 6,9 prosent.
@@ -42,7 +42,7 @@ Olje og gass er ikke med i tallene for året 1970. Næringen har ingen sysselsat
 
 ## 1970–1995: færre i jordbruk og industri, flere i helse og omsorg
 
-![Helningsdiagram over Helse og omsorg har overtatt industriens plass som den største næringen: i 1970: Helse og omsorg: 6,93 %, Undervisning: 5,56 %, Faglige tjenester: 1,56 %, Forretningstjenester: 0,79 %, Varehandel: 14,45 %, Bygg og anlegg: 6,98 %, Industri: 22,03 %, Jordbruk: 11,59 %; i 2025: Helse og omsorg: 20,95 %, Undervisning: 7,94 %, Faglige tjenester: 5,45 %, Forretningstjenester: 4,34 %, Varehandel: 12,35 %, Bygg og anlegg: 8,26 %, Industri: 7,79 %, Jordbruk: 1,56 %.](./graf-1.svg)
+![Prikkdiagram over Helse og omsorg har overtatt industriens plass som den største næringen: i 1970: Helse og omsorg: 6,93 %, Undervisning: 5,56 %, Faglige tjenester: 1,56 %, Forretningstjenester: 0,79 %, Varehandel: 14,45 %, Bygg og anlegg: 6,98 %, Industri: 22,03 %, Jordbruk: 11,59 %; i 2025: Helse og omsorg: 20,95 %, Undervisning: 7,94 %, Faglige tjenester: 5,45 %, Forretningstjenester: 4,34 %, Varehandel: 12,35 %, Bygg og anlegg: 8,26 %, Industri: 7,79 %, Jordbruk: 1,56 %.](./graf-1.svg)
 *Andel av alle sysselsatte personer, prosent. Kilde: Statistisk sentralbyrå.*
 
 Industrien hadde 85,9 tusen færre sysselsatte, jordbruk og skogbruk hadde 100,7 tusen færre, og helse og omsorg hadde 252,3 tusen flere. Ved slutten av perioden, i 1995, var andelen i helse og omsorg 17,3 prosent, mot 12,9 prosent i industrien.
@@ -59,7 +59,7 @@ Faglig tjenesteyting og forretningstjenester vokste fra små tall. Faglig tjenes
 
 De siste tretti årene ser annerledes ut. Antallet sysselsatte økte med 42,7 prosent, fra 2111,1 tusen til 3013,4 tusen. Men veksten fordelte seg ujevnt.
 
-![Stolpediagram over Jordbruk og industri krympet mens de fleste andre næringer vokste: Endring: Forretningsmessig tjenesteyting: 174,8 %, Bygg og anlegg: 145,5 %, Faglig tjenesteyting: 137,1 %, Informasjon og kommunikasjon: 76,8 %, Overnatting og servering: 73,5 %, Helse og omsorg: 73,0 %, Undervisning: 51,1 %, Varehandel: 27,8 %, Industri: −13,6 %, Jordbruk og skogbruk: −46,1 %, Alle næringer: 42,7 %.](./graf-3.svg)
+![Avviksdiagram over Jordbruk og industri krympet mens de fleste andre næringer vokste: Endring: Forretningsmessig tjenesteyting: 174,8 %, Bygg og anlegg: 145,5 %, Faglig tjenesteyting: 137,1 %, Informasjon og kommunikasjon: 76,8 %, Overnatting og servering: 73,5 %, Helse og omsorg: 73,0 %, Undervisning: 51,1 %, Varehandel: 27,8 %, Industri: −13,6 %, Jordbruk og skogbruk: −46,1 %, Alle næringer: 42,7 %.](./graf-3.svg)
 *Endring i antall sysselsatte personer over tretti år, prosent. Kilde: Statistisk sentralbyrå.*
 
 Blant de ti næringene i diagrammet hadde forretningstjenester, bygg og anlegg og faglig tjenesteyting høyest prosentvis vekst, med 174,8 prosent, 145,5 prosent og 137,1 prosent. Alle tre vokste mer enn dobbelt så mye som antallet sysselsatte totalt. Helse og omsorg økte med 73,0 prosent, og det var mer enn totalen, men mindre enn de tre.

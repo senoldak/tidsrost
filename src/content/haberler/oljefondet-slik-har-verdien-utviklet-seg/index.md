@@ -9,11 +9,11 @@ coverAlt: "Illustrasjon: «Oljefondet har syvdoblet seg på 15 år – passerte 
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Fondets verdi inngår i beregningen av hvor mye som kan overføres til statsbudsjettet innenfor handlingsregelen."
+why_matters: "Jo større fondet blir, desto mer kan overføres til statsbudsjettet innenfor handlingsregelen – og nå er det finansmarkedene, ikke oljepengene, som driver veksten."
 key_points:
-  - "Statens pensjonsfond utland var verdt 22 683 milliarder kroner per 30. juni 2026."
-  - "Avkastningen i første halvår 2026 var 9,4 prosent, eller 1 753 milliarder kroner – ifølge NBIM den høyeste kroneavkastningen i et halvår."
-  - "Forslaget til statsbudsjett for 2027 legger til grunn en overføring fra fondet på 608,4 milliarder kroner, anslått til 2,7 prosent av fondsverdien."
+  - "Statens pensjonsfond utland nådde 22 683 milliarder kroner per 30. juni 2026."
+  - "Første halvår 2026 ga 9,4 prosent avkastning, eller 1 753 milliarder kroner – den høyeste kroneavkastningen i et halvår noen gang, ifølge NBIM."
+  - "Statsbudsjettforslaget for 2027 legger opp til en overføring på 608,4 milliarder kroner, anslått til 2,7 prosent av fondsverdien."
 ---
 
 Statens pensjonsfond utland, oljefondet, var verdt 22 683 milliarder kroner per 30. juni 2026, viser halvårsrapporten som Norges Bank Investment Management (NBIM) la fram 12. august. Ved utgangen av 2010 var fondet verdt 3 077 milliarder kroner. På 15 år har formuen dermed blitt drøyt sju ganger så stor. Avkastning i finansmarkedene står for 15 210 milliarder kroner av verdien.
@@ -33,7 +33,7 @@ Tre faktorer avgjør hvor stort fondet er: gevinst eller tap i finansmarkedene, 
 
 Nesten tre fjerdedeler av formuen er plassert i aksjer. Per 30. juni 2026 var 72,1 prosent investert i aksjer, 25,8 prosent i rentepapirer, 1,6 prosent i unotert eiendom og 0,5 prosent i unotert infrastruktur for fornybar energi.
 
-![Rutediagram over Nesten tre fjerdedeler er aksjer: Andel: Aksjer: 72,1 %, Rentepapirer: 25,8 %, Unotert eiendom: 1,6 %, Unotert fornybar infrastruktur: 0,5 %.](./graf-2.svg)
+![Tabell over Nesten tre fjerdedeler er aksjer: Andel: Aksjer: 72,1 %, Rentepapirer: 25,8 %, Unotert eiendom: 1,6 %, Unotert fornybar infrastruktur: 0,5 %.](./graf-2.svg)
 *Fondets fordeling på aktivaklasser per 30. juni 2026. Andelen unotert fornybar infrastruktur er under én rute. Kilde: NBIM.*
 
 Aksjeporteføljen er spredt på eierposter i rundt 7 100 selskaper verden over. I gjennomsnitt eier fondet 1,5 prosent av alle børsnoterte selskaper. Fondet har handlet aksjer og rentepapirer siden 1998. De første kjøpene i unotert eiendom kom i 2011, mens investeringer i unotert fornybar infrastruktur ble åpnet i 2021.
@@ -42,7 +42,7 @@ Aksjeporteføljen er spredt på eierposter i rundt 7 100 selskaper verden over. 
 
 I første halvår 2026 ga fondet en avkastning på 9,4 prosent, eller 1 753 milliarder kroner. Ifølge NBIM er det den høyeste kroneavkastningen i et halvår, og 0,22 prosentpoeng bedre enn fondets referanseindeks. NBIM oppgir at resultatet skyldes god avkastning i aksjemarkedet, særlig i asiatiske teknologiaksjer.
 
-![Stolpediagram over Aksjene trakk avkastningen opp: Avkastning: Aksjer: 13,0 %, Unotert eiendom: 3,0 %, Renteinvesteringer: 0,9 %, Unotert fornybar infrastruktur: −0,2 %, Fondet samlet: 9,4 %.](./graf-3.svg)
+![Søylediagram over Aksjene trakk avkastningen opp: Avkastning: Aksjer: 13,0 %, Unotert eiendom: 3,0 %, Renteinvesteringer: 0,9 %, Unotert fornybar infrastruktur: −0,2 %.](./graf-3.svg)
 *Avkastning i første halvår 2026 etter aktivaklasse. Den stiplede linjen viser fondet samlet. Kilde: NBIM.*
 
 Fondsverdien økte likevel med et lavere beløp, 1 416 milliarder kroner. En sterkere krone mot flere av hovedvalutaene trakk verdien målt i norske kroner ned med 427 milliarder kroner. Netto tilførsel fra staten var 89 milliarder kroner etter fradrag for forvaltningskostnader.

@@ -8,11 +8,11 @@ coverAlt: "Illustrasjon: «Ny romlov og første testoppskyting fra Andøya»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Satellitter brukes blant annet til å overvåke havområder, til navigasjon og til kommunikasjon."
+why_matters: "Satellitter er avgjørende for alt fra havovervåking til navigasjon og kommunikasjon – og med ny romlov og romhavn på Andøya får Norge et helt nytt rammeverk."
 key_points:
-  - "Den nye romloven trådte i kraft 1. juli 2026 og erstatter loven fra 1969 om oppskyting fra norsk territorium."
-  - "I mars 2025 ble den første testoppskytingen gjennomført fra Andøya, som ifølge Direktoratet for romvirksomhet ga det europeiske kontinentet sin første romhavn for oppskyting i bane."
-  - "Norsk industri fikk 833,4 millioner kroner i ESA-kontrakter i 2025, ifølge direktoratets årsrapport."
+  - "Den nye romloven trådte i kraft 1. juli 2026 og avløser loven fra 1969 om oppskyting fra norsk territorium."
+  - "I mars 2025 ble den første testoppskytingen gjennomført fra Andøya, som ga det europeiske kontinentet sin første romhavn for oppskyting i bane."
+  - "Norsk industri sikret seg 833,4 millioner kroner i ESA-kontrakter i 2025, ifølge Direktoratet for romvirksomhet."
 ---
 
 Den nye romloven trådte i kraft 1. juli 2026, ifølge Nærings- og fiskeridepartementet. Den erstatter en lov fra 1969 som bare handlet om oppskyting fra norsk territorium. Samtidig har Andøya fått sin første testoppskyting, og norske aktører fikk mer i europeiske romkontrakter i 2025 enn året før.

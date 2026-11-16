@@ -9,11 +9,11 @@ coverAlt: "Illustrasjon: «Hver fjerde budsjettkrone hentes fra oljefondet – 6
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Oljefondet finansierer nå mer enn hver fjerde krone staten bruker. Handlingsregelen setter en ramme for hvor mye av fondet som kan brukes."
+why_matters: "Mer enn hver fjerde krone staten bruker hentes nå fra oljefondet. Handlingsregelen setter rammene for hvor mye av fondet politikerne kan ta ut over tid."
 key_points:
-  - "Regjeringen foreslår en bruk av fondsmidler på 608,4 milliarder kroner i 2027, som tilsvarer 2,7 prosent av Statens pensjonsfond utland – under forventet realavkastning på 3 prosent."
-  - "Fondsmidlene dekker anslagsvis 26,6 prosent av statsbudsjettets utgifter i 2027, mot 26,5 prosent i 2026 og 24,5 prosent i 2025."
-  - "Budsjettforslaget inneholder 3,2 milliarder kroner i økte frie inntekter til kommunesektoren, 3,1 milliarder kroner mer til sykehusene og en reduksjon i inntektsskatten på 6,4 milliarder kroner."
+  - "Regjeringen foreslår å bruke 608,4 milliarder oljekroner i 2027, tilsvarende 2,7 prosent av fondet – innenfor handlingsregelens 3-prosentbane."
+  - "Fondsmidlene dekker anslagsvis 26,6 prosent av statsbudsjettets utgifter i 2027, opp fra 24,5 prosent i 2025."
+  - "Forslaget gir 3,2 milliarder kroner mer i frie inntekter til kommunene, 3,1 milliarder mer til sykehusene og 6,4 milliarder kroner i lavere inntektsskatt."
 ---
 
 I forslaget til statsbudsjett for 2027, lagt fram 7. oktober 2026, foreslår regjeringen å bruke 608,4 milliarder kroner fra Statens pensjonsfond utland. Fondsmidlene dekker anslagsvis 26,6 prosent av statsbudsjettets utgifter, altså mer enn hver fjerde krone. Med en beregningsteknisk anslått fondsverdi på 22 400 milliarder kroner ved inngangen til 2027 tilsvarer bruken 2,7 prosent av fondet. Forslaget ligger nå til behandling i Stortinget.
@@ -43,7 +43,7 @@ Utenom lånetransaksjoner er statens samlede utgifter i 2027 anslått til 2 322 
 
 Folketrygden er den største utgiftsposten med 794,1 milliarder kroner, der alderspensjonene alene utgjør 378,2 milliarder. Deretter følger rammetilskuddene til kommuner og fylkeskommuner (277,6 milliarder kroner), de regionale helseforetakene (250,4 milliarder) og samferdsel (99,9 milliarder).
 
-![Stolpediagram over Folketrygden er den klart største posten: Utgifter: Folketrygden: 794,1 milliarder kroner, Rammetilskudd til kommunesektoren: 277,6 milliarder kroner, Regionale helseforetak: 250,4 milliarder kroner, Samferdsel: 99,9 milliarder kroner, Høyere utdanning og forskning: 68,6 milliarder kroner, Bistand: 53,4 milliarder kroner, Politi og påtalemyndighet: 33,6 milliarder kroner, Jordbruksavtalen: 33,4 milliarder kroner, Barnetrygd og kontantstøtte: 30,8 milliarder kroner, Renter på statsgjeld: 24,4 milliarder kroner.](./graf-2.svg)
+![Tabell over Folketrygden er den klart største posten: Utgifter: Folketrygden: 794,1 milliarder kroner, Rammetilskudd til kommunesektoren: 277,6 milliarder kroner, Regionale helseforetak: 250,4 milliarder kroner, Samferdsel: 99,9 milliarder kroner, Høyere utdanning og forskning: 68,6 milliarder kroner, Bistand: 53,4 milliarder kroner, Politi og påtalemyndighet: 33,6 milliarder kroner, Jordbruksavtalen: 33,4 milliarder kroner, Barnetrygd og kontantstøtte: 30,8 milliarder kroner, Renter på statsgjeld: 24,4 milliarder kroner.](./graf-2.svg)
 *Utvalgte utgiftsposter i statsbudsjettet 2027, milliarder kroner, utenom lånetransaksjoner og petroleumsvirksomheten. Samlede utgifter utenom petroleum er 2 286,8 milliarder kroner. Kilde: Finansdepartementet, Statsbudsjettet 2027, tabell 1.*
 
 ## Hva som endres

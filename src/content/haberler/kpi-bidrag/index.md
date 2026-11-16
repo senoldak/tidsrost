@@ -5,15 +5,15 @@ author: "Şenol Dak"
 cover: ./cover.png
 coverAlt: "Boligen veier tyngst i prisindeksen, men forsikring og servering steg raskest av hovedgruppene"
 produksjon: ki-redigert
-title: "Boligen veier tyngst i prisindeksen, men forsikring og servering steg raskest av hovedgruppene"
-description: "Konsumprisindeksen steg 3,4 prosent på ett år, men gruppene lå mellom minus 1,1 prosent og 7,9 prosent. Vi har lagt vekter og prisendringer side om side for å se hvor avvikene sitter."
+title: "Boligen veier tyngst i prisindeksen – men forsikring og servering steg raskest"
+description: "Konsumprisindeksen økte med 3,4 prosent på ett år, men bak snittet spriker gruppene fra minus 1,1 til pluss 7,9 prosent. Her er vektene og prisutslagene lagt side om side."
 category: okonomi
-why_matters: "Prisindeksen er et gjennomsnitt. Hvor mye en husholdning merker av prisveksten, avhenger av hva pengene går til, og gruppene i indeksen utviklet seg svært ulikt."
+why_matters: "Prisindeksen er et veid gjennomsnitt. Hvor hardt prisveksten treffer den enkelte husholdningen, avhenger av hva pengene faktisk går til."
 key_points:
   - "Konsumprisindeksen steg 3,4 prosent fra september 2025 til september 2026."
-  - "Åtte av tretten hovedgrupper steg raskere enn totalen, og de utgjør 707,5 promille av kurven."
-  - "Bolig, elektrisitet og brensel veier 312,3 promille, men steg bare 0,1 prosentpoeng mer enn totalen."
-  - "Drivstoff, strøm og forsikring veier til sammen 58,1 promille, men har store utslag i tolvmånedersendringen."
+  - "Åtte av tretten hovedgrupper steg raskere enn totalen, og disse utgjør 707,5 promille av kurven."
+  - "Bolig, elektrisitet og brensel veier tyngst med 312,3 promille, men lå bare 0,1 prosentpoeng over totalen."
+  - "Drivstoff, strøm og forsikring veier samlet 58,1 promille, men slår kraftig ut i tolvmånedersendringen."
 ---
 
 Den som fylte tanken i september 2026, betalte 26,3 prosent mer for drivstoff enn tolv måneder tidligere. Den som handlet mat, betalte 2,4 prosent mer. Den som leide bolig, betalte 3,6 prosent mer i husleie. Tre kvitteringer gir tre ulike tall. Likevel sier Statistisk sentralbyrå (SSB) at konsumprisindeksen, altså prisen på en fast handlekurv med varer og tjenester, steg 3,4 prosent fra september 2025 til september 2026.
@@ -61,7 +61,7 @@ Vekten alene sier ikke hva som drev prisveksten. Den sier bare hvor mye en grupp
 
 Åtte av de tretten hovedgruppene steg mer enn totalindeksen på 3,4 prosent. Forsikring og finansielle tjenester lå høyest med 7,9 prosent, fulgt av serverings- og overnattingstjenester med 6,0 prosent. Helse steg 4,9 prosent og transport 4,8 prosent. Avviket var størst i hver ende: forsikring og finansielle tjenester lå 4,5 prosentpoeng over totalen, mens avviket for møbler og husholdningsartikler var minus 4,5 prosentpoeng.
 
-![Stolpediagram over Åtte av tretten hovedgrupper steg raskere enn totalen: Avvik fra totalen: Forsikring og finans: 4,5, Servering og overnatting: 2,6, Helse: 1,5, Transport: 1,4, Utdanning: 0,9, Fritid og kultur: 0,6, Andre varer og tjenester: 0,5, Bolig og strøm: 0,1, Alkohol og tobakk: −0,8, Mat: −1,0, Klær og sko: −1,2, Informasjon og kommunikasjon: −1,7, Møbler og husholdning: −4,5.](./graf-2.svg)
+![Søylediagram over Åtte av tretten hovedgrupper steg raskere enn totalen: Avvik fra totalen: Forsikring og finans: 4,5, Servering og overnatting: 2,6, Helse: 1,5, Transport: 1,4, Utdanning: 0,9, Fritid og kultur: 0,6, Andre varer og tjenester: 0,5, Bolig og strøm: 0,1, Alkohol og tobakk: −0,8, Mat: −1,0, Klær og sko: −1,2, Informasjon og kommunikasjon: −1,7, Møbler og husholdning: −4,5.](./graf-2.svg)
 *Tolvmånedersendring minus totalindeksen, prosentpoeng, september. Kilde: Statistisk sentralbyrå.*
 
 Gruppene som steg raskere enn totalen, utgjør 707,5 promille av kurven. De fem som steg saktere, utgjør 292,6 promille. Det store flertallet av kurven lå altså over snittet. Bolig, som alene veier 312,3 promille, lå bare 0,1 prosentpoeng over totalen. Den største gruppen følger dermed totalen nesten helt.
@@ -89,7 +89,7 @@ Bildet var et annet for ett år siden. Tolvmånedersendringen for mat var 6,3 pr
 
 Deler vi kurven i varer og tjenester, steg varene 3,0 prosent og tjenestene 3,8 prosent i september 2026. Tjenestene veier 566,0 promille og varene 434,1 promille. Tjenestene steg dermed 0,8 prosentpoeng mer enn varene. I september 2025 var det omvendt, med 3,5 prosent for tjenester og 3,8 prosent for varer. Fra juni til september 2026 økte tolvmånedersendringen for tjenester med 1,2 prosentpoeng, mot 0,3 prosentpoeng for varer.
 
-![Linjediagram over Tjenestene har gått fra å stige saktere enn varene til å stige raskere: Tjenester: sep. 2025: 3,5 %, des. 2025: 3,4 %, mar. 2026: 3,6 %, jun. 2026: 2,6 %, sep. 2026: 3,8 %; Varer: sep. 2025: 3,8 %, des. 2025: 3,1 %, mar. 2026: 3,6 %, jun. 2026: 2,7 %, sep. 2026: 3,0 %; Totalt: sep. 2025: 3,6 %, des. 2025: 3,2 %, mar. 2026: 3,6 %, jun. 2026: 2,7 %, sep. 2026: 3,4 %.](./graf-4.svg)
+![Små linjediagrammer over Tjenestene har gått fra å stige saktere enn varene til å stige raskere: Tjenester: sep. 2025: 3,5 %, des. 2025: 3,4 %, mar. 2026: 3,6 %, jun. 2026: 2,6 %, sep. 2026: 3,8 %; Varer: sep. 2025: 3,8 %, des. 2025: 3,1 %, mar. 2026: 3,6 %, jun. 2026: 2,7 %, sep. 2026: 3,0 %; Totalt: sep. 2025: 3,6 %, des. 2025: 3,2 %, mar. 2026: 3,6 %, jun. 2026: 2,7 %, sep. 2026: 3,4 %.](./graf-4.svg)
 *Tolvmånedersendring i konsumprisindeksen, prosent. Kilde: Statistisk sentralbyrå.*
 
 ## En annen måte å lese tallene på

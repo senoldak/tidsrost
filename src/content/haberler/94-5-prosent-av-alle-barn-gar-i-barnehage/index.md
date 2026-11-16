@@ -9,7 +9,7 @@ coverAlt: "Illustrasjon: «94,5 prosent av alle barn går i barnehage – makspr
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Dekningsgrad og foreldrebetaling viser hvor mange barn som har barnehageplass og hva en plass koster."
+why_matters: "Nesten alle barn i Norge går i barnehage, og etter flere runder med priskutt er foreldrebetalingen nå mer enn halvert siden toppåret 2022."
 key_points:
   - "94,5 prosent av alle barn i alderen 1–5 år gikk i barnehage i 2025, og blant 3–5-åringene var dekningsgraden 97,5 prosent."
   - "Maksprisen for en barnehageplass er satt ned fra 3 315 kroner i måneden i 2022 til 1 200 kroner nasjonalt og 700 kroner i sentralitetssone 5 og 6."
@@ -22,7 +22,7 @@ Fra 1. august 2025 er den nasjonale maksprisen for en heltidsplass i barnehage 1
 
 Fra 2013 til januar 2022 steg maksprisen hvert år i kroner, fra 2 330 til 3 315 kroner i måneden. Deretter er den satt ned i flere trinn: til 3 050 kroner fra 1. august 2022, til 3 000 kroner fra januar 2023, til 2 000 kroner fra 1. august 2024 og til 1 200 kroner fra 1. august 2025. Ved nedsettelsen i august 2024 ble maksprisen i sentralitetssone 5 og 6 satt til 1 500 kroner, og fra august 2025 til 700 kroner.
 
-![Linjediagram over Maksprisen er mer enn halvert siden 2022: Makspris: januar 2013: 2 330, januar 2014: 2 405, januar 2015: 2 580, januar 2016: 2 655, januar 2017: 2 730, januar 2018: 2 910, januar 2019: 2 990, august 2019: 3 040, januar 2020: 3 135, januar 2021: 3 230, januar 2022: 3 315, august 2022: 3 050, januar 2023: 3 000, januar 2024: 3 000, august 2024: 2 000, august 2025: 1 200.](./graf-1.svg)
+![Linjediagram med perioder over Maksprisen er mer enn halvert siden: Makspris: januar 2013: 2 330, januar 2014: 2 405, januar 2015: 2 580, januar 2016: 2 655, januar 2017: 2 730, januar 2018: 2 910, januar 2019: 2 990, august 2019: 3 040, januar 2020: 3 135, januar 2021: 3 230, januar 2022: 3 315, august 2022: 3 050, januar 2023: 3 000, januar 2024: 3 000, august 2024: 2 000, august 2025: 1 200.](./graf-1.svg)
 *Nasjonal makspris for heltidsplass i barnehage per måned, nominelle kroner, januar 2013–august 2025. Kilde: Kunnskapsdepartementet og Utdanningsdirektoratet.*
 
 ## Hva en plass koster nå
@@ -45,7 +45,7 @@ I 2025 hadde 264 210 barn barnehageplass i Norge, 1 804 færre enn i 2024. Andel
 
 Den største økningen har kommet blant de minste. I 2015 hadde 80,6 prosent av ett- og toåringene barnehageplass, mot 96,6 prosent av tre- til femåringene.
 
-![Helningsdiagram over Dekningen har økt mest blant de minste: i 2015: Tre til fem år: 96,6 %, Ett til fem år: 90,4 %, Ett og to år: 80,6 %; i 2025: Tre til fem år: 97,5 %, Ett til fem år: 94,5 %, Ett og to år: 89,7 %.](./graf-2.svg)
+![Prikkdiagram over Dekningen har økt mest blant de minste: i 2015: Tre til fem år: 96, Ett til fem år: 90, Ett og to år: 80; i 2025: Tre til fem år: 97, Ett til fem år: 94, Ett og to år: 89.](./graf-2.svg)
 *Andel barn med barnehageplass i forhold til alle innbyggere i samme aldersgruppe, hele landet. Kilde: SSB, tabell 13502.*
 
 På landsbasis er det i gjennomsnitt 5,7 barn per årsverk i grunnbemanningen, et tall som har vært uendret siden 2019. Barnehagelærere utgjør 41,2 prosent av grunnbemanningen, ifølge SSBs tall for 2025.

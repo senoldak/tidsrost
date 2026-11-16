@@ -9,14 +9,14 @@ coverAlt: "Illustrasjon: «97,9 prosent av nye personbiler er elbiler – elbile
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Elbilen har i praksis overtatt nybilsalget i Norge, og i 2025 passerte antallet elbiler på veiene både diesel- og bensinbiler."
+why_matters: "Elbilen har i praksis overtatt det norske nybilsalget, og i 2025 passerte den også dieselbilen som den vanligste biltypen på norske veier."
 key_points:
-  - "Fra januar til september 2026 var 97,9 prosent av nyregistrerte personbiler elektriske eller nullutslipp, viser tall fra SSB."
-  - "Ved utgangen av 2025 var 945 182 av 2 935 738 registrerte personbiler elbiler – en andel på 32,2 prosent."
-  - "I forslaget til statsbudsjett for 2027 foreslår regjeringen å justere beløpsgrensen for momsfritaket fra 300 000 til 150 000 kroner fra 1. januar 2027."
+  - "Fra januar til september 2026 var 97,9 prosent av alle nyregistrerte personbiler elektriske eller nullutslipp, viser SSB-tall."
+  - "Ved utgangen av 2025 var 945 182 av landets 2 935 738 personbiler elektriske – en andel på 32,2 prosent."
+  - "I forslaget til statsbudsjett for 2027 vil regjeringen senke grensen for momsfritak fra 300 000 til 150 000 kroner fra 1. januar 2027."
 ---
 
-Fra januar til september 2026 ble det førstegangsregistrert 114 599 nye personbiler i Norge, og 112 224 av dem var elektriske eller andre nullutslippsbiler. Det tilsvarer 97,9 prosent, viser statistikk fra Statistisk sentralbyrå (SSB). Målet i Nasjonal transportplan var at alle nye personbiler skulle være nullutslippsbiler i 2025. Det året var andelen 95,9 prosent.
+Av de 114 599 nye personbilene som ble førstegangsregistrert i Norge fra januar til september 2026, var 112 224 elektriske eller andre nullutslippsbiler. Det gir en andel på 97,9 prosent, viser statistikk fra Statistisk sentralbyrå (SSB). Målet i Nasjonal transportplan var at alle nye personbiler skulle være nullutslippsbiler i 2025 – et år der andelen endte på 95,9 prosent.
 
 ## Hva målet er
 
@@ -39,7 +39,7 @@ Siden en personbil ifølge Finansdepartementet har en typisk levetid på 15 til 
 
 I 2025 var det for første gang registrert flere elbiler enn dieselbiler (942 780) på norske skilt. Bensinbilene var 676 614.
 
-![Linjediagram over Elbilene gikk forbi dieselbilene i 2025: Elbiler: 1 693 i 2008, 1 776 i 2009, 2 068 i 2010, 3 909 i 2011, 8 031 i 2012, 17 770 i 2013, 38 652 i 2014, 69 134 i 2015, 97 532 i 2016, 138 983 i 2017, 195 351 i 2018, 260 692 i 2019, 340 002 i 2020, 460 734 i 2021, 599 169 i 2022, 689 169 i 2023, 788 750 i 2024, 945 182 i 2025; Diesel: 597 391 i 2008, 690 560 i 2009, 804 384 i 2010, 922 986 i 2011, 1 025 220 i 2012, 1 110 621 i 2013, 1 186 194 i 2014, 1 243 235 i 2015, 1 276 947 i 2016, 1 294 493 i 2017, 1 290 442 i 2018, 1 281 019 i 2019, 1 246 671 i 2020, 1 204 097 i 2021, 1 135 538 i 2022, 1 065 135 i 2023, 1 005 761 i 2024, 942 780 i 2025.](./graf-2.svg)
+![Små linjediagrammer over Elbilene gikk forbi dieselbilene i 2025: Elbiler: 1 693 i 2008, 1 776 i 2009, 2 068 i 2010, 3 909 i 2011, 8 031 i 2012, 17 770 i 2013, 38 652 i 2014, 69 134 i 2015, 97 532 i 2016, 138 983 i 2017, 195 351 i 2018, 260 692 i 2019, 340 002 i 2020, 460 734 i 2021, 599 169 i 2022, 689 169 i 2023, 788 750 i 2024, 945 182 i 2025; Diesel: 597 391 i 2008, 690 560 i 2009, 804 384 i 2010, 922 986 i 2011, 1 025 220 i 2012, 1 110 621 i 2013, 1 186 194 i 2014, 1 243 235 i 2015, 1 276 947 i 2016, 1 294 493 i 2017, 1 290 442 i 2018, 1 281 019 i 2019, 1 246 671 i 2020, 1 204 097 i 2021, 1 135 538 i 2022, 1 065 135 i 2023, 1 005 761 i 2024, 942 780 i 2025.](./graf-2.svg)
 *Registrerte personbiler med elektrisk drivstoff og med diesel, per 31. desember. Kilde: SSB, tabell 07849.*
 
 Fra 2017 til 2025 ble beholdningen av personbiler med forbrenningsmotor redusert med nær 600 000, tilsvarende om lag 23 prosent, opplyser Finansdepartementet i budsjettproposisjonen for 2027. Beholdningen av personbiler samlet har likevel fortsatt å øke.

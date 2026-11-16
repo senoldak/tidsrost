@@ -6,14 +6,14 @@ cover: ./cover.png
 coverAlt: "Kjerneinflasjonen har ligget over 2 prosent hver måned siden februar 2022"
 produksjon: ki-redigert
 title: "Kjerneinflasjonen har ligget over 2 prosent hver måned siden februar 2022"
-description: "Tolvmånedersendringen i KPI-JAE var 3,0 prosent i september 2026. Målet for KPI er 2 prosent, og Norges Banks anslag for hele året 2026 er 3,0 prosent."
+description: "KPI-JAE var 3,0 prosent i september 2026 – nøyaktig det samme som Norges Banks anslag for hele året 2026, og fortsatt 1,0 prosentpoeng over inflasjonsmålet."
 category: okonomi
-why_matters: "Målet på 2 prosent er rammen for pengepolitikken. Månedstallene viser hvordan KPI-JAE har beveget seg siden januar 2021 sammenlignet med 2 prosent."
+why_matters: "Inflasjonsmålet på 2 prosent styrer rentesettingen, og månedstallene viser hvor seiglivet prisveksten har vært siden februar 2022."
 key_points:
-  - "KPI-JAE var 3,0 prosent i september 2026. Målet for konsumprisene er nær 2 prosent over tid."
+  - "KPI-JAE var 3,0 prosent i september 2026, mot et inflasjonsmål på nær 2 prosent over tid."
   - "Siste måned under 2 prosent var januar 2022, da tallet var 1,3 prosent."
-  - "Toppen kom i juni 2023 med 6,9 prosent. Siden da er tallet redusert med 3,9 prosentpoeng."
-  - "Norges Banks anslag fra september 2026 for KPI-JAE er 3,0 prosent i 2026, 2,7 prosent i 2027, 2,4 prosent i 2028 og 2,1 prosent i 2029."
+  - "Toppen ble nådd i juni 2023 med 6,9 prosent; siden har kjerneinflasjonen falt med 3,9 prosentpoeng."
+  - "Norges Bank anslår i september 2026 at KPI-JAE blir 3,0 prosent i 2026, 2,7 prosent i 2027, 2,4 prosent i 2028 og 2,1 prosent i 2029."
 ---
 
 Norges Bank anslo i september 2026: kjerneinflasjonen, målt som KPI-JAE, ligger på 3,0 prosent i året 2026. Statistisk sentralbyrå (SSB) målte 3,0 prosent i september 2026. Anslaget for hele året og utfallet for den siste måneden ligger altså på samme sted.
@@ -83,7 +83,7 @@ Hvilket mål vi velger, påvirker også forskjellen fra 2 prosent. I september 2
 
 Gjennom hele saken har vi holdt oss til målte tall. Det finnes likevel en offentlig fremskriving av tallet, og den er Norges Banks, ikke vår. I Pengepolitisk rapport fra september 2026, publisert 24. september 2026, anslår Norges Bank at KPI-JAE blir 3,0 prosent i 2026, 2,7 prosent i 2027, 2,4 prosent i 2028 og 2,1 prosent i 2029.
 
-![Stolpediagram over Norges Banks anslag for KPI-JAE faller fra 3,0 prosent til 2,1 prosent: Anslag: 3,0 % i 2026, 2,7 % i 2027, 2,4 % i 2028, 2,1 % i 2029, Mål: 2,0 %.](./graf-4.svg)
+![Søylediagram over Norges Banks anslag for KPI-JAE faller fra 3,0 prosent til 2,1 prosent: Anslag: 3,0 % i 2026, 2,7 % i 2027, 2,4 % i 2028, 2,1 % i 2029, Mål: 2,0 %.](./graf-4.svg)
 *KPI-JAE, anslag i Pengepolitisk rapport fra september 2026, prosent. Kilde: Norges Bank, Finansdepartementet.*
 
 Regnet mekanisk fra dette anslaget er forskjellen fra 2 prosent 0,7 prosentpoeng i 2027, 0,4 prosentpoeng i 2028, og 0,1 prosentpoeng i 2029. Forskjellen er vår beregning, ikke Norges Banks. Anslaget for KPI er 3,3 prosent i 2026 og 2,6 prosent i 2027.

@@ -1,6 +1,6 @@
 ---
 title: "379 kilo husholdningsavfall per innbygger i 2025 – 49 prosent levert til materialgjenvinning"
-description: "Husholdningsavfallet var 379 kilo per innbygger i 2025, og 48,9 prosent ble levert til materialgjenvinning, viser SSB. EU-målet er 55 prosent innen 2025, men måles på annet grunnlag."
+description: "Hver nordmann kastet i snitt 379 kilo husholdningsavfall i 2025, og 48,9 prosent ble levert til materialgjenvinning. EU krever 55 prosent, men måler på en annen måte."
 date: 2026-11-15T08:00:00+01:00
 category: innenriks
 cover: ./cover.png
@@ -8,16 +8,16 @@ coverAlt: "Illustrasjon: «379 kilo husholdningsavfall per innbygger i 2025 – 
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Statistikken viser hvor mye husholdningsavfall det er, hva det består av og hvor stor andel som leveres til gjenvinning."
+why_matters: "Vi kaster mindre enn under pandemiårene og sorterer mer, men etterslepet til EUs gjenvinningsmål viser at mye fortsatt går tapt før det blir til nye råvarer."
 key_points:
-  - "Husholdningsavfallet var 379,1 kilo per innbygger i 2025, mot 448,6 kilo i 2020, det høyeste i serien fra 2015. Totalt ble det 2 131 000 tonn."
-  - "48,9 prosent ble levert til materialgjenvinning inkludert biogass og kompostering, opp fra 37,9 prosent i 2015."
-  - "EU-målet er 55 prosent forberedelse til ombruk og materialgjenvinning innen 2025, målt på annet grunnlag enn SSBs andel. Miljødirektoratets høringsutkast til avfallsplan oppgir 42,9 prosent for 2023 etter justering for tap."
+  - "Husholdningsavfallet lå på 379,1 kilo per innbygger i 2025, ned fra toppen på 448,6 kilo i 2020. Samlet mengde ble 2 131 000 tonn."
+  - "48,9 prosent gikk til materialgjenvinning inkludert biogass og kompostering – et solid hopp fra 37,9 prosent i 2015."
+  - "EUs mål er 55 prosent innen 2025, men med strengere beregning: justert for tap i sorteringen oppnådde Norge bare 42,9 prosent i 2023, viser Miljødirektoratets høringsutkast."
 ---
 
-Husholdningsavfallet var i gjennomsnitt 379 kilo per innbygger i Norge i 2025, viser statistikken «Avfall frå hushalda» fra Statistisk sentralbyrå (SSB), oppdatert 15. juni 2026. Til sammen ble det 2 131 000 tonn. 48,9 prosent ble levert til materialgjenvinning, inkludert biogassproduksjon og kompostering. Året før var andelen 46,3 prosent.
+Hver innbygger i Norge sto i snitt bak 379 kilo husholdningsavfall i 2025, viser statistikken «Avfall frå hushalda» fra Statistisk sentralbyrå (SSB), oppdatert 15. juni 2026. Totalt ble det 2 131 000 tonn. Av dette ble 48,9 prosent levert til materialgjenvinning, inkludert biogassproduksjon og kompostering – opp fra 46,3 prosent året før.
 
-![Linjediagram over Større andel leveres til gjenvinning: Andel: 37,9 % i 2015, 38,1 % i 2016, 39,0 % i 2017, 39,8 % i 2018, 40,7 % i 2019, 41,1 % i 2020, 43,2 % i 2021, 43,7 % i 2022, 45,1 % i 2023, 46,3 % i 2024, 48,9 % i 2025.](./graf-1.svg)
+![Tabell over Større andel leveres til gjenvinning: Andel: 9 % i 2015, 1 % i 2016, 0 % i 2017, 8 % i 2018, 7 % i 2019, 1 % i 2020, 2 % i 2021, 7 % i 2022, 1 % i 2023, 3 % i 2024, 9 % i 2025.](./graf-1.svg)
 *Andel av husholdningsavfallet levert til materialgjenvinning, inkludert biogass og kompostering, 2015–2025. Kilde: SSB, tabell 12241.*
 
 ## Mengden per innbygger
@@ -39,7 +39,7 @@ Avfallsmengden per innbygger var høyest i 2020, med 448,6 kilo. Siden har den f
 
 Restavfall er den største gruppen, med 810 000 tonn eller 38 prosent av husholdningsavfallet i 2025. Deretter følger treavfall (249 000 tonn), matavfall (241 000 tonn) og papp (183 000 tonn). Fra 2024 økte matavfallet med 6,3 prosent, mens restavfallet gikk ned 3,6 prosent.
 
-![Stolpediagram over Restavfall er den største gruppen: Avfall: Restavfall: 810 406, Treavfall: 249 160, Matavfall: 241 484, Papp: 182 964, Hageavfall: 169 494, Metall: 92 145, Farlig avfall: 82 166, Glass: 80 642, Byggavfall: 59 001, Plast: 57 230, EE-avfall: 49 972.](./graf-2.svg)
+![Tabell over Restavfall er den største gruppen: Avfall: Restavfall: 810 406, Treavfall: 249 160, Matavfall: 241 484, Papp: 182 964, Hageavfall: 169 494, Metall: 92 145, Farlig avfall: 82 166, Glass: 80 642, Byggavfall: 59 001, Plast: 57 230, EE-avfall: 49 972.](./graf-2.svg)
 *Husholdningsavfall etter materiale, 2025. Kilde: SSB, tabell 13136.*
 
 ## Hvor avfallet havner

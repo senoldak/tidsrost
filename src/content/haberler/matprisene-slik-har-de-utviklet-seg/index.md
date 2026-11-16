@@ -1,6 +1,6 @@
 ---
-title: "Matprisveksten var 2,4 prosent i september 2026, mot 3,4 prosent for KPI samlet"
-description: "Mat og alkoholfrie drikkevarer steg 2,4 prosent det siste året, lavere enn den generelle prisveksten på 3,4 prosent. I tillegg gjør artikkelen rede for regjeringens forslag om dagligvaremarkedet."
+title: "Matprisene økte med 2,4 prosent i september 2026 – lavere enn KPI samlet på 3,4 prosent"
+description: "Mat og alkoholfrie drikkevarer steg saktere enn den generelle prisveksten det siste året, men over fem år har maten likevel økt klart mest. Her er tallene og regjeringens dagligvaregrep."
 date: 2026-10-14T12:31:00+02:00
 oppdatert: 2026-10-22T20:45:00+02:00
 category: okonomi
@@ -9,11 +9,11 @@ coverAlt: "Illustrasjon: «Matprisveksten var 2,4 prosent i september 2026, mot 
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Mat og alkoholfrie drikkevarer utgjør drøyt ti prosent av husholdningenes forbruk. Matprisveksten lå fra juni 2026 under den generelle inflasjonen."
+why_matters: "Mat og alkoholfrie drikkevarer utgjør drøyt ti prosent av husholdningenes forbruk. Siden juni 2026 har matprisveksten ligget under den generelle inflasjonen, etter flere år i motsatt retning."
 key_points:
-  - "Prisene på mat og alkoholfrie drikkevarer steg 2,4 prosent fra september 2025 til september 2026, lavere enn 3,4 prosent for konsumprisindeksen (KPI) samlet."
-  - "Fra september 2021 til september 2026 har matprisene økt med 36,3 prosent, mens KPI totalt har steget 21,8 prosent."
-  - "Oppgavene etter loven om god handelsskikk ble overført fra Dagligvaretilsynet til Konkurransetilsynet 30. april 2026, og regjeringen la 18. september 2026 fram forslag om grossisttilgang."
+  - "Mat og alkoholfrie drikkevarer steg 2,4 prosent fra september 2025 til september 2026, mot 3,4 prosent for konsumprisindeksen (KPI) samlet."
+  - "Sett over fem år, fra september 2021 til september 2026, har matprisene økt med 36,3 prosent – langt over KPIs 21,8 prosent."
+  - "Oppgavene etter loven om god handelsskikk ble flyttet fra Dagligvaretilsynet til Konkurransetilsynet 30. april 2026, og 18. september 2026 la regjeringen fram forslag om grossisttilgang."
 ---
 
 Prisene på matvarer og alkoholfrie drikkevarer lå 2,4 prosent høyere i september 2026 enn ett år før, mens konsumprisindeksen (KPI) samlet steg 3,4 prosent, viser tall fra Statistisk sentralbyrå (SSB) som ble lagt fram 9. oktober 2026. Det siste året har matprisene altså steget langsommere enn prisene generelt. Over fem år er bildet motsatt: Fra september 2021 til september 2026 steg matprisene 36,3 prosent, mot 21,8 prosent for KPI samlet.
@@ -56,7 +56,7 @@ Målt fra september 2021 til september 2026 er det internasjonalt omsatte råvar
 
 Meieriprodukter og egg (+31,6 prosent), brød og kornprodukter (+33,2 prosent), frukt og nøtter (+30,1 prosent) samt sukker og søtsaker (+28,3 prosent) har steget mindre enn mat og alkoholfrie drikkevarer samlet.
 
-![Stolpediagram over Kakao og kaffe har steget mest: Prisøkning: Kakao og sjokoladepulver: 82,0 %, Kaffe: 75,9 %, Fisk og sjømat: 51,2 %, Oljer og fett: 48,1 %, Kjøtt: 41,7 %, Grønnsaker: 37,2 %, Brød og kornprodukter: 33,2 %, Meieriprodukter og egg: 31,6 %, Frukt og nøtter: 30,1 %, Sukker og søtsaker: 28,3 %, Mat og drikke i alt: 36,3 %, KPI totalt: 21,8 %.](./graf-2.svg)
+![Tabell over Kakao og kaffe har steget mest: Prisøkning: Kakao og sjokoladepulver: 82,0 %, Kaffe: 75,9 %, Fisk og sjømat: 51,2 %, Oljer og fett: 48,1 %, Kjøtt: 41,7 %, Grønnsaker: 37,2 %, Brød og kornprodukter: 33,2 %, Meieriprodukter og egg: 31,6 %, Frukt og nøtter: 30,1 %, Sukker og søtsaker: 28,3 %, KPI totalt: 21,8 %.](./graf-2.svg)
 *Prisøkning fra september 2021 til september 2026, beregnet fra indekstall. Den stiplede linjen viser mat og alkoholfrie drikkevarer i alt. Kilde: SSB, tabell 14700.*
 
 ## Tiltak i dagligvaremarkedet

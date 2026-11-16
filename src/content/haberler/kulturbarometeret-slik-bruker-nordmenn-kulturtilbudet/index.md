@@ -1,6 +1,6 @@
 ---
-title: "Folkebibliotekene hadde 27,8 millioner besøk i 2025 – 62 prosent gikk på kino, mot 72 prosent i 2016"
-description: "SSBs kulturbarometer for 2025 viser at folkebibliotekene hadde 27,8 millioner besøk, 7,6 prosent flere enn i 2019, mens 62 prosent gikk på kino og 60 prosent på konsert."
+title: "Folkebibliotekene satte rekord med 27,8 millioner besøk – mens kino og teater taper terreng"
+description: "Kulturbarometeret for 2025 viser at 62 prosent gikk på kino og 60 prosent på konsert. Samtidig hadde folkebibliotekene 27,8 millioner fysiske besøk, 7,6 prosent flere enn i 2019."
 date: 2026-10-16T08:00:00+02:00
 oppdatert: 2026-10-22T20:55:00+02:00
 category: kultur
@@ -9,11 +9,11 @@ coverAlt: "Illustrasjon: «Folkebibliotekene hadde 27,8 millioner besøk i 2025 
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Undersøkelsen viser hvilke kulturtilbud folk oppsøker, og hvilke hindringer de oppgir, som billettpriser og tid."
+why_matters: "Tallene viser et skifte i hvordan nordmenn bruker kulturtilbudet – og at billettpriser og tidsklemme holder mange tilbake fra kino, teater og konserter."
 key_points:
-  - "62 prosent gikk på kino i 2025, ned fra 72 prosent i 2016. Andelen som gikk på teater, musikal eller revy, falt fra 50 til 37 prosent."
-  - "49 prosent oppsøkte et folkebibliotek i 2025, og bibliotekene talte 27,8 millioner fysiske besøk, det høyeste i SSBs tall fra 2015."
-  - "60 prosent gikk på konsert i 2025, mot 62 prosent i 2016 og 58 prosent i 2023."
+  - "Kinoandelen falt fra 72 prosent i 2016 til 62 prosent i 2025, og teater, musikal eller revy gikk ned fra 50 til 37 prosent."
+  - "49 prosent brukte et folkebibliotek i 2025, og bibliotekene registrerte 27,8 millioner fysiske besøk – det høyeste tallet i SSBs serie fra 2015."
+  - "60 prosent gikk på konsert i 2025, opp fra 58 prosent i 2023 og nesten tilbake på 2016-nivået på 62 prosent."
 ---
 
 Seks av ti nordmenn var på kino i løpet av de siste tolv månedene, viser Norsk kulturbarometer 2025 fra Statistisk sentralbyrå (SSB), som ble lagt fram 5. mars 2026. Kino er fortsatt det kulturtilbudet flest bruker, men andelen var 62 prosent i 2025, mot 72 prosent i 2016. For teater, musikal eller revy falt andelen fra 50 til 37 prosent. Folkebibliotekene gikk motsatt vei: 49 prosent hadde brukt et bibliotek, mot 46 prosent i 2016, og bibliotekene talte 27,8 millioner fysiske besøk, det høyeste i SSBs tall fra 2015.
@@ -45,7 +45,7 @@ Fra 2023 til 2025 gikk kinoandelen ned fra 65 til 62 prosent, mens bibliotek øk
 
 Blant barn og tenåringer mellom 9 og 15 år var 92 prosent på kino i 2025, omtrent som i 2016. I aldersgruppen 16–24 år var andelen 82 prosent, mot 90 prosent i 2016. Størst var nedgangen blant 25–44-åringene, fra 81 til 66 prosent, eller 15 prosentpoeng. Blant dem mellom 67 og 79 år økte kinoandelen fra 40 til 47 prosent. Av dem som er 80 år eller eldre, var 25 prosent på kino i 2025.
 
-![Helningsdiagram over Kinoandelen har falt mest blant unge voksne: i 2016: Ni til femten år: 91 %, Seksten til tjuefire år: 90 %, Tjuefem til førtifire år: 81 %, Førtifem til sekstiseks år: 63 %, Sekstisju til syttini år: 40 %; i 2025: Ni til femten år: 92 %, Seksten til tjuefire år: 82 %, Tjuefem til førtifire år: 66 %, Førtifem til sekstiseks år: 53 %, Sekstisju til syttini år: 47 %.](./graf-2.svg)
+![Små linjediagrammer over Kinoandelen har falt mest blant unge voksne: Ni til femten år: 91 % i 2016, 92 % i 2025; Seksten til tjuefire år: 90 % i 2016, 82 % i 2025; Tjuefem til førtifire år: 81 % i 2016, 66 % i 2025; Førtifem til sekstiseks år: 63 % i 2016, 53 % i 2025; Sekstisju til syttini år: 40 % i 2016, 47 % i 2025.](./graf-2.svg)
 *Andel som har vært på kino siste tolv måneder, etter alder. Gruppen 80 år og eldre var ikke med i undersøkelsen i 2016. Kilde: SSB, tabell 13503.*
 
 ## Folkebibliotekene

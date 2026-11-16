@@ -1,6 +1,6 @@
 ---
 title: "Fødselstallene har steget tre år på rad – og andelen eldre øker"
-description: "Fruktbarheten i Norge steg til 1,48 barn per kvinne i 2025, opp fra 1,40 i 2023. SSBs framskrivinger viser at andelen over 80 år nesten dobles innen 2050."
+description: "Fruktbarheten i Norge steg til 1,48 barn per kvinne i 2025, opp fra 1,40 i 2023. Samtidig viser SSBs framskrivinger at andelen innbyggere over 80 år nesten dobles fram mot 2050."
 date: 2026-10-14T12:16:00+02:00
 oppdatert: 2026-10-22T20:37:00+02:00
 category: innenriks
@@ -9,11 +9,11 @@ coverAlt: "Illustrasjon: «Fødselstallene har steget tre år på rad – og and
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Fødselstall og levealder påvirker behovet for barnehager, skoler, sykehjemsplasser og arbeidskraft i kommunene. SSBs framskrivinger viser utviklingen fram mot 2060."
+why_matters: "Fødselstall og levealder avgjør hvor mange barnehager, skoler og sykehjemsplasser kommunene trenger – og hvor mange hender som finnes i arbeidslivet fram mot 2060."
 key_points:
-  - "Samlet fruktbarhetstall var 1,48 barn per kvinne i 2025, opp fra 1,40 i 2023. I 2009 lå tallet på 1,98."
-  - "I SSBs hovedalternativ øker andelen av befolkningen som er 80 år eller eldre, fra 5,1 prosent i 2026 til 9,5 prosent i 2050."
-  - "Fra og med 2046 venter SSB at det vil dø flere enn det blir født i Norge."
+  - "Samlet fruktbarhetstall steg til 1,48 barn per kvinne i 2025, opp fra bunnen på 1,40 i 2023 (mot 1,98 i 2009)."
+  - "I SSBs hovedalternativ øker andelen som er 80 år eller eldre fra 5,1 prosent i 2026 til 9,5 prosent i 2050."
+  - "Allerede i 2032 blir det flere over 65 år enn under 20 år på landsbasis, og fra 2046 venter SSB flere døde enn fødte."
 ---
 
 Kvinner i Norge fikk i gjennomsnitt 1,48 barn i 2025, viser statistikk fra Statistisk sentralbyrå (SSB). Fruktbarhetstallet har økt to år på rad etter bunnen på 1,40 i 2023, det laveste nivået i SSBs tidsserie tilbake til 1968. I 2025 ble det født 55 401 barn, og antallet levendefødte har økt tre år på rad. Samtidig blir befolkningen eldre: I SSBs hovedalternativ nesten dobles andelen som er 80 år eller eldre, fra 5,1 prosent i 2026 til 9,5 prosent i 2050.
@@ -52,7 +52,7 @@ Ved inngangen til 2026 hadde Norge 5 627 400 innbyggere. Av disse var 959 633 pe
 
 I SSBs hovedalternativ vokser folketallet til 6 214 071 i 2050. Da ventes gruppen på 67 år og over å telle 1 425 792 personer, eller 22,9 prosent av befolkningen, mens antallet over 80 år mer enn dobles til 588 212. De over 80 år vil dermed utgjøre 9,5 prosent av befolkningen i 2050 og 10,8 prosent i 2060. Andelen barn og unge under 20 år går ned fra 22,0 prosent i 2026 til 20,0 prosent i 2050.
 
-![Helningsdiagram over De eldre blir flere enn de unge: i 2026: Barn og unge: 22,0 %, Eldre: 17,1 %, De eldste: 5,1 %; i 2050: Barn og unge: 20,0 %, Eldre: 22,9 %, De eldste: 9,5 %.](./graf-3.svg)
+![Prikkdiagram over De eldre blir flere enn de unge: i 2026: Barn og unge: 22,0 %, Eldre: 17,1 %, De eldste: 5,1 %; i 2050: Barn og unge: 20,0 %, Eldre: 22,9 %, De eldste: 9,5 %.](./graf-3.svg)
 *Barn og unge: under 20 år. Eldre: 67 år og over. De eldste: 80 år og over (inngår også i gruppen 67 år og over). Tallet for 2026 er befolkningen 1. januar 2026, tallet for 2050 SSBs hovedalternativ. Kilde: SSB, tabell 14740.*
 
 I 2032 passerer Norge en demografisk milepæl på landsbasis: Da vil det for første gang være flere innbyggere over 65 år enn barn og unge under 20 år. I Innlandet, Telemark, Vestfold, Nordland og Troms har dette skiftet allerede funnet sted, mens Oslo ventes å passere det innen 2046.

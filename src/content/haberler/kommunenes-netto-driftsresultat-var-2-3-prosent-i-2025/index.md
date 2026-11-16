@@ -1,6 +1,6 @@
 ---
-title: "Kommunenes netto driftsresultat var 2,3 prosent i 2025"
-description: "Kommunekonsernet hadde et netto driftsresultat på 15,5 milliarder kroner i 2025, tilsvarende 2,3 prosent av driftsinntektene, etter underskudd i 2024. Samtidig har 41 kommuner negativ fri egenkapital."
+title: "Kommuneøkonomien snudde til pluss i 2025 – men 41 kommuner er i minus på egenkapitalen"
+description: "Kommunekonsernet fikk et netto driftsresultat på 15,5 milliarder kroner (2,3 prosent) i 2025 etter underskuddet i 2024. Samtidig har 41 kommuner negativ fri egenkapital."
 date: 2026-11-08T08:00:00+01:00
 category: innenriks
 cover: ./cover.png
@@ -8,14 +8,14 @@ coverAlt: "Illustrasjon: «Kommunenes netto driftsresultat var 2,3 prosent i 202
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Netto driftsresultat viser hvor stort økonomisk handlingsrom kommunene har."
+why_matters: "Netto driftsresultat viser hvor mye kommunene faktisk sitter igjen med til investeringer og reserver når løpende drift og lån er betalt."
 key_points:
-  - "Kommunekonsernets netto driftsresultat var 15,5 milliarder kroner i 2025, tilsvarende 2,3 prosent av brutto driftsinntekter, mot minus 0,4 prosent i 2024."
-  - "Teknisk beregningsutvalg (TBU) anbefaler et netto driftsresultat på minst 1,75 prosent over tid; netto lånegjeld var 90,1 prosent av driftsinntektene."
-  - "41 av 357 kommuner hadde negativ fri egenkapital i drift i 2025, mot 38 året før; 23 av dem står i Robek-registeret."
+  - "Kommunekonsernet leverte et netto driftsresultat på 15,5 milliarder kroner i 2025, eller 2,3 prosent av brutto driftsinntekter, opp fra minus 0,4 prosent i 2024."
+  - "Teknisk beregningsutvalg (TBU) anbefaler minst 1,75 prosent over tid; netto lånegjeld lå på 90,1 prosent av driftsinntektene."
+  - "41 av 357 kommuner hadde negativ fri egenkapital i drift i 2025, opp fra 38 året før, og 23 av dem står i Robek-registeret."
 ---
 
-Kommunekonsernet hadde i 2025 et netto driftsresultat på 15,5 milliarder kroner. Det tilsvarer 2,3 prosent av brutto driftsinntekter, mot minus 0,4 prosent i 2024. Det viser de reviderte kommuneregnskapene fra Statistisk sentralbyrå (SSB), som ble omtalt i en artikkel 15. juni 2026.
+Etter underskuddet i 2024 hentet kommuneøkonomien seg inn igjen i 2025. Kommunekonsernet endte med et netto driftsresultat på 15,5 milliarder kroner, som tilsvarer 2,3 prosent av brutto driftsinntekter, mot minus 0,4 prosent året før. Tallene kommer fra de reviderte kommuneregnskapene til Statistisk sentralbyrå (SSB), omtalt 15. juni 2026.
 
 ![Linjediagram over Opp igjen etter underskuddet: Netto driftsresultat: 3,0 % i 2015, 4,0 % i 2016, 3,8 % i 2017, 2,6 % i 2018, 1,9 % i 2019, 2,7 % i 2020, 4,3 % i 2021, 3,0 % i 2022, 0,8 % i 2023, −0,4 % i 2024, 2,3 % i 2025.](./graf-1.svg)
 *Netto driftsresultat for kommunekonsernet, prosent av brutto driftsinntekter, 2015–2025. Kilde: SSB, tabell 12143.*
@@ -45,7 +45,7 @@ Netto lånegjeld utgjorde 90,1 prosent av brutto driftsinntekter i 2025, ned 0,3
 
 ## Forskjeller mellom kommunene
 
-Av landets 357 kommuner hadde 41 negativ fri egenkapital i drift i 2025, mot 38 i 2024. Det betyr at disposisjonsfondet minus tidligere underskudd er mindre enn null. 23 av de 41 står i Robek-registeret, der kommuner i økonomisk ubalanse, eller som ikke har vedtatt budsjett, økonomiplan eller regnskap innen fristene, blir oppført.
+Bak de samlede pluss-tallene skjuler det seg store forskjeller. Av landets 357 kommuner hadde 41 negativ fri egenkapital i drift i 2025, mot 38 i 2024. Det betyr at disposisjonsfondet minus tidligere underskudd er under null. 23 av de 41 står i Robek-registeret, der kommuner i økonomisk ubalanse – eller som ikke har vedtatt budsjett, økonomiplan eller regnskap innen fristene – blir oppført.
 
 ![Nøkkeltall om Flere kommuner med negativt fond: I fjor: Kommuner i 2025: 41; Sammenligning: i 2025: 41, i 2024: 38, i 2022: 9.](./graf-3.svg)
 *Kommuner med negativ fri egenkapital i drift. Kilde: SSB, artikkel 15. juni 2026.*

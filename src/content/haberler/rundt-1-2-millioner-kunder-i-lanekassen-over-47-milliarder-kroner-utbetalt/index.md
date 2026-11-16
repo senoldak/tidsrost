@@ -8,11 +8,11 @@ coverAlt: "Illustrasjon: «Rundt 1,2 millioner kunder i Lånekassen – over 47 
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Lånekassen gir støtte til videregående opplæring, fagskole og høyere utdanning, og har ordninger for sletting av studielån for dem som bor og arbeider i utvalgte kommuner."
+why_matters: "Lånekassen finansierer utdanning for hver femte innbygger i landet – og bruker i økende grad gjeldssletting som virkemiddel for å trekke folk til distriktene."
 key_points:
-  - "Rundt 1,2 millioner nordmenn mottar utdanningsstøtte eller betaler ned på studielånet, og Lånekassen utbetalte over 47 milliarder kroner i utdanningsstøtte i studieåret 2025–2026."
-  - "Basislånet for heltidsstudenter med elleve måneders støtte er 166 859 kroner i 2025–2026 og 170 368 kroner i 2026–2027, opp fra 151 690 kroner i 2024–2025."
-  - "Ifølge Lånekassen kan yrkesaktive i Finnmark og Nord-Troms få slettet inntil 60 000 kroner av studielånet hvert år, og yrkesaktive i utvalgte distriktskommuner inntil 25 000 kroner i året."
+  - "Om lag 1,2 millioner nordmenn mottar støtte eller betaler ned på studielån, og i 2025–2026 utbetalte Lånekassen over 47 milliarder kroner."
+  - "Basislånet for heltidsstudenter (11 måneder) økte fra 151 690 kroner i 2024–2025 til 166 859 kroner i 2025–2026, og når 170 368 kroner i 2026–2027."
+  - "Yrkesaktive i Finnmark og Nord-Troms kan få slettet inntil 60 000 kroner i året, mot inntil 25 000 kroner i utvalgte distriktskommuner."
 ---
 
 Omtrent 1,2 millioner nordmenn mottar utdanningsstøtte eller betaler ned på studielånet, og hver femte innbygger er kunde i Statens lånekasse for utdanning (Lånekassen), ifølge rapporten *Utdanningsstøtten 2026*. I studieåret 2025–2026 utbetalte Lånekassen over 47 milliarder kroner i utdanningsstøtte.

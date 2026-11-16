@@ -5,15 +5,15 @@ author: "Şenol Dak"
 cover: ./cover.png
 coverAlt: "Oslo har nest lavest medianinntekt av fylkene, men ligger øverst i tre av fire husholdningstyper"
 produksjon: ki-redigert
-title: "Oslo har nest lavest medianinntekt av fylkene, men ligger øverst i tre av fire husholdningstyper"
-description: "Medianinntekten etter skatt setter Oslo nær bunnen blant fylkene. Sammenligner vi like husholdninger, ligger byen i toppen. En del av bildet er hvem som bor sammen."
+title: "Oslo har nest lavest medianinntekt av fylkene – men topper i tre av fire husholdningstyper"
+description: "Medianinntekten etter skatt plasserer Oslo nær bunnen blant fylkene. Men sammenligner vi like husholdninger, ligger hovedstaden øverst. Forklaringen sitter i hvem som bor alene."
 category: okonomi
-why_matters: "En rangering av fylker etter medianinntekt kan gi et skjevt bilde når husholdningene er satt sammen ulikt. Det gjelder særlig i et fylke der halvparten bor alene."
+why_matters: "En ren fylkesrangering på medianinntekt kan villede når husholdningsstrukturen spriker – særlig i et fylke der over halvparten bor alene."
 key_points:
-  - "I 2024 hadde Akershus høyest medianinntekt etter skatt, 756 600 kroner, og Innlandet lavest, 629 500 kroner."
-  - "Oslo kom på 635 200 kroner, men halvparten av husholdningene i Oslo består av én person."
-  - "Oslo har høyeste median blant aleneboende, blant par uten barn og blant par med barn."
-  - "I perioden 2020–2024 steg medianen i alle åtte fylkene som kan sammenlignes, og Oslo gikk forbi Innlandet."
+  - "Akershus hadde høyest medianinntekt etter skatt i 2024 med 756 600 kroner, mens Innlandet lå lavest med 629 500 kroner."
+  - "Oslo endte på 635 200 kroner samlet, men der består 50,9 prosent av husholdningene av én person."
+  - "Ser vi på aleneboende, par uten barn og par med barn hver for seg, har Oslo den høyeste medianen av alle fylker."
+  - "Fra 2020 til 2024 steg medianinntekten i alle de åtte fylkene som kan sammenlignes over tid, og Oslo passerte Innlandet."
 ---
 
 Akershus, 756 600 kroner. Rogaland, 739 600 kroner. Vestland, 704 800 kroner. Slik begynner rangeringen av fylkene etter medianinntekt etter skatt for husholdninger i 2024, og den slutter med Oslo på 635 200 kroner og Innlandet på 629 500 kroner. Hele landet lå på 676 100 kroner.

@@ -1,6 +1,6 @@
 ---
-title: "Nær tre av fire husholdninger eier egen bolig – kommunene utbetalte 7 475 startlån i 2025"
-description: "72,7 prosent av norske husholdninger eier boligen de bor i. Ifølge Husbankens årsrapport utbetalte kommunene 7 475 startlån på til sammen 16 165 millioner kroner i 2025."
+title: "Nær tre av fire eier egen bolig – kommunene ga 7 475 startlån i 2025"
+description: "72,7 prosent av norske husholdninger eier boligen de bor i. Samtidig utbetalte kommunene 7 475 startlån på til sammen 16 165 millioner kroner i 2025, viser Husbankens årsrapport."
 date: 2026-10-28T08:00:00+01:00
 category: okonomi
 cover: ./cover.png
@@ -8,16 +8,16 @@ coverAlt: "Illustrasjon: «Nær tre av fire husholdninger eier egen bolig – ko
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Tallene viser hvor mange husholdninger som eier boligen sin, og hvor mange startlån kommunene utbetalte i 2025."
+why_matters: "Eierandelen i Norge holder seg høy, men startlånstallene viser hvem som trenger kommunal drahjelp for å komme inn på boligmarkedet."
 key_points:
-  - "72,7 prosent av alle husholdninger i Norge eide boligen sin i 2025 – fordelt på 59,2 prosent selveiere og 13,5 prosent andels- eller aksjeeiere."
-  - "Ifølge Husbankens årsrapport utbetalte kommunene 7 475 startlån i 2025, til sammen 16 165 millioner kroner, og 61 prosent av husstandene som fikk startlån, var barnefamilier."
-  - "Antall utbetalte startlån gikk ned fra 8 027 i 2024 til 7 475 i 2025."
+  - "72,7 prosent av norske husholdninger eide boligen sin i 2025 – 59,2 prosent som selveiere og 13,5 prosent som andels- eller aksjeeiere."
+  - "Kommunene utbetalte 7 475 startlån på til sammen 16 165 millioner kroner i 2025, og 61 prosent gikk til barnefamilier."
+  - "Antall utbetalte startlån falt fra 8 027 i 2024 til 7 475 i 2025."
 ---
 
 72,7 prosent av norske husholdninger eide boligen sin i 2025, viser boforholdsstatistikken fra Statistisk sentralbyrå (SSB): 59,2 prosent som selveiere og 13,5 prosent som andels- eller aksjeeiere, for eksempel i borettslag. De øvrige 27,3 prosent leide. Andelen leiere var høyest i Oslo med 33,8 prosent og lavest i Akershus med 24,1 prosent.
 
-![Andelsdiagram over Nær tre av fire eier boligen de bor i: Andel: Selveiere: 59,2 %, Andels- eller aksjeeiere: 13,5 %, Leiere: 27,3 %.](./graf-1.svg)
+![Tabell over Nær tre av fire eier boligen de bor i: Andel: Selveiere: 59,2 %, Andels- eller aksjeeiere: 13,5 %, Leiere: 27,3 %.](./graf-1.svg)
 *Husholdninger i Norge etter eierstatus, 2025. Kilde: SSB, tabell 14891.*
 
 ## Fylkene

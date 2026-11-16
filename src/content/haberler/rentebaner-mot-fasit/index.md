@@ -6,14 +6,14 @@ cover: ./cover.png
 coverAlt: "Rentebanen ett år fram mot faktisk rente: avvik fra −0,70 til 1,34 prosentpoeng siden mars 2020"
 produksjon: ki-redigert
 title: "Rentebanen ett år fram mot faktisk rente: avvik fra −0,70 til 1,34 prosentpoeng siden mars 2020"
-description: "Vi har lagt styringsrentebanene i Norges Banks pengepolitiske rapporter fra mars 2020 til juni 2025 ved siden av den faktiske renten ett år senere. Avvikene går fra −0,70 til 1,34 prosentpoeng, og to år fram når de 2,68 prosentpoeng."
+description: "Vi har lagt Norges Banks styringsrentebaner fra mars 2020 til juni 2025 ved siden av den faktiske renten ett år senere. Avvikene spenner fra −0,70 til 1,34 prosentpoeng – og på to års sikt når de 2,68 prosentpoeng."
 category: okonomi
-why_matters: "Rentebanen er Norges Banks eget anslag for styringsrenten. Sammenligningen viser hvor store avstandene mellom anslag og faktisk rente har vært, uten å si noe om hvorfor."
+why_matters: "Rentebanen er Norges Banks eget anslag for styringsrenten. Å sammenligne den med fasiten viser hvor store bommene faktisk har vært, uten å spekulere i årsakene."
 key_points:
-  - "Ett år fram varierer avviket mellom banen og den faktiske renten fra −0,70 prosentpoeng (mars 2020) til 1,34 prosentpoeng (desember 2021)."
-  - "To år fram er det største avviket 2,68 prosentpoeng, for rapporten fra desember 2021."
-  - "For seks rapporter har vi også tall for markedets forventning, og den lå under det faktiske gjennomsnittet i alle seks."
-  - "Tallene beskriver avstand, ikke årsak."
+  - "Ett år fram varierer avviket mellom bane og faktisk rente fra −0,70 prosentpoeng (mars 2020) til 1,34 prosentpoeng (desember 2021)."
+  - "På to års sikt er det største avviket 2,68 prosentpoeng, også det fra desember 2021."
+  - "I de seks rapportene der vi også har markedets forventning, lå den under det faktiske gjennomsnittet i samtlige."
+  - "Tallene måler avstand mellom anslag og utfall, ikke hvorfor renten endte der den gjorde."
 ---
 
 Rapporten Norges Bank la fram 16. desember 2021 viste en bane for styringsrenten på 1,11 prosent i 4. kvartal 2022. Gjennomsnittet i kvartalet ble 2,45 prosent. Avviket, regnet som faktisk rente minus bane, er 1,34 prosentpoeng.
@@ -38,7 +38,7 @@ Vi ser på to avstander i tid. Ett år fram sier noe om avviket på kort sikt, m
 
 Den første figuren viser nivåene, kvartal for kvartal. Linjene er lengst fra hverandre i 4. kvartal 2022, med 1,11 prosent for banen og 2,45 prosent for utfallet.
 
-![Linjediagram over Banen ett år før og den faktiske renten lå lengst fra hverandre i 4. kvartal 2022: Faktisk: 1. kv. 2021: 0,00 %, 2. kv. 2021: 0,00 %, 3. kv. 2021: 0,02 %, 4. kv. 2021: 0,29 %, 1. kv. 2022: 0,52 %, 2. kv. 2022: 0,79 %, 3. kv. 2022: 1,53 %, 4. kv. 2022: 2,45 %, 1. kv. 2023: 2,77 %, 2. kv. 2023: 3,20 %, 3. kv. 2023: 3,89 %, 4. kv. 2023: 4,30 %, 1. kv. 2024: 4,50 %, 2. kv. 2024: 4,50 %, 3. kv. 2024: 4,50 %, 4. kv. 2024: 4,50 %, 1. kv. 2025: 4,50 %, 2. kv. 2025: 4,47 %, 3. kv. 2025: 4,22 %, 4. kv. 2025: 4,00 %, 1. kv. 2026: 4,00 %, 2. kv. 2026: 4,15 %; Bane ett år før: 1. kv. 2021: 0,70 %, 2. kv. 2021: 0,00 %, 3. kv. 2021: 0,00 %, 4. kv. 2021: 0,00 %, 1. kv. 2022: 0,31 %, 2. kv. 2022: 0,78 %, 3. kv. 2022: 0,98 %, 4. kv. 2022: 1,11 %, 1. kv. 2023: 1,59 %, 2. kv. 2023: 2,87 %, 3. kv. 2023: 3,11 %, 4. kv. 2023: 3,08 %, 1. kv. 2024: 3,59 %, 2. kv. 2024: 4,18 %, 3. kv. 2024: 4,41 %, 4. kv. 2024: 4,29 %, 1. kv. 2025: 4,16 %, 2. kv. 2025: 4,25 %, 3. kv. 2025: 3,99 %, 4. kv. 2025: 3,80 %, 1. kv. 2026: 3,99 %, 2. kv. 2026: 3,62 %.](./graf-1.svg)
+![Avviksbånd over Banen ett år før og den faktiske renten lå lengst fra hverandre i 4. kvartal 2022: Faktisk: 1. kv. 2021: 0,00 %, 2. kv. 2021: 0,00 %, 3. kv. 2021: 0,02 %, 4. kv. 2021: 0,29 %, 1. kv. 2022: 0,52 %, 2. kv. 2022: 0,79 %, 3. kv. 2022: 1,53 %, 4. kv. 2022: 2,45 %, 1. kv. 2023: 2,77 %, 2. kv. 2023: 3,20 %, 3. kv. 2023: 3,89 %, 4. kv. 2023: 4,30 %, 1. kv. 2024: 4,50 %, 2. kv. 2024: 4,50 %, 3. kv. 2024: 4,50 %, 4. kv. 2024: 4,50 %, 1. kv. 2025: 4,50 %, 2. kv. 2025: 4,47 %, 3. kv. 2025: 4,22 %, 4. kv. 2025: 4,00 %, 1. kv. 2026: 4,00 %, 2. kv. 2026: 4,15 %; Bane ett år før: 1. kv. 2021: 0,70 %, 2. kv. 2021: 0,00 %, 3. kv. 2021: 0,00 %, 4. kv. 2021: 0,00 %, 1. kv. 2022: 0,31 %, 2. kv. 2022: 0,78 %, 3. kv. 2022: 0,98 %, 4. kv. 2022: 1,11 %, 1. kv. 2023: 1,59 %, 2. kv. 2023: 2,87 %, 3. kv. 2023: 3,11 %, 4. kv. 2023: 3,08 %, 1. kv. 2024: 3,59 %, 2. kv. 2024: 4,18 %, 3. kv. 2024: 4,41 %, 4. kv. 2024: 4,29 %, 1. kv. 2025: 4,16 %, 2. kv. 2025: 4,25 %, 3. kv. 2025: 3,99 %, 4. kv. 2025: 3,80 %, 1. kv. 2026: 3,99 %, 2. kv. 2026: 3,62 %.](./graf-1.svg)
 *Kvartalsgjennomsnitt, prosent. Banen er hentet fra rapporten som kom fire kvartaler før. Kilde: Norges Bank.*
 
 ## Ett år fram: avvikene rapport for rapport
@@ -61,7 +61,7 @@ I perioden med utfall på 4,50 prosent er banene lavere. 1. kvartal 2024: 3,59 p
 
 Figuren under viser avvikene for alle de tjueto rapportene.
 
-![Stolpediagram over Avviket mellom faktisk rente og bane ett år før, rapport for rapport: Avvik: mar. 2020: −0,70, jun. 2020: 0,00, sep. 2020: 0,02, des. 2020: 0,29, mar. 2021: 0,21, jun. 2021: 0,01, sep. 2021: 0,55, des. 2021: 1,34, mar. 2022: 1,18, jun. 2022: 0,33, sep. 2022: 0,78, des. 2022: 1,22, mar. 2023: 0,91, jun. 2023: 0,32, sep. 2023: 0,09, des. 2023: 0,21, mar. 2024: 0,34, jun. 2024: 0,22, sep. 2024: 0,23, des. 2024: 0,20, mar. 2025: 0,01, jun. 2025: 0,53.](./graf-2.svg)
+![Linjediagram med perioder over Avviket mellom faktisk rente og bane ett år før, rapport for rapport: Avvik: mar. 2020: −0,70, jun. 2020: 0,00, sep. 2020: 0,02, des. 2020: 0,29, mar. 2021: 0,21, jun. 2021: 0,01, sep. 2021: 0,55, des. 2021: 1,34, mar. 2022: 1,18, jun. 2022: 0,33, sep. 2022: 0,78, des. 2022: 1,22, mar. 2023: 0,91, jun. 2023: 0,32, sep. 2023: 0,09, des. 2023: 0,21, mar. 2024: 0,34, jun. 2024: 0,22, sep. 2024: 0,23, des. 2024: 0,20, mar. 2025: 0,01, jun. 2025: 0,53.](./graf-2.svg)
 *Faktisk rente minus bane ett år før, prosentpoeng, etter rapportens utgivelsesmåned. Kilde: Norges Bank.*
 
 ## To år fram: avvikene er større

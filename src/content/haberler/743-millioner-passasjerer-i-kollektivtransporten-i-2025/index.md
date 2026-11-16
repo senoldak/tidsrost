@@ -1,6 +1,6 @@
 ---
 title: "743 millioner passasjerer i kollektivtransporten i 2025 – 1,9 prosent flere enn i 2024"
-description: "SSB registrerte 743 millioner passasjerer i kollektivtransporten i 2025, 1,9 prosent flere enn året før og det høyeste tallet i SSBs tabell for 2015–2025. Bussen sto for 61,8 prosent av reisene, og jernbanen hadde 84 millioner passasjerer."
+description: "Kollektivtransporten satte ny toppnotering i 2025 med 743 millioner påstigninger – 1,9 prosent flere enn året før. Bussen står for 61,8 prosent av reisene, mens toget nådde 84 millioner."
 date: 2026-10-21T08:00:00+02:00
 oppdatert: 2026-10-22T20:55:00+02:00
 category: innenriks
@@ -9,14 +9,14 @@ coverAlt: "Illustrasjon: «743 millioner passasjerer i kollektivtransporten i 20
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Kollektivtransport er en del av transporttilbudet for pendlere, studenter og eldre. Statistikken viser hvor mange som bruker det."
+why_matters: "Etter pandemiens stup har kollektivtrafikken ikke bare hentet seg inn igjen – 2025 ble et rekordår, selv om første halvår 2026 viser en svak dupp."
 key_points:
-  - "SSB registrerte 743 millioner passasjerer i kollektivtransporten i 2025, en økning på 1,9 prosent fra 2024 og det høyeste tallet i SSBs tabell for årene 2015–2025."
-  - "Buss står for 61,8 prosent av passasjerene, mens jernbanen nådde 84,1 millioner passasjerer, opp 2,7 prosent fra året før."
-  - "I første halvår 2026 var passasjertallet 377,8 millioner, 1,1 prosent lavere enn i første halvår 2025."
+  - "743 millioner passasjerer ble registrert i kollektivtransporten i 2025 – opp 1,9 prosent fra 2024 og det høyeste tallet i SSBs serie fra 2015."
+  - "Buss sto for 61,8 prosent av alle påstigninger, mens jernbanen økte med 2,7 prosent til 84,1 millioner passasjerer."
+  - "Inn i 2026 har veksten bremset litt: 377,8 millioner passasjerer i første halvår er 1,1 prosent færre enn i samme periode i 2025."
 ---
 
-Det ble registrert 743 millioner passasjerer med buss, T-bane, bybane, trikk, tog og båt i Norge i 2025, viser kollektivtransportstatistikken fra Statistisk sentralbyrå (SSB). Det er 1,9 prosent flere enn i 2024 og det høyeste tallet i SSBs tabell for årene 2015–2025. SSB teller hver påstigning for seg, slik at en reise med bytte mellom transportmidler gir flere passasjerer.
+Kollektivtransporten i Norge nådde 743 millioner passasjerer i 2025 – fordelt på buss, T-bane, bybane, trikk, tog og båt. Det er 1,9 prosent flere enn i 2024 og det høyeste nivået i Statistisk sentralbyrås (SSB) statistikk for perioden 2015–2025. Merk at SSB teller hver påstigning for seg, så én reise med bytte mellom to linjer gir to passasjerer i statistikken.
 
 ![Nøkkeltall om Flere kollektivreiser enn før pandemien: Passasjerer: Passasjerer i 2025: 743 millioner personer; Sammenligning: i 2025: 743 millioner personer, i 2019: 718 millioner personer, i 2020: 451 millioner personer.](./graf-1.svg)
 *Passasjerer i kollektivtransporten i Norge, alle transportmidler. Kilde: SSB, tabell 11570.*

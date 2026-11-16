@@ -9,7 +9,7 @@ coverAlt: "Illustrasjon: «99,3 prosent av norske husstander har nå raskt bredb
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Bredbåndsdekning bestemmer hvilke digitale tjenester husstander kan bruke hjemme. Ved utgangen av 2025 hadde 99,3 prosent av husstandene tilbud om minst 100 Mbit/s."
+why_matters: "Nesten alle norske husstander har nå raskt bredbånd, men de siste prosentene i distriktene er de dyreste å bygge ut – og gigabitveksten har begynt å flate ut."
 key_points:
   - "99,3 prosent av husstandene hadde tilbud om minst 100 Mbit/s ved utgangen av 2025, opp fra 94,4 prosent i 2022."
   - "96,3 prosent av husstandene har tilbud om minst 1 Gbit/s, og 99,8 prosent har grunnleggende 5G-dekning hjemme."
@@ -39,7 +39,7 @@ I byer og tettsteder hadde alle husstandene tilgang til minst 100 Mbit/s, mens d
 
 I alle fylker kan over 90 prosent av husstandene få minst 1 Gbit/s. Høyest ligger Oslo med 99,2 prosent, fulgt av Rogaland og Vestland med 97,9 prosent. Lavest er Nordland med 90,9 prosent. På 100 Mbit/s har Nordland en dekning på 97,1 prosent.
 
-![Stolpediagram over Nordland har lavest gigabitdekning: Dekning: Oslo: 99,2 %, Rogaland: 97,9 %, Vestland: 97,9 %, Møre og Romsdal: 97,7 %, Agder: 97,3 %, Akershus: 96,7 %, Telemark: 96,0 %, Troms: 95,6 %, Trøndelag: 95,3 %, Vestfold: 95,1 %, Finnmark: 94,7 %, Østfold: 93,9 %, Innlandet: 93,8 %, Buskerud: 92,5 %, Nordland: 90,9 %, Hele landet: 96,3 %.](./graf-2.svg)
+![Søylediagram over Nordland har lavest gigabitdekning: Dekning: Oslo: 99, Rogaland: 97, Vestland: 97, Møre og Romsdal: 97, Agder: 97, Akershus: 96, Telemark: 96, Troms: 95, Trøndelag: 95, Vestfold: 95, Finnmark: 94, Østfold: 93, Innlandet: 93, Buskerud: 92, Nordland: 90, Hele landet: 96.](./graf-2.svg)
 *Andel husstander med tilbud om minst 1 Gbit/s per fylke ved utgangen av 2025. Den stiplede linjen viser hele landet. Kilde: Nkom.*
 
 ## Utviklingen: Gigabit flater ut

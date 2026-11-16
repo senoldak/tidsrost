@@ -6,14 +6,14 @@ cover: ./cover.png
 coverAlt: "Ledigheten var høyest under bankkrisen, men falt raskest etter pandemien"
 produksjon: ki-redigert
 title: "Ledigheten var høyest under bankkrisen, men falt raskest etter pandemien"
-description: "Vi har lagt tre perioder med stigende ledighet side om side: bankkrisen, finanskrisen og pandemien. Forløpene skiller seg i høyde, tempo og i hvor raskt ledigheten gikk ned igjen."
+description: "Bankkrisen, finanskrisen og pandemien ga tre helt ulike ledighetskurver. Sett side om side skiller de seg både i høyde, tempo og hvor fort arbeidsmarkedet hentet seg inn."
 category: okonomi
-why_matters: "Ledighet handler ikke bare om hvor høy den blir, men om hvor fort den stiger og hvor lenge den varer. De tre periodene viser at tallene kan ligne hverandre på toppen og likevel ha ulike forløp."
+why_matters: "Et ledighetstall på toppen forteller bare halve historien. Hvor bratt kurven stiger og hvor lenge den blir liggende høyt, avgjør hvor tungt nedturen rammer."
 key_points:
-  - "Ledigheten nådde 6,0 prosent i 1993, det høyeste årsnivået i SSBs serie, mot 3,8 prosent i 2010 og 4,6 prosent i 2020."
-  - "Fra bunnåret til toppåret økte ledigheten med 4,0 prosentpoeng i bankkrisen, 1,3 prosentpoeng i finanskrisen og 0,9 prosentpoeng under pandemien."
-  - "To år etter toppen var ledigheten 1,4 prosentpoeng lavere etter pandemien, 1,1 prosentpoeng lavere etter bankkrisen og 0,5 prosentpoeng lavere etter finanskrisen."
-  - "Serien har brudd i 2006 og i 2021, så sammenligningen mellom periodene har en usikkerhet som tallene ikke kan fjerne."
+  - "Arbeidsledigheten nådde 6,0 prosent i 1993, det høyeste årsnivået i SSBs serie, mot 3,8 prosent i 2010 og 4,6 prosent i 2020."
+  - "Fra bunnår til toppår steg ledigheten med 4,0 prosentpoeng i bankkrisen, 1,3 prosentpoeng i finanskrisen og 0,9 prosentpoeng under pandemien."
+  - "To år etter toppen hadde ledigheten falt med 1,4 prosentpoeng etter pandemien, 1,1 prosentpoeng etter bankkrisen og 0,5 prosentpoeng etter finanskrisen."
+  - "Statistikkserien har brudd i 2006 og 2021, noe som gir en usikkerhet i sammenligningen på tvers av tiår."
 ---
 I 1993 var 6,0 prosent av arbeidsstyrken arbeidsledige, målt med arbeidskraftundersøkelsen (AKU) til Statistisk sentralbyrå (SSB). Dette er det høyeste årsnivået i en serie som begynner i 1972. Året etter var tallet 5,4 prosent, og i 1998 var det nede på 3,2 prosent.
 
@@ -76,7 +76,7 @@ Toppåret under bankkrisen og toppåret under pandemien har én ting til felles.
 
 Forklaringen ligger i nevneren. Arbeidsstyrken var 2,1 millioner i 1993. I 2020 var den 2,8 millioner, en økning på 33,3 prosent. Når arbeidsstyrken vokser, må flere være arbeidsledige for at raten skal holde seg like høy. Rater fra ulike tiår kan derfor ikke leses som et mål på hvor mange mennesker som ble rammet. De sier noe om hvor stor andel av dem som ønsket arbeid som ikke fikk det.
 
-![Prikkdiagram over De to første årene etter toppen falt ledigheten mest etter pandemien: Toppår: Bankkrisen: 6,0 %, Finanskrisen: 3,8 %, Pandemien: 4,6 %; To år etter: Bankkrisen: 4,9 %, Finanskrisen: 3,3 %, Pandemien: 3,2 %.](./graf-4.svg)
+![Søylediagram over De to første årene etter toppen falt ledigheten mest etter pandemien: De to første årene etter toppen falt ledigheten mest etter pandemien: Bankkrisen: 6,0 %, Finanskrisen: 3,8 %, Pandemien: 4,6 %.](./graf-4.svg)
 *Arbeidsledige i prosent av arbeidsstyrken, årsgjennomsnitt. Kilde: Statistisk sentralbyrå.*
 
 ## Kan de tre periodene settes side om side?

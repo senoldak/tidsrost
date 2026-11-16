@@ -1,6 +1,6 @@
 ---
 title: "Over 98 prosent av norsk strøm kommer fra vann, vind og sol"
-description: "Norske kraftverk produserte 161,8 terawattimer strøm i 2025, og nesten hele produksjonen kom fra vann, vind og sol. Vannkraft alene sto for 89,9 prosent."
+description: "Norske kraftverk produserte 161,8 terawattimer strøm i 2025. Vannkraften sto alene for 89,9 prosent, og nettoeksporten nådde 22,8 TWh."
 date: 2026-10-18T08:00:00+02:00
 oppdatert: 2026-10-22T21:07:00+02:00
 category: okonomi
@@ -9,11 +9,11 @@ coverAlt: "Illustrasjon: «Over 98 prosent av norsk strøm kommer fra vann, vind
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Vannkraft er hovedkilden til norsk strømproduksjon. Kraftbalansen viser produksjon, forbruk og nettoeksport av strøm."
+why_matters: "Vannkraften er ryggraden i norsk strømforsyning, og kraftbalansen viser hvordan produksjonen nå overstiger det innenlandske forbruket år etter år."
 key_points:
-  - "Norsk elektrisitetsproduksjon var 161,8 TWh i 2025, der vannkraft sto for 89,9 prosent og vindkraft for 8,6 prosent (SSB)."
-  - "Vannkraft, vindkraft og solkraft utgjorde til sammen 98,7 prosent av kraftproduksjonen i 2025."
-  - "Produksjonen i 2025 var 20,0 prosent høyere enn i 2019, da den var 134,9 TWh."
+  - "Norsk kraftproduksjon nådde 161,8 TWh i 2025, med 89,9 prosent fra vannkraft og 8,6 prosent fra vindkraft (SSB)."
+  - "Vann, vind og sol sto til sammen for 98,7 prosent av all strømproduksjon i 2025."
+  - "Produksjonen i 2025 var 20,0 prosent høyere enn i 2019 (134,9 TWh), og ga en nettoeksport på 22,8 TWh."
 ---
 
 Av all strømmen som ble produsert i Norge i 2025, kom 98,7 prosent fra vannkraft, vindkraft og solkraft, viser elektrisitetsstatistikken fra Statistisk sentralbyrå (SSB). Norske kraftverk leverte til sammen 161,8 terawattimer (TWh), 20,0 prosent mer enn i 2019, da produksjonen var 134,9 TWh. Resten, 1,3 prosent, var varmekraft.
@@ -35,7 +35,7 @@ Vindkraften har vokst fra 0,9 TWh i 2010 til 13,9 TWh i 2025. Det høyeste nivå
 
 Bruttoforbruket av kraft i Norge var 139,0 TWh i 2025. Siden produksjonen var større enn forbruket, eksporterte Norge 22,8 TWh mer strøm enn landet importerte. I 2019 var forholdet omvendt: Da var forbruket litt større enn produksjonen. Siden 2020 har produksjonen vært større enn forbruket hvert år.
 
-![Linjediagram over Norge har produsert mer strøm enn landet bruker hvert år siden 2020: Produksjon: 142 816 i 2000, 121 608 i 2001, 130 473 i 2002, 107 245 i 2003, 110 472 i 2004, 137 811 i 2005, 121 400 i 2006, 137 164 i 2007, 142 108 i 2008, 131 773 i 2009, 123 630 i 2010, 127 631 i 2011, 147 716 i 2012, 133 975 i 2013, 141 968 i 2014, 144 511 i 2015, 148 989 i 2016, 149 402 i 2017, 147 057 i 2018, 134 882 i 2019, 154 197 i 2020, 157 113 i 2021, 145 942 i 2022, 153 973 i 2023, 157 136 i 2024, 161 793 i 2025; Forbruk: 123 761 i 2000, 125 206 i 2001, 120 800 i 2002, 115 130 i 2003, 121 964 i 2004, 125 769 i 2005, 122 255 i 2006, 127 128 i 2007, 128 231 i 2008, 122 790 i 2009, 131 180 i 2010, 124 557 i 2011, 129 900 i 2012, 128 970 i 2013, 126 383 i 2014, 129 884 i 2015, 132 579 i 2016, 134 238 i 2017, 136 908 i 2018, 134 926 i 2019, 133 724 i 2020, 139 529 i 2021, 133 420 i 2022, 136 235 i 2023, 138 697 i 2024, 138 993 i 2025.](./graf-1.svg)
+![Små linjediagrammer over Norge har produsert mer strøm enn landet bruker hvert år siden 2020: Produksjon: 142 816 i 2000, 121 608 i 2001, 130 473 i 2002, 107 245 i 2003, 110 472 i 2004, 137 811 i 2005, 121 400 i 2006, 137 164 i 2007, 142 108 i 2008, 131 773 i 2009, 123 630 i 2010, 127 631 i 2011, 147 716 i 2012, 133 975 i 2013, 141 968 i 2014, 144 511 i 2015, 148 989 i 2016, 149 402 i 2017, 147 057 i 2018, 134 882 i 2019, 154 197 i 2020, 157 113 i 2021, 145 942 i 2022, 153 973 i 2023, 157 136 i 2024, 161 793 i 2025; Forbruk: 123 761 i 2000, 125 206 i 2001, 120 800 i 2002, 115 130 i 2003, 121 964 i 2004, 125 769 i 2005, 122 255 i 2006, 127 128 i 2007, 128 231 i 2008, 122 790 i 2009, 131 180 i 2010, 124 557 i 2011, 129 900 i 2012, 128 970 i 2013, 126 383 i 2014, 129 884 i 2015, 132 579 i 2016, 134 238 i 2017, 136 908 i 2018, 134 926 i 2019, 133 724 i 2020, 139 529 i 2021, 133 420 i 2022, 136 235 i 2023, 138 697 i 2024, 138 993 i 2025.](./graf-1.svg)
 *Produksjon og bruttoforbruk av elektrisk kraft i Norge, 2000–2025, gigawattimer (1 000 GWh = 1 TWh). Kilde: SSB, tabell 08307.*
 
 | Nøkkeltall i kraftbalansen (TWh) | 2021 | 2023 | 2025 |
@@ -53,7 +53,7 @@ Bruttoforbruket av kraft i Norge var 139,0 TWh i 2025. Siden produksjonen var st
 
 Nettoforbruket, det som brukes hos sluttbrukerne, var 130,1 TWh i 2025. Husholdninger og hytter brukte 40,4 TWh, om lag 31 prosent, mens kraftintensiv industri brukte 37,4 TWh, om lag 29 prosent. Tjenesteytende næringer sto for 20,2 prosent og olje- og gassutvinning for 8,5 prosent.
 
-![Stolpediagram over Husholdningene og den kraftintensive industrien bruker mest: Andel: Husholdninger og hytter: 31,1 %, Kraftintensiv industri: 28,8 %, Tjenesteytende næringer: 20,2 %, Olje- og gassutvinning: 8,5 %, Annen industri: 5,9 %, Kraftforsyning, vann, bygg og anlegg: 3,3 %.](./graf-3.svg)
+![Søylediagram over Husholdningene og den kraftintensive industrien bruker mest: Andel: Husholdninger og hytter: 31,1 %, Kraftintensiv industri: 28,8 %, Tjenesteytende næringer: 20,2 %, Olje- og gassutvinning: 8,5 %, Annen industri: 5,9 %, bygg og anlegg: 3,3 %.](./graf-3.svg)
 *Andel av nettoforbruket av elektrisk kraft i 2025, beregnet fra SSBs månedstall. Jordbruk, skogbruk og fiske (2,0 prosent) er ikke med i figuren. Kilde: SSB, tabell 14091.*
 
 ## Hva tallene ikke viser

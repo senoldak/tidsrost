@@ -6,18 +6,18 @@ cover: ./cover.png
 coverAlt: "Antall konkurser falt med 14,1 prosent fra 3. kvartal 2025 til 3. kvartal 2026, og antall berørte ansatte gikk ned med 20,1 prosent"
 produksjon: ki-redigert
 kjede: {"runder":{"redaksiyon":3,"yazim":1},"kontrollert":52,"hentet":80}
-title: "Antall konkurser falt med 14,1 prosent fra 3. kvartal 2025 til 3. kvartal 2026, og antall berørte ansatte gikk ned med 20,1 prosent"
-description: "Bygg og anlegg, varehandel samt overnatting og servering sto for 48,3 prosent av konkursene i 3. kvartal 2026, men 65,1 prosent av de berørte ansatte."
+title: "Konkursene falt 14,1 prosent i 3. kvartal 2026 – færre ansatte rammet"
+description: "783 norske foretak gikk konkurs i 3. kvartal 2026, og 2 593 ansatte ble berørt. Bygg og anlegg, varehandel samt overnatting og servering sto for 48,3 prosent av konkursene, men hele 65,1 prosent av de berørte ansatte."
 category: okonomi
-why_matters: "Statistisk sentralbyrå (SSB) oppgir både antall konkurser og antall ansatte i foretakene som går konkurs. I 3. kvartal 2026 sto bygg og anlegg for 20,3 prosent av konkursene, men 39,9 prosent av de berørte ansatte."
+why_matters: "Konkurstallene blir ofte lest som én kurve, men antall berørte ansatte varierer sterkt mellom næringene. I 3. kvartal 2026 sto bygg og anlegg for 20,3 prosent av konkursene – og 39,9 prosent av de berørte ansatte."
 key_points:
-  - "Statistisk sentralbyrå (SSB) registrerte 783 åpnede konkurser i 3. kvartal 2026, 14,1 prosent færre enn i 3. kvartal 2025."
-  - "Foretakene som gikk konkurs i 3. kvartal 2026, hadde til sammen 2 593 ansatte, 20,1 prosent færre enn ett år før."
-  - "Konkurser i enkeltpersonforetak utgjorde 3,2 prosent av alle konkursene i 3. kvartal 2026, og disse foretakene hadde 1,3 prosent av de berørte ansatte."
-  - "For de tre første kvartalene i 2026 samlet falt antall konkurser med 17,9 prosent og antall berørte ansatte med 17,3 prosent, sammenlignet med samme periode i 2025."
+  - "SSB registrerte 783 åpnede konkurser i 3. kvartal 2026, ned 14,1 prosent fra samme kvartal i 2025."
+  - "2 593 ansatte var berørt i de konkursrammede foretakene, 20,1 prosent færre enn året før."
+  - "Enkeltpersonforetak utgjorde bare 3,2 prosent av konkursene i 3. kvartal 2026, og 1,3 prosent av de berørte ansatte."
+  - "Samlet for årets tre første kvartaler falt antall konkurser med 17,9 prosent og antall berørte ansatte med 17,3 prosent fra 2025 til 2026."
 ---
 
-I 3. kvartal 2026 ble det åpnet 783 konkurser i Norge, ifølge Statistisk sentralbyrå (SSB). Det er 14,1 prosent færre enn i 3. kvartal 2025. Foretakene som gikk konkurs, hadde til sammen 2 593 ansatte, 20,1 prosent færre enn ett år tidligere.
+Norske domstoler åpnet 783 konkurser i 3. kvartal 2026, viser tall fra Statistisk sentralbyrå (SSB). Det er 14,1 prosent færre enn i 3. kvartal 2025. Samtidig sank antall ansatte i de konkursrammede foretakene med 20,1 prosent, til 2 593.
 
 ## Færre konkurser og færre berørte ansatte
 
@@ -67,7 +67,7 @@ Antall konkurser i 3. kvartal 2026, 783, er 42,8 prosent lavere enn summen for d
 
 Tallene viser at de to målene ikke alltid følger hverandre. Det ble åpnet 953 konkurser med 3 811 berørte ansatte i 3. kvartal 2017. Året etter, i 3. kvartal 2018, var det 1 076 konkurser, men 3 031 berørte ansatte. I 3. kvartal 2020 var antall konkurser 800, færre enn i 3. kvartal 2019, mens antall berørte ansatte steg til 3 771.
 
-![Linjediagram over Konkursene rammet færre ansatte to år på rad: Berørte ansatte: 2 175 i 2015, 2 784 i 2016, 3 811 i 2017, 3 031 i 2018, 3 608 i 2019, 3 771 i 2020, 2 135 i 2021, 2 755 i 2022, 3 506 i 2023, 3 684 i 2024, 3 245 i 2025, 2 593 i 2026.](./graf-2.svg)
+![Tabell over Konkursene rammet færre ansatte to år på rad: Berørte ansatte: 2 175 i 2015, 2 784 i 2016, 3 811 i 2017, 3 031 i 2018, 3 608 i 2019, 3 771 i 2020, 2 135 i 2021, 2 755 i 2022, 3 506 i 2023, 3 684 i 2024, 3 245 i 2025, 2 593 i 2026.](./graf-2.svg)
 *Ansatte i foretak som gikk konkurs i tredje kvartal hvert år, antall. Kilde: Statistisk sentralbyrå (SSB).*
 
 ## Hva betyr den nye næringsgrupperingen?

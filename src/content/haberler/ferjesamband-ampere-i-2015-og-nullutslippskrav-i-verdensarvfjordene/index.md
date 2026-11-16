@@ -1,6 +1,6 @@
 ---
 title: "Ferjesamband i Norge: «Ampere» i 2015 og nullutslippskrav i verdensarvfjordene"
-description: "Verdens første helelektriske bilferge gikk i rute over Sognefjorden i 2015, ifølge regjeringen. Det finnes om lag 130 ferjesamband i Norge, og nullutslippskrav gjelder for passasjerskip i verdensarvfjordene fra 2026."
+description: "Elleve år etter at verdens første helelektriske bilferge gikk i rute over Sognefjorden, trer nullutslippskravet for passasjerskip i de fem verdensarvfjordene i kraft i 2026."
 date: 2026-10-25T08:00:00+01:00
 category: teknologi
 cover: ./cover.png
@@ -8,11 +8,11 @@ coverAlt: "Illustrasjon: «Ferjesamband i Norge: «Ampere» i 2015 og nullutslip
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Fergene knytter lokalsamfunn og næringsliv langs kysten sammen."
+why_matters: "Ferjene binder sammen kystsamfunn og næringsliv langs hele landet, og omstillingen til strøm og hydrogen setter fart på kuttene i sjøfarten."
 key_points:
-  - "MF «Ampere» var verdens første helelektriske ferge da den ble satt i rute mellom Lavik og Oppedal over Sognefjorden i 2015."
-  - "Det er om lag 130 ferjesamband i Norge, og Statens vegvesen har ansvaret for 16 av dem."
-  - "Ifølge regjeringen gjelder nullutslippskrav fra 2026 for passasjerskip under 10 000 bruttotonn i de fem verdensarvfjordene, og for større skip fra 2032."
+  - "MF «Ampere» ble verdens første helelektriske ferge da den startet på strekningen Lavik–Oppedal over Sognefjorden i 2015."
+  - "Norge har om lag 130 ferjesamband, hvorav Statens vegvesen har direkte ansvar for 16."
+  - "Fra 2026 gjelder nullutslippskrav for passasjerskip under 10 000 bruttotonn i de fem verdensarvfjordene, og for større skip fra 1. januar 2032."
 ---
 
 Fra 2026 gjelder et nullutslippskrav for passasjerskip under 10 000 bruttotonn i de fem verdensarvfjordene Nærøyfjorden, Aurlandsfjorden, Geirangerfjorden, Sunnylvsfjorden og Tafjorden, ifølge regjeringen. For større passasjerskip gjelder samme krav fra 1. januar 2032. Kravet kommer elleve år etter at verdens første helelektriske bilferge, MF «Ampere», ble satt i rute over Sognefjorden.

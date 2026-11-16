@@ -9,7 +9,7 @@ coverAlt: "Illustrasjon: «Stabilt lav arbeidsledighet høsten 2026 med 2,0 pros
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Ledighetstallene brukes i vurderinger av norsk økonomi. Fordi de to hovedmålene bygger på ulike definisjoner, gir de ulike svar på hvor mange som er uten jobb."
+why_matters: "Nav og SSB måler arbeidsledigheten på helt ulike måter – og avstanden mellom de to tallene har vokst kraftig de siste årene."
 key_points:
   - "59 400 personer var registrert som helt ledige hos Nav i september 2026 – 2,0 prosent av arbeidsstyrken."
   - "SSBs arbeidskraftundersøkelse viste 4,5 prosent ledighet i august 2026 (trendtall) da tallene ble publisert. I september 2026 var trendtallet 4,6 prosent."
@@ -35,7 +35,7 @@ SSB skriver at grupper uten krav på dagpenger har mindre grunn til å registrer
 
 I 2025 var til sammen 171 000 personer arbeidsledige i én eller begge statistikkene, men bare 28 000 av dem inngikk i begge. Ifølge SSBs beregninger lå Nav-ledigheten i årene 2011–2014 i snitt 1,1 prosentpoeng under AKU-ledigheten. Avstanden økte til rundt 2,0 prosentpoeng i 2024 og 2,4 prosentpoeng i 2025.
 
-![Linjediagram over Avstanden mellom de to ledighetstallene har økt: AKU: 3,6 % i 2011, 3,5 % i 2012, 3,8 % i 2013, 3,9 % i 2014, 4,9 % i 2015, 4,8 % i 2016, 4,2 % i 2017, 4,0 % i 2018, 4,1 % i 2019, 5,3 % i 2020, 3,8 % i 2021, 3,3 % i 2022, 3,6 % i 2023, 4,0 % i 2024, 4,6 % i 2025, 4,6 % i 2026; Nav: 2,6 % i 2011, 2,5 % i 2012, 2,7 % i 2013, 2,8 % i 2014, 3,0 % i 2015, 2,9 % i 2016, 2,6 % i 2017, 2,4 % i 2018, 2,3 % i 2019, 3,9 % i 2020, 2,5 % i 2021, 1,6 % i 2022, 1,8 % i 2023, 2,0 % i 2024, 2,1 % i 2025, 2,0 % i 2026.](./graf-1.svg)
+![Små linjediagrammer over Avstanden mellom de to ledighetstallene har økt: AKU: 6 % i 2011, 5 % i 2012, 8 % i 2013, 9 % i 2014, 9 % i 2015, 8 % i 2016, 2 % i 2017, 0 % i 2018, 1 % i 2019, 3 % i 2020, 8 % i 2021, 3 % i 2022, 6 % i 2023, 0 % i 2024, 6 % i 2025, 6 % i 2026; Nav: 6 % i 2011, 5 % i 2012, 7 % i 2013, 8 % i 2014, 0 % i 2015, 9 % i 2016, 6 % i 2017, 4 % i 2018, 3 % i 2019, 9 % i 2020, 5 % i 2021, 6 % i 2022, 8 % i 2023, 0 % i 2024, 1 % i 2025, 0 % i 2026.](./graf-1.svg)
 *Arbeidsledige i september hvert år, 2011–2026. AKU: trendtall for 15–74 år. Nav: helt ledige, sesongjustert. AKU ble lagt om i 2021, og Navs tidsserie har brudd i november 2018 og april 2025. Kilde: SSB, tabell 13760, og Nav.*
 
 ## Nav: 59 413 helt ledige
@@ -46,7 +46,7 @@ Justert for sesongvariasjoner gikk antallet helt ledige ned med rundt 600 person
 
 Oslo hadde den høyeste andelen helt ledige i september med 2,7 prosent, fulgt av Østfold med 2,6 prosent. Lavest var Troms med 1,2 prosent. Regnet med tiltaksdeltakere bytter de to øverste fylkene plass: Østfold topper med 3,2 prosent foran Oslo med 3,1 prosent.
 
-![Stolpediagram over Høyest ledighet i Oslo og Østfold: Helt ledige: Oslo: 2,7 %, Østfold: 2,6 %, Akershus: 2,3 %, Buskerud: 2,2 %, Vestfold: 2,2 %, Telemark: 2,2 %, Finnmark: 2,1 %, Agder: 2,0 %, Rogaland: 1,9 %, Trøndelag: 1,9 %, Møre og Romsdal: 1,6 %, Innlandet: 1,6 %, Vestland: 1,6 %, Nordland: 1,5 %, Troms: 1,2 %, Hele landet: 2,0 %.](./graf-2.svg)
+![Søylediagram over Høyest ledighet i Oslo og Østfold: Helt ledige: Oslo: 2, Østfold: 2, Akershus: 2, Buskerud: 2, Vestfold: 2, Telemark: 2, Finnmark: 2, Agder: 2, Rogaland: 1, Trøndelag: 1, Møre og Romsdal: 1, Innlandet: 1, Vestland: 1, Nordland: 1, Troms: 1, Hele landet: 2.](./graf-2.svg)
 *Helt ledige i prosent av arbeidsstyrken, september 2026, ujusterte tall. Den stiplede linjen viser hele landet. Kilde: Nav.*
 
 Mellom yrkesgruppene spenner ledigheten fra 2,9 prosent i reiseliv og transport til 0,8 prosent i akademiske yrker og 0,9 prosent i helse, pleie og omsorg. I ingeniør- og IKT-fag var 4 539 personer helt ledige, 538 flere enn året før, og andelen økte fra 1,3 til 1,5 prosent. I bygg og anlegg falt antallet med 737 personer, og andelen gikk ned fra 2,6 til 2,3 prosent.

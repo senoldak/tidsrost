@@ -6,14 +6,14 @@ cover: ./cover.png
 coverAlt: "Øverste tiendedels andel av inntekten steg kraftig i 2005 og i 2021 og falt tilbake året etter"
 produksjon: ki-redigert
 title: "Øverste tiendedels andel av inntekten steg kraftig i 2005 og i 2021 og falt tilbake året etter"
-description: "Statistisk sentralbyrås tall for inntekt etter skatt viser to år der den øverste tiendedelens andel steg kraftig. Den nederste tiendedelens andel har gått ned med 0,7 prosentpoeng siden 1986."
+description: "SSBs inntektstall viser to tydelige hopp i toppen i 2005 og 2021 som raskt falt tilbake. Samtidig har den nederste tiendedelens andel sunket med 0,7 prosentpoeng siden 1986."
 category: okonomi
-why_matters: "Gjennomsnitt og median sier lite om de laveste og de høyeste inntektene. Når toppen svinger fra år til år, kan ett enkelt år endre bildet av hele fordelingen."
+why_matters: "Gjennomsnitt og median skjuler hva som skjer i bunnen og toppen av inntektsfordelingen, og ett enkelt år i toppen kan gi et skjevt bilde av hele ulikheten."
 key_points:
-  - "Den øverste tiendedelen hadde 21,2 prosent av samlet inntekt etter skatt i 2024, mot 3,8 prosent for den nederste."
-  - "Toppdesilens andel økte med 3,1 prosentpoeng i perioden 1986–2024, men bare med 0,6 prosentpoeng i perioden 2006–2024."
-  - "Toppdesilens andel steg kraftig i 2005 og i 2021 og var lavere året etter."
-  - "Andelen i husholdninger med inntekt under seksti prosent av medianen var 12,8 prosent i 2024."
+  - "Den øverste tiendedelen tok 21,2 prosent av all inntekt etter skatt i 2024, mot 3,8 prosent for den nederste."
+  - "Toppdesilens andel økte med 3,1 prosentpoeng fra 1986 til 2024, men bare med 0,6 prosentpoeng etter 2006."
+  - "I 2005 og 2021 gjorde toppen et kraftig byks, før andelen falt tilbake året etter."
+  - "Andelen personer i husholdninger under 60 prosent av medianinntekten var 12,8 prosent i 2024."
 ---
 
 Hva skjer egentlig i halene av inntektsfordelingen, der de aller laveste og de aller høyeste inntektene ligger? Gjennomsnittet sier lite om dem, og medianen sier ingenting. Vi har stilt spørsmålet til tallene fra Statistisk sentralbyrå (SSB) og lett etter spor i begge ender.
@@ -54,7 +54,7 @@ Her må vi være forsiktige med tidsaksen. I perioden 2006–2024 har øverste t
 
 Det første hoppet ser vi i 2005. Øverste tiendedels andel var 25,1 prosent i 2004. I 2005 var den 29,4 prosent, en økning på 4,3 prosentpoeng på ett år. I 2006 var andelen 20,6 prosent, 8,8 prosentpoeng lavere.
 
-![Søylediagram over Toppdesilens andel hoppet i 2005 og falt tilbake i 2006: Øverste tiendedel: 25,1 % i 2004, 29,4 % i 2005, 20,6 % i 2006, 21,4 % i 2007, 20,8 % i 2008, 20,2 % i 2009, 20,6 % i 2010, 20,6 % i 2011.](./graf-2.svg)
+![Stolpediagram over Toppdesilens andel hoppet i 2005 og falt tilbake i 2006: Øverste tiendedel: 25,1 % i 2004, 29,4 % i 2005, 20,6 % i 2006, 21,4 % i 2007, 20,8 % i 2008, 20,2 % i 2009, 20,6 % i 2010, 20,6 % i 2011.](./graf-2.svg)
 *Øverste tiendedels andel av samlet inntekt etter skatt, prosent. Kilde: Statistisk sentralbyrå (SSB).*
 
 SSB har selv beskrevet perioden i en artikkel i Samfunnsspeilet, publisert i 2008. SSB skrev at året 2005 var ett av årene da det ble utbetalt svært store aksjeutbytter. SSB skrev også at «Nye regler for kapitalbeskatning bidro til at husholdningene i toppen» tok ut mindre i aksjeutbytte i 2006, og at det da var en klar utjevning. Artikkelen nevner høyere sysselsetting i 2006 som en annen del av bildet. SSB påpekte samtidig at statistikken ikke dekker uttak av reinvesterte aksjeutbytter, slik at nedgangen i ulikhet kan være mindre enn tallene viser. Vi gjengir dette som SSBs egen beskrivelse og trekker ingen egne slutninger av det.
@@ -69,7 +69,7 @@ I 2024 lå grensen for den tiendedelen med lavest inntekt på 297 000 kroner. Mi
 
 Forholdet mellom grensen for høyeste og laveste tiendedel er 2,8. Vi kom fram til tallet ved å dele de to grensene på hverandre. I 2004 var forholdet 2,6. Grensen for høyeste hundredel er 3,1 ganger grensen for midten, mens midten er 1,7 ganger grensen for laveste tiendedel. Det er toppen av fordelingen som ligger lengst unna midten.
 
-![Stolpediagram over Grensen for høyeste hundredel ligger høyt over alle de andre grensene: Grenseverdi: Laveste tjuedel: 249 200, Laveste tiendedel: 297 000, Midten: 513 500, Høyeste tiendedel: 830 500, Høyeste tjuedel: 983 600, Høyeste hundredel: 1 568 400.](./graf-3.svg)
+![Søylediagram over Grensen for høyeste hundredel ligger høyt over alle de andre grensene: Grenseverdi: Laveste tjuedel: 249 200, Laveste tiendedel: 297 000, Midten: 513 500, Høyeste tiendedel: 830 500, Høyeste tjuedel: 983 600, Høyeste hundredel: 1 568 400.](./graf-3.svg)
 *Grenseverdi for inntekt etter skatt per forbruksenhet, faste priser, kroner. Kilde: Statistisk sentralbyrå (SSB).*
 
 I perioden 2004–2024 har grensene steget i alle deler av fordelingen. Grensen for laveste tiendedel er 34,0 prosent høyere i faste priser, midten 40,7 prosent og grensen for høyeste tiendedel 44,5 prosent. Grensen for hundredelen med høyest inntekt er bare 23,3 prosent høyere, og den svinger kraftig mellom enkelte år.

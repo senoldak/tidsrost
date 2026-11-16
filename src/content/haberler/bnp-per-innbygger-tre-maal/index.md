@@ -8,7 +8,7 @@ produksjon: ki-redigert
 title: "BNP per innbygger har falt målt i dollar og steget målt i kroner siden 2013"
 description: "I 2024 var BNP per innbygger 932 583 kroner, 89 889 dollar eller 105 657 PPP-justerte dollar. De tre målene gir ulike svar på hvor Norge står."
 category: okonomi
-why_matters: "Når Norge omtales som et av verdens rikeste land, avhenger tallet av målet. Om det regnes i kroner, dollar eller prisjusterte dollar, endrer både utviklingen og plasseringen."
+why_matters: "Om Norge blir rikere eller fattigere – og hvor vi havner på internasjonale rangeringer – kommer helt an på om man måler i kroner, dollar eller prisjusterte dollar."
 key_points:
   - "I 2024 var BNP per innbygger 932 583 kroner i SSBs regnskap, 89 889 dollar og 105 657 PPP-justerte dollar hos Verdensbanken."
   - "I perioden 2013–2024 økte tallet med 53,3 prosent i kroner og falt med 15,5 prosent i dollar."
@@ -38,7 +38,7 @@ Tre spørsmål hører derfor til hvert BNP-tall: hvilken valuta det er oppgitt i
 
 Første spørsmål er hvorfor kroner og dollar peker i hver sin retning. Svaret ligger i valutakursen. Dollartallet følger kronetallet og kursen. I perioden 2013–2024 økte BNP per innbygger i kroner med 53,3 prosent. Kursen, målt som kroner per dollar, økte med 82,8 prosent. Når telleren stiger mindre enn nevneren, faller brøken. Verdensbankens dollartall for Norge falt med 15,5 prosent i perioden 2013–2024. Dollartallet er likevel ikke nøyaktig kronetallet delt på kursen. Deler vi SSBs kronetall for året 2024 på årsgjennomsnittet for kursen, blir dollartallet noe lavere enn Verdensbankens. Vi har ikke funnet en kilde som forklarer forskjellen, så de to tallene er ikke regnet ut fra samme grunnlag.
 
-![Linjediagram over Dollaren har blitt dyrere i kroner siden 2013: Kroner per dollar: 5,88 i 2013, 6,30 i 2014, 8,07 i 2015, 8,40 i 2016, 8,26 i 2017, 8,13 i 2018, 8,80 i 2019, 9,40 i 2020, 8,60 i 2021, 9,62 i 2022, 10,56 i 2023, 10,74 i 2024, 10,39 i 2025.](./graf-5.svg)
+![Linjediagram med perioder over Dollaren har blitt dyrere i kroner siden: Kroner per dollar: 88 i 2013, 30 i 2014, 7 i 2015, 40 i 2016, 26 i 2017, 13 i 2018, 80 i 2019, 40 i 2020, 60 i 2021, 62 i 2022, 56 i 2023, 74 i 2024, 39 i 2025.](./graf-5.svg)
 *Amerikanske dollar i kroner, årsgjennomsnitt. Kilde: Norges Bank.*
 
 Kursen har ikke steget jevnt. Fra 5,88 kroner i 2013 gikk den til 8,07 kroner i 2015, og den nådde 10,74 kroner i 2024. I 2025 var den litt lavere, 10,39 kroner. Det gir et lite utslag i dollartallet. Regnet med året 2025 som sluttår har BNP per innbygger i dollar falt med 11,0 prosent siden 2013. Med året 2024 som sluttår er fallet 15,5 prosent.
@@ -51,7 +51,7 @@ Neste spørsmål er hva de tre målene gjør med plasseringen. For å se det har
 
 I dollar var BNP per innbygger høyest i Luxembourg i 2025, med 147 252 dollar, fulgt av Sveits med 114 769 og Island med 98 323. Norge kommer på fjerde plass med 94 594 dollar, foran USA med 90 027.
 
-![Stolpediagram over Målt i dollar kommer Norge på fjerde plass blant elleve land: BNP per innbygger: Luxembourg: 147 252, Sveits: 114 769, Island: 98 323, Norge: 94 594, USA: 90 027, Danmark: 76 970, Nederland: 73 684, Sverige: 63 133, Tyskland: 60 496, Storbritannia: 57 602, Finland: 56 149.](./graf-1.svg)
+![Tabell over Målt i dollar kommer Norge på fjerde plass blant elleve land: BNP per innbygger: Luxembourg: 147 252, Sveits: 114 769, Island: 98 323, Norge: 94 594, USA: 90 027, Danmark: 76 970, Nederland: 73 684, Sverige: 63 133, Tyskland: 60 496, Storbritannia: 57 602, Finland: 56 149.](./graf-1.svg)
 *BNP per innbygger, løpende priser, dollar, målt i 2025, bare de elleve landene i sammenlikningen. Kilde: Verdensbanken.*
 
 Med PPP-justerte dollar endrer rekkefølgen seg. Luxembourg er fortsatt først med 156 542 internasjonale dollar. Så kommer Norge med 104 044, foran Sveits med 102 513. Island, som lå på tredjeplass i dollar, har 83 431 og havner bak både USA og Nederland. Sveits går motsatt vei, fra andreplass i dollar til tredjeplass med PPP-justerte dollar. For USA er de to tallene like, siden dollar er referansen.
@@ -69,14 +69,14 @@ Utviklingen siden 2013 viser den samme typen forskjell. I perioden 2013–2024 �
 
 Tallene for kroner, dollar og PPP er alle i løpende priser, og prisstigning ligger derfor inne i dem. Når prisene tas ut, er bildet et annet. SSBs tall i faste priser viser en økning på 8,4 prosent. Verdensbankens PPP-tall i faste priser viser 10,3 prosent. Forskjellen mellom dem er 1,9 prosentpoeng. Den kommer av ulike prisbaser og ulike beregninger, og vi har ikke gått nærmere inn på detaljene.
 
-![Stolpediagram over Samme økonomi, fem ulike vekstrater siden 2013: Endring: Kroner løpende: 53,3 %, Kroner faste: 8,4 %, Dollar: −15,5 %, PPP løpende: 52,7 %, PPP faste: 10,3 %.](./graf-4.svg)
+![Avviksdiagram over Samme økonomi, fem ulike vekstrater siden: Endring: Kroner løpende: 53, Kroner faste: 8, Dollar: −15, PPP løpende: 52, PPP faste: 10.](./graf-4.svg)
 *Prosentvis endring i BNP per innbygger i Norge, 2013–2024. Kilde: Statistisk sentralbyrå, Verdensbanken.*
 
 Med prisene tatt ut er BNP per innbygger 8,4 til 10,3 prosent høyere i 2024 enn i 2013, avhengig av kilde. Det er langt mindre enn de 53,3 prosent i løpende kroner.
 
 For å se hvordan dollarbildet endrer sammenlikningen med andre land, har vi tatt med åtte av landene. I 2013 lå Norge på andreplass av de åtte, bak Luxembourg og foran Sveits. I 2025 ligger Norge på fjerdeplass.
 
-![Helningsdiagram over Målt i dollar ligger Norge lavere i 2025 enn i 2013, mens alle de andre sju landene ligger høyere: i 2013: Luxembourg: 120 000, Sveits: 88 851, Island: 50 173, Norge: 106 333, USA: 53 297, Danmark: 61 378, Sverige: 60 844, Tyskland: 47 207; i 2025: Luxembourg: 147 252, Sveits: 114 769, Island: 98 323, Norge: 94 594, USA: 90 027, Danmark: 76 970, Sverige: 63 133, Tyskland: 60 496.](./graf-3.svg)
+![Prikkdiagram over Målt i dollar ligger Norge lavere i 2025 enn i 2013, mens alle de andre sju landene ligger høyere: i 2013: Luxembourg: 120 000, Sveits: 88 851, Island: 50 173, Norge: 106 333, USA: 53 297, Danmark: 61 378, Sverige: 60 844, Tyskland: 47 207; i 2025: Luxembourg: 147 252, Sveits: 114 769, Island: 98 323, Norge: 94 594, USA: 90 027, Danmark: 76 970, Sverige: 63 133, Tyskland: 60 496.](./graf-3.svg)
 *BNP per innbygger, løpende priser, dollar. Kilde: Verdensbanken.*
 
 Norge er det eneste av de åtte landene som har et lavere dollartall i 2025 enn i 2013. Luxembourg, Sveits, Island, USA, Danmark, Sverige og Tyskland ligger alle høyere. Regnet i dollar økte BNP per innbygger i perioden 2013–2025 med 22,7 prosent i Luxembourg, 29,2 prosent i Sveits, 96,0 prosent på Island, 68,9 prosent i USA, 25,4 prosent i Danmark, 3,8 prosent i Sverige og 28,2 prosent i Tyskland. Norge ligger på minus 11,0 prosent. Spredningen er stor, fra 3,8 prosent i Sverige til 96,0 prosent på Island. 

@@ -8,12 +8,12 @@ produksjon: ki-redigert
 title: "Åtte OECD-land hadde høyere skatt som andel av BNP enn Norge i 2024"
 description: "Skatt og avgifter utgjorde 40,2 prosent av BNP i Norge i 2024, mot 34,1 prosent i OECD-snittet. Norge var ikke øverst i noen av årene i perioden 2015–2024, og tallet svinger mer enn OECD-snittet."
 category: okonomi
-why_matters: "OECDs tall viser hvor Norge ligger i forhold til andre land, og hvorfor ett enkelt forholdstall ikke gir hele bildet."
+why_matters: "OECDs tall viser hvor Norge faktisk ligger sammenlignet med andre land – og hvorfor ett enkelt forholdstall mot BNP ikke forteller hvem som betaler."
 key_points:
-  - "Skatt og avgifter var 40,2 prosent av BNP i Norge i 2024. OECD-snittet var 34,1 prosent, og Danmark lå på 45,2 prosent."
-  - "Norge var nummer ni blant OECD-landene i 2024, og tredje høyeste i 2022, det året tallet var høyest."
-  - "Tallet for Norge økte med 5,0 prosentpoeng i perioden 2015–2022 og falt med 3,1 prosentpoeng i perioden 2022–2024."
-  - "Målt mot Fastlands-BNP blir forholdstallet 49,8 prosent, men det kan ikke sammenlignes med andre lands tall."
+  - "Skatt og avgifter utgjorde 40,2 prosent av BNP i Norge i 2024, over OECD-snittet på 34,1 prosent, men bak Danmark på 45,2 prosent."
+  - "Norge var nummer ni i OECD i 2024; toppåret var 2022, da Norge lå på tredjeplass."
+  - "Andelen steg 5,0 prosentpoeng fra 2015 til 2022 og falt 3,1 prosentpoeng fra 2022 til 2024."
+  - "Målt mot Fastlands-BNP blir forholdstallet 49,8 prosent, men det kan ikke sammenlignes direkte med andre lands tall."
 ---
 
 Har Norge verdens høyeste skattenivå? Målt slik OECD gjør det, er svaret nei. I 2024 gikk 40,2 prosent av bruttonasjonalproduktet (BNP) i Norge til staten, kommunene og trygdeordningene som skatter og avgifter. Det er mer enn OECD-snittet på 34,1 prosent, men Danmark lå på 45,2 prosent, og sju andre land lå også over Norge: Frankrike, Østerrike, Italia, Belgia, Finland, Luxembourg og Sverige.
@@ -52,7 +52,7 @@ I 2015 lå Danmark på 46,5 prosent, Frankrike på 45,4 prosent, Finland på 43,
 
 Avstanden mellom Norge og OECD-snittet har derfor variert. I 2015 var den 5,4 prosentpoeng, i 2022 var den 9,3 prosentpoeng, og i 2024 var den 6,1 prosentpoeng. Også Danmark svingte: der falt andelen med 5,4 prosentpoeng i perioden 2021–2022, før den steg med 3,1 prosentpoeng i perioden 2022–2024.
 
-![Linjediagram over Skattenivået i Norge svingte mer enn OECD-snittet: Norge: 38,3 % i 2015, 38,8 % i 2016, 38,6 % i 2017, 39,3 % i 2018, 39,9 % i 2019, 38,7 % i 2020, 41,3 % i 2021, 43,3 % i 2022, 41,6 % i 2023, 40,2 % i 2024; Danmark: 46,5 % i 2015, 45,8 % i 2016, 45,5 % i 2017, 44,4 % i 2018, 47,1 % i 2019, 47,2 % i 2020, 47,5 % i 2021, 42,1 % i 2022, 44,0 % i 2023, 45,2 % i 2024; OECD-snitt: 32,9 % i 2015, 33,6 % i 2016, 33,3 % i 2017, 33,4 % i 2018, 33,3 % i 2019, 33,5 % i 2020, 34,0 % i 2021, 34,0 % i 2022, 33,7 % i 2023, 34,1 % i 2024.](./graf-4.svg)
+![Små linjediagrammer over Skattenivået i Norge svingte mer enn OECD-snittet: Norge: 38,3 % i 2015, 38,8 % i 2016, 38,6 % i 2017, 39,3 % i 2018, 39,9 % i 2019, 38,7 % i 2020, 41,3 % i 2021, 43,3 % i 2022, 41,6 % i 2023, 40,2 % i 2024; Danmark: 46,5 % i 2015, 45,8 % i 2016, 45,5 % i 2017, 44,4 % i 2018, 47,1 % i 2019, 47,2 % i 2020, 47,5 % i 2021, 42,1 % i 2022, 44,0 % i 2023, 45,2 % i 2024; OECD-snitt: 32,9 % i 2015, 33,6 % i 2016, 33,3 % i 2017, 33,4 % i 2018, 33,3 % i 2019, 33,5 % i 2020, 34,0 % i 2021, 34,0 % i 2022, 33,7 % i 2023, 34,1 % i 2024.](./graf-4.svg)
 *Skatt og avgifter til offentlig forvaltning, prosent av BNP. Kilde: OECD.*
 
 ![Søylediagram over Norge har ligget over OECD-snittet hvert år: Forskjell: 5,4 i 2015, 5,2 i 2016, 5,3 i 2017, 5,8 i 2018, 6,5 i 2019, 5,2 i 2020, 7,3 i 2021, 9,3 i 2022, 7,9 i 2023, 6,1 i 2024.](./graf-5.svg)

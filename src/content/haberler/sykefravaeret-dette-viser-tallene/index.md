@@ -9,11 +9,11 @@ coverAlt: "Illustrasjon: «31 prosent av sykefraværene i 2. kvartal 2026 var gr
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Sykefraværsstatistikken viser hvor stor andel av arbeidstakernes avtalte dagsverk som går tapt på grunn av sykdom, og hvordan fraværet fordeler seg mellom kjønn og næringer. Ved gradert sykmelding er den sykmeldte delvis i arbeid."
+why_matters: "Sykefraværet viser hvor mye arbeidstid som går tapt til sykdom – og hvor stor del av de sykmeldte som likevel er delvis i jobb gjennom gradert sykmelding."
 key_points:
-  - "31 prosent av sykefraværene i 2. kvartal 2026 var graderte, den høyeste andelen som er målt ifølge Nav."
-  - "Det sesongjusterte sykefraværet var 6,68 prosent i 2. kvartal 2026, fordelt på 5,67 prosentpoeng legemeldt og 1,02 prosentpoeng egenmeldt fravær."
-  - "Blant næringene i SSBs oversikt var sykefraværet høyest i helse- og sosialtjenester (9,61 prosent) og lavest i informasjon og kommunikasjon (4,15 prosent)."
+  - "31 prosent av de legemeldte sykefraværene i 2. kvartal 2026 var graderte, den høyeste andelen Nav noen gang har målt."
+  - "Sesongjustert sykefravær lå på 6,68 prosent i 2. kvartal 2026, fordelt på 5,67 prosentpoeng legemeldt og 1,02 prosentpoeng egenmeldt fravær."
+  - "Helse- og sosialtjenester hadde høyest fravær med 9,61 prosent, mens informasjon og kommunikasjon lå lavest med 4,15 prosent."
 ---
 
 Sykefraværet blant norske lønnstakere var 6,68 prosent i 2. kvartal 2026, sesongjustert, viser statistikken Statistisk sentralbyrå (SSB) og Nav la fram 3. september 2026. Kvinner hadde et fravær på 8,53 prosent og menn 5,11 prosent, en forskjell på 3,42 prosentpoeng. Høyest var fraværet i helse- og sosialtjenester med 9,61 prosent. Samtidig var 31 prosent av de legemeldte sykefraværene gradert, den høyeste andelen Nav har målt.
@@ -38,7 +38,7 @@ Fra 2. kvartal 2025 (6,55 prosent) til 2. kvartal 2026 (6,68 prosent) økte syke
 
 Målt i 2. kvartal hvert år lå det sesongjusterte sykefraværet på 7,74 prosent i 2003, det høyeste i perioden fra 2000. Deretter gikk det ned til 5,53 prosent i 2018. Siden har det steget, til en topp på 6,89 prosent i 2024. I 2025 var fraværet 6,55 prosent. Ifølge Nav har sykefraværet økt noe i første halvår 2026 etter nedgangen i 2025.
 
-![Linjediagram over Sykefraværet har steget fra bunnen i 2018: Sykefravær: 6,85 % i 2000, 6,92 % i 2001, 7,23 % i 2002, 7,74 % i 2003, 7,10 % i 2004, 6,28 % i 2005, 6,53 % i 2006, 6,31 % i 2007, 6,63 % i 2008, 6,90 % i 2009, 6,26 % i 2010, 6,31 % i 2011, 5,85 % i 2012, 5,99 % i 2013, 5,93 % i 2014, 5,64 % i 2015, 5,56 % i 2016, 5,63 % i 2017, 5,53 % i 2018, 5,65 % i 2019, 5,72 % i 2020, 6,07 % i 2021, 6,43 % i 2022, 6,48 % i 2023, 6,89 % i 2024, 6,55 % i 2025, 6,68 % i 2026.](./graf-1.svg)
+![Linjediagram med perioder over Sykefraværet har steget fra bunnen i 2018: Sykefravær: 6,85 % i 2000, 6,92 % i 2001, 7,23 % i 2002, 7,74 % i 2003, 7,10 % i 2004, 6,28 % i 2005, 6,53 % i 2006, 6,31 % i 2007, 6,63 % i 2008, 6,90 % i 2009, 6,26 % i 2010, 6,31 % i 2011, 5,85 % i 2012, 5,99 % i 2013, 5,93 % i 2014, 5,64 % i 2015, 5,56 % i 2016, 5,63 % i 2017, 5,53 % i 2018, 5,65 % i 2019, 5,72 % i 2020, 6,07 % i 2021, 6,43 % i 2022, 6,48 % i 2023, 6,89 % i 2024, 6,55 % i 2025, 6,68 % i 2026.](./graf-1.svg)
 *Egenmeldt og legemeldt sykefravær i 2. kvartal hvert år, sesongjustert. Kilde: SSB, tabell 12439.*
 
 ## Graderte sykmeldinger

@@ -9,11 +9,11 @@ coverAlt: "Illustrasjon: «Norges Bank satte styringsrenten til 4,50 prosent –
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Styringsrenten er utgangspunktet for rentene bankene tilbyr husholdninger og bedrifter, og påvirker blant annet renten på boliglån og bankinnskudd."
+why_matters: "Styringsrenten setter gulvet for bankenes renter på både boliglån og innskudd – og bestemmer hvor stram pengepolitikken er for vanlige husholdninger."
 key_points:
-  - "Norges Bank satte styringsrenten opp fra 4,25 til 4,50 prosent 24. september 2026."
-  - "Prisveksten (KPI) var 3,4 prosent i september 2026, mens den underliggende inflasjonen (KPI-JAE) var 3,0 prosent."
-  - "Norges Bank anslår at husholdningenes disponible realinntekt vokser med 2,5 prosent i 2026 og 1,1 prosent i 2027."
+  - "Norges Bank hevet styringsrenten fra 4,25 til 4,50 prosent 24. september 2026."
+  - "Prisveksten (KPI) lå på 3,4 prosent i september 2026, mens kjerneinflasjonen (KPI-JAE) var 3,0 prosent."
+  - "Norges Bank venter at husholdningenes disponible realinntekt vokser med 2,5 prosent i 2026 og 1,1 prosent i 2027."
 ---
 
 Fra 25. september 2026 er Norges Banks styringsrente 4,50 prosent. Dagen før besluttet banken å sette renten opp fra 4,25 prosent, etter en økning fra 4,00 til 4,25 prosent i mai. Ifølge Norges Bank trengs en noe strammere pengepolitikk for å få prisveksten ned til målet på 2 prosent innen rimelig tid. Renten påvirker blant annet renten på boliglån og bankinnskudd. Neste rentebeslutning publiseres 5. november 2026.
@@ -26,7 +26,7 @@ Styringsrenten er renten bankene får på sine innskudd i Norges Bank. Den danne
 
 Ved starten av 2021 var styringsrenten 0 prosent. Fra september 2021 ble den satt opp i fjorten trinn, til 4,50 prosent i desember 2023. Der ble den liggende til juni 2025, da den ble satt ned til 4,25 prosent. I september 2025 ble den satt ned igjen, til 4,00 prosent.
 
-![Linjediagram over Renten er satt opp to ganger i 2026: Styringsrenten: januar 2021: 0,00 %, september 2021: 0,25 %, desember 2021: 0,50 %, mars 2022: 0,75 %, juni 2022: 1,25 %, august 2022: 1,75 %, september 2022: 2,25 %, november 2022: 2,50 %, desember 2022: 2,75 %, mars 2023: 3,00 %, mai 2023: 3,25 %, juni 2023: 3,75 %, august 2023: 4,00 %, september 2023: 4,25 %, desember 2023: 4,50 %, juni 2025: 4,25 %, september 2025: 4,00 %, mai 2026: 4,25 %, september 2026: 4,50 %.](./graf-1.svg)
+![Linjediagram med perioder over Renten er satt opp to ganger i 2026: Styringsrenten: jan. 2021: 0,00 %, sep. 2021: 0,25 %, des. 2021: 0,50 %, mar. 2022: 0,75 %, jun. 2022: 1,25 %, aug. 2022: 1,75 %, sep. 2022: 2,25 %, nov. 2022: 2,50 %, des. 2022: 2,75 %, mar. 2023: 3,00 %, mai 2023: 3,25 %, jun. 2023: 3,75 %, aug. 2023: 4,00 %, sep. 2023: 4,25 %, des. 2023: 4,50 %, jun. 2025: 4,25 %, sep. 2025: 4,00 %, mai 2026: 4,25 %, sep. 2026: 4,50 %.](./graf-1.svg)
 *Norges Banks styringsrente, januar 2021–september 2026. Hvert trinn viser når en ny rente fikk virkning. Kilde: Norges Bank.*
 
 ## Nå: To økninger i 2026

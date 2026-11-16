@@ -9,23 +9,23 @@ coverAlt: "Illustrasjon: «To av tre norske eksportkroner gikk til EU i 2025»"
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Handelsbalansen varierer med verdien av olje- og gasseksporten."
+why_matters: "Norges handelsbalanse svinger i takt med olje- og gassprisene, mens EU fortsatt tar imot to av tre eksportkroner."
 key_points:
-  - "Norge hadde et handelsoverskudd på 660,9 milliarder kroner i 2025, og i januar–august 2026 økte overskuddet med 24,4 prosent til 608,9 milliarder kroner."
-  - "Råolje, naturgass og kondensater sto for 56,8 prosent av vareeksporten i 2025 og 61,2 prosent i januar–august 2026."
-  - "EU tok imot 66,1 prosent av eksporten i 2025, mens fastlandseksporten vokste med 8,0 prosent til 768,1 milliarder kroner."
+  - "Handelsoverskuddet endte på 660,9 milliarder kroner i 2025, og fra januar til august 2026 steg det med 24,4 prosent til 608,9 milliarder kroner."
+  - "Råolje, naturgass og kondensater utgjorde 56,8 prosent av vareeksporten i 2025 og 61,2 prosent i januar–august 2026."
+  - "EU-landene kjøpte 66,1 prosent av norsk vareeksport i 2025, mens fastlandseksporten økte med 8,0 prosent til 768,1 milliarder kroner."
 ---
 
 Norge solgte varer til utlandet for 1 778,8 milliarder kroner i 2025 og importerte for 1 117,9 milliarder kroner, viser statistikken fra Statistisk sentralbyrå (SSB). Det ga et overskudd i varehandelen på 660,9 milliarder kroner. EU-landene kjøpte varer for 1 175,4 milliarder kroner, 66,1 prosent av all norsk eksport.
 
-![Andelsdiagram over To av tre eksportkroner gikk til EU: Andel: EU-landene: 66,1 %, Andre land: 33,9 %.](./graf-1.svg)
+![Søylediagram over To av tre eksportkroner gikk til EU: Andel: EU-landene: 66,1 %, Andre land: 33,9 %.](./graf-1.svg)
 *Norsk vareeksport i 2025 fordelt på EU-landene og andre land. Kilde: SSB, tabell 08804.*
 
 ## Hvor eksporten gikk
 
 Målt etter enkeltland var Storbritannia (316,6 milliarder kroner) og Tyskland (310,1 milliarder kroner) de to største mottakerne av norske varer i 2025, fulgt av Nederland, Sverige, Polen, Frankrike og Danmark. Storbritannia er ikke med i EU-tallet.
 
-![Stolpediagram over Storbritannia og Tyskland kjøper mest: Eksport: Storbritannia: 317 milliarder kroner, Tyskland: 310 milliarder kroner, Nederland: 173 milliarder kroner, Sverige: 115 milliarder kroner, Polen: 105 milliarder kroner, Frankrike: 102 milliarder kroner, Danmark: 101 milliarder kroner, Belgia: 90 milliarder kroner, USA: 68 milliarder kroner, Finland: 58 milliarder kroner.](./graf-2.svg)
+![Tabell over Storbritannia og Tyskland kjøper mest: Eksport: Storbritannia: 317 milliarder kroner, Tyskland: 310 milliarder kroner, Nederland: 173 milliarder kroner, Sverige: 115 milliarder kroner, Polen: 105 milliarder kroner, Frankrike: 102 milliarder kroner, Danmark: 101 milliarder kroner, Belgia: 90 milliarder kroner, USA: 68 milliarder kroner, Finland: 58 milliarder kroner.](./graf-2.svg)
 *De ti største mottakerlandene for norsk vareeksport i 2025, milliarder kroner. Kilde: SSB, tabell 08804.*
 
 Fastlandsvarer utgjorde 23,9 prosent av eksporten til Storbritannia og 21,2 prosent av eksporten til Tyskland. Resten var olje, gass, kondensater, skip og plattformer. Til USA eksporterte Norge varer for 68,3 milliarder kroner og til Kina for 48,7 milliarder kroner.
@@ -58,7 +58,7 @@ Med 828,5 milliarder kroner sto råolje, naturgass og kondensater for 61,2 prose
 
 Handelsbalansen varierer med verdien av olje- og gasseksporten. I toppåret 2022 ble det eksportert olje og gass for 1 969,0 milliarder kroner, den samlede vareeksporten var 2 662,6 milliarder kroner og handelsoverskuddet 1 631,7 milliarder kroner. I pandemiåret 2020 var overskuddet 10,6 milliarder kroner.
 
-![Linjediagram over Eksporten toppet seg i 2022: Eksport: 788 milliarder kroner i 2010, 899 milliarder kroner i 2011, 935 milliarder kroner i 2012, 917 milliarder kroner i 2013, 909 milliarder kroner i 2014, 835 milliarder kroner i 2015, 752 milliarder kroner i 2016, 864 milliarder kroner i 2017, 1 000 milliarder kroner i 2018, 915 milliarder kroner i 2019, 779 milliarder kroner i 2020, 1 493 milliarder kroner i 2021, 2 663 milliarder kroner i 2022, 1 883 milliarder kroner i 2023, 1 810 milliarder kroner i 2024, 1 779 milliarder kroner i 2025; Import: 467 milliarder kroner i 2010, 509 milliarder kroner i 2011, 508 milliarder kroner i 2012, 528 milliarder kroner i 2013, 562 milliarder kroner i 2014, 615 milliarder kroner i 2015, 629 milliarder kroner i 2016, 684 milliarder kroner i 2017, 710 milliarder kroner i 2018, 758 milliarder kroner i 2019, 769 milliarder kroner i 2020, 853 milliarder kroner i 2021, 1 031 milliarder kroner i 2022, 1 052 milliarder kroner i 2023, 1 089 milliarder kroner i 2024, 1 118 milliarder kroner i 2025.](./graf-3.svg)
+![Små linjediagrammer over Eksporten toppet seg i 2022: Eksport: 788 milliarder kroner i 2010, 899 milliarder kroner i 2011, 935 milliarder kroner i 2012, 917 milliarder kroner i 2013, 909 milliarder kroner i 2014, 835 milliarder kroner i 2015, 752 milliarder kroner i 2016, 864 milliarder kroner i 2017, 1 000 milliarder kroner i 2018, 915 milliarder kroner i 2019, 779 milliarder kroner i 2020, 1 493 milliarder kroner i 2021, 2 663 milliarder kroner i 2022, 1 883 milliarder kroner i 2023, 1 810 milliarder kroner i 2024, 1 779 milliarder kroner i 2025; Import: 467 milliarder kroner i 2010, 509 milliarder kroner i 2011, 508 milliarder kroner i 2012, 528 milliarder kroner i 2013, 562 milliarder kroner i 2014, 615 milliarder kroner i 2015, 629 milliarder kroner i 2016, 684 milliarder kroner i 2017, 710 milliarder kroner i 2018, 758 milliarder kroner i 2019, 769 milliarder kroner i 2020, 853 milliarder kroner i 2021, 1 031 milliarder kroner i 2022, 1 052 milliarder kroner i 2023, 1 089 milliarder kroner i 2024, 1 118 milliarder kroner i 2025.](./graf-3.svg)
 *Vareeksport og vareimport i alt, 2010–2025, milliarder kroner. Kilde: SSB, tabell 08804.*
 
 ## Hva tallene ikke viser

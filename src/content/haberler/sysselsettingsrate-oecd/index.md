@@ -8,12 +8,12 @@ produksjon: ki-redigert
 title: "Norge har falt fra fjerde til niende plass i OECD på sysselsettingsraten siden 2005"
 description: "Norges sysselsettingsrate økte, men flere land økte mer. Rangeringen falt mest i aldersgruppen fra tjuefem til femtifire år, der raten har stått stille, men også blant de eldste."
 category: okonomi
-why_matters: "Sysselsettingsraten viser hvor stor del av befolkningen som er i arbeid. Tallene viser at Norge fortsatt ligger høyt, men at forspranget på de fleste andre land har blitt mindre."
+why_matters: "Sysselsettingsraten måler hvor stor del av befolkningen som faktisk er i jobb. Norge ligger fortsatt høyt, men forspranget til resten av OECD krymper."
 key_points:
-  - "Norge var nummer fire av trettiåtte OECD-land på sysselsettingsraten i 2005 og nummer ni i 2025."
-  - "Raten økte fra 74,8 prosent i 2005 til 76,6 prosent i 2025, mens OECD samlet økte fra 65,2 prosent til 70,4 prosent."
-  - "I aldersgruppen fra tjuefem til femtifire år var raten 83,2 prosent i 2005 og 83,3 prosent i 2025, og Norge falt fra sjette til tjueandre plass."
-  - "I 2025 var seks land samlet i et bånd fra 76,4 prosent til 77,2 prosent, så små forskjeller gir store utslag i rangeringen."
+  - "Norge falt fra fjerdeplass i 2005 til niendeplass blant 38 OECD-land i 2025."
+  - "Den norske raten steg fra 74,8 til 76,6 prosent, mens OECD-snittet økte langt raskere – fra 65,2 til 70,4 prosent."
+  - "Blant 25–54-åringene sto Norge stille (83,2 til 83,3 prosent) og raste fra sjette til tjueandre plass."
+  - "Seks land ligger tett samlet mellom 76,4 og 77,2 prosent i 2025, så små utslag gir store hopp på tabellen."
 ---
 
 Norge er nummer ni av trettiåtte OECD-land på sysselsettingsraten i 2025. Av befolkningen mellom femten og sekstifire år var 76,6 prosent i jobb. I 2005 var Norge nummer fire, med 74,8 prosent.
@@ -64,7 +64,7 @@ Den yngste gruppen, fra femten til tjuefire år, gikk motsatt vei i rangeringen.
 
 Til sammen gir dette et bilde der Norges forsprang på OECD samlet for aldersgruppen fra femten til sekstifire år har blitt mindre: forskjellen mellom Norge og OECD samlet var 9,6 prosentpoeng i 2005. I 2025 var den 6,2 prosentpoeng. Blant årene vi har regnet ut, var forskjellen størst i 2010, med 10,9 prosentpoeng. Vi har ikke regnet ut årene imellom. De tre gruppene sier tre ulike ting. Blant de yngste og de eldste har Norge økt, men blant dem mellom tjuefem og femtifire år, har raten stått stille mens OECD samlet har økt. Vi har ikke tall som forklarer hvorfor den midterste aldersgruppen står stille, og vi vil ikke gjette på en årsak.
 
-![Linjediagram over Norges forsprang på OECD samlet er mindre enn i 2010: Norge minus OECD samlet: 9,6 i 2005, 10,9 i 2010, 8,5 i 2015, 6,6 i 2019, 8,5 i 2020, 6,8 i 2024, 6,2 i 2025.](./graf-3.svg)
+![Søylediagram over Norges forsprang på OECD samlet er mindre enn i 2010: Norge minus OECD samlet: 9,6 i 2005, 10,9 i 2010, 8,5 i 2015, 6,6 i 2019, 8,5 i 2020, 6,8 i 2024, 6,2 i 2025.](./graf-3.svg)
 *Norges sysselsettingsrate minus OECD samlet, prosentpoeng. Kilde: OECD.*
 
 ## Fire nordiske veier

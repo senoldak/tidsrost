@@ -8,12 +8,12 @@ produksjon: ki-redigert
 title: "Offisielle anslag for veksten i Fastlands-Norge spriker med 1,1 prosentpoeng i 2027"
 description: "Norges Bank, SSB og Finansdepartementet anslår vekst i Fastlands-Norge på mellom 1,0 prosent og 2,1 prosent i 2027, mens anslagene for prisveksten ligger innenfor 0,2 prosentpoeng."
 category: okonomi
-why_matters: "Anslagene er referansepunkter i debatten om budsjett, lønn og priser. Tallene for året 2027 er ulike for veksten, men ligger nær hverandre for lønn og priser."
+why_matters: "Disse prognosene danner bakteppet for budsjett, lønnsoppgjør og rentevedtak. For 2027 er ekspertene samstemte om priser og lønn, men uenige om farten i fastlandsøkonomien."
 key_points:
-  - "Anslagene for veksten i Fastlands-Norge i 2027 ligger mellom 1,0 prosent og 2,1 prosent, et sprik på 1,1 prosentpoeng."
-  - "For prisveksten målt ved KPI er spriket mellom de tre norske anslagene bare 0,2 prosentpoeng."
-  - "I alle tre institusjoners anslag ligger årslønnen over KPI i 2027."
-  - "Registrert ledighet og AKU-ledighet er to ulike mål, og anslagene for dem kan ikke leses mot hverandre."
+  - "Anslagene for fastlandsveksten i 2027 spriker med 1,1 prosentpoeng – fra 1,0 til 2,1 prosent."
+  - "For prisveksten (KPI) ligger de tre norske institusjonene derimot innenfor et smalt bånd på 0,2 prosentpoeng."
+  - "Alle tre venter at årslønnsveksten blir høyere enn prisveksten i 2027."
+  - "Registrert ledighet og AKU-ledighet måler ulike ting, så prognosene for dem kan ikke sammenlignes direkte."
 ---
 
 I juni anslo Norges Bank at tolvmånedersveksten i konsumprisene ville være 3,0 prosent i august 2026. Utfallet ble 3,3 prosent. For KPI-JAE, den underliggende prisveksten, var anslaget 3,3 prosent og utfallet 3,0 prosent. I september la banken fram nye anslag: 3,5 prosent for KPI og 2,9 prosent for KPI-JAE i september. Utfallene ble 3,4 prosent og 3,0 prosent. Avvikene er mellom 0,1 prosentpoeng og 0,3 prosentpoeng, og de går begge veier.
@@ -41,7 +41,7 @@ Første spørsmål er om spriket bare skyldes at institusjonene starter fra ulik
 
 Det neste spørsmålet er hvor mye veksten tar seg opp. Alle tre anslår høyere vekst i 2027 enn i 2026, men økningen varierer. Finansdepartementet anslår en økning på 0,6 prosentpoeng, SSB på 0,7 prosentpoeng og Norges Bank på 0,1 prosentpoeng.
 
-![Prikkdiagram over Alle tre anslår høyere vekst i 2027 enn i 2026: i 2026: Finansdepartementet: 1,1 %, SSB: 1,4 %, Norges Bank: 0,9 %; i 2027: Finansdepartementet: 1,7 %, SSB: 2,1 %, Norges Bank: 1,0 %.](./graf-2.svg)
+![Søylediagram over Alle tre anslår høyere vekst i 2027 enn i 2026: Alle tre anslår høyere vekst i 2027 enn i 2026: Finansdepartementet: 1,1 %, SSB: 1,4 %, Norges Bank: 0,9 %.](./graf-2.svg)
 *BNP for Fastlands-Norge, prosentvis endring i volum. Kilde: Finansdepartementet, Statistisk sentralbyrå, Norges Bank.*
 
 Tar vi med olje og gass, får vi total-BNP. I 2027 ligger anslagene slik: SSB 1,2 prosent, IMF 1,3 prosent og Norges Bank 0,1 prosent. Mellom høyeste og laveste anslag er det 1,2 prosentpoeng.
@@ -75,7 +75,7 @@ KPI-JAE er KPI justert for avgiftsendringer og uten energivarer. Forskjellen mel
 
 SSB og Norges Bank er også tett på hverandre når vi ser på banen videre. SSB anslår KPI-vekst på 3,2 prosent i 2026, 2,5 prosent i 2027 og 2,2 prosent i 2028. Norges Bank anslår 3,3 prosent, 2,6 prosent og 2,3 prosent. Linjene ligger 0,1 prosentpoeng fra hverandre alle tre årene. I 2025 var KPI-veksten 3,1 prosent.
 
-![Linjediagram over SSB og Norges Bank anslår at KPI-veksten avtar hvert år etter toppen i 2026: SSB: 3,1 % i 2025, framskrevet: 3,2 % i 2026, framskrevet: 2,5 % i 2027, framskrevet: 2,2 % i 2028; Norges Bank: 3,1 % i 2025, framskrevet: 3,3 % i 2026, framskrevet: 2,6 % i 2027, framskrevet: 2,3 % i 2028.](./graf-4.svg)
+![Små linjediagrammer over SSB og Norges Bank anslår at KPI-veksten avtar hvert år etter toppen i 2026: SSB: 3,1 % i 2025, 3,2 % i 2026, 2,5 % i 2027, 2,2 % i 2028; Norges Bank: 3,1 % i 2025, 3,3 % i 2026, 2,6 % i 2027, 2,3 % i 2028.](./graf-4.svg)
 *Konsumprisindeksen, prosentvis endring fra året før. Kilde: Statistisk sentralbyrå, Norges Bank.*
 
 Når lønn og priser er anslått, kan vi regne ut differansen. Dette er vår egen beregning av institusjonenes tall, ikke et anslag fra dem. Trekker vi KPI fra årslønnen, får vi 1,3 prosentpoeng med Finansdepartementets tall, 1,2 prosentpoeng med SSBs og 1,4 prosentpoeng med Norges Banks. Med KPI-JAE blir differansen 1,2 prosentpoeng, 1,2 prosentpoeng og 1,3 prosentpoeng. I alle tre institusjoners anslag ligger altså årslønnen over prisveksten i 2027.

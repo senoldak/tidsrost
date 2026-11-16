@@ -9,11 +9,11 @@ coverAlt: "Illustrasjon: «Strømprisen for husholdninger var 32 prosent lavere 
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Strøm er en viktig utgiftspost for husholdningene gjennom vinterhalvåret. Norgespris og den ordinære strømstønaden reduserer prisen forbrukerne betaler, mens engrosprisene varierer mellom landsdelene."
+why_matters: "Strøm er en tung utgiftspost for husholdningene. Norgespris og strømstønaden demper regningen kraftig, men bak sluttprisen skjuler det seg enorme prissprang mellom nord og sør."
 key_points:
-  - "Før støtte var gjennomsnittlig strømpris for husholdningene 173,2 øre/kWh i 2. kvartal 2026, mens støtteordningene trakk sluttprisen ned til 117,9 øre/kWh."
-  - "Ved utgangen av september 2026 var det registrert nær 1,9 millioner bestillinger av Norgespris, og regjeringen foreslår 16,4 milliarder kroner til ordningene i 2027."
-  - "I 2. kvartal 2026 var engrosprisen 27 øre/kWh i Nord-Norge – lavest i Europa – og 106 øre/kWh i Sørvest-Norge."
+  - "Før støtte var gjennomsnittlig strømpris 173,2 øre/kWh i 2. kvartal 2026; støtteordningene trakk sluttprisen ned til 117,9 øre/kWh."
+  - "Ved utgangen av september 2026 hadde nær 1,9 millioner kunder valgt Norgespris, og regjeringen foreslår 16,4 milliarder kroner til strømstøtte i 2027."
+  - "Engrosprisen i 2. kvartal 2026 var 27 øre/kWh i Nord-Norge – lavest i Europa – mot 106 øre/kWh i Sørvest-Norge."
 ---
 
 I 2. kvartal 2026 betalte husholdningene i gjennomsnitt 117,9 øre/kWh for strøm etter støtte, inkludert nettleie og avgifter, viser tall fra Statistisk sentralbyrå (SSB). Før støtte var prisen 173,2 øre/kWh, slik at støtteordningene Norgespris og strømstønad gjorde prisen 32 prosent lavere. Samtidig var forskjellene i engrosmarkedet store: Selve kraften kostet i snitt 106 øre/kWh i Sørvest-Norge og 27 øre/kWh i Nord-Norge, ifølge Norges vassdrags- og energidirektorat (NVE).
@@ -24,7 +24,7 @@ I 2. kvartal 2026 betalte husholdningene i gjennomsnitt 117,9 øre/kWh for strø
 
 Uten støtteordningene måtte man tilbake til 2022 for å finne en høyere strømpris i 2. kvartal, opplyser SSB.
 
-![Linjediagram over Støtten trakk prisen kraftig ned i 2026: Før støtte: 1. kvartal 2022: 188,8, 2. kvartal 2022: 205,3, 3. kvartal 2022: 317,6, 4. kvartal 2022: 264,9, 1. kvartal 2023: 182,3, 2. kvartal 2023: 160,1, 3. kvartal 2023: 114,9, 4. kvartal 2023: 162,9, 1. kvartal 2024: 148,6, 2. kvartal 2024: 130,4, 3. kvartal 2024: 112,4, 4. kvartal 2024: 134,7, 1. kvartal 2025: 139,2, 2. kvartal 2025: 131,0, 3. kvartal 2025: 139,3, 4. kvartal 2025: 152,8, 1. kvartal 2026: 195,1, 2. kvartal 2026: 173,2; Etter støtte: 1. kvartal 2022: 133,5, 2. kvartal 2022: 137,3, 3. kvartal 2022: 141,5, 4. kvartal 2022: 162,2, 1. kvartal 2023: 143,8, 2. kvartal 2023: 143,5, 3. kvartal 2023: 113,9, 4. kvartal 2023: 136,2, 1. kvartal 2024: 137,5, 2. kvartal 2024: 127,6, 3. kvartal 2024: 112,3, 4. kvartal 2024: 124,4, 1. kvartal 2025: 122,5, 2. kvartal 2025: 126,2, 3. kvartal 2025: 132,3, 4. kvartal 2025: 123,6, 1. kvartal 2026: 122,0, 2. kvartal 2026: 117,9.](./graf-1.svg)
+![Avviksbånd over Støtten trakk prisen kraftig ned i 2026: Før støtte: 1. kv. 2022: 188,8, 2. kv. 2022: 205,3, 3. kv. 2022: 317,6, 4. kv. 2022: 264,9, 1. kv. 2023: 182,3, 2. kv. 2023: 160,1, 3. kv. 2023: 114,9, 4. kv. 2023: 162,9, 1. kv. 2024: 148,6, 2. kv. 2024: 130,4, 3. kv. 2024: 112,4, 4. kv. 2024: 134,7, 1. kv. 2025: 139,2, 2. kv. 2025: 131,0, 3. kv. 2025: 139,3, 4. kv. 2025: 152,8, 1. kv. 2026: 195,1, 2. kv. 2026: 173,2; Etter støtte: 1. kv. 2022: 133,5, 2. kv. 2022: 137,3, 3. kv. 2022: 141,5, 4. kv. 2022: 162,2, 1. kv. 2023: 143,8, 2. kv. 2023: 143,5, 3. kv. 2023: 113,9, 4. kv. 2023: 136,2, 1. kv. 2024: 137,5, 2. kv. 2024: 127,6, 3. kv. 2024: 112,3, 4. kv. 2024: 124,4, 1. kv. 2025: 122,5, 2. kv. 2025: 126,2, 3. kv. 2025: 132,3, 4. kv. 2025: 123,6, 1. kv. 2026: 122,0, 2. kv. 2026: 117,9.](./graf-1.svg)
 *Gjennomsnittlig strømpris for husholdninger per kvartal, inkludert nettleie og avgifter, før og etter støtte fra myndighetene, 1. kvartal 2022–2. kvartal 2026. Kilde: SSB, tabell 09387.*
 
 SSBs husholdningsstatistikk oppgis kun som et landsgjennomsnitt og brytes ikke ned på prisområdene.
@@ -33,7 +33,7 @@ SSBs husholdningsstatistikk oppgis kun som et landsgjennomsnitt og brytes ikke n
 
 Fem prisområder: Fordi overføringskapasiteten i strømnettet setter grenser for hvor mye kraft som kan fraktes mellom landsdelene, er Norge delt inn i fem prisområder. I 2. kvartal 2026 var snittprisen i engrosmarkedet 100 øre/kWh i Sørøst-Norge (NO1) og Vest-Norge (NO5), 106 øre i Sørvest-Norge (NO2), 81 øre i Midt-Norge (NO3) og 27 øre i Nord-Norge (NO4). I 1. kvartal var prisene 123 øre i NO1 og NO5, 118 øre i NO2, 105 øre i NO3 og 65 øre i NO4.
 
-![Stolpediagram over Nord-Norge hadde Europas laveste kraftpris: Spotpris: Sørøst-Norge (NO1): 100, Sørvest-Norge (NO2): 106, Midt-Norge (NO3): 81, Nord-Norge (NO4): 27, Vest-Norge (NO5): 100.](./graf-2.svg)
+![Søylediagram over Nord-Norge hadde Europas laveste kraftpris: Spotpris: Sørøst-Norge (NO1): 100, Sørvest-Norge (NO2): 106, Midt-Norge (NO3): 81, Nord-Norge (NO4): 27, Vest-Norge (NO5): 100.](./graf-2.svg)
 *Gjennomsnittlig spotpris per prisområde i 2. kvartal 2026, uten nettleie, avgifter og støtte. Kilde: NVE.*
 
 NVE peker på to hovedforklaringer bak de høyere prisene i sør: En snøfattig vinter 2025/2026 ga mindre smeltevann til magasinene i Sør-Norge, samtidig som de europeiske gassprisene steg. I Nord-Norge sørget velfylte vannmagasiner for at snittprisen på 27 øre i 2. kvartal ble den laveste i Europa.

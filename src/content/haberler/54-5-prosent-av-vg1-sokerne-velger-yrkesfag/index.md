@@ -8,7 +8,7 @@ coverAlt: "Illustrasjon: «54,5 prosent av Vg1-søkerne velger yrkesfag – rund
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Yrkesfagene utdanner fagarbeidere til blant annet helse, industri, elektro, bygg og maritim sektor."
+why_matters: "Yrkesfagene sikrer fagarbeidere til helse, industri, bygg og elektro – og veksten drives nå særlig av at flere 16-åringer velger praktisk utdanning."
 key_points:
   - "54,5 prosent av søkerne til Vg1 hadde yrkesfag som førsteønske i 2026, mot 53,9 prosent i 2025 og rundt 47 prosent i 2016–2017."
   - "Det ble avlagt rundt 30 800 fag- og svennebrev i 2024/25, 1 000 flere enn året før."
@@ -21,14 +21,14 @@ Ifølge søkertallene fra Utdanningsdirektoratet, som Kunnskapsdepartementet la 
 
 Finnmark hadde høyest andel i 2026, med 72,8 prosent. Oslo hadde lavest, med 29,1 prosent, og Akershus nest lavest, med 43,3 prosent. I de øvrige 13 fylkene hadde mer enn halvparten av søkerne yrkesfag som førsteønske. Lavest av dem var Buskerud, med 55,4 prosent.
 
-![Stolpediagram over Høyest andel i Finnmark, lavest i Oslo: Yrkesfag: Hele landet: 54,5 %, Oslo: 29,1 %, Akershus: 43,3 %, Buskerud: 55,4 %, Østfold: 56,2 %, Troms: 58,6 %, Trøndelag: 58,9 %, Vestfold: 58,9 %, Rogaland: 59,7 %, Agder: 60,8 %, Vestland: 61,2 %, Telemark: 61,4 %, Nordland: 62,3 %, Innlandet: 63,0 %, Møre og Romsdal: 64,4 %, Finnmark: 72,8 %.](./graf-1.svg)
+![Søylediagram over Høyest andel i Finnmark, lavest i Oslo: Yrkesfag: Hele landet: 54, Oslo: 29, Akershus: 43, Buskerud: 55, Østfold: 56, Troms: 58, Trøndelag: 58, Vestfold: 58, Rogaland: 59, Agder: 60, Vestland: 61, Telemark: 61, Nordland: 62, Innlandet: 63, Møre og Romsdal: 64, Finnmark: 72.](./graf-1.svg)
 *Andel av søkerne til Vg1 som har yrkesfag som førsteønske, etter fylke, 2026. Den stiplede linjen viser hele landet. Kilde: Utdanningsdirektoratet, via Kunnskapsdepartementet.*
 
 ## Endringen fra i fjor
 
 Andelen økte i de fleste fylkene. Ifølge departementet var økningen størst i Oslo, der andelen gikk fra 26,4 til 29,1 prosent. Akershus og Finnmark økte begge med 2,1 prosentpoeng. I fire fylker gikk andelen ned: Nordland, Telemark, Innlandet og Troms. I Møre og Romsdal var den uendret.
 
-![Helningsdiagram over Oslo økte mest fra i fjor: i 2025: Hele landet: 53,9 %, Oslo: 26,4 %, Akershus: 41,2 %, Finnmark: 70,7 %, Nordland: 64,0 %, Telemark: 62,4 %; i 2026: Hele landet: 54,5 %, Oslo: 29,1 %, Akershus: 43,3 %, Finnmark: 72,8 %, Nordland: 62,3 %, Telemark: 61,4 %.](./graf-2.svg)
+![Prikkdiagram over Oslo økte mest fra i fjor: i 2025: Hele landet: 53, Oslo: 26, Akershus: 41, Finnmark: 70, Nordland: 64, Telemark: 62; i 2026: Hele landet: 54, Oslo: 29, Akershus: 43, Finnmark: 72, Nordland: 62, Telemark: 61.](./graf-2.svg)
 *Andel av søkerne til Vg1 med yrkesfag som førsteønske, 2025 og 2026, i hele landet og et utvalg fylker. Kilde: Utdanningsdirektoratet, via Kunnskapsdepartementet.*
 
 ## Hvem søker

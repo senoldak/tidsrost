@@ -1,6 +1,6 @@
 ---
 title: "109 724 uten fast lege i mai 2026 – nesten halvert siden utgangen av 2023"
-description: "Antall innbyggere på fastlegeliste uten fast lege var 109 724 i mai 2026, mot 214 106 ved utgangen av 2023, viser Helsedirektoratets årsrapport for allmennlegetjenesten og SSB."
+description: "Antall innbyggere på fastlegeliste uten fast lege falt til 109 724 i mai 2026, ned fra 214 106 ved utgangen av 2023, viser tall fra Helsedirektoratet."
 date: 2026-11-21T08:00:00+01:00
 category: innenriks
 cover: ./cover.png
@@ -8,34 +8,34 @@ coverAlt: "Illustrasjon: «109 724 uten fast lege i mai 2026 – nesten halvert 
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Tallene viser hvor mange innbyggere som står på en fastlegeliste uten fast lege, og hvordan tallet har utviklet seg."
+why_matters: "Fastlegekrisen er på retur: flere leger har kommet til, vikarbruken går ned og listene blir kortere – men fortsatt mangler over hundre tusen sin egen lege."
 key_points:
-  - "Antall innbyggere på liste uten fast lege falt fra 214 106 ved utgangen av 2023 til 109 724 i mai 2026, en nedgang på 48,8 prosent."
-  - "Antall fastleger økte fra 4 858 i 2019 til 5 720 i 2025, men gjennomsnittlig listelengde har sunket fra 1 128 til 958 på ti år."
-  - "Antall lister uten fast lege gikk ned fra 322 ved utgangen av 2023 til 179 i mai 2026, ifølge Helsedirektoratet."
+  - "Antall innbyggere på liste uten fast lege falt med 48,8 prosent fra utgangen av 2023 til mai 2026 – fra 214 106 til 109 724."
+  - "Fastlegekorpset vokste fra 4 858 i 2019 til 5 720 i 2025, mens gjennomsnittlig listelengde sank fra 1 128 til 958 på ti år."
+  - "Ubesatte lister gikk ned fra 322 ved utgangen av 2023 til 179 i mai 2026."
 ---
 
-I mai 2026 sto 109 724 innbyggere på en fastlegeliste uten fast lege. Det viser Helsedirektoratets årsrapport for allmennlegetjenesten, med status per mai 2026. Ved utgangen av 2023 var tallet 214 106, så det har falt med 104 382, eller 48,8 prosent. De som står uten fast lege utgjør nå 1,9 prosent av listeinnbyggerne.
+I mai 2026 sto 109 724 innbyggere på en fastlegeliste uten fast lege. Det går fram av Helsedirektoratets årsrapport for allmennlegetjenesten, med status per mai 2026. Ved utgangen av 2023 var tallet 214 106. På to og et halvt år har køen dermed krympet med 104 382 personer – en nedgang på 48,8 prosent. De som mangler fast lege utgjør nå 1,9 prosent av listeinnbyggerne.
 
-![Nøkkeltall om Nesten halvert på to og et halvt år: Nå: I mai 2026: 109 724; Sammenligning: Mai 2026: 109 724, Desember 2024: 163 034, Desember 2023: 214 106.](./graf-1.svg)
+![Nøkkeltall om Nesten halvert på to og et halvt år: Nå: I mai 2026: 109 724; Sammenligning: Mai 2026: 109 724, Desember 2024: 163 034, Desember 2023: 214 106.](./graf-1.svg)
 *Innbyggere på fastlegeliste uten fast lege, desember 2023, desember 2024 og mai 2026. Kilde: Helsedirektoratet, tabell 11.1.*
 
 ## Hva det betyr å stå uten fast lege
 
-En liste uten fast lege er en fastlegeliste der kommunen ikke har avtale med en fast lege. Listen kan dekkes av vikarer eller andre leger, og innbyggerne skal fortsatt ha tilbud om allmennlegetjenester. Men de har ingen fast lege å forholde seg til.
+En liste uten fast lege betyr at kommunen ikke har avtale med en fast lege for den aktuelle pasientlisten. Kommunen dekker gjerne listen med vikarer eller andre leger, slik at innbyggerne fortsatt får allmennlegetjenester. Forskjellen er at pasientene ikke har én fast lege å forholde seg til over tid.
 
 ## Toppen i 2022
 
-Ifølge SSB sto 30 985 personer på lister uten fast lege i 2015. Tallet steg hvert år unntatt 2017, og nådde 213 173 i 2022, 3,9 prosent av listeinnbyggerne. Siden har det falt tre år på rad, til 117 899 i 2025.
+Går vi tilbake til 2015, sto bare 30 985 personer på lister uten fast lege, ifølge SSB. Deretter steg tallet hvert år unntatt 2017, før det nådde en topp på 213 173 i 2022 – hele 3,9 prosent av listeinnbyggerne. Siden har utviklingen snudd og falt tre år på rad, til 117 899 i 2025.
 
-![Linjediagram over Toppen kom i 2022: Uten fast lege: 30 985 i 2015, 45 134 i 2016, 36 218 i 2017, 54 098 i 2018, 75 539 i 2019, 107 595 i 2020, 138 453 i 2021, 213 173 i 2022, 206 772 i 2023, 163 030 i 2024, 117 899 i 2025.](./graf-2.svg)
+![Tabell over Toppen kom i: Uten fast lege: 30 985 i 2015, 45 134 i 2016, 36 218 i 2017, 54 098 i 2018, 75 539 i 2019, 107 595 i 2020, 138 453 i 2021, 213 173 i 2022, 206 772 i 2023, 163 030 i 2024, 117 899 i 2025.](./graf-2.svg)
 *Personer på fastlegeliste uten fast lege, 2015–2025. Kilde: SSB, tabell 12005.*
 
-Antallet lister uten fast lege viser samme mønster. SSB oppgir 321 slike lister i 2022 og 197 i 2025, og Helsedirektoratet oppgir 179 i mai 2026.
+Antallet ubesatte lister følger samme kurve. SSB registrerte 321 slike lister i 2022 og 197 i 2025, mens Helsedirektoratet teller 179 i mai 2026.
 
 ## Flere fastleger, kortere lister
 
-Ifølge Helsedirektoratet økte antallet fastleger fra 4 858 i 2019 til 5 720 ved utgangen av 2025, en økning på 862, eller 17,7 prosent. Netto tilvekst var 249 fastleger i 2024, det høyeste noensinne, og 203 i 2025. I mai 2026 var det 5 767 fastleger.
+Bak bedringen ligger sterk vekst i antall fastleger. Fra 4 858 leger i 2019 økte korpset til 5 720 ved utgangen av 2025, viser Helsedirektoratets tall – en oppgang på 862 leger, eller 17,7 prosent. Netto tilvekst var 249 fastleger i 2024, det høyeste noensinne, og 203 i 2025. I mai 2026 var tallet kommet opp i 5 767.
 
 | Nøkkeltall (Helsedirektoratet) | Des. 2023 | Des. 2024 | Des. 2025 | Mai 2026 |
 |---|---:|---:|---:|---:|
@@ -50,7 +50,7 @@ Ifølge Helsedirektoratet økte antallet fastleger fra 4 858 i 2019 til 5 720 ve
 
 Samtidig har legene færre pasienter hver. Ifølge SSB falt gjennomsnittlig listelengde fra 1 128 i 2015 til 958 i 2025, en nedgang på 170, eller 15,1 prosent. Listelengden avtales individuelt mellom fastlegen og kommunen.
 
-![Linjediagram over Kortere lister hvert år: Listelengde: 1 128 i 2015, 1 120 i 2016, 1 106 i 2017, 1 097 i 2018, 1 084 i 2019, 1 068 i 2020, 1 057 i 2021, 1 033 i 2022, 1 005 i 2023, 977 i 2024, 958 i 2025.](./graf-3.svg)
+![Tabell over Kortere lister hvert år: Listelengde: 1 128 i 2015, 1 120 i 2016, 1 106 i 2017, 1 097 i 2018, 1 084 i 2019, 1 068 i 2020, 1 057 i 2021, 1 033 i 2022, 1 005 i 2023, 977 i 2024, 958 i 2025.](./graf-3.svg)
 *Gjennomsnittlig listelengde (personer per fastlegeliste), 2015–2025. Kilde: SSB, tabell 12005.*
 
 I et lengre perspektiv økte antallet fastleger med 2 020, eller 54 prosent, fra 2002 til 2025, mens folketallet økte med 24 prosent, ifølge SSB. Antall innbyggere per fastlege gikk ned fra 1 222 til 978.

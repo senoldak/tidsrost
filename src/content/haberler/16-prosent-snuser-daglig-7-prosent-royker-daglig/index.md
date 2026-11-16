@@ -1,6 +1,6 @@
 ---
 title: "16 prosent snuser daglig, 7 prosent røyker daglig – snus har passert røyk"
-description: "I 2025 brukte 16 prosent av befolkningen mellom 16 og 79 år snus daglig, mot 7 prosent som røykte daglig, viser SSB. I 1973 røykte 42 prosent daglig."
+description: "16 prosent av befolkningen mellom 16 og 79 år snuste daglig i 2025, mens bare 7 prosent røykte daglig. Til sammenligning røykte 42 prosent daglig i 1973."
 date: 2026-11-20T08:00:00+01:00
 category: innenriks
 cover: ./cover.png
@@ -8,18 +8,18 @@ coverAlt: "Illustrasjon: «16 prosent snuser daglig, 7 prosent røyker daglig �
 coverKreditt: "Illustrasjon: tidsrøst"
 author: "Şenol Dak"
 sjanger: forklart
-why_matters: "Bruken av tobakksprodukter har flyttet seg fra røyk til snus, og bildet er ulikt for kvinner og menn og for ulike aldersgrupper. Tallene viser hvor tobakks- og nikotinbruken er størst i dag."
+why_matters: "Nordmenns nikotinvaner har gjennomgått et skifte fra sigaretter til snus, men mønsteret varierer kraftig mellom aldersgrupper og kjønn."
 key_points:
-  - "I 2025 snuste 16 prosent av befolkningen på 16–79 år daglig, mens 7 prosent røykte daglig. I 2004 var tallene 4 og 26 prosent."
-  - "Daglig snusbruk er størst blant 25–34-åringer: 35 prosent av mennene og 22 prosent av kvinnene. Blant kvinner har andelen som snuser daglig økt fra 6 prosent i 2016 til 11 prosent i 2025."
-  - "Omtrent 1 prosent bruker e-sigaretter daglig i 2025, ifølge SSB."
+  - "16 prosent snuser daglig og 7 prosent røyker daglig i 2025 (16–79 år). I 2004 var bildet snudd på hodet: 4 prosent snuste og 26 prosent røykte."
+  - "Snusbruken topper seg blant 25–34-åringer, der 35 prosent av mennene og 22 prosent av kvinnene snuser daglig. Kvinnenes snusandel har økt fra 6 til 11 prosent siden 2016."
+  - "E-sigaretter brukes daglig av omtrent 1 prosent av befolkningen i 2025."
 ---
 
-I 2025 brukte 16 prosent av befolkningen mellom 16 og 79 år snus daglig, mens 7 prosent røykte daglig. Det viser tall fra Rusundersøkelsen som Statistisk sentralbyrå (SSB) publiserte 23. oktober 2025. I 1973, da SSB begynte å måle røykevaner, røykte 42 prosent daglig.
+Snus har for lengst tatt over for sigaretter i Norge. I 2025 brukte 16 prosent av befolkningen mellom 16 og 79 år snus daglig, mens 7 prosent røykte daglig, viser Rusundersøkelsen fra Statistisk sentralbyrå (SSB), publisert 23. oktober 2025. Da SSB begynte å måle røykevaner i 1973, røykte 42 prosent hver dag.
 
 ## Fra røyk til snus
 
-Andelen som røyker daglig har falt fra 42 prosent i 1973 til 7 prosent i 2025, en nedgang på 35 prosentpoeng. I 2004 røykte 26 prosent daglig. Samtidig økte andelen som snuser daglig fra 4 prosent i 2004 til 16 prosent i 2025. De to kurvene krysset hverandre rundt 2017–2018: I 2017 var begge 11 prosent, og i 2018 var andelen daglige snusbrukere 12 prosent mot 11 prosent daglige røykere. SSB oppgir at snus i 2018 tok over som det mest brukte tobakksproduktet i Norge.
+På drøyt femti år har daglig røyking falt med 35 prosentpoeng, fra 42 prosent i 1973 til 7 prosent i 2025. Bare siden 2004, da 26 prosent røykte daglig, har nedgangen vært dramatisk. I samme periode skjøt daglig snusbruk i været fra 4 til 16 prosent. Rundt 2017–2018 krysset kurvene hverandre: i 2017 lå begge på 11 prosent, og året etter gikk snus forbi med 12 mot 11 prosent. Siden 2018 har snus vært det klart mest brukte tobakksproduktet i Norge.
 
 ![Linjediagram over andelen som røyker daglig og andelen som snuser daglig, 16–79 år, 2004–2025. Røyker daglig: 26, 25, 23, 21, 20, 20, 19, 17, 16, 15, 13, 13, 12, 11, 11, 9, 9, 8, 8, 7, 8 og 7 prosent. Snuser daglig: 4, 5, 6, 6, 5, 6, 6, 8, 8, 9, 9, 10, 10, 11, 12, 13, 13, 14, 15, 15, 15 og 16 prosent.](./graf-1.svg)
 *Andel som bruker daglig, 2004–2025. Kilde: SSB, tabellene 05307 og 07692.*

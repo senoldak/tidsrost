@@ -7,14 +7,14 @@ coverAlt: "Lønnsindeksen forklart: den måler endring, ikke lønnsnivå"
 produksjon: ki-redigert
 kjede: {"runder":{"redaksiyon":2,"yazim":1},"kontrollert":117,"hentet":79}
 title: "Lønnsindeksen forklart: den måler endring, ikke lønnsnivå"
-description: "Indeksen for avtalt månedslønn sto i 109,9 i 2. kvartal 2026. Bak tallet lå en gjennomsnittlig avtalt månedslønn på 58 970 kroner, mens snittet med tillegg og bonus var 63 700 kroner."
+description: "Indeksen for avtalt månedslønn sto i 109,9 i 2. kvartal 2026. Bak tallet lå en gjennomsnittlig avtalt månedslønn på 58 970 kroner – og 63 700 kroner når tillegg og bonus regnes med."
 category: okonomi
-why_matters: "Lønnstall i nyhetene kan være et kronebeløp, et indekstall eller en prosentvis vekst. De tre svarer på ulike spørsmål, og to tall for samme år kan begge være riktige."
+why_matters: "Lønnstall i nyhetene dukker opp som kronebeløp, indekstall eller prosentvis vekst. De svarer på ulike spørsmål, og to tilsynelatende sprikende tall for samme år kan begge stemme."
 key_points:
-  - "Indeksen for avtalt månedslønn var 109,9 i 2. kvartal 2026, med 1. kvartal 2024 som basis lik 100."
-  - "Gjennomsnittlig avtalt månedslønn var 58 970 kroner i 2. kvartal 2026, 3,9 prosent mer enn i 2. kvartal 2025."
-  - "Månedslønn med uregelmessige tillegg og bonus var 63 700 kroner i 2. kvartal 2026, 4 730 kroner mer enn den avtalte lønnen."
-  - "Fra 2. kvartal 2016 til 2. kvartal 2026 steg indeksen med 44,4 prosent for alle næringer og med 56,2 prosent i jordbruk, skogbruk og fiske."
+  - "Indeksen for avtalt månedslønn nådde 109,9 i 2. kvartal 2026, med 1. kvartal 2024 satt til 100."
+  - "Gjennomsnittlig avtalt månedslønn var 58 970 kroner i 2. kvartal 2026, opp 3,9 prosent fra samme kvartal året før."
+  - "Med uregelmessige tillegg og bonus lå månedslønnen på 63 700 kroner, 4 730 kroner over den avtalte grunnlønnen."
+  - "Fra 2. kvartal 2016 til 2. kvartal 2026 steg indeksen med 44,4 prosent samlet, og mest i jordbruk, skogbruk og fiske med 56,2 prosent."
 ---
 
 Lønnsindeksen viser hvor mye lønnen har endret seg fra et fast utgangspunkt. I 2. kvartal 2026 sto indeksen for gjennomsnittlig avtalt månedslønn fra Statistisk sentralbyrå (SSB) i 109,9, mot 100 i basisperioden 1. kvartal 2024. Bak indeksen lå en gjennomsnittlig avtalt månedslønn på 58 970 kroner, 9,9 prosent mer enn i 1. kvartal 2024.

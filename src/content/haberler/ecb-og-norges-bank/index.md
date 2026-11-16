@@ -6,23 +6,23 @@ cover: ./cover.png
 coverAlt: "Gapet mellom Norges Banks rente og ECBs innskuddsrente er 2,00 prosentpoeng, som ved utgangen av året 2019"
 produksjon: ki-redigert
 title: "Gapet mellom Norges Banks rente og ECBs innskuddsrente er 2,00 prosentpoeng, som ved utgangen av året 2019"
-description: "Ved hvert årsskifte i perioden 2014–2025 lå Norges Banks styringsrente over ECBs innskuddsrente. Gapet har variert fra 0,50 til 2,00 prosentpoeng."
+description: "Ved hvert årsskifte siden 2014 har Norges Banks styringsrente ligget over ECBs innskuddsrente, med et spenn fra 0,50 til 2,00 prosentpoeng."
 category: okonomi
-why_matters: "Norges Banks styringsrente og ECBs innskuddsrente har beveget seg i takt i noen perioder og i utakt i andre. Gapet viser hvor ulike de to rentebanene har vært i tid og størrelse."
+why_matters: "Avstanden mellom norsk og europeisk styringsrente avgjør mye for kronekursen og kapitalflyten. Tallene viser at rentebanene har beveget seg i rykk og napp – ofte i utakt."
 key_points:
-  - "Ved hvert årsskifte i perioden 2014–2025 lå styringsrenten over innskuddsrenten, med et gap mellom 0,50 og 2,00 prosentpoeng."
-  - "Oppgangen fra bunn til topp var like stor i begge, 4,50 prosentpoeng, men Norges Bank hevet første gang omtrent ti måneder før ECB."
-  - "ECB satte ned innskuddsrenten 12. juni 2024, første gang etter toppen i september 2023, og Norges Bank satte ned styringsrenten 20. juni 2025."
-  - "I 2026 har begge hevet renten to ganger, og gapet er det samme som ved utgangen av året 2025."
+  - "Ved hvert årsskifte i perioden 2014–2025 lå styringsrenten over ECBs innskuddsrente, med et gap mellom 0,50 og 2,00 prosentpoeng."
+  - "Begge sentralbankene hevet med 4,50 prosentpoeng fra bunn til topp, men Norges Bank startet omtrent ti måneder før ECB."
+  - "ECB kuttet første gang 12. juni 2024 etter toppen i september 2023, mens Norges Bank ventet til 20. juni 2025."
+  - "I 2026 har begge hevet renten to ganger, slik at gapet nå er tilbake på 2,00 prosentpoeng – nøyaktig som ved utgangen av 2025."
 ---
 
-Dagen var 11. juni 2014: Den europeiske sentralbanken (ECB) satte innskuddsrenten til −0,10 prosent, for første gang i serien vi har lest. Dagen før var den 0,00 prosent. Samme dag lå Norges Banks styringsrente på 1,50 prosent, og gapet mellom de to rentene var 1,60 prosentpoeng.
+Den 11. juni 2014 satte Den europeiske sentralbanken (ECB) innskuddsrenten til −0,10 prosent, for første gang i serien vi har lest. Dagen før var den 0,00 prosent. Samtidig lå Norges Banks styringsrente på 1,50 prosent, noe som ga et gap på 1,60 prosentpoeng.
 
-Innskuddsrenten ble liggende under null til 26. juli 2022, da den var −0,50 prosent. Dagen etter, 27. juli 2022, var den 0,00 prosent. I mellomtiden gikk den norske styringsrenten både opp og ned.
+Innskuddsrenten ble liggende under null helt fram til 26. juli 2022, da den var −0,50 prosent. Dagen etter, 27. juli 2022, nådde den 0,00 prosent. I mellomtiden gikk den norske styringsrenten både opp og ned.
 
-Siden 2014 har gapet mellom de to rentene variert mellom 0,50 og 2,00 prosentpoeng ved årsskiftene. Ved utgangen av året 2025 var gapet 2,00 prosentpoeng, og 21. oktober 2026 er det like stort. Det samme gapet fant vi ved utgangen av året 2019, og det er det største vi finner ved noe årsskifte i perioden. Det minste, 0,50 prosentpoeng, finner vi ved utgangen av året 2020 og av året 2023.
+Siden 2014 har rentegapet variert mellom 0,50 og 2,00 prosentpoeng ved årsskiftene. Ved utgangen av 2025 var det 2,00 prosentpoeng, og 21. oktober 2026 er det like stort. Det samme gapet fant vi ved utgangen av 2019, som er det største ved noe årsskifte i perioden. Det minste, 0,50 prosentpoeng, ser vi ved utgangen av 2020 og 2023.
 
-Årsskifte for årsskifte lå den norske renten over den europeiske, men avstanden varierte mye. Mellom årsskiftene var bildet ikke alltid det samme, og vi kommer tilbake til et eksempel fra mars 2023.
+Årsskifte for årsskifte lå den norske renten over den europeiske, men avstanden varierte mye. Mellom årsskiftene var bildet ikke alltid det samme – noe et eksempel fra mars 2023 illustrerer.
 
 ## To renter som ikke er helt det samme
 
@@ -32,7 +32,7 @@ Det er en rimelig parallell, men ikke en identisk en. Begge rentene er styringsr
 
 Begge sentralbankene oppgir rentene dag for dag i sine datatjenester. Vi har lest av begge rentene på samme dato, siste handelsdag hvert år i perioden 2014–2025, og i tillegg 21. oktober 2026. Gapet er Norges Banks rente minus ECBs innskuddsrente, i prosentpoeng.
 
-![Linjediagram over Styringsrenten har ligget over innskuddsrenten ved hvert årsskifte: Norges Bank: 1,25 % i 2014, 0,75 % i 2015, 0,50 % i 2016, 0,50 % i 2017, 0,75 % i 2018, 1,50 % i 2019, 0,00 % i 2020, 0,50 % i 2021, 2,75 % i 2022, 4,50 % i 2023, 4,50 % i 2024, 4,00 % i 2025, okt. 2026: 4,50 %; ECB: −0,20 % i 2014, −0,30 % i 2015, −0,40 % i 2016, −0,40 % i 2017, −0,40 % i 2018, −0,50 % i 2019, −0,50 % i 2020, −0,50 % i 2021, 2,00 % i 2022, 4,00 % i 2023, 3,00 % i 2024, 2,00 % i 2025, okt. 2026: 2,50 %.](./graf-1.svg)
+![Små linjediagrammer over Styringsrenten har ligget over innskuddsrenten ved hvert årsskifte: Norges Bank: 1,25 % i 2014, 0,75 % i 2015, 0,50 % i 2016, 0,50 % i 2017, 0,75 % i 2018, 1,50 % i 2019, 0,00 % i 2020, 0,50 % i 2021, 2,75 % i 2022, 4,50 % i 2023, 4,50 % i 2024, 4,00 % i 2025, okt. 2026: 4,50 %; ECB: −0,20 % i 2014, −0,30 % i 2015, −0,40 % i 2016, −0,40 % i 2017, −0,40 % i 2018, −0,50 % i 2019, −0,50 % i 2020, −0,50 % i 2021, 2,00 % i 2022, 4,00 % i 2023, 3,00 % i 2024, 2,00 % i 2025, okt. 2026: 2,50 %.](./graf-1.svg)
 *Siste handelsdag hvert år, og siste punkt i oktober, prosent. Kilde: Norges Bank, Den europeiske sentralbanken.*
 
 ## Gapet ved hvert årsskifte
@@ -47,7 +47,7 @@ Nivåene bak gapet er disse. Ved utgangen av året 2020 var styringsrenten 0,00 
 
 Ved årsskiftene vi har lest av, har gapet aldri vært negativt, og det har ikke vært større enn 2,00 prosentpoeng.
 
-![Søylediagram over Gapet er nå like stort som det største vi finner ved noe årsskifte: Gap: 1,45 i 2014, 1,05 i 2015, 0,90 i 2016, 0,90 i 2017, 1,15 i 2018, 2,00 i 2019, 0,50 i 2020, 1,00 i 2021, 0,75 i 2022, 0,50 i 2023, 1,50 i 2024, 2,00 i 2025, okt. 2026: 2,00.](./graf-2.svg)
+![Stolpediagram over Gapet er nå like stort som det største vi finner ved noe årsskifte: Gap: 1,45 i 2014, 1,05 i 2015, 0,90 i 2016, 0,90 i 2017, 1,15 i 2018, 2,00 i 2019, 0,50 i 2020, 1,00 i 2021, 0,75 i 2022, 0,50 i 2023, 1,50 i 2024, 2,00 i 2025, okt. 2026: 2,00.](./graf-2.svg)
 *Norges Banks styringsrente minus ECBs innskuddsrente, prosentpoeng. Kilde: Den europeiske sentralbanken, Norges Bank.*
 
 ## Oppgangen: samme størrelse, ulik tid
