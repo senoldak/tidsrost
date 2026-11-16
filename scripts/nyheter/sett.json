@@ -11963,7 +11963,25 @@
     "medier:17a09b49f8324e0e": "2026-11-16T09:01:00.754Z",
     "medier:7bac75396a5fb924": "2026-11-16T09:01:00.754Z",
     "medier:2729623f12d1c0d4": "2026-11-16T09:01:00.754Z",
-    "medier:8f6b7a28c5a29c58": "2026-11-16T09:01:00.754Z"
+    "medier:8f6b7a28c5a29c58": "2026-11-16T09:01:00.754Z",
+    "regjeringen:3193105": "2026-11-16T11:01:12.360Z",
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/sjekk-kven-som-er-eigar-av-eit-koyretoy-gratis/": "2026-11-16T11:01:12.360Z",
+    "handball:https://www.handball.no/nyheter/2026/11/hva-mener-du-om-stromming-av-breddeidrett/": "2026-11-16T11:01:12.360Z",
+    "skiforbundet:https://www.skiforbundet.no/hopp/nyhetsarkiv/2026/11/klart-for-world-cup-apning-pa-hjemmebane--bjorseth-gjor-comeback/": "2026-11-16T11:01:12.360Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168809": "2026-11-16T11:01:12.360Z",
+    "kystverket:https://www.kystverket.no/nyheter/hvordan-skal-cruisetrafikken-utvikles-i-norske-farvann/": "2026-11-16T11:01:12.360Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168807": "2026-11-16T11:01:12.360Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2440": "2026-11-16T11:01:12.360Z",
+    "kystverket:https://www.kystverket.no/nyheter/kystverket-lyser-ut-oppdrag-om-mulighetsstudie-for-u-864/": "2026-11-16T11:01:12.360Z",
+    "medier:3b41513417a7f4ae": "2026-11-16T11:01:12.360Z",
+    "medier:a2d2ba0f10cd6618": "2026-11-16T11:01:12.360Z",
+    "medier:0fac78bee1176e21": "2026-11-16T11:01:12.360Z",
+    "medier:5294834d4a3ecc53": "2026-11-16T11:01:12.360Z",
+    "medier:1ba51a414960114f": "2026-11-16T11:01:12.360Z",
+    "medier:4183c558224bda5a": "2026-11-16T11:01:12.360Z",
+    "medier:ff88c545f222438b": "2026-11-16T11:01:12.360Z",
+    "medier:8ec8694c2ffbb599": "2026-11-16T11:01:12.360Z",
+    "medier:815a57318dc62b9f": "2026-11-16T11:01:12.360Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -12026,91 +12044,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:5b71b2bbca3ca139": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T11:03:27.501Z"
-    },
-    "medier:4de6de1252d57591": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T11:03:27.501Z"
-    },
-    "medier:703c89bd0e03c527": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T11:03:27.501Z"
-    },
-    "medier:c52ece02d92ec0ec": {
-      "p": 92,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T11:03:27.501Z"
-    },
-    "medier:43c441cb6f6b6994": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T11:03:27.501Z"
-    },
-    "medier:a8ce0b3f7206ce96": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T11:03:27.501Z"
-    },
-    "regjeringen:3192877": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T11:03:27.501Z"
-    },
-    "regjeringen:3192856": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T11:03:27.501Z"
-    },
-    "regjeringen:3192830": {
-      "p": 62,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T11:03:27.501Z"
-    },
-    "regjeringen:3192892": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T11:03:27.501Z"
-    },
-    "regjeringen:3192891": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T11:03:27.501Z"
-    },
-    "regjeringen:3192880": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T11:03:27.501Z"
-    },
-    "regjeringen:3192795": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T11:03:27.501Z"
-    },
-    "handball:https://www.handball.no/nyheter/2026/11/lanserer-kampens-beste-lagspiller-i-iceserien/": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T11:03:27.501Z"
-    },
-    "skiforbundet:https://www.skiforbundet.no/langrenn/nyhetsarkiv/2026/11/camp-idre/": {
-      "p": 10,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T11:03:27.501Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2431": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T11:03:27.501Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2360": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T11:03:27.501Z"
-    },
     "unnews:https://news.un.org/en/story/2026/11/1168798": {
       "p": 40,
       "v": "b34cb0de5bde",
@@ -13140,6 +13073,76 @@
       "p": 20,
       "v": "b34cb0de5bde",
       "t": "2026-11-16T09:03:07.198Z"
+    },
+    "medier:318cea0119523a37": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T11:03:38.548Z"
+    },
+    "medier:3b41513417a7f4ae": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T11:03:38.548Z"
+    },
+    "medier:5294834d4a3ecc53": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T11:03:38.548Z"
+    },
+    "medier:4183c558224bda5a": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T11:03:38.548Z"
+    },
+    "regjeringen:3193105": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T11:03:38.548Z"
+    },
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/sjekk-kven-som-er-eigar-av-eit-koyretoy-gratis/": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T11:03:38.548Z"
+    },
+    "handball:https://www.handball.no/nyheter/2026/11/hva-mener-du-om-stromming-av-breddeidrett/": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T11:03:38.548Z"
+    },
+    "skiforbundet:https://www.skiforbundet.no/hopp/nyhetsarkiv/2026/11/klart-for-world-cup-apning-pa-hjemmebane--bjorseth-gjor-comeback/": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T11:03:38.548Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168809": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T11:03:38.548Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168807": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T11:03:38.548Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2452": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T11:03:38.548Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2440": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T11:03:38.548Z"
+    },
+    "kystverket:https://www.kystverket.no/nyheter/hvordan-skal-cruisetrafikken-utvikles-i-norske-farvann/": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T11:03:38.548Z"
+    },
+    "kystverket:https://www.kystverket.no/nyheter/kystverket-lyser-ut-oppdrag-om-mulighetsstudie-for-u-864/": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T11:03:38.548Z"
     }
   }
 }
