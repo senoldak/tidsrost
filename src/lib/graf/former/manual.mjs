@@ -19,9 +19,11 @@ export function tegn(d) {
   const lo = Math.min(...alle), hi = Math.max(...alle);
   const x = skala(lo - (hi - lo) * 0.05, hi, M, bredde - 12);
   const H = rader.length * RAD + 28;
+  // Lejant: ikinci öğe birinci yazının genişliğine göre kayar (yaklaşık 7 px/harf), üst üste binmez.
+  const xB = M + 14 + String(gA).length * 7 + 18;
   const deler = [
     `<circle cx="${M + 5}" cy="9" r="5" class="g-f-kontur"/>`, tekst(M + 14, 13, gA, 'class="g-t-blekk"'),
-    `<circle cx="${M + 95}" cy="9" r="5" class="g-f-su"/>`, tekst(M + 104, 13, gB, 'class="g-t-blekk"'),
+    `<circle cx="${r2(xB)}" cy="9" r="5" class="g-f-su"/>`, tekst(xB + 9, 13, gB, 'class="g-t-blekk"'),
   ];
   const punkter = rader.map((p, i) => {
     const yy = 28 + i * RAD + RAD / 2;
