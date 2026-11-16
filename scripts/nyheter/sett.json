@@ -11981,7 +11981,46 @@
     "medier:4183c558224bda5a": "2026-11-16T11:01:12.360Z",
     "medier:ff88c545f222438b": "2026-11-16T11:01:12.360Z",
     "medier:8ec8694c2ffbb599": "2026-11-16T11:01:12.360Z",
-    "medier:815a57318dc62b9f": "2026-11-16T11:01:12.360Z"
+    "medier:815a57318dc62b9f": "2026-11-16T11:01:12.360Z",
+    "medier:09b01f81eb6f53ea": "2026-11-16T13:01:00.348Z",
+    "medier:318cea0119523a37": "2026-11-16T13:01:00.348Z",
+    "nkom:1c49f25c-ee77-43df-8fc5-c6e1ecb54508": "2026-11-16T13:01:00.348Z",
+    "skiskyting:https://skiskyting.no/?p=53284": "2026-11-16T13:01:00.348Z",
+    "sykling:https://sykling.no/?p=28405": "2026-11-16T13:01:00.348Z",
+    "svomming:https://svomming.no/?post_type=nyheter&p=44953": "2026-11-16T13:01:00.348Z",
+    "arbeidstilsynet:https://www.arbeidstilsynet.no/nyheter/flere-dodsulykker-i-anleggsarbeid-enn-i-byggearbeid/": "2026-11-16T13:01:00.348Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2448": "2026-11-16T13:01:00.348Z",
+    "regjeringen:3193137": "2026-11-16T13:01:00.348Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2444": "2026-11-16T13:01:00.348Z",
+    "medier:aa9544b2768a7657": "2026-11-16T13:01:00.348Z",
+    "medier:c0c3c9dd2f161cef": "2026-11-16T13:01:00.348Z",
+    "medier:57bdb71d7bee7b88": "2026-11-16T13:01:00.348Z",
+    "medier:c8a93521827b8716": "2026-11-16T13:01:00.348Z",
+    "medier:a32c752a6b8559c0": "2026-11-16T13:01:00.348Z",
+    "medier:bb5595ae451800d7": "2026-11-16T13:01:00.348Z",
+    "medier:1c3f71daefc7e861": "2026-11-16T13:01:00.348Z",
+    "medier:58f8f0db0649cee5": "2026-11-16T13:01:00.348Z",
+    "medier:f48d2a9c27961b27": "2026-11-16T13:01:00.348Z",
+    "medier:d25d2c3cf69edd69": "2026-11-16T13:01:00.348Z",
+    "medier:daa4fe02b62d1ebc": "2026-11-16T13:01:00.348Z",
+    "medier:f2c267d01a9f92bc": "2026-11-16T13:01:00.348Z",
+    "medier:8420a78090540156": "2026-11-16T13:01:00.348Z",
+    "medier:df6e30a9fb57a464": "2026-11-16T13:01:00.348Z",
+    "medier:c531bbdede8d82e3": "2026-11-16T13:01:00.348Z",
+    "medier:291c775dc2fe75bd": "2026-11-16T13:01:00.348Z",
+    "medier:28812bf40baf1706": "2026-11-16T13:01:00.348Z",
+    "medier:3510c6d9e2ddd4bb": "2026-11-16T13:01:00.348Z",
+    "medier:102228a197cd7982": "2026-11-16T13:01:00.348Z",
+    "medier:8b1de1819b4a64eb": "2026-11-16T13:01:00.348Z",
+    "medier:5f54fd0d2fc91405": "2026-11-16T13:01:00.348Z",
+    "medier:4b8ca018b2d8ed78": "2026-11-16T13:01:00.348Z",
+    "regjeringen:3193151": "2026-11-16T13:01:00.348Z",
+    "medier:b874c2ebf3dee3bf": "2026-11-16T13:01:00.348Z",
+    "medier:12acf7d531fc1a63": "2026-11-16T13:01:00.348Z",
+    "medier:c5d972effd348b89": "2026-11-16T13:01:00.348Z",
+    "medier:ddaaafa2b4917f8d": "2026-11-16T13:01:00.348Z",
+    "medier:5a50aefd4d013bef": "2026-11-16T13:01:00.348Z",
+    "medier:741164c01efb15a6": "2026-11-16T13:01:00.348Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -12044,31 +12083,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "unnews:https://news.un.org/en/story/2026/11/1168798": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T13:03:16.563Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168797": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T13:03:16.563Z"
-    },
-    "medier:5b75c5841a222f7c": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T13:03:16.563Z"
-    },
-    "medier:7f5531fbc1b8e046": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T13:03:16.563Z"
-    },
-    "sivilombudet:https://www.sivilombudet.no/?p=63951": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-13T13:03:16.563Z"
-    },
     "medier:81aab0e131d7a78d": {
       "p": 65,
       "v": "b34cb0de5bde",
@@ -13143,6 +13157,121 @@
       "p": 30,
       "v": "b34cb0de5bde",
       "t": "2026-11-16T11:03:38.548Z"
+    },
+    "medier:aca95505f8b2563b": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "medier:b874c2ebf3dee3bf": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "medier:bc408d9ed3ad575a": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "medier:aa9544b2768a7657": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "medier:57bdb71d7bee7b88": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "medier:102228a197cd7982": {
+      "p": 92,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "medier:48881915f0b9b198": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "medier:d97a61ca68f1463a": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "medier:a32c752a6b8559c0": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "medier:58f8f0db0649cee5": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "medier:c5d972effd348b89": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "medier:d25d2c3cf69edd69": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "medier:c531bbdede8d82e3": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "medier:28812bf40baf1706": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2448": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2444": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "regjeringen:3193151": {
+      "p": 88,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "regjeringen:3193137": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "nkom:1c49f25c-ee77-43df-8fc5-c6e1ecb54508": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "skiskyting:https://skiskyting.no/?p=53284": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "sykling:https://sykling.no/?p=28405": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "svomming:https://svomming.no/?post_type=nyheter&p=44953": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
+    },
+    "arbeidstilsynet:https://www.arbeidstilsynet.no/nyheter/flere-dodsulykker-i-anleggsarbeid-enn-i-byggearbeid/": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-16T13:03:28.232Z"
     }
   }
 }
