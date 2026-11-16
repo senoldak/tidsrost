@@ -1,15 +1,9 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 37,
-      "kadar": "2026-11-16T21:06:35.753Z"
+      "sayi": 38,
+      "kadar": "2026-11-17T09:08:38.106Z"
     }
-  },
-  "nord-norge-rammet-av-full-storm-og-farevarsler": {
-    "tarih": "2026-11-09T21:06:52.380Z",
-    "ig_story": "18126911152933298",
-    "fb_post": "1343803192154866_122116235847509504",
-    "fb_story": "2196153701785097"
   },
   "husholdningenes-gjeld-nermer-seg-4-800-milliarder-kroner-gjeldsveksten-er-4-6-prosent": {
     "tarih": "2026-11-10T07:08:17.042Z",
@@ -377,7 +371,9 @@
     "tarih": "2026-11-16T07:12:00.931Z",
     "ig_story": "18124962814923666",
     "fb_post": "1343803192154866_122118121359509504",
-    "fb_story": "985695357464724"
+    "fb_story": "985695357464724",
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "strombruk-gjennom-aaret": {
     "tarih": "2026-11-16T07:12:37.300Z",
@@ -438,5 +434,11 @@
     "ig_story": "18097292123690163",
     "fb_post": "1343803192154866_122118336645509504",
     "fb_story": "1741603324131708"
+  },
+  "cop31-gar-inn-i-avgjorende-uke-med-politiske-utfordringer-og-nye-teknologiske-lo": {
+    "tarih": "2026-11-16T21:08:53.357Z",
+    "ig_story": "18185959708450827",
+    "fb_post": "1343803192154866_122118351891509504",
+    "fb_story": "1598949315608065"
   }
 }
