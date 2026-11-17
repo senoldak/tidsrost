@@ -42,7 +42,7 @@ const forklaring = egen
     : sak.produksjon === 'ki-kontrollert'
       ? 'Saken er skrevet automatisk ut fra en offentlig melding. Ingen journalist har lest den før publisering.'
       : 'Saken er skrevet automatisk ut fra offentlige tall. Ingen journalist har lest den før publisering.';
-const merknad = egen ? 'Oskar og Liv er navn på automatiske trinn, ikke på personer.' : `Alle ${tallOrd(antallKI)} under er KI-agenter i tidsrøsts redaksjon.`;
+const merknad = egen ? 'Oskar og Liv er navn på automatiske trinn, ikke på personer.' : `Alle ${tallOrd(antallKI)} under er automatiske KI-trinn, ikke personer.`;
 const ansvar = egen
   ? ', journalist, utgiver og redaktør, leste den norske teksten og godkjente den før publisering.'
   : ', journalist, utgiver og redaktør, bestemmer reglene for hva som kan publiseres automatisk.';
@@ -111,7 +111,7 @@ const faktaDeler = fakta.map(del);
                   <span class="hvem">
                     <b>{a.navn}</b>
                     <span class="rolle">{a.rolle}</span>
-                    {egen && a.ki && <span class="na-ki">KI</span>}
+                    {a.ki && <span class="na-ki">KI</span>}
                   </span>
                   <span class="gjorde">{s.tekst}</span>
                 </span>

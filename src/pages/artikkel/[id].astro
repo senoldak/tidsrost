@@ -213,8 +213,15 @@ const jsonLd = {
       <div class="na-meta">
         <div class="rad">
           <span>
-            Av {forfatterUrl ? <a href={forfatterUrl} rel="author"><strong>{forfatterNavn}</strong></a> : <strong>{forfatterNavn}</strong>}
-            {merke && <span class="na-ki">{merke}</span>}
+            {/* KI-sak: ingen «redaksjon» i bylinen (17.11.2026); navnene står som KI-trinn i «Slik ble saken laget». */}
+            {kiBot ? (
+              <strong>Skrevet automatisk med KI</strong>
+            ) : (
+              <>
+                Av {forfatterUrl ? <a href={forfatterUrl} rel="author"><strong>{forfatterNavn}</strong></a> : <strong>{forfatterNavn}</strong>}
+                {merke && <span class="na-ki">{merke}</span>}
+              </>
+            )}
           </span>
           <span><time datetime={iso}>{formatDay(date)} kl. {formatTime(date)}</time></span>
           {endret && <span>Oppdatert <time datetime={modifiedIso}>{formatDay(endret)} kl. {formatTime(endret)}</time></span>}
