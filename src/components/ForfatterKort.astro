@@ -19,10 +19,14 @@ const initialer = name
   .slice(0, 2)
   .toUpperCase();
 
-// Künye (sahibinin onayladığı metin; dört sitede aynı kişi, aynı dört yayın). Profilde iki paragraf, sak altındaki kartta ilki.
+// Künye (sahibinin metni, 17.11.2026 düzeltilmiş hâli; üçüncü şahıs). Profilde bütün paragraflar, sak altındaki kartta ilki.
+// Bot haberleri yayından önce insan okumaz (altbilgi): "menneskelig kvalitetssikring" gibi bir iddia buraya yazılmaz.
+export const FORFATTER_ROLLER = 'Journalist · lærer · generative KI-systemer · dataanalyse og research';
 export const FORFATTER_KUNYE = [
-  'Jeg er journalist og har grunnlagt fire nyhetsnettsteder: kifobu, finfolis, jenDume og tidsrøst, der jeg er ansvarlig redaktør. Det første nyhetsbrevet fra kifobu sendte jeg ut i 2022. Jeg skriver om oppstartsbedrifter og folkefinansiering, finansmarkeder, kunstig intelligens, vitenskap og aktuelle saker fra Norge og resten av verden, og på tidsrøst har jeg skrevet mer enn 60 forklarende saker og analyser.',
-  'Jeg er også lærer i tyrkisk og i kunstig intelligens, og jeg arbeider med generative KI-systemer i programvarebransjen. Den erfaringen bruker jeg når jeg bestemmer hvilke saker tidsrøst kan publisere automatisk med KI, og hvordan de kontrolleres før publisering.',
+  'Şenol Dak er journalist og utgiver. Han har grunnlagt fire nyhetsnettsteder, kifobu, finfolis, jenDume og tidsrøst, og er ansvarlig redaktør i tidsrøst. Det journalistiske arbeidet startet i 2022, da han sendte ut det første nyhetsbrevet fra kifobu.',
+  'Han skriver om oppstartsbedrifter og folkefinansiering, finansmarkeder og økonomi, kunstig intelligens, vitenskap og teknologi, og om aktuelle saker fra Norge og resten av verden. Arbeidet hans består av nyheter, analyser og forklarende saker som viser bakgrunnen for en utvikling og hva den fører til. Han legger vekt på kildebasert research og dataanalyse, og på å gjøre kompliserte temaer lette å forstå.',
+  'Ved siden av journalistikken er han lærer i tyrkisk og i kunstig intelligens, og han arbeider med generative KI-systemer i programvarebransjen. Den tekniske kompetansen bruker han også i dataresearch og digital journalistikk.',
+  'Han er særlig opptatt av hvordan generativ kunstig intelligens kan brukes i journalistikken, og av hvordan teknologien endrer nyhetsresearch, produksjon og publisering. I tidsrøst har han bygget en automatisert nyhetsproduksjon med KI. Han bestemmer hvilke typer saker som kan publiseres automatisk, og hvilke kontroller av kilder og fakta som skal gjøres før publisering.',
 ];
 export const forfatterBeskrivelse = (_navn: string) => FORFATTER_KUNYE.join(' ');
 ---

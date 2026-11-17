@@ -5,7 +5,7 @@
 import { jsonLdMetni } from '../../lib/json-ld.mjs';
 import Base from '../../layouts/Base.astro';
 import Symbol from '../../components/Symbol.astro';
-import { FORFATTER_KUNYE, forfatterBeskrivelse } from '../../components/ForfatterKort.astro';
+import { FORFATTER_KUNYE, FORFATTER_ROLLER, forfatterBeskrivelse } from '../../components/ForfatterKort.astro';
 import { kunyeParcalari } from '../../lib/kunye.mjs';
 import { aarsRutenett } from '../../lib/aktivitet.mjs';
 import forfatterSider from '../../data/forfatter-sider.json';
@@ -135,8 +135,8 @@ const jsonLd = {
       <div class="fp-tekst">
         <h1 class="fp-navn" id="fp-navn" itemprop="name">{name}</h1>
         <p class="fp-rolle">
-          <span itemprop="jobTitle">Journalist</span>
-          {erEier && <><span class="fp-sep" aria-hidden="true">·</span>Ansvarlig redaktør i {SITE.name}</>}
+          {erEier ? FORFATTER_ROLLER : <span itemprop="jobTitle">Journalist</span>}
+          {erEier && <meta itemprop="jobTitle" content="Journalist" />}
         </p>
         {
           erEier && (
@@ -268,21 +268,23 @@ const jsonLd = {
   }
   .fp-in {
     display: grid;
-    grid-template-columns: minmax(240px, 400px) minmax(0, 1fr);
+    grid-template-columns: minmax(200px, 360px) minmax(0, 1fr);
     gap: clamp(24px, 4vw, 64px);
     padding: 0 var(--gutter, clamp(16px, 4vw, 40px));
     max-width: 1280px;
     margin: 0 auto;
   }
+  /* Fotoğraf kendi kare oranında, kaynağından büyük çizilmez (480 px); bandın yüksekliğine gerilmez. */
   .fp-foto {
     display: block;
     width: 100%;
-    height: 100%;
-    min-height: 100%;
+    max-width: 360px;
+    height: auto;
     aspect-ratio: 1;
     object-fit: cover;
-    border-left: 1px solid var(--ink);
-    border-right: 1px solid var(--ink);
+    align-self: start;
+    margin: clamp(32px, 5vw, 56px) 0;
+    border: 1px solid var(--ink);
   }
   .fp-monogram {
     display: grid;
