@@ -8,7 +8,7 @@ import Symbol from '../../components/Symbol.astro';
 import { FORFATTER_KUNYE, FORFATTER_ROLLER, forfatterBeskrivelse } from '../../components/ForfatterKort.astro';
 import { kunyeParcalari } from '../../lib/kunye.mjs';
 import { aarsRutenett } from '../../lib/aktivitet.mjs';
-import forfatterSider from '../../data/forfatter-sider.json';
+import yazarAktivite from '../../data/yazar-aktivite.json';
 import { SITE, formatKortDato } from '../../lib/site';
 import { forfatterSlug, getNews, newsUrl, type Haber } from '../../lib/news';
 import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbs } from '../../lib/seo';
@@ -52,9 +52,15 @@ const SIDER = [
   { id: 'finfolis', navn: 'finfolis', farge: '#c2502b' },
   { id: 'kifobu', navn: 'kifobu', farge: '#e8b40c' },
 ];
-const poster = erEier
-  ? (forfatterSider as { site: string; date: string }[]).filter((x) => new Date(x.date) <= new Date())
-  : items.map((h) => ({ site: 'tidsrost', date: h.data.date.toISOString() }));
+// Bu sitenin yazıları içerikten; diğer üç site derlemede çekilen listeden (scripts/yazar-aktivite.mjs, prebuild).
+const egne = items.map((h) => ({ site: 'tidsrost', date: h.data.date.toISOString() }));
+const andre = erEier
+  ? Object.entries((yazarAktivite as { sider: Record<string, string[]> }).sider ?? {})
+      .filter(([site]) => site !== 'tidsrost')
+      .flatMap(([site, datoer]) => datoer.map((date) => ({ site, date })))
+      .filter((x) => new Date(x.date) <= new Date())
+  : [];
+const poster = [...egne, ...andre];
 // 10.08.2022 (ilk kifobu bülteni) – 13.10.2026: gün gün kayıt yok. Sahibinin kendi anlatımı (17.11.2026): bu dönemde
 // kifobu, finfolis ve jenDume'de her gün yazı. Bu günler aynı kutularla, açık tonda gösterilir; sahibinin kararıyla (17.11.2026) sayfada not yok.
 // Kayıtlı günler (14.10.2026'dan beri) tam renkte.
