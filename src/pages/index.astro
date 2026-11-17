@@ -7,7 +7,7 @@ import { FORKLART, erForklart, getActiveCategories, getNews, groupByDay, newsUrl
 import { SITE, formatKortDato, formatTime } from '../lib/site';
 import { RENTE, aktiveVarsler, datoTekst, prosent } from '../lib/data';
 import { aktiveTemaer } from '../lib/temaer';
-import { velgForside } from '../lib/forside.mjs';
+import { innenforDager, paForsiden, velgForside } from '../lib/forside.mjs';
 import SignaturStripe from '../components/SignaturStripe.astro';
 
 const news = await getNews();
@@ -24,9 +24,14 @@ const to = rest.slice(0, 2);
 const side = rest.slice(2, 7);
 const forklartSaker = news.filter((h) => h !== signatur && erForklart(h)).slice(0, 3);
 const forklartSet = new Set(forklartSaker);
-const days = groupByDay(rest.slice(7, 31).filter((h) => !forklartSet.has(h)).slice(0, 20));
+const days = groupByDay(
+  rest
+    .slice(7, 31)
+    .filter((h) => !forklartSet.has(h) && innenforDager(h))
+    .slice(0, 20),
+);
 const sections = (await getActiveCategories())
-  .map((c) => ({ ...c, items: news.filter((h) => h !== signatur && h.data.category === c.slug).slice(0, 5) }))
+  .map((c) => ({ ...c, items: news.filter((h) => h !== signatur && h.data.category === c.slug && paForsiden(h)).slice(0, 5) }))
   .filter((s) => s.items.length > 0);
 const harTemaer = aktiveTemaer(news).length > 0;
 const varsler = aktiveVarsler();
