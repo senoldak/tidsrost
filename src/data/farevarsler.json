@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-17T15:11:20.302Z",
+  "hentet": "2026-11-17T17:16:20.652Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,8 +7,21 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-17T15:10:56+00:00",
+  "sistEndretHosMet": "2026-11-17T17:15:30+00:00",
   "varsler": [
+    {
+      "id": "2.49.0.1.578.0.20261117152404.050",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "Torungen - Lindesnes",
+      "domene": "hav",
+      "start": "2026-11-17T23:00:00+00:00",
+      "slutt": "2026-11-18T11:00:00+00:00",
+      "beskrivelse": "Fra natt til onsdag nordøst periodevis stiv kuling 15 m/s. Onsdag formiddag minkende.",
+      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
+      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
+    },
     {
       "id": "2.49.0.1.578.0.261117100000.0834_1_0",
       "niva": "gult",

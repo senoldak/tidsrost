@@ -12454,7 +12454,50 @@
     "medier:7d3310ef14c1701e": "2026-11-17T15:01:01.223Z",
     "medier:4c408ae2e658e525": "2026-11-17T15:01:01.223Z",
     "medier:7139acaf215e7e1b": "2026-11-17T15:01:01.223Z",
-    "unnews:https://news.un.org/en/story/2026/11/1168821": "2026-11-17T15:01:01.223Z"
+    "unnews:https://news.un.org/en/story/2026/11/1168821": "2026-11-17T15:01:01.223Z",
+    "regjeringen:3193415": "2026-11-17T17:00:57.942Z",
+    "skiforbundet:https://www.skiforbundet.no/kombinert/nyhetsarkiv/2026/11/stuan-fortsetter-som-sportssjef/": "2026-11-17T17:00:57.942Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2480": "2026-11-17T17:00:57.942Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2478": "2026-11-17T17:00:57.942Z",
+    "medier:e20d75fb1f6b34fa": "2026-11-17T17:00:57.942Z",
+    "medier:9d54235e38013ea3": "2026-11-17T17:00:57.942Z",
+    "medier:1076f2c1469361d6": "2026-11-17T17:00:57.942Z",
+    "medier:5e95b9668af462d2": "2026-11-17T17:00:57.942Z",
+    "medier:135ab3ab14e9995c": "2026-11-17T17:00:57.942Z",
+    "medier:4606bface002cc47": "2026-11-17T17:00:57.942Z",
+    "medier:ba00050eef07a996": "2026-11-17T17:00:57.942Z",
+    "medier:14df1a484bfd3f50": "2026-11-17T17:00:57.942Z",
+    "medier:8dcabb98ff52a31d": "2026-11-17T17:00:57.942Z",
+    "medier:3e14920f80c2e501": "2026-11-17T17:00:57.942Z",
+    "medier:edcd1e2ba90f4369": "2026-11-17T17:00:57.942Z",
+    "medier:c05e5fdb1dd27777": "2026-11-17T17:00:57.942Z",
+    "medier:cabe198e3a1ca00d": "2026-11-17T17:00:57.942Z",
+    "medier:60a8a6e44b7ecdda": "2026-11-17T17:00:57.942Z",
+    "medier:a1cc039ba680d7ed": "2026-11-17T17:00:57.942Z",
+    "medier:87f0b45ea95f79ce": "2026-11-17T17:00:57.942Z",
+    "medier:1251db1b5feceb71": "2026-11-17T17:00:57.942Z",
+    "medier:045f49bffab0c291": "2026-11-17T17:00:57.942Z",
+    "medier:1faa07ea6a736307": "2026-11-17T17:00:57.942Z",
+    "medier:5c57fdb4e0351633": "2026-11-17T17:00:57.942Z",
+    "medier:386dc90d57f86b63": "2026-11-17T17:00:57.942Z",
+    "medier:738e490ae39d2359": "2026-11-17T17:00:57.942Z",
+    "medier:e3573291a7d29aa1": "2026-11-17T17:00:57.942Z",
+    "medier:768a2e53c48e943d": "2026-11-17T17:00:57.942Z",
+    "medier:cf5154ff97bd9a32": "2026-11-17T17:00:57.942Z",
+    "medier:dee33d5e8b51d147": "2026-11-17T17:00:57.942Z",
+    "medier:4599c3164ec8949f": "2026-11-17T17:00:57.942Z",
+    "medier:68c1d7a831edbdaa": "2026-11-17T17:00:57.942Z",
+    "medier:b44f5012f5c703cc": "2026-11-17T17:00:57.942Z",
+    "medier:0c01eba5fd101219": "2026-11-17T17:00:57.942Z",
+    "medier:1c2f466733a58f70": "2026-11-17T17:00:57.942Z",
+    "medier:9295fccac12d70b9": "2026-11-17T17:00:57.942Z",
+    "medier:8884b26d53e19ab2": "2026-11-17T17:00:57.942Z",
+    "medier:19d9b0e4e47cd487": "2026-11-17T17:00:57.942Z",
+    "medier:0e9a2069110b50e8": "2026-11-17T17:00:57.942Z",
+    "medier:c9ae14ee1ce19fce": "2026-11-17T17:00:57.942Z",
+    "medier:6941f4efb353ead9": "2026-11-17T17:00:57.942Z",
+    "medier:dff4c7f0de48757c": "2026-11-17T17:00:57.942Z",
+    "medier:463d26a87edca8ad": "2026-11-17T17:00:57.942Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -12517,46 +12560,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:457a28d321dec735": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-14T17:02:38.771Z"
-    },
-    "medier:4b43c323c89f7554": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-14T17:02:38.771Z"
-    },
-    "medier:8f5de31a3790b73b": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-14T17:02:38.771Z"
-    },
-    "medier:9e97c2eb43ea5529": {
-      "p": 88,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-14T17:02:38.771Z"
-    },
-    "medier:b74385e746b57026": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-14T17:02:38.771Z"
-    },
-    "medier:bb099cf858127174": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-14T17:02:38.771Z"
-    },
-    "regjeringen:3192992": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-14T17:02:38.771Z"
-    },
-    "handball:https://www.handball.no/nyheter/2026/11/jevnspilt-pa-hjemmebane-for-storhamar/": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-14T17:02:38.771Z"
-    },
     "medier:4dc1f21fbfc91885": {
       "p": 75,
       "v": "b34cb0de5bde",
@@ -14141,6 +14144,116 @@
       "p": 70,
       "v": "b34cb0de5bde",
       "t": "2026-11-17T15:03:35.443Z"
+    },
+    "medier:e20d75fb1f6b34fa": {
+      "p": 32,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "medier:1076f2c1469361d6": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "medier:3e14920f80c2e501": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "medier:c05e5fdb1dd27777": {
+      "p": 62,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "medier:e3573291a7d29aa1": {
+      "p": 92,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "medier:1d03c6715196ebd3": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "medier:89bd0a446bc82e9a": {
+      "p": 74,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "medier:2283b3e7165824fb": {
+      "p": 71,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "medier:19d9b0e4e47cd487": {
+      "p": 84,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "medier:dff4c7f0de48757c": {
+      "p": 81,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "medier:4ce5caaf226ba935": {
+      "p": 76,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "medier:a1cc039ba680d7ed": {
+      "p": 58,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "medier:1251db1b5feceb71": {
+      "p": 48,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "medier:4599c3164ec8949f": {
+      "p": 86,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "medier:1faa07ea6a736307": {
+      "p": 42,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "medier:386dc90d57f86b63": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "regjeringen:3193415": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "skiforbundet:https://www.skiforbundet.no/kombinert/nyhetsarkiv/2026/11/stuan-fortsetter-som-sportssjef/": {
+      "p": 49,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168824": {
+      "p": 73,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168823": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2480": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2478": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T17:05:40.161Z"
     }
   }
 }
