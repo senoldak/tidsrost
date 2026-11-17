@@ -63,7 +63,7 @@ const sterke = varsler.filter((v) => v.niva !== 'gult').length;
             <a href={newsUrl(hero)}>{hero.data.title}</a>
           </h2>
           <p class="standfirst">{hero.data.description}</p>
-          <StoryMeta haber={hero} time="full" />
+          <StoryMeta haber={hero} time="full" kilde={false} />
           {/* Kapak ön sayfada gösterilmez: kapaklar başlığı yazıyla taşıyan sosyal görseller, aynı başlık iki kez okunuyordu (30.10.2026). */}
           {to.length > 0 && (
             <div class="lead-to">
@@ -73,7 +73,7 @@ const sterke = varsler.filter((v) => v.niva !== 'gult').length;
                     <a href={newsUrl(h)}>{h.data.title}</a>
                   </h3>
                   <p class="row-desc">{h.data.description}</p>
-                  <StoryMeta haber={h} time="short" />
+                  <StoryMeta haber={h} time="short" kilde={false} />
                 </article>
               ))}
             </div>
@@ -88,7 +88,7 @@ const sterke = varsler.filter((v) => v.niva !== 'gult').length;
                 <h3>
                   <a href={newsUrl(h)}>{h.data.title}</a>
                 </h3>
-                <StoryMeta haber={h} time="short" />
+                <StoryMeta haber={h} time="short" kilde={false} />
               </article>
             ))}
           </div>
@@ -128,7 +128,7 @@ const sterke = varsler.filter((v) => v.niva !== 'gult').length;
       <section class="day">
         <h2 class="band">{d.label}</h2>
         {d.items.map((h, i) => (
-          <StoryRow haber={h} desc={di === 0 && i < 3} />
+          <StoryRow haber={h} desc={di === 0 && i < 3} kilde={false} />
         ))}
       </section>
     ))

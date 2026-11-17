@@ -10,12 +10,14 @@ interface Props {
   haber: Haber;
   showCategory?: boolean;
   time?: 'full' | 'short' | false;
+  // Kaynak adı (ör. Europakommisjonen); ön sayfada gösterilmez (17.11.2026), haber sayfasında Kildelinje'de durur.
+  kilde?: boolean;
 }
 
-const { haber, showCategory = true, time = false } = Astro.props;
+const { haber, showCategory = true, time = false, kilde: visKilde = true } = Astro.props;
 const { title, date, category, breaking, author } = haber.data;
 const warn = varsel(title);
-const source = kilde(haber);
+const source = visKilde ? kilde(haber) : undefined;
 const forfatter = synligForfatter({ sjanger: haber.data.sjanger, author }, SITE.name, SITE.redaktor);
 const harForfatter = forfatter !== SITE.name;
 ---
