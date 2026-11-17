@@ -3,10 +3,11 @@ export const YAYINLAR = {
   kifobu: 'https://kifobu.com/',
   finfolis: 'https://finfolis.com/',
   'JEN DUME': 'https://jendume.com/',
+  jenDume: 'https://jendume.com/',
   'tidsrøst': 'https://tidsrost.com/',
 };
 
-const AD = /(kifobu|finfolis|JEN DUME|tidsrøst)/;
+const AD = /(kifobu|finfolis|JEN DUME|jenDume|tidsrøst)/;
 
 /** Paragrafı parçalara böler: [{ metin, adres? }]; yayın adı olan parçanın adresi dolu. */
 export function kunyeParcalari(paragraf) {
