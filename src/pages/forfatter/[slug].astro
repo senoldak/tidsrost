@@ -625,17 +625,19 @@ const jsonLd = {
   }
 
   @media (max-width: 760px) {
+    /* Telefonda fotoğraf ile ad arası tek boşluk: sütun boşluğu ve fotoğrafın alt payı sıfır. */
     .fp-in {
       grid-template-columns: minmax(0, 1fr);
+      row-gap: 0;
     }
     .fp-foto {
-      width: min(100%, 320px);
+      width: min(100%, 280px);
       height: auto;
-      margin-top: calc(var(--u) * 3);
+      margin: calc(var(--u) * 3) 0 0;
       border: 1px solid var(--ink);
     }
     .fp-tekst {
-      padding-top: calc(var(--u) * 3);
+      padding-top: calc(var(--u) * 2.5);
     }
     .fp-akt {
       /* Yarım yıl (27 hafta) ekrana sığar: kutu boyu ekran genişliğinden. */
