@@ -968,125 +968,293 @@ main.container {
 }
 
 /* ——— Altbilgi: tegnforklaring ve künye ——— */
+/* ——— Altbilgi: fjord mavisi zemin, altta Gudvangen gravürü (maske; renk temadan gelir) ——— */
+:root {
+  --fot-bg: #173f6b;
+  --fot-tekst: #f4f0e6;
+  --fot-soluk: rgba(244, 240, 230, 0.7);
+  --fot-cizgi: rgba(244, 240, 230, 0.24);
+  --fot-land: #f4f0e6;
+  --fot-o: #9cc8f0;
+}
+
+:root[data-tema='mork'] {
+  --fot-bg: #0f1c2b;
+  --fot-tekst: #ebe9e2;
+  --fot-soluk: rgba(235, 233, 226, 0.64);
+  --fot-cizgi: rgba(235, 233, 226, 0.18);
+  --fot-land: #cfc9b8;
+  --fot-o: #7fb2e5;
+}
+
+:root.kontrast,
+:root.kontrast[data-tema='mork'],
+:root.kontrast[data-tema='lys'] {
+  --fot-bg: #000;
+  --fot-tekst: #fff;
+  --fot-soluk: #fff;
+  --fot-cizgi: #fff;
+  --fot-land: #fff;
+  --fot-o: #ffd60a;
+}
+
 .site-footer {
-  border-top: 1px solid var(--ink);
-  background: var(--surface);
-  padding: calc(var(--u) * 5) 0 calc(var(--u) * 3);
-  font: 500 0.875rem/1.55 var(--frame);
-  font-stretch: 94%;
-  color: var(--muted);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--fot-bg);
+  color: var(--fot-soluk);
+  padding: calc(var(--u) * 10) 0 0;
+  font: 400 1rem/1.55 var(--read);
 }
 
-.footer-grid {
+.fot-korn {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 0.09;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.site-footer a {
+  color: var(--fot-tekst);
+}
+
+.site-footer a:hover {
+  color: var(--fot-o);
+}
+
+/* Baş: büyük logo ve slogan solda, künye ve sosyal hesaplar sağda */
+.fot-bas {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) repeat(3, minmax(0, 1fr));
-  gap: calc(var(--u) * 5);
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: calc(var(--u) * 6);
+  align-items: end;
+  padding-bottom: calc(var(--u) * 6);
+  border-bottom: 1px solid var(--fot-cizgi);
 }
 
-.footer-grid h2 {
-  margin: 0 0 calc(var(--u) * 1.5);
-  padding-bottom: var(--u);
-  border-bottom: 1px solid var(--ink);
-  font: 700 0.6875rem var(--frame);
-  letter-spacing: 0.14em;
+.site-footer .fot-logo,
+.site-footer .fot-logo:hover {
+  display: inline-block;
+  font: 800 clamp(3.25rem, 7.5vw, 6.25rem) / 0.9 var(--frame);
+  font-stretch: 112%;
+  letter-spacing: -0.045em;
+  color: var(--fot-tekst);
+}
+
+.fot-logo .o {
+  color: var(--fot-o);
+}
+
+.fot-slagord {
+  margin: calc(var(--u) * 2) 0 0;
+  font: italic 400 clamp(1.5rem, 2.6vw, 2.25rem) / 1.2 var(--read);
+  letter-spacing: -0.005em;
+  color: var(--fot-tekst);
+}
+
+.fot-kunye {
+  display: grid;
+  gap: calc(var(--u) * 2);
+  margin: 0;
+}
+
+.fot-kunye dt {
+  font: 600 0.6875rem/1.2 var(--frame);
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--ink);
+  color: var(--fot-soluk);
 }
 
-.footer-grid p {
-  margin: 0 0 var(--u);
-  max-width: 44ch;
+.fot-kunye dd {
+  margin: 6px 0 0;
+  font: 400 1.125rem/1.3 var(--read);
+  color: var(--fot-tekst);
 }
 
-.footer-grid ul {
-  list-style: none;
+.fot-sosial {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.fot-sosial a {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--fot-cizgi);
+  border-radius: 50%;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.fot-sosial a:hover {
+  background: var(--fot-tekst);
+  border-color: var(--fot-tekst);
+  color: var(--fot-bg);
+}
+
+/* Bağlantılar: dört sütun; Saker iki alt sütunlu */
+.fot-lenker {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1.15fr));
+  gap: calc(var(--u) * 5);
+  padding: calc(var(--u) * 6) 0;
+}
+
+.fot-lenker h2 {
+  position: relative;
+  margin: 0 0 calc(var(--u) * 2.5);
+  padding-bottom: calc(var(--u) * 1.75);
+  font: 600 0.75rem/1 var(--frame);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--fot-tekst);
+}
+
+.fot-lenker h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 32px;
+  height: 1px;
+  background: var(--fot-tekst);
+}
+
+.fot-lenker ul {
+  display: grid;
+  gap: 10px;
   margin: 0;
   padding: 0;
+  list-style: none;
+}
+
+.fot-lenker li a {
+  font: 400 1.0625rem/1.3 var(--read);
+}
+
+.fot-saker ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: calc(var(--u) * 3);
+}
+
+/* Etik ve lisans notu yan yana, en altta hukuki bağlantılar */
+.fot-etikk {
   display: grid;
-  gap: 6px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: calc(var(--u) * 6);
+  padding: calc(var(--u) * 3) 0;
+  border-top: 1px solid var(--fot-cizgi);
+  font: italic 400 0.875rem/1.6 var(--read);
 }
 
-.footer-grid li a,
-.footer-grid li span {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6em;
-  color: var(--ink-2);
+.fot-etikk p {
+  margin: 0;
+  max-width: 62ch;
 }
 
-.footer-grid .mark-breaking {
-  color: var(--red);
-}
-
-.logo-sm {
-  display: inline-block;
-  margin-bottom: calc(var(--u) * 1.5);
-  font: 800 2rem/1 var(--frame);
-  font-stretch: 112%;
-  letter-spacing: -0.035em;
-  color: var(--ink);
-}
-
-.logo-sm:hover {
-  color: var(--ink);
-  text-decoration: none;
-}
-
-.logo-sm .o {
-  color: var(--water);
-}
-
-.footer-ansvar {
-  display: grid;
-  gap: calc(var(--u) * 1.25);
-  margin: calc(var(--u) * 2) 0;
-  padding: calc(var(--u) * 1.5) 0;
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-}
-
-.footer-ansvar dt {
-  font: 700 0.6875rem/1.2 var(--frame);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.footer-ansvar dd {
-  margin: 2px 0 0;
-  font: 600 0.9375rem/1.35 var(--frame);
-  color: var(--ink);
-}
-
-.footer-ansvar dd a {
-  color: var(--ink);
-}
-
-.footer-etikk {
-  font-size: 0.8125rem;
-  color: var(--muted);
-}
-
-.footer-etikk a {
-  color: var(--ink-2);
+.fot-etikk a {
   text-decoration: underline;
-  text-underline-offset: 0.18em;
+  text-decoration-color: var(--fot-cizgi);
+  text-underline-offset: 0.2em;
 }
 
-.footer-grid a:not(.logo-sm):hover {
-  color: var(--water);
-}
-
-.copyright {
+.fot-bunn {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  gap: var(--u);
-  margin-top: calc(var(--u) * 4);
-  padding-top: calc(var(--u) * 1.5);
-  border-top: 1px solid var(--rule);
-  font-size: 0.75rem;
-  letter-spacing: 0.04em;
+  justify-content: space-between;
+  gap: var(--u) calc(var(--u) * 3);
+  padding: calc(var(--u) * 2) 0;
+  border-top: 1px solid var(--fot-cizgi);
+  font: 500 0.8125rem/1.4 var(--frame);
+  font-stretch: 94%;
+}
+
+.fot-bunn nav {
+  display: flex;
+}
+
+.fot-bunn nav a {
+  font: italic 400 0.875rem/1.4 var(--read);
+}
+
+.fot-bunn nav a + a::before {
+  content: '|';
+  margin: 0 0.9em;
+  font-style: normal;
+  color: var(--fot-cizgi);
+}
+
+.fot-landskap {
+  position: relative;
+  z-index: 1;
+  margin-top: calc(var(--u) * 3);
+  aspect-ratio: 2400 / 1485;
+  background: var(--fot-land);
+  -webkit-mask: url('/gravur/gudvangen.png') center bottom / 100% 100% no-repeat;
+  mask: url('/gravur/gudvangen.png') center bottom / 100% 100% no-repeat;
+}
+
+@media (max-width: 1080px) {
+  .fot-lenker {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .fot-saker {
+    grid-column: 1 / -1;
+  }
+
+  .fot-saker ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .site-footer {
+    padding-top: calc(var(--u) * 7);
+  }
+
+  .fot-bas {
+    grid-template-columns: minmax(0, 1fr);
+    gap: calc(var(--u) * 4);
+    padding-bottom: calc(var(--u) * 4);
+  }
+
+  .fot-lenker {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: calc(var(--u) * 4) calc(var(--u) * 3);
+    padding: calc(var(--u) * 4) 0;
+  }
+
+  .fot-saker ul,
+  .fot-apenhet ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: calc(var(--u) * 3);
+  }
+
+  .fot-apenhet {
+    grid-column: 1 / -1;
+  }
+
+  .fot-etikk {
+    grid-template-columns: minmax(0, 1fr);
+    gap: calc(var(--u) * 2);
+  }
+
+  .fot-bunn {
+    flex-direction: column;
+  }
+
+  .fot-landskap {
+    -webkit-mask-image: url('/gravur/gudvangen-1200.png');
+    mask-image: url('/gravur/gudvangen-1200.png');
+  }
 }
 
 /* ——— Sayfa geçişi: masthead yerinde kalır, içerik kâğıt gibi yumuşakça değişir ——— */
@@ -1184,16 +1352,6 @@ main.container {
   .top {
     grid-template-columns: minmax(0, 1fr);
     gap: calc(var(--u) * 5);
-  }
-
-  /* Smal skjerm: merkevaren over hele bredden, lenkelistene i to spalter. */
-  .footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: calc(var(--u) * 4) calc(var(--u) * 3);
-  }
-
-  .footer-brand {
-    grid-column: 1 / -1;
   }
 }
 
@@ -1563,10 +1721,6 @@ main.container {
   bottom: 14px;
   left: calc(var(--u) * -2.25);
   border-left: 1px solid var(--rule);
-}
-
-.footer-grid p + h2 {
-  margin-top: calc(var(--u) * 3);
 }
 
 /* Artikkel: "Emner" (temaer) i margen, ett emne per linje */
@@ -2118,44 +2272,6 @@ main.container {
 }
 
 /* Bunnlinje: følg oss + opphavsrett */
-.footer-bunn {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--u) calc(var(--u) * 3);
-  margin-top: calc(var(--u) * 4);
-  padding-top: calc(var(--u) * 2);
-  border-top: 1px solid var(--ink);
-  font: 500 0.8125rem/1.4 var(--frame);
-}
-
-.footer-bunn nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--u) calc(var(--u) * 2.5);
-}
-
-.footer-bunn nav a {
-  font-weight: 600;
-  color: var(--ink);
-}
-
-.footer-bunn + .copyright {
-  margin-top: calc(var(--u) * 1.5);
-}
-
-@media (max-width: 1080px) and (min-width: 861px) {
-  .footer-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .footer-brand {
-    grid-column: 1 / -1;
-  }
-}
-
-
 /* Del saken: knapper med ikon */
 .del-saken {
   margin: calc(var(--u) * 4) 0 0;

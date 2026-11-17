@@ -5,6 +5,7 @@ import { LISENS_URL } from '../lib/lisens.mjs';
 import { metaDescription, organization, website } from '../lib/seo';
 import { ANALYSE, FORKLART, erAnalyse, erForklart, getActiveCategories, getNews } from '../lib/news';
 import Symbol from '../components/Symbol.astro';
+import SosialIkon from '../components/SosialIkon.astro';
 import { aktiveTemaer } from '../lib/temaer';
 import '../styles/global.css';
 
@@ -196,15 +197,19 @@ const [nameHead, nameTail] = SITE.name.split('ø');
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-grid">
-        <div class="footer-brand">
-          <a href="/" class="logo-sm">
-            {nameTail === undefined ? SITE.name : <>{nameHead}<span class="o">ø</span>{nameTail}</>}
-          </a>
-          <p>
-            Uavhengig og ikke-kommersiell nyhetsside: korte nyheter, forklarende saker og oppdaterte data.
-          </p>
-          <dl class="footer-ansvar">
+      <svg class="fot-korn" aria-hidden="true" focusable="false">
+        <filter id="fot-korn"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" /><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.55 0" /></filter>
+        <rect width="100%" height="100%" filter="url(#fot-korn)" />
+      </svg>
+      <div class="container">
+        <div class="fot-bas">
+          <div>
+            <a href="/" class="fot-logo">
+              {nameTail === undefined ? SITE.name : <>{nameHead}<span class="o">ø</span>{nameTail}</>}
+            </a>
+            <p class="fot-slagord">{SITE.slogan}</p>
+          </div>
+          <dl class="fot-kunye">
             {
               SITE.redaktor && (
                 <div>
@@ -229,75 +234,91 @@ const [nameHead, nameTail] = SITE.name.split('ø');
                 </div>
               )
             }
+            <div>
+              <dt>Følg {SITE.name}</dt>
+              <dd>
+                <nav class="fot-sosial" aria-label={`Følg ${SITE.name}`}>
+                  {SITE.social.facebook && <a href={SITE.social.facebook} rel="noopener noreferrer" aria-label="Facebook"><SosialIkon ad="facebook" /></a>}
+                  {SITE.social.instagram && <a href={SITE.social.instagram} rel="noopener noreferrer" aria-label="Instagram"><SosialIkon ad="instagram" /></a>}
+                  {SITE.social.linkedin && <a href={SITE.social.linkedin} rel="noopener noreferrer" aria-label="LinkedIn"><SosialIkon ad="linkedin" /></a>}
+                  {SITE.social.telegram && <a href={SITE.social.telegram} rel="noopener noreferrer" aria-label="Telegram"><SosialIkon ad="telegram" /></a>}
+                  {SITE.social.x && <a href={SITE.social.x} rel="noopener noreferrer" aria-label="X"><SosialIkon ad="x" /></a>}
+                  <a href="/rss.xml" aria-label="RSS"><SosialIkon ad="rss" /></a>
+                </nav>
+              </dd>
+            </div>
           </dl>
-          <p class="footer-etikk">
-            {SITE.name} bruker <a href="https://www.presse.no/vaer-varsom-plakaten">Vær Varsom-plakaten</a> som rettesnor.
+        </div>
+
+        <div class="fot-lenker">
+          <section class="fot-saker" aria-labelledby="fot-saker">
+            <h2 id="fot-saker">Saker</h2>
+            <ul>
+              {harAnalyse && <li><a href={`/${ANALYSE.slug}/`}>{ANALYSE.name}</a></li>}
+              {harForklart && <li><a href={`/${FORKLART.slug}/`}>{FORKLART.name}</a></li>}
+              {categories.map((c) => <li><a href={`/kategori/${c.slug}/`}>{c.name}</a></li>)}
+              {harTemaer && <li><a href="/tema/">Temaer</a></li>}
+              <li><a href="/arkiv/">Arkiv</a></li>
+            </ul>
+          </section>
+          <section aria-labelledby="fot-tall">
+            <h2 id="fot-tall">Tall og data</h2>
+            <ul>
+              <li><a href="/tall/">Alle tall og data</a></li>
+              <li><a href="/prisstigning/">Prisstigningen nå</a></li>
+              <li><a href="/boligpriser/">Boligprisene nå</a></li>
+              <li><a href="/arbeidsledighet/">Arbeidsledigheten nå</a></li>
+              <li><a href="/styringsrenten/">Styringsrenten nå</a></li>
+              <li><a href="/farevarsler/">Farevarsler i Norge</a></li>
+            </ul>
+          </section>
+          <section aria-labelledby="fot-redaksjonen">
+            <h2 id="fot-redaksjonen">Redaksjonen</h2>
+            <ul>
+              <li><a href="/om-oss/">Om oss</a></li>
+              <li><a href="/redaksjonelle-prinsipper/">Redaksjonelle prinsipper</a></li>
+              <li><a href="/om-oss/#arbeidsmetode">Slik arbeider redaksjonen</a></li>
+              <li><a href="/redaksjonen/">Gå inn i redaksjonen</a></li>
+            </ul>
+          </section>
+          <section class="fot-apenhet" aria-labelledby="fot-apenhet">
+            <h2 id="fot-apenhet">Åpenhet</h2>
+            <ul>
+              <li><a href="/apenhet/">Slik velger vi nyheter</a></li>
+              <li><a href="/bruk-av-ki/">Bruk av KI</a></li>
+              <li><a href="/rettelser/">Rettelser</a></li>
+              <li><a href="/rettelsespolitikk/">Rettelsespolitikk</a></li>
+              <li><a href="/klager/">Klager</a></li>
+              <li><a href="/standardrapport/">Standardrapport</a></li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="fot-etikk">
+          <p>
+            {SITE.name} bruker <a href="https://www.presse.no/vaer-varsom-plakaten">Vær Varsom-plakaten</a> som rettesnor. Saker med
+            navn er skrevet av redaktøren. Øvrige nyhetssaker lages automatisk, de fleste med KI, og leses ikke av et menneske før
+            publisering. <a href="/bruk-av-ki/">Slik bruker vi KI</a>
           </p>
-          <p class="footer-etikk">
-            Saker med navn er skrevet av redaktøren. Øvrige nyhetssaker lages automatisk, de fleste med KI, og leses ikke av
-            et menneske før publisering. <a href="/bruk-av-ki/">Slik bruker vi KI</a>
+          <p>
+            Innhold: <a href={LISENS_URL} rel="license noopener">CC BY-NC 4.0</a>, fritt til ikke-kommersiell bruk med kildehenvisning
+            til {SITE.name}. Logo og navn er ikke omfattet. Illustrasjon: Gudvangen i Nærøyfjorden, etter Thomas Fearnley, litografi i
+            <i>Norge fremstillet i Tegninger</i> (1848). Fri for opphavsrett.
           </p>
         </div>
 
-        <section aria-labelledby="footer-saker">
-          <h2 id="footer-saker">Saker</h2>
-          <ul>
-            {harAnalyse && <li><a href={`/${ANALYSE.slug}/`}>{ANALYSE.name}</a></li>}
-            {harForklart && <li><a href={`/${FORKLART.slug}/`}>{FORKLART.name}</a></li>}
-            {categories.map((c) => <li><a href={`/kategori/${c.slug}/`}>{c.name}</a></li>)}
-            {harTemaer && <li><a href="/tema/">Temaer</a></li>}
-            <li><a href="/arkiv/">Arkiv</a></li>
-          </ul>
-        </section>
-
-        <section aria-labelledby="footer-tall">
-          <h2 id="footer-tall">Tall og data</h2>
-          <ul>
-            <li><a href="/tall/">Alle tall og data</a></li>
-            <li><a href="/prisstigning/">Prisstigningen nå</a></li>
-            <li><a href="/boligpriser/">Boligprisene nå</a></li>
-            <li><a href="/arbeidsledighet/">Arbeidsledigheten nå</a></li>
-            <li><a href="/styringsrenten/">Styringsrenten nå</a></li>
-            <li><a href="/farevarsler/">Farevarsler i Norge</a></li>
-          </ul>
-        </section>
-
-        <section aria-labelledby="footer-om">
-          <h2 id="footer-om">Om {SITE.name}</h2>
-          <ul>
-            <li><a href="/om-oss/">Om oss</a></li>
-            <li><a href="/redaksjonelle-prinsipper/">Redaksjonelle prinsipper</a></li>
-            <li><a href="/om-oss/#arbeidsmetode">Slik arbeider redaksjonen</a></li>
-            <li><a href="/redaksjonen/">Gå inn i redaksjonen</a></li>
-            <li><a href="/bruk-av-ki/">Bruk av KI</a></li>
-            <li><a href="/apenhet/">Slik velger vi nyheter</a></li>
-            <li><a href="/rettelser/">Rettelser</a></li>
-            <li><a href="/rettelsespolitikk/">Rettelsespolitikk</a></li>
-            <li><a href="/klager/">Klager</a></li>
-            <li><a href="/standardrapport/">Standardrapport</a></li>
-            <li><a href="/personvern/">Personvern</a></li>
-            <li><a href="/juridisk/">Juridisk informasjon</a></li>
-          </ul>
-        </section>
+        <div class="fot-bunn">
+          <span>
+            © {new Date().getFullYear()} {SITE.name}
+            {SITE.ikkeKommersiell && ' · Ikke-kommersielt nettsted uten annonser'}
+          </span>
+          <nav aria-label="Juridisk">
+            <a href="/personvern/">Personvern</a>
+            <a href="/juridisk/">Juridisk informasjon</a>
+          </nav>
+        </div>
       </div>
-      <div class="container footer-bunn">
-        <nav aria-label={`Følg ${SITE.name}`}>
-          {SITE.social.facebook && <a href={SITE.social.facebook} rel="noopener noreferrer">Facebook</a>}
-          {SITE.social.instagram && <a href={SITE.social.instagram} rel="noopener noreferrer">Instagram</a>}
-          {SITE.social.linkedin && <a href={SITE.social.linkedin} rel="noopener noreferrer">LinkedIn</a>}
-          {SITE.social.telegram && <a href={SITE.social.telegram} rel="noopener noreferrer">Telegram</a>}
-          {SITE.social.x && <a href={SITE.social.x} rel="noopener noreferrer">X</a>}
-          <a href="/rss.xml">RSS</a>
-        </nav>
-        <span>
-          © {new Date().getFullYear()} {SITE.name}
-          {SITE.ikkeKommersiell && ' · Ikke-kommersielt nettsted uten annonser'}
-          {' · '}Ark {sheet}
-        </span>
-      </div>
-      <div class="container copyright">
-        <span>Innhold: <a href={LISENS_URL} rel="license noopener">CC BY-NC 4.0</a>, fritt til ikke-kommersiell bruk med kildehenvisning til {SITE.name}. Logo og navn er ikke omfattet.</span>
-      </div>
+      <div class="fot-landskap" aria-hidden="true"></div>
     </footer>
   </body>
 </html>

@@ -14,5 +14,9 @@
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
+# Altbilgi gravürü (maske); dosya adı değişmeden güncellenirse bir hafta içinde yenilenir.
+/gravur/*
+  Cache-Control: public, max-age=604800
+
 /site.webmanifest
   Content-Type: application/manifest+json
