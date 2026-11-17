@@ -1197,8 +1197,8 @@ main.container {
   margin-top: calc(var(--u) * 3);
   aspect-ratio: 2400 / 1485;
   background: var(--fot-land);
-  -webkit-mask: url('/gravur/gudvangen.png') center bottom / 100% 100% no-repeat;
-  mask: url('/gravur/gudvangen.png') center bottom / 100% 100% no-repeat;
+  -webkit-mask: url('/gravur/gudvangen-v2.png') center bottom / 100% 100% no-repeat;
+  mask: url('/gravur/gudvangen-v2.png') center bottom / 100% 100% no-repeat;
 }
 
 @media (max-width: 1080px) {
@@ -1252,8 +1252,8 @@ main.container {
   }
 
   .fot-landskap {
-    -webkit-mask-image: url('/gravur/gudvangen-1200.png');
-    mask-image: url('/gravur/gudvangen-1200.png');
+    -webkit-mask-image: url('/gravur/gudvangen-v2-1200.png');
+    mask-image: url('/gravur/gudvangen-v2-1200.png');
   }
 }
 
