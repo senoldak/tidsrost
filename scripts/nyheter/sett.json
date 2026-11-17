@@ -12426,7 +12426,35 @@
     "medier:3e664d8f5f54204b": "2026-11-17T13:01:01.702Z",
     "medier:4ac83756f8b2858b": "2026-11-17T13:01:01.702Z",
     "medier:6df1c98cb0e02158": "2026-11-17T13:01:01.702Z",
-    "medier:bca4edac38d027d1": "2026-11-17T13:01:01.702Z"
+    "medier:bca4edac38d027d1": "2026-11-17T13:01:01.702Z",
+    "regjeringen:3193419": "2026-11-17T15:01:01.223Z",
+    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/problemer-med-egenmelding-fra-regnskapsforetak-krt-1004/": "2026-11-17T15:01:01.223Z",
+    "forbrukerradet:https://www.forbrukerradet.no/?p=56634": "2026-11-17T15:01:01.223Z",
+    "svomming:https://svomming.no/?post_type=nyheter&p=44974": "2026-11-17T15:01:01.223Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168822": "2026-11-17T15:01:01.223Z",
+    "regjeringen:3193150": "2026-11-17T15:01:01.223Z",
+    "medier:27262edac7e550af": "2026-11-17T15:01:01.223Z",
+    "medier:5998f9ac2ee2e940": "2026-11-17T15:01:01.223Z",
+    "medier:45f0db2e5d31123e": "2026-11-17T15:01:01.223Z",
+    "medier:80d40236aadb48f1": "2026-11-17T15:01:01.223Z",
+    "medier:708b8c3408432506": "2026-11-17T15:01:01.223Z",
+    "medier:519a086926edd895": "2026-11-17T15:01:01.223Z",
+    "medier:1a988325abb195b8": "2026-11-17T15:01:01.223Z",
+    "medier:90d4c0d576e7b007": "2026-11-17T15:01:01.223Z",
+    "medier:7754d188cff30d5a": "2026-11-17T15:01:01.223Z",
+    "medier:7c46e6fc682e7282": "2026-11-17T15:01:01.223Z",
+    "medier:7676c2d481fed146": "2026-11-17T15:01:01.223Z",
+    "medier:b4b54955dea867a3": "2026-11-17T15:01:01.223Z",
+    "medier:52e5f68cefd0a140": "2026-11-17T15:01:01.223Z",
+    "medier:3b4e8f71a53d78b8": "2026-11-17T15:01:01.223Z",
+    "medier:72ae0f0aa46a1425": "2026-11-17T15:01:01.223Z",
+    "medier:1b0bb1e160db8f15": "2026-11-17T15:01:01.223Z",
+    "medier:a7fcd43e9be115b5": "2026-11-17T15:01:01.223Z",
+    "medier:bacc6a64dc66519b": "2026-11-17T15:01:01.223Z",
+    "medier:7d3310ef14c1701e": "2026-11-17T15:01:01.223Z",
+    "medier:4c408ae2e658e525": "2026-11-17T15:01:01.223Z",
+    "medier:7139acaf215e7e1b": "2026-11-17T15:01:01.223Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168821": "2026-11-17T15:01:01.223Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -12489,41 +12517,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:327f7804043b9397": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-14T15:02:30.779Z"
-    },
-    "medier:98c91359aabb561f": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-14T15:02:30.779Z"
-    },
-    "medier:ec5835fffe9def1d": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-14T15:02:30.779Z"
-    },
-    "medier:bfeb6bb5a45f21e8": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-14T15:02:30.779Z"
-    },
-    "medier:d1eb9b12a7d697dd": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-14T15:02:30.779Z"
-    },
-    "medier:31c377fd550dd79f": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-14T15:02:30.779Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168776": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-14T15:02:30.779Z"
-    },
     "medier:457a28d321dec735": {
       "p": 75,
       "v": "b34cb0de5bde",
@@ -14073,6 +14066,81 @@
       "p": 55,
       "v": "b34cb0de5bde",
       "t": "2026-11-17T13:03:26.689Z"
+    },
+    "medier:b44f5012f5c703cc": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T15:03:35.443Z"
+    },
+    "medier:a7fcd43e9be115b5": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T15:03:35.443Z"
+    },
+    "medier:27262edac7e550af": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T15:03:35.443Z"
+    },
+    "medier:45f0db2e5d31123e": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T15:03:35.443Z"
+    },
+    "medier:708b8c3408432506": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T15:03:35.443Z"
+    },
+    "medier:90d4c0d576e7b007": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T15:03:35.443Z"
+    },
+    "medier:7676c2d481fed146": {
+      "p": 62,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T15:03:35.443Z"
+    },
+    "medier:52e5f68cefd0a140": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T15:03:35.443Z"
+    },
+    "regjeringen:3193419": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T15:03:35.443Z"
+    },
+    "regjeringen:3193150": {
+      "p": 58,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T15:03:35.443Z"
+    },
+    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/problemer-med-egenmelding-fra-regnskapsforetak-krt-1004/": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T15:03:35.443Z"
+    },
+    "forbrukerradet:https://www.forbrukerradet.no/?p=56634": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T15:03:35.443Z"
+    },
+    "svomming:https://svomming.no/?post_type=nyheter&p=44974": {
+      "p": 22,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T15:03:35.443Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168822": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T15:03:35.443Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168821": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-17T15:03:35.443Z"
     }
   }
 }
