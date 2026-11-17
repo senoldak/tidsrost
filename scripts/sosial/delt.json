@@ -1,8 +1,8 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 39,
-      "kadar": "2026-11-17T21:09:25.997Z"
+      "sayi": 40,
+      "kadar": "2026-11-18T09:12:01.128Z"
     }
   },
   "gjennomsnittlig-manedslonn-var-62-070-kroner-i-2025": {
@@ -391,7 +391,9 @@
     "reels": {
       "gun": "2026-11-17",
       "dilim": "kveld"
-    }
+    },
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "dokumentlekkasje-fra-deutsche-bank-avdekker-nye-opplysninger": {
     "tarih": "2026-11-17T11:10:16.206Z",
@@ -428,5 +430,17 @@
     "ig_story": "18201025063387769",
     "fb_post": "1343803192154866_122118634815509504",
     "fb_story": "1860409435139602"
+  },
+  "dovrebanen-stengt-mellom-eidsvoll-og-hamar-etter-strombrudd": {
+    "tarih": "2026-11-17T21:12:16.781Z",
+    "ig_story": "18137473102582093",
+    "fb_post": "1343803192154866_122118657033509504",
+    "fb_story": "1149126194275306"
+  },
+  "sveriges-talmann-gir-partiene-frist-til-jul-for-regjeringsdannelse": {
+    "tarih": "2026-11-17T21:12:51.286Z",
+    "ig_story": "17915155587603550",
+    "fb_post": "1343803192154866_122118657417509504",
+    "fb_story": "1609901371178879"
   }
 }
