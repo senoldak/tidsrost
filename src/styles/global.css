@@ -1201,6 +1201,14 @@ main.container {
   mask: url('/gravur/gudvangen-v2.png') center bottom / 100% 100% no-repeat;
 }
 
+.fot-kreditt {
+  margin: 0 auto;
+  padding: calc(var(--u) * 1.5) var(--gutter);
+  font: italic 400 0.75rem/1.4 var(--read);
+  text-align: right;
+  color: var(--fot-soluk);
+}
+
 @media (max-width: 1080px) {
   .fot-lenker {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1249,6 +1257,14 @@ main.container {
 
   .fot-bunn {
     flex-direction: column;
+  }
+
+  .fot-kreditt {
+    text-align: left;
+  }
+
+  .fot-kreditt-lang {
+    display: none;
   }
 
   .fot-landskap {
