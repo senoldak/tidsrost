@@ -1,15 +1,9 @@
 {
   "_sinir": {
     "ig_post": {
-      "sayi": 38,
-      "kadar": "2026-11-17T09:08:38.106Z"
+      "sayi": 39,
+      "kadar": "2026-11-17T21:09:25.997Z"
     }
-  },
-  "svindel-for-438-millioner-kroner-i-forste-halvar-2026": {
-    "tarih": "2026-11-10T09:08:03.431Z",
-    "ig_story": "17918058231556369",
-    "fb_post": "1343803192154866_122116381263509504",
-    "fb_story": "948803258200755"
   },
   "russere-i-rekordflukt-fra-hjemlandet": {
     "tarih": "2026-11-10T11:10:26.240Z",
@@ -377,7 +371,9 @@
     "reels": {
       "gun": "2026-11-17",
       "dilim": "morgen"
-    }
+    },
+    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk}",
+    "limit": 1
   },
   "dnb-og-sbanken-rammet-av-omfattende-tekniske-problemer-i-nettbank-og-mobilbank": {
     "tarih": "2026-11-16T15:20:05.059Z",
