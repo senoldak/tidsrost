@@ -99,9 +99,10 @@ export const GET: APIRoute = () => {
     return `<path class="${cls}" d="${contour(field, level)}"/>`;
   }).join('');
 
+  // 17.11.2026: sjø çizgisi logodaki ø ve altbilgideki fjord ile aynı mavi (--water).
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice"><style>
 path{fill:none;stroke-linejoin:round;stroke-linecap:round}
-.kote{stroke:#b07a55;stroke-width:.8;opacity:.5}.tell{stroke:#a0643c;stroke-width:1.6;opacity:.85}.sjo{stroke:#3a78b5;stroke-width:1.3}
+.kote{stroke:#b07a55;stroke-width:.8;opacity:.5}.tell{stroke:#a0643c;stroke-width:1.6;opacity:.85}.sjo{stroke:#1f5f99;stroke-width:1.6}
 </style>${lines}</svg>`;
 
   return new Response(svg, { headers: { 'Content-Type': 'image/svg+xml' } });

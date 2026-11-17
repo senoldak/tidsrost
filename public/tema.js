@@ -22,6 +22,19 @@
   };
 
   document.addEventListener('DOMContentLoaded', function () {
+    // Hamburgermenyen lukkes med Esc og ved klikk utenfor.
+    var meny = document.querySelector('.nav-meny');
+    if (meny) {
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && meny.open) {
+          meny.open = false;
+          meny.querySelector('summary').focus();
+        }
+      });
+      document.addEventListener('click', function (e) {
+        if (meny.open && !meny.contains(e.target)) meny.open = false;
+      });
+    }
     oppdaterKnapper();
     if (rot.getAttribute('data-tema')) oppdaterMeta();
     var knapper = document.querySelectorAll('.tema-bryter');

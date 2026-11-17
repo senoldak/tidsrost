@@ -236,6 +236,26 @@ p {
   mask-image: linear-gradient(to right, transparent 0, transparent 20%, #000 48%);
 }
 
+/* Kâğıt dokusu: altbilgideki gravürle aynı tahıl, haritanın üstünde çok hafif (17.11.2026). */
+.mast::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.09 0 0 0 0 0.1 0 0 0 0 0.11 0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+:root[data-tema='mork'] .mast::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.1;
+}
+
+:root.kontrast .mast::before {
+  display: none;
+}
+
 /* Paftanın kenar karelajı: alt çizgide 80px'de bir işaret. */
 .mast::after {
   content: '';
@@ -287,22 +307,42 @@ p {
   color: var(--water);
 }
 
+/* Edisyon, altbilginin dilinde: aralıklı büyük harf etiket, kısa çizgi, altında italik tarih (17.11.2026). */
 .edition {
   text-align: right;
-  font: 500 0.75rem/1.5 var(--frame);
-  font-stretch: 88%;
-  letter-spacing: 0.08em;
+  font: 600 0.6875rem/1.2 var(--frame);
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
+.edition-ark {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.edition-ark::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 32px;
+  height: 1px;
+  background: currentColor;
+}
+
 .edition b {
-  display: inline;
-  margin-left: 0.5em;
-  font: 650 1rem/1 var(--read);
+  display: block;
+  font: italic 400 1.25rem/1.2 var(--read);
   letter-spacing: 0;
   text-transform: none;
   color: var(--ink);
+}
+
+.edition b::first-letter {
+  text-transform: uppercase;
 }
 
 /* ——— Lejant menüsü ——— */
@@ -317,9 +357,192 @@ p {
 
 .legend-nav .container {
   display: flex;
+  align-items: center;
   gap: calc(var(--u) * 2);
-  overflow-x: auto;
-  scrollbar-width: none;
+}
+
+.nav-rull {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  min-width: 0;
+  height: 48px;
+  column-gap: calc(var(--u) * 1.75);
+  overflow: hidden;
+}
+
+/* Hamburgermeny (17.11.2026, «Mer» og sideveis rulling forkastet): bare på nettbrett og mobil (≤ 1080 px). */
+.nav-meny {
+  display: none;
+}
+
+.nav-meny summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  min-height: 48px;
+  font: 600 0.6875rem/1 var(--frame);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.nav-meny summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-meny .ikon-lukk,
+.nav-meny[open] .ikon-apne {
+  display: none;
+}
+
+.nav-meny[open] .ikon-lukk {
+  display: block;
+}
+
+.nav-meny-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  max-height: calc(100vh - 49px);
+  max-height: calc(100dvh - 49px);
+  overflow-y: auto;
+  background: var(--paper);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--ink);
+  box-shadow: 0 16px 28px rgb(0 0 0 / 0.1);
+}
+
+.legend-nav .nav-meny-spalter {
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: calc(var(--u) * 4);
+  padding-top: calc(var(--u) * 4);
+  padding-bottom: calc(var(--u) * 5);
+}
+
+.nav-meny-spalter h2 {
+  position: relative;
+  margin: 0 0 calc(var(--u) * 2);
+  padding-bottom: calc(var(--u) * 1.5);
+  font: 600 0.6875rem/1 var(--frame);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.nav-meny-spalter h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 32px;
+  height: 1px;
+  background: currentColor;
+}
+
+.nav-meny-spalter ul {
+  display: grid;
+  column-gap: calc(var(--u) * 3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-meny-spalter section:first-child ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.legend-nav .nav-meny-spalter a {
+  display: block;
+  min-height: 0;
+  padding: 6px 0;
+  font: 400 1.125rem/1.3 var(--read);
+  color: var(--ink);
+  box-shadow: none;
+}
+
+.legend-nav .nav-meny-spalter a:hover,
+.legend-nav .nav-meny-spalter a[aria-current='page'] {
+  color: var(--water);
+  box-shadow: none;
+}
+
+.legend-nav .tema-bryter.nav-meny-tema {
+  margin-top: calc(var(--u) * 3);
+  padding: 10px 16px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font: italic 400 1rem/1 var(--read);
+}
+
+/* Dar masaüstü (1081–1240 px): satır tam kalır, yalnız simgeler düşer. */
+@media (max-width: 1240px) and (min-width: 1081px) {
+  .nav-rull > a > .sym {
+    display: none;
+  }
+
+  .nav-rull {
+    column-gap: calc(var(--u) * 1.5);
+  }
+}
+
+/* Dar telefon: logo ve tarih tek satıra sığsın; menüde sığmayan bağlantı yarım görünmez, alt satıra düşüp gizlenir
+   (.nav-rull sabit yükseklik + flex-wrap). */
+@media (max-width: 420px) {
+  .mast-inner {
+    gap: calc(var(--u) * 1.5);
+  }
+
+  .mast .logo {
+    font-size: 2.375rem;
+  }
+
+  .mast .edition b {
+    font-size: 0.8125rem;
+  }
+
+  .mast .edition.label {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 340px) {
+  .mast .edition {
+    display: none;
+  }
+}
+
+/* Tablet ve telefon (≤ 1080 px, tasarım sistemindeki article-collapse): hamburger. Masaüstünde hamburger yok. */
+@media (max-width: 1080px) {
+  .legend-nav .nav-rull > .nav-bred {
+    display: none;
+  }
+
+  .nav-meny {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .legend-nav .nav-meny-spalter {
+    grid-template-columns: minmax(0, 1fr);
+    gap: calc(var(--u) * 3);
+    padding-top: calc(var(--u) * 3);
+  }
+
+  .legend-nav .nav-meny-spalter a {
+    font-size: 1.0625rem;
+  }
+
+  .nav-meny-tekst {
+    display: none;
+  }
 }
 
 .legend-nav a {
@@ -327,8 +550,7 @@ p {
   align-items: center;
   gap: 0.5em;
   min-height: 48px;
-  font: 600 0.9375rem var(--frame);
-  font-stretch: 96%;
+  font: 400 1rem var(--read);
   white-space: nowrap;
   box-shadow: inset 0 -3px transparent;
 }
@@ -340,7 +562,7 @@ p {
 
 .legend-nav a[aria-current='page'] {
   color: var(--water);
-  box-shadow: inset 0 -3px var(--water);
+  box-shadow: inset 0 -2px var(--water);
 }
 
 main.container {
@@ -1382,8 +1604,12 @@ main.container {
   }
 
   .edition b {
-    margin-left: 0;
     font-size: 0.9375rem;
+    white-space: nowrap;
+  }
+
+  .edition-dag {
+    display: none;
   }
 
   .row {
@@ -1853,77 +2079,11 @@ main.container {
   color: var(--water);
 }
 
-/* «Mer»-menyen: bare på smalere skjerm (≤ 1240 px, der hele raden ikke får plass). Der skjules seksjonene, temaer og lyst/mørkt fra raden og ligger i
-   panelet; Forsiden, Analyse, Forklart, Tall og Søk står fast. Panelet plasseres mot den klebrige menyen (ikke mot den
-   rullbare raden), så det ikke klippes. */
-.nav-mer {
-  display: none;
-}
-@media (max-width: 1240px) {
-  .legend-nav .container > .nav-bred {
-    display: none;
-  }
-  .legend-nav .container {
-    gap: calc(var(--u) * 2);
-  }
-  .nav-mer {
-    display: block;
-  }
-  .nav-mer summary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35em;
-    min-height: 48px;
-    font: 600 0.9375rem var(--frame);
-    font-stretch: 96%;
-    color: var(--water);
-    cursor: pointer;
-    list-style: none;
-    white-space: nowrap;
-  }
-  .nav-mer summary::-webkit-details-marker {
-    display: none;
-  }
-  .nav-mer[open] summary svg {
-    transform: rotate(180deg);
-  }
-  .nav-mer-panel {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: calc(var(--u) * 3);
-    padding: calc(var(--u) * 0.5) var(--gutter) calc(var(--u) * 2);
-    background: var(--paper);
-    border-top: 1px solid var(--rule);
-    border-bottom: 3px solid var(--water);
-    box-shadow: 0 12px 20px rgb(0 0 0 / 0.08);
-  }
-  .nav-mer-panel a,
-  .legend-nav .nav-mer-panel .tema-bryter {
-    min-height: 46px;
-    padding: 0;
-    border-bottom: 1px solid var(--rule);
-    font: 600 1rem var(--frame);
-    text-align: left;
-  }
-  .legend-nav .nav-mer-panel a[aria-current='page'] {
-    box-shadow: none;
-  }
-  .legend-nav .nav-forklart {
-    margin-right: 0;
-  }
-  .legend-nav .nav-forklart::after {
-    display: none;
-  }
-}
 @media (max-width: 420px) {
   .legend-nav .container {
     gap: calc(var(--u) * 1.75);
   }
-  .legend-nav .container > a > .sym {
+  .nav-rull > a > .sym {
     display: none;
   }
   /* Søk som ikon (teksten blir værende for skjermlesere) */
