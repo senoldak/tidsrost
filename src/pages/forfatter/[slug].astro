@@ -84,6 +84,11 @@ function halvdeler(r: Rad) {
     { uker: r.uker.slice(kutt), maaneder: r.maaneder.filter((m) => m.kol >= kutt).map((m) => ({ ...m, kol: m.kol - kutt })) },
   ].filter((h) => h.uker.length > 0);
 }
+// Ay etiketi: her hafta sütununa bir hücre, ayın ilk haftasında ad (satır içi grid-column yok, CSP).
+const mndVed = (h: { maaneder: { kol: number; mnd: string }[] }, kol: number) => {
+  const m = h.maaneder.find((x) => x.kol === kol);
+  return m ? mndNavn(m.mnd) : '';
+};
 const mndNavn = (mnd: string) => stor(mndKort.format(utc(`${mnd}-15`))).replace('.', '');
 const cellTittel = (c: { key: string; siter: string[]; egen: boolean }) =>
   `${stor(dagLang.format(utc(c.key)))} ${c.key.slice(0, 4)}${c.siter.length ? `: ${SIDER.filter((x) => c.siter.includes(x.id)).map((x) => x.navn).join(', ')}` : ''}`;
@@ -178,16 +183,16 @@ const jsonLd = {
             </label>
           ))}
         </fieldset>
-        <style is:inline set:html={`@supports selector(:has(*)){.fp-aar{display:none!important}${aarRader.map((r) => `.fp-akt:has(input[value="${r.aar}"]:checked) .fp-aar[data-aar="${r.aar}"]{display:grid!important}`).join('')}}`} />
+        {/* CSP style-src 'self': satır içi stil yok. Yıl satırları düğmelerle aynı sırada; eşleşme nth-of-type ile (CSS'te). */}
         <div class="fp-aarene" role="img" aria-label="Saker på tidsrøst, jenDume, finfolis og kifobu fra august 2022.">
-          {aarRader.map((r) => (
+          {[...aarRader].reverse().map((r) => (
             <div class="fp-aar" data-aar={r.aar} aria-hidden="true">
               <span class="fp-aar-tall">{r.aar}</span>
               <div class="fp-aar-ramme">
                 {halvdeler(r).map((h) => (
                   <div class="fp-halv">
-                    <div class="fp-mnd-linje" style={`--uker:${h.uker.length}`}>
-                      {h.maaneder.map((m) => <span style={`grid-column:${m.kol + 1}`}>{mndNavn(m.mnd)}</span>)}
+                    <div class="fp-mnd-linje">
+                      {h.uker.map((_, kol) => <span>{mndVed(h, kol)}</span>)}
                     </div>
                     <div class="fp-dager">
                       {h.uker.map((uke) =>
@@ -405,7 +410,47 @@ const jsonLd = {
     outline: 2px solid var(--water);
     outline-offset: -2px;
   }
+  /* Yıl seçimi: düğme k seçiliyse k. yıl satırı görünür (en fazla 12 yıl; satır içi stil yok, CSP). */
   @supports selector(:has(*)) {
+    .fp-aarene .fp-aar {
+      display: none;
+    }
+    .fp-akt:has(.fp-aar-valg label:nth-of-type(1) input:checked) .fp-aar:nth-of-type(1) {
+      display: grid;
+    }
+    .fp-akt:has(.fp-aar-valg label:nth-of-type(2) input:checked) .fp-aar:nth-of-type(2) {
+      display: grid;
+    }
+    .fp-akt:has(.fp-aar-valg label:nth-of-type(3) input:checked) .fp-aar:nth-of-type(3) {
+      display: grid;
+    }
+    .fp-akt:has(.fp-aar-valg label:nth-of-type(4) input:checked) .fp-aar:nth-of-type(4) {
+      display: grid;
+    }
+    .fp-akt:has(.fp-aar-valg label:nth-of-type(5) input:checked) .fp-aar:nth-of-type(5) {
+      display: grid;
+    }
+    .fp-akt:has(.fp-aar-valg label:nth-of-type(6) input:checked) .fp-aar:nth-of-type(6) {
+      display: grid;
+    }
+    .fp-akt:has(.fp-aar-valg label:nth-of-type(7) input:checked) .fp-aar:nth-of-type(7) {
+      display: grid;
+    }
+    .fp-akt:has(.fp-aar-valg label:nth-of-type(8) input:checked) .fp-aar:nth-of-type(8) {
+      display: grid;
+    }
+    .fp-akt:has(.fp-aar-valg label:nth-of-type(9) input:checked) .fp-aar:nth-of-type(9) {
+      display: grid;
+    }
+    .fp-akt:has(.fp-aar-valg label:nth-of-type(10) input:checked) .fp-aar:nth-of-type(10) {
+      display: grid;
+    }
+    .fp-akt:has(.fp-aar-valg label:nth-of-type(11) input:checked) .fp-aar:nth-of-type(11) {
+      display: grid;
+    }
+    .fp-akt:has(.fp-aar-valg label:nth-of-type(12) input:checked) .fp-aar:nth-of-type(12) {
+      display: grid;
+    }
     .fp-aar-tall {
       display: none;
     }
@@ -448,12 +493,13 @@ const jsonLd = {
   }
   .fp-mnd-linje {
     display: grid;
-    grid-template-columns: repeat(var(--uker), var(--rute));
+    grid-auto-flow: column;
+    grid-auto-columns: var(--rute);
     column-gap: var(--rom);
     height: 16px;
   }
   .fp-mnd-linje span {
-    grid-row: 1;
+    overflow: visible;
     font: 600 0.6875rem/1 'Archivo Variable', 'Archivo', system-ui, sans-serif;
     letter-spacing: 0.06em;
     text-transform: uppercase;
