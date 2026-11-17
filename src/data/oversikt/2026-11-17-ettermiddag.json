@@ -1,0 +1,23 @@
+{
+  "dato": "2026-11-17",
+  "donem": "ettermiddag",
+  "tittel": "Ettermiddagsoversikt",
+  "opprettet": "2026-11-17T13:51:00.104Z",
+  "saker": [
+    {
+      "slug": "dokumentlekkasje-fra-deutsche-bank-avdekker-nye-opplysninger",
+      "tittel": "Dokumentlekkasje fra Deutsche Bank avdekker nye opplysninger",
+      "ingress": "En omfattende lekkasje av over 15 millioner interne dokumenter fra Deutsche Bank viser nye detaljer om tidligere skandaler, svake kontrollrutiner og bankens håndtering av sensitiv informasjon."
+    },
+    {
+      "slug": "temu-kan-ha-brutt-regler-for-salg-av-ulovlige-produkter",
+      "tittel": "Temu kan ha brutt regler for salg av ulovlige produkter",
+      "ingress": "Europakommisjonen har i en pressemelding lagt frem en foreløpig vurdering som konkluderer med at Temu ikke har gode nok tiltak for å hindre salg av ulovlige varer."
+    },
+    {
+      "slug": "fornebubanen-kan-bli-3-6-milliarder-kroner-dyrere-enn-planlagt",
+      "tittel": "Fornebubanen kan bli 3,6 milliarder kroner dyrere enn planlagt",
+      "ingress": "En fersk usikkerhetsanalyse viser at T-baneprosjektet mellom Fornebu og Majorstuen kan ende på 34,8 milliarder kroner, noe som overstiger dagens økonomiske rammer."
+    }
+  ]
+}
