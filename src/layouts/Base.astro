@@ -189,6 +189,7 @@ const [nameHead, nameTail] = SITE.name.split('ø');
         </div>
       </nav>
     </header>
+    <slot name="under-header" />
 
     <main class="container" id="innhold">
       <slot />
@@ -231,6 +232,10 @@ const [nameHead, nameTail] = SITE.name.split('ø');
           </dl>
           <p class="footer-etikk">
             {SITE.name} bruker <a href="https://www.presse.no/vaer-varsom-plakaten">Vær Varsom-plakaten</a> som rettesnor.
+          </p>
+          <p class="footer-etikk">
+            Saker med navn er skrevet av redaktøren. Øvrige nyhetssaker lages automatisk, de fleste med KI, og leses ikke av
+            et menneske før publisering. <a href="/bruk-av-ki/">Slik bruker vi KI</a>
           </p>
         </div>
 

@@ -1,0 +1,36 @@
+---
+// Ön sayfada başlığın altındaki imza şeridi (17.11.2026): redaktörün fotoğrafı, adı, unvanı ve en yeni yazısı.
+// Hangi yazının seçildiği src/lib/forside.mjs velgForside'da; yazı ön sayfanın başka yerinde tekrar etmez.
+import Symbol from './Symbol.astro';
+import { SITE, dayBand, formatKortDato, formatTime } from '../lib/site';
+import { ANALYSE, FORKLART, erAnalyse, forfatterSlug, newsUrl, type Haber } from '../lib/news';
+
+interface Props {
+  haber: Haber;
+}
+
+const { haber } = Astro.props;
+const { title, date } = haber.data;
+const profilUrl = `/forfatter/${forfatterSlug(SITE.redaktor)}/`;
+const sjanger = erAnalyse(haber) ? ANALYSE.name : FORKLART.name;
+const band = dayBand(date);
+const tid = band === 'Tidligere' ? formatKortDato(date) : `${band} ${formatTime(date)}`;
+---
+
+<section class="signatur" aria-label={`Siste sak fra ${SITE.redaktor}`}>
+  <div class="container signatur-in">
+    <a class="signatur-person" href={profilUrl}>
+      <img src="/yazar-foto/senol-dak.jpg" width="48" height="48" alt="" />
+      <span>
+        <span class="signatur-navn">{SITE.redaktor}</span>
+        <span class="signatur-tittel">Journalist, utgiver og redaktør</span>
+      </span>
+    </a>
+    <a class="signatur-sak" href={newsUrl(haber)}>{title}</a>
+    <p class="signatur-meta">
+      <span class="mark"><Symbol kind="forklart" />{sjanger}</span>
+      <time datetime={date.toISOString()}>{tid}</time>
+      <a class="signatur-flere" href={profilUrl}>Flere saker →</a>
+    </p>
+  </div>
+</section>

@@ -7,6 +7,8 @@ import { FORKLART, erForklart, getActiveCategories, getNews, groupByDay, newsUrl
 import { SITE, formatKortDato, formatTime } from '../lib/site';
 import { RENTE, aktiveVarsler, datoTekst, prosent } from '../lib/data';
 import { aktiveTemaer } from '../lib/temaer';
+import { velgForside } from '../lib/forside.mjs';
+import SignaturStripe from '../components/SignaturStripe.astro';
 
 const news = await getNews();
 // Siste nytt: son 24 saatin breaking haberleri; aynı başlık (tekrarlanan varsel) bir kez, en fazla üç.
@@ -15,16 +17,16 @@ const breaking = news
   .filter((h) => h.data.breaking && h.data.date.getTime() > sisteGrense)
   .filter((h, i, a) => a.findIndex((x) => x.data.title === h.data.title) === i)
   .slice(0, 3);
-const hero = news.find((h) => h.data.featured) ?? news[0];
-const rest = news.filter((h) => h !== hero);
+// İmza şeridi + manşet kuralı: src/lib/forside.mjs. İmza yazısı sayfada başka yerde tekrar etmez.
+const { signatur, hero, rest } = velgForside(news);
 // Manşetin altında iki ikincil haber, yanda Siste (beş). Spot yalnız manşet, ikincil ve günün ilk üç satırında.
 const to = rest.slice(0, 2);
 const side = rest.slice(2, 7);
-const forklartSaker = news.filter(erForklart).slice(0, 3);
+const forklartSaker = news.filter((h) => h !== signatur && erForklart(h)).slice(0, 3);
 const forklartSet = new Set(forklartSaker);
 const days = groupByDay(rest.slice(7, 31).filter((h) => !forklartSet.has(h)).slice(0, 20));
 const sections = (await getActiveCategories())
-  .map((c) => ({ ...c, items: news.filter((h) => h.data.category === c.slug).slice(0, 5) }))
+  .map((c) => ({ ...c, items: news.filter((h) => h !== signatur && h.data.category === c.slug).slice(0, 5) }))
   .filter((s) => s.items.length > 0);
 const harTemaer = aktiveTemaer(news).length > 0;
 const varsler = aktiveVarsler();
@@ -32,6 +34,7 @@ const sterke = varsler.filter((v) => v.niva !== 'gult').length;
 ---
 
 <Base description={SITE.forsideBeskrivelse}>
+  {signatur && <SignaturStripe slot="under-header" haber={signatur} />}
   <h1 class="sr-only">{SITE.name}: {SITE.description}</h1>
   {
     breaking.length > 0 && (
