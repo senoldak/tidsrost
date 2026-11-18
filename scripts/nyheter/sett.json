@@ -12828,7 +12828,26 @@
     "medier:ea961e66133789f6": "2026-11-18T13:01:03.663Z",
     "medier:8c05eeb2951e513b": "2026-11-18T13:01:03.663Z",
     "medier:eaed3ee72d7bc8f2": "2026-11-18T13:01:03.663Z",
-    "forbrukerradet:https://www.forbrukerradet.no/?p=56823": "2026-11-18T13:01:03.663Z"
+    "forbrukerradet:https://www.forbrukerradet.no/?p=56823": "2026-11-18T13:01:03.663Z",
+    "medier:65f45d1286f9c349": "2026-11-18T15:00:58.401Z",
+    "medier:acaefdeab00444b1": "2026-11-18T15:00:58.401Z",
+    "medier:35e5322bfebbd77c": "2026-11-18T15:00:58.401Z",
+    "medier:50ef67ee5b5ce05d": "2026-11-18T15:00:58.401Z",
+    "mattilsynet:https://www.mattilsynet.no/dyr/dyresykdommer/fugleinfluensa/ny-pavisning-av-fugleinfluensa-i-lindesnes": "2026-11-18T15:00:58.401Z",
+    "kystverket:https://www.kystverket.no/nyheter/dypvannskaia-i-mo-i-rana-er-i-drift/": "2026-11-18T15:00:58.401Z",
+    "medier:2bebac81335fb9d1": "2026-11-18T15:00:58.401Z",
+    "medier:bf3841a395a6aeb2": "2026-11-18T15:00:58.401Z",
+    "medier:e811fad0ed1b0dd3": "2026-11-18T15:00:58.401Z",
+    "medier:dd8ab70b2de6980c": "2026-11-18T15:00:58.401Z",
+    "medier:f3e0e00ff0f6a494": "2026-11-18T15:00:58.401Z",
+    "medier:a31bf067a213c20e": "2026-11-18T15:00:58.401Z",
+    "medier:eaf6682acbb4e221": "2026-11-18T15:00:58.401Z",
+    "medier:740890f061f58323": "2026-11-18T15:00:58.401Z",
+    "medier:6d0d1e4e67019e77": "2026-11-18T15:00:58.401Z",
+    "medier:02da1e0e3d4dc105": "2026-11-18T15:00:58.401Z",
+    "medier:e4e3cd04c0bbf140": "2026-11-18T15:00:58.401Z",
+    "medier:5a6ce3b17ef8f90b": "2026-11-18T15:00:58.401Z",
+    "medier:bc8ed435c9c3614c": "2026-11-18T15:00:58.401Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -12891,26 +12910,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:ef35d6303c38f85d": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-15T15:02:39.351Z"
-    },
-    "medier:1f6bff61ceade789": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-15T15:02:39.351Z"
-    },
-    "medier:843c8d50fcb2efc5": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-15T15:02:39.351Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168801": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-15T15:02:39.351Z"
-    },
     "medier:a6f98a10282487be": {
       "p": 35,
       "v": "b34cb0de5bde",
@@ -14940,6 +14939,46 @@
       "p": 50,
       "v": "b34cb0de5bde",
       "t": "2026-11-18T13:03:53.427Z"
+    },
+    "medier:62ece21dc72b1fb9": {
+      "p": 92,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-18T15:03:16.171Z"
+    },
+    "medier:2bebac81335fb9d1": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-18T15:03:16.171Z"
+    },
+    "medier:e811fad0ed1b0dd3": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-18T15:03:16.171Z"
+    },
+    "medier:f3e0e00ff0f6a494": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-18T15:03:16.171Z"
+    },
+    "medier:eaf6682acbb4e221": {
+      "p": 42,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-18T15:03:16.171Z"
+    },
+    "medier:56cdf38b6d8c70a8": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-18T15:03:16.171Z"
+    },
+    "mattilsynet:https://www.mattilsynet.no/dyr/dyresykdommer/fugleinfluensa/ny-pavisning-av-fugleinfluensa-i-lindesnes": {
+      "p": 48,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-18T15:03:16.171Z"
+    },
+    "kystverket:https://www.kystverket.no/nyheter/dypvannskaia-i-mo-i-rana-er-i-drift/": {
+      "p": 38,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-18T15:03:16.171Z"
     }
   }
 }
