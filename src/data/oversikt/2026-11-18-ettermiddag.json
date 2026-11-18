@@ -1,0 +1,23 @@
+{
+  "dato": "2026-11-18",
+  "donem": "ettermiddag",
+  "tittel": "Ettermiddagsoversikt",
+  "opprettet": "2026-11-18T13:50:59.682Z",
+  "saker": [
+    {
+      "slug": "mary-peltola-sikrer-seg-senatsplass-i-alaska",
+      "tittel": "Mary Peltola sikrer seg senatsplass i Alaska",
+      "ingress": "Demokratenes kandidat har gått seirende ut av senatsvalget i delstaten og slått den sittende representanten for Republikanerne."
+    },
+    {
+      "slug": "finansminister-jens-stoltenberg-varsler-endringer-i-statsbudsjettet-etter-hard-k",
+      "tittel": "Finansminister Jens Stoltenberg varsler endringer i statsbudsjettet etter hard kritikk",
+      "ingress": "Finansminister Jens Stoltenberg regner med at budsjettforhandlingene i Stortinget vil føre til endringer. SV, Senterpartiet, MDG og Rødt har varslet at de vil jobbe for å snu den sosiale profilen på regjeringens forslag til skattelettelser."
+    },
+    {
+      "slug": "innboforsikring-avdekker-prisforskjell-pa-7000-kroner-i-ny-test",
+      "tittel": "Innboforsikring: Avdekker prisforskjell på 7000 kroner i ny test",
+      "ingress": "Forbrukerrådet har testet ni forsikringsselskaper og funnet store prisforskjeller på innboforsikringer for samme bolig og kundeprofil."
+    }
+  ]
+}
