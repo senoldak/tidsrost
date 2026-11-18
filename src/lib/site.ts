@@ -80,6 +80,14 @@ export function formatTime(date: Date) {
   return date.toLocaleTimeString(SITE.locale, { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Oslo' });
 }
 
+// Kısa saat: bugünse yalnız saat, dünse "I går 20.05", daha eskiyse "16. nov. 14.04" (saat tek başına gün söylemez).
+export function formatKortTid(date: Date) {
+  const band = dayBand(date);
+  if (band === 'I dag') return formatTime(date);
+  if (band === 'I går') return `I går ${formatTime(date)}`;
+  return `${formatKortDato(date)} ${formatTime(date)}`;
+}
+
 export function formatDay(date: Date) {
   const s = date.toLocaleDateString(SITE.locale, { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Oslo' });
   return s.charAt(0).toUpperCase() + s.slice(1);

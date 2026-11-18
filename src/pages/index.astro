@@ -30,8 +30,10 @@ const days = groupByDay(
     .filter((h) => !forklartSet.has(h) && innenforDager(h))
     .slice(0, 20),
 );
+// "Etter tema" yukarıda gösterilenleri tekrar etmez (18.11.2026: yedi sütun yukarıdaki haberleri yeniden listeliyordu).
+const vist = new Set([signatur, hero, ...to, ...side, ...forklartSaker, ...days.flatMap((d) => d.items), ...breaking]);
 const sections = (await getActiveCategories())
-  .map((c) => ({ ...c, items: news.filter((h) => h !== signatur && h.data.category === c.slug && paForsiden(h)).slice(0, 5) }))
+  .map((c) => ({ ...c, items: news.filter((h) => !vist.has(h) && h.data.category === c.slug && paForsiden(h)).slice(0, 5) }))
   .filter((s) => s.items.length > 0);
 const harTemaer = aktiveTemaer(news).length > 0;
 const varsler = aktiveVarsler();

@@ -2,7 +2,7 @@
 // Haberin işaret satırı: farevarsel, Siste nytt, tür (Forklart / Analyse), kategori, yazar, saat, kaynak.
 // Üretim işareti ve lesetid listelerden çıkarıldı (30.10.2026): üretim notu haber sayfasında durur.
 import Symbol from './Symbol.astro';
-import { SITE, categoryName, formatDay, formatTime, varsel } from '../lib/site';
+import { SITE, categoryName, formatDay, formatKortTid, formatTime, varsel } from '../lib/site';
 import { ANALYSE, erAnalyse, erForklart, FORKLART, forfatterSlug, kilde, type Haber } from '../lib/news';
 import { synligForfatter } from '../lib/forfatter.mjs';
 
@@ -31,7 +31,7 @@ const harForfatter = forfatter !== SITE.name;
   {harForfatter && <span class="mark">Av <a href={`/forfatter/${forfatterSlug(forfatter)}/`}>{forfatter}</a></span>}
   {
     time && (
-      <time datetime={date.toISOString()}>{time === 'full' ? `${formatDay(date)} kl. ${formatTime(date)}` : formatTime(date)}</time>
+      <time datetime={date.toISOString()}>{time === 'full' ? `${formatDay(date)} kl. ${formatTime(date)}` : formatKortTid(date)}</time>
     )
   }
   {source && <span class="mark"><Symbol kind="kilde" />{source}</span>}

@@ -1,5 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
-import { CATEGORIES, dayBand } from './site';
+import { CATEGORIES, dayBand, formatDay } from './site';
 
 export type Haber = CollectionEntry<'haberler'>;
 
@@ -65,7 +65,9 @@ export function kildeUrl(haber: Haber) {
 export function groupByDay(news: Haber[]) {
   const bands = new Map<string, Haber[]>();
   for (const h of news) {
-    const key = dayBand(h.data.date);
+    // "Tidligere" birden çok günü tek bantta karıştırıyordu (saatler sırasız görünüyordu): eski günler kendi tarihini alır.
+    const band = dayBand(h.data.date);
+    const key = band === 'Tidligere' ? formatDay(h.data.date) : band;
     bands.set(key, [...(bands.get(key) ?? []), h]);
   }
   return [...bands].map(([label, items]) => ({ label, items }));
