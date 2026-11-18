@@ -1,29 +1,5 @@
 {
   "_sinir": {},
-  "ostlandet-far-utvidet-snovarsel-og-gult-farevarsel": {
-    "tarih": "2026-11-11T11:10:45.325Z",
-    "ig_story": "18146451805517262",
-    "fb_post": "1343803192154866_122116713753509504",
-    "fb_story": "2863646430684622"
-  },
-  "oljehavnen-i-ust-luga-brenner-etter-ukrainsk-droneangrep": {
-    "tarih": "2026-11-11T11:11:28.650Z",
-    "ig_story": "18179965669390912",
-    "fb_post": "1343803192154866_122116714077509504",
-    "fb_story": "1682966663191069"
-  },
-  "kronprinsen-ringte-pst-og-ba-om-at-hoiby-skulle-fa-melde-seg": {
-    "tarih": "2026-11-11T13:11:23.755Z",
-    "ig_story": "18140685199728132",
-    "fb_post": "1343803192154866_122116748517509504",
-    "fb_story": "1457760983129162",
-    "ig_reels": "18600383800068789",
-    "fb_reels": "1493636409309018",
-    "reels": {
-      "gun": "2026-11-11",
-      "dilim": "kveld"
-    }
-  },
   "stavanger-universitetssjukehus-foreslar-a-redusere-bemanningen-med-250-arsverk": {
     "tarih": "2026-11-11T17:08:26.701Z",
     "ig_story": "18133639627885839",
@@ -441,5 +417,23 @@
     "ig_story": "17983406721131933",
     "fb_post": "1343803192154866_122118773895509504",
     "fb_story": "1435941258208183"
+  },
+  "mary-peltola-sikrer-seg-senatsplass-i-alaska": {
+    "tarih": "2026-11-18T13:17:38.377Z",
+    "ig_story": "18022535237952389",
+    "fb_post": "1343803192154866_122118899181509504",
+    "fb_story": "2568068977340491"
+  },
+  "finansminister-jens-stoltenberg-varsler-endringer-i-statsbudsjettet-etter-hard-k": {
+    "tarih": "2026-11-18T13:18:17.140Z",
+    "ig_story": "18176117095415274",
+    "fb_post": "1343803192154866_122118899529509504",
+    "fb_story": "1033163853133546"
+  },
+  "innboforsikring-avdekker-prisforskjell-pa-7000-kroner-i-ny-test": {
+    "tarih": "2026-11-18T13:18:54.176Z",
+    "ig_story": "18149952700570026",
+    "fb_post": "1343803192154866_122118899805509504",
+    "fb_story": "1864211408102310"
   }
 }
