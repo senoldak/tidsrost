@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-18T07:08:04.686Z",
+  "hentet": "2026-11-18T09:12:52.319Z",
   "kilde": {
     "navn": "Norges Bank",
     "url": "https://www.norges-bank.no/tema/pengepolitikk/Styringsrenten/",
@@ -7,7 +7,7 @@
     "lisens": "NLOD"
   },
   "rente": 4.5,
-  "sisteObservasjon": "2026-11-16",
+  "sisteObservasjon": "2026-11-17",
   "gjeldendeFra": "2026-09-25",
   "serieFra": "2016-01-04",
   "endringer": [
