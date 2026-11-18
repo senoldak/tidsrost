@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-18T17:16:51.277Z",
+  "hentet": "2026-11-18T19:12:47.225Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-18T17:16:01+00:00",
+  "sistEndretHosMet": "2026-11-18T19:11:02+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.261118100000.0839_7_0",
@@ -60,19 +60,6 @@
       "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker. Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
       "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261118104901.079",
-      "niva": "gult",
-      "hendelse": "Is",
-      "omrade": "Deler av Øst-Finnmark",
-      "domene": "land",
-      "start": "2026-11-18T10:55:00+00:00",
-      "slutt": "2026-11-18T18:00:00+00:00",
-      "beskrivelse": "Det er lokalt fare for is på grunn av overgang til mildvær og regn. Regn kan fryse til is på vegbanen, på kjøretøy og på andre gjenstander.",
-      "konsekvenser": "Lokalt vanskelige kjøreforhold: Det kan være lokalt vanskelige kjøreforhold. Transporttjenester kan også bli påvirket. Vurder bruk av brodder eller piggsko: Fare for hålkeføre.",
-      "rad": "Lokalt vanskelige kjøreforhold: Beregn ekstra tid til transport og kjøring. Bruk riktige dekk og kjør etter forholdene. Vurder bruk av brodder eller piggsko: Vær oppmerksom på at isen kan være vanskelig å se. Følg utviklingen: Følg med på oppdaterte farevarsler. Sjekk veimeldinger på vegvesen.no/trafikk.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/is"
     },
     {
       "id": "2.49.0.1.578.0.261118100000.0842_1_0",
