@@ -1,32 +1,5 @@
 {
-  "_sinir": {
-    "ig_post": {
-      "sayi": 40,
-      "kadar": "2026-11-18T09:12:01.128Z"
-    }
-  },
-  "norges-bank-risikobildet-for-det-finansielle-systemet-preges-av-okt-usikkerhet": {
-    "tarih": "2026-11-11T09:08:20.667Z",
-    "ig_story": "18100575854105223",
-    "fb_post": "1343803192154866_122116680597509504",
-    "fb_story": "2360342981406401",
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
-  "droner-over-baltikum-forte-til-varsler-og-kampfly-i-luften": {
-    "tarih": "2026-11-11T09:09:01.272Z",
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1,
-    "ig_story": "17998440930044052",
-    "fb_post": "1343803192154866_122116680843509504",
-    "fb_story": "2021791945177397"
-  },
-  "fremskrittspartiet-krever-reforhandling-av-parisavtalen": {
-    "tarih": "2026-11-11T09:09:47.902Z",
-    "ig_story": "17874019899641600",
-    "fb_post": "1343803192154866_122116681053509504",
-    "fb_story": "4175283589437327"
-  },
+  "_sinir": {},
   "ostlandet-far-utvidet-snovarsel-og-gult-farevarsel": {
     "tarih": "2026-11-11T11:10:45.325Z",
     "ig_story": "18146451805517262",
@@ -381,31 +354,51 @@
     "tarih": "2026-11-17T11:10:16.206Z",
     "ig_story": "18132826075879134",
     "fb_post": "1343803192154866_122118496827509504",
-    "fb_story": "1027907683680022"
+    "fb_story": "1027907683680022",
+    "ig_post": "18067220630632234",
+    "zaman": {
+      "ig_post": "2026-11-18T09:15:15.981Z"
+    }
   },
   "temu-kan-ha-brutt-regler-for-salg-av-ulovlige-produkter": {
     "tarih": "2026-11-17T11:10:56.393Z",
     "ig_story": "17895941088684002",
     "fb_post": "1343803192154866_122118497175509504",
-    "fb_story": "1780800879696222"
+    "fb_story": "1780800879696222",
+    "ig_post": "18081832220418133",
+    "zaman": {
+      "ig_post": "2026-11-18T09:15:45.383Z"
+    }
   },
   "fornebubanen-kan-bli-3-6-milliarder-kroner-dyrere-enn-planlagt": {
     "tarih": "2026-11-17T13:09:24.098Z",
     "ig_story": "18115732838464724",
     "fb_post": "1343803192154866_122118559923509504",
-    "fb_story": "1696803045368711"
+    "fb_story": "1696803045368711",
+    "ig_post": "18171834301464734",
+    "zaman": {
+      "ig_post": "2026-11-18T09:16:12.150Z"
+    }
   },
   "tolletaten-advarer-mot-rusdrikken-lean-etter-flere-beslag": {
     "tarih": "2026-11-17T17:18:20.406Z",
     "ig_story": "17919336117524591",
     "fb_post": "1343803192154866_122118612087509504",
-    "fb_story": "1119318350983028"
+    "fb_story": "1119318350983028",
+    "ig_post": "17950714623355978",
+    "zaman": {
+      "ig_post": "2026-11-18T09:16:38.862Z"
+    }
   },
   "cop31-forhandlingene-i-antalya-setter-fokus-pa-hav-og-natur": {
     "tarih": "2026-11-17T19:10:52.549Z",
     "ig_story": "18657906949038506",
     "fb_post": "1343803192154866_122118634455509504",
-    "fb_story": "1882060229642079"
+    "fb_story": "1882060229642079",
+    "ig_post": "17964207096305705",
+    "zaman": {
+      "ig_post": "2026-11-18T09:17:06.291Z"
+    }
   },
   "norge-pa-tiendeplass-over-land-som-eksporterer-mest-co2-utslipp": {
     "tarih": "2026-11-17T19:11:30.172Z",
