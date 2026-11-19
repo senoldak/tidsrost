@@ -13086,7 +13086,40 @@
     "medier:ae7ccd058326eb02": "2026-11-19T07:00:53.580Z",
     "ssb:4e5a3d7c-74de-4ff6-b326-c9520da44508": "2026-11-19T07:00:53.580Z",
     "medier:64b4812c75b96791": "2026-11-19T07:00:53.580Z",
-    "medier:ad8f80fd27c8e084": "2026-11-19T07:00:53.580Z"
+    "medier:ad8f80fd27c8e084": "2026-11-19T07:00:53.580Z",
+    "medier:6575bd3ea1c4577e": "2026-11-19T09:00:59.483Z",
+    "regjeringen:3193631": "2026-11-19T09:00:59.483Z",
+    "handball:https://www.handball.no/nyheter/2026/11/ny-temaside-pa-handball.no-okonomi-som-barriere": "2026-11-19T09:00:59.483Z",
+    "arbeidstilsynet:https://www.arbeidstilsynet.no/nyheter/kan-eg-overfore-feriedagane-mine-til-neste-ar/": "2026-11-19T09:00:59.483Z",
+    "ssb:0a6811e4-a3f5-4bd0-8fda-7285870f083b": "2026-11-19T09:00:59.483Z",
+    "medier:bc116bac1ceed1e6": "2026-11-19T09:00:59.483Z",
+    "medier:3bf16467a2e7c49c": "2026-11-19T09:00:59.483Z",
+    "medier:06b96aa0cb1e1cf7": "2026-11-19T09:00:59.483Z",
+    "medier:d64eff45541d5fe9": "2026-11-19T09:00:59.483Z",
+    "medier:27933a3886c37842": "2026-11-19T09:00:59.483Z",
+    "medier:51dc6c779c0e6b84": "2026-11-19T09:00:59.483Z",
+    "medier:dba8ed24a418bf87": "2026-11-19T09:00:59.483Z",
+    "medier:0b94c50e3990961a": "2026-11-19T09:00:59.483Z",
+    "medier:4d3ae044a4353bc0": "2026-11-19T09:00:59.483Z",
+    "medier:010db760c16adf66": "2026-11-19T09:00:59.483Z",
+    "medier:9ea6d8267b55a9c6": "2026-11-19T09:00:59.483Z",
+    "medier:b2a9374970102f53": "2026-11-19T09:00:59.483Z",
+    "medier:b2cbba515b4309b9": "2026-11-19T09:00:59.483Z",
+    "medier:f2602c928cb5a3b3": "2026-11-19T09:00:59.483Z",
+    "medier:9d8aa066d89abe44": "2026-11-19T09:00:59.483Z",
+    "medier:7bf63ac28f8ef9a9": "2026-11-19T09:00:59.483Z",
+    "medier:31fb075914d738a4": "2026-11-19T09:00:59.483Z",
+    "medier:7dcc3e6f2d22903d": "2026-11-19T09:00:59.483Z",
+    "medier:fd8c6c741b23800a": "2026-11-19T09:00:59.483Z",
+    "medier:abc8ef527269deab": "2026-11-19T09:00:59.483Z",
+    "medier:997e8c971a697e80": "2026-11-19T09:00:59.483Z",
+    "medier:ed0a5d46bd85b328": "2026-11-19T09:00:59.483Z",
+    "medier:0966150814c9252a": "2026-11-19T09:00:59.483Z",
+    "medier:24b2309b63391ee9": "2026-11-19T09:00:59.483Z",
+    "medier:8dcf8469aab23279": "2026-11-19T09:00:59.483Z",
+    "medier:bcf132ee2e05971f": "2026-11-19T09:00:59.483Z",
+    "medier:bf35895d16ff1e41": "2026-11-19T09:00:59.483Z",
+    "ssb:19cd58d7-1b0e-42b8-9bbc-601e738277ce": "2026-11-19T09:00:59.483Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -13149,56 +13182,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:905d59c1271b5fba": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T09:03:07.198Z"
-    },
-    "medier:35437ca1b7d644c7": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T09:03:07.198Z"
-    },
-    "medier:76fa4e62703d40fc": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T09:03:07.198Z"
-    },
-    "medier:7bac75396a5fb924": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T09:03:07.198Z"
-    },
-    "medier:ab5ffcdd4bc5e338": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T09:03:07.198Z"
-    },
-    "regjeringen:3193011": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T09:03:07.198Z"
-    },
-    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/egenmelding-fra-regnskapsforetak-krt-1004--rapportering/": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T09:03:07.198Z"
-    },
-    "havforskning:https://www.hi.no/hi/nyheter/2026/november/hi-savner-havkompetanse-i-klima-rapport": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T09:03:07.198Z"
-    },
-    "havforskning:https://www.hi.no/hi/nyheter/2026/november/plast-i-havet-pavirker-klodens-eldste-livsformer": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T09:03:07.198Z"
-    },
-    "sykling:https://sykling.no/?p=28401": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T09:03:07.198Z"
-    },
     "medier:318cea0119523a37": {
       "p": 72,
       "v": "b34cb0de5bde",
@@ -15303,6 +15286,71 @@
       "p": 60,
       "v": "b34cb0de5bde",
       "t": "2026-11-19T07:02:22.366Z"
+    },
+    "ssb:0a6811e4-a3f5-4bd0-8fda-7285870f083b": {
+      "p": 42,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T09:03:11.552Z"
+    },
+    "medier:bcf132ee2e05971f": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T09:03:11.552Z"
+    },
+    "medier:bc116bac1ceed1e6": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T09:03:11.552Z"
+    },
+    "medier:06b96aa0cb1e1cf7": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T09:03:11.552Z"
+    },
+    "medier:ed0a5d46bd85b328": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T09:03:11.552Z"
+    },
+    "medier:dba8ed24a418bf87": {
+      "p": 52,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T09:03:11.552Z"
+    },
+    "medier:010db760c16adf66": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T09:03:11.552Z"
+    },
+    "medier:7dcc3e6f2d22903d": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T09:03:11.552Z"
+    },
+    "medier:b2cbba515b4309b9": {
+      "p": 62,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T09:03:11.552Z"
+    },
+    "medier:24b2309b63391ee9": {
+      "p": 74,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T09:03:11.552Z"
+    },
+    "regjeringen:3193631": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T09:03:11.552Z"
+    },
+    "handball:https://www.handball.no/nyheter/2026/11/ny-temaside-pa-handball.no-okonomi-som-barriere": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T09:03:11.552Z"
+    },
+    "arbeidstilsynet:https://www.arbeidstilsynet.no/nyheter/kan-eg-overfore-feriedagane-mine-til-neste-ar/": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T09:03:11.552Z"
     }
   }
 }
