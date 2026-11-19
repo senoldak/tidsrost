@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-18T23:05:28.763Z",
+  "hentet": "2026-11-19T01:04:47.568Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-18T23:04:15+00:00",
+  "sistEndretHosMet": "2026-11-19T01:04:39+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.261118220000.0839_7_0",
@@ -34,19 +34,6 @@
       "konsekvenser": "Stor fare for at småbåter kan synke: Det ventes sterk isvekst på fronten/styrhuset til båten. Det er stor fare for at båten mister stabilitet, velter og synker. Sterk isvekst kan gjøre det vanskelig å få fjernet isen raskt nok før uhellet er ute. Kraftig isvekst på overflater: Det er stor risiko for en betydelig mengde is på overflater på båter som ferdes i området. Isen vil føre til glatte dekk, gelender og stiger, og operasjoner utendørs blir utfordrende. Redningsutstyr kan bli påvirket: Nedising av redningsteknisk utstyr kan forekomme, og isingen kan ødelegge samband- og kommunikasjonsutstyr.",
       "rad": "Kraftig isvekst på overflater: Fjern is raskt fra båten.",
       "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.20261118084225.021",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Slettnes fyr - Vardø",
-      "domene": "hav",
-      "start": "2026-11-18T09:00:00+00:00",
-      "slutt": "2026-11-19T01:00:00+00:00",
-      "beskrivelse": "Fra onsdag formiddag østlig stiv kuling 15 m/s, fra onsdag kveld sterk kuling  20 m/s. Natt til torsdag minkende.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker. Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
       "id": "2.49.0.1.578.0.20261118090708.096",
