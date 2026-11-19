@@ -13038,7 +13038,55 @@
     "medier:db936e73944b7333": "2026-11-19T01:01:11.189Z",
     "medier:377d46b4a0b60d1c": "2026-11-19T01:01:11.189Z",
     "medier:5744ada672be6b93": "2026-11-19T01:01:11.189Z",
-    "medier:fda3d16a5def22d0": "2026-11-19T01:01:11.189Z"
+    "medier:fda3d16a5def22d0": "2026-11-19T01:01:11.189Z",
+    "medier:2fe7cbb255fb6deb": "2026-11-19T07:00:53.580Z",
+    "medier:d4de7491f003ce13": "2026-11-19T07:00:53.580Z",
+    "medier:0799d832aca8e59e": "2026-11-19T07:00:53.580Z",
+    "medier:44534ef1e8169d32": "2026-11-19T07:00:53.580Z",
+    "medier:a296d2b7868116f1": "2026-11-19T07:00:53.580Z",
+    "medier:3be180735b7d61f2": "2026-11-19T07:00:53.580Z",
+    "medier:571d469967165118": "2026-11-19T07:00:53.580Z",
+    "medier:e87868207a07dd07": "2026-11-19T07:00:53.580Z",
+    "medier:62ac151a4bbc348b": "2026-11-19T07:00:53.580Z",
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/anbefaler-trinnvis-utvikling-av-rv.-4-mellom-sinsen-og-gjellerasen": "2026-11-19T07:00:53.580Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2508": "2026-11-19T07:00:53.580Z",
+    "medier:5673ad3b7bc79108": "2026-11-19T07:00:53.580Z",
+    "medier:5aeca4eeb35a6511": "2026-11-19T07:00:53.580Z",
+    "ssb:701baade-7270-435b-9e77-1f16baedd1cb": "2026-11-19T07:00:53.580Z",
+    "medier:9471c521f1dbd275": "2026-11-19T07:00:53.580Z",
+    "medier:4a5f195bbf119e04": "2026-11-19T07:00:53.580Z",
+    "medier:1bc4589eda7d8b7e": "2026-11-19T07:00:53.580Z",
+    "medier:dad12de8e92d03fb": "2026-11-19T07:00:53.580Z",
+    "medier:f6c14b3ded4061ab": "2026-11-19T07:00:53.580Z",
+    "medier:70e7f647ac47469d": "2026-11-19T07:00:53.580Z",
+    "medier:6ad01eb192ed6c63": "2026-11-19T07:00:53.580Z",
+    "ssb:6245eef5-6807-4572-8641-3a039beed8d9": "2026-11-19T07:00:53.580Z",
+    "medier:c7e86a7d4a6babf1": "2026-11-19T07:00:53.580Z",
+    "medier:4d3a0a2667ae60eb": "2026-11-19T07:00:53.580Z",
+    "medier:37be52935200a746": "2026-11-19T07:00:53.580Z",
+    "medier:ba8478e71bf692da": "2026-11-19T07:00:53.580Z",
+    "medier:e6f92f3fd815e61d": "2026-11-19T07:00:53.580Z",
+    "medier:0c80552996a8273d": "2026-11-19T07:00:53.580Z",
+    "medier:3a24856041e44b9c": "2026-11-19T07:00:53.580Z",
+    "ssb:ef23ff5a-6a53-491f-a9fe-c61e95815929": "2026-11-19T07:00:53.580Z",
+    "medier:5de1b31f7db81f45": "2026-11-19T07:00:53.580Z",
+    "medier:714d22c3ed58a1db": "2026-11-19T07:00:53.580Z",
+    "medier:02e59f733140a434": "2026-11-19T07:00:53.580Z",
+    "medier:0ae32d945f4195a0": "2026-11-19T07:00:53.580Z",
+    "medier:f2cf2ff04fd3c96f": "2026-11-19T07:00:53.580Z",
+    "medier:82a01666077f5ff2": "2026-11-19T07:00:53.580Z",
+    "medier:214436f7501fb9a9": "2026-11-19T07:00:53.580Z",
+    "medier:f9d1cced674af666": "2026-11-19T07:00:53.580Z",
+    "medier:aa5a3863b426c242": "2026-11-19T07:00:53.580Z",
+    "met:ice:deler-av-troms-finnmark-og-vesteralen:2026-11-19": "2026-11-19T07:00:53.580Z",
+    "medier:4d7ed3dac1345c88": "2026-11-19T07:00:53.580Z",
+    "medier:f5a01e95981c9b53": "2026-11-19T07:00:53.580Z",
+    "medier:26db431040c0450d": "2026-11-19T07:00:53.580Z",
+    "medier:726abdd8d06ab202": "2026-11-19T07:00:53.580Z",
+    "medier:ae7ccd058326eb02": "2026-11-19T07:00:53.580Z",
+    "ssb:4e5a3d7c-74de-4ff6-b326-c9520da44508": "2026-11-19T07:00:53.580Z",
+    "medier:64b4812c75b96791": "2026-11-19T07:00:53.580Z",
+    "medier:ad8f80fd27c8e084": "2026-11-19T07:00:53.580Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -13101,96 +13149,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:eba9a9b279f61eec": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
-    "medier:8ec8694c2ffbb599": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
-    "medier:b1cd488fce6a9bbc": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
-    "medier:8494917a545a1b7d": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
-    "medier:f4fb97ae1e2d97b5": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
-    "medier:df92ce942929fe38": {
-      "p": 76,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
-    "medier:3c1741d0cd4f05b0": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
-    "medier:0d0c85d9d24d7eda": {
-      "p": 92,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
-    "medier:bfd5b8e7ef7f4346": {
-      "p": 48,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
-    "medier:cdb807c4f78d50b4": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
-    "regjeringen:3193007": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
-    "regjeringen:3192307": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
-    "regjeringen:3193002": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
-    "ssb:d9949223-44d0-4f5f-b589-6e05f654e2af": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
-    "ssb:2e319164-1fec-42ac-a952-85a3f498ac7b": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
-    "ssb:c2a164c3-58ba-409b-985a-160798671bd4": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/t-banen-stenger-19.-22.-november-vurder-om-du-ma-kjore-bil-i-oslo": {
-      "p": 62,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168808": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T07:03:12.956Z"
-    },
     "medier:905d59c1271b5fba": {
       "p": 85,
       "v": "b34cb0de5bde",
@@ -15255,6 +15213,96 @@
       "p": 60,
       "v": "b34cb0de5bde",
       "t": "2026-11-19T01:02:21.844Z"
+    },
+    "medier:44534ef1e8169d32": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
+    },
+    "medier:5673ad3b7bc79108": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
+    },
+    "medier:4d7ed3dac1345c88": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
+    },
+    "medier:9471c521f1dbd275": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
+    },
+    "medier:c7e86a7d4a6babf1": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
+    },
+    "medier:5de1b31f7db81f45": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
+    },
+    "medier:0ae32d945f4195a0": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
+    },
+    "medier:82a01666077f5ff2": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
+    },
+    "medier:64b4812c75b96791": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
+    },
+    "medier:f9d1cced674af666": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
+    },
+    "ssb:19cd58d7-1b0e-42b8-9bbc-601e738277ce": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
+    },
+    "ssb:701baade-7270-435b-9e77-1f16baedd1cb": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
+    },
+    "ssb:4e5a3d7c-74de-4ff6-b326-c9520da44508": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
+    },
+    "ssb:6245eef5-6807-4572-8641-3a039beed8d9": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
+    },
+    "ssb:ef23ff5a-6a53-491f-a9fe-c61e95815929": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
+    },
+    "skatteetaten:/presse/nyhetsrommet/fiskebruk-ma-betale-skatt-og-avgift-utanlandske-selskap-har-unndratt/": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
+    },
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/anbefaler-trinnvis-utvikling-av-rv.-4-mellom-sinsen-og-gjellerasen": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2508": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T07:02:22.366Z"
     }
   }
 }
