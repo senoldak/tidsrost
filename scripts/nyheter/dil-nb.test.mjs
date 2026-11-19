@@ -66,3 +66,11 @@ test('ukjenteOrdNb: nettverksfeil gir ingen falske funn', async () => {
   };
   assert.deepEqual(await ukjenteOrdNb('helt nytt ordxyz her', { hent }), []);
 });
+
+test('KI-mønstre: går til språkvask, stopper ikke saken', () => {
+  for (const t of ['Avtalen er ikke bare dyr, men også lang.', 'Vedtaket markerer et viktig steg for regionen.', 'Prisen steg — igjen.']) {
+    assert.ok(koder(t).includes('monster'), t);
+    assert.equal(kesinProblemer(sprakProblemerNb(t)).length, 0, t);
+  }
+  assert.ok(!koder('Prisen steg – ifølge SSB – med 3 prosent i 2015–2025.').includes('monster'));
+});

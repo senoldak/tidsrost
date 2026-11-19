@@ -43,7 +43,8 @@ export function ozetIstemi({ site, haberler }) {
       'ingressene du får; ikke legg til tall, navn, datoer eller vurderinger. Skriv nøkternt, klart nyhetsspråk på bokmål. ' +
       'Ikke tiltal leseren, ikke still spørsmål, ikke bruk overdrivelser eller rosende ord, ikke nevn nyhetskilder. Velg ' +
       'dagens 3–5 viktigste saker og skriv ett avsnitt på 3–5 setninger (høyst 550 tegn). Skriv tall slik kilden gjør ' +
-      '(10,57 kroner, 2,5 prosent). I feltet kimlikler skriver du id-ene til sakene du omtaler, i samme rekkefølge som i avsnittet.';
+      '(10,57 kroner, 2,5 prosent). Ikke bruk falske kontraster («ikke bare X, men også Y»), oppblåste fraser («et viktig steg», ' +
+      '«en ny æra», «milepæl»), vurderende avslutninger («Dette viser at …») eller lang strek (—). I feltet kimlikler skriver du id-ene til sakene du omtaler, i samme rekkefølge som i avsnittet.';
     const istem = haberler.map((h) => `id: ${h.id}\ntittel: ${h.baslik}\ningress: ${h.ozet}`).join('\n\n');
     return { sistem, istem };
   }
@@ -52,7 +53,8 @@ export function ozetIstemi({ site, haberler }) {
     'bilgileri kullan; başka rakam, ad, tarih, yorum ekleme. Haber dilinde, düz ve akıcı Türkçe yaz. Okura hitap etme, ' +
     'soru sorma, abartı ve övgü sözcükleri kullanma, yatırım tavsiyesi verme, haber kaynağı adı yazma. Günün en önemli ' +
     '3–5 haberini seç ve 3–5 tümcelik tek bir paragraf yaz (en çok 550 karakter). Rakamları kaynaktaki gibi yaz ' +
-    '(1 milyar dolar, %2,5). Kimlikler alanına paragrafta anlattığın haberlerin kimliklerini paragraf sırasıyla yaz.';
+    '(1 milyar dolar, %2,5). Sahte karşıtlık ("sadece X değil, aynı zamanda Y"), önem şişiren kalıp ("önemli bir adım", ' +
+    '"yeni bir dönem", "dikkat çekiyor"), yorumla biten tümce ("Bu gelişme ... gösteriyor") ve tümce içinde tire kullanma. Kimlikler alanına paragrafta anlattığın haberlerin kimliklerini paragraf sırasıyla yaz.';
   const istem = haberler.map((h) => `kimlik: ${h.id}\nbaşlık: ${h.baslik}\nözet: ${h.ozet}`).join('\n\n');
   return { sistem, istem };
 }

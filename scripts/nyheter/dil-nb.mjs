@@ -35,7 +35,26 @@ const MØNSTRE = [
   { re: /Det er foreløpig ikke gitt ytterligere detaljer/g, mld: 'Fyllsetning: stryk den' },
   { re: /(?<![a-zæøå])(avdekker|viser) en betydelig utvikling/g, mld: 'Tom frase: si konkret hva som har skjedd' },
   { re: /Den amerikanske (sjefen|lederen)/g, mld: 'Omskrivning av navn: bruk tittel og navn ("president Donald Trump")' },
+  // KI-mønstre (19. november 2026; humanizer og stop-slop, zincirens yasak-nb.json). Ingen er absolutte: saken
+  // stoppes ikke, problemet går til språkvasken. Tankestrek (–) er norsk norm og flagges ikke; lang strek (—) gjør.
+  { re: /—/g, mld: 'Lang strek (—) er ikke norsk: bruk komma, punktum, kolon eller tankestrek (–)' },
+  { re: /(?<![a-zæøå])ikke bare\s[^.!?\n]{1,80}?\smen også/gi, mld: 'Falsk kontrast ("ikke bare X, men også Y"): skriv opplysningene rett fram' },
+  {
+    re: /(markerer|representerer) (et|en) (viktig|stort|historisk|nytt)|en ny (æra|epoke)|milepæl|banebrytende|spiller en (viktig|avgjørende|sentral) rolle|understreker (betydningen|viktigheten)|det er verdt å merke seg|i dagens samfunn|(?<![a-zæøå])alt i alt|kort oppsummert/gi,
+    mld: 'Oppblåst betydning eller fyllfrase: fjern frasen og skriv det konkrete faktumet (tall, dato, navn)',
+  },
 ];
+
+// KI-mønstre for språkvasken (redaktor.mjs) og Dagens oppsummering. Nyhetsspråkets vanlige passiv og tilskriving berøres ikke.
+export const KI_MONSTRE_NB = `Fjern typiske KI-mønstre:
+- Ikke bygg falske kontraster («ikke bare X, men også Y»). Gi begge opplysningene rett fram.
+- Ikke blås opp betydningen. Erstatt fraser som «markerer et viktig steg», «en ny æra», «milepæl», «spiller en avgjørende rolle» og «understreker betydningen» med selve faktumet (tall, dato, navn).
+- Ikke avslutt et avsnitt eller en sak med en vurdering kilden ikke har gjort («Dette viser at …», «Det gjenstår å se …»). Skriv heller en konkret opplysning fra kilden. En setning som gjengir et faktum fra kilden, beholdes.
+- Ingen av disse reglene gir grunn til å endre mening, fakta eller kildens vekting. Er du usikker, la setningen stå.
+- Ikke bruk tredelte oppramsinger av vane. Har kilden to elementer, skriv to.
+- Ikke bruk lang strek (—). Tankestrek (–) etter norsk norm er i orden.
+- Ikke begynn flere setninger på rad med samme ord eller navn, og varier setningslengden.
+- Når en frase fjernes, fyll plassen med en konkret opplysning fra teksten. Lengden beholdes; ingen nye fakta legges til.`;
 
 function setninger(tekst) {
   return tekst

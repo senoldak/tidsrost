@@ -19,7 +19,7 @@ import { ordtelling } from '../../src/lib/ordtelling.mjs';
 import { olcekKontrol } from './olcek.mjs';
 import { naerhet, kildefriOmskriving } from './faktaark.mjs';
 import { readFileSync, readdirSync } from 'node:fs';
-import { rettNb, sprakProblemerNb, kesinProblemer as kesinNb, problemListe, korpusOrd, ukjenteOrdNb } from './dil-nb.mjs';
+import { rettNb, sprakProblemerNb, kesinProblemer as kesinNb, problemListe, korpusOrd, ukjenteOrdNb, KI_MONSTRE_NB } from './dil-nb.mjs';
 
 // ── Ortak yazım kuralları (bütün kaynakların istemlerinde) ─────────────
 
@@ -310,6 +310,8 @@ const SPRAKVASK_REGLER = `Rett:
 - Unngå passiv når det er kjent hvem som handlet: «Regjeringen besluttet tidligere at …», ikke «Det har tidligere blitt besluttet at …».
 - Gjentakelser: Samme tilskriving eller formulering («ifølge pressemeldingen», «opplyser departementet») skal ikke gjentas tett; varier eller fjern den andre. Første setning i brødteksten skal ikke gjenta ingressen ordrett.
 - Fjern avsluttende henvisninger som «les mer på …», «hele pressemeldingen kan leses …» og setninger som «Opplysningene kommer fra …»; kildelenken legges til automatisk.
+
+${KI_MONSTRE_NB}
 
 Ikke endre:
 - Fakta, tall, navn, datoer eller rekkefølgen av opplysninger.
