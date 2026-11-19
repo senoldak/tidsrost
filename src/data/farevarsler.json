@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-19T17:13:07.589Z",
+  "hentet": "2026-11-19T19:14:34.652Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-19T17:11:16+00:00",
+  "sistEndretHosMet": "2026-11-19T19:12:59+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.261119100000.0839_7_0",
@@ -34,19 +34,6 @@
       "konsekvenser": "Stor fare for at småbåter kan synke: Det ventes sterk isvekst på fronten/styrhuset til båten. Det er stor fare for at båten mister stabilitet, velter og synker. Sterk isvekst kan gjøre det vanskelig å få fjernet isen raskt nok før uhellet er ute. Kraftig isvekst på overflater: Det er stor risiko for en betydelig mengde is på overflater på båter som ferdes i området. Isen vil føre til glatte dekk, gelender og stiger, og operasjoner utendørs blir utfordrende. Redningsutstyr kan bli påvirket: Nedising av redningsteknisk utstyr kan forekomme, og isingen kan ødelegge samband- og kommunikasjonsutstyr.",
       "rad": "Kraftig isvekst på overflater: Fjern is raskt fra båten.",
       "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.20261119051351.070",
-      "niva": "gult",
-      "hendelse": "Is",
-      "omrade": "Deler av Troms, Finnmark og Vesterålen",
-      "domene": "land",
-      "start": "2026-11-19T05:20:00+00:00",
-      "slutt": "2026-11-19T18:00:00+00:00",
-      "beskrivelse": "Det er fare for is på grunn av overgang til mildvær i kombinasjon med nedbør som regn.",
-      "konsekvenser": "Lokalt vanskelige kjøreforhold: Det kan være lokalt vanskelige kjøreforhold. Transporttjenester kan også bli påvirket. Våt is i veibanen: Veibanen kan lokalt bli dekket av våt is. Vurder bruk av brodder eller piggsko: Fare for hålkeføre.",
-      "rad": "Lokalt vanskelige kjøreforhold: Beregn ekstra tid til transport og kjøring. Bruk riktige dekk og kjør etter forholdene. Våt is i veibanen: Tilpass farten og kjør etter forholdene. Vurder bruk av brodder eller piggsko: Vær oppmerksom på at isen kan være vanskelig å se. Følg utviklingen: Følg med på oppdaterte farevarsler. Sjekk veimeldinger på vegvesen.no/trafikk.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/is"
     },
     {
       "id": "2.49.0.1.578.0.261119100000.0839_1_0",
