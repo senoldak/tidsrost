@@ -13196,7 +13196,36 @@
     "regjeringen:3193973": "2026-11-19T13:00:59.005Z",
     "medier:72161e51d2ef8621": "2026-11-19T13:00:59.005Z",
     "medier:6600c8cfd96ca212": "2026-11-19T13:00:59.005Z",
-    "medier:4b91704bfc6df457": "2026-11-19T13:00:59.005Z"
+    "medier:4b91704bfc6df457": "2026-11-19T13:00:59.005Z",
+    "medier:362b1e60c84e5d03": "2026-11-19T15:01:00.691Z",
+    "medier:cdd07316bc09abd3": "2026-11-19T15:01:00.691Z",
+    "medier:b067c70b376646d4": "2026-11-19T15:01:00.691Z",
+    "medier:a43781ac62c4545c": "2026-11-19T15:01:00.691Z",
+    "medier:a211bfa4c2fea2f5": "2026-11-19T15:01:00.691Z",
+    "mattilsynet:https://www.mattilsynet.no/tilbakekallinger/hewad-mohmand-kaller-tilbake-rosiner-etter-funn-av-plantevernmidler-i-produktet": "2026-11-19T15:01:00.691Z",
+    "sykling:https://sykling.no/?p=28435": "2026-11-19T15:01:00.691Z",
+    "svomming:https://svomming.no/?post_type=nyheter&p=44994": "2026-11-19T15:01:00.691Z",
+    "medier:10618bbfb5e5b1e0": "2026-11-19T15:01:00.691Z",
+    "medier:3fdbb8f80f5c49d6": "2026-11-19T15:01:00.691Z",
+    "medier:371d14344058e237": "2026-11-19T15:01:00.691Z",
+    "medier:f8214a231fee5773": "2026-11-19T15:01:00.691Z",
+    "medier:0dd7df3cb04e7bd5": "2026-11-19T15:01:00.691Z",
+    "medier:e651aa879a952049": "2026-11-19T15:01:00.691Z",
+    "medier:59495071ff35e80b": "2026-11-19T15:01:00.691Z",
+    "medier:f5f9349613119b7a": "2026-11-19T15:01:00.691Z",
+    "medier:6c82a72586ad8af5": "2026-11-19T15:01:00.691Z",
+    "medier:d2f9c38629a6c827": "2026-11-19T15:01:00.691Z",
+    "medier:b2ce3a948497a04e": "2026-11-19T15:01:00.691Z",
+    "medier:17c26391cd45a967": "2026-11-19T15:01:00.691Z",
+    "medier:e19dc3790ea2635a": "2026-11-19T15:01:00.691Z",
+    "medier:bdc0f784687fdcc8": "2026-11-19T15:01:00.691Z",
+    "medier:0c9efa0fa8c6f774": "2026-11-19T15:01:00.691Z",
+    "medier:aa515772096e113a": "2026-11-19T15:01:00.691Z",
+    "medier:8bec6246a349bd24": "2026-11-19T15:01:00.691Z",
+    "medier:4604af4872ea344e": "2026-11-19T15:01:00.691Z",
+    "medier:aca57161ab50bd77": "2026-11-19T15:01:00.691Z",
+    "medier:5bc31dec8d95d97d": "2026-11-19T15:01:00.691Z",
+    "regjeringen:3194060": "2026-11-19T15:01:00.691Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -13259,91 +13288,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:6b1b3d03e765749b": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T15:04:20.640Z"
-    },
-    "medier:4a7592aa73ae7e34": {
-      "p": 52,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T15:04:20.640Z"
-    },
-    "medier:a0cb3327dc0c04cd": {
-      "p": 74,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T15:04:20.640Z"
-    },
-    "medier:9e880bcfb1f0638a": {
-      "p": 96,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T15:04:20.640Z"
-    },
-    "medier:eed404e8bb44307d": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T15:04:20.640Z"
-    },
-    "medier:a821a7cdbe45bb23": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T15:04:20.640Z"
-    },
-    "medier:d359cb7cc65e4db8": {
-      "p": 64,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T15:04:20.640Z"
-    },
-    "medier:d34db8a248acfe5f": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T15:04:20.640Z"
-    },
-    "medier:f07590ad8d0c838e": {
-      "p": 62,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T15:04:20.640Z"
-    },
-    "medier:8322a822b3df0219": {
-      "p": 58,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T15:04:20.640Z"
-    },
-    "medier:b1a65ed770b06e71": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T15:04:20.640Z"
-    },
-    "regjeringen:3193242": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T15:04:20.640Z"
-    },
-    "regjeringen:3193190": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T15:04:20.640Z"
-    },
-    "sykling:https://sykling.no/?p=28392": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T15:04:20.640Z"
-    },
-    "sykling:https://sykling.no/?p=28409": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T15:04:20.640Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168811": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T15:04:20.640Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168810": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-16T15:04:20.640Z"
-    },
     "medier:b3931959b5c3f13f": {
       "p": 45,
       "v": "b34cb0de5bde",
@@ -15418,6 +15362,71 @@
       "p": 15,
       "v": "b34cb0de5bde",
       "t": "2026-11-19T13:03:24.078Z"
+    },
+    "medier:0c9efa0fa8c6f774": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T15:03:34.219Z"
+    },
+    "medier:10618bbfb5e5b1e0": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T15:03:34.219Z"
+    },
+    "medier:3989f9ecd5392944": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T15:03:34.219Z"
+    },
+    "medier:0dd7df3cb04e7bd5": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T15:03:34.219Z"
+    },
+    "medier:59495071ff35e80b": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T15:03:34.219Z"
+    },
+    "medier:4604af4872ea344e": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T15:03:34.219Z"
+    },
+    "medier:d2f9c38629a6c827": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T15:03:34.219Z"
+    },
+    "medier:e19dc3790ea2635a": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T15:03:34.219Z"
+    },
+    "regjeringen:3194060": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T15:03:34.219Z"
+    },
+    "mattilsynet:https://www.mattilsynet.no/tilbakekallinger/hewad-mohmand-kaller-tilbake-rosiner-etter-funn-av-plantevernmidler-i-produktet": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T15:03:34.219Z"
+    },
+    "sykling:https://sykling.no/?p=28435": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T15:03:34.219Z"
+    },
+    "svomming:https://svomming.no/?post_type=nyheter&p=44994": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T15:03:34.219Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168836": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-19T15:03:34.219Z"
     }
   }
 }
