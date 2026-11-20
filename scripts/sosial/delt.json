@@ -427,7 +427,11 @@
     "tarih": "2026-11-19T13:12:21.272Z",
     "ig_story": "18121249586278523",
     "fb_post": "1343803192154866_122119219767509504",
-    "fb_story": "1139028358716040"
+    "fb_story": "1139028358716040",
+    "ig_post": "18424278385153384",
+    "zaman": {
+      "ig_post": "2026-11-20T11:07:29.838Z"
+    }
   },
   "norwegian-ber-5000-kunder-sperre-bankkortet-etter-dataangrep": {
     "tarih": "2026-11-19T21:10:34.049Z",
@@ -439,25 +443,41 @@
     "reels": {
       "gun": "2026-11-20",
       "dilim": "morgen"
+    },
+    "ig_post": "18118375148604884",
+    "zaman": {
+      "ig_post": "2026-11-20T11:07:54.908Z"
     }
   },
   "klimaavtale-uten-referanser-til-fossil-energi-pa-cop31": {
     "tarih": "2026-11-19T21:11:07.688Z",
     "ig_story": "17914796958473593",
     "fb_post": "1343803192154866_122119321881509504",
-    "fb_story": "1027873046998792"
+    "fb_story": "1027873046998792",
+    "ig_post": "18112205330635464",
+    "zaman": {
+      "ig_post": "2026-11-20T11:08:19.044Z"
+    }
   },
   "donald-trump-vladimir-putin-og-xi-jinping-holdt-toppmote-i-shenzhen": {
     "tarih": "2026-11-20T07:08:32.442Z",
     "ig_story": "18133864153836347",
     "fb_post": "1343803192154866_122119422327509504",
-    "fb_story": "919476304489284"
+    "fb_story": "919476304489284",
+    "ig_post": "17888665890625321",
+    "zaman": {
+      "ig_post": "2026-11-20T11:08:45.014Z"
+    }
   },
   "16-prosent-snuser-daglig-7-prosent-royker-daglig": {
     "tarih": "2026-11-20T07:09:15.154Z",
     "ig_story": "17913353175332473",
     "fb_post": "1343803192154866_122119422657509504",
-    "fb_story": "29259208977032363"
+    "fb_story": "29259208977032363",
+    "ig_post": "18108022772369418",
+    "zaman": {
+      "ig_post": "2026-11-20T11:09:09.532Z"
+    }
   },
   "sysselsetting-etter-naering": {
     "tarih": "2026-11-20T07:09:49.501Z",
@@ -494,5 +514,11 @@
     "ig_story": "18381451960212518",
     "fb_post": "1343803192154866_122119444083509504",
     "fb_story": "1140032628670864"
+  },
+  "sas-link-streik-avsluttes-etter-tariffenighet": {
+    "tarih": "2026-11-20T11:09:24.752Z",
+    "ig_story": "18101184605407758",
+    "fb_post": "1343803192154866_122119466019509504",
+    "fb_story": "1615026859950990"
   }
 }
