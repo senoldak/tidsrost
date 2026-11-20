@@ -1,0 +1,18 @@
+{
+  "dato": "2026-11-20",
+  "donem": "kveld",
+  "tittel": "Kveldsoversikt",
+  "opprettet": "2026-11-20T17:50:57.720Z",
+  "saker": [
+    {
+      "slug": "kronen-svekket-seg-denne-uken-3",
+      "tittel": "Kronen svekket seg denne uken",
+      "ingress": "En euro kostet 10,72 kroner, 15 øre mer enn en uke tidligere. En dollar kostet 9,75 kroner, 19 øre mer enn en uke tidligere."
+    },
+    {
+      "slug": "restriksjoner-i-afghanistan-hindrer-kvinner-i-a-fa-helsehjelp",
+      "tittel": "Restriksjoner i Afghanistan hindrer kvinner i å få helsehjelp",
+      "ingress": "Hjelpeorganisasjoner i Afghanistan advarer om at kvinners rettigheter og frihet blir stadig mer begrenset, noe som gjør tilgangen til livsviktig helsehjelp vanskeligere."
+    }
+  ]
+}
