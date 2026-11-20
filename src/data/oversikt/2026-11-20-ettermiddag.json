@@ -1,0 +1,18 @@
+{
+  "dato": "2026-11-20",
+  "donem": "ettermiddag",
+  "tittel": "Ettermiddagsoversikt",
+  "opprettet": "2026-11-20T13:50:55.067Z",
+  "saker": [
+    {
+      "slug": "sas-link-streik-avsluttes-etter-tariffenighet",
+      "tittel": "SAS Link-streik avsluttes etter tariffenighet",
+      "ingress": "Fellesforbundet og NHO Luftfart har kommet til enighet om en ny tariffavtale for kabinansatte i SAS Link. Dette betyr at den pågående streiken avsluttes, og en varslet sympatistreik er avlyst."
+    },
+    {
+      "slug": "kort-fortalt-20-november-2026",
+      "tittel": "Kort fortalt 20. november 2026",
+      "ingress": "Korte meldinger fra departementer, etater og Stortinget 20. november 2026, med lenke til hele saken hos avsenderen."
+    }
+  ]
+}
