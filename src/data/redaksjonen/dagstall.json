@@ -1,5 +1,5 @@
 {
- "oppdatert": "2026-11-20T17:16:09.698Z",
+ "oppdatert": "2026-11-20T19:05:39.815Z",
  "dager": {
   "2026-11-02": {
    "turer": 9,
@@ -379,16 +379,16 @@
    "venter": 21
   },
   "2026-11-20": {
-   "turer": 8,
-   "funnet": 144,
-   "vurdert": 338,
+   "turer": 9,
+   "funnet": 153,
+   "vurdert": 353,
    "avvist": {
-    "borte-fra-kilden": 7,
-    "lav-nyhetsverdi": 224,
-    "varsomhet": 23,
+    "borte-fra-kilden": 11,
+    "lav-nyhetsverdi": 231,
+    "varsomhet": 25,
     "en-kilde": 11,
-    "standard:kaynak-benzerligi": 19,
-    "standard:ozel-haber": 8,
+    "standard:kaynak-benzerligi": 21,
+    "standard:ozel-haber": 10,
     "for-lite-kildemateriale": 4,
     "standard:suc": 6,
     "standard:turkiye-devlet": 5
@@ -397,7 +397,7 @@
    "utkast": 0,
    "publisert": 11,
    "kortfortalt": 2,
-   "venter": 12
+   "venter": 15
   }
  }
 }
