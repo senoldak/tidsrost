@@ -1,11 +1,5 @@
 {
   "_sinir": {},
-  "fugleinfluensa-pavist-i-kommersielt-fjorfehold-i-vestby-kommune": {
-    "tarih": "2026-11-14T11:10:17.811Z",
-    "ig_story": "18096630377182373",
-    "fb_post": "1343803192154866_122117595645509504",
-    "fb_story": "1793889295059641"
-  },
   "nusa-og-haaland-senket-wales-pa-ullevaal": {
     "tarih": "2026-11-14T19:06:03.453Z",
     "ig_story": "18477251983191662",
@@ -479,24 +473,53 @@
     "tarih": "2026-11-20T17:18:18.944Z",
     "ig_story": "17966618502250762",
     "fb_post": "1343803192154866_122119531467509504",
-    "fb_story": "1460873112826643"
+    "fb_story": "1460873112826643",
+    "ig_post": "18123034117983362",
+    "zaman": {
+      "ig_post": "2026-11-21T13:16:43.674Z"
+    }
   },
   "sivilbefolkning-og-eldre-lurt-for-millioner-av-svindelnettverk-i-rogaland": {
     "tarih": "2026-11-20T21:06:13.474Z",
     "ig_story": "18128680693912120",
     "fb_post": "1343803192154866_122119568769509504",
-    "fb_story": "1193213926704322"
+    "fb_story": "1193213926704322",
+    "ig_post": "17917698138499016",
+    "zaman": {
+      "ig_post": "2026-11-21T13:17:16.288Z"
+    }
   },
   "109-724-uten-fast-lege-i-mai-2026-nesten-halvert-siden-2023": {
     "tarih": "2026-11-21T07:04:37.722Z",
     "ig_story": "17920611288524019",
     "fb_post": "1343803192154866_122119662765509504",
-    "fb_story": "1451528930291944"
+    "fb_story": "1451528930291944",
+    "ig_post": "17917079361519268",
+    "zaman": {
+      "ig_post": "2026-11-21T13:17:45.749Z"
+    }
   },
   "riemannhypotesen-kan-ha-blitt-lost-ved-hjelp-av-kunstig-intelligens": {
     "tarih": "2026-11-21T09:13:05.261Z",
     "ig_story": "18449841088135273",
     "fb_post": "1343803192154866_122119688175509504",
-    "fb_story": "1690112429488174"
+    "fb_story": "1690112429488174",
+    "ig_post": "18093814355291523",
+    "zaman": {
+      "ig_post": "2026-11-21T13:18:13.702Z"
+    }
+  },
+  "sparta-ii-i-brann-etter-droneangrep-i-finskebukta": {
+    "tarih": "2026-11-21T13:18:28.910Z",
+    "ig_post": "17875330794641025",
+    "zaman": {
+      "ig_post": "2026-11-21T13:18:42.993Z"
+    },
+    "son_hata": "kap: Graph 400: Timeout (#-2/2207003) [Zaman Aşımı: Medyanın indirilmesi çok uzun sürüyor.]",
+    "deneme": {
+      "ig_story": 1
+    },
+    "fb_post": "1343803192154866_122119749675509504",
+    "fb_story": "1430486092182250"
   }
 }
