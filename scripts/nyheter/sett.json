@@ -13934,7 +13934,51 @@
     "medier:347cccc170127776": "2026-11-21T11:00:58.098Z",
     "medier:28b406b310e5c3eb": "2026-11-21T11:00:58.098Z",
     "medier:ed888eb664888e0e": "2026-11-21T11:00:58.098Z",
-    "medier:62f60f599af67ca4": "2026-11-21T11:00:58.098Z"
+    "medier:62f60f599af67ca4": "2026-11-21T11:00:58.098Z",
+    "medier:dfb736db0eabeb78": "2026-11-21T13:01:09.874Z",
+    "medier:59d1661a38c9c2c1": "2026-11-21T13:01:09.874Z",
+    "medier:2bb07e83a2ab8221": "2026-11-21T13:01:09.874Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2557": "2026-11-21T13:01:09.874Z",
+    "medier:0d03e497fd941281": "2026-11-21T13:01:09.874Z",
+    "medier:8f11447ef3ba938f": "2026-11-21T13:01:09.874Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2539": "2026-11-21T13:01:09.874Z",
+    "medier:1a4e4ae4e6e74941": "2026-11-21T13:01:09.874Z",
+    "medier:7d81e985075c03ff": "2026-11-21T13:01:09.874Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2532": "2026-11-21T13:01:09.874Z",
+    "medier:62076d0513015a0b": "2026-11-21T13:01:09.874Z",
+    "medier:8707dd665dff6d5c": "2026-11-21T13:01:09.874Z",
+    "medier:2c418a4a477ef750": "2026-11-21T13:01:09.874Z",
+    "medier:95b059146adf395c": "2026-11-21T13:01:09.874Z",
+    "medier:cf2f12c6a0227c09": "2026-11-21T13:01:09.874Z",
+    "medier:0726fd8509bac428": "2026-11-21T13:01:09.874Z",
+    "medier:b81f9361e7de8e0f": "2026-11-21T13:01:09.874Z",
+    "medier:2ecb1a410fa0304c": "2026-11-21T13:01:09.874Z",
+    "medier:2f4f3cfab5a1cb2e": "2026-11-21T13:01:09.874Z",
+    "medier:bfd2a43d66861fd7": "2026-11-21T13:01:09.874Z",
+    "medier:6557367ea63c7910": "2026-11-21T13:01:09.874Z",
+    "medier:6ff936c8a6ae0e56": "2026-11-21T13:01:09.874Z",
+    "medier:305887086643d622": "2026-11-21T13:01:09.874Z",
+    "medier:59f06aed1fdeb737": "2026-11-21T13:01:09.874Z",
+    "medier:21920aa33f44c626": "2026-11-21T13:01:09.874Z",
+    "medier:71b3e5b1348704dd": "2026-11-21T13:01:09.874Z",
+    "medier:14b457b12480769f": "2026-11-21T13:01:09.874Z",
+    "medier:5cd8faf15109ea13": "2026-11-21T13:01:09.874Z",
+    "medier:db61b58a878ba85e": "2026-11-21T13:01:09.874Z",
+    "medier:8de27a1e93c57815": "2026-11-21T13:01:09.874Z",
+    "medier:ca8b1c32c5b4d10a": "2026-11-21T13:01:09.874Z",
+    "medier:a2c369f5222c7e16": "2026-11-21T13:01:09.874Z",
+    "medier:ada68193bf38fb5d": "2026-11-21T13:01:09.874Z",
+    "medier:6963894545ddee10": "2026-11-21T13:01:09.874Z",
+    "medier:84ee3c9b76988f3a": "2026-11-21T13:01:09.874Z",
+    "medier:34e2b4a5794b40a1": "2026-11-21T13:01:09.874Z",
+    "medier:03496ae64274a40e": "2026-11-21T13:01:09.874Z",
+    "medier:aec0207a9c9f5ad8": "2026-11-21T13:01:09.874Z",
+    "medier:ff3cf7dfe0b5631d": "2026-11-21T13:01:09.874Z",
+    "medier:4d22923f1141658f": "2026-11-21T13:01:09.874Z",
+    "medier:078e1d29e0aaae0a": "2026-11-21T13:01:09.874Z",
+    "medier:9ce1d4351f60ae6a": "2026-11-21T13:01:09.874Z",
+    "medier:f89397dd4229051a": "2026-11-21T13:01:09.874Z",
+    "medier:2c05c155d8792f75": "2026-11-21T13:01:09.874Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -13997,96 +14041,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "unnews:https://news.un.org/en/story/2026/11/1168830": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
-    "medier:bf5d5820bcf00429": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
-    "medier:7cd689c812e92234": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
-    "medier:e2bc955cbc8a165e": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
-    "medier:3831f9f8436a10b3": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
-    "medier:93cdddd4e179925a": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
-    "medier:50ef67ee5b5ce05d": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
-    "medier:9a3130d01b56fed9": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
-    "medier:ea961e66133789f6": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
-    "medier:5e297a292c8cc01b": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
-    "regjeringen:3193572": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
-    "mattilsynet:https://www.mattilsynet.no/tilbakekallinger/fjordland-thaisuppe-350-g-tilbakekalles-pa-grunn-av-feilmerking": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
-    "mattilsynet:https://www.mattilsynet.no/fisk-og-akvakultur/fiskesykdommer/bonamiose-og-marteiliose/norge-suspenderer-fristatus-for-osterssykdommene-bonamia-ostreae-og-marteilia-refringens": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
-    "handball:https://www.handball.no/nyheter/2026/11/to-solide-trokker-men-mathilde-er-pa-opptur/": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
-    "handball:https://www.handball.no/nyheter/2026/11/handballtreneren-relanseres--tettere-pa-forskning-og-praksis/": {
-      "p": 10,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
-    "sykling:https://sykling.no/?p=28425": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2499": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2494": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T13:03:53.427Z"
-    },
     "medier:62ece21dc72b1fb9": {
       "p": 92,
       "v": "b34cb0de5bde",
@@ -15896,6 +15850,86 @@
       "p": 80,
       "v": "b34cb0de5bde",
       "t": "2026-11-21T11:03:21.463Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2557": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T13:03:50.845Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2539": {
+      "p": 10,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T13:03:50.845Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2532": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T13:03:50.845Z"
+    },
+    "medier:0d03e497fd941281": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T13:03:50.845Z"
+    },
+    "medier:1a4e4ae4e6e74941": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T13:03:50.845Z"
+    },
+    "medier:62076d0513015a0b": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T13:03:50.845Z"
+    },
+    "medier:740ac1c9dae81427": {
+      "p": 88,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T13:03:50.845Z"
+    },
+    "medier:31b14fe0af701aaf": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T13:03:50.845Z"
+    },
+    "medier:0726fd8509bac428": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T13:03:50.845Z"
+    },
+    "medier:bfd2a43d66861fd7": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T13:03:50.845Z"
+    },
+    "medier:ca8b1c32c5b4d10a": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T13:03:50.845Z"
+    },
+    "medier:21920aa33f44c626": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T13:03:50.845Z"
+    },
+    "medier:f89397dd4229051a": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T13:03:50.845Z"
+    },
+    "medier:4d22923f1141658f": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T13:03:50.845Z"
+    },
+    "medier:14b457b12480769f": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T13:03:50.845Z"
+    },
+    "medier:db61b58a878ba85e": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T13:03:50.845Z"
     }
   }
 }
