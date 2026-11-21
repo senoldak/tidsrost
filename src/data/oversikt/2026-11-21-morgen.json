@@ -1,0 +1,28 @@
+{
+  "dato": "2026-11-21",
+  "donem": "morgen",
+  "tittel": "Morgenoversikt",
+  "opprettet": "2026-11-21T09:50:53.257Z",
+  "saker": [
+    {
+      "slug": "sivilbefolkning-og-eldre-lurt-for-millioner-av-svindelnettverk-i-rogaland",
+      "tittel": "Sivilbefolkning og eldre lurt for millioner av svindelnettverk i Rogaland",
+      "ingress": "Politiet etterforsker et stort svindelnettverk i Rogaland der over 20 unge personer er siktet for å ha lurt eldre kvinner for store beløp."
+    },
+    {
+      "slug": "109-724-uten-fast-lege-i-mai-2026-nesten-halvert-siden-2023",
+      "tittel": "109 724 uten fast lege i mai 2026 – nesten halvert siden utgangen av 2023",
+      "ingress": "Antall innbyggere på fastlegeliste uten fast lege falt til 109 724 i mai 2026, ned fra 214 106 ved utgangen av 2023, viser tall fra Helsedirektoratet."
+    },
+    {
+      "slug": "kort-fortalt-21-november-2026",
+      "tittel": "Kort fortalt 21. november 2026",
+      "ingress": "Korte meldinger fra departementer, etater og Stortinget 21. november 2026, med lenke til hele saken hos avsenderen."
+    },
+    {
+      "slug": "riemannhypotesen-kan-ha-blitt-lost-ved-hjelp-av-kunstig-intelligens",
+      "tittel": "Riemannhypotesen kan ha blitt løst ved hjelp av kunstig intelligens",
+      "ingress": "En forsker deler oppsiktsvekkende påstander om at det berømte matematiske mysteriet er knekt med en språkmodell."
+    }
+  ]
+}
