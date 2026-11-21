@@ -13978,7 +13978,25 @@
     "medier:078e1d29e0aaae0a": "2026-11-21T13:01:09.874Z",
     "medier:9ce1d4351f60ae6a": "2026-11-21T13:01:09.874Z",
     "medier:f89397dd4229051a": "2026-11-21T13:01:09.874Z",
-    "medier:2c05c155d8792f75": "2026-11-21T13:01:09.874Z"
+    "medier:2c05c155d8792f75": "2026-11-21T13:01:09.874Z",
+    "medier:eefea8a5c4d2ceb1": "2026-11-21T15:01:00.343Z",
+    "medier:31b14fe0af701aaf": "2026-11-21T15:01:00.343Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168834": "2026-11-21T15:01:00.343Z",
+    "medier:657269ff6c2a036e": "2026-11-21T15:01:00.343Z",
+    "medier:fdd256d4c412be98": "2026-11-21T15:01:00.343Z",
+    "medier:ebe83da0d35700cf": "2026-11-21T15:01:00.343Z",
+    "medier:ce264ac917d3363e": "2026-11-21T15:01:00.343Z",
+    "medier:bd826c58ed00ed42": "2026-11-21T15:01:00.343Z",
+    "medier:7995dc649e6ca61e": "2026-11-21T15:01:00.343Z",
+    "medier:1014207c30847c1c": "2026-11-21T15:01:00.343Z",
+    "medier:36e93fb50bf58d3b": "2026-11-21T15:01:00.343Z",
+    "medier:c409003052140a82": "2026-11-21T15:01:00.343Z",
+    "medier:d9e4175674cd6933": "2026-11-21T15:01:00.343Z",
+    "medier:ac812ff354a28144": "2026-11-21T15:01:00.343Z",
+    "medier:77f411a9f798e1df": "2026-11-21T15:01:00.343Z",
+    "medier:3b274fa84ae625ab": "2026-11-21T15:01:00.343Z",
+    "medier:ecf9481f17ea4287": "2026-11-21T15:01:00.343Z",
+    "medier:0142560cc8c31ad4": "2026-11-21T15:01:00.343Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -14041,46 +14059,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:62ece21dc72b1fb9": {
-      "p": 92,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T15:03:16.171Z"
-    },
-    "medier:2bebac81335fb9d1": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T15:03:16.171Z"
-    },
-    "medier:e811fad0ed1b0dd3": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T15:03:16.171Z"
-    },
-    "medier:f3e0e00ff0f6a494": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T15:03:16.171Z"
-    },
-    "medier:eaf6682acbb4e221": {
-      "p": 42,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T15:03:16.171Z"
-    },
-    "medier:56cdf38b6d8c70a8": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T15:03:16.171Z"
-    },
-    "mattilsynet:https://www.mattilsynet.no/dyr/dyresykdommer/fugleinfluensa/ny-pavisning-av-fugleinfluensa-i-lindesnes": {
-      "p": 48,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T15:03:16.171Z"
-    },
-    "kystverket:https://www.kystverket.no/nyheter/dypvannskaia-i-mo-i-rana-er-i-drift/": {
-      "p": 38,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-18T15:03:16.171Z"
-    },
     "medier:cc3b82e02b31cdab": {
       "p": 35,
       "v": "b34cb0de5bde",
@@ -15930,6 +15908,51 @@
       "p": 30,
       "v": "b34cb0de5bde",
       "t": "2026-11-21T13:03:50.845Z"
+    },
+    "medier:657269ff6c2a036e": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T15:02:27.637Z"
+    },
+    "medier:bd826c58ed00ed42": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T15:02:27.637Z"
+    },
+    "medier:ac812ff354a28144": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T15:02:27.637Z"
+    },
+    "medier:c409003052140a82": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T15:02:27.637Z"
+    },
+    "medier:cea1973ca1424204": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T15:02:27.637Z"
+    },
+    "medier:d050fed1cbc65c7a": {
+      "p": 88,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T15:02:27.637Z"
+    },
+    "medier:0142560cc8c31ad4": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T15:02:27.637Z"
+    },
+    "medier:3b274fa84ae625ab": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T15:02:27.637Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168834": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-21T15:02:27.637Z"
     }
   }
 }
