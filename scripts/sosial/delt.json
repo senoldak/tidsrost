@@ -1,37 +1,5 @@
 {
   "_sinir": {},
-  "kjerneinflasjon-mot-maalet": {
-    "tarih": "2026-11-14T07:07:51.786Z",
-    "ig_story": "18061720631658682",
-    "fb_post": "1343803192154866_122117547441509504",
-    "fb_story": "1659038615633594",
-    "ig_reels": "18472751602189039",
-    "fb_reels": "1151734424023931",
-    "reels": {
-      "gun": "2026-11-14",
-      "dilim": "kveld"
-    }
-  },
-  "lonnsindeksen-forklart": {
-    "tarih": "2026-11-14T07:08:30.839Z",
-    "ig_story": "17883195147549205",
-    "fb_post": "1343803192154866_122117547819509504",
-    "fb_story": "1093002023770774",
-    "ig_reels": "17919906591523655",
-    "fb_reels": "1675690963929147",
-    "reels": {
-      "gun": "2026-11-15",
-      "dilim": "morgen"
-    }
-  },
-  "flystansen-i-usa-opphevet": {
-    "tarih": "2026-11-14T09:06:17.349Z",
-    "ig_story": "18120027235796532",
-    "fb_post": "1343803192154866_122117574507509504",
-    "fb_story": "1285377623762716",
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk; instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
   "fugleinfluensa-pavist-i-kommersielt-fjorfehold-i-vestby-kommune": {
     "tarih": "2026-11-14T11:10:17.811Z",
     "ig_story": "18096630377182373",
@@ -524,5 +492,11 @@
     "ig_story": "17920611288524019",
     "fb_post": "1343803192154866_122119662765509504",
     "fb_story": "1451528930291944"
+  },
+  "riemannhypotesen-kan-ha-blitt-lost-ved-hjelp-av-kunstig-intelligens": {
+    "tarih": "2026-11-21T09:13:05.261Z",
+    "ig_story": "18449841088135273",
+    "fb_post": "1343803192154866_122119688175509504",
+    "fb_story": "1690112429488174"
   }
 }
