@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-22T07:03:36.527Z",
+  "hentet": "2026-11-22T09:05:29.300Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-22T07:02:47+00:00",
+  "sistEndretHosMet": "2026-11-22T09:04:21+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.20261121105704.019",
@@ -33,19 +33,6 @@
       "beskrivelse": "Fra natt til søndag nordvestlig stiv kuling 15 m/s. Søndag ettermiddag minkende, først i vest.",
       "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
       "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261121123058.003",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Svenskegrensa - Stavern",
-      "domene": "hav",
-      "start": "2026-11-22T03:00:00+00:00",
-      "slutt": "2026-11-22T08:00:00+00:00",
-      "beskrivelse": "Fra natt til søndag nordlig stiv kuling 15 m/s. Minkende søndag formiddag.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     }
   ]

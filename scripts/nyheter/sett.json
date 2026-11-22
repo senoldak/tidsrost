@@ -14099,7 +14099,19 @@
     "medier:1823567fb31ac2c8": "2026-11-22T07:00:55.873Z",
     "medier:b9f22de2db53ae4c": "2026-11-22T07:00:55.873Z",
     "medier:3d1c5d5523ab3cb1": "2026-11-22T07:00:55.873Z",
-    "medier:a925a39dd3a2af44": "2026-11-22T07:00:55.873Z"
+    "medier:a925a39dd3a2af44": "2026-11-22T07:00:55.873Z",
+    "medier:23e0b2acb362d876": "2026-11-22T09:01:01.984Z",
+    "medier:cc419b11ebbdaa8e": "2026-11-22T09:01:01.984Z",
+    "medier:35f8cae52c6682ac": "2026-11-22T09:01:01.984Z",
+    "medier:ed82f6e5cf719238": "2026-11-22T09:01:01.984Z",
+    "medier:e4bb17ba590c64d8": "2026-11-22T09:01:01.984Z",
+    "medier:57313679b22c6813": "2026-11-22T09:01:01.984Z",
+    "medier:afc968f0177cc376": "2026-11-22T09:01:01.984Z",
+    "medier:f372431ffa11aeb5": "2026-11-22T09:01:01.984Z",
+    "medier:cc7875991f5181af": "2026-11-22T09:01:01.984Z",
+    "medier:e5792e9c689d9f82": "2026-11-22T09:01:01.984Z",
+    "medier:c881b92791f4bc36": "2026-11-22T09:01:01.984Z",
+    "medier:c26f6a53d2868ba9": "2026-11-22T09:01:01.984Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -14162,71 +14174,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "ssb:0a6811e4-a3f5-4bd0-8fda-7285870f083b": {
-      "p": 42,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T09:03:11.552Z"
-    },
-    "medier:bcf132ee2e05971f": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T09:03:11.552Z"
-    },
-    "medier:bc116bac1ceed1e6": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T09:03:11.552Z"
-    },
-    "medier:06b96aa0cb1e1cf7": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T09:03:11.552Z"
-    },
-    "medier:ed0a5d46bd85b328": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T09:03:11.552Z"
-    },
-    "medier:dba8ed24a418bf87": {
-      "p": 52,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T09:03:11.552Z"
-    },
-    "medier:010db760c16adf66": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T09:03:11.552Z"
-    },
-    "medier:7dcc3e6f2d22903d": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T09:03:11.552Z"
-    },
-    "medier:b2cbba515b4309b9": {
-      "p": 62,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T09:03:11.552Z"
-    },
-    "medier:24b2309b63391ee9": {
-      "p": 74,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T09:03:11.552Z"
-    },
-    "regjeringen:3193631": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T09:03:11.552Z"
-    },
-    "handball:https://www.handball.no/nyheter/2026/11/ny-temaside-pa-handball.no-okonomi-som-barriere": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T09:03:11.552Z"
-    },
-    "arbeidstilsynet:https://www.arbeidstilsynet.no/nyheter/kan-eg-overfore-feriedagane-mine-til-neste-ar/": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T09:03:11.552Z"
-    },
     "medier:1aada32ae232962c": {
       "p": 45,
       "v": "b34cb0de5bde",
@@ -15896,6 +15843,31 @@
       "p": 70,
       "v": "b34cb0de5bde",
       "t": "2026-11-22T07:02:02.904Z"
+    },
+    "medier:cc419b11ebbdaa8e": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-22T09:03:02.666Z"
+    },
+    "medier:85569ea4c79a02e2": {
+      "p": 88,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-22T09:03:02.666Z"
+    },
+    "medier:35359c50e561c932": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-22T09:03:02.666Z"
+    },
+    "medier:e4bb17ba590c64d8": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-22T09:03:02.666Z"
+    },
+    "medier:afc968f0177cc376": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-22T09:03:02.666Z"
     }
   }
 }
