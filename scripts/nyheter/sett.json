@@ -14091,7 +14091,15 @@
     "medier:fc1240949f38affa": "2026-11-21T23:00:56.078Z",
     "medier:36dcfc0f699d6666": "2026-11-21T23:00:56.078Z",
     "medier:34e50840c31aa9b6": "2026-11-22T01:01:09.278Z",
-    "medier:1766309f2d574090": "2026-11-22T01:01:09.278Z"
+    "medier:1766309f2d574090": "2026-11-22T01:01:09.278Z",
+    "medier:8355f9cfe6c594a3": "2026-11-22T07:00:55.873Z",
+    "medier:6865eb432676faff": "2026-11-22T07:00:55.873Z",
+    "medier:b5859218b2c891b9": "2026-11-22T07:00:55.873Z",
+    "medier:b4ed275fbe5f3338": "2026-11-22T07:00:55.873Z",
+    "medier:1823567fb31ac2c8": "2026-11-22T07:00:55.873Z",
+    "medier:b9f22de2db53ae4c": "2026-11-22T07:00:55.873Z",
+    "medier:3d1c5d5523ab3cb1": "2026-11-22T07:00:55.873Z",
+    "medier:a925a39dd3a2af44": "2026-11-22T07:00:55.873Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -14154,96 +14162,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:44534ef1e8169d32": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
-    "medier:5673ad3b7bc79108": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
-    "medier:4d7ed3dac1345c88": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
-    "medier:9471c521f1dbd275": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
-    "medier:c7e86a7d4a6babf1": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
-    "medier:5de1b31f7db81f45": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
-    "medier:0ae32d945f4195a0": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
-    "medier:82a01666077f5ff2": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
-    "medier:64b4812c75b96791": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
-    "medier:f9d1cced674af666": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
-    "ssb:19cd58d7-1b0e-42b8-9bbc-601e738277ce": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
-    "ssb:701baade-7270-435b-9e77-1f16baedd1cb": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
-    "ssb:4e5a3d7c-74de-4ff6-b326-c9520da44508": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
-    "ssb:6245eef5-6807-4572-8641-3a039beed8d9": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
-    "ssb:ef23ff5a-6a53-491f-a9fe-c61e95815929": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
-    "skatteetaten:/presse/nyhetsrommet/fiskebruk-ma-betale-skatt-og-avgift-utanlandske-selskap-har-unndratt/": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/anbefaler-trinnvis-utvikling-av-rv.-4-mellom-sinsen-og-gjellerasen": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2508": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T07:02:22.366Z"
-    },
     "ssb:0a6811e4-a3f5-4bd0-8fda-7285870f083b": {
       "p": 42,
       "v": "b34cb0de5bde",
@@ -15948,6 +15866,36 @@
       "p": 55,
       "v": "b34cb0de5bde",
       "t": "2026-11-22T01:02:22.461Z"
+    },
+    "medier:8355f9cfe6c594a3": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-22T07:02:02.904Z"
+    },
+    "medier:7c473fcb41c63517": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-22T07:02:02.904Z"
+    },
+    "medier:e5792e9c689d9f82": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-22T07:02:02.904Z"
+    },
+    "medier:1823567fb31ac2c8": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-22T07:02:02.904Z"
+    },
+    "medier:3d1c5d5523ab3cb1": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-22T07:02:02.904Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168851": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-22T07:02:02.904Z"
     }
   }
 }

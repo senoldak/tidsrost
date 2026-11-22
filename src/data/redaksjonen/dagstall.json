@@ -1,5 +1,5 @@
 {
- "oppdatert": "2026-11-22T01:02:23.645Z",
+ "oppdatert": "2026-11-22T07:03:35.612Z",
  "dager": {
   "2026-11-02": {
    "turer": 9,
@@ -420,17 +420,17 @@
    "venter": 16
   },
   "2026-11-22": {
-   "turer": 2,
-   "funnet": 6,
-   "vurdert": 13,
+   "turer": 3,
+   "funnet": 12,
+   "vurdert": 21,
    "avvist": {
-    "lav-nyhetsverdi": 13
+    "lav-nyhetsverdi": 21
    },
    "skrevet": 0,
    "utkast": 0,
    "publisert": 0,
    "kortfortalt": 0,
-   "venter": 0
+   "venter": 3
   }
  }
 }
