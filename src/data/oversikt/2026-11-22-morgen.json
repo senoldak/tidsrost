@@ -1,0 +1,33 @@
+{
+  "dato": "2026-11-22",
+  "donem": "morgen",
+  "tittel": "Morgenoversikt",
+  "opprettet": "2026-11-22T09:50:53.918Z",
+  "saker": [
+    {
+      "slug": "sparta-ii-i-brann-etter-droneangrep-i-finskebukta",
+      "tittel": "Sparta II i brann etter droneangrep i Finskebukta",
+      "ingress": "Et russisk lasteskip brenner etter et angrep lørdag formiddag. Fartøyet har drevet inn i finsk territorialfarvann, og myndighetene forbereder seg på mulige miljøskader."
+    },
+    {
+      "slug": "martin-odegaard-med-tabbe-og-assist-i-kamp-mot-newcastle",
+      "tittel": "Martin Ødegaard med tabbe og assist i kamp mot Newcastle",
+      "ingress": "Martin Ødegaard spilte en sentral rolle med både tabbe og målgivende da Arsenal sikret 2–2 borte mot Newcastle lørdag kveld."
+    },
+    {
+      "slug": "38-3-prosent-har-hoyere-utdanning-kvinner-43-7-og-menn-32-8-prosent",
+      "tittel": "38,3 prosent har høyere utdanning – kvinner 43,7 og menn 32,8 prosent",
+      "ingress": "38,3 prosent av befolkningen over 16 år hadde universitets- eller høgskoleutdanning i 2025, viser tall fra SSB. Gapet mellom kjønnene er nå 10,9 prosentpoeng, og Oslo skiller seg kraftig ut."
+    },
+    {
+      "slug": "skatteniva-myte-og-tall",
+      "tittel": "Åtte OECD-land hadde høyere skatt som andel av BNP enn Norge i 2024",
+      "ingress": "Skatt og avgifter utgjorde 40,2 prosent av BNP i Norge i 2024, mot 34,1 prosent i OECD-snittet. Norge var ikke øverst i noen av årene i perioden 2015–2024, og tallet svinger mer enn OECD-snittet."
+    },
+    {
+      "slug": "seks-likposer-hentet-ut-etter-fabrikkbrann-i-indonesia",
+      "tittel": "Seks likposer hentet ut etter fabrikkbrann i Indonesia",
+      "ingress": "Indonesisk politi har hentet ut seks likposer fra en godterifabrikk etter en voldsom brann. 42 ansatte er fortsatt ikke gjort rede for."
+    }
+  ]
+}
