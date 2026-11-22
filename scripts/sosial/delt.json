@@ -1,19 +1,5 @@
 {
   "_sinir": {},
-  "iran-og-bahrain-i-uenighet-etter-droneangrep-mot-militaerbase": {
-    "tarih": "2026-11-15T13:07:25.820Z",
-    "ig_story": "18414055825094822",
-    "fb_post": "1343803192154866_122117934561509504",
-    "fb_story": "1863057888318739",
-    "ig_reels": "18164083981500757",
-    "fb_reels": "1626833818332633",
-    "reels": {
-      "gun": "2026-11-16",
-      "dilim": "morgen"
-    },
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
   "378-500-mottar-uforetrygd-106-prosent-av-befolkningen-18-67-ar": {
     "tarih": "2026-11-16T07:12:00.931Z",
     "ig_story": "18124962814923666",
@@ -501,24 +487,50 @@
     "tarih": "2026-11-21T21:05:36.121Z",
     "ig_story": "18037693610910691",
     "fb_post": "1343803192154866_122119844241509504",
-    "fb_story": "2003597543641310"
+    "fb_story": "2003597543641310",
+    "ig_post": "18126085921941230",
+    "zaman": {
+      "ig_post": "2026-11-22T15:06:35.612Z"
+    }
   },
   "38-3-prosent-har-hoyere-utdanning-kvinner-43-7-og-menn-32-8-prosent": {
     "tarih": "2026-11-22T07:05:44.261Z",
     "ig_story": "17948663661495974",
     "fb_post": "1343803192154866_122119933491509504",
-    "fb_story": "1870956507684982"
+    "fb_story": "1870956507684982",
+    "ig_post": "18119924570023967",
+    "zaman": {
+      "ig_post": "2026-11-22T15:07:09.583Z"
+    }
   },
   "skatteniva-myte-og-tall": {
     "tarih": "2026-11-22T07:06:16.974Z",
     "ig_story": "18083118011398373",
     "fb_post": "1343803192154866_122119933707509504",
-    "fb_story": "2355371861668492"
+    "fb_story": "2355371861668492",
+    "ig_post": "18143013085715545",
+    "zaman": {
+      "ig_post": "2026-11-22T15:07:36.735Z"
+    }
   },
   "seks-likposer-hentet-ut-etter-fabrikkbrann-i-indonesia": {
     "tarih": "2026-11-22T09:07:30.938Z",
     "ig_story": "18363795982170518",
     "fb_post": "1343803192154866_122119952883509504",
-    "fb_story": "1824685255249501"
+    "fb_story": "1824685255249501",
+    "ig_post": "18206789284335945",
+    "zaman": {
+      "ig_post": "2026-11-22T15:08:06.015Z"
+    }
+  },
+  "anisa-fadhl-flyktet-fra-kamphandlinger": {
+    "tarih": "2026-11-22T15:08:21.252Z",
+    "ig_post": "17899356858418268",
+    "zaman": {
+      "ig_post": "2026-11-22T15:08:32.933Z"
+    },
+    "ig_story": "18124757728940854",
+    "fb_post": "1343803192154866_122120019363509504",
+    "fb_story": "1488093651050189"
   }
 }
