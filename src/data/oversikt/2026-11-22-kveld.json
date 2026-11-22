@@ -1,0 +1,28 @@
+{
+  "dato": "2026-11-22",
+  "donem": "kveld",
+  "tittel": "Kveldsoversikt",
+  "opprettet": "2026-11-22T17:50:52.835Z",
+  "saker": [
+    {
+      "slug": "anisa-fadhl-flyktet-fra-kamphandlinger",
+      "tittel": "Anisa Fadhl flyktet fra kamphandlinger",
+      "ingress": "Ifølge FNs nyhetstjeneste (UN News) har opptrappingen av kamphandlingene rammet gravide og fødende hardt, og mange mangler helsetilbud."
+    },
+    {
+      "slug": "cop31-avsluttet-uten-klimapakt-etter-dager-med-fastlaste-forhandlinger",
+      "tittel": "Cop31 avsluttet uten klimapakt etter dager med fastlåste forhandlinger",
+      "ingress": "FNs klimatoppmøte COP31 i Antalya i Türkiye ble avsluttet søndag uten en endelig klimapakt. Forhandlerne klarte ikke å bli enige om fossil energi."
+    },
+    {
+      "slug": "klimatoppmotet-i-tyrkia-kollapset-uten-slutterklaering",
+      "tittel": "Klimatoppmøtet i Tyrkia kollapset uten slutterklæring",
+      "ingress": "For første gang på 26 år avsluttet FNs klimatoppmøte uten at landene ble enige om en felles slutterklæring."
+    },
+    {
+      "slug": "marianne-torp-foss-saksoker-staten-etter-a-ha-fatt-me-etter-koronavaksine",
+      "tittel": "Marianne Torp Foss saksøker staten etter å ha fått ME etter koronavaksine",
+      "ingress": "Marianne Torp Foss ble syk med ME kort tid etter å ha tatt andre dose med koronavaksine. Etter å ha vunnet i tingretten, må staten og Foss nå gjennom en ny runde i lagmannsretten."
+    }
+  ]
+}
