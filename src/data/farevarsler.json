@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-22T09:05:29.300Z",
+  "hentet": "2026-11-22T11:04:06.544Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,21 +7,8 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-22T09:04:21+00:00",
+  "sistEndretHosMet": "2026-11-22T11:02:02+00:00",
   "varsler": [
-    {
-      "id": "2.49.0.1.578.0.20261121105704.019",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Fruholmen - Slettnes fyr",
-      "domene": "hav",
-      "start": "2026-11-21T17:00:00+00:00",
-      "slutt": "2026-11-22T11:00:00+00:00",
-      "beskrivelse": "Fra lørdag kveld nordvestlig stiv kuling 15 m/s. Søndag formiddag minkende.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
     {
       "id": "2.49.0.1.578.0.20261121110504.004",
       "niva": "gult",
@@ -34,6 +21,32 @@
       "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
       "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
+    },
+    {
+      "id": "2.49.0.1.578.0.20261122080115.088",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "Svenskegrensa - Stavern",
+      "domene": "hav",
+      "start": "2026-11-22T17:00:00+00:00",
+      "slutt": "2026-11-23T09:00:00+00:00",
+      "beskrivelse": "Fra søndag kveld nordlig stiv kuling 15 m/s, minkende mandag formiddag.",
+      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
+      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
+    },
+    {
+      "id": "2.49.0.1.578.0.20261122081858.009",
+      "niva": "gult",
+      "hendelse": "Is",
+      "omrade": "Deler av Troms og Finnmark",
+      "domene": "land",
+      "start": "2026-11-23T14:00:00+00:00",
+      "slutt": "2026-11-23T23:00:00+00:00",
+      "beskrivelse": "Mandag ettermiddag ventes fare for is på grunn av overgang til mildvær og nedbør som fryser på kald bakke. Nedbøren kan enkelte steder starte som snø eller sludd.",
+      "konsekvenser": "Lokalt vanskelige kjøreforhold: Det kan være lokalt vanskelige kjøreforhold. Transporttjenester kan også bli påvirket. Vurder bruk av brodder eller piggsko: Fare for hålkeføre.",
+      "rad": "Lokalt vanskelige kjøreforhold: Beregn ekstra tid til transport og kjøring. Bruk riktige dekk og kjør etter forholdene. Vurder bruk av brodder eller piggsko: Vær oppmerksom på at isen kan være vanskelig å se. Følg utviklingen: Følg med på oppdaterte farevarsler. Sjekk veimeldinger på vegvesen.no/trafikk.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/is"
     }
   ]
 }

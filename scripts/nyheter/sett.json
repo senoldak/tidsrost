@@ -14111,7 +14111,21 @@
     "medier:cc7875991f5181af": "2026-11-22T09:01:01.984Z",
     "medier:e5792e9c689d9f82": "2026-11-22T09:01:01.984Z",
     "medier:c881b92791f4bc36": "2026-11-22T09:01:01.984Z",
-    "medier:c26f6a53d2868ba9": "2026-11-22T09:01:01.984Z"
+    "medier:c26f6a53d2868ba9": "2026-11-22T09:01:01.984Z",
+    "medier:d9dcc9290a675eab": "2026-11-22T11:01:01.583Z",
+    "medier:35359c50e561c932": "2026-11-22T11:01:01.583Z",
+    "medier:e26d4bb3335f88e1": "2026-11-22T11:01:01.583Z",
+    "medier:2f0bc7b748d3d9ad": "2026-11-22T11:01:01.583Z",
+    "medier:0c37538c210c732a": "2026-11-22T11:01:01.583Z",
+    "medier:c4f66d2c3dd5ea36": "2026-11-22T11:01:01.583Z",
+    "medier:97bfcd3afed2c777": "2026-11-22T11:01:01.583Z",
+    "medier:fa609ccdaa7373fe": "2026-11-22T11:01:01.583Z",
+    "medier:221dbef3d8e9cca5": "2026-11-22T11:01:01.583Z",
+    "medier:c35768c04e33bea2": "2026-11-22T11:01:01.583Z",
+    "medier:468752794a3cd38f": "2026-11-22T11:01:01.583Z",
+    "medier:352421c378668265": "2026-11-22T11:01:01.583Z",
+    "medier:4b38e3e872fa75c4": "2026-11-22T11:01:01.583Z",
+    "met:ice:deler-av-troms-og-finnmark:2026-11-23": "2026-11-22T11:01:01.583Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -14174,131 +14188,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:1aada32ae232962c": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "medier:0967a70badd4899b": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "medier:04f942598047a3cc": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "medier:55c35a541e48c559": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "medier:f902bbe22fb7c3d3": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "medier:b3741043c1df3051": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "medier:82570d8143707102": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "medier:d9ead8c4b467e5d2": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "medier:d8e9c93bdc8ff4a5": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "medier:fab97cd0f6f7bbaa": {
-      "p": 42,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "medier:aa05e43f6f27d9ca": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "medier:540063117f25513f": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "medier:c71b8b73e40521d0": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "medier:c3dfa036e727cede": {
-      "p": 48,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "regjeringen:3193974": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "konkurransetilsynet:https://konkurransetilsynet.no/?p=56152": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "havforskning:https://www.hi.no/hi/nettrapporter/rapport-fra-havforskningen-2026-76": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "sivilombudet:https://www.sivilombudet.no/?p=64031": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "idrettsforbundet:https://www.idrettsforbundet.no/nyheter/2026/apen-time-19.-november/": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "handball:https://www.handball.no/nyheter/2026/11/european-league-trekning-for-larvik-og-tertnes/": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "sykling:https://sykling.no/?p=28427": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2503": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2427": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2356": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2372": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-19T11:03:24.832Z"
-    },
     "medier:56cccd7596892fb1": {
       "p": 92,
       "v": "b34cb0de5bde",
@@ -15868,6 +15757,21 @@
       "p": 35,
       "v": "b34cb0de5bde",
       "t": "2026-11-22T09:03:02.666Z"
+    },
+    "medier:e26d4bb3335f88e1": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-22T11:02:54.779Z"
+    },
+    "medier:c4f66d2c3dd5ea36": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-22T11:02:54.779Z"
+    },
+    "medier:221dbef3d8e9cca5": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-22T11:02:54.779Z"
     }
   }
 }
