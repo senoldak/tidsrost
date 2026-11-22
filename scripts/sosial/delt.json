@@ -1,13 +1,5 @@
 {
   "_sinir": {},
-  "apotekenes-e-reseptlosning-var-nede-flere-ganger-lordag": {
-    "tarih": "2026-11-14T21:05:59.137Z",
-    "ig_story": "18497844460128502",
-    "fb_post": "1343803192154866_122117744295509504",
-    "fb_story": "1555391749756208",
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
   "379-kilo-husholdningsavfall-per-innbygger-49-prosent-til-materialgjenvinning": {
     "tarih": "2026-11-15T07:08:47.965Z",
     "ig_story": "17968734657209618",
@@ -534,5 +526,17 @@
     "ig_story": "18037693610910691",
     "fb_post": "1343803192154866_122119844241509504",
     "fb_story": "2003597543641310"
+  },
+  "38-3-prosent-har-hoyere-utdanning-kvinner-43-7-og-menn-32-8-prosent": {
+    "tarih": "2026-11-22T07:05:44.261Z",
+    "ig_story": "17948663661495974",
+    "fb_post": "1343803192154866_122119933491509504",
+    "fb_story": "1870956507684982"
+  },
+  "skatteniva-myte-og-tall": {
+    "tarih": "2026-11-22T07:06:16.974Z",
+    "ig_story": "18083118011398373",
+    "fb_post": "1343803192154866_122119933707509504",
+    "fb_story": "2355371861668492"
   }
 }
