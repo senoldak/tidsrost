@@ -1,25 +1,5 @@
 {
   "_sinir": {},
-  "kort-fortalt-16-november-2026": {
-    "tarih": "2026-11-16T13:13:58.777Z",
-    "ig_story": "18022492292948640",
-    "fb_post": "1343803192154866_122118229437509504",
-    "fb_story": "997721773390083"
-  },
-  "norge-og-37-andre-land-advarer-mot-atomfare-i-ukraina": {
-    "tarih": "2026-11-16T13:14:33.676Z",
-    "ig_story": "18148595689582731",
-    "fb_post": "1343803192154866_122118229671509504",
-    "fb_story": "1605691731329320",
-    "ig_reels": "18116677909854524",
-    "fb_reels": "4603078826600794",
-    "reels": {
-      "gun": "2026-11-17",
-      "dilim": "morgen"
-    },
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
   "dnb-og-sbanken-rammet-av-omfattende-tekniske-problemer-i-nettbank-og-mobilbank": {
     "tarih": "2026-11-16T15:20:05.059Z",
     "ig_story": "18113333210229026",
@@ -554,5 +534,11 @@
     "ig_story": "18212270998374925",
     "fb_post": "1343803192154866_122120168721509504",
     "fb_story": "2685581725219534"
+  },
+  "kriminelle-nettverk-utnytter-offentlige-stotteordninger": {
+    "tarih": "2026-11-23T13:18:26.140Z",
+    "ig_story": "17924733744454187",
+    "fb_post": "1343803192154866_122120230155509504",
+    "fb_story": "980537118109745"
   }
 }
