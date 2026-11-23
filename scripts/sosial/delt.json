@@ -1,35 +1,5 @@
 {
   "_sinir": {},
-  "dnb-og-sbanken-rammet-av-omfattende-tekniske-problemer-i-nettbank-og-mobilbank": {
-    "tarih": "2026-11-16T15:20:05.059Z",
-    "ig_story": "18113333210229026",
-    "fb_post": "1343803192154866_122118282225509504",
-    "fb_story": "1434890332128717"
-  },
-  "ukraina-har-angrepet-broen-til-krym-med-droner": {
-    "tarih": "2026-11-16T17:20:06.679Z",
-    "ig_story": "18131084080859816",
-    "fb_post": "1343803192154866_122118310839509504",
-    "fb_story": "3105290339828851",
-    "ig_reels": "17928770514430452",
-    "fb_reels": "4596678633947379",
-    "reels": {
-      "gun": "2026-11-16",
-      "dilim": "kveld"
-    }
-  },
-  "ukraina-i-samtaler-med-usa-og-eu-om-fremtidige-fredsforhandlinger": {
-    "tarih": "2026-11-16T19:18:24.530Z",
-    "ig_story": "18124755680470638",
-    "fb_post": "1343803192154866_122118336213509504",
-    "fb_story": "40097340733245007"
-  },
-  "fn-sjefen-oppfordrer-til-juridisk-bindende-instrument-for-drapsroboter": {
-    "tarih": "2026-11-16T19:19:09.701Z",
-    "ig_story": "18097292123690163",
-    "fb_post": "1343803192154866_122118336645509504",
-    "fb_story": "1741603324131708"
-  },
   "cop31-gar-inn-i-avgjorende-uke-med-politiske-utfordringer-og-nye-teknologiske-lo": {
     "tarih": "2026-11-16T21:08:53.357Z",
     "ig_story": "18185959708450827",
@@ -527,7 +497,11 @@
     "tarih": "2026-11-23T07:06:50.293Z",
     "ig_story": "18104683868065701",
     "fb_post": "1343803192154866_122120168523509504",
-    "fb_story": "2577641919377470"
+    "fb_story": "2577641919377470",
+    "ig_post": "18116545220162958",
+    "zaman": {
+      "ig_post": "2026-11-23T19:53:42.534Z"
+    }
   },
   "var-energi-kjoper-conocophillips-norske-virksomhet": {
     "tarih": "2026-11-23T07:07:27.629Z",
@@ -539,12 +513,20 @@
     "reels": {
       "gun": "2026-11-23",
       "dilim": "kveld"
+    },
+    "ig_post": "18196465354406866",
+    "zaman": {
+      "ig_post": "2026-11-23T19:54:09.175Z"
     }
   },
   "kriminelle-nettverk-utnytter-offentlige-stotteordninger": {
     "tarih": "2026-11-23T13:18:26.140Z",
     "ig_story": "17924733744454187",
     "fb_post": "1343803192154866_122120230155509504",
-    "fb_story": "980537118109745"
+    "fb_story": "980537118109745",
+    "ig_post": "18051155726822432",
+    "zaman": {
+      "ig_post": "2026-11-23T19:54:34.700Z"
+    }
   }
 }
