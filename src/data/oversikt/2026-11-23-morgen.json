@@ -1,0 +1,23 @@
+{
+  "dato": "2026-11-23",
+  "donem": "morgen",
+  "tittel": "Morgenoversikt",
+  "opprettet": "2026-11-23T09:50:55.516Z",
+  "saker": [
+    {
+      "slug": "arbeiderpartiet-skal-legge-fram-helhetlig-tilbud-i-budsjettforhandlingene-pa-sto",
+      "tittel": "Arbeiderpartiet skal legge fram helhetlig tilbud i budsjettforhandlingene på Stortinget",
+      "ingress": "De fem partiene som forhandler om neste års statsbudsjett på Stortinget, møtes til nye samtalemøter. Det er ventet at Arbeiderpartiet vil legge fram et helhetlig tilbud."
+    },
+    {
+      "slug": "kort-fortalt-23-november-2026",
+      "tittel": "Kort fortalt 23. november 2026",
+      "ingress": "Korte meldinger fra departementer, etater og Stortinget 23. november 2026, med lenke til hele saken hos avsenderen."
+    },
+    {
+      "slug": "var-energi-kjoper-conocophillips-norske-virksomhet",
+      "tittel": "Vår Energi kjøper ConocoPhillips' norske virksomhet",
+      "ingress": "Vår Energi har inngått en avtale om å overta ConocoPhillips sin virksomhet og tilhørende anlegg i Norge og Storbritannia."
+    }
+  ]
+}
