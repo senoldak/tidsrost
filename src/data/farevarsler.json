@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-23T21:10:32.324Z",
+  "hentet": "2026-11-23T23:16:56.539Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,46 +7,20 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-23T21:10:00+00:00",
+  "sistEndretHosMet": "2026-11-23T23:16:16+00:00",
   "varsler": [
     {
-      "id": "2.49.0.1.578.0.261123100000.0834_7_0",
+      "id": "2.49.0.1.578.0.261123220000.0834_7_0",
       "niva": "oransje",
       "hendelse": "Sterk ising på skip",
       "omrade": "A3",
       "domene": "hav",
       "start": "2026-11-24T10:00:00+00:00",
-      "slutt": "2026-11-24T16:00:00+00:00",
+      "slutt": "2026-11-24T17:00:00+00:00",
       "beskrivelse": "Utrygt for sterk ising.",
       "konsekvenser": "Stor fare for at småbåter kan synke: Det ventes sterk isvekst på fronten/styrhuset til båten. Det er stor fare for at båten mister stabilitet, velter og synker. Sterk isvekst kan gjøre det vanskelig å få fjernet isen raskt nok før uhellet er ute. Kraftig isvekst på overflater: Det er stor risiko for en betydelig mengde is på overflater på båter som ferdes i området. Isen vil føre til glatte dekk, gelender og stiger, og operasjoner utendørs blir utfordrende. Redningsutstyr kan bli påvirket: Nedising av redningsteknisk utstyr kan forekomme, og isingen kan ødelegge samband- og kommunikasjonsutstyr.",
       "rad": "Kraftig isvekst på overflater: Fjern is raskt fra båten.",
       "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.20261122081858.009",
-      "niva": "gult",
-      "hendelse": "Is",
-      "omrade": "Deler av Troms og Finnmark",
-      "domene": "land",
-      "start": "2026-11-23T14:00:00+00:00",
-      "slutt": "2026-11-23T23:00:00+00:00",
-      "beskrivelse": "Mandag ettermiddag ventes fare for is på grunn av overgang til mildvær og nedbør som fryser på kald bakke. Nedbøren kan enkelte steder starte som snø eller sludd.",
-      "konsekvenser": "Lokalt vanskelige kjøreforhold: Det kan være lokalt vanskelige kjøreforhold. Transporttjenester kan også bli påvirket. Vurder bruk av brodder eller piggsko: Fare for hålkeføre.",
-      "rad": "Lokalt vanskelige kjøreforhold: Beregn ekstra tid til transport og kjøring. Bruk riktige dekk og kjør etter forholdene. Vurder bruk av brodder eller piggsko: Vær oppmerksom på at isen kan være vanskelig å se. Følg utviklingen: Følg med på oppdaterte farevarsler. Sjekk veimeldinger på vegvesen.no/trafikk.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/is"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261123163637.005",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Svenskegrensa - Stavern",
-      "domene": "hav",
-      "start": "2026-11-23T16:40:00+00:00",
-      "slutt": "2026-11-23T22:00:00+00:00",
-      "beskrivelse": "Mandag nordlig periodevis stiv kuling 15 m/s. Minkende sent mandag kveld.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
       "id": "2.49.0.1.578.0.20261123174259.068",
@@ -75,6 +49,19 @@
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
+      "id": "2.49.0.1.578.0.261123220000.0848_1_0",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "C5",
+      "domene": "hav",
+      "start": "2026-11-24T12:00:00+00:00",
+      "slutt": "2026-11-24T21:00:00+00:00",
+      "beskrivelse": "Nordvest sterk kuling 20 m/s.",
+      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": null
+    },
+    {
       "id": "2.49.0.1.578.0.20261123091425.087",
       "niva": "gult",
       "hendelse": "Is",
@@ -88,39 +75,39 @@
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/is"
     },
     {
-      "id": "2.49.0.1.578.0.261123100000.0836_1_0",
+      "id": "2.49.0.1.578.0.261123220000.7083_1_0",
       "niva": "gult",
       "hendelse": "Kuling",
-      "omrade": "A5",
+      "omrade": "Nordbanken",
       "domene": "hav",
       "start": "2026-11-24T19:00:00+00:00",
-      "slutt": "2026-11-24T22:00:00+00:00",
-      "beskrivelse": "Nordlig sterk kuling 20 m/s.",
-      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
-      "web": null
-    },
-    {
-      "id": "2.49.0.1.578.0.261123100000.0848_1_0",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "C5",
-      "domene": "hav",
-      "start": "2026-11-24T19:00:00+00:00",
-      "slutt": "2026-11-24T21:00:00+00:00",
+      "slutt": "2026-11-25T10:00:00+00:00",
       "beskrivelse": "Nordvest sterk kuling 20 m/s.",
       "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
     },
     {
-      "id": "2.49.0.1.578.0.261123100000.7083_1_0",
+      "id": "2.49.0.1.578.0.261123220000.0836_1_0",
       "niva": "gult",
       "hendelse": "Kuling",
-      "omrade": "Nordbanken",
+      "omrade": "A5",
       "domene": "hav",
-      "start": "2026-11-24T21:00:00+00:00",
-      "slutt": "2026-11-24T22:00:00+00:00",
+      "start": "2026-11-24T20:00:00+00:00",
+      "slutt": "2026-11-25T01:00:00+00:00",
+      "beskrivelse": "Nordlig sterk kuling 20 m/s.",
+      "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
+      "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.261123220000.7024_1_0",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "Kildinbanken",
+      "domene": "hav",
+      "start": "2026-11-24T23:00:00+00:00",
+      "slutt": "2026-11-25T10:00:00+00:00",
       "beskrivelse": "Nordvest sterk kuling 20 m/s.",
       "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
