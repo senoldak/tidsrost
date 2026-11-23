@@ -1,5 +1,5 @@
 {
- "oppdatert": "2026-11-23T17:04:59.016Z",
+ "oppdatert": "2026-11-23T19:06:06.523Z",
  "dager": {
   "2026-11-02": {
    "turer": 9,
@@ -437,8 +437,8 @@
    "venter": 19
   },
   "2026-11-23": {
-   "turer": 8,
-   "funnet": 87,
+   "turer": 9,
+   "funnet": 96,
    "vurdert": 145,
    "avvist": {
     "lav-nyhetsverdi": 77,
