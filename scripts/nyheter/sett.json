@@ -14308,7 +14308,34 @@
     "medier:a3fb7ba4a1386cdf": "2026-11-23T07:01:04.890Z",
     "medier:3054679c3453f00e": "2026-11-23T07:01:04.890Z",
     "medier:5b8c5935625f7052": "2026-11-23T07:01:04.890Z",
-    "regjeringen:3194336": "2026-11-23T07:01:04.890Z"
+    "regjeringen:3194336": "2026-11-23T07:01:04.890Z",
+    "medier:a3e5e6816921283e": "2026-11-23T09:01:00.077Z",
+    "medier:cbb3a3d62f8bd1fd": "2026-11-23T09:01:00.077Z",
+    "medier:c0cac5e0f696bfc4": "2026-11-23T09:01:00.077Z",
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/nytt-rekkverk-og-veglys-e6-dal-kolomoen/": "2026-11-23T09:01:00.077Z",
+    "medier:80c1768148a4bae2": "2026-11-23T09:01:00.077Z",
+    "medier:639768ea5a100477": "2026-11-23T09:01:00.077Z",
+    "medier:f4d90083c7088f52": "2026-11-23T09:01:00.077Z",
+    "medier:941f838a709c1e60": "2026-11-23T09:01:00.077Z",
+    "medier:53c3c8181a5c91d8": "2026-11-23T09:01:00.077Z",
+    "medier:1b2f8cfa9f40a7b7": "2026-11-23T09:01:00.077Z",
+    "medier:130c66f005a19507": "2026-11-23T09:01:00.077Z",
+    "medier:b4bc3bddfbd355b4": "2026-11-23T09:01:00.077Z",
+    "medier:cace6cbbd3977a3b": "2026-11-23T09:01:00.077Z",
+    "medier:6203c67215858b3f": "2026-11-23T09:01:00.077Z",
+    "medier:6f5341038025e755": "2026-11-23T09:01:00.077Z",
+    "medier:e4a988ae2f5c4090": "2026-11-23T09:01:00.077Z",
+    "medier:b5d1a2a74e2ee9bb": "2026-11-23T09:01:00.077Z",
+    "medier:982ec0f694a5a137": "2026-11-23T09:01:00.077Z",
+    "medier:06040cdfbbfe2e1f": "2026-11-23T09:01:00.077Z",
+    "medier:8b5fca30ddbea3af": "2026-11-23T09:01:00.077Z",
+    "medier:63abe09b557e53c2": "2026-11-23T09:01:00.077Z",
+    "medier:44a37749b44bc113": "2026-11-23T09:01:00.077Z",
+    "medier:2d21fb64119772a0": "2026-11-23T09:01:00.077Z",
+    "medier:481d3b2e0d5745f3": "2026-11-23T09:01:00.077Z",
+    "medier:41bf4704c8ee6882": "2026-11-23T09:01:00.077Z",
+    "medier:60af55e9b1256e97": "2026-11-23T09:01:00.077Z",
+    "medier:9965b03d2d498135": "2026-11-23T09:01:00.077Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -14371,66 +14398,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:3c176c4ff43c4acc": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T09:03:10.110Z"
-    },
-    "medier:78bad5b7908c66aa": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T09:03:10.110Z"
-    },
-    "medier:a553c291c7eda5fd": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T09:03:10.110Z"
-    },
-    "medier:58ef90eed223599a": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T09:03:10.110Z"
-    },
-    "medier:d87a90fc7bc86104": {
-      "p": 90,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T09:03:10.110Z"
-    },
-    "medier:aa44335f6076434e": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T09:03:10.110Z"
-    },
-    "medier:1c6db8909b33609e": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T09:03:10.110Z"
-    },
-    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/problemene-med-skjema-krt-1004-egenmelding-fra-regnskapsforetak-er-na-lost/": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T09:03:10.110Z"
-    },
-    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/invitasjon-fagseminar-og-presentasjon-av-finansielt-utsyn-3.-desember-2026": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T09:03:10.110Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/e6-oyertunnelen-nattestengd-veke-48-og-50/": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T09:03:10.110Z"
-    },
-    "handball:https://www.handball.no/nyheter/2026/11/sola-og-byasen-motes-til-nm-finale-i-oslo/": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T09:03:10.110Z"
-    },
-    "sykling:https://sykling.no/?p=28447": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T09:03:10.110Z"
-    },
     "medier:da84a15371b6287d": {
       "p": 65,
       "v": "b34cb0de5bde",
@@ -15840,6 +15807,36 @@
       "p": 50,
       "v": "b34cb0de5bde",
       "t": "2026-11-23T07:03:12.102Z"
+    },
+    "medier:53c3c8181a5c91d8": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-23T09:03:23.797Z"
+    },
+    "medier:80c1768148a4bae2": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-23T09:03:23.797Z"
+    },
+    "medier:b4bc3bddfbd355b4": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-23T09:03:23.797Z"
+    },
+    "medier:c23deea9114cf238": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-23T09:03:23.797Z"
+    },
+    "medier:f4d90083c7088f52": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-23T09:03:23.797Z"
+    },
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/nytt-rekkverk-og-veglys-e6-dal-kolomoen/": {
+      "p": 42,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-23T09:03:23.797Z"
     }
   }
 }

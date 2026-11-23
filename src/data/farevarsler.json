@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-23T07:04:54.963Z",
+  "hentet": "2026-11-23T09:09:03.044Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,21 +7,8 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-23T07:02:32+00:00",
+  "sistEndretHosMet": "2026-11-23T09:07:02+00:00",
   "varsler": [
-    {
-      "id": "2.49.0.1.578.0.20261122080115.088",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Svenskegrensa - Stavern",
-      "domene": "hav",
-      "start": "2026-11-22T17:00:00+00:00",
-      "slutt": "2026-11-23T09:00:00+00:00",
-      "beskrivelse": "Fra søndag kveld nordlig stiv kuling 15 m/s, minkende mandag formiddag.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
     {
       "id": "2.49.0.1.578.0.20261122081858.009",
       "niva": "gult",
