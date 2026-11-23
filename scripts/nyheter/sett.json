@@ -14416,7 +14416,14 @@
     "regjeringen:3194372": "2026-11-23T13:01:03.092Z",
     "skatteetaten:/presse/nyhetsrommet/kriminelle-nettverk-kan-bruke-offentlige-ordninger-som-inntektskilde/": "2026-11-23T13:01:03.092Z",
     "medier:5dbc9cdd49fd2db0": "2026-11-23T13:01:03.092Z",
-    "medier:0258a44fa212222b": "2026-11-23T13:01:03.092Z"
+    "medier:0258a44fa212222b": "2026-11-23T13:01:03.092Z",
+    "medier:c23deea9114cf238": "2026-11-23T15:01:01.423Z",
+    "medier:b7b7eb6a76854392": "2026-11-23T15:01:01.423Z",
+    "medier:8b1c56eb5e54033a": "2026-11-23T15:01:01.423Z",
+    "medier:9864b897a2fee510": "2026-11-23T15:01:01.423Z",
+    "medier:9e0d9df0d7ff127d": "2026-11-23T15:01:01.423Z",
+    "medier:b718988e11007a0c": "2026-11-23T15:01:01.423Z",
+    "medier:113cb7d74e4b0cce": "2026-11-23T15:01:01.423Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -14479,126 +14486,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:6320530d07303515": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "medier:b65c1790eb177ae1": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "medier:c29c58f2007e2fd2": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "medier:1b82d88bc2b340fd": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "medier:b4b272e46e9e30b7": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "medier:ad78b35bb026298c": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "medier:d7a58307932fba2d": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "medier:ce2f381d983a2a7f": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "medier:0dc8418242017b36": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "medier:4cdacad7f64bd7d3": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "medier:082c0a548ef174b7": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "medier:678cc67cea4e4743": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "medier:53f9a5c52ff99a93": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "regjeringen:3194226": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "regjeringen:3194237": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "regjeringen:3194250": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "mattilsynet:https://www.mattilsynet.no/mat-og-drikke/merking-av-mat/nordisk-samarbeid-om-datomerking-lanseres-velkommen-til-informasjonsmote-i-datomerkingskoalisjonen": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "mattilsynet:https://www.mattilsynet.no/fisk-og-akvakultur/oppdrettsanlegg/mattilsynet-arbeider-for-bedre-sporbarhet-av-oppdrettsfisk": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/naa-sendes-kunstnerundersoekelsen-til-35-000-kunstnere-over-hele-landet": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2550": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2549": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2548": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2547": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2546": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-20T15:05:58.909Z"
-    },
     "medier:5c819a2af08bdfeb": {
       "p": 65,
       "v": "b34cb0de5bde",
