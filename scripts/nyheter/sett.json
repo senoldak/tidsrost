@@ -14737,7 +14737,8 @@
     "medier:ed23fc5d16101c22": "2026-11-24T11:00:58.206Z",
     "medier:42cb2b544fb34dcc": "2026-11-24T11:00:58.206Z",
     "regjeringen:3194547": "2026-11-24T11:00:58.206Z",
-    "havforskning:https://www.hi.no/hi/nyheter/2026/november/fant-flere-ulovlige-stoffer-i-importert-sjomat": "2026-11-24T11:00:58.206Z"
+    "havforskning:https://www.hi.no/hi/nyheter/2026/november/fant-flere-ulovlige-stoffer-i-importert-sjomat": "2026-11-24T11:00:58.206Z",
+    "medier:e59790f7e5368810": "2026-11-24T13:00:58.391Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -14810,86 +14811,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2557": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T13:03:50.845Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2539": {
-      "p": 10,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T13:03:50.845Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2532": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T13:03:50.845Z"
-    },
-    "medier:0d03e497fd941281": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T13:03:50.845Z"
-    },
-    "medier:1a4e4ae4e6e74941": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T13:03:50.845Z"
-    },
-    "medier:62076d0513015a0b": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T13:03:50.845Z"
-    },
-    "medier:740ac1c9dae81427": {
-      "p": 88,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T13:03:50.845Z"
-    },
-    "medier:31b14fe0af701aaf": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T13:03:50.845Z"
-    },
-    "medier:0726fd8509bac428": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T13:03:50.845Z"
-    },
-    "medier:bfd2a43d66861fd7": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T13:03:50.845Z"
-    },
-    "medier:ca8b1c32c5b4d10a": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T13:03:50.845Z"
-    },
-    "medier:21920aa33f44c626": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T13:03:50.845Z"
-    },
-    "medier:f89397dd4229051a": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T13:03:50.845Z"
-    },
-    "medier:4d22923f1141658f": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T13:03:50.845Z"
-    },
-    "medier:14b457b12480769f": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T13:03:50.845Z"
-    },
-    "medier:db61b58a878ba85e": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T13:03:50.845Z"
-    },
     "medier:657269ff6c2a036e": {
       "p": 45,
       "v": "b34cb0de5bde",
