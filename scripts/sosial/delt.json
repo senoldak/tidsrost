@@ -1,19 +1,5 @@
 {
   "_sinir": {},
-  "452-367-hytter-i-norge-1-973-fritidsboliger-fikk-igangsettingstillatelse-i-2025": {
-    "tarih": "2026-11-17T07:10:13.029Z",
-    "ig_story": "18099967886661938",
-    "fb_post": "1343803192154866_122118448779509504",
-    "fb_story": "1652189643043273",
-    "ig_reels": "18031351511875743",
-    "fb_reels": "2642837456129008",
-    "reels": {
-      "gun": "2026-11-17",
-      "dilim": "kveld"
-    },
-    "son_hata": "yayın: Graph 403: Application request limit reached (#4/2207051) [eylem engellendi: Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.] {instagram çağrı 1% bekleme 0 dk}",
-    "limit": 1
-  },
   "dokumentlekkasje-fra-deutsche-bank-avdekker-nye-opplysninger": {
     "tarih": "2026-11-17T11:10:16.206Z",
     "ig_story": "18132826075879134",
@@ -538,5 +524,27 @@
     "ig_story": "17957884155297291",
     "fb_post": "1343803192154866_122120326527509504",
     "fb_story": "1794235991808585"
+  },
+  "ekteskap-og-skilsmisser-i-2025-21-574-vigsler-og-8-583-skilsmisser": {
+    "tarih": "2026-11-24T07:18:40.846Z",
+    "ig_post": "18123370564956498",
+    "zaman": {
+      "ig_post": "2026-11-24T07:18:53.222Z"
+    },
+    "ig_story": "18102866717084568",
+    "fb_post": "1343803192154866_122120411811509504",
+    "fb_story": "1459326943072731"
+  },
+  "husholdningene-2015-2025": {
+    "tarih": "2026-11-24T07:19:28.968Z",
+    "ig_story": "18110960603013592",
+    "fb_post": "1343803192154866_122120412237509504",
+    "fb_story": "1832535127790346"
+  },
+  "equinor-signerer-historisk-lang-gassavtale-med-tysk-partner": {
+    "tarih": "2026-11-24T07:20:05.612Z",
+    "ig_story": "18117933695178609",
+    "fb_post": "1343803192154866_122120412471509504",
+    "fb_story": "1413281897543241"
   }
 }
