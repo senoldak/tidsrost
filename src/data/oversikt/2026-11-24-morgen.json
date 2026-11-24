@@ -1,0 +1,43 @@
+{
+  "dato": "2026-11-24",
+  "donem": "morgen",
+  "tittel": "Morgenoversikt",
+  "opprettet": "2026-11-24T09:51:07.837Z",
+  "saker": [
+    {
+      "slug": "kriminelle-nettverk-utnytter-offentlige-stotteordninger",
+      "tittel": "Kriminelle nettverk utnytter offentlige støtteordninger",
+      "ingress": "En fersk analyse fra NTAES avslører at kriminelle aktører systematisk bruker selskaper og stråpersoner for å tappe fellesskapet for store summer."
+    },
+    {
+      "slug": "fn-sjefen-antonio-guterres-ber-om-globale-samtaler-om-rammeverk-for-kunstig-inte",
+      "tittel": "FN-sjefen António Guterres ber om globale samtaler om rammeverk for kunstig intelligens",
+      "ingress": "FNs generalsekretær António Guterres oppfordrer medlemslandene til å starte diskusjoner om en felles plattform for å håndtere risikoer knyttet til kunstig intelligens. Han advarer om en historisk maktforskyvning."
+    },
+    {
+      "slug": "ekteskap-og-skilsmisser-i-2025-21-574-vigsler-og-8-583-skilsmisser",
+      "tittel": "Ekteskap og skilsmisser i 2025: 21 574 vigsler og 8 583 skilsmisser",
+      "ingress": "Aldri siden 2017 har så mange giftet seg i Norge som i 2025, da 21 574 par sa ja. Samtidig økte både skilsmissene (8 583) og separasjonene (9 772), viser tall fra SSB."
+    },
+    {
+      "slug": "husholdningene-2015-2025",
+      "tittel": "Ledighet og sparerate er omtrent som i 2015, men styringsrenten og boligbyggingen er det ikke",
+      "ingress": "Sammenligner vi husholdningenes økonomi i 2015 og 2025 med de samme målene, har ledighet og sparerate knapt flyttet seg – mens styringsrente og boligbygging står et helt annet sted."
+    },
+    {
+      "slug": "equinor-signerer-historisk-lang-gassavtale-med-tysk-partner",
+      "tittel": "Equinor signerer historisk lang gassavtale med tysk partner",
+      "ingress": "Equinor har forpliktet seg til å selge store mengder naturgass til det tyske energiselskapet VNG i en periode på nesten to tiår."
+    },
+    {
+      "slug": "hybridbiler-far-midlertidige-importkvoter-i-eu",
+      "tittel": "Hybridbiler får midlertidige importkvoter i EU",
+      "ingress": "Europakommisjonen innfører nye restriksjoner for å beskytte industrien i EU mot en kraftig økning i importen av hybridbiler."
+    },
+    {
+      "slug": "nasjonalarkivet-apner-tilsyn-med-utenriksdepartementets-arkiver",
+      "tittel": "Nasjonalarkivet åpner tilsyn med Utenriksdepartementets arkiver",
+      "ingress": "Nasjonalarkivet vil føre tilsyn med Utenriksdepartementet etter at det ble funnet graderte dokumenter i en kjellerbod."
+    }
+  ]
+}
