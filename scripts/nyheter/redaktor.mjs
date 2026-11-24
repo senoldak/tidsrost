@@ -378,7 +378,7 @@ export async function språkvask(sak, kilde, problemer = '', tidligereFeil = [])
   const svar = await gemini({
     schema: TEKST_SKJEMA,
     tenkning: 'medium',
-    sicaklik: 0.2,
+    sicaklik: null, // Sıcaklık gönderilmez: Gemini 3'te düşük sıcaklık redaksiyonu kaçak yanıta sokuyordu (24 Kasım 2026).
     prompt: `Du er språkvasker (korrekturleser) i en norsk nettavis. Gjør en språkvask av saken under. Du skal BARE rette språket, aldri innholdet.
 
 ${SPRAKVASK_REGLER}

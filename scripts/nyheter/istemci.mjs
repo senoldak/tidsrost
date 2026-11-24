@@ -142,7 +142,9 @@ export async function geminiCagir(
               ...(sistem && { systemInstruction: { parts: [{ text: sistem }] } }),
               contents: [{ role: 'user', parts: [{ text: metinIstem }] }],
               generationConfig: {
-                temperature: sicaklik,
+                // sicaklik null: temperature gönderilmez, model varsayılanı (Gemini 3 için Google'ın önerisi; 24 Kasım 2026
+                // denemesinde 0,2 sıcaklıkta redaksiyon çıkış tavanına çarptı, varsayılanda çarpmadı).
+                ...(sicaklik != null && { temperature: sicaklik }),
                 ...(maksCikis && { maxOutputTokens: maksCikis }),
                 ...(!semasiz && { responseMimeType: 'application/json', responseSchema: sema }),
                 ...(dusunme && { thinkingConfig: dusunme }),

@@ -64,7 +64,7 @@ test('vurderingen har ikke lenger omskriving i skjemaet; vasken har tenkning med
     globalThis.fetch = gercek;
   }
   assert.ok(!skjemaer[0].props.includes('redigert'));
-  assert.equal(skjemaer[1].temp, 0.2);
+  assert.equal(skjemaer[1].temp, undefined); // sıcaklık gönderilmez (24 Kasım 2026)
   assert.equal(skjemaer[1].tenk, 'medium');
 });
 
