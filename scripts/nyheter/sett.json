@@ -14718,7 +14718,26 @@
     "medier:eaaea44edc3a1af9": "2026-11-24T09:01:10.888Z",
     "medier:9e1306f8d05596c7": "2026-11-24T09:01:10.888Z",
     "medier:8551a2141550e427": "2026-11-24T09:01:10.888Z",
-    "medier:06a12212bf514578": "2026-11-24T09:01:10.888Z"
+    "medier:06a12212bf514578": "2026-11-24T09:01:10.888Z",
+    "medier:8db4190b0ebcef18": "2026-11-24T11:00:58.206Z",
+    "fhi:https://www.fhi.no/nyheter/2026/horselstap-knyttes-til-hoyere-dodelighet/": "2026-11-24T11:00:58.206Z",
+    "skiforbundet:https://www.skiforbundet.no/hopp/nyhetsarkiv/2026/11/hoppgutta-med-sterk-sesongapning--na-venter-ruka/": "2026-11-24T11:00:58.206Z",
+    "miljodirektoratet:https://www.miljodirektoratet.no/aktuelt/nyheter/2026/november-2026/farre-trekkjande-sporvefuglar-siste-30-ar/": "2026-11-24T11:00:58.206Z",
+    "regjeringen:3194595": "2026-11-24T11:00:58.206Z",
+    "skiforbundet:https://www.skiforbundet.no/hopp/nyhetsarkiv/2026/11/kvartett-til-hinzenbach-etter-dominans-pa-hjemmebane/": "2026-11-24T11:00:58.206Z",
+    "medier:3751431baf9c8f72": "2026-11-24T11:00:58.206Z",
+    "medier:a21bb741e0ed70d4": "2026-11-24T11:00:58.206Z",
+    "medier:c9a8dfecbd69bbd3": "2026-11-24T11:00:58.206Z",
+    "regjeringen:3194584": "2026-11-24T11:00:58.206Z",
+    "met:icing:b2:2026-11-24": "2026-11-24T11:00:58.206Z",
+    "regjeringen:3194577": "2026-11-24T11:00:58.206Z",
+    "medier:902aaa689d243b91": "2026-11-24T11:00:58.206Z",
+    "medier:e3327c26bf5de9fc": "2026-11-24T11:00:58.206Z",
+    "medier:a96738681e734729": "2026-11-24T11:00:58.206Z",
+    "medier:ed23fc5d16101c22": "2026-11-24T11:00:58.206Z",
+    "medier:42cb2b544fb34dcc": "2026-11-24T11:00:58.206Z",
+    "regjeringen:3194547": "2026-11-24T11:00:58.206Z",
+    "havforskning:https://www.hi.no/hi/nyheter/2026/november/fant-flere-ulovlige-stoffer-i-importert-sjomat": "2026-11-24T11:00:58.206Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -14791,76 +14810,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:347cccc170127776": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T11:03:21.463Z"
-    },
-    "medier:bcff0e9131bad60b": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T11:03:21.463Z"
-    },
-    "medier:eefea8a5c4d2ceb1": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T11:03:21.463Z"
-    },
-    "medier:dfb736db0eabeb78": {
-      "p": 88,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T11:03:21.463Z"
-    },
-    "medier:59d1661a38c9c2c1": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T11:03:21.463Z"
-    },
-    "medier:eec550de09ab9b35": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T11:03:21.463Z"
-    },
-    "medier:a8b196075cf4d98a": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T11:03:21.463Z"
-    },
-    "medier:bed1e2e0e49e755a": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T11:03:21.463Z"
-    },
-    "medier:0b189c7f577c8b61": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T11:03:21.463Z"
-    },
-    "medier:c031a0809f2d26ec": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T11:03:21.463Z"
-    },
-    "medier:ed888eb664888e0e": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T11:03:21.463Z"
-    },
-    "medier:2bb07e83a2ab8221": {
-      "p": 76,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T11:03:21.463Z"
-    },
-    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/arbeid-ved-snasavatnet/": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T11:03:21.463Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2556": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T11:03:21.463Z"
-    },
     "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2557": {
       "p": 15,
       "v": "b34cb0de5bde",
@@ -16100,6 +16049,56 @@
       "p": 30,
       "v": "b34cb0de5bde",
       "t": "2026-11-24T09:03:58.242Z"
+    },
+    "regjeringen:3194595": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T11:03:18.106Z"
+    },
+    "regjeringen:3194577": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T11:03:18.106Z"
+    },
+    "regjeringen:3194584": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T11:03:18.106Z"
+    },
+    "medier:902aaa689d243b91": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T11:03:18.106Z"
+    },
+    "medier:e59790f7e5368810": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T11:03:18.106Z"
+    },
+    "medier:3751431baf9c8f72": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T11:03:18.106Z"
+    },
+    "fhi:https://www.fhi.no/nyheter/2026/horselstap-knyttes-til-hoyere-dodelighet/": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T11:03:18.106Z"
+    },
+    "skiforbundet:https://www.skiforbundet.no/hopp/nyhetsarkiv/2026/11/hoppgutta-med-sterk-sesongapning--na-venter-ruka/": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T11:03:18.106Z"
+    },
+    "skiforbundet:https://www.skiforbundet.no/hopp/nyhetsarkiv/2026/11/kvartett-til-hinzenbach-etter-dominans-pa-hjemmebane/": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T11:03:18.106Z"
+    },
+    "miljodirektoratet:https://www.miljodirektoratet.no/aktuelt/nyheter/2026/november-2026/farre-trekkjande-sporvefuglar-siste-30-ar/": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T11:03:18.106Z"
     }
   }
 }
