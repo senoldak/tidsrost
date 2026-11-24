@@ -14860,7 +14860,21 @@
     "unnews:https://news.un.org/en/story/2026/11/1168859": "2026-11-24T21:01:01.939Z",
     "regjeringen:3194606": "2026-11-24T21:01:01.939Z",
     "medier:51710f94554c850d": "2026-11-24T21:01:01.939Z",
-    "medier:fbd53ae27f3a9816": "2026-11-24T21:01:01.939Z"
+    "medier:fbd53ae27f3a9816": "2026-11-24T21:01:01.939Z",
+    "medier:9cbae2b1e558ea3b": "2026-11-24T23:01:08.129Z",
+    "medier:b98f1408ccdc6c46": "2026-11-24T23:01:08.129Z",
+    "medier:3ea144c8cf979811": "2026-11-24T23:01:08.129Z",
+    "medier:83470c73df4ecc10": "2026-11-24T23:01:08.129Z",
+    "medier:bdf6be7b02f2af33": "2026-11-24T23:01:08.129Z",
+    "medier:26b4d4610ac9075b": "2026-11-24T23:01:08.129Z",
+    "handball:https://www.handball.no/nyheter/2026/11/elverum-med-komfortabel-og-viktig-borteseier/": "2026-11-24T23:01:08.129Z",
+    "medier:d8d9e6f00d8c3b11": "2026-11-24T23:01:08.129Z",
+    "medier:c14852473adb32a6": "2026-11-24T23:01:08.129Z",
+    "medier:1dd18619115eb0b1": "2026-11-24T23:01:08.129Z",
+    "medier:91f407a86d7b8fb7": "2026-11-24T23:01:08.129Z",
+    "medier:126a51f98313ac09": "2026-11-24T23:01:08.129Z",
+    "medier:4299a3fc39b9e634": "2026-11-24T23:01:08.129Z",
+    "medier:8739a0add5387780": "2026-11-24T23:01:08.129Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -14938,31 +14952,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:9908b610cf2f59dd": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T23:02:19.575Z"
-    },
-    "medier:7ad4a7d204809e95": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T23:02:19.575Z"
-    },
-    "medier:c37235c3f6638e47": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T23:02:19.575Z"
-    },
-    "medier:a4190ab6f009efac": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T23:02:19.575Z"
-    },
-    "medier:fc1240949f38affa": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T23:02:19.575Z"
-    },
     "medier:34e50840c31aa9b6": {
       "p": 55,
       "v": "b34cb0de5bde",
@@ -16242,6 +16231,26 @@
       "p": 50,
       "v": "b34cb0de5bde",
       "t": "2026-11-24T21:03:03.879Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168871": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T23:02:29.933Z"
+    },
+    "medier:d8d9e6f00d8c3b11": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T23:02:29.933Z"
+    },
+    "medier:91f407a86d7b8fb7": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T23:02:29.933Z"
+    },
+    "handball:https://www.handball.no/nyheter/2026/11/elverum-med-komfortabel-og-viktig-borteseier/": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T23:02:29.933Z"
     }
   }
 }
