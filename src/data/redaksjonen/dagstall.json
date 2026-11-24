@@ -1,5 +1,5 @@
 {
- "oppdatert": "2026-11-24T13:06:05.950Z",
+ "oppdatert": "2026-11-24T15:04:28.598Z",
  "dager": {
   "2026-11-02": {
    "turer": 9,
@@ -457,8 +457,8 @@
    "venter": 14
   },
   "2026-11-24": {
-   "turer": 6,
-   "funnet": 91,
+   "turer": 7,
+   "funnet": 105,
    "vurdert": 139,
    "avvist": {
     "borte-fra-kilden": 11,
