@@ -14742,7 +14742,36 @@
     "medier:df9fd1ebd9cf0bda": "2026-11-24T17:01:01.784Z",
     "medier:455f63168053a820": "2026-11-24T17:01:01.784Z",
     "unnews:https://news.un.org/en/story/2026/11/1168864": "2026-11-24T17:01:01.784Z",
-    "unnews:https://news.un.org/en/story/2026/11/1168865": "2026-11-24T17:01:01.784Z"
+    "unnews:https://news.un.org/en/story/2026/11/1168865": "2026-11-24T17:01:01.784Z",
+    "medier:d537c331b31c6fe1": "2026-11-24T19:01:04.597Z",
+    "medier:92a9398beb1cda39": "2026-11-24T19:01:04.597Z",
+    "medier:2626c8007fa8b573": "2026-11-24T19:01:04.597Z",
+    "medier:3a8445dd23b7afff": "2026-11-24T19:01:04.597Z",
+    "medier:92bc8306947d3c11": "2026-11-24T19:01:04.597Z",
+    "medier:6b6f4ad32d327758": "2026-11-24T19:01:04.597Z",
+    "medier:18cc95eda82d54c3": "2026-11-24T19:01:04.597Z",
+    "medier:d108c06cfeeed274": "2026-11-24T19:01:04.597Z",
+    "medier:a27fc819629416d4": "2026-11-24T19:01:04.597Z",
+    "medier:0ea63c16b51fee81": "2026-11-24T19:01:04.597Z",
+    "medier:8cb205182c02dd4f": "2026-11-24T19:01:04.597Z",
+    "medier:330021cb7a60f9a3": "2026-11-24T19:01:04.597Z",
+    "regjeringen:3194622": "2026-11-24T19:01:04.597Z",
+    "mattilsynet:https://www.mattilsynet.no/tilbakekallinger/strandamor-kveil-los-vekt-ca-7-5-kg-tilbakekalles-pa-grunn-av-mugg": "2026-11-24T19:01:04.597Z",
+    "handball:https://www.handball.no/nyheter/2026/11/billettsalget-til-nm-finalene-2026-er-i-gang/": "2026-11-24T19:01:04.597Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2571": "2026-11-24T19:01:04.597Z",
+    "nkom:b02ccd83-2645-402e-b571-d686575aaf9e": "2026-11-24T19:01:04.597Z",
+    "medier:1e0ca73ae60b856c": "2026-11-24T19:01:04.597Z",
+    "medier:f789695763cb48d8": "2026-11-24T19:01:04.597Z",
+    "medier:4c6db09de068cd98": "2026-11-24T19:01:04.597Z",
+    "medier:4794f29d2e3cb9a1": "2026-11-24T19:01:04.597Z",
+    "kystverket:https://www.kystverket.no/nyheter/nkom-varsler-reaksjoner-mot-ulovlig-ais-bruk/": "2026-11-24T19:01:04.597Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2553": "2026-11-24T19:01:04.597Z",
+    "regjeringen:3194573": "2026-11-24T19:01:04.597Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2572": "2026-11-24T19:01:04.597Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168868": "2026-11-24T19:01:04.597Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2562": "2026-11-24T19:01:04.597Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168866": "2026-11-24T19:01:04.597Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2577": "2026-11-24T19:01:04.597Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -14774,6 +14803,16 @@
       "antall": 1,
       "melding": "Gemini: çok fazla deneme",
       "tid": "2026-11-23T21:01:01.899Z"
+    },
+    "fhi:https://www.fhi.no/nyheter/2026/personer-med-hoy-inntekt-overlever-i-storre-grad-sykdom-viser-stor-studie-av-100-sykdommer/": {
+      "antall": 1,
+      "melding": "Gemini: çok fazla deneme",
+      "tid": "2026-11-24T19:01:04.597Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168862": {
+      "antall": 1,
+      "melding": "Gemini: çok fazla deneme",
+      "tid": "2026-11-24T19:01:04.597Z"
     }
   },
   "kilder": {
@@ -14815,41 +14854,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:9edf15344a3afcd4": {
-      "p": 42,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T19:02:27.403Z"
-    },
-    "medier:711ff27bee14b2fe": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T19:02:27.403Z"
-    },
-    "medier:59eaf34f7e91b484": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T19:02:27.403Z"
-    },
-    "medier:d271ad1c8f18bdfb": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T19:02:27.403Z"
-    },
-    "medier:9440582c8192d626": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T19:02:27.403Z"
-    },
-    "medier:d07b1271d2d587c9": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T19:02:27.403Z"
-    },
-    "medier:c073136db95edbbe": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T19:02:27.403Z"
-    },
     "medier:cf928126c6d55d14": {
       "p": 75,
       "v": "b34cb0de5bde",
@@ -15924,6 +15928,106 @@
       "p": 55,
       "v": "b34cb0de5bde",
       "t": "2026-11-24T11:03:18.106Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168868": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168866": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "regjeringen:3194622": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "regjeringen:3194606": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "regjeringen:3194573": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "regjeringen:3194746": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "mattilsynet:https://www.mattilsynet.no/tilbakekallinger/strandamor-kveil-los-vekt-ca-7-5-kg-tilbakekalles-pa-grunn-av-mugg": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "fhi:https://www.fhi.no/nyheter/2026/personer-med-hoy-inntekt-overlever-i-storre-grad-sykdom-viser-stor-studie-av-100-sykdommer/": {
+      "p": 88,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "handball:https://www.handball.no/nyheter/2026/11/billettsalget-til-nm-finalene-2026-er-i-gang/": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2571": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2553": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2572": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2562": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2577": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "nkom:b02ccd83-2645-402e-b571-d686575aaf9e": {
+      "p": 48,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "medier:1e0ca73ae60b856c": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "medier:74aa7c986b97bc49": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "medier:09fe9edb232e97f4": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "medier:51710f94554c850d": {
+      "p": 76,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
+    },
+    "kystverket:https://www.kystverket.no/nyheter/nkom-varsler-reaksjoner-mot-ulovlig-ais-bruk/": {
+      "p": 48,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-24T19:03:58.121Z"
     }
   }
 }
