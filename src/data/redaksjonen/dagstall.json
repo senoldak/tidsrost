@@ -1,5 +1,5 @@
 {
- "oppdatert": "2026-11-24T19:12:27.045Z",
+ "oppdatert": "2026-11-24T21:16:08.920Z",
  "dager": {
   "2026-11-02": {
    "turer": 9,
@@ -457,22 +457,22 @@
    "venter": 14
   },
   "2026-11-24": {
-   "turer": 9,
-   "funnet": 154,
-   "vurdert": 167,
+   "turer": 10,
+   "funnet": 194,
+   "vurdert": 249,
    "avvist": {
-    "borte-fra-kilden": 22,
-    "lav-nyhetsverdi": 104,
-    "varsomhet": 10,
-    "standard:kaynak-benzerligi": 5,
+    "borte-fra-kilden": 24,
+    "lav-nyhetsverdi": 173,
+    "varsomhet": 12,
+    "standard:kaynak-benzerligi": 6,
     "dekket-av-farevarsler": 2,
     "en-kilde": 3
    },
-   "skrevet": 7,
+   "skrevet": 11,
    "utkast": 0,
-   "publisert": 7,
-   "kortfortalt": 2,
-   "venter": 17
+   "publisert": 11,
+   "kortfortalt": 4,
+   "venter": 21
   }
  }
 }
