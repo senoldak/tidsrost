@@ -14738,7 +14738,11 @@
     "medier:42cb2b544fb34dcc": "2026-11-24T11:00:58.206Z",
     "regjeringen:3194547": "2026-11-24T11:00:58.206Z",
     "havforskning:https://www.hi.no/hi/nyheter/2026/november/fant-flere-ulovlige-stoffer-i-importert-sjomat": "2026-11-24T11:00:58.206Z",
-    "medier:e59790f7e5368810": "2026-11-24T13:00:58.391Z"
+    "medier:e59790f7e5368810": "2026-11-24T13:00:58.391Z",
+    "medier:df9fd1ebd9cf0bda": "2026-11-24T17:01:01.784Z",
+    "medier:455f63168053a820": "2026-11-24T17:01:01.784Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168864": "2026-11-24T17:01:01.784Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168865": "2026-11-24T17:01:01.784Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -14811,61 +14815,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:8189f3813dc7d06a": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T17:03:10.890Z"
-    },
-    "medier:88afaec41dbb8386": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T17:03:10.890Z"
-    },
-    "medier:5a052197682a5297": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T17:03:10.890Z"
-    },
-    "medier:4d3fa4eb3e8b5291": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T17:03:10.890Z"
-    },
-    "medier:4aff1db4325b4a3f": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T17:03:10.890Z"
-    },
-    "medier:3bcca984d18c0af9": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T17:03:10.890Z"
-    },
-    "medier:d14876b5cfd85417": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T17:03:10.890Z"
-    },
-    "medier:2d8efddb56d5c744": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T17:03:10.890Z"
-    },
-    "medier:afda3b8972b2e561": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T17:03:10.890Z"
-    },
-    "medier:55a2940da7325e85": {
-      "p": 48,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T17:03:10.890Z"
-    },
-    "handball:https://www.handball.no/nyheter/2026/11/ettmalsseier-til-runar-i-veldig-jevn-kamp/": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-21T17:03:10.890Z"
-    },
     "medier:9edf15344a3afcd4": {
       "p": 42,
       "v": "b34cb0de5bde",

@@ -1,5 +1,5 @@
 {
- "oppdatert": "2026-11-24T15:04:28.598Z",
+ "oppdatert": "2026-11-24T17:07:08.352Z",
  "dager": {
   "2026-11-02": {
    "turer": 9,
@@ -457,11 +457,11 @@
    "venter": 14
   },
   "2026-11-24": {
-   "turer": 7,
-   "funnet": 105,
-   "vurdert": 139,
+   "turer": 8,
+   "funnet": 131,
+   "vurdert": 141,
    "avvist": {
-    "borte-fra-kilden": 11,
+    "borte-fra-kilden": 13,
     "lav-nyhetsverdi": 87,
     "varsomhet": 10,
     "standard:kaynak-benzerligi": 5,
