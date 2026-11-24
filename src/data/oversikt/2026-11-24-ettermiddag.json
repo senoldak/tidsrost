@@ -1,0 +1,23 @@
+{
+  "dato": "2026-11-24",
+  "donem": "ettermiddag",
+  "tittel": "Ettermiddagsoversikt",
+  "opprettet": "2026-11-24T13:50:54.825Z",
+  "saker": [
+    {
+      "slug": "magdalena-andersson-gir-opp-regjeringsdanning-i-sverige",
+      "tittel": "Magdalena Andersson gir opp regjeringsdanning i Sverige",
+      "ingress": "Lederen for Socialdemokraterna fastslår at det mangler grunnlag for å få på plass en rødgrønn regjering."
+    },
+    {
+      "slug": "havforskningsinstituttet-fant-ulovlige-stoffer-og-miljogifter-i-importert-sjomat",
+      "tittel": "Havforskningsinstituttet fant ulovlige stoffer og miljøgifter i importert sjømat",
+      "ingress": "En ny rapport viser at stikkprøver av sjømat fra land utenfor EU/EØS inneholdt både forbudte stoffer og for høye verdier av miljøgifter."
+    },
+    {
+      "slug": "kort-fortalt-24-november-2026",
+      "tittel": "Kort fortalt 24. november 2026",
+      "ingress": "Korte meldinger fra departementer, etater og Stortinget 24. november 2026, med lenke til hele saken hos avsenderen."
+    }
+  ]
+}
