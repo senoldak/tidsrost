@@ -1,17 +1,5 @@
 {
   "_sinir": {},
-  "dovrebanen-stengt-mellom-eidsvoll-og-hamar-etter-strombrudd": {
-    "tarih": "2026-11-17T21:12:16.781Z",
-    "ig_story": "18137473102582093",
-    "fb_post": "1343803192154866_122118657033509504",
-    "fb_story": "1149126194275306"
-  },
-  "sveriges-talmann-gir-partiene-frist-til-jul-for-regjeringsdannelse": {
-    "tarih": "2026-11-17T21:12:51.286Z",
-    "ig_story": "17915155587603550",
-    "fb_post": "1343803192154866_122118657417509504",
-    "fb_story": "1609901371178879"
-  },
   "equinor-rammet-av-pagaende-cyberangrep-mot-it-systemer": {
     "tarih": "2026-11-17T23:08:09.963Z",
     "ig_story": "17996704299103586",
@@ -489,24 +477,60 @@
     "tarih": "2026-11-24T07:19:28.968Z",
     "ig_story": "18110960603013592",
     "fb_post": "1343803192154866_122120412237509504",
-    "fb_story": "1832535127790346"
+    "fb_story": "1832535127790346",
+    "ig_post": "18121313248956823",
+    "zaman": {
+      "ig_post": "2026-11-24T21:18:35.629Z"
+    }
   },
   "equinor-signerer-historisk-lang-gassavtale-med-tysk-partner": {
     "tarih": "2026-11-24T07:20:05.612Z",
     "ig_story": "18117933695178609",
     "fb_post": "1343803192154866_122120412471509504",
-    "fb_story": "1413281897543241"
+    "fb_story": "1413281897543241",
+    "ig_post": "18115755845617435",
+    "zaman": {
+      "ig_post": "2026-11-24T21:19:02.601Z"
+    }
   },
   "hybridbiler-far-midlertidige-importkvoter-i-eu": {
     "tarih": "2026-11-24T09:18:40.662Z",
     "ig_story": "18030383336875844",
     "fb_post": "1343803192154866_122120444493509504",
-    "fb_story": "1659817428958411"
+    "fb_story": "1659817428958411",
+    "ig_post": "18031492295701370",
+    "zaman": {
+      "ig_post": "2026-11-24T21:19:29.257Z"
+    }
   },
   "magdalena-andersson-gir-opp-regjeringsdanning-i-sverige": {
     "tarih": "2026-11-24T11:14:43.086Z",
     "ig_story": "18108598976346710",
     "fb_post": "1343803192154866_122120466273509504",
     "fb_story": "4455309491350516"
+  },
+  "kort-fortalt-24-november-2026": {
+    "tarih": "2026-11-24T21:19:44.873Z",
+    "ig_story": "17872206696659738",
+    "fb_post": "1343803192154866_122120567595509504",
+    "fb_story": "2038766750154608"
+  },
+  "najell-produkter-og-leketoy-tilbakekalles-etter-sikkerhetsadvarsler": {
+    "tarih": "2026-11-24T21:20:21.717Z",
+    "ig_story": "18125861725906361",
+    "fb_post": "1343803192154866_122120567805509504",
+    "fb_story": "29217053357937114"
+  },
+  "fn-mote-om-vinterangrep-og-skipsfart": {
+    "tarih": "2026-11-24T21:20:59.627Z",
+    "ig_story": "18379182628244561",
+    "fb_post": "1343803192154866_122120568045509504",
+    "fb_story": "2360240698144565"
+  },
+  "skanska-skal-bygge-nytt-ubatanlegg-pa-haakonsvern-for-3-6-milliarder": {
+    "tarih": "2026-11-24T21:21:34.699Z",
+    "ig_story": "18438329293149252",
+    "fb_post": "1343803192154866_122120568309509504",
+    "fb_story": "1772536958215258"
   }
 }
