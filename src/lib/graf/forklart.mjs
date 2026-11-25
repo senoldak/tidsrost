@@ -5,6 +5,8 @@ import { existsSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { grafHtml } from './html.mjs';
+import { esc } from './felles.mjs';
+import { kildeHtml } from '../kilde-lenke.mjs';
 import { nyId } from './index.mjs';
 import { validerGraf } from './sema.mjs';
 
@@ -42,6 +44,23 @@ export function grafForAvsnitt(p, mappe) {
   }
 }
 
+/**
+ * Yazıdaki kendi başına "Kilde: …" paragrafı (düz ya da tamamı italik, içinde bağlantı yok): etat adları ve SSB tablo
+ * numaraları bağlantıya döner (src/lib/kilde-lenke.mjs). Metin değişmez. Bağlanacak ad yoksa ya da paragraf başka bir
+ * şeyse null.
+ */
+export function kildeAvsnitt(p) {
+  const barn = (p.children ?? []).filter((c) => !(c.type === 'text' && !c.value.trim()));
+  const em = barn.length === 1 && barn[0].type === 'element' && barn[0].tagName === 'em' ? barn[0] : null;
+  const tekstBarn = em ? em.children ?? [] : p.children ?? [];
+  if (!tekstBarn.length || !tekstBarn.every((c) => c.type === 'text')) return null;
+  const tekst = tekstBarn.map((c) => c.value).join('').trim();
+  if (!/^Kilder?:\s/.test(tekst)) return null;
+  const html = kildeHtml(tekst, esc);
+  if (!html.includes('<a ')) return null;
+  return em ? `<p><em>${html}</em></p>` : `<p>${html}</p>`;
+}
+
 // Sätteri hast-plugin: yalnız src/content/haberler/ altındaki yazılar. GRAF_KART=0 iken kapalı: yazı işlerinin onay
 // denetimi (mecmua, onay/site-denetimi.mjs) gövdeyi resim başvurusuyla görür; kart verisini kendisi denetler.
 export function satteriGraf() {
@@ -55,7 +74,7 @@ export function satteriGraf() {
       element: {
         filter: ['p'],
         visit(node, ctx) {
-          const html = grafForAvsnitt(node, mappe);
+          const html = grafForAvsnitt(node, mappe) ?? kildeAvsnitt(node);
           if (html) ctx.replaceNode(node, { type: 'raw', value: html });
         },
       },

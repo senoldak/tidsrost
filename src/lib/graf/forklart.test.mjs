@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { grafForAvsnitt, satteriGraf } from './forklart.mjs';
+import { grafForAvsnitt, kildeAvsnitt, satteriGraf } from './forklart.mjs';
 
 const mappe = mkdtempSync(join(tmpdir(), 'forklart-'));
 writeFileSync(join(mappe, 'graf-1.json'), JSON.stringify({ form: 'soyle', tittel: 'Drepte', kilde: { navn: 'SSB' }, enhet: 'personer', desimaler: 0, serier: [{ navn: 'Drepte', punkter: [{ x: '2024', y: 87 }, { x: '2025', y: 106 }] }] }));
@@ -35,7 +35,10 @@ test('grafForAvsnitt: resim + düz metin değişmez', () => {
 test('grafForAvsnitt: yazının italik açıklaması olduğu gibi kalır; kartın alt başlığı ve kaynak satırı çıkmaz', () => {
   const avsnitt = { type: 'element', tagName: 'p', children: [{ type: 'element', tagName: 'img', properties: { src: './graf-1.svg' }, children: [] }, { type: 'text', value: '\n' }, { type: 'element', tagName: 'em', children: [{ type: 'text', value: 'Drepte per år, 2001–2025. Kilde: SSB, tabell 06752.' }] }] };
   const h = grafForAvsnitt(avsnitt, mappe);
-  assert.match(h, /<p class="g-bildetekst"><em>Drepte per år, 2001–2025\. Kilde: SSB, tabell 06752\.<\/em><\/p><\/figure>$/);
+  assert.match(
+    h,
+    /<p class="g-bildetekst"><em>Drepte per år, 2001–2025\. Kilde: <a href="https:\/\/www\.ssb\.no\/">SSB<\/a>, tabell <a href="https:\/\/www\.ssb\.no\/statbank\/table\/06752">06752<\/a>\.<\/em><\/p><\/figure>$/,
+  );
   assert.doesNotMatch(h, /class="g-kilde"|class="g-under"/);
 });
 test('grafForAvsnitt: açıklamada metin dışı öğe varsa dokunulmaz', () => {
@@ -55,4 +58,25 @@ test('satteriGraf: GRAF_KART=0 iken eklenti kapalı (yazı işlerinin onay denet
     if (once === undefined) delete process.env.GRAF_KART;
     else process.env.GRAF_KART = once;
   }
+});
+
+const tekstP = (t, em = false) => ({
+  type: 'element',
+  tagName: 'p',
+  children: em ? [{ type: 'element', tagName: 'em', children: [{ type: 'text', value: t }] }] : [{ type: 'text', value: t }],
+});
+
+test('kildeAvsnitt: "Kilde: SSB, tabell …" satırı bağlantılı, metin aynı', () => {
+  assert.equal(
+    kildeAvsnitt(tekstP('Kilde: SSB, tabell 06752.', true)),
+    '<p><em>Kilde: <a href="https://www.ssb.no/">SSB</a>, tabell <a href="https://www.ssb.no/statbank/table/06752">06752</a>.</em></p>',
+  );
+  assert.equal(kildeAvsnitt(tekstP('Kilder: Nav og Udir.')), '<p>Kilder: <a href="https://www.nav.no/">Nav</a> og <a href="https://www.udir.no/">Udir</a>.</p>');
+});
+
+test('kildeAvsnitt: başka paragraf, bağlanacak ad yok ya da zaten bağlantılı: dokunulmaz', () => {
+  assert.equal(kildeAvsnitt(tekstP('SSB melder at ledigheten steg.')), null);
+  assert.equal(kildeAvsnitt(tekstP('Kilde: Tidsrøst.', true)), null);
+  const lenket = { type: 'element', tagName: 'p', children: [{ type: 'text', value: 'Kilde: ' }, { type: 'element', tagName: 'a', properties: { href: 'https://www.ssb.no/' }, children: [{ type: 'text', value: 'SSB' }] }] };
+  assert.equal(kildeAvsnitt(lenket), null);
 });

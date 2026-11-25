@@ -6,6 +6,7 @@ import KiNotat from '../components/KiNotat.astro';
 import Base from '../layouts/Base.astro';
 import Symbol from '../components/Symbol.astro';
 import Brodsmuler from '../components/Brodsmuler.astro';
+import { kildeDeler } from '../lib/kilde-lenke.mjs';
 import { tallTekst } from '../lib/graf.mjs';
 import { RENTE, VARSELARKIV, datoTekst, osloIdag, prosent } from '../lib/data';
 import { kvartalTekst, maanedTekst } from '../lib/datasider';
@@ -216,7 +217,7 @@ const jsonLd = {
                       <p class="tall-tekst">{k.tekst}</p>
                       <span class="tall-kilde">
                         <Symbol kind="kilde" />
-                        Kilde: {k.kilde}
+                        Kilde: {kildeDeler(k.kilde).map((d) => (d.url ? <a href={d.url}>{d.tekst}</a> : d.tekst))}
                       </span>
                     </div>
                   </li>
