@@ -1,5 +1,5 @@
 {
- "oppdatert": "2026-11-25T13:14:23.299Z",
+ "oppdatert": "2026-11-25T15:08:07.551Z",
  "dager": {
   "2026-11-02": {
    "turer": 9,
@@ -475,12 +475,12 @@
    "venter": 21
   },
   "2026-11-25": {
-   "turer": 6,
-   "funnet": 89,
-   "vurdert": 164,
+   "turer": 7,
+   "funnet": 109,
+   "vurdert": 225,
    "avvist": {
     "borte-fra-kilden": 12,
-    "lav-nyhetsverdi": 104,
+    "lav-nyhetsverdi": 165,
     "en-kilde": 13,
     "standard:suc": 1,
     "standard:cocuk": 1,
