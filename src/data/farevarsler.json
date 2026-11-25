@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-25T11:16:02.834Z",
+  "hentet": "2026-11-25T13:14:25.414Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,44 +7,18 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-25T11:13:19+00:00",
+  "sistEndretHosMet": "2026-11-25T13:14:08+00:00",
   "varsler": [
     {
-      "id": "2.49.0.1.578.0.20261124122347.086",
+      "id": "2.49.0.1.578.0.20261125113643.016",
       "niva": "gult",
       "hendelse": "Kuling",
-      "omrade": "Nordkapp - Grense Jakobselv",
+      "omrade": "Nordkapp - Vardø",
       "domene": "hav",
-      "start": "2026-11-24T07:00:00+00:00",
-      "slutt": "2026-11-25T14:00:00+00:00",
-      "beskrivelse": "Vestlig stiv kuling 15 m/s. Fra tirsdag kveld periodevis nordvest sterk kuling 20. Onsdag morgen dreiende nordlig.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker. Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
-      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261123091425.087",
-      "niva": "gult",
-      "hendelse": "Is",
-      "omrade": "Deler av Nordland og sørlige deler av Troms",
-      "domene": "land",
       "start": "2026-11-24T14:00:00+00:00",
-      "slutt": "2026-11-25T12:00:00+00:00",
-      "beskrivelse": "Det er fare for is på grunn av overgang til mildvær. Lokalt kan regn fryse til is på vegbanen, på kjøretøy og på andre gjenstander.",
-      "konsekvenser": "Lokalt vanskelige kjøreforhold: Det kan være lokalt vanskelige kjøreforhold. Transporttjenester kan også bli påvirket. Vurder bruk av brodder eller piggsko: Fare for hålkeføre.",
-      "rad": "Lokalt vanskelige kjøreforhold: Beregn ekstra tid til transport og kjøring. Bruk riktige dekk og kjør etter forholdene. Vurder bruk av brodder eller piggsko: Vær oppmerksom på at isen kan være vanskelig å se. Følg utviklingen: Følg med på oppdaterte farevarsler. Sjekk veimeldinger på vegvesen.no/trafikk.",
-      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/is"
-    },
-    {
-      "id": "2.49.0.1.578.0.20261125065123.061",
-      "niva": "gult",
-      "hendelse": "Kuling",
-      "omrade": "Torsvåg - Nordkapp",
-      "domene": "hav",
-      "start": "2026-11-25T07:00:00+00:00",
-      "slutt": "2026-11-25T13:00:00+00:00",
-      "beskrivelse": "Nordvestlig periodevis stiv kuling 15 m/s, minkende onsdag ettermiddag.",
-      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
+      "slutt": "2026-11-26T06:00:00+00:00",
+      "beskrivelse": "Nordlig stiv kuling 15 m/s, periodevis sterk kuling 20 m/s lengst øst. Minkende torsdag morgen.",
+      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker. Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
       "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
@@ -73,6 +47,19 @@
       "konsekvenser": "Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.20261125115841.086",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "Vardø - Grense Jakobselv",
+      "domene": "hav",
+      "start": "2026-11-25T11:00:00+00:00",
+      "slutt": "2026-11-26T15:00:00+00:00",
+      "beskrivelse": "Nordlig periodevis sterk kuling 20 m/s, minkende til nordlig stiv kuling 15 m/s natt til torsdag.",
+      "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Middels høye bølger: Bølgekammene er ved å brytes opp til sjørokk.",
+      "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt. Ved motorstopp kan man drive raskt mot land.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
       "id": "2.49.0.1.578.0.261125100000.4036_1_0",

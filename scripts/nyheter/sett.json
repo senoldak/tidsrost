@@ -15277,7 +15277,22 @@
     "medier:2ef92edb1b221b2f": "2026-11-25T11:01:00.480Z",
     "medier:cfb109a0bd2a91d9": "2026-11-25T11:01:00.480Z",
     "medier:4bf5607a571e315d": "2026-11-25T11:01:00.480Z",
-    "medier:a92ba5abec161cce": "2026-11-25T11:01:00.480Z"
+    "medier:a92ba5abec161cce": "2026-11-25T11:01:00.480Z",
+    "medier:eaf169728f218f38": "2026-11-25T13:01:07.350Z",
+    "medier:1f76ec302221a7ab": "2026-11-25T13:01:07.350Z",
+    "medier:5aaefec0ab29db5b": "2026-11-25T13:01:07.350Z",
+    "medier:fe13ffe754d9402d": "2026-11-25T13:01:07.350Z",
+    "medier:9b095be03e5f007c": "2026-11-25T13:01:07.350Z",
+    "medier:337993a18ff72bf7": "2026-11-25T13:01:07.350Z",
+    "medier:78bc6712b5ad322f": "2026-11-25T13:01:07.350Z",
+    "medier:a7f300c5cab0a646": "2026-11-25T13:01:07.350Z",
+    "medier:b37b7facb6b4af73": "2026-11-25T13:01:07.350Z",
+    "medier:2e9f896a7e19b047": "2026-11-25T13:01:07.350Z",
+    "medier:764e7747dbba32a5": "2026-11-25T13:01:07.350Z",
+    "medier:ec926c60cb1d6174": "2026-11-25T13:01:07.350Z",
+    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/bruk-av-fleksibilitetskvotene-i-utlansforskriften-i-tredje-kvartal-2026/": "2026-11-25T13:01:07.350Z",
+    "medier:9ff7fd1d8d5f1700": "2026-11-25T13:01:07.350Z",
+    "medier:1ea15d884c58d9cc": "2026-11-25T13:01:07.350Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -15360,36 +15375,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:8d7e141be077836c": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T13:02:55.420Z"
-    },
-    "medier:a63dac59dc5290f3": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T13:02:55.420Z"
-    },
-    "medier:c04317a7119bb855": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T13:02:55.420Z"
-    },
-    "medier:967d637751e666b6": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T13:02:55.420Z"
-    },
-    "medier:c7c24953c62bce47": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T13:02:55.420Z"
-    },
-    "medier:4ae69c4fbbbc1a2f": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T13:02:55.420Z"
-    },
     "medier:e325d0d962729fff": {
       "p": 42,
       "v": "b34cb0de5bde",
@@ -16884,6 +16869,26 @@
       "p": 30,
       "v": "b34cb0de5bde",
       "t": "2026-11-25T11:03:27.030Z"
+    },
+    "medier:fe13ffe754d9402d": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T13:03:41.838Z"
+    },
+    "medier:a7f300c5cab0a646": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T13:03:41.838Z"
+    },
+    "medier:2e9f896a7e19b047": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T13:03:41.838Z"
+    },
+    "medier:4db4644f88327224": {
+      "p": 92,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T13:03:41.838Z"
     }
   }
 }
