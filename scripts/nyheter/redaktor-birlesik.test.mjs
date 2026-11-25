@@ -16,6 +16,27 @@ const kilde = `${body}\n\nKilde.`;
 const sak = { title: 'Regjeringen foreslår ny ordning for kommunene', description: 'Forslaget gjelder alle kommuner.', body };
 const ingenOrdbok = async () => { throw new Error('ingen nett i test'); };
 
+// Språkvasken returnerer setningsrettelser (25. november 2026). Testsvarene skrives fortsatt som hel sak for lesbarhet;
+// her gjøres de om til { alan, eski, yeni } mot feltene i prompten: setning for setning, ekstra setninger på slutten
+// legges til den siste setningen.
+function tilRettelser(svar, prompt) {
+  if (!svar || svar.duzeltmeler || !(svar.title || svar.body)) return svar;
+  const m = /SAKEN \(JSON\):\r?\n([\s\S]*?)\r?\n\r?\n/.exec(prompt);
+  const foer = m ? JSON.parse(m[1]) : {};
+  const setn = (t) => String(t ?? '').split(/(?<=[.!?])\s+/);
+  const duzeltmeler = [];
+  for (const k of ['title', 'description', 'body', 'why_matters']) {
+    if (typeof svar[k] !== 'string' || svar[k] === foer[k] || typeof foer[k] !== 'string') continue;
+    const a = setn(foer[k]);
+    const b = setn(svar[k]);
+    if (b.length > a.length) b.splice(a.length - 1, b.length, b.slice(a.length - 1).join(' '));
+    a.forEach((x, i) => {
+      if (b[i] !== undefined && b[i] !== x) duzeltmeler.push({ alan: k, eski: x, yeni: b[i] });
+    });
+  }
+  return { duzeltmeler };
+}
+
 // svarFn(type, n, prompt): type = 'vurdering' | 'vask' | 'rett'
 async function kjor(svarFn, saken = sak, kildeTekst = kilde) {
   const kall = [];
@@ -24,7 +45,8 @@ async function kjor(svarFn, saken = sak, kildeTekst = kilde) {
     const prompt = JSON.parse(init.body).contents[0].parts[0].text;
     const type = prompt.startsWith('Du er vaktsjef') ? 'vurdering' : prompt.startsWith('Du er språkvasker') ? 'vask' : 'rett';
     kall.push({ type, prompt });
-    const svar = svarFn(type, kall.filter((k) => k.type === type).length, prompt);
+    const raa = svarFn(type, kall.filter((k) => k.type === type).length, prompt);
+    const svar = type === 'vask' ? tilRettelser(raa, prompt) : raa;
     return new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: JSON.stringify(svar) }] } }], usageMetadata: {} }));
   };
   const warn = console.warn;
@@ -68,8 +90,16 @@ test('vurderingen har ikke lenger omskriving i skjemaet; vasken har tenkning med
   assert.equal(skjemaer[1].tenk, 'medium');
 });
 
+test('vask som kutter setninger: rettelsen brukes ikke (setningsrettelser kan ikke korte ned), teksten står uendret', async () => {
+  const { r, kall } = await kjor((type) => (type === 'vurdering' ? godkjent() : { ...sak, body: body.replace(/ og la vekt på at ordningen skal gjelde [^.]*./g, '.') }));
+  assert.equal(typer(kall), 'vurdering,vask');
+  assert.equal(r.sak.body, body);
+  assert.equal(r.stopp.length, 0);
+});
+
 test('vask som bryter lengderegelen: ett nytt forsøk, så forkastes den med synlig merknad og logg', async () => {
-  const { r, kall, logg } = await kjor((type) => (type === 'vurdering' ? godkjent() : { ...sak, body: 'For kort.' }));
+  const lang = body.replaceAll('i landet fra neste år.', 'i landet fra neste år og i alle årene som kommer etter det.');
+  const { r, kall, logg } = await kjor((type) => (type === 'vurdering' ? godkjent() : { ...sak, body: lang }));
   assert.equal(typer(kall), 'vurdering,vask,vask');
   assert.match(kall[2].prompt, /FORRIGE FORSØK BLE FORKASTET/);
   assert.equal(r.sak.body, body);
@@ -90,7 +120,7 @@ test('vask med påfunnet tall: andre forsøk får vite hvilket tall, og godkjent
 });
 
 test('vask som endrer lengden for mye (over 115 prosent) forkastes', async () => {
-  const { r } = await kjor((type) => (type === 'vurdering' ? godkjent() : { ...sak, body: `${body} ${body.split(' ').slice(0, 60).join(' ')}.` }));
+  const { r } = await kjor((type) => (type === 'vurdering' ? godkjent() : { ...sak, body: body.replaceAll('i landet fra neste år.', 'i landet fra neste år og i alle årene som kommer etter det.') }));
   assert.equal(r.sak.body, body);
   assert.ok(r.merknader.some((m) => /Lengden endret seg/.test(m)));
 });

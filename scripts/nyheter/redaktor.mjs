@@ -20,6 +20,7 @@ import { olcekKontrol } from './olcek.mjs';
 import { naerhet, kildefriOmskriving } from './faktaark.mjs';
 import { readFileSync, readdirSync } from 'node:fs';
 import { rettNb, sprakProblemerNb, kesinProblemer as kesinNb, problemListe, korpusOrd, ukjenteOrdNb, KI_MONSTRE_NB } from './dil-nb.mjs';
+import { DUZELTME_SEMASI, duzeltmeBicimi, duzeltmeleriUygula } from './duzeltme.mjs';
 
 // ── Ortak yazım kuralları (bütün kaynakların istemlerinde) ─────────────
 
@@ -375,8 +376,11 @@ async function problemerForVask(sak, kilde, opts = {}) {
  * tidligereFeil = hvilke kontroller forrige forsøk brøt (andre forsøk). Returnerer ny sak, eller null uten svar.
  */
 export async function språkvask(sak, kilde, problemer = '', tidligereFeil = []) {
+  // Setningsrettelser (25. november 2026): modellen skriver ikke feltene på nytt, den returnerer bare endrede setninger
+  // (duzeltme.mjs). Hele omskrivinger løp løpsk (utdatataket) eller kortet ned teksten.
+  const felt = Object.fromEntries(['title', 'description', 'body', 'why_matters', 'key_points'].filter((k) => sak[k] != null).map((k) => [k, sak[k]]));
   const svar = await gemini({
-    schema: TEKST_SKJEMA,
+    schema: DUZELTME_SEMASI,
     tenkning: 'medium',
     sicaklik: null, // Sıcaklık gönderilmez: Gemini 3'te düşük sıcaklık redaksiyonu kaçak yanıta sokuyordu (24 Kasım 2026).
     prompt: `Du er språkvasker (korrekturleser) i en norsk nettavis. Gjør en språkvask av saken under. Du skal BARE rette språket, aldri innholdet.
@@ -388,15 +392,16 @@ I tillegg:
 - Behold alle fakta, navn, tall og sitater uendret.
 - Engelske sitater eller engelske setninger oversettes til indirekte tale på norsk bokmål, uten anførselstegn.
 ${problemer ? `\nKODEKONTROLLEN FANT DETTE (rett alt som er en reell feil):\n${problemer}\n` : ''}${tidligereFeil.length ? `\nFORRIGE FORSØK BLE FORKASTET FORDI:\n${tidligereFeil.map((f) => `- ${f}`).join('\n')}\nRett dette: ikke endre tall, navn eller sitater, og hold lengden.\n` : ''}
-Er teksten allerede korrekt, returner den uendret.
-
 KILDE (bare for å sjekke fakta; ikke hent formuleringer derfra):
 ${ilgiliKisim(kilde, helTekst(sak), 14000)}
 
-SAKEN:
-${sakBlokk(sak)}`,
+SAKEN (JSON):
+${JSON.stringify(felt, null, 2)}
+
+${duzeltmeBicimi('nb')}`,
   });
-  return svar?.title && svar?.description && svar?.body ? { ...sak, ...svar } : null;
+  if (!Array.isArray(svar?.duzeltmeler)) return null;
+  return { ...sak, ...duzeltmeleriUygula(felt, svar.duzeltmeler).alanlar };
 }
 
 /**
