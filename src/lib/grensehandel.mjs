@@ -1,16 +1,19 @@
-// Grensehandelkalkulator: beregner reell gevinst ved svenskehandel (harrytur)
-// Basert på SSB grensehandelstatistikk, valutakurs NOK/SEK, reisekostnader og Tolletatens kvoter.
+// Grensehandelkalkulator: beregner reell gevinst ved svenskehandel (harrytur).
+// Kilder (kontrollert 25.11.2026): Tolletaten (verdigrense), Norges Bank (valutakurs), Eurostat prisnivåindekser
+// (prc_ppp_ind, 2024). Reisekostnader, forbruk og bompenger er forutsetninger.
 
-export const STANDARD_KURS = 98.0; // NOK per 100 SEK (0.98 kursfaktor)
+// NOK per 100 SEK. Norges Bank, 25.11.2026: 95,90 (https://data.norges-bank.no/api/data/EXR/B.SEK.NOK.SP).
+export const STANDARD_KURS = 96.0;
+export const KURS_DATO = '25. november 2026';
 
-// Prisforskjeller Norge vs. Sverige (hvor mye dyrere varene i snitt er i Norge)
-// Kilde: SSB, NHO Mat og Drikke, Tillväxtanalys
+// Prisnivå Norge delt på prisnivå Sverige, samme valuta (Eurostat prc_ppp_ind, PLI EU27=100, 2024).
+// Eurostat skiller ikke ut godteri eller snus: godteri og brus bruker «alkoholfrie drikkevarer», snus bruker «tobakk».
 export const PRISPREMIER_NORGE = {
-  dagligvarer: 1.30, // ~30 % dyrere i Norge
-  kjott: 1.45,        // ~45 % dyrere i Norge (høyere kjøttpriser/tollvern)
-  godteri: 1.50,      // ~50 % dyrere i Norge (sukkeravgift og emballasje)
-  snus: 1.50,         // ~50 % dyrere i Norge (norsk tobakksavgift)
-  alkohol: 1.35       // ~35 % dyrere i Norge (alkoholavgifter og Vinmonopolet)
+  dagligvarer: 1.22, // matvarer: NO 130,6 / SE 106,7
+  kjott: 1.32, //       kjøtt: NO 140,0 / SE 106,2
+  godteri: 1.33, //     alkoholfrie drikkevarer: NO 139,1 / SE 104,7 (anslag for godteri)
+  snus: 2.02, //        tobakk: NO 210,5 / SE 104,0 (snus er ikke skilt ut)
+  alkohol: 1.55, //     alkoholholdige drikkevarer: NO 225,8 / SE 145,8
 };
 
 export const STEDER_PRESETS = [
@@ -47,14 +50,14 @@ export function beregnGrensehandel(input) {
   // Faktisk kostnad i NOK betalt i Sverige
   const varekostnadNok = Math.round(totaltSek * kursFaktor * 100) / 100;
 
-  // Hva tilsvarende varer ville kostet i Norge
+  // Hva tilsvarende varer ville kostet i Norge: svensk pris omregnet til NOK, ganget med prisnivåforskjellen.
   const estimertNorgeNok = Math.round((
     (dagligvarerSek * PRISPREMIER_NORGE.dagligvarer) +
     (kjottSek * PRISPREMIER_NORGE.kjott) +
     (godteriSek * PRISPREMIER_NORGE.godteri) +
     (snusSek * PRISPREMIER_NORGE.snus) +
     (alkoholSek * PRISPREMIER_NORGE.alkohol)
-  ) * 100) / 100;
+  ) * kursFaktor * 100) / 100;
 
   // Brutto besparelse før reiseutgifter
   const bruttoSparingNok = Math.round((estimertNorgeNok - varekostnadNok) * 100) / 100;
@@ -69,16 +72,17 @@ export function beregnGrensehandel(input) {
   const nettoSparingNok = Math.round((bruttoSparingNok - reisekostnadNok) * 100) / 100;
   const lonnsom = nettoSparingNok > 0;
 
-  // Tolletatens verdigrense
-  // < 24 timer: 3 000 NOK
-  // >= 24 timer: 6 000 NOK
-  const verdigrenseNok = oppholdstimer >= 24 ? 6000 : 3000;
-  const verdigrenseOverskredet = varekostnadNok > verdigrenseNok;
+  // Tolletatens verdigrense (toll.no/no/handle-i-utlandet/verdigrensa): 24 timer eller mindre 3 000 kr, mer enn 24 timer
+  // 6 000 kr. Alkohol og tobakk har egne kvoter og regnes ikke med i verdigrensen.
+  const verdigrenseNok = oppholdstimer > 24 ? 6000 : 3000;
+  const verdigrenseGrunnlagNok = Math.round((dagligvarerSek + kjottSek + godteriSek) * kursFaktor * 100) / 100;
+  const verdigrenseOverskredet = verdigrenseGrunnlagNok > verdigrenseNok;
 
   // Nullpunkt (break-even handlekurv i SEK for å dekke reisekostnadene)
   // Vektet spareprosent per SEK
-  const snittPremie = totaltSek > 0 ? (estimertNorgeNok / totaltSek) : 1.38;
-  const sparingPerSek = snittPremie - kursFaktor;
+  // Uten handlekurv brukes matvarenes prisforskjell.
+  const snittPremie = totaltSek > 0 ? estimertNorgeNok / (totaltSek * kursFaktor) : PRISPREMIER_NORGE.dagligvarer;
+  const sparingPerSek = kursFaktor * (snittPremie - 1);
   const nullpunktSek = sparingPerSek > 0 ? Math.round(reisekostnadNok / sparingPerSek) : 0;
 
   return {
@@ -94,8 +98,9 @@ export function beregnGrensehandel(input) {
     kvoteStatus: {
       oppholdstimer,
       verdigrenseNok,
+      verdigrenseGrunnlagNok,
       verdigrenseOverskredet,
-      verdidifferanseNok: Math.max(0, Math.round(varekostnadNok - verdigrenseNok))
+      verdidifferanseNok: Math.max(0, Math.round(verdigrenseGrunnlagNok - verdigrenseNok))
     }
   };
 }

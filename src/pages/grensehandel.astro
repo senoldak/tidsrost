@@ -8,7 +8,20 @@ import KiNotat from '../components/KiNotat.astro';
 import { jsonLdMetni } from '../lib/json-ld.mjs';
 import { datasideLd } from '../lib/datasider';
 import { SITE_URL } from '../lib/seo';
-import { STEDER_PRESETS, STANDARD_KURS, beregnGrensehandel } from '../lib/grensehandel.mjs';
+import { STEDER_PRESETS, STANDARD_KURS, KURS_DATO, beregnGrensehandel } from '../lib/grensehandel.mjs';
+
+// Startverdiene i skjemaet, regnet ut i bygget (siden viser riktige tall også før skriptet har lastet).
+const start = beregnGrensehandel({
+  varekurv: { dagligvarerSek: 1000, kjottSek: 800, godteriSek: 400, snusSek: 800, alkoholSek: 0 },
+  kursNokPer100Sek: STANDARD_KURS,
+  avstandEnVeiKm: 120,
+  drivstoff: 'bensin',
+  drivstoffPris: 21,
+  forbrukPerMil: 0.65,
+  bompengerTurRetur: 60,
+  oppholdstimer: 4,
+});
+const kr = (n: number) => Math.round(n).toLocaleString('nb-NO') + ' kr';
 
 const pageUrl = `${SITE_URL}/grensehandel/`;
 const tittel = 'Grensehandelkalkulator';
@@ -20,11 +33,11 @@ const { sti, jsonLd } = datasideLd({
   tittel,
   description,
   datasettNavn: 'Grensehandel og prisforskjeller Norge–Sverige',
-  datasettBeskrivelse: 'Modell for beregning av netto besparelse ved grensehandel basert på SSB statistikk og Tolletatens kvoteregler.',
-  kildeData: 'https://www.ssb.no/grensehandel',
+  datasettBeskrivelse: 'Modell for beregning av netto besparelse ved grensehandel basert på Eurostats prisnivåindekser, Norges Banks valutakurs og Tolletatens verdigrense; reisekostnadene er forutsetninger.',
+  kildeData: 'https://ec.europa.eu/eurostat/databrowser/view/prc_ppp_ind/default/table',
   lisensUrl: 'https://data.norge.no/nlod/no/2.0',
   periode: '2026',
-  oppdatert: new Date().toISOString().slice(0, 10),
+  oppdatert: '2026-11-25',
 });
 ---
 
@@ -53,12 +66,12 @@ const { sti, jsonLd } = datasideLd({
             <div class="felt">
               <label for="f-dagligvarer">Dagligvarer / mat (SEK)</label>
               <input type="number" id="f-dagligvarer" min="0" step="50" value="1000" />
-              <small>Ca. 30 % dyrere i Norge</small>
+              <small>Eurostat: prisnivået er ca. 22 % høyere i Norge</small>
             </div>
             <div class="felt">
               <label for="f-kjott">Kjøtt og kylling (SEK)</label>
               <input type="number" id="f-kjott" min="0" step="50" value="800" />
-              <small>Ca. 45 % dyrere i Norge</small>
+              <small>Eurostat: prisnivået er ca. 32 % høyere i Norge</small>
             </div>
           </div>
 
@@ -66,12 +79,12 @@ const { sti, jsonLd } = datasideLd({
             <div class="felt">
               <label for="f-godteri">Godteri og brus (SEK)</label>
               <input type="number" id="f-godteri" min="0" step="50" value="400" />
-              <small>Ca. 50 % dyrere i Norge</small>
+              <small>Anslag: ca. 33 % høyere (Eurostat, alkoholfrie drikkevarer)</small>
             </div>
             <div class="felt">
               <label for="f-snus">Snus og tobakk (SEK)</label>
               <input type="number" id="f-snus" min="0" step="50" value="800" />
-              <small>Høy norsk tobakksavgift</small>
+              <small>Eurostat: tobakk koster om lag dobbelt så mye i Norge</small>
             </div>
           </div>
 
@@ -79,12 +92,12 @@ const { sti, jsonLd } = datasideLd({
             <div class="felt">
               <label for="f-alkohol">Alkohol / øl / vin (SEK)</label>
               <input type="number" id="f-alkohol" min="0" step="50" value="0" />
-              <small>Systembolaget vs. Vinmonopolet</small>
+              <small>Eurostat: prisnivået er ca. 55 % høyere i Norge</small>
             </div>
             <div class="felt">
               <label for="f-kurs">Valutakurs (NOK per 100 SEK)</label>
               <input type="number" id="f-kurs" min="70" max="130" step="0.5" value={STANDARD_KURS} />
-              <small>100 SEK koster i dag ca. 98 NOK</small>
+              <small>Norges Bank, {KURS_DATO}: 100 SEK = 95,90 NOK (<a href="https://www.norges-bank.no/tema/Statistikk/Valutakurser/">dagens kurs</a>)</small>
             </div>
           </div>
         </fieldset>
@@ -125,8 +138,8 @@ const { sti, jsonLd } = datasideLd({
             <div class="felt">
               <label for="f-opphold">Oppholdstid i utlandet</label>
               <select id="f-opphold">
-                <option value="4" selected>Under 24 timer (kvote: 3 000 kr)</option>
-                <option value="25">Over 24 timer (kvote: 6 000 kr)</option>
+                <option value="4" selected>24 timer eller mindre (verdigrense: 3 000 kr)</option>
+                <option value="25">Mer enn 24 timer (verdigrense: 6 000 kr)</option>
               </select>
             </div>
           </div>
@@ -137,7 +150,7 @@ const { sti, jsonLd } = datasideLd({
       <aside class="grense-resultat" id="grense-resultat">
         <div class="resultat-boks" id="boks-status">
           <span class="status-merke" id="res-etikett">Netto besparelse</span>
-          <div class="hovedtall" id="res-netto">0 kr</div>
+          <div class="hovedtall" id="res-netto">{(start.nettoSparingNok >= 0 ? '+' : '') + kr(start.nettoSparingNok)}</div>
           <p class="status-tekst" id="res-status-tekst">
             Beregner reell gevinst når reiseutgiftene er trukket fra.
           </p>
@@ -146,29 +159,29 @@ const { sti, jsonLd } = datasideLd({
         <div class="regnestykke">
           <div class="linje">
             <span>Betalt i Sverige:</span>
-            <strong id="res-sek-nok">3 000 SEK (2 940 kr)</strong>
+            <strong id="res-sek-nok">{`${start.totaltSek.toLocaleString('nb-NO')} SEK (${kr(start.varekostnadNok)})`}</strong>
           </div>
           <div class="linje">
             <span>Tilsvarer i Norge:</span>
-            <strong id="res-norge-nok">4 200 kr</strong>
+            <strong id="res-norge-nok">{kr(start.estimertNorgeNok)}</strong>
           </div>
           <div class="linje pluss">
             <span>Brutto prisgevinst:</span>
-            <strong id="res-brutto">+1 260 kr</strong>
+            <strong id="res-brutto">{`+${kr(start.bruttoSparingNok)}`}</strong>
           </div>
           <div class="linje minus">
             <span>Reisekostnad (tur-retur):</span>
-            <strong id="res-reise">&minus;388 kr</strong>
+            <strong id="res-reise">{`−${kr(start.reisekostnadNok)}`}</strong>
           </div>
           <div class="linje total">
             <span>Netto fortjeneste:</span>
-            <strong id="res-bunnlinje">+872 kr</strong>
+            <strong id="res-bunnlinje">{(start.nettoSparingNok >= 0 ? '+' : '') + kr(start.nettoSparingNok)}</strong>
           </div>
         </div>
 
         <div class="nullpunkt-kile" id="res-nullpunkt-sone">
           <span>Inntjeningsterskel:</span>
-          <p>Du må handle for minst <strong id="res-nullpunkt">1 150 SEK</strong> før du har tjent inn reisen.</p>
+          <p>Du må handle for minst <strong id="res-nullpunkt">{`${start.nullpunktSek.toLocaleString('nb-NO')} SEK`}</strong> før du har tjent inn reisen.</p>
         </div>
 
         <div class="kvote-advarsel" id="res-kvote-advarsel" style="display: none;">
@@ -188,26 +201,56 @@ const { sti, jsonLd } = datasideLd({
       <article class="fakta-kort">
         <h3>Tolletatens verdigrenser</h3>
         <p>
-          Er du ute av Norge i <strong>under 24 timer</strong>, kan du ta med deg varer for inntil <strong>3 000 NOK</strong> toll- og avgiftsfritt.
-          Er du ute i <strong>over 24 timer</strong>, øker grensen til <strong>6 000 NOK</strong> per person.
+          Har du vært ute av Norge i <strong>24 timer eller mindre</strong>, kan du én gang i løpet av 24 timer ta med varer for
+          inntil <strong>3 000 kroner</strong> uten toll og avgift. Har du vært ute i <strong>mer enn 24 timer</strong>, er grensen
+          <strong>6 000 kroner</strong> per person. Alkohol og tobakk har egne kvoter og regnes ikke med.
+          Kilde: <a href="https://www.toll.no/no/handle-i-utlandet/verdigrensa">Tolletaten</a>.
         </p>
       </article>
 
       <article class="fakta-kort">
-        <h3>Kjøttkvoten på 10 kg</h3>
+        <h3>Kvoten på 10 kg kjøtt og ost</h3>
         <p>
-          Uavhengig av verdi kan hver person ta med seg maksimalt <strong>10 kg kjøtt, ost og melkeprodukter</strong> til sammen.
-          Kjøttdeig og kyllingfilet må veies nøye dersom du handler inn store kvanta.
+          Fra EØS-land kan hver person ta med til sammen <strong>10 kg kjøtt, kjøttvarer, ost og fôrvarer</strong>. Det som går
+          utover kvoten, regnes inn i verdigrensen.
+          Kilde: <a href="https://www.toll.no/no/varer/mat/handle-kjot-ost">Tolletaten</a>.
         </p>
       </article>
 
       <article class="fakta-kort">
         <h3>Valutakursens betydning</h3>
         <p>
-          Når den svenske kronen styrker seg mot den norske (nærmer seg 1:1), krymper gevinsten raskt.
-          Historisk har den største fordelen ligget på tobakk, brus og godteri på grunn av særnorske særavgifter.
+          Når den svenske kronen styrker seg mot den norske, krymper gevinsten. Ifølge Eurostats prisnivåindekser for 2024 er
+          prisforskjellen mellom Norge og Sverige størst for tobakk og alkohol.
         </p>
       </article>
+    </div>
+  </section>
+
+  <section class="day" aria-labelledby="kilder">
+    <h2 class="band" id="kilder">Kilder og forutsetninger</h2>
+    <div class="prose">
+      <ul>
+        <li>
+          Prisforskjellen mellom Norge og Sverige: <a href="https://ec.europa.eu/eurostat/databrowser/view/prc_ppp_ind/default/table">Eurostat, prisnivåindekser (prc_ppp_ind)</a>, 2024.
+          Matvarer 1,22, kjøtt 1,32, alkohol 1,55 og tobakk 2,02 ganger svensk prisnivå. Eurostat skiller ikke ut godteri og snus;
+          godteri og brus bruker tallet for alkoholfrie drikkevarer (1,33), snus bruker tallet for tobakk. Prisnivåindeksen er et
+          landsgjennomsnitt, ikke prisene i grensebutikkene.
+        </li>
+        <li>Valutakurs: <a href="https://www.norges-bank.no/tema/Statistikk/Valutakurser/">Norges Bank</a>, {KURS_DATO}. Du kan endre kursen i skjemaet.</li>
+        <li>
+          Verdigrense og kvoter: <a href="https://www.toll.no/no/handle-i-utlandet">Tolletaten</a>
+          (<a href="https://www.toll.no/no/varer/alkohol-og-tobakk/kvote">alkohol og tobakk</a>).
+        </li>
+        <li>
+          Hvor mye nordmenn handler på dagsturer til utlandet: <a href="https://www.ssb.no/varehandel-og-tjenesteyting/varehandel/statistikk/grensehandel">SSB, grensehandel</a>.
+          Tallene inngår ikke i kalkulatoren.
+        </li>
+        <li>
+          Forutsetninger, ikke kildetall: drivstoffpris (bensin 21 kr/l, diesel 20 kr/l, strøm 2,50 kr/kWh), forbruk
+          (0,65 og 0,60 l/mil, 2,0 kWh/mil), avstander og bompenger for rutene. Endre dem i skjemaet for din egen tur.
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -258,7 +301,7 @@ const { sti, jsonLd } = datasideLd({
       const godteriSek = parseFloat(fGodteri.value) || 0;
       const snusSek = parseFloat(fSnus.value) || 0;
       const alkoholSek = parseFloat(fAlkohol.value) || 0;
-      const kurs = parseFloat(fKurs.value) || 98;
+      const kurs = parseFloat(fKurs.value) || 96;
 
       const avstand = parseFloat(fAvstand.value) || 0;
       const bom = parseFloat(fBompenger.value) || 0;
@@ -319,7 +362,7 @@ const { sti, jsonLd } = datasideLd({
       if (kvoteBoks && kvoteTekst) {
         if (res.kvoteStatus.verdigrenseOverskredet) {
           kvoteBoks.style.display = 'block';
-          kvoteTekst.textContent = `Varer for ${kr(res.varekostnadNok)} overskrider den tollfrie verdigrensen på ${kr(res.kvoteStatus.verdigrenseNok)} ved under ${oppholdstimer} timers opphold. Overskytende beløp må fortolles.`;
+          kvoteTekst.textContent = `Varer for ${kr(res.kvoteStatus.verdigrenseGrunnlagNok)} (uten alkohol og tobakk) overskrider verdigrensen på ${kr(res.kvoteStatus.verdigrenseNok)}. Du må betale avgift for det som går utover.`;
         } else {
           kvoteBoks.style.display = 'none';
         }
@@ -355,7 +398,7 @@ const { sti, jsonLd } = datasideLd({
 <style>
   .grense-layout {
     display: grid;
-    grid-template-columns: 1fr 340px;
+    grid-template-columns: minmax(0, 1fr) 340px;
     gap: 32px;
     margin-top: 24px;
     align-items: start;
@@ -368,6 +411,7 @@ const { sti, jsonLd } = datasideLd({
   }
 
   .grense-gruppe {
+    min-width: 0;
     border: 1px solid var(--border, #dcd9cf);
     border-radius: 4px;
     padding: 16px 20px;
@@ -384,7 +428,7 @@ const { sti, jsonLd } = datasideLd({
 
   .felt-rad {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 16px;
     margin-top: 12px;
   }
@@ -576,10 +620,10 @@ const { sti, jsonLd } = datasideLd({
 
   @media (max-width: 800px) {
     .grense-layout {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
     .felt-rad {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
   }
 </style>

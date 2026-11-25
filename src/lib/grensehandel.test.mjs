@@ -104,3 +104,26 @@ test('beregnGrensehandel: beregner break-even nullpunkt når reisen er dyr og ha
   assert.ok(res.nettoSparingNok < 0);
   assert.ok(res.nullpunktSek > 1500);
 });
+
+const grunn = { avstandEnVeiKm: 30, drivstoff: 'elbil', drivstoffPris: 2.5, forbrukPerMil: 2.0, bompengerTurRetur: 0 };
+
+test('beregnGrensehandel: alkohol og tobakk regnes ikke med i verdigrensen (egne kvoter)', () => {
+  const res = beregnGrensehandel({
+    ...grunn,
+    varekurv: { dagligvarerSek: 1000, kjottSek: 0, godteriSek: 0, snusSek: 3000, alkoholSek: 2000 },
+    kursNokPer100Sek: 100,
+    oppholdstimer: 4,
+  });
+  assert.equal(res.kvoteStatus.verdigrenseGrunnlagNok, 1000);
+  assert.equal(res.kvoteStatus.verdigrenseOverskredet, false);
+});
+
+test('beregnGrensehandel: 24 timer eller mindre gir 3 000 kr; norsk pris følger valutakursen', () => {
+  const kurv = { dagligvarerSek: 1000, kjottSek: 0, godteriSek: 0, snusSek: 0, alkoholSek: 0 };
+  assert.equal(beregnGrensehandel({ ...grunn, varekurv: kurv, kursNokPer100Sek: 100, oppholdstimer: 24 }).kvoteStatus.verdigrenseNok, 3000);
+  const a = beregnGrensehandel({ ...grunn, varekurv: kurv, kursNokPer100Sek: 100, oppholdstimer: 4 });
+  const b = beregnGrensehandel({ ...grunn, varekurv: kurv, kursNokPer100Sek: 90, oppholdstimer: 4 });
+  assert.equal(a.estimertNorgeNok, 1220);
+  assert.equal(b.estimertNorgeNok, 1098);
+  assert.equal(STANDARD_KURS, 96);
+});

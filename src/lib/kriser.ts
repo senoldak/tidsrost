@@ -5,6 +5,11 @@
  * og nasjonale stabiliseringskriser, fra Volcker-sjokket til dagens inflasjonsbølge.
  */
 
+export interface Kilde {
+  navn: string;
+  url: string;
+}
+
 export interface KriseEpoke {
   id: string;
   tittel: string;
@@ -18,80 +23,111 @@ export interface KriseEpoke {
   politiskeTiltak: string[];
   laerdommer: string;
   dagensParallell: string;
+  // Kildene for tallene og faktaopplysningene i kortet (kontrollert 25.11.2026).
+  kilder: Kilde[];
 }
+
+// Tallene er kontrollert mot offisielle kilder 25. november 2026 (FRED, SSB, Norges Bank, World Bank, Lovdata,
+// Finanstilsynet, regjeringen.no). Det som ikke lot seg belegge, er fjernet.
+const NB_RENTE: Kilde = {
+  navn: 'Norges Bank: endringer i styringsrenten',
+  url: 'https://www.norges-bank.no/en/topics/Monetary-policy/Policy-rate/Key-policy-rate-Monetary-policy-meetings-and-changes-in-the-policy-rate/',
+};
+const SSB_KPI: Kilde = { navn: 'SSB, tabell 03013 (KPI)', url: 'https://www.ssb.no/statbank/table/03013' };
+const SSB_AKU: Kilde = { navn: 'SSB, tabell 08517 (AKU)', url: 'https://www.ssb.no/statbank/table/08517' };
 
 export const KRISER: KriseEpoke[] = [
   {
     id: 'volcker-1979',
     tittel: 'Volcker-sjokket og kampen mot forventningene',
     periode: '1979–1982',
-    region: 'USA / Globalt',
+    region: 'USA',
     kategori: 'inflasjon',
-    toppRente: '20,0 % (juni 1981)',
-    toppInflasjon: '14,8 % (mars 1980)',
-    ledighet: '10,8 % (desember 1982)',
-    kjerneAarsak: 'Tiår med forankret høy inflasjonspsykologi, forsterket av to oljesjokk og ekspansiv finanspolitikk.',
+    toppRente: '19,1 % (fed funds, snitt juni 1981)',
+    toppInflasjon: '14,8 % (KPI, mars 1980)',
+    ledighet: '10,8 % (november–desember 1982)',
+    kjerneAarsak: 'Høy og vedvarende inflasjon gjennom 1970-tallet.',
     politiskeTiltak: [
-      'Federal Reserve la om styringen fra rente til direkte kontroll over bankenes reserver (pengemengde).',
-      'Aksepterte en dyp dobbelbunn-resesjon for å knekke lønns- og prisspiralen.',
-      'Etablerte prinsippet om at sentralbanken må være villig til å påføre økonomien kortsiktig smerte for å sikre langsiktig prisstabilitet.',
+      'I oktober 1979 gikk Federal Reserve over til å styre etter bankenes reserver i stedet for etter fed funds-renten.',
+      'USA hadde to resesjoner: januar–juli 1980 og juli 1981–november 1982.',
     ],
-    laerdommer: 'Inflasjon kan ikke snakkes ned; forventningene brytes først når sentralbanken viser vilje til å holde realrenten markant positiv over tid.',
-    dagensParallell: 'Norges Banks beslutning om å holde styringsrenten på 4,50 % lenge etter at andre kutter, drives av frykten for at kronesvekkelse og lønnsvekst skal forankre en ny inflasjonsbølge.',
+    laerdommer: 'Inflasjonen falt først etter en lang periode med svært høye renter og høy arbeidsledighet.',
+    dagensParallell:
+      'Norges Bank satte styringsrenten opp til 4,50 % i desember 2023, kuttet til 4,00 % i 2025 og satte den opp igjen til 4,50 % i september 2026.',
+    kilder: [
+      { navn: 'FRED: fed funds-renten (FEDFUNDS)', url: 'https://fred.stlouisfed.org/series/FEDFUNDS' },
+      { navn: 'FRED: KPI, USA (CPIAUCNS)', url: 'https://fred.stlouisfed.org/series/CPIAUCNS' },
+      { navn: 'FRED: arbeidsledighet, USA (UNRATE)', url: 'https://fred.stlouisfed.org/series/UNRATE' },
+      { navn: 'Federal Reserve History: The Great Inflation', url: 'https://www.federalreservehistory.org/essays/great-inflation' },
+      NB_RENTE,
+    ],
   },
   {
     id: 'norsk-bankkrise-1988',
     tittel: 'Den norske bankkrisen',
-    periode: '1988–1992',
+    periode: '1988–1993',
     region: 'Norge',
     kategori: 'bankkrise',
-    toppRente: '11,0 % (dagsrente opp mot 25 %)',
-    toppInflasjon: '8,7 % (1987)',
-    ledighet: '6,0 % (1993, etterkrigsrekord)',
-    kjerneAarsak: 'Deregulering av kredittmarkedet i 1984–85 uten tilstrekkelig tilsyn, etterfulgt av oljeprisfall i 1986 og kraftig fall i eiendomspriser.',
+    toppRente: '13,1 % (dagslånsrenten, snitt 1988)',
+    toppInflasjon: '6,7 % (KPI, snitt 1988)',
+    ledighet: '6,0 % (1993, høyeste etter krigen)',
+    kjerneAarsak: 'Kredittmarkedet ble deregulert i 1984–85, og bankenes utlån vokste raskt.',
     politiskeTiltak: [
-      'Statlig redning av banksystemet via Statens Banksikringsfond og Statens Bankinvesteringsfond.',
-      'Aksjonærene i Christiania Bank og Den norske Creditbank mistet sine verdier; staten overtok eierskapet.',
-      'Innføring av strengere soliditets- og tapsavsetningsregler.',
+      'Staten opprettet Statens Banksikringsfond våren 1991 og Statens Bankinvesteringsfond høsten 1991.',
+      'To storbanker fikk aksjekapitalen skrevet ned til null høsten 1991, en tredje i 1993.',
     ],
-    laerdommer: 'Finansiell deregulering kombinert med skattefradrag for gjeldsrenter og uerfarne banker skaper uunngåelig kredittbobler og påfølgende systemkrise.',
-    dagensParallell: 'Dagens utlånsforskrift (krav om 15 % egenkapital, maksimalt 5x inntekt og rente-stresstest) er en direkte arv fra bankkrisens lærdommer.',
+    laerdommer: 'Rask kredittvekst etter dereguleringen ble fulgt av store tap og statlige kapitaltilskudd til bankene.',
+    dagensParallell:
+      'Utlånsforskriften setter i dag grenser for boliglån: lånet kan ikke være over 90 % av boligens verdi, samlet gjeld kan være høyst fem ganger inntekten, og låntakeren må tåle en renteøkning på 3 prosentpoeng, minst til 7 %.',
+    kilder: [
+      { navn: 'Norges Bank: styringsrenten, årssnitt', url: 'https://www.norges-bank.no/en/topics/Statistics/Key-policy-rate-daily/policy-rate-annual/' },
+      SSB_KPI,
+      SSB_AKU,
+      { navn: 'SSB: Bankkrisen', url: 'https://www.ssb.no/bank-og-finansmarked/artikler-og-publikasjoner/bankkrisen' },
+      { navn: 'Lovdata: utlånsforskriften', url: 'https://lovdata.no/dokument/SF/forskrift/2020-12-09-2648' },
+    ],
   },
   {
     id: 'erm-1992',
     tittel: 'Valutakrisen og oppgivelsen av fastkursen',
-    periode: 'Høsten 1992',
+    periode: 'November–desember 1992',
     region: 'Norge og Europa',
     kategori: 'valuta',
-    toppRente: '25,0 % (Norges Banks dagslånrente)',
-    toppInflasjon: '2,3 % (1992)',
-    ledighet: '5,9 %',
-    kjerneAarsak: 'Spekulasjonsbølger mot europeiske fastkurser (ERM) etter Tysklands gjenforening og høye Bundesbank-renter.',
+    toppRente: '25,0 % (dagslånsrenten, 23.–27. november 1992)',
+    toppInflasjon: '2,3 % (KPI, snitt 1992)',
+    ledighet: '5,9 % (1992)',
+    kjerneAarsak: 'Uro i det europeiske valutasamarbeidet høsten 1992 og spekulasjon mot kronen, som da hadde fast kurs.',
     politiskeTiltak: [
-      'Norges Bank hevet dagslånrenten til ekstreme 25 % for å forsvare kronen mot spekulasjon.',
-      '10. desember 1992 ga regjeringen og Norges Bank opp fastkursen mot ECU (forløperen til euro).',
-      'Kronen fløt fritt og svekket seg med ca. 5 %, noe som lettet presset på eksportindustrien.',
+      'Norges Bank satte dagslånsrenten opp til 25 % for å forsvare kronen.',
+      'Den 10. desember 1992 ble fastkurspolitikken oppgitt, og kronen gikk over til styrt flyt.',
     ],
-    laerdommer: 'Å forsvare en overvurdert fast valutakurs krever uholdbart høye renter som knuser innenlandsk økonomi. Fleksibel valutakurs fungerer som en uunnværlig støtdemper.',
-    dagensParallell: 'Forklarer hvorfor Norges Bank i dag lar kronen svinge fritt og ikke intervenerer for å forsvare et spesifikt kursmål mot euro eller dollar.',
+    laerdommer: 'Forsvaret av fastkursen krevde svært høye renter i en periode med høy arbeidsledighet.',
+    dagensParallell: 'I dag har Norge flytende kronekurs, og pengepolitikken skal sikre lav og stabil inflasjon, med et mål på 2 % over tid.',
+    kilder: [
+      { navn: 'Norges Bank: styringsrenten, historikk', url: 'https://www.norges-bank.no/en/topics/Monetary-policy/policy-rate/Policy-rate---more' },
+      { navn: 'Norges Bank: historie, 1992–', url: 'https://www.norges-bank.no/tema/Om-Norges-Bank/historie/norges-banks-historie/e6-artikkel2/1992-/' },
+      SSB_KPI,
+      SSB_AKU,
+      { navn: 'Lovdata: forskrift om pengepolitikken', url: 'https://lovdata.no/dokument/LTI/forskrift/2001-03-29-278' },
+    ],
   },
   {
     id: 'latin-stabilisering-1990',
-    tittel: 'Latinamerikanske stabiliseringsprogrammer',
-    periode: '1985–1994',
-    region: 'Latin-Amerika (Brasil, Argentina, Mexico)',
+    tittel: 'Hyperinflasjonen i Brasil',
+    periode: '1990–1995',
+    region: 'Latin-Amerika (Brasil)',
     kategori: 'inflasjon',
-    toppRente: '> 100 % (ekstreme nominelle satser)',
-    toppInflasjon: '> 1000 % (hyperinflasjon)',
-    ledighet: 'Betydelig underbeskjeftigelse',
-    kjerneAarsak: 'Kroniske budsjettunderskudd finansiert med pengeseddelpressen, kombinert med full indeksregulering av lønninger og priser.',
-    politiskeTiltak: [
-      'Heterodokse sjokk (prisfrysinger som Cruzado- og Austral-planene) mislyktes fordi de underliggende underskuddene besto.',
-      'Gjennombrudd kom med ortodokse budsjettkutt og institusjonell nyskapning (Brasils Plano Real med den fiktive regneenheten URV i 1994).',
-      'Forbud mot sentralbankfinansiering av statsgjeld.',
+    toppRente: '–',
+    toppInflasjon: '2 948 % (KPI, 1990)',
+    ledighet: '–',
+    kjerneAarsak: 'Prisene i Brasil steg med over 1 900 % i 1990, 1993 og 1994.',
+    politiskeTiltak: ['Brasil innførte Plano Real i 1994. Inflasjonen falt fra 2 076 % i 1994 til 66 % i 1995.'],
+    laerdommer: 'Inflasjonen falt kraftig året etter at Plano Real ble innført.',
+    dagensParallell: 'Prisstigningen i Norge var 3,6 % i oktober 2026.',
+    kilder: [
+      { navn: 'World Bank: inflasjon, Brasil (FP.CPI.TOTL.ZG)', url: 'https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=BR' },
+      { navn: 'SSB, tabell 14700 (KPI)', url: 'https://www.ssb.no/statbank/table/14700' },
     ],
-    laerdommer: 'Automatisk indeksregulering virker som bensin på inflasjonsbålet. Prisvekst kan aldri temmes varig uten finanspolitisk disiplin.',
-    dagensParallell: 'Advarsel mot automatisk inflasjonsjustering av offentlige budsjetter og lønnstillegg som kan føre til at inflasjonsimpulsene sementeres.',
   },
   {
     id: 'finanskrisen-2008',
@@ -99,35 +135,50 @@ export const KRISER: KriseEpoke[] = [
     periode: '2008–2009',
     region: 'Globalt / Norge',
     kategori: 'likviditet',
-    toppRente: '5,75 % (kuttet til 1,25 %)',
-    toppInflasjon: '3,8 % (2008)',
-    ledighet: '3,2 % (begrenset økning i Norge)',
-    kjerneAarsak: 'Kollaps i det amerikanske subprime-markedet og Lehman Brothers-konkurs som frøs de internasjonale kredittmarkedene.',
+    toppRente: '5,75 % (25. juni 2008), kuttet til 1,25 % (17. juni 2009)',
+    toppInflasjon: '3,8 % (KPI, snitt 2008)',
+    ledighet: '2,7 % (2008), 3,3 % (2009)',
+    kjerneAarsak:
+      'Krisen i det amerikanske boliglånsmarkedet og Lehman Brothers-konkursen i september 2008 stengte de internasjonale kredittmarkedene.',
     politiskeTiltak: [
-      '«Gullkortet»: Norske banker fikk bytte obligasjoner med fortrinnsrett (OMF) mot statskasseveksler med lav risiko.',
-      'Norges Bank kuttet styringsrenten aggressivt fra 5,75 % til 1,25 %.',
-      'Statens finansfond ble opprettet for å styrke bankenes kjernekapital ved behov.',
+      'Bytteordningen (oktober 2008): bankene kunne bytte obligasjoner med fortrinnsrett (OMF) mot statskasseveksler, med en ramme på 350 mrd. kroner.',
+      'Norges Bank kuttet styringsrenten fra 5,75 % til 1,25 %.',
+      'Statens finansfond ble opprettet i mars 2009 med 50 mrd. kroner for å styrke bankenes kjernekapital.',
     ],
-    laerdommer: 'Rask og massiv tilførsel av statlig likviditet mot pant kan avverge en kredittfrys før den smitter over i realøkonomien.',
-    dagensParallell: 'Bankenes store beholdning av OMF og solide kapitalbuffere gjør at dagens renteoppgang på 4,50 % håndteres uten fare for systemkrise i kredittmarkedet.',
+    laerdommer: 'Staten ga bankene likviditet mot sikkerhet og tilbød kapital tidlig i krisen.',
+    dagensParallell: 'Over 95 % av husholdningenes gjeld i banker og kredittforetak har flytende rente (Finanstilsynet, 1. kvartal 2026).',
+    kilder: [
+      NB_RENTE,
+      SSB_KPI,
+      SSB_AKU,
+      { navn: 'Finanstilsynet: Tilstanden i finansmarkedet 2009', url: 'https://www.finanstilsynet.no/contentassets/af5b86649a7e41c0bc6346bf2c2f11f0/tilstanden_i_finansmarkedet_2009.pdf' },
+      { navn: 'Ot.prp. nr. 35 (2008–2009): Statens finansfond', url: 'https://www.regjeringen.no/contentassets/7eb8c5a3fc61480fb94d5fb3572b1632/no/pdfs/otp200820090035000dddpdfs.pdf' },
+      { navn: 'Finanstilsynet: Finansielt utsyn, juni 2026', url: 'https://www.finanstilsynet.no/publikasjoner-og-analyser/finansielt-utsyn/finansielt-utsyn---juni-2026/html/2026/' },
+    ],
   },
   {
     id: 'inflasjonssjokket-2021',
     tittel: 'Det store inflasjons- og energisjokket',
     periode: '2021–2026',
-    region: 'Norge og Vesten',
+    region: 'Norge',
     kategori: 'inflasjon',
-    toppRente: '4,50 % (desember 2023–2026)',
-    toppInflasjon: '7,5 % (KPI okt 2022), 7,0 % (KPI-JAE jun 2023)',
-    ledighet: 'ca. 2,0 % (NAV registrert)',
-    kjerneAarsak: 'Etterdønninger av pandemi-stimulanser, forsyningsflaskehalser, gasskrise, krig i Ukraina og en historisk svak kronekurs.',
+    toppRente: '4,50 % (desember 2023–juni 2025 og fra september 2026)',
+    toppInflasjon: '7,5 % (KPI, oktober 2022), 6,9 % (KPI-JAE, juni 2023)',
+    ledighet: '3,2 % (AKU, 2022), 4,6 % (oktober 2026)',
+    kjerneAarsak: 'Prisene på energi og varer steg kraftig etter pandemien og krigen i Ukraina.',
     politiskeTiltak: [
-      'Raskeste renteoppgang i Norges Banks nyere historie: fra 0 % til 4,50 % på 27 måneder.',
-      'Strømstøtteordning for å dempe sjokket for husholdningene.',
-      'Statsbudsjett med vekt på å unngå overoppheting av fastlandsøkonomien.',
+      'Norges Bank satte styringsrenten opp fra 0 % i september 2021 til 4,50 % i desember 2023.',
+      'Strømstøtten ble innført i desember 2021, og Norgespris kom 1. oktober 2025.',
     ],
-    laerdommer: 'Små åpne økonomier med flytende rente rammes dobbelt: Kronesvekkelsen hever importprisene, mens renteøkningene treffer husholdningenes høye gjeld direkte via flytende rente.',
-    dagensParallell: 'Aktuell situasjon som binder sammen lærdommene fra Volckers forventningskamp, 1992-valutaens fleksibilitet og 2008-bankenes robusthet.',
+    laerdommer: 'Styringsrenten gikk fra 0 % til 4,50 % på 27 måneder.',
+    dagensParallell: 'Styringsrenten er 4,50 % fra 25. september 2026, og prisstigningen var 3,6 % i oktober 2026.',
+    kilder: [
+      NB_RENTE,
+      SSB_KPI,
+      { navn: 'SSB, tabell 14704 (KPI-JAE)', url: 'https://www.ssb.no/statbank/table/14704' },
+      { navn: 'SSB, tabell 13760 (AKU)', url: 'https://www.ssb.no/statbank/table/13760' },
+      { navn: 'Regjeringen: strømtiltak', url: 'https://www.regjeringen.no/no/tema/energi/strom/regjeringens-stromtiltak/id2900232/' },
+    ],
   },
 ];
 

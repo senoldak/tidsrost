@@ -20,10 +20,10 @@ const { sti, jsonLd } = datasideLd({
   description,
   datasettNavn: 'Makroøkonomiske kriser og stabiliseringsprogrammer',
   datasettBeskrivelse: 'Sammenlignende analyse av topprenter, inflasjonsutvikling og politiske lærdommer fra historiske kriser.',
-  kildeData: 'https://www.norges-bank.no/',
+  kildeData: 'https://www.ssb.no/statbank/table/03013',
   lisensUrl: 'https://data.norge.no/nlod/no/2.0',
   periode: '1979–2026',
-  oppdatert: new Date().toISOString().slice(0, 10),
+  oppdatert: '2026-11-25',
 });
 ---
 
@@ -34,9 +34,9 @@ const { sti, jsonLd } = datasideLd({
   <header class="page-head">
     <h1 class="page-title"><Symbol kind="analyse" />Historiske kriser og makroresonans</h1>
     <p class="page-intro">
-      Dagens utfordringer med seiglivet inflasjon, svak kronekurs og en styringsrente på 4,50 % er ikke unike.
-      Ved å sammenligne dagens situasjon med tidligere sjokk – fra Volckers renteoffensiv og den norske bankkrisen
-      til 1992-valutaens fall – trer de strukturelle mekanismene i pengepolitikken klarere fram.
+      Styringsrenten er 4,50 %, og prisstigningen var 3,6 % i oktober 2026. Her er tallene fra seks tidligere
+      kriser, fra Volckers renteoffensiv og den norske bankkrisen til valutakrisen i 1992. Hvert kort viser kildene
+      for tallene.
     </p>
   </header>
 
@@ -119,6 +119,13 @@ const { sti, jsonLd } = datasideLd({
                 <h4>Parallell til dagens situasjon i Norge</h4>
                 <p>{k.dagensParallell}</p>
               </div>
+
+              <h4>Kilder</h4>
+              <ul class="krise-kilder">
+                {k.kilder.map((kilde) => (
+                  <li><a href={kilde.url}>{kilde.navn}</a></li>
+                ))}
+              </ul>
             </div>
           </article>
         ))}
@@ -131,33 +138,32 @@ const { sti, jsonLd } = datasideLd({
         <div class="prinsipp-kort">
           <h3>1. Forventninger er selvforsterkende</h3>
           <p>
-            Både Volcker-sjokket og de latinamerikanske programmene beviste at dersom lønnstakere og bedrifter
-            forventer 4–5 % prisvekst, blir prisveksten 4–5 %. Renten må heves nok til at realrenten oppleves
-            innstrammende, ellers fortsetter spiralen.
+            I USA falt inflasjonen fra 14,8 % i 1980 først etter at fed funds-renten hadde ligget rundt 19 % og
+            arbeidsledigheten hadde nådd 10,8 %. Når folk venter høy prisvekst, tar det tid og høye renter å snu den.
           </p>
         </div>
         <div class="prinsipp-kort">
           <h3>2. Flytende kurs er en ventil, ikke et mål</h3>
           <p>
-            1992-krisen viste at å bruke rentevåpenet til å tvangsforsvare et bestemt kronekursnivå fører til
-            uholdbare samfunnsøkonomiske tap. Norges Banks mandat er lav og stabil inflasjon over tid, ikke
-            å holde kronen sterk mot euro.
+            I 1992 satte Norges Bank dagslånsrenten opp til 25 % for å forsvare fastkursen, men ga den opp 10. desember.
+            I dag er kronekursen flytende, og pengepolitikken skal sikre lav og stabil inflasjon, med et mål på 2 %
+            over tid (<a href="https://lovdata.no/dokument/LTI/forskrift/2001-03-29-278">forskrift om pengepolitikken</a>).
           </p>
         </div>
         <div class="prinsipp-kort">
           <h3>3. Bankenes soliditet avgjør smertegrensen</h3>
           <p>
-            I 1988 knakk norske banker fordi de manglet kapital og overvåking. I 2008 og i dag gjør strenge
-            egenkapitalkrav og utlånsforskriften at banksystemet tåler selv markante rentehopp uten systemisk
-            kredittstopp.
+            Etter bankkrisen måtte staten skyte inn kapital i bankene gjennom to statlige fond i 1991. I 2008 fikk bankene
+            likviditet gjennom bytteordningen, og i 2009 ble Statens finansfond opprettet. I dag setter
+            <a href="https://lovdata.no/dokument/SF/forskrift/2020-12-09-2648">utlånsforskriften</a> grenser for boliglån.
           </p>
         </div>
         <div class="prinsipp-kort">
           <h3>4. Flytende boliglån gir lynrask transmisjon</h3>
           <p>
-            Norske husholdningers uvanlig høye andel lån med flytende rente (over 90 %) betyr at Norges Banks
-            rentehevinger treffer husholdningenes disponible inntekt mye raskere og mer direkte enn i USA eller
-            eurosonen, der fastrente dominerer.
+            Over 95 % av husholdningenes gjeld i banker og kredittforetak har flytende rente
+            (<a href="https://www.finanstilsynet.no/publikasjoner-og-analyser/finansielt-utsyn/finansielt-utsyn---juni-2026/html/2026/">Finanstilsynet</a>,
+            1. kvartal 2026). Derfor slår endringer i styringsrenten raskt inn i husholdningenes renteutgifter.
           </p>
         </div>
       </div>
@@ -369,6 +375,10 @@ const { sti, jsonLd } = datasideLd({
     padding: 0.75rem;
     background: var(--bg-subtle, #fbfaf8);
     border-left: 3px solid #204c75;
+  }
+
+  .kort-innhold ul.krise-kilder {
+    font-size: 0.8rem;
   }
 
   .parallell-boks h4 {

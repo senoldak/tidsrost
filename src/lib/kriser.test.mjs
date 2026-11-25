@@ -17,7 +17,7 @@ test('finnKrise henter riktig epoke', () => {
   const k = finnKrise('volcker-1979');
   assert.ok(k);
   assert.equal(k.periode, '1979–1982');
-  assert.ok(k.toppRente.includes('20,0 %'));
+  assert.ok(k.toppRente.includes('19,1 %'));
 });
 
 test('filtrerKriser filtrerer på kategori eller returnerer alle', () => {
@@ -44,5 +44,12 @@ test('sammenligningsMatrise gir kompakt oversikt for alle kriser', () => {
     assert.ok(rad.toppRente);
     assert.ok(rad.toppInflasjon);
     assert.ok(rad.hovedlaerdom);
+  }
+});
+
+test('hver krise har minst én kilde med https-adresse', () => {
+  for (const k of KRISER) {
+    assert.ok(k.kilder.length > 0, k.id);
+    for (const kilde of k.kilder) assert.match(kilde.url, /^https:\/\//, `${k.id}: ${kilde.navn}`);
   }
 });
