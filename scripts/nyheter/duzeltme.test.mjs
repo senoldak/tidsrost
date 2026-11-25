@@ -55,3 +55,26 @@ test('biçim talimatı üç dilde; şema düzeltme listesini ister', () => {
   assert.throws(() => duzeltmeBicimi('de'), /bilinmeyen dil/);
   assert.deepEqual(DUZELTME_SEMASI.required, ['duzeltmeler']);
 });
+
+test('uzunluk bütçesi: gövdeyi alt sınırın altına indirecek düzeltme atlanır, ötekiler uygulanır; az kısaltan önce', async () => {
+  const { govdeSiniri } = await import('./duzeltme.mjs');
+  const cumle = (i) => `Bu ${i}. cümle dokuz sözcükten oluşan sıradan bir örnek cümle.`;
+  const body = Array.from({ length: 20 }, (_, i) => cumle(i + 1)).join(' ');
+  const sinir = govdeSiniri(body, 0);
+  assert.deepEqual(sinir, { alt: 186, ust: 224 }); // 200 sözcük: %93 ve %112
+  const liste = Array.from({ length: 6 }, (_, i) => ({ alan: 'body', eski: cumle(i + 1), yeni: `Bu ${i + 1}. cümle kısa bir örnek.` })); // her biri 10 → 6 sözcük
+  liste.push({ alan: 'body', eski: cumle(20), yeni: `Bu 20. cümle dokuz sözcükten oluşan sıradan bir örnek cümle oldu.` });
+  const r = duzeltmeleriUygula({ body }, liste, { sinirlar: { body: sinir } });
+  // Uzatan düzeltme önce, sonra kısaltanlar: 200 + 1 = 201; 201 − 4k ≥ 186 → en çok 3 kısaltma.
+  assert.equal(r.uygulanan, 4);
+  assert.equal(r.atlanan.filter((a) => a.neden.startsWith('uzunluk bütçesi')).length, 3);
+  assert.ok(r.alanlar.body.includes('cümle oldu.'));
+});
+
+test('govdeSiniri: site alt sınırına yakın metin alt sınırın altına inemez; zaten altındaysa kısalamaz', async () => {
+  const { govdeSiniri } = await import('./duzeltme.mjs');
+  const metin = (n) => Array.from({ length: n }, () => 'sözcük').join(' ');
+  assert.equal(govdeSiniri(metin(190), 180).alt, 183);
+  assert.equal(govdeSiniri(metin(175), 180).alt, 175);
+  assert.equal(govdeSiniri(metin(400), 180).alt, 372);
+});

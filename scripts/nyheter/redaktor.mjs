@@ -20,7 +20,7 @@ import { olcekKontrol } from './olcek.mjs';
 import { naerhet, kildefriOmskriving } from './faktaark.mjs';
 import { readFileSync, readdirSync } from 'node:fs';
 import { rettNb, sprakProblemerNb, kesinProblemer as kesinNb, problemListe, korpusOrd, ukjenteOrdNb, KI_MONSTRE_NB } from './dil-nb.mjs';
-import { DUZELTME_SEMASI, duzeltmeBicimi, duzeltmeleriUygula } from './duzeltme.mjs';
+import { DUZELTME_SEMASI, duzeltmeBicimi, duzeltmeleriUygula, govdeSiniri } from './duzeltme.mjs';
 
 // ── Ortak yazım kuralları (bütün kaynakların istemlerinde) ─────────────
 
@@ -401,7 +401,7 @@ ${JSON.stringify(felt, null, 2)}
 ${duzeltmeBicimi('nb')}`,
   });
   if (!Array.isArray(svar?.duzeltmeler)) return null;
-  return { ...sak, ...duzeltmeleriUygula(felt, svar.duzeltmeler).alanlar };
+  return { ...sak, ...duzeltmeleriUygula(felt, svar.duzeltmeler, { sinirlar: { body: govdeSiniri(sak.body, MIN_ORD_UTKAST) } }).alanlar };
 }
 
 /**

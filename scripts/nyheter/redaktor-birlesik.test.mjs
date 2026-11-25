@@ -97,9 +97,8 @@ test('vask som kutter setninger: rettelsen brukes ikke (setningsrettelser kan ik
   assert.equal(r.stopp.length, 0);
 });
 
-test('vask som bryter lengderegelen: ett nytt forsøk, så forkastes den med synlig merknad og logg', async () => {
-  const lang = body.replaceAll('i landet fra neste år.', 'i landet fra neste år og i alle årene som kommer etter det.');
-  const { r, kall, logg } = await kjor((type) => (type === 'vurdering' ? godkjent() : { ...sak, body: lang }));
+test('vask som bryter kontrollene to ganger: ett nytt forsøk, så forkastes den med synlig merknad og logg', async () => {
+  const { r, kall, logg } = await kjor((type) => (type === 'vurdering' ? godkjent() : { ...sak, body: body.replace('alle kommuner i landet', '4 827 kommuner i landet') }));
   assert.equal(typer(kall), 'vurdering,vask,vask');
   assert.match(kall[2].prompt, /FORRIGE FORSØK BLE FORKASTET/);
   assert.equal(r.sak.body, body);
@@ -119,10 +118,11 @@ test('vask med påfunnet tall: andre forsøk får vite hvilket tall, og godkjent
   assert.equal(r.merknader.length, 0);
 });
 
-test('vask som endrer lengden for mye (over 115 prosent) forkastes', async () => {
-  const { r } = await kjor((type) => (type === 'vurdering' ? godkjent() : { ...sak, body: body.replaceAll('i landet fra neste år.', 'i landet fra neste år og i alle årene som kommer etter det.') }));
-  assert.equal(r.sak.body, body);
-  assert.ok(r.merknader.some((m) => /Lengden endret seg/.test(m)));
+test('vask som ville gjort teksten for lang: rettelsene over lengdebudsjettet brukes ikke (26. nov.), ingen forkastelse', async () => {
+  const { r, kall } = await kjor((type) => (type === 'vurdering' ? godkjent() : { ...sak, body: body.replaceAll('i landet fra neste år.', 'i landet fra neste år og i alle årene som kommer etter det.') }));
+  assert.equal(typer(kall), 'vurdering,vask');
+  assert.ok(r.sak.body.split(/s+/).length <= Math.floor(body.split(/s+/).length * 1.12));
+  assert.ok(!r.merknader.some((m) => /Lengden endret seg/.test(m)));
 });
 
 test('avvist sak: rett, ny kontroll med vask', async () => {

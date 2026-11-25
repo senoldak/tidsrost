@@ -69,15 +69,32 @@ const kac = (metin, parca) => {
  * Düzeltmeleri sırayla uygular. Her düzeltme yalnız eski metin alanın içinde tam bir kez geçiyorsa uygulanır
  * (dizi alanda: tam bir öğede, o öğede bir kez).
  */
-export function duzeltmeleriUygula(alanlar, liste) {
+// Uzunluk bütçesi (26 Kasım 2026): her düzeltme tek başına %60–160 içinde kalsa da birkaçı birlikte gövdeyi kısaltıp
+// sitenin uzunluk kapısına (%90–115, en az N kelime) takılıyordu; kapı bütün redaksiyonu atıyordu. sinirlar verilirse
+// alanın sözcük sayısı her düzeltmeden sonra { alt, ust } içinde kalmalı; kalmayacaksa yalnız o düzeltme atlanır.
+// Kısaltan düzeltmeler en son ve en azı kısaltandan başlayarak denenir: bütçe en çok düzeltmeye yetsin.
+export const sozcukSayisi = (s) => (Array.isArray(s) ? s.join(' ') : sozcukSay(s ?? ''));
+
+/** Gövde bütçesi: alt = önceki uzunluğun %93'ü ve (önceden aşıyorsa) site alt sınırı + 3; üst = %112. */
+export function govdeSiniri(metin, siteEnAz = 0) {
+  const n = sozcukSay(metin ?? '');
+  const alt = Math.max(Math.ceil(n * 0.93), n >= siteEnAz + 3 ? siteEnAz + 3 : Math.min(n, siteEnAz));
+  return { alt: Math.min(alt, n), ust: Math.floor(n * 1.12) };
+}
+
+export function duzeltmeleriUygula(alanlar, liste, { sinirlar = {} } = {}) {
   const yeni = {};
   for (const [k, v] of Object.entries(alanlar ?? {})) yeni[k] = Array.isArray(v) ? [...v] : v;
   const atlanan = [];
   let uygulanan = 0;
-  const dizi = Array.isArray(liste) ? liste : [];
+  const ham = Array.isArray(liste) ? liste : [];
   if (!Array.isArray(liste)) atlanan.push({ neden: 'düzeltme listesi yok' });
-  if (dizi.length > EN_COK_DUZELTME) atlanan.push({ neden: `${dizi.length - EN_COK_DUZELTME} düzeltme sınırın (${EN_COK_DUZELTME}) üstünde, atlandı` });
-  for (const d of dizi.slice(0, EN_COK_DUZELTME)) {
+  if (ham.length > EN_COK_DUZELTME) atlanan.push({ neden: `${ham.length - EN_COK_DUZELTME} düzeltme sınırın (${EN_COK_DUZELTME}) üstünde, atlandı` });
+  const fark = (d) => sozcukSay(typeof d?.yeni === 'string' ? d.yeni : '') - sozcukSay(typeof d?.eski === 'string' ? d.eski : '');
+  const dizi = Object.keys(sinirlar).length
+    ? ham.slice(0, EN_COK_DUZELTME).map((d, i) => [d, i]).sort((a, b) => fark(b[0]) - fark(a[0]) || a[1] - b[1]).map(([d]) => d)
+    : ham.slice(0, EN_COK_DUZELTME);
+  for (const d of dizi) {
     const alan = typeof d?.alan === 'string' ? d.alan.trim() : '';
     const eski = typeof d?.eski === 'string' ? d.eski : '';
     const yeniMetin = typeof d?.yeni === 'string' ? d.yeni.trim() : '';
@@ -90,6 +107,11 @@ export function duzeltmeleriUygula(alanlar, liste) {
     const a = sozcukSay(eski), b = sozcukSay(yeniMetin);
     if (a && (b < a * ALT_ORAN || b > a * UST_ORAN)) { atla(`uzunluk ${a} → ${b} sözcük (izin %${ALT_ORAN * 100}–${UST_ORAN * 100})`); continue; }
     const v = yeni[alan];
+    const sinir = sinirlar[alan];
+    if (sinir && !Array.isArray(v) && typeof v === 'string' && kac(v, eski) === 1) {
+      const sonra = sozcukSay(v.replace(eski, () => yeniMetin));
+      if (sonra < sinir.alt || sonra > sinir.ust) { atla(`uzunluk bütçesi: ${alan} ${sonra} sözcük olurdu (izin ${sinir.alt}–${sinir.ust})`); continue; }
+    }
     if (Array.isArray(v)) {
       const yerler = v.map((x, i) => (typeof x === 'string' ? [i, kac(x, eski)] : [i, 0])).filter(([, n]) => n > 0);
       if (yerler.length !== 1 || yerler[0][1] !== 1) { atla(yerler.length ? 'eski birden çok yerde geçiyor' : 'eski metinde bulunamadı'); continue; }
