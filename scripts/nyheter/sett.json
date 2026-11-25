@@ -15353,7 +15353,21 @@
     "medier:8803141366ed4a7b": "2026-11-25T15:01:03.779Z",
     "medier:2b0977a632abbdf9": "2026-11-25T15:01:03.779Z",
     "medier:ab3245cd278a148e": "2026-11-25T15:01:03.779Z",
-    "medier:4696a3d7179952b2": "2026-11-25T15:01:03.779Z"
+    "medier:4696a3d7179952b2": "2026-11-25T15:01:03.779Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168862": "2026-11-25T17:00:58.834Z",
+    "medier:92dbe8d74563a0bc": "2026-11-25T17:00:58.834Z",
+    "medier:72a05174ab396881": "2026-11-25T17:00:58.834Z",
+    "medier:631eda1fd520d1b2": "2026-11-25T17:00:58.834Z",
+    "medier:bc893c1fa507f968": "2026-11-25T17:00:58.834Z",
+    "medier:560603b73d171c2a": "2026-11-25T17:00:58.834Z",
+    "medier:a4687d6a9888c639": "2026-11-25T17:00:58.834Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168873": "2026-11-25T17:00:58.834Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2573": "2026-11-25T17:00:58.834Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168875": "2026-11-25T17:00:58.834Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168876": "2026-11-25T17:00:58.834Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168874": "2026-11-25T17:00:58.834Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168872": "2026-11-25T17:00:58.834Z",
+    "regjeringen:3194812": "2026-11-25T17:00:58.834Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -15441,56 +15455,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:609c0d319791d35e": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T17:02:43.869Z"
-    },
-    "medier:41e6c0265b291d07": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T17:02:43.869Z"
-    },
-    "medier:9cbd3696f40f6a2a": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T17:02:43.869Z"
-    },
-    "medier:eb9cf4af831d37d9": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T17:02:43.869Z"
-    },
-    "medier:d228ccf88487ccf9": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T17:02:43.869Z"
-    },
-    "medier:b88f04085142b5c9": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T17:02:43.869Z"
-    },
-    "medier:30fd134e6fb33fd8": {
-      "p": 92,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T17:02:43.869Z"
-    },
-    "medier:e862eda62fdf03d8": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T17:02:43.869Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168852": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T17:02:43.869Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168855": {
-      "p": 92,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T17:02:43.869Z"
-    },
     "medier:8edd0e42b73b1b7d": {
       "p": 65,
       "v": "b34cb0de5bde",
@@ -16995,6 +16959,36 @@
       "p": 52,
       "v": "b34cb0de5bde",
       "t": "2026-11-25T15:04:51.516Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168873": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T17:04:11.150Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168875": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T17:04:11.150Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168876": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T17:04:11.150Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168874": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T17:04:11.150Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168872": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T17:04:11.150Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2573": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T17:04:11.150Z"
     }
   }
 }
