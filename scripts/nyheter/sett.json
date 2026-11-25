@@ -14922,7 +14922,41 @@
     "medier:f51056294ddafdb1": "2026-11-25T07:00:58.624Z",
     "medier:8feb324dff4ebf62": "2026-11-25T07:00:58.624Z",
     "medier:4f616117be21174c": "2026-11-25T07:00:58.624Z",
-    "medier:ebd07c6c4907e420": "2026-11-25T07:00:58.624Z"
+    "medier:ebd07c6c4907e420": "2026-11-25T07:00:58.624Z",
+    "medier:f216aab8c85aa1b1": "2026-11-25T09:01:00.412Z",
+    "regjeringen:3194387": "2026-11-25T09:01:00.412Z",
+    "havforskning:https://www.hi.no/hi/nyheter/2026/november/hi-tilrar-fredingsperiode-for-raudspette-pa-norskekysten": "2026-11-25T09:01:00.412Z",
+    "handball:https://www.handball.no/nyheter/2026/11/mork-for-sitt-15.-mesterskap---jeg-elsker-a-vinne": "2026-11-25T09:01:00.412Z",
+    "skiforbundet:https://www.skiforbundet.no/langrenn/nyhetsarkiv/2026/11/harald-ostberg-amundsen-tildeles-idrettspolitisk-pris-2026/": "2026-11-25T09:01:00.412Z",
+    "medier:0685ca92cf420245": "2026-11-25T09:01:00.412Z",
+    "medier:af85a5a17c7a038e": "2026-11-25T09:01:00.412Z",
+    "medier:9a51bbbedb2d5f4d": "2026-11-25T09:01:00.412Z",
+    "medier:f28f76e7b183e2bd": "2026-11-25T09:01:00.412Z",
+    "medier:c0e7c272aa7b3e0a": "2026-11-25T09:01:00.412Z",
+    "medier:a0dd601e72ef8306": "2026-11-25T09:01:00.412Z",
+    "medier:53342c2c1f28d252": "2026-11-25T09:01:00.412Z",
+    "medier:d12a17f82d76740d": "2026-11-25T09:01:00.412Z",
+    "medier:5b9ff663acc2f673": "2026-11-25T09:01:00.412Z",
+    "medier:974ff196173acb3e": "2026-11-25T09:01:00.412Z",
+    "medier:05e9c6af43dbee29": "2026-11-25T09:01:00.412Z",
+    "medier:b495e409421e8b04": "2026-11-25T09:01:00.412Z",
+    "medier:ad511e9bd9470ac4": "2026-11-25T09:01:00.412Z",
+    "medier:c54feeb467fb1687": "2026-11-25T09:01:00.412Z",
+    "medier:22e0763293f1ead7": "2026-11-25T09:01:00.412Z",
+    "medier:873c0640ec4a24c9": "2026-11-25T09:01:00.412Z",
+    "medier:c08ba5984c1f38b4": "2026-11-25T09:01:00.412Z",
+    "medier:11d862940cc95c91": "2026-11-25T09:01:00.412Z",
+    "medier:7acd3298add9a211": "2026-11-25T09:01:00.412Z",
+    "medier:d27fdb4b958a220f": "2026-11-25T09:01:00.412Z",
+    "medier:a054ae04d7a74b29": "2026-11-25T09:01:00.412Z",
+    "medier:c72f50321e087f50": "2026-11-25T09:01:00.412Z",
+    "medier:936d0bb81168ce42": "2026-11-25T09:01:00.412Z",
+    "medier:f27321fc1080a57e": "2026-11-25T09:01:00.412Z",
+    "medier:e8f4a02d69cd0e58": "2026-11-25T09:01:00.412Z",
+    "medier:ce7863454f5c8e0f": "2026-11-25T09:01:00.412Z",
+    "medier:cfe73faadc9cc2ac": "2026-11-25T09:01:00.412Z",
+    "medier:0ffab663f9074a8b": "2026-11-25T09:01:00.412Z",
+    "medier:f742805d43483ee6": "2026-11-25T09:01:00.412Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -15000,31 +15034,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:cc419b11ebbdaa8e": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T09:03:02.666Z"
-    },
-    "medier:85569ea4c79a02e2": {
-      "p": 88,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T09:03:02.666Z"
-    },
-    "medier:35359c50e561c932": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T09:03:02.666Z"
-    },
-    "medier:e4bb17ba590c64d8": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T09:03:02.666Z"
-    },
-    "medier:afc968f0177cc376": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T09:03:02.666Z"
-    },
     "medier:e26d4bb3335f88e1": {
       "p": 45,
       "v": "b34cb0de5bde",
@@ -16359,6 +16368,81 @@
       "p": 62,
       "v": "b34cb0de5bde",
       "t": "2026-11-25T07:02:12.736Z"
+    },
+    "medier:1544131292ffdaba": {
+      "p": 88,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T09:03:45.613Z"
+    },
+    "medier:0685ca92cf420245": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T09:03:45.613Z"
+    },
+    "medier:c0e7c272aa7b3e0a": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T09:03:45.613Z"
+    },
+    "medier:974ff196173acb3e": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T09:03:45.613Z"
+    },
+    "medier:b495e409421e8b04": {
+      "p": 62,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T09:03:45.613Z"
+    },
+    "medier:936d0bb81168ce42": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T09:03:45.613Z"
+    },
+    "medier:c54feeb467fb1687": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T09:03:45.613Z"
+    },
+    "medier:873c0640ec4a24c9": {
+      "p": 48,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T09:03:45.613Z"
+    },
+    "medier:11d862940cc95c91": {
+      "p": 42,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T09:03:45.613Z"
+    },
+    "medier:d27fdb4b958a220f": {
+      "p": 58,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T09:03:45.613Z"
+    },
+    "regjeringen:3194387": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T09:03:45.613Z"
+    },
+    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/bruk-av-fleksibilitetskvotene-i-utlansforskriften-i-tredje-kvartal-2026/": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T09:03:45.613Z"
+    },
+    "havforskning:https://www.hi.no/hi/nyheter/2026/november/hi-tilrar-fredingsperiode-for-raudspette-pa-norskekysten": {
+      "p": 52,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T09:03:45.613Z"
+    },
+    "handball:https://www.handball.no/nyheter/2026/11/mork-for-sitt-15.-mesterskap---jeg-elsker-a-vinne": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T09:03:45.613Z"
+    },
+    "skiforbundet:https://www.skiforbundet.no/langrenn/nyhetsarkiv/2026/11/harald-ostberg-amundsen-tildeles-idrettspolitisk-pris-2026/": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T09:03:45.613Z"
     }
   }
 }
