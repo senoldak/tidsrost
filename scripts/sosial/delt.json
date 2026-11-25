@@ -1,35 +1,5 @@
 {
   "_sinir": {},
-  "equinor-rammet-av-pagaende-cyberangrep-mot-it-systemer": {
-    "tarih": "2026-11-17T23:08:09.963Z",
-    "ig_story": "17996704299103586",
-    "fb_post": "1343803192154866_122118677373509504",
-    "fb_story": "1795988304819318",
-    "ig_reels": "17922962379245111",
-    "fb_reels": "1139336128501420",
-    "reels": {
-      "gun": "2026-11-18",
-      "dilim": "morgen"
-    }
-  },
-  "sivile-tap-i-2026-overstiger-tidligere-ar": {
-    "tarih": "2026-11-17T23:08:49.083Z",
-    "ig_story": "18120354898799365",
-    "fb_post": "1343803192154866_122118677763509504",
-    "fb_story": "2213127295939857"
-  },
-  "ecb-og-norges-bank": {
-    "tarih": "2026-11-18T07:10:12.036Z",
-    "ig_story": "17983406721131933",
-    "fb_post": "1343803192154866_122118773895509504",
-    "fb_story": "1435941258208183",
-    "ig_reels": "18255563698310881",
-    "fb_reels": "2331160014110230",
-    "reels": {
-      "gun": "2026-11-18",
-      "dilim": "kveld"
-    }
-  },
   "mary-peltola-sikrer-seg-senatsplass-i-alaska": {
     "tarih": "2026-11-18T13:17:38.377Z",
     "ig_story": "18022535237952389",
@@ -513,7 +483,11 @@
     "tarih": "2026-11-24T11:14:43.086Z",
     "ig_story": "18108598976346710",
     "fb_post": "1343803192154866_122120466273509504",
-    "fb_story": "4455309491350516"
+    "fb_story": "4455309491350516",
+    "ig_post": "18188044384424184",
+    "zaman": {
+      "ig_post": "2026-11-25T07:12:55.558Z"
+    }
   },
   "kort-fortalt-24-november-2026": {
     "tarih": "2026-11-24T21:19:44.873Z",
@@ -538,5 +512,29 @@
     "ig_story": "18438329293149252",
     "fb_post": "1343803192154866_122120568309509504",
     "fb_story": "1772536958215258"
+  },
+  "fn-rapport-om-vaksineutfordringer-nodhjelp-og-tap-av-liv-i-konfliktomrader": {
+    "tarih": "2026-11-25T07:13:10.843Z",
+    "ig_story": "18101514851438794",
+    "fb_post": "1343803192154866_122120680257509504",
+    "fb_story": "4243782259264931"
+  },
+  "norsk-sokkel-i-2025-239-2-millioner-sm3-oe-produsert-97-felt-i-drift-og-246-milliarder-i-investeringer": {
+    "tarih": "2026-11-25T07:13:49.254Z",
+    "ig_story": "17897397489438507",
+    "fb_post": "1343803192154866_122120680923509504",
+    "fb_story": "1128479943481982"
+  },
+  "budsjettforhandlingene-mellom-de-rodgronne-partiene-fortsetter-under-stort-tidsp": {
+    "tarih": "2026-11-25T07:14:22.863Z",
+    "ig_story": "18038697083668396",
+    "fb_post": "1343803192154866_122120681187509504",
+    "fb_story": "1079573488475581"
+  },
+  "manchester-city-spilte-uavgjort-mot-napoli-etter-sen-utligning": {
+    "tarih": "2026-11-25T07:14:54.423Z",
+    "ig_story": "18106172486374471",
+    "fb_post": "1343803192154866_122120681409509504",
+    "fb_story": "1453577440253623"
   }
 }
