@@ -15367,7 +15367,50 @@
     "unnews:https://news.un.org/en/story/2026/11/1168876": "2026-11-25T17:00:58.834Z",
     "unnews:https://news.un.org/en/story/2026/11/1168874": "2026-11-25T17:00:58.834Z",
     "unnews:https://news.un.org/en/story/2026/11/1168872": "2026-11-25T17:00:58.834Z",
-    "regjeringen:3194812": "2026-11-25T17:00:58.834Z"
+    "regjeringen:3194812": "2026-11-25T17:00:58.834Z",
+    "medier:e47c538d0452e9ed": "2026-11-25T19:00:59.072Z",
+    "medier:31885e8958b3663f": "2026-11-25T19:00:59.072Z",
+    "medier:004cc9e881b8e047": "2026-11-25T19:00:59.072Z",
+    "medier:11c2da567b200118": "2026-11-25T19:00:59.072Z",
+    "medier:d6b02865322fd214": "2026-11-25T19:00:59.072Z",
+    "handball:https://www.handball.no/nyheter/2026/11/god-2.-omgang-ga-seier-til-juniorjentene": "2026-11-25T19:00:59.072Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2591": "2026-11-25T19:00:59.072Z",
+    "medier:f9f39193ebd6e416": "2026-11-25T19:00:59.072Z",
+    "medier:ee631abfd36e3ead": "2026-11-25T19:00:59.072Z",
+    "medier:fd8ce4b51e8a95a4": "2026-11-25T19:00:59.072Z",
+    "medier:106b9cabfd9abb68": "2026-11-25T19:00:59.072Z",
+    "medier:3c778480abf726aa": "2026-11-25T19:00:59.072Z",
+    "medier:6cea2ffd76af940a": "2026-11-25T19:00:59.072Z",
+    "medier:0d893d210a9e11fd": "2026-11-25T19:00:59.072Z",
+    "medier:605f910d8aadbbcc": "2026-11-25T19:00:59.072Z",
+    "medier:4ac57e375de37c51": "2026-11-25T19:00:59.072Z",
+    "medier:42718617a46c3f78": "2026-11-25T19:00:59.072Z",
+    "medier:eb1fd01570356312": "2026-11-25T19:00:59.072Z",
+    "medier:a0bd8e6d8fdc87de": "2026-11-25T19:00:59.072Z",
+    "medier:0c9298f2429ff300": "2026-11-25T19:00:59.072Z",
+    "medier:a9d2a214283a57c1": "2026-11-25T19:00:59.072Z",
+    "medier:491ff0473f00f487": "2026-11-25T19:00:59.072Z",
+    "medier:5b44fc23db4f1871": "2026-11-25T19:00:59.072Z",
+    "medier:5578a4b8512dde9b": "2026-11-25T19:00:59.072Z",
+    "medier:712c90b4d309b54a": "2026-11-25T19:00:59.072Z",
+    "medier:afe5faa4b34462d2": "2026-11-25T19:00:59.072Z",
+    "medier:af452e466fd83f6a": "2026-11-25T19:00:59.072Z",
+    "medier:7333a5098783b6cf": "2026-11-25T19:00:59.072Z",
+    "medier:a5b750259788dcdb": "2026-11-25T19:00:59.072Z",
+    "medier:ef61d9666624b74e": "2026-11-25T19:00:59.072Z",
+    "medier:7b3d9949072013d8": "2026-11-25T19:00:59.072Z",
+    "medier:b3ffa2c249a4c17a": "2026-11-25T19:00:59.072Z",
+    "medier:377fc0afeea2ba34": "2026-11-25T19:00:59.072Z",
+    "medier:4162a04681c20a3f": "2026-11-25T19:00:59.072Z",
+    "medier:4422363879bdbccd": "2026-11-25T19:00:59.072Z",
+    "medier:867b243d8a2e7023": "2026-11-25T19:00:59.072Z",
+    "medier:c32739ad6d4589be": "2026-11-25T19:00:59.072Z",
+    "medier:14f9407710979a52": "2026-11-25T19:00:59.072Z",
+    "medier:ed09adab749360ff": "2026-11-25T19:00:59.072Z",
+    "medier:30b61a023ee4bbd5": "2026-11-25T19:00:59.072Z",
+    "medier:ac3e43837dc71ec1": "2026-11-25T19:00:59.072Z",
+    "medier:e4f6e48c605b868d": "2026-11-25T19:00:59.072Z",
+    "medier:b3468715278f6543": "2026-11-25T19:00:59.072Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -15414,6 +15457,11 @@
       "antall": 1,
       "melding": "Gemini: çok fazla deneme",
       "tid": "2026-11-25T15:01:03.779Z"
+    },
+    "medier:1e5c8c2b36a9601a": {
+      "antall": 1,
+      "melding": "Gemini: çok fazla deneme",
+      "tid": "2026-11-25T19:00:59.072Z"
     }
   },
   "kilder": {
@@ -15455,36 +15503,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:8edd0e42b73b1b7d": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T19:02:56.030Z"
-    },
-    "medier:f07039a08e59ed0c": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T19:02:56.030Z"
-    },
-    "medier:a4dccd7bea73d141": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T19:02:56.030Z"
-    },
-    "medier:c1b00fe63c432274": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T19:02:56.030Z"
-    },
-    "medier:df69dc271343f9f0": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T19:02:56.030Z"
-    },
-    "medier:3ee134cf4b8f3212": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-22T19:02:56.030Z"
-    },
     "medier:c317fea36b385d7b": {
       "p": 92,
       "v": "b34cb0de5bde",
@@ -16989,6 +17007,76 @@
       "p": 25,
       "v": "b34cb0de5bde",
       "t": "2026-11-25T17:04:11.150Z"
+    },
+    "medier:e47c538d0452e9ed": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T19:03:37.687Z"
+    },
+    "medier:f9f39193ebd6e416": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T19:03:37.687Z"
+    },
+    "medier:3c778480abf726aa": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T19:03:37.687Z"
+    },
+    "medier:0d893d210a9e11fd": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T19:03:37.687Z"
+    },
+    "medier:1e5c8c2b36a9601a": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T19:03:37.687Z"
+    },
+    "medier:42718617a46c3f78": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T19:03:37.687Z"
+    },
+    "medier:e4f6e48c605b868d": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T19:03:37.687Z"
+    },
+    "medier:7b3d9949072013d8": {
+      "p": 90,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T19:03:37.687Z"
+    },
+    "medier:99a136eda3efc8c5": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T19:03:37.687Z"
+    },
+    "medier:5578a4b8512dde9b": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T19:03:37.687Z"
+    },
+    "medier:c32739ad6d4589be": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T19:03:37.687Z"
+    },
+    "medier:afe5faa4b34462d2": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T19:03:37.687Z"
+    },
+    "handball:https://www.handball.no/nyheter/2026/11/god-2.-omgang-ga-seier-til-juniorjentene": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T19:03:37.687Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2591": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-25T19:03:37.687Z"
     }
   }
 }
