@@ -3,6 +3,8 @@
   "name": "tidsrost",
   "main": "worker/index.js",
   "compatibility_date": "2026-10-01",
+  // Workers Logs (ücretsiz: günde 200.000 olay, 3 gün saklama). Yalnız /api/* Worker'dan geçtiği için olay sayısı küçük.
+  "observability": { "enabled": true },
   "routes": [
     { "pattern": "tidsrost.com", "custom_domain": true }
   ],
