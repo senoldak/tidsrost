@@ -1,0 +1,28 @@
+{
+  "dato": "2026-11-26",
+  "donem": "ettermiddag",
+  "tittel": "Ettermiddagsoversikt",
+  "opprettet": "2026-11-26T13:50:54.285Z",
+  "saker": [
+    {
+      "slug": "riksrevisjonen-kritiserer-okonomistyringen-i-norske-helseforetak",
+      "tittel": "Riksrevisjonen kritiserer økonomistyringen i norske helseforetak",
+      "ingress": "Riksrevisjonen konkluderer med at økonomistyringen og effektiviteten i norske helseforetak ikke er tilfredsstillende. Den samlede gjelden har økt kraftig, og helseministeren varsler tiltak."
+    },
+    {
+      "slug": "flyselskapet-norse-i-dyp-krise-har-ikke-betalt-ut-lonn",
+      "tittel": "Flyselskapet Norse i dyp krise: har ikke betalt ut lønn",
+      "ingress": "Flyselskapet Norse har stanset alle flygninger og sliter med å betale ut lønn til de ansatte. Styret varsler konkursfare dersom ny finansiering ikke kommer på plass."
+    },
+    {
+      "slug": "personer-i-risikogrupper-oppfordres-til-a-ta-vaksine-mot-influensa-og-covid-19-n",
+      "tittel": "Personer i risikogrupper oppfordres til å ta vaksine mot influensa og covid-19 nå",
+      "ingress": "Vinterens influensautbrudd er i gang samtidig som forekomsten av covid-19 stiger. Folkehelseinstituttet ber alle i målgruppene om å sikre seg beskyttelse før jul."
+    },
+    {
+      "slug": "vestfoldbanen-utsettes-igjen-trenger-mer-opplaering",
+      "tittel": "Vestfoldbanen utsettes igjen: Trenger mer opplæring",
+      "ingress": "Full åpning av Vestfoldbanen blir utsatt i nok en uke. Pendlerne må dermed belage seg på buss for tog på de fleste avganger."
+    }
+  ]
+}
