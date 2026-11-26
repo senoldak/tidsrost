@@ -15542,7 +15542,19 @@
     "medier:c219ce86202b6083": "2026-11-26T09:00:56.723Z",
     "medier:e617686f7f8f48e0": "2026-11-26T09:00:56.723Z",
     "medier:c91ae010b91cc02e": "2026-11-26T09:00:56.723Z",
-    "medier:f11b748c0f2bde30": "2026-11-26T09:00:56.723Z"
+    "medier:f11b748c0f2bde30": "2026-11-26T09:00:56.723Z",
+    "medier:8165107026b09608": "2026-11-26T11:01:00.553Z",
+    "medier:ea14f5f87e9cd385": "2026-11-26T11:01:00.553Z",
+    "regjeringen:3194884": "2026-11-26T11:01:00.553Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2594": "2026-11-26T11:01:00.553Z",
+    "statnett:https://www.statnett.no/om-statnett/nyheter-og-pressemeldinger/nyhetsarkiv-2026/statnetts-klimamal-godkjent-internasjonalt/": "2026-11-26T11:01:00.553Z",
+    "regjeringen:3194970": "2026-11-26T11:01:00.553Z",
+    "medier:86a71330bc329839": "2026-11-26T11:01:00.553Z",
+    "medier:4fa31377f29d54f0": "2026-11-26T11:01:00.553Z",
+    "medier:019ad416447fce5c": "2026-11-26T11:01:00.553Z",
+    "medier:84f22b7989afe7ae": "2026-11-26T11:01:00.553Z",
+    "medier:1c3564cd40e10ec8": "2026-11-26T11:01:00.553Z",
+    "medier:93e1cb13e84c3383": "2026-11-26T11:01:00.553Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -15630,96 +15642,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:52ced884447ef432": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
-    "medier:62ca3b2140c15c7d": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
-    "medier:b7b7eb6a76854392": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
-    "medier:c95f53cf64a1e9bd": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
-    "medier:43ffb5820f90f026": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
-    "medier:ace46ea21d961ab3": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
-    "medier:075d98d35866724e": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
-    "medier:e96f5295de4e5b7e": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
-    "medier:348d012b3c2cba69": {
-      "p": 76,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
-    "regjeringen:3194401": {
-      "p": 64,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
-    "regjeringen:3194400": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
-    "kulturdirektoratet:https://www.kulturdirektoratet.no/aktuelt/kulturarenaer-over-heile-landet-faar-eit-loeft": {
-      "p": 52,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
-    "havforskning:https://www.hi.no/hi/nyheter/2026/november/anbefaler-a-fjerne-bakteriar-fra-sjukehuskloakk": {
-      "p": 48,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
-    "skiskyting:https://skiskyting.no/?p=51853": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
-    "sykling:https://sykling.no/?p=28460": {
-      "p": 18,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2552": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2530": {
-      "p": 58,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2467": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-23T11:03:32.901Z"
-    },
     "medier:2b0bc72f25eb0a6c": {
       "p": 35,
       "v": "b34cb0de5bde",
@@ -17294,6 +17216,61 @@
       "p": 48,
       "v": "b34cb0de5bde",
       "t": "2026-11-26T09:03:11.076Z"
+    },
+    "medier:b4fd64736d1d3ea7": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-26T11:05:32.733Z"
+    },
+    "medier:c1e02d8aa07917a6": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-26T11:05:32.733Z"
+    },
+    "medier:29f0ef9027cb0e29": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-26T11:05:32.733Z"
+    },
+    "medier:86a71330bc329839": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-26T11:05:32.733Z"
+    },
+    "medier:1c3564cd40e10ec8": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-26T11:05:32.733Z"
+    },
+    "medier:24d81398254a64ea": {
+      "p": 74,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-26T11:05:32.733Z"
+    },
+    "medier:019ad416447fce5c": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-26T11:05:32.733Z"
+    },
+    "regjeringen:3194884": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-26T11:05:32.733Z"
+    },
+    "regjeringen:3194970": {
+      "p": 32,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-26T11:05:32.733Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2594": {
+      "p": 62,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-26T11:05:32.733Z"
+    },
+    "statnett:https://www.statnett.no/om-statnett/nyheter-og-pressemeldinger/nyhetsarkiv-2026/statnetts-klimamal-godkjent-internasjonalt/": {
+      "p": 38,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-26T11:05:32.733Z"
     }
   }
 }
