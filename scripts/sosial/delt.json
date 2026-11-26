@@ -1,31 +1,5 @@
 {
   "_sinir": {},
-  "norwegian-ber-5000-kunder-sperre-bankkortet-etter-dataangrep": {
-    "tarih": "2026-11-19T21:10:34.049Z",
-    "ig_story": "18117264743139537",
-    "fb_post": "1343803192154866_122119321689509504",
-    "fb_story": "1904071057624985",
-    "ig_reels": "17991363738075909",
-    "fb_reels": "1422053063300936",
-    "reels": {
-      "gun": "2026-11-20",
-      "dilim": "morgen"
-    },
-    "ig_post": "18118375148604884",
-    "zaman": {
-      "ig_post": "2026-11-20T11:07:54.908Z"
-    }
-  },
-  "klimaavtale-uten-referanser-til-fossil-energi-pa-cop31": {
-    "tarih": "2026-11-19T21:11:07.688Z",
-    "ig_story": "17914796958473593",
-    "fb_post": "1343803192154866_122119321881509504",
-    "fb_story": "1027873046998792",
-    "ig_post": "18112205330635464",
-    "zaman": {
-      "ig_post": "2026-11-20T11:08:19.044Z"
-    }
-  },
   "donald-trump-vladimir-putin-og-xi-jinping-holdt-toppmote-i-shenzhen": {
     "tarih": "2026-11-20T07:08:32.442Z",
     "ig_story": "18133864153836347",
@@ -472,7 +446,11 @@
     "tarih": "2026-11-26T07:08:31.482Z",
     "ig_story": "18648049339037758",
     "fb_post": "1343803192154866_122120930925509504",
-    "fb_story": "1446917348507624"
+    "fb_story": "1446917348507624",
+    "ig_post": "18034463702683472",
+    "zaman": {
+      "ig_post": "2026-11-26T23:06:07.100Z"
+    }
   },
   "12-8-millioner-kubikkmeter-tommer-hogd-i-2025-verdien-10-9-milliarder-kroner": {
     "tarih": "2026-11-26T07:09:09.666Z",
@@ -484,13 +462,21 @@
     "reels": {
       "gun": "2026-11-26",
       "dilim": "kveld"
+    },
+    "ig_post": "18203223487383959",
+    "zaman": {
+      "ig_post": "2026-11-26T23:06:32.650Z"
     }
   },
   "sysselsettingsrate-oecd": {
     "tarih": "2026-11-26T07:09:45.912Z",
     "ig_story": "17919753894473086",
     "fb_post": "1343803192154866_122120931441509504",
-    "fb_story": "1689177389271767"
+    "fb_story": "1689177389271767",
+    "ig_post": "17896960182477863",
+    "zaman": {
+      "ig_post": "2026-11-26T23:06:58.561Z"
+    }
   },
   "norsk-okonomi-vokste-mer-i-2024-enn-tidligere-beregnet": {
     "tarih": "2026-11-26T07:10:23.086Z",
@@ -545,5 +531,11 @@
     "ig_story": "18114681179180242",
     "fb_post": "1343803192154866_122121033201509504",
     "fb_story": "2270201760217884"
+  },
+  "norge-tok-gull-og-solv-i-kokke-vm": {
+    "tarih": "2026-11-26T23:07:13.764Z",
+    "ig_story": "17892709122623656",
+    "fb_post": "1343803192154866_122121103131509504",
+    "fb_story": "1075464328849537"
   }
 }
