@@ -1,32 +1,5 @@
 {
   "_sinir": {},
-  "antibiotikaresistensen-har-blitt-verre-siden-2019": {
-    "tarih": "2026-11-19T06:23:05.748Z",
-    "ig_reels": "18078122912770484",
-    "fb_reels": "2102463203711782",
-    "reels": {
-      "gun": "2026-11-19",
-      "dilim": "morgen"
-    }
-  },
-  "norsk-bistand-589-milliarder-i-2025-576-foreslatt-for-2027": {
-    "tarih": "2026-11-19T07:07:52.803Z",
-    "ig_story": "18105686105037247",
-    "fb_post": "1343803192154866_122119116849509504",
-    "fb_story": "2339895763496363",
-    "ig_reels": "18013164461780073",
-    "fb_reels": "1155755683498825",
-    "reels": {
-      "gun": "2026-11-19",
-      "dilim": "kveld"
-    }
-  },
-  "russisk-fiskerikonsern-tapte-soksmal-mot-staten": {
-    "tarih": "2026-11-19T07:08:27.079Z",
-    "ig_story": "18033100553689857",
-    "fb_post": "1343803192154866_122119117185509504",
-    "fb_story": "2228930427838663"
-  },
   "borsnoterte-aksjer-steg-kraftig-i-tredje-kvartal": {
     "tarih": "2026-11-19T09:11:27.079Z",
     "ig_story": "17953614309055006",
@@ -514,5 +487,35 @@
     "ig_story": "17980353504150398",
     "fb_post": "1343803192154866_122120858739509504",
     "fb_story": "1200012869355240"
+  },
+  "minst-30-omkom-i-omfattende-brann-i-kairo": {
+    "tarih": "2026-11-26T07:08:31.482Z",
+    "ig_story": "18648049339037758",
+    "fb_post": "1343803192154866_122120930925509504",
+    "fb_story": "1446917348507624"
+  },
+  "12-8-millioner-kubikkmeter-tommer-hogd-i-2025-verdien-10-9-milliarder-kroner": {
+    "tarih": "2026-11-26T07:09:09.666Z",
+    "ig_story": "18004744188032100",
+    "fb_post": "1343803192154866_122120931201509504",
+    "fb_story": "4582513685300357"
+  },
+  "sysselsettingsrate-oecd": {
+    "tarih": "2026-11-26T07:09:45.912Z",
+    "ig_story": "17919753894473086",
+    "fb_post": "1343803192154866_122120931441509504",
+    "fb_story": "1689177389271767"
+  },
+  "norsk-okonomi-vokste-mer-i-2024-enn-tidligere-beregnet": {
+    "tarih": "2026-11-26T07:10:23.086Z",
+    "ig_story": "17996468991070810",
+    "fb_post": "1343803192154866_122120931633509504",
+    "fb_story": "1177094321434247"
+  },
+  "fastlandsokonomien-vokste-0-1-prosent-i-tredje-kvartal": {
+    "tarih": "2026-11-26T07:10:57.893Z",
+    "ig_story": "18097966046482710",
+    "fb_post": "1343803192154866_122120931945509504",
+    "fb_story": "1912990503394094"
   }
 }
