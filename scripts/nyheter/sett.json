@@ -15841,7 +15841,43 @@
     "medier:56f6f4dcb0c15f5d": "2026-11-27T11:01:02.007Z",
     "medier:4a0fed70ee9f5a7b": "2026-11-27T11:01:02.007Z",
     "regjeringen:3195106": "2026-11-27T11:01:02.007Z",
-    "regjeringen:3195121": "2026-11-27T11:01:02.007Z"
+    "regjeringen:3195121": "2026-11-27T11:01:02.007Z",
+    "medier:7daf410d6bba04cd": "2026-11-27T13:01:08.072Z",
+    "medier:a3976d89ee30cc5d": "2026-11-27T13:01:08.072Z",
+    "medier:eaca802a19b9444d": "2026-11-27T13:01:08.072Z",
+    "regjeringen:3195169": "2026-11-27T13:01:08.072Z",
+    "handball:https://www.handball.no/nyheter/2026/11/klubben-i-havgapet-fikk-trener-i-verdensklasse/": "2026-11-27T13:01:08.072Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2592": "2026-11-27T13:01:08.072Z",
+    "arbeidstilsynet:https://www.arbeidstilsynet.no/nyheter/ekstrahjelp-i-julestria/": "2026-11-27T13:01:08.072Z",
+    "regjeringen:3195108": "2026-11-27T13:01:08.072Z",
+    "handball:https://www.handball.no/nyheter/2026/11/u-jentene-tapte-igjen-mot-danmark/": "2026-11-27T13:01:08.072Z",
+    "medier:91ddd8235ef7e813": "2026-11-27T13:01:08.072Z",
+    "medier:94989ec3423a234a": "2026-11-27T13:01:08.072Z",
+    "medier:02f7ff46e3f7c595": "2026-11-27T13:01:08.072Z",
+    "regjeringen:3195158": "2026-11-27T13:01:08.072Z",
+    "medier:fee397db7734fdae": "2026-11-27T13:01:08.072Z",
+    "medier:273dd89ee6274735": "2026-11-27T13:01:08.072Z",
+    "medier:0d6a03d94e3deb36": "2026-11-27T13:01:08.072Z",
+    "medier:d8a9bd155ccc24c6": "2026-11-27T13:01:08.072Z",
+    "medier:c1eedfbeb86e917e": "2026-11-27T13:01:08.072Z",
+    "medier:70deec8a10f0745a": "2026-11-27T13:01:08.072Z",
+    "medier:04c6c06039bd0f21": "2026-11-27T13:01:08.072Z",
+    "medier:8e04432c649fbfdd": "2026-11-27T13:01:08.072Z",
+    "medier:70c7f44eeded7559": "2026-11-27T13:01:08.072Z",
+    "medier:a40a4aeb6d7e5591": "2026-11-27T13:01:08.072Z",
+    "medier:fb0003a2151cf3f4": "2026-11-27T13:01:08.072Z",
+    "medier:20b82d48330edb3f": "2026-11-27T13:01:08.072Z",
+    "medier:c9139aebe4a7d8b4": "2026-11-27T13:01:08.072Z",
+    "medier:e5fe1be4f4ba1e2a": "2026-11-27T13:01:08.072Z",
+    "medier:7b4f000005e732ef": "2026-11-27T13:01:08.072Z",
+    "medier:126497a3ce98f072": "2026-11-27T13:01:08.072Z",
+    "medier:2b17e3bdb0446ab3": "2026-11-27T13:01:08.072Z",
+    "medier:d2b67e84b4d82645": "2026-11-27T13:01:08.072Z",
+    "medier:8aa46fc208ff8e81": "2026-11-27T13:01:08.072Z",
+    "medier:2889ac4cd6e52d70": "2026-11-27T13:01:08.072Z",
+    "medier:cf18938596a6aa4d": "2026-11-27T13:01:08.072Z",
+    "medier:cf910b05ba196fc8": "2026-11-27T13:01:08.072Z",
+    "medier:9e6573055808ce6b": "2026-11-27T13:01:08.072Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -17528,6 +17564,96 @@
       "p": 25,
       "v": "b34cb0de5bde",
       "t": "2026-11-27T11:03:30.017Z"
+    },
+    "medier:1daad20ab04a4c32": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
+    },
+    "medier:91ddd8235ef7e813": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
+    },
+    "medier:fee397db7734fdae": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
+    },
+    "medier:cf910b05ba196fc8": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
+    },
+    "medier:8e04432c649fbfdd": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
+    },
+    "medier:353bdecc2c7e78f8": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
+    },
+    "medier:fb0003a2151cf3f4": {
+      "p": 50,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
+    },
+    "medier:2889ac4cd6e52d70": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
+    },
+    "medier:e5fe1be4f4ba1e2a": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
+    },
+    "medier:126497a3ce98f072": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
+    },
+    "medier:08a14ecf63059c4b": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
+    },
+    "regjeringen:3195169": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
+    },
+    "regjeringen:3195108": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
+    },
+    "regjeringen:3195158": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
+    },
+    "handball:https://www.handball.no/nyheter/2026/11/klubben-i-havgapet-fikk-trener-i-verdensklasse/": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
+    },
+    "handball:https://www.handball.no/nyheter/2026/11/u-jentene-tapte-igjen-mot-danmark/": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2592": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
+    },
+    "arbeidstilsynet:https://www.arbeidstilsynet.no/nyheter/ekstrahjelp-i-julestria/": {
+      "p": 58,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T13:03:52.325Z"
     }
   }
 }
