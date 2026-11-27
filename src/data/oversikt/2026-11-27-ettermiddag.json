@@ -1,0 +1,23 @@
+{
+  "dato": "2026-11-27",
+  "donem": "ettermiddag",
+  "tittel": "Ettermiddagsoversikt",
+  "opprettet": "2026-11-27T13:50:54.283Z",
+  "saker": [
+    {
+      "slug": "fremskrittspartiet-foreslar-kutt-pa-63-milliarder-kroner-i-sitt-alternative-stat",
+      "tittel": "Fremskrittspartiet foreslår kutt på 63 milliarder kroner i sitt alternative statsbudsjett",
+      "ingress": "Fremskrittspartiet legger frem en rekke omfattende kuttforslag for å finansiere lavere skatter og avgifter."
+    },
+    {
+      "slug": "kort-fortalt-27-november-2026",
+      "tittel": "Kort fortalt 27. november 2026",
+      "ingress": "Korte meldinger fra departementer, etater og Stortinget 27. november 2026, med lenke til hele saken hos avsenderen."
+    },
+    {
+      "slug": "sjafor-straffet-med-bot-og-tap-av-forerkort-etter-dramatisk-tunnelbrann",
+      "tittel": "Sjåfør straffet med bot og tap av førerkort etter dramatisk tunnelbrann",
+      "ingress": "En uregistrert russebuss tok fyr i Raudhammartunnelen i Sørfold natt til 27. mars, noe som resulterte i en stengt E6 og store trafikale problemer."
+    }
+  ]
+}
