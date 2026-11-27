@@ -1,0 +1,18 @@
+{
+  "dato": "2026-11-27",
+  "donem": "morgen",
+  "tittel": "Morgenoversikt",
+  "opprettet": "2026-11-27T09:50:55.340Z",
+  "saker": [
+    {
+      "slug": "norge-tok-gull-og-solv-i-kokke-vm",
+      "tittel": "Norge tok gull og sølv i kokke-VM",
+      "ingress": "De norske kokkelandslagene sikret seg både gull og sølv under verdensmesterskapet i Luxembourg."
+    },
+    {
+      "slug": "mdg-og-sv-i-hard-konflikt-om-klimapolitikk-og-dieselpriser-i-statsbudsjettet",
+      "tittel": "MDG og SV i hard konflikt om klimapolitikk og dieselpriser i statsbudsjettet",
+      "ingress": "Miljøpartiet De Grønne nekter å støtte statsbudsjettet etter kutt i drivstoffavgiftene, mens SV forsvarer avtalen."
+    }
+  ]
+}
