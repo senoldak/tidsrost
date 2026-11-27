@@ -15809,7 +15809,39 @@
     "medier:0c695ff30543abfa": "2026-11-27T09:01:08.840Z",
     "medier:460b108c797eaed6": "2026-11-27T09:01:08.840Z",
     "medier:36af02f33befe081": "2026-11-27T09:01:08.840Z",
-    "medier:b175513f54d0abb2": "2026-11-27T09:01:08.840Z"
+    "medier:b175513f54d0abb2": "2026-11-27T09:01:08.840Z",
+    "medier:4eac7d9b05bc6ad0": "2026-11-27T11:01:02.007Z",
+    "medier:f3d1be95663db7bf": "2026-11-27T11:01:02.007Z",
+    "medier:af132ddc37485d65": "2026-11-27T11:01:02.007Z",
+    "medier:44a2b2dcb96d8ef1": "2026-11-27T11:01:02.007Z",
+    "medier:66551c3ebabc9e6c": "2026-11-27T11:01:02.007Z",
+    "medier:2c2410d6163f8ecb": "2026-11-27T11:01:02.007Z",
+    "regjeringen:3195123": "2026-11-27T11:01:02.007Z",
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/sikringsarbeid-e39-brusdalen/": "2026-11-27T11:01:02.007Z",
+    "sivilombudet:https://www.sivilombudet.no/?p=64073": "2026-11-27T11:01:02.007Z",
+    "skiforbundet:https://www.skiforbundet.no/om/organisasjon/moter-og-samlinger/nyheter/2026/11/innstilt-som-visepresident/": "2026-11-27T11:01:02.007Z",
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/arbeidene-i-e136-sornestunnelen-forlenges-til-18.-desember": "2026-11-27T11:01:02.007Z",
+    "medier:7c4857fa7a2d5d79": "2026-11-27T11:01:02.007Z",
+    "medier:5f9c5456f7345543": "2026-11-27T11:01:02.007Z",
+    "medier:581ec899ed99a2e4": "2026-11-27T11:01:02.007Z",
+    "medier:8fd2a06260e00d14": "2026-11-27T11:01:02.007Z",
+    "medier:e099ffad78ada373": "2026-11-27T11:01:02.007Z",
+    "medier:a226bead211a84fb": "2026-11-27T11:01:02.007Z",
+    "medier:8e3a20bc5e984329": "2026-11-27T11:01:02.007Z",
+    "regjeringen:3195111": "2026-11-27T11:01:02.007Z",
+    "regjeringen:3194901": "2026-11-27T11:01:02.007Z",
+    "regjeringen:3194903": "2026-11-27T11:01:02.007Z",
+    "regjeringen:3195029": "2026-11-27T11:01:02.007Z",
+    "regjeringen:3194806": "2026-11-27T11:01:02.007Z",
+    "medier:0a93ee730e040db1": "2026-11-27T11:01:02.007Z",
+    "medier:d96842416aa4c780": "2026-11-27T11:01:02.007Z",
+    "met:blowingSnow:fjellet-i-sor-norge:2026-11-28": "2026-11-27T11:01:02.007Z",
+    "regjeringen:3195120": "2026-11-27T11:01:02.007Z",
+    "medier:396af98f20e45a22": "2026-11-27T11:01:02.007Z",
+    "medier:56f6f4dcb0c15f5d": "2026-11-27T11:01:02.007Z",
+    "medier:4a0fed70ee9f5a7b": "2026-11-27T11:01:02.007Z",
+    "regjeringen:3195106": "2026-11-27T11:01:02.007Z",
+    "regjeringen:3195121": "2026-11-27T11:01:02.007Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -15897,56 +15929,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "regjeringen:3194595": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T11:03:18.106Z"
-    },
-    "regjeringen:3194577": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T11:03:18.106Z"
-    },
-    "regjeringen:3194584": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T11:03:18.106Z"
-    },
-    "medier:902aaa689d243b91": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T11:03:18.106Z"
-    },
-    "medier:e59790f7e5368810": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T11:03:18.106Z"
-    },
-    "medier:3751431baf9c8f72": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T11:03:18.106Z"
-    },
-    "fhi:https://www.fhi.no/nyheter/2026/horselstap-knyttes-til-hoyere-dodelighet/": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T11:03:18.106Z"
-    },
-    "skiforbundet:https://www.skiforbundet.no/hopp/nyhetsarkiv/2026/11/hoppgutta-med-sterk-sesongapning--na-venter-ruka/": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T11:03:18.106Z"
-    },
-    "skiforbundet:https://www.skiforbundet.no/hopp/nyhetsarkiv/2026/11/kvartett-til-hinzenbach-etter-dominans-pa-hjemmebane/": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T11:03:18.106Z"
-    },
-    "miljodirektoratet:https://www.miljodirektoratet.no/aktuelt/nyheter/2026/november-2026/farre-trekkjande-sporvefuglar-siste-30-ar/": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T11:03:18.106Z"
-    },
     "unnews:https://news.un.org/en/story/2026/11/1168868": {
       "p": 45,
       "v": "b34cb0de5bde",
@@ -17456,6 +17438,96 @@
       "p": 20,
       "v": "b34cb0de5bde",
       "t": "2026-11-27T09:03:38.994Z"
+    },
+    "medier:396af98f20e45a22": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
+    },
+    "medier:7c4857fa7a2d5d79": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
+    },
+    "medier:0a93ee730e040db1": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
+    },
+    "medier:a226bead211a84fb": {
+      "p": 68,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
+    },
+    "medier:6c6593e48faba450": {
+      "p": 74,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
+    },
+    "regjeringen:3195123": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
+    },
+    "regjeringen:3195120": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
+    },
+    "regjeringen:3195106": {
+      "p": 73,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
+    },
+    "regjeringen:3195121": {
+      "p": 70,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
+    },
+    "regjeringen:3195111": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
+    },
+    "regjeringen:3194901": {
+      "p": 52,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
+    },
+    "regjeringen:3194903": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
+    },
+    "regjeringen:3194806": {
+      "p": 85,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
+    },
+    "regjeringen:3195029": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
+    },
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/sikringsarbeid-e39-brusdalen/": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
+    },
+    "vegvesen:https://www.vegvesen.no/om-oss/presse/aktuelt/2026/11/arbeidene-i-e136-sornestunnelen-forlenges-til-18.-desember": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
+    },
+    "sivilombudet:https://www.sivilombudet.no/?p=64073": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
+    },
+    "skiforbundet:https://www.skiforbundet.no/om/organisasjon/moter-og-samlinger/nyheter/2026/11/innstilt-som-visepresident/": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T11:03:30.017Z"
     }
   }
 }
