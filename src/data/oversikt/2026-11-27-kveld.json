@@ -1,0 +1,23 @@
+{
+  "dato": "2026-11-27",
+  "donem": "kveld",
+  "tittel": "Kveldsoversikt",
+  "opprettet": "2026-11-27T17:50:54.590Z",
+  "saker": [
+    {
+      "slug": "norse-atlantic-airways-begjaerer-oppbud-fredag",
+      "tittel": "Norse Atlantic Airways begjærer oppbud fredag",
+      "ingress": "Det norske driftsselskapet Norse Atlantic Airways AS har levert oppbudsbegjæring til Agder tingrett etter en periode med akutt pengemangel."
+    },
+    {
+      "slug": "kronen-styrket-seg-mot-euro-denne-uken",
+      "tittel": "Kronen styrket seg mot euro denne uken",
+      "ingress": "En euro kostet 10,69 kroner, 3 øre mindre enn en uke tidligere. En dollar kostet 9,75 kroner, omtrent det samme som en uke tidligere."
+    },
+    {
+      "slug": "norse-konkursen-forer-til-stans-i-alle-flyginger-og-kanselleringer",
+      "tittel": "Norse-konkursen fører til stans i alle flyginger og kanselleringer",
+      "ingress": "Ifølge Forbrukerrådet har flyselskapet Norse meldt oppbud, noe som medfører at samtlige flygninger stanses. Reisende har likevel mulighet til å sikre refundering av utleggene gjennom banken sin."
+    }
+  ]
+}
