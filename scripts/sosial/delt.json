@@ -1,61 +1,5 @@
 {
   "_sinir": {},
-  "donald-trump-vladimir-putin-og-xi-jinping-holdt-toppmote-i-shenzhen": {
-    "tarih": "2026-11-20T07:08:32.442Z",
-    "ig_story": "18133864153836347",
-    "fb_post": "1343803192154866_122119422327509504",
-    "fb_story": "919476304489284",
-    "ig_post": "17888665890625321",
-    "zaman": {
-      "ig_post": "2026-11-20T11:08:45.014Z"
-    }
-  },
-  "16-prosent-snuser-daglig-7-prosent-royker-daglig": {
-    "tarih": "2026-11-20T07:09:15.154Z",
-    "ig_story": "17913353175332473",
-    "fb_post": "1343803192154866_122119422657509504",
-    "fb_story": "29259208977032363",
-    "ig_post": "18108022772369418",
-    "zaman": {
-      "ig_post": "2026-11-20T11:09:09.532Z"
-    },
-    "ig_reels": "17913889575571709",
-    "fb_reels": "1166206122607993",
-    "reels": {
-      "gun": "2026-11-21",
-      "dilim": "morgen"
-    }
-  },
-  "sysselsetting-etter-naering": {
-    "tarih": "2026-11-20T07:09:49.501Z",
-    "ig_story": "18472496053189715",
-    "fb_post": "1343803192154866_122119423035509504",
-    "fb_story": "2227044684515816"
-  },
-  "polen-undersoker-ukjent-gjenstand-etter-russiske-angrep": {
-    "tarih": "2026-11-20T07:10:21.800Z",
-    "ig_story": "18378338386209130",
-    "fb_post": "1343803192154866_122119423245509504",
-    "fb_story": "1482705324000812"
-  },
-  "iran-krigen-har-nadd-en-prislapp-pa-470-milliarder-kroner-for-usa": {
-    "tarih": "2026-11-20T07:10:53.189Z",
-    "ig_story": "18121165067098865",
-    "fb_post": "1343803192154866_122119423449509504",
-    "fb_story": "1492461092800564"
-  },
-  "datasentre-i-norge-krf-vil-oke-stromavgiften-til-svensk-og-finsk-niva": {
-    "tarih": "2026-11-20T07:11:26.558Z",
-    "ig_story": "18140843209649666",
-    "fb_post": "1343803192154866_122119423677509504",
-    "fb_story": "1140859448346658"
-  },
-  "norges-folketall-okte-med-9-700-i-3-kvartal-2026": {
-    "tarih": "2026-11-20T07:11:57.906Z",
-    "ig_story": "18079391729746436",
-    "fb_post": "1343803192154866_122119423953509504",
-    "fb_story": "1684456359854307"
-  },
   "kyiv-og-flere-ukrainske-byer-rammet-av-omfattende-russiske-angrep": {
     "tarih": "2026-11-20T09:09:16.637Z",
     "ig_story": "18381451960212518",
@@ -543,5 +487,11 @@
     "ig_story": "17892709122623656",
     "fb_post": "1343803192154866_122121103131509504",
     "fb_story": "1075464328849537"
+  },
+  "mdg-og-sv-i-hard-konflikt-om-klimapolitikk-og-dieselpriser-i-statsbudsjettet": {
+    "tarih": "2026-11-27T09:08:14.337Z",
+    "ig_story": "18034925354681803",
+    "fb_post": "1343803192154866_122121182793509504",
+    "fb_story": "1856307365818126"
   }
 }
