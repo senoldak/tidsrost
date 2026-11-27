@@ -1,17 +1,5 @@
 {
   "_sinir": {},
-  "kyiv-og-flere-ukrainske-byer-rammet-av-omfattende-russiske-angrep": {
-    "tarih": "2026-11-20T09:09:16.637Z",
-    "ig_story": "18381451960212518",
-    "fb_post": "1343803192154866_122119444083509504",
-    "fb_story": "1140032628670864",
-    "ig_reels": "18150171139499669",
-    "fb_reels": "986469077518690",
-    "reels": {
-      "gun": "2026-11-20",
-      "dilim": "kveld"
-    }
-  },
   "sas-link-streik-avsluttes-etter-tariffenighet": {
     "tarih": "2026-11-20T11:09:24.752Z",
     "ig_story": "18101184605407758",
@@ -444,13 +432,21 @@
     "tarih": "2026-11-26T11:19:08.660Z",
     "ig_story": "18140608564675538",
     "fb_post": "1343803192154866_122120967849509504",
-    "fb_story": "4731996510367825"
+    "fb_story": "4731996510367825",
+    "ig_post": "18647427379029202",
+    "zaman": {
+      "ig_post": "2026-11-27T09:53:09.298Z"
+    }
   },
   "flyselskapet-norse-i-dyp-krise-har-ikke-betalt-ut-lonn": {
     "tarih": "2026-11-26T13:08:03.144Z",
     "ig_story": "18359668504172049",
     "fb_post": "1343803192154866_122120990895509504",
-    "fb_story": "1714680900091835"
+    "fb_story": "1714680900091835",
+    "ig_post": "18154889971561462",
+    "zaman": {
+      "ig_post": "2026-11-27T09:53:39.432Z"
+    }
   },
   "personer-i-risikogrupper-oppfordres-til-a-ta-vaksine-mot-influensa-og-covid-19-n": {
     "tarih": "2026-11-26T13:08:40.181Z",
