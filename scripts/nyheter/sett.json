@@ -15935,7 +15935,24 @@
     "medier:b40863be2025a153": "2026-11-27T17:00:57.389Z",
     "medier:55ea03e5afb86ea2": "2026-11-27T17:00:57.389Z",
     "medier:b60e13510d4659d1": "2026-11-27T17:00:57.389Z",
-    "medier:b6cdfb40fa02ee7c": "2026-11-27T17:00:57.389Z"
+    "medier:b6cdfb40fa02ee7c": "2026-11-27T17:00:57.389Z",
+    "medier:d69c03e60fd88271": "2026-11-27T19:01:08.008Z",
+    "medier:3f6b1cdfa6c0c936": "2026-11-27T19:01:08.008Z",
+    "medier:1daad20ab04a4c32": "2026-11-27T19:01:08.008Z",
+    "medier:019507868b4565f6": "2026-11-27T19:01:08.008Z",
+    "medier:dc35284562116e5c": "2026-11-27T19:01:08.008Z",
+    "medier:00ba6ce21770e285": "2026-11-27T19:01:08.008Z",
+    "medier:9227640838973efe": "2026-11-27T19:01:08.008Z",
+    "medier:c46d306da9bf7509": "2026-11-27T19:01:08.008Z",
+    "medier:b4204691e2653dfd": "2026-11-27T19:01:08.008Z",
+    "medier:0e788ac00e26594a": "2026-11-27T19:01:08.008Z",
+    "medier:5325e12942700974": "2026-11-27T19:01:08.008Z",
+    "medier:4018a62d3196af78": "2026-11-27T19:01:08.008Z",
+    "regjeringen:3195225": "2026-11-27T19:01:08.008Z",
+    "medier:1fe4d41595e8747c": "2026-11-27T19:01:08.008Z",
+    "medier:48e0b08b440c52cc": "2026-11-27T19:01:08.008Z",
+    "medier:9257161fe238d6f7": "2026-11-27T19:01:08.008Z",
+    "medier:faf9d3dd375890f5": "2026-11-27T19:01:08.008Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -16023,106 +16040,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "unnews:https://news.un.org/en/story/2026/11/1168868": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168866": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "regjeringen:3194622": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "regjeringen:3194606": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "regjeringen:3194573": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "regjeringen:3194746": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "mattilsynet:https://www.mattilsynet.no/tilbakekallinger/strandamor-kveil-los-vekt-ca-7-5-kg-tilbakekalles-pa-grunn-av-mugg": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "fhi:https://www.fhi.no/nyheter/2026/personer-med-hoy-inntekt-overlever-i-storre-grad-sykdom-viser-stor-studie-av-100-sykdommer/": {
-      "p": 88,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "handball:https://www.handball.no/nyheter/2026/11/billettsalget-til-nm-finalene-2026-er-i-gang/": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2571": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2553": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2572": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2562": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2577": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "nkom:b02ccd83-2645-402e-b571-d686575aaf9e": {
-      "p": 48,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "medier:1e0ca73ae60b856c": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "medier:74aa7c986b97bc49": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "medier:09fe9edb232e97f4": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "medier:51710f94554c850d": {
-      "p": 76,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
-    "kystverket:https://www.kystverket.no/nyheter/nkom-varsler-reaksjoner-mot-ulovlig-ais-bruk/": {
-      "p": 48,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-24T19:03:58.121Z"
-    },
     "unnews:https://news.un.org/en/story/2026/11/1168869": {
       "p": 65,
       "v": "b34cb0de5bde",
@@ -17782,6 +17699,46 @@
       "p": 78,
       "v": "b34cb0de5bde",
       "t": "2026-11-27T17:03:26.118Z"
+    },
+    "medier:1fe4d41595e8747c": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T19:03:29.279Z"
+    },
+    "medier:0e788ac00e26594a": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T19:03:29.279Z"
+    },
+    "medier:23a68faeb7273bff": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T19:03:29.279Z"
+    },
+    "medier:019507868b4565f6": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T19:03:29.279Z"
+    },
+    "medier:efd34e128876fca1": {
+      "p": 74,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T19:03:29.279Z"
+    },
+    "medier:00ba6ce21770e285": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T19:03:29.279Z"
+    },
+    "medier:c46d306da9bf7509": {
+      "p": 60,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T19:03:29.279Z"
+    },
+    "regjeringen:3195225": {
+      "p": 80,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-27T19:03:29.279Z"
     }
   }
 }

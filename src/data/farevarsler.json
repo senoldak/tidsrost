@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-27T17:04:53.568Z",
+  "hentet": "2026-11-27T19:05:54.886Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-27T17:04:01+00:00",
+  "sistEndretHosMet": "2026-11-27T19:04:02+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.20261127070414.016",
@@ -151,6 +151,19 @@
       "konsekvenser": "Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": null
+    },
+    {
+      "id": "2.49.0.1.578.0.20261127184051.064",
+      "niva": "gult",
+      "hendelse": "Kuling",
+      "omrade": "Bodø - Andenes",
+      "domene": "hav",
+      "start": "2026-11-28T05:00:00+00:00",
+      "slutt": "2026-11-28T13:00:00+00:00",
+      "beskrivelse": "Fra lørdag morgen sørvest periodevis stiv kuling 15 m/s.",
+      "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
+      "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
     },
     {
       "id": "2.49.0.1.578.0.261127100000.7011_1_0",
