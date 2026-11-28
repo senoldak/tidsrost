@@ -16069,7 +16069,37 @@
     "unnews:https://news.un.org/en/story/2026/11/1168894": "2026-11-28T15:00:56.326Z",
     "medier:abe9dabff6e9e4b1": "2026-11-28T15:00:56.326Z",
     "medier:c061a44f9b1ebc90": "2026-11-28T15:00:56.326Z",
-    "medier:b75e4bcdc5060ffb": "2026-11-28T15:00:56.326Z"
+    "medier:b75e4bcdc5060ffb": "2026-11-28T15:00:56.326Z",
+    "unnews:https://news.un.org/en/story/2026/11/1168895": "2026-11-28T17:00:58.203Z",
+    "medier:60ef8e2fa4e64793": "2026-11-28T17:00:58.203Z",
+    "medier:0a703dbbb2de16f5": "2026-11-28T17:00:58.203Z",
+    "medier:9bdc01b36f2574a3": "2026-11-28T17:00:58.203Z",
+    "medier:583110bd34e279f6": "2026-11-28T17:00:58.203Z",
+    "medier:e39e9f89a433d15d": "2026-11-28T17:00:58.203Z",
+    "medier:daf71cd5cd23931f": "2026-11-28T17:00:58.203Z",
+    "medier:23137d71ed9b43b5": "2026-11-28T17:00:58.203Z",
+    "medier:c96aceea158e94cd": "2026-11-28T17:00:58.203Z",
+    "medier:2f62ca91aa842362": "2026-11-28T17:00:58.203Z",
+    "medier:a0ec9db48c5b2a1f": "2026-11-28T17:00:58.203Z",
+    "medier:adee2ad8fb86eeee": "2026-11-28T17:00:58.203Z",
+    "medier:36be9e75553aaacf": "2026-11-28T17:00:58.203Z",
+    "medier:f255b42f703e1616": "2026-11-28T17:00:58.203Z",
+    "medier:a7a315d7be0df2ce": "2026-11-28T17:00:58.203Z",
+    "medier:13d61a73ca3bcc84": "2026-11-28T17:00:58.203Z",
+    "medier:a5b0f58e3eaa3474": "2026-11-28T17:00:58.203Z",
+    "medier:4473adf1924a252c": "2026-11-28T17:00:58.203Z",
+    "medier:497db5462854c216": "2026-11-28T17:00:58.203Z",
+    "medier:1c448e1b42453945": "2026-11-28T17:00:58.203Z",
+    "medier:713cb4f59e4e8fea": "2026-11-28T17:00:58.203Z",
+    "medier:12c2a519f24c3941": "2026-11-28T17:00:58.203Z",
+    "medier:715473d09a67cd85": "2026-11-28T17:00:58.203Z",
+    "medier:2a8f031f1427039a": "2026-11-28T17:00:58.203Z",
+    "medier:5d7e6eb558572428": "2026-11-28T17:00:58.203Z",
+    "medier:767400b1df1842ff": "2026-11-28T17:00:58.203Z",
+    "medier:1880c10e6d1315db": "2026-11-28T17:00:58.203Z",
+    "medier:187fa06b1473e12e": "2026-11-28T17:00:58.203Z",
+    "medier:0a72fb5a06a4cccf": "2026-11-28T17:00:58.203Z",
+    "medier:75882275baf05be2": "2026-11-28T17:00:58.203Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -16157,131 +16187,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "medier:631eda1fd520d1b2": {
-      "p": 78,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "medier:29702facaccb509f": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "medier:a2cf0829bfa0865f": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "medier:92dbe8d74563a0bc": {
-      "p": 82,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "medier:72a05174ab396881": {
-      "p": 88,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "medier:a4687d6a9888c639": {
-      "p": 72,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "medier:59383a3e3ef32a17": {
-      "p": 68,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "medier:560603b73d171c2a": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "medier:bc893c1fa507f968": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "medier:6bdf600e2608aa0c": {
-      "p": 58,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "medier:97566ad408b6278e": {
-      "p": 20,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "medier:518a7c84ef0520bc": {
-      "p": 62,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "medier:5933246a6408fe4f": {
-      "p": 42,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "medier:5e8a577d1a775bc1": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "medier:2b0977a632abbdf9": {
-      "p": 15,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "regjeringen:3194812": {
-      "p": 73,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "skiforbundet:https://www.skiforbundet.no/langrenn/nyhetsarkiv/2026/11/voss-il-er-tildelt-hovedlandsrennet-2028/": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2576": {
-      "p": 32,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2574": {
-      "p": 52,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T15:04:51.516Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168873": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T17:04:11.150Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168875": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T17:04:11.150Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168876": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T17:04:11.150Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168874": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T17:04:11.150Z"
-    },
-    "unnews:https://news.un.org/en/story/2026/11/1168872": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T17:04:11.150Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2573": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T17:04:11.150Z"
-    },
     "medier:e47c538d0452e9ed": {
       "p": 45,
       "v": "b34cb0de5bde",
@@ -17551,6 +17456,56 @@
       "p": 65,
       "v": "b34cb0de5bde",
       "t": "2026-11-28T15:02:34.306Z"
+    },
+    "medier:5d7e6eb558572428": {
+      "p": 75,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T17:03:12.180Z"
+    },
+    "medier:497db5462854c216": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T17:03:12.180Z"
+    },
+    "medier:60ef8e2fa4e64793": {
+      "p": 65,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T17:03:12.180Z"
+    },
+    "medier:c96aceea158e94cd": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T17:03:12.180Z"
+    },
+    "medier:2c47bfffcb92541f": {
+      "p": 82,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T17:03:12.180Z"
+    },
+    "medier:a0ec9db48c5b2a1f": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T17:03:12.180Z"
+    },
+    "medier:f255b42f703e1616": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T17:03:12.180Z"
+    },
+    "medier:0a72fb5a06a4cccf": {
+      "p": 72,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T17:03:12.180Z"
+    },
+    "medier:13d61a73ca3bcc84": {
+      "p": 55,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T17:03:12.180Z"
+    },
+    "unnews:https://news.un.org/en/story/2026/11/1168895": {
+      "p": 30,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T17:03:12.180Z"
     }
   }
 }
