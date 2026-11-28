@@ -1,0 +1,18 @@
+{
+  "dato": "2026-11-28",
+  "donem": "morgen",
+  "tittel": "Morgenoversikt",
+  "opprettet": "2026-11-28T09:50:52.944Z",
+  "saker": [
+    {
+      "slug": "regjeringen-stanser-ikke-omstridt-gruvesalg",
+      "tittel": "Regjeringen stanser ikke omstridt gruvesalg",
+      "ingress": "Regjeringen stopper ikke salget av Nussir-gruven i Hammerfest til selskapet ACG Metals, men innfører meldeplikt for fremtidige eierbytter."
+    },
+    {
+      "slug": "offisielle-anslag-2027",
+      "tittel": "Offisielle anslag for veksten i Fastlands-Norge spriker med 1,1 prosentpoeng i 2027",
+      "ingress": "Norges Bank, SSB og Finansdepartementet anslår vekst i Fastlands-Norge på mellom 1,0 prosent og 2,1 prosent i 2027, mens anslagene for prisveksten ligger innenfor 0,2 prosentpoeng."
+    }
+  ]
+}
