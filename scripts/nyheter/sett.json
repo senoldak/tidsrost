@@ -16034,7 +16034,23 @@
     "medier:d04b64c8ae8204f4": "2026-11-28T09:01:02.634Z",
     "medier:856d18a6b0742830": "2026-11-28T09:01:02.634Z",
     "medier:69072be01770f389": "2026-11-28T09:01:02.634Z",
-    "medier:1f338e6a21123ef8": "2026-11-28T09:01:02.634Z"
+    "medier:1f338e6a21123ef8": "2026-11-28T09:01:02.634Z",
+    "medier:81d20ee6d7a8a0f6": "2026-11-28T11:01:00.564Z",
+    "medier:8f0a16494e6720b0": "2026-11-28T11:01:00.564Z",
+    "medier:4ed4409ea2ca8d05": "2026-11-28T11:01:00.564Z",
+    "handball:https://www.handball.no/nyheter/2026/11/innforer-nytt-crest-for-handballandslagene/": "2026-11-28T11:01:00.564Z",
+    "medier:e0c7f1e55090ea08": "2026-11-28T11:01:00.564Z",
+    "medier:b9c5c89726bd48e1": "2026-11-28T11:01:00.564Z",
+    "medier:f85a7dbff2e7e7a5": "2026-11-28T11:01:00.564Z",
+    "medier:057b3c1a0fdcc202": "2026-11-28T11:01:00.564Z",
+    "medier:6ef2f0162e0089ad": "2026-11-28T11:01:00.564Z",
+    "medier:21b0144b2502e196": "2026-11-28T11:01:00.564Z",
+    "medier:02a65da90eab7d3c": "2026-11-28T11:01:00.564Z",
+    "medier:8fba203e23b4e6b8": "2026-11-28T11:01:00.564Z",
+    "medier:199c4c8a3ea96d5e": "2026-11-28T11:01:00.564Z",
+    "met:snow:holmestrand-drammen-lier-asker-baerum-og-deler-av-oslo:2026-11-29": "2026-11-28T11:01:00.564Z",
+    "met:ice:deler-av-vestland-og-rogaland:2026-11-29": "2026-11-28T11:01:00.564Z",
+    "met:ice:deler-av-nordland-og-troms:2026-11-28": "2026-11-28T11:01:00.564Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -16122,136 +16138,6 @@
     "skiforbundet": "2026-11-02T07:01:18.169Z"
   },
   "puan": {
-    "finanstilsynet:https://www.finanstilsynet.no/nyhetsarkiv/nyheter/2026/rapport-om-kapitalkrav-i-norden-og-baltikum/": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "medier:5e96c017e5a15cda": {
-      "p": 95,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "medier:eaf169728f218f38": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "medier:6ca8caa3e906e705": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "medier:727604dbb269a36f": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "medier:edfb440c58a49e80": {
-      "p": 85,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "medier:759920c0a90ed96b": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "medier:523f304221df477b": {
-      "p": 40,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "medier:2e040ec666634c46": {
-      "p": 45,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "medier:d64c565af40a69f6": {
-      "p": 80,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "medier:6760452e7a4537e9": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "medier:9ff7fd1d8d5f1700": {
-      "p": 70,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "medier:146f20485cdcad0f": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "medier:e804c88c6cdccf30": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "medier:3d4fcc6b19eba943": {
-      "p": 35,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "medier:5aaefec0ab29db5b": {
-      "p": 90,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "medier:df98de1ad572a8ec": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "medier:1f76ec302221a7ab": {
-      "p": 75,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "regjeringen:3194825": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "regjeringen:3194807": {
-      "p": 55,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "konkurransetilsynet:https://konkurransetilsynet.no/?p=56221": {
-      "p": 65,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "dsb:https://www.dsb.no/aktuelt/sivilforsvaret-pa-befaring-pa-svalbard/": {
-      "p": 25,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "svomming:https://svomming.no/?post_type=nyheter&p=45005": {
-      "p": 10,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2583": {
-      "p": 60,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2567": {
-      "p": 50,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
-    "arbeidstilsynet:https://www.arbeidstilsynet.no/nyheter/ny-meldeplikt-for-virksomheter-som-gjenvinner-skip/": {
-      "p": 30,
-      "v": "b34cb0de5bde",
-      "t": "2026-11-25T11:03:27.030Z"
-    },
     "medier:fe13ffe754d9402d": {
       "p": 45,
       "v": "b34cb0de5bde",
@@ -17596,6 +17482,31 @@
       "p": 78,
       "v": "b34cb0de5bde",
       "t": "2026-11-28T09:03:25.327Z"
+    },
+    "medier:e0c7f1e55090ea08": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T11:03:18.740Z"
+    },
+    "medier:f85a7dbff2e7e7a5": {
+      "p": 25,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T11:03:18.740Z"
+    },
+    "medier:6ef2f0162e0089ad": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T11:03:18.740Z"
+    },
+    "medier:02a65da90eab7d3c": {
+      "p": 15,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T11:03:18.740Z"
+    },
+    "handball:https://www.handball.no/nyheter/2026/11/innforer-nytt-crest-for-handballandslagene/": {
+      "p": 20,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T11:03:18.740Z"
     }
   }
 }
