@@ -1,31 +1,5 @@
 {
   "_sinir": {},
-  "sivilbefolkning-og-eldre-lurt-for-millioner-av-svindelnettverk-i-rogaland": {
-    "tarih": "2026-11-20T21:06:13.474Z",
-    "ig_story": "18128680693912120",
-    "fb_post": "1343803192154866_122119568769509504",
-    "fb_story": "1193213926704322",
-    "ig_post": "17917698138499016",
-    "zaman": {
-      "ig_post": "2026-11-21T13:17:16.288Z"
-    }
-  },
-  "109-724-uten-fast-lege-i-mai-2026-nesten-halvert-siden-2023": {
-    "tarih": "2026-11-21T07:04:37.722Z",
-    "ig_story": "17920611288524019",
-    "fb_post": "1343803192154866_122119662765509504",
-    "fb_story": "1451528930291944",
-    "ig_post": "17917079361519268",
-    "zaman": {
-      "ig_post": "2026-11-21T13:17:45.749Z"
-    },
-    "ig_reels": "18019238483953514",
-    "fb_reels": "1875533486800265",
-    "reels": {
-      "gun": "2026-11-21",
-      "dilim": "kveld"
-    }
-  },
   "riemannhypotesen-kan-ha-blitt-lost-ved-hjelp-av-kunstig-intelligens": {
     "tarih": "2026-11-21T09:13:05.261Z",
     "ig_story": "18449841088135273",
@@ -472,19 +446,31 @@
     "tarih": "2026-11-27T09:08:14.337Z",
     "ig_story": "18034925354681803",
     "fb_post": "1343803192154866_122121182793509504",
-    "fb_story": "1856307365818126"
+    "fb_story": "1856307365818126",
+    "ig_post": "18031264007879488",
+    "zaman": {
+      "ig_post": "2026-11-28T07:06:12.174Z"
+    }
   },
   "fremskrittspartiet-foreslar-kutt-pa-63-milliarder-kroner-i-sitt-alternative-stat": {
     "tarih": "2026-11-27T11:07:46.283Z",
     "ig_story": "18120119123087396",
     "fb_post": "1343803192154866_122121198849509504",
-    "fb_story": "29424022960569170"
+    "fb_story": "29424022960569170",
+    "ig_post": "18421939300081155",
+    "zaman": {
+      "ig_post": "2026-11-28T07:06:40.127Z"
+    }
   },
   "kort-fortalt-27-november-2026": {
     "tarih": "2026-11-27T11:08:18.551Z",
     "ig_story": "18080641748451242",
     "fb_post": "1343803192154866_122121199149509504",
-    "fb_story": "2287499535125453"
+    "fb_story": "2287499535125453",
+    "ig_post": "17925352569454144",
+    "zaman": {
+      "ig_post": "2026-11-28T07:07:06.798Z"
+    }
   },
   "sjafor-straffet-med-bot-og-tap-av-forerkort-etter-dramatisk-tunnelbrann": {
     "tarih": "2026-11-27T13:09:18.391Z",
@@ -521,5 +507,11 @@
       "gun": "2026-11-28",
       "dilim": "morgen"
     }
+  },
+  "offisielle-anslag-2027": {
+    "tarih": "2026-11-28T07:07:22.084Z",
+    "ig_story": "18399983680205608",
+    "fb_post": "1343803192154866_122121389397509504",
+    "fb_story": "1637134714825716"
   }
 }
