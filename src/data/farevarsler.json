@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-28T13:03:03.617Z",
+  "hentet": "2026-11-28T15:03:03.441Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,17 +7,17 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-28T13:02:01+00:00",
+  "sistEndretHosMet": "2026-11-28T15:02:26+00:00",
   "varsler": [
     {
-      "id": "2.49.0.1.578.0.20261128083540.066",
+      "id": "2.49.0.1.578.0.20261128132809.057",
       "niva": "gult",
       "hendelse": "Kuling",
       "omrade": "Åna-Sira - Karmøy",
       "domene": "hav",
       "start": "2026-11-26T18:00:00+00:00",
       "slutt": "2026-11-29T10:00:00+00:00",
-      "beskrivelse": "Sørøst sterk kuling stiv kuling 20 m/s, fra lørdag kveld periodevis liten storm 22, søndag morgen minkende til sterk kuling 20.",
+      "beskrivelse": "Sørøst sterk kuling 20 m/s, fra lørdag kveld periodevis liten storm 22, søndag morgen minkende til sterk kuling 20.",
       "konsekvenser": "Sjøen bygger seg opp: Det er farlig å være ute i småbåt. Høye bølger: Sjøen begynner å rulle. Sjørokket kan minske synsvidden.",
       "rad": "Ikke dra ut i småbåt: Det er farlig å være ute i småbåt.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
