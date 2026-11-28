@@ -1,5 +1,5 @@
 {
-  "hentet": "2026-11-28T11:03:51.570Z",
+  "hentet": "2026-11-28T13:03:03.617Z",
   "kilde": {
     "navn": "Meteorologisk institutt (MET Norway)",
     "url": "https://www.met.no/",
@@ -7,7 +7,7 @@
     "lisens": "CC BY 4.0",
     "lisensUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "sistEndretHosMet": "2026-11-28T11:02:55+00:00",
+  "sistEndretHosMet": "2026-11-28T13:02:01+00:00",
   "varsler": [
     {
       "id": "2.49.0.1.578.0.20261128083540.066",
@@ -203,6 +203,19 @@
       "konsekvenser": "Grov sjø: Hvitt skum fra bølgetopper som brekker.",
       "rad": "Vurder å la båten ligge: Det kan være farlig å være ute i småbåt.",
       "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/kuling-stormvarsel-for-kyst-og-naere-fiskebanker"
+    },
+    {
+      "id": "2.49.0.1.578.0.20261127112112.088",
+      "niva": "gult",
+      "hendelse": "Is",
+      "omrade": "Deler av Finnmark",
+      "domene": "land",
+      "start": "2026-11-28T21:00:00+00:00",
+      "slutt": "2026-11-29T09:00:00+00:00",
+      "beskrivelse": "Fra  lørdag  kveld til  søndag  morgen er det lokal fare for is på grunn av overgang til mildvær og nedbør som regn, stedvis regn  som fryser på kald  bakke.",
+      "konsekvenser": "Lokalt vanskelige kjøreforhold: Det kan være lokalt vanskelige kjøreforhold. Transporttjenester kan også bli påvirket. Våt is i veibanen: Veibanen kan lokalt bli dekket av våt is. Vurder bruk av brodder eller piggsko: Fare for hålkeføre.",
+      "rad": "Lokalt vanskelige kjøreforhold: Beregn ekstra tid til transport og kjøring. Bruk riktige dekk og kjør etter forholdene. Våt is i veibanen: Tilpass farten og kjør etter forholdene. Vurder bruk av brodder eller piggsko: Vær oppmerksom på at isen kan være vanskelig å se. Følg utviklingen: Følg med på oppdaterte farevarsler. Sjekk veimeldinger på vegvesen.no/trafikk.",
+      "web": "https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/is"
     },
     {
       "id": "2.49.0.1.578.0.261128100000.0861_1_0",

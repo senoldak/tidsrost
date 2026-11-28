@@ -16050,7 +16050,21 @@
     "medier:199c4c8a3ea96d5e": "2026-11-28T11:01:00.564Z",
     "met:snow:holmestrand-drammen-lier-asker-baerum-og-deler-av-oslo:2026-11-29": "2026-11-28T11:01:00.564Z",
     "met:ice:deler-av-vestland-og-rogaland:2026-11-29": "2026-11-28T11:01:00.564Z",
-    "met:ice:deler-av-nordland-og-troms:2026-11-28": "2026-11-28T11:01:00.564Z"
+    "met:ice:deler-av-nordland-og-troms:2026-11-28": "2026-11-28T11:01:00.564Z",
+    "medier:fd28c778dd156f08": "2026-11-28T13:01:00.139Z",
+    "medier:adb5d7627449529e": "2026-11-28T13:01:00.139Z",
+    "medier:842ea170cb5f5cc5": "2026-11-28T13:01:00.139Z",
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2604": "2026-11-28T13:01:00.139Z",
+    "medier:180d25fd04e31d79": "2026-11-28T13:01:00.139Z",
+    "medier:3f710e57a6ab4298": "2026-11-28T13:01:00.139Z",
+    "medier:8e3dc089c54ef567": "2026-11-28T13:01:00.139Z",
+    "medier:4fe1d2c366736ad6": "2026-11-28T13:01:00.139Z",
+    "medier:9fd539ea1d9b7966": "2026-11-28T13:01:00.139Z",
+    "medier:b6b1c3cd210d2bf5": "2026-11-28T13:01:00.139Z",
+    "medier:e47893696c00fbaa": "2026-11-28T13:01:00.139Z",
+    "medier:089643ffe72845e3": "2026-11-28T13:01:00.139Z",
+    "medier:3b798ff3d936e484": "2026-11-28T13:01:00.139Z",
+    "met:ice:deler-av-finnmark:2026-11-28": "2026-11-28T13:01:00.139Z"
   },
   "feil": {
     "medier:7f58f04f07376003": {
@@ -17507,6 +17521,36 @@
       "p": 20,
       "v": "b34cb0de5bde",
       "t": "2026-11-28T11:03:18.740Z"
+    },
+    "medier:adb5d7627449529e": {
+      "p": 45,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T13:02:34.492Z"
+    },
+    "medier:a6e3832e5045d4ef": {
+      "p": 78,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T13:02:34.492Z"
+    },
+    "medier:180d25fd04e31d79": {
+      "p": 40,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T13:02:34.492Z"
+    },
+    "medier:4fe1d2c366736ad6": {
+      "p": 35,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T13:02:34.492Z"
+    },
+    "medier:e47893696c00fbaa": {
+      "p": 42,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T13:02:34.492Z"
+    },
+    "eukommisjonen:https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2604": {
+      "p": 48,
+      "v": "b34cb0de5bde",
+      "t": "2026-11-28T13:02:34.492Z"
     }
   }
 }
