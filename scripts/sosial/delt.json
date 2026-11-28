@@ -1,25 +1,5 @@
 {
   "_sinir": {},
-  "sparta-ii-i-brann-etter-droneangrep-i-finskebukta": {
-    "tarih": "2026-11-21T13:18:28.910Z",
-    "ig_post": "17875330794641025",
-    "zaman": {
-      "ig_post": "2026-11-21T13:18:42.993Z"
-    },
-    "son_hata": "kap: Graph 400: Timeout (#-2/2207003) [Zaman Aşımı: Medyanın indirilmesi çok uzun sürüyor.]",
-    "deneme": {
-      "ig_story": 1
-    },
-    "fb_post": "1343803192154866_122119749675509504",
-    "fb_story": "1430486092182250",
-    "ig_story": "18643302454007172",
-    "ig_reels": "18360971734171342",
-    "fb_reels": "1530695225561451",
-    "reels": {
-      "gun": "2026-11-22",
-      "dilim": "morgen"
-    }
-  },
   "martin-odegaard-med-tabbe-og-assist-i-kamp-mot-newcastle": {
     "tarih": "2026-11-21T21:05:36.121Z",
     "ig_story": "18037693610910691",
@@ -496,12 +476,38 @@
     "reels": {
       "gun": "2026-11-28",
       "dilim": "morgen"
+    },
+    "ig_post": "18139237789709507",
+    "zaman": {
+      "ig_post": "2026-11-28T17:07:34.261Z"
     }
   },
   "offisielle-anslag-2027": {
     "tarih": "2026-11-28T07:07:22.084Z",
     "ig_story": "18399983680205608",
     "fb_post": "1343803192154866_122121389397509504",
-    "fb_story": "1637134714825716"
+    "fb_story": "1637134714825716",
+    "ig_post": "17914475580481207",
+    "zaman": {
+      "ig_post": "2026-11-28T17:08:01.173Z"
+    }
+  },
+  "manchester-united-tapte-0-4-mot-brentford-etter-ajer-scoring": {
+    "tarih": "2026-11-28T17:08:16.432Z",
+    "ig_story": "18058729037803103",
+    "fb_post": "1343803192154866_122121488799509504",
+    "fb_story": "1435009398655595"
+  },
+  "bodo-glimt-knuste-kfum-med-6-0-og-okte-ledelsen-i-eliteserien": {
+    "tarih": "2026-11-28T17:08:55.139Z",
+    "ig_story": "18604357738069847",
+    "fb_post": "1343803192154866_122121489027509504",
+    "fb_story": "2375920469911605"
+  },
+  "manchester-united-risikerer-nedrykk-i-premier-league-etter-svak-sesongstart": {
+    "tarih": "2026-11-28T17:09:33.419Z",
+    "ig_story": "17974132388961793",
+    "fb_post": "1343803192154866_122121489339509504",
+    "fb_story": "3234008803612560"
   }
 }
